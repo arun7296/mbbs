@@ -1,0 +1,28 @@
+{
+  "$schema": "https://claude-code-settings.json",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "FILE=$(cat | jq -r '.tool_input.file_path // empty') && [ -n \"$FILE\" ] && [[ \"$FILE\" == *.ts || \"$FILE\" == *.tsx || \"$FILE\" == *.json ]] && npx prettier --write \"$FILE\" 2>/dev/null || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Remember: Use /validate-content after creating lessons or MCQs. Use /run-medical-tests before committing.'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

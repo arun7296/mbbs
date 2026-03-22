@@ -1,0 +1,86 @@
+export const physiologySubject = {
+  name: "Physiology",
+  code: "PY",
+  phase: "PHASE_1" as const,
+  totalHours: 480,
+  description: "Study of normal body functions - cellular, organ system, and integrative physiology",
+  iconUrl: null,
+  sortOrder: 2,
+};
+
+export const physiologyModules = [
+  { code: "PY-MOD-01", name: "General Physiology", description: "Cell physiology, membrane transport, body fluids, homeostasis", estimatedHours: 50, sortOrder: 1 },
+  { code: "PY-MOD-02", name: "Hematology & Immunology", description: "Blood composition, coagulation, immunity, blood groups", estimatedHours: 55, sortOrder: 2 },
+  { code: "PY-MOD-03", name: "Cardiovascular System", description: "Heart as pump, cardiac cycle, hemodynamics, BP regulation", estimatedHours: 65, sortOrder: 3 },
+  { code: "PY-MOD-04", name: "Respiratory System", description: "Mechanics of breathing, gas exchange, transport, regulation", estimatedHours: 55, sortOrder: 4 },
+  { code: "PY-MOD-05", name: "Renal Physiology", description: "GFR, tubular functions, acid-base balance, micturition", estimatedHours: 55, sortOrder: 5 },
+  { code: "PY-MOD-06", name: "Gastrointestinal System", description: "GI motility, secretions, digestion, absorption, liver functions", estimatedHours: 55, sortOrder: 6 },
+  { code: "PY-MOD-07", name: "Endocrine System", description: "Hypothalamus, pituitary, thyroid, adrenals, pancreas, reproductive hormones", estimatedHours: 65, sortOrder: 7 },
+  { code: "PY-MOD-08", name: "Neurophysiology & Special Senses", description: "Nerve, muscle, synapse, sensory systems, vision, hearing, motor control", estimatedHours: 80, sortOrder: 8 },
+];
+
+export const physiologyTopics: Record<string, Array<{ code: string; name: string; sortOrder: number; competencyCode: string; competencyDesc: string }>> = {
+  "PY-MOD-01": [
+    { code: "PY-MOD-01-TOP-01", name: "Cell Membrane & Transport", sortOrder: 1, competencyCode: "PY1.1", competencyDesc: "Describe cell membrane structure and transport mechanisms" },
+    { code: "PY-MOD-01-TOP-02", name: "Resting Membrane Potential", sortOrder: 2, competencyCode: "PY1.2", competencyDesc: "Explain genesis and maintenance of resting membrane potential" },
+    { code: "PY-MOD-01-TOP-03", name: "Action Potential", sortOrder: 3, competencyCode: "PY1.3", competencyDesc: "Describe generation and propagation of action potential" },
+    { code: "PY-MOD-01-TOP-04", name: "Body Fluids & Compartments", sortOrder: 4, competencyCode: "PY1.4", competencyDesc: "Describe body fluid compartments and their regulation" },
+    { code: "PY-MOD-01-TOP-05", name: "Homeostasis & Feedback Mechanisms", sortOrder: 5, competencyCode: "PY1.5", competencyDesc: "Explain homeostasis and positive/negative feedback" },
+  ],
+  "PY-MOD-02": [
+    { code: "PY-MOD-02-TOP-01", name: "Blood: Composition & Functions", sortOrder: 1, competencyCode: "PY2.1", competencyDesc: "Describe composition and functions of blood" },
+    { code: "PY-MOD-02-TOP-02", name: "Red Blood Cells & Hemoglobin", sortOrder: 2, competencyCode: "PY2.2", competencyDesc: "Describe RBC formation, hemoglobin, and oxygen transport" },
+    { code: "PY-MOD-02-TOP-03", name: "White Blood Cells & Immunity", sortOrder: 3, competencyCode: "PY2.3", competencyDesc: "Describe WBC types, innate and adaptive immunity" },
+    { code: "PY-MOD-02-TOP-04", name: "Hemostasis & Coagulation", sortOrder: 4, competencyCode: "PY2.4", competencyDesc: "Describe platelet function, coagulation cascade, fibrinolysis" },
+    { code: "PY-MOD-02-TOP-05", name: "Blood Groups & Transfusion", sortOrder: 5, competencyCode: "PY2.5", competencyDesc: "Describe ABO and Rh systems, cross-matching, transfusion reactions" },
+    { code: "PY-MOD-02-TOP-06", name: "Anemias & Bleeding Disorders", sortOrder: 6, competencyCode: "PY2.6", competencyDesc: "Describe pathophysiology of common anemias and bleeding disorders" },
+  ],
+  "PY-MOD-03": [
+    { code: "PY-MOD-03-TOP-01", name: "Properties of Cardiac Muscle", sortOrder: 1, competencyCode: "PY3.1", competencyDesc: "Describe properties of cardiac muscle and pacemaker activity" },
+    { code: "PY-MOD-03-TOP-02", name: "Cardiac Cycle & Heart Sounds", sortOrder: 2, competencyCode: "PY3.2", competencyDesc: "Describe cardiac cycle, heart sounds, and pressure changes" },
+    { code: "PY-MOD-03-TOP-03", name: "Electrocardiogram (ECG)", sortOrder: 3, competencyCode: "PY3.3", competencyDesc: "Describe normal ECG, leads, and basic interpretation" },
+    { code: "PY-MOD-03-TOP-04", name: "Cardiac Output & Its Regulation", sortOrder: 4, competencyCode: "PY3.4", competencyDesc: "Describe cardiac output, its measurement and regulation" },
+    { code: "PY-MOD-03-TOP-05", name: "Blood Pressure Regulation", sortOrder: 5, competencyCode: "PY3.5", competencyDesc: "Describe arterial BP, its measurement and regulation" },
+    { code: "PY-MOD-03-TOP-06", name: "Regional Circulation", sortOrder: 6, competencyCode: "PY3.6", competencyDesc: "Describe coronary, cerebral, and splanchnic circulations" },
+    { code: "PY-MOD-03-TOP-07", name: "Shock & Heart Failure", sortOrder: 7, competencyCode: "PY3.7", competencyDesc: "Describe pathophysiology of shock and cardiac failure" },
+  ],
+  "PY-MOD-04": [
+    { code: "PY-MOD-04-TOP-01", name: "Mechanics of Breathing", sortOrder: 1, competencyCode: "PY4.1", competencyDesc: "Describe mechanics of respiration, compliance, and surfactant" },
+    { code: "PY-MOD-04-TOP-02", name: "Lung Volumes & Capacities", sortOrder: 2, competencyCode: "PY4.2", competencyDesc: "Describe lung volumes, capacities, and spirometry" },
+    { code: "PY-MOD-04-TOP-03", name: "Gas Exchange & Transport", sortOrder: 3, competencyCode: "PY4.3", competencyDesc: "Describe diffusion, V/Q ratio, O2 and CO2 transport" },
+    { code: "PY-MOD-04-TOP-04", name: "Regulation of Respiration", sortOrder: 4, competencyCode: "PY4.4", competencyDesc: "Describe neural and chemical regulation of breathing" },
+    { code: "PY-MOD-04-TOP-05", name: "Hypoxia & Oxygen Therapy", sortOrder: 5, competencyCode: "PY4.5", competencyDesc: "Describe types of hypoxia, cyanosis, and oxygen therapy" },
+  ],
+  "PY-MOD-05": [
+    { code: "PY-MOD-05-TOP-01", name: "Renal Blood Flow & GFR", sortOrder: 1, competencyCode: "PY5.1", competencyDesc: "Describe renal blood flow, GFR, and its regulation" },
+    { code: "PY-MOD-05-TOP-02", name: "Tubular Reabsorption & Secretion", sortOrder: 2, competencyCode: "PY5.2", competencyDesc: "Describe tubular reabsorption and secretion mechanisms" },
+    { code: "PY-MOD-05-TOP-03", name: "Concentration & Dilution of Urine", sortOrder: 3, competencyCode: "PY5.3", competencyDesc: "Describe countercurrent mechanism and ADH action" },
+    { code: "PY-MOD-05-TOP-04", name: "Acid-Base Balance", sortOrder: 4, competencyCode: "PY5.4", competencyDesc: "Describe acid-base balance and buffer systems" },
+    { code: "PY-MOD-05-TOP-05", name: "Micturition", sortOrder: 5, competencyCode: "PY5.5", competencyDesc: "Describe micturition reflex and its abnormalities" },
+  ],
+  "PY-MOD-06": [
+    { code: "PY-MOD-06-TOP-01", name: "GI Motility", sortOrder: 1, competencyCode: "PY6.1", competencyDesc: "Describe GI smooth muscle, peristalsis, and motility patterns" },
+    { code: "PY-MOD-06-TOP-02", name: "GI Secretions", sortOrder: 2, competencyCode: "PY6.2", competencyDesc: "Describe salivary, gastric, pancreatic, and intestinal secretions" },
+    { code: "PY-MOD-06-TOP-03", name: "Digestion & Absorption", sortOrder: 3, competencyCode: "PY6.3", competencyDesc: "Describe digestion and absorption of nutrients" },
+    { code: "PY-MOD-06-TOP-04", name: "Liver Functions & Bile", sortOrder: 4, competencyCode: "PY6.4", competencyDesc: "Describe functions of liver and composition of bile" },
+    { code: "PY-MOD-06-TOP-05", name: "GI Hormones & Regulation", sortOrder: 5, competencyCode: "PY6.5", competencyDesc: "Describe GI hormones and neural regulation" },
+  ],
+  "PY-MOD-07": [
+    { code: "PY-MOD-07-TOP-01", name: "Hypothalamus & Pituitary", sortOrder: 1, competencyCode: "PY7.1", competencyDesc: "Describe hypothalamic-pituitary axis and its hormones" },
+    { code: "PY-MOD-07-TOP-02", name: "Thyroid Gland", sortOrder: 2, competencyCode: "PY7.2", competencyDesc: "Describe thyroid hormones synthesis, actions, and disorders" },
+    { code: "PY-MOD-07-TOP-03", name: "Adrenal Gland", sortOrder: 3, competencyCode: "PY7.3", competencyDesc: "Describe adrenal cortical and medullary hormones" },
+    { code: "PY-MOD-07-TOP-04", name: "Pancreas: Insulin & Glucagon", sortOrder: 4, competencyCode: "PY7.4", competencyDesc: "Describe insulin, glucagon, and glucose homeostasis" },
+    { code: "PY-MOD-07-TOP-05", name: "Calcium & Phosphate Metabolism", sortOrder: 5, competencyCode: "PY7.5", competencyDesc: "Describe PTH, calcitonin, vitamin D, and bone metabolism" },
+    { code: "PY-MOD-07-TOP-06", name: "Male Reproductive Physiology", sortOrder: 6, competencyCode: "PY7.6", competencyDesc: "Describe testicular hormones, spermatogenesis, and puberty" },
+    { code: "PY-MOD-07-TOP-07", name: "Female Reproductive Physiology", sortOrder: 7, competencyCode: "PY7.7", competencyDesc: "Describe ovarian cycle, menstruation, pregnancy, and lactation" },
+  ],
+  "PY-MOD-08": [
+    { code: "PY-MOD-08-TOP-01", name: "Nerve & Muscle Physiology", sortOrder: 1, competencyCode: "PY8.1", competencyDesc: "Describe neuromuscular junction and muscle contraction" },
+    { code: "PY-MOD-08-TOP-02", name: "Synapse & Neurotransmitters", sortOrder: 2, competencyCode: "PY8.2", competencyDesc: "Describe synaptic transmission and neurotransmitters" },
+    { code: "PY-MOD-08-TOP-03", name: "Sensory Physiology", sortOrder: 3, competencyCode: "PY8.3", competencyDesc: "Describe receptors, sensory pathways, and pain" },
+    { code: "PY-MOD-08-TOP-04", name: "Motor System & Reflexes", sortOrder: 4, competencyCode: "PY8.4", competencyDesc: "Describe motor pathways, reflexes, and muscle tone" },
+    { code: "PY-MOD-08-TOP-05", name: "Vision & Eye", sortOrder: 5, competencyCode: "PY8.5", competencyDesc: "Describe optics, visual pathways, and color vision" },
+    { code: "PY-MOD-08-TOP-06", name: "Hearing & Vestibular System", sortOrder: 6, competencyCode: "PY8.6", competencyDesc: "Describe auditory mechanism, vestibular function, and balance" },
+    { code: "PY-MOD-08-TOP-07", name: "Higher Functions & EEG", sortOrder: 7, competencyCode: "PY8.7", competencyDesc: "Describe learning, memory, sleep, EEG, and CSF" },
+  ],
+};

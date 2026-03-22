@@ -1,0 +1,86 @@
+export const medicineSubject = { name: "Internal Medicine", code: "IM", phase: "PHASE_3_PART2" as const, totalHours: 600, description: "Diagnosis and non-surgical management of diseases of internal organs", iconUrl: null, sortOrder: 14 };
+
+export const medicineModules = [
+  { code: "IM-MOD-01", name: "Cardiology", description: "IHD, heart failure, valvular diseases, arrhythmias", estimatedHours: 60, sortOrder: 1 },
+  { code: "IM-MOD-02", name: "Pulmonology", description: "COPD, asthma, pneumonia, TB, pleural diseases", estimatedHours: 55, sortOrder: 2 },
+  { code: "IM-MOD-03", name: "Gastroenterology", description: "GERD, peptic ulcer, IBD, liver diseases, pancreatitis", estimatedHours: 55, sortOrder: 3 },
+  { code: "IM-MOD-04", name: "Nephrology", description: "AKI, CKD, glomerulonephritis, dialysis", estimatedHours: 45, sortOrder: 4 },
+  { code: "IM-MOD-05", name: "Endocrinology", description: "Diabetes, thyroid, adrenal, pituitary disorders", estimatedHours: 50, sortOrder: 5 },
+  { code: "IM-MOD-06", name: "Hematology & Oncology", description: "Anemias, leukemias, coagulation disorders", estimatedHours: 45, sortOrder: 6 },
+  { code: "IM-MOD-07", name: "Neurology", description: "Stroke, epilepsy, meningitis, neuropathies, movement disorders", estimatedHours: 55, sortOrder: 7 },
+  { code: "IM-MOD-08", name: "Rheumatology", description: "RA, SLE, spondyloarthropathies, vasculitis", estimatedHours: 35, sortOrder: 8 },
+  { code: "IM-MOD-09", name: "Infectious Diseases", description: "Tropical infections, fever approach, sepsis, HIV", estimatedHours: 55, sortOrder: 9 },
+  { code: "IM-MOD-10", name: "Emergency Medicine", description: "Shock, poisoning, snake bite, CPR, critical care basics", estimatedHours: 45, sortOrder: 10 },
+];
+
+export const medicineTopics: Record<string, Array<{ code: string; name: string; sortOrder: number; competencyCode: string; competencyDesc: string }>> = {
+  "IM-MOD-01": [
+    { code: "IM-MOD-01-TOP-01", name: "Ischemic Heart Disease & MI", sortOrder: 1, competencyCode: "IM1.1", competencyDesc: "Describe etiology, pathogenesis, clinical features, and management of IHD" },
+    { code: "IM-MOD-01-TOP-02", name: "Heart Failure", sortOrder: 2, competencyCode: "IM1.2", competencyDesc: "Describe types, diagnosis, and management of heart failure" },
+    { code: "IM-MOD-01-TOP-03", name: "Rheumatic Heart Disease", sortOrder: 3, competencyCode: "IM1.3", competencyDesc: "Describe rheumatic fever and valvular heart disease" },
+    { code: "IM-MOD-01-TOP-04", name: "Hypertension", sortOrder: 4, competencyCode: "IM1.4", competencyDesc: "Describe classification, evaluation, and treatment of hypertension" },
+    { code: "IM-MOD-01-TOP-05", name: "Arrhythmias", sortOrder: 5, competencyCode: "IM1.5", competencyDesc: "Describe common arrhythmias and their management" },
+    { code: "IM-MOD-01-TOP-06", name: "Infective Endocarditis", sortOrder: 6, competencyCode: "IM1.6", competencyDesc: "Describe IE: diagnosis using Duke criteria and management" },
+  ],
+  "IM-MOD-02": [
+    { code: "IM-MOD-02-TOP-01", name: "COPD & Emphysema", sortOrder: 1, competencyCode: "IM2.1", competencyDesc: "Describe COPD pathogenesis, staging, and management" },
+    { code: "IM-MOD-02-TOP-02", name: "Bronchial Asthma", sortOrder: 2, competencyCode: "IM2.2", competencyDesc: "Describe asthma: classification, acute management, long-term control" },
+    { code: "IM-MOD-02-TOP-03", name: "Pneumonia", sortOrder: 3, competencyCode: "IM2.3", competencyDesc: "Describe CAP, HAP, and atypical pneumonias" },
+    { code: "IM-MOD-02-TOP-04", name: "Pulmonary Tuberculosis", sortOrder: 4, competencyCode: "IM2.4", competencyDesc: "Describe TB diagnosis, DOTS, MDR-TB management" },
+    { code: "IM-MOD-02-TOP-05", name: "Pleural Effusion & Pneumothorax", sortOrder: 5, competencyCode: "IM2.5", competencyDesc: "Describe pleural diseases: effusion, empyema, pneumothorax" },
+  ],
+  "IM-MOD-03": [
+    { code: "IM-MOD-03-TOP-01", name: "GERD & Peptic Ulcer Disease", sortOrder: 1, competencyCode: "IM3.1", competencyDesc: "Describe GERD and peptic ulcer disease management" },
+    { code: "IM-MOD-03-TOP-02", name: "Inflammatory Bowel Disease", sortOrder: 2, competencyCode: "IM3.2", competencyDesc: "Differentiate UC and Crohn's disease" },
+    { code: "IM-MOD-03-TOP-03", name: "Hepatitis & Cirrhosis", sortOrder: 3, competencyCode: "IM3.3", competencyDesc: "Describe viral hepatitis and complications of cirrhosis" },
+    { code: "IM-MOD-03-TOP-04", name: "Jaundice & Liver Failure", sortOrder: 4, competencyCode: "IM3.4", competencyDesc: "Describe approach to jaundice and acute liver failure" },
+    { code: "IM-MOD-03-TOP-05", name: "Acute & Chronic Pancreatitis", sortOrder: 5, competencyCode: "IM3.5", competencyDesc: "Describe pancreatitis: causes, diagnosis, management" },
+  ],
+  "IM-MOD-04": [
+    { code: "IM-MOD-04-TOP-01", name: "Acute Kidney Injury", sortOrder: 1, competencyCode: "IM4.1", competencyDesc: "Describe AKI: causes, staging, management" },
+    { code: "IM-MOD-04-TOP-02", name: "Chronic Kidney Disease", sortOrder: 2, competencyCode: "IM4.2", competencyDesc: "Describe CKD staging and management including dialysis" },
+    { code: "IM-MOD-04-TOP-03", name: "Nephrotic & Nephritic Syndrome", sortOrder: 3, competencyCode: "IM4.3", competencyDesc: "Differentiate nephrotic and nephritic syndromes" },
+    { code: "IM-MOD-04-TOP-04", name: "Urinary Tract Infections", sortOrder: 4, competencyCode: "IM4.4", competencyDesc: "Describe UTI diagnosis and management" },
+  ],
+  "IM-MOD-05": [
+    { code: "IM-MOD-05-TOP-01", name: "Diabetes Mellitus", sortOrder: 1, competencyCode: "IM5.1", competencyDesc: "Describe DM types, diagnosis, management, and complications" },
+    { code: "IM-MOD-05-TOP-02", name: "Thyroid Disorders", sortOrder: 2, competencyCode: "IM5.2", competencyDesc: "Describe hypothyroidism, hyperthyroidism, and thyroid nodules" },
+    { code: "IM-MOD-05-TOP-03", name: "Adrenal Disorders", sortOrder: 3, competencyCode: "IM5.3", competencyDesc: "Describe Cushing's, Addison's, and pheochromocytoma" },
+    { code: "IM-MOD-05-TOP-04", name: "Pituitary Disorders", sortOrder: 4, competencyCode: "IM5.4", competencyDesc: "Describe acromegaly, hypopituitarism, and SIADH" },
+    { code: "IM-MOD-05-TOP-05", name: "Metabolic Bone Disease", sortOrder: 5, competencyCode: "IM5.5", competencyDesc: "Describe osteoporosis, hyperparathyroidism, Paget's disease" },
+  ],
+  "IM-MOD-06": [
+    { code: "IM-MOD-06-TOP-01", name: "Iron Deficiency & Megaloblastic Anemia", sortOrder: 1, competencyCode: "IM6.1", competencyDesc: "Describe approach to anemia and management" },
+    { code: "IM-MOD-06-TOP-02", name: "Hemolytic Anemias & Thalassemia", sortOrder: 2, competencyCode: "IM6.2", competencyDesc: "Describe hemolytic anemias and hemoglobinopathies" },
+    { code: "IM-MOD-06-TOP-03", name: "Leukemias & Lymphomas", sortOrder: 3, competencyCode: "IM6.3", competencyDesc: "Describe leukemias, lymphomas, and myeloma" },
+    { code: "IM-MOD-06-TOP-04", name: "Bleeding & Coagulation Disorders", sortOrder: 4, competencyCode: "IM6.4", competencyDesc: "Describe ITP, hemophilia, DIC, and DVT" },
+  ],
+  "IM-MOD-07": [
+    { code: "IM-MOD-07-TOP-01", name: "Stroke", sortOrder: 1, competencyCode: "IM7.1", competencyDesc: "Describe ischemic and hemorrhagic stroke management" },
+    { code: "IM-MOD-07-TOP-02", name: "Epilepsy", sortOrder: 2, competencyCode: "IM7.2", competencyDesc: "Describe seizure classification and management" },
+    { code: "IM-MOD-07-TOP-03", name: "Meningitis & Encephalitis", sortOrder: 3, competencyCode: "IM7.3", competencyDesc: "Describe CNS infections: bacterial, viral, tubercular meningitis" },
+    { code: "IM-MOD-07-TOP-04", name: "Peripheral Neuropathy & GBS", sortOrder: 4, competencyCode: "IM7.4", competencyDesc: "Describe neuropathies and Guillain-Barre syndrome" },
+    { code: "IM-MOD-07-TOP-05", name: "Parkinson's & Movement Disorders", sortOrder: 5, competencyCode: "IM7.5", competencyDesc: "Describe Parkinson's disease and other movement disorders" },
+    { code: "IM-MOD-07-TOP-06", name: "Headache & Migraine", sortOrder: 6, competencyCode: "IM7.6", competencyDesc: "Describe approach to headache and migraine management" },
+  ],
+  "IM-MOD-08": [
+    { code: "IM-MOD-08-TOP-01", name: "Rheumatoid Arthritis", sortOrder: 1, competencyCode: "IM8.1", competencyDesc: "Describe RA diagnosis and management" },
+    { code: "IM-MOD-08-TOP-02", name: "Systemic Lupus Erythematosus", sortOrder: 2, competencyCode: "IM8.2", competencyDesc: "Describe SLE: criteria, management, and complications" },
+    { code: "IM-MOD-08-TOP-03", name: "Gout & Pseudogout", sortOrder: 3, competencyCode: "IM8.3", competencyDesc: "Describe gout pathogenesis and management" },
+    { code: "IM-MOD-08-TOP-04", name: "Ankylosing Spondylitis", sortOrder: 4, competencyCode: "IM8.4", competencyDesc: "Describe spondyloarthropathies" },
+  ],
+  "IM-MOD-09": [
+    { code: "IM-MOD-09-TOP-01", name: "Malaria", sortOrder: 1, competencyCode: "IM9.1", competencyDesc: "Describe malaria: species, diagnosis, treatment, severe malaria" },
+    { code: "IM-MOD-09-TOP-02", name: "Dengue & Chikungunya", sortOrder: 2, competencyCode: "IM9.2", competencyDesc: "Describe dengue fever, warning signs, and management" },
+    { code: "IM-MOD-09-TOP-03", name: "Typhoid & Enteric Fever", sortOrder: 3, competencyCode: "IM9.3", competencyDesc: "Describe typhoid fever diagnosis and management" },
+    { code: "IM-MOD-09-TOP-04", name: "HIV/AIDS & Opportunistic Infections", sortOrder: 4, competencyCode: "IM9.4", competencyDesc: "Describe HIV staging, ART, and OI management" },
+    { code: "IM-MOD-09-TOP-05", name: "Sepsis & SIRS", sortOrder: 5, competencyCode: "IM9.5", competencyDesc: "Describe sepsis bundle and management" },
+  ],
+  "IM-MOD-10": [
+    { code: "IM-MOD-10-TOP-01", name: "Shock: Types & Management", sortOrder: 1, competencyCode: "IM10.1", competencyDesc: "Describe types of shock and initial resuscitation" },
+    { code: "IM-MOD-10-TOP-02", name: "Poisoning & Overdose", sortOrder: 2, competencyCode: "IM10.2", competencyDesc: "Describe management of common poisonings: OP, paracetamol, acid" },
+    { code: "IM-MOD-10-TOP-03", name: "Snake Bite & Envenomation", sortOrder: 3, competencyCode: "IM10.3", competencyDesc: "Describe snake bite management and ASV protocol" },
+    { code: "IM-MOD-10-TOP-04", name: "CPR & Basic Life Support", sortOrder: 4, competencyCode: "IM10.4", competencyDesc: "Describe BLS and ACLS algorithms" },
+    { code: "IM-MOD-10-TOP-05", name: "Electrolyte & Acid-Base Disorders", sortOrder: 5, competencyCode: "IM10.5", competencyDesc: "Describe hyponatremia, hyperkalemia, metabolic acidosis/alkalosis" },
+  ],
+};
