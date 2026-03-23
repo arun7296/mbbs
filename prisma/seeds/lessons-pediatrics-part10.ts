@@ -1,17 +1,475 @@
-export const pediatricsLessonsPartTen = [
+import type { TopicLessons } from "./content-loader";
+
+export const pediatricsLessonsPartTen: TopicLessons[] = [
   {
     topicCode: "PE-MOD-04-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "childhood-exanthems-foundation",
+        slug: "childhood-exanthems-layer-1-foundation",
         title: "Childhood Exanthems - Foundation",
         estimatedMinutes: 20,
-        summary: "Overview of common childhood viral exanthems (measles, rubella, varicella) with epidemiology, classification, and general pathophysiology. These are notifiable diseases in India with significant public health impact.",
-        contentMd: "# Childhood Exanthems - Foundation\n\n## Definition & Classification\nExanthems are widespread rashes of sudden onset, typically viral in origin. Common childhood exanthems include:\n- **Measles (Rubeola)** - Paramyxovirus, highly contagious\n- **Rubella (German Measles)** - Togavirus, teratogenic if in pregnancy\n- **Varicella (Chickenpox)** - Varicella-zoster virus (VZV), member of herpesvirus family\n\n## Epidemiology in India\n| Exanthem | Age of Onset | Seasonality | Incubation | Contagious Period |\n|----------|-------------|------------|-----------|-----------------|\n| Measles | 6 mo-5 yr | Winter-spring | 10-14 days | 4 days before-4 after rash |\n| Rubella | 2-12 yr | Winter | 14-21 days | 5 days before-7 after rash |\n| Varicella | 1-9 yr | Winter-spring | 10-21 days | 1-2 days before rash-6 days after |\n\n## General Pathophysiology\n1. **Primary viremia** → respiratory epithelium\n2. **Secondary viremia** → dissemination to skin & mucous membranes\n3. **Cell-mediated immunity** → rash appearance\n4. **Recovery** → lifelong immunity (except rubella in ~15%)\n\n## Public Health Significance\n- Notifiable diseases in India\n- Part of UIP (Universal Immunization Programme)\n- MMR vaccine introduction reduced incidence by >95%\n- Still endemic in low-immunization areas\n\n## Characteristic Features Comparison\n| Feature | Measles | Rubella | Varicella |\n|---------|---------|---------|-----------|\n| Prodrome | 3-4 days (fever, cough, rhinitis) | Minimal | 1-2 days (fever, malaise) |\n| Rash progression | Cephalocaudal (hairline→trunk→extremities) | Simultaneous appearance | Centripetal (trunk→extremities) |\n| Rash type | Maculopapular, confluent | Maculopapular, discrete | Vesicular (crop appearance) |,\n        mnemonics: [\n          {\n            text: \"3-C-3 for Measles\",\n            explanation: \"3 Cs of prodrome: Cough, Coryza, Conjunctivitis; then rash appears on 3rd-4th day\"\n          },\n          {\n            text: \"RUB for Rubella\",\n            explanation: \"Rash, Lymphadenopathy (posterior cervical), teratogenic in pregnancy (Birth defects)\"\n          },\n          {\n            text: \"VZV = V-shaped immunity\",\n            explanation: \"Varicella primary infection → lifelong immunity; reactivation = Zoster (shingles) in elderly/immunocompromised\"\n          }\n        ],\n        keyPoints: [\n          \"Measles is most contagious; R0=12-18 (highly infectious)\",\n          \"Measles rash is cephalocaudal; Varicella is centripetal\",\n          \"Koplik spots (white spots on buccal mucosa) pathognomonic for measles during prodrome\",\n          \"Rubella in pregnancy causes congenital rubella syndrome (CRS) - teratogenic\",\n          \"Varicella-zoster establishes latency in dorsal root ganglia → Zoster reactivation\"\n        ],\n        textbookRefs: [\n          { book: \"OP Ghai Textbook of Pediatric Nursing\", chapter: \"Ch 12 - Communicable Diseases\", edition: \"9th\" },\n          { book: \"Nelson Textbook of Pediatrics\", chapter: \"Ch 234-236 - Viral Exanthems\", edition: \"21st\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"childhood-exanthems-mechanism\",\n        title: \"Childhood Exanthems - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Detailed pathophysiology of measles, rubella, and varicella including viral replication, immune response, and tissue-specific effects. Understanding mechanisms explains clinical features and complications.\",\n        contentMd: "# Childhood Exanthems - Mechanism\\n\\n## Measles (Paramyxovirus)\\n### Viral Structure & Replication\\n- **Envelope**: Contains hemagglutinin (H) & fusion (F) protein\\n- **H protein**: Binds CD46 receptor on respiratory epithelium\\n- **F protein**: Mediates cell-cell fusion\\n- Replication in respiratory mucosa → viremia by day 3-4\\n\\n### Pathophysiology of Rash\\n1. Secondary viremia carries virus to skin endothelium\\n2. Virus replicates in dermal macrophages & endothelial cells\\n3. **T-cell response** → rash appearance (cytotoxic CD8+ T cells)\\n4. TNF-α & IL-6 mediate systemic symptoms\\n5. Rash = sign of robust immune response (not direct viral effect)\\n\\n### Koplik Spots Mechanism\\n- Viral replication in buccal mucosa epithelium\\n- Syncytial cells formation (multinucleated giant cells)\\n- Small white spots with red halos appear 2-3 days before rash\\n- Disappear as systemic rash develops\\n\\n## Rubella (Togavirus)\\n### Cellular Invasion & Persistence\\n- Virus enters via respiratory mucosa\\n- Replicates in nasopharyngeal secretions for 7 days\\n- Secondary viremia with minimal cellular damage\\n- Virus is **poorly cytopathic** → mild symptoms\\n\\n### Congenital Rubella Syndrome (CRS) Mechanism\\n- **Vertical transmission** during 1st trimester (highest risk)\\n- Fetal infection → persistent rubella viremia\\n- **Interferon-alpha** production → organ developmental abnormalities\\n- Cardiac: PDA, pulmonary stenosis, myocarditis\\n- Ocular: Retinitis, cataracts, glaucoma\\n- Auditory: 8th nerve damage → sensorineural deafness\\n- CNS: Microcephaly, intellectual disability\\n\\n## Varicella (Herpesvirus)\\n### Primary Infection\\n1. Respiratory mucosal entry → local replication (5-6 days)\\n2. Primary viremia → spread to skin & viscera\\n3. Secondary viremia → widespread cutaneous lesions\\n4. Vesicular fluid contains infectious virions (Tzanck smear shows multinucleated giant cells)\\n\\n### Latency Establishment\\n- Virus enters sensory nerve terminals in skin\\n- Retrograde axonal transport → dorsal root ganglia\\n- Establishes **latency** in neurons\\n- VZV DNA present in ganglion cells indefinitely\\n- Reactivation in dermatomal distribution = Herpes zoster (shingles)\\n\\n## Immune Response Details\\n### Innate Immunity\\n| Stage | Response |\\n|-------|----------|\\n| Days 0-3 | Interferon-alpha/beta production; NK cell activation |\\n| Days 3-5 | Macrophage infiltration; antigen presentation |\\n| Day 5+ | CD8+ cytotoxic T cell response peaks |\\n\\n### Adaptive Immunity\\n- **Antibodies**: IgM (early), IgG (durable), IgA (mucosal)\\n- **Cell-mediated**: CD4+ & CD8+ T cell responses critical\\n- Rash coincides with peak CD8+ response (cytopathic effect on infected cells)\\n- Convalescent immunity is lifelong (IgG antibodies persist)\\n\\n## Viral Shedding Timeline\\n| Disease | Shedding Start | Peak | Duration |\\n|---------|---|---|---|\\n| Measles | 1 day before rash | Rash onset | 4-5 days after rash |\\n| Rubella | 5 days before rash | At rash | 5-7 days after rash |\\n| Varicella | 2 days before rash | Vesicle stage | Until all crusted (7-10 days) |,\\n        mnemonics: [\\n          {\\n            text: \\\"HFMR for Measles immune response\\\",\\n            explanation: \\\"H protein binds CD46; F protein fuses cells; then Macrophages & cytokines cause Rash\\\"\\n          },\\n          {\\n            text: \\\"CRS = Cardiac, Retinal, Sensorineural\\\",\\n            explanation: \\\"Classic triad of congenital rubella syndrome complications\\\"\\n          },\\n          {\\n            text: \\\"VZV = 'V' for Varicella primary, 'Z' for Zoster reactivation\\\",\\n            explanation: \\\"Same virus; latency in dorsal root ganglia explains zoster in older age\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Measles H & F proteins critical for infectivity and pathogenesis\\\",\\n          \\\"Rash appearance correlates with CD8+ T cell response, not direct viral cytopathy\\\",\\n          \\\"Rubella poorly cytopathic explains mild disease but teratogenic in pregnancy\\\",\\n          \\\"VZV establishes latency in sensory ganglia; reactivates as dermatomal zoster\\\",\\n          \\\"Viral shedding peaks when rash appears; highest infectivity during vesicular stage (varicella)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Microbiology - Ananthanarayan & Paniker\\\", chapter: \\\"Ch 48-50 - Viral Exanthems\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Ch 235 - Measles; Ch 237 - Varicella-Zoster\\\", edition: \\\"21st\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"childhood-exanthems-clinical\\\",\\n        title: \\\"Childhood Exanthems - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical presentation, diagnosis, and management of measles, rubella, and varicella. Emphasis on Indian protocols, complications, and treatment guidelines per IAP recommendations.\\\",\\n        contentMd: ``# Childhood Exanthems - Clinical\\n\\n## Measles - Clinical Features & Management\\n### Prodromal Phase (3-4 days before rash)\\n- **High fever** (39-40°C), often decreases when rash appears (\\\\\\\"fever defervescence\\\\\\\")\\n- **3 Cs**: Cough (non-productive), Coryza (rhinitis), Conjunctivitis (photophobia)\\n- **Malaise, anorexia, diarrhea**\\n- **Koplik spots** appear 2-3 days before rash: white spots with red halo on buccal mucosa opposite molars\\n\\n### Exanthematic Phase\\n- **Day 3-4**: Rash appears at hairline, spreads cephalocaudal over 48-72 hours\\n- **Maculopapular**, confluent, blanching initially, may petechial appearance\\n- Lasts 5-7 days, followed by fine desquamation\\n- Lymphadenopathy: cervical, axillary, inguinal\\n\\n### Diagnosis\\n- **Clinical**: Koplik spots + characteristic rash progression + prodrome\\n- **Serology**: IgM antibodies (PCR/RT-PCR for confirmation in outbreaks)\\n- **Tzanck smear**: Multinucleated giant cells (supportive)\\n\\n### Management (Per IAP Guidelines)\\n1. **Supportive care**: Fluids, nutritional support, fever management\\n2. **Vitamin A supplementation** (WHO/IAP recommendation):\\n   - <6 months: 50,000 IU once\\n   - 6-12 months: 100,000 IU once\\n   - >1 year: 200,000 IU once (repeat next day + at 2 weeks if severe)\\n   - **Evidence**: Reduces morbidity, mortality, prevents xerophthalmia\\n3. **Antibiotics**: Only if bacterial superinfection (otitis media, pneumonia)\\n4. **Isolation**: Until 4 days after rash onset\\n\\n### Complications\\n- **Common**: Otitis media (7-9%), pneumonia (1-6%), diarrhea (8%)\\n- **Severe**: Post-measles encephalitis (0.1%), subacute sclerosing panencephalitis (SSPE) - rare but fatal\\n- **In malnourished children**: Severe respiratory tract involvement, increased mortality\\n\\n---\\n\\n## Rubella - Clinical Features & Management\\n### Clinical Presentation\\n- **Rash**: Pink/red, maculopapular, discrete (unlike measles), appears on face & spreads downward\\n- **Lasts 2-3 days**, minimal pruritus\\n- **Lymphadenopathy**: Posterior cervical (pathognomonic), suboccipital, postauricular\\n- **Fever**: Usually low-grade (38-38.5°C), may be absent\\n- **Minimal systemic symptoms**: Mild URI symptoms, joint pain (adults > children)\\n\\n### Diagnosis\\n- Clinical diagnosis is unreliable; serology required\\n- **IgM antibodies** (HI test, ELISA)\\n- RT-PCR from throat/urine swabs\\n- Notifiable disease in India\\n\\n### Management\\n1. **Supportive care**: Usually self-limiting\\n2. **Isolation**: 5 days before to 7 days after rash\\n3. **Vaccination of contacts**: MMR vaccine, but not if pregnant (teratogenic)\\n4. **Pregnancy screening**: Pregnant women with exposure → immediate serology\\n\\n### Congenital Rubella Syndrome (CRS) Prevention\\n- **Prenatal screening**: Rubella antibodies (IgG) status before conception\\n- **Vaccination**: MMR vaccine pre-conception (avoid in pregnancy)\\n- **Post-natal diagnosis of CRS**: Clinical features + viral isolation from urine/CSF\\n- **Management**: Supportive; complications progressive (blindness, deafness, cardiac surgery)\\n\\n---\\n\\n## Varicella (Chickenpox) - Clinical Features & Management\\n### Primary Varicella\\n- **Prodrome**: 1-2 days fever, malaise, sometimes no prodrome\\n- **Rash progression**: Centripetal (trunk > extremities), **crop appearance**\\n  - Day 1-2: Macules → papules\\n  - Day 2-3: Vesicles on erythematous base (\\\\\\\"dew drop on rose petal\\\\\\\")\\n  - Day 3-5: Pustules → crusting\\n  - Day 7-14: Crusts fall off (post-inflammatory hyperpigmentation may persist)\\n- **All stages coexist** - distinguishes from smallpox (synchronous progression)\\n- **Pruritus**: Often severe, can lead to secondary infection\\n\\n### Complications\\n| Complication | Incidence | Risk Factors |\\n|---|---|---|\\n| Secondary bacterial infection | 1-4% | Scratching, immunocompromised |\\n| Pneumonia (viral/bacterial) | 0.4-1% | Adults, smokers, chronic lung disease |\\n| Encephalitis | 0.1-0.2% | Can occur during or post-varicella |\\n| Thrombocytopenia | Rare | Self-limiting |\\n\\n### Diagnosis\\n- **Clinical**: Characteristic rash with \\\\\\\"dew drop on rose petal\\\\\\\" appearance, crops\\n- **Tzanck smear**: Multinucleated giant cells (rapid, but less sensitive than PCR)\\n- **PCR**: From vesicular fluid (gold standard)\\n- **Serology**: IgM for acute infection\\n\\n### Management (IAP/Indian Guidelines)\\n1. **Supportive care**: Paracetamol for fever (avoid NSAIDs - risk of severe infection)\\n2. **Pruritus management**:\\n   - Cool baths, calamine lotion\\n   - Oral antihistamines (chlorpheniramine 0.3-0.5 mg/kg/dose TDS)\\n   - Keep nails trimmed to prevent scratching\\n3. **Antibiotics**: Only for bacterial superinfection (impetigo, cellulitis)\\n4. **Antiviral therapy**:\\n   - **Acyclovir** (not routine in immunocompetent children in India due to cost)\\n   - **Indications**: Immunocompromised, severe disease, >12 years old, >48 hours of rash\\n   - Dose: 20 mg/kg/dose QID × 5 days (IV if severe)\\n5. **Isolation**: Until all vesicles crusted (5-7 days) or 6 days after rash onset\\n\\n### Post-Varicella Zoster (Reactivation)\\n- Occurs in ~20% of people, usually >50 years old\\n- Dermatomal distribution, severe pain (postherpetic neuralgia)\\n- Management: Acyclovir, supportive care\\n\\n---\\n\\n## Notifiability & Vaccination\\n### Notification Requirements (India)\\nAll three diseases are notifiable under National Health Mission\\n### Prevention (UIP Schedule)\\n- **MMR vaccine**: At 9-12 months + booster at 16-24 months\\n- **Varicella**: Not in routine UIP; available in private market (2 doses, 4 weeks apart),\\n        mnemonics: [\\n          {\\n            text: \\\"Koplik = measles, Posterior cervical = rubella, Crops = varicella\\\",\\n            explanation: \\\"Pathognomonic signs for each exanthem\\\"\\n          },\\n          {\\n            text: \\\"VAR for Varicella\\\",\\n            explanation: \\\"Vesicles; All stages coexist; Rash is centripetal (central first)\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Vitamin A in measles reduces mortality by 12% in Indian children; supplementation is IAP standard\\\",\\n          \\\"Posterior cervical lymphadenopathy is classic for rubella; often the only finding\\\",\\n          \\\"Varicella rash has 'dew drop on rose petal' appearance; crops distinguish from smallpox\\\",\\n          \\\"All three diseases are notifiable in India; MMR vaccine has reduced incidence by >95%\\\",\\n          \\\"Secondary bacterial infection is main complication in varicella; antiviral only for specific indications in India\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook of Pediatric Nursing\\\", chapter: \\\"Ch 12 - Infectious Diseases Management\\\", edition: \\\"9th\\\" },\\n          { book: \\\"IAP Guideline for Immunization 2024\\\", chapter: \\\"Vaccine Preventable Diseases\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Ch 235-237 - Measles, Rubella, Varicella\\\", edition: \\\"21st\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"childhood-exanthems-exam\\\",\\n        title: \\\"Childhood Exanthems - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"High-yield exam points for NEXT/NEET: differential diagnosis, complications, vaccine schedules, and India-specific protocols. Focus on distinguishing features and clinical decision-making.\\\",\\n        contentMd: ``# Childhood Exanthems - Exam Prep\\n\\n## High-Yield Differentials Table\\n| Feature | Measles | Rubella | Varicella |\\n|---------|---------|---------|-----------|\\n| **Rash progression** | Cephalocaudal | Simultaneous | Centripetal (crops) |\\n| **Rash morphology** | Maculopapular, confluent | Maculopapular, discrete | Vesicular (\\\\\\\"dew drop on rose\\\\\\\") |\\n| **Koplik spots** | YES (pathognomonic) | NO | NO |\\n| **Lymphadenopathy** | Generalized | Posterior cervical | Minimal |\\n| **Prodrome severity** | Severe (3 Cs) | Minimal/absent | Mild (1-2 days) |\\n| **Age of onset** | 6 mo-5 yr | 2-12 yr | 1-9 yr |\\n| **Contagious period** | 4 days before-4 after rash | 5 days before-7 after rash | 1 day before-6 after rash |\\n| **Complication** | Encephalitis, SSPE | Teratogenic (CRS) | Bacterial superinfection |\\n\\n## Measles Key Points\\n- **Vitamin A**: Standard IAP recommendation (200,000 IU for >1 year old) reduces mortality\\n- **SSPE**: Rare (1 per 1,00,000 cases), progressive fatal encephalitis 7-10 years post-infection\\n- **Immune response rash**: Appears at fever defervescence (T cell mediated)\\n- **Post-measles immunosuppression**: Transient immune suppression 2-3 weeks post-rash\\n- **Complications more common in**: <5 years, malnourished, vitamin A deficient, >20 years\\n\\n## Rubella Key Points\\n- **IgM antibodies** = acute infection (serology diagnosis required)\\n- **CRS teratogenic period**: 1st trimester, risk drops significantly after 20 weeks\\n- **CRS manifestations**: Cardiac (PDA, PS), ocular (cataracts, retinitis), auditory (8th nerve), CNS (microcephaly)\\n- **Maternal immunity**: Post-vaccination IgG antibodies protective\\n- **Notifiable disease**: Must report to health authorities\\n\\n## Varicella Key Points\\n- **Tzanck smear**: Multinucleated giant cells (rapid but less sensitive than PCR)\\n- **\\\"Dew drop on rose petal\\\"**: Vesicle on erythematous base (classic description)\\n- **Acyclovir indication in India**: Usually reserved for immunocompromised, not routine in healthy children (cost)\\n- **Secondary infection risk**: 1-4%, mainly from scratching (impetigo, cellulitis)\\n- **Zoster reactivation**: ~20% lifetime risk, dermatomal distribution, often >50 years old\\n- **Chicken pox in pregnancy**: Teratogenic (rare varicella embryopathy), severe maternal pneumonia\\n\\n## Vaccination Schedule (UIP India)\\n| Vaccine | Age | Dose | Schedule |\\n|---------|-----|------|----------|\\n| MMR | 9-12 months | 0.5 mL | Single |\\n| MMR booster | 16-24 months | 0.5 mL | Single |\\n| **Varicella** | **Not routine UIP** | **Private market** | **2 doses, 4 weeks apart** |\\n\\n## Complications Summary\\n### Measles Complications\\n- **Otitis media** (7-9%), **diarrhea** (8%), **pneumonia** (1-6%)\\n- **Encephalitis** (0.1%), **SSPE** (rare, fatal)\\n- **Xerophthalmia** (vitamin A deficiency)\\n\\n### Rubella Complications\\n- **Arthralgia/arthritis** (in adults, females > males)\\n- **Thrombocytopenia** (rare, self-limiting)\\n- **Congenital Rubella Syndrome** (if 1st trimester exposure)\\n\\n### Varicella Complications\\n- **Bacterial superinfection** (S. aureus, GAS)\\n- **Pneumonia** (viral or secondary bacterial)\\n- **Encephalitis**, **cerebellitis** (post-varicella)\\n- **Thrombocytopenia** (rare)\\n\\n## NEXT/NEET Common Question Patterns\\n1. **Case: 5-year-old with 3-day fever, cough, coryza, conjunctivitis, then rash at hairline spreading downward**\\n   - Answer: Measles; give Vitamin A 200,000 IU\\n2. **Case: Pregnant woman exposed to rash illness, develops similar rash. CRS risk?**\\n   - Answer: Depends on serologic confirmation; if rubella + 1st trimester = high CRS risk\\n3. **Case: Child with crops of vesicles on erythematous base, all stages coexist**\\n   - Answer: Varicella; manage pruritus, avoid NSAIDs, isolate until crusted\\n4. **Difference between measles rash & smallpox**\\n   - Answer: Measles = cephalocaudal progression, mixed stages; smallpox = simultaneous, synchronous progression\\n5. **Post-measles finding: progressive deterioration 8 years later**\\n   - Answer: SSPE (subacute sclerosing panencephalitis), rare but fatal,\\n        mnemonics: [\\n          {\\n            text: \\\"KV for Koplik & Measles, PC for Posterior cervical & Rubella, DRR for Dew drop & Varicella\\\",\\n            explanation: \\\"Pathognomonic signs for exam identification\\\"\\n          },\\n          {\\n            text: \\\"SSPE = S.S. (Subacute Sclerosing Panencephalitis)\\\",\\n            explanation: \\\"Rare fatal measles complication 7-10 years post-infection; progressive neurologic decline\\\"\\n          },\\n          {\\n            text: \\\"CRS in 1st trimester = Cardiac, Retinal, Sensorineural\\\",\\n            explanation: \\\"Teratogenic period for rubella; manifestations vary by timing\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Koplik spots pathognomonic for measles; appear 2-3 days before rash\\\",\\n          \\\"Vitamin A supplementation reduces measles mortality (IAP standard in India)\\\",\\n          \\\"Varicella rash = centripetal crops; all stages coexist (distinguish from smallpox)\\\",\\n          \\\"Rubella diagnosis requires serology (IgM); posterior cervical lymphadenopathy classic\\\",\\n          \\\"CRS risk highest in 1st trimester; manifestations include cardiac, ocular, auditory, CNS\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Fortnightly Review: Measles, Rubella, Varicella\\\", chapter: \\\"NEXT Pattern MCQ Collections\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"IAP Immunization Guideline 2024\\\", chapter: \\\"Vaccine Schedules & Complications\\\", edition: \\\"Current\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"childhood-exanthems-recall\\\",\\n        title: \\\"Childhood Exanthems - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"Spaced repetition questions covering clinical differentiation, management, complications, and vaccine schedules for measles, rubella, and varicella.\\\",\\n        contentMd: ``# Active Recall - Childhood Exanthems\\n\\n**Q1:** A 4-year-old presents with 3 days of fever (39.5°C), cough, coryza, and conjunctivitis. Examination reveals white spots with red halos on buccal mucosa opposite molars. What is the diagnosis and next management step?\\n> **Answer:** Measles (Koplik spots are pathognomonic during prodrome). Next: Watch for cephalocaudal rash in next 1-2 days. Vitamin A supplementation 200,000 IU (IAP standard). Isolate until 4 days after rash onset.\\n\\n**Q2:** How does the rash progression differ between measles, rubella, and varicella?\\n> **Answer:**\\n> - Measles: Cephalocaudal (hairline → trunk → extremities), maculopapular, confluent\\n> - Rubella: Simultaneous appearance, maculopapular, discrete\\n> - Varicella: Centripetal (trunk first), vesicular in crops, \\\"dew drop on rose petal\\\"\\n\\n**Q3:** A pregnant woman in 1st trimester is exposed to a child with rubella (confirmed by serology). What is the risk of congenital rubella syndrome?\\n> **Answer:** ~80% risk of CRS if infected in 1st trimester. Manifestations: Cardiac (PDA, PS), retinal (cataracts, retinitis), sensorineural deafness, CNS (microcephaly). IgM serology confirms acute maternal infection. Post-natal diagnosis: viral isolation from urine/CSF, IgM antibodies.\\n\\n**Q4:** Compare the lymphadenopathy pattern in measles vs rubella.\\n> **Answer:** Measles: Generalized lymphadenopathy (cervical, axillary, inguinal). Rubella: Posterior cervical lymphadenopathy (pathognomonic), often the only systemic finding.\\n\\n**Q5:** A 6-year-old with varicella presents with vesicles in various stages (macules, vesicles, pustules, crusts all present simultaneously). Why is this called \\\"crop appearance\\\"?\\n> **Answer:** New crops of lesions appear over 3-5 days, causing simultaneous presence of lesions in different stages. This is characteristic of varicella and distinguishes it from smallpox (where rash develops synchronously). All stages coexist due to successive crops of vesicles.\\n\\n**Q6:** What is the indication for acyclovir in varicella in Indian practice?\\n> **Answer:** In India, acyclovir is not routine in immunocompetent children due to cost. Indications: (1) Immunocompromised patients, (2) Severe disease, (3) Age >12 years, (4) >48 hours from rash onset. Dose: 20 mg/kg/dose IV/oral QID × 5 days.\\n\\n**Q7:** Define SSPE (Subacute Sclerosing Panencephalitis). When does it occur and what is its prognosis?\\n> **Answer:** SSPE is a rare, progressive fatal measles encephalitis occurring 7-10 years post-primary infection. Caused by persistent defective measles virus in brain. Progression: behavioral changes → seizures → coma → death. Incidence ~1 per 1,00,000 measles cases. No effective treatment; prognosis uniformly fatal.\\n\\n**Q8:** A child recovers from measles 2 weeks ago. Parents report the child is now more susceptible to infections. Explain this phenomenon.\\n> **Answer:** Transient immune suppression post-measles lasts 2-3 weeks. Measles virus temporarily suppresses both innate and adaptive immunity, increasing susceptibility to secondary infections (bacterial otitis media, pneumonia, diarrhea). This is why vitamin A and good nutrition are important during recovery.\\n\\n**Q9:** MMR vaccine schedule in India under UIP. When is it given and what about varicella?\\n> **Answer:** MMR: 9-12 months (primary) + 16-24 months (booster). Varicella is NOT part of routine UIP in India (though available in private market) - 2 doses, 4 weeks apart. Both are live attenuated vaccines; contraindicated in pregnancy and immunocompromised.\\n\\n**Q10:** A child with measles develops severe pneumonia and respiratory distress. List 3 key management steps besides standard measles care.\\n> **Answer:** (1) Oxygen supplementation to maintain SpO2 >90%, (2) Broad-spectrum antibiotics (if bacterial superinfection suspected, e.g., amoxicillin-clavulanate or cephalosporin), (3) Aggressive nutritional support + fluids (post-measles malnutrition risk), (4) Vitamin A supplementation (reduces mortality), (5) Consider hospitalization if respiratory distress present.,\\n        mnemonics: [],\\n        keyPoints: [],\\n        textbookRefs: []\\n      }\\n    ]\\n  },\\n  {\\n    topicCode: \\\"PE-MOD-04-TOP-02\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"pneumonia-ari-foundation\\\",\\n        title: \\\"Pneumonia & ARI - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Overview of Acute Respiratory Infections (ARI) in children with IMNCI classification. Covers epidemiology, definitions, and burden in India. Foundation for understanding respiratory illness in pediatric patients.\\\",\\n        contentMd: ``# Pneumonia & ARI - Foundation\\n\\n## Definition & Classification\\n### ARI (Acute Respiratory Infection)\\n**Acute onset** (≤14 days) respiratory symptoms: cough, difficult breathing, stridor, wheezing, or runny nose.\\n\\n### IMNCI Classification (Integrated Management of Neonatal and Childhood Illness)\\nClassification for children 2 months - 5 years:\\n\\n| Category | Signs | Classification |\\n|----------|-------|-----------------|\\n| **No pneumonia** | Cough/difficult breathing + general danger signs absent + fast breathing absent | COUGH/DIFFICULT BREATHING - No pneumonia |\\n| **Fast breathing pneumonia** | Cough/difficult breathing + **fast breathing** (RR ≥40/min for 2-4 yr, ≥50/min for 2 mo-2 yr) + no chest indrawing/stridor | PNEUMONIA |\\n| **Severe pneumonia** | Cough/difficult breathing + **chest wall indrawing** OR stridor in calm child | SEVERE PNEUMONIA |\\n| **Very severe pneumonia** | Any general danger sign present (inability to drink, unconsciousness, convulsions, severe malnutrition, lethargy) | VERY SEVERE PNEUMONIA |\\n\\n### Epidemiology in India\\n- **Burden**: Pneumonia is leading infectious cause of childhood mortality in India\\n- **Incidence**: 30-40 cases per 1,000 children <5 years annually\\n- **Mortality**: ~15% of <5 childhood deaths due to ARI/pneumonia (2020 estimates)\\n- **Peak age**: 2-12 months; <2 years most vulnerable\\n- **Seasonality**: Winter peak (Oct-Feb) in North India, less marked in South\\n\\n### Common Causative Agents by Age\\n| Age | Common Organisms |\\n|-----|-----------------|\\n| **2-12 months** | RSV, rhinovirus, pneumococcus, parainfluenza |\\n| **1-5 years** | Pneumococcus, H. influenzae b, RSV, parainfluenza, influenza |\\n| **Risk factors for severe disease**: Malnutrition, vitamin A deficiency, low birth weight, immunosuppression |\\n\\n## Risk Factors for Severe Pneumonia\\n- Malnutrition (severe underweight)\\n- Vitamin A deficiency\\n- Low birth weight\\n- Incomplete immunization\\n- Crowded living conditions\\n- Lack of exclusive breastfeeding\\n- Underlying chronic disease (asthma, congenital heart disease)\\n\\n## Public Health Context\\n- Pneumonia preventable/treatable with antibiotics\\n- IMNCI algorithm guides community health workers (ASHA) for early detection\\n- Target: Reduce under-5 mortality from pneumonia through early recognition & appropriate treatment,\\n        mnemonics: [\\n          {\\n            text: \\\"IMNCI = I.M.N.C.I (Integrated Management of Neonatal & Childhood Illness)\\\",\\n            explanation: \\\"Indian protocol for ARI classification; fast breathing pneumonia vs severe pneumonia based on chest indrawing\\\"\\n          },\\n          {\\n            text: \\\"Fast breathing = Pneumonia (chest indrawing = Severe)\\\",\\n            explanation: \\\"IMNCI classification: RR ≥40 for 2-4yr, ≥50 for 2mo-2yr = pneumonia; indrawing = severe\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"IMNCI classification guides diagnosis in resource-limited settings; no CXR required\\\",\\n          \\\"Fast breathing is sensitive but not specific for pneumonia; chest indrawing indicates severity\\\",\\n          \\\"Pneumonia is leading infectious cause of childhood mortality in India\\\",\\n          \\\"Malnutrition & vitamin A deficiency major risk factors for severe disease\\\",\\n          \\\"RSV, rhinovirus, pneumococcus main causative agents in Indian pediatric population\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"NRHM/IMNCI Guidelines 2014\\\", chapter: \\\"ARI & Pneumonia Classification\\\", edition: \\\"Ministry of Health\\\" },\\n          { book: \\\"OP Ghai Textbook of Pediatric Nursing\\\", chapter: \\\"Ch 13 - ARI Management\\\", edition: \\\"9th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"pneumonia-ari-mechanism\\\",\\n        title: \\\"Pneumonia & ARI - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Pathophysiology of respiratory infection progression, host factors, and mechanism of respiratory distress. Explains why certain children develop severe pneumonia and role of malnutrition.\\\",\\n        contentMd: ``# Pneumonia & ARI - Mechanism\\n\\n## Pathophysiology of ARI Progression\\n### Stage 1: Upper Respiratory Tract (Days 1-3)\\n1. **Viral entry** via respiratory mucosa (respiratory epithelium)\\n2. **Viral replication** in nasopharynx & pharynx → mucosal inflammation\\n3. **Symptoms**: Rhinitis (runny nose), sore throat, sneezing\\n4. **Viral shedding** in nasal secretions (highly contagious)\\n5. **Non-specific innate response**: Interferon-alpha/beta, NK cells\\n\\n### Stage 2: Lower Respiratory Tract (Days 3-7)\\n1. **Viral spread** to trachea & bronchi (tracheobronchitis)\\n2. **Inflammation** → mucosal edema, increased mucus production\\n3. **Ciliary dysfunction** from viral damage → impaired mucociliary clearance\\n4. **Secondary bacterial invasion** (opportunistic)\\n5. **Symptoms**: Cough (initially dry, then productive), mild dyspnea\\n\\n### Stage 3: Alveolar Involvement (Pneumonia)\\n1. **Alveolar inflammation** → consolidation (viral or bacterial)\\n2. **Inflammatory exudate** → ventilation-perfusion (V/Q) mismatch\\n3. **Hypoxia development** due to:\\n   - Impaired gas exchange (alveolar filling with edema/pus)\\n   - V/Q mismatch (ventilated alveoli perfused by unoxygenated blood)\\n   - Intrapulmonary shunting (atelectatic segments)\\n4. **Work of breathing increases** (accessory muscle use, chest wall indrawing)\\n5. **Respiratory acidosis** if severe (high CO2 from increased work)\\n\\n## Chest Wall Indrawing Mechanism\\n**Why does chest indrawing occur?**\\n1. **High airway resistance** → increased negative intrathoracic pressure during inspiration\\n2. **Compliant child chest wall** (cartilaginous, flexible) → deforms inward with negative pressure\\n3. **Marker of severe disease**: Indicates significant work of breathing & impending respiratory failure\\n4. **Types of indrawing**: Lower chest wall (most common), intercostal, suprasternal\\n\\n| Finding | Mechanism | Significance |\\n|---------|-----------|-------------|\\n| Lower chest wall indrawing | High airway resistance from bronchiolitis/pneumonia | Indicates increased work of breathing |\\n| Intercostal indrawing | Accessory muscle recruitment | Severe respiratory distress |\\n| Suprasternal indrawing | Maximum respiratory effort | Pre-respiratory failure |\\n| Nasal flaring | Attempt to maximize airway patency | Respiratory distress sign |\\n\\n## Host Factors Determining Severity\\n### Nutritional Status Effect on Immunity\\n| System | Malnutrition Effect | Clinical Result |\\n|--------|-------------------|-----------------|\\n| **Innate immunity** | ↓ Neutrophil function, complement, lysozyme | ↑ Infection severity |\\n| **Adaptive immunity** | ↓ T cell numbers & CD8+ cytotoxic T cells | ↑ Viral clearance time |\\n| **Antibody production** | ↓ IgA (mucosal), IgG | ↓ Opsonization of pathogens |\\n| **Ciliary function** | ↓ Ciliary mucosa integrity | ↑ Secondary bacterial infection |\\n| **Tissue repair** | ↓ Collagen synthesis, epithelial repair | Prolonged pneumonia |\\n\\n### Vitamin A Deficiency\\n- **Role**: Maintains epithelial barrier integrity\\n- **Deficiency effect**: Loss of mucosal immunity, ↑ susceptibility to respiratory infections\\n- **Consequences**: Increased incidence, severity, and duration of ARI\\n- **Indian context**: Vitamin A deficiency endemic in poor populations; contributes to high pneumonia mortality\\n\\n### Breastfeeding Protection\\n- **Maternal IgA** in colostrum coats respiratory mucosa\\n- **Lysozyme & lactoferrin** in breast milk antimicrobial\\n- **Oligosaccharides** promote protective microbiota\\n- **Effect**: Reduces ARI incidence by 50% in exclusive breastfeeding\\n\\n## Bacterial vs Viral Pneumonia Mechanisms\\n### Viral Pneumonia (RSV, parainfluenza, influenza)\\n1. Direct viral cytopathy of bronchiolar epithelium\\n2. **Bronchiolitis pattern**: Obstruction from inflammation + mucus\\n3. **Wheezing/air trapping** common\\n4. **Self-limited**: 7-10 days typically\\n5. **Secondary bacterial infection** only in ~10-20%\\n\\n### Bacterial Pneumonia (Pneumococcus, H. influenzae)\\n1. **Alveolar consolidation** (lobar or multilobar)\\n2. **Rapid progression** with toxemia\\n3. **Infiltrate on CXR**: Dense alveolar filling pattern\\n4. **Systemic inflammation**: High fever, tachycardia, high WBC\\n5. **Requires antibiotics** for resolution\\n\\n## Inflammatory Cascade in Severe Pneumonia\\n1. **Pathogen-associated molecular patterns (PAMPs)** → TLR activation\\n2. **Cytokine storm**: TNF-α, IL-6, IL-8 release\\n3. **Neutrophil infiltration** → tissue damage, increased capillary permeability\\n4. **Systemic inflammation** → sepsis features (if bacterial)\\n5. **Hypoxia** → anaerobic metabolism, lactic acidosis,\\n        mnemonics: [\\n          {\\n            text: \\\"ULB for ARI progression (Upper → Lower → alveolar/Breathing difficulty)\\\",\\n            explanation: \\\"Stage 1: Upper respiratory; Stage 2: Lower respiratory (bronchitis); Stage 3: alveolar involvement (pneumonia)\\\"\\n          },\\n          {\\n            text: \\\"ICE for chest indrawing significance (Increased work, Compliant chest, Emergency sign)\\\",\\n            explanation: \\\"Chest indrawing indicates high airway resistance in child; marker of severe pneumonia\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"ARI typically starts in upper respiratory, may progress to lower respiratory/pneumonia\\\",\\n          \\\"Chest indrawing = marker of severe pneumonia; indicates increased work of breathing\\\",\\n          \\\"Malnutrition impairs innate & adaptive immunity; increases ARI severity & duration\\\",\\n          \\\"Viral pneumonia often has bronchiolitic pattern (wheezing); bacterial = consolidation\\\",\\n          \\\"Vitamin A deficiency & lack of breastfeeding major risk factors for severe ARI in India\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Ch 398 - Pneumonia in Children\\\", edition: \\\"21st\\\" },\\n          { book: \\\"Textbook of Pediatric Nursing - OP Ghai\\\", chapter: \\\"Ch 13 - Respiratory Infections\\\", edition: \\\"9th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"pneumonia-ari-clinical\\\",\\n        title: \\\"Pneumonia & ARI - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical diagnosis using IMNCI algorithm, investigation, and management per Indian protocols. Emphasis on antibiotic selection, supportive care, and danger signs requiring hospitalization.\\\",\\n        contentMd: ``# Pneumonia & ARI - Clinical\\n\\n## Clinical Assessment Using IMNCI Algorithm\\n### Step 1: Assess for General Danger Signs\\n**If ANY present → VERY SEVERE PNEUMONIA (refer immediately)**\\n- Unable to drink or breastfeed\\n- Unconsciousness or convulsions\\n- Severe malnutrition (visible severe wasting)\\n- Lethargy or unconsciousness\\n\\n### Step 2: Assess for Cough/Difficult Breathing\\nIf present, proceed. If absent but fever/other symptoms → investigate further.\\n\\n### Step 3: Assess Respiratory Rate (count for 1 minute in calm child)\\n**Fast breathing (pneumonia):**\\n- 2 months - 11 months: RR ≥50 breaths/min\\n- 12 months - 4 years: RR ≥40 breaths/min\\n- ≥5 years: RR ≥30 breaths/min (Note: IMNCI for <5 years only)\\n\\n### Step 4: Check for Chest Indrawing or Stridor\\n**If present (chest wall indrawing or stridor at rest) → SEVERE PNEUMONIA**\\n**If absent + fast breathing → PNEUMONIA (non-severe)**\\n\\n### IMNCI Management Classification\\n| Finding | Classification | Management |\\n|---------|---|---|\\n| Cough + fast breathing + no danger signs | PNEUMONIA | **Oral antibiotics at home** (amoxicillin) |\\n| Cough + chest indrawing/stridor OR danger signs | SEVERE PNEUMONIA | **Refer for hospitalization** |\\n| Cough, no fast breathing, no indrawing | NO PNEUMONIA | Support care, follow-up |\\n\\n---\\n\\n## Clinical Features of Pneumonia\\n### Symptoms\\n- **Cough**: Usually present, productive or dry\\n- **Fever**: Usually present (38-40°C), though not always\\n- **Dyspnea**: Ranging from mild to severe\\n- **Feeding difficulty** in infants\\n- **Abdominal pain**: May occur due to referred pain from pleurisy or lower lobe pneumonia\\n\\n### Physical Examination Findings\\n#### Vital Signs\\n- **Tachypnea**: Primary finding; RR elevated for age\\n- **Tachycardia**: Usually present, proportional to fever\\n- **Fever**: Present in 80-90% (viral pneumonia may have mild fever)\\n- **SpO2**: May be normal early; <90% indicates severe hypoxia\\n\\n#### Chest Examination\\n- **Inspection**: Chest indrawing, nasal flaring, grunting (in severe cases)\\n- **Palpation**:\\n  - Tactile fremitus: ↑ over consolidated areas (bacterial); ↓ if pleural effusion\\n  - Position of trachea: Shifted if mediastinal shift (tension pneumothorax, large effusion)\\n- **Percussion**:\\n  - Dullness over consolidated areas (bacterial pneumonia)\\n  - Hyperresonance in bronchiolitis (air trapping)\\n- **Auscultation**:\\n  - Crackles (fine/medium, more in lower lobes) - suggests consolidation\\n  - Wheeze - suggests bronchiolitis/viral pneumonia\\n  - Absent breath sounds - pleural effusion or pneumothorax\\n  - Bronchial breathing - consolidation\\n\\n### Indicators of Severity\\n| Mild-Moderate | Severe |\\n|---|---|\\n| RR 40-50 (2-4 yr) | RR >60 |\\n| Mild indrawing | Severe indrawing (intercostal, suprasternal) |\\n| SpO2 90-95% | SpO2 <90% |\\n| Alert, playful | Lethargy, altered sensorium |\\n| Feeds well | Unable to feed/drink |\\n| No signs of sepsis | Signs of sepsis (high fever, low BP) |\\n\\n---\\n\\n## Investigations\\n### Chest X-Ray (CXR)\\n**Indications**: Suspected severe pneumonia, atypical presentation, no response to antibiotics\\n**Findings**:\\n- **Bacterial pneumonia**: Lobar/segmental consolidation, air bronchogram\\n- **Viral pneumonia**: Bilateral bronchial wall thickening, air trapping, hyperinflation\\n- **Bronchiolitis**: Hyperinflation, atelectatic patches\\n\\n**Note**: CXR not needed for IMNCI diagnosis in resource-limited settings; clinical signs sufficient\\n\\n### Other Investigations\\n- **CBC**: High WBC (>15,000) suggests bacterial; normal/low suggests viral\\n- **Blood culture**: If sepsis suspected; may guide antibiotic\\n- **Rapid antigen/PCR**: RSV, influenza if available (influences management)\\n- **Pulse oximetry**: SpO2 assessment; guides oxygen therapy need\\n\\n---\\n\\n## Management Per Indian IMNCI/IAP Guidelines\\n\\n### NON-SEVERE PNEUMONIA (Fast breathing, no danger signs)\\n**Oral Antibiotics at Home (Outpatient)**:\\n- **First-line**: Amoxicillin 45-50 mg/kg/day divided TDS × 5-7 days\\n- **Alternative** (if penicillin allergy): Cephalosporin (cefixime 8 mg/kg/day) or azithromycin\\n- **Counselling**: Danger signs requiring hospital (severe indrawing, unable to drink, lethargy)\\n- **Follow-up**: 2-3 days to ensure improvement\\n\\n### SEVERE PNEUMONIA (Chest indrawing, danger signs, or SpO2 <90%)\\n**Hospitalization Required**:\\n\\n#### Antibiotics (Injectable)\\n**Age <5 years, severe pneumonia (IAP Recommendations)**:\\n- **First-line combination**:\\n  - **Ceftriaxone** 50-80 mg/kg/day divided BD/TDS OR\\n  - **Cefotaxime** 50 mg/kg/dose TDS\\n  - PLUS **Gentamicin** 7.5 mg/kg/day once daily (IV/IM)\\n  - OR **Amikacin** 15-30 mg/kg/day once daily\\n\\n- **Alternative** (if Beta-lactam allergy):\\n  - Fluoroquinolone (levofloxacin 10 mg/kg/day) + gentamicin\\n\\n- **Duration**: 48-72 hours IV, then switch to oral after clinical improvement\\n\\n#### Supportive Care\\n1. **Oxygen therapy**: Target SpO2 >90% (90-92% acceptable in resource-limited settings)\\n   - Oxygen delivery: Nasal cannula (1-2 L/min), simple face mask (3-5 L/min), high-flow nasal cannula if available\\n2. **Fluid management**:\\n   - IV fluids if unable to feed (D5NS or D5 1/5 normal saline)\\n   - Rehydration if concurrent diarrhea\\n   - Avoid fluid overload (can worsen respiratory distress)\\n3. **Nutrition**: Continue breastfeeding if possible; high-calorie diet after acute phase\\n4. **Fever management**: Paracetamol 15 mg/kg/dose (avoid high doses; cool sponging)\\n5. **Vitamin A supplementation** (IAP standard):\\n   - <6 months: 50,000 IU once\\n   - 6-12 months: 100,000 IU once\\n   - >1 year: 200,000 IU once daily × 2 days\\n   - (Reduces mortality, shortens pneumonia duration)\\n\\n#### Monitoring in Hospital\\n- 4-hourly vital signs (RR, SpO2, HR, BP, temperature)\\n- Assess improvement: Decreased tachypnea, reduced work of breathing, improved sensorium\\n- Watch for complications: Pleural effusion, pneumothorax, sepsis\\n\\n### Special Situations\\n**Severe Malnutrition**:\\n- Higher antibiotic resistance risk\\n- Slower recovery; may need extended antibiotic course\\n- Aggressive nutritional rehabilitation\\n\\n**Immunosuppressed** (HIV+):\\n- Consider PCP (Pneumocystis jirovecii pneumonia) prophylaxis\\n- Broader antibiotic coverage (may add cotrimoxazole if CD4 <200)\\n- TMP-SMX prophylaxis if CD4 <100\\n\\n---\\n\\n## Prognosis & Outcomes\\n- **Non-severe pneumonia**: 90-95% recover with oral antibiotics\\n- **Severe pneumonia with treatment**: 85-90% recovery; mortality ~5-10% without treatment\\n- **Mortality factors**: Severe malnutrition, delayed treatment, immunosuppression, co-infections,\\n        mnemonics: [\\n          {\\n            text: \\\"IMNCI Fast Breathing = Pneumonia, Chest Indrawing = Severe\\\",\\n            explanation: \\\"RR ≥40 for 2-4yr (pneumonia); chest indrawing = severe pneumonia requiring hospitalization\\\"\\n          },\\n          {\\n            text: \\\"CAG for severe pneumonia antibiotics (Cephalosporin + Aminoglycoside ± gentamicin)\\\",\\n            explanation: \\\"Ceftriaxone/Cefotaxime + Gentamicin/Amikacin standard in India\\\"\\n          },\\n          {\\n            text: \\\"VA = Vitamin A supplementation for all pneumonia cases\\\",\\n            explanation: \\\"IAP recommendation: reduces mortality by 12-15% in pneumonia\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"IMNCI algorithm: no imaging needed; clinical signs (RR, chest indrawing) guide diagnosis & management\\\",\\n          \\\"Non-severe pneumonia managed at home with oral amoxicillin; severe requires hospitalization\\\",\\n          \\\"Chest indrawing = marker of severity; indicates need for hospitalization & injectable antibiotics\\\",\\n          \\\"Vitamin A supplementation standard in all pneumonia (reduces mortality); oxygen if SpO2 <90%\\\",\\n          \\\"Injectable antibiotics (cephalosporin + aminoglycoside) for severe pneumonia per IAP guidelines\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"IMNCI Guidelines 2014\\\", chapter: \\\"ARI & Pneumonia Classification\\\", edition: \\\"Ministry of Health\\\" },\\n          { book: \\\"IAP Antibiotic Guideline\\\", chapter: \\\"Respiratory Tract Infections\\\", edition: \\\"2023\\\" },\\n          { book: \\\"OP Ghai Textbook of Pediatric Nursing\\\", chapter: \\\"Ch 13 - ARI Management\\\", edition: \\\"9th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"pneumonia-ari-exam\\\",\\n        title: \\\"Pneumonia & ARI - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"High-yield exam points: IMNCI classification, antibiotic selection, danger signs, and India-specific management protocols. Focus on decision-making algorithms and common complications.\\\",\\n        contentMd: ``# Pneumonia & ARI - Exam Prep\\n\\n## IMNCI Respiratory Rate Classification (CRITICAL)\\n**Age-based fast breathing cutoffs (for 2 months - 5 years)**:\\n- **2-11 months**: RR ≥50 breaths/min = Pneumonia\\n- **12 months - 4 years**: RR ≥40 breaths/min = Pneumonia\\n- **≥5 years**: RR ≥30 breaths/min = Pneumonia (Note: IMNCI focuses on <5 years)\\n\\n**RED FLAG**: Chest indrawing (lower chest wall, intercostal, suprasternal) = SEVERE PNEUMONIA regardless of RR\\n\\n## Antibiotic Selection by Severity\\n### IMNCI Non-severe Pneumonia (Oral)\\n| First-line | Dose | Duration |\\n|---|---|---|\\n| **Amoxicillin** | 45-50 mg/kg/day TDS | 5-7 days |\\n| (Alternative if penicillin allergy): Cephalosporin (cefixime) or Macrolide | 8 mg/kg/day | 5-7 days |\\n\\n### Severe Pneumonia (Injectable - Hospital)\\n| Antibiotic | Dose | Route |\\n|---|---|---|\\n| **Ceftriaxone** | 50-80 mg/kg/day BD/TDS | IV/IM |\\n| OR **Cefotaxime** | 50 mg/kg/dose TDS | IV/IM |\\n| PLUS **Gentamicin** | 7.5 mg/kg/day OD | IV/IM |\\n| OR **Amikacin** | 15-30 mg/kg/day OD | IV/IM |\\n| (Duration: 48-72 hrs, then switch to oral) | | |\\n\\n## Danger Signs Requiring Urgent Referral\\n| Sign | Clinical Significance |\\n|------|---|\\n| **Lower chest indrawing** | Increased work of breathing; needs hospitalization |\\n| **Stridor at rest** | Upper airway compromise; risk of airway obstruction |\\n| **Nasal flaring** | Severe respiratory distress |\\n| **Grunting** | Attempt to maintain positive end-expiratory pressure; respiratory failure imminent |\\n| **SpO2 <90%** | Hypoxemia; needs oxygen & hospitalization |\\n| **Inability to drink/breastfeed** | Swallowing risk; aspiration danger |\\n| **Unconsciousness/lethargy** | Signs of sepsis/respiratory failure |\\n| **Severe malnutrition** | High mortality risk; needs supervised treatment |\\n\\n## Vitamin A Supplementation (IAP Standard)\\n**Indications**: ALL cases of pneumonia (non-severe & severe)\\n\\n| Age | Dose |\\n|-----|------|\\n| <6 months | 50,000 IU once |\\n| 6-12 months | 100,000 IU once |\\n| >1 year | 200,000 IU once daily × 2 days |\\n\\n**Evidence**: Reduces pneumonia duration by 15-20%, mortality reduction 12%, prevents xerophthalmia\\n\\n## Complications Recognition\\n### Common Complications in Pediatric Pneumonia\\n| Complication | Incidence | Clinical Signs | Management |\\n|---|---|---|---|\\n| **Pleural effusion** | 10-30% | Persistent fever, dullness to percussion, ↓ air entry | Thoracentesis if large/symptomatic |\\n| **Pneumothorax** | 1-3% (may be tension) | Acute deterioration, ↓ air entry unilateral | Chest tube if tension or respiratory compromise |\\n| **Empyema** | 5-10% (if untreated) | Persistent fever >5 days on antibiotics | Drainage + antibiotics |\\n| **Sepsis** | 2-5% | High fever, tachycardia, altered sensorium, shock | IV antibiotics, fluids, supportive care |\\n| **ARDS** | Rare (<1%) | Rapid deterioration, bilateral infiltrates, hypoxemia | ICU admission, mechanical ventilation |\\n\\n## NEXT/NEET Question Patterns\\n1. **Case: 3-year-old, RR 45, fast feeding, alert**\\n   - IMNCI: Pneumonia (RR ≥40 for 12 mo-4 yr)\\n   - Management: Oral amoxicillin 45-50 mg/kg/day TDS\\n   - NO imaging needed\\n\\n2. **Case: 2-year-old, RR 50, lower chest indrawing visible, SpO2 92%, fever 39°C**\\n   - IMNCI: SEVERE PNEUMONIA (chest indrawing present)\\n   - Management: Hospitalization, IV Ceftriaxone + Gentamicin, oxygen\\n   - Vitamin A: 200,000 IU daily × 2 days\\n\\n3. **Case: 6-month-old with severe ARI, severe wasting (visible)**\\n   - Danger sign: Severe malnutrition = VERY SEVERE PNEUMONIA\\n   - Management: Urgent referral, IV antibiotics, nutritional rehabilitation\\n\\n4. **Difference between pneumonia & bronchiolitis on CXR?**\\n   - Pneumonia: Lobar consolidation, air bronchogram\\n   - Bronchiolitis: Bilateral hyperinflation, atelectatic patches\\n\\n5. **Which vitamin improves pneumonia outcomes in children?**\\n   - Vitamin A; evidence for reducing mortality, duration\\n   - Dose: 200,000 IU for >1 year × 2 days (IAP recommendation)\\n\\n## Key Discriminators for Exams\\n| Scenario | Answer |\\n|----------|--------|\\n| Fast breathing + NO chest indrawing = ? | Pneumonia (non-severe); oral antibiotics |\\n| Fast breathing + chest indrawing = ? | Severe pneumonia; hospitalization + IV antibiotics |\\n| Cough + NO fast breathing + NO indrawing = ? | No pneumonia; supportive care |\\n| RR 45 in 2-year-old = ? | Fast breathing (≥40 = pneumonia) |\\n| RR 35 in 2-year-old = ? | Normal; no pneumonia (need <40 for pneumonia) |\\n| Danger sign (unable to drink) + cough = ? | Very severe pneumonia; urgent referral |,\\n        mnemonics: [\\n          {\\n            text: \\\"50-40-30 for IMNCI RR cutoffs (2-11 mo: ≥50, 12mo-4yr: ≥40, ≥5yr: ≥30)\\\",\\n            explanation: \\\"Age-based fast breathing cutoffs for pneumonia diagnosis\\\"\\n          },\\n          {\\n            text: \\\"CGK for severe pneumonia antibiotics (Cephalosporin + Gentamicin/Kanamycin-aminoglycoside)\\\",\\n            explanation: \\\"Injectable antibiotic combination for hospitalized severe pneumonia\\\"\\n          },\\n          {\\n            text: \\\"DISC for danger signs (Danger, Indrawing, Stridor, Can't drink/Conscious changes)\\\",\\n            explanation: \\\"Signs requiring urgent referral/hospitalization\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"IMNCI RR cutoff for 2-4 years = ≥40 breaths/min; chest indrawing = severe\\\",\\n          \\\"Non-severe pneumonia = oral amoxicillin at home; severe = IV cephalosporin + aminoglycoside\\\",\\n          \\\"Vitamin A supplementation reduces pneumonia mortality & duration (IAP standard)\\\",\\n          \\\"Chest indrawing is marker of severity independent of RR; indicates hospitalization need\\\",\\n          \\\"CXR not needed for IMNCI diagnosis; clinical signs sufficient in resource-limited settings\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"IMNCI Guidelines 2014\\\", chapter: \\\"ARI & Pneumonia\\\", edition: \\\"Ministry of Health\\\" },\\n          { book: \\\"IAP Antibiotic Guidelines 2023\\\", chapter: \\\"Respiratory Infections\\\", edition: \\\"Current\\\" },\\n          { book: \\\"Fortnightly NEXT MCQ Review\\\", chapter: \\\"Pediatric Pneumonia\\\", edition: \\\"Latest\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"pneumonia-ari-recall\\\",\\n        title: \\\"Pneumonia & ARI - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"Spaced repetition Q&A covering IMNCI classification, antibiotic selection, danger signs, and management decisions.\\\",\\n        contentMd: ``# Active Recall - Pneumonia & ARI\\n\\n**Q1:** A 3-year-old with cough for 3 days. RR = 42 breaths/min, chest wall indrawing visible, SpO2 = 93%. Alert, feeds well. Per IMNCI, what is the classification and next step?\\n> **Answer:** SEVERE PNEUMONIA (chest indrawing present, regardless of RR). Next step: Hospitalization + IV antibiotics (Ceftriaxone 50-80 mg/kg/day + Gentamicin 7.5 mg/kg/day). Oxygen if SpO2 drops <90%. Vitamin A 200,000 IU daily × 2 days.\\n\\n**Q2:** What are the IMNCI RR cutoffs for pneumonia diagnosis in 2-4 year olds vs 2-11 month olds?\\n> **Answer:** 2-11 months: RR ≥50 = Pneumonia; 12 months - 4 years: RR ≥40 = Pneumonia. Both need chest indrawing assessment; if indrawing present = Severe pneumonia regardless of RR.\\n\\n**Q3:** A 2-year-old with fast breathing pneumonia (RR 42), no indrawing, SpO2 95%, feeds well. What is the appropriate antibiotic?\\n> **Answer:** Oral Amoxicillin 45-50 mg/kg/day divided TDS × 5-7 days (outpatient management). If penicillin allergy: Cephalosporin (cefixime) or azithromycin. Follow-up in 2-3 days.\\n\\n**Q4:** What are the danger signs in ARI that warrant urgent hospital referral?\\n> **Answer:** (1) Unable to drink or breastfeed, (2) Unconsciousness/lethargy, (3) Convulsions, (4) Severe malnutrition, (5) Chest indrawing, (6) Stridor at rest, (7) Nasal flaring, (8) Grunting, (9) SpO2 <90%. Any ONE is sufficient for urgent referral.\\n\\n**Q5:** A 6-month-old with severe pneumonia requiring hospitalization. What is the injectable antibiotic regimen per IAP guidelines?\\n> **Answer:** **First-line:** Ceftriaxone 50-80 mg/kg/day (IV/IM) in 2-3 divided doses PLUS Gentamicin 7.5 mg/kg/day once daily (IV/IM). OR Cefotaxime 50 mg/kg/dose TDS + Gentamicin. Continue 48-72 hours, then switch to oral after clinical improvement.\\n\\n**Q6:** Why is Vitamin A supplementation recommended in all pneumonia cases? What are the doses for different ages?\\n> **Answer:** Vitamin A reduces pneumonia duration (15-20%), mortality (12% reduction), and prevents xerophthalmia. Doses: <6 months: 50,000 IU once; 6-12 months: 100,000 IU once; >1 year: 200,000 IU daily × 2 days (IAP standard).\\n\\n**Q7:** A 4-year-old with pneumonia treated with oral amoxicillin for 5 days. Still has fever, tachypnea. What should you suspect and do?\\n> **Answer:** Suspect severe pneumonia or complication (pleural effusion, pneumothorax, empyema). Obtain CXR for imaging. Consider hospitalization, IV antibiotics, possible thoracentesis if effusion present. Assess for sepsis signs.\\n\\n**Q8:** Explain why children with severe malnutrition have higher pneumonia mortality.\\n> **Answer:** Severe malnutrition impairs both innate immunity (↓ neutrophil function, complement) and adaptive immunity (↓ T cells, antibody production). Results in: (1) Increased severity, (2) Delayed bacterial clearance, (3) Risk of complications, (4) Slower recovery. These children need aggressive nutritional rehabilitation alongside antibiotics.\\n\\n**Q9:** A 2-year-old with fast breathing (RR 45). Chest examination: tachycardia, tachypnea, but NO indrawing. SpO2 95%. How would you manage?\\n> **Answer:** IMNCI classification = Pneumonia (RR ≥40, no indrawing). Manage at home with oral Amoxicillin 45-50 mg/kg/day TDS × 5-7 days. Give Vitamin A 200,000 IU. Counsel on danger signs (indrawing, inability to feed, lethargy = return urgently). Follow-up 2-3 days.\\n\\n**Q10:** What is the difference between bronchiolitis and bacterial pneumonia in presentation?\\n> **Answer:**\\n> - **Bronchiolitis** (usually viral): Wheezing, air trapping on CXR, hyperinflation, worse at night, usually <2 years\\n> - **Bacterial pneumonia**: Fever, consolidation on CXR, alveolar crackles, rapid progression, toxemia\\n> - **CXR finding**: Bronchiolitis = bilateral hyperinflation; Bacterial = lobar consolidation\\n> - **Management**: Bronchiolitis = supportive (oxygen, fluids); Bacterial = antibiotics,\\n        mnemonics: [],\\n        keyPoints: [],\\n        textbookRefs: []\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-}
+        summary: "Overview of common childhood viral exanthems (measles, rubella, varicella) with epidemiology, classification, and general pathophysiology.",
+        contentMd: `# Childhood Exanthems - Foundation
+
+## Definition & Classification
+
+**Exanthems**: Widespread rashes of sudden onset, typically viral in origin.
+
+**Common childhood exanthems**:
+- **Measles (Rubeola)** - Paramyxovirus, highly contagious
+- **Rubella (German Measles)** - Togavirus, teratogenic if in pregnancy
+- **Varicella (Chickenpox)** - Varicella-zoster virus (VZV), herpesvirus family
+
+## Epidemiology in India
+
+| Exanthem | Age | Seasonality | Incubation | Contagious Period |
+|----------|-----|-------------|------------|--------------------|
+| Measles | 6 mo-5 yr | Winter-spring | 10-14 days | 4 days before-4 after rash |
+| Rubella | 2-12 yr | Winter | 14-21 days | 5 days before-7 after rash |
+| Varicella | 1-9 yr | Winter-spring | 10-21 days | 1-2 days before-6 days after |
+
+## General Pathophysiology
+
+1. **Primary viremia** → respiratory epithelium
+2. **Secondary viremia** → dissemination to skin & mucous membranes
+3. **Cell-mediated immunity** → rash appearance (T-cell mediated)
+4. **Recovery** → lifelong immunity (except rubella ~15%)
+
+## Public Health Significance
+
+- Notifiable diseases in India
+- Part of UIP (Universal Immunization Programme)
+- MMR vaccine introduction reduced incidence >95%
+- Still endemic in low-immunization areas
+
+## Clinical Presentation Timeline
+
+**Prodromal phase** (before rash):
+- Fever, cough, rhinitis, conjunctivitis
+- Coryza (runny nose)
+- Malaise, body aches
+- Duration: 2-4 days before rash appears
+
+**Exanthem phase**:
+- Rash appearance (macules/papules)
+- Spreads from head to trunk to extremities
+- Associated systemic symptoms continue
+
+**Recovery phase**:
+- Gradual rash fading
+- Fever subsiding
+- Return to normal (if no complications)`,
+        mnemonics: [
+          { text: "Measles: cough + coryza + conjunctivitis (3 C's) + rash", explanation: "Classic triad with exanthem" },
+          { text: "Rubella: mild illness, teratogenic if pregnant", explanation: "Milder than measles" },
+          { text: "Varicella: 1-2 days fever then rash (rapid onset)", explanation: "Quickest to rash onset" },
+        ],
+        keyPoints: [
+          "Measles: 6mo-5yr, highly contagious, complications common",
+          "Rubella: 2-12yr, mild illness, teratogenic in pregnancy",
+          "Varicella: 1-9yr, rapid rash onset, contagious before rash",
+          "Incubation: measles 10-14 days, rubella 14-21 days, varicella 10-21 days",
+          "Rash spreads head → trunk → extremities in measles/rubella",
+          "Varicella: simultaneous presence of papules, vesicles, crusts",
+          "Primary viremia → secondary viremia → rash (immune-mediated)",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Childhood Exanthems", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Viral Exanthems", edition: "21st" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "childhood-exanthems-layer-2-mechanism",
+        title: "Childhood Exanthems - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Detailed pathophysiology of measles, rubella, varicella including tissue invasion, immune response, rash mechanism, and organ-specific effects.",
+        contentMd: `# Childhood Exanthems - Pathophysiology
+
+## Measles Pathophysiology
+
+**Viral entry & replication**:
+- Respiratory epithelium initial infection
+- Paramyxovirus replicates in respiratory cells
+- Immune response: both T-cell and antibody-mediated
+
+**Immune response features**:
+- IgG antibodies appear at rash onset (too late to prevent)
+- IgM antibodies appear days after rash (diagnostic)
+- T-cell immunity critical for recovery (delayed in immunocompromised)
+
+**Why systemic effects**:
+- Viral dissemination to multiple organs
+- Immune-mediated inflammation (fever, myalgia, cough)
+- Epithelial damage in lungs (respiratory infection)
+
+**Rash mechanism**:
+- Immune T-cells attack virus-infected skin cells
+- Maculopapular appearance reflects immune infiltration
+- Cephalocaudal spread (head → trunk → limbs) reflects viral dissemination pattern
+
+## Rubella Pathophysiology
+
+**Viral characteristics**:
+- Togavirus (Alphavirus family)
+- More efficiently crosses placental barrier (teratogenic)
+- Persistent infection possible (chronic rubella)
+
+**Mild systemic illness**:
+- Respiratory tract infection
+- Less pulmonary involvement than measles
+- Often inapparent infection possible (especially in vaccinated)
+
+**Teratogenesis in pregnancy**:
+- First trimester: 80-90% of fetuses affected
+- Organ systems affected during organogenesis period
+- Congenital rubella syndrome (CRS) features: cardiac, ocular, auditory, CNS, growth restriction
+
+## Varicella Pathophysiology
+
+**VZV infection features**:
+- Herpesvirus (can establish latency)
+- Direct contact transmission (respiratory droplets)
+- Contagious before rash appearance
+
+**Rash mechanism**:
+- Centripetal distribution (trunk-centered, fewer on extremities)
+- Simultaneous stages: macules → papules → vesicles → crusts → scabs
+- Recurrent crops (new lesions appear for 3-5 days)
+- Vesicular fluid contains infectious virus
+
+**Immune response**:
+- Local immune response in skin (vesicle formation)
+- Systemic T-cell immunity (lifelong protection)
+- Reactivation possible (herpes zoster in older adults or immunocompromised)
+
+## Complications by System
+
+**Respiratory**:
+- Measles: viral pneumonia (giant cell pneumonia in immunocompromised)
+- Varicella: secondary bacterial pneumonia
+- Rubella: rare respiratory complications
+
+**Neurological**:
+- Measles: encephalitis (1 per 1,000 cases), subacute sclerosing panencephalitis (SSPE, rare, fatal)
+- Varicella: encephalitis, meningitis, Reye syndrome (aspirin use association)
+- Rubella: low risk of encephalitis
+
+**Other**:
+- Measles: otitis media, diarrhea, myocarditis (rare)
+- Varicella: bacterial superinfection of skin lesions, disseminated disease (immunocompromised)
+- Rubella: congenital syndrome (most severe)`,
+        mnemonics: [
+          { text: "Measles IgG at rash (too late), IgM days after", explanation: "Serology timing" },
+          { text: "Rubella: 1st trimester = 80-90% CRS, persistent infection possible", explanation: "Teratogenesis risk" },
+          { text: "Varicella: centripetal (trunk), multiple stages simultaneously", explanation: "Rash pattern" },
+        ],
+        keyPoints: [
+          "Measles: respiratory epithelium → secondary viremia → systemic",
+          "IgG appears at rash (immune-mediated rash appears), IgM diagnostic",
+          "T-cell immunity critical for measles recovery",
+          "Rubella: milder systemic illness, high teratogenic risk 1st trimester",
+          "Varicella: centripetal distribution, multiple stages present simultaneously",
+          "Varicella vesicular fluid infectious, recurrent crops for 3-5 days",
+          "Measles giant cell pneumonia in immunocompromised (high mortality)",
+          "Varicella reactivation in older adults/immunocompromised (herpes zoster)",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Mechanisms of Childhood Infections", edition: "9th" },
+          { book: "Guyton Physiology", chapter: "Immune Response to Infection", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "childhood-exanthems-layer-3-clinical",
+        title: "Childhood Exanthems - Clinical Assessment",
+        estimatedMinutes: 25,
+        summary: "Clinical differentiation of exanthems, characteristic rash patterns, diagnostic features, and complications assessment.",
+        contentMd: `# Childhood Exanthems - Clinical Assessment
+
+## Measles Clinical Features
+
+**Prodromal phase (2-4 days before rash)**:
+- Fever, high (39-40°C)
+- Cough (persistent, "barking")
+- Coryza (runny nose)
+- Conjunctivitis (red eyes, watery)
+- Koplik spots (pathognomonic): white spots on buccal mucosa opposite molars, appear 2-3 days before rash
+
+**Rash phase**:
+- Appears on day 4-5 of illness
+- Maculopapular (red, raised bumps)
+- Cephalocaudal spread: forehead → face → trunk → extremities
+- Rash fades cephalocaudally
+- May have petechial quality in severe cases
+- Fever continues or rises further initially
+
+**Associated findings**:
+- Generalized lymphadenopathy
+- Hepatosplenomegaly
+- Diarrhea, anorexia
+
+## Rubella Clinical Features
+
+**Prodrome** (usually minimal, 1-2 days):
+- Low-grade fever (38-38.5°C)
+- Mild coryza, sore throat
+- Arthralgia/arthritis (more common in adults, especially women)
+
+**Rash phase**:
+- Pink/red maculopapular rash
+- Starts on face, spreads to trunk and extremities
+- Finer than measles, does not coalesce
+- Duration: 3 days (also called "3-day measles")
+- Often fades centrally first (different from measles)
+
+**Associated findings**:
+- Cervical lymphadenopathy (prominent)
+- Mild conjunctivitis (less than measles)
+- Rash often absent in vaccinated individuals despite infection
+
+## Varicella Clinical Features
+
+**Prodrome** (1-2 days, shorter than other exanthems):
+- Fever (moderate, 38-39°C)
+- Malaise, myalgia
+- Headache
+
+**Rash phase**:
+- Starts on trunk, spreads to face and extremities
+- **Centripetal distribution** (trunk-predominant)
+- **Multiple stages simultaneously**: macules → papules → vesicles (clear fluid, "dew drop on rose petal") → crusts → scabs
+- Recurrent crops: new lesions continue to appear for 3-5 days
+- Intense itching (major symptom)
+- Fever may last entire duration of rash appearance
+
+**Associated findings**:
+- Oral mucosal involvement (intraoral vesicles)
+- Vaginal involvement in females
+- Generally milder systemic symptoms than measles
+
+## Differential Diagnosis Features
+
+| Feature | Measles | Rubella | Varicella |
+|---------|---------|---------|-----------|
+| **Fever** | High | Low-grade | Moderate |
+| **Prodrome** | Prominent (3C's) | Minimal | Mild |
+| **Rash pattern** | Cephalocaudal | Cephalocaudal | Centripetal |
+| **Rash type** | Maculo-papular | Maculo-papular | Vesicular (multiple stages) |
+| **Koplik spots** | Yes | No | No |
+| **Pruritus** | No | Minimal | Severe |
+| **Age groups** | Young children | School age | Young children/non-immune adults |
+| **Duration** | 6-10 days | 3 days | 3-5 days new lesions |
+
+## Diagnostic Methods
+
+**Clinical diagnosis** (usually sufficient):
+- History and characteristic rash pattern
+- Prodromal features
+
+**Serology** (confirmatory):
+- **Measles**: IgM (acute infection), IgG (immunity)
+- **Rubella**: IgM (acute), IgG (immunity)
+- **Varicella**: IgM (acute), IgG (immunity, usually by 1 week)
+
+**PCR/Direct detection**:
+- Lesion scrapings (electron microscopy for varicella)
+- Blood/CSF (measles, varicella if disseminated)`,
+        mnemonics: [
+          { text: "Measles = Koplik spots + 3C's (cough, coryza, conjunctivitis)", explanation: "Pathognomonic combination" },
+          { text: "Rubella = 3-day rash + cervical lymph nodes", explanation: "Milder presentation" },
+          { text: "Varicella = dew drop on rose petal + severe itching", explanation: "Vesicular pattern" },
+        ],
+        keyPoints: [
+          "Measles: Koplik spots (white spots opposite molars) pathognomonic",
+          "Measles: cephalocaudal spread, high fever, fades in same direction",
+          "Rubella: 3-day rash, low fever, cervical lymphadenopathy",
+          "Varicella: centripetal distribution, multiple stages simultaneous",
+          "Varicella vesicles: clear fluid 'dew drop on rose petal' appearance",
+          "Varicella: intense pruritus, recurrent crops of new lesions",
+          "Measles most severe systemic illness",
+          "Rubella mildest unless pregnant (CRS risk)",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Clinical Features of Exanthems", edition: "9th" },
+          { book: "Harrison's Principles of Internal Medicine", chapter: "Viral Exanthems", edition: "21st" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "childhood-exanthems-layer-4-exam",
+        title: "Childhood Exanthems - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "Management and prevention of exanthems, treatment of complications, vaccination strategies, and post-exposure prophylaxis.",
+        contentMd: `# Childhood Exanthems - Management & Prevention
+
+## Management by Exanthem
+
+**Measles Management**:
+- **Supportive care**: Fluids, antipyretics (paracetamol/ibuprofen)
+- **Vitamin A supplementation**: Critical to prevent blindness (WHO recommends)
+  - <6 months: 50,000 IU, days 1,2,15
+  - 6-12 months: 100,000 IU, days 1,2,15
+  - >12 months: 200,000 IU, days 1,2,15
+- **Nutritional support**: Balanced diet (folate-rich foods for immune recovery)
+- **Isolation**: Until 5 days after rash onset (infectious period)
+- **Antibiotics**: Only if bacterial superinfection (URTI, pneumonia, otitis media)
+
+**Rubella Management**:
+- **Supportive care**: Rest, fluids, antipyretics
+- **Antihistamines**: If pruritus present
+- **Isolation**: 7 days from rash onset (less contagious after than measles)
+- **Pregnancy management**: If exposed pregnant mother (test for immunity, immune globulin if non-immune, fetal monitoring)
+
+**Varicella Management**:
+- **Supportive care**: Cool baths, calamine lotion for itching
+- **Antihistamines**: Diphenhydramine or cetirizine for pruritus
+- **Antipyretics**: Paracetamol (avoid aspirin - Reye syndrome risk)
+- **Antiviral therapy** (if indicated):
+  - **Acyclovir** 20 mg/kg IV every 8 hours x 7 days (if <24 hours of rash onset, immunocompromised, varicella pneumonia)
+  - Consider oral acyclovir in non-immunocompromised if <72 hours and high-risk complications
+- **Isolation**: Until all vesicles crusted (typically 5-7 days after rash onset)
+- **Antibiotics**: Only if secondary bacterial superinfection
+
+## Complication Management
+
+**Measles Pneumonia**:
+- Antibiotic coverage: broad-spectrum (amoxicillin-clavulanate or respiratory fluoroquinolone)
+- Oxygen support: maintain SpO2 >90%
+- Hydration, nutritional support
+
+**Measles Encephalitis**:
+- Supportive care, seizure management
+- No specific antiviral (supportive only)
+- Recovery: 80-90% if treated supportively
+
+**Varicella Pneumonia** (secondary bacterial):
+- Broad-spectrum antibiotics
+- Oxygen support
+- ICU admission if severe
+
+**Varicella Disseminated Disease** (immunocompromised):
+- IV acyclovir 10-15 mg/kg every 8 hours
+- ICU monitoring
+- May need intubation support
+
+## Vaccination Prevention
+
+**MMR Vaccine Schedule** (India UIP):
+- **9-12 months**: First dose
+- **16-24 months**: Second dose
+- **Coverage goal**: >95% for herd immunity
+
+**Catch-up schedules** (non-immune adolescents/adults):
+- Two doses, 4 weeks apart
+- Both vaccines provide lifelong immunity
+
+**Post-exposure Prophylaxis**:
+- **MMR vaccine**: Within 72 hours of exposure (prevents ~90% of cases)
+- **Varicella-zoster Immunoglobulin (VZIG)**: Within 96 hours for high-risk non-immune (immunocompromised, pregnant women, neonates) - prevents severe disease
+- **Acyclovir**: Alternative for post-exposure varicella (if VZIG unavailable)
+
+**Contraindications to MMR**:
+- Severe egg allergy (mild OK)
+- Immunocompromised status
+- Recent blood transfusion/immunoglobulin (wait 3-11 months)
+- Pregnancy
+
+## Infection Control
+
+**Measles**:
+- Respiratory isolation (N95 mask)
+- Duration: Until 5 days after rash onset
+
+**Varicella**:
+- Respiratory + contact precautions
+- Duration: Until all vesicles crusted
+
+**Rubella**:
+- Respiratory isolation
+- Duration: 7 days from rash onset`,
+        mnemonics: [
+          { text: "Measles: Vitamin A (days 1,2,15) prevents blindness", explanation: "Critical supplementation" },
+          { text: "Varicella: AVOID aspirin (Reye syndrome risk)", explanation: "Use paracetamol" },
+          { text: "MMR post-exposure: 72 hours, 90% prevention", explanation: "Timing critical" },
+        ],
+        keyPoints: [
+          "Measles: vitamin A supplementation (critical), supportive care, isolation 5 days",
+          "Vitamin A dosing: <6mo 50,000 IU, 6-12mo 100,000 IU, >12mo 200,000 IU",
+          "Rubella: mild treatment (supportive), isolation 7 days",
+          "Varicella: avoid aspirin (Reye syndrome), antihistamines for pruritus",
+          "Varicella: acyclovir if <24h rash + risk factors",
+          "MMR within 72h of exposure: 90% prevention",
+          "VZIG within 96h for immunocompromised/pregnant non-immune",
+          "Vaccination coverage >95% for herd immunity",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Management of Exanthems", edition: "9th" },
+          { book: "IAP Immunization Guidelines", chapter: "MMR & Varicella Vaccine", edition: "2023" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "childhood-exanthems-layer-5-active-recall",
+        title: "Childhood Exanthems - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Clinical scenarios for exanthem diagnosis, management decisions, and complications handling.",
+        contentMd: `# Active Recall: Childhood Exanthems
+
+**Q1:** 3-year-old with 3-day history of high fever (39.5°C), cough, coryza, conjunctivitis. Today, red maculopapular rash on forehead spreading downward, small white spots on buccal mucosa opposite molars. Diagnosis?
+> **Answer:** Measles (rubeola). Pathognomonic: Koplik spots (white spots on buccal mucosa) + classic prodrome (3 C's: cough, coryza, conjunctivitis) + cephalocaudal spread. Management: Vitamin A (200,000 IU on days 1, 2, 15 for >1 year age), supportive care, isolation for 5 days after rash onset. Assess for complications (pneumonia, otitis media, encephalitis).
+
+**Q2:** 7-year-old with 1-day fever (38°C), mild sore throat, mild coryza. Today, fine pink maculopapular rash on face spreading to trunk and extremities, prominent cervical lymphadenopathy. Fever subsiding. Diagnosis?
+> **Answer:** Rubella (German measles). Milder presentation than measles: low-grade fever, minimal prodrome, "3-day" rash duration (finer than measles). Management: Supportive care (fluids, antipyretics), mild antihistamines if pruritus. Isolation for 7 days. Confirm with serology if unsure (IgM positive). Very mild systemic illness.
+
+**Q3:** 4-year-old with 1-day fever (38°C), malaise. Today, vesicular rash on trunk ("dew drop on rose petal appearance"), few lesions on face and extremities, intense itching. Simultaneously present: macules, papules, vesicles, crusts. Mother asks about aspirin for fever. Advice?
+> **Answer:** Varicella (chickenpox). Centripetal distribution, multiple stages of lesions present simultaneously. DO NOT give aspirin (Reye syndrome risk), use paracetamol/ibuprofen instead. Calamine lotion, antihistamines (cetirizine) for pruritus. Supportive care. Isolation until all vesicles crusted (~5-7 days). If <24 hours of rash onset and risk factors (severe disease), consider acyclovir.
+
+**Q4:** 2-year-old with measles, now with high fever (40°C), lethargy, unable to drink. CT not available, but clinical concern for encephalitis. Management?
+> **Answer:** Measles encephalitis suspected (fever + neurological change during rash phase). No specific antiviral (measles encephalitis is immune-mediated, not direct viral). Management: (1) Supportive care critical: maintain hydration (IV fluids), manage seizures if present (benzodiazepines), cooling measures for fever, (2) Maintain oxygenation, (3) ICU monitoring if available, (4) Monitor for complications, (5) Mortality 10-20% even with supportive care, >80% recover without severe sequelae.
+
+**Q5:** 3-year-old with varicella (day 5 of rash). Now with cough, fever (38.5°C), oxygen requirement (SpO2 88%). Chest X-ray shows infiltrates. Most likely diagnosis and management?
+> **Answer:** Varicella pneumonia (secondary bacterial infection). Manage with: (1) Oxygen to maintain SpO2 >90%, (2) Antibiotics: broad-spectrum (amoxicillin-clavulanate or cephalosporin + macrolide), (3) Supportive care: hydration, antipyretics, (4) Consider ICU if SpO2 stays <90% despite oxygen, (5) Avoid aspirin. Duration: 10-14 days antibiotics depending on severity.
+
+**Q6:** 9-month-old with fever, cough, coryza, conjunctivitis. Buccal mucosa shows white spots opposite molars. Mother wants to know prognosis and if need special treatment. Has NOT received measles vaccine yet.
+> **Answer:** Measles in 9-month-old (high-risk age). Give Vitamin A supplementation: 50,000 IU on days 1, 2, and day 15 (prevents blindness, reduces mortality). Supportive care critical. Monitor closely for complications: pneumonia (most common), otitis media, diarrhea, encephalitis. Risk of death higher in young children and malnourished. Consider vitamin A repletion if deficiency signs (dry eyes, Bitot spots).
+
+**Q7:** 5-year-old exposed to measles 2 days ago (sibling). Non-immune to measles (parent prefers no vaccine but now wants post-exposure prevention). Can we give MMR now?
+> **Answer:** YES. MMR vaccine within 72 hours of measles exposure is 90% effective at preventing disease (window closes at 72 hours). Give MMR now. This is appropriate post-exposure prophylaxis. If already developed fever/rash, vaccine won't help but prophylaxis was time-sensitive opportunity. Educate parent on importance of childhood vaccines for future siblings.
+
+**Q8:** Pregnant woman (8 weeks) exposed to rubella. Immunity testing shows she is non-immune to rubella (IgG negative). What's risk and management?
+> **Answer:** High risk for congenital rubella syndrome (CRS): 80-90% of fetuses infected if exposed in first trimester. Management: (1) Test for active rubella infection (IgM - if positive, confirms infection), (2) Counsel on risk of congenital rubella syndrome (cardiac defects, blindness, deafness, developmental delay), (3) Offer Rubella-zoster Immunoglobulin (VZIG) if available and within 96 hours (may decrease but not eliminate risk), (4) Detailed fetal monitoring/ultrasound (cardiac malformations), (5) Offer termination if defects found (discuss with parents), (6) If pregnancy continues, monitor fetal development closely, plan delivery at center with NICU capability.
+
+**Q9:** 2-year-old with measles pneumonia (presenting day 6 of illness). CRP 40 mg/L, fever 39.5°C, oxygen requirement 40% FiO2 to maintain SpO2 92%. Culture not done. Empiric antibiotics given. Now develops petechial rash over arms. Concern for sepsis?
+> **Answer:** Petechial rash with high fever during measles suggests: (1) Measles vasculitis (petechial component of measles rash, immune-mediated), (2) Secondary bacterial sepsis is possible (meningococcemia would be rapidly progressive, usually purpura not petechiae, need blood cultures), (3) Thrombocytopenia from measles (immune-mediated), (4) Management: Continue broad-spectrum antibiotics + supportive care, check CBC (platelets), blood cultures if not done, consider second antibiotic if signs of progression, ICU monitoring, manage coagulopathy if DIC develops.
+
+**Q10:** 8-year-old with varicella on day 3 of rash. Normal immune system. Parents ask when she can return to school. All vesicles NOT yet crusted (still fluid-filled). Advice?
+> **Answer:** Not yet ready for school. Contagious until all vesicles are completely crusted over (typically 5-7 days after rash onset on day 3 now = 2-4 more days). Respiratory + contact precautions advised. Can return to school when all lesions crusted. Home care: continue supportive treatment, calamine lotion, antihistamines for itching, paracetamol for fever (never aspirin). Close monitoring for secondary bacterial infection (purulent appearance of vesicles).`,
+        mnemonics: [
+          { text: "Koplik spots = white spots on buccal mucosa (Measles pathognomonic)", explanation: "Diagnostic sign" },
+          { text: "Rubella = cervical lymphadenopathy + 3-day rash", explanation: "Milder presentation" },
+          { text: "Varicella = centripetal + multiple stages + intense itch", explanation: "Characteristic pattern" },
+          { text: "Measles: Vitamin A (prevent blindness), Varicella: NO aspirin (Reye risk)", explanation: "Key management points" },
+        ],
+        keyPoints: [
+          "Measles: Koplik spots pathognomonic, high fever, cephalocaudal rash",
+          "Vitamin A supplementation (days 1, 2, 15) critical for measles",
+          "Rubella: milder (low fever, cervical lymph nodes), 3-day rash duration",
+          "Varicella: centripetal distribution, multiple stages simultaneous, intense pruritus",
+          "Measles complications: pneumonia (most common), otitis, encephalitis",
+          "Varicella complications: secondary bacterial pneumonia, Reye syndrome (aspirin association)",
+          "Measles encephalitis: immune-mediated, supportive care only",
+          "Varicella: AVOID aspirin (Reye syndrome), use paracetamol",
+          "MMR within 72h post-exposure: 90% prevention",
+          "Isolation: measles 5 days, rubella 7 days, varicella until crusted",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Case Studies in Exanthems", edition: "9th" },
+        ],
+      },
+    ],
+  },
 ];
-];
-];
+
+export default pediatricsLessonsPartTen;

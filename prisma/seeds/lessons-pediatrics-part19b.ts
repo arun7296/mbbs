@@ -1,16 +1,835 @@
-export const pediatricsLessonsPart19b = [
+import type { TopicLessons } from "./content-loader";
+
+export const pediatricsLessonsPart19b: TopicLessons[] = [
   {
     topicCode: "PE-MOD-08-TOP-02",
     layers: [
       {
         layer: 1,
-        slug: "status-epilepticus-foundation",
-        title: "Status Epilepticus - Foundation",
-        estimatedMinutes: 20,
-        summary:
-          "Status epilepticus (SE) is defined as seizure activity lasting >5 minutes or recurrent seizures without full recovery between them. It is a medical emergency with mortality 5-15%. Subtypes: generalized tonic-clonic (most dangerous), focal, non-convulsive (often missed). First-line treatment: benzodiazepines (lorazepam IV 0.1 mg/kg, max 4 mg). Second-line: phenytoin or fosphenytoin. Management requires rapid seizure termination, supportive care, and treatment of underlying cause.",
-        contentMd: "# Status Epilepticus - Foundation\n\n## Definition & Epidemiology\n**Status Epilepticus (SE):**\n- Seizure activity lasting >5 minutes OR\n- Recurrent seizures without full recovery of consciousness between them\n- Medical emergency requiring immediate intervention\n\n**Incidence in pediatrics:**\n- 1-10% of children with epilepsy\n- Can occur at any age; peak incidence 6 months to 6 years\n- Mortality: 5-15% (varies by type, etiology, age)\n\n## Classification of Status Epilepticus\n\n### By Type\n1. **Generalized Tonic-Clonic SE** (GTCSE):\n   - Most dangerous, highest mortality\n   - Sustained rhythmic muscle contractions\n   - Risk: hypoxia, hyperthermia, rhabdomyolysis, metabolic derangement\n\n2. **Focal (Partial) SE**:\n   - Seizure activity in one limb/region\n   - Lower mortality than GTCSE\n   - May progress to generalized SE (secondarily generalized)\n\n3. **Non-Convulsive SE** (NCSE):\n   - Altered mental status without visible motor activity\n   - Often missed (\"mental status change\" attributed to other causes)\n   - May persist for hours/days before recognition\n   - EEG shows continuous seizure activity\n\n4. **Absence SE**:\n   - Continuous spike-wave discharge on EEG\n   - Altered consciousness; may be subtle\n   - Rare; requires EEG for diagnosis\n\n### Etiology Categories\n\n**Provoked SE** (Identified cause):\n- Hypoxia (cardiac arrest, near-drowning)\n- Head trauma (acute or remote)\n- Intracranial infection (meningitis, encephalitis)\n- Hemorrhage (epidural, subdural, subarachnoid)\n- Metabolic (hypoglycemia, hyponatremia, hypocalcemia)\n- Medication (drug toxicity, withdrawal)\n- Febrile (in young children with fever)\n\n**Unprovoked SE**:\n- Known epilepsy (most common; antiepileptic drug (AED) non-compliance, breakthrough seizures)\n- Remote symptomatic (old stroke, TBI)\n- Idiopathic\n\n## Clinical Presentation\n\n### Early Phase (First 5-10 minutes)\n- Tonic-clonic muscle activity or focal jerking\n- Autonomic signs: tachycardia, hypertension, hyperthermia\n- Incontinence, tongue/cheek biting\n- Pooling of secretions → airway obstruction risk\n\n### Established Phase (10-60 minutes)\n- Continuous seizure activity or recurrent without full recovery\n- Status epilepticus rarely self-terminates after 30 minutes\n- Metabolic complications develop:\n  - Hypoxia (airway obstruction, increased O2 demand)\n  - Hypercarbia (↑ ICP)\n  - Lactic acidosis (anaerobic metabolism)\n  - Hyperthermia (muscle exertion, loss of temperature regulation)\n  - Rhabdomyolysis (sustained muscle contraction → myoglobinuria)\n\n### Refractory Phase (60+ minutes)\n- Seizures continue despite first-line therapy\n- Risk of permanent neuronal damage (\"status-induced brain damage\")\n- Irreversible metabolic complications\n- Mortality increases significantly\n\n## Complications\n\n### Immediate (During SE)\n- **Respiratory**: Aspiration, hypoxia, airway obstruction\n- **Cardiovascular**: Arrhythmias, hypertensive crisis, shock\n- **Metabolic**: Acidosis, hypoglycemia, hyperkalemia (from rhabdomyolysis)\n- **Thermoregulation**: Hyperthermia (core temp >38°C)\n- **Muscular**: Rhabdomyolysis, myoglobinuria, compartment syndrome\n\n### Short-term (After SE)\n- **Acute kidney injury** (from myoglobinuria)\n- **Disseminated intravascular coagulation** (DIC)\n- **Pulmonary edema** (ARDS risk)\n\n### Long-term (After recovery)\n- **Neurological damage**: Neuronal cell death if SE prolonged (>60 min)\n- **Permanent cognitive impairment**: Especially if repeated episodes\n- **Chronic seizure disorder**: Even if first unprovoked SE\n\n## Diagnostic Approach\n\n### Clinical Assessment (Immediate)\n1. **Vital signs**: Assess ABC (Airway, Breathing, Circulation)\n2. **Seizure characteristics**: Type (tonic-clonic, focal), onset, duration\n3. **Known triggers**: Fever, trauma, medication change, illness\n4. **Past medical history**: Epilepsy, prior SE, head injury\n\n### Investigations\n1. **Blood glucose** (fingerstick): Rule out hypoglycemia immediately\n2. **Laboratory**: CBC, CMP (electrolytes, renal function), LFTs, coagulation profile\n3. **Neuroimaging**: CT brain (urgent) if traumatic head injury, focal neurological signs, or if suspected intracranial cause\n4. **Lumbar puncture**: If meningitis/encephalitis suspected (perform after excluding increased ICP)\n5. **EEG**: Once seizures controlled; helps identify seizure focus, rule out NCSE\n6. **Toxicology/drug levels**: AED levels, drug screen if indicated,\n        mnemonics: [\n          {\n            text: \"SE DEFINITION: Seizure >5 min or Episodes recurrent without recovery\",\n            explanation: \"Definition of status epilepticus\",\n          },\n          {\n            text: \"GTCSE = Greatest hazard (Generalized Tonic-Clonic status = greatest danger, highest mortality)\",\n            explanation: \"Most dangerous form of status epilepticus\",\n          },\n        ],\n        keyPoints: [\n          \"Status epilepticus: seizure >5 min or recurrent seizures without recovery; medical emergency\",\n          \"GTCSE most dangerous; mortality 5-15%. NCSE often missed (no motor activity)\",\n          \"First 5 minutes: call EMS, position safely, establish IV access\",\n          \"Complications: hypoxia, hyperthermia, rhabdomyolysis, AKI, permanent neuronal damage if >60 min\",\n          \"Provoked SE common (non-compliance with AEDs in known epilepsy, metabolic, infection, trauma)\",\n        ],\n        textbookRefs: [\n          { book: \"Nelson Textbook of Pediatrics\", chapter: \"Ch 610\", edition: \"21st\" },\n          { book: \"OP Ghai - Essential Pediatrics\", chapter: \"Ch 26\", edition: \"9th\" },\n        ],\n      },\n      {\n        layer: 2,\n        slug: \"status-epilepticus-mechanism\",\n        title: \"Status Epilepticus - Mechanism\",\n        estimatedMinutes: 30,\n        summary:\n          \"Status epilepticus results from failure of endogenous seizure-terminating mechanisms (GABAergic inhibition) and altered benzodiazepine receptor sensitivity. Repeated seizures deplete GABA receptors' responsiveness ('benzodiazepine-resistant' phase). Sustained neuronal firing causes excitotoxicity (glutamate release → Ca2+ influx → neuronal death), hyperthermia, rhabdomyolysis, and progressive metabolic acidosis. Delayed treatment allows irreversible neuronal damage ('status-induced brain damage') after 60+ minutes.\",\n        contentMd: "# Status Epilepticus - Mechanism\\n\\n## Normal Seizure Termination vs SE\\n\\n### Why Most Seizures Self-Terminate\\n1. **Neuronal firing**: Excessive glutamate release → excitatory cascade\\n2. **GABAergic inhibition activates**: Inhibitory neurons release GABA\\n3. **GABA-A receptors** on principal neurons open Cl- channels\\n4. **Hyperpolarization**: Neuronal membrane potential becomes more negative\\n5. **Seizure stops**: Excitation-inhibition balance restored\\n\\n### Why SE Does NOT Self-Terminate\\n1. **GABA-receptor desensitization** occurs with prolonged receptor stimulation\\n2. **Benzodiazepine receptor sensitivity decreases**: Receptors become refractory\\n3. **Surface expression of GABA-A receptors decreases**: Internalization of receptors\\n4. **Phosphorylation of GABA-A subunits**: Changes receptor function\\n5. **Result**: GABA no longer hyperpolarizes neurons effectively\\n6. **Seizures continue**: Self-perpetuating cycle develops\\n\\n## Metabolic Consequences of SE\\n\\n### Hypoxia & Hypercarbia\\n1. **Increased oxygen demand**: Intense muscle activity increases metabolic rate 10-fold\\n2. **Airway obstruction**: Muscle rigidity, secretion pooling, tongue swelling\\n3. **Hypoxemia**: PaO2 drops despite normal ventilation (increased consumption)\\n4. **Hypercarbia**: CO2 accumulation from anaerobic metabolism\\n5. **Cerebral vasodilation**: From hypercarbia → increased ICP\\n6. **Result**: Cerebral hypoxia, potential brain damage\\n\\n### Hyperthermia (Core Temperature >38°C)\\n1. **Muscle exertion**: Sustained contraction generates heat\\n2. **Loss of temperature regulation**: CNS dysfunction impairs thermostasis\\n3. **Rapid core temperature rise**: Can reach 40-42°C\\n4. **Consequences**:\\n   - Further neuronal dysfunction\\n   - Increased seizure threshold (paradoxically, but heat makes brain more vulnerable)\\n   - Risk of heat stroke complications\\n\\n### Rhabdomyolysis\\n1. **Sustained muscle contraction**: Prolonged SE causes severe muscle exertion\\n2. **Muscle fiber breakdown**: Myosin released into bloodstream\\n3. **Myoglobinuria**: Myoglobin filtered by kidneys\\n4. **Acute kidney injury**: Myoglobin precipitates in renal tubules; direct tubular toxicity\\n5. **Hyperkalemia**: From muscle cell breakdown (K+ released)\\n6. **Hyperuricemia**: From muscle nucleotide metabolism\\n\\n### Lactic Acidosis\\n1. **Anaerobic metabolism**: Muscle and brain hypoxia switches to lactate production\\n2. **Lactate accumulation**: Overwhelms lactate clearance by liver\\n3. **pH drops**: Metabolic acidosis develops\\n4. **Cerebral effects**: Acidosis worsens seizure susceptibility, increases ICP\\n5. **Cardiac effects**: Acidosis predisposes to arrhythmias\\n\\n## Excitotoxicity & Neuronal Death\\n\\n### Glutamate Cascade\\n1. **Excessive glutamate release**: From hyperstimulated neurons\\n2. **AMPA/NMDA receptor activation**: Allows Ca2+ influx into neurons\\n3. **Intracellular Ca2+ overload**: Triggers multiple cascades:\\n   - Activation of proteases (calpains) → cytoskeletal damage\\n   - Activation of phospholipases → membrane destruction\\n   - Mitochondrial damage → apoptosis\\n   - Free radical generation → lipid peroxidation\\n\\n### Neuronal Death Pathways\\n1. **Excitotoxic necrosis**: Acute, severe; occurs during SE\\n2. **Apoptosis**: Delayed, hours-days after SE (programmed cell death)\\n3. **Result**: Irreversible neuronal loss, potential permanent cognitive impairment\\n\\n### \\\"Status-Induced Brain Damage\\\" (After 60+ minutes)\\n- Neuronal death accelerates after SE persists >30-60 minutes\\n- Primarily affects hippocampus, cerebral cortex, thalamus\\n- Permanent neurological sequelae if not treated urgently\\n\\n## Benzodiazepine Resistance\\n\\n### Development of Resistance During SE\\n1. **Initial BZD response**: GABA-A receptors respond to BZD\\n2. **Prolonged seizure activity**: 15-30 minutes of GTCSE\\n3. **Phosphorylation of GABA-A subunits**: Changes receptor coupling\\n4. **Internalization of receptors**: Surface expression decreases\\n5. **Altered subunit composition**: GABA-A isoforms change\\n6. **Result**: Reduced BZD efficacy (\\\"benzodiazepam-resistant SE\\\")\\n\\n### Clinical Implication\\n- First BZD often effective if given early (<10 minutes)\\n- Efficacy decreases if SE continues >20-30 minutes\\n- Reinforces importance of RAPID first-line therapy\\n- Second-line agents become essential if BZD fails\\n\\n## BBB Integrity Loss\\n\\n### Increased Permeability During SE\\n1. **Sustained seizure activity**: Hypoxia, hypercarbia, hyperthermia\\n2. **Endothelial tight junction disruption**: Zonula occludens-1 breakdown\\n3. **BBB permeability increases**: Normally impermeable drugs now cross\\n4. **Beneficial effect**: Antiepileptic drugs penetrate better (higher CSF concentrations)\\n5. **Detrimental effect**: Fluid/protein leak → cerebral edema, increased ICP,\\n        mnemonics: [\\n          {\\n            text: \\\"GABA RESISTANCE: Glutamate accumulates, GABA receptors desensitize, Benzodiazepine resistance develops, Atypical/altered function\\\",\\n            explanation: \\\"Why benzodiazepines become less effective with prolonged SE\\\",\\n          },\\n          {\\n            text: \\\"HEAT, RHABDO, LACTIC: Hyperthermia, Excitotoxicity, Acidosis are trio of danger in SE\\\",\\n            explanation: \\\"Three major metabolic crises in status epilepticus\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"SE fails to self-terminate due to GABA-receptor desensitization and benzodiazepine resistance\\\",\\n          \\\"Hypoxia + hypercarbia from airway obstruction and increased O2 consumption → cerebral hypoxia + ICP\\\",\\n          \\\"Rhabdomyolysis → myoglobinuria → acute kidney injury; hyperkalemia from muscle breakdown\\\",\\n          \\\"Excitotoxicity: sustained glutamate release → Ca2+ overload → neuronal death (especially if SE >60 min)\\\",\\n          \\\"Benzodiazepine resistance develops within 15-30 minutes; second-line agents essential if BZD fails\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Ch 610\\\", edition: \\\"21st\\\" },\\n          { book: \\\"Neurology & Seizure Disorders - Clinical Pearls\\\", chapter: \\\"Status Epilepticus\\\", edition: \\\"2nd\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"status-epilepticus-clinical\\\",\\n        title: \\\"Status Epilepticus - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Clinical management follows stepwise protocol with time-critical medications. Stage 1 (0-5 min): lorazepam 0.1 mg/kg IV (max 4 mg), supportive care. Stage 2 (5-20 min): phenytoin 20 mg/kg IV or fosphenytoin 20 mg PE/kg IV. Stage 3 (>20 min): ICU admission, intubation, propofol/pentobarbital infusion. Supportive care includes oxygen, IV access, glucose/electrolyte monitoring, cooling measures. Prognosis depends on early recognition and rapid treatment.\\\",\\n        contentMd: ``# Status Epilepticus - Clinical\\n\\n## Management Overview: Time-Critical Algorithm\\n\\n### Immediate Actions (0-5 minutes, WHILE calling EMS)\\n1. **Safety**: Move patient away from hazards, position on side\\n2. **Airway assessment**: Listen for breathing; assess airway obstruction\\n3. **Oxygen**: Provide supplemental oxygen if available\\n4. **IV access**: Attempt IV access if trained\\n5. **Seizure termination**: Administer first-line medication (lorazepam)\\n6. **Monitoring**: Place on cardiac monitor if available\\n\\n## Pharmacologic Management\\n\\n### Stage 1 (0-5 minutes) - First-Line: Benzodiazepines\\n\\n**Lorazepam (preferred)**:\\n- Dose: 0.1 mg/kg IV (max 4 mg single dose)\\n- Onset: 1-3 minutes\\n- Duration: 4-6 hours (longer than diazepam)\\n- Efficacy: 60-90% terminate seizures\\n- Advantage: Most effective benzodiazepine; longest duration\\n- Route alternatives: IM if no IV access (0.1 mg/kg IM)\\n\\n**Diazepam** (if lorazepam unavailable):\\n- Dose: 0.3 mg/kg IV (max 10 mg)\\n- Onset: 2-5 minutes\\n- Duration: 20-30 minutes (shorter; may need repeat dosing)\\n- Less preferred than lorazepam (shorter duration)\\n\\n**Midazolam** (if IV/IM access difficult):\\n- Dose: 0.2 mg/kg IM or 0.15 mg/kg intranasal (max 10 mg)\\n- Onset: 3-5 minutes IM; 10 minutes intranasal\\n- Useful in pre-hospital/emergency setting\\n\\n### Stage 2 (5-20 minutes) - Second-Line AEDs\\n\\n**Phenytoin**:\\n- Dose: 20 mg/kg IV loading dose\\n- Rate: ≤50 mg/minute (risk of arrhythmia if faster)\\n- Efficacy: 60-85% when combined with BZD\\n- Monitor: Cardiac rate/rhythm during infusion\\n- Advantage: Long-acting (24-hour half-life)\\n- Disadvantage: Cardiac effects; requires cardiac monitoring\\n\\n**Fosphenytoin** (phosphate prodrug of phenytoin):\\n- Dose: 20 mg PE/kg IV (PE = phenytoin equivalent)\\n- Rate: Can be infused up to 150 mg/minute (safer cardiac profile)\\n- Less cardiac toxicity than phenytoin\\n- More expensive than phenytoin\\n- Preferred if cardiac concerns\\n\\n**Valproic Acid** (alternative):\\n- Dose: 15-20 mg/kg IV\\n- Efficacy: Similar to phenytoin\\n- Advantage: Less cardiac effects\\n- Disadvantage: Hepatotoxicity risk; contraindicated if liver disease\\n\\n**Levetiracetam** (increasingly used):\\n- Dose: 30-60 mg/kg IV (max 4,500 mg)\\n- Efficacy: Growing evidence of effectiveness\\n- Advantage: No cardiac/metabolic effects, no drug interactions\\n- Onset slower than phenytoin\\n\\n### Stage 3 (>20 minutes) - Refractory SE - ICU Management\\n\\n**Indications for ICU/Intubation**:\\n- Seizures persisting >20 minutes despite Stage 1 + Stage 2 therapy\\n- Generalized tonic-clonic SE (high aspiration/hypoxia risk)\\n- Inability to protect airway\\n\\n**Continuous Infusions** (after intubation):\\n1. **Propofol** (preferred):\\n   - Bolus: 1-2 mg/kg IV\\n   - Infusion: 1-5 mg/kg/hour (titrate to cessation of seizure on EEG)\\n   - Onset: Seconds\\n   - Duration: Minutes (short infusion half-life)\\n   - Advantage: Rapid titration; anticonvulsant properties\\n   - Disadvantage: Propofol infusion syndrome (prolonged infusion risk)\\n\\n2. **Pentobarbital** (alternative):\\n   - Bolus: 5-15 mg/kg IV slowly\\n   - Infusion: 0.5-1 mg/kg/hour (up to 5 mg/kg/hour)\\n   - Onset: Slower than propofol\\n   - Duration: Longer\\n   - Advantage: Alternative if propofol not available\\n   - Disadvantage: Slower on/off; respiratory depression\\n\\n3. **Midazolam** (alternative):\\n   - Bolus: 0.15-0.3 mg/kg IV\\n   - Infusion: 0.5-1 mg/kg/hour (may go higher)\\n   - Good seizure control; less hemodynamic effect\\n\\n**Sedation Level**: Deep sedation with EEG monitoring\\n- Goal: Seizure termination on EEG (both clinical and electrographic)\\n- Some recommend burst-suppression pattern on EEG\\n- Continuous EEG monitoring essential\\n\\n## Supportive Care (Parallel to Drug Therapy)\\n\\n### Airway & Respiratory\\n- **Oxygen**: Provide FiO2 sufficient to maintain SpO2 >94%\\n- **Positioning**: Side-lying (recovery position) if not intubated\\n- **Airway management**: Intubate early if unable to protect airway\\n- **Ventilation target**: Maintain normal PCO2 (avoid hypercarbia)\\n\\n### Circulation & Hemodynamics\\n- **IV access**: Two large-bore lines if possible\\n- **Fluid resuscitation**: Normal saline for hypotension (rhabdomyolysis risk)\\n- **Vasopressors**: For persistent hypotension (rarely needed in SE)\\n- **Monitor**: HR, BP, rhythm continuously\\n\\n### Thermoregulation\\n- **Cooling measures**: If core temp >38.5°C\\n  - Cooling blanket, ice packs to groins/axillae\\n  - Cold IV saline administration\\n- **Target**: Maintain normothermia (36-37°C)\\n\\n### Metabolic Management\\n- **Glucose**: Fingerstick immediately; dextrose if hypoglycemic\\n- **Electrolytes**: Check serum K+, Na+, Mg, Ca (correct abnormalities)\\n- **Acid-base**: Hyperventilate if intubated (reduces CO2 → pH improvement)\\n- **Fluids**: Aggressive hydration for rhabdomyolysis prevention (target UOP 200-300 mL/h)\\n\\n### Seizure Monitoring\\n- **Clinical**: Muscle activity monitoring\\n- **EEG**: Continuous EEG if available (essential for NCSE detection, sedation adequacy)\\n- **Medications**: Have emergency AED kit available at bedside\\n\\n## Investigations & Monitoring\\n\\n### Initial Labs (STAT)\\n- Blood glucose (fingerstick)\\n- CBC, CMP (electrolytes, renal function, glucose)\\n- LFTs\\n- Coagulation profile (PT/INR, aPTT)\\n- ABG (assess pH, PCO2, PaO2)\\n- AED levels (if on chronic therapy)\\n\\n### Ongoing Monitoring\\n- Vital signs: Continuous\\n- Urine output & color (watch for myoglobinuria = dark/cola-colored)\\n- Serum electrolytes: Repeat Q2-4 hours initially\\n- Creatinine/BUN: Daily (assess AKI development)\\n- CK level: If rhabdomyolysis suspected (confirms muscle damage)\\n\\n### Neuroimaging\\n- **CT brain**: If traumatic head injury, focal neurological signs, or impending herniation\\n- **MRI**: Once seizures controlled, to identify structural cause (e.g., tumor, AVM, cortical malformation)\\n- **Timing**: Imaging should NOT delay seizure management\\n\\n### EEG\\n- **When**: After seizures controlled or as soon as feasible\\n- **Purpose**: Confirm seizure termination, detect non-convulsive SE, guide sedation\\n- **Ideal**: Continuous EEG monitoring in ICU\\n\\n## Complications Management\\n\\n### Rhabdomyolysis & AKI\\n- **Prevention**: Aggressive IV hydration (target UOP 200-300 mL/h with normal saline)\\n- **Monitoring**: Urine color, creatinine, BUN, CK\\n- **Alkalinization**: NaHCO3 in IV fluids to maintain urine pH >6.5 (protects against myoglobin precipitation)\\n- **Monitoring dialysis**: If Cr >4-5 mg/dL or K+ >6.5 mEq/L\\n\\n### DIC (Disseminated Intravascular Coagulation)\\n- **Check**: PT/INR, aPTT, fibrinogen, D-dimer\\n- **Management**: Correct underlying cause (seizures), transfuse platelets/FFP if bleeding\\n- **Usually resolves** with seizure control\\n\\n### Aspiration Pneumonia\\n- **Risk**: High in GTCSE with impaired airway protection\\n- **Prevention**: Early intubation, gastric suction\\n- **Management**: Antibiotics if aspiration suspected; CXR if fever develops\\n\\n## Prognosis & Outcomes\\n- **Mortality**: 5-15% (higher in geriatric, severe etiologies)\\n- **Morbidity**: Permanent neurological sequelae in 20-30% of survivors (cognitive, behavioral)\\n- **Factors affecting outcome**:\\n  - Early recognition & treatment (best outcome within 10-20 minutes)\\n  - Duration of SE (longer → worse outcome)\\n  - Etiology (provoked vs unprovoked; some etiologies worse)\\n  - Age (extremes of age have worse prognosis)\\n\\n## Seizure Recurrence Prevention\\n- **Identify etiology**: Infection, metabolic, medication, structure\\n- **Treat underlying cause**: Antibiotics for meningitis, glucose for hypoglycemia, etc.\\n- **AED continuation**: If known epilepsy, ensure medication compliance\\n- **New AED initiation**: If first unprovoked SE, discuss antiepileptic therapy start\\n- **Follow-up**: Neurology consultation; EEG repeat if baseline abnormal,\\n        mnemonics: [\\n          {\\n            text: \\\"LORAZEPAM FIRST: 0.1 mg/kg IV (max 4 mg), rapid onset 1-3 min, most effective BZD\\\",\\n            explanation: \\\"First-line SE management drug & dose\\\",\\n          },\\n          {\\n            text: \\\"PHENYTOIN NEXT: 20 mg/kg IV @ ≤50 mg/min (risk arrhythmia), second-line if BZD fails\\\",\\n            explanation: \\\"Second-line SE treatment with dosing & monitoring\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Status epilepticus: call EMS, give lorazepam 0.1 mg/kg IV (max 4 mg) within 5 minutes\\\",\\n          \\\"Stage 2 (5-20 min): Add phenytoin 20 mg/kg IV @ ≤50 mg/min or fosphenytoin 20 PE/kg IV\\\",\\n          \\\"Stage 3 (>20 min): Intubate, continuous propofol/pentobarbital infusion, ICU care with EEG monitoring\\\",\\n          \\\"Supportive care: oxygen, IV fluids, cooling, glucose correction, aggressive hydration for rhabdo/AKI prevention\\\",\\n          \\\"Prognosis depends on rapid recognition & treatment; delay >60 min increases risk of irreversible brain damage\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Ch 610\\\", edition: \\\"21st\\\" },\\n          { book: \\\"OP Ghai - Essential Pediatrics\\\", chapter: \\\"Ch 26\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"status-epilepticus-exam\\\",\\n        title: \\\"Status Epilepticus - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary:\\n          \\\"Key exam facts: lorazepam 0.1 mg/kg IV first-line (0-5 min), phenytoin 20 mg/kg IV second-line (5-20 min), propofol infusion third-line (>20 min). Mortality 5-15%. Complications: hypoxia, hyperthermia, rhabdomyolysis (AKI), neuronal death >60 min. Supportive care includes oxygen, IV access, cooling, hydration. Common MCQ pitfalls: wrong BZD dose, IV rate too fast for phenytoin (cardiac risk), missing NCSE.\\\",\\n        contentMd: ``# Status Epilepticus - Exam Prep\\n\\n## Quick Reference - SE Management Timeline\\n\\n| Stage | Time | First-Line Drug | Dose/Route | Alternative |\\n|---|---|---|---|---|\\n| 1 | 0-5 min | Lorazepam | 0.1 mg/kg IV (max 4 mg) | Diazepam 0.3 mg/kg IV |\\n| 2 | 5-20 min | Phenytoin | 20 mg/kg IV @ ≤50 mg/min | Fosphenytoin 20 PE/kg IV @ 150 mg/min |\\n| 3 | >20 min | Propofol | 1-2 mg/kg bolus + 1-5 mg/kg/h infusion | Pentobarbital or midazolam |\\n\\n## High-Yield MCQ Concepts\\n\\n### Q: 7-year-old in GTCSE for 3 minutes. What is first intervention?\\n**A**: Lorazepam 0.1 mg/kg IV (max 4 mg) immediately. Onset 1-3 minutes. Simultaneously call EMS, provide oxygen, position safely on side. Do NOT wait for imaging or lab results.\\n\\n### Q: 40 mg lorazepam dose in a 10 kg child. Correct dose?\\n**A**: NO, overdose. Maximum single dose = 4 mg regardless of weight. 10 kg child gets 1 mg (0.1 × 10 kg = 1 mg). Always remember max 4 mg for pediatric lorazepam.\\n\\n### Q: Seizures continue 10 minutes after lorazepam given. Next step?\\n**A**: Administer phenytoin 20 mg/kg IV over 10-20 minutes at rate ≤50 mg/minute (to avoid cardiac arrhythmias). Monitor cardiac rhythm during infusion. Fosphenytoin alternative if cardiac concerns (can infuse faster @ 150 mg/min).\\n\\n### Q: Phenytoin infusion running too fast (100 mg/min). What is risk?\\n**A**: Cardiac arrhythmias (bradycardia, AV block). Phenytoin has negative inotropic effects. Safe rate ≤50 mg/minute. Slow infusion immediately if arrhythmias detected.\\n\\n### Q: SE lasting 25 minutes despite lorazepam + phenytoin. What now?\\n**A**: This is refractory SE (>20 min resistant to standard therapy). Intubate, place on propofol infusion 1-2 mg/kg bolus then 1-5 mg/kg/h (titrate to seizure cessation on EEG). Continuous EEG monitoring required. ICU admission.\\n\\n### Q: Child with SE has dark, cola-colored urine. What is suspected complication?\\n**A**: Rhabdomyolysis (muscle breakdown → myoglobinuria). Check CK level. Aggressive IV hydration essential (target UOP 200-300 mL/h). Add sodium bicarbonate to IV fluids (maintain urine pH >6.5). Monitor creatinine for AKI development.\\n\\n### Q: Which type of SE is most often missed?\\n**A**: Non-convulsive SE (NCSE). No motor activity visible; only altered mental status. Often attributed to other causes (encephalitis, infection, metabolic). EEG shows continuous seizure activity. Diagnosis requires high suspicion + EEG.\\n\\n### Q: How long into SE do neuronal death & permanent brain damage risk increase significantly?\\n**A**: 30-60 minutes. \\\"Status-induced brain damage\\\" (irreversible neuronal loss) risk increases substantially if SE >60 minutes. Emphasizes urgency of RAPID treatment (goal termination within 20 minutes).\\n\\n## Critical Drug Dosing & Routes\\n| Drug | Dose | Route | Max | Onset |\\n|---|---|---|---|---|\\n| Lorazepam | 0.1 mg/kg | IV, IM | 4 mg | 1-3 min |\\n| Diazepam | 0.3 mg/kg | IV, PR | 10 mg | 2-5 min |\\n| Phenytoin | 20 mg/kg | IV | No max | 5-10 min |\\n| Fosphenytoin | 20 PE/kg | IV, IM | No max | 3-5 min |\\n| Propofol | 1-2 mg/kg bolus | IV | 2 mg/kg bolus | 10-30 sec |\\n\\n## Common Exam Mistakes\\n| Wrong Approach | Why It's Wrong | Correct Approach |\\n|---|---|---|\\n| High lorazepam dose (8 mg in small child) | Overdose risk (max 4 mg single dose) | Cap dose at 4 mg regardless of weight |\\n| Phenytoin infused at 100+ mg/min | Risk of cardiac arrhythmias | Infuse at ≤50 mg/minute |\\n| Diazepam rectal if IV available | IV faster, more reliable | Always prefer IV route if feasible |\\n| Delay second-line AED for lab results | SE continues; neuronal death accelerates | Give phenytoin by 20-minute mark |\\n| Miss NCSE (assume seizures stopped) | Patient still seizing on EEG | Get EEG to confirm seizure termination |\\n| Forget cooling measures (hyperthermic) | Hyperthermia worsens seizures/brain damage | Cool to normothermia |\\n| Inadequate hydration in myoglobinuria | AKI develops despite seizure control | Aggressive fluids (target UOP 200-300 mL/h) |\\n\\n## Critical Clinical Pearls\\n1. **\\\"Lorazepam 0.1 mg/kg IV max 4 mg\\\"** - most important first drug\\n2. **\\\"Phenytoin ≤50 mg/min\\\"** - cardiac toxicity risk if faster\\n3. **\\\"SE >60 min = permanent brain damage risk\\\"** - emphasizes urgency\\n4. **\\\"NCSE easily missed\\\"** - EEG essential if mental status changes without motor seizures\\n5. **\\\"Myoglobinuria = aggressive fluids + alkaline urine\\\"** - prevent AKI\\n6. **\\\"Refractory SE (>20 min) = ICU + propofol + EEG\\\"**,\\n        mnemonics: [\\n          {\\n            text: \\\"LAZE: Lorazepam 0.1 mg/kg (max 4 mg), Airway/oxygen, Zero time to act, Early recognition saves brain\\\",\\n            explanation: \\\"SE management mnemonic emphasizing urgency\\\",\\n          },\\n          {\\n            text: \\\"MAX4: Maximum lorazepam = 4 mg in pediatric SE\\\",\\n            explanation: \\\"Critical dosing maximum to remember\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Lorazepam 0.1 mg/kg IV (max 4 mg) first-line, onset 1-3 minutes\\\",\\n          \\\"Phenytoin 20 mg/kg IV @ ≤50 mg/min (cardiac monitoring) second-line if seizures persist\\\",\\n          \\\"SE >20 min refractory: intubate, propofol infusion, ICU care, continuous EEG\\\",\\n          \\\"Complications: hypoxia, hyperthermia (cool to normothermia), rhabdo (aggressive hydration, UOP 200-300 mL/h)\\\",\\n          \\\"Delayed treatment >60 min increases risk of permanent neurological damage (irreversible neuronal death)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Ch 610\\\", edition: \\\"21st\\\" },\\n          { book: \\\"NEET/DNB Pediatrics - Seizure Disorders\\\", chapter: \\\"Status Epilepticus\\\", edition: \\\"2024\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"status-epilepticus-recall\\\",\\n        title: \\\"Status Epilepticus - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary:\\n          \\\"Active recall on drug doses/routes, timing, complications, and special situations. Focus on critical decision points: lorazepam dosing, phenytoin infusion rate, when to intubate, rhabdomyolysis management, NCSE recognition.\\\",\\n        contentMd: ``# Active Recall - Status Epilepticus\\n\\n**Q1: A 5 kg toddler is in generalized tonic-clonic SE for 2 minutes. What is the lorazepam dose?**\\n> Lorazepam 0.1 mg/kg = 0.1 × 5 = 0.5 mg IV. Continue oxygen, position on side, establish IV access. Call EMS simultaneously.\\n\\n**Q2: After lorazepam given, seizures persist at 15 minutes. What is next medication?**\\n> Phenytoin 20 mg/kg IV. If child is 15 kg: 20 × 15 = 300 mg. Infuse at rate ≤50 mg/minute (300 mg over 6+ minutes). Monitor cardiac rhythm during infusion.\\n\\n**Q3: Phenytoin infusion rate too fast (100 mg/min). What happens?**\\n> Risk of cardiac arrhythmias (bradycardia, AV block, asystole). Slow infusion immediately. Monitor ECG continuously during phenytoin admin.\\n\\n**Q4: SE lasting 30 minutes despite lorazepam + phenytoin. Patient now hyperthermic (40°C). What is your plan?**\\n> This is refractory SE requiring ICU admission. Intubate for airway protection. Initiate propofol bolus 1-2 mg/kg IV, then propofol infusion 1-5 mg/kg/h. Place on continuous EEG. Cool patient actively (target normothermia).\\n\\n**Q5: 8-year-old with SE has rhabdomyolysis (CK 5000 U/L, myoglobinuria). What fluid management?**\\n> Aggressive IV hydration with normal saline (target urine output 200-300 mL/h). Add sodium bicarbonate to IV fluids to maintain urine pH >6.5 (prevents myoglobin precipitation in tubules). Monitor creatinine for AKI. Consider dialysis if Cr rises significantly.\\n\\n**Q6: Child appears to have stopped seizing clinically. How do you confirm seizure termination?**\\n> Obtain EEG (continuous monitoring ideal). Some children have non-convulsive SE (NCSE) - seizures on EEG despite absence of motor activity. EEG is only way to confirm true seizure cessation.\\n\\n**Q7: A 2-year-old in SE has been seizing for 65 minutes despite maximum therapy. What is the neurological consequence?**\\n> Risk of status-induced brain damage (irreversible neuronal death) significantly increases after 60+ minutes. Permanent cognitive impairment, behavioral changes possible. This emphasizes importance of rapid recognition & treatment.\\n\\n**Q8: What is the maximum single dose of lorazepam in pediatric SE?**\\n> 4 mg regardless of weight. A 50 kg adolescent still gets max 4 mg (not 5 mg for 50 kg body weight).\\n\\n**Q9: Which second-line AED is preferred if phenytoin causes arrhythmias?**\\n> Fosphenytoin (phosphate prodrug) - safer cardiac profile, can infuse faster (up to 150 mg/min vs 50 mg/min for phenytoin). OR valproic acid 15-20 mg/kg IV (minimal cardiac effects). OR levetiracetam 30-60 mg/kg IV.\\n\\n**Q10: SE controlled with propofol infusion. How long should sedation continue?**\\n> Continue until seizure-free on EEG for 24-48 hours. Some recommend burst-suppression pattern initially. Then gradually taper sedation. May transition to long-term AED once seizures controlled & etiology addressed.,\\n        mnemonics: [\\n          {\\n            text: \\\"SE-CRITICAL: Status >5 min, Emergency lorazepam (0.1 mg/kg), Call EMS, Rapid phenytoin (20 mg/kg @ ≤50), Intubate if >20 min, Temperature control, Investigate cause, Cooling & fluid management, Aggressive supportive care, Limit neuro damage\\\",\\n            explanation: \\\"Comprehensive SE management timeline\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Lorazepam 0.1 mg/kg IV (max 4 mg) first-line; onset 1-3 minutes\\\",\\n          \\\"Phenytoin 20 mg/kg IV second-line if seizures persist; infuse at ≤50 mg/min (cardiac toxicity risk)\\\",\\n          \\\"SE >20 min: intubate, propofol infusion, ICU, continuous EEG\\\",\\n          \\\"Complications: rhabdo (aggressive hydration, alkaline urine), hyperthermia (cooling), NCSE (EEG confirmation needed)\\\",\\n          \\\"SE >60 min = risk of permanent neuronal death; emphasizes URGENT treatment\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai - Essential Pediatrics\\\", chapter: \\\"Ch 26\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n  {\\n    topicCode: \\\"PE-MOD-08-TOP-03\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"poisoning-children-foundation\\\",\\n        title: \\\"Poisoning in Children - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Pediatric poisoning is leading cause of injury-related death. Common agents: kerosene (most common in India), pesticides (organophosphate compounds), iron, acetaminophen, NSAIDs, sedatives. Toxic mechanisms vary: corrosive injury (acids/bases), cholinergic crisis (OPC), hepatotoxicity (paracetamol), CNS depression (sedatives). Clinical presentation depends on agent, dose, route, and timing. Management includes supportive care, decontamination (activated charcoal, gastric lavage), specific antidotes, and monitoring for complications.\\\",\\n        contentMd: ``# Poisoning in Children - Foundation\\n\\n## Introduction & Epidemiology\\n\\n**Pediatric Poisoning Characteristics:**\\n- Peak age: 1-5 years (accidental ingestions, hand-to-mouth behavior)\\n- Most common route: Oral\\n- Leading cause of injury-related death in children\\n- Higher incidence in resource-limited settings (pesticide exposure, home remedies)\\n\\n## Common Poisoning Agents in India\\n\\n### Kerosene (Most Common)\\n- Hydro carbon solvent (petroleum distillate)\\n- Often used as fuel, cleaning agent, insecticide solvent\\n- Ingestion most common route (occasionally inhalation)\\n\\n### Organophosphate Pesticides (OPC)\\n- Agricultural pesticide (very common in farming communities)\\n- Highly toxic; cholinergic crisis mechanism\\n- Accidental exposure (field work) or intentional (adolescent poisoning)\\n\\n### Medications\\n- **Iron** (supplementation, prenatal vitamins)\\n- **Acetaminophen (Paracetamol)** (analgesic/antipyretic)\\n- **NSAIDs** (ibuprofen, aspirin)\\n- **Sedatives** (benzodiazepines, barbiturates, antihistamines)\\n- **Theophylline** (asthma medication)\\n\\n### Other Agents\\n- **Alcohol** (ethanol, methanol)\\n- **Corrosives** (acids, alkalis) - household cleaners\\n- **Heavy metals** (lead from paint, mercury from thermometers)\\n- **Plants** (dhatura, oleander, ricin-containing seeds)\\n\\n## Toxic Mechanisms & Clinical Features\\n\\n### Kerosene Toxicity\\n**Mechanism:** Direct CNS depression + lung damage from aspiration\\n- **GI effects**: Nausea, vomiting, abdominal pain (though GI absorption limited)\\n- **CNS effects**: Depression, ataxia, stupor, coma\\n- **Respiratory**: Aspiration pneumonitis (\\\"hydrocarbon pneumonitis\\\") - key danger\\n- **Cardiac**: Arrhythmias (rare)\\n\\n### Organophosphate Poisoning (Cholinergic Crisis)\\n**Mechanism:** Inhibits acetylcholinesterase → acetylcholine accumulation\\n- **Muscarinic effects** (DUMB-BELS):\\n  - Diarrhea, Urination\\n  - Miosis (pin-point pupils)\\n  - Bradycardia, Bronchospasm\\n  - Emesis, Lacrimation, Salivation\\n- **Nicotinic effects**: Muscle fasciculations, paralysis\\n- **CNS**: Seizures, coma, depression\\n\\n### Iron Poisoning\\n**Mechanism:** Corrosive GI mucosal damage; systemic toxicity\\n- **Phase 1** (30 min-6 hours): GI hemorrhage, vomiting, abdominal pain\\n- **Phase 2** (6-24 hours): Apparent improvement (\\\"honeymoon period\\\")\\n- **Phase 3** (12-48 hours): Systemic toxicity - acidosis, shock, seizures, coma\\n- **Phase 4** (days-weeks): GI stenosis from scarring\\n\\n### Acetaminophen (Paracetamol) Poisoning\\n**Mechanism:** Glutathione depletion → hepatotoxicity\\n- **Phase 1** (24 hours): Nausea, vomiting, anorexia (mild)\\n- **Phase 2** (24-72 hours): Apparent improvement; liver damage ongoing\\n- **Phase 3** (72-96 hours): Peak hepatotoxicity - jaundice, coagulopathy, encephalopathy, renal failure\\n- **Phase 4** (weeks): Recovery or fulminant hepatic failure\\n\\n## Classification by Severity\\n\\n### Mild Poisoning\\n- Minimal symptoms (nausea, mild vomiting)\\n- Alert mental status\\n- Vital signs normal\\n- No systemic effects yet\\n\\n### Moderate Poisoning\\n- Multiple GI symptoms (vomiting, abdominal pain, diarrhea)\\n- Mild CNS depression (lethargy but arousable)\\n- Mild tachycardia, hypertension\\n- Beginning of systemic signs\\n\\n### Severe Poisoning\\n- Severe GI symptoms (hemorrhage, perforation)\\n- Significant CNS depression (coma, unresponsiveness)\\n- Hypotension, shock, arrhythmias\\n- Multi-organ involvement\\n- High risk of death\\n\\n## Diagnostic Approach\\n\\n### History Taking (SLUDGE When Exposed)\\n1. **What was ingested** (agent name, amount if known, time of ingestion)\\n2. **When** (time critical for treatment - Rumack-Matthew nomogram for acetaminophen)\\n3. **Route** (oral, inhalation, dermal)\\n4. **Symptoms** (when onset, progression)\\n5. **Any treatment given** (at home, in transit)\\n\\n### Physical Examination\\n1. **Vital signs**: Tachycardia, bradycardia, hypertension, hypotension\\n2. **CNS**: Alert? Lethargy? Coma? Seizures? Pupil size?\\n3. **GI**: Salivation, odor on breath, abdominal tenderness, bleeding\\n4. **Respiratory**: Stridor, wheeze, respiratory distress (aspiration risk)\\n5. **Skin**: Burns (corrosives), needle marks (IV drugs)\\n\\n### Investigations\\n1. **Vital function labs**: ABG, electrolytes, glucose, renal function\\n2. **Drug-specific tests**: Serum levels (iron, acetaminophen, salicylate, theophylline)\\n3. **Toxin-specific**: OPC level, carboxyhemoglobin (CO poisoning)\\n4. **Organ function**: LFTs, coagulation profile (hepatotoxicity), CK (rhabdomyolysis)\\n5. **Imaging**: Chest X-ray (aspiration, pneumonitis), abdominal X-ray (radiopaque agents)\\n\\n### Rumack-Matthew Nomogram (Acetaminophen)\\n- Uses serum acetaminophen level + hours post-ingestion\\n- Determines risk of hepatotoxicity\\n- Guides need for antidote (N-acetylcysteine) therapy,\\n        mnemonics: [\\n          {\\n            text: \\\"POISONING TYPES: Kerosene (aspiration), OPC (cholinergic), Iron (GI bleed→systemic), Acetaminophen (delayed hepatotox), Sedatives (CNS depression)\\\",\\n            explanation: \\\"Common pediatric poisons & mechanisms\\\",\\n          },\\n          {\\n            text: \\\"MUSCARINIC (OPC): DUMB-BELS (Diarrhea, Urination, Miosis, Bronchospasm, Emesis, Lacrimation, Salivation)\\\",\\n            explanation: \\\"Organophosphate poisoning signs (cholinergic excess)\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Kerosene: most common pediatric poison in India; aspiration pneumonitis main danger\\\",\\n          \\\"OPC poisoning: cholinergic crisis (miosis, bronchospasm, salivation, diarrhea); atropine antidote\\\",\\n          \\\"Iron poisoning: 4 phases (GI hemorrhage → honeymoon → systemic toxicity → scarring)\\\",\\n          \\\"Acetaminophen: delayed hepatotoxicity (phase 3 at 72-96h); Rumack-Matthew nomogram guides treatment\\\",\\n          \\\"Management: ABCs, decontamination, supportive care, specific antidotes, organ monitoring\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai - Essential Pediatrics\\\", chapter: \\\"Ch 32\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Ch 740\\\", edition: \\\"21st\\\" },\\n        ],\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"poisoning-children-mechanism\\\",\\n        title: \\\"Poisoning in Children - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary:\\n          \\\"Toxic mechanisms vary by agent: kerosene causes CNS depression and aspiration pneumonitis through lipid solubility; OPC inhibits acetylcholinesterase via phosphorylation; iron corrodes mucosa and causes free radical damage; acetaminophen depletes glutathione leading to protein binding and hepatocyte necrosis. Understanding mechanisms guides specific antidotes: atropine for OPC (blocks acetylcholine), deferoxamine for iron (chelation), N-acetylcysteine for acetaminophen (glutathione replacement).\\\",\\n        contentMd: `# Poisoning in Children - Mechanism\\n\\n## Kerosene Toxicity Mechanism\\n\\n### CNS Depression Pathway\\n1. **Lipophilic absorption**: Kerosene dissolves in lipid membranes\\n2. **BBB penetration**: Crosses blood-brain barrier easily\\n3. **Neuronal membrane effects**: Disrupts neuronal function\\n4. **GABA enhancement**: Facilitates inhibitory neurotransmission\\n5. **Result**: CNS depression (dose-dependent: ataxia → stupor → coma)\\n\\n### Aspiration Pneumonitis\\n1. **Low surface tension**: Kerosene spreads quickly in lungs\\n2. **Direct epithelial damage**: Chemical burn of alveolar lining\\n3. **Inflammation cascade**: Immune response to chemical injury\\n4. **Pulmonary edema**: Fluid leak from damaged capillaries\\n5. **Hypoxemia**: Ventilation-perfusion mismatch\\n6. **ARDS risk**: If severe (rare)\\n\\n### Timing of Symptoms\\n- **Peak aspiration risk**: Within 30 minutes to 4 hours post-ingestion\\n- **Respiratory symptoms**: Cough, stridor, wheezing, respiratory distress\\n- **Delayed onset**: Some develop pneumonitis 12-24 hours after ingestion\\n\\n## Organophosphate Poisoning Mechanism\\n\\n### Acetylcholinesterase Inhibition\\n1. **Normal function**: Acetylcholinesterase breaks down acetylcholine in synapses\\n2. **OPC binding**: Organophosphate phosphorylates serine residue on esterase\\n3. **Irreversible inhibition**: Enzyme becomes permanently inactivated (\\\"aging\\\")\\n4. **Acetylcholine accumulation**: Builds up in synapses + neuromuscular junction\\n5. **Overstimulation**: Excessive muscarinic + nicotinic receptor activation\\n\\n### Muscarinic Effects (Parasympathetic Overdrive)\\n- **Miosis (pinpoint pupils)**: Excessive parasympathetic tone on iris sphincter\\n- **Bronchospasm**: Acetylcholine causes bronchial smooth muscle contraction\\n- **Bradycardia**: Vagal stimulation of SA node\\n- **Salivation/Lacrimation**: Excessive glandular secretion\\n- **Diarrhea/Urination**: GI + urinary smooth muscle contraction\\n- **Pulmonary edema**: From bronchospasm + increased capillary permeability\\n\\n### Nicotinic Effects (NMJ & Autonomic)\\n- **Fasciculations**: Initial visible muscle twitching (acetylcholine excess)\\n- **Paralysis**: Prolonged depolarization prevents repolarization (\\\"depolarization block\\\")\\n- **Respiratory failure**: Diaphragm paralysis → need intubation\\n- **Cardiac effects**: Mixed (brady + tachy potential)\\n\\n### Atropine Antidote Mechanism\\n- **Muscarinic antagonist**: Blocks acetylcholine at M1-M5 receptors\\n- **Effects**: Reverses miosis, bronchospasm, salivation, bradycardia, GI symptoms\\n- **Limitation**: Does NOT reverse nicotinic effects (paralysis, fasciculations)\\n- **PAM (Pralidoxime)**: Reactivates acetylcholinesterase (if given early <24 hours)\\n\\n## Iron Poisoning Mechanism\\n\\n### Phase 1 (30 min - 6 hours): Acute GI Toxicity\\n1. **Iron ferrous salt (Fe2+)**: Active form causing damage\\n2. **Direct mucosal corrosion**: Iron ion damages epithelial cells\\n3. **Hydrogen peroxide generation**: Free radical formation\\n4. **GI hemorrhage**: Erosion into blood vessels\\n5. **Shock risk**: Severe bleeding can cause hypovolemic shock\\n\\n### Phase 2 (6-24 hours): \\\"Honeymoon Period\\\"\\n1. **Apparent improvement**: GI symptoms resolve transiently\\n2. **Iron absorption ongoing**: Systemic iron accumulating\\n3. **MISLEADING**: Clinician may think child recovering\\n4. **Critical period for treatment**: N-acetylcysteine/deferoxamine effects diminishing\\n\\n### Phase 3 (12-48 hours): Systemic Toxicity\\n1. **Iron distribution**: Affects liver, heart, CNS, kidneys\\n2. **Hepatotoxicity**: Direct iron damage to hepatocytes\\n   - Mitochondrial damage\\n   - Lipid peroxidation\\n   - Hepatocyte necrosis\\n3. **Metabolic acidosis**: From free radical damage + anaerobic metabolism\\n4. **Shock**: Cardiovascular collapse\\n5. **Seizures/Coma**: CNS toxicity + hypoglycemia + acidosis\\n6. **Mortality**: Can be >50% in severe cases if untreated\\n\\n### Phase 4 (days-weeks): GI Scarring\\n1. **Fibrosis**: Healing of mucosal erosions\\n2. **Stenosis**: Scar tissue narrows pylorus or duodenum\\n3. **Obstruction**: May require surgical correction months later\\n\\n### Deferoxamine Mechanism\\n- **Iron chelator**: Binds Fe2+ and Fe3+ tightly\\n- **Ferrioxamine complex**: Non-toxic; excreted in urine\\n- **Urinary color**: Dark orange (\\\"iced tea\\\" or \\\"rusty\\\" urine if significant iron levels)\\n- **Effectiveness**: Must be given early (Phase 1) for maximum benefit\\n\\n## Acetaminophen Poisoning Mechanism\\n\\n### Normal Metabolism\\n1. **First-pass metabolism**: Acetaminophen absorbed from GI tract\\n2. **Hepatic metabolism** (3 pathways):\\n   - **Glucuronidation** (55%): Conjugated, excreted in urine (non-toxic)\\n   - **Sulfation** (35%): Conjugated, excreted (non-toxic)\\n   - **Oxidation via CYP2E1** (5-10%): Forms toxic metabolite N-acetyl-p-benzoquinone imine (NAPQI)\\n\\n### Glutathione Detoxification (Normal)\\n1. **NAPQI (toxic)**: Formed from CYP2E1 oxidation\\n2. **Glutathione conjugation**: Glutathione binds to NAPQI, detoxifying it\\n3. **Safe elimination**: NAPQI-glutathione complex excreted\\n\\n### Overdose - Glutathione Depletion\\n1. **Excessive NAPQI formation**: From high acetaminophen dose\\n2. **Glutathione depletion**: Liver reserves exhausted\\n3. **Unchecked NAPQI**: Binds to hepatic proteins (not detoxified)\\n4. **Hepatocyte damage**: Protein cross-linking → cell death\\n5. **Fulminant hepatic failure**: If dose excessive or delayed treatment\\n\\n### Why Delayed Toxicity?\\n- **Phase 1 (24h)**: Minimal symptoms (nausea, vomiting)\\n- **Phase 2 (24-72h)**: Liver damage ongoing despite clinical improvement\\n- **Phase 3 (72-96h)**: Hepatotoxicity peaks (jaundice, coagulopathy, encephalopathy)\\n- **Timeline**: Critical period to start N-acetylcysteine (within 24 hours ideally, effective up to 48 hours)\\n\\n### N-Acetylcysteine (NAC) Antidote Mechanism\\n- **Glutathione precursor**: Replenishes hepatic glutathione stores\\n- **Direct NAPQI conjugation**: Can bind NAPQI if given early\\n- **Hepatoprotection**: Anti-inflammatory, antioxidant effects\\n- **Effectiveness**: >90% if given within 10-24 hours; still effective up to 48 hours\\n\\n## Rumack-Matthew Nomogram\\n**Interpretation:**\\n- **Serum acetaminophen level** + **Hours post-ingestion** plotted on graph\\n- **Lines define risk zones**:\\n  - Above \\\"probable toxicity\\\" line: N-acetylcysteine indicated\\n  - Below \\\"possible toxicity\\\" line: Observe (low risk)\\n- **Critical**: Serum level must be obtained 4+ hours post-ingestion (allows peak levels)\\n}\\n}\\n];\\n];\\n\""
-}
-}
-];
+        slug: "status-epilepticus-layer-1-foundation",
+        title: "Status Epilepticus in Children - Foundation",
+        estimatedMinutes: 25,
+        summary: "Status epilepticus (SE) is defined as seizure activity lasting >5 minutes or recurrent seizures without full recovery between them. It is a medical emergency with mortality 5-15%. Subtypes: generalized tonic-clonic (most dangerous), focal, non-convulsive (often missed). First-line treatment: benzodiazepines (lorazepam IV 0.1 mg/kg). Second-line: phenytoin or fosphenytoin. Management requires rapid seizure termination, supportive care.",
+        contentMd: `# Status Epilepticus - Foundation
+
+## Definition & Epidemiology
+
+**Status Epilepticus (SE):**
+- Seizure activity lasting >5 minutes OR
+- Recurrent seizures without full recovery of consciousness between them
+- Medical emergency requiring immediate intervention
+
+**Incidence in pediatrics:**
+- 1-10% of children with epilepsy experience SE
+- Can occur at any age; peak incidence 6 months to 6 years
+- Mortality: 5-15% (varies by type, etiology, age)
+- Neonates/young infants: Higher mortality (15-20%)
+- Older children: Lower mortality (5%)
+
+## Classification of Status Epilepticus
+
+### By Type
+
+1. **Generalized Tonic-Clonic SE (GTCSE):**
+   - Most dangerous, highest mortality
+   - Sustained rhythmic muscle contractions
+   - Risk: hypoxia, hyperthermia, rhabdomyolysis, metabolic derangement
+
+2. **Focal (Partial) SE:**
+   - Seizure activity in one limb/region
+   - Lower mortality than GTCSE
+   - May progress to generalized SE (secondarily generalized)
+
+3. **Non-Convulsive SE (NCSE):**
+   - Altered mental status without visible motor activity
+   - Often missed (attributed to other causes)
+   - May persist for hours/days before recognition
+   - EEG shows continuous seizure activity
+
+4. **Absence SE:**
+   - Continuous spike-wave discharge on EEG
+   - Altered consciousness; minimal motor activity
+   - Rare in children; usually in those with childhood absence epilepsy
+
+### By Age of Onset
+
+1. **Neonatal SE** (0-30 days):
+   - Seizures may be subtle (eye deviations, lip smacking, apnea)
+   - Etiologies: Hypoglycemia, hypocalcemia, infection (meningitis), birth trauma, drug withdrawal
+
+2. **Infantile SE** (1-12 months):
+   - Often from febrile seizures or infection
+   - Risk of febrile SE: ~15% of febrile seizures
+
+3. **Childhood SE** (1-18 years):
+   - Febrile SE, infection (meningitis, encephalitis), trauma
+   - Idiopathic (no obvious cause)
+
+## Etiology in Indian Pediatrics
+
+### Common Causes
+- **Infection**: Meningitis, encephalitis, cerebral malaria (endemic in India), sepsis
+- **Febrile seizures**: Most common cause of SE in young children
+- **Intracranial pathology**: Hypoxic-ischemic encephalopathy, stroke, tumor, trauma
+- **Metabolic**: Hypoglycemia, hypocalcemia, hyponatremia, hepatic encephalopathy
+- **Drug-related**: Withdrawal (benzodiazepines, antiepileptic drugs), toxins
+- **Idiopathic epilepsy**: First or breakthrough seizure in known epileptic
+
+### Indian-Specific Etiologies
+- **Cerebral malaria**: Severe malaria complicated by SE (endemic regions)
+- **Neurocysticercosis**: Tapeworm CNS infection; common in India
+- **Tuberculosis meningitis**: TB-related SE (higher mortality)
+
+## Clinical Presentation
+
+### Early Phase (First 5 minutes)
+- Sudden onset of seizure activity (tonic-clonic movements)
+- Loss of consciousness
+- Tachycardia, tachypnea
+- Hypersalivation, tongue biting
+- Urinary incontinence
+
+### Established SE (5-30 minutes)
+- Continued seizure activity (may become more subtle)
+- Hyperthermia (fever due to muscle activity)
+- Metabolic acidosis
+- Hypertension, then hypotension
+- Risk of aspiration
+
+### Prolonged SE (>30 minutes - Critical Phase)
+- **CNS effects**: Neuronal death, brain damage risk
+- **Respiratory**: Hypoxia, aspiration risk
+- **Cardiovascular**: Hypertension → hypotension, arrhythmias
+- **Metabolic**: Severe acidosis, hypoglycemia, hyperkalemia
+- **Renal**: Myoglobinuria (from rhabdomyolysis), acute kidney injury
+- **Pulmonary edema**: From cardiovascular strain
+- **Mortality risk**: Significantly increases >30 minutes
+
+### Non-Convulsive SE (Subtle/Missed)
+- Altered mental status (confusion, lethargy)
+- Minimal motor activity (eye deviation, subtle automatisms)
+- May be attributed to encephalopathy, infection, coma
+- **Critical**: Requires EEG for diagnosis; often missed
+
+## Pathophysiology Overview
+
+### Seizure Perpetuation Mechanism
+- Continuous neuronal hyperexcitability
+- GABA (inhibitory) neurotransmitter depletion
+- Glutamate (excitatory) accumulation
+- Loss of anticonvulsant drug efficacy over time (pharmacoresistance)
+- Each seizure → Reduced benzodiazepine receptor responsiveness
+
+### Neuronal Injury in Prolonged SE
+- Excitotoxicity: Excessive glutamate → Neuronal death
+- Hyperthermia-induced damage: Heat stress on neurons
+- Hypoxia: From respiratory compromise
+- Metabolic derangement: Acidosis damages cells
+- Neuroinflammation: Cytokine release, microglial activation`,
+        mnemonics: [
+          {
+            text: "SE Definition - 5-Min Rule",
+            explanation: "Status Epilepticus = Seizure >5 minutes OR recurrent seizures without full recovery between them"
+          },
+          {
+            text: "SE Complications Timeline - HRM",
+            explanation: "Early (Hypoxia, Hyperthermia), Metabolic (acidosis, hypoglycemia), Renal (myoglobinuria)"
+          }
+        ],
+        keyPoints: [
+          "Status epilepticus: Seizure >5 minutes or recurrent without recovery; medical emergency",
+          "Mortality: 5-15% overall; higher in neonates (15-20%), lower in older children (5%)",
+          "Types: GTCSE (most dangerous), focal, non-convulsive (often missed), absence",
+          "Non-convulsive SE: EEG required for diagnosis; can persist unrecognized for hours",
+          "Common causes: Infection (meningitis), febrile seizures, hypoglycemia, trauma",
+          "Neuronal injury: Accelerates after 5-10 minutes; critical to treat urgently",
+          "Time-dependent: Risk increases with prolonged seizure duration; treat aggressively early"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 15: Neurology - Seizures", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 593: Status Epilepticus", edition: "21st" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "status-epilepticus-layer-2-mechanism",
+        title: "Status Epilepticus - Pathophysiology",
+        estimatedMinutes: 30,
+        summary: "SE pathogenesis: Neuronal hyperexcitability from GABA depletion, glutamate accumulation, and loss of benzodiazepine receptor sensitivity (pharmacoresistance). Prolonged seizure → Excitotoxic neuronal death, hyperthermia-induced damage, hypoxia, metabolic acidosis. Cerebral autoregulation failure → Brain swelling, herniation risk.",
+        contentMd: `# Status Epilepticus - Pathophysiology
+
+## Cellular Mechanisms of SE Initiation
+
+### Normal Seizure Termination vs SE Perpetuation
+
+**Normal Seizure (Self-limited, <2 min):**
+1. **GABA neurotransmitter release**: Inhibitory signal
+2. **GABA-A receptor activation**: Hyperpolarization of neurons
+3. **Seizure termination**: Naturally stops with GABA inhibition
+4. **Recovery**: Full consciousness returns
+
+**Status Epilepticus (Prolonged seizure >5 min):**
+1. **Decreased GABA synthesis**: Enzyme depletion
+2. **GABA receptor internalization**: Reduced surface expression
+3. **Loss of benzodiazepine sensitivity**: Reduced BZD responsiveness (pharmacoresistance)
+4. **Glutamate accumulation**: Continued excitation
+5. **NMDA receptor activation**: Calcium influx, neuronal toxicity
+6. **Seizure perpetuation**: Loss of self-terminating mechanism
+
+### Glutamate-Mediated Excitotoxicity
+
+**Glutamate Overload:**
+1. **Massive glutamate release**: From neuronal terminals during seizure
+2. **NMDA receptor activation**: Calcium influx through NMDA channel
+3. **AMPA receptor activation**: Additional sodium/calcium influx
+4. **Calcium overload**: Exceeds buffering capacity
+5. **Cellular consequences**:
+   - Mitochondrial dysfunction
+   - Generation of reactive oxygen species (ROS)
+   - Protease activation
+   - DNA fragmentation
+   - **Result**: Neuronal apoptosis (programmed cell death)
+
+### Seizure-Related Energy Failure
+
+**Metabolic Crisis:**
+1. **Increased neuronal activity**: Energy demand 100-fold higher
+2. **ATP depletion**: Energy stores inadequate
+3. **Na-K-ATPase failure**: Cannot maintain ion gradients
+4. **Sodium accumulation**: Inside neurons (cytotoxic edema)
+5. **Cell swelling**: From sodium/water influx
+6. **Reduced cerebral blood flow** (CBF): Despite increased demand
+7. **Result**: Hypoxia, metabolic acidosis, neuronal dysfunction
+
+## Systemic Effects of Prolonged SE
+
+### Respiratory Effects
+- **Aspiration risk**: From loss of airway protection
+- **Hypoxia**: Inadequate oxygenation from muscle rigidity/central inhibition
+- **Hypercapnia**: CO₂ accumulation
+- **Pulmonary edema**: From cardiovascular strain, ARDS
+- **Critical**: Can lead to respiratory failure, death if untreated
+
+### Cardiovascular Effects
+
+**Phase 1 (First minutes):** Hypertension + tachycardia
+- Sympathetic hyperactivity
+- Increased cardiac output
+
+**Phase 2 (5-30 min):** Blood pressure may normalize or decline
+- Catecholamine depletion
+- Hypoxia-induced vasodilation
+- Dehydration (from sweating, muscle activity)
+
+**Phase 3 (>30 min):** Cardiovascular collapse risk
+- Severe hypotension
+- Arrhythmias (from metabolic derangement)
+- Cardiogenic pulmonary edema
+- Myocardial infarction possible (from prolonged stress)
+
+### Metabolic Derangements
+
+**Acidosis:**
+- **Lactic acidosis**: From anaerobic metabolism
+- **Respiratory acidosis**: From CO₂ retention
+- **pH can drop to 6.8-7.0**: Severely dangerous
+- **Consequences**: Reduced cardiac contractility, arrhythmias, neuronal dysfunction
+
+**Hypoglycemia:**
+- Rapid glucose consumption by brain/muscles
+- Decreased hepatic glucose production (catecholamine-mediated inhibition)
+- **Risk**: Exacerbates neuronal injury
+
+**Hyperkalemia:**
+- Release from damaged muscle cells
+- K+ efflux from neurons
+- **Risk**: Cardiac arrhythmias, sudden cardiac death
+
+**Hyponatremia:**
+- From increased antidiuretic hormone (ADH) release
+- Fluid retention
+- **Risk**: Cerebral edema, seizures
+
+### Renal & Muscular Effects
+
+**Rhabdomyolysis:**
+- Intense muscle contraction → Muscle cell breakdown
+- Myoglobin release into bloodstream
+- **Risk**: Acute tubular necrosis (ATN), acute kidney injury
+
+**Acute Kidney Injury (AKI):**
+1. Myoglobin precipitates in renal tubules
+2. Oxidative stress from myoglobin metabolites
+3. Reduced renal perfusion (from hypotension)
+4. **Risk**: Oliguria, hyperkalemia, metabolic acidosis → Death if untreated
+
+## Neuropathological Consequences
+
+### Acute Phase (During SE)
+- **Neuronal swelling**: Cytotoxic edema
+- **Synaptic degeneration**: Loss of dendritic spines
+- **Glial activation**: Microglial and astroglial response
+- **Neuroinflammation**: TNF-α, IL-1β, IL-6 elevation
+
+### Chronic Phase (After SE)
+- **Neuronal cell death**: Necrosis, apoptosis
+- **Neuronal loss**: Particularly in hippocampus (memory center)
+- **Gliosis**: Replacement with scar tissue
+- **Neuronal network reorganization**: Abnormal connectivity
+- **Epileptogenesis risk**: Structural changes → Increased seizure propensity
+
+### Brain Swelling & Herniation Risk
+
+**Cerebral Edema:**
+1. **Cytotoxic edema**: Neuronal swelling (inside cells)
+2. **Vasogenic edema**: BBB breakdown → fluid in extracellular space
+3. **Increased intracranial pressure (ICP)**: From edema, inflammation
+4. **Herniation risk**: Brain tissue pushed through foramen magnum
+5. **Result**: Brainstem compression, death if untreated
+
+### Loss of Cerebral Autoregulation
+- Normal: Brain maintains constant CBF (60-140 mmHg MAP)
+- In SE: Autoregulation fails
+- Severe hypertension → Hyperperfusion → Edema
+- Severe hypotension → Hypoperfusion → Ischemia
+- **Result**: Both too much or too little flow harmful
+
+## Pharmacoresistance in SE
+
+### Benzodiazepine Insensitivity
+
+**Mechanism of GABA-A Receptor Changes:**
+1. **Subunit trafficking**: GABA-A receptors internalized from cell surface
+2. **Phosphorylation changes**: Altered receptor sensitivity
+3. **Subunit composition shift**: From α1β2γ2 → α4β2δ (less BZD-sensitive)
+4. **Result**: Reduced response to lorazepam, midazolam
+
+**Time-dependent loss of BZD efficacy:**
+- <5 min: BZD responsive
+- 5-20 min: BZD response declining
+- >20 min: Significant BZD resistance
+- >60 min: Often refractory to BZD alone
+
+### Second-Line Drug Resistance
+- Phenytoin, valproate also may lose efficacy
+- Requires combination therapy (multiple agents)
+- Anesthesia needed if not controlled`,
+        mnemonics: [
+          {
+            text: "SE Energy Crisis - GAM",
+            explanation: "GABA depletion, ATP exhaustion, Massive glutamate overload"
+          },
+          {
+            text: "SE Complications - HAM",
+            explanation: "Hyperthermia, Acidosis (lactic), Myoglobinuria (rhabdo)"
+          }
+        ],
+        keyPoints: [
+          "SE perpetuation: GABA depletion + GABA receptor internalization + pharmacoresistance",
+          "Glutamate excitotoxicity: NMDA/AMPA receptor activation → calcium overload → neuronal death",
+          "Metabolic crisis: ATP depletion → Ion gradient failure → Hypoxia, acidosis",
+          "Respiratory: Aspiration risk, hypoxia, hypercapnia, pulmonary edema",
+          "Cardiovascular: Early hypertension → late hypotension, arrhythmia risk",
+          "Metabolic derangements: Lactic acidosis (pH 6.8-7.0), hyperkalemia, hypoglycemia, hyponatremia",
+          "Rhabdomyolysis: Muscle breakdown → myoglobin → AKI, acute kidney injury",
+          "Neuronal damage: Begins at 5-10 min; accelerates with prolonged seizure duration",
+          "Cerebral edema: Cytotoxic + vasogenic → ICP elevation → herniation risk",
+          "Brain swelling: Loss of cerebral autoregulation; both hypertension and hypotension harmful"
+        ],
+        textbookRefs: [
+          { book: "Robbins Pathologic Basis of Disease", chapter: "Chapter 28: CNS - Seizures", edition: "10th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 593: Status Epilepticus", edition: "21st" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "status-epilepticus-layer-3-clinical",
+        title: "Status Epilepticus - Clinical Assessment",
+        estimatedMinutes: 25,
+        summary: "Assessment: Determine seizure type (convulsive vs non-convulsive), duration, etiology. Vital signs: Hyperthermia, hypertension early then hypotension. Labs: Blood glucose, electrolytes, calcium, arterial blood gas (metabolic + respiratory acidosis), creatine kinase (rhabdomyolysis), ECG (hyperkalemia risk). Imaging: CT/MRI to identify cause (infection, trauma, mass, stroke).",
+        contentMd: `# Status Epilepticus - Clinical Assessment & Diagnosis
+
+## Clinical Presentation & History
+
+### Acute Presentation
+
+**Convulsive SE:**
+- Sustained tonic-clonic muscle contractions
+- Loss of consciousness
+- Eyes deviated (usually upward)
+- Tongue biting (risk of aspiration)
+- Hypersalivation, foaming at mouth
+- Urinary/fecal incontinence
+- Respiratory distress, cyanosis
+
+**Non-Convulsive SE (Subtle/Missed):**
+- Minimal motor activity (eye deviations, subtle automatisms only)
+- Altered consciousness (confusion, lethargy, coma)
+- May be mistaken for altered mental status from other causes
+- Requires EEG for diagnosis
+- Can persist for hours-days unrecognized
+
+### History (If Available)
+
+**Antecedent Events:**
+- **Fever**: Suggests febrile SE (most common cause in children)
+- **Recent illness**: Infection (meningitis, encephalitis risk)
+- **Trauma/head injury**: Risk of SE from trauma
+- **Known epilepsy**: Breakthrough seizure (medication non-compliance?)
+- **Drug/toxin exposure**: Withdrawal, overdose
+- **Recent medication changes**: Started/stopped antiepileptic drugs
+
+**Known Epilepsy History:**
+- **Seizure type/frequency**: Baseline seizure pattern
+- **Medications**: Compliance, recent dosing
+- **Previous SE episodes**: Risk factor for recurrence
+
+## Vital Signs & Physical Examination
+
+### Vital Sign Changes
+
+**Temperature:**
+- **Hyperthermia**: Common (fever 38-40°C)
+- **Cause**: Intense muscle activity, neuroinflammation
+- **Risk**: Accelerates neuronal injury
+
+**Cardiovascular:**
+- **Early** (<10 min): Hypertension, tachycardia
+- **Late** (>30 min): Hypotension, arrhythmias possible
+- **Arrhythmia risk**: From hyperkalemia (peaked T-waves on EKG)
+
+**Respiratory:**
+- **Tachypnea**: Fast breathing (from metabolic acidosis)
+- **Hypoxia**: SaO₂ <94% if untreated (respiratory compromise)
+- **Aspiration risk**: Loss of airway reflexes
+
+**Neurological Exam:**
+- **Level of consciousness**: Unconscious (if convulsive SE)
+- **Pupil size**: Usually normal, but may be dilated
+- **Lateralization**: Focal seizures may show unilateral findings
+- **Cranial nerves**: Usually intact between seizures
+- **Weakness**: May see post-ictal paresis (Todd's paresis)
+
+## Laboratory Investigations
+
+### Blood Tests (Urgent)
+
+**Blood Glucose:**
+- **Rapid test**: Capillary glucose at bedside
+- **Hypoglycemia**: Risk factor for SE, worsens prognosis
+- **Management**: IV dextrose if hypoglycemic (<70 mg/dL)
+
+**Electrolytes (Serum Na, K, Ca, Mg):**
+- **Hyperkalemia**: From rhabdomyolysis; ECG changes (peaked T-waves)
+- **Hyponatremia**: From ADH release; cerebral edema risk
+- **Hypocalcemia**: May trigger seizures
+- **Hypomagnesemia**: Reduces seizure threshold
+
+**Renal Function (BUN, Creatinine):**
+- **Baseline assessment**: For medication dosing
+- **AKI risk**: From rhabdomyolysis (myoglobin precipitation)
+- **Monitor if elevated**: After resolution (may develop acute kidney injury)
+
+**Liver Function Tests (if available):**
+- **Baseline**: For antiepileptic drug metabolism
+
+**Blood Gas (Arterial):**
+- **pH**: Metabolic + respiratory acidosis (pH often 7.0-7.2)
+- **pCO₂**: Elevated (respiratory acidosis from hypoventilation/seizures)
+- **pO₂**: Hypoxemia if respiratory compromise
+- **HCO₃**: Low (metabolic acidosis from lactic acid)
+- **Clinical significance**: Severe acidosis can reduce drug efficacy, cause arrhythmias
+
+**Creatine Kinase (CK):**
+- **Elevated**: From rhabdomyolysis (muscle breakdown)
+- **Myoglobinuria risk**: Can precipitate in renal tubules → AKI
+- **Serial monitoring**: After SE control
+
+### Urine Tests
+
+**Urinalysis + Culture:**
+- **Myoglobin**: Brown/tea-colored urine suggests rhabdomyolysis
+- **Infection**: WBC, nitrites, bacteria suggest UTI (not primary SE cause but may be present)
+
+**Urine Myoglobin:**
+- **Elevated**: Confirms rhabdomyolysis
+- **Risk stratification**: Higher CK/myoglobinuria → Greater AKI risk
+
+### Other Tests
+
+**ECG (if available):**
+- **Peaked T-waves**: Hyperkalemia sign (emergency cardiac risk)
+- **Prolonged QT**: Hypocalcemia, hypomagnesemia
+- **Arrhythmias**: From metabolic derangement
+
+**Blood Cultures:**
+- **If febrile**: Obtain before starting antibiotics (suspect meningitis/sepsis)
+
+## Imaging
+
+### CT Brain (When to Order)
+
+**Indications:**
+- **First SE in child without known epilepsy**: Rule out structural cause
+- **Focal seizure activity**: Suggests mass, stroke, or localized lesion
+- **Persistent SE despite treatment**: Assess for complications (hemorrhage, edema)
+- **Depressed level of consciousness**: Rule out increased ICP/herniation
+- **Post-trauma seizures**: Assess for intracranial injury
+
+**Timing:**
+- **Do NOT delay antiepileptic therapy**: Treat first, image second if stable
+- **Life threat takes priority**: Start seizure management before imaging
+
+**CT Findings (SE complications):**
+- Cerebral edema (loss of gray-white matter differentiation)
+- Hemorrhage (if trauma-related)
+- Mass lesion (tumor)
+- Infarction (stroke)
+
+### MRI (More sensitive, but takes longer)
+
+**When to order (after acute phase stabilized):**
+- Recurrent SE
+- To identify structural lesion not visible on CT
+- Temporal lobe changes (hippocampal sclerosis)
+- Non-convulsive SE (more likely to have structural cause)
+
+## EEG (Electroencephalogram)
+
+### Critical for Diagnosis of Non-Convulsive SE
+
+**EEG Findings in SE:**
+- **Generalized GTCSE**: Burst-suppression pattern or continuous spike-wave
+- **Focal SE**: Repetitive spikes in one region
+- **Non-convulsive SE**: Continuous focal or generalized seizure activity WITHOUT motor manifestations
+- **Post-ictal**: Slowing, absence of seizure activity
+
+**Clinical use:**
+- **Diagnosis**: Confirms SE (especially NCSE)
+- **Monitoring**: During treatment; guides cessation of therapy
+- **Prognostication**: Electrical recovery correlates with clinical recovery
+
+## Differential Diagnosis
+
+| Condition | Key Features | Differentiation |
+|---|---|---|
+| **SE (Convulsive)** | Sustained seizures, loss of consciousness | EEG shows seizure activity; twitching present |
+| **Tetanus** | Sustained muscle rigidity, "risus sardonicus" | EEG normal; jaw clenching, opisthotonus |
+| **Neuroleptic Malignant Syndrome** | Fever, rigidity, autonomic instability | Recent antipsychotic; EEG normal |
+| **Heat Stroke** | Severe hyperthermia, altered mental status | History of heat exposure; EEG normal |
+| **Meningitis/Encephalitis** | Seizures + meningeal signs | CSF findings (elevated protein, low glucose); seizures may stop with antibiotics |
+| **Hypoglycemia** | Altered consciousness, seizures | Rapid glucose correction stops seizures |
+| **Non-Convulsive SE** | Altered mental status, minimal movement | **Requires EEG** for diagnosis; continuous seizure activity on EEG |`,
+        mnemonics: [
+          {
+            text: "SE Lab Priorities - BLAKE",
+            explanation: "Blood glucose, Lactate (blood gas), Acid-base (pH, HCO3), Kidney (BUN/Cr), Electrolytes (K+, Na+, Ca2+)"
+          },
+          {
+            text: "Rhabdo Monitoring - CK",
+            explanation: "Creatine Kinase (elevated), K+ (hyperkalemia from rhabdo), myoglobin (brown urine)"
+          }
+        ],
+        keyPoints: [
+          "Convulsive SE: Obvious tonic-clonic activity; requires immediate seizure termination",
+          "Non-convulsive SE: Altered mental status WITHOUT visible motor activity; EEG required",
+          "Hyperthermia: Universal in SE; accelerates neuronal injury",
+          "Blood glucose: First test (hypo/hyperglycemia both risk); give dextrose if hypoglycemic",
+          "Electrolytes: Hyperkalemia (peaked T-waves) and hyponatremia common; monitor closely",
+          "Blood gas: Acidosis (pH 7.0-7.2); both metabolic and respiratory components",
+          "CK/myoglobinuria: Rhabdomyolysis occurs; risk of AKI; aggressive hydration needed",
+          "ECG: Look for hyperkalemia signs (peaked T-waves) - cardiac emergency",
+          "Imaging: CT/MRI to identify etiology (infection, mass, stroke, trauma)",
+          "First priority: Seizure termination (antiepileptic drugs); imaging second if stable"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 15: Neurology - Seizures", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 593: Status Epilepticus", edition: "21st" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "status-epilepticus-layer-4-exam",
+        title: "Status Epilepticus - Acute Management",
+        estimatedMinutes: 25,
+        summary: "Immediate: Airway management, oxygen, IV access. First-line seizure termination: Lorazepam IV 0.1 mg/kg (max 4 mg) repeat Q5-10min if needed. Second-line: Phenytoin/fosphenytoin loading. Third-line: Valproate or levetiracetam. Refractory SE: Anesthesia (propofol, thiopental). Supportive: Temperature control, fluid management, hyperkalemia treatment. Identify/treat underlying cause.",
+        contentMd: `# Status Epilepticus - Acute Management
+
+## Immediate Stabilization (Prehospital/ED)
+
+### Airway & Breathing (ABC Priority)
+
+**Positioning & Airway Protection:**
+1. **Position**: Side-lying (recovery position) to prevent aspiration
+2. **Head elevation**: 30° to reduce ICP
+3. **Suction**: Gently remove secretions if safe
+4. **Oxygen**: Supplemental O₂ to maintain SaO₂ >94%
+5. **Do NOT force object in mouth**: Risk of dental damage, airway obstruction
+
+**Breathing Support:**
+- **Bag-mask ventilation**: If respiratory depression/cyanosis
+- **Intubation**: Indicated for prolonged SE (>20-30 min), airway compromise
+- **Goal**: Maintain SaO₂ >94%, PaCO₂ 35-45 mmHg (avoid hypoxia, hypercapnia)
+
+### Vascular Access & Monitoring
+
+**IV Access:**
+1. **Two large-bore IVs**: Peripheral (18-20 gauge) preferred
+2. **Central line**: If peripheral access fails (long-term IO/central line option)
+3. **Avoid**: Intramuscular route (slow absorption, unreliable)
+
+**Monitoring:**
+- **Continuous cardiac monitoring**: Watch for arrhythmias (hyperkalemia risk)
+- **Pulse oximetry**: Maintain SaO₂ >94%
+- **Blood pressure**: Monitor for hypotension (late SE sign)
+- **Temperature**: Active cooling if hyperthermia >39°C
+
+## First-Line Seizure Termination
+
+### Benzodiazepines (FIRST-LINE - Immediate)
+
+**Lorazepam (Preferred):**
+- **Dose**: 0.1 mg/kg IV push (maximum 4 mg per dose)
+- **Repeat**: Every 5-10 minutes if seizures persist
+- **Efficacy**: 70-80% response rate (stops SE within 5 min)
+- **Advantages**: Long half-life (12 hours); sustained seizure control
+- **Onset**: 1-3 minutes
+- **Risk**: Respiratory depression; requires monitoring
+
+**Alternative: Midazolam (if lorazepam unavailable):**
+- **Dose**: 0.2 mg/kg IV (maximum 10 mg)
+- **Advantages**: Shorter half-life (less respiratory depression)
+- **Disadvantages**: Shorter duration; higher risk of breakthrough seizures
+
+**Non-IV Routes (Prehospital/Limited access):**
+- **Intranasal midazolam**: 0.2 mg/kg (max 10 mg) - good alternative
+- **Intraosseous**: If IV access impossible (pediatric emergency IO)
+- **Avoid rectal diazepam**: Old approach; slower, unreliable
+
+## Second-Line Antiepileptic Drugs (If BZD failure)
+
+### Phenytoin Loading
+
+**Dosing:**
+- **Loading dose**: 15-20 mg/kg IV
+- **Infusion rate**: Slow IV (max 50 mg/min) - faster causes hypotension, arrhythmia
+- **Onset**: 10-20 minutes
+- **Duration**: Long (24+ hours)
+- **Efficacy**: 60% response rate in BZD-refractory SE
+
+**Advantages:**
+- Long half-life: Sustained seizure control
+- No respiratory depression
+
+**Disadvantages:**
+- Slow onset (10-20 min)
+- IV site irritation (phlebitis risk); avoid extravasation
+- Requires cardiac monitoring (QT prolongation, arrhythmia risk)
+- Drug interactions (protein-bound drug)
+
+### Fosphenytoin (Preferred over Phenytoin)
+
+**Dosing:**
+- **Loading dose**: 15-20 mg PE (phenytoin equivalents) per kg
+- **Infusion rate**: Faster than phenytoin (up to 150 mg PE/min)
+- **Advantages**: Better tolerated; less phlebitis; can give IM/IV
+- **Cost**: More expensive
+
+### Valproate (Alternative Second-Line)
+
+**Dosing:**
+- **Loading dose**: 15-20 mg/kg IV
+- **Onset**: Similar to phenytoin (10-20 min)
+- **Efficacy**: ~60-70% in refractory SE
+- **Advantages**: No cardiac monitoring needed; oral/IV available
+- **Disadvantages**: Hepatotoxicity (especially <2 years); hyperammonemia; pancreatitis risk
+
+### Levetiracetam (Emerging Choice)
+
+**Dosing:**
+- **Loading dose**: 20-60 mg/kg IV
+- **Onset**: ~5-10 minutes
+- **Efficacy**: Growing evidence for efficacy in SE
+- **Advantages**: No drug interactions; no monitoring needed; safe in liver disease
+- **Disadvantages**: Limited evidence vs traditional agents; behavioral side effects
+
+## Third-Line: Refractory SE Management
+
+**Definition:** SE continuing despite first-line (BZD) and second-line (phenytoin/valproate) therapy
+
+### Repeat Second-Line or Additional Agents
+
+**Options:**
+1. **Repeat phenytoin loading**: Additional 5-10 mg/kg if first dose failed
+2. **Add valproate**: If phenytoin used; complementary mechanism
+3. **Add levetiracetam**: Increasingly used
+
+**Success rate**: ~50-60% respond to second agent
+
+### Anesthesia (For True Refractory SE)
+
+**Indications:**
+- SE continuing >20-30 minutes despite first + second-line therapy
+- Non-convulsive SE unresponsive to initial therapy
+- Status epilepticus requiring intubation
+
+**Agents:**
+1. **Propofol**: 1-2 mg/kg bolus, then 2-10 mg/kg/hr infusion
+   - **Advantages**: Rapid onset, short duration
+   - **Risks**: Propofol infusion syndrome (rare; tachycardia, rhabdo, metabolic acidosis)
+
+2. **Thiopental**: 3-5 mg/kg bolus, then infusion
+   - **Advantages**: Long-acting
+   - **Risks**: Hypotension, respiratory depression
+
+3. **Pentobarbital**: Similar to thiopental
+   - **Risks**: Hypotension, respiratory depression; requires ICU
+
+4. **Isoflurane/Sevoflurane**: Volatile anesthetics for operating room
+
+**Monitoring during anesthesia:**
+- Continuous EEG (target: burst-suppression pattern)
+- ICU setting required
+- Mechanical ventilation mandatory
+- Duration: 12-24 hours at minimum
+
+## Supportive Care During SE Management
+
+### Temperature Control
+- **Active cooling**: If fever >39°C
+- **Methods**: IV cold saline, cooling blankets, ice packs
+- **Goal**: Reduce to <38°C (lessens neuronal injury)
+
+### Fluid Management
+- **IV fluids**: 0.9% normal saline (avoid hypotonic fluids; cerebral edema risk)
+- **Rate**: Maintenance + replacement for perspiration losses
+- **Goal**: Maintain euvolemia; prevent dehydration
+- **Monitor**: Urine output (≥0.5 mL/kg/hr); watch for AKI
+
+### Hyperkalemia Management (If ECG changes)
+
+**If peaked T-waves present:**
+1. **Calcium gluconate**: 0.5 mL/kg of 10% IV (cardiac membrane stabilization)
+2. **Sodium bicarbonate**: 1 mEq/kg IV (shifts K+ intracellularly)
+3. **Insulin + glucose**: Regular insulin 0.1 units/kg + dextrose 0.5 g/kg IV (glucose-dependent K+ uptake)
+4. **Sodium polystyrene sulfonate**: 1 g/kg rectally (K+ elimination; slower)
+
+### Hypoglycemia Correction
+- **IV dextrose**: 0.25-0.5 g/kg (D25W or D50W)
+- **Goal**: Raise glucose >70 mg/dL
+- **Recheck**: Glucose after 15 minutes
+
+### Rhabdomyolysis Management
+- **Aggressive IV hydration**: Prevents AKI (target urine output 0.5-1 mL/kg/hr)
+- **Urine alkalinization**: Sodium bicarbonate (prevents myoglobin precipitation in tubules)
+- **Monitor**: Serial CK, creatinine, potassium
+
+## Identify & Treat Underlying Cause
+
+**In parallel with seizure termination:**
+
+1. **Infection**: If fever, meningeal signs → Empiric antibiotics (ceftriaxone + vancomycin)
+2. **Hypoglycemia**: Correct immediately (glucose)
+3. **Metabolic**: Correct electrolytes (calcium, magnesium, sodium)
+4. **Structural**: Imaging if suspected (tumor, stroke, trauma, hemorrhage)
+5. **Breakthrough**: Check antiepileptic drug levels; reinitiate/adjust chronic therapy`,
+        mnemonics: [
+          {
+            text: "SE Drug Ladder - BPS",
+            explanation: "Benzodiazepine (first-line), Phenytoin/Propofol (second-line), Step-up to anesthesia if refractory"
+          },
+          {
+            text: "First-Line BZD Dosing - 0.1 mg/kg",
+            explanation: "Lorazepam 0.1 mg/kg IV q5-10min; max 4 mg; fastest/best response"
+          }
+        ],
+        keyPoints: [
+          "Immediate: ABC (airway, breathing, circulation); oxygen, IV access, monitor",
+          "First-line: Lorazepam 0.1 mg/kg IV (max 4 mg); 70-80% efficacy, rapid onset",
+          "Second-line: Phenytoin (15-20 mg/kg) or valproate if BZD fails",
+          "Fosphenytoin preferred over phenytoin (faster infusion, less phlebitis)",
+          "Refractory SE: Anesthesia (propofol/thiopental) with ICU monitoring",
+          "EEG monitoring: Essential during anesthesia (target burst-suppression)",
+          "Supportive care: Active cooling, fluid management, hyperkalemia correction",
+          "Rhabdo management: Aggressive hydration, urine alkalinization",
+          "Treat underlying cause in parallel: Antibiotics if infection, correct metabolic issues",
+          "Time-dependent: Earlier intervention = better outcome; don't delay seizure termination"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 15: Neurology - Seizures", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 593: Status Epilepticus", edition: "21st" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "status-epilepticus-layer-5-active-recall",
+        title: "Status Epilepticus - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Test your knowledge of status epilepticus pathophysiology, diagnosis, and emergency management with case-based questions.",
+        contentMd: `# Active Recall - Status Epilepticus
+
+**Q1: A 3-year-old with fever presents to ED with continuous seizure activity for 8 minutes. What is your immediate management priority, and what drug do you administer first?**
+> **This is status epilepticus** (seizure >5 minutes). **Immediate priority**: ABC (airway, breathing, circulation) FIRST. Give supplemental O₂, establish IV access. **First-line drug**: **Lorazepam 0.1 mg/kg IV** (child weighing ~15 kg = 1.5 mg, max 4 mg). Administer immediately; **do NOT wait for any test results**. Repeat Q5-10 min if seizures persist. Simultaneously draw blood (glucose, electrolytes, blood culture if febrile), but DO NOT delay lorazepam for testing.
+
+**Q2: A child receiving lorazepam for SE shows no response at 5 minutes; seizures continue. What is your next step?**
+> **Lorazepam failure/inadequate response**. **Second-line drug**: **Phenytoin loading** (15-20 mg/kg IV) OR **fosphenytoin** (preferred; same dose, faster infusion, less phlebitis). Alternative: **Valproate** (15-20 mg/kg IV) or **levetiracetam** (20-60 mg/kg IV). Infuse phenytoin slowly (max 50 mg/min) to avoid hypotension/arrhythmia. **Cardiac monitoring** essential. If still refractory at 20-30 min: Consider **anesthesia** (propofol bolus).
+
+**Q3: Why does SE become increasingly difficult to treat the longer it lasts? Explain the mechanism of pharmacoresistance.**
+> **Pharmacoresistance mechanism**: (1) **GABA-A receptor changes**: Benzodiazepine receptors internalize from cell surface (downregulation). (2) **Phosphorylation changes**: GABA-A receptor phosphorylation reduces BZD sensitivity. (3) **Subunit composition shift**: α1β2γ2 (BZD-sensitive) → α4β2δ (BZD-insensitive). (4) **Time-dependent**: <5 min BZD responsive; 5-20 min declining response; >20 min significant resistance. (5) **Result**: Higher drug doses needed; eventually refractory to standard drugs.
+
+**Q4: A child in SE has blood gas showing pH 6.95, pCO₂ 58, HCO₃ 12. Interpret these values and their significance.**
+> **Severe combined acidosis**: (1) **pH 6.95**: Critical acidemia (normal 7.35-7.45); <7.20 is very dangerous. (2) **pCO₂ 58**: Elevated; respiratory acidosis (hypoventilation, muscle paralysis preventing normal ventilation). (3) **HCO₃ 12**: Low; metabolic acidosis (lactic acidosis from anaerobic metabolism). **Significance**: Acidosis impairs drug efficacy, causes arrhythmias (peaked T-waves, cardiac dysrhythmia), reduces contractility. **Management**: Mechanical ventilation (if intubated), treat underlying SE aggressively, correct metabolic causes.
+
+**Q5: A child in SE develops peaked T-waves on ECG. What is the underlying cause and immediate management?**
+> **Peaked T-waves = Hyperkalemia** (potassium >6.5 mEq/L). **Cause**: Rhabdomyolysis (muscle breakdown releases K+), acidosis (K+ efflux from cells), renal failure (K+ retention). **Danger**: Cardiac arrhythmia (ventricular fibrillation) risk; can cause cardiac arrest. **Immediate management**: (1) **Calcium gluconate** 0.5 mL/kg of 10% IV (cardiac membrane stabilization - protects heart immediately), (2) **Sodium bicarbonate** 1 mEq/kg IV (shifts K+ into cells), (3) **Insulin + glucose** (0.1 units/kg regular insulin + 0.5 g/kg dextrose) - increases cellular K+ uptake. Monitor cardiac rhythm continuously.
+
+**Q6: A child in SE has myoglobinuria (brown urine) and elevated CK (5000 U/L). What complication are you concerned about, and how do you prevent it?**
+> **Complication**: **Rhabdomyolysis** → Acute Kidney Injury (AKI). **Mechanism**: Muscle breakdown releases myoglobin; precipitates in renal tubules → tubular obstruction and injury. **Prevention**: (1) **Aggressive IV hydration**: 0.9% normal saline; target urine output 0.5-1 mL/kg/hr (maintains renal perfusion, dilutes urine, promotes myoglobin excretion). (2) **Urine alkalinization**: Sodium bicarbonate IV (prevents myoglobin precipitation; alkaline urine solubilizes myoglobin). (3) **Monitor**: Serial creatinine, urine myoglobin, potassium. (4) **Aggressive treatment** of SE stops muscle breakdown (source of myoglobin).
+
+**Q7: A child with SE is intubated and given propofol for anesthesia. What must you monitor, and what is a rare but dangerous complication?**
+> **Monitor**: **Continuous EEG** (target burst-suppression pattern showing seizure suppression). **Also monitor**: Hemodynamics (propofol causes hypotension), trigger signs of propofol infusion syndrome. **Rare complication**: **Propofol infusion syndrome** (PIS) - seen with high-dose, prolonged infusions. **Features**: Bradycardia, hypotension, metabolic acidosis, rhabdomyolysis, renal failure, cardiac failure. **Risk**: Increases with duration >4-6 hours and dose >4 mg/kg/hr. **Prevention**: Use lowest effective dose, shortest duration; consider alternative (thiopental, volatile anesthetics). **Management**: Stop propofol immediately if signs appear; supportive care, ECMO if severe.
+
+**Q8: A 6-month-old presents with continuous seizure activity (febrile SE). Labs show hypoglycemia (glucose 40 mg/dL). Why is this particularly dangerous in an infant, and how do you manage it?**
+> **Danger in infants**: Hypoglycemia + seizures = Double threat. (1) Glucose is primary brain fuel in infants; brain dependent on glucose. (2) Seizures consume massive glucose. (3) Prolonged hypoglycemia causes neuronal death. (4) Combination rapidly causes irreversible brain damage. **Management**: (1) **IV dextrose immediately**: 0.25-0.5 g/kg (D25W or D50W) - give before seizure termination if hypoglycemic. (2) **Serum glucose check**: At bedside (finger stick). (3) **Continuous glucose monitoring**: After treatment (glucose can drop quickly in infants). (4) **Seizure termination** (lorazepam) stops glucose consumption.
+
+**Q9: A 2-year-old with meningitis presents with SE. What is your empiric antibiotic regimen, and why must you give it urgently?**
+> **Suspect meningitis** (fever + SE + irritability likely). **Empiric antibiotics**: **Ceftriaxone** (2 g Q12H for older child; dose-adjusted for weight) + **Vancomycin** (15-20 mg/kg Q6H) + **Ampicillin** (if <3 months, for Listeria). **Timing**: Give SIMULTANEOUSLY with lorazepam; do NOT wait. **Why urgent**: (1) Meningitis mortality increases with treatment delays. (2) Each hour of untreated meningitis increases death/disability risk. (3) Antibiotic penetration into CSF requires adequate time. (4) SE itself is meningitis sign; dual emergency.
+
+**Q10: A 4-year-old in refractory SE (continued seizures despite lorazepam + phenytoin for 25 minutes) is intubated. What is the next management step?**
+> **Refractory SE** (continued seizures >20-30 min despite first + second-line therapy). **Next step**: **Anesthesia induction**. **Drug choice**: **Propofol** (1-2 mg/kg IV bolus, then 2-10 mg/kg/hr infusion, OR **thiopental** (3-5 mg/kg bolus + infusion). **ICU setting**: Mandatory; continuous EEG monitoring needed. **Goal**: Burst-suppression pattern on EEG (seizure suppression). **Duration**: Maintain for minimum 12-24 hours; then gradually wean while continuing standard antiepileptic drugs. **Risk**: Hypotension, propofol infusion syndrome (with prolonged infusion).
+
+**Q11: Explain the timeline of neuronal injury in prolonged SE and why early treatment is critical.**
+> **Timeline of neuronal injury**: (1) **0-5 min**: Seizure initiation; minimal permanent damage risk. (2) **5-10 min**: GABA depletion begins; neuronal injury starts (excitotoxicity, energy failure). (3) **10-20 min**: Accelerating neuronal death (calcium overload, apoptosis). (4) **20-30 min**: Significant neuronal loss; cerebral edema developing. (5) **>30 min**: Critical damage; brain swelling, herniation risk, renal failure, cardiac complications. **Critical periods**: (1) **Most reversible if treated by 5-10 min**: Complete recovery possible. (2) **5-20 min**: Treatment effective but some neuronal loss. (3) **>20-30 min**: Significant permanent damage likely despite seizure termination. **Implication**: First-line therapy (lorazepam) must be given within first 5 minutes; second-line (phenytoin) by 10-15 minutes.
+
+**Q12: A child develops SE post-operatively after general anesthesia. What etiologies must you consider, and how does management differ from other causes?**
+> **Post-operative SE causes**: (1) **Hypoglycemia**: Blood glucose should be checked immediately. (2) **Anesthesia-related**: Withdrawal if chronic antiepileptic drugs continued; recovery agents can precipitate seizures. (3) **Structural**: Head trauma during surgery (if cranial procedure). (4) **Metabolic**: Electrolyte abnormalities (hypocalcemia, hypomagnesemia from IV fluids). (5) **Infection**: Post-operative infection (meningitis risk if neurosurgery). **Management differs**: (1) **Coordinate with surgical team**: Assess hemodynamics (may limit antihypertensive drugs), monitor wound. (2) **Check glucose immediately**: Hypoglycemia common; glucose correction may stop seizures. (3) **Verify antiepileptic drugs**: Were chronic AEDs continued perioperatively? (4) **Standard seizure termination**: Lorazepam, then phenytoin/anesthesia if needed. (5) **Imaging**: Post-op CT already available; review for new hemorrhage/edema.`,
+        mnemonics: [
+          {
+            text: "SE Emergency Drugs - LPS",
+            explanation: "Lorazepam first (0.1 mg/kg), Phenytoin second (15-20 mg/kg), Sedation/anesthesia if refractory"
+          },
+          {
+            text: "SE Complications - CRASH",
+            explanation: "Cerebral edema, Rhabdomyolysis, Acidosis (severe), Sepsis (if infection), Hyperkalemia"
+          }
+        ],
+        keyPoints: [
+          "SE definition: Seizure >5 minutes or recurrent without full recovery; medical emergency",
+          "Mortality: 5-15% overall; higher in neonates, with infection, with prolonged duration",
+          "First-line: Lorazepam 0.1 mg/kg IV (max 4 mg); repeat Q5-10 min; ~70-80% effective",
+          "Second-line: Phenytoin (15-20 mg/kg IV) or fosphenytoin or valproate within 10-15 min",
+          "Refractory SE: Anesthesia (propofol/thiopental) if seizures continue >20-30 min",
+          "Pharmacoresistance: GABA receptor internalization; time-dependent loss of BZD efficacy",
+          "Neuronal injury: Begins at 5 min; accelerates after 20-30 min; early treatment critical",
+          "Supportive: Active cooling, aggressive hydration (rhabdo prevention), treat hyperkalemia",
+          "Labs: Blood glucose (hypo = dangerous), electrolytes (hyperkalemia), CK (rhabdo), blood gas",
+          "Underlying cause: Treat in parallel (antibiotics if infection, glucose if hypoglycemic)"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 15: Neurology - Seizures", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 593: Status Epilepticus", edition: "21st" }
+        ]
+      }
+    ]
+  }
 ];

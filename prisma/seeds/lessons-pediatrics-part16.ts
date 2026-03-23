@@ -1,15 +1,551 @@
-export const pediatricsLessonsPart16 = [
+import type { TopicLessons } from "./content-loader";
+
+export const pediatricsLessonsPart16: TopicLessons[] = [
   {
     topicCode: "PE-MOD-06-TOP-03",
     layers: [
       {
         layer: 1,
-        slug: "agn-uti-children-foundation",
-        title: "AGN & UTI in Children - Foundation",
+        slug: "agn-uti-layer-1-foundation",
+        title: "Acute Glomerulonephritis & UTI in Children - Foundation",
         estimatedMinutes: 20,
         summary: "Acute glomerulonephritis (AGN) post-streptococcal presents 1-3 weeks after pharyngitis with hematuria, proteinuria, hypertension, edema. UTI includes cystitis (dysuria) and pyelonephritis (fever, flank pain). Diagnosis via urinalysis and culture.",
-        contentMd: "# Acute Glomerulonephritis and Urinary Tract Infection - Foundation\n\n## Acute Glomerulonephritis (Post-Streptococcal)\n\n### Epidemiology\n- **Age**: Peak 5-12 years\n- **Preceding infection**: Group A streptococcus pharyngitis (1-3 weeks before)\n- **Latency period**: Average 10 days post-pharyngitis\n- **Incidence**: Decreasing in developed countries; still common in India\n- **Prognosis**: Excellent; most children recover fully\n\n### Pathophysiology Overview\n- Type III hypersensitivity reaction\n- Immune complex deposition in glomeruli\n- Complement activation (C3 deposition)\n- Glomerular inflammation and proliferation\n- Results in hematuria, proteinuria, reduced GFR\n\n### Clinical Presentation\n- **Hematuria**: \"Cola-colored\" or \"smoky\" urine (hallmark)\n- **Proteinuria**: Causes foamy urine\n- **Hypertension**: Due to sodium retention and renin activation\n- **Edema**: Periorbital (morning), lower extremities\n- **Systemic**: Malaise, headache, mild fever\n- **Nephritic syndrome**: Hematuria + proteinuria + hypertension + reduced GFR\n\n## Urinary Tract Infection (UTI)\n\n### Classification\n\n**Cystitis (Lower UTI):**\n- **Location**: Bladder inflammation\n- **Symptoms**: Dysuria, frequency, urgency, suprapubic pain\n- **Exam**: Suprapubic tenderness\n- **Fever**: Absent or low-grade\n- **Labs**: Pyuria, bacteriuria, positive culture\n\n**Pyelonephritis (Upper UTI):**\n- **Location**: Kidney/renal pelvis\n- **Symptoms**: Flank pain, fever, CVA tenderness\n- **Exam**: Costovertebral angle tenderness, fever\n- **Systemic**: High fever, chills, malaise\n- **Risk**: Sepsis if untreated; renal scarring\n\n### Epidemiology\n- **Prevalence**: 1-2% of children; more common in girls >1 year\n- **Age**: Can occur at any age; neonates highest risk of complications\n- **Risk factors**: Vesicoureteral reflux, obstruction, neurogenic bladder, female gender\n- **India**: E. coli most common in community; nosocomial often resistant\n\n### Pathophysiology\n- Bacterial ascension from urethra to bladder\n- Mucosal invasion and colonization\n- Inflammatory response\n- If untreated: Ascending infection to kidney,\n        mnemonics: [\n          {\n            text: \"PSGN Presentation - HEPSE\",\n            explanation: \"Hematuria (cola-colored), Edema (periorbital), Proteinuria, Strep history, Hypertension, E (edema lower extremities)\"\n          }\n        ],\n        keyPoints: [\n          \"PSGN: 1-3 weeks post-streptococcal pharyngitis; excellent prognosis\",\n          \"Cola-colored hematuria hallmark; hypertension from sodium retention\",\n          \"UTI: E. coli most common; more common in girls\",\n          \"Pyelonephritis risk: Renal scarring if delayed treatment\"\n        ],\n        textbookRefs: [\n          { book: \"OP Ghai Essential Pediatrics\", chapter: \"Chapter 8: Nephrology\", edition: \"10th\" },\n          { book: \"Nelson Textbook of Pediatrics\", chapter: \"Chapter 518: Glomerulonephritis\", edition: \"21st\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"agn-uti-children-mechanism\",\n        title: \"AGN & UTI - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"PSGN: Immune complex (streptococcal antigen + antibody) deposition in glomeruli → complement activation → proliferative GN. UTI: bacterial uroepithelial invasion → mucosal inflammation → dysuria; ascending infection → pyelonephritis.\",\n        contentMd: "# AGN and UTI - Molecular Mechanisms\\n\\n## Post-Streptococcal GN Pathogenesis\\n\\n### Immune Complex Formation\\n1. **Streptococcal antigen presentation**:\\n   - Group A strep surface antigens processed\\n   - Streptococcal pyrogenic exotoxins (SPE) activate T cells\\n   - Molecular mimicry: Strep antigens cross-react with glomerular components\\n\\n2. **Antibody production**:\\n   - Anti-streptolysin O (ASO)\\n   - Anti-DNase B\\n   - Anti-streptococcal hyaluronate\\n   - Anti-streptococcal M protein\\n\\n3. **Immune complex formation**:\\n   - Antigen + Antibody → Circulating immune complexes\\n   - In antibody excess: Larger soluble complexes\\n   - Deposition in glomeruli\\n\\n### Glomerular Deposition and Complement Activation\\n\\n**Glomerular Immune Complex Deposition:**\\n- Subepithelial location (typical \\\"hump\\\" appearance on electron microscopy)\\n- Complement fixation: Classical pathway\\n- C3 deposition (most prominent)\\n- C1q, C4 also deposited\\n\\n**Complement Activation Effects:**\\n1. **C5a generation**: Potent chemotactic factor\\n   - Attracts neutrophils and macrophages to glomerulus\\n\\n2. **C3a, C5a**: Anaphylatoxins\\n   - Mast cell degranulation\\n   - Increased vascular permeability\\n\\n3. **Membrane attack complex (MAC/C5b-9)**:\\n   - Glomerular damage\\n   - Podocyte injury\\n\\n### Glomerular Inflammation and Proliferation\\n\\n**Histopathology:**\\n- **Light microscopy**: Proliferative GN\\n  - Endocapillary proliferation (endothelial, mesangial cells)\\n  - Hypercellularity in glomerular tuft\\n  - Minimal crescent formation (unlike ANCA-associated)\\n\\n- **Immunofluorescence**: \\\"Starry sky\\\" pattern\\n  - Granular C3 and IgG deposition\\n  - Predominantly subepithelial\\n\\n- **Electron microscopy**: \\\"Humps\\\"\\n  - Subepithelial electron-dense deposits\\n  - Epithelial cell foot process fusion (minor)\\n\\n### Functional Consequences\\n\\n**Reduced Glomerular Filtration:**\\n- Endocapillary swelling reduces capillary lumen\\n- Podocyte injury → protein leak\\n- Capillary loop narrowing\\n\\n**Hematuria Mechanism:**\\n- Mesangial proliferation disrupts glomerular basement membrane\\n- Inflammatory mediators increase permeability\\n- RBC leak into Bowman's space\\n- Cola-colored urine from hemoglobin\\n\\n**Hypertension Mechanism:**\\n1. **Reduced GFR** → Sodium and fluid retention\\n2. **Renin-angiotensin activation** → Vasoconstriction\\n3. **Complement-mediated endothelial dysfunction** → Reduced NO (vasodilator)\\n4. Result: Mild-moderate hypertension (BP 140-160 systolic in 10-year-old)\\n\\n**Proteinuria Mechanism:**\\n- Glomerular permeability increased\\n- Albumin and plasma proteins leak\\n- Usually <3 g/24 hours (non-nephrotic range)\\n\\n## Urinary Tract Infection Pathogenesis\\n\\n### Bacterial Uroepithelial Invasion\\n\\n**E. coli Virulence Factors:**\\n1. **Pili (Fimbriae)**:\\n   - Type 1 pili: Bind to uroplakin Ia on uroepithelial cells\\n   - P pili: Bind to P antigen (globoseries glycolipids)\\n   - Attachment essential for colonization\\n\\n2. **Lipopolysaccharide (LPS)**:\\n   - Endotoxin activation of TLR4\\n   - Local and systemic inflammation\\n\\n3. **Hemolysin and Aerobactin**:\\n   - Toxins for tissue damage\\n   - Iron acquisition for survival\\n\\n### Mucosal Defense Mechanisms\\n\\n**Normal Defense:**\\n- **Mechanical clearance**: Peristalsis washes bacteria\\n- **Uroplakins**: Tight epithelial barrier\\n- **Tamm-Horsfall protein (THP)**: Agglutinates and traps bacteria\\n- **Lysozyme and lactoferrin**: Antibacterial peptides\\n- **IgA**: Secretory immunity\\n\\n**In UTI:** Bacteria overcome defenses through:\\n- Flagella: Aid motility\\n- Biofilm formation: Bacterial aggregates protected from antibiotics\\n- P fimbriae: Bind despite P antigen expression\\n\\n### Cystitis Pathogenesis\\n\\n1. **Bacterial adherence**: P and type 1 pili bind uroepithelium\\n2. **Epithelial invasion**: Some bacteria internalize (protecting from antibodies)\\n3. **Mucosal inflammation**:\\n   - IL-8 production → Neutrophil recruitment\\n   - TNF-α, IL-1 release\\n4. **Clinical symptoms**:\\n   - Dysuria from mucosal irritation\\n   - Frequency/urgency from inflammation\\n   - Suprapubic pain from bladder irritation\\n\\n### Pyelonephritis Pathogenesis\\n\\n**Ascending Infection:**\\n1. **Initial bladder colonization**: Bacteria multiply\\n2. **Ureteral peristalsis disruption**: P fimbriae interference\\n3. **Bacterial ascension**: Via ureteral lumen to kidney\\n4. **Renal pelvic inflammation**: Epithelial invasion\\n\\n**Renal Scarring Mechanism:**\\n- **Acute phase**: Interstitial inflammation (neutrophil infiltrate, TNF-α elevation)\\n- **Chronic phase**: Fibrosis and scar formation\\n- **Risk factors**:\\n  - Delay in treatment\\n  - Vesicoureteral reflux (intrarenal backflow)\\n  - High-grade reflux (more parenchymal contact)\\n  - Repeated infections\\n\\n**Sepsis Risk (Neonates):**\\n- Immature immunity\\n- Lack of specific IgA\\n- Systemic dissemination\\n- Bacteremia and septic shock risk,\\n        mnemonics: [\\n          {\\n            text: \\\"PSGN Pathology - HECC\\\",\\n            explanation: \\\"Hump deposits (subepithelial), Endocapillary proliferation, C3/C1q complement, Complex immune-mediated\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"PSGN: Type III hypersensitivity; immune complex deposition glomeruli\\\",\\n          \\\"Complement C3 predominates; 'starry sky' immunofluorescence pattern\\\",\\n          \\\"Hypertension: Sodium retention + renin-angiotensin activation\\\",\\n          \\\"UTI: E. coli P fimbriae critical for uroepithelial adhesion\\\",\\n          \\\"Renal scarring: Risk increased with delayed treatment and VUR\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins Pathologic Basis of Disease\\\", chapter: \\\"Chapter 20: Kidney\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Chapter 518: Glomerulonephritis\\\", edition: \\\"21st\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"agn-uti-children-clinical\\\",\\n        title: \\\"AGN & UTI - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"PSGN: Cola-colored hematuria, edema, hypertension 1-3 weeks post-strep. UTI: dysuria in cystitis; fever + flank pain in pyelonephritis. Diagnosis via urinalysis, urine culture, ASO titer. Management: supportive for PSGN, antibiotics for UTI.\\\",\\n        contentMd: ``# AGN and UTI - Clinical Features and Diagnosis\\n\\n## Post-Streptococcal GN - Presentation\\n\\n### Classic Presentation\\n- **Age**: 5-12 years typically\\n- **Timing**: 1-3 weeks post-pharyngitis (average 10 days)\\n- **Onset**: Often abrupt\\n\\n### Clinical Features\\n\\n**Urinary Findings:**\\n- **Hematuria**: \\\"Cola-colored\\\" or \\\"tea-colored\\\" urine (hallmark)\\n  - May be visible or microscopic\\n  - RBC casts pathognomonic\\n- **Proteinuria**: \\\"Foamy\\\" urine\\n  - Usually <3 g/24 hours (non-nephrotic)\\n  - Up to 5-6 g if nephrotic features present\\n\\n**Systemic Features:**\\n- **Hypertension**: Present in 50% of cases\\n  - Mild to moderate elevation\\n  - BP 140-160 systolic typical\\n  - Usually asymptomatic\\n- **Edema**: 50% of patients\\n  - Periorbital (morning)\\n  - Lower extremity edema\\n  - Usually mild\\n- **General symptoms**:\\n  - Malaise, headache\\n  - Low-grade fever\\n  - Lethargy (if severe)\\n\\n**Nephritic Syndrome Features:**\\n- Hematuria + proteinuria + hypertension + reduced GFR\\n- Mild azotemia possible (serum Cr 0.8-1.5 mg/dL)\\n- Usually self-limited\\n\\n### Physical Examination\\n| Finding | Frequency | Significance |\\n|---|---|---|\\n| Periorbital edema | 40% | Usually pitting |\\n| Lower extremity edema | 50% | May involve sacrum if severe |\\n| Hypertension | 50% | Measured in all extremities |\\n| Pulmonary edema | Rare | Indicates severe fluid overload |\\n| Abdominal tenderness | Rare | If present, consider other pathology |\\n\\n## Urinary Tract Infection - Presentation\\n\\n### Cystitis (Lower UTI)\\n- **Frequency**: Dysuria, pollakiuria (frequent voiding)\\n- **Pain**: Suprapubic discomfort, dysuria\\n- **Urine character**: May see turbid urine, hematuria\\n- **Systemic**: Asymptomatic or low-grade fever\\n- **Exam**: Suprapubic tenderness; no CVA tenderness\\n\\n### Pyelonephritis (Upper UTI)\\n- **Fever**: High, often >38.5°C with chills\\n- **Flank pain**: Unilateral or bilateral CVA tenderness\\n- **GI symptoms**: Vomiting, abdominal pain\\n- **Systemic**: Malaise, headache, myalgias\\n- **Exam**: CVA tenderness, fever, ill-appearing\\n- **Sepsis risk**: High in neonates and young infants\\n\\n### Age-Specific Presentations\\n\\n**Neonates/Young Infants (<1 year):**\\n- Fever or hypothermia\\n- Irritability, lethargy\\n- Poor feeding\\n- Jaundice possible\\n- Sepsis signs (tachycardia, hypotension)\\n- Dysuria symptoms absent\\n\\n**Older Children (>3 years):**\\n- Classic symptoms of UTI or pyelonephritis\\n- Dysuria often reported\\n- Better able to localize pain\\n\\n## Diagnosis\\n\\n### Urinalysis\\n\\n**Microscopic Examination (PSGN):**\\n- **RBC**: >5 RBC/hpf (often >50)\\n- **RBC casts**: Pathognomonic (protein + RBC in cylindrical form)\\n- **Protein**: 1-4+ proteinuria\\n- **WBC**: <5 WBC/hpf (pyuria minimal)\\n- **Crystals**: None unless specific cause\\n\\n**Urine Culture:**\\n- **PSGN**: Sterile culture (no bacteria)\\n- **Key differentiator**: Negative culture rules out UTI\\n\\n**Nitrites/Leukocyte Esterase:**\\n- PSGN: Negative nitrites, negative LE\\n- UTI: May be positive for both\\n\\n### Laboratory Tests (PSGN)\\n\\n**Serology:**\\n- **ASO (Antistreptolysin O) titer**: Elevated in 80-90% (peak 3-5 weeks post-infection)\\n- **Anti-DNase B**: Also elevated; more specific for strep\\n- **Both negative**: Occurs in ~10%; diagnosis still clinical if classic presentation\\n\\n**Renal Function:**\\n- **Serum creatinine**: Usually normal or mildly elevated (0.7-1.2 mg/dL)\\n- **BUN**: May be elevated if fluid overload present\\n- **Electrolytes**: Usually normal; watch for hyperkalemia\\n\\n**Complement Levels:**\\n- **C3 levels**: Depressed during acute phase (recovers 6-8 weeks)\\n- **C4 levels**: Usually normal\\n- **Persistently low C3**: Suggests alternative diagnosis (MPGN, lupus)\\n\\n**Other Tests:**\\n- **Renal ultrasound**: Normal in PSGN; shows kidney size/echogenicity\\n- **Chest X-ray**: If pulmonary edema suspected\\n- **Blood pressure monitoring**: Serial monitoring important\\n\\n### Urinalysis (UTI)\\n\\n**Pyuria:**\\n- **WBC**: >5 WBC/hpf (cystitis) or >10 (pyelonephritis)\\n- **Bacteria**: Present on uncentrifuged specimen\\n- **Nitrites**: Positive (gram-negative bacteria produce nitrites)\\n- **Leukocyte esterase**: Positive (from pyuria)\\n\\n**Hematuria:**\\n- **RBC**: May see hematuria with pyelonephritis\\n- **RBC casts**: Absent (differentiates from PSGN)\\n\\n**Urine Culture:**\\n- **Gold standard**: >10⁵ CFU/mL in midstream clean-catch (boys)\\n- **Girls**: >10⁵ CFU/mL (midstream catch)\\n- **Catheterized specimen**: >10² CFU/mL positive\\n- **Any growth from catheterized/straight cath**: Presumptively positive\\n\\n**Imaging (If Pyelonephritis or Recurrent UTI):**\\n- **Renal ultrasound**: Assess for hydronephrosis, scarring\\n- **Voiding cystourethrogram (VCUG)**: Detect vesicoureteral reflux (if indicated)\\n- **Renal scintigraphy (DMSA)**: Assess for scarring (controversial timing),\\n        mnemonics: [\\n          {\\n            text: \\\"PSGN vs UTI - CON vs PUN\\\",\\n            explanation: \\\"PSGN: Cola hematuria, Old history (1-3 wks), Negative culture. UTI: Pyuria, Urine positive culture, New symptoms\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"PSGN: Cola-colored hematuria; RBC casts pathognomonic\\\",\\n          \\\"PSGN: ASO titer elevated 80-90%; C3 depressed acutely\\\",\\n          \\\"Cystitis: Dysuria, suprapubic pain; usually afebrile\\\",\\n          \\\"Pyelonephritis: Fever, flank pain, CVA tenderness; sepsis risk in neonates\\\",\\n          \\\"Urine culture: Positive in UTI, negative in PSGN\\\",\\n          \\\"PSGN: Excellent prognosis; >95% recover completely\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Essential Pediatrics\\\", chapter: \\\"Chapter 8: Nephrology\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Chapter 518: Glomerulonephritis\\\", edition: \\\"21st\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"agn-uti-children-exam\\\",\\n        title: \\\"AGN & UTI - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"PSGN: Supportive care (salt/fluid restriction if edema/HTN); monitor BP; most recover without specific therapy. UTI: Antibiotics based on culture; avoid nephrotoxic agents. Follow-up: BP monitoring in PSGN; imaging for VUR in UTI.\\\",\\n        contentMd: ``# AGN and UTI - Management and Treatment\\n\\n## Post-Streptococcal GN Management\\n\\n### Supportive Care (Primary)\\n\\n**Fluid and Electrolyte Management:**\\n- **Fluid restriction**: If edema or hypertension present\\n  - Restrict to insensible losses + urine output\\n  - Usually 800-1000 mL/day for school-age child\\n- **Sodium restriction**: 1-2 g/day (help reduce BP)\\n- **Potassium restriction**: If hyperkalemia or oliguric\\n- **Monitor**: Daily weights, strict intake/output\\n\\n**Dietary Management:**\\n- Normal protein intake (growth requirement)\\n- Avoid high-sodium foods\\n- Provide balanced calories\\n\\n**Activity:**\\n- Bed rest during acute phase (reduce proteinuria)\\n- Gradual activity increase as improves\\n- Usually resolves within 1-2 weeks\\n\\n### Specific Treatments (Limited)\\n\\n**Hypertension Management:**\\n- **Observation first**: Many improve with salt restriction\\n- **Antihypertensive if**: SBP >160 or signs of hypertensive encephalopathy\\n- **First-line**:\\n  - ACE inhibitor: Enalapril 0.1 mg/kg BD\\n  - Calcium channel blocker: Amlodipine\\n- **Avoid**: NSAIDs (reduce GFR further); diuretics (unless volume overload)\\n\\n**Immunosuppression:**\\n- **Generally NOT used**: PSGN is self-limited\\n- **Consider if**: Rapidly progressive GN with crescent formation (rare)\\n\\n### Antibiotic Treatment of Preceding Strep\\n\\n**Penicillin/Amoxicillin:**\\n- Not treatment of GN itself\\n- Eradicates residual streptococcus\\n- Prevents transmission to others\\n- Typical: Amoxicillin 500 mg × 10 days (older children)\\n\\n### Monitoring and Follow-up\\n\\n**Baseline Labs:**\\n- Urinalysis, urine culture\\n- BUN, creatinine\\n- Electrolytes\\n- Complement C3\\n\\n**Follow-up Schedule:**\\n- **1 week**: Reassess BP, clinical status\\n- **2-4 weeks**: Repeat urinalysis (should show improvement)\\n- **3 months**: BP, creatinine, C3 level\\n- **6 months**: Repeat UA, BP\\n\\n**Resolution Timeline:**\\n- **Hematuria**: Resolves within weeks to months (90% by 3 months)\\n- **Proteinuria**: May persist 6-12 months but usually asymptomatic\\n- **Hypertension**: Resolves in 50% within 1 week; all within 2-3 weeks\\n- **Renal function**: Returns to baseline in vast majority\\n\\n## Urinary Tract Infection Management\\n\\n### Antibiotics Selection\\n\\n**Community-Acquired UTI (Cystitis):**\\n- **First-line (India)**:\\n  - Cefixime 8 mg/kg/day TDS × 5-7 days\\n  - TMP-SMX if susceptible\\n- **Oral agents preferred**: If tolerating well and non-toxic appearing\\n- **Adjust for sensitivities**: De-escalate once culture results available\\n\\n**Community-Acquired Pyelonephritis:**\\n- **Parenteral initial** (if vomiting, ill-appearing, concern for sepsis):\\n  - Ceftriaxone 50-80 mg/kg/day (IV/IM)\\n  - Duration: 2-3 days, then switch to oral for total 10-14 days\\n- **Oral agents** (if child well):\\n  - Cefixime or oral fluoroquinolone (older children)\\n  - Total duration: 10-14 days\\n\\n**Nosocomial/Resistant Organisms:**\\n- **Culture-directed therapy**: Based on sensitivities\\n- **Often broader coverage needed**: Carbapenem, aminoglycoside\\n\\n### Monitoring Response\\n\\n**Clinical Response:**\\n- **24-48 hours**: Fever should resolve; child more comfortable\\n- **Dysuria improvement**: Within 2-3 days\\n- **Persistent fever**: Consider imaging for abscess, inadequate therapy\\n\\n**Microbiologic Response:**\\n- **Repeat urine culture**: After completing antibiotics (test of cure)\\n- **Negative culture**: Indicates adequate therapy\\n\\n### Imaging in UTI\\n\\n**First Episode of Cystitis (Girls):**\\n- **Historically**: VCUG for all\\n- **Current practice**: No routine imaging (low risk of VUR and scarring)\\n- **Imaging indicated if**:\\n  - Pyelonephritis (high risk of scarring)\\n  - Male (higher risk VUR)\\n  - Atypical presentation\\n  - Recurrent infections\\n\\n**First Episode of Pyelonephritis:**\\n- **Renal ultrasound**: Assess for hydronephrosis, scarring, abscess\\n- **VCUG**: Determine if VUR present (→ risk of recurrent infections)\\n- **DMSA scan**: Can assess scarring (timing variable; some use at 6 months)\\n\\n### Prevention of Recurrence\\n\\n**Bladder Emptying:**\\n- Regular voiding schedule (every 2-3 hours during day)\\n- Complete emptying (\\\"double void\\\" if residual urine)\\n\\n**Hygiene:**\\n- **Girls**: Wipe front-to-back after bowel movements\\n- **Hand hygiene**: After defecation, before eating\\n\\n**Hydration:**\\n- Adequate fluid intake (promotes frequent voiding)\\n- Avoid dehydration\\n\\n**Antibiotic Prophylaxis** (If VUR or recurrent infections):\\n- **Low-dose nitrofurantoin**: 1-2 mg/kg/day at bedtime\\n- **Low-dose TMP-SMX**: If susceptible organism\\n- **Duration**: Until vesicoureter resolution or as long as VUR present\\n\\n### Vesicoureteral Reflux (VUR) Management\\n\\n**Grading (by VCUG):**\\n- Grade I: Urine into ureter only\\n- Grade II: Into renal pelvis\\n- Grade III: Mild dilatation\\n- Grade IV: Moderate dilatation\\n- Grade V: Severe dilatation\\n\\n**Management:**\\n- **Low-grade (I-II)**: Conservative; antibiotic prophylaxis, regular follow-up\\n- **High-grade (III-V)**: Prophylaxis ± surgical intervention\\n- **Surgical repair**: If recurrent infections despite prophylaxis or high-grade reflux with scarring,\\n        mnemonics: [\\n          {\\n            text: \\\"PSGN Management - SAFE\\\",\\n            explanation: \\\"Salt restriction, Antihypertensives if needed, Fluids restrict if HTN, Excellent prognosis\\\"\\n          },\\n          {\\n            text: \\\"UTI Antibiotics - CFT\\\",\\n            explanation: \\\"Cefixime first-line, Focus on culture results, Treatment duration 5-14 days\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"PSGN: Supportive care (salt/fluid restriction); no specific therapy needed\\\",\\n          \\\"Hypertension: Usually resolves within 2-3 weeks with salt restriction\\\",\\n          \\\"Hematuria: Resolves 90% within 3 months; proteinuria may persist longer\\\",\\n          \\\"Excellent prognosis: >95% recover completely; permanent damage rare\\\",\\n          \\\"UTI: Oral antibiotics (cefixime first-line); hospitalize if pyelonephritis/toxic\\\",\\n          \\\"Imaging: VCUG for pyelonephritis; assess for VUR\\\",\\n          \\\"Follow imaging: DMSA to assess scarring at 6 months post-pyelonephritis\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Essential Pediatrics\\\", chapter: \\\"Chapter 8: Nephrology\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Chapter 518: Glomerulonephritis\\\", edition: \\\"21st\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"agn-uti-children-recall\\\",\\n        title: \\\"AGN & UTI - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"Test your knowledge of AGN and UTI pathophysiology, diagnosis, and management.\\\",\\n        contentMd: ``# Active Recall - AGN and UTI\\n\\n**Q1: A 7-year-old boy presents with dark urine, periorbital edema, and hypertension 2 weeks after strep throat. What is the diagnosis and what makes it post-streptococcal?**\\n> Post-streptococcal GN (PSGN). Diagnosis based on timing (1-3 weeks post-pharyngitis), clinical presentation (hematuria, edema, hypertension), and ASO titer elevation. It's post-streptococcal because immune complexes form against Group A strep antigens, deposit in glomeruli, activate complement, causing proliferative GN.\\n\\n**Q2: Explain why RBC casts are pathognomonic for PSGN but absent in UTI.**\\n> RBC casts require both hemoglobin and cylindrical protein matrix formation in renal tubules—indicate glomerular bleeding (PSGN pathology). UTI is bladder/urinary tract inflammation; no glomerular involvement, so no RBC casts form. Glomerular disease = RBC casts; urinary tract infection = pyuria, bacteria, no casts.\\n\\n**Q3: A urine sample shows hematuria, proteinuria, WBC, and bacteria with positive nitrites. Is this PSGN or UTI?**\\n> UTI. Positive nitrites and bacteria culture are the key differentiators. PSGN: Hematuria + proteinuria but NEGATIVE culture (no bacteria). Presence of bacteria and positive nitrites = bacterial infection (UTI). Culture will confirm organism and guide antibiotics.\\n\\n**Q4: Why is the C3 level depressed in acute PSGN, and what does recovery of C3 indicate?**\\n> C3 consumed during complement activation (classical pathway) when immune complexes deposit. Depressed C3 during acute phase (indicator of active disease). C3 recovery over 6-8 weeks indicates resolution of immune complex disease and glomerular inflammation. Persistently low C3 suggests alternative diagnosis (MPGN, lupus).\\n\\n**Q5: A 3-year-old girl has fever, flank pain, and pyuria. Urine culture grows E. coli. What is your initial management and why hospitalize or treat outpatient?**\\n> Pyelonephritis (fever + flank pain = upper UTI). Initial management: Parenteral antibiotic (ceftriaxone 50-80 mg/kg/day IV) if ill-appearing/vomiting; oral if well. Hospitalize if: toxic appearance, sepsis signs, vomiting, age <3 months, or unable to follow up. Outpatient if: well-appearing, tolerating oral, reliable follow-up. Total duration: 10-14 days.\\n\\n**Q6: Why does cystitis cause dysuria but pyelonephritis causes fever?**\\n> Cystitis: Local mucosal inflammation (bladder epithelium) → neurogenic pain signals (dysuria) but no systemic inflammation (fever absent). Pyelonephritis: Systemic inflammatory response (TNF-α, IL-1 elevation) → fever; also flank pain from renal inflammation. Same organism (E. coli) but different tissue involved = different symptom pattern.\\n\\n**Q7: A girl has recurrent UTIs. Why is VCUG imaging important, and what is vesicoureteral reflux?**\\n> VCUG assesses for vesicoureteral reflux (VUR)—abnormal retrograde flow of urine from bladder back to ureters/kidneys. Risk: Intrarenal reflux damages kidney parenchyma during infection; increases scarring risk. Management depends on grade (I-II: prophylaxis; III-V: prophylaxis ± surgery). Critical to identify before recurrent infections cause scarring.\\n\\n**Q8: What is the expected timeline for hematuria, proteinuria, and hypertension resolution in PSGN?**\\n> Hematuria: 90% resolve within 3 months (range weeks-months). Hypertension: Resolves within 2-3 weeks (50% within 1 week) with salt restriction. Proteinuria: May persist 6-12 months but usually asymptomatic. Overall: Excellent prognosis; >95% return to normal renal function.\\n\\n**Q9: Explain why antibiotic therapy is NOT primarily treating PSGN, and what is the benefit of penicillin in PSGN?**\\n> Antibiotics don't treat PSGN glomerulonephritis itself (already an immune response). Penicillin eradicates residual streptococcus (completes treatment of preceding infection), prevents transmission to others, but doesn't alter GN course. PSGN resolves with supportive care alone in vast majority.\\n\\n**Q10: A child with PSGN has severe hypertension (BP 170/110) and headaches. What is your concern and management?**\\n> Concern: Hypertensive encephalopathy (CNS manifestation of severe hypertension). Management: Immediate antihypertensive therapy (ACE inhibitor or calcium channel blocker; NOT diuretics unless volume overload). Monitor for seizures. Treat aggressively to avoid permanent CNS damage. Also restrict salt/fluids to reduce fluid overload.,\\n        mnemonics: [\\n          {\\n            text: \\\"PSGN vs UTI Differentiation - CRAB\\\",\\n            explanation: \\\"Culture (sterile=PSGN, positive=UTI), Rash/systemic (post-strep=PSGN), ASO titer (elevated=PSGN), Bacteria (absent=PSGN, present=UTI)\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"PSGN: Type III hypersensitivity; complement-mediated; self-limited\\\",\\n          \\\"RBC casts: Pathognomonic for PSGN; absent in UTI\\\",\\n          \\\"C3 depression: Indicator of active PSGN; recovery indicates resolution\\\",\\n          \\\"Management: Supportive care; antihypertensives if BP >160\\\",\\n          \\\"Prognosis: Excellent; >95% recover completely\\\",\\n          \\\"UTI: Culture-directed antibiotics; differentiate cystitis from pyelonephritis\\\",\\n          \\\"VUR screening: Important in pyelonephritis to prevent scarring\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Essential Pediatrics\\\", chapter: \\\"Chapter 8: Nephrology\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Chapter 518: Glomerulonephritis\\\", edition: \\\"21st\\\" }\\n        ]\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-];
+        contentMd: `# Acute Glomerulonephritis and Urinary Tract Infection - Foundation
+
+## Acute Glomerulonephritis (Post-Streptococcal)
+
+### Epidemiology
+- **Age**: Peak 5-12 years
+- **Preceding infection**: Group A streptococcus pharyngitis (1-3 weeks before)
+- **Latency period**: Average 10 days post-pharyngitis
+- **Incidence**: Decreasing in developed countries; still common in India
+- **Prognosis**: Excellent; most children recover fully
+
+### Pathophysiology Overview
+- Type III hypersensitivity reaction
+- Immune complex deposition in glomeruli
+- Complement activation (C3 deposition)
+- Glomerular inflammation and proliferation
+- Results in hematuria, proteinuria, reduced GFR
+
+### Clinical Presentation
+- **Hematuria**: "Cola-colored" or "smoky" urine (hallmark)
+- **Proteinuria**: Causes foamy urine
+- **Hypertension**: Due to sodium retention and renin activation
+- **Edema**: Periorbial (morning), lower extremities
+- **Systemic**: Malaise, headache, mild fever
+- **Nephritic syndrome**: Hematuria + proteinuria + hypertension + reduced GFR
+
+## Urinary Tract Infection (UTI)
+
+### Classification
+
+**Cystitis (Lower UTI):**
+- **Location**: Bladder inflammation
+- **Symptoms**: Dysuria, frequency, urgency, suprapubic pain
+- **Exam**: Suprapubic tenderness
+- **Fever**: Absent or low-grade
+- **Labs**: Pyuria, bacteriuria, positive culture
+
+**Pyelonephritis (Upper UTI):**
+- **Location**: Kidney/renal pelvis
+- **Symptoms**: Flank pain, fever, CVA tenderness
+- **Exam**: Costovertebral angle tenderness, fever
+- **Systemic**: High fever, chills, malaise
+- **Risk**: Sepsis if untreated; renal scarring
+
+### Epidemiology
+- **Prevalence**: 1-2% of children; more common in girls >1 year
+- **Age**: Can occur at any age; neonates highest risk of complications
+- **Risk factors**: Vesicoureteral reflux, obstruction, neurogenic bladder, female gender
+- **India**: E. coli most common in community; nosocomial often resistant
+
+### Pathophysiology
+- Bacterial ascension from urethra to bladder
+- Mucosal invasion and colonization
+- Inflammatory response
+- If untreated: Ascending infection to kidney
+- Pyelonephritis risk: Renal scarring if delayed treatment`,
+        mnemonics: [
+          {
+            text: "PSGN Presentation - HEPSE",
+            explanation: "Hematuria (cola-colored), Edema (periorbital), Proteinuria, Strep history, Hypertension, E (edema lower extremities)"
+          },
+          {
+            text: "UTI Red Flags - FEVER",
+            explanation: "Fever (pyelonephritis), Elevated WBC, Vesicoureteral concern, E coli (most common), Recurrent infections"
+          }
+        ],
+        keyPoints: [
+          "PSGN: 1-3 weeks post-streptococcal pharyngitis; excellent prognosis",
+          "Cola-colored hematuria hallmark; hypertension from sodium retention",
+          "UTI: E. coli most common; more common in girls",
+          "Pyelonephritis risk: Renal scarring if delayed treatment",
+          "Cystitis: Lower UTI with dysuria; pyelonephritis: upper UTI with fever and flank pain"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 8: Nephrology", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 518: Glomerulonephritis", edition: "21st" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "agn-uti-layer-2-mechanism",
+        title: "AGN & UTI - Mechanism",
+        estimatedMinutes: 30,
+        summary: "PSGN: Immune complex (streptococcal antigen + antibody) deposition in glomeruli → complement activation → proliferative GN. UTI: bacterial uroepithelial invasion → mucosal inflammation → dysuria; ascending infection → pyelonephritis.",
+        contentMd: `# AGN and UTI - Molecular Mechanisms
+
+## Post-Streptococcal GN Pathogenesis
+
+### Immune Complex Formation
+1. **Streptococcal antigen presentation**:
+   - Group A strep surface antigens processed
+   - Streptococcal pyrogenic exotoxins (SPE) activate T cells
+   - Molecular mimicry: Strep antigens cross-react with glomerular components
+
+2. **Antibody production**:
+   - Anti-streptolysin O (ASO)
+   - Anti-DNase B
+   - Anti-streptococcal hyaluronate
+   - Anti-streptococcal M protein
+
+3. **Immune complex formation**:
+   - Antigen + Antibody → Circulating immune complexes
+   - In antibody excess: Larger soluble complexes
+   - Deposition in glomeruli
+
+### Glomerular Deposition and Complement Activation
+
+**Glomerular Immune Complex Deposition:**
+- Subepithelial location (typical "hump" appearance on electron microscopy)
+- Complement fixation: Classical pathway
+- C3 deposition (most prominent)
+- C1q, C4 also deposited
+
+**Complement Activation Effects:**
+1. **C5a generation**: Potent chemotactic factor
+   - Attracts neutrophils and macrophages to glomerulus
+
+2. **C3a, C5a**: Anaphylatoxins
+   - Mast cell degranulation
+   - Increased vascular permeability
+
+3. **Membrane attack complex (MAC/C5b-9)**:
+   - Glomerular damage
+   - Podocyte injury
+
+### Glomerular Inflammation and Proliferation
+
+**Histopathology:**
+- **Light microscopy**: Proliferative GN
+  - Endocapillary proliferation (endothelial, mesangial cells)
+  - Hypercellularity in glomerular tuft
+  - Minimal crescent formation (unlike ANCA-associated)
+
+- **Immunofluorescence**: "Starry sky" pattern
+  - Granular C3 and IgG deposition
+  - Predominantly subepithelial
+
+- **Electron microscopy**: "Humps"
+  - Subepithelial electron-dense deposits
+  - Epithelial cell foot process fusion (minor)
+
+### Functional Consequences
+
+**Hypertension Mechanism:**
+1. **Reduced GFR** → Sodium and fluid retention
+2. **Renin-angiotensin activation** → Vasoconstriction
+3. **Complement-mediated endothelial dysfunction** → Reduced NO (vasodilator)
+4. Result: Mild-moderate hypertension (BP 140-160 systolic in 10-year-old)
+
+## Urinary Tract Infection Pathogenesis
+
+### Bacterial Uroepithelial Invasion
+
+**E. coli Virulence Factors:**
+1. **Pili (Fimbriae)**:
+   - Type 1 pili: Bind to uroplakin Ia on uroepithelial cells
+   - P pili: Bind to P antigen (globoseries glycolipids)
+   - Attachment essential for colonization
+
+2. **Lipopolysaccharide (LPS)**:
+   - Endotoxin activation of TLR4
+   - Local and systemic inflammation
+
+3. **Hemolysin and Aerobactin**:
+   - Toxins for tissue damage
+   - Iron acquisition for survival
+
+### Cystitis vs Pyelonephritis Pathogenesis
+
+**Cystitis Pathogenesis:**
+1. Bacterial adherence: P and type 1 pili bind uroepithelium
+2. Epithelial invasion: Some bacteria internalize
+3. Mucosal inflammation: IL-8 production → Neutrophil recruitment
+4. Clinical symptoms: Dysuria from mucosal irritation
+
+**Pyelonephritis Pathogenesis:**
+1. Initial bladder colonization: Bacteria multiply
+2. Ureteral peristalsis disruption: P fimbriae interference
+3. Bacterial ascension: Via ureteral lumen to kidney
+4. Renal pelvic inflammation: Epithelial invasion
+
+**Renal Scarring Mechanism:**
+- Acute phase: Interstitial inflammation
+- Chronic phase: Fibrosis and scar formation
+- Risk factors: Delay in treatment, vesicoureteral reflux, repeated infections`,
+        mnemonics: [
+          {
+            text: "PSGN Pathology - HECC",
+            explanation: "Hump deposits (subepithelial), Endocapillary proliferation, C3/C1q complement, Complex immune-mediated"
+          },
+          {
+            text: "E. coli Virulence - PAHL",
+            explanation: "Pili (adhesion), Aerobactin (iron), Hemolysin (toxin), LPS (endotoxin)"
+          }
+        ],
+        keyPoints: [
+          "PSGN: Type III hypersensitivity; immune complex deposition glomeruli",
+          "Complement C3 predominates; 'starry sky' immunofluorescence pattern",
+          "Hypertension: Sodium retention + renin-angiotensin activation",
+          "UTI: E. coli P fimbriae critical for uroepithelial adhesion",
+          "Renal scarring: Risk increased with delayed treatment and VUR"
+        ],
+        textbookRefs: [
+          { book: "Robbins Pathologic Basis of Disease", chapter: "Chapter 20: Kidney", edition: "10th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 518: Glomerulonephritis", edition: "21st" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "agn-uti-layer-3-clinical",
+        title: "AGN & UTI - Clinical Features",
+        estimatedMinutes: 25,
+        summary: "PSGN: Cola-colored hematuria, edema, hypertension 1-3 weeks post-strep. UTI: dysuria in cystitis; fever + flank pain in pyelonephritis. Diagnosis via urinalysis, urine culture, ASO titer. RBC casts pathognomonic for PSGN.",
+        contentMd: `# AGN and UTI - Clinical Features and Diagnosis
+
+## Post-Streptococcal GN - Presentation
+
+### Classic Presentation
+- **Age**: 5-12 years typically
+- **Timing**: 1-3 weeks post-pharyngitis (average 10 days)
+- **Onset**: Often abrupt
+
+### Clinical Features
+
+**Urinary Findings:**
+- **Hematuria**: "Cola-colored" or "tea-colored" urine (hallmark)
+  - May be visible or microscopic
+  - RBC casts pathognomonic
+- **Proteinuria**: "Foamy" urine
+  - Usually <3 g/24 hours (non-nephrotic)
+  - Up to 5-6 g if nephrotic features present
+
+**Systemic Features:**
+- **Hypertension**: Present in 50% of cases
+  - Mild to moderate elevation
+  - BP 140-160 systolic typical
+  - Usually asymptomatic
+- **Edema**: 50% of patients
+  - Periorbital (morning)
+  - Lower extremity edema
+  - Usually mild
+- **General symptoms**:
+  - Malaise, headache
+  - Low-grade fever
+  - Lethargy (if severe)
+
+### Physical Examination
+| Finding | Frequency | Significance |
+|---|---|---|
+| Periorbital edema | 40% | Usually pitting |
+| Lower extremity edema | 50% | May involve sacrum if severe |
+| Hypertension | 50% | Measured in all extremities |
+| Pulmonary edema | Rare | Indicates severe fluid overload |
+
+## Urinary Tract Infection - Presentation
+
+### Cystitis (Lower UTI)
+- **Frequency**: Dysuria, pollakiuria (frequent voiding)
+- **Pain**: Suprapubic discomfort, dysuria
+- **Urine character**: May see turbid urine, hematuria
+- **Systemic**: Asymptomatic or low-grade fever
+- **Exam**: Suprapubic tenderness; no CVA tenderness
+
+### Pyelonephritis (Upper UTI)
+- **Fever**: High, often >38.5°C with chills
+- **Flank pain**: Unilateral or bilateral CVA tenderness
+- **GI symptoms**: Vomiting, abdominal pain
+- **Systemic**: Malaise, headache, myalgias
+- **Exam**: CVA tenderness, fever, ill-appearing
+- **Sepsis risk**: High in neonates and young infants
+
+### Age-Specific Presentations
+
+**Neonates/Young Infants (<1 year):**
+- Fever or hypothermia
+- Irritability, lethargy
+- Poor feeding
+- Jaundice possible
+- Sepsis signs (tachycardia, hypotension)
+- Dysuria symptoms absent
+
+**Older Children (>3 years):**
+- Classic symptoms of UTI or pyelonephritis
+- Dysuria often reported
+- Better able to localize pain
+
+## Diagnosis
+
+### Urinalysis
+
+**Microscopic Examination (PSGN):**
+- **RBC**: >5 RBC/hpf (often >50)
+- **RBC casts**: Pathognomonic (protein + RBC in cylindrical form)
+- **Protein**: 1-4+ proteinuria
+- **WBC**: <5 WBC/hpf (pyuria minimal)
+- **Culture**: Sterile (no bacteria)
+
+**Urinalysis (UTI):**
+- **WBC**: >5 WBC/hpf (cystitis) or >10 (pyelonephritis)
+- **Bacteria**: Present on uncentrifuged specimen
+- **Nitrites**: Positive (gram-negative bacteria)
+- **Leukocyte esterase**: Positive (from pyuria)
+
+### Laboratory Tests (PSGN)
+
+**Serology:**
+- **ASO titer**: Elevated in 80-90% (peak 3-5 weeks post-infection)
+- **Anti-DNase B**: Also elevated; more specific for strep
+
+**Renal Function:**
+- **Serum creatinine**: Usually normal or mildly elevated (0.7-1.2 mg/dL)
+- **BUN**: May be elevated if fluid overload present
+- **Electrolytes**: Usually normal; watch for hyperkalemia
+
+**Complement Levels:**
+- **C3 levels**: Depressed during acute phase (recovers 6-8 weeks)
+- **C4 levels**: Usually normal
+
+### Urine Culture
+
+**Diagnostic threshold:**
+- **PSGN**: Sterile culture (no bacteria)
+- **UTI**: >10⁵ CFU/mL in midstream clean-catch
+- **Catheterized specimen**: >10² CFU/mL positive`,
+        mnemonics: [
+          {
+            text: "PSGN vs UTI - CON vs PUN",
+            explanation: "PSGN: Cola hematuria, Old history (1-3 wks), Negative culture. UTI: Pyuria, Urine positive culture, New symptoms"
+          },
+          {
+            text: "RBC Casts Significance - GN",
+            explanation: "Glomerular disease indicator, Nephritic syndrome, only in kidney (not bladder infection)"
+          }
+        ],
+        keyPoints: [
+          "PSGN: Cola-colored hematuria; RBC casts pathognomonic",
+          "PSGN: ASO titer elevated 80-90%; C3 depressed acutely",
+          "Cystitis: Dysuria, suprapubic pain; usually afebrile",
+          "Pyelonephritis: Fever, flank pain, CVA tenderness; sepsis risk in neonates",
+          "Urine culture: Positive in UTI, negative in PSGN",
+          "PSGN: Excellent prognosis; >95% recover completely"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 8: Nephrology", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 518: Glomerulonephritis", edition: "21st" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "agn-uti-layer-4-exam",
+        title: "AGN & UTI - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "PSGN: Supportive care (salt/fluid restriction if edema/HTN); monitor BP; most recover without specific therapy. UTI: Antibiotics based on culture; cefixime first-line in India. Follow-up: BP monitoring in PSGN; imaging for VUR in pyelonephritis.",
+        contentMd: `# AGN and UTI - Management and Treatment
+
+## Post-Streptococcal GN Management
+
+### Supportive Care (Primary)
+
+**Fluid and Electrolyte Management:**
+- **Fluid restriction**: If edema or hypertension present
+  - Restrict to insensible losses + urine output
+  - Usually 800-1000 mL/day for school-age child
+- **Sodium restriction**: 1-2 g/day (help reduce BP)
+- **Potassium restriction**: If hyperkalemia or oliguric
+- **Monitor**: Daily weights, strict intake/output
+
+**Dietary Management:**
+- Normal protein intake (growth requirement)
+- Avoid high-sodium foods
+- Provide balanced calories
+
+**Activity:**
+- Bed rest during acute phase (reduce proteinuria)
+- Gradual activity increase as improves
+- Usually resolves within 1-2 weeks
+
+### Specific Treatments (Limited)
+
+**Hypertension Management:**
+- **Observation first**: Many improve with salt restriction
+- **Antihypertensive if**: SBP >160 or signs of hypertensive encephalopathy
+- **First-line**:
+  - ACE inhibitor: Enalapril 0.1 mg/kg BD
+  - Calcium channel blocker: Amlodipine
+- **Avoid**: NSAIDs (reduce GFR further); diuretics (unless volume overload)
+
+**Immunosuppression:**
+- **Generally NOT used**: PSGN is self-limited
+- **Consider if**: Rapidly progressive GN with crescent formation (rare)
+
+### Monitoring and Follow-up
+
+**Follow-up Schedule:**
+- **1 week**: Reassess BP, clinical status
+- **2-4 weeks**: Repeat urinalysis (should show improvement)
+- **3 months**: BP, creatinine, C3 level
+- **6 months**: Repeat UA, BP
+
+**Resolution Timeline:**
+- **Hematuria**: Resolves within weeks to months (90% by 3 months)
+- **Proteinuria**: May persist 6-12 months
+- **Hypertension**: Resolves in 50% within 1 week; all within 2-3 weeks
+
+## Urinary Tract Infection Management
+
+### Antibiotics Selection
+
+**Community-Acquired UTI (Cystitis):**
+- **First-line (India)**:
+  - Cefixime 8 mg/kg/day TDS × 5-7 days
+  - TMP-SMX if susceptible
+- **Oral agents preferred**: If tolerating well and non-toxic appearing
+
+**Community-Acquired Pyelonephritis:**
+- **Parenteral initial** (if vomiting, ill-appearing):
+  - Ceftriaxone 50-80 mg/kg/day (IV/IM)
+  - Duration: 2-3 days, then switch to oral for total 10-14 days
+- **Oral agents** (if child well):
+  - Cefixime or oral fluoroquinolone (older children)
+  - Total duration: 10-14 days
+
+### Imaging in UTI
+
+**First Episode of Cystitis (Girls):**
+- **Current practice**: No routine imaging (low risk of VUR and scarring)
+
+**First Episode of Pyelonephritis:**
+- **Renal ultrasound**: Assess for hydronephrosis, scarring, abscess
+- **VCUG**: Determine if VUR present
+- **DMSA scan**: Assess scarring at 6 months
+
+### Prevention of Recurrence
+
+**Bladder Emptying:**
+- Regular voiding schedule (every 2-3 hours during day)
+- Complete emptying
+
+**Hydration:**
+- Adequate fluid intake (promotes frequent voiding)
+- Avoid dehydration
+
+**Antibiotic Prophylaxis** (If VUR or recurrent infections):
+- **Low-dose nitrofurantoin**: 1-2 mg/kg/day at bedtime
+- **Low-dose TMP-SMX**: If susceptible organism`,
+        mnemonics: [
+          {
+            text: "PSGN Management - SAFE",
+            explanation: "Salt restriction, Antihypertensives if needed, Fluids restrict if HTN, Excellent prognosis"
+          },
+          {
+            text: "UTI Antibiotics - CFT",
+            explanation: "Cefixime first-line, Focus on culture results, Treatment duration 5-14 days"
+          }
+        ],
+        keyPoints: [
+          "PSGN: Supportive care (salt/fluid restriction); no specific therapy needed",
+          "Hypertension: Usually resolves within 2-3 weeks with salt restriction",
+          "Hematuria: Resolves 90% within 3 months; proteinuria may persist longer",
+          "Excellent prognosis: >95% recover completely; permanent damage rare",
+          "UTI: Oral antibiotics (cefixime first-line); hospitalize if pyelonephritis/toxic",
+          "Imaging: VCUG for pyelonephritis; assess for VUR",
+          "Follow imaging: DMSA to assess scarring at 6 months post-pyelonephritis"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 8: Nephrology", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 518: Glomerulonephritis", edition: "21st" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "agn-uti-layer-5-active-recall",
+        title: "AGN & UTI - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Test your knowledge of AGN and UTI pathophysiology, diagnosis, and management with clinical case questions.",
+        contentMd: `# Active Recall - AGN and UTI
+
+**Q1: A 7-year-old boy presents with dark urine, periorbital edema, and hypertension 2 weeks after strep throat. What is the diagnosis and what makes it post-streptococcal?**
+> Post-streptococcal GN (PSGN). Diagnosis based on timing (1-3 weeks post-pharyngitis), clinical presentation (hematuria, edema, hypertension), and ASO titer elevation. It's post-streptococcal because immune complexes form against Group A strep antigens, deposit in glomeruli, activate complement, causing proliferative GN.
+
+**Q2: Explain why RBC casts are pathognomonic for PSGN but absent in UTI.**
+> RBC casts require both hemoglobin and cylindrical protein matrix formation in renal tubules—indicate glomerular bleeding (PSGN pathology). UTI is bladder/urinary tract inflammation; no glomerular involvement, so no RBC casts form. Glomerular disease = RBC casts; urinary tract infection = pyuria, bacteria, no casts.
+
+**Q3: A urine sample shows hematuria, proteinuria, WBC, and bacteria with positive nitrites. Is this PSGN or UTI?**
+> UTI. Positive nitrites and bacteria culture are the key differentiators. PSGN: Hematuria + proteinuria but NEGATIVE culture (no bacteria). Presence of bacteria and positive nitrites = bacterial infection (UTI). Culture will confirm organism and guide antibiotics.
+
+**Q4: Why is the C3 level depressed in acute PSGN, and what does recovery of C3 indicate?**
+> C3 consumed during complement activation (classical pathway) when immune complexes deposit. Depressed C3 during acute phase (indicator of active disease). C3 recovery over 6-8 weeks indicates resolution of immune complex disease and glomerular inflammation. Persistently low C3 suggests alternative diagnosis (MPGN, lupus).
+
+**Q5: A 3-year-old girl has fever, flank pain, and pyuria. Urine culture grows E. coli. What is your initial management?**
+> Pyelonephritis (fever + flank pain = upper UTI). Initial management: Parenteral antibiotic (ceftriaxone 50-80 mg/kg/day IV) if ill-appearing/vomiting; oral if well. Hospitalize if: toxic appearance, sepsis signs, vomiting, age <3 months. Total duration: 10-14 days. Follow with renal ultrasound and VCUG to assess for VUR.
+
+**Q6: Why does cystitis cause dysuria but pyelonephritis causes fever?**
+> Cystitis: Local mucosal inflammation (bladder epithelium) → neurogenic pain signals (dysuria) but no systemic inflammation (fever absent). Pyelonephritis: Systemic inflammatory response (TNF-α, IL-1 elevation) → fever; also flank pain from renal inflammation. Same organism (E. coli) but different tissue involved = different symptom pattern.
+
+**Q7: A girl has recurrent UTIs. Why is VCUG imaging important, and what is vesicoureteral reflux?**
+> VCUG assesses for vesicoureteral reflux (VUR)—abnormal retrograde flow of urine from bladder back to ureters/kidneys. Risk: Intrarenal reflux damages kidney parenchyma during infection; increases scarring risk. Management depends on grade (I-II: prophylaxis; III-V: prophylaxis ± surgery).
+
+**Q8: What is the expected timeline for hematuria, proteinuria, and hypertension resolution in PSGN?**
+> Hematuria: 90% resolve within 3 months. Hypertension: Resolves within 2-3 weeks (50% within 1 week) with salt restriction. Proteinuria: May persist 6-12 months but usually asymptomatic. Overall: Excellent prognosis; >95% return to normal renal function.
+
+**Q9: Explain why penicillin therapy doesn't treat PSGN, and what is the benefit of penicillin in PSGN?**
+> Antibiotics don't treat PSGN glomerulonephritis itself (already an immune response). Penicillin eradicates residual streptococcus (completes treatment of preceding infection), prevents transmission to others, but doesn't alter GN course. PSGN resolves with supportive care alone in vast majority.
+
+**Q10: What distinguishes PSGN from IgA nephropathy (IgAN) in a child with hematuria?**
+> PSGN: Post-streptococcal (1-3 weeks after pharyngitis), elevated ASO titer, depressed C3 acutely, resolves within weeks-months. IgAN: No preceding infection, persistently normal C3, may have recurrent hematuria episodes, more chronic course. Kidney biopsy shows IgA predominance in IgAN vs C3 predominance in PSGN on immunofluorescence.
+
+**Q11: A 6-month-old infant with fever and irritability has urine culture positive for E. coli. Why is neonatal UTI more dangerous than in older children?**
+> Neonates: Immature immunity, lack specific IgA, higher risk of systemic dissemination and sepsis. Presentation atypical (no dysuria, no localized symptoms). Risk: Bacteremia, septic shock, renal scarring. Diagnosis often delayed (attributed to other causes). Requires hospitalization, parenteral antibiotics, aggressive management.
+
+**Q12: Describe the mechanism of renal scarring in pyelonephritis and how VUR increases this risk.**
+> Acute pyelonephritis: Interstitial inflammation (neutrophils, TNF-α, IL-1 elevation), bacterial invasion. Chronic: Fibrosis and scar formation. VUR increases risk because: Intrarenal reflux (high-pressure reflux) forces infected urine directly into kidney parenchyma, increasing parenchymal contact and inflammation. Scarring prevention: Early antibiotic treatment, VUR grading, prophylaxis for high-grade reflux.`,
+        mnemonics: [
+          {
+            text: "PSGN vs UTI Differentiation - CRAB",
+            explanation: "Culture (sterile=PSGN, positive=UTI), Rash/systemic (post-strep=PSGN), ASO titer (elevated=PSGN), Bacteria (absent=PSGN, present=UTI)"
+          },
+          {
+            text: "Child UTI Management - CAFE",
+            explanation: "Culture-directed therapy, Antibiotics (cefixime first-line), Fluids (hydration), Evaluate for VUR (especially pyelonephritis)"
+          }
+        ],
+        keyPoints: [
+          "PSGN: Type III hypersensitivity; complement-mediated; self-limited",
+          "RBC casts: Pathognomonic for PSGN; absent in UTI",
+          "C3 depression: Indicator of active PSGN; recovery indicates resolution",
+          "Management: Supportive care; antihypertensives if BP >160",
+          "Prognosis: Excellent; >95% recover completely",
+          "UTI: Culture-directed antibiotics; differentiate cystitis from pyelonephritis",
+          "VUR screening: Important in pyelonephritis to prevent scarring"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 8: Nephrology", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 518: Glomerulonephritis", edition: "21st" }
+        ]
+      }
+    ]
+  }
 ];

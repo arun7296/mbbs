@@ -1,18 +1,369 @@
-export const pediatricsPart6Lessons = [
-  // PE-MOD-03-TOP-01: Breastfeeding & Complementary Feeding
+import type { TopicLessons } from "./content-loader";
+
+export const pediatricsPart6Lessons: TopicLessons[] = [
   {
     topicCode: "PE-MOD-03-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "breastfeeding-foundation",
+        slug: "breastfeeding-layer-1-foundation",
         title: "Breastfeeding & Complementary Feeding - Foundation",
         estimatedMinutes: 25,
         summary: "Overview of breastfeeding benefits, techniques, exclusive breastfeeding guidelines, and introduction of complementary feeding per Indian ICMR standards.",
-        contentMd: "# Breastfeeding & Complementary Feeding - Foundation\n\n## Breast Milk Composition\n**Colostrum** (days 1-5):\n- High IgA, lactoferrin, lymphocytes\n- Low lactose, high protein (1.5-2 g/100 mL)\n- Yellow appearance due to carotenoids\n\n**Mature milk** (after week 2):\n- Protein: 1 g/100 mL (whey:casein = 70:30)\n- Fat: 3-4 g/100 mL (easily digestible)\n- Lactose: 7 g/100 mL\n- Calories: 65 kcal/100 mL\n\n**Expressed milk storage** (Indian guidelines):\n- Room temperature: 4 hours\n- Refrigerator: 24 hours\n- Freezer: 3 months\n\n## Exclusive Breastfeeding (EBF)\n- WHO/UNICEF: Breast milk only for first 6 months\n- No water, formula, or other foods (except medicines, vitamins)\n- Prevents 45% of neonatal deaths, 13% of under-5 deaths globally\n- Reduces diarrhea by 64%, respiratory infections by 72%\n\n## Latch Assessment\n**Good latch signs**:\n- Areola mostly in mouth (>2 cm)\n- Lower lip covers more areola than upper\n- Cheeks rounded outward\n- No pain for mother\n- Milk transfer seen (baby swallows)\n\n**Poor latch signs**:\n- Only nipple in mouth (white ring at areola)\n- Nipple pain, cracks\n- Slow weight gain\n- Audible clicking during feed\n\n## Complementary Feeding (6+ months)\n**Start at 6 months** (as per Ministry of Health, India):\n- Exclusive breastfeeding becomes nutritionally inadequate\n- Child loses birth immunity (3-4 months)\n- Baby develops readiness (sit upright, loss of extrusion reflex)\n\n**First foods** (6-8 months):\n- Iron-fortified cereals, mashed vegetables (sweet potato, carrot)\n- Gradually increase texture: puree → mashed → soft pieces\n- 1-2 meals/day, single food at a time (3-5 day trial for allergy detection)\n\n**Progressive diet** (8-12 months):\n- 2-3 meals + 2 snacks\n- Animal products: egg, meat, fish, curd\n- Fruits, legumes, grains mixed\n- Continue breastfeeding 6-8 times/day,\n        mnemonics: [\n          { text: \"EBF = 6M exclusive, then start complement\", explanation: \"WHO guidelines: 6 months exclusive, then gradual introduction\" },\n          { text: \"Latch: >2cm areola, cheeks round, painless\", explanation: \"Good latch assessment\" },\n          { text: \"First foods: Iron, veggie purees, 1-2 meals/day\", explanation: \"Starting complementary feeding at 6 months\" }\n        ],\n        keyPoints: [\n          \"Breast milk has perfect macronutrient ratio for infants\",\n          \"Colostrum rich in antibodies, essential first feed\",\n          \"EBF reduces infant mortality by preventing infections\",\n          \"Complementary feeding starts at 6 months, not earlier\",\n          \"Continue breastfeeding while introducing solids\"\n        ],\n        textbookRefs: [\n          { book: \"OP Ghai, Paul V. M. Essential Pediatrics\", chapter: \"Nutrition & Feeding\", edition: \"10th\" },\n          { book: \"WHO/UNICEF\", chapter: \"Infant and Young Child Feeding\", edition: \"2021\" },\n          { book: \"Ministry of Health, India IMNCI\", chapter: \"IYCF Guidelines\", edition: \"2016\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"breastfeeding-mechanism\",\n        title: \"Breastfeeding & Complementary Feeding - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Lactation physiology, let-down reflex, hormonal control, immunologic benefits, and introduction mechanism of complementary foods.\",\n        contentMd: "# Breastfeeding & Complementary Feeding - Mechanism\\n\\n## Lactation Physiology\\n**Hormonal control**:\\n- **Prolactin**: Released by anterior pituitary in response to nipple stimulation (TRH → PRL)\\n- **Oxytocin**: Released by posterior pituitary → let-down reflex, milk ejection\\n- Peak prolactin: 20-30 min after start of feeding\\n\\n**Lactogenesis stages**:\\n1. **Lactogenesis I** (week 16-32 pregnancy): Mammary gland tissue formation\\n2. **Lactogenesis II** (days 2-5 postpartum): Copious milk secretion (progesterone drop triggers)\\n3. **Galactopoiesis** (week 2+): Maintenance of milk production\\n\\n**Milk production mechanism**:\\n- Mother produces 500-1500 mL/day by 2-3 weeks postpartum\\n- Production depends on: frequency of emptying, completeness of emptying\\n- Supply-demand regulation: More frequent feeds = more milk\\n\\n## Let-Down Reflex\\n**Trigger**: Infant suckling → sensory nerves → hypothalamus → oxytocin release\\n**Result**: Myoepithelial cells contract → milk ejection (audible spray initially)\\n**Timeline**: Takes 1-5 minutes after infant attaches\\n**Role of infant**: Creates negative pressure (15-25 cmH₂O), then expression reflex does work\\n\\n## Immunologic Benefits\\n**Antibodies**:\\n- IgA (90% of immunoglobulins): Protects infant GI tract\\n- IgG, IgM: Provide systemic immunity\\n- Levels: High in colostrum, decrease over weeks (but still present at 6+ months)\\n\\n**Cells**:\\n- White blood cells: 4000-11000/mL (neutrophils, lymphocytes, macrophages)\\n- Anti-inflammatory: Lactoferrin, lysozyme, lactoperoxidase\\n- Bifidus factor: Promotes Bifidobacterium (commensal bacteria)\\n\\n**Prebiotics & Probiotics**:\\n- Oligosaccharides: Fermented by beneficial bacteria\\n- Lactobacilli naturally present in breast milk\\n\\n## Complementary Feeding Introduction\\n**Why 6 months**:\\n- Gut integrity develops: Reduced intestinal permeability\\n- Enzymes increase: Pancreatic enzymes, intestinal brush border\\n- Immune tolerance: Regulatory T cells mature (↓ allergy risk)\\n\\n**Introduction mechanism**:\\n- Small amounts (1-2 tsp) mixed with breast milk or alone\\n- Watch for signs of readiness: Tongue extrusion loss, interest in food, sit upright\\n- Signs of intolerance: Vomiting, diarrhea, rash, constipation\\n\\n**Single food introduction**:\\n- One new food every 3-5 days\\n- Allows identification of allergens\\n- Common early allergens: Eggs, peanuts, fish, milk products\\n\\n## Breastfeeding Continuation\\n- Continue 2-3 times/day at 12-24 months\\n- Nutritional contribution: ~30% of calories at 12 months\\n- Immunologic & developmental benefits persist beyond infancy,\\n        mnemonics: [\\n          { text: \\\"Prolactin = Milk production, Oxytocin = Milk ejection\\\", explanation: \\\"Key hormones in lactation\\\" },\\n          { text: \\\"Lactogenesis I→II→Galactopoiesis (16wks→5days→ongoing)\\\", explanation: \\\"3 stages of lactation\\\" },\\n          { text: \\\"IgA = 90% antibodies, protects infant gut\\\", explanation: \\\"Most important immunologic factor\\\" },\\n          { text: \\\"Complementary feeding: 6M start, 3-5 day trial per food\\\", explanation: \\\"Safe introduction guidelines\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Prolactin makes milk, oxytocin delivers milk (let-down reflex)\\\",\\n          \\\"Baby's suckling is key to continuing milk supply\\\",\\n          \\\"Breast milk antibodies protect GI tract, reduce infections\\\",\\n          \\\"Complementary feeding must preserve breastfeeding\\\",\\n          \\\"Single food introduction allows allergy detection\\\",\\n          \\\"Breastfeeding benefits continue well beyond 6 months\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai, Paul V. M. Essential Pediatrics\\\", chapter: \\\"Lactation & Breastfeeding Physiology\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Academy of Pediatrics\\\", chapter: \\\"Breastfeeding and Lactation\\\", edition: \\\"2020\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"breastfeeding-clinical\\\",\\n        title: \\\"Breastfeeding & Complementary Feeding - Clinical\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Management of breastfeeding problems, maternal health considerations, introduction of specific complementary foods with Indian dietary patterns.\\\",\\n        contentMd: ``# Breastfeeding & Complementary Feeding - Clinical\\n\\n## Common Breastfeeding Problems\\n\\n**Sore Nipples** (first 2 weeks, 60% mothers):\\n- Cause: Poor latch → friction and trauma\\n- Management: Correct latch, air-dry between feeds, lanolin ointment, warm compresses\\n- Severe: Nipple shields, express milk temporarily if pain severe\\n\\n**Engorgement** (day 3-5):\\n- Cause: Venous stasis + interstitial edema (not milk overproduction)\\n- Signs: Hard, swollen, painful breasts, low-grade fever\\n- Management: Frequent feeds (every 2 hours), warm compresses, gentle expression, NSAIDs\\n- Resolution: 48-72 hours with correct management\\n\\n**Blocked Duct**:\\n- Cause: Milk stasis in one duct (tight bra, poor positioning, oversupply)\\n- Signs: Localized lump, pain, no systemic symptoms\\n- Management: Frequent feeds on affected side, warm compresses, massage, varied positions\\n- Differential: Mastitis (systemic symptoms: fever, malaise)\\n\\n**Mastitis** (1-5% breastfeeding mothers):\\n- Cause: Milk stasis + infection (S. aureus most common)\\n- Signs: Fever (>38.5°C), localized redness, induration, systemic symptoms\\n- Management: Continue breastfeeding, antibiotics (flucloxacillin 500mg QID), drain breast, analgesia\\n- Rare: Breast abscess (hardness, fluctuance) → ultrasound, drainage\\n\\n**Inadequate Supply**:\\n- Signs: Infant not gaining weight, <6 wet diapers/day, infrequent stools\\n- Causes: Poor latch, infrequent feeds, maternal stress, drugs (OCPs, antihistamines)\\n- Management: Increase feed frequency, correct latch, reduce stress, galactagogues (fenugreek, domperidone)\\n\\n## Maternal Contraindications to Breastfeeding\\n**Absolute**:\\n- Active TB (untreated), HIV (in resource-limited settings, relative)\\n- Herpetic lesions on breast\\n- Breast cancer with ongoing chemotherapy\\n\\n**Relative** (express and discard milk):\\n- Maternal medications: Some anticonvulsants, radioisotopes\\n- Galactosemia in infant (mother can breastfeed, infant cannot)\\n\\n**Maternal conditions safe to breastfeed**:\\n- Hepatitis B, C (if infant vaccinated)\\n- Diabetes, hypertension, asthma\\n- Mastitis, engorgement, blocked duct (continue feeding)\\n\\n## Complementary Feeding - Indian Context\\n\\n**6-8 months** (stage 1):\\n- Iron-fortified cereal with vegetable: Rice cereal + spinach puree\\n- Vegetable purees: Sweet potato, carrot, bottle gourd, pumpkin\\n- Mashed banana, steamed apple\\n- Frequency: Once daily, 2-3 tsp\\n\\n**8-10 months** (stage 2):\\n- Add legumes: Lentil (moong), chickpea (chana) porridge\\n- Meat/fish: Minced chicken, fish, once/week\\n- Finger foods: Soft toast, rusks, boiled egg pieces\\n- Frequency: Twice daily, 3-4 tsp per meal\\n\\n**10-12 months** (stage 3):\\n- Family foods: Dal-rice, khichdi (dal + rice + vegetable)\\n- Full egg (cooked), yogurt, paneer\\n- Mashed fruits: Chikoo, papaya, mango (seasonal)\\n- Frequency: 2-3 meals, 100-150 mL/meal\\n\\n**After 12 months**:\\n- Gradual transition to family diet\\n- Continue breastfeeding 2-3 times/day\\n- Total nutrition: Milk (breast + cow's milk) 500 mL/day\\n\\n## Signs of Adequate Nutrition\\n- Weight gain: 15-20 g/day (6-12 months)\\n- Motor milestones: Sit independently (6M), stand (9-12M)\\n- Responsive to stimulation\\n- No signs of malnutrition: Wasting, stunting,\\n        mnemonics: [\\n          { text: \\\"Mastitis: Fever + localized swelling = continue BF + antibiotics\\\", explanation: \\\"Management approach\\\" },\\n          { text: \\\"Inadequate supply: Poor latch → infrequent feeds → ↓milk\\\", explanation: \\\"Mechanism and intervention\\\" },\\n          { text: \\\"Complement intro: 6M veggie puree, 8M add meat, 10M family food\\\", explanation: \\\"Progressive Indian pattern\\\" },\\n          { text: \\\"TB untreated = no BF, Hepatitis B = BF safe (infant vaccinated)\\\", explanation: \\\"Key maternal contraindications\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Sore nipples usually result from poor latch, not from breastfeeding itself\\\",\\n          \\\"Engorgement treated with frequent feeds, not limitation\\\",\\n          \\\"Mastitis is NOT indication to stop breastfeeding\\\",\\n          \\\"Complementary feeding should be started at exactly 6 months (not earlier)\\\",\\n          \\\"Early introduction of allergens may reduce allergic sensitization\\\",\\n          \\\"Breastfeeding should continue alongside solids for optimal nutrition\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai, Paul V. M. Essential Pediatrics\\\", chapter: \\\"Common Breastfeeding Problems\\\", edition: \\\"10th\\\" },\\n          { book: \\\"IMNCI Training Handbook\\\", chapter: \\\"Infant and Young Child Feeding\\\", edition: \\\"2016\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"breastfeeding-exam\\\",\\n        title: \\\"Breastfeeding & Complementary Feeding - Exam Prep\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"NEET/NMC exam patterns: Latch assessment, mastitis management, complementary feeding timelines, and national guidelines.\\\",\\n        contentMd: ``# Breastfeeding & Complementary Feeding - Exam Prep\\n\\n## Exam-Focus Topics\\n\\n**Exclusive Breastfeeding (EBF)**:\\n- Duration: 6 months (NOT 4-6 months, exactly 6 months per WHO)\\n- Definition: Breast milk ONLY (no other foods, water, or formula)\\n- Exception: Prescribed medicines and vitamin drops are acceptable\\n\\n**Latch Assessment** (Common exam question):\\n- Good latch: >2 cm of areola in mouth, cheeks round, no pain\\n- Poor latch: Only nipple in mouth, mother reports pain, poor weight gain\\n- Result of good latch: Effective milk transfer, baby's sucks/swallows audible\\n\\n**Mastitis vs Blocked Duct**:\\n| Feature | Blocked Duct | Mastitis |\\n|---------|-------------|----------|\\n| Fever | No | Yes (>38.5°C) |\\n| Location | Localized | May be diffuse or localized |\\n| Systemic symptoms | None | Malaise, chills |\\n| Treatment | Massage, warm compress, feeds | Antibiotics + feeds |\\n| Prognosis | Self-limiting | Improves in 48-72 hrs with antibiotics |\\n\\n**Milk Composition Across Time**:\\n- Colostrum (day 1-5): High protein (1.5-2 g%), high IgA\\n- Transitional (week 2): Decreasing protein, increasing lactose\\n- Mature (week 3+): 1 g% protein, 7 g% lactose, 65 kcal/100 mL\\n\\n**Complementary Feeding Timeline** (Indian IMNCI):\\n- 6 months: Start with single cereal + vegetable (1-2 tsp, 1x/day)\\n- 8 months: Add meat, increase to 2x/day\\n- 10 months: Family foods, 3 meals + snacks\\n- 12 months: Transition to family diet, continue breastfeeding\\n\\n**Iron-Fortified Foods**:\\n- Start from 6 months to prevent anemia\\n- Best sources: Fortified cereals, meat, liver, dark leafy greens\\n- Vitamin C helps absorption (tomato, orange juice)\\n\\n**Contraindications to Breastfeeding** (Exam questions):\\n- HIV in resource-limited setting (relative, alternative feeding safer)\\n- Active TB (untreated): No direct transmission but risk of infection\\n- Breast abscess with discharge: Temporary cessation, express and discard\\n\\n**Growth Monitoring During Complementary Feeding**:\\n- Expected weight gain: 15-20 g/day (6-12 months)\\n- If <10 g/day: Inadequate caloric intake or malabsorption\\n- Check: Latch, feed frequency, food quality, infection status,\\n        mnemonics: [\\n          { text: \\\"EBF = 6M (not 4-6M), breast milk ONLY (no water)\\\", explanation: \\\"Exam confusion point\\\" },\\n          { text: \\\"Mastitis: Fever + antibiotics + continue BF\\\", explanation: \\\"Key management difference from blocking\\\" },\\n          { text: \\\"Complement: 6M (single), 8M (meat), 10M (family), 12M (transition)\\\", explanation: \\\"Monthly progression\\\" },\\n          { text: \\\"Iron-fortified from 6M to prevent anemia\\\", explanation: \\\"Public health recommendation\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"EBF is EXACTLY 6 months, not '4-6 months'\\\",\\n          \\\"Mastitis is NOT absolute contraindication to breastfeeding\\\",\\n          \\\"Complementary feeding starts AT 6 months (not before, not after)\\\",\\n          \\\"First foods should be iron-fortified to prevent anemia\\\",\\n          \\\"Mother's diet quality affects breast milk micronutrients\\\",\\n          \\\"Growth failure during complementary feeding suggests inadequate diet or infection\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"NMC Standard Textbook\\\", chapter: \\\"Lactation and Complementary Feeding\\\", edition: \\\"2024\\\" },\\n          { book: \\\"WHO Guidelines\\\", chapter: \\\"Infant and Young Child Feeding Recommendations\\\", edition: \\\"2021\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"breastfeeding-recall\\\",\\n        title: \\\"Breastfeeding & Complementary Feeding - Active Recall\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"7-10 targeted Q&A covering latch, lactation, mastitis, complementary feeding timing, and Indian dietary practices.\\\",\\n        contentMd: ``# Breastfeeding & Complementary Feeding - Active Recall\\n\\n## Questions & Answers\\n\\n**Q1: A 3-month-old infant with poor weight gain is on exclusive breastfeeding. What is the first step in management?**\\nA: Assess the latch. Poor latch is the most common cause of inadequate milk transfer. Check for: >2 cm areola in mouth, rounded cheeks, painless feeding, and audible swallows. If latch is poor, correct positioning. If latch is good, rule out infant illness and maternal causes (poor supply, stress).\\n\\n**Q2: A mother with fever (38.8°C), localized breast redness and induration reports severe breast pain. What is the diagnosis and immediate management?**\\nA: Mastitis. Immediate management: (1) Continue breastfeeding frequently on affected side (priority); (2) Flucloxacillin 500 mg QID x 7 days (covers S. aureus); (3) Analgesia (paracetamol); (4) Warm compresses; (5) Review in 48 hours. Stopping breastfeeding increases abscess risk.\\n\\n**Q3: At what age should complementary feeding be introduced, and what is the appropriate first food?**\\nA: Exactly 6 months of age. First food should be a single, iron-fortified cereal mixed with vegetable puree (e.g., rice cereal + carrot). Start with 1-2 teaspoons once daily. Iron fortification is critical to prevent anemia. Do NOT introduce water, formula, or mixed foods initially.\\n\\n**Q4: What is the composition of colostrum and why is it important?**\\nA: Colostrum (day 1-5): High protein (1.5-2 g%), high IgA antibodies, low lactose, yellow appearance. Importance: (1) IgA coats infant GI tract, provides passive immunity; (2) Lactoferrin has antimicrobial properties; (3) Laxative effect clears meconium; (4) High nutrient density in small volume suits newborn stomach capacity.\\n\\n**Q5: A mother is taking fluconazole for vaginal candidiasis. Can she continue breastfeeding?**\\nA: Yes. Fluconazole is safe during breastfeeding. Infant absorption is minimal. If infant has oral thrush, both mother and infant should be treated (infant with nystatin drops, mother with miconazole cream on nipple). Continue breastfeeding during treatment.\\n\\n**Q6: How should complementary foods be introduced to detect allergies?**\\nA: Introduce one new food at a time, waiting 3-5 days before introducing another. This allows identification of allergens if the infant develops symptoms: rash, vomiting, diarrhea, constipation, or wheezing. Common allergens: eggs, peanuts, fish, milk products. Early allergen introduction may actually reduce allergy risk (not increase it).\\n\\n**Q7: What is the recommended frequency and duration of breastfeeding at 12 months?**\\nA: At 12 months, infant should continue breastfeeding 2-3 times daily, contributing approximately 30% of daily caloric needs. Can continue alongside cow's milk (500 mL/day) and family foods. Benefits extend beyond nutrition: immunologic protection, developmental bonding, and reduced infection risk.\\n\\n**Q8: A 9-month-old with poor weight gain is on complementary feeding (khichdi 2x/day) alongside breastfeeding. What is the expected weight gain rate, and when should you suspect malnutrition?**\\nA: Expected weight gain: 15-20 g/day (6-12 months). If <10 g/day, suspect: (1) Inadequate food intake (insufficient calories); (2) Malabsorption (diarrhea, infections); (3) Poor quality food (low nutrient density); (4) Feeding practices (force-feeding, infrequent feeds). Assess for wasting and stunting using growth charts.\\n\\n**Q9: How does breastfeeding reduce infant mortality compared to formula feeding in India?**\\nA: Breastfeeding reduces: (1) Diarrheal deaths by 64% (IgA coating, commensal bacteria, reduced contamination); (2) Respiratory infection deaths by 72% (IgA, IgG, antimicrobial factors); (3) Neonatal mortality by 45% (via colostrum immunity, bonding, reduced hypothermia); (4) Overall child mortality by 13%. Formula feeding in India increases infection risk due to water contamination and preparation challenges.\\n\\n**Q10: A mother with active untreated TB asks if she can breastfeed. What is your advice?**\\nA: Active untreated TB of mother is contraindication to direct breastfeeding (infant infection risk via respiratory droplets). Management: (1) Separate infant from mother for 2 weeks of anti-TB therapy; (2) Mother can express milk safely (TB not transmitted via milk) and infant can receive expressed milk; (3) Start infant prophylaxis (INH); (4) Infant can resume direct feeding after mother has been on therapy for 2 weeks and is non-infectious.\\n      }\\n    ]\\n  },\\n  // PE-MOD-03-TOP-04: Immunization Schedule\\n  {\\n    topicCode: \\\"PE-MOD-03-TOP-04\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"immunization-foundation\\\",\\n        title: \\\"Immunization Schedule - Foundation\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Overview of universal immunization program (UIP), vaccination schedule per Indian guidelines, vaccine-preventable diseases, and herd immunity concept.\\\",\\n        contentMd: ``# Immunization Schedule - Foundation\\n\\n## Universal Immunization Program (UIP) - India\\n**Goal**: Prevent communicable diseases in children via routine immunization\\n**Coverage Target**: >90% vaccination by 18 months\\n**Schedule**: Follows Ministry of Health UIP 2024 guidelines\\n\\n**Free vaccines under UIP**:\\n- BCG, OPV/IPV (polio)\\n- DPT (diphtheria, pertussis, tetanus)\\n- Hepatitis B\\n- Haemophilus influenzae type b (Hib) - added recently\\n- Pneumococcal conjugate vaccine (PCV)\\n- Rotavirus\\n- Measles/Rubella (MR)\\n- Japanese Encephalitis (JE) - region-specific\\n- Varicella - selected states\\n\\n**Schedule overview** (birth to 5 years):\\n- **Birth**: BCG, HepB-0, OPV-0\\n- **6 weeks**: DPT-1, OPV-1, IPV-1, HepB-1, Hib-1, PCV-1, Rotavirus-1\\n- **10 weeks**: DPT-2, OPV-2, IPV-2, HepB-2, Hib-2, PCV-2, Rotavirus-2\\n- **14 weeks**: DPT-3, OPV-3, IPV-3, HepB-3, Hib-3, PCV-3, Rotavirus-3\\n- **9 months**: MR-1, JE-1 (where applicable)\\n- **18 months**: DPT Booster-1, OPV Booster, IPV Booster, MR-2, JE-2\\n- **2-6 years**: School entry boosters\\n\\n## Vaccine Types\\n**Live vaccines**:\\n- BCG, OPV (oral polio), Rotavirus, MR, Varicella, JE\\n- Cannot give within 4 weeks of each other (except BCG)\\n- Spacing: 4-week minimum gap\\n\\n**Inactivated vaccines**:\\n- IPV (inactivated polio), DPT, HepB, Hib, PCV\\n- Can be given together\\n- Can be given any time after live vaccine\\n\\n## Herd Immunity Threshold\\n- Percentage vaccinated needed to break disease transmission chain\\n- **Measles**: 85-90% immunity\\n- **Polio**: 80-85%\\n- **Diphtheria**: 75-80%\\n- When herd immunity reached: Disease transmission stopped even in unvaccinated individuals\\n\\n## Vaccine-Preventable Diseases\\n\\n**Diphtheria**: Corynebacterium diphtheriae\\n- Pseudomembrane, myocarditis, neurologic complications\\n- Mortality: 10% overall, 20% in <5 years\\n\\n**Pertussis**: Bordetella pertussis\\n- Paroxysmal cough, post-tussal vomiting, whooping sound\\n- Apnea and seizures in infants\\n- Mortality: 1-2% in infants\\n\\n**Tetanus**: Clostridium tetani\\n- Lockjaw, opisthotonus, respiratory muscle paralysis\\n- Mortality: 5-10% even with ICU care\\n\\n**Poliomyelitis**: Poliovirus (3 serotypes)\\n- Flaccid paralysis, respiratory failure\\n- India declared polio-free since 2014,\\n        mnemonics: [\\n          { text: \\\"UIP: BCG-birth, DPT-6wks/10wks/14wks, MR-9M, Boosters-18M\\\", explanation: \\\"Basic UIP schedule outline\\\" },\\n          { text: \\\"Live vaccines: 4-week gap (except BCG), Inactivated: any time\\\", explanation: \\\"Vaccine spacing rules\\\" },\\n          { text: \\\"Herd immunity: Measles 85-90%, Polio 80-85%\\\", explanation: \\\"Thresholds for disease elimination\\\" },\\n          { text: \\\"DPT = Diphtheria (membrane), Pertussis (cough), Tetanus (lockjaw)\\\", explanation: \\\"Disease features\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"BCG given at birth (intradermal), creates lifelong scar\\\",\\n          \\\"Rotavirus vaccine protects against severe diarrhea in infants\\\",\\n          \\\"Pneumococcal conjugate vaccine prevents pneumonia, meningitis, bacteremia\\\",\\n          \\\"Hib vaccine prevents meningitis (most common cause pre-vaccine)\\\",\\n          \\\"MR vaccine eliminates need for 3 separate vaccines (measles, mumps, rubella)\\\",\\n          \\\"India polio-free since 2014; IPV now preferred over OPV\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai, Paul V. M. Essential Pediatrics\\\", chapter: \\\"Immunization\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Ministry of Health, India\\\", chapter: \\\"Universal Immunization Program Schedule\\\", edition: \\\"2024\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"immunization-mechanism\\\",\\n        title: \\\"Immunization Schedule - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Immune response to vaccines, antibody production timeline, booster timing logic, and age-specific immune competence.\\\",\\n        contentMd: ``# Immunization Schedule - Mechanism\\n\\n## Immune Response to Vaccines\\n\\n**Primary response** (first exposure):\\n- IgM antibodies appear at 1-2 weeks (low affinity)\\n- IgG antibodies appear at 2-3 weeks (high affinity)\\n- Cell-mediated immunity (T-cells) develops in parallel\\n- Peak antibody levels: 2-4 weeks post-vaccination\\n\\n**Secondary response** (booster):\\n- Rapid IgG production (1-3 days)\\n- Higher antibody titers and affinity\\n- Longer duration of immunity\\n- Cellular memory response strong\\n\\n## Why Multiple Doses Are Needed\\n\\n**Maternal antibodies** (newborn):\\n- IgG transferred transplacentally (peaks at birth)\\n- Decays exponentially: Halves every 4-6 weeks\\n- Interferes with vaccine response (blocks antigen)\\n- By 6 weeks: <30% remaining; 9-12 months: negligible\\n\\n**Infant immune system** (6-14 weeks):\\n- Innate immunity weak (TLR response immature)\\n- T-cell numbers low, function slow\\n- By 6 weeks: Capable of primary response to vaccine\\n- By 14 weeks: More robust response\\n\\n**Multiple dose rationale**:\\n- Primary series (3 doses): Overcome maternal antibodies, establish response\\n- Booster dose (18 months): Anamnestic response, long-term immunity\\n- School boosters: Maintain immunity before age of highest exposure risk\\n\\n## Age-Specific Vaccine Responses\\n\\n**6 weeks of age**:\\n- Maternal antibodies mostly gone\\n- First vaccine doses administered\\n- IgM response expected, IgG begins\\n- T-cell response initiated\\n\\n**9-14 weeks**:\\n- Progressing immune response to series\\n- Better response than at 6 weeks\\n- Maternal antibody interference minimal\\n\\n**18 months**:\\n- Booster response: Rapid IgG production\\n- IgG titers 10-100 fold higher than primary series\\n- Long-lived plasma cells and memory B cells established\\n\\n**School age (5-6 years)**:\\n- Booster response to maintain immunity\\n- Specific spacing needed to prevent tolerance (minimum 12 months from previous dose)\\n\\n## Vaccine Efficacy\\n\\n**Antibody titers and protection**:\\n- Protective levels defined for each vaccine\\n- Diphtheria: >0.1 IU/mL protective\\n- Tetanus: >0.1 IU/mL protective\\n- Hepatitis B: >10 mIU/mL protective\\n- Measles: >120 mIU/mL protective\\n\\n**Duration of immunity**:\\n- **BCG**: Lifelong (>90 years), 1-2 boosters in endemic TB areas\\n- **DPT**: Requires boosters every 10 years in childhood (then adult Td every 10 years)\\n- **Polio**: Oral (OPV) = mucosal immunity (good for community); IPV = serum immunity (good for individual)\\n- **Hepatitis B**: 30-year immunity after 3-dose series; boosters not routinely needed\\n- **Measles**: Near-lifelong after 2 doses (99% protection),\\n        mnemonics: [\\n          { text: \\\"Maternal Abs: halve every 4-6wks, gone by 9-12M\\\", explanation: \\\"Why vaccine timing is 6 weeks\\\" },\\n          { text: \\\"Primary = establish, Booster = anamnestic (10-100× higher titers)\\\", explanation: \\\"Dose rationale\\\" },\\n          { text: \\\"6wks onwards: Infant immune system ready for vaccination\\\", explanation: \\\"Age for first vaccine\\\" },\\n          { text: \\\"Protective titers: Diphtheria >0.1 IU/mL, Measles >120 mIU/mL\\\", explanation: \\\"Vaccine efficacy markers\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Maternal IgG protects infant but interferes with vaccine response initially\\\",\\n          \\\"Primary response takes 2-4 weeks; booster response takes 1-3 days\\\",\\n          \\\"Multiple doses needed to overcome maternal antibodies and establish immunity\\\",\\n          \\\"Booster at 18 months provides 10-100 fold higher antibody levels than primary series\\\",\\n          \\\"Spacing between doses is important: too close = poor response, too far = need to restart\\\",\\n          \\\"Some vaccines provide lifetime immunity (measles, polio, hepatitis B); others need periodic boosters (diphtheria, tetanus)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Janeway's Immunobiology\\\", chapter: \\\"Vaccination and Vaccine Development\\\", edition: \\\"9th\\\" },\\n          { book: \\\"OP Ghai, Paul V. M. Essential Pediatrics\\\", chapter: \\\"Immunization Mechanisms\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"immunization-clinical\\\",\\n        title: \\\"Immunization Schedule - Clinical\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Contraindications to vaccination, adverse events, catch-up schedules, special situations (prematurity, immunocompromise), and vaccination documentation.\\\",\\n        contentMd: ``# Immunization Schedule - Clinical\\n\\n## Contraindications to Vaccination\\n\\n**Absolute contraindications**:\\n- **Anaphylaxis to previous vaccine dose**: Avoid that specific vaccine\\n- **Anaphylaxis to vaccine component** (e.g., egg allergy → measles, yellow fever; gelatin → MMR)\\n- **Severe immunodeficiency** (e.g., severe combined immunodeficiency, AIDS CD4 <200): Avoid live vaccines\\n- **Encephalopathy within 7 days of DPT**: Avoid further DPT (give DT instead)\\n- **Intussusception history**: Relative contraindication to rotavirus (risk-benefit analysis)\\n\\n**Relative contraindications** (defer, not avoid):\\n- Acute febrile illness: Defer until recovery (mild fever/URI acceptable)\\n- Immunosuppressive therapy: Defer until 3-6 months after therapy ends\\n- Blood transfusion: Defer live vaccine 3-6 months\\n- Pregnancy: Defer live vaccines; inactivated safe\\n- Tuberculosis (active, untreated): Defer until treatment started (BCG safe if not yet given)\\n\\n**NOT contraindications** (safe to vaccinate):\\n- Mild fever, cough, diarrhea\\n- Antibiotics use\\n- Jaundice (mild)\\n- Prematurity (use chronological age until 2 years, then calendar age)\\n- Eczema, hay fever\\n- Family history of adverse vaccine events\\n- Breastfeeding\\n- Eczema or family history of atopy (safe; no increased risk)\\n\\n## Adverse Events Following Immunization (AEFI)\\n\\n**Expected/common adverse events**:\\n- Fever, injection site pain/redness/swelling (24-48 hrs after vaccine)\\n- Fussy behavior, decreased appetite\\n- Mild rash (measles vaccine, 5-12 days post-vaccination)\\n\\n**Serious but rare adverse events**:\\n- **Guillain-Barré Syndrome** (post-polio vaccine, 1 in 1 million doses)\\n- **Anaphylaxis** (1 in 1-2 million doses, reactions within minutes)\\n- **VAPP** (vaccine-associated paralytic poliomyelitis, 1 in 2.4 million OPV doses) - rare since switch to IPV\\n- **Intussusception** (rotavirus vaccine, 1 in 20000-100000)\\n\\n**Management of AEFI**:\\n- Monitor for 30 minutes post-vaccination\\n- Anaphylaxis: Immediate epinephrine IM (0.01 mg/kg of 1:1000), IV line, observation\\n- Fever: Paracetamol 15 mg/kg\\n- Report to pharmacovigilance center (AEFI reporting mandatory)\\n\\n## Catch-Up Vaccination\\n\\n**Missed doses schedule** (if gap >4 weeks):\\n- **DPT series**: If gap, restart series (no need to restart if <4 weeks gap)\\n- **Polio**: No need to restart, continue from where left\\n- **Measles**: If delayed, can give anytime >9 months; catch-up dosing as per status\\n\\n**Incomplete vaccination at 2+ years**:\\n- Accelerate schedule (minimum intervals respected)\\n- Example: Child 2 years old with DPT-1 only: Give DPT-2 after 4-6 weeks, DPT-3 after 4-6 weeks from DPT-2\\n\\n## Special Situations\\n\\n**Prematurity**:\\n- Calculate age from expected date of delivery (EDD) until 2 years of age\\n- Vaccination should not be delayed due to prematurity alone\\n- Preterm infants: Higher risk of whooping cough, should vaccinate on schedule\\n\\n**Low birth weight (<2000g)**:\\n- Defer BCG if hospitalized for other conditions (give at discharge)\\n- Other vaccines safe to give as scheduled\\n\\n**Immunocompromised child** (e.g., HIV, chemotherapy):\\n- Avoid live vaccines: BCG, OPV, Rotavirus, MR, Varicella, JE\\n- Inactivated vaccines safe: IPV, DPT, HepB, Hib, PCV\\n- Timing: If CD4 >200 (HIV), can give inactivated vaccines\\n- Vaccinate early before immunosuppression worsens\\n\\n**Post-exposure prophylaxis**:\\n- **Varicella exposure**: Vaccinate within 3 days if unvaccinated\\n- **Measles exposure**: Vaccinate within 72 hours if unvaccinated (or immunoglobulin)\\n- **Hepatitis B exposure**: HepB vaccine + HBIG within 24 hours (neonatal exposure)\\n\\n## Vaccination Documentation\\n- **Certificate**: Record vaccine name, date, batch number, site of injection\\n- **Immunization card**: Given to parents (WHO card design)\\n- **Register**: Maintained at health facility for coverage assessment\\n- **Follow-up**: Schedule next dose before discharge/exit,\\n        mnemonics: [\\n          { text: \\\"True contraindications: Anaphylaxis to vaccine or component, severe immunodeficiency, encephalopathy post-DPT\\\", explanation: \\\"Only absolute contraindications\\\" },\\n          { text: \\\"NOT contraindications: Mild fever/diarrhea/eczema/family Hx/breastfeeding\\\", explanation: \\\"Safe to vaccinate despite these\\\" },\\n          { text: \\\"AEFI: Expected (fever, redness), Rare serious (GBS, anaphylaxis, VAPP)\\\", explanation: \\\"Adverse events spectrum\\\" },\\n          { text: \\\"Prematurity: Use EDD until 2 years, then calendar age\\\", explanation: \\\"Age calculation in preterm\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Mild fever/illness is NOT contraindication to vaccination\\\",\\n          \\\"Severe immunodeficiency is absolute contraindication only to LIVE vaccines\\\",\\n          \\\"Anaphylaxis within minutes of vaccine requires immediate epinephrine IM\\\",\\n          \\\"AEFI reporting is mandatory for pharmacovigilance\\\",\\n          \\\"Prematurity alone does not delay vaccination; use corrected age until 2 years\\\",\\n          \\\"Missed doses should be continued from where left (except DPT if gap >4 weeks)\\\",\\n          \\\"Live vaccine spacing: 4-week minimum gap (except BCG with another vaccine same day)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai, Paul V. M. Essential Pediatrics\\\", chapter: \\\"Immunization: Contraindications and AEFI\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Ministry of Health, India\\\", chapter: \\\"UIP Handbook: Adverse Events, Contraindications\\\", edition: \\\"2024\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"immunization-exam\\\",\\n        title: \\\"Immunization Schedule - Exam Prep\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"NEET/NMC exam patterns: UIP schedule details, vaccine spacing, contraindications, AEFI recognition, and public health aspects.\\\",\\n        contentMd: ``# Immunization Schedule - Exam Prep\\n\\n## Exam-Focus: UIP Schedule (2024)\\n\\n| Age | Vaccines |\\n|-----|----------|\\n| Birth | BCG, HepB-0, OPV-0 |\\n| 6 weeks | DPT-1, OPV-1, IPV-1, HepB-1, Hib-1, PCV-1, Rotavirus-1 |\\n| 10 weeks | DPT-2, OPV-2, IPV-2, HepB-2, Hib-2, PCV-2, Rotavirus-2 |\\n| 14 weeks | DPT-3, OPV-3, IPV-3, HepB-3, Hib-3, PCV-3, Rotavirus-3 |\\n| 9 months | MR-1, JE-1 (region-specific) |\\n| 18 months | DPT Booster-1, OPV Booster, IPV Booster, MR-2, JE-2 |\\n| 5-6 years | DPT Booster-2, OPV Booster-2 |\\n\\n**Key points**:\\n- IPV now preferred over OPV (inactivated safer, no VAPP risk)\\n- PCV (pneumococcal) vaccine prevents meningitis, pneumonia\\n- Hib vaccine prevents Haemophilus meningitis (major pre-vaccine cause)\\n- Rotavirus vaccine prevents severe diarrhea in infants\\n- MR vaccine replaces measles, mumps, rubella (3-in-1)\\n- JE vaccine added in endemic areas (North India focus)\\n\\n## Vaccine Spacing Rules (Exam Questions)\\n- **Live vaccines**: 4-week minimum gap (except BCG, can be given same day as another vaccine)\\n- **Inactivated vaccines**: No spacing requirement (can give same day, different syringes, different sites)\\n- **Live after inactivated**: No spacing required\\n- **Inactivated after live**: 4-week gap (applies to live vaccines)\\n- **Exception**: BCG + OPV at birth = acceptable\\n\\n## AEFI Recognition\\n**Anaphylaxis** (within minutes to 15 min):\\n- Signs: Urticaria, angioedema, wheeze, hypotension, syncope\\n- Management: Epinephrine IM 0.01 mg/kg (1:1000), IV fluids, antihistamines, corticosteroids\\n- Do NOT use subcutaneous epinephrine\\n\\n**Encephalopathy** (within 7 days of DPT):\\n- Signs: Altered consciousness, seizures, high fever\\n- Contraindication: No further whole-cell pertussis (give DT instead)\\n- IPV/DPT-IPV continuation depends on clinical assessment\\n\\n**Guillain-Barré Syndrome**:\\n- Ascending paralysis, 1-4 weeks post-vaccination (rare)\\n- Weakness starts in legs, may involve cranial nerves\\n- Respiratory support may be needed\\n\\n**Intussusception** (rotavirus):\\n- Age: Peaks 4-24 weeks after vaccine\\n- Signs: Abdominal pain, vomiting, bloody stools\\n- Management: Ultrasound diagnosis, often self-limited but may need reduction\\n\\n## Contraindications Quick Table\\n| Situation | Safe? | Action |\\n|-----------|-------|--------|\\n| Fever 38.2°C | Yes | Vaccinate |\\n| Mild diarrhea | Yes | Vaccinate |\\n| URI | Yes | Vaccinate |\\n| Severe immunodeficiency | No | Avoid live vaccines |\\n| Anaphylaxis to egg | Maybe | Avoid measles/yellow fever |\\n| Eczema | Yes | Vaccinate |\\n| Breastfeeding | Yes | Safe |\\n| Antibiotic use | Yes | Vaccinate |\\n| Prematurity 32 weeks | Yes | Use EDD until 2y |\\n\\n## Public Health Aspects\\n- **Vaccination coverage**: Target >90% by 18 months for disease elimination\\n- **Herd immunity**: Measles needs 85-90%, Polio needs 80-85%, Diphtheria needs 75-80%\\n- **Vaccination impact**: Reduced disease burden, hospital admissions, mortality\\n- **Equity**: UIP ensures free vaccines for all children, reduces socioeconomic gap\\n- **Surveillance**: AEFI reporting mandatory; disease surveillance monitors vaccine-preventable disease trends,\\n        mnemonics: [\\n          { text: \\\"Birth: BCG/HepB/OPV; 6w: All vaccines; 9M: MR/JE; 18M: Boosters\\\", explanation: \\\"UIP schedule milestones\\\" },\\n          { text: \\\"Live vaccine gap = 4 weeks (except BCG same day)\\\", explanation: \\\"Spacing rule\\\" },\\n          { text: \\\"Anaphylaxis = IM epinephrine (not SQ), 0.01 mg/kg\\\", explanation: \\\"AEFI management\\\" },\\n          { text: \\\"Prematurity: Use expected delivery date age until 2 years\\\", explanation: \\\"Age calculation\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"BCG at birth; other vaccines start at 6 weeks (not earlier)\\\",\\n          \\\"IPV preferred over OPV in India now (inactivated safer)\\\",\\n          \\\"Hib vaccine prevents meningitis (major indication)\\\",\\n          \\\"Anaphylaxis requires IM epinephrine, NOT subcutaneous\\\",\\n          \\\"Mild fever (<38.5°C) is NOT contraindication\\\",\\n          \\\"Prematurity does NOT delay vaccination; correct age only until 2 years\\\",\\n          \\\"All AEFI must be reported for pharmacovigilance\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"NMC Standard Textbook\\\", chapter: \\\"Immunization and UIP\\\", edition: \\\"2024\\\" },\\n          { book: \\\"Ministry of Health UIP Handbook\\\", chapter: \\\"Schedule, Contraindications, AEFI\\\", edition: \\\"2024\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"immunization-recall\\\",\\n        title: \\\"Immunization Schedule - Active Recall\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"8 targeted Q&A covering UIP schedule, vaccine spacing, contraindications, AEFI, and special situations.\\\",\\n        contentMd: ``# Immunization Schedule - Active Recall\\n\\n## Questions & Answers\\n\\n**Q1: A 6-week-old infant is brought to clinic. What vaccines are due today?**\\nA: DPT-1, OPV-1, IPV-1, HepB-1 (third dose, first two were at birth), Hib-1, PCV-1, Rotavirus-1. All can be given on the same day using different syringes and injection sites. These are all inactivated or oral vaccines (no spacing issues). BCG was already given at birth.\\n\\n**Q2: A child missed vaccination at 10 weeks and 14 weeks. Now at 6 months, the child needs DPT series completion. What is the approach?**\\nA: This child is overdue for DPT-2 and DPT-3. For DPT series: Do NOT restart the series (only restart if gap >4 weeks since DPT-1, which was 4 months ago—borderline, so assess). Give DPT-2 immediately, then DPT-3 after 4-6 weeks. If DPT-1 was >4 months ago (which it was), can either continue from DPT-1 or restart the series. Continue with other vaccines as per current schedule (measles at 9 months if due).\\n\\n**Q3: A 9-month-old child with chicken pox exposure (not yet infected) is brought to clinic. Can the child receive MR vaccine today?**\\nA: Check if child has varicella immunity status. If non-immune and exposed <72 hours ago: Defer MR today; give varicella vaccine immediately (within 72 hours of exposure provides post-exposure prophylaxis). Then give MR vaccine after 4-week gap. If already immune to varicella or exposure >72 hours: Give MR as scheduled. If child develops chicken pox: Defer both vaccines until 4 weeks after recovery.\\n\\n**Q4: A mother reports her premature infant (born at 32 weeks GA, now 10 weeks chronological age) had fever (38.4°C) and mild diarrhea. She's worried about vaccinating today. Should you vaccinate?**\\nA: Yes, vaccinate today. The chronological age is 10 weeks (correct for DPT-2, OPV-2, etc. since <2 years, not yet using EDD). Fever 38.4°C and mild diarrhea are NOT contraindications. Prematurity does NOT delay vaccination; schedule continues on chronological age. Administer vaccines as per 10-week schedule. Continue to use chronological age until 2 years, then switch to calendar age.\\n\\n**Q5: Immediately after receiving DPT vaccine, a 6-week-old infant develops urticaria, wheezing, and hypotension. What is this reaction and what is the immediate management?**\\nA: This is anaphylaxis (IgE-mediated hypersensitivity reaction within minutes of vaccine). Immediate management: (1) Stop vaccination, keep infant supine; (2) IM epinephrine 0.01 mg/kg of 1:1000 solution (not subcutaneous) in outer thigh; (3) Establish IV access; (4) IV fluids (normal saline); (5) Antihistamines (chlorpheniramine IV); (6) Corticosteroids (hydrocortisone IV); (7) Keep in observation for 2-4 hours; (8) Report AEFI to pharmacovigilance center.\\n\\n**Q6: A child's vaccination card was lost, and mother cannot recall which vaccines were given. The child is now 18 months old. What is your approach?**\\nA: Revaccinate all vaccines due at 18 months per UIP schedule: DPT Booster-1, OPV Booster, IPV Booster, MR-2, JE-2 (if in endemic area). There is no contraindication to repeating vaccines. Revaccination is safer than incomplete vaccination. Also administer any missed vaccines from earlier (check for BCG scar; if no scar, give BCG). Provide new vaccination card and counsel mother on importance of maintaining records.\\n\\n**Q7: A child completed primary series (DPT-1, 2, 3 by 14 weeks) but missed the 18-month booster. Now at 5 years old, coming to school. What is due?**\\nA: At 5 years: DPT Booster-2, OPV Booster-2. Before giving school-entry vaccines, the child needs the missed 18-month DPT Booster-1 and IPV Booster. Administer 18-month boosters first; then give 5-year boosters (can be same visit if appropriate spacing, or defer 5-year boosters to next visit). Minimum interval between doses: respects standard spacing rules.\\n\\n**Q8: A mother of a 9-month-old asks: \\\"Is BCG vaccine safe to give again since the child's BCG scar is not visible?\\\" What is the approach?**\\nA: Do NOT revaccinate BCG. The absence of visible scar does NOT indicate vaccine failure; some children don't develop visible scars despite successful vaccination (immunity still present). BCG revaccination risks serious adverse events (abscess, osteomyelitis). Check BCG immunity via: Tuberculin test (Mantoux) or BCG scar measurement. If immunologically protected, do NOT repeat. If no scar and no Tb immunity (rare), consult TB specialist before revaccination.\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-}
+        contentMd: `# Breastfeeding & Complementary Feeding - Foundation
+
+## Breast Milk Composition
+
+**Colostrum** (days 1-5):
+- High IgA, lactoferrin, lymphocytes
+- Low lactose, high protein (1.5-2 g/100 mL)
+- Yellow appearance due to carotenoids
+
+**Mature milk** (after week 2):
+- Protein: 1 g/100 mL (whey:casein = 70:30)
+- Fat: 3-4 g/100 mL (easily digestible)
+- Lactose: 7 g/100 mL
+- Calories: 65 kcal/100 mL
+
+## Exclusive Breastfeeding (EBF)
+
+- WHO/UNICEF: Breast milk only for first 6 months
+- No water, formula, or other foods (except medicines, vitamins)
+- Prevents 45% of neonatal deaths, 13% of under-5 deaths globally
+- Reduces diarrhea by 64%, respiratory infections by 72%
+
+## Latch Assessment
+
+**Good latch signs**:
+- Areola mostly in mouth (>2 cm)
+- Lower lip covers more areola than upper
+- Cheeks rounded outward
+- No pain for mother
+- Milk transfer seen (baby swallows)
+
+**Poor latch signs**:
+- Only nipple in mouth (white ring at areola)
+- Nipple pain, cracks
+- Slow weight gain
+- Audible clicking during feed
+
+## Complementary Feeding (6+ months)
+
+**Start at 6 months** (as per Ministry of Health, India):
+- Exclusive breastfeeding becomes nutritionally inadequate
+- Child loses birth immunity (3-4 months)
+- Baby develops readiness (sit upright, loss of extrusion reflex)
+
+**First foods** (6-8 months):
+- Iron-fortified cereals, mashed vegetables
+- Gradually increase texture: puree → mashed → soft pieces
+- 1-2 meals/day, single food at a time (3-5 day trial for allergy detection)`,
+        mnemonics: [
+          { text: "EBF = 6M exclusive", explanation: "WHO guideline" },
+          { text: "Good latch = areola in mouth, cheeks round", explanation: "Milk transfer indicator" },
+          { text: "First foods iron-fortified + single food trials", explanation: "Anemia prevention and allergy detection" },
+        ],
+        keyPoints: [
+          "Exclusive breastfeeding prevents 45% neonatal deaths",
+          "Mature milk: 1 g/100mL protein, 65 kcal/100mL",
+          "Colostrum high in IgA and immunocytes",
+          "Start complementary feeding at 6 months",
+          "Poor latch causes nipple pain and slow weight gain",
+          "First foods: iron-fortified cereals, vegetables",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Breastfeeding", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Infant Nutrition and Development", edition: "21st" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "breastfeeding-layer-2-mechanism",
+        title: "Breastfeeding & Complementary Feeding - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Lactation physiology, hormonal control (prolactin, oxytocin), milk production, and nutritional transition during complementary feeding.",
+        contentMd: `# Breastfeeding & Complementary Feeding - Pathophysiology
+
+## Lactation Physiology
+
+**Lactogenesis I (pregnancy)**:
+- Mammary gland development under progesterone
+- Lactogenesis II (postpartum): progesterone withdrawal triggers milk secretion
+- Colostrum volume: 10-40 mL per feed
+- Contains immunoglobulins (especially IgA), white blood cells, lactoferrin
+
+**Lactogenesis II & III (postpartum)**:
+- Colostrum transitional milk (days 6-14)
+- Volume increases: 60-100 mL per feed
+- Mature milk establishes by week 3: 800-1000 mL/day
+
+## Hormonal Control
+
+**Prolactin**:
+- Released from anterior pituitary
+- Stimulated by suckling
+- Maintains milk secretion
+- Inhibited by dopamine
+- Levels highest at night
+
+**Oxytocin**:
+- Released from posterior pituitary
+- Triggered by suckling
+- Causes milk let-down (myoepithelial contraction)
+- Also stimulates uterine contraction
+
+## Milk Supply Regulation
+
+**Supply = Demand**:
+- Frequent suckling → sustained prolactin → continued production
+- Adequate milk removal → prevents engorgement
+- Infrequent feeds → decreased supply
+
+## Nutritional Transition at 6 Months
+
+**Why complementary feeding needed**:
+- Iron stores from fetal life deplete at 6 months
+- Calcium, phosphorus demand increases
+- Zinc requirements exceed breast milk provision
+- Vitamin D supplementation often needed`,
+        mnemonics: [
+          { text: "Prolactin = supply, Oxytocin = let-down", explanation: "Hormonal control" },
+          { text: "Supply = Demand", explanation: "Lactation feedback" },
+          { text: "6M iron stores deplete", explanation: "Why complement needed" },
+        ],
+        keyPoints: [
+          "Lactogenesis I: pregnancy development",
+          "Lactogenesis II: postpartum milk synthesis",
+          "Prolactin stimulated by suckling",
+          "Oxytocin causes let-down reflex",
+          "Supply regulation: demand-driven",
+          "Foremilk vs hindmilk: fat increases through feed",
+          "At 6M: iron, zinc, calcium needs exceed breast milk",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Lactation Physiology", edition: "9th" },
+          { book: "Guyton Textbook of Medical Physiology", chapter: "Lactation", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "breastfeeding-layer-3-clinical",
+        title: "Breastfeeding & Complementary Feeding - Clinical Assessment",
+        estimatedMinutes: 25,
+        summary: "Common breastfeeding problems (engorgement, mastitis, poor latch), assessment of infant growth, and complementary feeding troubleshooting.",
+        contentMd: `# Breastfeeding & Complementary Feeding - Clinical Assessment
+
+## Common Breastfeeding Problems
+
+**Engorgement**:
+- Days 3-5 postpartum
+- Breast becomes hard, painful, swollen
+- Poor latch due to areola turgidity
+- Management: frequent feeding, warm compresses
+
+**Nipple Pain/Cracks**:
+- Usually from poor latch (90% of cases)
+- Check latch: areola in mouth, no pulling
+- Use correct positioning
+- Apply lanolin, hydrogel pads post-feed
+
+**Mastitis**:
+- Unilateral breast pain, redness, fever (>38.5°C)
+- From milk stasis (blocked duct, infrequent feeding)
+- Management: frequent feeding from affected breast, antibiotics
+- Rare: abscess (fluctuant, needs drainage)
+
+**Low Milk Supply**:
+- Inadequate output (<6 wet diapers/day)
+- Causes: poor latch, infrequent feeding, stress
+- Management: frequent feeding, ensure complete emptying
+
+## Assessment of Breastfeeding Success
+
+**Infant weight gain**:
+- Newborn: weight loss <10% in first week
+- 0-3 months: 25-30 g/day (150-200 g/week)
+- 3-6 months: 15-20 g/day (100-150 g/week)
+
+**Diaper Count**:
+- Days 1-2: ≥1 wet, ≥1 soiled
+- Days 3-4: ≥2 wet, ≥2 soiled
+- After day 5: ≥6 wet, ≥3 soiled/day
+
+## Complementary Feeding Assessment
+
+**Readiness at 6 months**:
+- Sits upright with minimal support
+- Loss of extrusion reflex
+- Reaches for food, shows interest
+
+**Food Introduction**:
+- Single ingredient foods
+- Iron-fortified cereals first
+- Vegetables before fruits`,
+        mnemonics: [
+          { text: "Mastitis = unilateral fever + redness", explanation: "Milk stasis pathophysiology" },
+          { text: "Poor latch = nipple pain 90%", explanation: "Check areola position" },
+          { text: "6+ wet diapers = adequate milk transfer", explanation: "Clinical assessment" },
+        ],
+        keyPoints: [
+          "Engorgement days 3-5: treat with frequent feeding",
+          "Mastitis: frequent feeding from affected breast most important",
+          "Poor latch causes: nipple pain, cracked nipples, slow gain",
+          "Adequate breastfeeding: ≥6 wet, ≥3 soiled/day",
+          "Low supply causes: poor latch, infrequent feeding",
+          "Complementary feeding: single foods, iron-fortified first",
+          "Readiness signs: sits upright, loss of extrusion reflex",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Clinical Management", edition: "9th" },
+          { book: "AAP Guidelines on Breastfeeding", chapter: "Troubleshooting", edition: "2022" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "breastfeeding-layer-4-exam",
+        title: "Breastfeeding & Complementary Feeding - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "Management of breastfeeding problems, weaning strategies, micronutrient supplementation, and prevention of common nutritional deficiencies.",
+        contentMd: `# Breastfeeding & Complementary Feeding - Management & Prevention
+
+## Management of Breastfeeding Problems
+
+**Engorgement Management**:
+- Frequent feeding (most important)
+- Warm compress before feed (improves let-down)
+- Cold compress after feed (reduces inflammation)
+- Analgesics
+- Manual expression if too hard for baby
+
+**Mastitis Management**:
+- Continue frequent feeding from affected breast
+- Antibiotics: amoxicillin 500 mg TDS or cephalexin QID x 10-14 days
+- Analgesics + antipyretics
+- Warm compresses, gentle massage
+- Abscess: needs drainage with ultrasound guidance
+
+**Low Milk Supply Management**:
+1. Ensure correct latch (most important)
+2. Increase feeding frequency (8-12x/day)
+3. Ensure complete breast emptying
+4. Consider pumping after feeds
+5. Galactagogues: fenugreek, domperidone
+
+## Weaning Strategy
+
+**Planned Weaning**:
+- Gradual replacement of feeds with complementary foods
+- Drop one feed every 3-7 days
+- Start with midday feed
+- Timing: usually after 6-12 months of complementary feeding
+
+## Micronutrient Supplementation
+
+**For Breastfed Infants**:
+- Vitamin D: 400 IU/day
+- Iron: Start at 6 months (1 mg/kg/day)
+- Vitamin B12: If mother vegan
+
+**For Lactating Mothers**:
+- Continue prenatal vitamins
+- Calcium: 1000-1200 mg/day
+- Vitamin D: 400-600 IU/day
+
+## Complementary Feeding Strategies
+
+**Progressive Introduction** (6-24 months):
+- 6-8 months: once-daily, puree, single ingredients
+- 8-10 months: twice-daily, mashed, finger foods
+- 10-12 months: 3 meals + snacks
+- 12-24 months: family foods, continue breastfeeding
+
+**Preventing Common Deficiencies**:
+- Iron: fortified cereals, meat, lentils
+- Zinc: meat, egg, legumes
+- Vitamin A: orange vegetables
+- Vitamin C: fruits (aids iron absorption)`,
+        mnemonics: [
+          { text: "Mastitis: FREQUENT FEEDING > antibiotics", explanation: "Milk removal most important" },
+          { text: "Low supply: correct latch, increase frequency", explanation: "Fix basics before galactagogues" },
+          { text: "Vitamin D: infant 400 IU/day or mother 2000 IU/day", explanation: "Prevent rickets" },
+        ],
+        keyPoints: [
+          "Engorgement: frequent feeding, warm compress pre, cold post",
+          "Mastitis: continue feeding, antibiotics, analgesics",
+          "Low supply: ensure correct latch (90% of cases)",
+          "Increase supply: 8-12 feeds/day, complete emptying",
+          "Gradual weaning: drop one feed every 3-7 days",
+          "Iron supplementation starts at 6 months",
+          "Introduce one food every 3-5 days (allergy detection)",
+          "Iron-fortified cereals, meat, legumes for deficiency prevention",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Management & Prevention", edition: "9th" },
+          { book: "IAP Guidelines on IYCF", chapter: "Comprehensive Feeding", edition: "2023" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "breastfeeding-layer-5-active-recall",
+        title: "Breastfeeding & Complementary Feeding - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Clinical scenarios for breastfeeding troubleshooting, complementary feeding problems, and decision-making in lactation counseling.",
+        contentMd: `# Active Recall: Breastfeeding & Complementary Feeding
+
+**Q1:** 5-day-old newborn, engorged breasts (hard, painful), unable to latch. Most immediate management?
+> **Answer:** Frequent feeding (milk removal resolves engorgement). Warm compress before feeding, cold after. Analgesics. Manual expression if needed. Continue breastfeeding.
+
+**Q2:** 3-week-old baby, unilateral breast pain (left), T 39°C, redness on left breast. Diagnosis and management?
+> **Answer:** Mastitis. Most important: CONTINUE frequent feeding from affected breast. Antibiotics: amoxicillin 500 mg TDS or cephalexin QID. Analgesics, warm compresses, rest. Do NOT stop breastfeeding.
+
+**Q3:** 2-month-old exclusively breastfed, weight gain 80 g/week (slow). 4-5 wet diapers/day. Likely issue and first action?
+> **Answer:** Low milk transfer. First: Observe feeding, check latch (90% of cases are poor latch). Check: areola in mouth, audible swallowing. Correct positioning if needed. Increase frequency to 8-12x/day. If correct, consider galactagogues.
+
+**Q4:** 8-month-old, rash around mouth after mashed potato. Diarrhea today. Stop all foods?
+> **Answer:** Stop only potato. Continue other tolerated foods. Continue breastfeeding. Rash should resolve within hours-days of food withdrawal. Introduce foods one at a time.
+
+**Q5:** 6-month-old starting complementary feeding. How long between introducing new foods?
+> **Answer:** Introduce one food at a time, wait 3-5 days before adding another. Allows identification of food allergies. Suggested order: iron-fortified cereals, vegetables, meat, legumes.
+
+**Q6:** 4-month-old on exclusive breastfeeding, mother returning to work in 2 months. How to maintain supply?
+> **Answer:** Breastfeed early morning + evening. Express at work (2-3 times if 8-hour day). Store expressed milk (refrigerator 24h, freezer 3 months). Continue night feeds. Start complementary feeding at 6 months.
+
+**Q7:** 10-month-old on complementary feeding, constipation since starting solids. Mother concerned. Advice?
+> **Answer:** Constipation common with solids. Increase water intake, fruits (prunes, papaya), vegetables. Continue breastfeeding. If hard stools, may need stool softener. Check iron supplementation (can cause constipation).
+
+**Q8:** 7-month-old, parents want to give mashed whole peanuts (family has peanut allergy). Should they continue?
+> **Answer:** Newer guidelines support introduction of allergenic foods at 6 months to develop tolerance. However, whole peanuts are aspiration hazard. Recommendation: Give peanut butter at 6+ months. Consider allergy testing if family history of severe anaphylaxis.
+
+**Q9:** 18-month-old, mother stopped breastfeeding abruptly. Now severe unilateral pain, fluctuant mass (2-3 cm), T 38.5°C. Diagnosis and management?
+> **Answer:** Breast abscess (from abrupt cessation, milk stasis). Ultrasound confirmation. Needle aspiration or drainage (may need GA). Antibiotics: amoxicillin + clavulanic acid. Prevention: gradual weaning (drop one feed every 3-7 days).
+
+**Q10:** 11-month-old exclusively breastfed until now, mother concerned about iron deficiency. Iron levels normal. Advice about iron supplementation?
+> **Answer:** Breast milk iron insufficient after 6 months. This baby should be on iron supplementation (1 mg/kg/day) from 6 months via iron-fortified foods or supplement. Since iron normal, likely because complementary foods started. Continue current approach with iron-rich foods: meat, fortified cereals, lentils.`,
+        mnemonics: [
+          { text: "Engorgement: frequent feeding resolves", explanation: "Don't stop breastfeeding" },
+          { text: "Mastitis: continue frequent feeding affected breast", explanation: "Most important management" },
+          { text: "New food allergy: stop only that food", explanation: "Continue others + breastfeeding" },
+          { text: "Introduce one food every 3-5 days", explanation: "Allergy detection" },
+        ],
+        keyPoints: [
+          "Engorgement: milk stasis, frequent feeding + warm compress",
+          "Mastitis: unilateral fever + redness, continue feeding",
+          "Poor latch causes 90% of low supply - observe and correct",
+          "Increase frequency to 8-12 feeds/day for low supply",
+          "Introduce one food at a time, wait 3-5 days",
+          "Iron-fortified cereals first (less allergenic)",
+          "Iron supplementation needed from 6 months",
+          "Gradual weaning prevents engorgement/mastitis",
+          "Breast abscess: abrupt weaning risk, needs drainage",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Clinical Cases", edition: "9th" },
+        ],
+      },
+    ],
+  },
 ];
-];
-];
+
+export default pediatricsPart6Lessons;

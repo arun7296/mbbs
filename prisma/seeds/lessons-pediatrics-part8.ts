@@ -1,19 +1,387 @@
-// Pediatrics Part 8: PE-MOD-02 (Neonatal Sepsis, HIE) + PE-MOD-03 (Malnutrition) + PE-MOD-04 (Childhood Infections) + PE-MOD-05 (Rheumatic Fever)
+import type { TopicLessons } from "./content-loader";
 
-export const pediatricsPart8Lessons = [
+export const pediatricsPart8Lessons: TopicLessons[] = [
   {
     topicCode: "PE-MOD-02-TOP-04",
     layers: [
       {
         layer: 1,
-        slug: "neonatal-sepsis-foundation",
+        slug: "neonatal-sepsis-layer-1-foundation",
         title: "Neonatal Sepsis - Foundation",
         estimatedMinutes: 20,
         summary: "Neonatal sepsis classification (early vs late onset), risk factors, pathophysiology, and immune immaturity.",
-        contentMd: "# Neonatal Sepsis - Foundation\n\n## Definitions\n\n**Neonatal sepsis:** Systemic infection in neonates (0-28 days of life) confirmed by blood culture\n\n**Early-Onset Sepsis (EOS):** Presentation within first 72 hours (up to 7 days)\n- Vertical transmission from mother (vaginal flora)\n- Occurs DURING hospitalization for birth\n\n**Late-Onset Sepsis (LOS):** Presentation after 72 hours (typically 1-4 weeks)\n- Horizontal transmission (environmental, hospital sources, caregivers)\n- Occurs AFTER hospital discharge or during prolonged hospitalization\n\n## Risk Factors for EOS\n\n**Maternal factors:**\n- Prolonged rupture of membranes (PROM >18 hours)\n- Maternal fever/chorioamnionitis (T >38°C)\n- Maternal UTI/bacteriuria during pregnancy\n- Group B Streptococcus (GBS) positive culture without intrapartum prophylaxis\n- Low socioeconomic status\n\n**Neonatal factors:**\n- Prematurity <37 weeks\n- Low birth weight <2500 g\n- Male sex\n- Apgar score <7 at 5 minutes\n\n## Common Organisms\n\n**EOS (vertical transmission):**\n- Group B Streptococcus (GBS) - most common (40%)\n- Escherichia coli (especially K1 strain) - second most common\n- Listeria monocytogenes\n- Gram-negative enteric bacteria\n\n**LOS (environmental/horizontal):**\n- Staphylococcus aureus (including MRSA)\n- Coagulase-negative Staphylococci (CoNS)\n- Enterococci\n- Candida (prolonged antibiotics, central lines)\n- Klebsiella, Pseudomonas\n\n## Pathophysiology of Neonatal Immune Dysfunction\n\n**Immature immune system:**\n- **Low IgG:** Passively acquired from mother (crosses placenta), levels ↓ at 3-6 months (physiologic hypogammaglobulinemia nadir)\n- **Absent IgM, IgA:** Not maternally transferred\n- **Impaired complement:** Levels 50-80% of adult values\n- **Neutrophil dysfunction:** ↓ chemotaxis, ↓ opsonization, ↓ killing capacity\n- **Impaired cell-mediated immunity:** T-cell response reduced\n\n**Lack of prior exposure:**\n- No prior infection = no specific antibodies\n- Rely on maternal IgG + innate immunity\n\n## Incidence (India)\n- Early-onset: 1-3 per 1000 live births\n- Late-onset: Varies by NICU setting, up to 10-25 per 1000 VLBW infants\n- Mortality: 10-15% EOS, 5-10% LOS (with treatment),\n        mnemonics: [\n          { text: \"EOS = Early (72h), vertical\", explanation: \"Early-Onset Sepsis from maternal flora\" },\n          { text: \"LOS = Late (>72h), horizontal\", explanation: \"Late-Onset Sepsis from environment\" },\n          { text: \"GBS + E.coli = EOS\", explanation: \"Most common organisms for early-onset sepsis\" },\n        ],\n        keyPoints: [\n          \"EOS: within 72 hours, vertical transmission (GBS, E.coli K1)\",\n          \"LOS: after 72 hours, environmental source\",\n          \"Neonatal immune: low IgG, no IgM/IgA, impaired complement/neutrophils\",\n          \"Risk factors: PROM, maternal fever, GBS+, prematurity\",\n          \"Mortality 10-15% EOS, 5-10% LOS\",\n        ],\n        textbookRefs: [\n          { book: \"OP Ghai Textbook\", chapter: \"Neonatal Infections\", edition: \"10th\" },\n          { book: \"Nelson's Textbook\", chapter: \"Bacterial Infections in Neonates\", edition: \"22nd\" },\n        ],\n      },\n      {\n        layer: 2,\n        slug: \"neonatal-sepsis-mechanism\",\n        title: \"Neonatal Sepsis - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiology of bacterial sepsis, SIRS/septic shock in neonates, and host-pathogen interactions.\",\n        contentMd: "# Neonatal Sepsis - Pathophysiology\\n\\n## Bacterial Invasion Mechanism\\n\\n**For GBS:**\\n- Colonizes maternal vaginal tract (10-30% of women)\\n- Vertical transmission during labor (ascending infection from vagina)\\n- Bypass of normal defenses: Hyaluronic acid capsule (mimics host tissue, evades immune response)\\n- Poor opsonization (neonatal complement deficiency)\\n\\n**For E.coli K1:**\\n- K1 polysaccharide capsule (antiphagocytic)\\n- Fimbriae enhance adhesion\\n- Produces alpha-hemolysin\\n\\n**For Listeria:**\\n- Intracellular pathogen\\n- Crosses placental barrier (transplacental infection)\\n- Impaired T-cell response in neonates (Listeria is intracellular → needs cell-mediated immunity)\\n\\n## Sepsis Cascade in Neonates\\n\\n**Colonization → Invasion → Systemic response:**\\n\\n1. **Bacterial multiplication:**\\n   - Overcomes innate immunity (complement, phagocytes)\\n   - Produces toxins (endotoxin from gram-negative LPS)\\n\\n2. **Cytokine release:**\\n   - TNF-α, IL-1, IL-6, IL-8 elevation\\n   - In neonates: exaggerated response to small bacterial burden\\n\\n3. **SIRS (Systemic Inflammatory Response):**\\n   - Fever (or hypothermia - worse sign in neonates)\\n   - Tachycardia, tachypnea\\n   - Hyperglycemia or hypoglycemia\\n\\n4. **Septic shock progression:**\\n   - Vasodilation, increased vascular permeability\\n   - Myocardial depression\\n   - Hypotension (late finding in neonates, catastrophic)\\n   - Multi-organ failure (kidneys, coagulation, lung)\\n\\n## Special Neonatal Features\\n\\n**Why neonates are more susceptible:**\\n- Transient hypogammaglobulinemia (nadir 3-6 months, especially in preterm)\\n- Immature dendritic cells (impaired antigen presentation)\\n- Reduced complement components (C3, C4)\\n- Neutrophil chemotaxis defect (↓ CD11b/CD18)\\n- Impaired opsonization (complement + IgG low)\\n\\n**Neonatal clinical response atypical:**\\n- May present WITHOUT fever (hypothermia more common <34°C)\\n- Subtle signs initially (jitteriness, poor feeding)\\n- Rapid decompensation (hours not days)\\n- Shock = late finding (by this point, significant organ damage)\\n\\n## Meningitis in Neonatal Sepsis\\n\\n**Prevalence:** 20-25% neonates with bacteremia have meningitis\\n- GBS meningitis risk: 5-10% of GBS bacteremia\\n- E.coli K1 meningitis risk: 20-40% of K1 bacteremia\\n\\n**Why high meningitis risk:**\\n- Impaired host defense in CSF (low complement, IgG)\\n- Neonatal GBS/E.coli tropism for CNS\\n- Immature BBB (increased permeability initially, but impaired drug penetration)\\n\\n**Complications:** Ventriculitis, subdural effusion, hydrocephalus, seizures,\\n        mnemonics: [\\n          { text: \\\"GBS = vaginal capsule antiphagocytic\\\", explanation: \\\"Hyaluronic acid mimics host, evades immune\\\" },\\n          { text: \\\"Listeria = intracellular\\\", explanation: \\\"Needs T-cell response (deficient in neonates)\\\" },\\n          { text: \\\"Neonatal hypothermia = bad sign\\\", explanation: \\\"Fever absent, hypothermia more concerning\\\" },\\n        ],\\n        keyPoints: [\\n          \\\"GBS vertical transmission, hyaluronic acid capsule\\\",\\n          \\\"E.coli K1 fimbriae, alpha-hemolysin, meningitis risk 20-40%\\\",\\n          \\\"Listeria intracellular, transplacental, T-cell deficiency risk\\\",\\n          \\\"Neonatal response: may present without fever, hypothermia ominous\\\",\\n          \\\"Rapid decompensation (hours), shock late finding\\\",\\n          \\\"Meningitis 20-25% neonatal sepsis\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook\\\", chapter: \\\"Pathophysiology of Neonatal Infections\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Nelson's Textbook\\\", chapter: \\\"Sepsis Mechanism in Neonates\\\", edition: \\\"22nd\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"neonatal-sepsis-clinical\\\",\\n        title: \\\"Neonatal Sepsis - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical presentation, risk scoring (sepsis calculator), diagnostic workup (CBC, CRP, culture, procalcitonin).\\\",\\n        contentMd: ``# Neonatal Sepsis - Clinical Diagnosis\\n\\n## Clinical Presentation of Neonatal Sepsis\\n\\n**Early signs (subtle, non-specific):**\\n- **Temperature:** Fever (usually), but hypothermia (<36°C) = ominous sign\\n- **Feeding:** Poor suck, refusal to feed\\n- **Activity:** Lethargy, jitteriness, irritability\\n- **Skin:** Pallor, poor perfusion (cold extremities)\\n- **Respiratory:** Tachypnea (RR >60), grunting, retractions\\n- **Metabolic:** Hypoglycemia, acidosis\\n\\n**Late signs (indicates severe sepsis/shock):**\\n- Hypotension (systolic <50 mmHg in term, <40 in preterm)\\n- Shock (poor perfusion, cold periphery, mottled skin)\\n- Seizures (especially meningitis)\\n- Multi-organ failure\\n- DIC (petechiae, bleeding)\\n\\n## Risk Stratification: CDC/Sepsis Calculator\\n\\n**Low risk:**\\n- Maternal age ≥21 years\\n- No maternal fever\\n- Maternal GBS negative (if tested) OR ≥18 hours prophylaxis (if positive)\\n- No rupture of membranes OR rupture <18 hours\\n\\n**Medium risk:**\\n- Maternal age <21 years OR\\n- Maternal intrapartum fever (38.0-38.4°C) without risk factors OR\\n- Maternal GBS status unknown with delivery <34 weeks gestation\\n\\n**High risk:**\\n- Maternal fever ≥38.5°C OR\\n- Maternal fever 38.0-38.4°C + maternal GBS positive OR\\n- Maternal fever 38.0-38.4°C + fetal tachycardia OR\\n- Maternal fever 38.0-38.4°C + fetal tachycardia + maternal UTI/chorioamnionitis OR\\n- GBS positive status without intrapartum prophylaxis\\n\\n## Diagnostic Workup\\n\\n**Initial evaluation:**\\n- **CBC (complete blood count):**\\n  - WBC count: Often unreliable in neonates (wide normal range 5000-21000)\\n  - Immature:total neutrophil ratio (I:T) >0.2 suggests infection (though low sensitivity/specificity)\\n  - Thrombocytopenia <100,000 (suggests severe infection, especially gram-negative sepsis)\\n\\n- **Blood culture:** Gold standard (positive in 60-80% bacteremia)\\n  - Obtain before antibiotics\\n  - Need adequate volume (>0.5 mL minimum, >1 mL preferred)\\n  - Must be sterile collection\\n\\n- **CRP (C-reactive protein):**\\n  - Elevated >10 mg/L suggests infection (sensitivity 60-80%, specificity 50%)\\n  - More specific than WBC\\n  - Takes 6-12 hours to rise (may be negative early)\\n\\n- **Procalcitonin:**\\n  - More sensitive/specific than CRP for sepsis (sensitivity 80-90%)\\n  - Rises rapidly (within 4 hours)\\n  - Good negative predictive value (if normal, low infection risk)\\n  - More expensive, not universally available\\n\\n**Lumbar puncture (CSF analysis):**\\n- Recommended if signs suggest meningitis (seizures, bulging fontanelle)\\n- ALWAYS if blood culture positive (to rule out meningitis)\\n- CSF: Cell count, protein, glucose, culture, Gram stain\\n\\n**Additional tests:**\\n- **Blood glucose:** Hypoglycemia common in sepsis\\n- **Acid-base:** Metabolic acidosis suggests septic shock\\n- **Coagulation studies:** PT, aPTT (DIC monitoring)\\n- **Lactate:** Elevated >2 mmol/L suggests tissue hypoperfusion\\n\\n## Imaging\\n\\n**Chest X-ray:**\\n- Pneumonia (infiltrates, consolidation)\\n- Rule out other causes (aspiration, meconium)\\n\\n**Abdominal imaging:**\\n- If NEC (necrotizing enterocolitis) suspected\\n- Pneumatosis intestinalis (pathognomonic for NEC),\\n        mnemonics: [\\n          { text: \\\"Low risk = no fever, GBS-, PROM <18h\\\", explanation: \\\"Can observe, minimal antibiotics\\\" },\\n          { text: \\\"High risk = fever ≥38.5°C or fever + GBS+ no prophylaxis\\\", explanation: \\\"Start antibiotics immediately\\\" },\\n          { text: \\\"Hypothermia = bad sign\\\", explanation: \\\"Temperature <36°C in sepsis = poor prognosis\\\" },\\n          { text: \\\"Blood culture before antibiotics\\\", explanation: \\\"Essential for diagnosis\\\" },\\n        ],\\n        keyPoints: [\\n          \\\"Early signs: poor feeding, lethargy, tachypnea, hypothermia\\\",\\n          \\\"Late signs: hypotension, shock, multi-organ failure\\\",\\n          \\\"Sepsis calculator: low/medium/high risk stratification\\\",\\n          \\\"CBC unreliable (wide normal range), CRP more specific\\\",\\n          \\\"Blood culture gold standard, procalcitonin more sensitive\\\",\\n          \\\"LP if signs meningitis or positive blood culture\\\",\\n          \\\"Hypothermia, hypotension, DIC = severe sepsis\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook\\\", chapter: \\\"Clinical Presentation of Neonatal Sepsis\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Nelson's Textbook\\\", chapter: \\\"Diagnostic Approach to Neonatal Infections\\\", edition: \\\"22nd\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"neonatal-sepsis-exam\\\",\\n        title: \\\"Neonatal Sepsis - Exam Prep\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Empirical antibiotic therapy, duration, supportive care, and meningitis-specific management.\\\",\\n        contentMd: ``# Neonatal Sepsis - Management\\n\\n## Empirical Antibiotic Therapy\\n\\n**For EOS (0-72 hours):**\\n- **Ampicillin 50 mg/kg IV q8h** (covers GBS, Listeria, some E.coli)\\n- PLUS **Gentamicin 2.5 mg/kg IV q8h** (covers gram-negative rods, synergistic with ampicillin)\\n- Dosing adjusted for gestational age/weight in VLBW infants\\n\\n**For LOS (>72 hours in hospitalized neonate):**\\n- Depends on institution flora\\n- **Vancomycin 15-20 mg/kg IV q8-12h** (covers MRSA, CoNS)\\n- PLUS **Gentamicin 2.5 mg/kg IV q8h** OR\\n- **Ampicillin** (if Listeria/GBS likely) instead of vancomycin\\n\\n**Adjustment based on organisms:**\\n\\n**GBS:**\\n- Ampicillin (or penicillin G 50,000 units/kg q8h)\\n- Gentamicin synergistic\\n- Duration: 10 days\\n\\n**E.coli K1:**\\n- Ampicillin + Gentamicin\\n- If meningitis: Add cefotaxime 50 mg/kg q8h (or ceftriaxone)\\n- Duration: 14 days (meningitis)\\n\\n**Listeria monocytogenes:**\\n- Ampicillin ONLY (cephalosporins NOT effective)\\n- Gentamicin may be added\\n- Duration: 14 days\\n\\n**MRSA/CoNS:**\\n- Vancomycin 15-20 mg/kg IV q8-12h\\n- TMP-SMX alternative if allergy\\n- Duration: 7-10 days (bacteremia), 14+ days (meningitis)\\n\\n## Meningitis-Specific Management\\n\\n**Antibiotics for neonatal meningitis:**\\n- **Ampicillin 50 mg/kg q8h** (GBS, Listeria, some gram-negatives)\\n- PLUS **Gentamicin 2.5 mg/kg q8h** (for synergy)\\n- PLUS **Cefotaxime 50 mg/kg q8h** or **ceftriaxone 50 mg/kg q8h** (better CSF penetration for gram-negative)\\n- DO NOT use cephalosporin monotherapy (misses Listeria, GBS)\\n\\n**Meningitis-specific issues:**\\n- CSF sterilization often takes 24-48 hours\\n- Repeat LP recommended at 24-48 hours if:\\n  - No clinical improvement\\n  - Gram-positive cocci persist\\n  - Negative initial CSF culture but blood positive\\n- Duration: **14 days** for GBS/Listeria, **14-21 days** for gram-negative (due to CNS penetration challenges)\\n\\n**Dexamethasone in neonatal meningitis:**\\n- Controversial (limited data in neonates, unlike older children)\\n- May reduce hearing loss risk (data weak)\\n- NOT routinely recommended in many protocols\\n\\n## Supportive Care\\n\\n**Fluid management:**\\n- Maintain adequate perfusion (avoid hypovolemia)\\n- Monitor urine output (>1 mL/kg/hr goal)\\n- Fluid restriction if inappropriate ADH secretion\\n\\n**Thermal management:**\\n- Maintain normothermia (36.5-37.5°C)\\n- Hypothermia worsens outcomes\\n\\n**Glucose management:**\\n- Monitor glucose closely (Q4-6h initially)\\n- Correct hypoglycemia (<40 mg/dL) with IV dextrose bolus\\n- Correct hyperglycemia if persistent\\n\\n**Renal function:**\\n- Monitor urine output, creatinine\\n- Adjust gentamicin dosing for renal function\\n- Target serum gentamicin trough <1-2 μg/mL (prevent nephrotoxicity)\\n\\n**Hemodynamic support:**\\n- Fluid resuscitation (10-20 mL/kg of normal saline if hypotensive)\\n- Inotropes (dopamine, dobutamine) if shock unresponsive to fluids\\n- Target mean BP ≥ gestational age in weeks\\n\\n## Treatment Duration\\n\\n- **EOS bacteremia (no meningitis):** 7-10 days\\n- **EOS meningitis:** 14-21 days\\n- **LOS:** 7-10 days bacteremia, 14-21 days meningitis\\n- If cultures negative but clinical presentation suspicious: 10-14 days based on clinical response\\n\\n## GBS Prophylaxis\\n\\n**Maternal intrapartum prophylaxis (IPA):**\\n- **Penicillin G 5 million units IV load, then 2.5 million units q4h** until delivery\\n- **Ampicillin alternative:** 2 g IV load, then 1 g q4h\\n- Indication: GBS positive culture, previous infant with GBS, GBS bacteriuria, maternal fever\\n- Efficacy: >90% reduction in EOS risk\\n\\n**Neonatal observation/screening:**\\n- Newborns born to GBS+ mothers: observation ≥12 hours (or antibiotics if risk factors)\\n- If maternal prophylaxis inadequate: antibiotics (ampicillin + gentamicin) for 48 hours,\\n        mnemonics: [\\n          { text: \\\"Amp + Gent = EOS standard\\\", explanation: \\\"Ampicillin + Gentamicin covers GBS, Listeria, gram-neg\\\" },\\n          { text: \\\"Listeria = Ampicillin only\\\", explanation: \\\"Cephalosporin ineffective\\\" },\\n          { text: \\\"Meningitis: Amp + Gent + Cephalosporin\\\", explanation: \\\"Triple therapy for neonatal meningitis\\\" },\\n          { text: \\\"Meningitis 14-21 days\\\", explanation: \\\"Longer duration than bacteremia\\\" },\\n        ],\\n        keyPoints: [\\n          \\\"EOS: Ampicillin + Gentamicin empirical\\\",\\n          \\\"LOS: Vancomycin + Gentamicin (MRSA/CoNS risk)\\\",\\n          \\\"GBS: Ampicillin, duration 10 days\\\",\\n          \\\"E.coli K1: May need cephalosporin if meningitis\\\",\\n          \\\"Listeria: Ampicillin ONLY (not cephalosporin)\\\",\\n          \\\"Meningitis: Triple therapy, 14-21 days\\\",\\n          \\\"Maternal GBS prophylaxis: PCN G or Ampicillin\\\",\\n          \\\"Monitor gentamicin trough <1-2 μg/mL\\\",\\n          \\\"Supportive: fluids, thermostasis, glucose, inotropes if needed\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook\\\", chapter: \\\"Treatment of Neonatal Sepsis\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Nelson's Textbook\\\", chapter: \\\"Management of Neonatal Infections\\\", edition: \\\"22nd\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"neonatal-sepsis-recall\\\",\\n        title: \\\"Neonatal Sepsis - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"Clinical scenarios for sepsis risk stratification and management decisions.\\\",\\n        contentMd: ``# Active Recall: Neonatal Sepsis\\n\\n**Q1:** Term neonate, 12 hours old. Mother: age 35, afebrile throughout, GBS negative (tested), PROM 14 hours, vaginal delivery. Risk category? Management?\\n> **Answer:** Low risk. Observe ≥12 hours without antibiotics. Monitor for signs: temperature, feeding, activity, respiratory status. Educate parents on danger signs (fever/hypothermia, poor feeding, lethargy). Can discharge if well.\\n\\n**Q2:** Term neonate, 8 hours old. Mother: fever 38.2°C, GBS positive status unknown, PROM 12 hours. Sepsis calculator?\\n> **Answer:** Medium risk (fever + GBS status unknown). Observe for 48 hours or give antibiotics x 48 hours (depends on local protocol). CBC, blood culture, CRP at birth; repeat CRP 6 hours if starting empirical therapy.\\n\\n**Q3:** Preterm neonate (34 weeks), 6 hours old. Mother: fever 39°C, delivered for suspected chorioamnionitis, GBS status unknown. Sepsis score?\\n> **Answer:** High risk (fever ≥38.5°C, GBS unknown with delivery <34 weeks). Start antibiotics IMMEDIATELY: Ampicillin + Gentamicin. CBC, blood culture, CRP. Repeat CRP in 6 hours. Cannot observe; requires empirical therapy.\\n\\n**Q4:** Neonate 3 days old (hospital admission). Blood culture positive for GBS (confirms EOS). CSF not yet obtained. Next step?\\n> **Answer:** Perform LP immediately to rule out meningitis (20-25% GBS bacteremia have meningitis, must assess CNS). If LP concerning for meningitis: change to triple therapy (Amp + Gent + Cephalosporin). If CSF normal: continue Amp + Gent for 10 days total.\\n\\n**Q5:** Preterm LOS. Day 8 of hospitalization. NICU infant with fever 38.5°C, lethargy, elevated WBC 22,000, CRP 15 mg/L. Presumed CoNS (common LOS). Antibiotic choice?\\n> **Answer:** Vancomycin + Gentamicin (CoNS/MRSA likely in LOS). Start immediately. Monitor vancomycin trough 15-20 μg/mL. Treat 7-10 days if bacteremia, 14+ days if meningitis. If clinical improvement and cultures negative: can stop empirical ampicillin (vanc/gent covers).\\n\\n**Q6:** Neonate with E.coli K1 bacteremia, seizures, bulging fontanelle on day 2. CSF: WBC 1500 (PMN), protein 200, glucose 15 (serum glucose 80). Diagnosis?\\n> **Answer:** E.coli K1 meningitis (seizures + CSF findings). Treat with Ampicillin + Gentamicin + CEPHALOSPORIN (cefotaxime 50 mg/kg q8h) for 14-21 days. Poor prognosis for gram-negative meningitis in neonates (30-50% mortality/morbidity even with treatment). Monitor for ventriculitis, subdural effusion on ultrasound.\\n\\n**Q7:** Positive blood culture: Listeria monocytogenes at 18 hours. What is appropriate antibiotic?\\n> **Answer:** Ampicillin 50 mg/kg q8h (±gentamicin). Do NOT use cephalosporin (Listeria resistant). If empirical cephalosporin was given, MUST switch to ampicillin (treatment failure/relapse otherwise). Duration 14 days.\\n\\n**Q8:** Afebrile newborn, 36 hours old, mother GBS+, received <2 hours intrapartum prophylaxis. Risk? Management?\\n> **Answer:** Inadequate prophylaxis; increased risk even though afebrile. Observe ≥12 hours with serial exams. Consider antibiotics (Amp + Gent) for 48 hours if risk factors. Do not delay antibiotics if fever develops or signs worsen.\\n\\n**Q9:** Neonate on ampicillin + gentamicin x 3 days. Blood culture negative, clinically improving, normal CRP. Can stop antibiotics?\\n> **Answer:** Not yet. Most protocols recommend completing at least 7 days (EOS non-meningitis) even with negative culture if strong clinical suspicion. Recheck CRP at 48h (should normalize by day 2-3). If persistently positive: investigate for complications (meningitis, abscess). Always discuss with attending.\\n\\n**Q10:** Gentleman in NICU, day 5 of life, on Amp/Gent for presumed EOS. Still febrile, CRP trending up (now 18 mg/L from 12 mg/L). Blood culture still pending. What to consider?\\n> **Answer:** Possible meningitis (inadequately treated gram-negative), resistance, fungal (prolonged antibiotics risk), or other source (NEC, aspiration). Get repeat blood culture, LP (if not done), abdominal imaging if NEC suspected. If gram-negative in blood: add cephalosporin immediately for presumed meningitis. Consider antifungal (fluconazole) if prolonged hospitalization/risk.,\\n        mnemonics: [],\\n        keyPoints: [\\n          \\\"Low risk: observe, no antibiotics\\\",\\n          \\\"Medium risk: observe 48h or antibiotics x 48h\\\",\\n          \\\"High risk: antibiotics immediately\\\",\\n          \\\"GBS: Ampicillin, 10 days\\\",\\n          \\\"E.coli K1: Amp + Gent, ± Cephalosporin if meningitis\\\",\\n          \\\"Listeria: Ampicillin ONLY\\\",\\n          \\\"Meningitis: triple therapy, 14-21 days\\\",\\n          \\\"Blood culture positive: LP to rule out meningitis\\\",\\n          \\\"CoNS/MRSA LOS: Vancomycin + Gentamicin\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook\\\", chapter: \\\"Case Studies in Neonatal Sepsis\\\", edition: \\\"10th\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n  {\\n    topicCode: \\\"PE-MOD-02-TOP-05\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"birth-asphyxia-foundation\\\",\\n        title: \\\"Birth Asphyxia & HIE - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Birth asphyxia definition, Apgar scoring, pathophysiology of hypoxic-ischemic encephalopathy, and severity classification.\\\",\\n        contentMd: ``# Birth Asphyxia & Hypoxic-Ischemic Encephalopathy - Foundation\\n\\n## Definitions\\n\\n**Birth asphyxia:** Impaired gas exchange during labor/delivery leading to tissue hypoxia, hypercarbia, and metabolic acidosis\\n\\n**Hypoxic-ischemic encephalopathy (HIE):** Neonatal encephalopathy caused by asphyxia\\n\\n**Neonatal encephalopathy:** Clinical manifestation of CNS dysfunction (irritability, poor feeding, seizures, altered consciousness) in first days of life\\n\\n## Apgar Score\\n\\n**Scoring system (0-10, assessed at 1 and 5 minutes):**\\n- **A**ppearance (skin color): 0-2\\n- **P**ulse (heart rate): 0-2\\n- **G**rimace (reflex irritability/response): 0-2\\n- **A**ctivity (muscle tone): 0-2\\n- **R**espiration (respiratory effort): 0-2\\n\\n**Interpretation:**\\n- 7-10: Normal\\n- 4-6: Moderately abnormal\\n- <3: Severely abnormal (requires resuscitation)\\n\\n**Prognostic value:**\\n- 5-minute Apgar score correlates better with outcome than 1-minute\\n- Apgar <3 at 5, 10, 15 minutes = increased mortality/morbidity\\n- HOWEVER: Low Apgar alone does NOT diagnose asphyxia (can occur in prematurity, sedation, congenital anomalies)\\n\\n## Pathophysiology of Birth Asphyxia\\n\\n**Three phases of tissue response to hypoxia:**\\n\\n**Phase 1: Primary insult (acute hypoxia during labor)**\\n- ↓ O2 delivery to tissues\\n- Anaerobic metabolism → lactate production\\n- ↓ ATP → loss of Na-K ATPase function\\n- Na+, Ca2+ accumulation intracellularly (cell swelling)\\n- K+ loss extracellularly (hyperkalemia)\\n- Cellular dysfunction (organ failure)\\n\\n**Phase 2: Reperfusion/reoxygenation (\\\"latent phase\\\")**\\n- Reoxygenation occurs after delivery (spontaneous or assisted)\\n- Brief recovery period (6-15 hours) = \\\"clinical honeymoon\\\"\\n- HOWEVER: Reperfusion injury begins:\\n  - Free radical generation (ROS)\\n  - Mitochondrial calcium overload\\n  - Excitotoxicity (glutamate excess)\\n  - Inflammation (cytokine release)\\n\\n**Phase 3: Secondary injury (\\\"delayed encephalopathy\\\")**\\n- Progressive energy failure\\n- Apoptosis (programmed cell death)\\n- Neuronal loss\\n- Clinical deterioration (worsening seizures, consciousness)\\n- Peak at 24-72 hours post-insult\\n\\n## Sarnat HIE Staging (Clinical)\\n\\n**Stage 1 (Mild):**\\n- Hyperalertness, irritability, normal tone\\n- Moro reflex exaggerated\\n- Tachycardia\\n- Feeding difficulties (minor)\\n- No seizures\\n- Prognosis: Generally good (~5-10% mortality, >90% normal neurodevelopment)\\n\\n**Stage 2 (Moderate):**\\n- Lethargy, hypotonia (initially), hypertonia (later)\\n- Weak sucking/swallowing\\n- Seizures present (60-90% of cases)\\n- Bradycardia, respiratory depression\\n- Prognosis: 10-15% mortality, 25-50% neurodisability\\n\\n**Stage 3 (Severe):**\\n- Coma, flaccid paralysis\\n- Loss of brainstem reflexes (pupil dilation, no corneal/gag reflex)\\n- Seizures (may be refractory)\\n- Severe bradycardia, respiratory failure (requires ventilation)\\n- Prognosis: 50-60% mortality, survivors with severe disability\\n\\n## Incidence\\n\\n- **Asphyxia:** 2-10 per 1000 live births (higher in low-resource settings)\\n- **HIE incidence:** 3-5 per 1000 term infants\\n- **Risk factors:** Placental abruption, placental insufficiency, meconium aspiration, cord prolapse, maternal hypotension, prolonged labor,\\n        mnemonics: [\\n          { text: \\\"Apgar 5 min > 1 min\\\", explanation: \\\"5-minute Apgar more predictive of outcome\\\" },\\n          { text: \\\"Three phases: acute → reperfusion → secondary\\\", explanation: \\\"Latent phase 6-15h, then delayed deterioration\\\" },\\n          { text: \\\"Sarnat I/II/III: alert/lethargy/coma\\\", explanation: \\\"Stages based on consciousness and tone\\\" },\\n        ],\\n        keyPoints: [\\n          \\\"Birth asphyxia = impaired gas exchange during labor/delivery\\\",\\n          \\\"Apgar <3 at 5 min = severe abnormality\\\",\\n          \\\"HIE stages: Stage 1 (mild) → Stage 3 (severe/coma)\\\",\\n          \\\"Three-phase response: acute hypoxia → reperfusion injury → secondary injury\\\",\\n          \\\"Secondary phase 6-72 hours (therapeutic window)\\\",\\n          \\\"Mortality 50-60% Stage 3, prognosis depends on severity\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook\\\", chapter: \\\"Birth Asphyxia and HIE\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Nelson's Textbook\\\", chapter: \\\"Hypoxic-Ischemic Encephalopathy\\\", edition: \\\"22nd\\\" },\\n        ],\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"hie-mechanism\\\",\\n        title: \\\"Birth Asphyxia & HIE - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Molecular mechanisms of hypoxic injury, reperfusion injury, neuroinflammation, and neuroprotection targets.\\\",\\n        contentMd: ``# Birth Asphyxia & HIE - Molecular Pathophysiology\\n\\n## Energy Metabolism Failure\\n\\n**Aerobic → Anaerobic transition:**\\n- Normal: Glucose + O2 → 30-32 ATP per molecule (oxidative phosphorylation)\\n- Hypoxic: Glucose → 2 ATP (anaerobic glycolysis)\\n- Result: **2-3% of normal ATP production**\\n\\n**Consequences of ATP depletion:**\\n1. **Na-K ATPase pump failure:**\\n   - Na+ accumulates intracellularly (osmotic swelling)\\n   - Ca2+ accumulation (Na/Ca exchanger reverses)\\n   - Cell edema (cytotoxic)\\n\\n2. **Calcium-mediated injury:**\\n   - Ca2+ activates proteases (calpains) → protein degradation\\n   - Ca2+ activates lipases → lipid peroxidation\\n   - Ca2+ overload in mitochondria → energy failure → apoptosis\\n\\n3. **Excitotoxicity:**\\n   - Glutamate (major excitatory neurotransmitter) accumulates\\n   - NMDA and AMPA receptor activation\\n   - Further Ca2+ influx\\n   - Neuronal dysfunction and death\\n\\n## Reperfusion Injury (Most Damaging Phase)\\n\\n**Reactive oxygen species (ROS) generation:**\\n- Hypoxanthine + xanthine oxidase → superoxide (O2•-)\\n- Superoxide → hydrogen peroxide (H2O2) via superoxide dismutase\\n- H2O2 + Fe2+ (Fenton reaction) → hydroxyl radical (•OH, most destructive)\\n- ROS cause: lipid peroxidation, protein cross-linking, DNA damage\\n\\n**Oxidative stress → cellular damage:**\\n- Membrane lipid peroxidation (PUFA destruction)\\n- Mitochondrial dysfunction\\n- Apoptosis initiation (cytochrome c release, caspase activation)\\n\\n**Mitochondrial dysfunction:**\\n- Calcium overload → uncoupling of oxidative phosphorylation\\n- Impaired ATP synthesis\\n- Cytochrome c release → apoptosis cascade\\n- Necrosis in severely damaged cells\\n\\n## Neuroinflammation\\n\\n**Microglia activation (primary CNS immune cells):**\\n- Hypoxia-reoxygenation → TLR (toll-like receptor) stimulation\\n- Microglia activation → release of:\\n  - Pro-inflammatory cytokines (TNF-α, IL-1β, IL-6)\\n  - Chemokines (attract leukocytes)\\n  - ROS/RNS (further damage)\\n\\n**Blood-brain barrier disruption:**\\n- Hypoxia → endothelial dysfunction\\n- ↑ Permeability → edema formation\\n- Leukocyte infiltration\\n\\n**Excitotoxicity + Inflammation synergy:**\\n- Glutamate-induced injury primes microglia\\n- Microglial TNF-α augments glutamate damage\\n- Vicious cycle perpetuates injury\\n\\n## Apoptosis vs Necrosis\\n\\n**Apoptosis (programmed cell death):**\\n- Delayed (hours to days)\\n- Energy-dependent (requires ATP)\\n- Clean, minimal inflammation\\n- Caspase-mediated\\n- Peak timing: 24-72 hours post-insult\\n\\n**Necrosis (uncontrolled cell death):**\\n- Immediate (with severe injury)\\n- Energy-independent\\n- Inflammatory\\n- Follows ATP depletion (uncontrolled calcium influx)\\n\\n**Therapeutic window:** Apoptosis can be inhibited (24-72 hours), necrosis cannot\\n\\n## Regional Vulnerability\\n\\n**Basal ganglia and thalamus:** Most vulnerable (watershed areas, metabolically active)\\n- Putamen, globus pallidus\\n- Dorsal thalamus\\n\\n**Cerebral white matter:** Periventricular white matter injury (in preterm)\\n\\n**Hippocampus:** Memory center, vulnerable to asphyxia\\n\\n**Cerebral cortex:** Motor cortex (cortical/pyramidal tract involvement),\\n        mnemonics: [\\n          { text: \\\"ROS hydroxyl radical\\\", explanation: \\\"Most destructive free radical from hypoxia-reoxygenation\\\" },\\n          { text: \\\"Apoptosis 24-72 hours\\\", explanation: \\\"Delayed injury phase, therapeutic window for intervention\\\" },\\n          { text: \\\"Basal ganglia most vulnerable\\\", explanation: \\\"Putamen, globus pallidus preferentially damaged\\\" },\\n        ],\\n        keyPoints: [\\n          \\\"ATP depletion: Na pump failure → Ca overload → excitotoxicity\\\",\\n          \\\"ROS generated during reperfusion (most damaging phase)\\\",\\n          \\\"Microglia activation → TNF-α, IL-1β → neuroinflammation\\\",\\n          \\\"Apoptosis delayed 24-72h, can be targeted therapeutically\\\",\\n          \\\"Basal ganglia/thalamus most vulnerable regions\\\",\\n          \\\"Secondary injury phase (6-72h) therapeutic window\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Nelson's Textbook\\\", chapter: \\\"HIE Molecular Mechanisms\\\", edition: \\\"22nd\\\" },\\n          { book: \\\"Seminars in Perinatology\\\", chapter: \\\"Pathophysiology of Perinatal Asphyxia\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"hie-clinical\\\",\\n        title: \\\"Birth Asphyxia & HIE - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical presentation by Sarnat stage, diagnostic workup (MRI, EEG, biomarkers), and prognostic assessment.\\\",\\n        contentMd: ``# Birth Asphyxia & HIE - Clinical Diagnosis & Prognosis\\n\\n## Clinical Features by Sarnat Stage\\n\\n**Stage 1 (Mild HIE):**\\n- Level of consciousness: Hyperalert\\n- Muscle tone: Normal/increased\\n- Posture: Flexed\\n- Stretch reflexes: Hyperactive\\n- Seizures: None\\n- Feeding: Coordinated (may be strong)\\n- Moro reflex: Exaggerated, low threshold\\n\\n**Stage 2 (Moderate HIE):**\\n- Level of consciousness: Lethargic initially, may have reduced alertness\\n- Muscle tone: Hypotonic → hypertonic (progressive)\\n- Posture: Flexed initially, extended later\\n- Stretch reflexes: Decreased\\n- **Seizures: COMMON (60-90%)** - usually at 12-48 hours\\n- Feeding: Weak or absent, may need gavage\\n- Moro reflex: Incomplete\\n- Autonomic: Bradycardia, variable temperature control\\n\\n**Stage 3 (Severe HIE):**\\n- Level of consciousness: COMATOSE\\n- Muscle tone: Flaccid throughout\\n- Posture: Flaccid (arms/legs limp)\\n- Stretch reflexes: Absent\\n- Seizures: Frequent (may be subclinical on EEG)\\n- Feeding: Unable, NPO\\n- Moro reflex: Absent\\n- Autonomic: Severe bradycardia, requiring ventilatory support\\n- Pupillary light reflex: May be dilated/unreactive\\n\\n## Seizures in HIE\\n\\n**Timing:** Usually appear 12-48 hours after birth (not immediately)\\n- \\\"Delayed onset\\\" seizures characteristic\\n\\n**Seizure types:**\\n- Subtle seizures (70%): Nystagmus, eye opening, chewing, pedaling\\n- Clonic: Rhythmic jerking\\n- Tonic: Sustained posturing\\n- Myoclonic: Brief jerks\\n\\n**Prognostic significance:**\\n- Early seizures (first 12 hours): More severe\\n- Refractory seizures: Worse prognosis (Stage 3)\\n- Status epilepticus: Very poor prognosis\\n\\n## Diagnostic Investigations\\n\\n**Laboratory markers (AFTER resuscitation, indicating severity):**\\n- **Cord pH <7.0:** Indicates significant acidosis (asphyxia)\\n- **Base deficit >12 mmol/L:** Severe metabolic acidosis\\n- **Lactate >12 mmol/L:** Tissue hypoxia marker\\n- **Troponin elevation:** Myocardial injury\\n- **Creatinine >1.5 mg/dL:** Renal dysfunction\\n\\n**Neuroimaging (MRI gold standard for HIE assessment):**\\n- **Timing:** Conventional MRI at 24-72 hours (best shows acute injury)\\n- **Stage 1:** May be normal or subtle changes\\n- **Stage 2:** Gray matter predominant (basal ganglia, thalamus)\\n- **Stage 3:** Extensive gray matter + white matter involvement\\n- **Pattern recognition:** Helps predict neurodevelopmental outcome\\n\\n**Regions affected:**\\n- Putamen/globus pallidus (basal ganglia)\\n- Thalamus (dorsal and ventral)\\n- Brainstem\\n- Cerebral cortex\\n- Hippocampus\\n\\n**EEG findings:**\\n- Stage 1: Continuous normal activity\\n- Stage 2: Low amplitude, may have background slowing\\n- Stage 3: Suppressed/very low amplitude, burst suppression pattern\\n- Serial EEG: improving pattern = better prognosis\\n\\n**Biomarkers (research + clinical):**\\n- Cord blood IL-6, TNF-α (inflammation)\\n- Cord blood lactate\\n- Serum neuron-specific enolase (NSE)\\n- Tau protein (axonal injury)\\n- MicroRNAs (emerging)\\n\\n## Prognostic Factors\\n\\n**Poor prognostic indicators:**\\n- **Clinical:** Sarnat Stage 3, persistent seizures, severe EEG abnormalities\\n- **Imaging:** Extensive gray/white matter injury on MRI, particularly basal ganglia + thalamus bilateral\\n- **Biochemical:** Very low pH (<6.8), high lactate (>18), elevated troponin\\n- **Secondary injury:** Renal dysfunction, hepatic dysfunction, coagulopathy (MODS)\\n\\n**Long-term outcomes (by stage):**\\n- **Stage 1:** <10% mortality, >90% normal neurodevelopment\\n- **Stage 2:** 10-15% mortality, 25-50% neurodisability (CP, developmental delay)\\n- **Stage 3:** 50-60% mortality (often die), survivors with severe CP, profound developmental delay\\n\\n**Cooling effect:** Therapeutic hypothermia reduces unfavorable outcome from 60% to 50% in moderate-severe HIE\\n\\n## Assessment Tools for Outcome Prediction\\n\\n**nHSSI (Neonatal Hypoxic-Ischemic Severity Index):**\\n- Clinical features + imaging findings\\n- Predicts unfavorable outcome with 80-90% accuracy\\n\\n**Sargent Score:**\\n- Combines clinical, EEG, and imaging data\\n- Higher score = worse prognosis,\\n        mnemonics: [\\n          { text: \\\"Stage 2 seizures 12-48h\\\", explanation: \\\"Characteristic timing, delayed onset\\\" },\\n          { text: \\\"Stage 3 = coma + flaccid\\\", explanation: \\\"Severe encephalopathy with loss of tone/reflexes\\\" },\\n          { text: \\\"MRI 24-72h best timing\\\", explanation: \\\"Shows acute DWI abnormality, predicts outcome\\\" },\\n          { text: \\\"Gray matter > white matter\\\", explanation: \\\"Basal ganglia/thalamus predominantly affected\\\" },\\n        ],\\n        keyPoints: [\\n          \\\"Sarnat Stage guides clinical management and prognosis\\\",\\n          \\\"Stage 1: alert, normal exam → good prognosis\\\",\\n          \\\"Stage 2: lethargy, seizures, hypotonia → guarded\\\",\\n          \\\"Stage 3: coma, flaccid, no reflexes → very poor\\\",\\n          \\\"Seizures typically delayed 12-48 hours\\\",\\n          \\\"MRI at 24-72h shows DWI abnormality predicting outcome\\\",\\n          \\\"Gray matter (basal ganglia, thalamus) most affected\\\",\\n          \\\"Mild HIE: normal EEG, normal early MRI, good prognosis\\\",\\n          \\\"Severe HIE: low amplitude EEG, extensive MRI changes, poor prognosis\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook\\\", chapter: \\\"Clinical Assessment of HIE\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Pediatrics\\\", chapter: \\\"HIE Diagnostic Approach\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"hie-exam\\\",\\n        title: \\\"Birth Asphyxia & HIE - Exam Prep\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Neonatal resuscitation, therapeutic hypothermia, seizure management, supportive care, and long-term follow-up.\\\",\\n        contentMd: ``# Birth Asphyxia & HIE - Management\\n\\n## Neonatal Resuscitation (Immediate Management)\\n\\n**Initial assessment (first 10 seconds):**\\n- Is the baby term/near-term, vigorous (strong cry, good tone)?\\n- If YES → Keep with mother, observe\\n- If NO → Initiate resuscitation\\n\\n**Resuscitation sequence (if needed):**\\n\\n1. **Prepare & warm:** Dry infant, stimulate (gentle)\\n2. **Airway:** Suction (if meconium-stained, selective suctioning if vigorous)\\n3. **Initial steps (0-30 sec):**\\n   - Position (sniffing position to open airway)\\n   - Clear secretions (gentle wiping if needed)\\n   - Stimulate (dry, vigorous rubbing - if not breathing)\\n\\n4. **If not breathing after initial steps:**\\n   - Begin PPV (positive pressure ventilation) with room air or oxygen\\n   - Rate: 40-60 breaths/minute\\n   - Target: Chest rise with each breath\\n\\n5. **Check HR at 15 seconds:**\\n   - HR >100: Continue PPV, recheck at 15 sec intervals\\n   - HR 60-100: Continue PPV + consider intubation if apnea\\n   - HR <60: Add chest compressions\\n\\n6. **Chest compressions (if HR <60 after 15 sec PPV):**\\n   - Method: 3:1 compression:ventilation ratio\\n   - Rate: 90 compressions, 30 ventilations per minute\\n   - Depth: 1/3 anteroposterior diameter of chest\\n\\n7. **Medications (only with central access):**\\n   - Epinephrine: 0.1-0.3 mL/kg (1:10,000) IV every 3-5 min if HR remains <60\\n   - Sodium bicarbonate: If prolonged resuscitation\\n\\n8. **Continue/discontinue:**\\n   - If no response to resuscitation at 10 minutes: discontinue (very poor prognosis)\\n   - If HR recovers: continue supportive care\\n\\n## Therapeutic Hypothermia\\n\\n**Indications (for Stage 2-3 HIE):**\\n- Moderate to severe encephalopathy\\n- Born ≥35 weeks gestation\\n- Age <6 hours (preferably <3 hours)\\n- Criteria: pH <7.1 OR base deficit >12 OR lactate >11 (if cord blood) OR Apgar <5 at 10 min\\n\\n**Protocol:**\\n- **Target temperature:** 33.5°C\\n- **Duration:** 72 hours of cooling\\n- **Method:** Selective head cooling or whole-body cooling\\n- **Rewarming:** Gradual (0.5°C per hour) over 4-6 hours after cooling\\n\\n**Mechanism:**\\n- ↓ CMRO2 (cerebral metabolic rate)\\n- ↓ Excitotoxicity\\n- ↓ ROS generation\\n- ↓ Apoptosis\\n- Extends therapeutic window\\n\\n**Efficacy:**\\n- Reduces death/major disability from 60% to 50% (NNT = 10)\\n- Most benefit in moderate HIE (Stage 2)\\n- Some benefit in severe (Stage 3) but worse baseline\\n\\n**Complications to monitor:**\\n- Arrhythmias (cold → bradycardia, QT prolongation)\\n- Hyperglycemia (insulin resistance when cool)\\n- Increased ICP (cerebral edema)\\n- Rebound seizures during/after rewarming\\n\\n## Seizure Management in HIE\\n\\n**First-line:**\\n- Levetiracetam 20-50 mg/kg/day divided q8-12h\\n- OR Phenobarbital 20 mg/kg IV load, then 3-5 mg/kg/day maintenance\\n\\n**Second-line (if seizures persist):**\\n- Add phenytoin (if phenobarbital used) or vice versa\\n- OR Lorazepam 0.05-0.1 mg/kg IV q4h PRN\\n\\n**Challenges:**\\n- Seizures may be subtle (not obvious clinically)\\n- EEG monitoring essential for detection\\n- Refractory seizures common in Stage 3 (difficult to control)\\n\\n**Neonatal seizure characteristics:**\\n- Subtle: Nystagmus, eye deviation, chewing, pedaling, apnea spells\\n- Clonic: Rhythmic jerking of limbs\\n- Tonic: Sustained posturing\\n\\n## Supportive Care\\n\\n**Seizure precautions:**\\n- Padded crib sides\\n- Avoid hypoglycemia (causes seizures)\\n- Gentle handling (avoid overstimulation)\\n\\n**Respiratory support:**\\n- May need intubation (respiratory depression in Stage 3)\\n- Avoid hyperventilation (↓ cerebral blood flow)\\n\\n**Fluid management:**\\n- Maintain euvolemia (hypovolemia worsens outcome)\\n- Avoid fluid overload (cerebral edema risk)\\n- Monitor urine output\\n\\n**Glucose management:**\\n- Keep 60-100 mg/dL (avoid hypo or hyperglycemia)\\n- Both worsen neurologic outcome\\n\\n**Temperature control:**\\n- Keep normothermic (unless receiving therapeutic hypothermia)\\n- Fever worsens outcome\\n\\n**Coagulopathy monitoring:**\\n- PT/aPTT, fibrinogen (if severe asphyxia/MODS)\\n- Replace as needed\\n\\n**Organ dysfunction monitoring:**\\n- Renal: Monitor creatinine, urine output (acute kidney injury common)\\n- Hepatic: Monitor LFTs (fulminant hepatic failure possible)\\n- Cardiac: Troponin elevation, arrhythmias\\n- Hematologic: Thrombocytopenia, DIC\\n\\n## Long-term Follow-up\\n\\n**Neurodevelopmental assessment:**\\n- Bayley Scales of Infant Development (BSID-III)\\n- Assessment at 12, 18, 24 months\\n\\n**Common sequelae (HIE survivors):**\\n- Cerebral palsy (30-40% moderate-severe HIE)\\n  - Spastic (most common), ataxic, dyskinetic types\\n  - Motor cortex involvement → pyramidal signs\\n- Developmental delay (40-50%)\\n- Learning difficulties (20-30%)\\n- Behavioral/attention problems (10-20%)\\n- Hearing loss (from ototoxic medications or direct injury)\\n- Vision problems (cortical visual impairment from occipital involvement)\\n\\n**Prevention:**\\n- Antenatal care (fetal monitoring, delivery timing)\\n- Intrapartum surveillance (CTG, fetal scalp pH)\\n- Prompt recognition and management of complications,\\n        mnemonics: [\\n          { text: \\\"Resuscitation: warm → airway → PPV → compressions\\\", explanation: \\\"Initial steps before epinephrine\\\" },\\n          { text: \\\"Hypothermia 33.5°C x 72h\\\", explanation: \\\"Therapeutic cooling protocol\\\" },\\n          { text: \\\"Levetiracetam first-line seizures\\\", explanation: \\\"20-50 mg/kg/day divided\\\" },\\n          { text: \\\"Rewarming 0.5°C/hour\\\", explanation: \\\"Gradual increase temperature after cooling\\\" },\\n        ],\\n        keyPoints: [\\n          \\\"Resuscitation: PPV if not breathing, compressions if HR <60\\\",\\n          \\\"Therapeutic hypothermia 33.5°C x 72h for Stage 2-3\\\",\\n          \\\"Cooling reduces unfavorable outcome 60% → 50% (NNT = 10)\\\",\\n          \\\"Seizures common 12-48h, use EEG monitoring\\\",\\n          \\\"Levetiracetam or phenobarbital first-line\\\",\\n          \\\"Monitor glucose, temperature, organ function\\\",\\n          \\\"Rewarming gradually 0.5°C/hour\\\",\\n          \\\"Long-term sequelae: CP, developmental delay, learning problems\\\",\\n          \\\"Neurodevelopmental follow-up essential\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook\\\", chapter: \\\"Management of HIE\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Neonatal Resuscitation\\\", chapter: \\\"PPV and Resuscitation\\\", edition: \\\"8th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"hie-recall\\\",\\n        title: \\\"Birth Asphyxia & HIE - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"Clinical scenarios testing resuscitation, severity assessment, and management decisions.\\\",\\n        contentMd: ``# Active Recall: Birth Asphyxia & HIE\\n\\n**Q1:** Term newborn not breathing at delivery. Apgar 2 (no cry, limp, pale). What are first 3 actions?\\n> **Answer:** Warm (dry infant, put on warmer), clear airway (suction if needed), stimulate. If not breathing after 10 seconds: begin PPV (40-60 breaths/min). Check HR at 15 seconds (HR <60 → add chest compressions).\\n\\n**Q2:** Cord blood pH 6.8, base deficit -16, lactate 14. Apgar 3 at 1 minute, 4 at 5 minutes. Clinical presentation Stage 2 (lethargy, hypotonia). Eligible for therapeutic hypothermia?\\n> **Answer:** YES. Cord blood indicates severe asphyxia (pH <7.1, base deficit >12). Apgar <5 at 10 min. Likely Stage 2-3 HIE. Start hypothermia immediately (target 33.5°C) if <6 hours old. This is a therapeutic window opportunity (cooling reduces mortality/major disability by 10-15%).\\n\\n**Q3:** 18-hour-old term neonate with Stage 2 HIE on cooling protocol. Now having seizures (eye deviation, pedaling, apnea spells). First-line seizure medication?\\n> **Answer:** Levetiracetam 20-50 mg/kg/day divided q8-12h OR phenobarbital 20 mg/kg IV load, then 3-5 mg/kg/day. EEG monitoring essential (seizures can be subtle). May also need lorazepam for acute seizure termination.\\n\\n**Q4:** MRI at 48 hours shows extensive bilateral basal ganglia and thalamic injury with white matter changes. Sarnat Stage 3 features. Prognosis?\\n> **Answer:** Poor. Extensive gray/white matter involvement predicts severe neurodisability or death (50-60% mortality Stage 3). Survivors have 80-90% risk of moderate-severe CP, profound developmental delay. Continue supportive care, discuss realistic goals with family.\\n\\n**Q5:** Newborn with mild HIE (Stage 1): alert, normal tone, no seizures, EEG normal at 24 hours. Can discontinue hypothermia?\\n> **Answer:** Hypothermia NOT indicated for Stage 1 (inclusion criteria require moderate-severe encephalopathy). If cooling was started, can stop (no benefit). Prognosis excellent (>90% normal neurodevelopment).\\n\\n**Q6:** During rewarming from therapeutic hypothermia, infant develops seizures. Why?\\n> **Answer:** Rebound seizures common during rewarming (↑ neuronal excitability as brain temperature rises). Rewarming too rapidly (goal <0.5°C per hour) can exacerbate. Ensure seizure prophylaxis in place before/during rewarming. Continue anticonvulsants.\\n\\n**Q7:** 3-week-old with history of perinatal asphyxia, presenting with spastic posture of legs (scissoring), brisk reflexes, positive Babinski sign. Diagnosis?\\n> **Answer:** Spastic cerebral palsy (pyramidal tract involvement from motor cortex/basal ganglia injury). Likely sequela of HIE. Refer for neurorehabilitation (physical therapy, occupational therapy, speech therapy). Prognosis depends on extent of injury.\\n\\n**Q8:** Mother had placental abruption, fetal HR dropped to 60 in 5 minutes, emergency cesarean. Apgar 6 at 1 minute, 8 at 5 minutes. Cord pH 7.12, base deficit -8. Does infant meet hypothermia criteria?\\n> **Answer:** NO. Apgar ≥8 at 5 minutes argues against moderate-severe encephalopathy. pH and base deficit borderline but not severe enough alone without clinical signs. Observe closely; if clinical encephalopathy develops (seizures, lethargy, hypotonia), consider hypothermia late (ideally <6h, maximum <18h in some protocols). Monitor EEG.\\n\\n**Q9:** Infant receiving therapeutic hypothermia develops bradycardia (HR 70, normal 120-160), hypothermia-induced diuresis (polyuria). Expected? Dangerous?\\n> **Answer:** Expected cold-induced bradycardia and increased urine output. NOT dangerous per se (normal response to hypothermia). Monitor electrolytes (maintain normal K, Na). Bradycardia resolves with rewarming. BUT monitor for arrhythmias (QT prolongation risk during cooling).\\n\\n**Q10:** Post-hypothermia neonate at 3 months shows developmental delay (not tracking visually, limited vocalizations). What is most common sequela?\\n> **Answer:** Neurodevelopmental delay (common in moderate-severe HIE even with cooling). Visual impairment possible (cortical visual impairment from occipital lobe damage). Refer to developmental pediatrician, ophthalmology. Early intervention services (PT/OT/speech). Bayley assessment at 12-24 months to quantify delay.,\\n        mnemonics: [],\\n        keyPoints: [\\n          \\\"Resuscitation: warm → airway → PPV → compressions\\\",\\n          \\\"Apgar <5 at 10 min + acidosis → consider hypothermia\\\",\\n          \\\"Therapeutic hypothermia 33.5°C x 72h reduces mortality 10-15%\\\",\\n          \\\"Stage 1: good prognosis; Stage 3: poor (50-60% mortality)\\\",\\n          \\\"Seizures common 12-48h, use EEG monitoring\\\",\\n          \\\"Gray matter (basal ganglia) predominant injury pattern\\\",\\n          \\\"Rebound seizures during rewarming (slow 0.5°C/hour)\\\",\\n          \\\"Long-term: CP, developmental delay, learning problems\\\",\\n          \\\"Early intervention critical for neurodevelopmental outcomes\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook\\\", chapter: \\\"Case Studies in HIE\\\", edition: \\\"10th\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n];\\n\\nexport default pediatricsPart8Lessons;\\n\""
-}
-}
-}
+        contentMd: `# Neonatal Sepsis - Foundation
+
+## Definitions
+
+**Neonatal sepsis**: Systemic infection in neonates (0-28 days) confirmed by blood culture
+
+**Early-Onset Sepsis (EOS)**: Presentation within first 72 hours
+- Vertical transmission from mother
+- Occurs during hospitalization for birth
+
+**Late-Onset Sepsis (LOS)**: Presentation after 72 hours
+- Horizontal transmission (environmental)
+- Occurs after discharge or prolonged hospitalization
+
+## Risk Factors for EOS
+
+**Maternal factors**:
+- PROM >18 hours
+- Maternal fever/chorioamnionitis
+- GBS positive without prophylaxis
+- Low socioeconomic status
+
+**Neonatal factors**:
+- Prematurity <37 weeks
+- Low birth weight <2500 g
+- Male sex
+- Apgar <7 at 5 minutes
+
+## Common Organisms
+
+**EOS**:
+- GBS (Group B Streptococcus) - 40%
+- E. coli K1 - second most common
+- Listeria monocytogenes
+- Gram-negative enterics
+
+**LOS**:
+- Staphylococcus aureus (including MRSA)
+- CoNS (Coagulase-negative Staphylococci)
+- Enterococci
+- Candida
+- Klebsiella, Pseudomonas
+
+## Neonatal Immune Immaturity
+
+**Antibody deficiency**:
+- Low IgG (passively acquired, drops by 3-6 months)
+- Absent IgM, IgA
+
+**Complement**:
+- 50-80% of adult values
+- Impaired opsonization
+
+**Cells**:
+- Impaired neutrophil chemotaxis
+- Reduced T-cell function`,
+        mnemonics: [
+          { text: "EOS <72h = vertical (mother), LOS >72h = horizontal", explanation: "Transmission route" },
+          { text: "GBS + E. coli = 80% of EOS", explanation: "Most common organisms" },
+          { text: "Neonatal: ↓ IgM, ↓ complement, ↓ neutrophils", explanation: "Immaturity mechanisms" },
+        ],
+        keyPoints: [
+          "EOS: vertical transmission, <72 hours",
+          "LOS: horizontal transmission, >72 hours",
+          "GBS (40%) and E. coli most common EOS",
+          "PROM >18h, maternal fever are major risk factors",
+          "Neonatal immunity immature: low IgG, absent IgM/IgA",
+          "Low birth weight, prematurity, male sex are neonatal risks",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Neonatal Sepsis", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Infections of Newborn", edition: "21st" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "neonatal-sepsis-layer-2-mechanism",
+        title: "Neonatal Sepsis - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pathophysiology of neonatal infection, immune dysfunction mechanisms, inflammatory cascade, and complications.",
+        contentMd: `# Neonatal Sepsis - Pathophysiology
+
+## Routes of Infection
+
+**Vertical transmission (EOS)**:
+- Maternal genital flora (vagina, rectum)
+- Ascending infection (PROM, labor)
+- Aspiration during delivery
+
+**Horizontal transmission (LOS)**:
+- Skin colonization (healthcare workers)
+- Mucous membranes (GI, respiratory)
+- Bloodstream seeding (lines, procedures)
+
+## Immune Dysfunction
+
+**Complement system**:
+- 50-80% of adult values
+- Impaired opsonization (poor bacterial coating)
+- Reduced complement activation
+
+**Neutrophils**:
+- Reduced storage pool (depletes quickly)
+- Impaired chemotaxis
+- Reduced killing capacity
+
+**Antibodies**:
+- Absent IgM (not crossing placenta)
+- Absent IgA (no mucosal immunity)
+- Low maternal IgG in preterm
+
+## Bacterial Virulence
+
+**GBS**:
+- Hyaluronic acid capsule (immune evasion)
+- β-hemolysin (toxin)
+- No opsonizing IgM antibody
+
+**E. coli K1**:
+- K1 capsule antigen
+- LPS endotoxin
+- Fimbriae for adherence
+
+## Septic Shock
+
+**SIRS**:
+- Fever or hypothermia
+- Tachycardia, tachypnea
+- Elevated/depressed WBC
+
+**Septic Shock**:
+- Hypotension (systolic <65 mmHg)
+- Tissue hypoperfusion
+- Multi-organ dysfunction`,
+        mnemonics: [
+          { text: "GBS = hyaluronic capsule (evasion)", explanation: "Virulence mechanism" },
+          { text: "Neonatal septic shock = vasodilation + ↓ contractility", explanation: "TNF-α effects" },
+        ],
+        keyPoints: [
+          "Vertical: maternal genital flora, aspiration during delivery",
+          "Horizontal: skin colonization, healthcare contact",
+          "Complement 50-80%: impaired opsonization",
+          "Neutrophil storage pool quickly depleted",
+          "GBS virulence: hyaluronic capsule, no IgM antibodies",
+          "Septic shock: hypotension + tissue hypoperfusion",
+          "Meningitis in 10-15% of EOS",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Neonatal Immune Mechanisms", edition: "9th" },
+          { book: "Robbins Pathology", chapter: "Infectious Diseases", edition: "10th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "neonatal-sepsis-layer-3-clinical",
+        title: "Neonatal Sepsis - Clinical Assessment",
+        estimatedMinutes: 25,
+        summary: "Clinical presentation of neonatal sepsis, signs by system, diagnostic approach, and biomarkers.",
+        contentMd: `# Neonatal Sepsis - Clinical Assessment
+
+## Clinical Presentation
+
+**Non-specific signs**:
+- Fever or hypothermia
+- Irritability or lethargy
+- Poor feeding, sucking
+- Vomiting, abdominal distension
+
+**Respiratory**:
+- Tachypnea (>60/min)
+- Grunting, retractions
+- Apnea spells
+- Cyanosis
+
+**Cardiovascular**:
+- Tachycardia
+- Hypotension (systolic <65 mmHg)
+- Poor perfusion (cold extremities, mottled)
+- Delayed capillary refill (>3 seconds)
+
+**Neurological**:
+- Seizures
+- Bulging fontanelle (meningitis)
+- Hypotonia, decreased reflexes
+- Altered consciousness
+
+**Skin**:
+- Petechiae, purpura (DIC)
+- Pustules (bacterial infection)
+- Poor skin turgor
+
+## Investigations
+
+**Blood Culture**:
+- Gold standard
+- Draw >0.5 mL before antibiotics
+- Aerobic + anaerobic bottles
+
+**Complete Blood Count**:
+- Total WBC: elevated or depressed (depressed worse)
+- Left shift: increased immature forms
+- Platelet count: low suggests DIC
+
+**C-Reactive Protein**:
+- Rises 6-8 hours after infection
+- Serial CRP more useful
+
+**Procalcitonin**:
+- More specific for bacterial infection
+- Rises 2-4 hours
+
+**Lumbar Puncture**:
+- If meningitis suspected
+- CSF: low glucose, high protein, pleocytosis
+- Culture of CSF
+
+**Lactate**:
+- Elevated in tissue hypoperfusion
+- Prognostic indicator`,
+        mnemonics: [
+          { text: "Non-specific: fever/hypothermia, poor feeding", explanation: "Early signs" },
+          { text: "Depressed WBC worse than elevated", explanation: "Prognostic sign" },
+          { text: "Blood culture >0.5 mL before antibiotics", explanation: "Gold standard" },
+        ],
+        keyPoints: [
+          "Non-specific: fever/hypothermia, irritability, poor feeding",
+          "Respiratory: tachypnea, grunting, apnea",
+          "Cardiovascular: tachycardia, hypotension, poor perfusion",
+          "Neurological: seizures, bulging fontanelle",
+          "Blood culture: >0.5 mL before antibiotics",
+          "CBC: depressed WBC more ominous",
+          "CRP rises 6-8 hours, serial measurement important",
+          "Procalcitonin rises 2-4 hours",
+          "Lumbar puncture: CSF glucose <50% serum glucose",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Clinical Diagnosis", edition: "9th" },
+          { book: "Manual of Neonatal Care", chapter: "Neonatal Infection", edition: "9th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "neonatal-sepsis-layer-4-exam",
+        title: "Neonatal Sepsis - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "Management of EOS and LOS, antibiotic selection, duration, supportive care, and prevention.",
+        contentMd: `# Neonatal Sepsis - Management & Prevention
+
+## Empiric Antibiotic Therapy
+
+**For EOS (first 72 hours)**:
+- **Ampicillin** 50 mg/kg IV every 6-12 hours (GBS, Listeria)
+- **PLUS Gentamicin** 7.5 mg/kg IV once daily (E. coli)
+- Duration: 7-10 days if positive, 48-72 hours if negative + improving
+
+**For LOS (after 72 hours)**:
+- **Vancomycin** 15-20 mg/kg IV every 8-12 hours (resistant gram-positive)
+- **PLUS Gentamicin** 7.5 mg/kg IV once daily (gram-negative)
+- PLUS consider Cefotaxime if gram-negative likely
+- Duration: 10-14 days
+
+**For Meningitis**:
+- **Cefotaxime** 50 mg/kg IV every 6 hours (CNS penetration)
+- **PLUS Vancomycin** 15-20 mg/kg IV every 8-12 hours
+- **Ampicillin** still needed (Listeria coverage)
+- **PLUS Dexamethasone** 0.6 mg/kg IV every 6 hours x 4 days
+- Duration: 14 days (GBS), 21 days (gram-negative)
+
+## Supportive Care
+
+**Fluid & Electrolyte**:
+- IV fluids: glucose, electrolytes, fluid balance
+- Correct acidosis if severe
+
+**Hemodynamic Support**:
+- Fluids first for hypotension
+- Vasopressors (dopamine) if needed
+- Target MAP = 40 + (2 x age in days)
+
+**Respiratory Support**:
+- Supplemental O2 for SpO2 >90%
+- Mechanical ventilation if respiratory failure
+
+## Prevention
+
+**GBS Prevention**:
+- Intrapartum antibiotic prophylaxis (IAP)
+- Penicillin G 5 million units IV then 2.5 million every 4 hours
+- Alternative: Cephalexin, vancomycin if allergy
+
+**Infection Prevention**:
+- Skin antisepsis
+- Aseptic technique for procedures
+- Limited invasive procedures
+- Hand hygiene`,
+        mnemonics: [
+          { text: "EOS: Ampicillin + Gentamicin", explanation: "Empiric therapy" },
+          { text: "LOS: Vancomycin + Gentamicin ± Cefotaxime", explanation: "Resistant coverage" },
+          { text: "Meningitis: add Cefotaxime, Vancomycin, keep Ampicillin", explanation: "CNS coverage" },
+        ],
+        keyPoints: [
+          "Start empiric antibiotics immediately",
+          "EOS: ampicillin (GBS, Listeria) + gentamicin",
+          "LOS: vancomycin (resistant) + gentamicin + cefotaxime",
+          "Meningitis: cefotaxime + vancomycin + ampicillin",
+          "Dexamethasone with first antibiotic (meningitis)",
+          "Hemodynamic support: fluids first, then vasopressors",
+          "GBS prevention: intrapartum antibiotics",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Management", edition: "9th" },
+          { book: "AAP/ACOG Guidelines", chapter: "GBS Prevention", edition: "2020" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "neonatal-sepsis-layer-5-active-recall",
+        title: "Neonatal Sepsis - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Clinical scenarios for diagnosis, management decisions, and prognostic assessment.",
+        contentMd: `# Active Recall: Neonatal Sepsis
+
+**Q1:** Term newborn, 18 hours of life. Mother had PROM 20 hours. Mother fever (T 38.2°C) before delivery. Baby irritable, poor feeding, HR 160, RR 65. WBC 7,500 with left shift. What management?
+> **Answer:** High risk EOS (PROM >18h, maternal fever). Start empiric antibiotics IMMEDIATELY: Ampicillin 50 mg/kg IV every 6 hours + Gentamicin 7.5 mg/kg IV once daily. Draw blood culture before antibiotics. Continue 7-10 days if positive, 48-72 hours if negative + improving.
+
+**Q2:** 4-day-old preterm (32 weeks), on ventilator, central line. Fever (T 38.5°C), increasing O2 requirement, septic appearance. WBC 3,500 (depressed), CRP >30. What antibiotics?
+> **Answer:** LOS (day 4, hospitalized). Start vancomycin 15-20 mg/kg IV every 8-12 hours + gentamicin 7.5 mg/kg IV once daily + cefotaxime. Depressed WBC is concerning sign. Continue 10-14 days depending on organism.
+
+**Q3:** 2-day-old with seizures, bulging fontanelle, CSF pleocytosis, Gram-positive cocci. GBS meningitis presumed. Antibiotics?
+> **Answer:** Cefotaxime 50 mg/kg IV every 6 hours + Vancomycin 15-20 mg/kg IV every 8-12 hours + Ampicillin 50 mg/kg IV every 6 hours. ADD dexamethasone 0.6 mg/kg IV every 6 hours x 4 days. Treat 14 days (GBS). Repeat LP at 24-48 hours.
+
+**Q4:** Term baby, 6 hours of life. Mother GBS-positive, PROM 24 hours, no intrapartum antibiotics. Baby asymptomatic. Treat?
+> **Answer:** YES. High risk EOS even though asymptomatic. Start ampicillin + gentamicin. 6 hours too early to rule out sepsis. Stop at 48 hours if culture negative + clinically well.
+
+**Q5:** 5-day-old with fever, abdominal distension, bilious vomiting. X-ray shows pneumatosis intestinalis. Diagnosis and management?
+> **Answer:** Necrotizing enterocolitis (NEC). NPO immediately, NG decompression, IV fluids, start antibiotics: ampicillin + gentamicin + clindamycin. Blood culture. Surgical consultation if perforation.
+
+**Q6:** 3-day-old with GBS sepsis (positive blood culture), no meningitis. On ampicillin + gentamicin, improving clinically. Duration of treatment?
+> **Answer:** 7-10 days (positive blood culture). Continue current antibiotics. Blood culture should be sterile at 24 hours. Total 7-10 days for non-meningitis GBS bacteremia.
+
+**Q7:** Term baby born to mother with penicillin anaphylaxis. GBS-positive at birth. Now day 3, baby septic. What antibiotics?
+> **Answer:** Baby can receive beta-lactams even if mother allergic (different person). Use cephalosporin (cefotaxime) as allergy alternative, or penicillin if anaphylaxis unlikely. Add gentamicin. Maternal history should NOT prevent appropriate antibiotics in baby.
+
+**Q8:** 10-day-old, culture-positive Candida sepsis. Currently on ampicillin + gentamicin, stable. Change antibiotics?
+> **Answer:** Switch to Amphotericin B 1 mg/kg IV daily. Remove central line if possible (source control). Fluconazole alternative if susceptible. Treat 14 days minimum. Repeat cultures to document sterilization.
+
+**Q9:** 1-day-old from mother with PROM 48 hours. CRP 2 mg/dL (slightly elevated), WBC 8,000 (normal), no clinical signs. Treat?
+> **Answer:** Risk stratification: PROM >18h = high risk. Give empiric ampicillin + gentamicin. Repeat CRP at 24 hours (serial CRP more useful). Can stop antibiotics at 48 hours if CRP not rising, clinically normal, blood culture negative.
+
+**Q10:** GBS-positive mother, no intrapartum antibiotics. Baby 32 weeks, age 36 hours, signs of sepsis (WBC 4,500, CRP 50, fever). Antibiotic choice?
+> **Answer:** EOS (36 hours = <72h). Start Ampicillin 50 mg/kg IV every 8-12 hours + Gentamicin 7.5 mg/kg IV once daily. If GBS confirmed, continue for 7-10 days. Monitor closely (preterm = higher morbidity).`,
+        mnemonics: [
+          { text: "EOS: Ampicillin + Gentamicin", explanation: "Standard empiric therapy" },
+          { text: "LOS: Vancomycin + Gentamicin + Cefotaxime", explanation: "Resistant coverage" },
+          { text: "Meningitis: Cefotaxime + Vancomycin + Ampicillin + Dexamethasone", explanation: "CNS coverage" },
+        ],
+        keyPoints: [
+          "Start empiric antibiotics immediately on suspicion",
+          "EOS: ampicillin + gentamicin",
+          "LOS: vancomycin + gentamicin ± cefotaxime",
+          "Meningitis: cefotaxime + vancomycin + ampicillin + dexamethasone",
+          "Depressed WBC more ominous than elevated",
+          "Blood culture before antibiotics (gold standard)",
+          "NEC: NPO, NG decompression, broad antibiotics + clindamycin",
+          "Candida: Amphotericin B, remove central line",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Case Studies", edition: "9th" },
+        ],
+      },
+    ],
+  },
 ];
-];
-];
+
+export default pediatricsPart8Lessons;

@@ -1,19 +1,346 @@
-// Pediatrics Part 9: PE-MOD-03 (PEM) + PE-MOD-04 (Infections) + PE-MOD-05-06-07-08 (Remaining topics)
+import type { TopicLessons } from "./content-loader";
 
-export const pediatricsPart9Lessons = [
+export const pediatricsPart9Lessons: TopicLessons[] = [
   {
     topicCode: "PE-MOD-03-TOP-02",
     layers: [
       {
         layer: 1,
-        slug: "pem-foundation",
+        slug: "malnutrition-layer-1-foundation",
         title: "Protein-Energy Malnutrition - Foundation",
         estimatedMinutes: 20,
         summary: "PEM classification (SAM, MAM, underweight), kwashiorkor vs marasmus distinction, and prevalence in India.",
-        contentMd: "# Protein-Energy Malnutrition - Foundation\n\n## Classification of Malnutrition (WHO)\n\n**By weight-for-age (WFA) percentage of expected:**\n- >80% WFA: Mild malnutrition\n- 70-80% WFA: Moderate malnutrition\n- <70% WFA: Severe malnutrition\n\n**Severe Acute Malnutrition (SAM):**\n- Weight-for-height Z-score <-3 (wasting)\n- OR Mid-upper arm circumference (MUAC) <11.5 cm (children 6-59 months)\n- OR Presence of bilateral pedal edema (kwashiorkor)\n- Acute onset (weeks to months)\n- Medical complications risk: VERY HIGH\n\n**Moderate Acute Malnutrition (MAM):**\n- Weight-for-height Z-score -2 to -3\n- OR MUAC 11.5-12.5 cm\n- Less severe than SAM but still concerning\n\n**Chronic Malnutrition (Stunting):**\n- Height-for-age Z-score <-2\n- Low birth weight + inadequate nutrition over years\n- May appear well-nourished (weight normal) but short\n\n## Kwashiorkor vs Marasmus\n\n**Kwashiorkor (protein deficiency):**\n- **Pathophysiology:** Inadequate protein with some carbohydrate intake\n- **Presentation:** Edema (bilateral feet/legs), liver enlargement, dermatosis, hair changes (red/thin)\n- **Biochemistry:** Low albumin, anemia, vitamin A deficiency (blindness risk)\n- **Acute onset:** Rapid decompensation\n- **Risk:** Sudden death (cardiac arrhythmias, refeeding syndrome)\n\n**Marasmus (energy deficiency):**\n- **Pathophysiology:** Severe caloric restriction (no protein/carb)\n- **Presentation:** Wasting (all muscle/fat gone), \"old man appearance,\" no edema\n- **Biochemistry:** Relatively normal albumin initially (conserved), low transthyretin\n- **Subacute onset:** Progressive wasting\n- **Risk:** Slow deterioration (but hidden metabolic derangement)\n\n**Marasmic-kwashiorkor (mixed):**\n- Features of both: Wasting + edema\n- Most severe form\n- Highest mortality\n\n## Prevalence in India\n\n- **Overall malnutrition:** 35-45% of children <5 years\n- **SAM:** 5-7% children <5 years (varies by region)\n- **Stunting:** 35-40% (chronic malnutrition)\n- **Wasting:** 15-20% (acute malnutrition)\n- **Higher in rural areas, lower SES**\n\n## Causes of PEM (India context)\n\n**Primary (exogenous):**\n- Inadequate food intake (poverty, food insecurity)\n- Poor feeding practices (delayed complementary feeding)\n- Infections (diarrhea, malaria, TB causing poor absorption/loss)\n\n**Secondary (endogenous):**\n- Chronic diarrhea (malabsorption)\n- TB (hypermetabolism)\n- Congenital heart disease (increased caloric needs)\n- Cystic fibrosis (malabsorption)\n\n## Age of Presentation\n\n- **Peak incidence:** 6-24 months (weaning period, transition from breast to complementary foods)\n- **Rarer in exclusively breastfed infants** (breast milk protein adequate),\n        mnemonics: [\n          { text: \"SAM = MUAC <11.5 or WFH <-3\", explanation: \"Quick field assessment\" },\n          { text: \"Kwashiorkor edema + hair changes\", explanation: \"Protein deficiency picture\" },\n          { text: \"Marasmus 'old man appearance'\", explanation: \"Severe wasting, no edema\" },\n        ],\n        keyPoints: [\n          \"SAM: acute wasting, MUAC <11.5, medical complications\",\n          \"Kwashiorkor: protein deficiency, edema, liver enlargement, diarrhea\",\n          \"Marasmus: energy deficiency, wasting, no edema, preserved albumin initially\",\n          \"35% Indian children <5 malnourished\",\n          \"Peak 6-24 months (weaning period)\",\n        ],\n        textbookRefs: [\n          { book: \"OP Ghai Textbook\", chapter: \"Protein-Energy Malnutrition\", edition: \"10th\" },\n          { book: \"WHO Guidelines\", chapter: \"Management of SAM in Children\", edition: \"2013\" },\n        ],\n      },\n      {\n        layer: 2,\n        slug: \"pem-mechanism\",\n        title: \"Protein-Energy Malnutrition - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiology of SAM, metabolic adaptation, immune dysfunction, and organ-specific changes.\",\n        contentMd: "# Protein-Energy Malnutrition - Pathophysiology\\n\\n## Metabolic Adaptation in Starvation\\n\\n**Phase 1 (First 4-6 weeks):**\\n- ↓ Gluconeogenesis (maintain blood glucose)\\n- ↓ Protein catabolism (conserve muscle for essential functions)\\n- ↑ Lipolysis (energy from fat)\\n- ↓ Metabolic rate (conserve energy)\\n\\n**Phase 2 (Weeks 6-12):**\\n- Protein catabolism ↑↑ (muscle wasting accelerates)\\n- Fat stores depleted\\n- Immune system deteriorates (lymphocyte loss)\\n- Organ perfusion maintained (brain, heart, kidney prioritized)\\n\\n## Protein-Specific Changes in Kwashiorkor\\n\\n**Hepatic protein synthesis impaired:**\\n- ↓ Albumin (colloid oncotic pressure ↓ → edema)\\n- ↓ Clotting factors (coagulopathy)\\n- ↓ Immune proteins (immunoglobulins)\\n- Fatty liver (lipid accumulation, impaired export)\\n\\n**Intestinal dysfunction:**\\n- Reduced mucosal thickness\\n- ↓ Brush border enzymes (disaccharidase deficiency)\\n- ↑ Intestinal permeability (protein loss, translocation)\\n- **Secondary lactose intolerance** (transient)\\n\\n## Immune System Changes\\n\\n**Innate immunity impaired:**\\n- ↓ Neutrophil count, chemotaxis, killing\\n- ↓ Complement (C3, C4)\\n- ↓ Lysozyme, lactoferrin\\n\\n**Adaptive immunity devastated:**\\n- ↓↓ T-lymphocytes (most affected: CD4 cells)\\n- ↓ B-lymphocytes and antibody production\\n- Thymic atrophy (no T-cell production)\\n- ↓ Antibody titers (vaccination less effective)\\n\\n**Result:** Severe susceptibility to infections (measles, TB, GI infections)\\n\\n## Specific Organ Dysfunction\\n\\n**Heart:**\\n- Ventricular atrophy\\n- Impaired contractility\\n- Risk of sudden cardiac death (arrythmias, myocarditis)\\n- **Refeeding syndrome risk** (see management section)\\n\\n**Kidneys:**\\n- Impaired GFR (renal perfusion ↓)\\n- ↓ Potassium excretion (hyperkalemia risk)\\n- ↓ Acid excretion (metabolic acidosis)\\n\\n**Lungs:**\\n- Respiratory muscle atrophy\\n- Impaired cough reflex\\n- ↑ Aspiration risk\\n\\n**GI tract:**\\n- Pancreatic insufficiency (enzyme production ↓)\\n- Bile duct dysfunction (fat malabsorption)\\n- Atrophic mucosa (lactose intolerance)\\n- Loss of protective mucus (increased translocation)\\n\\n**Hematologic:**\\n- ↓ Hemoglobin (anemia)\\n- ↓ Platelets (thrombocytopenia, bleeding risk)\\n- ↓ Clotting factors (coagulopathy)\\n- ↓ Iron stores (yet paradoxical high serum iron in kwashiorkor - indicates liver dysfunction)\\n\\n**Metabolic:**\\n- Hypoglycemia risk (reduced gluconeogenesis)\\n- Hypophosphatemia (during refeeding)\\n- Hypokalemia (during refeeding despite total body depletion)\\n- Hypomagnesium (total body depletion)\\n\\n## Infections in PEM\\n\\n**Why increased infection risk:**\\n- T-cell deficiency → impaired cell-mediated immunity\\n- Low complement → poor opsonization\\n- Reduced antibodies → poor humoral response\\n- Impaired intestinal barrier → bacterial translocation\\n\\n**Common infections in SAM:**\\n- Diarrhea (70-80% present with diarrhea)\\n- Respiratory infections (pneumonia)\\n- TB (increased reactivation)\\n- Sepsis/bacteremia\\n- Malaria (severe)\\n- Measles (often severe/fatal in malnourished),\\n        mnemonics: [\\n          { text: \\\"Kwashiorkor fatty liver\\\", explanation: \\\"Impaired protein synthesis and lipid export\\\" },\\n          { text: \\\"SAM immune T-cells devastated\\\", explanation: \\\"CD4 lymphopenia, thymic atrophy\\\" },\\n          { text: \\\"Refeeding syndrome hypophosphatemia\\\", explanation: \\\"Paradoxically low despite total body depletion\\\" },\\n        ],\\n        keyPoints: [\\n          \\\"Kwashiorkor: ↓ albumin → edema, fatty liver, diarrhea\\\",\\n          \\\"Marasmus: muscle wasting, preserved liver protein initially\\\",\\n          \\\"Immune: T-cells devastated (CD4), thymic atrophy, ↓ antibodies\\\",\\n          \\\"Infections common: diarrhea, pneumonia, TB, sepsis\\\",\\n          \\\"Metabolic risks: hypoglycemia, refeeding syndrome\\\",\\n          \\\"Diarrhea 70-80%, often secondary to intestinal dysfunction\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook\\\", chapter: \\\"Metabolic Consequences of PEM\\\", edition: \\\"10th\\\" },\\n          { book: \\\"Pediatric Gastroenterology\\\", chapter: \\\"Malnutrition Effects on GI\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"pem-clinical\\\",\\n        title: \\\"Protein-Energy Malnutrition - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical presentation by type, IMCI classification, MUAC assessment, and diagnostic workup.\\\",\\n        contentMd: ``# Protein-Energy Malnutrition - Clinical Assessment\\n\\n## Clinical Features\\n\\n**Kwashiorkor:**\\n- **Edema:** Bilateral, pitting (feet, legs, face)\\n- **Hair changes:** Thin, sparse, color change (reddish/\\\"pepper and salt\\\")\\n- **Skin changes:** Dermatosis (flaky paint appearance, hyperpigmented patches, follicular hyperkeratosis)\\n- **Hepatomegaly:** Smooth, tender (fatty infiltration)\\n- **Facial appearance:** Moon face (edema), apathy/misery\\n- **Diarrhea:** Often severe (80%), foul-smelling\\n- **Anemia:** Moderate to severe\\n- **Behavioral:** Irritable initially, later apathetic\\n\\n**Marasmus:**\\n- **Appearance:** Thin, skeletal, \\\"old man appearance\\\"\\n- **Loss of:** Subcutaneous fat completely gone, muscle wasting visible (ribs prominent, scapulae prominent)\\n- **Skin:** Dry, loose (saggy appearance), normal color\\n- **Hair:** Normal color initially, becomes thin\\n- **Edema:** ABSENT (critical distinction from kwashiorkor)\\n- **Hepatomegaly:** Absent or minimal\\n- **Behavior:** Hungry, alert (may beg for food)\\n- **Vital signs:** Bradycardia, hypothermia common\\n\\n**Marasmic-kwashiorkor:**\\n- **Features of both:** Severe wasting + edema\\n- **Skin:** Dermatosis + loose skin\\n- **Organs:** Hepatomegaly + muscle loss\\n- **Most severe form, highest mortality**\\n\\n## IMCI Classification (Integrated Management of Neonatal & Childhood Illness)\\n\\n**Severe Acute Malnutrition (SAM) - Red flag:**\\n- Bilateral pitting edema involving feet (kwashiorkor/marasmic-kwashiorkor)\\n- OR Weight-for-height <70% with severe wasting appearance\\n- OR MUAC <11.5 cm (6-59 months)\\n- **Requires hospitalization for management**\\n\\n**Moderate Acute Malnutrition (MAM) - Yellow flag:**\\n- Weight-for-height 70-80%\\n- OR MUAC 11.5-12.5 cm\\n- **Requires supplementation (outpatient)**\\n\\n**Chronic Malnutrition (Stunting):**\\n- Height-for-age <95% (or <-2 SD)\\n- Indicates long-standing poor nutrition\\n- Earlier detection/intervention critical\\n\\n## Anthropometric Assessment\\n\\n**Weight-for-height (WFH):**\\n- Most useful for acute malnutrition (wasting)\\n- Requires accurate measurement\\n- Less affected by age estimation error\\n\\n**MUAC (Mid-Upper Arm Circumference):**\\n- Simple field measurement (no scale needed)\\n- Directly measured with flexible tape\\n- Cutoffs: <11.5 cm = SAM, 11.5-12.5 cm = MAM (6-59 months)\\n- Quick, reliable, correlates with mortality risk\\n\\n**Height-for-age (HFA):**\\n- Indicates chronic malnutrition (stunting)\\n- Reflects long-term nutritional status\\n- Less acute than WFH\\n\\n**Weight-for-age (WFA):**\\n- Includes both acute and chronic malnutrition\\n- Most affected by edema (misleadingly normal in kwashiorkor)\\n\\n## Clinical Signs Assessment\\n\\n**Immediate danger signs (SAM with complications):**\\n- Lethargy/unconsciousness\\n- Unable to drink\\n- Persistent vomiting\\n- Severe pallor (Hb <7 g/dL)\\n- Severe dehydration\\n- **In these cases: immediate referral to hospital**\\n\\n## Laboratory & Diagnostic Workup\\n\\n**Routine baseline labs (before starting treatment):**\\n- **Hemoglobin:** Usually low (anemia)\\n- **Blood glucose:** May be low (hypoglycemia risk)\\n- **Electrolytes:** K+, Na+, PO4, Mg (often low, paradoxically)\\n- **Liver function:** AST/ALT (elevated in kwashiorkor), albumin (very low), bilirubin\\n- **Renal function:** Creatinine, urea (impaired GFR)\\n- **Whipcell count:** Lymphocyte count (very low)\\n- **Blood culture:** If fever/signs of infection (commonly positive)\\n\\n**Assessment for infections:**\\n- Tuberculin test (tuberculosis screening)\\n- Stool exam (parasites, malabsorption)\\n- Chest X-ray (TB, pneumonia)\\n- Malaria test (if endemic area)\\n- Measles immunity (vaccination response poor)\\n\\n**Metabolic assessment:**\\n- Plasma amino acid profile (prealbumin, transthyretin reflect recent change)\\n- Nitrogen balance studies (advanced settings),\\n        mnemonics: [\\n          { text: \\\"Kwashiorkor = edema + hair changes\\\", explanation: \\\"Protein deficiency hallmark\\\" },\\n          { text: \\\"Marasmus = wasting only, no edema\\\", explanation: \\\"Energy deficiency\\\" },\\n          { text: \\\"MUAC <11.5 = SAM\\\", explanation: \\\"Field assessment tool\\\" },\\n        ],\\n        keyPoints: [\\n          \\\"Kwashiorkor: edema, hair change, dermatosis, hepatomegaly, diarrhea\\\",\\n          \\\"Marasmus: wasting, skeletal appearance, no edema, hungry\\\",\\n          \\\"Marasmic-kwashiorkor: both wasting and edema, worst prognosis\\\",\\n          \\\"MUAC <11.5 cm = SAM requiring hospitalization\\\",\\n          \\\"Anemia, low albumin, electrolyte derangement common\\\",\\n          \\\"Blood culture positive in 10-15% (bacteremia/sepsis)\\\",\\n          \\\"TB/parasites must be ruled out\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook\\\", chapter: \\\"Clinical Features of PEM\\\", edition: \\\"10th\\\" },\\n          { book: \\\"WHO IMCI Pocket Book\\\", chapter: \\\"Malnutrition Assessment\\\", edition: \\\"2014\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"pem-exam\\\",\\n        title: \\\"Protein-Energy Malnutrition - Exam Prep\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Management of SAM (stabilization vs rehabilitation phase), micronutrient supplementation, refeeding syndrome prevention.\\\",\\n        contentMd: ``# Protein-Energy Malnutrition - Management\\n\\n## Phases of SAM Management\\n\\n**Phase 1: Stabilization (1-2 weeks)**\\n- Treat life-threatening complications\\n- NO rapid weight gain (avoid refeeding syndrome)\\n- Initial feeds modest in quantity\\n- Focus: Infections, metabolic abnormalities, fluid/electrolyte correction\\n\\n**Phase 2: Rehabilitation (4-6 weeks)**\\n- Gradual increase in energy/protein intake\\n- Steady weight gain (target 10-15 g/kg/day)\\n- Micronutrient repletion\\n- Prepare for transition to community management\\n\\n**Phase 3: Follow-up (continued)**\\n- Community-based supplementation\\n- Prevent relapse\\n- Developmental stimulation\\n\\n## Stabilization Phase Management\\n\\n**Fluids & Rehydration:**\\n- Assess dehydration status (may be difficult with edema)\\n- Use low-osmolality ORS (1:1 glucose:sodium ratio = hypotonic)\\n- AVOID normal saline (↑ edema risk)\\n- Oral > IV (if able to drink)\\n- Monitor carefully (IV fluids restricted due to cardiac risk)\\n\\n**Infections:**\\n- Treat presumptively:\\n  - **Broad-spectrum antibiotics** (even without documented infection)\\n  - Ampicillin 50 mg/kg/day + Gentamicin 7.5 mg/kg/day\\n  - Consider TB (isolate, investigate, treat if suspected)\\n  - Antifungal consideration (if prolonged antibiotics)\\n\\n**Micronutrients (MUST GIVE):**\\n- **Vitamin A:** 200,000 IU immediately (day 1), then repeat day 2 and day 15\\n  - Critical for immunity and prevention of blindness\\n- **Folic acid:** 1 mg daily x 2 weeks (supports rapid cell division during recovery)\\n- **Zinc:** 2 mg/kg/day (essential for protein synthesis, immune function, wound healing)\\n- **Iron:** DELAYED until after stabilization (risk of oxidative stress, infection exacerbation)\\n- **Copper:** 0.3 mg/kg/day (prevents anemia, maintains connective tissue)\\n- **Vitamin B complex:** Multivitamin containing thiamine, riboflavin, niacin\\n\\n**Electrolyte management:**\\n- **Potassium:** Monitor; usually high initially (despite total body depletion)\\n  - DO NOT give K+ in stabilization phase\\n  - Risk of hyperkalemia/cardiac arrhythmia\\n- **Phosphate:** Monitor; becomes VERY low during refeeding\\n  - May need supplementation if <1 mg/dL\\n- **Magnesium:** Usually depleted, supplement if low\\n- **Calcium:** Assess; supplement if low\\n\\n**Initial Feeding (Stabilization):**\\n- **Modest start:** 100-120 kcal/kg/day (not full requirements)\\n- **F-100 (Therapeutic milk):** WHO recommended formula\\n  - Energy: 100 kcal/100 mL\\n  - Protein: 2.9 g/100 mL (higher ratio than normal milk)\\n  - Composition: Designed for malnourished children\\n- **Feeding schedule:** 4-hourly initially (small frequent feeds)\\n- **Monitoring:** Diarrhea common, lactose intolerance (use lactose-free feed if persistent)\\n- **Do NOT wean from breastfeeding** if still lactating (valuable source)\\n\\n**Monitoring for refeeding syndrome:**\\n- **Daily weights:** Should NOT increase >10% per week initially\\n- **Vital signs:** Monitor heart rate (risk of arrhythmias)\\n- **Electrolytes:** Recheck 24-48h (risk of hypokalemia, hypophosphatemia)\\n- **Death often occurs 3-7 days into treatment** from cardiac arrhythmia/hypophosphatemia\\n\\n## Refeeding Syndrome (Critical to prevent)\\n\\n**Pathophysiology:**\\n- Shift from catabolic → anabolic state\\n- ↑ Insulin, ↓ glucagon\\n- Cellular uptake of phosphate, potassium, magnesium (intracellular repletion)\\n- **Results in severe hypokalemia, hypophosphatemia, hypomagnesemia** (paradoxical given total body depletion)\\n\\n**Manifestations:**\\n- Cardiac arrhythmias (QT prolongation, sudden death)\\n- Hypokalemia → weakness, paralysis, arrhythmias\\n- Hypophosphatemia → respiratory muscle weakness, rhabdomyolysis\\n- Hypomagnesemia → weakness, personality change\\n\\n**Prevention:**\\n- **SLOW feeding initiation** (100-120 kcal/kg/day initially)\\n- **Slow increase** in feeds (increment 20 kcal/kg/day every 3-5 days)\\n- **Monitor electrolytes** closely (day 1, 2, 3, then daily)\\n- **Supplement:** Potassium, phosphate, magnesium as needed\\n- **Thiamine supplementation** (vitamin B1) before dextrose infusion (prevents Wernicke encephalopathy)\\n\\n## Rehabilitation Phase (After 1-2 weeks)\\n\\n**Increased feeding:**\\n- Gradually increase to 150-220 kcal/kg/day (high-calorie diet)\\n- Aim for 10-15 g/kg/day weight gain\\n- Transition from F-100 → fortified local foods, then regular diet\\n\\n**Continue micronutrients:**\\n- Vitamin A x 2 weeks total\\n- Iron NOW can be introduced (after stabilization) 2-3 mg/kg/day\\n- Zinc, copper, vitamins continued\\n\\n**Other interventions:**\\n- Deworming (after nutrition improves, NOT during acute phase)\\n- Measles vaccination (after recovery, if not immune)\\n- TB management (if diagnosed)\\n- Developmental stimulation (critical, prevent developmental delay)\\n\\n## Nutritional Targets During Rehabilitation\\n\\n- **Energy:** 150-220 kcal/kg/day (high-energy catch-up diet)\\n- **Protein:** 4-6 g/kg/day (high-protein for muscle recovery)\\n- **Carbohydrate:** 10-12 g/kg/day\\n- **Fat:** 4-6 g/kg/day\\n\\n## Outcomes & Discharge Criteria\\n\\n**Criteria for discharge from hospital:**\\n- Alert/responsive (not lethargic)\\n- Eating well (>80% of offered food)\\n- No signs of infection\\n- Weight gain trajectory positive\\n- Able to follow-up\\n\\n**Target weight:** 80% of expected for height (can continue outpatient recovery)\\n\\n**Mortality in SAM (India):** 5-10% even with adequate treatment (higher without),\\n        mnemonics: [\\n          { text: \\\"Vitamin A BEFORE carbs\\\", explanation: \\\"Prevent Wernicke encephalopathy\\\" },\\n          { text: \\\"F-100 therapeutic milk\\\", explanation: \\\"WHO formula for malnourished children\\\" },\\n          { text: \\\"SLOW feeding prevents refeeding syndrome\\\", explanation: \\\"Start 100-120 kcal/kg/day, increase gradually\\\" },\\n          { text: \\\"Refeeding 3-7 days danger\\\", explanation: \\\"Sudden death from arrhythmias/electrolyte derangement\\\" },\\n        ],\\n        keyPoints: [\\n          \\\"SAM: 2-phase management (stabilization 1-2 weeks, rehabilitation 4-6 weeks)\\\",\\n          \\\"Phase 1: treat infections, modest feeds (100-120 kcal/kg), micronutrients\\\",\\n          \\\"Vitamin A day 1, 2, 15; Folic acid; Zinc (NO iron yet)\\\",\\n          \\\"Refeeding syndrome: hypophosphatemia/hypokalemia risk days 3-7\\\",\\n          \\\"Slow feeding (increase 20 kcal/kg every 3-5 days) prevents syndrome\\\",\\n          \\\"Phase 2: increase to 150-220 kcal/kg/day, add iron, measure weight gain\\\",\\n          \\\"Discharge at 80% weight-for-height with good oral intake\\\",\\n          \\\"Infection/TB/parasites must be treated concurrently\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook\\\", chapter: \\\"Management of SAM\\\", edition: \\\"10th\\\" },\\n          { book: \\\"WHO Guidelines\\\", chapter: \\\"Inpatient and Outpatient Treatment\\\", edition: \\\"2013\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"pem-recall\\\",\\n        title: \\\"Protein-Energy Malnutrition - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"Clinical scenarios for PEM assessment, management decisions, and complication handling.\\\",\\n        contentMd: ``# Active Recall: Protein-Energy Malnutrition\\n\\n**Q1:** 18-month-old with bilateral leg edema, red thin hair, flaky dermatosis, abdominal distension, diarrhea. WFH 65%, MUAC 10 cm. Diagnosis and urgency?\\n> **Answer:** Severe Acute Malnutrition - Kwashiorkor (protein deficiency pattern: edema, hair change, dermatosis). SAM diagnosis (MUAC <11.5, WFH <70%, edema). Requires immediate HOSPITALIZATION. High mortality risk without treatment.\\n\\n**Q2:** 20-month-old, severely thin (\\\"old man appearance\\\"), no edema, WFH 60%, MUAC 9 cm. Asking for food, alert. Type of malnutrition?\\n> **Answer:** Marasmus (energy deficiency). SAM diagnosis (severe wasting, MUAC <11.5). Although alert/hungry (vs kwashiorkor apathy), still requires hospitalization. Metabolic derangement may be hidden.\\n\\n**Q3:** Malnourished child hospitalized, on day 4 of treatment. On F-100 feeds, doing well clinically. Suddenly weak, poor sucking, HR irregular. K+ checked: 2.8 mEq/L (low). What happened?\\n> **Answer:** Refeeding syndrome (hypokalemia phase). Feeds shifted metabolism from catabolic → anabolic. Despite total body K+ depletion, cells take up K+ rapidly → serum K+ drops dangerously. Check PO4 (likely low too), Mg (likely low). STOP rapid feed increase, supplement K+ IV/oral, slow feeding protocol, monitor electrolytes daily.\\n\\n**Q4:** SAM child, day 1 of hospitalization. No documented infection but febrile (T 39°C). Appropriate antibiotic choice?\\n> **Answer:** Start broad-spectrum antibiotics empirically (not waiting for culture). Ampicillin 50 mg/kg/day + Gentamicin 7.5 mg/kg/day. Infection very common (70%+ have bacteremia/infections). Early antibiotics reduce mortality significantly. Also assess for TB, parasites.\\n\\n**Q5:** 12-month-old with SAM, admitted for stabilization. Initial labs show Hb 6.5 g/dL (severe anemia). When to start iron supplementation?\\n> **Answer:** NOT now (stabilization phase risk). Iron increases oxidative stress, worsens sepsis during acute phase. Start AFTER stabilization (week 2) at 2-3 mg/kg/day. Also give vitamin A, zinc, folic acid NOW (immediately). Iron delayed prevents complications.\\n\\n**Q6:** Child recovering from SAM, now in rehabilitation phase (day 10). Weight gaining well. MUAC improving. Still has loose stools (lactose intolerance). Feeding strategy?\\n> **Answer:** Try lactose-free formula (yogurt, fermented foods, or hydrolyzed milk). Gradually introduce lactose if tolerated. Continue high-calorie feeds (150-220 kcal/kg/day), increase slowly (20 kcal/kg every 3-5 days). Add deworming NOW (safe in rehabilitation). Continue micronutrients (vitamin A completing course).\\n\\n**Q7:** Kwashiorkor child with hepatomegaly, yellowing of skin. Bilirubin 3.5, AST 120. Acute liver failure? Start treatment?\\n> **Answer:** Likely cholestatic pattern (not fulminant failure). Fatty liver infiltration, impaired synthetic function. Continue nutritional rehabilitation (best treatment for liver recovery). Monitor PT (prothrombin time), albumin (if PT prolonged, may need FFP). Hepatic failure usually resolves with nutrition (not need transplant).\\n\\n**Q8:** Child completing SAM treatment, ready for discharge at 80% WFH. What is most critical for preventing relapse in community?\\n> **Answer:** Educate mother on nutrition (local nutrient-dense foods, feeding frequency), micronutrient supplementation (continue vitamin A, zinc if available), breastfeeding (if possible), exclusive complementary feeding after 6 months. Arrange community follow-up (health worker home visits). Prevent childhood infections (immunization, diarrhea prevention with water/sanitation). Identify cause (poverty, food insecurity, poor practices) and address.\\n\\n**Q9:** Child with marasmic-kwashiorkor (wasting + edema), develops acute respiratory distress (orthopnea, crackles). What is cause?\\n> **Answer:** Cardiac compromise from malnutrition (myocardial atrophy, impaired contractility) + aggressive fluid administration → fluid overload/pulmonary edema. Restrict fluids (switch to ORS not IV), diuretics if severe (furosemide). Future: careful fluid management in SAM to avoid overload (low-osmolarity ORS preferred).\\n\\n**Q10:** Vitamin A supplementation given at day 1. Why repeat at day 2 and day 15?\\n> **Answer:** Multiple doses optimize tissue stores. First dose (200,000 IU) corrects acute deficiency. Second dose (day 2) addresses continued losses. Day 15 dose maintains stores during early recovery. Total vitamin A across 2 weeks = robust protection against blindness (critical sequela of malnutrition).,\\n        mnemonics: [],\\n        keyPoints: [\\n          \\\"Kwashiorkor: edema + hair changes + dermatosis + diarrhea\\\",\\n          \\\"Marasmus: wasting only, skeletal appearance, no edema\\\",\\n          \\\"MUAC <11.5 cm = SAM requiring hospitalization\\\",\\n          \\\"Stabilization phase: slow feeds (100-120 kcal/kg), antibiotics, micronutrients\\\",\\n          \\\"Refeeding syndrome: hypokalemia/hypophosphatemia days 3-7\\\",\\n          \\\"Iron delayed until after stabilization (oxidative stress risk)\\\",\\n          \\\"Rehabilitation: 150-220 kcal/kg/day, gradual increase, continue vitamins\\\",\\n          \\\"Discharge at 80% WFH, continue community supplementation\\\",\\n          \\\"Prevent relapse: address underlying causes (poverty, infections)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai Textbook\\\", chapter: \\\"Case Studies in SAM\\\", edition: \\\"10th\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n];\\n\\nexport default pediatricsPart9Lessons;\\n\""
-}
-}
-}
+        contentMd: `# Protein-Energy Malnutrition - Foundation
+
+## Classification of Malnutrition (WHO)
+
+**By weight-for-age (WFA)**:
+- >80% WFA: Mild malnutrition
+- 70-80% WFA: Moderate malnutrition
+- <70% WFA: Severe malnutrition
+
+**Severe Acute Malnutrition (SAM)**:
+- Weight-for-height Z-score <-3 (wasting)
+- OR MUAC <11.5 cm (6-59 months)
+- OR Bilateral pedal edema (kwashiorkor)
+- Medical complications: VERY HIGH
+
+**Kwashiorkor vs Marasmus**:
+- **Kwashiorkor**: Protein deficiency, edema, hair changes, liver enlargement
+- **Marasmus**: Energy deficiency, severe wasting, no edema, "old man appearance"
+- **Marasmic-kwashiorkor**: Both features, most severe
+
+## Prevalence in India
+
+- Overall malnutrition: 35-45% children <5 years
+- SAM: 5-7% children <5 years
+- Stunting: 35-40% (chronic malnutrition)
+- Higher in rural areas, lower SES
+
+## Age of Presentation
+
+- Peak: 6-24 months (weaning period)
+- Rarer in exclusively breastfed infants`,
+        mnemonics: [
+          { text: "SAM = MUAC <11.5 or WFH <-3", explanation: "Quick field assessment" },
+          { text: "Kwashiorkor: edema + hair changes", explanation: "Protein deficiency" },
+          { text: "Marasmus: 'old man appearance'", explanation: "Energy deficiency, no edema" },
+        ],
+        keyPoints: [
+          "SAM: acute wasting, MUAC <11.5, medical complications",
+          "Kwashiorkor: protein deficiency, edema, liver enlargement",
+          "Marasmus: energy deficiency, wasting, no edema",
+          "35% Indian children <5 malnourished",
+          "Peak 6-24 months (weaning period)",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Protein-Energy Malnutrition", edition: "9th" },
+          { book: "WHO Guidelines", chapter: "Management of SAM in Children", edition: "2013" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "malnutrition-layer-2-mechanism",
+        title: "Protein-Energy Malnutrition - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pathophysiology of SAM, metabolic adaptation, immune dysfunction, and organ-specific changes.",
+        contentMd: `# Protein-Energy Malnutrition - Pathophysiology
+
+## Metabolic Adaptation in Starvation
+
+**Phase 1 (4-6 weeks)**:
+- ↓ Gluconeogenesis (maintain blood glucose)
+- ↓ Protein catabolism (conserve muscle)
+- ↑ Lipolysis (energy from fat)
+- ↓ Metabolic rate
+
+**Phase 2 (Weeks 6-12)**:
+- Protein catabolism ↑↑ (muscle wasting accelerates)
+- Fat stores depleted
+- Immune system deteriorates
+- Organ perfusion maintained (brain, heart, kidney prioritized)
+
+## Protein-Specific Changes in Kwashiorkor
+
+**Hepatic protein synthesis impaired**:
+- ↓ Albumin (colloid oncotic pressure ↓ → edema)
+- ↓ Clotting factors (coagulopathy)
+- Fatty liver (lipid accumulation)
+
+**Intestinal dysfunction**:
+- Reduced mucosal thickness
+- ↓ Brush border enzymes
+- ↑ Intestinal permeability
+- Secondary lactose intolerance
+
+## Immune System Changes
+
+**Innate immunity impaired**:
+- ↓ Neutrophil count, chemotaxis
+- ↓ Complement
+- ↓ Lysozyme, lactoferrin
+
+**Adaptive immunity devastated**:
+- ↓↓ T-lymphocytes (CD4 cells)
+- ↓ B-lymphocytes
+- Thymic atrophy
+- ↓ Antibody titers
+
+## Infections in PEM
+
+- Diarrhea (70-80%)
+- Respiratory infections
+- TB (increased reactivation)
+- Sepsis/bacteremia
+- Measles (often severe/fatal)`,
+        mnemonics: [
+          { text: "Kwashiorkor: fatty liver", explanation: "Impaired protein synthesis and lipid export" },
+          { text: "SAM immune: T-cells devastated", explanation: "CD4 lymphopenia, thymic atrophy" },
+          { text: "Refeeding syndrome: hypophosphatemia", explanation: "Low despite total body depletion" },
+        ],
+        keyPoints: [
+          "Kwashiorkor: ↓ albumin → edema, fatty liver, diarrhea",
+          "Marasmus: muscle wasting, preserved liver protein",
+          "Immune: T-cells devastated, thymic atrophy, ↓ antibodies",
+          "Infections common: diarrhea, pneumonia, TB, sepsis",
+          "Metabolic risks: hypoglycemia, refeeding syndrome",
+          "Diarrhea 70-80%, secondary to intestinal dysfunction",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Metabolic Consequences of PEM", edition: "9th" },
+          { book: "Pediatric Gastroenterology", chapter: "Malnutrition Effects on GI", edition: "2023" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "malnutrition-layer-3-clinical",
+        title: "Protein-Energy Malnutrition - Clinical",
+        estimatedMinutes: 20,
+        summary: "Clinical presentation by type, IMCI classification, MUAC assessment, and diagnostic workup.",
+        contentMd: `# Protein-Energy Malnutrition - Clinical Assessment
+
+## Clinical Features
+
+**Kwashiorkor**:
+- Edema: Bilateral, pitting (feet, legs, face)
+- Hair changes: Thin, color change (reddish)
+- Skin: Dermatosis (flaky paint appearance)
+- Hepatomegaly: Smooth, tender
+- Moon face (edema)
+- Diarrhea: Often severe (80%)
+- Anemia: Moderate to severe
+- Behavioral: Irritable, then apathetic
+
+**Marasmus**:
+- Thin, skeletal, "old man appearance"
+- Subcutaneous fat completely gone
+- Skin: Dry, loose (saggy)
+- Edema: ABSENT
+- Hepatomegaly: Absent or minimal
+- Behavior: Hungry, alert
+- Vital signs: Bradycardia, hypothermia
+
+**Marasmic-kwashiorkor**:
+- Severe wasting + edema
+- Dermatosis + loose skin
+- Highest mortality
+
+## IMCI Classification
+
+**Severe Acute Malnutrition (SAM) - Red flag**:
+- Bilateral pitting edema (feet)
+- OR Weight-for-height <70%
+- OR MUAC <11.5 cm (6-59 months)
+- Requires hospitalization
+
+**Moderate Acute Malnutrition (MAM)**:
+- Weight-for-height 70-80%
+- OR MUAC 11.5-12.5 cm
+- Outpatient supplementation
+
+## Anthropometric Assessment
+
+**Weight-for-height (WFH)**: Detects acute malnutrition
+**MUAC**: Field measurement, quick, reliable (<11.5 cm = SAM)
+**Height-for-age**: Detects chronic malnutrition
+**Weight-for-age**: Both acute and chronic, affected by edema`,
+        mnemonics: [
+          { text: "Kwashiorkor = edema + hair changes", explanation: "Protein deficiency hallmark" },
+          { text: "Marasmus = wasting only, no edema", explanation: "Energy deficiency" },
+          { text: "MUAC <11.5 = SAM", explanation: "Field assessment tool" },
+        ],
+        keyPoints: [
+          "Kwashiorkor: edema, hair change, dermatosis, hepatomegaly",
+          "Marasmus: wasting, skeletal, no edema, hungry",
+          "Marasmic-kwashiorkor: both, worst prognosis",
+          "MUAC <11.5 cm = SAM requiring hospitalization",
+          "Anemia, low albumin, electrolyte derangement common",
+          "Blood culture positive in 10-15%",
+          "TB/parasites must be ruled out",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Clinical Features of PEM", edition: "9th" },
+          { book: "WHO IMCI Pocket Book", chapter: "Malnutrition Assessment", edition: "2014" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "malnutrition-layer-4-exam",
+        title: "Protein-Energy Malnutrition - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "Management of SAM (stabilization vs rehabilitation), micronutrient supplementation, refeeding syndrome prevention.",
+        contentMd: `# Protein-Energy Malnutrition - Management
+
+## Phases of SAM Management
+
+**Phase 1: Stabilization (1-2 weeks)**:
+- Treat life-threatening complications
+- NO rapid weight gain (avoid refeeding syndrome)
+- Modest initial feeds
+- Focus: Infections, metabolic abnormalities
+
+**Phase 2: Rehabilitation (4-6 weeks)**:
+- Gradual increase in energy/protein
+- Target weight gain: 10-15 g/kg/day
+- Micronutrient repletion
+- Transition to community management
+
+## Stabilization Phase
+
+**Infections**:
+- Broad-spectrum antibiotics: Ampicillin 50 mg/kg/day + Gentamicin 7.5 mg/kg/day
+- Treat presumptively (70%+ have bacteremia)
+
+**Micronutrients (MUST GIVE)**:
+- Vitamin A: 200,000 IU day 1, repeat day 2 & day 15
+- Folic acid: 1 mg daily x 2 weeks
+- Zinc: 2 mg/kg/day
+- Iron: DELAYED (risk of oxidative stress)
+
+**Initial Feeding**:
+- 100-120 kcal/kg/day (slow start)
+- F-100 (WHO therapeutic milk)
+- 4-hourly feeds (small, frequent)
+
+## Refeeding Syndrome Prevention
+
+**Critical days 3-7**:
+- Slow feeding initiation
+- Slow increase: 20 kcal/kg every 3-5 days
+- Monitor electrolytes closely
+- Risk: Hypokalemia, hypophosphatemia, cardiac arrhythmias
+
+## Rehabilitation Phase
+
+**Increased feeding**:
+- 150-220 kcal/kg/day
+- 10-15 g/kg/day weight gain
+- Transition from F-100 to local foods
+
+**Micronutrients**:
+- Vitamin A: Weeks 1-2 only
+- Iron: NOW introduced (2-3 mg/kg/day)
+- Continue zinc, copper, vitamins`,
+        mnemonics: [
+          { text: "Vitamin A BEFORE feeds", explanation: "Prevent Wernicke encephalopathy" },
+          { text: "F-100 therapeutic milk", explanation: "WHO formula for malnourished" },
+          { text: "SLOW feeding prevents refeeding syndrome", explanation: "Start 100-120 kcal/kg" },
+          { text: "Refeeding danger: days 3-7", explanation: "Sudden cardiac death" },
+        ],
+        keyPoints: [
+          "SAM: 2-phase (stabilization 1-2 weeks, rehabilitation 4-6 weeks)",
+          "Phase 1: modest feeds (100-120 kcal/kg), antibiotics, micronutrients",
+          "Vitamin A days 1, 2, 15; Zinc; NO iron yet",
+          "Refeeding syndrome risk days 3-7",
+          "Slow feeding: increase 20 kcal/kg every 3-5 days",
+          "Phase 2: increase to 150-220 kcal/kg/day, add iron",
+          "Discharge at 80% weight-for-height",
+          "Infection/TB/parasites treated concurrently",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Management of SAM", edition: "9th" },
+          { book: "WHO Guidelines", chapter: "Inpatient and Outpatient Treatment", edition: "2013" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "malnutrition-layer-5-active-recall",
+        title: "Protein-Energy Malnutrition - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Clinical scenarios for PEM assessment, management decisions, and complication handling.",
+        contentMd: `# Active Recall: Protein-Energy Malnutrition
+
+**Q1:** 18-month-old with bilateral leg edema, red thin hair, dermatosis, diarrhea. WFH 65%, MUAC 10 cm. Diagnosis?
+> **Answer:** Severe Acute Malnutrition - Kwashiorkor. SAM diagnosis (MUAC <11.5, WFH <70%, edema). IMMEDIATE HOSPITALIZATION. High mortality risk without treatment.
+
+**Q2:** 20-month-old, severely thin, no edema, WFH 60%, MUAC 9 cm. Alert, asking for food. Type?
+> **Answer:** Marasmus (energy deficiency). SAM diagnosis. Despite alert/hungry (vs kwashiorkor apathy), requires hospitalization. Hidden metabolic derangement.
+
+**Q3:** Malnourished child on day 4 treatment. On F-100, suddenly weak, poor sucking, irregular HR. K+ 2.8 mEq/L. What happened?
+> **Answer:** Refeeding syndrome (hypokalemia). Metabolism shifted catabolic → anabolic. Despite total body K+ depletion, cells take up K+ rapidly → serum K+ drops. STOP feeds, supplement K+, slow protocol.
+
+**Q4:** SAM child, day 1, febrile (T 39°C), no documented infection. Antibiotics?
+> **Answer:** YES, empirically. Ampicillin 50 mg/kg + Gentamicin 7.5 mg/kg. 70%+ have bacteremia. Early antibiotics reduce mortality. Assess TB, parasites.
+
+**Q5:** 12-month-old SAM, Hb 6.5 g/dL. When iron supplementation?
+> **Answer:** NOT now (stabilization risk). Iron worsens sepsis during acute phase. Start week 2 at 2-3 mg/kg/day AFTER stabilization. Give vitamin A, zinc, folic acid NOW.
+
+**Q6:** SAM recovery (day 10), weight gaining, MUAC improving, loose stools. Feeding strategy?
+> **Answer:** Lactose-free formula initially. Gradually reintroduce lactose. Continue 150-220 kcal/kg/day, increase 20 kcal/kg every 3-5 days. Deworming NOW (safe). Continue micronutrients.
+
+**Q7:** Kwashiorkor, hepatomegaly, yellowing, bilirubin 3.5, AST 120. Acute liver failure?
+> **Answer:** Likely cholestatic (fatty infiltration, impaired synthetic function). Continue nutrition (best treatment). Monitor PT, albumin. Usually resolves with nutrition.
+
+**Q8:** SAM discharge at 80% WFH. Prevent relapse?
+> **Answer:** Mother education (local nutrient-dense foods, feeding frequency), micronutrient supplementation, breastfeeding if possible. Community follow-up, prevent infections, address causes (poverty, food insecurity).
+
+**Q9:** Marasmic-kwashiorkor, acute respiratory distress. Cause?
+> **Answer:** Cardiac compromise (myocardial atrophy) + aggressive fluid → pulmonary edema. Restrict fluids (ORS not IV). Future: careful fluid management.
+
+**Q10:** Vitamin A day 1, why repeat day 2 & day 15?
+> **Answer:** Multiple doses optimize tissue stores. Day 1 corrects acute deficiency. Day 2 addresses continued losses. Day 15 maintains stores during early recovery.`,
+        mnemonics: [
+          { text: "Kwashiorkor: edema + hair + dermatosis", explanation: "Protein deficiency" },
+          { text: "Marasmus: wasting only, no edema", explanation: "Energy deficiency" },
+          { text: "MUAC <11.5 = SAM hospitalization", explanation: "Field assessment" },
+        ],
+        keyPoints: [
+          "Kwashiorkor: edema, hair changes, dermatosis, diarrhea",
+          "Marasmus: wasting, skeletal, no edema",
+          "MUAC <11.5 cm = SAM requiring hospitalization",
+          "Stabilization: slow feeds, antibiotics, micronutrients",
+          "Refeeding syndrome: hypokalemia/hypophosphatemia days 3-7",
+          "Iron delayed until stabilization",
+          "Rehabilitation: 150-220 kcal/kg/day, gradual increase",
+          "Discharge at 80% WFH, continue community supplementation",
+          "Prevent relapse: address underlying causes",
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Case Studies in SAM", edition: "9th" },
+        ],
+      },
+    ],
+  },
 ];
-];
-];
+
+export default pediatricsPart9Lessons;

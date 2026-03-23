@@ -1,18 +1,644 @@
-export const pediatricsLessonsPart19 = [
+import type { TopicLessons } from "./content-loader";
+
+export const pediatricsLessonsPart19: TopicLessons[] = [
   {
     topicCode: "PE-MOD-07-TOP-03",
     layers: [
       {
         layer: 1,
-        slug: "down-syndrome-foundation",
+        slug: "genetic-disorders-layer-1-foundation",
         title: "Down Syndrome & Genetic Disorders - Foundation",
-        estimatedMinutes: 20,
-        summary:
-          "Down syndrome (trisomy 21) is the most common autosomal chromosome disorder (1 in 700 births). Caused by nondisjunction (95%), translocation (3-4%), or mosaicism (1-2%). Characterized by intellectual disability, distinctive facial features (flat facies, up-slanting palpebral fissures, epicanthal fold), cardiac anomalies (AV canal, VSD), GI abnormalities, and increased risk of hematologic malignancies. Diagnosis by karyotyping or FISH; prenatal diagnosis via NIPT.",
-        contentMd: "# Down Syndrome & Genetic Disorders - Foundation\n\n## Introduction\n**Down Syndrome (Trisomy 21):**\n- Most common autosomal chromosome disorder\n- Incidence: 1 in 700 live births (higher in advanced maternal age)\n- Intellectual disability, characteristic features, multiple organ involvement\n- Life expectancy: 50-60 years (improved with medical care)\n\n## Cytogenetics & Inheritance\n\n### Karyotypic Types\n1. **Regular Trisomy 21** (95%): Three complete copies of chromosome 21\n   - Result of nondisjunction during meiosis\n   - Risk increases with maternal age (especially >35 years)\n   - Not heritable (random event in meiosis)\n\n2. **Translocation Down Syndrome** (3-4%):\n   - Extra chromosome 21 attached to another chromosome (often 14)\n   - Karyotype: 46 chromosomes with extra material\n   - Can be heritable (if parent is balanced translocation carrier)\n   - Same clinical features as regular trisomy 21\n\n3. **Mosaic Down Syndrome** (1-2%):\n   - Some cells have trisomy 21; others are normal (46 chromosomes)\n   - Often milder phenotype than regular trisomy 21\n   - Variable expression depending on proportion of affected cells\n\n## Maternal Risk Factors for Trisomy 21\n- **Advanced maternal age** (>35 years): Risk increases exponentially\n- **Maternal age 20 years**: 1 in 1,500\n- **Maternal age 35 years**: 1 in 350\n- **Maternal age 45 years**: 1 in 30\n- **Previous child with Down syndrome**: ~1% recurrence risk\n- **Parental translocation carrier**: Up to 15% risk (if mother carrier)\n\n## Clinical Features\n\n### Craniofacial Features\n- Flat facies (hypoplastic midface)\n- Up-slanting palpebral fissures\n- Epicanthal fold\n- Short nose with depressed nasal bridge\n- Open mouth (hypotonia + malocclusion)\n- Micrognathia\n\n### Head & Neck\n- Brachycephaly (short head)\n- Simplified ear structure\n- Brushfield spots (iris spotting)\n- Protruding tongue\n\n### Skeletal Features\n- Short stature\n- Generalized hypotonia\n- Ligamentous laxity (atlantoaxial instability risk)\n- Generalized muscle hypotonia\n\n### Hand Features\n- Simian crease (transverse palmar crease)\n- Short 5th digit (clinodactyly)\n- Wide inter-digit spacing (sandal gap)\n\n## Associated Medical Conditions\n\n### Cardiac\n- **AV canal defect** (endocardial cushion defect) - 40% of DS patients\n- **Ventricular septal defect (VSD)** - 30%\n- **Patent foramen ovale** - 20%\n- **Patent ductus arteriosus** - 10%\n- *Echocardiography screening at birth is standard*\n\n### GI\n- Duodenal atresia (10-15x increased risk)\n- Tracheoesophageal fistula (increased risk)\n- Hirschsprung disease (elevated risk)\n- Celiac disease (5-10%)\n- Gastroesophageal reflux (common)\n\n### Hematologic\n- Increased risk of acute leukemia (20x increased, especially acute lymphoblastic leukemia)\n- Transient abnormal myelopoiesis (neonatal)\n- Polycythemia (common in newborns)\n\n### Vision & Hearing\n- Refractive errors (40-50%)\n- Strabismus (30-40%)\n- Conductive hearing loss (50-70% due to middle ear dysfunction)\n- Sensorineural hearing loss (less common)\n\n### Respiratory & Sleep\n- Obstructive sleep apnea (50-70% due to hypotonia, lingual tonsillar hypertrophy)\n- Subglottic stenosis (rare)\n\n### Endocrine\n- Thyroid dysfunction (hypothyroidism) - 15-20%\n- Growth hormone deficiency (short stature)\n\n## Developmental Milestones (Delayed)\n- Gross motor: Walking by 12-18 months (vs 12 months typical)\n- Fine motor: Pincer grasp by 9-12 months (vs 9 months typical)\n- Speech: First words by 18-24 months (vs 12 months typical)\n- IQ: Usually 30-70 (moderate intellectual disability)\n\n## Diagnostic Methods\n\n### Postnatal Diagnosis\n1. **Karyotyping** (gold standard): Shows trisomy 21 or translocation\n2. **Fluorescence in situ hybridization (FISH)**: Rapid diagnosis (24-48 hours)\n3. **Chromosomal microarray**: Detects additional abnormalities\n\n### Prenatal Diagnosis\n1. **Non-invasive prenatal testing (NIPT)**: Cell-free fetal DNA (>99% sensitivity)\n2. **First-trimester screen**: Maternal serum markers + ultrasound nuchal translucency\n3. **Amniocentesis**: Gold standard (1% miscarriage risk); confirms diagnosis\n4. **Chorionic villus sampling (CVS)**: Earliest invasive test (10-12 weeks),\n        mnemonics: [\n          {\n            text: \"DOWN SYNDROME: Delayed development, Overall hypotonia, Wide gaps (hand), Nondisjunction (usually), Slow IQ, Yellow (increased risk leukemia), Narrow genetic counseling, Dermal ridge abnormalities, Rough (flat facies), Obvious cardiac\",\n            explanation: \"Comprehensive features of Down syndrome\",\n          },\n          {\n            text: \"CARDIAC in DS: AV canal (40%), VSD (30%), PFO (20%), PDA (10%)\",\n            explanation: \"Cardiac anomaly frequencies in Down syndrome\",\n          },\n        ],\n        keyPoints: [\n          \"Down syndrome: trisomy 21 (95% nondisjunction, 3-4% translocation, 1-2% mosaic)\",\n          \"Incidence 1 in 700 births; maternal age >35 significantly increases risk\",\n          \"Characteristic features: flat facies, epicanthal fold, up-slanting palpebra, simian crease, intellectual disability\",\n          \"Cardiac involvement in 40-50%; AV canal & VSD most common; echocardiography at birth mandatory\",\n          \"Increased risk of leukemia (20x), hearing loss (50-70%), sleep apnea, hypothyroidism\",\n        ],\n        textbookRefs: [\n          { book: \"OP Ghai - Essential Pediatrics\", chapter: \"Ch 3\", edition: \"9th\" },\n          { book: \"Nelson Textbook of Pediatrics\", chapter: \"Ch 92\", edition: \"21st\" },\n        ],\n      },\n      {\n        layer: 2,\n        slug: \"down-syndrome-mechanism\",\n        title: \"Down Syndrome & Genetic Disorders - Mechanism\",\n        estimatedMinutes: 30,\n        summary:\n          \"Down syndrome results from 3 copies of chromosome 21 (trisomy), leading to gene dosage imbalance. Overexpression of genes on chromosome 21 (e.g., APP, DSCAM, S100B) contributes to neuronal dysfunction, synaptic abnormalities, and intellectual disability. The aneuploidy also affects cardiac neural crest development, GI morphogenesis, and hematopoietic regulation, explaining multi-organ involvement. Mosaicism (some normal cells) results in milder phenotype due to lesser gene dosage imbalance.\",\n        contentMd: "# Down Syndrome & Genetic Disorders - Mechanism\\n\\n## Chromosomal Basis\\n\\n### Nondisjunction (95% of cases)\\n**Mechanism:**\\n1. Failure of chromosome 21 pair to separate during meiosis\\n2. Results in gamete with 2 copies of chromosome 21\\n3. Fertilization → zygote with 3 copies of chromosome 21\\n4. All cells (every cell) have trisomy 21\\n\\n**Why nondisjunction occurs:**\\n- Exact mechanism unclear\\n- Associated with advanced maternal age (oxidative damage to oocytes)\\n- Maternal meiosis I error most common\\n\\n### Translocation (3-4% of cases)\\n**Mechanism:**\\n1. Part or all of chromosome 21 attaches to another chromosome (usually 14)\\n2. Karyotype shows 46 chromosomes (not 47) due to attachment to chromosome 14\\n3. But genetically 3 copies of chromosome 21 material\\n4. Same Down syndrome phenotype\\n\\n**Heritable translocation:**\\n- If parent is balanced translocation carrier (45 chromosomes):\\n  - Carriers have 2 copies of chromosome 21 + attached extra material\\n  - Phenotypically normal (balanced)\\n  - Risk of trisomy offspring: 10-15% (if mother carrier), 3% (if father carrier)\\n\\n### Mosaicism (1-2% of cases)\\n**Mechanism:**\\n1. Nondisjunction occurs during early mitotic divisions (post-fertilization)\\n2. Some cell lines have trisomy 21\\n3. Other cell lines have normal 46 chromosomes\\n4. Results in mosaic karyotype (e.g., 45,XX/46,XX+21)\\n\\n**Consequences:**\\n- Milder phenotype than regular trisomy 21\\n- Variable expression depending on proportion of trisomic cells\\n- Brain more likely to be mosaic (less severe cognitive impact)\\n\\n## Gene Dosage Imbalance\\n\\n### Overexpression of Chromosome 21 Genes\\n**Problem:** 3 copies of genes → 1.5× normal gene expression for those genes\\n\\n**Critical genes involved:**\\n1. **APP (Amyloid Precursor Protein)**:\\n   - Overexpression → amyloid-beta accumulation\\n   - Neuronal toxicity → neurodegeneration\\n   - Resembles Alzheimer pathology\\n   - Contributes to cognitive decline with age\\n\\n2. **DSCAM (Down Syndrome Cell Adhesion Molecule)**:\\n   - Disrupts neural development\\n   - Impairs dendrite and axon development\\n   - Synaptic dysfunction\\n\\n3. **S100B (Calcium-binding protein)**:\\n   - Elevated in DS brains\\n   - Neuroinflammation\\n   - Affects astrocyte function\\n\\n4. **RCAN1 (Regulator of Calcineurin)**:\\n   - Overexpression → impaired calcium signaling\\n   - Affects synaptic plasticity\\n   - Contributes to cognitive dysfunction\\n\\n### Consequence: Intellectual Disability\\n- **Neuronal dysfunction**: Reduced dendritic spines, impaired synaptic plasticity\\n- **Impaired long-term potentiation (LTP)**: Necessary for memory formation\\n- **Neurotransmitter abnormalities**: Dopamine, serotonin imbalance\\n- **Result**: Mild-to-moderate intellectual disability\\n\\n## Cardiac Developmental Abnormalities\\n\\n### Neural Crest Contribution\\n- Chromosome 21 encodes genes essential for cardiac neural crest migration\\n- Abnormal neural crest development → improper endocardial cushion formation\\n- Results in AV canal defects\\n\\n### AV Canal Defect (Endocardial Cushion Defect)\\n1. **Normal development**: Endocardial cushions fuse to separate atria from ventricles\\n2. **In DS**: Impaired cushion development\\n3. **Result**: Defect in AV septation\\n   - Shared AV valve\\n   - Atrial septal defect (ostium primum)\\n   - Ventricular septal defect\\n   - Regurgitation, shunting, volume overload\\n\\n### Left-to-Right Shunting Physiology\\n- Increased pulmonary blood flow\\n- Pulmonary vascular congestion\\n- Risk of pulmonary hypertension (if uncorrected)\\n- Eventually (if severe): Eisenmenger syndrome\\n\\n## GI Malformations\\n\\n### Duodenal Atresia\\n- Disrupted duodenal development\\n- 10-15x increased risk in DS\\n- Results in bowel obstruction\\n- Presents with bilious vomiting in newborn\\n- Requires surgical correction (duodenoduodenostomy)\\n\\n### Hirschsprung Disease\\n- Impaired neural crest cell migration to GI tract\\n- Failure of ganglion cell development\\n- Results in aganglionosis (absence of nerve plexus)\\n- Presents with neonatal enterocolitis or constipation\\n\\n## Hematologic Abnormalities\\n\\n### Increased Leukemia Risk (20x normal)\\n1. **Transient abnormal myelopoiesis (TAM)**:\\n   - Spontaneous differentiation of abnormal blasts\\n   - Occurs in 10% of DS newborns\\n   - Often self-resolving (90% cases)\\n   - 30% progress to acute leukemia\\n\\n2. **Acute lymphoblastic leukemia (ALL)**:\\n   - 50-fold increased risk in DS\\n   - Better chemotherapy response than non-DS ALL\\n   - Cure rates higher in DS-ALL\\n\\n3. **Acute myeloid leukemia (AML)**:\\n   - Also increased risk\\n\\n### Mechanism\\n- Chromosome 21 contains transcription factors affecting hematopoietic regulation\\n- Trisomy → hematopoietic dysregulation\\n- Increased blast proliferation\\n\\n## Thyroid Dysfunction\\n\\n### Hypothyroidism (15-20% of DS)\\n- Autoimmune thyroiditis common\\n- Elevated TSH, low free T4\\n- Contributes to growth failure, developmental delay\\n- Requires thyroid function monitoring & L-thyroxine supplementation\\n\\n## Sleep Apnea Mechanism\\n\\n### Anatomic Factors\\n1. **Hypotonia**: Decreased muscle tone → airway collapse\\n2. **Lingual tonsillar hypertrophy**: Enlargement of back-of-tongue lymphoid tissue\\n3. **Adenotonsillar hypertrophy**: Enlarged adenoids & tonsils\\n4. **Midface hypoplasia**: Narrowed airway\\n\\n### Consequence\\n- Obstructive sleep apnea in 50-70%\\n- Leads to hypoxemia, fragmented sleep\\n- Accelerates cognitive decline, behavioral problems\\n- May require adenotonsillectomy or CPAP\\n\\n## Mosaic Down Syndrome - Milder Phenotype\\n\\n### Why Milder?\\n- Percentage of trisomic cells varies (20-60% typically)\\n- Lower overall gene dosage imbalance\\n- Especially if CNS has normal cells (neuronal function better)\\n\\n### Variable Presentation\\n- Cognitive disability may be milder (IQ 40-85 vs 30-70 in regular trisomy)\\n- Fewer structural abnormalities detected\\n- Better developmental trajectories possible,\\n        mnemonics: [\\n          {\\n            text: \\\"TRISOMY = Three copies → 1.5× gene expression → gene dosage imbalance → dysfunction\\\",\\n            explanation: \\\"Fundamental mechanism of Down syndrome\\\",\\n          },\\n          {\\n            text: \\\"APP overexpression = Amyloid-beta accumulation → neuronal toxicity → Alzheimer-like pathology\\\",\\n            explanation: \\\"Gene dosage effect in cognitive dysfunction\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Nondisjunction (95%) results from maternal meiosis error; associated with advanced maternal age\\\",\\n          \\\"Translocation (3-4%) can be heritable; balanced carriers phenotypically normal but 10-15% risk of affected offspring\\\",\\n          \\\"Mosaic DS: some normal cells, some trisomic → milder phenotype than regular trisomy 21\\\",\\n          \\\"Gene dosage imbalance (1.5× normal expression): APP, DSCAM, S100B, RCAN1 → neuronal dysfunction, intellectual disability\\\",\\n          \\\"Cardiac: neural crest abnormality → AV canal defects (40%), VSD (30%); duodenal atresia (10-15x risk); leukemia (20x risk)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Ch 92\\\", edition: \\\"21st\\\" },\\n          { book: \\\"Clinical Genetics & Dysmorphology\\\", chapter: \\\"Chromosomal Abnormalities\\\", edition: \\\"2nd\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"down-syndrome-clinical\\\",\\n        title: \\\"Down Syndrome & Genetic Disorders - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Clinical management includes early diagnosis (clinical features, karyotyping), comprehensive screening (echocardiography for cardiac defects, audiometry for hearing loss, vision assessment, thyroid function testing, sleep apnea screening), early intervention (physical/occupational/speech therapy), and family counseling. Prenatal diagnosis via NIPT (>99% sensitive); genetic counseling for recurrence risk. Multidisciplinary approach optimizes outcomes and life expectancy (50-60 years).\\\",\\n        contentMd: ``# Down Syndrome & Genetic Disorders - Clinical\\n\\n## Neonatal Diagnosis & Management\\n\\n### Clinical Suspicion & Diagnostic Workup\\n**Clinical signs suggesting Down syndrome:**\\n- Distinctive facial features (flat facies, epicanthal fold, up-slanting palpebra)\\n- Simian crease, sandal gap between toes\\n- Hypotonia, poor suck\\n- Cardiac murmur\\n\\n**Confirmatory testing:**\\n1. **Karyotyping** (reference standard):\\n   - Shows trisomy 21 (47,XX or XY,+21) or translocation\\n   - Takes 7-14 days\\n   - Still considered gold standard for confirmation\\n\\n2. **FISH (Fluorescence in situ hybridization)**:\\n   - Rapid aneuploidy detection\\n   - Results within 24-48 hours\\n   - Useful for quick confirmation\\n\\n3. **Chromosomal microarray**:\\n   - Detects additional abnormalities\\n   - Can be done along with karyotyping\\n\\n### Genetic Counseling\\n**Critical discussions:**\\n1. **Inheritance pattern**:\\n   - Regular trisomy 21: random nondisjunction, low recurrence (1%)\\n   - Translocation: assess parental karyotypes (10-15% recurrence if mother carrier)\\n\\n2. **Prognosis**:\\n   - Moderate intellectual disability (IQ 30-70)\\n   - Life expectancy: 50-60 years with good medical care\\n   - Self-sufficiency varies; many achieve partial independence\\n\\n3. **Prenatal diagnosis for future pregnancies**:\\n   - NIPT (>99% sensitive, non-invasive)\\n   - Option of amniocentesis if desired\\n\\n## Comprehensive Screening Protocol\\n\\n### Cardiac Evaluation (URGENT)\\n- **Echocardiography at birth**: Identify cardiac defects\\n- **Common findings**: AV canal (40%), VSD (30%), PFO (20%), PDA (10%)\\n- **Management**:\\n  - If mild: Close monitoring, antibiotic prophylaxis for endocarditis (if needed)\\n  - If moderate-severe: Early surgical correction to prevent pulmonary hypertension\\n  - Timing depends on severity; AV canal defects usually corrected by 6-12 months\\n\\n### Hearing Assessment\\n- **40-50% conductive hearing loss** (middle ear dysfunction)\\n- **10-15% sensorineural hearing loss**\\n- **Screening**: Neonatal auditory brainstem response (ABR) or otoacoustic emission (OAE)\\n- **Follow-up**: Repeat audiometry at 6-12 months; annual assessment if abnormal\\n- **Management**: Hearing aids if needed; speech-language therapy\\n\\n### Vision Screening\\n- **Refraction errors** (40-50%): Myopia, hyperopia, astigmatism\\n- **Strabismus** (30-40%)\\n- **Ophthalmology referral**: By 6-12 months\\n- **Annual or bi-annual exams** for glasses/contact prescription\\n\\n### Thyroid Function Testing\\n- **TSH + free T4** at birth/early infancy\\n- **Hypothyroidism in 15-20%** (usually autoimmune thyroiditis)\\n- **Repeat testing** at 6 months, 1 year, then annually\\n- **Treatment**: L-thyroxine if TSH elevated or free T4 low\\n\\n### Sleep Apnea Screening\\n- **Incidence**: 50-70% have obstructive sleep apnea\\n- **Screening** (age 3-4 years): Sleep study (polysomnography)\\n- **Management**:\\n  - If adenotonsillar hypertrophy: Adenotonsillectomy\\n  - If persistent: CPAP therapy\\n  - Improves cognition, behavior, growth\\n\\n### Spine Imaging\\n- **Atlantoaxial instability**: Ligamentous laxity → C1-C2 subluxation risk\\n- **Screening**: Cervical spine X-rays (neutral, flexion, extension views) at age 3-5 years\\n- **Incidence**: 10-15% have radiographic instability\\n- **Restriction**: Contact sports contraindicated if instability present\\n\\n### GI Evaluation\\n- **History**: Check for feeding difficulties, vomiting, constipation\\n- **If symptoms of duodenal atresia** (bilious vomiting in newborn):\\n  - Plain abdominal X-ray: \\\"Double bubble\\\" sign\\n  - Surgical correction (duodenoduodenostomy) required\\n- **If Hirschsprung suspected** (neonatal enterocolitis, constipation):\\n  - Barium enema: Transition zone\\n  - Rectal biopsy (diagnosis)\\n\\n### Hematologic Monitoring\\n- **CBC at birth**: Evaluate for TAM (transient abnormal myelopoiesis)\\n- **Monitoring**: Monthly CBC for first 6 months if TAM present\\n- **Prognosis**: 90% TAM spontaneously regresses; 10% progress to AML\\n- **Leukemia screening**: Annual physical exams; low threshold for bone marrow evaluation if symptoms\\n\\n## Early Intervention & Development\\n\\n### Developmental Support\\n- **Physical therapy**: Gross motor skills (walking, balance)\\n- **Occupational therapy**: Fine motor, self-care skills\\n- **Speech-language pathology**: Language development, feeding\\n- **Start early** (within first 3 months if possible)\\n- **Frequency**: 2-3 sessions/week optimal\\n\\n### Developmental Milestones (Expected)\\n- **Sitting**: 6-12 months (vs 6 months typical)\\n- **Walking**: 12-18 months (vs 12 months typical)\\n- **First words**: 18-24 months (vs 12 months typical)\\n- **Toilet training**: 3-5 years (vs 2-3 years typical)\\n- **Self-sufficiency**: Varies; many achieve partial independence\\n\\n### Education & Placement\\n- **IEP (Individualized Education Plan)** for school\\n- **Mainstream vs special education**: Depends on ability level\\n- **Vocational training**: For adolescents (job training, employment support)\\n\\n## Preventive Health Maintenance\\n\\n### Immunizations\\n- Standard childhood schedule applies\\n- No contraindications (all vaccines safe)\\n- Higher risk of infections → ensure compliance\\n\\n### Growth Monitoring\\n- **Shorter stature typical** in Down syndrome\\n- **Growth charts**: Down syndrome-specific (shorter, slower growth)\\n- **Hypothyroidism screening**: Critical (can worsen growth)\\n- **GH therapy**: Controversial; some studies show modest benefit\\n\\n### Behavioral & Mental Health\\n- **Screen for depression, anxiety** (higher risk in DS)\\n- **Behavioral support**: Positive reinforcement, structured environment\\n- **Special education teachers**: Behavioral management strategies\\n\\n## Prenatal Diagnosis Counseling\\n\\n### First-Trimester Screening (11-13 weeks)\\n- **Maternal serum markers**: PAPP-A (decreased), beta-hCG (increased)\\n- **Ultrasound**: Nuchal translucency measurement\\n- **Combined risk**: Patient-specific likelihood ratio\\n- **If high risk**: Offer NIPT or invasive testing\\n\\n### Non-Invasive Prenatal Testing (NIPT, >13 weeks)\\n- **Method**: Cell-free fetal DNA analysis\\n- **Sensitivity**: >99% for trisomy 21\\n- **Specificity**: >99%\\n- **Advantage**: No miscarriage risk\\n- **Disadvantage**: Requires counseling; may detect other abnormalities\\n- **Cost**: Moderate; sometimes covered by insurance\\n\\n### Invasive Testing (If Desired)\\n- **Amniocentesis** (15-20 weeks):\\n  - Gold standard for diagnosis\\n  - 1% miscarriage risk\\n  - Karyotyping + microarray\\n\\n- **CVS** (10-12 weeks):\\n  - Earlier diagnosis\\n  - 0.2-1% miscarriage risk\\n  - May have maternal cell contamination\\n\\n## Family Support & Resources\\n\\n### Counseling Topics\\n1. **Prognosis discussion**: Life expectancy, life quality, independence potential\\n2. **Support groups**: National Down Syndrome Society, local chapters\\n3. **Financial planning**: Educational expenses, vocational training, future living arrangements\\n4. **Siblings**: Address sibling concerns, role expectations\\n\\n### Psychosocial Support\\n- **Parent counseling**: Coping strategies, stress management\\n- **Marital support**: DS diagnosis can stress relationships\\n- **Respite care**: Provides family breaks\\n\\n## Transition to Adulthood\\n\\n### Adolescent Health\\n- **Sexual education**: Age-appropriate discussion\\n- **Screening**: Hypothyroidism, cardiac function\\n- **Vocational training**: For employment readiness\\n- **Independence skills**: Self-care, community navigation\\n\\n### Adult Life Expectancy\\n- **50-60 years**: With good medical management\\n- **Common causes of death**: Cardiac (if uncorrected), leukemia, infections, respiratory\\n- **Aging concerns**: Dementia (Alzheimer-like pathology), loss of independence,\\n        mnemonics: [\\n          {\\n            text: \\\"CHESS: Cardiac (echo), Hearing (audiology), Eye (vision), Sleep (apnea study), Spine (imaging)\\\",\\n            explanation: \\\"Screening priorities in Down syndrome management\\\",\\n          },\\n          {\\n            text: \\\"GENETIC COUNSEL: Karyotype confirm, E-NIPT for future, N-invasive if needed, E-educate family, T-thyroid test, I-interventions early, C-cardiac first\\\",\\n            explanation: \\\"Comprehensive Down syndrome management approach\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Diagnosis: clinical features + karyotyping/FISH confirmation; genetic counseling essential\\\",\\n          \\\"Screening priorities: echocardiography (cardiac defects), audiometry (hearing loss), vision, thyroid TSH, sleep apnea, spine imaging\\\",\\n          \\\"Early intervention (PT/OT/speech therapy) critical for developmental progress\\\",\\n          \\\"Cardiac management: AV canal/VSD surgical correction (6-12 months) to prevent pulmonary hypertension\\\",\\n          \\\"Prenatal diagnosis: NIPT >99% sensitive; counseling for future pregnancies regarding recurrence risk\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai - Essential Pediatrics\\\", chapter: \\\"Ch 3\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Ch 92\\\", edition: \\\"21st\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"down-syndrome-exam\\\",\\n        title: \\\"Down Syndrome & Genetic Disorders - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary:\\n          \\\"Key exam facts: trisomy 21 (95% nondisjunction, 3-4% translocation), incidence 1 in 700, maternal age association, characteristic features (flat facies, epicanthal fold, simian crease), cardiac anomalies (AV canal 40%, VSD 30%), hearing loss (40-50%), increased leukemia (20x), life expectancy 50-60 years. MCQ pitfalls: missing cardiac findings, inadequate screening, under-recognizing translocation heritability.\\\",\\n        contentMd: ``# Down Syndrome & Genetic Disorders - Exam Prep\\n\\n## Quick Facts Table\\n\\n### Down Syndrome Cytogenetics\\n| Type | Frequency | Inheritance | Recurrence |\\n|---|---|---|---|\\n| Regular trisomy 21 | 95% | Nondisjunction (random) | <1% |\\n| Translocation | 3-4% | Can be heritable | 10-15% if mother carrier, 3% if father |\\n| Mosaic | 1-2% | Somatic mutation | <1% |\\n\\n### Karyotypes\\n- **Regular trisomy 21**: 47,XX,+21 or 47,XY,+21\\n- **Translocation**: 46,XX,der(14;21) or similar\\n- **Mosaic**: 45,XX/46,XX,+21 (mixed cell populations)\\n\\n### Associated Anomalies & Screening\\n\\n| System | Anomaly/Finding | Frequency | Screening Method |\\n|---|---|---|---|\\n| Cardiac | AV canal, VSD | 40-50% | Echocardiography (at birth) |\\n| Hearing | Conductive loss | 40-50% | ABR/OAE neonatal; audiology by 6-12m |\\n| Vision | Refraction errors, strabismus | 40-50% | Eye exam by 6-12 months |\\n| Thyroid | Hypothyroidism | 15-20% | TSH/free T4 at birth, 6m, 1y, annually |\\n| Sleep | OSA | 50-70% | Sleep study age 3-4 years |\\n| Hematologic | Leukemia | 20x risk | CBC monitoring; annual physical |\\n| Spine | Atlantoaxial instability | 10-15% | C-spine X-ray age 3-5 years |\\n| GI | Duodenal atresia | 10-15x risk | Clinical history; imaging if symptomatic |\\n\\n## High-Yield MCQ Concepts\\n\\n### Q: 3-day-old with flat facies, epicanthal fold, simian crease, and cardiac murmur. What is first step?\\n**A**: Echocardiography to rule out cardiac anomalies (AV canal, VSD present in 40-50%). Obtain karyotype/FISH to confirm trisomy 21. Perform genetic counseling with parents regarding diagnosis, prognosis, inheritance.\\n\\n### Q: What is the risk of Down syndrome in a mother aged 45 years?\\n**A**: Approximately 1 in 30 (exponential increase with maternal age). Risk at age 20: 1 in 1,500. At age 35: 1 in 350. At age 45: 1 in 30.\\n\\n### Q: A mother is a balanced carrier of translocation 14;21. What is the recurrence risk for trisomy 21 offspring?\\n**A**: 10-15% if mother is carrier (higher risk). 3% if father is carrier. This is much higher than regular trisomy 21 (<1%). Genetic counseling essential; prenatal diagnosis (NIPT/amniocentesis) offered.\\n\\n### Q: A 6-month-old with Down syndrome has persistent otitis media despite tubes. What is the mechanism?\\n**A**: Conductive hearing loss common in DS (40-50%) due to middle ear dysfunction/hypotonia. Tubes help but may not resolve all hearing loss. Audiometry needed; hearing aids may be required despite tubes.\\n\\n### Q: Why is echocardiography done urgently in newborns with Down syndrome?\\n**A**: To identify cardiac defects (AV canal in 40%, VSD in 30%) that require early surgical correction to prevent pulmonary hypertension. Timing: 6-12 months for defect closure optimal.\\n\\n### Q: Down syndrome child with irregular breathing during sleep, daytime somnolence, and behavioral decline. What is suspected?\\n**A**: Obstructive sleep apnea (50-70% incidence in DS). Sleep study indicated. Adenotonsillectomy often helps; CPAP if persistent. Sleep apnea accelerates cognitive decline & behavioral problems.\\n\\n### Q: What is NIPT sensitivity for detecting trisomy 21?\\n**A**: >99% (cell-free fetal DNA screening). Also >99% specificity. Most sensitive non-invasive prenatal screening method. Can be done >13 weeks gestation.\\n\\n### Q: Newborn with Down syndrome has elevated WBC, many blasts on smear, but no clinical symptoms. What is this?\\n**A**: Transient abnormal myelopoiesis (TAM) - occurs in 10% of DS newborns. Usually self-resolving (90%). 10% progress to AML. Monitor with monthly CBC first 6 months.\\n\\n## Common Exam Mistakes\\n| Wrong Approach | Why It's Wrong | Correct Approach |\\n|---|---|---|\\n| Delay cardiac workup in suspected DS | Cardiac defects need early surgical correction | Echocardiography at birth in all DS patients |\\n| Miss translocation inheritance pattern | Increases recurrence risk significantly | Always check parental karyotypes if translocation |\\n| Forget hearing screening | 40-50% have conductive loss; impacts speech | Audiology assessment by 6-12 months mandatory |\\n| Assume all DS with tachy/murmur are benign | Many have significant AV canal/VSD | Confirm with echo; surgical correction may be needed |\\n| Lack thyroid monitoring | 15-20% develop hypothyroidism; worsens growth/development | TSH screening at birth, 6m, 1y, then annually |\\n\\n## Critical Clinical Pearls\\n1. **Regular trisomy 21 (95%) = random nondisjunction, <1% recurrence**\\n2. **Translocation DS (3-4%) = may be heritable; check parental karyotypes**\\n3. **Maternal age >35 significantly increases risk** (exponential with age)\\n4. **Cardiac anomalies in 40-50%** (AV canal, VSD) → echo at birth\\n5. **Hearing loss 40-50%** (conductive; OSA 50-70%) → audiology by 6-12m\\n6. **Thyroid dysfunction 15-20%** → TSH screening at birth, 6m, 1y, annually\\n7. **Leukemia risk 20x normal** → monitor with CBC; low threshold for bone marrow if symptoms\\n8. **NIPT >99% sensitive** for prenatal diagnosis; genetic counseling essential,\\n        mnemonics: [\\n          {\\n            text: \\\"TRISOMY PLUS: Trisomy 21, Typical features (flat facies), Rhesus incompatibility NOT association, Intellectual disability, Septal defects (cardiac), Oral simian crease, More screening needed, Plus life expectancy 50-60\\\",\\n            explanation: \\\"Down syndrome key facts\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Nondisjunction (95%): random event, <1% recurrence; translocation (3-4%): check parental karyotypes, 10-15% recurrence if mother carrier\\\",\\n          \\\"Characteristic features: flat facies, epicanthal fold, up-slanting palpebra, simian crease, intellectual disability\\\",\\n          \\\"Cardiac anomalies (40-50%): AV canal & VSD most common; echocardiography at birth mandatory\\\",\\n          \\\"Screening priorities: hearing (40-50% conductive loss), vision (40-50% refraction), thyroid (15-20% hypothyroid), sleep apnea (50-70%)\\\",\\n          \\\"NIPT >99% sensitive for prenatal diagnosis; genetic counseling for recurrence risk essential\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Ch 92\\\", edition: \\\"21st\\\" },\\n          { book: \\\"NEET/DNB Pediatrics - Genetic Disorders\\\", chapter: \\\"Chromosomal Abnormalities\\\", edition: \\\"2024\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"down-syndrome-recall\\\",\\n        title: \\\"Down Syndrome & Genetic Disorders - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary:\\n          \\\"Active recall on diagnosis, karyotype interpretation, screening priorities, cardiac management, inheritance patterns, and prenatal diagnosis counseling. Focus on clinical decision-making, genetic counseling approaches, and multi-system management.\\\",\\n        contentMd: ``# Active Recall - Down Syndrome\\n\\n**Q1: Newborn with flat facies, up-slanting palpebra, epicanthal fold, and systolic murmur. What is the diagnosis and first investigation?**\\n> Down syndrome (trisomy 21) based on clinical features. First investigation: Echocardiography (40-50% have cardiac anomalies; AV canal & VSD most common). Obtain karyotype/FISH to confirm. Genetic counseling regarding diagnosis & prognosis.\\n\\n**Q2: Karyotype shows 46,XX,der(14;21). What does this mean?**\\n> Translocation Down syndrome (extra chromosome 21 material attached to chromosome 14). Phenotype is trisomy 21 but karyotype shows 46 chromosomes. Check parental karyotypes: if parent is balanced carrier, recurrence risk 10-15% (if mother) or 3% (if father).\\n\\n**Q3: An older mother (age 47) wants prenatal diagnosis for Down syndrome. What is the test of choice?**\\n> NIPT (non-invasive prenatal testing) - cell-free fetal DNA screening. >99% sensitive, >99% specific. No miscarriage risk. Requires counseling about results & management. If abnormal, confirm with amniocentesis.\\n\\n**Q4: A 6-month-old with Down syndrome has conductive hearing loss despite ear tubes. What is the mechanism?**\\n> Middle ear dysfunction/hypotonia common in DS (40-50% conductive loss). Tubes help drainage but may not resolve underlying Eustachian tube hypotonia. Audiometry/hearing aids may be needed. Speech-language therapy essential.\\n\\n**Q5: Why is atlantoaxial stability assessed in Down syndrome?**\\n> Ligamentous laxity in DS puts C1-C2 at risk for subluxation. Can cause spinal cord compression → neurological damage. Cervical spine X-rays (flexion/extension) at age 3-5 years. If instability present, contact sports contraindicated.\\n\\n**Q6: A 4-year-old with Down syndrome has behavioral decline, daytime somnolence, irregular breathing at night. What is suspected?**\\n> Obstructive sleep apnea (50-70% incidence in DS). Sleep study indicated. Adenotonsillar hypertrophy + hypotonia → airway obstruction. Adenotonsillectomy often helps; CPAP if persistent. Sleep apnea accelerates cognitive/behavioral decline.\\n\\n**Q7: Newborn with Down syndrome has elevated WBC (25,000), 30% blasts, but asymptomatic. What is this condition?**\\n> Transient abnormal myelopoiesis (TAM) - occurs in 10% of DS newborns. Usually self-resolving (90%). 10% progress to AML. Monitor with monthly CBC for first 6 months. Low threshold for bone marrow evaluation if symptoms develop.\\n\\n**Q8: Down syndrome infant has TSH 8.0 mIU/L (normal <5), free T4 normal. What is the next step?**\\n> Elevated TSH suggests subclinical hypothyroidism. Recheck at 6 weeks; if persistently elevated, start L-thyroxine. Hypothyroidism in 15-20% of DS; impacts growth & development. Annual screening recommended.\\n\\n**Q9: Mother asks about recurrence risk for Down syndrome in next pregnancy. Current child has regular trisomy 21. What do you counsel?**\\n> Recurrence risk is <1% (age-dependent risk applies, but baseline low). If regular nondisjunction (95% of cases), not heritable. If translocation confirmed, parental karyotype needed; if parent is carrier, risk increases to 10-15%.\\n\\n**Q10: A 2-year-old with Down syndrome is delayed in all developmental milestones. What interventions optimize development?**\\n> Early intervention (PT/OT/speech therapy) 2-3 times/week. Physical therapy for gross motor, OT for fine motor/self-care, speech for language/feeding. Start within first 3 months if possible. IEP for school. Thyroid function/hearing/vision must be normal for therapies to be effective.,\\n        mnemonics: [\\n          {\\n            text: \\\"DS SCREENING: Down syndrome, Screen Cardiac (echo), Hearing & vision, Thyroid TSH, Atlantoaxial stability, Sleep apnea study, Immune competence (check)\\\",\\n            explanation: \\\"Comprehensive screening priorities in Down syndrome\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Diagnosis: clinical features + karyotype/FISH; genetic counseling for inheritance & recurrence risk\\\",\\n          \\\"Cardiac screening at birth: AV canal (40%), VSD (30%); early surgical correction prevents pulmonary HTN\\\",\\n          \\\"Hearing loss (40-50% conductive); audiology by 6-12 months; hearing aids often needed\\\",\\n          \\\"Thyroid screening (TSH/free T4 at birth, 6m, 1y, annually): 15-20% develop hypothyroidism\\\",\\n          \\\"Sleep apnea (50-70%); sleep study age 3-4 years; adenotonsillectomy ± CPAP as needed\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"OP Ghai - Essential Pediatrics\\\", chapter: \\\"Ch 3\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n];\\n\""
-}
-}
-}
-];
-];
+        estimatedMinutes: 25,
+        summary: "Down syndrome (trisomy 21) is the most common autosomal chromosome disorder (1 in 700 births). Caused by nondisjunction (95%), translocation (3-4%), or mosaicism (1-2%). Characterized by intellectual disability, distinctive facial features (flat facies, up-slanting palpebral fissures, epicanthal fold), cardiac anomalies (AV canal, VSD), GI abnormalities, and increased risk of hematologic malignancies.",
+        contentMd: `# Down Syndrome & Genetic Disorders - Foundation
+
+## Introduction
+**Down Syndrome (Trisomy 21):**
+- Most common autosomal chromosome disorder
+- Incidence: 1 in 700 live births (higher in advanced maternal age)
+- Intellectual disability, characteristic features, multiple organ involvement
+- Life expectancy: 50-60 years (improved with medical care)
+
+## Cytogenetics & Inheritance
+
+### Karyotypic Types
+1. **Regular Trisomy 21** (95%): Three complete copies of chromosome 21
+   - Result of nondisjunction during meiosis
+   - Risk increases with maternal age (especially >35 years)
+   - Not heritable (random event in meiosis)
+
+2. **Translocation Down Syndrome** (3-4%):
+   - Extra chromosome 21 attached to another chromosome (often 14)
+   - Karyotype: 46 chromosomes with extra material
+   - Can be heritable (if parent is balanced translocation carrier)
+   - Same clinical features as regular trisomy 21
+
+3. **Mosaic Down Syndrome** (1-2%):
+   - Some cells have trisomy 21; others are normal (46 chromosomes)
+   - Often milder phenotype than regular trisomy 21
+   - Variable expression depending on proportion of affected cells
+
+## Maternal Risk Factors for Trisomy 21
+- **Advanced maternal age**: Risk 1/1,500 at age 20; 1/100 at age 40
+- **Previous child with trisomy 21**: 1-2% recurrence risk
+- **Parental balanced translocation**: 10-15% recurrence if mother is carrier
+
+## Clinical Features
+
+### Craniofacial Features
+- **Flat facies**: Hypoplastic nasal bridge
+- **Up-slanting palpebral fissures**: Upward slant of eyes
+- **Epicanthal folds**: Skin fold above inner canthus
+- **Brushfield spots**: White spots on iris
+- **Ear abnormalities**: Low-set ears, abnormal shape
+- **Macroglossia**: Large tongue (protrusion out of mouth)
+- **Dental abnormalities**: Delayed eruption, malposition
+
+### Body Habitus
+- **Short stature**: Often 15-20 cm below normal height
+- **Muscle hypotonia**: Floppiness (floppy infant)
+- **Broad hands**: Single palmar crease (simian crease)
+- **Spacing**: Wide space between 1st and 2nd toes (sandal gap)
+- **Dorsiflexion**: Increased flexibility of joints
+
+### Cognitive Development
+- **Intellectual disability**: Mild to moderate (IQ 30-70)
+- **Developmental delay**: Especially in motor skills
+- **Language delay**: Speech more affected than understanding
+- **Learning capacity**: Can learn with appropriate education
+
+### Cardiac Abnormalities (40-50%)
+- **Atrioventricular (AV) canal defect**: Most common (30-40%)
+- **Ventricular septal defect (VSD)**: 25-30%
+- **Atrial septal defect (ASD)**: 10%
+- **Patent ductus arteriosus (PDA)**: 5-10%
+- **Tetralogy of Fallot (rare)**: 3%
+- **Risk**: Pulmonary hypertension, heart failure
+
+### Gastrointestinal Abnormalities
+- **Duodenal atresia/stenosis**: 8-10% (presents with vomiting, polyhydramnios)
+- **Anal atresia/stenosis**: 1%
+- **Tracheoesophageal fistula (rare)**
+- **Hirschsprung disease**: Increased risk
+
+### Other Organ Involvement
+- **Hematologic**: Increased risk of leukemia (ALL, AML), 15-20 times higher
+- **Thyroid**: Hypothyroidism (15-20%), thyroid antibodies
+- **Vision**: Strabismus (30%), myopia, cataracts
+- **Hearing**: Conductive hearing loss (60-70%) from ear infections
+- **Atlanto-axial instability**: Risk of spinal cord compression (5-15%)`,
+        mnemonics: [
+          {
+            text: "Down Syndrome Features - FACES",
+            explanation: "Flat facies, Atrioventricular canal (cardiac), Crease (palmar/simian), Ears (low-set), Sandal gap (wide spacing 1st-2nd toe)"
+          },
+          {
+            text: "Trisomy 21 Types - NTM",
+            explanation: "Nondisjunction (95%), Translocation (3-4%), Mosaic (1-2%)"
+          }
+        ],
+        keyPoints: [
+          "Down syndrome: Incidence 1/700; increases with maternal age >35",
+          "Clinical: Flat facies, up-slanting eyes, epicanthal fold, macroglossia, hypotonia",
+          "Cardiac: AV canal most common (30-40%); requires echocardiogram",
+          "GI: Duodenal atresia (8-10%); presents with polyhydramnios/vomiting",
+          "Hematologic: Increased leukemia risk (15-20 times higher); monitor for signs",
+          "Most common autosomal chromosome disorder with viable phenotype"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 3: Genetics", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 81: Trisomy 21", edition: "21st" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "genetic-disorders-layer-2-mechanism",
+        title: "Down Syndrome - Molecular Basis",
+        estimatedMinutes: 30,
+        summary: "Trisomy 21: Three copies of chromosome 21 → 50% increase in chromosome 21 gene products → Dosage imbalance. Gene-dose imbalance affects neuronal development (decreased neurogenesis), cardiac development (septation defects), and hematopoiesis (leukemia predisposition). Maternal age effect linked to meiotic nondisjunction; exact mechanism remains unclear.",
+        contentMd: `# Down Syndrome - Molecular Basis
+
+## Chromosome 21 and Gene Dosage Imbalance
+
+### Normal vs Trisomy 21 Gene Expression
+- **Normal (2 copies)**: 100% chromosome 21 gene expression
+- **Trisomy 21 (3 copies)**: 150% chromosome 21 gene expression
+- **Dosage effect**: 50% increase in protein products from chromosome 21 genes
+- **Critical imbalance**: Gene dosage sensitivity; 50% increase pathogenic
+
+### Gene Dosage Sensitive Genes on Chromosome 21
+
+**DSCR1 (Down Syndrome Critical Region 1):**
+- Expressed at higher levels in trisomy 21
+- Involved in NFAT signaling (calcium-dependent pathway)
+- Altered cardiac development
+- Contributes to intellectual disability
+
+**APP (Amyloid Precursor Protein):**
+- Overexpression → Increased Aβ (amyloid-beta) production
+- Neuronal toxicity, neurodegeneration
+- Earlier onset Alzheimer pathology in Down syndrome adults
+
+**OLIG1, OLIG2 (Oligodendrocyte factors):**
+- Abnormal oligodendrocyte development
+- Reduced myelination of neurons
+- Contributes to developmental delay
+
+**NFAT5, DYRK1A (Kinases):**
+- Altered intracellular signaling
+- Disturbed neuronal development
+- Intellectual disability pathogenesis
+
+## Developmental Consequences of Gene Dosage Imbalance
+
+### Neural Development Disruption
+
+**Neurogenesis Impairment:**
+1. **Reduced neural progenitor cell proliferation**: Decreased neuronal production
+2. **Abnormal neuronal migration**: Disrupted cortical lamination
+3. **Dendritic abnormalities**: Fewer dendritic spines; reduced synaptic density
+4. **Synaptic dysfunction**: Impaired neurotransmission
+
+**Result**: Intellectual disability (IQ 30-70), developmental delay
+
+### Cardiac Development Defects
+
+**Septal Development Abnormality:**
+1. **Endocardial cushion development**: Disrupted
+2. **Neural crest cell migration**: Impaired (DSCR1, other genes)
+3. **Atrioventricular canal failure to close**: AV canal defect
+4. **Ventricular septation failure**: VSD
+
+**Molecular basis**:
+- Gene dosage imbalance of transcription factors (RUNX2, SOX9)
+- Altered cell migration signaling
+- Abnormal extracellular matrix formation
+
+**Result**: Cardiac defects in 40-50% (AV canal most common)
+
+### Hematopoietic System Changes
+
+**Leukemia Predisposition (15-20x increased risk):**
+1. **Transient myeloproliferative disorder (TMD)**: First weeks of life (5-10% of infants)
+   - Blast cells in blood/bone marrow
+   - Usually self-limited
+   - Risk of progression to acute megakaryoblastic leukemia (AMKL)
+
+2. **GATA1 mutations**: Acquired somatic mutations
+   - GATA1 involved in hematopoietic differentiation
+   - Trisomy 21 provides permissive background for GATA1 mutations
+   - Higher mutational burden in Down syndrome
+
+3. **Molecular basis**:
+   - Gene dosage imbalance of chromosome 21 genes involved in cell cycle, apoptosis
+   - ERG (ETS-related gene) overexpression: Oncogenic potential
+   - Altered apoptotic pathway: Reduced cell death of abnormal clones
+
+**Result**: Increased ALL (most common), AML risk
+
+### Gastrointestinal Development Defects
+
+**Duodenal Atresia Pathogenesis:**
+- Abnormal duodenal epithelial development
+- Failed recanalization of duodenal lumen (occurs ~week 8-10 of gestation)
+- Partial or complete obstruction
+- Gene dosage effects on developmental signaling pathways (hedgehog, Wnt, Notch)
+
+## Meiotic Nondisjunction and Maternal Age
+
+### Nondisjunction Mechanism
+- **Normal meiosis**: Homologous chromosomes separate (one to each daughter cell)
+- **Nondisjunction**: Chromosomes fail to separate
+- **Result**: One gamete gets 2 copies; other gets none
+- **Fertilization**: 2 + 1 = 3 chromosomes (trisomy); 0 + 1 = monosomy (usually lethal)
+
+### Maternal Age Effect
+- **Age 20**: Trisomy 21 risk ~1/1,500
+- **Age 30**: Risk ~1/900
+- **Age 40**: Risk ~1/100
+- **Age 45**: Risk ~1/30
+
+**Proposed mechanisms:**
+1. **Maternal meiotic checkpoint hypothesis**: Oocytes arrested in prophase I from birth; delayed checkpoint control with aging
+2. **Oocyte aging**: Accumulated damage, reduced cohesion proteins (cohesin degradation)
+3. **Cohesin hypothesis**: Age-dependent loss of cohesin proteins → weakened chromatid cohesion → nondisjunction
+4. **Lack of checkpoints repair**: Cumulative DNA damage; reduced repair mechanisms
+
+**Result**: Maternal age is most significant risk factor for trisomy 21`,
+        mnemonics: [
+          {
+            text: "Gene Dosage Imbalance in Trisomy 21 - APP",
+            explanation: "Amyloid Precursor Protein (neurodegeneration), DSCR1 (cardiac/signaling), DYRK1A (neural development)"
+          },
+          {
+            text: "Maternal Age Risk - 3 decades rule",
+            explanation: "Age 20: 1/1,500; Age 30: 1/900; Age 40: 1/100; Age 45: 1/30"
+          }
+        ],
+        keyPoints: [
+          "Gene dosage imbalance: 50% increase in chromosome 21 gene expression is pathogenic",
+          "Intellectual disability: Reduced neurogenesis, abnormal neuronal migration, synaptic dysfunction",
+          "Cardiac defects: Neural crest cell migration disruption → AV canal, VSD",
+          "Leukemia risk: 15-20x higher; GATA1 mutations + permissive trisomy 21 background",
+          "TMD (transient myeloproliferative disorder): 5-10% of infants; usually self-limited",
+          "Maternal age effect: Cohesin protein loss → chromatid cohesion failure → nondisjunction",
+          "Duodenal atresia: Developmental signaling pathway disruption (Wnt, hedgehog, Notch)"
+        ],
+        textbookRefs: [
+          { book: "Robbins Pathologic Basis of Disease", chapter: "Chapter 5: Genetic Disorders", edition: "10th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 81: Trisomy 21", edition: "21st" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "genetic-disorders-layer-3-clinical",
+        title: "Down Syndrome - Diagnosis & Screening",
+        estimatedMinutes: 25,
+        summary: "Prenatal: NIPT (cell-free DNA testing) >99% sensitive; triple/quad screen, ultrasound findings (NT thickening, AV canal, duodenal bubble). Postnatal: Clinical features + karyotyping or FISH. Maternal age >35 is significant risk factor. Diagnosis often made at birth; counseling and multidisciplinary evaluation essential.",
+        contentMd: `# Down Syndrome - Diagnosis & Screening
+
+## Prenatal Screening & Diagnosis
+
+### Non-Invasive Prenatal Testing (NIPT)
+
+**Cell-free DNA Testing (Preferred first-line screen):**
+- **Sensitivity**: >99% for trisomy 21
+- **Specificity**: >99%
+- **Timing**: After 9-10 weeks gestation
+- **Method**: Analyzes fetal DNA in maternal blood
+- **Advantages**: Minimal risk, easy to perform, quick results (days)
+- **Disadvantage**: Can miss mosaicism
+
+**Who should have NIPT:**
+- **Advanced maternal age** (>35 years)
+- **Abnormal ultrasound findings** (NT thickening, cardiac defects, polyhydramnios)
+- **Family history** of Down syndrome
+- **Abnormal first/second trimester screening results**
+
+### Traditional Biochemical Screening
+
+**First Trimester (11-14 weeks):**
+- **Maternal age**
+- **PAPP-A** (pregnancy-associated plasma protein A): Decreased in trisomy 21
+- **hCG** (human chorionic gonadotropin): Increased in trisomy 21
+- **Nuchal translucency (NT)**: Ultrasound measurement; increased NT (>3mm) suggests aneuploidy
+- **Detection rate**: 85-90%
+
+**Second Trimester (15-20 weeks) - Quad Screen:**
+- **Maternal serum markers**:
+  - **AFP** (alpha-fetoprotein): Decreased in trisomy 21
+  - **hCG**: Increased
+  - **uE3** (unconjugated estriol): Decreased
+  - **Inhibin A**: Increased
+- **Detection rate**: 80-85%
+
+### Ultrasound Findings (Suggestive of Down Syndrome)
+
+**First Trimester:**
+- **Nuchal translucency >3 mm** (11-14 weeks): Most significant marker
+- **Nasal bone hypoplasia** (11-14 weeks): Absent or very small
+
+**Second Trimester:**
+- **Cardiac defects** (AV canal, VSD, PDA): Present in 40-50%
+- **Duodenal atresia**: "Double bubble" sign
+- **Renal abnormalities**: Pyelectasis, cysts
+- **Echogenic intracardiac focus**: Soft marker
+- **Fetal growth restriction**: Mild growth lag
+- **Polyhydramnios**: Excessive amniotic fluid
+- **Ventriculomegaly**: Mild ventricular enlargement
+
+## Postnatal Diagnosis
+
+### Clinical Features at Birth (Classic Presentation)
+
+**Most recognizable signs:**
+1. **Hypotonia**: "Floppy baby"
+2. **Facial features**: Flat facies, up-slanting eyes, epicanthal folds
+3. **Palmar crease**: Single simian crease across palm
+4. **Sandal gap**: Wide spacing between 1st-2nd toes
+5. **Broad hands**: Short, broad with incurved 5th finger
+6. **Macroglossia**: Large tongue
+
+**Frequency of clinical signs at birth:**
+- Hypotonia: 100% of neonates
+- Flat facies: 90%
+- Up-slanting palpebral fissures: 80%
+- Simian crease: 50%
+- Sandal gap: 50%
+- Structural abnormality (cardiac, GI): 40-50%
+
+### Confirmatory Testing
+
+**Karyotyping (Gold Standard):**
+- **Method**: Chromosome analysis of peripheral blood lymphocytes
+- **Cost**: ~$500-1000 in India
+- **Turnaround**: 7-14 days
+- **Shows**: 47 chromosomes with three copies of chromosome 21 (regular trisomy 21)
+- **Translocation variants**: Can identify if present
+
+**Fluorescence In Situ Hybridization (FISH):**
+- **Faster**: Results in 24-48 hours
+- **Method**: Fluorescent probes for chromosome 21
+- **Advantage**: Rapid confirmation; useful in neonatal period
+- **Disadvantage**: Cannot detect balanced translocations
+
+**Array CGH (Chromosomal Microarray Analysis):**
+- **Detects**: Submicroscopic chromosomal imbalances
+- **Used if**: FISH/karyotyping inconclusive; detect mosaicism
+
+## Differential Diagnosis (Other Genetic Syndromes)
+
+| Syndrome | Karyotype | Key Features |
+|---|---|---|
+| **Trisomy 18** (Edwards) | 47, XX/XY, +18 | Severe IUGR, severe facial abnormalities, clenched fists, rocker-bottom feet, early lethality |
+| **Trisomy 13** (Patau) | 47, XX/XY, +13 | Severe facial cleft, holoprosencephaly, polydactyly, scalp defects, early lethality |
+| **Turner** (Monosomy X) | 45, X | Short stature, webbed neck, coarctation, infertility, female only |
+| **Klinefelter** (XXY) | 47, XXY | Tall stature, infertility, mild learning disability, male only |
+
+## Postnatal Evaluation and Management Plan
+
+**Immediate (First days of life):**
+1. **Pediatric cardiologist referral**: Echocardiogram to evaluate for cardiac defects
+2. **Feeding assessment**: Hypotonia may affect feeding; support needed
+3. **Genetic counseling**: Family discussion, implications, prognosis
+4. **Karyotyping/FISH**: Confirmatory testing
+
+**First weeks:**
+1. **Thyroid screening**: TSH at 3-5 days and 2 weeks (congenital hypothyroidism screening)
+2. **Audiology**: Formal hearing assessment (conductive loss common)
+3. **Ophthalmology**: Vision screening (strabismus, refractive errors)
+4. **Developmental assessment**: Early intervention services
+
+**Ongoing:**
+1. **Neurological monitoring**: Atlanto-axial instability screening
+2. **Hematologic surveillance**: Monitor for signs of leukemia (CBC periodically)
+3. **Growth monitoring**: Special growth charts for Down syndrome
+4. **Educatio**: Early childhood intervention programs`,
+        mnemonics: [
+          {
+            text: "Prenatal Screening - NIPT/Quad",
+            explanation: "NIPT (>99% sensitive), or Quad screen (AFP, hCG, uE3, Inhibin A)"
+          },
+          {
+            text: "Clinical Features at Birth - FACES2",
+            explanation: "Flat facies, up-slanting eyes, Crease (simian), Ears (low-set), Sandal gap, Hypotonia (most universal)"
+          }
+        ],
+        keyPoints: [
+          "NIPT: >99% sensitive and specific; preferred first-line prenatal screen",
+          "Maternal age >35: Significant risk factor; should offer prenatal screening",
+          "Ultrasound findings: NT >3mm, duodenal atresia ('double bubble'), cardiac defects",
+          "Clinical diagnosis: Hypotonia, flat facies, simian crease, sandal gap, structural defects",
+          "Karyotyping: Confirmatory test; identifies regular vs translocation vs mosaic types",
+          "FISH: Faster results (24-48 hours); useful for rapid neonatal confirmation",
+          "Counseling critical: Discuss prognosis, life expectancy (50-60 years), intervention services"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 3: Genetics", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 81: Trisomy 21", edition: "21st" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "genetic-disorders-layer-4-exam",
+        title: "Down Syndrome - Management & Complications",
+        estimatedMinutes: 25,
+        summary: "Early intervention services (physical therapy, speech therapy, developmental assessment). Cardiac management: Echocardiogram screening; surgical repair if indicated. Thyroid screening (hypothyroidism 15-20%). Hearing evaluation (conductive loss common). Monitor for leukemia, atlanto-axial instability, GI complications. Educational support and social integration.",
+        contentMd: `# Down Syndrome - Management & Complications
+
+## Multidisciplinary Care Approach
+
+### Initial Evaluation
+
+**Cardiac Assessment:**
+- **Echocardiogram**: Mandatory for all newborns with Down syndrome
+- **Indications for repair**:
+  - AV canal defect (most common cardiac anomaly)
+  - Large VSD (>0.5 cm²)
+  - Symptoms of heart failure (poor feeding, failure to thrive)
+  - Pulmonary hypertension risk
+- **Timing of repair**: Usually 4-6 months of age (weight >3-4 kg)
+- **Outcome**: Good with modern surgical technique; can achieve normal functional status
+
+**Thyroid Screening:**
+- **TSH/free T4**: Screen at birth (within 3-5 days) and 2 weeks
+- **Congenital hypothyroidism**: 1:200 in Down syndrome (vs 1:4000 in general population)
+- **Management**: Levothyroxine replacement if TSH elevated
+- **Periodic reassessment**: TSH checks annually (acquired hypothyroidism also increased)
+- **Benefit**: Early treatment prevents developmental delay
+
+**Hearing Assessment:**
+- **Conductive hearing loss**: 50-70% have some degree
+- **Sensorineural**: 15-20%
+- **Cause**: Otitis media with effusion (small ear canal, eustachian tube dysfunction)
+- **Assessment**: Audiology evaluation in first weeks; formal testing at 3 months
+- **Management**:
+  - Watchful waiting initially (often resolves)
+  - Hearing aids if persistent loss
+  - Tympanostomy tubes if recurrent otitis media
+
+**Vision Assessment:**
+- **Strabismus**: 30-40% (can require surgery for ocular alignment)
+- **Refractive errors**: Myopia, hyperopia, astigmatism common
+- **Other**: Cataracts (rare), keratoconus
+- **Ophthalmology evaluation**: In first weeks of life
+
+### Developmental Intervention
+
+**Early Intervention Programs (Birth-3 years):**
+- **Physical therapy**: Improve muscle tone, mobility, prevent contractures
+- **Occupational therapy**: Fine motor skills, adaptive feeding
+- **Speech-language pathology**: Language development, communication strategies
+- **Developmental assessment**: Monitor progress; adjust interventions
+- **Family support**: Parent education, counseling
+
+**Educational Support (School-age):**
+- **Individualized Education Plan (IEP)**: Tailored to child's abilities
+- **Special education services**: Depending on intellectual ability
+- **Inclusive education**: Integration with typically developing peers when possible
+- **Vocational training**: Adolescents; supported employment programs
+
+## Complications and Monitoring
+
+### Gastrointestinal Complications
+
+**Duodenal Atresia/Stenosis (8-10%):**
+- **Presentation**: Vomiting (bilious), polyhydramnios prenatally, abdominal distension
+- **Diagnosis**: "Double bubble" on abdominal X-ray (gastric bubble + duodenal bubble)
+- **Management**: Surgical repair (duodenoduodenostomy) in first weeks of life
+- **Prognosis**: Good with surgical intervention
+
+**Hirschsprung Disease (1%):**
+- **Presentation**: Failure to pass meconium, enterocolitis, abdominal distension
+- **Diagnosis**: Contrast enema (transition zone), rectal biopsy (absent ganglion cells)
+- **Management**: Surgical resection of aganglionic segment
+
+**Celiac Disease (5-10%):**
+- **Increased risk**: Autoimmune mechanism
+- **Screening**: Tissue transglutaminase (tTG) antibodies annually
+- **Management**: Gluten-free diet if confirmed
+
+**Feeding Difficulties:**
+- **Hypotonia**: Weak suck, poor feeding
+- **Macroglossia**: May interfere with feeding
+- **Management**: Speech therapy, adaptive feeding techniques, nasogastric feeding if needed
+
+### Hematologic Complications
+
+**Transient Myeloproliferative Disorder (TMD):**
+- **Incidence**: 5-10% of Down syndrome infants
+- **Presentation**: Jaundice, hepatosplenomegaly, blasts in blood
+- **Age of onset**: First weeks of life
+- **Natural history**: Usually self-limited (resolves by 3 months)
+- **Risk**: 30-40% progress to acute leukemia (especially AMKL)
+- **Monitoring**: CBC; watch for signs of progression
+
+**Acute Leukemia:**
+- **Risk**: 15-20 times higher than general population; 1/150 in Down syndrome
+- **Types**: ALL (60-70%), AMKL (acute megakaryoblastic, unique to Down syndrome; 30-40%)
+- **Presentation**: Anemia, thrombocytopenia, bleeding, infections, hepatosplenomegaly
+- **Prognosis**: Better in Down syndrome than non-Down syndrome leukemia (better chemotherapy tolerance, fewer toxicities)
+- **Monitoring**: CBC annually or if symptoms (fatigue, bleeding, infections)
+
+### Orthopedic Complications
+
+**Atlanto-axial Instability (AAI):**
+- **Incidence**: 10-15% with radiographic evidence; 1-2% symptomatic
+- **Mechanism**: Joint laxity from ligamentous laxity; risk of spinal cord compression
+- **Screening**: Neck X-rays (lateral view in flexion/extension) at age 3-5 years
+- **Monitoring**: Restrict activities (contact sports, gymnastics) if instability present
+- **Surgical intervention**: Fusion if symptomatic (rare)
+- **Red flags**: Neck pain, progressive neurological deficit, loss of motor skills
+
+**Patellar Dislocation:**
+- **Increased risk**: Due to generalized joint laxity, muscle weakness
+- **Management**: Physical therapy; surgical correction if recurrent
+
+### Endocrine & Metabolic
+
+**Hypothyroidism:**
+- **Congenital**: 1/200 (vs 1/4000 general population)
+- **Acquired**: Increases with age; ~20% by adulthood
+- **Screening**: Initial (birth), then annually
+- **Management**: Levothyroxine replacement; monitor TSH
+
+**Obesity:**
+- **Increased risk**: Reduced activity, metabolic factors
+- **Management**: Dietary counseling, exercise programs, family support
+
+### Behavioral & Mental Health
+
+**Behavioral Issues:**
+- **Oppositional behavior**: Common in early childhood
+- **Attention deficit**: Can require management strategies
+- **Management**: Behavioral approaches, parental support; rarely medications
+
+**Mental Health:**
+- **Depression**: More common in adolescents/adults
+- **Anxiety disorders**: Can occur
+- **Early identification**: Mental health screening, psychological support`,
+        mnemonics: [
+          {
+            text: "Down Syndrome Management - FETCH",
+            explanation: "Feeding (PT, OT), Early intervention (speech, PT, development), Thyroid (TSH screen), Cardiac (echo), Hearing (audiology)"
+          },
+          {
+            text: "Complications Monitoring - BEACH",
+            explanation: "Behavior, Endocrine (thyroid), Atlanto-axial instability, Cardiac, Hematologic (leukemia)"
+          }
+        ],
+        keyPoints: [
+          "Cardiac defects: AV canal most common (30-40%); echocardiogram mandatory",
+          "Surgical repair timing: 4-6 months of age for AV canal; good outcomes",
+          "Thyroid screening: Birth + annually; hypothyroidism 1/200 vs 1/4000 general",
+          "Hearing: 50-70% conductive loss (otitis media); audiology evaluation essential",
+          "Early intervention: PT, OT, speech therapy critical for developmental outcomes",
+          "Leukemia risk: 15-20x higher; monitor with annual CBC",
+          "TMD: Self-limited in 60-70%; 30-40% progress to acute leukemia",
+          "Atlanto-axial instability: 1-2% symptomatic; restrict contact sports",
+          "Life expectancy: 50-60 years with good medical care and support"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 3: Genetics", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 81: Trisomy 21", edition: "21st" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "genetic-disorders-layer-5-active-recall",
+        title: "Down Syndrome - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Test your knowledge of Down syndrome genetics, diagnosis, and clinical management with case-based questions.",
+        contentMd: `# Active Recall - Down Syndrome & Genetic Disorders
+
+**Q1: A pregnant woman aged 42 is offered prenatal screening for chromosomal abnormalities. What is the risk of trisomy 21 at her age, and what test would you recommend?**
+> At age 42, risk of trisomy 21 is approximately 1/100 (much higher than general population 1/700). Recommended test: **NIPT (Non-Invasive Prenatal Testing)** - sensitivity >99%, specificity >99%, can be done from 9-10 weeks gestation. If NIPT abnormal or unavailable, offer invasive testing (CVS at 11-14 weeks or amniocentesis at 15-20 weeks) for definitive karyotyping.
+
+**Q2: An infant born with "floppy baby" presentation, flat facies, up-slanting eyes, single palmar crease, and sandal gap between 1st-2nd toes. Clinical diagnosis suspected. What confirmatory test and timeline?**
+> **Suspected diagnosis**: Down syndrome. **Confirmatory tests**: (1) **FISH** (fastest - 24-48 hours; detects trisomy 21), or (2) **Karyotyping** (gold standard; 7-14 days; identifies type: regular trisomy 21, translocation, or mosaic). Order both if possible. **Clinical presentation**: Most signs present at birth (flat facies 90%, hypotonia 100%, up-slanting eyes 80%, simian crease 50%).
+
+**Q3: Why does maternal age >35 significantly increase the risk of trisomy 21? Explain the molecular mechanism.**
+> **Maternal age effect**: Due to **cohesin protein loss**. (1) Oocytes arrested in prophase I from birth; with aging, cohesin proteins degrade (2) Loss of cohesin → Weakened sister chromatid cohesion (3) Meiosis I nondisjunction → Chromosome 21 fails to separate (4) Results in gamete with 2 copies chromosome 21. (5) Fertilization: 2 + 1 = trisomy 21 (47, XX/XY, +21).
+
+**Q4: A newborn with Down syndrome has an echocardiogram showing AV canal defect. Explain the embryologic basis and management plan.**
+> **Embryologic basis**: AV canal defect from abnormal neural crest cell migration and endocardial cushion development. Gene dosage imbalance of chromosome 21 genes (DSCR1, transcription factors) disrupts developmental signaling. **AV canal defect features**: Complete form has ostium primum ASD + inlet VSD + common AV valve. **Management**: (1) Monitor for signs of heart failure, (2) Surgical repair at 4-6 months of age (when weight >3 kg), (3) Good prognosis with modern surgery.
+
+**Q5: A 2-week-old with Down syndrome has a TSH of 8.5 mIU/L (elevated) and free T4 of 0.8 ng/dL (low-normal). Diagnosis and management?**
+> **Diagnosis**: Congenital hypothyroidism (TSH elevated, free T4 low). **Incidence**: 1/200 in Down syndrome (vs 1/4000 general population). **Management**: Start **levothyroxine replacement** at 10-15 mcg/kg/day (adjust based on TSH/free T4 response). **Benefit**: Early treatment prevents intellectual disability, growth failure. **Monitoring**: Recheck TSH/free T4 at 4-6 weeks, then periodically; screen annually (acquired hypothyroidism also common).
+
+**Q6: A 3-year-old with Down syndrome undergoes developmental screening showing significant delay. What early intervention services are essential?**
+> **Essential services**: (1) **Physical therapy**: Improve muscle tone, mobility (hypotonia is universal), prevent contractures. (2) **Occupational therapy**: Fine motor skills, adaptive feeding (macroglossia/hypotonia affect feeding). (3) **Speech-language pathology**: Language development (speech more delayed than comprehension); communication strategies. (4) **Developmental assessment**: Ongoing monitoring; adjust interventions. (5) **Family support**: Parent education, counseling. Benefit: Better outcomes with early intensive intervention before age 3.
+
+**Q7: A 5-year-old with Down syndrome has audiologic testing showing conductive hearing loss (air-bone gap). Explain the mechanism and management.**
+> **Mechanism**: 50-70% of Down syndrome children have conductive hearing loss. **Cause**: Otitis media with effusion (OME) - small ear canals, eustachian tube dysfunction, increased infection risk. **Diagnosis**: Tympanometry shows Type B (flat) curve; audiometry shows air-bone gap. **Management**: (1) Watch and wait initially (often resolves spontaneously), (2) If persistent >3 months or affecting speech development: tympanostomy tubes, (3) Hearing aids if permanent loss, (4) Periodic follow-up.
+
+**Q8: A 7-year-old with Down syndrome presents with jaundice, hepatosplenomegaly, and blasts in peripheral blood. CBC shows: WBC 45,000/μL, Hgb 8 g/dL, Plt 50,000/μL. Diagnosis?**
+> **Diagnosis**: Either (1) **Transient Myeloproliferative Disorder (TMD)** - if age <1 year (5-10% of Down syndrome infants; self-limited in ~60%), or (2) **Acute Leukemia** - if older. **In this 7-year-old**: Likely acute leukemia (30-40% AMKL - acute megakaryoblastic leukemia; 60-70% ALL). **Risk**: 15-20x higher in Down syndrome than general population. **Prognosis**: Better in Down syndrome (fewer treatment toxicities, better chemotherapy tolerance). **Management**: Referral to pediatric oncology; chemotherapy.
+
+**Q9: Explain why Down syndrome children have increased risk of acute megakaryoblastic leukemia (AMKL), and what is the molecular basis?**
+> **Gene dosage imbalance**: 3 copies of chromosome 21 → 50% overexpression of chromosome 21 genes. **Molecular basis**: (1) **ERG overexpression** (chromosome 21 gene) → Oncogenic potential. (2) **GATA1 mutations**: Acquired somatic mutations in hematopoietic precursor cells. Down syndrome provides permissive background (altered cell cycle, apoptosis regulation). (3) **Result**: GATA1 mutations + gene dosage imbalance → Selective advantage for megakaryoblastic lineage. **Unique to Down syndrome**: AMKL rare outside Down syndrome; 50x more common in Down syndrome.
+
+**Q10: A 4-year-old with Down syndrome presents with progressive neck pain and weakness in lower extremities. Imaging ordered. What complication are you concerned about?**
+> **Complication**: **Atlanto-axial instability (AAI)** - abnormal motion between C1 (atlas) and C2 (axis) from generalized joint laxity. **Incidence**: 10-15% radiographic evidence; 1-2% symptomatic. **Pathophysiology**: Looseness of transverse atlantal ligament; risk of spinal cord compression with neck movement. **Management**: (1) **Neck X-rays** (lateral views in flexion/extension) for assessment, (2) Restrict contact sports, gymnastics, high-impact activities, (3) Surgical fusion (C1-C2) if symptomatic or imaging shows severe instability. **Prevention**: Avoid trauma; screen at age 3-5 years.
+
+**Q11: A 2-month-old with Down syndrome has CBC showing: WBC 18,000/μL, with blasts present, Hgb 10 g/dL, Plt 75,000/μL. Bone marrow biopsy shows megakaryoblasts. Diagnosis and prognosis?**
+> **Diagnosis**: **Transient Myeloproliferative Disorder (TMD)** (also called transient abnormal myelopoiesis). **Features**: Self-limited myeloproliferation in first weeks-months of life; unique to Down syndrome. **Natural history**: (1) 60-70% resolve spontaneously by 3 months, (2) 30-40% progress to acute leukemia (usually AMKL) by age 3-5 years. **Management**: (1) Monitor with serial CBC, (2) Cytarabine (low-dose) may be used if life-threatening, (3) Prepare family for possible progression to acute leukemia; intensive monitoring required.
+
+**Q12: Describe the comprehensive screening and monitoring plan for a newborn with confirmed Down syndrome.**
+> **Immediate (first week)**: (1) **Cardiac**: Echocardiogram to screen for AV canal, VSD, other defects. (2) **Thyroid**: TSH/free T4 (part of newborn screening); repeat at 2 weeks. (3) **Genetic counseling**: Family discussion, recurrence risk, prognosis. (4) **Feeding assessment**: Support for hypotonia-related feeding difficulties.
+
+> **First month**: (1) **Audiology**: Formal hearing assessment (conductive loss common; otoacoustic emissions, audiology evaluation). (2) **Ophthalmology**: Vision screening (strabismus, refractive errors). (3) **Early intervention referral**: Physical, occupational, speech therapy.
+
+> **Ongoing (First year)**: (1) **Thyroid**: Repeat TSH at 3-6 months, then annually. (2) **Hematologic**: CBC at diagnosis, monitor for TMD or leukemia signs. (3) **Growth**: Special Down syndrome growth charts; monitor growth velocity. (4) **Developmental**: Regular developmental assessment; adjust early intervention.
+
+> **Age 3-5 years**: (1) **Atlanto-axial screening**: Neck X-rays (flexion/extension views). (2) **Celiac screening**: tTG antibodies (5-10% have celiac disease). (3) **Educational planning**: Transition to school; IEP development.`,
+        mnemonics: [
+          {
+            text: "Down Syndrome Screening - CHEF",
+            explanation: "Cardiac (echo), Hearing (audiology), Endocrine (TSH), Feeding (PT/OT)"
+          },
+          {
+            text: "Leukemia Risk Factors - GEAT",
+            explanation: "Gene dosage (50% increase), ERG overexpression, GATA1 mutations, Age-dependent accumulation"
+          }
+        ],
+        keyPoints: [
+          "Maternal age >35: Risk 1/100 at age 40; genetic counseling and NIPT screening essential",
+          "NIPT: Preferred first-line test; >99% sensitive/specific for trisomy 21",
+          "Clinical features at birth: Hypotonia (100%), flat facies (90%), up-slanting eyes (80%), simian crease (50%)",
+          "Cardiac defects: AV canal (30-40%); surgical repair at 4-6 months age with good prognosis",
+          "Thyroid screening: Mandatory; congenital hypothyroidism 1/200 (50x higher than general)",
+          "Hearing: 50-70% conductive loss; tympanostomy tubes often needed",
+          "Early intervention critical: PT, OT, speech therapy before age 3 for best outcomes",
+          "Leukemia risk: 15-20x higher; AMKL unique to Down syndrome",
+          "TMD: Self-limited 60-70%; 30-40% progress to acute leukemia",
+          "Life expectancy: 50-60 years with comprehensive medical care and support"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 3: Genetics", edition: "9th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 81: Trisomy 21", edition: "21st" }
+        ]
+      }
+    ]
+  }
 ];
