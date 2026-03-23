@@ -1,17 +1,804 @@
-export const forensicMedicineLessonsPartXXII = [
+import type { TopicLessons } from "./content-loader";
+
+export const forensicMedicineLessonsPartXXII: TopicLessons[] = [
   {
     topicCode: "FM-MOD-04-TOP-04",
     layers: [
       {
         layer: 1,
-        slug: "infanticide-abortion-mtp-act-foundation",
-        title: "Infanticide & Abortion (MTP Act) - Foundation",
+        slug: "infanticide-abortion-layer-1-foundation",
+        title: "Infanticide & Abortion - Foundation",
+        estimatedMinutes: 25,
+        summary: "Introduction to infanticide and abortion from forensic and medico-legal perspective. Understanding definitions, legal framework, and autopsy significance.",
+        contentMd: `# Infanticide & Abortion - Foundation
+
+## Definitions & Terminology
+
+### Infanticide
+- **Definition**: Willful killing of an infant (usually <1 year old, some definitions <3 years)
+- **Methods**: Suffocation, strangulation, drowning, trauma, poisoning, abandonment, exposure
+- **Perpetrator**: Usually mother (postpartum psychosis, depression, inadequate support)
+- **Intent**: May range from deliberate to negligent care
+
+### Viability & Fetal Life
+- **Conception**: Fertilization of ovum (~day 0)
+- **Viable fetus**: Usually after 22-24 weeks gestation (some jurisdictions 20 weeks)
+- **Quickening**: Fetal movement felt by mother (~16-18 weeks)
+- **Abortion**: Termination before viability (~22-24 weeks)
+- **Miscarriage/Spontaneous abortion**: Natural loss before viability
+
+### Live birth
+- **Definition**: Expulsion of fetus with any sign of life after viability
+- **Signs of life**: Heartbeat, respiration, umbilical cord pulsation, movement
+- **Legal significance**: Once live birth occurs, child is person; killing is homicide
+
+## Legal Framework (India)
+
+### IPC Provisions on Infanticide
+- **IPC Section 301**: Causing death by act endangering life
+- **IPC Section 302**: Murder (applicable to infanticide)
+- **IPC Section 304**: Culpable homicide (if no premeditation)
+- **IPC Section 305**: Causing suicide by instigation
+
+### IPC Provisions on Abortion & Fetal Loss
+- **IPC Section 312**: Causing miscarriage (illegal without lawful authority)
+- **IPC Section 313**: Causing death of quick unborn child
+- **IPC Section 314**: Death caused by act of abortion
+
+### Medical Termination of Pregnancy Act (MTP Act 2002)
+- **Legal abortion**: Performed by registered practitioner
+- **Indications**:
+  - Pregnancy threatens maternal health/life
+  - Fetal abnormality likely to result in severe disability
+  - Contraceptive failure in married couples
+  - Rape/incest victims (with caution for married women)
+- **Timeline**: Up to 20 weeks (some conditions up to viability)
+- **Recent amendment (2021)**: Extended to 24 weeks for special categories
+
+### Unsafe/Illegal Abortion
+- **Criminal act** under IPC Sections 312-314
+- **Perpetrator**: Woman undergoing + person inducing
+- **Punishment**: Varies (up to 3 years imprisonment, 1000 rupees fine)
+- **Common methods**: Crude instruments, herbal concoctions, manual trauma
+
+## Causes of Infanticide
+
+### Mother-Related Factors
+- **Postpartum depression/psychosis**: Mental health crisis after birth
+- **Socioeconomic pressure**: Poverty, inability to support child
+- **Marital problems**: Unwanted/illegitimate child, abandonment by father
+- **Lack of support**: No social safety net, family rejection
+- **Medical complications**: Severe illness, incapacity
+
+### Child-Related Factors
+- **Premature birth**: Not fully developed, perceived weakness
+- **Birth defects**: Severe abnormalities
+- **Failure to thrive**: Difficulty feeding, medical problems
+
+### Social & Cultural Factors
+- **Gender bias**: Female infanticide (sex selection)
+- **Caste/religious factors**: Social stigma, family honor
+- **Superstitions**: Belief in curse or bad omen
+- **Economic burden**: Multiple children, inability to provide
+
+## Types of Infanticide Methods
+
+### Asphyxia (Most Common)
+- **Smothering**: Pillow over face, hand covering nose/mouth
+- **Strangulation**: Ligature around neck
+- **Choking**: Blocking airway with object or cloth
+- **Drowning**: Immersion in water or liquid
+
+### Trauma
+- **Head injury**: Blunt force to skull, subdural/epidural bleeding
+- **Internal injuries**: Abdominal trauma, organ damage
+- **Fractures**: Rib fractures, long bone fractures
+- **Intentional vs. accidental**: Important forensic question
+
+### Poisoning
+- **Herbal toxins**: Traditional medicines with toxic substances
+- **Medications**: Overdose of sedatives, narcotics
+- **Household poisons**: Pesticides, cleaning agents
+- **Natural toxins**: Plant derivatives
+
+### Neglect/Abandonment
+- **Exposure**: Leaving infant in cold/elements
+- **Starvation**: Withholding food/nutrition
+- **Dehydration**: Denying fluids
+- **Lack of medical care**: Failing to treat severe illness/injury
+
+### Other Methods
+- **Thermal injury**: Burning
+- **Falls**: From height (may be accidental vs. intentional)
+- **Electrocution**: Rare
+- **Chemical burns**: Corrosive substances
+
+## Medico-Legal Examination of Infanticide
+
+### External Examination
+- **Body size & development**: Assess age, prematurity, growth
+- **Signs of trauma**: Bruises, lacerations, fractures, burn marks
+- **Ligature marks**: Strangulation evidence
+- **Petechiae**: Face, neck (asphyxia marker)
+- **Froth**: Pulmonary edema (drowning or asphyxia)
+- **Nutritional status**: Skeletal appearance, muscle wasting
+- **Signs of neglect**: Hygiene, diaper rash, infection signs
+
+### Internal Examination (Autopsy)
+- **Lungs**: Pulmonary edema, hemorrhage, aspiration evidence
+- **Respiratory tract**: Foreign material, trauma
+- **Brain**: Subdural/epidural hemorrhage (shaken baby)
+- **Liver/organs**: Abdominal trauma, hemorrhage
+- **Stomach contents**: Aspiration, last feeding
+- **Skeletal survey**: Fractures (old and new, suggesting repeated trauma)
+- **Toxicology**: Drug/poison screening
+
+### Viability Assessment
+- **Lung buoyancy**: If lungs float (hydrostatic test) = air breathing = lived
+- **Lung weight**: Newborn lungs 35-50g; larger if air-filled and lived
+- **Stomach contents**: Feeding suggests lived after delivery
+- **Vernix caseosa**: Still present if <1 day old
+
+## Examination Findings in Different Methods
+
+### Asphyxia (Smothering)
+- Petechiae (face, conjunctiva)
+- Froth in airway
+- Lack of external injury
+- Pulmonary edema
+
+### Blunt Force Trauma
+- Bruising, lacerations, abrasions
+- Skull fractures
+- Subdural/epidural hemorrhage
+- Fractures (ribs, long bones)
+- Internal organ injury
+
+### Drowning
+- Froth cone at nose/mouth
+- Pulmonary edema (most important)
+- Water in lungs/stomach
+- Maceration (if prolonged submersion)
+
+### Poisoning
+- Toxicology screening
+- Organ damage consistent with toxin
+- No external injury usually
+- Toxin identification
+
+`,
+        mnemonics: [
+          {
+            text: "INFANTICIDE METHODS: ASTPN (Asphyxia, Starvation/Trauma, Trauma, Poisoning, Neglect)",
+            explanation: "Common methods of infanticide"
+          },
+          {
+            text: "VIABILITY MARKERS: Quickening (~16wk), Viable (~22-24wk), Live birth (signs of life)",
+            explanation: "Key gestational milestones"
+          },
+          {
+            text: "MTP ACT: Legal abortion up to 20wk (24wk special cases), Performed by registered practitioner",
+            explanation: "Legal framework for pregnancy termination"
+          },
+          {
+            text: "IPC ABORTION: 312=Miscarriage, 313=Death quick unborn, 314=Maternal death from abortion",
+            explanation: "Relevant IPC sections"
+          }
+        ],
+        keyPoints: [
+          "Infanticide: Willful killing of infant (usually <1 year), most common method asphyxia/smothering",
+          "Viability: ~22-24 weeks gestation (varies by jurisdiction)",
+          "MTP Act: Legal abortion up to 20 weeks (extended to 24 in special cases)",
+          "Unsafe abortion: Criminal under IPC; complications include hemorrhage, infection, sepsis, death",
+          "Autopsy must establish: Viability, live birth, cause of death, interval from birth to death"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "Infanticide & Abortion", edition: "34th" },
+          { book: "Parikh's Textbook of Medical Jurisprudence", chapter: "Infanticide & MTP Act", edition: "8th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "infanticide-abortion-layer-2-mechanism",
+        title: "Infanticide & Abortion - Pathophysiology & Complications",
+        estimatedMinutes: 25,
+        summary: "Physiological mechanisms of infanticide methods and complications of unsafe abortion. Understanding perinatal physiology and medical emergencies.",
+        contentMd: `# Infanticide & Abortion - Pathophysiology & Complications
+
+## Mechanism of Asphyxia in Infanticide
+
+### Newborn Respiratory Physiology
+- **Newborn airway**: Small, collapsible, easily obstructed
+- **Laryngeal reflex**: Protective but can prevent breathing with foreign material
+- **Breathing reflex**: Develops during labor; requires external stimulation initially
+- **Oxygen demand**: Newborns have high metabolic rate, rapid oxygen depletion
+
+### Smothering/Suffocation Pathophysiology
+1. **Airway occlusion**: Object (pillow, cloth) covers nose/mouth
+2. **Hypoxia develops**: Rapid in newborns (minutes, not seconds)
+3. **CO2 accumulation**: Anoxic drive increases, then fails
+4. **Consciousness loss**: Within 1-3 minutes in newborn
+5. **Brain death**: 4-6 minutes of anoxia causes irreversible damage
+6. **Cardiac arrest**: Follows cerebral death
+
+### Strangulation in Newborn
+- **Cord/ligature around neck**: Venous compression easier than adult (lower pressure)
+- **Carotid compression**: Rapid cerebral ischemia
+- **Laryngeal compression**: Additional asphyxia mechanism
+- **Vagal reflex**: Possible sudden death from cardiac reflex
+
+## Mechanism of Blunt Force Trauma
+
+### Shaken Baby Syndrome (Abusive Head Trauma)
+- **Mechanism**: Violent shaking causes brain injury within intact skull
+- **Forces**: Acceleration-deceleration, rotational forces damage brain tissue
+- **Subdural hemorrhage**: Bleeding between brain and dura (most common)
+- **Epidural hemorrhage**: Bleeding between dura and skull
+- **Retinal hemorrhages**: Specific for shaking/impact injuries
+- **White matter shearing**: Diffuse axonal injury
+- **Result**: Severe brain injury, developmental disability, or death
+
+### Direct Impact Trauma
+- **Skull fracture**: Linear, comminuted, or depressed
+- **Cerebral contusion**: Bruising of brain tissue
+- **Intracranial hemorrhage**: Bleeding in various compartments
+- **Coup-contrecoup**: Injury at impact site and opposite side
+- **Fatal injury**: Massive head trauma incompatible with life
+
+### Chest/Abdominal Trauma
+- **Rib fractures**: Indicates significant force; may indicate abuse
+- **Pulmonary contusion**: Bruising of lung tissue, bleeding into alveoli
+- **Liver laceration**: Bleeding into peritoneal cavity
+- **Spleen rupture**: Massive hemorrhage
+- **Kidney injury**: Flank trauma
+
+## Physiological Effects of Newborn Size
+
+### Why Newborns Die Quickly from Infanticide
+- **Small body mass**: Limited oxygen stores (~200-300ml)
+- **High metabolic rate**: ~5ml O2/kg/min (vs adult 3-4ml)
+- **Small blood volume**: ~80ml/kg; loss of 20-30% is critical
+- **Weak immune system**: Infections rapidly fatal
+- **Temperature regulation poor**: Exposure causes rapid hypothermia
+- **Vulnerability**: Dependent on care for survival
+
+## Complications of Unsafe Abortion
+
+### Hemorrhage (Most Common Complication)
+- **Uterine perforation**: Instruments penetrate uterine wall → abdominal bleeding
+- **Cervical laceration**: Tearing during dilation
+- **Placental abruption**: Premature separation (if induced late)
+- **Placenta previa**: Massive bleeding if disrupted
+- **Coagulopathy**: Disseminated intravascular coagulation (DIC) from sepsis
+- **Hypovolemic shock**: From blood loss
+- **Death**: From exsanguination
+
+### Infection & Sepsis
+- **Endometritis**: Infection of uterine lining (incomplete abortion debris)
+- **Parametritis**: Infection spreading to surrounding tissues
+- **Pelvic inflammatory disease (PID)**: Upper genital tract infection
+- **Septicemia**: Bloodstream infection, systemic inflammatory response
+- **Septic shock**: Organ failure from infection
+- **Death**: From overwhelming sepsis
+
+### Perforation & Internal Injury
+- **Uterine perforation**: Instruments penetrate uterine wall
+- **Bowel perforation**: Damage to intestines if instruments advance too far
+- **Abdominal hemorrhage**: Bleeding into peritoneal cavity
+- **Peritonitis**: Infection of peritoneal lining
+- **Emergency surgery**: Required to repair damage
+- **Death**: From uncontrolled hemorrhage or peritonitis
+
+### Incomplete Abortion
+- **Retained products of conception**: Fetal parts remain in uterus
+- **Infection**: Retained tissue provides culture medium for bacteria
+- **Hemorrhage**: Uterus cannot contract to compress bleeding vessels
+- **Ongoing bleeding**: Can persist for days/weeks
+- **Uterine atony**: Loss of muscle tone, uncontrolled bleeding
+- **Death**: From cumulative blood loss and infection
+
+### Anesthetic Complications
+- **Inadequate anesthesia**: Crude methods lack safety monitoring
+- **Aspiration**: Vomiting with inadequate airway protection
+- **Respiratory depression**: From overdose of anesthetic agents
+- **Cardiac arrhythmias**: From toxins or electrolyte abnormalities
+- **Death**: From respiratory failure or cardiac arrest
+
+## Cause of Death in Unsafe Abortion Cases
+
+### Direct Causes
+1. **Hemorrhage** (40-50% of deaths)
+2. **Sepsis/infection** (20-30%)
+3. **Perforation with peritonitis** (10-15%)
+4. **Anesthetic complications** (5-10%)
+5. **Aspiration** (5%)
+6. **Embolism** (1-2%)
+
+### Autopsy Findings
+- Hemorrhage (uterine, abdominal)
+- Infection signs (purulent material, infected organs)
+- Retained products (fetal tissue in uterus)
+- Perforation (hole in uterine wall/bowel)
+- Sepsis markers (organ congestion, petechiae, thrombosis)
+
+`,
+        mnemonics: [
+          {
+            text: "NEWBORN OXYGEN DEPLETION: Rapid (minutes not seconds) from small body mass and high metabolism",
+            explanation: "Why newborns die quickly from asphyxia"
+          },
+          {
+            text: "UNSAFE ABORTION DEATHS: Hemorrhage (40-50%), Sepsis (20-30%), Perforation (10-15%)",
+            explanation: "Cause of death distribution"
+          },
+          {
+            text: "SHAKEN BABY: Subdural hemorrhage, Retinal hemorrhages, Diffuse axonal injury",
+            explanation: "Classic findings in abusive head trauma"
+          },
+          {
+            text: "INCOMPLETE ABORTION: Retained products, Infection, Hemorrhage, Uterine atony",
+            explanation: "Complications of failed abortion"
+          }
+        ],
+        keyPoints: [
+          "Newborns die rapidly from asphyxia (2-5 minutes) due to small body and high metabolism",
+          "Shaken baby syndrome: acceleration-deceleration causes subdural hemorrhage and brain injury",
+          "Unsafe abortion complications: hemorrhage, sepsis, perforation, anesthetic emergencies",
+          "Incomplete abortion leaves retained products that become infected and cause ongoing hemorrhage",
+          "Autopsy must determine: viability, live birth, interval from birth, cause of death"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "Infanticide & Abortion", edition: "34th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Neonatal Physiology", edition: "21st" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "infanticide-abortion-layer-3-clinical",
+        title: "Infanticide & Abortion - Forensic Examination & Autopsy",
+        estimatedMinutes: 25,
+        summary: "Autopsy procedures in suspected infanticide. Assessment of viability, live birth evidence, and cause of death determination. Medical management of abortion complications.",
+        contentMd: `# Infanticide & Abortion - Forensic Examination & Autopsy
+
+## Autopsy Examination in Infanticide
+
+### External Examination
+1. **Body measurements**:
+   - Crown-heel length: Assess gestational age/prematurity
+   - Head circumference: Normal ~34-35cm at term
+   - Weight: Expected 2500-4000g at term
+   - Muscle tone: Limp (if dead shortly after birth)
+
+2. **Skin examination**:
+   - Vernix caseosa: Waxy coating (present if <1 day old)
+   - Lanugo: Fine body hair (more prominent if preterm)
+   - Meconium staining: Green discoloration if passed before death
+   - Maceration: Skin breakdown (postmortem artifact, timing uncertain)
+   - Lividity: May be atypical distribution
+   - Rigor mortis: Develops faster in infants than adults
+
+3. **Trauma assessment**:
+   - Bruising: Pattern, age (fresh vs. old)
+   - Lacerations: Depth, associated tissue damage
+   - Petechiae: Face, conjunctiva (asphyxia marker)
+   - Burn marks: Thermal or chemical injury
+   - Ligature marks: Strangulation evidence
+   - Fractures: Evident on X-ray or palpation
+
+4. **Identification**:
+   - Birthmarks, scars, identifying features
+   - Photography with identifying marks
+   - Fingerprints if feasible (forensic comparison)
+   - DNA sample collection (possible paternity testing)
+
+### Internal Examination (Autopsy)
+
+**Respiratory Tract**:
+- **Lungs**: Inspect for fluid, hemorrhage, foreign material
+- **Trachea/larynx**: Examine for trauma, obstruction, ligature marks
+- **Esophagus**: For aspirated material
+- **Lung buoyancy test**: Float lungs in water (float = breathed air)
+- **Lung weight**: >50g suggests lived (normal ~35-50g)
+
+**Cardiovascular**:
+- **Heart**: Signs of fetal shunts patent (foramen ovale, ductus venosus still open if died quickly)
+- **Umbilical cord**: Examine for trauma, ligature marks, placenta connection
+- **Blood**: Collect for toxicology, blood group, DNA
+
+**Gastrointestinal**:
+- **Stomach**: Examine for contents (food suggests fed after birth, alive ≥24hr)
+- **Intestines**: Check for meconium, feeding, perforation
+- **Liver**: Inspect for disease, hemorrhage, toxin effects
+- **Spleen**: Signs of trauma, infection
+
+**Central Nervous System**:
+- **Skull**: Examine for fractures (linear, comminuted, depressed)
+- **Dura**: Inspect for hemorrhage (subdural, epidural)
+- **Brain**: Look for contusions, lacerations, hemorrhage, edema
+- **Sections**: Systematic examination of all lobes and brainstem
+
+**Skeleton**:
+- **Rib fractures**: Indicate chest trauma (may suggest abuse)
+- **Long bone fractures**: Pattern and age assessment
+- **Metaphyseal fractures**: Specific for shaking injuries
+- **Dating fractures**: Callus formation indicates healing over time
+
+### Viability Assessment (Critical Forensic Question)
+
+**Tests for Evidence of Viability**:
+1. **Hydrostatic test** (lung float test):
+   - Place lungs in water
+   - Float = breathed air = baby lived
+   - Sink = no air = stillborn or died before breathing
+
+2. **Lung weight and appearance**:
+   - Prenatal lungs: Solid, airless, ~35-50g, sink in water
+   - Postnatal lungs: Spongy, air-filled, >50g, float in water
+   - Partially inflated: May give unreliable results
+
+3. **Stomach/intestinal contents**:
+   - Milk, food, or meconium in stomach = fed after birth
+   - If fed = baby lived ≥4-6 hours
+   - No feeding = may have died at birth or shortly after
+
+4. **Cord condition**:
+   - Fresh cord (not dried) = died shortly after birth
+   - Dried cord = survived ≥12-24 hours
+   - Separated cord = infection/maceration occurred
+
+5. **Other evidence**:
+   - Hair growth: Present if survived
+   - Nails growth: Present if survived weeks
+   - Infection signs: Delayed if died immediately
+
+### Determining Interval from Birth to Death
+
+- **<6 hours**: Fresh appearance, no maceration, cord fresh, body warm
+- **6-24 hours**: Early maceration (skin peeling), cord drying, body cooling
+- **24-48 hours**: Advanced maceration, lividity changes, decomposition begins
+- **>48 hours**: Decomposition, insect activity (if exposed)
+
+## Examination of Unsafe Abortion Cases
+
+### External Examination
+- **Vaginal trauma**: Lacerations, bruising from instrumentation
+- **Cervical injury**: Laceration from crude dilation
+- **Evidence of douching/instrumentation**: Foreign material, visible injuries
+
+### Internal Examination (Autopsy)
+1. **Uterus examination**:
+   - Perforation: Hole in uterine wall (location significant)
+   - Retained products: Fetal tissue, placenta, clots
+   - Infection signs: Purulent material, necrotic tissue
+   - Size/contraction: Assessment of uterine tone
+
+2. **Abdominal examination**:
+   - Hemorrhage: Blood in peritoneal cavity (quantify volume)
+   - Bowel integrity: Perforation, contamination
+   - Peritonitis: Inflammation of peritoneal lining
+   - Organ damage: Liver, spleen, kidney injury
+
+3. **Infection assessment**:
+   - Cultures: From uterus, blood, organs (if sepsis)
+   - Toxicology: For herbal toxins, medications
+   - Histology: Tissue examination for infection, inflammation
+
+4. **Pregnancy status**:
+   - Gestational age assessment (if fetal tissue present)
+   - Completeness: Determine if all products of conception present
+   - Dating: Time of abortion (fresh vs. old tissue)
+
+## Causes of Death in Infanticide vs. Unsafe Abortion
+
+### Infanticide Causes
+1. Asphyxia (smothering/strangulation) - most common
+2. Blunt force trauma/head injury
+3. Drowning
+4. Poisoning
+5. Neglect/starvation (delayed)
+
+### Unsafe Abortion Causes
+1. Hemorrhage (acute from uterine perforation)
+2. Sepsis/septic shock
+3. Aspiration/anesthetic complications
+4. Peritonitis (from perforation)
+5. Retained products (subacute, over days)
+
+## Legal & Investigation Aspects
+
+### Questions Autopsy Must Answer
+1. **Is fetus viable?** (age >22-24 weeks)
+2. **Did child breathe after delivery?** (hydrostatic test, lung examination)
+3. **How long after delivery did death occur?** (interval assessment)
+4. **What is cause of death?** (specific mechanism)
+5. **Is manner of death consistent with infanticide/abortion?** (examination findings)
+
+### Infanticide Investigation
+- Scene examination for evidence of struggle
+- Witness interviews about circumstances
+- Maternal mental health history
+- Social service records
+- POCSO considerations if sexual elements
+
+### Unsafe Abortion Investigation
+- Method used (crude instruments, herbal preparations)
+- Who performed procedure (untrained person)
+- Medical complications (hemorrhage, infection, perforation)
+- Whether delay in seeking care contributed
+
+`,
+        mnemonics: [
+          {
+            text: "VIABILITY MARKERS: Hydrostatic test (lungs float), Lung weight >50g, Stomach contents, Cord appearance",
+            explanation: "Tests to assess if baby breathed/lived"
+          },
+          {
+            text: "INTERVAL FROM BIRTH: <6hr (fresh), 6-24hr (early maceration), 24-48hr (advanced), >48hr (decomposition)",
+            explanation: "Timeline of postmortem changes"
+          },
+          {
+            text: "ABORTION DEATH CAUSES: Hemorrhage > Sepsis > Perforation > Aspiration",
+            explanation: "Frequency of complications"
+          },
+          {
+            text: "INFANTICIDE AUTOPSY: Viability (yes/no), Breathed (lungs float?), Interval (when died), Cause (how died)",
+            explanation: "Key autopsy questions"
+          }
+        ],
+        keyPoints: [
+          "Lung float test critical to determine if baby breathed (viability assessment)",
+          "Stomach contents (milk/food) indicate baby lived ≥6 hours after birth",
+          "Interval from birth to death assessed by maceration, cord condition, body temperature",
+          "Unsafe abortion complications: hemorrhage (acute), sepsis (subacute), perforation (peritonitis)",
+          "Autopsy must definitively answer: viable? breathed? interval from birth? cause of death?"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "Infanticide & Abortion", edition: "34th" },
+          { book: "Parikh's Textbook of Medical Jurisprudence", chapter: "Infanticide & MTP Act", edition: "8th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "infanticide-abortion-layer-4-exam",
+        title: "Infanticide & Abortion - Exam Preparation",
         estimatedMinutes: 20,
-        summary: "Introduction to infanticide, abortion, and Medical Termination of Pregnancy (MTP) Act 2021. Understanding legal definitions, medical/legal grounds for termination, and forensic aspects of neonatal death.",
-        contentMd: "# Infanticide & Abortion (MTP Act) - Foundation\n\n## Definitions\n\n### Infanticide\n- **Definition**: Intentional killing of a child within 12 months of birth\n- **IPC Section 305**: Punishment 3-10 years imprisonment (less than murder)\n- **Rationale**: Diminished responsibility during postpartum period (stress, hormonal changes)\n- **Legal distinction**: Infanticide vs. murder (same act, reduced penalty)\n- **Forensic significance**: Must differentiate intentional killing from accidental death, SIDS (Sudden Infant Death Syndrome)\n\n### Abortion\n- **Definition**: Termination of pregnancy before fetus is viable (before 20 weeks)\n- **IPC Section 312-318**: Provisions on causing/facilitating abortion\n- **Criminal abortion**: Abortion without consent, illegal abortion, unsafe abortion\n- **Miscarriage/Spontaneous abortion**: Natural termination (not criminal)\n\n### Medical Termination of Pregnancy (MTP Act 2021)\n\n**Key Features**:\n- **Updated from MTP Act 1972** with more liberal provisions\n- **Gestational limits**:\n  - Up to 20 weeks: One registered medical practitioner (RMP) consent\n  - 20-24 weeks: Two RMP consent (exceptional circumstances)\n  - >24 weeks: NOT permitted (except fetal anomaly incompatible with life)\n\n**Grounds for Termination**:\n1. **Pregnant woman's health** (physical/mental)\n2. **Socioeconomic reasons** (up to 20 weeks, liberal approach)\n3. **Contraceptive failure** (married/unmarried, widowed, divorced)\n4. **Fetal anomaly** (incompatible with life, ultrasound confirmation)\n\n## Neonatal Death Mechanisms\n\n### Natural Deaths in Neonates\n1. **Prematurity-related**:\n   - Respiratory distress syndrome\n   - Intraventricular hemorrhage\n   - Necrotizing enterocolitis\n\n2. **Birth defects**:\n   - Congenital heart disease\n   - Central nervous system malformations\n\n3. **Infection**:\n   - Sepsis (bacterial, viral)\n   - Meningitis\n   - Chorioamnionitis\n\n4. **SIDS** (Sudden Infant Death Syndrome):\n   - Unexplained death in infants <1 year (usually 2-4 months)\n   - Diagnosis of exclusion\n\n### Infanticide (Criminal Deaths)\n1. **Asphyxia**: Smothering, gagging, choking\n2. **Mechanical trauma**: Blunt force, internal injuries\n3. **Poisoning**: Drugs, toxins\n4. **Starvation**: Deprivation of food/fluids\n5. **Neglect**: Exposure, lack of medical care\n\n## Forensic Autopsy in Neonatal Death\n\n### Scene Investigation\n- **Position**: Where baby found (crib, fallen, abandoned)\n- **Condition**: Wrapped, unclothed, temperature\n- **Associated items**: Plastic bags, ropes (asphyxia), medications\n- **Placenta/umbilical cord**: If delivered, condition of delivery\n- **Evidence**: Signs of struggle, restraints\n\n### Key Autopsy Features\n\n**Live Birth vs. Stillbirth**:\n1. **Aeration of lungs**: Floats in water (live birth), sinks (stillbirth)\n2. **Stomach contents**: Air in live birth, empty in stillbirth\n3. **Patent foramen ovale**: Probe passes in both; not diagnostic alone\n4. **Liver color**: Pale (live birth, with respiration), dark red (stillbirth)\n\n**Signs of Viability**:\n- **Lung flotation test**: MOST IMPORTANT\n- **Stomach aeration**\n- **Persistence of blood circulation**\n- **Liver paling** (from oxygenation)\n\n**Evidence of Survival After Birth**:\n- **Respiratory effort** (lungs aerate)\n- **Feeding** (milk in stomach)\n- **Cord separation** (if time elapsed)\n- **Meconium passage** (bowel activity)\n\n### Forensic Significance of Findings\n- **Aerated lungs + stomach contents = LIVE BIRTH & SURVIVAL**\n- **Non-aerated lungs + empty stomach = STILLBIRTH or very early infanticide**\n- **Injury patterns**: Determine if accidental or inflicted\n- **Manner of death determination**: Crucial for legal case,\n        mnemonics: [\n          { text: \"INFANTICIDE: <12 months old, IPC 305 (lighter than murder)\", explanation: \"Definition and legal section\" },\n          { text: \"MTP ACT 2021: <20 wks=1 doctor, 20-24 wks=2 doctors, >24 wks=NOT allowed\", explanation: \"Gestational limits and doctor requirements\" },\n          { text: \"LIVE BIRTH TESTS: Lung float + Stomach air + Liver pale = AERATION = Live birth\", explanation: \"Key autopsy tests\" },\n          { text: \"NEONATAL DEATH CAUSES: BIC (Birth defects, Infection, Congenital anomaly) vs. Infanticide\", explanation: \"Natural vs. criminal causes\" }\n        ],\n        keyPoints: [\n          \"Infanticide: Killing child <12 months; IPC 305 (reduced penalty vs. murder due to stress/postpartum)\",\n          \"MTP Act 2021: Allows termination up to 20 weeks (1 RMP) or 20-24 weeks (2 RMP) on medical grounds\",\n          \"Lung flotation test most important for differentiating live birth from stillbirth\",\n          \"Criminal infanticide: asphyxia, trauma, poisoning; differentiate from natural death, SIDS\",\n          \"Criminal abortion vs. medical termination: Legal authorization determines criminality\"\n        ],\n        textbookRefs: [\n          { book: \"Reddy's Forensic Medicine\", chapter: \"Ch 24 - Infanticide & Abortion\", edition: \"34th\" },\n          { book: \"Parikh's Textbook of Medical Jurisprudence\", chapter: \"Ch Infanticide, Abortion, MTP Act\", edition: \"8th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"infanticide-abortion-mtp-mechanism\",\n        title: \"Infanticide & Abortion (MTP Act) - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Physiological mechanisms of neonatal death in infanticide cases. Understanding asphyxial mechanisms, trauma pathophysiology, and pathological changes occurring in fetal/neonatal tissues during pregnancy termination and after birth.\",\n        contentMd: "# Infanticide & Abortion (MTP Act) - Mechanism\\n\\n## Mechanisms of Infanticide\\n\\n### Asphyxia in Infanticide\\n1. **Smothering**:\\n   - Covering nose/mouth with pillow, plastic bag, hand\\n   - Prevents air entry\\n   - Neonate cannot struggle effectively (weak, less coordinated)\\n   - Death from hypoxia in minutes\\n\\n2. **Gagging/Choking**:\\n   - Placing cloth, cord, or object in mouth\\n   - Triggers gag reflex + mechanical obstruction\\n   - Airway obstruction\\n\\n3. **Strangulation**:\\n   - Cord around neck (rare in neonates; neck small)\\n   - Carotid/jugular compression\\n   - Vagal reflex more likely (immature nervous system)\\n\\n### Trauma in Infanticide\\n1. **Blunt force**:\\n   - Beating, blunt impact\\n   - Subdural hemorrhage (brain bleeding)\\n   - Internal organ trauma (liver, spleen, kidneys)\\n   - Fractures (ribs, long bones, skull)\\n\\n2. **Penetrating trauma**:\\n   - Sharp object injuries\\n   - Stab wounds\\n   - Rare (requires deliberate intent)\\n\\n### Poisoning in Infanticide\\n1. **Medicinal overdose**:\\n   - Sedatives (paracetamol, aspirin)\\n   - Opioids (morphine)\\n   - Anticholinergics\\n\\n2. **Environmental toxins**:\\n   - Lead (from paint, old containers)\\n   - Carbon monoxide (defective stove)\\n   - Pesticides\\n\\n### Starvation/Neglect in Infanticide\\n- Withholding food/fluids\\n- Dehydration develops in days\\n- Hypoglycemia, electrolyte imbalance\\n- Pneumonia from aspiration (neglected feeding position)\\n\\n## Fetal/Neonatal Physiology in Termination\\n\\n### Changes at Birth\\n1. **Respiratory system activation**:\\n   - First breath: Negative pressure expands lungs\\n   - Pulmonary vascular resistance drops (placental circulation ceases)\\n   - Blood flow diverts from lungs (fetal pattern) to lungs (neonatal pattern)\\n\\n2. **Circulatory changes**:\\n   - **Foramen ovale closes**: Right-to-left shunt eliminated\\n   - **Ductus venosus closes**: Liver circulation perfusion begins\\n   - **Ductus arteriosus closes**: Right ventricular output to lungs begins\\n\\n3. **Metabolic changes**:\\n   - Placental nutrition ceases\\n   - Neonate dependent on enteral/IV nutrition\\n   - Hypoglycemia develops without feeding\\n\\n### Fetal Viability\\n- **Legal definition**: Ability to survive independently outside uterus\\n- **Physiological viability**: ~20-22 weeks (surfactant production begins)\\n- **Practical viability**: ~24 weeks ( 50% survival with intensive care)\\n- **MTP Act viability**: >24 weeks considered viable (generally not permitted termination)\\n\\n## Pathological Changes in Abortion/Termination\\n\\n### Natural Abortion (Miscarriage)\\n1. **Placental pathology**:\\n   - Placental infarction (inadequate blood supply)\\n   - Infection (chorioamnionitis, villitis)\\n   - Detachment (placental abruption)\\n\\n2. **Fetal changes**:\\n   - Maceration (autolysis, tissue disintegration) if retained\\n   - Mummification (if chronic retention in dry environment)\\n   - No signs of inflammation (stillbirth, immune response minimal)\\n\\n### Medical Termination (Mifepristone/Misoprostol)\\n1. **Mifepristone effects**:\\n   - **Progesterone antagonist**: Disrupts corpus luteum function\\n   - Decidualization reversal (placental separation begins)\\n   - Uterine contractions may begin\\n\\n2. **Misoprostol effects**:\\n   - **Prostaglandin analog**: Induces uterine contractions\\n   - Cervical ripening (dilation)\\n   - Expulsion of products of conception\\n\\n3. **Timing**:\\n   - Mifepristone day 1 (RU-486)\\n   - Misoprostol days 2-3\\n   - Evacuation 1-2 weeks (complete in 90-95%)\\n\\n### Unsafe Abortion Complications\\n1. **Perforation**: Uterine rupture from instruments\\n2. **Hemorrhage**: Placental detachment, coagulopathy\\n3. **Infection**: Chorioamnionitis, sepsis, peritonitis\\n4. **Retention**: Incomplete abortion, products left behind\\n5. **Trauma**: Vaginal/cervical laceration\\n\\n## Neonatal Death Pathophysiology\\n\\n### SIDS vs. Infanticide Differentiation\\n\\n**SIDS (Sudden Infant Death Syndrome)**:\\n- Occurs during sleep (usually supine position)\\n- Age: 2-4 months (peak)\\n- Risk factors: Prematurity, smoking, overheating, prone position\\n- Pathophysiology: Unknown; theories include respiratory immaturity, autonomic dysfunction\\n- Autopsy: Usually NORMAL findings (diagnosis of exclusion)\\n- No trauma, no asphyxia evidence\\n\\n**Infanticide (Asphyxia)**:\\n- Evidence of interference: Plastic over head, hands on face\\n- Petechiae: Face, neck (from capillary rupture due to venous obstruction)\\n- Frothy fluid: In airways (pulmonary edema)\\n- Facial marks: Finger marks, cord grooves\\n- Internal: Pulmonary edema, cerebral edema\\n\\n### Differentiation Features\\n| Feature | SIDS | Infanticide |\\n|---------|------|---|\\n| **Scene** | Baby in crib, peaceful | Evidence of struggle/interference |\\n| **Position** | Variable (but usually supine) | May show restraint marks |\\n| **Autopsy findings** | Normal | Asphyxia signs (petechiae, froth) |\\n| **Injuries** | None | Trauma, marks |\\n| **Petechiae** | Absent/minimal | Prominent |\\n| **History** | No history of abuse | Often history of stress/postpartum |,\\n        mnemonics: [\\n          { text: \\\"ASPHYXIA METHODS: SCS (Smothering, Choking/gagging, Strangulation/starvation)\\\", explanation: \\\"Three main asphyxial mechanisms in infanticide\\\" },\\n          { text: \\\"BIRTH CHANGES: CFD (Circulation changes, Foramen ovale closure, Ductus arteriosus closure)\\\", explanation: \\\"Key physiologic transitions\\\" },\\n          { text: \\\"LUNG FLOTATION: Live birth aerated (floats), Stillbirth collapsed (sinks)\\\", explanation: \\\"Most important autopsy test\\\" },\\n          { text: \\\"SIDS vs. INFANTICIDE: SIDS=Normal autopsy/no marks, Infanticide=Petechiae/trauma/marks\\\", explanation: \\\"Key differential features\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Smothering most common infanticide method (simple, leaves minimal evidence)\\\",\\n          \\\"Pulmonary aeration indicates live birth and survival; non-aerated = stillbirth\\\",\\n          \\\"Stomach air indicates breathing/feeding; empty stomach = no survival time\\\",\\n          \\\"SIDS diagnosis of exclusion (normal autopsy findings); infanticide shows trauma/asphyxia signs\\\",\\n          \\\"Petechiae prominent in asphyxial infanticide; absent in SIDS\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Reddy's Forensic Medicine\\\", chapter: \\\"Ch 24 - Infanticide & Abortion\\\", edition: \\\"34th\\\" },\\n          { book: \\\"Sabiston Textbook of Surgery\\\", chapter: \\\"Ch 6 - Wound Healing\\\", edition: \\\"21st\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"infanticide-abortion-mtp-clinical\\\",\\n        title: \\\"Infanticide & Abortion (MTP Act) - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical assessment of suspicious neonatal deaths, forensic autopsy findings, investigation of infanticide cases, and application of MTP Act in medical practice including consent and documentation.\\\",\\n        contentMd: "# Infanticide & Abortion (MTP Act) - Clinical\\\\n\\\\n## Assessment of Suspicious Neonatal Death\\\\n\\\\n### History-Taking Red Flags\\\\n- **Delayed presentation**: Found after hours/days (suggests concealment)\\\\n- **Vague history**: \\\\\\\"Don't know,\\\\\\\" \\\\\\\"wasn't there,\\\\\\\" \\\\\\\"alone\\\\\\\"\\\\n- **Changing story**: Inconsistencies between accounts\\\\n- **Parental stress**: Postpartum depression, financial stress, substance abuse\\\\n- **Prior losses**: Multiple unexplained infant deaths (serial infanticide rare but possible)\\\\n- **Lack of prenatal care**: No medical oversight\\\\n\\\\n### Scene Investigation\\\\n- **Position and condition**: Baby fully clothed vs. exposed, crib vs. found elsewhere\\\\n- **Associated objects**: Plastic bags, pillows, cords\\\\n- **Environmental factors**: Temperature (exposure), location (bathroom, trash, abandoned)\\\\n- **Time of discovery**: When found vs. when likely died\\\\n- **Witnesses**: Who present, what observed\\\\n\\\\n### Initial Assessment at Hospital\\\\n1. **Vital signs**: Already deceased vs. moribund vs. alive\\\\n2. **Temperature**: Cold suggests time since death; warm suggests recent\\\\n3. **Rigor/Livor**: Rigor (hours), livor (discoloration from dependent position) indicate time course\\\\n4. **Injuries**: Obvious trauma, bruising, marks, fractures\\\\n5. **Asphyxia signs**: Cyanosis, petechiae, froth\\\\n\\\\n## Forensic Autopsy in Infanticide\\\\n\\\\n### External Examination\\\\n1. **Ligature marks**: Cord, cloth around neck, wrists, ankles\\\\n2. **Facial marks**: Finger marks, hand prints, smothering evidence\\\\n3. **Injuries**: Bruising, lacerations, fractures\\\\n4. **Genital**: Inspect for sexual abuse (rare, but investigate)\\\\n5. **Condition**: Maceration (water immersion), adipocere (prolonged water/soil contact)\\\\n\\\\n### Critical Tests\\\\n1. **Lung flotation test** (MOST IMPORTANT):\\\\n   - Dissect lungs from trachea\\\\n   - Place in water container\\\\n   - Floats = aerated (live birth, some survival)\\\\n   - Sinks = not aerated (stillbirth or very early death)\\\\n   - Interpretation: Aerated lungs = infant breathed after birth\\\\n\\\\n2. **Stomach examination**:\\\\n   - Open stomach at autopsy\\\\n   - Presence of food/milk = feeding occurred (survival time)\\\\n   - Empty stomach = may indicate quick death or stillbirth\\\\n   - Note: Vomiting/aspiration may show milk in trachea\\\\n\\\\n3. **Liver color**:\\\\n   - Pale liver = well-perfused with oxygenated blood (live birth)\\\\n   - Dark/congested = no oxygenation (stillbirth)\\\\n   - Correlates with lung aeration\\\\n\\\\n4. **Cord examination**:\\\\n   - Separated vs. attached\\\\n   - Time of separation varies (days to weeks depending on care)\\\\n   - Dry, desiccated = time since birth\\\\n   - Moist, fresh = recent separation\\\\n\\\\n### Internal Examination for Cause of Death\\\\n1. **Asphyxia signs**:\\\\n   - Petechiae in lungs, heart, thoracic organs\\\\n   - Pulmonary edema (fluid in lungs, foamy)\\\\n   - Cerebral edema (brain swelling)\\\\n   - Tongue indentation (from teeth, indicates antemortem pressure)\\\\n\\\\n2. **Trauma assessment**:\\\\n   - Subdural/epidural hemorrhage (head injury)\\\\n   - Liver/splenic lacerations (abdominal trauma)\\\\n   - Rib fractures (compression)\\\\n   - Bowel perforation (blunt trauma)\\\\n\\\\n3. **Infection assessment**:\\\\n   - Pneumonia (aspiration, bacterial)\\\\n   - Meningitis (CSF analysis)\\\\n   - Sepsis (blood cultures)\\\\n\\\\n4. **Toxicology**:\\\\n   - Drug screen (sedatives, poisons)\\\\n   - Metabolic panel (hypoglycemia, electrolyte abnormality)\\\\n\\\\n## MTP Act Application in Medical Practice\\\\n\\\\n### Legal Requirements Before Termination\\\\n\\\\n**Gestational Dating**:\\\\n- **Ultrasound confirmation** of gestational age\\\\n- Weeks of gestation determines consent requirements\\\\n- <20 weeks: Single RMP\\\\n- 20-24 weeks: Two RMP (exceptional circumstances)\\\\n\\\\n**Documentation Required**:\\\\n1. **Informed consent form**: Pregnant woman signs after counseling\\\\n2. **Reasons for termination**: Medical grounds, socioeconomic, fetal anomaly\\\\n3. **Ultrasound report**: Confirms gestation, any fetal anomalies\\\\n4. **RMP signatures**: One (or two if 20-24 weeks)\\\\n5. **Medical record**: Complete documentation in file\\\\n6. **Follow-up**: Contraceptive counseling, post-termination checkup\\\\n\\\\n### Procedure Documentation\\\\n- **Date, time, method of termination**: Medical/surgical details\\\\n- **Complications**: Hemorrhage, incomplete evacuation, perforation\\\\n- **Products of conception**: Examined, documented\\\\n- **Discharge instructions**: Follow-up appointments, contraception\\\\n- **Witness**: Nursing staff present during procedure\\\\n\\\\n### Post-Termination Follow-Up\\\\n1. **Medical evaluation**: RH sensitization (RhoGAM if Rh-negative)\\\\n2. **Infection prophylaxis**: Antibiotics given\\\\n3. **Contraception**: Counseling, provision of contraceptive method\\\\n4. **Psychological support**: Referral if needed\\\\n5. **Complications management**: If infection, hemorrhage, incomplete abortion\\\\n\\\\n## Distinguishing Criminal from Legal Abortion\\\\n\\\\n### Criminal Abortion Indicators\\\\n- **Unsafe procedure**: Non-medical provider, unsterilized instruments\\\\n- **Late presentation**: Complications from unsafe abortion\\\\n- **Perforation**: Uterine rupture, visceral injuries\\\\n- **Hemorrhage**: Severe bleeding from careless procedure\\\\n- **Infection**: Peritonitis, sepsis from contamination\\\\n- **Lack of consent**: Forced abortion (rare but possible)\\\\n\\\\n### Legal Abortion Under MTP Act\\\\n- **Proper authorization**: Valid consent, RMP approval\\\\n- **Documented procedure**: Records of termination\\\\n- **Safe procedure**: Medical facility, sterile instruments, RMP supervision\\\\n- **Appropriate follow-up**: Post-termination care\\\\n- **Court admissibility**: Medical records demonstrate legality\\\\n\\\\n## Forensic Documentation in Suspected Infanticide\\\\n\\\\n### Medical Record Requirements\\\\n1. **History as given**: Document exactly what patient/family states\\\\n2. **Examination findings**: Objective descriptions (measurements, colors, locations)\\\\n3. **Injuries documented**: Photographs with consent (if possible)\\\\n4. **Manner of death determination**: \\\\\\\"Homicide,\\\\\\\" \\\\\\\"Accident,\\\\\\\" \\\\\\\"Natural,\\\\\\\" \\\\\\\"Undetermined\\\\\\\"\\\\n5. **Chain of custody**: All evidence handling documented\\\\n6. **Expert opinion**: Pathologist's interpretation of findings\\\\n\\\\n### Communication with Law Enforcement\\\\n- **Mandatory reporting**: Suspected infanticide must be reported to police\\\\n- **Findings communicated**: Share autopsy findings with investigating officer\\\\n- **Expert witness**: May be called to testify about cause/manner of death\\\\n- **Confidentiality**: Balance investigation needs with privacy\\\\n\\\\n### Court Testimony\\\\n- **Medical facts**: Present autopsy findings objectively\\\\n- **Mechanisms explained**: How injuries/asphyxia could cause death\\\\n- **Differential diagnosis**: Discuss natural causes ruled out\\\\n- **Manner of death**: Based on evidence (not opinion of guilt)\\\\n- **Cross-examination**: Defense may challenge interpretation,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"NEONATAL DEATH RED FLAGS: DVH-PRE (Delayed presentation, Vague history, Hiding location, Prior losses, Stress/depression, no Prenatal care)\\\\\\\", explanation: \\\\\\\"History features raising suspicion\\\\\\\" },\\\\n          { text: \\\\\\\"AUTOPSY KEY: LFS (Lung Floats=live, stomach Food=feeding, Liver pale=aerated)\\\\\\\", explanation: \\\\\\\"Three most important findings\\\\\\\" },\\\\n          { text: \\\\\\\"MTP ACT CONSENT: <20wks=1 RMP, 20-24=2 RMP, Ultrasound dating required, Written consent\\\\\\\", explanation: \\\\\\\"Legal requirements\\\\\\\" },\\\\n          { text: \\\\\\\"ASPHYXIA AUTOPSY: PFE (Petechiae, Frothy fluid in airways, Edema cerebral/pulmonary)\\\\\\\", explanation: \\\\\\\"Asphyxia autopsy signs\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Lung flotation test determines if infant breathed (aerated) after birth\\\\\\\",\\\\n          \\\\\\\"Stomach contents indicate survival time and feeding after birth\\\\\\\",\\\\n          \\\\\\\"Delayed presentation, vague history, hidden location raise suspicion of infanticide\\\\\\\",\\\\n          \\\\\\\"SIDS diagnosis requires normal autopsy (infanticide must be excluded)\\\\\\\",\\\\n          \\\\\\\"MTP Act requires consent form, RMP approval, ultrasound dating, documentation\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Reddy's Forensic Medicine\\\\\\\", chapter: \\\\\\\"Ch 24 - Infanticide & Abortion\\\\\\\", edition: \\\\\\\"34th\\\\\\\" },\\\\n          { book: \\\\\\\"Parikh's Textbook of Medical Jurisprudence\\\\\\\", chapter: \\\\\\\"Ch Infanticide, Abortion, MTP Act\\\\\\\", edition: \\\\\\\"8th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"infanticide-abortion-mtp-exam\\\\\\\",\\\\n        title: \\\\\\\"Infanticide & Abortion (MTP Act) - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield exam facts on infanticide, abortion, and MTP Act. Focus on autopsy tests distinguishing live birth from stillbirth, mechanisms of infanticide, and legal requirements for medical termination.\\\\\\\",\\\\n        contentMd: "# Infanticide & Abortion (MTP Act) - Exam Prep\\\\\\\\n\\\\\\\\n## High-Yield Facts\\\\\\\\n\\\\\\\\n### Infanticide (IPC 305)\\\\\\\\n- **Definition**: Killing of child <12 months\\\\\\\\n- **Penalty**: 3-10 years imprisonment (less than murder)\\\\\\\\n- **Rationale**: Postpartum stress, hormonal changes, diminished responsibility\\\\\\\\n- **Common method**: Asphyxia (smothering), trauma, starvation, poisoning\\\\\\\\n- **Forensic challenge**: Differentiate from accidental death, SIDS\\\\\\\\n\\\\\\\\n### MTP Act 2021 (Updated from 1972)\\\\\\\\n- **<20 weeks**: 1 RMP consent (liberal approach)\\\\\\\\n- **20-24 weeks**: 2 RMP consent (exceptional circumstances: fetal anomaly, maternal health)\\\\\\\\n- **>24 weeks**: NOT permitted (except fetal anomaly incompatible with life)\\\\\\\\n- **Grounds**: Maternal health, socioeconomic reasons, contraceptive failure, fetal anomaly\\\\\\\\n- **Key change**: Socioeconomic reasons now valid; more liberal than previous law\\\\\\\\n\\\\\\\\n### Autopsy Tests in Neonatal Death\\\\\\\\n\\\\\\\\n**Lung Flotation Test** (MOST IMPORTANT):\\\\\\\\n- **Live birth (aerated)**: Lungs float in water\\\\\\\\n- **Stillbirth (collapsed)**: Lungs sink in water\\\\\\\\n- **Significance**: Aerated lungs = infant breathed after birth\\\\\\\\n- **Mechanism**: First breath expands lungs with air\\\\\\\\n- **Pitfall**: Can be artificially inflated after death (not reliable)\\\\\\\\n\\\\\\\\n**Other Tests**:\\\\\\\\n- **Stomach contents**: Food/milk = fed after birth (survival)\\\\\\\\n- **Liver color**: Pale (live birth, aerated), dark (stillbirth)\\\\\\\\n- **Cord**: Dried/separated (time since birth), fresh attached (stillbirth)\\\\\\\\n\\\\\\\\n### Infanticide Autopsy Findings\\\\\\\\n- **Asphyxia signs**: Petechiae (face, organs), frothy fluid, tongue marks\\\\\\\\n- **Trauma**: Subdural hemorrhage, internal injuries, fractures\\\\\\\\n- **Markers of struggle**: Hand marks, ligature marks, bruising\\\\\\\\n- **Absence of findings**: May indicate very early death, slow asphyxia\\\\\\\\n\\\\\\\\n### SIDS vs. Infanticide\\\\\\\\n| Feature | SIDS | Infanticide |\\\\\\\\n|---------|------|---|\\\\\\\\n| **Autopsy** | NORMAL (diagnosis of exclusion) | Abnormal (trauma/asphyxia signs) |\\\\\\\\n| **Scene** | Peaceful, crib | Evidence of struggle |\\\\\\\\n| **Petechiae** | Absent | Present |\\\\\\\\n| **Injuries** | None | Present |\\\\\\\\n| **History** | No suspicious factors | Stress/concealment |\\\\\\\\n\\\\\\\\n## Common Exam Scenarios\\\\\\\\n\\\\\\\\n### Scenario 1: \\\\\\\\\\\\\\\"Neonatal autopsy. Lungs float in water, stomach contains milk, liver pale, no injuries. SIDS vs. infanticide?\\\\\\\\\\\\\\\"\\\\\\\\n- **Findings indicate**: LIVE BIRTH & SURVIVAL (aerated lungs, fed)\\\\\\\\n- **Autopsy normal**: Consistent with SIDS\\\\\\\\n- **Conclusion**: SIDS (diagnosis of exclusion; no evidence of infanticide)\\\\\\\\n- **Key point**: Absence of injury doesn't prove SIDS; must rule out asphyxia\\\\\\\\n\\\\\\\\n### Scenario 2: \\\\\\\\\\\\\\\"Neonatal autopsy. Lungs sink in water, empty stomach, dark liver, petechiae in lungs. Manner of death?\\\\\\\\\\\\\\\"\\\\\\\\n- **Findings indicate**: STILLBIRTH or very early infanticide\\\\\\\\n- **Petechiae + dark liver**: Suggests anoxia (asphyxia or stillbirth)\\\\\\\\n- **Non-aerated lungs**: No breathing efforts (stillbirth or early death)\\\\\\\\n- **Challenge**: Differentiate stillbirth from infanticide\\\\\\\\n- **Scene investigation critical**: Was baby concealed? Found abandoned? Maternal history?\\\\\\\\n\\\\\\\\n### Scenario 3: \\\\\\\\\\\\\\\"Woman 22 weeks pregnant presenting with complications. Wants abortion. MTP Act requirements?\\\\\\\\\\\\\\\"\\\\\\\\n- **Gestation 22 weeks**: Falls in 20-24 week range\\\\\\\\n- **Requirement**: TWO RMP consent (not just one)\\\\\\\\n- **\\\\\\\\\\\\\\\"Exceptional circumstances\\\\\\\\\\\\\\\"** for 20-24 week termination\\\\\\\\n- **Documentation**: Ultrasound confirmation of gestation, both RMP signatures, consent form\\\\\\\\n- **Complication management**: RhoGAM (if Rh-negative), antibiotics, follow-up\\\\\\\\n\\\\\\\\n### Scenario 4: \\\\\\\\\\\\\\\"Woman with concealed pregnancy presents with baby found abandoned. Baby has ligature marks on neck, petechiae, pulmonary edema. Manner of death?\\\\\\\\\\\\\\\"\\\\\\\\n- **Scene + findings**: Suggest strangulation/asphyxia infanticide\\\\\\\\n- **Ligature marks**: Indicate intentional interference\\\\\\\\n- **Petechiae + froth**: Asphyxia signs\\\\\\\\n- **Manner of death**: HOMICIDE (infanticide)\\\\\\\\n- **Investigation**: Identify mother, establish intent, prosecution\\\\\\\\n\\\\\\\\n## Examination-Type Questions\\\\\\\\n\\\\\\\\n**Q: Lung flotation test in neonatal autopsy shows lungs SINK in water. Most likely diagnosis?**\\\\\\\\n- A: Live birth with SIDS\\\\\\\\n- B: **Stillbirth or very early infanticide (non-aerated lungs)** - CORRECT\\\\\\\\n- C: Congenital heart disease\\\\\\\\n- D: Pneumonia\\\\\\\\n\\\\\\\\n**Q: MTP Act 2021 allows termination in 20-24 week pregnancy under which circumstances?**\\\\\\\\n- A: Any reason (woman's choice)\\\\\\\\n- B: **Exceptional circumstances (fetal anomaly, maternal health)** - CORRECT\\\\\\\\n- C: Socioeconomic reasons (like <20 weeks)\\\\\\\\n- D: >24 weeks if woman requests\\\\\\\\n\\\\\\\\n**Q: Infanticide (IPC 305) penalty compared to murder:**\\\\\\\\n- A: **MORE lenient (3-10 years vs. life/7+ years for murder)** - CORRECT\\\\\\\\n- B: Same as murder\\\\\\\\n- C: Less serious than culpable homicide\\\\\\\\n- D: Not prosecutable if postpartum\\\\\\\\n\\\\\\\\n**Q: SIDS diagnosis requires what autopsy finding?**\\\\\\\\n- A: Foam in airways\\\\\\\\n- B: Petechiae\\\\\\\\n- C: **NORMAL autopsy findings (diagnosis of exclusion)** - CORRECT\\\\\\\\n- D: Pneumonia\\\\\\\\n\\\\\\\\n**Q: A 25-week pregnant woman wants abortion. How many RMP signatures required under MTP Act?**\\\\\\\\n- A: 1\\\\\\\\n- B: **2** - CORRECT (20-24 weeks requires 2 RMP)\\\\\\\\n- C: 3\\\\\\\\n- D: None (not allowed)\\\\\\\\n\\\\\\\\n## Quick Reference\\\\\\\\n\\\\\\\\n**Live Birth Tests**:\\\\\\\\n- Lung floats = aerated\\\\\\\\n- Stomach has milk = fed\\\\\\\\n- Liver pale = oxygenated\\\\\\\\n- = Alive & survived post-birth\\\\\\\\n\\\\\\\\n**Stillbirth Tests**:\\\\\\\\n- Lungs sink = not aerated\\\\\\\\n- Stomach empty = no feeding\\\\\\\\n- Liver dark = not oxygenated\\\\\\\\n- = Dead at/before delivery\\\\\\\\n\\\\\\\\n**Infanticide Clues**:\\\\\\\\n- Petechiae\\\\\\\\n- Frothy fluid\\\\\\\\n- Ligature marks\\\\\\\\n- Hidden location\\\\\\\\n- Concealed pregnancy,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"LUNG FLOAT: Float=Live aerated, Sink=Still/early death\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Most important autopsy test\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"MTP CONSENT: <20=1 RMP, 20-24=2 RMP, >24=NO (except fetal anomaly)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Gestational age consent requirement\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"SIDS AUTOPSY: Normal (all tests normal) = SIDS diagnosis\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Key differentiator\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"INFANTICIDE SIGNS: PFL (Petechiae, Froth, Ligature marks, Liver dark)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Asphyxia/trauma markers\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Lung flotation test determines if infant breathed (most important autopsy test)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"SIDS requires normal autopsy findings; any abnormality suggests other cause\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"MTP Act 2021: <20 weeks liberal (socioeconomic OK), 20-24 weeks restrictive (exceptional only)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Infanticide more common in mothers with postpartum stress, psychiatric illness\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Ligature marks + petechiae = asphyxia infanticide; differentiate from SIDS\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Reddy's Forensic Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 24 - Infanticide & Abortion\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"34th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Parikh's Textbook of Medical Jurisprudence\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch Infanticide, Abortion, MTP Act\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"infanticide-abortion-mtp-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Infanticide & Abortion (MTP Act) - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Active recall questions testing understanding of forensic autopsy tests in neonatal death, mechanisms of infanticide vs. natural death, and MTP Act legal requirements.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Infanticide & Abortion (MTP Act) - Active Recall\\\\\\\\n\\\\\\\\n**Q1: Explain the significance of the lung flotation test and why it is considered the MOST important autopsy test in neonatal death.**\\\\\\\\n> Lung flotation test: Dissect lungs at autopsy; place in water. If float = aerated (air-filled) lungs. If sink = collapsed lungs (no air). Significance: Lungs only become aerated when neonate takes first breath after birth. Non-aerated lungs indicate: (1) Stillbirth (never breathed), (2) Very early infanticide before breathing established, (3) Mechanical asphyxia preventing respiration. Aerated lungs prove infant breathed after birth, establishing live birth and some post-birth survival. Combined with stomach contents and other tests, lung flotation determines if death was antemortem vs. peripartum. This is most important because it definitively answers: \\\\\\\\\\\\\\\"Did this baby live after birth?\\\\\\\\\\\\\\\" which is critical for establishing infanticide vs. stillbirth.\\\\\\\\n\\\\\\\\n**Q2: Describe the findings and forensic interpretation in cases of asphyxial infanticide due to smothering.**\\\\\\\\n> Asphyxial infanticide findings (smothering): (1) **External**: Petechiae on face/neck/upper body (capillary rupture from venous obstruction), cyanosis (blue discoloration), possibly facial marks from pillow/fabric pressure, (2) **Lung**: Pulmonary edema (fluid in airways), petechiae on lung surface and cut surface (anoxic damage), (3) **Other organs**: Petechiae in liver, heart, thymus, (4) **Brain**: Cerebral edema, petechial hemorrhages (anoxic brain injury), (5) **Stomach**: May show evidence of struggle (swallowed matter). Mechanism: Airway covered (nose/mouth) → no air entry → hypoxia → capillary rupture (petechiae) → anoxic injury → death. Forensic interpretation: Petechiae pattern suggests asphyxia; location concentrated in face/upper body is characteristic. Scene evidence (pillow position, infant position) correlates with autopsy findings.\\\\\\\\n\\\\\\\\n**Q3: Why does the MTP Act 2021 allow more liberal termination up to 20 weeks compared to the older 1972 law?**\\\\\\\\n> MTP Act 2021 represents shift toward: (1) **Woman's autonomy**: Reproductive rights prioritized; woman's decision more determinative, (2) **Socioeconomic grounds**: Recognizes poverty, marital status, contraceptive failure as valid reasons (not just medical emergencies), (3) **Accessibility**: Single RMP sufficient for <20 weeks (easier access in private/rural practice), (4) **Healthcare reality**: Forced continuation of unwanted pregnancies harms maternal health (physical/mental), increases mortality, (5) **Public health perspective**: Safe, legal abortion better than unsafe abortion (reduces morbidity/mortality). 20-week limit chosen as compromise between fetal viability and maternal rights; after 20 weeks, fetal interests increasingly recognized (hence 2 RMP requirement, restricted indications). Socioeconomic grounds now valid recognition that ability to parent/afford child is legitimate health consideration.\\\\\\\\n\\\\\\\\n**Q4: Differentiate between SIDS and infanticide using autopsy findings, scene investigation, and clinical history.**\\\\\\\\n> **SIDS autopsy**: NORMAL findings (diagnosis of exclusion) - no asphyxia signs, no trauma, no infections, normal organ weights/function, negative toxicology. **Infanticide autopsy**: Abnormal findings - petechiae (asphyxia), subdural hemorrhage (trauma), ligature marks, pulmonary edema, fractured ribs, bruises. **SIDS scene**: Baby in crib, peaceful position, appropriate sleep environment, no evidence of struggle. **Infanticide scene**: Evidence of interference (plastic over head, pillow position), hidden location (found in trash/woods), ligature/rope present, concealed pregnancy history. **SIDS history**: Age 2-4 months (peak), risk factors (prematurity, smoking exposure), no prior unexplained deaths, no abuse history. **Infanticide history**: Often postpartum stress/depression, prior losses, social isolation, substance abuse, denial of pregnancy, late prenatal care. Integration: SIDS diagnosis requires BOTH normal autopsy AND absence of scene/history red flags. If ANY abnormality on autopsy OR suspicious scene/history → infanticide must be investigated.\\\\\\\\n\\\\\\\\n**Q5: Explain the requirements for obtaining informed consent for medical termination of pregnancy under MTP Act 2021.**\\\\\\\\n> Informed consent components: (1) **Patient must understand**: Procedure being performed, why (medical/socioeconomic grounds), risks/benefits, alternatives, (2) **Counseling required**: Before providing consent; discuss contraception, post-termination care, psychosocial support options, (3) **Written consent form**: Signed, dated, witnessed (document in medical record), (4) **Capacity assessment**: Patient mentally capable of providing informed consent (not under duress, substance influence, psychiatric emergency), (5) **Timing**: Consent obtained BEFORE procedure (not verbal alone), (6) **Documentation**: Consent form in file, reason for termination documented, (7) **Special provisions**: Adolescents/minors (guardianship/maturity assessment), married couples (separate counseling may be needed). Consent valid only if: Informed (knows implications), Voluntary (no coercion), Capable (competent), Documented (written record). Failure to obtain proper informed consent: Renders procedure non-consensual (illegal even if medically justified), potential criminal liability for medical provider.\\\\\\\\n\\\\\\\\n**Q6: How would you differentiate stillbirth from infanticide when autopsy shows non-aerated lungs but petechiae are present?**\\\\\\\\n> Non-aerated lungs (sink in water) + petechiae present creates diagnostic challenge. Differential: (1) **Stillbirth with intra-uterine asphyxia**: Petechiae from anoxia in utero (placental insufficiency), lungs never aerated (no breathing), (2) **Early infanticide with asphyxia**: Petechiae from smothering/strangulation, lungs not aerated because airway blocked before breathing could occur, (3) **Birth asphyxia from birth trauma**: Cord compression/prolapse leading to asphyxia at birth, lungs may partially aerate then be compressed, preventing full aeration. Distinguishing features: **Placental pathology**: Examine placenta - infarction, infection, abruption suggest stillbirth. **Stomach**: Milk/food in stillbirth rare; suggests survival. **Meconium staining**: Fetus passed meconium in utero (stress), then died. **Scene investigation**: Concealment, hidden location suggest infanticide; expected delivery with complications suggest stillbirth. **Maternal history**: Preeclampsia, diabetes, placental issues suggest stillbirth. Integration: Multiple findings considered; pathology findings + maternal history + scene investigation + autopsy all needed for manner determination.\\\\\\\\n\\\\\\\\n**Q7: What are the postpartum complications of unsafe abortion and how do they present medically?**\\\\\\\\n> Unsafe abortion complications: (1) **Perforation**: Uterine rupture from instruments → acute peritoneal signs (severe pain, rigidity), hemorrhage, shock, requires emergency surgery. (2) **Hemorrhage**: Uncontrolled bleeding from placental site, coagulopathy → massive transfusion protocol, DIC risk. (3) **Infection/Sepsis**: Contaminated instruments, retained products → fever, purulent discharge, peritonitis, endocarditis risk, septic shock. (4) **Retained products**: Incomplete abortion → incomplete evacuation, infection risk, ongoing bleeding. (5) **Cervical/vaginal trauma**: Lacerations from instruments → hemorrhage, infection, scarring. (6) **Amniotic fluid embolism**: Rare but fatal if air/fluid enters vasculature during procedure. Clinical presentation: **Pain** (severe, persistent), **Fever** (>38.5°C), **Foul vaginal discharge**, **Vaginal bleeding** (excessive), **Signs of shock** (hypotension, tachycardia), **Peritoneal signs** (rigid abdomen). Medical management: **IV access, fluids, antibiotics**, **CBC/Coagulation studies**, **Ultrasound** (retained products, perforation), **Admission/observation**, **Surgical consultation** (if perforation/massive bleeding). Forensic significance: Unsafe abortion complications indicate non-medical procedure; compare with safe medical termination.\\\\\\\\n\\\\\\\\n**Q8: Explain how postpartum psychiatric illness/depression relates to infanticide and the reduced penalty under IPC 305 vs. murder (IPC 302).**\\\\\\\\n> Postpartum psychiatric illness pathophysiology: (1) **Hormonal changes**: Abrupt drop in estrogen/progesterone after delivery, (2) **Sleep deprivation**: Severe stress to brain, (3) **Social isolation**: New mother stress, loss of previous identity, (4) **Physical trauma**: Recovery from delivery, pain, exhaustion, (5) **Postpartum depression/psychosis**: Major depressive disorder or psychotic episode. Psychiatric symptoms: Depression (hopelessness, suicidal ideation), psychosis (hallucinations, delusions like \\\\\\\\\\\\\\\"baby is possessed\\\\\\\\\\\\\\\"), infanticidal ideation (\\\\\\\\\\\\\\\"killing baby is mercy\\\\\\\\\\\\\\\"). Legal rationale for reduced penalty (IPC 305 vs. 302): Diminished responsibility due to psychiatric illness (not fully conscious/volitional), compared to sane murder. Penalty: Infanticide 3-10 years (vs. murder 7 years to life). Court considers: Psychiatric evaluation, treatment, mental health history, circumstances of death, victim age. Medical role: Psychiatric assessment, document postpartum symptoms, treatment history, mitigating factors. Ethical consideration: Balance justice with recognition of mental illness affecting capacity.\\\\\\\\n\\\\\\\\n**Q9: Describe the autopsy findings you would expect in neonatal death from starvation/neglect vs. asphyxia.**\\\\\\\\n> **Starvation/neglect autopsy findings**: (1) **Body weight**: Severe malnutrition, wasted appearance, skeletal prominence, (2) **Organ weights**: Small liver (glycogen depleted), small heart, shrunken brain, (3) **Stomach**: EMPTY (no feeding), absence of milk, (4) **Lungs**: May show aeration (lived days/weeks), (5) **Internal**: Muscle wasting, minimal fat, (6) **Timeline**: Takes days to weeks (slower death than asphyxia). **Asphyxia/smothering findings**: (1) **Petechiae**: Abundant (face, organs) - acute hypoxia, (2) **Pulmonary edema**: Frothy fluid in airways - acute process, (3) **Organ size**: Normal (acute death), (4) **Stomach**: May contain milk/secretions (recent feeding), (5) **Internal**: Cerebral edema, petechial hemorrhages, (6) **Timeline**: Hours to minutes (acute death). Differentiation: Starvation = chronicity (malnutrition signs, days/weeks) + empty stomach; Asphyxia = acuity (petechiae, pulmonary edema, hours). Mechanism: Starvation from withholding food (passive neglect); asphyxia from active interference (smothering). Forensic significance: Smothering more likely to be charged as intentional infanticide; starvation may be charged as criminal neglect or child abuse.\\\\\\\\n\\\\\\\\n**Q10: What is the role of diatom analysis in infanticide vs. drowning and why is it unreliable for determining manner of death in neonatal cases?**\\\\\\\\n> Diatom analysis: Microscopic silica-containing algae found in water. In infanticide vs. drowning differentiation: If infant found in water (drowned vs. placed after murder): Diatoms in lungs/organs suggest water inhalation (drowning); absence suggests placed after death (infanticide). Limitations in neonatal cases: (1) **Neonatal aspiration mechanics**: Small airway, limited breathing effort → minimal diatom inhalation even if submerged, (2) **Environmental contamination**: Diatoms on skin/external surfaces don't indicate inhalation, (3) **Post-mortem movement**: Body in water post-mortem → diatoms enter airways without life-breath (aspiration), (4) **Autopsy contamination**: Diatoms from water used in lab procedures, (5) **Species nonspecific**: Diatom species found in multiple water sources (not uniquely matching drowning site). Reliability: NOT highly specific for mode of death in neonates. Better approach: Lung aeration (breathing effort), stomach water (swallowing), pulmonary edema pattern (antemortem vs. postmortem), scene evidence (submerged vs. placed). Forensic conclusion: Diatom presence supportive of drowning; absence doesn't exclude; combined with other findings (lungs aerated, water in stomach, scene evidence of drowning) supports drowning diagnosis. Use as supplementary evidence, not standalone determination.\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-}
-];
-];
+        summary: "High-yield facts about infanticide and abortion. Focus on viability determination, evidence of live birth, and autopsy interpretation.",
+        contentMd: `# Infanticide & Abortion - Exam Preparation
+
+## High-Yield Facts
+
+### Infanticide Definition
+- **Infanticide**: Willful killing of infant (usually <1 year)
+- **Methods**: Asphyxia (smothering, 60%), trauma, drowning, poisoning, neglect
+- **Perpetrator**: Usually mother (postpartum depression/psychosis)
+- **Intent**: Ranges from deliberate to negligent
+
+### Viability & Live Birth
+- **Viable fetus**: >22-24 weeks gestation (varies by jurisdiction)
+- **Quickening**: ~16-18 weeks (fetal movement felt by mother)
+- **Viable newborn birth weight**: >500g (some jurisdictions >350g)
+- **Live birth**: Expulsion with signs of life after viability
+- **Signs of life**: Heartbeat, respiration, umbilical cord pulsation
+
+### MTP Act (2002) - India
+- **Legal abortion**: Up to 20 weeks (extended to 24 weeks special cases)
+- **Performed by**: Registered medical practitioner
+- **Indications**: Maternal health, fetal abnormality, contraceptive failure
+- **Unsafe abortion**: Criminal under IPC
+
+### Autopsy Findings for Viability/Live Birth
+
+**Hydrostatic Lung Float Test**:
+- **Float in water**: Lungs contain air → baby breathed → LIVED
+- **Sink in water**: Lungs airless → prenatal state → stillborn/died at birth
+- **Limitation**: Can be unreliable if postmortem inflation or decomposition
+
+**Lung Weight**:
+- **<50g**: Consistent with prenatal lungs (didn't breathe)
+- **>50g**: Consistent with air-filled lungs (breathed after birth)
+- **35-50g normal newborn prenatal**: Can overlap with postnatal
+
+**Stomach Contents**:
+- **Milk, food present**: Baby fed after birth → lived ≥6 hours
+- **Meconium in intestine**: If evacuated, baby lived ≥24 hours
+- **Empty stomach**: May indicate death at birth or shortly after
+
+**Cord Appearance**:
+- **Fresh, moist**: Died <12 hours
+- **Dried, stiff**: Died ≥12-24 hours
+- **Separated**: Infection/maceration occurred (lived days/weeks)
+
+### Common Exam Scenarios
+
+### Scenario 1: Newborn found in trash with ligature around neck, lungs sink in water
+- **Findings**: Strangulation, lungs airless (prenatal state)
+- **Interpretation**: Likely stillborn or died immediately (didn't breathe)
+- **Charges**: May not be infanticide if didn't breathe after viability
+- **Forensic question**: Did baby achieve viability? Breathe after birth?
+
+### Scenario 2: Infant found dead with head trauma, subdural hemorrhage, retinal hemorrhages
+- **Findings**: Shaken baby syndrome (abusive head trauma)
+- **Mechanism**: Acceleration-deceleration forces causing brain injury
+- **Charges**: Infanticide/culpable homicide
+- **Autopsy focus**: Rib fractures (suggest prior abuse), eye examination (retinal hemorrhages)
+
+### Scenario 3: Woman presenting with fever, abdominal pain, vaginal bleeding, uterine perforation on exam
+- **Diagnosis**: Unsafe abortion with uterine perforation and sepsis
+- **Complications**: Hemorrhage, peritonitis, septic shock
+- **Emergency**: Requires immediate surgery
+- **Charges**: Under IPC 314 (death caused by abortion act)
+
+### Scenario 4: Newborn with stomach containing milk, cord dried, maceration present
+- **Assessment**: Baby lived at least 12-24 hours after birth (fed, cord dried)
+- **Interval from birth**: Maceration suggests 24-48 hours postmortem
+- **Cause of death**: Asphyxia/trauma if evidence present
+- **Charges**: Infanticide
+
+## Examination-Type Questions
+
+**Q: The most reliable test for determining if a newborn breathed after birth is:**
+- A: Presence of meconium in intestines
+- B: **Lung float test (hydrostatic test)** ✓
+- C: Umbilical cord appearance
+- D: Weight of lungs >50g
+
+**Q: If newborn lungs float in water, what does this indicate?**
+- A: Stillborn (normal finding)
+- B: **Baby breathed air after birth (viable, lived)** ✓
+- C: Death from drowning
+- D: Decomposition artifact
+
+**Q: What is the legal upper limit for safe abortion under MTP Act (2002)?**
+- A: 12 weeks
+- B: 16 weeks
+- C: **20 weeks (extended to 24 in special cases)** ✓
+- D: 28 weeks
+
+**Q: The most common cause of death in infanticide is:**
+- A: Trauma
+- B: **Asphyxia (smothering)** ✓
+- C: Poisoning
+- D: Drowning
+
+**Q: What does presence of milk in a newborn's stomach indicate?**
+- A: Baby died stillborn
+- B: **Baby lived and was fed (at least 6+ hours)** ✓
+- C: Mother attempted feeding before birth
+- D: Aspiration during labor
+
+**Q: Unsafe abortion most commonly causes death from:**
+- A: Infection
+- B: **Hemorrhage** ✓
+- C: Anesthesia
+- D: Perforation
+
+## Medicolegal Pearls
+
+**For Infanticide**:
+1. **Viability assessment crucial**: >22-24 weeks gestation?
+2. **Live birth evidence**: Lung float test, stomach contents, cord appearance
+3. **Interval from birth**: Maceration, cord condition, decomposition
+4. **Cause of death**: Asphyxia (60%), trauma (20%), other (20%)
+
+**For Unsafe Abortion**:
+1. **Hemorrhage most common**: Uterine perforation, ongoing bleeding
+2. **Sepsis/infection**: Retained products, contamination
+3. **Perforation complications**: Peritonitis, need for surgery
+4. **Death prevention**: Early medical care (legal abortion access improves outcomes)
+
+## Quick Reference: Viability Tests
+
+| Test | Finding | Interpretation |
+|------|---------|---|
+| **Lung float** | Float | Breathed = Lived |
+| **Lung float** | Sink | Didn't breathe = Stillborn |
+| **Lung weight** | >50g | Consistent with lived |
+| **Lung weight** | <50g | Consistent with stillborn |
+| **Stomach contents** | Milk present | Lived ≥6 hours |
+| **Stomach contents** | Empty | Died at birth or shortly after |
+| **Cord appearance** | Fresh/moist | <12 hours old |
+| **Cord appearance** | Dried | ≥12-24 hours old |
+
+`,
+        mnemonics: [
+          {
+            text: "LUNG FLOAT TEST: Float=breathed=lived, Sink=didn't breathe=stillborn",
+            explanation: "Most important viability test"
+          },
+          {
+            text: "VIABILITY THRESHOLD: >22-24 weeks (varies), >500g viable in most jurisdictions",
+            explanation: "Legal definition of viable fetus"
+          },
+          {
+            text: "INFANTICIDE CAUSES: Asphyxia (60%), Trauma (20%), Drowning/poison/neglect (20%)",
+            explanation: "Frequency distribution"
+          },
+          {
+            text: "MTP ACT: Legal 20wk (24wk special), Registered doctor only, IPC 312-314 if illegal",
+            explanation: "Legal framework India"
+          }
+        ],
+        keyPoints: [
+          "Lung float test diagnostic for whether baby breathed (viability/live birth)",
+          "Stomach milk indicates baby lived ≥6 hours",
+          "Cord appearance and maceration assess interval from birth to death",
+          "Asphyxia (smothering) most common infanticide method",
+          "Unsafe abortion complications: hemorrhage (40-50%), sepsis (20-30%), perforation (10-15%)"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "Infanticide & Abortion", edition: "34th" },
+          { book: "Parikh's Textbook of Medical Jurisprudence", chapter: "Infanticide & MTP Act", edition: "8th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "infanticide-abortion-layer-5-active-recall",
+        title: "Infanticide & Abortion - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Self-assessment on infanticide and abortion cases. Test understanding of viability, live birth evidence, cause of death determination.",
+        contentMd: `# Infanticide & Abortion - Active Recall
+
+**Q1: Explain the lung hydrostatic (float) test and its interpretation for determining if a newborn breathed after delivery.**
+> Lung hydrostatic test procedure: Remove lungs at autopsy and place in water or saline. If lungs float: Baby breathed air (lungs inflated) = LIVED. If lungs sink: Airless lungs (prenatal state) = stillborn or died immediately. Floating lungs indicate viability and live birth. Sinking lungs suggest stillbirth. Limitations: Postmortem emphysema (gas-producing bacteria) can falsely inflate lungs making them float. Other evidence must corroborate (stomach contents, cord condition, maceration).
+
+**Q2: Describe how stomach contents help determine interval after birth and if baby lived.**
+> Stomach contents evidence: (1) Milk/food present = baby fed = lived ≥4-6 hours, (2) Amount/digestion stage = longer survival with more digestion, (3) Meconium in intestines = lived ≥12-24 hours, (4) Absence of feeding = death at birth or shortly after. Significance: Stomach contents prove baby lived post-delivery and approximate interval (days/weeks based on feeding progression).
+
+**Q3: Explain cord appearance and maceration timeline in determining interval from birth to death.**
+> **Cord timeline**: (1) Fresh, moist = <6-12 hours, (2) Dried = 6-24 hours, (3) Separated = lived days/weeks. **Maceration timeline**: (1) None = <6 hours, (2) Early = 6-24 hours, (3) Advanced = 24-48 hours, (4) Severe = >48 hours. Combined assessment estimates interval from live birth to death.
+
+**Q4: Differentiate stillbirth from infanticide in autopsy.**
+> **Stillbirth**: Lungs sink, empty stomach, intact cord, no trauma. **Infanticide**: Lungs float, fed stomach, desiccated cord, trauma evidence. Distinction critical for legal charges - infanticide requires live birth proof.
+
+**Q5: Explain shaken baby syndrome (abusive head trauma) pathophysiology.**
+> Violent shaking causes acceleration-deceleration/rotational brain forces resulting in subdural hemorrhage, diffuse axonal injury, retinal hemorrhages. Infant brains vulnerable: large head (30% body weight), weak neck muscles, white matter dominant. Death from brain swelling and bleeding.
+
+**Q6: Discuss MTP Act legal definition versus infanticide.**
+> MTP Act: Legal abortion by registered doctor up to 20 weeks (24 weeks special). Infanticide: Post-viable baby killing. Viability threshold distinguishes legal from homicidal act.
+
+**Q7: Describe unsafe abortion complications and causes of death.**
+> Complications: Hemorrhage (40-50%), sepsis (20-30%), perforation (10-15%). Clinical: Acute hemorrhage (shock), delayed infection (fever/pain), perforation (peritonitis emergency).
+
+**Q8: Explain autopsy findings in unsafe abortion and causation determination.**
+> Findings: Uterine perforation, retained products, hemorrhage, peritonitis. Causation: Procedure evidence + timing + exclusion of other causes.
+
+**Q9: Discuss legal ramifications for infanticide vs. unsafe abortion in India.**
+> **Infanticide (IPC 302/304)**: Murder or culpable homicide, 7yr-life. **Unsafe abortion (IPC 312-314)**: Criminal, 3yr+fine. Distinction: Viability threshold.
+
+**Q10: Explain integration of autopsy and investigation findings in determining manner of death.**
+> Autopsy: Viability, live birth, cause, interval. Scene investigation: Circumstances, concealment, witnesses. Maternal history: Mental health, support. Combined assessment determines: Homicide, accidental, or undetermined manner.
+
+`,
+        mnemonics: [
+          {
+            text: "LUNG FLOAT: Float (lived), Sink (stillborn) - MOST IMPORTANT VIABILITY TEST",
+            explanation: "Primary evidence of live birth"
+          },
+          {
+            text: "VIABILITY TIMELINE: Cord fresh (<12h), Maceration early (6-24h), Advanced (24-48h), Decomposition (>48h)",
+            explanation: "Interval from birth to death assessment"
+          },
+          {
+            text: "UNSAFE ABORTION DEATHS: Hemorrhage (40-50%) > Sepsis (20-30%) > Perforation (10-15%)",
+            explanation: "Cause of death frequency"
+          },
+          {
+            text: "INFANTICIDE vs ABORTION: Infanticide=post-viable killing, Abortion=pre-viable termination",
+            explanation: "Legal distinction based on viability"
+          }
+        ],
+        keyPoints: [
+          "Lung float test is most reliable evidence that baby breathed after birth",
+          "Stomach milk indicates baby lived ≥6 hours after delivery",
+          "Cord appearance and maceration assess time interval from birth to death",
+          "Shaken baby syndrome: subdural hemorrhage, retinal hemorrhages, diffuse axonal injury",
+          "Unsafe abortion: hemorrhage and sepsis most common causes of death"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "Infanticide & Abortion", edition: "34th" },
+          { book: "Parikh's Textbook of Medical Jurisprudence", chapter: "Infanticide & MTP Act", edition: "8th" }
+        ]
+      }
+    ]
+  }
 ];

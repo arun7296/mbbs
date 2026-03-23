@@ -1,18 +1,654 @@
-// Forensic Medicine Part 7 - Remaining Topics from FM-MOD-05 & FM-MOD-06
-// Topics: DNA Fingerprinting, Toxicology, Snake Bite
+import type { TopicLessons } from "./content-loader";
 
-export const forensicMedicinePart7Lessons = [
+export const forensicMedicinePart7Lessons: TopicLessons[] = [
   {
     topicCode: "FM-MOD-05-TOP-03",
     layers: [
       {
         layer: 1,
-        slug: "dna-fingerprinting-foundation",
+        slug: "dna-fingerprinting-layer-1-foundation",
         title: "DNA Fingerprinting & Forensic Identity - Foundation",
         estimatedMinutes: 25,
-        summary: "DNA profiling methods, applications in forensic medicine, and medicolegal importance.",
-        contentMd: "# DNA Fingerprinting & Forensic Identity - Foundation\n\n## DNA Fingerprinting\n\n### Definition\n**DNA Fingerprinting (DNA Profiling)**: Technique to identify individuals by analyzing unique variations in their DNA. Each person (except identical twins) has unique DNA pattern.\n\n### Discovery & Development\n- Discovered: Alec Jeffreys (1984)\n- Used in paternity testing, criminal investigations, disaster victim identification\n- Now gold standard for identification\n\n## Techniques\n\n### 1. Restriction Fragment Length Polymorphism (RFLP)\n- **Method**: Uses restriction enzymes to cut DNA at specific sites\n- **Principle**: Length of DNA fragments varies between individuals\n- **Process**:\n  - Extract DNA\n  - Cut with restriction enzyme\n  - Separate fragments by gel electrophoresis\n  - Hybridize with probes\n  - Create banding pattern\n\n**Advantages**: Reliable, reproducible\n**Disadvantages**:\n- Requires large amount of DNA (100-1000 ng)\n- Time-consuming (2-3 weeks)\n- Now largely replaced by PCR-based methods\n\n### 2. PCR-Based Methods (Current Standard)\n\n**Short Tandem Repeats (STR) Analysis**:\n- **What are STRs?**: Repeated DNA sequences (2-6 base pairs) repeated multiple times\n- **Variation**: Number of repeats differs between individuals\n- **Principle**: Amplify STR regions using specific primers, count repeats\n- **Standard loci**: 13-20 core STR loci used (e.g., D5S818, D7S820, D8S1179)\n- **Advantages**:\n  - Rapid (hours to days)\n  - Requires minimal DNA (nanograms)\n  - Highly polymorphic (discriminating power: 1 in billions)\n  - Automated analysis possible\n  - Degraded DNA can be analyzed\n\n**CODIS Database** (Combined DNA Index System):\n- FBI maintains database of DNA profiles of convicted offenders\n- Used for matching in criminal cases\n- India: NDIS (National DNA Index System) under NCRB\n\n### 3. Other Methods\n\n**Y-Chromosome Markers**:\n- Analyze male-specific DNA regions\n- Useful for paternal lineage identification\n- Not useful for determining who among males committed crime\n\n**Mitochondrial DNA (mtDNA)**:\n- Multiple copies per cell (high copy number)\n- Maternal inheritance\n- Useful when nuclear DNA degraded\n- Lower discriminating power than STR\n\n## Medicolegal Applications\n\n### Criminal Investigations\n- **Rape cases**: Semen identification, perpetrator identification\n- **Murder cases**: Blood, tissue from crime scene vs. suspect\n- **Robbery/Burglary**: Hair, skin cells from perpetrator\n- **Hit-and-run**: Blood from vehicle vs. suspect/victim\n\n### Paternity Testing\n- **Principle**: Child inherits one allele from each parent\n- **Analysis**: Compare STR profiles of alleged father, mother, child\n- **Exclusion**: If alleged father lacks allele present in child (from mother), he is excluded\n- **Inclusion**: Statistical probability of paternity calculated (usually >99.99%)\n- **Legal requirements**: Court order in India, consent of parties involved\n\n### Identification of Deceased\n- **Mass disasters**: Tsunami, earthquake, plane crash\n- **Unknown body**: Comparison with biological relatives\n- **Skeletal remains**: DNA extraction from bone\n- **Family reunification**: Matching with relatives' DNA (relationship determination)\n\n### Wildlife Trafficking\n- Identify species, origin of seized wildlife products\n- Prevent illegal trade\n\n## DNA Evidence Collection & Handling\n\n### Biological Samples\n**Best samples for DNA analysis**:\n- **Blood**: Gold standard (cells with nuclei)\n- **Saliva**: Buccal swabs, mouth rinses\n- **Semen**: Spermatozoa have DNA\n- **Hair**: Root/bulb (medulla contains cells; shaft has minimal DNA)\n- **Skin cells**: From swabs, fingernails\n- **Bone/Teeth**: From skeletal remains\n\n**Storage**:\n- Dry storage at room temperature (prevents degradation)\n- Refrigeration (2-8°C) for wet samples\n- Freezing (-20°C) for long-term storage\n\n### Chain of Custody\n- **Critical**: Document every person handling evidence\n- **Label**: Unique identification number, date, time\n- **Seal**: Tamper-proof containers\n- **Prevent**: Cross-contamination, loss of integrity\n- **Legal requirement**: Admissibility in court depends on proper handling\n\n## Quality Standards & Validation\n\n### PCR Validation\n- **Positive control**: Known DNA of correct profile (validates method)\n- **Negative control**: No DNA template (detects contamination)\n- **Sensitivity**: Minimum DNA needed for reliable results (10-100 pg STR)\n- **Specificity**: Correct loci amplified, no non-specific products\n\n### DNA Testing Standards\n- India follows CODIS-compatible STR loci\n- Quality assurance: ISO 17025 accreditation for labs\n- Proficiency testing: Regular testing against known samples\n- Expert testimony: DNA evidence presented by qualified expert\n\n## Indian Legal Framework\n\n### DNA Technology (Use and Regulation) Bill, 2019\n- Regulates DNA testing in India\n- Protects privacy while enabling forensic DNA analysis\n- Establishes DNA Index System (NDIS) by NCRB\n- Consent requirements:\n  - Voluntary sample: With consent\n  - Suspected person: Can be compelled\n  - Victim: Voluntary (except in sexual assault for medical purposes)\n- **Misuse prevention**: Penalties for unauthorized DNA profiling\n\n### Admissibility in Court\n- DNA evidence is admissible under Indian Evidence Act\n- Must demonstrate:\n  - Proper collection and chain of custody\n  - Use of validated methodology\n  - Expert conducting analysis is qualified\n  - Results are reliable,\n        mnemonics: [\n          {\n            text: \"DNA Methods Timeline: RFLP (1980s) → PCR (1990s) → STR Analysis (current gold standard)\",\n            explanation: \"Evolution of DNA fingerprinting techniques\"\n          },\n          {\n            text: \"Best DNA Sources = Blood > Saliva > Semen > Hair (root) > Tissue\",\n            explanation: \"Quality of DNA decreases in this order\"\n          },\n          {\n            text: \"STR Advantages = Fast (hours), Sensitive (nanograms), Specific (1 in billions)\",\n            explanation: \"Why STR is current gold standard in DNA analysis\"\n          },\n          {\n            text: \"Chain of Custody = Document ALL handlers, label, seal, prevent cross-contamination\",\n            explanation: \"Critical for legal admissibility of DNA evidence\"\n          }\n        ],\n        keyPoints: [\n          \"DNA fingerprinting uses STR (Short Tandem Repeats) analysis - current gold standard\",\n          \"13-20 core STR loci analyzed; discriminating power > 99.99%\",\n          \"RFLP is older method (requires more DNA, time-consuming); now largely replaced by PCR\",\n          \"Paternity: Child inherits one allele from each parent; can exclude alleged fathers if he lacks allele\",\n          \"Chain of custody essential - improper handling can make evidence inadmissible in court\",\n          \"DNA Technology (Use and Regulation) Bill 2019 regulates DNA testing and establishes NDIS in India\",\n          \"Best samples: Blood > Saliva > Semen; storage: dry at room temperature or frozen (-20°C)\"\n        ],\n        textbookRefs: [\n          { book: \"Forensic Medicine by Reddy\", chapter: \"DNA Fingerprinting and Identification\", edition: \"34th\" },\n          { book: \"Modi's Medical Jurisprudence and Toxicology\", chapter: \"Identification and DNA Analysis\", edition: \"25th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"dna-fingerprinting-mechanism\",\n        title: \"DNA Fingerprinting - Mechanism & Analysis\",\n        estimatedMinutes: 25,\n        summary: \"STR analysis process, interpretation of results, probability calculations.\",\n        contentMd: "# DNA Fingerprinting - Mechanism & Analysis\\n\\n## STR Analysis Process\\n\\n### Step 1: DNA Extraction\\n- Isolate DNA from biological sample (blood, saliva, tissue)\\n- Methods: Phenol-chloroform extraction, silica-based columns, FTA cards\\n- Assessment: Quantify DNA concentration and quality\\n\\n### Step 2: PCR Amplification\\n- **Primers**: Designed to amplify specific STR loci (13-20 core loci)\\n- **Multiplexing**: Amplify multiple STR loci simultaneously using fluorescently-labeled primers\\n- **PCR profile**: 25-30 cycles of denaturation, annealing, extension\\n- **Product**: DNA fragments of specific sizes corresponding to STR repeats\\n\\n### Step 3: Capillary Electrophoresis\\n- **Principle**: DNA fragments separated by size using electric field in capillary tube\\n- **Detection**: Fluorescent labels on DNA read by detector\\n- **Electropherogram**: Peak heights and sizes recorded\\n\\n### Step 4: Data Analysis & Interpretation\\n- **Allele designation**: Peak size converted to number of repeats\\n- **Genotype determination**: Two peaks per locus = heterozygous (two different alleles)\\n- **Profile construction**: Compilation of alleles across all loci\\n- **Software**: AutoSTR, GeneMapper automatically identifies alleles\\n\\n## STR Loci & Nomenclature\\n\\n### Example Loci in CODIS System\\n\\n| Locus | Chromosome | Repeat Unit | Typical Range |\\n|-------|-----------|-------------|---------------|\\n| D3S1358 | 3 | AGAT | 12-19 |\\n| D5S818 | 5 | AGAT | 7-13 |\\n| D7S820 | 7 | GATA | 5-15 |\\n| D13S317 | 13 | GATA | 7-15 |\\n| FGA | 4 | AAAG | 18-51 |\\n\\n### Allele Designation\\n- **Allele name** = number of repeat units\\n- **Example**: Locus D3S1358 with 15 repeats = \\\"15\\\"\\n- **Heterozygous**: Two alleles different (e.g., 15/18)\\n- **Homozygous**: Two identical alleles (e.g., 15/15)\\n\\n## Profile Matching & Interpretation\\n\\n### Exclusion (Non-Match)\\n- **Criteria**: Difference at even 1 locus is sufficient for exclusion\\n- **Probability**: Excluded person could not be source\\n- **Certainty**: 100% exclusion possible\\n\\n**Example**:\\n- Crime scene: 15/18 at D3S1358\\n- Suspect A: 12/16 at D3S1358\\n- **Result**: Suspect A excluded (lacks both alleles)\\n\\n### Inclusion (Match)\\n- **Criteria**: All tested loci match\\n- **Probability**: Calculated using population frequencies\\n- **Random Match Probability (RMP)**: Chance that randomly selected person has same profile\\n\\n**Calculation**:\\n- RMP = p₁ × p₂ × p₃ × ... (product of allele frequencies)\\n- With 13 loci: RMP ≈ 1 in 6.7 billion\\n- With 20 loci: RMP ≈ 1 in 10^17 (essentially unique)\\n\\n**Likelihood Ratio**:\\n- Calculation: LR = Frequency of match in guilty person / Frequency in innocent person\\n- Example: LR = 1 / (1 in 6.7 billion) = 6.7 billion\\n- Interpretation: Profile is 6.7 billion times more likely from crime scene DNA than randomly selected person\\n\\n## Paternity Testing Interpretation\\n\\n### Genetic Inheritance Rules\\n- **Child's alleles**: One from each biological parent\\n- **ABO blood group example**:\\n  - Mother: Type A (AA or AO)\\n  - Father Type B (BB or BO)\\n  - Child Type AB → Father must have contributed B allele (is father)\\n  - Child Type O → Mother is AO, Father is BO (both can be biological parents)\\n\\n### STR Paternity Analysis\\n\\n**Scenario 1: Biological Father**\\n- Mother: 15/18 at D3S1358\\n- Child: 15/16 at D3S1358\\n- Alleged Father: 16/19 at D3S1358\\n- **Analysis**: Child has 15 from mother, 16 from father → Alleged father matches, CANNOT BE EXCLUDED\\n\\n**Scenario 2: Excluded Father**\\n- Mother: 15/18 at D3S1358\\n- Child: 12/18 at D3S1358\\n- Alleged Father: 16/19 at D3S1358\\n- **Analysis**: Child has 18 from mother, 12 from other parent\\n- Alleged father has only 16/19 → EXCLUDED (does not have 12)\\n\\n### Probability Calculation in Paternity\\n- **Cumulative Probability of Paternity**: Across all loci\\n- **With 13-15 loci**: Probability of paternity >99.99% if consistent\\n- **Statement**: \\\"Alleged father is the biological father with >99.99% certainty\\\" (cannot prove 100% due to other men in population with same profile)\\n\\n## Quality Assurance Issues\\n\\n### Artifacts in STR Analysis\\n\\n**Allelic Dropout**:\\n- Failure to amplify one allele (appears homozygous when heterozygous)\\n- Causes: Low DNA template, primer binding problems, early PCR cycles\\n\\n**Null Alleles**:\\n- Primers don't bind due to sequence variation\\n- Results in apparent homozygosity\\n\\n**Contamination**:\\n- Introduction of foreign DNA\\n- Shows multiple alleles at locus (3+ peaks)\\n\\n**Amelogenin Sex Determination**:\\n- Co-amplified with STR loci\\n- X chromosome (106 bp) vs. Y chromosome (112 bp)\\n- Confirms biological sex\\n\\n## Admissibility Standards\\n\\n### Daubert Standard (USA-influenced, applicable in India)\\n- General acceptance in scientific community\\n- Peer review and publication\\n- Error rate known\\n- Standards and controls maintained\\n- Expert witness qualification\\n\\n### Indian Evidence Act Requirements\\n- Expert testimony must show:\\n  - Proper methodology used\\n  - Chain of custody maintained\\n  - Qualified expert conducting analysis\\n  - Laboratory accreditation (ISO 17025)\\n  - Proficiency testing results\\n      }\\n    ]\\n  },\\n\\n  {\\n    topicCode: \\\"FM-MOD-06-TOP-01\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"general-toxicology-foundation\\\",\\n        title: \\\"General Toxicology - Foundation\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Principles of toxicology, classification of poisons, and management of poisoning.\\\",\\n        contentMd: "# General Toxicology - Foundation\\\\n\\\\n## Definition & Scope\\\\n\\\\n### Toxicology\\\\n**Definition**: Science studying adverse effects of chemical substances on living organisms.\\\\n\\\\n**Forensic Toxicology**: Applies toxicology to legal cases - detecting poisons in body tissues/fluids, determining if poisoning caused death.\\\\n\\\\n**Clinical Toxicology**: Management of poisoned patients - diagnosis, treatment.\\\\n\\\\n## Fundamental Concepts\\\\n\\\\n### Poison vs. Drug\\\\n- **Poison**: Substance causing harmful effects (intention doesn't matter legally)\\\\n- **Drug**: Medicinal substance used therapeutically\\\\n- **Same substance** can be poison or drug (e.g., digoxin: therapeutic at 0.5-2 ng/mL, toxic >2.5 ng/mL)\\\\n\\\\n### Dose-Response Relationship\\\\n**Paracelsus Principle**: \\\\\\\"The dose makes the poison\\\\\\\" - any substance at sufficient dose is toxic.\\\\n\\\\n**Key variables**:\\\\n- Dose (amount ingested/absorbed)\\\\n- Duration (acute vs. chronic exposure)\\\\n- Route (oral, inhalation, cutaneous, intravenous)\\\\n- Individual factors (age, sex, weight, liver/kidney function, tolerance)\\\\n\\\\n### Toxicity vs. Hazard\\\\n- **Toxicity**: Inherent property of substance (ability to cause harm)\\\\n- **Hazard**: Actual risk given exposure conditions\\\\n- **Example**: Arsenic powder has high toxicity but low hazard if sealed in container\\\\n\\\\n## Classification of Poisons\\\\n\\\\n### By Potency (LD₅₀ - dose killing 50% of experimental animals)\\\\n\\\\n| Class | LD₅₀ (oral, mg/kg) | Example | Lethal Dose (70 kg human) |\\\\n|-------|-----------------|---------|------------------------|\\\\n| Super-toxic | <1 | Cyanide | <70 mg |\\\\n| Extremely toxic | 1-50 | Strychnine | 70 mg - 3.5 g |\\\\n| Very toxic | 50-500 | Arsenic, DDT | 3.5 - 35 g |\\\\n| Moderately toxic | 500-5000 | Morphine | 35 - 350 g |\\\\n| Slightly toxic | 5000-15000 | Salt, sugar | 350 g - 1 kg |\\\\n\\\\n### By Chemical Nature\\\\n\\\\n**Inorganic Poisons**:\\\\n- Corrosive acids: Sulfuric acid, hydrochloric acid\\\\n- Alkalis: Sodium hydroxide, ammonia\\\\n- Metallic: Arsenic, lead, mercury, cyanide\\\\n- Salts: Copper sulfate (blue vitriol), potassium permanganate\\\\n\\\\n**Organic Poisons**:\\\\n- Plant alkaloids: Strychnine, nicotine, atropine\\\\n- Synthetic drugs: Barbiturates, opioids, stimulants\\\\n- Pesticides: Organophosphates, carbamates\\\\n- Alcohols: Ethanol, methanol, ethylene glycol\\\\n\\\\n### By Effects\\\\n\\\\n**Local Effect Poisons**:\\\\n- Primarily damage where they contact body\\\\n- **Corrosives**: Concentrated acids/alkalis cause burn injury\\\\n- **GI irritants**: Copper sulfate, mercury salts cause nausea, vomiting\\\\n\\\\n**Systemic Poisons**:\\\\n- Absorbed and exert effects distant from site of entry\\\\n- **Narcotic**: Depress CNS (opioids, barbiturates)\\\\n- **Convulsant**: Cause seizures (strychnine)\\\\n- **Cardiac**: Affect heart (digitalis, aconite)\\\\n- **Respiratory**: Affect respiration (cyanide)\\\\n- **Hemolytic**: Destroy RBCs (certain phosphorus compounds)\\\\n\\\\n## Toxicodynamics (How Poison Works)\\\\n\\\\n### Mechanism of Action\\\\n1. **Cellular damage**: Direct cytotoxic effect (corrosives, heavy metals)\\\\n2. **Enzyme inhibition**: Blocks metabolic pathway (cyanide inhibits cytochrome oxidase)\\\\n3. **Receptor antagonism**: Blocks normal receptor function (atropine blocks acetylcholine)\\\\n4. **Neurotransmitter effects**: Excess/deficit of neurotransmitters (anticholinergic, cholinergic effects)\\\\n\\\\n### Phase of Action\\\\n\\\\n**First Phase** (0-30 minutes):\\\\n- Absorption from GI tract\\\\n- Onset of symptoms (varies by poison)\\\\n\\\\n**Second Phase** (30 minutes - several hours):\\\\n- Peak symptoms\\\\n- Maximum absorption\\\\n- Systemic effects manifest\\\\n\\\\n**Third Phase** (hours to days):\\\\n- Elimination (renal, hepatic)\\\\n- Recovery or death\\\\n\\\\n## Poisoning Severity Classification\\\\n\\\\n### Mild Poisoning\\\\n- Symptoms limited to GI tract or mild CNS\\\\n- Patient alert and conscious\\\\n- Vital signs stable\\\\n- Prognosis: Good, complete recovery expected\\\\n\\\\n### Moderate Poisoning\\\\n- Systemic manifestations present\\\\n- Alert but may be confused\\\\n- Mild vital sign derangement\\\\n- Some organ dysfunction possible\\\\n- Prognosis: Generally good with treatment\\\\n\\\\n### Severe Poisoning\\\\n- Profound CNS depression (coma)\\\\n- Respiratory depression, aspiration risk\\\\n- Cardiovascular instability (shock)\\\\n- Multi-organ involvement\\\\n- Prognosis: Guarded, mortality 10-50%\\\\n\\\\n### Fatal Poisoning\\\\n- Respiratory failure, circulatory collapse\\\\n- Status epilepticus unresponsive to treatment\\\\n- Myocardial infarction, arrhythmias\\\\n- Prognosis: Death regardless of treatment\\\\n\\\\n## General Management of Poisoning\\\\n\\\\n### ABCDE Protocol\\\\n\\\\n**A - Airway**:\\\\n- Assess patency\\\\n- Clear secretions\\\\n- Intubation if GCS <8\\\\n\\\\n**B - Breathing**:\\\\n- Assess respiratory rate, effort\\\\n- Supplemental O₂ if SpO₂ <94%\\\\n- Mechanical ventilation if needed (respiratory depression from poisons like opioids)\\\\n\\\\n**C - Circulation**:\\\\n- Obtain IV access (2 lines)\\\\n- Fluid resuscitation for hypotension\\\\n- Treat arrhythmias\\\\n- Monitor ECG\\\\n\\\\n**D - Disability** (Neurological):\\\\n- Assess GCS\\\\n- Check pupils (pinpoint in opioid overdose, dilated in anticholinergic)\\\\n- Check for seizures, manage with anticonvulsants\\\\n\\\\n**E - Exposure** (Prevent Further Exposure):\\\\n- Remove contaminated clothes\\\\n- Decontamination (shower if necessary)\\\\n- Prevent inhalation of fumes\\\\n\\\\n### Decontamination Methods\\\\n\\\\n**Gastric Decontamination**:\\\\n- **Activated Charcoal**: Most effective within 1-2 hours\\\\n- Most poisons bind to charcoal in stomach/small bowel\\\\n- Dose: 0.5-1 g/kg (typical 25-100g)\\\\n- Contraindications: Caustic poisons, hydrocarbons, unable to protect airway\\\\n- Works best: First 2 hours but can be given up to 24 hours for sustained-release preparations\\\\n\\\\n**Induced Vomiting**: Rarely used now (no advantage over charcoal)\\\\n\\\\n**Gastric Lavage**: Limited evidence for benefit; risk of aspiration\\\\n\\\\n**Whole Bowel Irrigation**:\\\\n- Polyethylene glycol solution (GoLYTELY) given orally/NGT\\\\n- 1-2 L/hour until rectal effluent clear\\\\n- Useful for: Iron, lithium, sustained-release drugs\\\\n- Contraindication: Severe toxicity, ileus\\\\n\\\\n### Elimination Enhancement\\\\n- **Urine alkalinization**: Salicylates, barbiturates (weak acids) eliminated better in alkaline urine\\\\n- **Hemodialysis**: Removes: Alcohols (ethylene glycol, methanol), salicylates, phenobarbital\\\\n- **Charcoal hemoperfusion**: Less commonly used now,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"ABCDE Poisoning Management = Airway, Breathing, Circulation, Disability, Exposure\\\\\\\",\\\\n            explanation: \\\\\\\"Systematic approach to any poisoning case\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Poison Classification by LD₅₀: <1 (super) → 1-50 (extreme) → 50-500 (very) → 500-5000 (moderate) → >5000 (slight)\\\\\\\",\\\\n            explanation: \\\\\\\"Quick reference for toxicity levels\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Activated Charcoal Window = Within 2 hours of ingestion (best) but effective up to 24 hours\\\\\\\",\\\\n            explanation: \\\\\\\"Timing for gastric decontamination\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Toxicology: Science of adverse effects; Forensic toxicology applies to legal cases\\\\\\\",\\\\n          \\\\\\\"Dose-response: Any substance at sufficient dose is toxic (Paracelsus principle)\\\\\\\",\\\\n          \\\\\\\"Local vs. systemic: Corrosives have local damage; cyanide has systemic effects\\\\\\\",\\\\n          \\\\\\\"Three phases: Absorption (0-30 min) → Peak symptoms (30 min-hours) → Elimination (hours-days)\\\\\\\",\\\\n          \\\\\\\"Poisoning severity: Mild (GI/mild CNS) → Moderate (systemic, alert) → Severe (coma, shock) → Fatal\\\\\\\",\\\\n          \\\\\\\"Management: ABCDE protocol; activated charcoal within 2 hours; hemodialysis for certain poisons\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Forensic Medicine by Reddy\\\\\\\", chapter: \\\\\\\"General Toxicology\\\\\\\", edition: \\\\\\\"34th\\\\\\\" },\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"Poisoning and Drug Overdosage\\\\\\\", edition: \\\\\\\"21st\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  },\\\\n\\\\n  {\\\\n    topicCode: \\\\\\\"FM-MOD-06-TOP-04\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"snake-bite-envenomation-foundation\\\\\\\",\\\\n        title: \\\\\\\"Snake Bite & Envenomation - Foundation\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Snake venom composition, clinical manifestations, and antisnake venom therapy.\\\\\\\",\\\\n        contentMd: "# Snake Bite & Envenomation - Foundation\\\\\\\\n\\\\\\\\n## Epidemiology of Snake Bite\\\\\\\\n\\\\\\\\n### Global & Indian Burden\\\\\\\\n- **Global**: 81,000-138,000 deaths/year from snake bite\\\\\\\\n- **India**: Highest burden globally - 30,000-40,000 deaths/year\\\\\\\\n- **Incidence**: 1-2 bites per 1000 people/year (varies by region)\\\\\\\\n- **Mortality**: Overall 5-10%; higher in rural areas with delayed treatment\\\\\\\\n\\\\\\\\n### High-Risk Groups\\\\\\\\n- Agricultural workers, farmers (seasonal)\\\\\\\\n- Night workers, outdoor laborers\\\\\\\\n- Rural populations with limited access to treatment\\\\\\\\n- Children and elderly (higher risk of death per bite)\\\\\\\\n\\\\\\\\n### Geographic Distribution (India)\\\\\\\\n- **High endemicity**: Maharashtra, Andhra Pradesh, Karnataka, Tamil Nadu, Rajasthan\\\\\\\\n- **Seasonal**: Monsoon and post-monsoon peaks\\\\\\\\n- **Time**: Night bites more common\\\\\\\\n\\\\\\\\n## Medically Important Venomous Snakes in India\\\\\\\\n\\\\\\\\n### \\\\\\\\\\\\\\\"Big 4\\\\\\\\\\\\\\\" of India\\\\\\\\n\\\\\\\\n**1. Cobra (Naja species)**\\\\\\\\n- **Type**: Neurotoxic (most important neurotoxin source)\\\\\\\\n- **Fangs**: Fixed\\\\\\\\n- **Bite marks**: Two small puncture marks\\\\\\\\n- **Venom effects**: Neurotoxins → flaccid paralysis, respiratory failure\\\\\\\\n- **Symptoms onset**: 30 minutes - 6 hours\\\\\\\\n\\\\\\\\n**2. Kraits (Bungarus caeruleus)**\\\\\\\\n- **Type**: Highly neurotoxic\\\\\\\\n- **Fangs**: Fixed\\\\\\\\n- **Activity**: Nocturnal (bites while sleeping indoors)\\\\\\\\n- **Venom**: Extremely potent neurotoxins\\\\\\\\n- **Mortality**: Highest among Big 4 (15-20%)\\\\\\\\n- **Symptoms**: Delayed onset (4-12 hours), progressive weakness\\\\\\\\n\\\\\\\\n**3. Viper (Echis and Vipera species)**\\\\\\\\n- **Type**: Hemotoxic (affects blood coagulation)\\\\\\\\n- **Fangs**: Foldable (solenoglyphous)\\\\\\\\n- **Bite marks**: Two puncture marks with tissue damage\\\\\\\\n- **Venom effects**: Hemolysis, coagulopathy, necrosis\\\\\\\\n- **Symptoms onset**: Rapid (15 minutes - 2 hours)\\\\\\\\n\\\\\\\\n**4. Russell's Viper (Daboia russelii)**\\\\\\\\n- **Type**: Hemotoxic + neurotoxic\\\\\\\\n- **Fangs**: Foldable\\\\\\\\n- **Venom**: Coagulotoxin (consumes clotting factors), hemorrhagin\\\\\\\\n- **Bite marks**: Deep puncture with tissue damage\\\\\\\\n- **Symptoms**: DIC, acute renal failure\\\\\\\\n- **Mortality**: Moderate-high (10-15%)\\\\\\\\n\\\\\\\\n### Other Medically Important Snakes\\\\\\\\n- **King Cobra**: Largest venomous snake; neurotoxic\\\\\\\\n- **Green pit viper, pit viper**: Hemotoxic\\\\\\\\n\\\\\\\\n## Venom Composition & Toxins\\\\\\\\n\\\\\\\\n### Major Venom Components\\\\\\\\n\\\\\\\\n**Neurotoxins** (Cobras, Kraits, King Cobra):\\\\\\\\n- Presynaptic neurotoxins: Block acetylcholine release → flaccid paralysis\\\\\\\\n- Postsynaptic neurotoxins: Block acetylcholine receptor\\\\\\\\n- Effect: Respiratory paralysis, death\\\\\\\\n- Treatment: Mechanical ventilation, anticholinesterase drugs may help postsynaptic toxins\\\\\\\\n\\\\\\\\n**Hemotoxins** (Vipers):\\\\\\\\n- Coagulotoxins: Consume clotting factors (mimic consumption coagulopathy/DIC)\\\\\\\\n- Hemorrhagins: Direct vessel damage, hemorrhage\\\\\\\\n- Anticoagulants: Prevent clotting\\\\\\\\n- Effects: Bleeding, shock, organ failure\\\\\\\\n- Treatment: ASV (antisnake venom), fresh frozen plasma, antifibrinolytic agents\\\\\\\\n\\\\\\\\n**Cytotoxins**:\\\\\\\\n- Direct cellular damage\\\\\\\\n- Cause tissue necrosis at bite site and systemically\\\\\\\\n\\\\\\\\n**Enzymes** (Phospholipase, serine protease):\\\\\\\\n- Break down cell membranes, cell death\\\\\\\\n\\\\\\\\n## Clinical Manifestations\\\\\\\\n\\\\\\\\n### Local Effects\\\\\\\\n\\\\\\\\n**At Bite Site**:\\\\\\\\n- Fang marks: Two puncture holes (occasionally single mark if one fang penetrates)\\\\\\\\n- Pain (immediate)\\\\\\\\n- Swelling (within 15 minutes - 2 hours)\\\\\\\\n- Discoloration (ecchymosis around bite)\\\\\\\\n- Blistering, tissue necrosis (in hemotoxic bites)\\\\\\\\n\\\\\\\\n**Compartment Syndrome** (Viper bites):\\\\\\\\n- Massive swelling → increased intracompartmental pressure\\\\\\\\n- Muscle ischemia → rhabdomyolysis, acute renal failure\\\\\\\\n- Treatment: Surgical fasciotomy if necessary\\\\\\\\n\\\\\\\\n### Systemic Manifestations\\\\\\\\n\\\\\\\\n**Neurotoxic** (Cobra, Krait):\\\\\\\\n- **Early**: Euphoria, drowsiness, dizziness (6-8 hours after krait bite)\\\\\\\\n- **Ptosis**: Drooping eyelids, ophthalmoplegia (external eye muscle paralysis)\\\\\\\\n- **Bulbar signs**: Difficulty swallowing, dysarthria (weakness of speech muscles)\\\\\\\\n- **Respiratory paralysis**: Inability to breathe; death if ventilation not provided\\\\\\\\n- **Flaccid paralysis**: Arms, legs weakness, loss of tone\\\\\\\\n\\\\\\\\n**Hemotoxic** (Viper, Russell's Viper):\\\\\\\\n- **Coagulopathy**: Uncontrolled bleeding from bite site, nose, gums, urine, stool\\\\\\\\n- **DIC**: Disseminated intravascular coagulation - bleeding from multiple sites\\\\\\\\n- **Shock**: Hemorrhagic shock from massive bleeding\\\\\\\\n- **Organ failure**: Acute renal failure (myoglobinuria from muscle breakdown), hepatic dysfunction\\\\\\\\n\\\\\\\\n**Cardiovascular**:\\\\\\\\n- Hypotension, shock\\\\\\\\n- Arrhythmias, myocardial infarction\\\\\\\\n\\\\\\\\n### \\\\\\\\\\\\\\\"Dry Bite\\\\\\\\\\\\\\\" (No Envenomation)\\\\\\\\n- 20-30% of bites are dry (no venom injected)\\\\\\\\n- Diagnosis: No local or systemic symptoms after 24 hours\\\\\\\\n- Treatment: Still give ASV and supportive care (cannot exclude envenomation in first hours)\\\\\\\\n\\\\\\\\n## Antisnake Venom (ASV) Therapy\\\\\\\\n\\\\\\\\n### Composition\\\\\\\\n- Polyvalent ASV: Contains antibodies against Big 4 snakes\\\\\\\\n- Prepared in: Horse serum (equine-derived immunoglobulins)\\\\\\\\n- Contains: Specific F(ab')₂ fragments against major neurotoxins and hemotoxins\\\\\\\\n\\\\\\\\n### Efficacy\\\\\\\\n- Earliest administration most effective\\\\\\\\n- Ideally given within 24 hours (some effect up to 48 hours)\\\\\\\\n- Prevents progression but does NOT reverse established paralysis\\\\\\\\n- Once respiratory paralysis occurs, only mechanical ventilation helps\\\\\\\\n\\\\\\\\n### Administration\\\\\\\\n\\\\\\\\n**Dosing**:\\\\\\\\n- **Initial dose**: 10 vials IV in 100 mL normal saline over 30-60 minutes\\\\\\\\n- **Repeat dose**: If coagulation parameters abnormal or bleeding continues, give additional vials\\\\\\\\n- Typical total dose: 10-20 vials per bite\\\\\\\\n\\\\\\\\n**Route**: Intravenous (preferred, most effective)\\\\\\\\n- Alternative: Intramuscular (if IV not feasible, less effective)\\\\\\\\n- NOT given subcutaneously or locally (inadequate distribution)\\\\\\\\n\\\\\\\\n**Monitoring**: Check coagulation profile (PT/INR, aPTT) before and after ASV\\\\\\\\n\\\\\\\\n### Side Effects\\\\\\\\n\\\\\\\\n**Type I Hypersensitivity** (5-10%):\\\\\\\\n- Urticaria, angioedema\\\\\\\\n- Anaphylaxis (rare, <1%)\\\\\\\\n- Prevention: Premedication with antihistamines, corticosteroids\\\\\\\\n- Treatment: Adrenaline for anaphylaxis\\\\\\\\n\\\\\\\\n**Serum Sickness** (Delayed, 7-14 days):\\\\\\\\n- Fever, rash, joint pain\\\\\\\\n- Self-limited, responds to NSAIDs/corticosteroids\\\\\\\\n\\\\\\\\n### Contraindications\\\\\\\\n- **No absolute contraindications** (benefit outweighs risk)\\\\\\\\n- Relative: Severe allergy history (manage with premedication)\\\\\\\\n- Pregnancy: NOT contraindicated; benefit > risk\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\"\\\"\""
-}
-}
-];
+        summary: "DNA profiling methods, STR analysis, applications in forensic medicine and paternity testing.",
+        contentMd: `# DNA Fingerprinting & Forensic Identity - Foundation
+
+## Introduction to DNA Fingerprinting
+
+### Definition
+DNA fingerprinting (DNA profiling) is technique using unique DNA variations to identify individuals. Each person (except identical twins) has unique DNA pattern.
+
+### Discovery and Development
+- Discovered by Alec Jeffreys in 1984
+- Revolutionized forensic identification
+- Now gold standard for identification
+- Applications: Criminal investigations, paternity testing, disaster victim identification
+
+## DNA Fingerprinting Methods
+
+### 1. Restriction Fragment Length Polymorphism (RFLP) - Older Method
+- **Process**: Uses restriction enzymes to cut DNA at specific sites
+- **Principle**: Length of DNA fragments varies between individuals
+- **Disadvantages**: Requires large DNA (100-1000 ng), time-consuming (2-3 weeks), now largely replaced
+
+### 2. STR Analysis (Short Tandem Repeats) - Current Gold Standard
+
+**What are STRs?**
+- Repeated DNA sequences (2-6 base pairs) repeated multiple times
+- Example: GATA repeated 7 times, 9 times, etc.
+- Number of repeats differs between individuals (polymorphic)
+
+**Process**:
+- Identify specific STR loci (locations)
+- Use PCR to amplify STR regions
+- Count number of repeats at each locus
+- Create DNA profile from 13-20 core loci
+
+**Advantages**:
+- Rapid (hours to days)
+- Requires minimal DNA (nanograms)
+- Highly polymorphic (discriminating power: >99.99%)
+- Automated analysis available
+- Degraded DNA can be analyzed
+
+### 3. Other Methods
+
+**Y-Chromosome Markers**: For male-specific identification and paternal lineage
+**Mitochondrial DNA (mtDNA)**: Multiple copies per cell; useful when nuclear DNA degraded
+
+## DNA Markers Used in Forensics
+
+### CODIS System (Combined DNA Index System)
+- FBI maintains database of DNA profiles
+- Used for criminal case matching
+- 13-20 core STR loci analyzed
+- India: NDIS (National DNA Index System) under NCRB
+
+### Core STR Loci (13-20 typically analyzed)
+Examples: D3S1358, D5S818, D7S820, D13S317, FGA, and others
+
+## Forensic Applications
+
+### Criminal Investigations
+- **Rape cases**: Semen identification, perpetrator identification
+- **Murder cases**: Blood/tissue from scene vs. suspect comparison
+- **Robbery/Burglary**: Hair, skin cells from perpetrator
+- **Hit-and-run**: Blood from vehicle
+
+### Paternity Testing
+- **Principle**: Child inherits one allele from each parent
+- **Comparison**: Father, mother, child profiles analyzed
+- **Exclusion**: If alleged father lacks allele present in child, excluded
+- **Inclusion**: >99.99% probability of paternity
+
+### Identification of Deceased
+- **Mass disasters**: Tsunami, earthquake, plane crash
+- **Unknown bodies**: Comparison with biological relatives
+- **Skeletal remains**: DNA extraction from bone
+
+## DNA Evidence Handling
+
+### Best Samples for Analysis
+- **Blood**: Gold standard (cells with nuclei)
+- **Saliva**: Buccal swabs
+- **Semen**: Spermatozoa
+- **Hair**: Root/bulb (medulla contains cells)
+- **Skin cells**: Fingernails, swabs
+
+### Storage and Handling
+- **Dry storage**: Room temperature (prevents degradation)
+- **Refrigeration**: 2-8°C for wet samples
+- **Freezing**: -20°C for long-term storage
+- **Chain of Custody**: Document every handler
+
+## Indian Legal Framework
+
+### DNA Technology (Use and Regulation) Bill, 2019
+- Regulates DNA testing in India
+- Protects privacy while enabling forensic DNA analysis
+- Establishes DNA Index System (NDIS) by NCRB
+- Consent requirements: Voluntary (with consent) or compelled (suspected person)
+- Misuse prevention: Penalties for unauthorized DNA profiling
+
+### Admissibility in Court
+- DNA evidence admissible under Indian Evidence Act
+- Requires: Proper collection, chain of custody, validated methodology, qualified expert`,
+        mnemonics: [
+          {
+            text: "DNA Methods Evolution = RFLP (1980s) → PCR (1990s) → STR Analysis (current)",
+            explanation: "Evolution of DNA fingerprinting techniques"
+          },
+          {
+            text: "Best DNA Sources = Blood > Saliva > Semen > Hair (root) > Skin",
+            explanation: "Quality ranking of DNA samples"
+          },
+          {
+            text: "STR Advantages = Fast (hours), Sensitive (nanograms), Specific (1 in billions)",
+            explanation: "Why STR is gold standard"
+          }
+        ],
+        keyPoints: [
+          "DNA fingerprinting uses STR (Short Tandem Repeats) analysis - current gold standard",
+          "13-20 core STR loci analyzed; discriminating power > 99.99%",
+          "RFLP is older method; now largely replaced by PCR-based STR analysis",
+          "Paternity: Child inherits one allele from each parent",
+          "Chain of custody essential - improper handling makes evidence inadmissible",
+          "DNA Technology Bill 2019 regulates DNA testing and establishes NDIS in India"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "DNA Fingerprinting and Identification", edition: "34th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "dna-fingerprinting-layer-2-mechanism",
+        title: "DNA Fingerprinting - Mechanism & Analysis",
+        estimatedMinutes: 25,
+        summary: "STR analysis process, profile matching, probability calculations, and interpretation.",
+        contentMd: `# DNA Fingerprinting - Mechanism & Analysis
+
+## STR Analysis Technical Process
+
+### Step 1: DNA Extraction
+- Isolate DNA from biological sample
+- Methods: Phenol-chloroform, silica-based columns, FTA cards
+- Quantify DNA concentration and purity
+
+### Step 2: PCR Amplification
+- **Primers**: Designed for specific STR loci
+- **Multiplexing**: Amplify 13-20 loci simultaneously
+- **Labeling**: Fluorescent dyes on primers
+- **PCR cycles**: 25-30 cycles of denaturation-annealing-extension
+
+### Step 3: Capillary Electrophoresis
+- DNA fragments separated by size in capillary tube
+- Fluorescent labels detected
+- Peak pattern recorded (electropherogram)
+
+### Step 4: Data Analysis
+- **Allele designation**: Peak size converted to repeat number
+- **Genotype**: Two peaks per locus (heterozygous) or one (homozygous)
+- **Profile compilation**: Alleles across all loci
+- **Software**: AutoSTR, GeneMapper automated analysis
+
+## STR Loci and Nomenclature
+
+### Example Core STR Loci
+
+| Locus | Repeat Unit | Typical Range |
+|-------|------------|---------------|
+| D3S1358 | AGAT | 12-19 |
+| D5S818 | AGAT | 7-13 |
+| D7S820 | GATA | 5-15 |
+| D13S317 | GATA | 7-15 |
+| FGA | AAAG | 18-51 |
+
+### Allele Designation
+- **Name** = number of repeat units
+- **Heterozygous** = two different alleles (15/18)
+- **Homozygous** = two identical alleles (15/15)
+
+## Profile Matching and Interpretation
+
+### Exclusion (Non-Match)
+- Difference at even ONE locus is sufficient
+- 100% certainty of exclusion
+- Excluded person could not be source
+
+**Example**:
+- Crime scene: 15/18 at D3S1358
+- Suspect: 12/16 at D3S1358
+- Result: EXCLUDED (lacks both alleles)
+
+### Inclusion (Match)
+- All tested loci match
+- Probability calculated using population frequencies
+
+**Random Match Probability (RMP)**:
+- Probability random person has same profile
+- With 13 loci: RMP ≈ 1 in 6.7 billion
+- With 20 loci: RMP ≈ 1 in 10¹⁷ (essentially unique)
+
+**Expert Testimony**:
+- "Profile is 6.7 billion times more likely from crime scene DNA than random person"
+
+## Paternity Testing
+
+### Genetic Inheritance
+- Child inherits one allele from each biological parent
+- Can exclude alleged father if he lacks child's allele
+
+### Analysis Example
+
+**Scenario: Biological Father**
+- Mother: 15/18 at D3S1358
+- Child: 15/16 at D3S1358
+- Alleged Father: 16/19 at D3S1358
+- Analysis: Child has 15 from mother, 16 from father
+- Result: CANNOT BE EXCLUDED
+
+**Scenario: Excluded Father**
+- Mother: 15/18 at D3S1358
+- Child: 12/18 at D3S1358
+- Alleged Father: 16/19 at D3S1358
+- Analysis: Child has 18 from mother, 12 from other parent
+- Alleged father has 16/19
+- Result: EXCLUDED (does not have 12)
+
+### Cumulative Probability
+- Across all loci: >99.99% probability of paternity if consistent
+- Statement: "Alleged father is biological father with >99.99% certainty"
+
+## Quality Assurance
+
+### Common Artifacts in STR Analysis
+
+**Allelic Dropout**: One allele fails to amplify (appears homozygous)
+- Causes: Low DNA template, primer binding problems
+- Resolution: Repeat analysis
+
+**Null Alleles**: Primers don't bind due to sequence variation
+- Appears as homozygosity
+- Recognition: Look for family patterns
+
+**Contamination**: Foreign DNA introduced
+- Appears as multiple peaks at locus (3+ alleles)
+- Resolution: Careful sample handling, repeat testing
+
+**Amelogenin Sex Determination**:
+- Co-amplified with STR loci
+- X chromosome (106 bp) vs. Y chromosome (112 bp)
+- Confirms biological sex
+
+## Admissibility Standards
+
+### Daubert Standard (USA-influenced, used in India)
+- General acceptance in scientific community
+- Peer review and publication
+- Known error rate
+- Standards and controls maintained
+- Qualified expert witness
+
+### Indian Evidence Act Requirements
+- Expert must demonstrate:
+  - Proper methodology used
+  - Chain of custody maintained
+  - Laboratory accreditation (ISO 17025)
+  - Proficiency testing results
+  - Qualification of expert analyst`,
+        mnemonics: [
+          {
+            text: "STR Analysis Steps = Extraction → Amplification → Electrophoresis → Analysis",
+            explanation: "Four main steps of STR analysis"
+          },
+          {
+            text: "Matching Criteria = One locus difference = EXCLUSION; All match = INCLUSION",
+            explanation: "Decision rules for DNA matching"
+          }
+        ],
+        keyPoints: [
+          "STR analysis: PCR amplification of 13-20 loci; capillary electrophoresis separates fragments",
+          "Exclusion: One locus mismatch = 100% certainty person not source",
+          "Inclusion: All loci match; probability calculated from population frequencies",
+          "Paternity: Child must have one allele from each parent",
+          "RMP with 13 loci: ~1 in 6.7 billion (essentially unique identification)",
+          "Quality issues: Allelic dropout, null alleles, contamination require recognition"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "DNA Fingerprinting and Identification", edition: "34th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "dna-fingerprinting-layer-3-clinical",
+        title: "DNA Fingerprinting - Forensic Applications & Case Studies",
+        estimatedMinutes: 25,
+        summary: "Real-world forensic DNA applications, case interpretation, and Indian legal considerations.",
+        contentMd: `# DNA Fingerprinting - Forensic Applications & Case Studies
+
+## Case Study 1: Sexual Assault Investigation
+
+**Scenario**: Woman reports rape. DNA analysis of vaginal swab sample.
+
+**Evidence Collection**:
+- Vaginal swab: High-grade DNA from semen
+- DNA profile created from 13-20 STR loci
+- Suspect DNA profile created from buccal swab
+
+**Interpretation**:
+- **Match**: DNA from assault matches suspect's profile (RMP = 1 in 6.7 billion)
+- **Non-match**: Excludes suspect with 100% certainty
+- **Mixed profile**: May contain DNA from victim and/or multiple perpetrators
+
+**Forensic Value**:
+- Can identify perpetrator with extremely high probability
+- Can exclude innocent suspects
+- Corroborates victim's account
+
+## Case Study 2: Paternity Dispute
+
+**Scenario**: Child custody case; alleged father denies paternity. DNA testing requested.
+
+**Analysis Setup**:
+- Child profile: Multiple loci analyzed
+- Mother profile: Multiple loci analyzed
+- Alleged father profile: Multiple loci analyzed
+
+**Interpretation**:
+- **Consistent with paternity**: All loci match (child has one allele from mother, one from father)
+- **Excluded from paternity**: At multiple loci, alleged father lacks allele present in child
+- **Probability statement**: ">99.99% probability alleged father is biological father" if consistent
+
+**Example Findings**:
+- Locus 1: Child 15/18, Mother 15/19, Father 18/21 → Consistent
+- Locus 2: Child 12/14, Mother 12/16, Father 14/17 → Consistent
+- Locus 3: Child 10/12, Mother 10/13, Alleged father 15/18 → EXCLUDED (doesn't have 10 or 12)
+- **Conclusion**: Alleged father EXCLUDED as biological father
+
+## Case Study 3: Mass Disaster Victim Identification
+
+**Scenario**: Earthquake kills hundreds. DNA used to identify unknown remains.
+
+**Process**:
+- Extract DNA from skeletal/tissue remains
+- Create DNA profile (may be partial if DNA degraded)
+- Compare with DNA profiles of biological relatives
+- Match to family members (even partial profiles useful)
+
+**Application**:
+- Mitochondrial DNA useful (multiple copies, degraded nuclear DNA often absent)
+- Y-chromosome markers for male lineage identification
+- Family reunification through relative matching
+- Critical for identifying family members for closure and inheritance
+
+## Case Study 4: Criminal Database Hit (CODIS Match)
+
+**Scenario**: DNA from crime scene uploaded to CODIS database. Match found with convicted offender.
+
+**Process**:
+- Crime scene DNA profile created
+- Searched against national database (CODIS/NDIS)
+- Match found: Known offender's profile identical to crime scene DNA
+
+**Significance**:
+- Can solve cold cases
+- Links serial crimes to single perpetrator
+- Leads to suspect identification
+- Corroborates other evidence
+
+## DNA in Wildlife Trafficking
+
+**Application**: Identify species and origin of seized wildlife products
+- Protect endangered species
+- Prevent illegal trade
+- Trace origin of contraband
+
+## Quality and Chain of Custody
+
+### Chain of Custody Documentation
+- **Critical for admissibility**: Every person handling evidence must be documented
+- **Label**: Unique identification number, date, time
+- **Seal**: Tamper-proof containers
+- **Storage**: Proper temperature and humidity
+- **Prevent**: Cross-contamination, loss of integrity
+
+**Legal Requirement**: Admissibility in court depends on proper chain of custody
+
+### Laboratory Accreditation
+- **ISO 17025**: International standard for laboratory accreditation
+- **Proficiency testing**: Regular testing against known standards
+- **Quality assurance**: Regular audits and quality control
+- **Expert qualification**: Analyst must be trained and experienced
+
+## Indian Legal Considerations
+
+### DNA Technology Bill 2019
+- **Consent**: Voluntary sample (with consent) vs. suspected person (can be compelled)
+- **Privacy protection**: Strict regulations on data use and storage
+- **Penalties**: Unauthorized DNA profiling is punishable
+- **NDIS**: National DNA Index System under NCRB
+
+### Indian Evidence Act
+- DNA evidence admissible as scientific evidence
+- Expert witness must establish:
+  - Proper collection and handling
+  - Validated methodology
+  - Laboratory accreditation
+  - Results reliability
+
+### BNS/IPC Sections
+- **IPC Section 293**: Obstetric offences may require paternity determination
+- **IPC Section 375**: Rape cases where DNA evidence crucial
+- **BNS Section 45 (Indian Evidence Act)**: Opinion of experts in science/art
+
+## Limitations of DNA Evidence
+
+- **Not absolute proof**: No DNA link doesn't prove innocence (may have worn gloves)
+- **Contamination**: Cross-contamination can lead to false inclusion
+- **Population frequency data**: Required for RMP calculation; may vary by ethnic group
+- **Mixed profiles**: Difficult interpretation with DNA from multiple persons
+- **Degraded DNA**: Poor quality may give unreliable results
+- **Interpretation**: Requires qualified expert testimony`,
+        mnemonics: [
+          {
+            text: "Chain of Custody = Document, Label, Seal, Store, Prevent cross-contamination",
+            explanation: "Key requirements for evidence integrity"
+          }
+        ],
+        keyPoints: [
+          "DNA matching identifies perpetrators with RMP > 1 in 6.7 billion (essentially unique)",
+          "Paternity: Child must inherit one allele from each parent; one locus mismatch = excluded",
+          "Mass disasters: Mitochondrial DNA and relative matching crucial for victim identification",
+          "CODIS/NDIS: National databases solve cold cases and link serial crimes",
+          "Chain of custody: Essential for admissibility; every handler must be documented",
+          "Indian law: DNA Technology Bill 2019 regulates consent and data protection"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "DNA Fingerprinting and Identification", edition: "34th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "dna-fingerprinting-layer-4-exam",
+        title: "DNA Fingerprinting - Exam Preparation",
+        estimatedMinutes: 20,
+        summary: "Key definitions, facts, and typical exam questions with answers.",
+        contentMd: `# DNA Fingerprinting - Exam Preparation
+
+## Key Definitions
+
+| Term | Definition |
+|------|-----------|
+| STR (Short Tandem Repeat) | Repeated DNA sequences; basis of modern DNA profiling |
+| CODIS | FBI database of DNA profiles for criminal matching |
+| NDIS | India's National DNA Index System (NCRB) |
+| Allele | Variant of gene/STR locus |
+| RMP | Random Match Probability |
+| PCR | Polymerase Chain Reaction; amplifies DNA |
+| Chain of Custody | Documentation of evidence handling |
+
+## DNA Analysis Methods
+
+**RFLP (Restriction Fragment Length Polymorphism)**:
+- Older method; uses restriction enzymes
+- Requires large DNA (100-1000 ng)
+- Time-consuming (2-3 weeks)
+- Largely replaced
+
+**STR Analysis (Current Gold Standard)**:
+- PCR-based amplification
+- 13-20 core loci analyzed
+- Rapid (hours-days)
+- Requires minimal DNA (nanograms)
+- RMP: 1 in 6.7 billion (13 loci) to 1 in 10¹⁷ (20 loci)
+
+## Common Exam Questions
+
+**Q1: What is DNA fingerprinting and when was it discovered?**
+A: DNA fingerprinting is technique identifying individuals by unique DNA variations. Discovered by Alec Jeffreys in 1984. Each person (except identical twins) has unique profile.
+
+**Q2: What are STR loci and why are they useful?**
+A: STRs are repeated DNA sequences varying in repeat number between individuals. Useful because highly polymorphic (discriminating), require minimal DNA, and can be analyzed in hours.
+
+**Q3: How many STR loci are used in standard analysis?**
+A: 13-20 core STR loci typically analyzed (13 minimum for criminal databases, 20 or more in high-level cases).
+
+**Q4: What is Random Match Probability (RMP)?**
+A: Probability that randomly selected person has same DNA profile. With 13 loci: ~1 in 6.7 billion. Essentially identifies person uniquely.
+
+**Q5: How is paternity established using DNA?**
+A: Child must inherit one allele from each parent. If alleged father lacks allele present in child (not from mother), he is excluded. If all alleles consistent, >99.99% paternity probability.
+
+**Q6: When can an individual be excluded from paternity?**
+A: When at even ONE locus, alleged father lacks allele present in child (not inherited from mother). One locus exclusion = 100% exclusion from paternity.
+
+**Q7: What are the advantages of STR analysis over RFLP?**
+A: STR: Rapid (hours-days), requires minimal DNA (nanograms), highly specific, automated analysis possible, degraded DNA analyzable. RFLP: Slow (weeks), requires much DNA, less specific.
+
+**Q8: What is chain of custody and why is it important?**
+A: Chain of custody is documentation of every person handling evidence. Important because admissibility in court depends on maintaining evidence integrity and preventing contamination.
+
+**Q9: What is CODIS and its function?**
+A: FBI database of DNA profiles from convicted offenders. Used to match crime scene DNA with known offenders, solve cold cases, and link serial crimes.
+
+**Q10: What is NDIS in Indian context?**
+A: National DNA Index System maintained by NCRB (National Crime Records Bureau) in India. Similar to CODIS; matches DNA profiles in criminal cases.
+
+**Q11: What are best samples for DNA analysis?**
+A: Blood (gold standard), saliva, semen, hair roots, skin cells. Avoid degraded, contaminated, or mixed samples.
+
+**Q12: How does contamination affect DNA analysis?**
+A: Contamination introduces foreign DNA. Results in multiple peaks at locus (3+ alleles instead of expected 2). Requires careful handling and repeat testing.
+
+**Q13: What is allelic dropout and how does it occur?**
+A: One allele fails to amplify in PCR. Appears as homozygosity when actually heterozygous. Caused by low DNA template or primer binding problems.
+
+**Q14: Can DNA evidence prove innocence?**
+A: Exclusion (non-match) with 100% certainty proves innocence. Absence of match doesn't prove guilt (suspect may have worn gloves, not left biological evidence).
+
+**Q15: Is DNA admissible in Indian courts?**
+A: Yes, under Indian Evidence Act. Expert must demonstrate: proper collection, chain of custody, validated methodology, lab accreditation, expert qualification.
+
+## Important Points
+
+- **Exclusion criteria**: One locus mismatch = 100% exclusion
+- **Inclusion criteria**: All loci match; RMP determines significance
+- **Paternity**: Child must have alleles from both biological parents
+- **STR advantages**: Speed, sensitivity, specificity
+- **Chain of custody**: Critical for admissibility
+- **Database value**: CODIS/NDIS solve many cases`,
+        mnemonics: [
+          {
+            text: "STR Analysis = PCR Amplification → Electrophoresis → Data Analysis → Profile Creation",
+            explanation: "Steps in STR DNA analysis"
+          },
+          {
+            text: "Exclusion = ONE locus mismatch; Inclusion = ALL loci match",
+            explanation: "Matching criteria in DNA analysis"
+          }
+        ],
+        keyPoints: [
+          "STR analysis: Current gold standard for DNA fingerprinting",
+          "13-20 core loci analyzed; RMP 1 in 6.7 billion (essentially unique)",
+          "Exclusion: One locus mismatch = 100% certainty person not source",
+          "Paternity: One locus exclusion = father excluded with 100% certainty",
+          "Chain of custody: Essential for court admissibility",
+          "DNA Technology Bill 2019: Regulates consent, privacy, data protection in India"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "DNA Fingerprinting and Identification", edition: "34th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "dna-fingerprinting-layer-5-active-recall",
+        title: "DNA Fingerprinting - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Self-assessment flashcard Q&A for spaced repetition.",
+        contentMd: `# DNA Fingerprinting - Active Recall
+
+## Flashcard Q&A
+
+**Q1: What is DNA fingerprinting and who discovered it?**
+A: DNA fingerprinting is technique identifying individuals by unique DNA variations. Discovered by Alec Jeffreys in 1984. Each person (except identical twins) has unique DNA profile.
+
+**Q2: What are STRs and why are they preferred over RFLP?**
+A: STRs (Short Tandem Repeats) are repeated DNA sequences varying in repeat number. Preferred because: Rapid (hours), require minimal DNA (nanograms), highly polymorphic, automated analysis possible.
+
+**Q3: How many STR loci are analyzed in standard DNA profiling?**
+A: 13-20 core STR loci typically analyzed. 13 loci minimum for criminal databases; more loci increase discrimination power.
+
+**Q4: What is Random Match Probability (RMP) with 13 STR loci?**
+A: RMP approximately 1 in 6.7 billion. Means profile is essentially unique to individual; 6.7 billion times more likely from crime scene DNA than random person.
+
+**Q5: How do you calculate paternity exclusion at one locus?**
+A: Child has two alleles (one from each parent). If alleged father lacks both alleles present in child (one from mother), father is excluded. One locus exclusion = 100% paternity exclusion.
+
+**Q6: Give example of paternity exclusion at single locus.**
+A: Mother 15/19, Child 12/18, Alleged Father 16/20. Child has 18 from mother, 12 from other parent. Alleged father lacks both 12 and 18. EXCLUDED as biological father.
+
+**Q7: What is allelic dropout and how does it occur?**
+A: Allelic dropout is failure of one allele to amplify in PCR. Appears as homozygosity (one peak) when should be heterozygous (two peaks). Caused by low DNA template or primer binding problems.
+
+**Q8: What does it mean when only one peak appears at STR locus?**
+A: Either: (1) Person is homozygous (inherited same allele from both parents), OR (2) Allelic dropout (one allele failed to amplify). Requires careful interpretation and possible repeat testing.
+
+**Q9: What is DNA contamination in forensic analysis?**
+A: Introduction of foreign (extraneous) DNA during collection, handling, or storage. Results in multiple peaks at locus (3+ alleles instead of expected 2). Requires careful evidence handling.
+
+**Q10: What is chain of custody and why is it critical?**
+A: Documentation of every person handling evidence, when, and for what purpose. Critical because court admissibility depends on maintaining evidence integrity and preventing contamination/loss.
+
+**Q11: What is CODIS and what does it do?**
+A: Combined DNA Index System maintained by FBI. Database of DNA profiles from convicted offenders. Used to match crime scene DNA with known offenders and solve cold cases.
+
+**Q12: What is NDIS in Indian forensic context?**
+A: National DNA Index System maintained by NCRB (National Crime Records Bureau) in India. Similar to CODIS; matches DNA profiles in criminal cases under DNA Technology Bill 2019.
+
+**Q13: What are best biological samples for DNA analysis?**
+A: Blood (gold standard), saliva (buccal swabs), semen, hair roots (medulla has cells), skin cells from fingernails/swabs. Avoid degraded, contaminated, or mixed samples.
+
+**Q14: How is DNA extracted from hair?**
+A: Best: Hair pulled out with root/bulb (medulla contains cells with nuclei). Shaft of hair has minimal DNA. Hair found naturally may have degraded DNA; root is crucial for analysis.
+
+**Q15: What is Amelogenin and what does it indicate?**
+A: Amelogenin is gene co-amplified with STR loci during PCR. X chromosome version (106 bp) indicates female; Y chromosome version (112 bp) indicates male. Confirms biological sex of DNA sample.
+
+**Q16: How does mitochondrial DNA differ from nuclear DNA in forensics?**
+A: Mitochondrial DNA: Multiple copies per cell (high copy number), maternal inheritance, useful when nuclear DNA degraded. Nuclear DNA: Two copies per cell, biparental inheritance, higher discrimination.
+
+**Q17: Can absence of DNA evidence prove innocence?**
+A: Not necessarily. Exclusion (non-match) proves innocence with 100% certainty. Absence of match just means person didn't leave biological evidence (may have worn gloves, not come in contact with victim).
+
+**Q18: How is profile matching interpreted in sexual assault case?**
+A: If crime scene DNA matches suspect's profile (all 13-20 loci), RMP indicates probability. Statement: "Profile is 1 in 6.7 billion times more likely from perpetrator than random person."
+
+**Q19: What is RFLP and why is it no longer primary method?**
+A: RFLP uses restriction enzymes to cut DNA at specific sites; measures fragment length differences. Largely replaced because: Requires large DNA, time-consuming (2-3 weeks), less discriminating than STR.
+
+**Q20: What are requirements for DNA evidence admissibility in Indian courts?**
+A: Expert must demonstrate: (1) Proper collection and handling. (2) Chain of custody maintained. (3) Validated methodology used. (4) Laboratory accreditation (ISO 17025). (5) Expert qualification. (6) Results reliability.`,
+        mnemonics: [
+          {
+            text: "STR Advantages = Speed (hours), Sensitivity (nanograms), Specificity (1 in billions)",
+            explanation: "Three key advantages of STR analysis"
+          },
+          {
+            text: "Exclusion vs. Inclusion = One locus mismatch (EXCLUDE) vs. All match (INCLUDE)",
+            explanation: "Decision criteria for DNA matching"
+          }
+        ],
+        keyPoints: [
+          "STR analysis: PCR amplification of 13-20 loci; discriminating power >99.99%",
+          "Exclusion: One locus mismatch = 100% certainty person not source",
+          "Paternity: Child inherits one allele from each parent; one mismatch = excluded",
+          "RMP: 1 in 6.7 billion (13 loci) makes profile essentially unique",
+          "Chain of custody: Every handler documented; critical for court admissibility",
+          "CODIS/NDIS: Databases match crime DNA with known offenders, solve cold cases"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "DNA Fingerprinting and Identification", edition: "34th" }
+        ]
+      }
+    ]
+  }
 ];

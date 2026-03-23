@@ -1,19 +1,651 @@
-export const forensicMedicinePart4Lessons = [
+import type { TopicLessons } from "./content-loader";
+
+export const forensicMedicinePart4Lessons: TopicLessons[] = [
   {
     topicCode: "FM-MOD-01-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "medical-ethics-code-of-conduct-foundation",
+        slug: "fm-ethics-conduct-layer-1-foundation",
         title: "Medical Ethics & Code of Conduct - Foundation",
         estimatedMinutes: 25,
-        summary: "Basic principles of medical ethics, physician responsibilities, and professional conduct.",
-        contentMd: "# Medical Ethics & Code of Conduct - Foundation\n\n## Fundamental Principles of Medical Ethics\n\n### Autonomy (Respect for Persons)\n**Definition**: Right of individuals to make decisions about their own medical care.\n\n**Implications**:\n- Informed consent before treatment\n- Patient right to refuse treatment\n- Confidentiality and privacy\n- Truth-telling to patients\n\n### Beneficence (Do Good)\n**Definition**: Physicians should act in patient's best interests.\n\n**Implications**:\n- Provide competent care\n- Use best available treatment\n- Promote patient welfare\n- Balance risks and benefits\n\n### Non-Maleficence (Do No Harm)\n**Definition**: Avoid harming patients; primum non nocere.\n\n**Implications**:\n- Minimize adverse effects\n- Avoid unnecessary procedures\n- Use proven treatments\n- Acknowledge limits of knowledge\n\n### Justice (Fairness)\n**Definition**: Fair distribution of healthcare resources and benefits.\n\n**Implications**:\n- Equal treatment for all patients\n- Access to care regardless of socioeconomic status\n- Fair allocation of scarce resources\n- Non-discrimination\n\n## Medical Code of Conduct in India (GMC/NMC)\n\n### General Principles\n1. **Protect patient confidentiality** - Exception: Legal requirement, public health emergency\n2. **Obtain informed consent** - Before treatment, investigation, research\n3. **Avoid conflict of interest** - Declare financial/personal interests\n4. **Provide competent care** - Continue education, acknowledge limitations\n5. **Be truthful** - Honest communication with patients\n6. **Treat all patients equitably** - Without discrimination\n7. **Report unethical colleagues** - Mandatory reporting of professional misconduct\n8. **Maintain high moral standards** - Personal conduct affecting professional reputation\n\n### Duties of Physician\n- Duty of care: Provide standard of care expected of competent physician\n- Duty of candor: Disclose errors and adverse events\n- Duty of confidence: Maintain patient confidentiality\n- Duty to report: Infectious diseases, abuse, impaired colleagues\n- Duty to continue education: Keep knowledge current\n\n### Professional Conduct\n- Avoid sexual relations with patients or those dependent on physician\n- Don't exploit patients (financial or otherwise)\n- Don't accept inappropriate gifts\n- Don't advertise unethically\n- Maintain professional dress and decorum\n\n## Doctor-Patient Relationship\n\n### Principles\n- Based on mutual trust and respect\n- Non-judgmental attitude\n- Compassion and empathy\n- Respect for patient autonomy\n- Confidentiality and privacy\n\n### Physician Responsibilities\n- Take proper history and physical examination\n- Perform appropriate investigations\n- Provide evidence-based treatment\n- Document adequately\n- Communicate clearly with patient\n- Refer when needed\n- Follow-up\n\n### Patient Rights (Indian Healthcare)\n- Right to know diagnosis and treatment options\n- Right to refuse treatment\n- Right to confidentiality\n- Right to quality care\n- Right to grievance redressal\n- Right to information about costs,\n        mnemonics: [\n          {\n            text: \"Medical Ethics Pillars = Autonomy, Beneficence, Non-maleficence, Justice (ABNJ)\",\n            explanation: \"Four fundamental ethical principles\"\n          },\n          {\n            text: \"GMC Code = Confidentiality, Consent, Competence, Candor, Care, Conduct\",\n            explanation: \"Key duties of physicians in India\"\n          }\n        ],\n        keyPoints: [\n          \"Autonomy: patient's right to make decisions about their own care\",\n          \"Informed consent required before any treatment or investigation\",\n          \"Confidentiality fundamental; exceptions only with legal mandate or public health emergency\",\n          \"Justice requires equitable treatment and fair resource allocation\",\n          \"Physicians must report unethical colleagues and professional misconduct\",\n          \"Doctor-patient relationship built on trust, respect, and non-judgmental care\"\n        ],\n        textbookRefs: [\n          { book: \"Reddy's Clinical Forensic Medicine & Toxicology\", chapter: \"Medical Ethics and Law\", edition: \"3rd\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"medical-ethics-code-of-conduct-mechanism\",\n        title: \"Medical Ethics & Code of Conduct - Mechanism\",\n        estimatedMinutes: 25,\n        summary: \"Detailed exploration of informed consent, confidentiality, and ethical dilemmas.\",\n        contentMd: "# Medical Ethics & Code of Conduct - Mechanism\\n\\n## Informed Consent\\n\\n### Elements of Valid Informed Consent\\n1. **Information**: Clear explanation of:\\n   - Diagnosis and nature of proposed treatment\\n   - Benefits and risks of treatment\\n   - Alternatives available\\n   - Consequences of refusal\\n\\n2. **Understanding**: Patient comprehends information:\\n   - Use simple language\\n   - Assess comprehension\\n   - Allow questions\\n\\n3. **Voluntary**: Decision made freely:\\n   - No coercion or undue influence\\n   - Time to consider\\n   - May take time\\n\\n4. **Capacity**: Patient competent to consent:\\n   - Age >18 years (major)\\n   - Mental capacity to understand\\n   - Not under influence of drugs/alcohol\\n\\n### Exceptions to Informed Consent\\n- **Emergency**: Immediate life-saving treatment without delay\\n- **Therapeutic privilege**: Withholding information if disclosure would harm patient\\n- **Waiver**: Patient explicitly waives right to information\\n- **Statutory requirements**: Court-ordered treatment\\n\\n### Consent in Special Situations\\n- **Minor**: Parent/guardian consent required\\n- **Incompetent adult**: Legal guardian consent\\n- **Refusal of transfusion**: Respect Jehovah's witness beliefs (Bloodless protocols)\\n- **Research**: Strict informed consent; Ethics Committee approval\\n\\n## Confidentiality and Privacy\\n\\n### Definition\\n**Confidentiality**: Duty to protect information disclosed by patient.\\n\\n### Scope of Confidentiality\\n- Information given by patient\\n- Observations made during examination\\n- Results of investigations\\n- Diagnoses and treatment plans\\n- Records and documents\\n\\n### Exceptions to Confidentiality\\n**Duty to disclose** when:\\n1. **Legal requirement**: Court subpoena, disclosure act\\n2. **Public health emergency**: Communicable disease, public safety threat\\n3. **Abuse**: Child abuse, intimate partner violence, elder abuse (mandatory reporting in many countries)\\n4. **Serious harm**: Risk of serious harm to identifiable third party (duty to warn)\\n5. **Death notification**: Inform next of kin\\n\\n**Permissible disclosure**:\\n- For continuity of care (consultants, other treating physicians)\\n- For payment/insurance purposes\\n- For quality assurance and research (with anonymization)\\n\\n### Patient Right to Access Records\\n- In India, patients can access medical records\\n- Reasonable charges may apply\\n- Exceptions: Information about third party, information that would cause harm\\n\\n## Ethical Dilemmas and Resolution\\n\\n### Common Ethical Conflicts\\n1. **Autonomy vs. Beneficence**: Patient refuses life-saving treatment\\n   - Respect patient autonomy (if competent)\\n   - Document refusal with witnesses\\n   - Explore reasons for refusal\\n\\n2. **Truthfulness vs. Compassion**: Telling bad news (terminal diagnosis)\\n   - Be honest but compassionate\\n   - Do it privately with family support\\n   - Allow time for questions\\n\\n3. **Confidentiality vs. Public Safety**: Patient with communicable disease refusing isolation\\n   - Explain importance of isolation\\n   - May breach confidentiality if public health risk\\n   - Report to health authorities\\n\\n### Ethical Decision-Making Framework\\n1. **Identify the ethical issue**\\n2. **Gather relevant information**\\n3. **Consider ethical principles and values**\\n4. **List alternatives**\\n5. **Analyze consequences**\\n6. **Consult ethics committee if needed**\\n7. **Make decision and document**\\n8. **Review outcome**\\n\\n## Role of Ethics Committees\\n\\n### Institutional Ethics Committee (IEC)\\n- Reviews research protocols\\n- Protects rights and welfare of research subjects\\n- Approves informed consent forms\\n- Monitors ongoing research\\n\\n### Clinical Ethics Committee\\n- Advises on clinical ethical dilemmas\\n- Helps resolve conflicts\\n- Develops institutional policies\\n- Education and consultation,\\n        mnemonics: [\\n          {\\n            text: \\\"Informed Consent = Information, Understanding, Voluntariness, Capacity\\\",\\n            explanation: \\\"Four elements of valid informed consent\\\"\\n          },\\n          {\\n            text: \\\"Confidentiality Exceptions = Legal mandate, Public health, Abuse, Serious harm to third party\\\",\\n            explanation: \\\"When physician duty to disclose overrides confidentiality\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Informed consent requires four elements: information, understanding, voluntariness, capacity\\\",\\n          \\\"Emergency treatment exception: can proceed without consent if life-saving\\\",\\n          \\\"Confidentiality fundamental but has exceptions (legal, public health, abuse, harm)\\\",\\n          \\\"Mandatory reporting of abuse in many settings (child abuse, intimate partner violence)\\\",\\n          \\\"Therapeutic privilege rare; generally should disclose information even if bad news\\\",\\n          \\\"Ethics committees provide support for difficult decisions\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Reddy's Clinical Forensic Medicine & Toxicology\\\", chapter: \\\"Medical Ethics and Law\\\", edition: \\\"3rd\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"medical-ethics-code-of-conduct-clinical\\\",\\n        title: \\\"Medical Ethics & Code of Conduct - Clinical Scenarios\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Real-world application of ethical principles in clinical and research settings.\\\",\\n        contentMd: "# Medical Ethics & Code of Conduct - Clinical Scenarios\\\\n\\\\n## Ethical Scenarios and Management\\\\n\\\\n### Scenario 1: Terminally Ill Patient Requesting Assisted Death\\\\n**Ethical Issue**: Autonomy vs. Non-maleficence\\\\n- In India: Physician cannot actively assist death (illegal)\\\\n- Can offer palliative care and pain management\\\\n- Explore reasons for request (often pain, depression)\\\\n- Ensure psychological support\\\\n- Respect refusal of further treatment\\\\n- Document discussion and wishes\\\\n\\\\n### Scenario 2: Minor Refusing Necessary Treatment\\\\n**Ethical Issue**: Autonomy of minor vs. Beneficence\\\\n- In India: Medical decisions for minors rest with parents/guardians\\\\n- If refusal harmful, petition court (Doctrine of Parens Patriae)\\\\n- Explain risks to minor and parents\\\\n- Emergency: Provide life-saving treatment without parental consent if not possible to obtain\\\\n- Religious objections (Jehovah's witness): Court intervention often needed\\\\n\\\\n### Scenario 3: Patient with Communicable Disease Refusing Isolation\\\\n**Ethical Issue**: Confidentiality and autonomy vs. Public Health\\\\n- Explain importance of isolation\\\\n- Attempt to gain compliance\\\\n- If refuses and poses public health risk: Report to health authorities\\\\n- Breaching confidentiality justified by public health emergency\\\\n- Document all attempts to gain compliance\\\\n\\\\n### Scenario 4: Colleague Showing Signs of Substance Abuse\\\\n**Ethical Issue**: Colleague loyalty vs. Patient safety and professional responsibility\\\\n- Document specific observed behaviors\\\\n- Express concern to colleague privately\\\\n- Suggest evaluation and help\\\\n- If refuses help and poses patient safety risk: Report to regulatory body\\\\n- Mandatory reporting of professional misconduct\\\\n- Confidentiality of reporter protected\\\\n\\\\n### Scenario 5: Patient Asks Physician Not to Tell Diagnosis to Family\\\\n**Ethical Issue**: Autonomy vs. Family involvement\\\\n- Respect patient's autonomy and wish for privacy\\\\n- Explain benefits of family support/involvement\\\\n- Try to persuade patient to inform family\\\\n- Can inform family only with explicit patient consent\\\\n- Document patient's wishes in record\\\\n\\\\n### Scenario 6: Research Study Without Proper Informed Consent\\\\n**Ethical Issue**: Research benefits vs. Individual autonomy\\\\n- Unethical and illegal\\\\n- Report to Ethics Committee\\\\n- Participants should be informed of use without consent\\\\n- Offer withdrawal from study\\\\n- Serious violations reported to regulatory authorities\\\\n\\\\n## Professional Conduct Issues\\\\n\\\\n### Handling Errors\\\\n- Acknowledge error promptly to patient\\\\n- Explain what happened and potential consequences\\\\n- Implement measures to prevent recurrence\\\\n- Inform supervisor/institution\\\\n- Document thoroughly\\\\n- Apologize sincerely (moral, not legal admission)\\\\n- Report serious errors to regulatory body\\\\n\\\\n### Managing Conflict of Interest\\\\n- Disclose financial interests (pharmaceutical, device companies)\\\\n- Don't let commercial interest influence prescribing\\\\n- Avoid expensive unnecessary investigations\\\\n- Recuse self from decisions affecting own financial interest\\\\n- Document disclosure in medical record\\\\n\\\\n### Advertising and Professional Conduct\\\\n- Can advertise qualifications truthfully\\\\n- Cannot claim superiority or make comparative claims\\\\n- Cannot use testimonials or patient endorsements\\\\n- Cannot advertise unproven treatments\\\\n- Cannot provide medical advice without proper consultation\\\\n\\\\n## Ethical Issues in Indian Healthcare Context\\\\n\\\\n### Resource Allocation\\\\n- Limited resources for large population\\\\n- Triage necessary in emergencies\\\\n- Principle: Greatest good for greatest number\\\\n- Also consider: Need, potential benefit, equity\\\\n\\\\n### Vulnerable Populations\\\\n- Ensure access for poor/marginalized\\\\n- Obtain informed consent properly in less-educated populations\\\\n- Avoid exploitation in research\\\\n- Provide culturally sensitive care\\\\n\\\\n### Traditional and Alternative Medicine\\\\n- Respect patient preferences if safe\\\\n- Ensure integration with allopathy when combined\\\\n- Don't disparage other systems without evidence\\\\n- Disclose limitations of alternative systems\\\\n\\\\n### Gender and Cultural Sensitivity\\\\n- Respect cultural norms while maintaining professional ethics\\\\n- Don't compromise care based on cultural beliefs\\\\n- Advocate for vulnerable groups (women, marginalized)\\\\n- Provide confidential care for sensitive issues,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Error Management = Acknowledge, Apologize, Analyze, Prevent recurrence, Report\\\\\\\",\\\\n            explanation: \\\\\\\"Steps for handling medical errors ethically\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Assisted death illegal in India; focus on palliative care and pain management\\\\\\\",\\\\n          \\\\\\\"Minor's medical decisions rest with parents unless life-saving emergency\\\\\\\",\\\\n          \\\\\\\"Public health emergency justifies breaching confidentiality\\\\\\\",\\\\n          \\\\\\\"Mandatory reporting of colleague impairment; protect patient safety first\\\\\\\",\\\\n          \\\\\\\"Informed consent required for research; Ethics Committee oversight essential\\\\\\\",\\\\n          \\\\\\\"Disclose financial conflicts; don't let commercial interest influence medical decisions\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Reddy's Clinical Forensic Medicine & Toxicology\\\\\\\", chapter: \\\\\\\"Medical Ethics and Law\\\\\\\", edition: \\\\\\\"3rd\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"medical-ethics-code-of-conduct-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Medical Ethics & Code of Conduct - Exam Preparation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Key ethical principles, definitions, and exam-focused scenarios.\\\\\\\",\\\\n        contentMd: "# Medical Ethics & Code of Conduct - Exam Preparation\\\\\\\\n\\\\\\\\n## Key Definitions\\\\\\\\n\\\\\\\\n| Term | Definition |\\\\\\\\n|------|-----------|\\\\\\\\n| Autonomy | Right to self-determination; make own decisions |\\\\\\\\n| Beneficence | Act in patient's best interest |\\\\\\\\n| Non-maleficence | Do no harm (primum non nocere) |\\\\\\\\n| Justice | Fair, equitable treatment |\\\\\\\\n| Confidentiality | Protect patient information |\\\\\\\\n| Informed Consent | Agreement based on adequate information |\\\\\\\\n| Therapeutic Privilege | Withhold info if disclosure harmful |\\\\\\\\n| Doctrine of Parens Patriae | State acts as guardian of minor/incompetent |\\\\\\\\n\\\\\\\\n## Essential Ethical Principles\\\\\\\\n\\\\\\\\n### Autonomy\\\\\\\\n- Patient right to make own decisions\\\\\\\\n- Requires informed consent\\\\\\\\n- Even if decision appears irrational\\\\\\\\n- Exception: Immediate danger to self/others\\\\\\\\n\\\\\\\\n### Beneficence & Non-maleficence\\\\\\\\n- Maximize benefits, minimize harms\\\\\\\\n- Risk-benefit analysis for interventions\\\\\\\\n- May conflict with autonomy\\\\\\\\n\\\\\\\\n### Justice\\\\\\\\n- Equal treatment regardless of:\\\\\\\\n  - Socioeconomic status\\\\\\\\n  - Religion, caste, gender\\\\\\\\n  - Ability to pay\\\\\\\\n- Fair distribution of resources\\\\\\\\n\\\\\\\\n### Confidentiality Exceptions\\\\\\\\n- Legal mandate (court order)\\\\\\\\n- Public health emergency\\\\\\\\n- Abuse (especially child abuse)\\\\\\\\n- Serious threat to identifiable third party\\\\\\\\n\\\\\\\\n## Common Exam Scenarios\\\\\\\\n\\\\\\\\n### Scenario 1: Consent for Emergency\\\\\\\\n**Question**: Patient unconscious, no family present, needs surgery.\\\\\\\\n**Answer**: Can operate without explicit consent (implied consent in emergency, life-saving)\\\\\\\\n\\\\\\\\n### Scenario 2: Teen Refusing Blood Transfusion (Jehovah's Witness)\\\\\\\\n**Question**: How to manage?\\\\\\\\n**Answer**: Respect autonomy if competent adolescent; explore alternatives; if minor, court petition may be needed for life-saving transfusion\\\\\\\\n\\\\\\\\n### Scenario 3: Patient with TB Refusing Isolation\\\\\\\\n**Question**: What is physician duty?\\\\\\\\n**Answer**: Explain, attempt compliance, then report to health authorities; public health justifies breaching confidentiality\\\\\\\\n\\\\\\\\n### Scenario 4: Colleague with Alcohol Problem\\\\\\\\n**Question**: What should you do?\\\\\\\\n**Answer**: Approach privately, suggest help, if refuses and patient safety at risk → report to medical council; mandatory reporting\\\\\\\\n\\\\\\\\n### Scenario 5: Research Without Informed Consent\\\\\\\\n**Question**: Is this ethical?\\\\\\\\n**Answer**: No; strict informed consent required; Ethics Committee oversight mandatory; report violations\\\\\\\\n\\\\\\\\n## Common Exam Questions\\\\\\\\n\\\\\\\\n1. **List four ethical principles in medical practice.**\\\\\\\\n   - Autonomy, Beneficence, Non-maleficence, Justice\\\\\\\\n\\\\\\\\n2. **What are the four elements of informed consent?**\\\\\\\\n   - Information, Understanding, Voluntariness, Capacity\\\\\\\\n\\\\\\\\n3. **Name three exceptions to confidentiality.**\\\\\\\\n   - Legal mandate, Public health emergency, Abuse, Serious threat to third party (any 3)\\\\\\\\n\\\\\\\\n4. **Define therapeutic privilege.**\\\\\\\\n   - Rare exception where physician may withhold information if disclosure would seriously harm patient\\\\\\\\n\\\\\\\\n5. **Who can consent for a 10-year-old child for surgery?**\\\\\\\\n   - Parent or legal guardian (not the child)\\\\\\\\n\\\\\\\\n6. **What is duty to warn?**\\\\\\\\n   - When patient threatens harm to identifiable third party, physician has duty to warn that person\\\\\\\\n\\\\\\\\n7. **Define conflict of interest in medical practice.**\\\\\\\\n   - Financial/personal interests that may compromise clinical judgment; must be disclosed\\\\\\\\n\\\\\\\\n8. **What is mandatory reporting in medical practice?**\\\\\\\\n   - Obligation to report abuse, professional misconduct, unsafe practitioners to authorities\\\\\\\\n\\\\\\\\n## Important Indian Context\\\\\\\\n\\\\\\\\n### Medical Council Regulations\\\\\\\\n- GMC (General Medical Council) sets standards\\\\\\\\n- NMC (National Medical Commission) oversees regulation\\\\\\\\n- Disciplinary action for unethical conduct\\\\\\\\n\\\\\\\\n### Indian Legal Framework\\\\\\\\n- IPC sections relevant to medical practice\\\\\\\\n- Protection of Patient Rights\\\\\\\\n- Privacy laws (RTI Act)\\\\\\\\n- Mandatory reporting requirements (child abuse)\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Four Ethical Principles = Autonomy, Beneficence, Non-maleficence, Justice\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Fundamental framework for medical ethics\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Informed Consent Elements = Information, Understanding, Voluntariness, Capacity\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Must have all four for valid consent\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Autonomy: respect patient's right to make own decisions\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Beneficence/Non-maleficence: maximize benefits, minimize harms\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Justice: equal treatment, fair resource allocation\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Confidentiality fundamental but has legal/public health exceptions\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Informed consent required for all non-emergency treatment\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Mandatory reporting of abuse, professional misconduct to protect others\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Reddy's Clinical Forensic Medicine & Toxicology\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Medical Ethics and Law\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"3rd\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"medical-ethics-code-of-conduct-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Medical Ethics & Code of Conduct - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Self-assessment on ethical principles, informed consent, and professional conduct.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: `# Medical Ethics & Code of Conduct - Active Recall\\\\\\\\n\\\\\\\\n## Quick Assessment Questions\\\\\\\\n\\\\\\\\n**Q1: Define autonomy in medical ethics and give an example.**\\\\\\\\nA: Autonomy is the right of individuals to make decisions about their own medical care. Example: Patient with cancer refuses chemotherapy and chooses palliative care instead; physician must respect this choice if patient is competent.\\\\\\\\n\\\\\\\\n**Q2: What are the four fundamental ethical principles in medical practice?**\\\\\\\\nA: (1) Autonomy - respect for self-determination. (2) Beneficence - act in patient's best interest. (3) Non-maleficence - do no harm. (4) Justice - fair, equitable treatment.\\\\\\\\n\\\\\\\\n**Q3: List the four elements required for valid informed consent.**\\\\\\\\nA: (1) Information - adequate disclosure of diagnosis, treatment, risks, benefits, alternatives. (2) Understanding - patient comprehends information. (3) Voluntariness - decision made freely without coercion. (4) Capacity - patient competent to understand and decide.\\\\\\\\n\\\\\\\\n**Q4: Name three situations where informed consent can be waived.**\\\\\\\\nA: (1) Emergency - immediate life-saving treatment without time for consent. (2) Therapeutic privilege - withholding information if disclosure would seriously harm patient (rare). (3) Waiver - patient explicitly waives right to information.\\\\\\\\n\\\\\\\\n**Q5: List exceptions to physician-patient confidentiality.**\\\\\\\\nA: (1) Legal requirement - court subpoena, disclosure act. (2) Public health emergency - communicable disease, public safety threat. (3) Abuse - mandatory reporting of child abuse, elder abuse. (4) Duty to warn - serious threat to identifiable third party.\\\\\\\\n\\\\\\\\n**Q6: What is meant by \\\\\\\\\\\\\\\"duty to warn\\\\\\\\\\\\\\\" in medical ethics?**\\\\\\\\nA: If patient poses serious threat of harm to identifiable third party, physician has duty to warn that person and alert authorities, even if it breaches confidentiality.\\\\\\\\n\\\\\\\\n**Q7: Define conflict of interest in medical practice and how should it be managed.**\\\\\\\\nA: Conflict of interest occurs when financial or personal interests may compromise clinical judgment. Should be: managed by disclosing interest, not accepting inappropriate gifts, and recusing self from decisions affecting own financial interest.\\\\\\\\n\\\\\\\\n**Q8: What is therapeutic privilege and when is it justified?**\\\\\\\\nA: Therapeutic privilege is rare exception where physician may withhold information from patient if disclosure would seriously harm patient's mental or physical condition. Rarely justified; generally information should be disclosed honestly.\\\\\\\\n\\\\\\\\n**Q9: What are the duties of physician regarding professional misconduct by colleagues?**\\\\\\\\nA: Physicians must report professional misconduct of colleagues to regulatory bodies. This is mandatory reporting; patient safety takes precedence over colleague loyalty.\\\\\\\\n\\\\\\\\n**Q10: Explain the Doctrine of Parens Patriae in medical decision-making.**\\\\\\\\nA: The state acts as guardian of minors and incompetent adults when they cannot make medical decisions themselves. Allows court to override parental/patient wishes if necessary for child's welfare (e.g., life-saving transfusion in Jehovah's witness child).,\\\\\\\\n        mnemonics: [],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Autonomy: respect patient's right to refuse treatment even if appears irrational\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Beneficence and Non-maleficence: balance risks and benefits of interventions\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Justice: ensure equitable access to care regardless of ability to pay\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Informed consent fundamental; requires all four elements\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Confidentiality has exceptions: legal, public health, abuse, threat to others\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Mandatory reporting of abuse and professional misconduct protects vulnerable populations\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Reddy's Clinical Forensic Medicine & Toxicology\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Medical Ethics and Law\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"3rd\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-}
-}
-];
-];
-];
+        summary: "Four pillars of medical ethics, physician responsibilities, and doctor-patient relationship in Indian context.",
+        contentMd: `# Medical Ethics & Code of Conduct - Foundation
+
+## Four Pillars of Medical Ethics
+
+### 1. Autonomy (Respect for Persons)
+Right of individuals to make decisions about their own medical care.
+- Patient self-determination
+- Informed consent before treatment
+- Right to refuse treatment
+- Confidentiality and privacy protection
+
+### 2. Beneficence (Do Good)
+Physicians should act in patient's best interests.
+- Provide competent medical care
+- Use best available evidence-based treatments
+- Promote patient's overall welfare
+- Balance therapeutic benefits with risks
+
+### 3. Non-Maleficence (Do No Harm)
+Principle of avoiding harm to patients.
+- Minimize adverse effects and complications
+- Avoid unnecessary procedures
+- Use only proven treatments
+- Acknowledge limits of medical knowledge
+
+### 4. Justice (Fairness)
+Fair distribution of healthcare resources and equal treatment.
+- Equal treatment for all patients
+- No discrimination by ability to pay, religion, caste, gender
+- Fair allocation of limited resources
+- Access to care for all populations
+
+## Informed Consent: Foundation Principles
+
+Consent process requires:
+- **Information**: Clear disclosure of diagnosis, treatment, risks, benefits, alternatives
+- **Understanding**: Patient comprehends information in their own language
+- **Voluntariness**: Decision made freely without coercion or pressure
+- **Capacity**: Patient has legal and mental ability to consent
+
+## Physician Duties in Medical Practice
+
+### Primary Duties
+- **Duty of Care**: Provide standard medical care; thorough evaluation
+- **Duty of Confidentiality**: Protect patient information (exceptions exist)
+- **Duty of Candor**: Be honest with patients; disclose errors
+- **Duty to Report**: Communicable diseases, abuse, professional misconduct
+- **Duty to Educate**: Continue learning; stay current in medical knowledge
+
+### Professional Conduct Standards
+- Avoid conflicts of interest
+- Don't exploit patients financially or sexually
+- Maintain professional dress and decorum
+- Be truthful in advertising and communications
+- Report unethical colleagues to authorities
+
+## Doctor-Patient Relationship
+
+### Foundations of Relationship
+- Built on mutual trust and respect
+- Non-judgmental, compassionate attitude
+- Confidentiality and privacy
+- Respect for patient autonomy and values
+- Cultural sensitivity
+
+### Patient Rights (Indian Healthcare)
+1. Right to know diagnosis and treatment options
+2. Right to refuse treatment
+3. Right to confidentiality
+4. Right to quality care
+5. Right to grievance redressal
+6. Right to information about costs
+7. Right to seek second opinion
+8. Right to access medical records
+
+## Exceptions to Standard Rules
+
+### When Confidentiality May Be Breached
+- Legal mandate (court order, statutory reporting)
+- Public health emergency (epidemic, communicable disease)
+- Child abuse or vulnerable person abuse
+- Threat of serious harm to identifiable third party
+
+### Emergency Exceptions to Informed Consent
+- Immediate life-saving treatment without delay
+- Implied consent when explicit consent impossible
+- Presumption that reasonable person would want treatment`,
+        mnemonics: [
+          {
+            text: "Four Pillars of Ethics = Autonomy, Beneficence, Non-maleficence, Justice",
+            explanation: "Foundation of medical ethics"
+          },
+          {
+            text: "Informed Consent Elements = Information, Understanding, Voluntariness, Capacity",
+            explanation: "Four requirements for valid consent"
+          }
+        ],
+        keyPoints: [
+          "Autonomy: Respect patient's right to self-determination in medical decisions",
+          "Beneficence: Act in patient's best interest; Non-maleficence: Minimize harm",
+          "Justice: Treat all patients fairly regardless of socioeconomic status or background",
+          "Informed consent requires all four elements; missing one makes it invalid",
+          "Confidentiality fundamental duty with limited exceptions",
+          "Doctor-patient relationship based on trust, respect, and non-judgment"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "Medical Ethics and Code of Conduct", edition: "34th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "fm-ethics-conduct-layer-2-mechanism",
+        title: "Medical Ethics & Code of Conduct - Mechanism & Processes",
+        estimatedMinutes: 25,
+        summary: "Detailed mechanisms of ethical decision-making, informed consent process, and managing ethical conflicts.",
+        contentMd: `# Medical Ethics & Code of Conduct - Mechanism & Processes
+
+## Informed Consent Process
+
+### Information Disclosure Checklist
+
+**Medical Condition**:
+- What is the diagnosis
+- What is the severity and prognosis
+- What will happen if left untreated
+- How it affects daily functioning
+
+**Proposed Treatment**:
+- What the treatment involves
+- Step-by-step procedure details
+- Duration and frequency
+- Where it will be done
+- Who will perform it
+
+**Benefits**:
+- Expected outcomes and likelihood
+- Probability of success
+- Timeline for improvement
+- Quality of life improvements
+
+**Risks and Side Effects**:
+- Common side effects (percentage frequency)
+- Serious but rare complications
+- Long-term effects
+- Individual risk factors that increase risk
+
+**Alternatives**:
+- Other treatment options available
+- Watchful waiting or observation option
+- No treatment option
+- Comparative risks and benefits
+- Why physician recommends specific option
+
+### Capacity Assessment
+
+**Legal Capacity**:
+- Age >18 years = presumed competent
+- Age <18 years = parents/guardians provide consent
+- Exceptions: Emergency, life-saving treatment
+
+**Cognitive Capacity** (Mental Ability to Consent):
+- Ability to understand information provided
+- Ability to retain/remember information
+- Ability to weigh options rationally
+- Ability to communicate decision clearly
+- Not under influence of drugs/alcohol/mental illness
+
+## Managing Ethical Conflicts
+
+### Framework for Resolution
+
+1. **Identify the Issue**: What ethical principles are in conflict?
+2. **Gather Information**: Medical facts, patient values, legal requirements
+3. **Consider Principles**: Apply Autonomy, Beneficence, Non-maleficence, Justice
+4. **Identify Stakeholders**: Patient, family, healthcare team, institution
+5. **Generate Options**: List all possible courses of action
+6. **Analyze Consequences**: Effects on each stakeholder
+7. **Consult**: Seek ethics committee advice if complex
+8. **Decide and Document**: Make decision, implement, record rationale
+
+### Common Conflicts and Approaches
+
+**Autonomy vs. Beneficence**:
+- Patient refuses treatment physician thinks necessary
+- Approach: Provide education, respect competent patient's autonomy, document refusal
+
+**Confidentiality vs. Public Safety**:
+- Patient with contagious disease refuses isolation
+- Approach: Explain risks, attempt persuasion, then report to authorities if refuses
+
+**Professional Loyalty vs. Patient Safety**:
+- Colleague appears impaired or incompetent
+- Approach: Private discussion, suggest help, report if unsafe practice continues
+
+## Confidentiality Management
+
+### Information Protected by Confidentiality
+- What patient tells physician
+- Physical examination findings
+- Diagnostic test results
+- Diagnoses and treatment plans
+- All medical records and documents
+- Information disclosed even after patient's death
+
+### Permissible Disclosures (Without Explicit Consent)
+
+**For Continuity of Care**:
+- Other treating physicians
+- Nurses and healthcare team members
+- Consultants with need-to-know
+- Minimum necessary information
+
+**For Administrative/Business Purposes**:
+- Insurance companies (limited information for billing)
+- Hospital administration
+- Payment processing
+- Accreditation review
+
+### Mandatory Disclosure Exceptions
+
+**Legal Mandate**:
+- Court subpoena or court order
+- Statutory reporting requirements (births, deaths)
+- Law enforcement with legal authority
+
+**Public Health Emergency**:
+- Communicable diseases (TB, plague, cholera)
+- Risk of epidemic or pandemic
+- Health authority reporting required
+- Breach of confidentiality justified
+
+**Abuse and Vulnerable Persons**:
+- Child abuse: Mandatory reporting
+- Elder abuse: Mandatory reporting
+- Intimate partner violence: Varying by jurisdiction
+
+**Duty to Warn (Tarasoff Duty)**:
+- Patient threatens serious, imminent harm to identifiable person
+- Physician may warn that person
+- Physician may notify police
+- Breach of confidentiality justified
+
+## Ethics Committees
+
+**Institutional Ethics Committee (IEC)**:
+- Reviews research protocols before approval
+- Protects research participant rights
+- Approves informed consent forms
+- Monitors ongoing research
+- Addresses ethical concerns
+
+**Clinical Ethics Committee**:
+- Advises on difficult clinical ethical dilemmas
+- Helps resolve conflicts between stakeholders
+- Develops institutional ethical policies
+- Provides education and consultation`,
+        mnemonics: [
+          {
+            text: "Informed Consent Info = Diagnosis, Treatment, Benefits, Risks, Alternatives (DTBRA)",
+            explanation: "Key information elements"
+          },
+          {
+            text: "Ethical Framework = Identify, Gather, Consider, Identify, Generate, Analyze, Decide (7 Steps)",
+            explanation: "Systematic approach to ethical problems"
+          }
+        ],
+        keyPoints: [
+          "Informed consent requires detailed disclosure of diagnosis, treatment, benefits, risks, alternatives",
+          "Capacity assessment: Legal (age >18) and cognitive (understand, retain, weigh, communicate)",
+          "Ethical framework: Seven steps from problem identification to decision implementation",
+          "Confidentiality exceptions: Legal mandate, public health, abuse, threat to third party",
+          "Mandatory reporting: Communicable disease, abuse, professional misconduct",
+          "Ethics committees provide support for complex clinical decisions"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "Medical Ethics and Code of Conduct", edition: "34th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "fm-ethics-conduct-layer-3-clinical",
+        title: "Medical Ethics & Code of Conduct - Clinical Scenarios",
+        estimatedMinutes: 25,
+        summary: "Real-world ethical dilemmas in clinical practice with Indian legal and cultural context.",
+        contentMd: `# Medical Ethics & Code of Conduct - Clinical Scenarios
+
+## Scenario 1: Terminally Ill Patient Requesting Assisted Death
+
+**Situation**: 65-year-old with metastatic cancer, severe pain, requests physician assistance to end suffering.
+
+**Ethical Conflict**: Patient autonomy vs. Physician duty to preserve life vs. Professional ethics
+
+**Legal Status in India**:
+- Active euthanasia/assisted death is ILLEGAL (IPC Section 306)
+- Passive euthanasia allowed (2018 Supreme Court ruling)
+
+**Ethical Management**:
+- Optimize pain control (escalate analgesics, palliative care)
+- Provide psychological support (depression often modifiable)
+- Allow refusal of further treatment
+- Support advance directives and DNR orders
+- Offer hospice and comfort care
+- NEVER actively assist death
+
+## Scenario 2: Minor Refusing Life-Saving Treatment
+
+**Situation**: 16-year-old Jehovah's witness with life-threatening bleeding refuses blood transfusion; parents support refusal.
+
+**Ethical Issues**: Child autonomy vs. Parental rights vs. Physician duty to save life vs. Religious freedom
+
+**Legal Framework**: Minors' medical decisions rest with parents; court can override (doctrine of parens patriae) if necessary for child's welfare.
+
+**Management**:
+- Explain medical necessity to child and parents
+- Respect religious beliefs
+- Offer bloodless alternatives (colloids, medications, cell salvage)
+- Assess adolescent's own wishes (may differ from parents)
+- If life-threatening and alternatives unavailable: Seek court order
+- Document all discussions thoroughly
+
+## Scenario 3: Patient with Communicable Disease Refusing Isolation
+
+**Situation**: 45-year-old with untreated TB refuses isolation, wants to continue working in school.
+
+**Ethical Conflict**: Patient autonomy vs. Public health and children's safety
+
+**Legal Framework**: TB reporting mandatory; health officer can enforce isolation if necessary.
+
+**Management**:
+- Educate about TB transmission and harm to others
+- Explain treatment benefits (cure possible, stops transmission)
+- Attempt to gain voluntary compliance
+- If refuses: Report to health authorities
+- Breach confidentiality justified by public health emergency
+- Support contact tracing and treatment initiation
+
+## Scenario 4: Colleague Showing Signs of Impairment
+
+**Situation**: Senior surgeon arrives to work smelling of alcohol, has tremor, makes questionable surgical decisions.
+
+**Ethical Conflict**: Colleague loyalty vs. Patient safety (paramount)
+
+**Legal Requirement**: Mandatory reporting of impaired colleagues
+
+**Management**:
+- Document specific observed behaviors
+- Express concern to colleague privately
+- Suggest evaluation and professional help
+- Offer support and confidential resources
+- If continues unsafe practice: Report to
+  - Hospital administration
+  - Medical council
+  - Chief medical officer
+- Patient safety takes precedence
+
+## Scenario 5: Research Study Without Proper Informed Consent
+
+**Situation**: Discover ongoing research enrolled patients without IEC approval or informed consent.
+
+**Ethical Issue**: Research ethics violation; patient autonomy violation
+
+**Management**:
+- Report to IEC immediately
+- Inform research participants of issue
+- Offer withdrawal without penalty
+- Investigate how this occurred (training gap)
+- Implement preventive measures
+- Report serious violations to regulatory authorities
+
+## Scenario 6: Financial Conflict of Interest
+
+**Situation**: Pharmaceutical company offers kickback for prescribing their expensive antibiotic instead of cheaper equivalent.
+
+**Ethical Issue**: Conflict of interest; patient welfare at risk
+
+**Management**:
+- REFUSE the offer (illegal and unethical)
+- Do not let financial incentive influence prescribing
+- Prescribe based on clinical benefit and cost-effectiveness
+- Disclose any pharmaceutical company interactions
+- Choose most appropriate treatment for patient
+
+## Scenario 7: Intimate Partner Violence
+
+**Situation**: Woman with injuries inconsistent with stated cause; denies abuse when husband present.
+
+**Ethical Issue**: Patient safety vs. Confidentiality; mandatory reporting
+
+**Management**:
+- Interview woman alone (away from partner)
+- Create safe space for disclosure
+- Document injuries objectively with photographs (if consented)
+- Provide safety planning assistance
+- Offer referrals to social services, legal aid, shelters
+- Follow mandatory reporting requirements (varies by state)
+- Follow up with patient regularly
+- Maintain confidentiality of report identity
+
+## Scenario 8: Expensive Treatment for Terminal Patient
+
+**Situation**: 80-year-old with stage 4 cancer, <3 months life expectancy. Family wants aggressive chemotherapy unlikely to extend life meaningfully.
+
+**Ethical Issues**: Autonomy, beneficence, justice, resource allocation
+
+**Management**:
+- Discuss realistic prognosis and treatment goals
+- Explain low likelihood of benefit
+- Discuss quality of life impact (side effects, hospitalizations)
+- Explore goals of care (life prolongation vs. comfort)
+- Discuss palliative care alternative
+- Respect informed patient/family autonomy
+- May decline to provide futile treatment
+- Offer comfort care and symptom management`,
+        mnemonics: [
+          {
+            text: "Legal Status = Active Euthanasia (ILLEGAL) vs. Passive Euthanasia (ALLOWED)",
+            explanation: "Distinction in Indian law"
+          }
+        ],
+        keyPoints: [
+          "Assisted death illegal in India; focus on pain management and comfort care",
+          "Minors: Parents consent; court can override if life-saving",
+          "Public health emergency justifies breaching confidentiality",
+          "Mandatory reporting of colleague impairment protects patients",
+          "Research ethics: IEC approval and informed consent mandatory",
+          "Conflict of interest must be disclosed; clinical benefit trumps profit"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "Medical Ethics and Code of Conduct", edition: "34th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "fm-ethics-conduct-layer-4-exam",
+        title: "Medical Ethics & Code of Conduct - Exam Preparation",
+        estimatedMinutes: 20,
+        summary: "Key definitions, recall facts, and typical exam questions with answers.",
+        contentMd: `# Medical Ethics & Code of Conduct - Exam Preparation
+
+## Key Definitions
+
+| Term | Definition |
+|------|-----------|
+| Autonomy | Right to self-determination in medical decisions |
+| Beneficence | Acting in patient's best interest |
+| Non-maleficence | Do no harm (primum non nocere) |
+| Justice | Fair, equitable treatment |
+| Confidentiality | Duty to protect patient information |
+| Informed Consent | Agreement based on adequate disclosure |
+| Therapeutic Privilege | Rare exception to disclose information |
+| Parens Patriae | State as guardian of minor/incompetent |
+
+## Four Pillars of Medical Ethics
+
+**Autonomy**: Respect patient's self-determination; even if decision seems irrational
+**Beneficence**: Maximize benefits; act in patient's interest
+**Non-maleficence**: Minimize harm; avoid unnecessary procedures
+**Justice**: Fairness; equal treatment regardless of status
+
+## Four Elements of Informed Consent
+
+All FOUR required for valid consent:
+1. **Information** - Adequate disclosure of diagnosis, treatment, risks, benefits, alternatives
+2. **Understanding** - Patient comprehends information (not just informed, but understands)
+3. **Voluntariness** - Freedom from coercion or undue influence
+4. **Capacity** - Legal competence and mental ability to make decision
+
+## Exceptions to Informed Consent
+
+1. **Emergency** - Life-saving treatment when consent unavailable
+2. **Therapeutic Privilege** - Withhold info if disclosure would harm (rarely justified)
+3. **Patient Waiver** - Patient explicitly declines information
+
+## Exceptions to Confidentiality
+
+1. **Legal Mandate** - Court order or subpoena
+2. **Public Health Emergency** - Communicable disease
+3. **Abuse** - Child/elder abuse, intimate partner violence
+4. **Threat to Third Party** - Patient threatens serious harm to identifiable person
+
+## Common Exam Questions
+
+**Q1: Define autonomy. What is an example?**
+A: Autonomy is right to self-determination in medical decisions. Example: Competent cancer patient chooses palliative care instead of chemotherapy; physician must respect choice.
+
+**Q2: List four ethical principles. How can they conflict?**
+A: Autonomy, Beneficence, Non-maleficence, Justice. Example conflict: Autonomy (patient refuses treatment) vs. Beneficence (physician thinks treatment necessary).
+
+**Q3: What are four elements of informed consent?**
+A: Information, Understanding, Voluntariness, Capacity. All four required; missing one makes consent invalid.
+
+**Q4: Can you treat 12-year-old without parental consent?**
+A: Normally no; need parent/guardian consent. Exception: Life-saving emergency if parents unavailable.
+
+**Q5: What are exceptions to confidentiality?**
+A: Legal mandate (court order), public health emergency (communicable disease), abuse (child/elder/IPV), threat to third party.
+
+**Q6: Colleague suspected to be impaired. What should you do?**
+A: Document observations. Approach privately with concern. Suggest evaluation. If continues unsafe practice: Report to medical council (mandatory).
+
+**Q7: Define therapeutic privilege and is it justified?**
+A: Rare exception allowing withholding information if disclosure would seriously harm patient. Generally NOT justified; patients have right to information.
+
+**Q8: What is duty to warn (Tarasoff duty)?**
+A: If patient threatens serious harm to identifiable person, physician can warn that person, notify police, or consider hospitalization. Breach of confidentiality justified.
+
+**Q9: Assisted death: Is it legal in India?**
+A: NO. Active euthanasia is illegal (IPC Section 306). Passive euthanasia allowed with advance directive (2018 Supreme Court).
+
+**Q10: List patient rights in Indian healthcare.**
+A: Right to know diagnosis, right to refuse, right to confidentiality, right to quality care, right to grievance redressal, right to access records.
+
+## Important Indian Legal Context
+
+- **National Medical Commission (NMC)**: Oversees medical practice
+- **Professional Conduct Rules**: Set ethical standards
+- **IPC Section 306**: Abetment of suicide (cannot help patient die)
+- **Communicable Disease Act**: Mandatory reporting
+- **Protection of Women from Domestic Violence Act**: Mandatory reporting of abuse`,
+        mnemonics: [
+          {
+            text: "Four Pillars = Autonomy, Beneficence, Non-maleficence, Justice",
+            explanation: "Ethical framework"
+          },
+          {
+            text: "Informed Consent = Information, Understanding, Voluntariness, Capacity",
+            explanation: "Four required elements"
+          },
+          {
+            text: "Confidentiality Exceptions = Legal, Public health, Abuse, Serious threat",
+            explanation: "When to breach confidentiality"
+          }
+        ],
+        keyPoints: [
+          "Autonomy: Respect patient's decisions even if seem irrational",
+          "Beneficence/Non-maleficence: Balance benefits and harms",
+          "Justice: Equitable treatment regardless of socioeconomic status",
+          "Informed consent: All four elements required",
+          "Confidentiality: Fundamental; limited exceptions",
+          "Mandatory reporting: Abuse, disease, professional misconduct"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "Medical Ethics and Code of Conduct", edition: "34th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "fm-ethics-conduct-layer-5-active-recall",
+        title: "Medical Ethics & Code of Conduct - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Self-assessment with flashcard Q&A for spaced repetition.",
+        contentMd: `# Medical Ethics & Code of Conduct - Active Recall
+
+## Flashcard Q&A
+
+**Q1: Define autonomy in medical ethics. Give a clinical example.**
+A: Autonomy is the right of individuals to make decisions about their own medical care. Example: A cancer patient chooses palliative care instead of aggressive chemotherapy despite physician's recommendation; autonomy requires respecting this choice.
+
+**Q2: What are the four pillars of medical ethics and how do they differ?**
+A: (1) Autonomy = respect self-determination. (2) Beneficence = act in patient's interest. (3) Non-maleficence = avoid harm. (4) Justice = fairness. They can conflict; example: Autonomy (patient refuses) vs. Beneficence (physician recommends).
+
+**Q3: List the four elements of informed consent. What if one is missing?**
+A: (1) Information = disclosure. (2) Understanding = patient comprehends. (3) Voluntariness = no coercion. (4) Capacity = ability to decide. All FOUR required; missing even one makes consent invalid.
+
+**Q4: What are three situations where informed consent can be waived?**
+A: (1) Emergency = immediate life-saving treatment. (2) Therapeutic privilege = withhold info if disclosure would seriously harm (rare). (3) Patient waiver = patient explicitly declines information.
+
+**Q5: Name three exceptions to physician-patient confidentiality.**
+A: (1) Legal mandate = court order/subpoena. (2) Public health emergency = communicable disease. (3) Abuse = child/elder abuse. (4) Threat to third party = serious harm to identifiable person.
+
+**Q6: What is therapeutic privilege and why is it controversial?**
+A: Therapeutic privilege allows withholding information if disclosure would seriously harm patient. Controversial because it undermines autonomy; generally NOT justified.
+
+**Q7: How do you manage a 16-year-old Jehovah's witness refusing blood transfusion?**
+A: (1) Explain necessity. (2) Respect beliefs. (3) Offer bloodless alternatives. (4) Assess adolescent's own wishes. (5) If life-saving and no alternatives: Seek court order.
+
+**Q8: What are your duties if colleague is impaired from alcohol?**
+A: (1) Document behaviors. (2) Approach privately. (3) Suggest evaluation. (4) If continues unsafe practice: Report to hospital and medical council (mandatory).
+
+**Q9: Define conflict of interest in medical practice and how to manage it.**
+A: Conflict of interest = personal/financial interests may compromise judgment. Example: Pharmaceutical kickback. Management: Refuse offer, disclose relationships, prescribe based on clinical benefit.
+
+**Q10: What is duty to warn (Tarasoff duty) and when does it apply?**
+A: Physician has duty to warn/protect when patient threatens serious, imminent harm to identifiable person. Actions: Warn that person, alert police, consider hospitalization. Breach of confidentiality justified.
+
+**Q11: How do you handle patient's request for information to be kept from family?**
+A: Respect patient's autonomy. Keep information confidential. Explain benefits of family involvement but respect patient's choice. Document patient's wishes.
+
+**Q12: What are patient rights in Indian healthcare system?**
+A: (1) Know diagnosis/treatment. (2) Refuse treatment. (3) Confidentiality. (4) Quality care. (5) Grievance redressal. (6) Cost information. (7) Second opinion. (8) Access records.
+
+**Q13: How do you manage terminally ill patient requesting assisted death?**
+A: (1) Explain assisted death is ILLEGAL in India. (2) Optimize pain control. (3) Provide psychological support. (4) Offer palliative care. (5) Allow treatment refusal and DNR orders. (6) NEVER actively assist death.
+
+**Q14: What is difference between active and passive euthanasia in India?**
+A: Active (physician causes death) = ILLEGAL. Passive (withhold/withdraw life support) = allowed with advance directive (2018 Supreme Court).
+
+**Q15: How should you respond to police requesting records without court order?**
+A: (1) Inform court order required. (2) Decline without legal authority. (3) Document request. (4) Consult hospital legal team. (5) If court order received: Disclose only relevant information.
+
+**Q16: Explain ethical decision-making framework steps.**
+A: (1) Identify issue. (2) Gather information. (3) Consider principles. (4) Identify stakeholders. (5) Generate alternatives. (6) Analyze consequences. (7) Consult if needed. (8) Decide and document.
+
+**Q17: Explain justice in medical ethics with an example.**
+A: Justice = fair, equitable treatment regardless of socioeconomic status, religion, caste, gender. Example: Poor patient receives same quality care as wealthy patient.
+
+**Q18: Difference between general consent and informed consent.**
+A: General consent = patient agrees to routine hospital care. Informed consent = specific agreement for particular treatment after detailed disclosure of risks/benefits/alternatives.
+
+**Q19: How do you manage autonomy vs. beneficence conflict?**
+A: Example: Patient refuses necessary amputation. Actions: (1) Provide education. (2) Respect competent autonomy. (3) Document refusal. (4) Seek alternatives. (5) Respect decision even if differs from recommendation.
+
+**Q20: What is role of Institutional Ethics Committee (IEC)?**
+A: IEC reviews research protocols, protects participant rights, approves consent forms, monitors ongoing research, addresses ethical concerns. Mandatory for research approval.`,
+        mnemonics: [
+          {
+            text: "Four Pillars = Autonomy, Beneficence, Non-maleficence, Justice",
+            explanation: "Ethical framework"
+          },
+          {
+            text: "Informed Consent = Information, Understanding, Voluntariness, Capacity",
+            explanation: "Four required elements"
+          }
+        ],
+        keyPoints: [
+          "Autonomy: Respect patient's decisions even if seem irrational to physician",
+          "Beneficence/Non-maleficence: Balance benefits and harms in treatment",
+          "Justice: Equal, fair treatment regardless of socioeconomic status, religion, caste",
+          "Informed consent: All four elements (IUVC) required; document in medical record",
+          "Confidentiality: Fundamental right with exceptions (legal, public health, abuse, threat)",
+          "End-of-life: Active euthanasia illegal; passive allowed with advance directive"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine & Toxicology", chapter: "Medical Ethics and Code of Conduct", edition: "34th" }
+        ]
+      }
+    ]
+  }
 ];
