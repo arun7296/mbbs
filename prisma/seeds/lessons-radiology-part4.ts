@@ -1,7 +1,6 @@
-// Radiology Part 4: Remaining topics from modules 2, 4
+import type { TopicLessons } from "./content-loader";
 
-export const radiologyPart4Lessons = [
-  // RD-MOD-02-TOP-03: Cardiac Imaging
+export const radiologyPart4Lessons: TopicLessons[] = [
   {
     topicCode: "RD-MOD-02-TOP-03",
     layers: [
@@ -11,9 +10,303 @@ export const radiologyPart4Lessons = [
         title: "Cardiac Imaging - Foundation",
         estimatedMinutes: 25,
         summary: "Echocardiography basics, cardiac MRI, CT angiography principles.",
-        contentMd: "# Cardiac Imaging - Foundation\n\n## Echocardiography Overview\n\n### Types\n- **Transthoracic echo (TTE)**: Standard; non-invasive\n- **Transesophageal echo (TEE)**: High quality; during surgery/procedures\n- **Stress echo**: With exercise or dobutamine\n- **3D echo**: Volumetric assessment\n\n### Cardiac Chambers & Dimensions\n- **Left ventricle (LV)**: Posterior wall (PW), interventricular septum (IVS), LV internal dimension (LVID)\n  - **Normal LVID**: 4.5-5.5 cm (diastole)\n  - **Dilation**: >5.5 cm\n- **Left atrium (LA)**: Normal 2.4-4.0 cm\n- **Right atrium (RA)**: Normal 2.6-4.2 cm\n- **Right ventricle (RV)**: Normal 2.5-4.0 cm base\n\n### Ejection Fraction (EF)\n- **Definition**: Percentage of blood ejected from LV per beat\n- **Formula**: EF = (EDV - ESV)/EDV × 100\n- **Normal**: >50% in adults\n- **Mild dysfunction**: 40-49%\n- **Moderate dysfunction**: 30-39%\n- **Severe dysfunction**: <30%\n\n## Cardiac MRI\n\n### Advantages\n- **Excellent tissue characterization**: Fibrosis, edema, scar\n- **Functional assessment**: LV/RV volumes, EF\n- **Flow assessment**: Shunts, regurgitation\n- **Myocardial viability**: Late gadolinium enhancement (LGE)\n\n### Limitations\n- **Contraindications**: Metallic implants (pacemakers, older valves)\n- **Arrhythmia sensitivity**: Irregular rhythm reduces image quality\n- **Time-consuming**: 45-60 minutes\n\n### Common Sequences\n- **Cine SSFP**: Cardiac function; wall motion\n- **Perfusion imaging**: Myocardial ischemia\n- **Late gadolinium enhancement (LGE)**: Scar/fibrosis (bright in infarct)\n- **T2 weighted**: Myocardial edema\n\n## CT Angiography (CTA)\n\n### Coronary CTA\n- **Indication**: Chest pain; assess for CAD\n- **Sensitivity**: 95% for significant stenosis (>50%)\n- **Radiation**: 1-2 mSv (vs. 5-7 mSv invasive angiography)\n- **Advantages**: Non-invasive; assess coronary anatomy, calcification\n\n### Heart Rate Control\n- **Target HR**: <60 bpm for best images\n- **Beta-blockers**: Metoprolol 50-100 mg preop\n- **Nitrates**: Sublingual for vasodilation\n\n### Image Quality\n- **Blooming artifact**: Heavy calcification reduces specificity\n- **Motion artifact**: Irregular HR degrades images\n- **Timing**: Bolus tracking or test bolus essential\n\n## Chest X-Ray Cardiac Assessment\n\n### Heart Size & Silhouette\n- **Cardiothoracic ratio**: Width of cardiac silhouette/thoracic width\n  - **Normal**: <0.5 (50%)\n  - **Cardiomegaly**: >0.5\n- **Left heart border**: Convex (normal); straightened or convex in LV dilation\n- **Right heart border**: Straight normally; pushed outward in RA/RV enlargement\n\n### Pulmonary Vasculature\n- **Upper lobe vessels**: Normally smaller than lower lobe\n- **Pulmonary edema**: \"Bat-wing\" distribution; Kerley B lines\n- **Pulmonary hypertension**: Enlarged central vessels with peripheral pruning,\n        mnemonics: [\n          { text: \"Echo chambers: LA, RA, LV, RV\", explanation: \"Normal LA 2.4-4.0; LV 4.5-5.5 (diastole); LVEF >50%\" },\n          { text: \"Cardiac MRI: CFPM\", explanation: \"Cine (function), Fibrosis (LGE), Perfusion (ischemia), edema (T2)\" }\n        ],\n        keyPoints: [\n          \"Echocardiography standard for cardiac structure/function; LVEF >50% normal\",\n          \"Cardiac MRI excellent for tissue characterization, viability, scarring\",\n          \"Coronary CTA: 95% sensitivity for CAD; 1-2 mSv radiation\",\n          \"Heart size on CXR: cardiothoracic ratio >0.5 = cardiomegaly\",\n          \"Pulmonary edema CXR: bat-wing distribution, Kerley B lines\"\n        ],\n        textbookRefs: [\n          { book: \"Textbook of Radiology by Satish Bhattacharya\", chapter: \"Cardiac Imaging\", edition: \"4th\" },\n          { book: \"Radiologyassistant.nl - Cardiac Imaging\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"cardiac-pathologies\",\n        title: \"Cardiac Imaging - Common Pathologies\",\n        estimatedMinutes: 30,\n        summary: \"Valvular disease, cardiomyopathy, ischemic heart disease on imaging.\",\n        contentMd: "# Cardiac Pathologies - Imaging Features\\n\\n## Valvular Disease\\n\\n### Mitral Stenosis\\n- **Echo**: Thickened, domed mitral valve; reduced opening\\n- **Severity**: Mitral valve area (MVA) <1.5 cm² = severe\\n- **Associated**: LA enlargement, AF, pulmonary HTN\\n- **CXR**: LA enlargement (straightened left border, splayed carina)\\n\\n### Mitral Regurgitation\\n- **Echo**: Color Doppler shows flow into LA\\n- **Severity**: Jet area, regurgitant volume, LA/LV size\\n- **Complications**: LA enlargement, AF, LV dilation\\n- **Chronic**: LV dilates (eccentric hypertrophy)\\n\\n### Aortic Stenosis\\n- **Echo**: Thickened aortic valve, reduced opening\\n- **Severity**: AVA <1.0 cm² (severe); mean gradient >40 mmHg\\n- **Associated**: LV hypertrophy initially; eventual dilation\\n\\n### Aortic Regurgitation\\n- **Echo**: Widened color jet in LV (diastole)\\n- **Severity**: Jet width, holodiastolic reversal in abdominal aorta\\n- **Chronic**: LV dilation (eccentric hypertrophy, high EF initially)\\n\\n## Cardiomyopathies\\n\\n### Dilated Cardiomyopathy\\n- **Echo**: Global LV dilation (LVID >5.5), reduced EF (<40%)\\n- **Causes**: Ischemic, viral, idiopathic, toxic (alcohol, chemotherapy)\\n- **Features**: Enlarged LA, functional MR, reduced LV strain\\n- **CXR**: Cardiomegaly, pulmonary edema\\n\\n### Hypertrophic Cardiomyopathy\\n- **Echo**: Asymmetric LV hypertrophy; often septal predominance\\n- **SAM**: Systolic anterior motion of mitral valve (obstruction)\\n- **Obstruction**: LV outflow gradient >30 mmHg (obstructive HCM)\\n- **Risk**: Sudden cardiac death; syncope in young\\n\\n### Restrictive Cardiomyopathy\\n- **Echo**: Normal LV size, diastolic dysfunction\\n- **Atria**: Markedly enlarged\\n- **Tissue Doppler**: Restrictive pattern\\n- **Causes**: Amyloidosis, sarcoidosis, hemochromatosis\\n- **MRI**: Late gadolinium enhancement (fibrosis)\\n\\n### Takotsubo Cardiomyopathy\\n- **Echo**: Apical ballooning (apical akinesis, basal hyperkinesis)\\n- **Presentation**: Chest pain, ST elevation (mimics ACS)\\n- **Troponin**: Mildly elevated\\n- **Prognosis**: Usually reversible (weeks to months)\\n- **CXR**: Pulmonary edema common\\n\\n## Ischemic Heart Disease\\n\\n### Myocardial Infarction - Acute\\n- **ECG**: ST elevation or depression; T wave changes\\n- **Echo**: Wall motion abnormality (hypokinesis/akinesis) in vascular territory\\n- **Troponin**: Elevated (highly specific)\\n- **CXR**: May show pulmonary edema\\n\\n### Myocardial Infarction - Chronic\\n- **Echo**: Thinning of affected wall; scar (bright on MRI LGE)\\n- **MRI**: Transmural LGE in infarct territory (diagnostic)\\n- **Complications**: Aneurysm, rupture, VSD, papillary muscle rupture\\n- **Viability**: MRI shows if segment salvageable\\n\\n### Myocarditis\\n- **Echo**: Global or regional wall motion abnormality; reduced EF\\n- **MRI**: Edema (T2 bright); subepicardial LGE (characteristic)\\n- **Troponin**: Elevated\\n- **Cause**: Viral (common); also autoimmune, toxic\\n\\n## Pericardial Disease\\n\\n### Pericardial Effusion\\n- **Echo**: Fluid echo-free space around heart\\n- **Size**: Small (<1 cm), moderate (1-2 cm), large (>2 cm)\\n- **Tamponade**: RA/RV diastolic collapse indicates hemodynamic significance\\n- **Causes**: Heart failure, malignancy, infection, bleeding\\n\\n### Constrictive Pericarditis\\n- **Echo**: Annulus paradoxus (septum moves toward dilated RV)\\n- **Doppler**: Restrictive pattern (high early E velocity, low A velocity)\\n- **MRI**: Thickened, sometimes calcified pericardium\\n- **Physiology**: Equalized diastolic pressures,\\n        keyPoints: [\\n          \\\"Mitral stenosis: MVA <1.5 cm²; thickened, domed valve; LA enlargement\\\",\\n          \\\"Mitral regurgitation: color jet into LA; LV dilation (eccentric hypertrophy)\\\",\\n          \\\"Dilated cardiomyopathy: global LV dilation, reduced EF\\\",\\n          \\\"Hypertrophic cardiomyopathy: asymmetric LV hypertrophy; SAM (obstruction)\\\",\\n          \\\"Myocardial infarction: wall motion abnormality; MRI shows LGE scar\\\",\\n          \\\"Pericardial effusion: echo-free space; tamponade if RA/RV collapse\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Radiology by Satish Bhattacharya\\\", chapter: \\\"Cardiac Pathologies\\\", edition: \\\"4th\\\" },\\n          { book: \\\"Echocardiography Manual by Bonow & Mann\\\", chapter: \\\"Cardiac Diseases\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"cardiac-stress-testing\\\",\\n        title: \\\"Cardiac Imaging - Stress Testing & Risk Stratification\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Stress echo, nuclear imaging, prognostic value in CAD.\\\",\\n        contentMd: ``# Cardiac Stress Testing - Physiology & Interpretation\\n\\n## Stress Echocardiography\\n\\n### Protocol\\n- **Baseline**: Resting echo with wall motion assessment\\n- **Stress induction**: Exercise (treadmill/bicycle) or dobutamine (pharmacologic)\\n- **Monitoring**: ECG, BP, HR throughout\\n- **Post-stress echo**: Reassess wall motion in all segments\\n\\n### Wall Motion Scoring\\n- **Normal**: Hyperkinetic motion (10-20% systolic excursion)\\n- **Hypokinesis**: Reduced motion (5-10% excursion)\\n- **Akinesis**: No motion\\n- **Dyskinesis**: Paradoxical outward motion\\n\\n### Wall Motion Score Index (WMSI)\\n- **Scoring**: Average of 16 segments (1=normal, 4=dyskinesis)\\n- **Normal WMSI**: 1.0\\n- **Abnormal**: >1.0 (indicates ischemia or scar)\\n\\n### Interpretation\\n- **Normal stress echo**: No new wall motion abnormalities; prognostic value excellent\\n- **Ischemia**: New/worsening wall motion with stress; indicates significant CAD\\n- **Fixed scar**: Abnormal at baseline and stress (prior infarction)\\n\\n## Nuclear Imaging (SPECT)\\n\\n### Mechanism\\n- **Tracer**: Technetium-99m sestamibi or thallium-201\\n- **Uptake**: Tracer distributes with myocardial blood flow\\n- **Ischemia**: Reduced uptake during stress; normalizes at rest (reversible)\\n- **Infarction**: Reduced uptake both stress and rest (fixed)\\n\\n### Interpretation\\n- **Normal**: Uniform tracer distribution stress and rest\\n- **Reversible defect**: Reduced stress, normal rest = ischemia (60-70% stenosis)\\n- **Fixed defect**: Reduced stress and rest = scar/infarction\\n- **Mixed pattern**: Ischemia + infarction (high-risk)\\n\\n### Prognosis\\n- **Normal SPECT**: <1% cardiac events/year\\n- **Reversible defect**: 2-5% events/year (depends on size, severity)\\n- **Fixed defect**: <2% events/year (established scar, no viability)\\n- **Multivessel ischemia**: >5% events/year (high-risk)\\n\\n## Coronary CTA for Risk Stratification\\n\\n### Calcium Score\\n- **Method**: Non-contrast CT; quantifies coronary artery calcification\\n- **Scoring**: Agatston score; 0-400 units\\n  - **0**: No calcification; low risk\\n  - **1-100**: Mild; intermediate risk\\n  - **101-400**: Moderate; higher risk\\n  - **>400**: Extensive; high risk\\n- **Value**: Risk stratification; lower specificity for stenosis\\n\\n### CTA Stenosis Assessment\\n- **Sensitivity**: 95% for >50% stenosis\\n- **Specificity**: 86% for significant stenosis\\n- **Advantages**: Non-invasive; assess anatomic variants, left main disease\\n- **Limitations**: Radiation, contrast, motion artifact with high HR\\n\\n## Prognostic Value by Test\\n\\n| Test | Normal | Abnormal |\\n|------|--------|----------|\\n| **Stress echo** | <1% events/yr | 2-8% events/yr |\\n| **SPECT normal** | <1% events/yr | Reversible 2-5%; Fixed <2% |\\n| **Coronary CTA negative** | <1% events/yr | Depends on stenosis severity |\\n| **Exercise ECG only** | Lower specificity; limited if baseline ST changes |\\n\\n## Clinical Decision-Making\\n\\n### Pretest Probability\\n- **Low probability (<10%)**: May not need further testing\\n- **Intermediate (10-90%)**: Stress testing appropriate\\n- **High probability (>90%)**: Consider invasive coronary angiography\\n\\n### Test Selection\\n- **Able to exercise**: Stress echo or ECG stress test\\n- **Unable to exercise**: Dobutamine stress echo or SPECT\\n- **Baseline ST changes**: Stress echo preferred (no ECG interpretation)\\n- **Lung disease**: SPECT preferred (no breath-hold needed),\\n        keyPoints: [\\n          \\\"Stress echo: new wall motion abnormality indicates ischemia; normal <1% events/yr\\\",\\n          \\\"SPECT: reversible defect = ischemia; fixed = scar\\\",\\n          \\\"Coronary CTA: 95% sensitivity for >50% stenosis; non-invasive alternative to angiography\\\",\\n          \\\"Calcium score risk stratification; 0 low risk, >400 high risk\\\",\\n          \\\"Prognostic value: normal <1% cardiac events/year; reversible ischemia 2-8%\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Radiology by Satish Bhattacharya\\\", chapter: \\\"Cardiac Stress Testing\\\", edition: \\\"4th\\\" },\\n          { book: \\\"Cardiac Imaging Manual by Bonow & Mann\\\", chapter: \\\"Functional Imaging\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"cardiac-imaging-exam\\\",\\n        title: \\\"Cardiac Imaging - Exam Preparation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Case analysis and imaging interpretation.\\\",\\n        contentMd: ``# Cardiac Imaging - Exam Preparation\\n\\n## Case 1: Acute Myocardial Infarction\\n**Scenario**: 58-year-old male, acute chest pain, ST elevation in inferior leads.\\n\\n**Imaging Assessment**:\\n- **ECG**: ST elevation II, III, aVF (inferior MI, RCA territory)\\n- **Echo**: Regional wall motion abnormality (inferior wall hypokinesis)\\n- **Troponin**: Elevated (>10× ULN)\\n- **CXR**: May show pulmonary edema if large infarction\\n\\n**Management**:\\n- **Urgent coronary angiography**: Gold standard; PCI if suitable anatomy\\n- **Medications**: Aspirin, P2Y12 inhibitor, beta-blockers, ACE inhibitors\\n- **Follow-up echo**: 3-6 months to assess EF recovery; consider viability testing (MRI or SPECT)\\n\\n## Case 2: Dyspnea - Dilated Cardiomyopathy\\n**Scenario**: 45-year-old with dyspnea, orthopnea, edema. Echo shows enlarged heart.\\n\\n**Imaging Findings**:\\n- **Echo**: LV dilation (LVID 6.5 cm), reduced EF (35%), LA enlargement\\n- **CXR**: Cardiomegaly (cardiothoracic ratio 0.65), pulmonary edema\\n- **BNP**: Elevated\\n\\n**Diagnosis**: Dilated cardiomyopathy with heart failure.\\n\\n**Management**:\\n- **Optimize diuretics**: Reduce preload; relieve symptoms\\n- **ACE inhibitors + beta-blockers**: Proven mortality benefit\\n- **ICD consideration**: If EF <35% despite optimal therapy\\n- **Cause workup**: Ischemic, viral, toxic, idiopathic\\n\\n## Case 3: Syncope - Hypertrophic Cardiomyopathy\\n**Scenario**: 28-year-old with syncope with exertion, family history of sudden cardiac death.\\n\\n**Imaging Findings**:\\n- **Echo**: Asymmetric septal hypertrophy (septum 2.2 cm); SAM of mitral valve\\n- **Doppler**: LV outflow gradient 45 mmHg (obstructive)\\n- **ECG**: LVH with deep Q waves, T wave inversions\\n\\n**Management**:\\n- **Activity restriction**: Avoid strenuous exercise\\n- **Beta-blockers or calcium channel blockers**: First-line\\n- **ICD**: If high-risk features (syncope, family history SCD, severe gradient)\\n- **Genetic testing**: Identify family members,\\n        keyPoints: [\\n          \\\"Acute MI: ECG shows territory; echo shows wall motion; troponin confirms\\\",\\n          \\\"Dilated cardiomyopathy: LV >5.5 cm, EF <40%, LA enlargement\\\",\\n          \\\"Hypertrophic cardiomyopathy: asymmetric hypertrophy, SAM, obstruction\\\",\\n          \\\"Prognostic value stress testing: normal <1% events/yr\\\",\\n          \\\"Follow-up imaging: repeat echo 3-6 months post-MI; assess recovery\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Radiology by Satish Bhattacharya\\\", chapter: \\\"Cardiac Imaging\\\", edition: \\\"4th\\\" },\\n          { book: \\\"Bonow & Mann Cardiac Imaging\\\", chapter: \\\"Clinical Applications\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"cardiac-imaging-qa\\\",\\n        title: \\\"Cardiac Imaging - Q&A\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"Key MCQs on cardiac imaging interpretation.\\\",\\n        contentMd: ``# Cardiac Imaging - Q&A\\n\\n## Q1: What is a normal left ventricular ejection fraction?\\n\\n**Answer**: >50%. EF 40-49% = mild dysfunction; 30-39% = moderate; <30% = severe LV dysfunction.\\n\\n## Q2: In mitral stenosis, what is the severity cutoff for mitral valve area?\\n\\n**Answer**: MVA <1.5 cm² indicates moderate-severe stenosis. <1.0 cm² = very severe. Normal MVA 4-5 cm².\\n\\n## Q3: What is the difference between reversible and fixed defects on SPECT imaging?\\n\\n**Answer**: Reversible defect = reduced tracer uptake during stress, normal at rest; indicates ischemia. Fixed defect = reduced both stress and rest; indicates scar/infarction.\\n\\n## Q4: A patient has asymmetric septal hypertrophy and SAM on echo. What is the diagnosis?\\n\\n**Answer**: Hypertrophic cardiomyopathy (obstructive). SAM = systolic anterior motion of mitral valve causing LV outflow obstruction.\\n\\n## Q5: What is the sensitivity and specificity of coronary CTA for detecting >50% coronary stenosis?\\n\\n**Answer**: Sensitivity 95% (detects most significant stenosis); Specificity 86% (some false positives with calcification).,\\n        keyPoints: [\\n          \\\"LVEF >50% normal; EF assessment predicts prognosis and therapy\\\",\\n          \\\"Mitral stenosis MVA <1.5 cm²; mitral regurgitation severity by jet width\\\",\\n          \\\"SPECT reversible = ischemia; fixed = scar\\\",\\n          \\\"Hypertrophic cardiomyopathy: asymmetric hypertrophy, SAM, high-risk for SCD\\\",\\n          \\\"Coronary CTA 95% sensitivity; excellent for excluding significant CAD\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Radiology by Satish Bhattacharya\\\", chapter: \\\"Cardiac Imaging\\\", edition: \\\"4th\\\" },\\n          { book: \\\"Bonow & Mann - Cardiac Imaging Manual\\\" }\\n        ]\\n      }\\n    ]\\n  },\\n  // RD-MOD-04-TOP-03: GU Imaging & IVP\\n  {\\n    topicCode: \\\"RD-MOD-04-TOP-03\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"gu-imaging-foundation\\\",\\n        title: \\\"GU Imaging - Foundation\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Renal anatomy, imaging modalities, IVP principles.\\\",\\n        contentMd: ``# GU Imaging - Foundation\\n\\n## Renal Anatomy\\n\\n### Gross Anatomy\\n- **Location**: Retroperitoneal; T12-L3 (right slightly lower)\\n- **Size**: 10-12 cm length × 5-6 cm width\\n- **Structure**: Cortex (outer), medulla (inner), hilum (vascular entry)\\n- **Blood supply**: Renal artery branches from aorta; early bifurcation common\\n- **Lymphatic**: To hilar and lumbar nodes\\n\\n### Collecting System\\n- **Minor calyces**: 7-14; cup-shaped around renal papillae\\n- **Major calyces**: 2-3; anterior/posterior groups\\n- **Renal pelvis**: Funnel-like; drains into ureter\\n- **Ureter**: 25-30 cm length; descends to bladder\\n\\n### Physiologic Variants\\n- **Duplex collecting system**: Duplicated ureter (bilateral 0.8%)\\n- **Ectopic ureter**: Drains outside expected location\\n- **Horseshoe kidney**: Fused lower poles (0.25%)\\n\\n## Imaging Modalities\\n\\n### Ultrasound (US)\\n- **Advantages**: No radiation, no contrast, portable\\n- **Limitations**: Operator-dependent, limited in obese patients\\n- **Applications**: Initial screening, follow-up, hydronephrosis, renal mass\\n- **Echo pattern**: Normal kidney cortex slightly hypoechoic to liver; bright pelvic fat\\n\\n### CT KUB (CT Abdomen & Pelvis)\\n- **Advantages**: High sensitivity for stones, hydronephrosis, masses\\n- **Limitations**: Radiation, contrast (for CTA)\\n- **Unenhanced CT**: Best for stone detection; no contrast needed\\n- **Contrast-enhanced CT**: Best for mass characterization, CTA\\n\\n### Intravenous Pyelography (IVP)\\n- **Technique**: IV contrast; sequential imaging of excretion\\n- **Indications**: Stone, obstruction, hematuria (less now due to CT)\\n- **Advantages**: Functional and anatomic information\\n- **Limitations**: Radiation, contrast nephropathy risk (obsolete in many centers)\\n\\n### MRI/MR Urography\\n- **Advantages**: No radiation, excellent soft tissue\\n- **Limitations**: Contrast gadolinium (avoid severe renal failure), motion artifact\\n- **Applications**: Complex cases, pregnancy, contrast allergy\\n\\n### Renal Ultrasound\\n- **Measurements**: Longitudinal axis (bipolar length); anteroposterior diameter\\n- **Cortical thickness**: Normal 8-12 mm; <6 mm suggests chronic disease\\n- **Echogenicity**: Cortex slightly hyperechoic to liver suggests fibrosis\\n- **Resistive index (RI)**: Doppler measurement; RI >0.8 suggests dysfunction,\\n        mnemonics: [\\n          { text: \\\"Kidney ultrasound: CAR\\\", explanation: \\\"Cortical thickness (8-12 mm normal), Anteroposterior (AP) diameter, Resistive index (RI) <0.8\\\" },\\n          { text: \\\"Renal artery positions: HIL\\\", explanation: \\\"Hilum location; Important for duplex variants\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Normal renal size 10-12 cm × 5-6 cm; located T12-L3\\\",\\n          \\\"Cortical thickness >6 mm normal; <6 mm suggests chronic disease\\\",\\n          \\\"US good initial modality; limited in obese, operator-dependent\\\",\\n          \\\"Unenhanced CT best for stone; contrast CT for masses\\\",\\n          \\\"IVP functional information but high radiation (now superseded by CT)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Radiology by Satish Bhattacharya\\\", chapter: \\\"GU Imaging\\\", edition: \\\"4th\\\" },\\n          { book: \\\"Radiologyassistant.nl - Renal Imaging\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"gu-pathologies\\\",\\n        title: \\\"GU Imaging - Common Pathologies\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Nephrolithiasis, hydronephrosis, renal mass characterization.\\\",\\n        contentMd: ``# GU Pathologies - Imaging Features\\n\\n## Nephrolithiasis (Kidney Stones)\\n\\n### Stone Composition & Density\\n- **Calcium oxalate/phosphate** (75%): Radiopaque; visible on KUB\\n- **Uric acid** (10%): Radiolucent\\n- **Struvite** (15%): Radiopaque\\n- **Cystine** (1%): Radiopaque\\n\\n### Imaging Appearance\\n\\n**X-ray (KUB)**:\\n- Radiopaque stone visible in renal region\\n- Sensitivity: 80-90% for calcium stones; 0% for uric acid\\n\\n**Ultrasound**:\\n- Echogenic focus with acoustic shadow\\n- Sensitivity: 95-98% for detecting hydronephrosis\\n- Limited for actual stone detection\\n\\n**Non-contrast CT**:\\n- Gold standard; detects all stone types\\n- Sensitivity: 95-99%\\n- Hounsfield unit (HU) helps predict composition\\n- No contrast needed\\n\\n### Hydronephrosis Grading\\n- **Grade 0**: Normal collecting system\\n- **Grade 1**: Mild pelvic dilatation\\n- **Grade 2**: Moderate dilatation; preserved calyces\\n- **Grade 3**: Significant dilatation; effaced calyces\\n- **Grade 4**: Severe; parenchymal thinning\\n\\n### Complications\\n- **Infection**: Pyonephrosis (infected obstructed kidney)\\n- **Acute kidney injury**: High uric acid stones\\n- **Chronic**: Obstructive uropathy; renal insufficiency\\n\\n## Hydronephrosis & Obstruction\\n\\n### Causes\\n- **Upper ureter**: Stone, sloughed papilla, tumor, stricture\\n- **Pelvic**: Retroperitoneal fibrosis, lymphadenopathy\\n- **Lower ureter**: BPH (bladder outlet), prostate cancer, cervical cancer\\n- **Functional**: VUR (vesicoureteral reflux), megaureter\\n\\n### Ultrasound Findings\\n- **Pelvic dilatation**: >10 mm abnormal\\n- **Calyceal dilatation**: Loss of normal sharp angles\\n- **Parenchymal thinning**: Suggests chronicity\\n- **Ureteral dilation**: If obstruction below pelvis\\n\\n### CT Findings\\n- **Pelvic and calyceal dilatation**: Graded 1-4\\n- **Whirlpool sign**: Twisted ureter in volvulus\\n- **Transition point**: Where dilation ends; site of obstruction\\n- **Parenchymal enhancement**: Reduced if significant obstruction\\n\\n## Renal Mass Characterization\\n\\n### Benign Lesions\\n\\n**Simple Cyst**:\\n- **Ultrasound**: Anechoic, no internal echoes, sharp borders\\n- **CT**: Water density (-20 to 0 HU), no enhancement\\n- **Criteria**: Bosniak I (simple); benign\\n\\n**Fat-containing Lesions (Angiomyolipoma)**:\\n- **CT**: Negative Hounsfield units (fat density -50 to -100)\\n- **Prevalence**: 0.3-3%; 80% associated with tuberous sclerosis\\n- **Benign**: No follow-up needed if characteristic fat\\n\\n### Malignant Lesions\\n\\n**Renal Cell Carcinoma (RCC)**:\\n- **Appearance**: Solid mass with variable enhancement\\n- **Heterogeneous**: Due to necrosis, hemorrhage\\n- **Staging**: T1 (<4cm), T2 (4-7cm), T3 (extends fat/vessels), T4 (beyond Gerota)\\n- **Aggressive features**: Large size, necrosis, invasion, metastases\\n\\n### Bosniak Classification (Cystic Lesions)\\n- **I**: Simple cyst; benign\\n- **II**: Few septa, thin walls; likely benign (no follow-up)\\n- **IIF**: Follow-up needed; slightly increased risk\\n- **III**: Multiple septa, thickened walls; 50% malignant (intervention)\\n- **IV**: Definite enhancing solid component; >90% malignant\\n\\n## Renal Infarction\\n\\n### Mechanism\\n- **Thrombosis**: Renal artery dissection, thrombosis\\n- **Embolism**: AF, endocarditis, aortic atherosclerosis\\n\\n### Imaging\\n- **CT**: Wedge-shaped perfusion defect (rim enhancement = viable periphery)\\n- **Ultrasound**: Loss of normal echogenicity in affected segment\\n- **Elevated LDH**: Clue to diagnosis\\n\\n### Complications\\n- **Septic infarction**: If infection source\\n- **Renal artery dissection**: Spontaneous or post-intervention,\\n        keyPoints: [\\n          \\\"Kidney stones: CT gold standard (95-99% sensitivity); all stone types detected\\\",\\n          \\\"Hydronephrosis grading: mild (Grade 1) to severe (Grade 4)\\\",\\n          \\\"Simple cyst benign (Bosniak I); no follow-up\\\",\\n          \\\"RCC solid mass with heterogeneous enhancement; assess for invasion, mets\\\",\\n          \\\"Renal infarction: wedge-shaped perfusion defect on contrast CT\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Radiology by Satish Bhattacharya\\\", chapter: \\\"Urinary System\\\", edition: \\\"4th\\\" },\\n          { book: \\\"Radiologyassistant.nl - Renal Pathologies\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"bladder-prostate-imaging\\\",\\n        title: \\\"GU Imaging - Bladder & Prostate\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Bladder pathology, prostate imaging, post-void residual.\\\",\\n        contentMd: ``# Bladder & Prostate Imaging\\n\\n## Bladder Imaging\\n\\n### Ultrasound\\n- **Pre-void volume**: Normal <100 mL\\n- **Wall thickness**: Normal <3-4 mm (full); <2 mm (empty)\\n- **Thickened wall**: >5 mm suggests obstruction (BPH, stricture) or neurogenic bladder\\n- **Post-void residual (PVR)**: Abnormal if >100-150 mL\\n\\n### CT & MRI\\n- **Wall enhancement**: Normal submucosa enhances; tumor disrupts architecture\\n- **Muscle infiltration**: T2/T3 disease (invasion into muscularis/beyond)\\n- **Perivesical fat**: Obliteration suggests invasion\\n- **Lymph nodes**: Regional nodes assessed\\n\\n### Cystography\\n- **Technique**: Retrograde contrast into bladder; emptying films\\n- **Indications**: Bladder trauma, suspicion of perforation\\n- **Extraperitoneal rupture**: Contrast in peripelvic space\\n- **Intraperitoneal rupture**: Contrast in peritoneal cavity\\n\\n## Prostate Imaging\\n\\n### Clinical Context\\n- **BPH**: Common >50 years; causes obstruction\\n- **Prostatitis**: Acute or chronic; infection\\n- **Prostate cancer**: Elevated PSA; high-risk on imaging\\n\\n### Transrectal Ultrasound (TRUS)\\n- **Hypoechoic lesion**: Suspicious for cancer (transition zone)\\n- **Biopsy guidance**: Image-guided biopsies (12-14 core standard)\\n- **Volume measurement**: Important for symptom/obstruction assessment\\n\\n### Multiparametric MRI (mpMRI)\\n- **T2-weighted**: Anatomic detail; hypointense lesion in PZ\\n- **Diffusion-weighted imaging (DWI)**: Restricted diffusion in cancer\\n- **Dynamic contrast-enhanced (DCE)**: Early enhancement in cancer\\n- **MR spectroscopy**: Choline/citrate ratio elevated in cancer\\n\\n### Staging Prostate Cancer\\n- **T-stage**: Local extent (T1-T4)\\n- **N-stage**: Regional lymph nodes (N0, N1)\\n- **M-stage**: Distant metastases (M0, M1)\\n- **Gleason score**: Histopathologic grade\\n\\n### Imaging Findings by Stage\\n- **T1**: Confined to prostate; not palpable\\n- **T2**: Confined to prostate; palpable\\n- **T3**: Extends beyond capsule; seminal vesicle invasion\\n- **T4**: Fixed; invades adjacent structures\\n\\n## Post-Void Residual (PVR) Assessment\\n\\n### Clinical Significance\\n- **Normal**: <100-150 mL\\n- **Abnormal**: >150 mL suggests obstruction or detrusor failure\\n- **Risk**: UTI, stone, upper tract dilation\\n\\n### Measurement Techniques\\n- **US (simplest)**: Longitudinal × transverse × AP × 0.52\\n- **Catheterization**: Gold standard but invasive\\n- **Post-void dribbling**: Suggests significant PVR\\n\\n## Cryptorchidism & Gonadal Imaging\\n\\n### Undescended Testis\\n- **US**: First-line imaging; assess location\\n- **Inguinal location**: High in canal, at external ring\\n- **Intra-abdominal**: Further investigation needed\\n- **Absent**: Confirm agenesis\\n\\n### Testicular Ultrasound\\n- **Echotexture**: Normal homogeneous\\n- **Size**: Normal 4-5 cm length × 2.5 cm width\\n- **Color Doppler**: Normal peripheral flow; central flow in malignancy\\n- **Epididymis**: Hypoechoic; normal size <12 mm\\n\\n### Testicular Cancer\\n- **Hypoechoic mass**: Disrupts normal architecture\\n- **Color Doppler**: Increased vascularity\\n- **Staging**: CT chest/abdomen/pelvis for metastases\\n- **Prognosis**: Depends on histology, stage, tumor markers,\\n        keyPoints: [\\n          \\\"Bladder wall thickness >5 mm suggests obstruction; normal <3-4 mm\\\",\\n          \\\"Post-void residual >150 mL abnormal; indicates obstruction or detrusor failure\\\",\\n          \\\"Prostate mpMRI: T2 (anatomy), DWI (restriction), DCE (enhancement) for cancer\\\",\\n          \\\"Cryptorchidism: US best initial; CT if intra-abdominal location\\\",\\n          \\\"Testicular cancer: hypoechoic mass with increased color Doppler\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Radiology by Satish Bhattacharya\\\", chapter: \\\"Urinary System\\\", edition: \\\"4th\\\" },\\n          { book: \\\"Radiologyassistant.nl - Bladder & Prostate Imaging\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"gu-imaging-exam\\\",\\n        title: \\\"GU Imaging - Exam Preparation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Case analysis and imaging interpretation.\\\",\\n        contentMd: ``# GU Imaging - Exam Preparation\\n\\n## Case 1: Acute Flank Pain - Kidney Stone\\n**Scenario**: 35-year-old male with acute left flank pain, hematuria.\\n\\n**Imaging Workup**:\\n- **CT KUB (unenhanced)**: Gold standard\\n  - Shows: Stone in left renal pelvis (3 mm), mild left hydronephrosis (Grade 1-2)\\n  - Density: 800+ HU (calcium oxalate)\\n- **Ultrasound**: Confirms hydronephrosis; visualizes stone with acoustic shadow\\n- **Blood**: Elevated creatinine if bilateral obstruction\\n\\n**Management**:\\n- **Expectant management**: Likely to pass (70% <5 mm pass)\\n- **Pain control**: NSAIDs, hydration\\n- **Follow-up imaging**: Repeat CT at 2-4 weeks if persistent symptoms\\n- **Intervention (ureteroscopy/ESWL)**: If fails to pass or infection develops\\n\\n## Case 2: Asymptomatic Renal Mass\\n**Scenario**: 60-year-old with incidental renal mass on CT (surveillance).\\n\\n**Imaging Findings**:\\n- **Mass characteristics**: 3 cm, solid, heterogeneous enhancement (RCC appearance)\\n- **Bosniak classification**: Not cystic; solid lesion\\n- **Staging**: CT chest shows no lung metastases; regional nodes normal\\n- **No fat density**: Rules out AML\\n\\n**Diagnosis**: Likely RCC (renal cell carcinoma).\\n\\n**Management**:\\n- **Partial nephrectomy**: Preferred if technically feasible (preserves function)\\n- **Radical nephrectomy**: If large, central, or multifocal\\n- **Surveillance**: If <3-4 cm, good operative risk unclear; can observe\\n- **Prognosis**: Depends on grade, stage; local disease 70-80% 5-year survival\\n\\n## Case 3: Elevated PSA - Prostate Imaging\\n**Scenario**: 65-year-old, PSA 8 ng/mL (normal <4), no symptoms.\\n\\n**Imaging Assessment**:\\n- **DRE**: Not nodular; possible benign enlargement\\n- **Multiparametric MRI**: Shows 2 cm lesion in peripheral zone with restricted DIF and early DCE enhancement → suspicious for cancer\\n\\n**Management**:\\n- **TRUS-guided biopsy**: 12-14 core; image-guided\\n- **If cancer confirmed**: Staging (CT, bone scan if Gleason ≥7)\\n- **Risk stratification**: PSA, Gleason, T-stage → treatment (watchful waiting, radiation, surgery),\\n        keyPoints: [\\n          \\\"Kidney stone CT KUB unenhanced gold standard; 95-99% sensitivity\\\",\\n          \\\"Hydronephrosis grading helps assess urgency of intervention\\\",\\n          \\\"Renal mass: characterize as benign (cyst) or malignant (RCC)\\\",\\n          \\\"Bosniak classification guides management of cystic lesions\\\",\\n          \\\"Prostate mpMRI: assess for cancer; guides biopsy if indicated\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Radiology by Satish Bhattacharya\\\", chapter: \\\"GU Imaging\\\", edition: \\\"4th\\\" },\\n          { book: \\\"Radiologyassistant.nl - GU Pathology\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"gu-imaging-qa\\\",\\n        title: \\\"GU Imaging - Q&A\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"Key MCQs on GU imaging interpretation.\\\",\\n        contentMd: ``# GU Imaging - Q&A\\n\\n## Q1: What is the gold standard imaging modality for detecting kidney stones?\\n\\n**Answer**: Non-contrast CT (unenhanced CT KUB). Sensitivity 95-99% for all stone types (calcium, uric acid, struvite). Better than ultrasound, KUB (radiolucent stones missed).\\n\\n## Q2: What is the normal post-void residual volume on ultrasound?\\n\\n**Answer**: <100-150 mL. Values >150 mL abnormal; suggests obstruction (BPH) or detrusor failure. Higher risk of UTI, stone, upper tract dilation.\\n\\n## Q3: A simple renal cyst on ultrasound. What is the Bosniak classification and follow-up?\\n\\n**Answer**: Bosniak I (simple cyst). Benign; no follow-up needed. Criteria: anechoic, no internal echoes, sharp borders. CT confirms water density, no enhancement.\\n\\n## Q4: A patient has elevated PSA (8 ng/mL). What is the next imaging study?\\n\\n**Answer**: Multiparametric MRI (mpMRI) of prostate. Assesses for cancer using T2, DWI, DCE sequences. Guides TRUS-guided biopsy if lesion detected.\\n\\n## Q5: What is the significance of a hypodense wedge-shaped lesion on contrast CT?\\n\\n**Answer**: Consistent with renal infarction. Results from renal artery thrombosis or embolism. \\\"Rim sign\\\" (peripheral enhancement) indicates viable collateral perfusion at margins.,\\n        keyPoints: [\\n          \\\"CT KUB unenhanced: gold standard for stone (95-99% sensitivity)\\\",\\n          \\\"Post-void residual >150 mL abnormal; indicates obstruction\\\",\\n          \\\"Bosniak I simple cyst: benign, no follow-up\\\",\\n          \\\"Bosniak III-IV: >50% malignant; intervention needed\\\",\\n          \\\"Prostate mpMRI: guides biopsy; stages cancer if detected\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Radiology by Satish Bhattacharya\\\", chapter: \\\"Urinary System\\\", edition: \\\"4th\\\" },\\n          { book: \\\"Radiologyassistant.nl - GU Imaging\\\" }\\n        ]\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-];
-];
+        contentMd: `# Cardiac Imaging - Foundation
+
+## Echocardiography Overview
+### Types
+- **Transthoracic echo (TTE)**: Standard; non-invasive
+- **Transesophageal echo (TEE)**: High quality; during surgery/procedures
+- **Stress echo**: With exercise or dobutamine
+- **3D echo**: Volumetric assessment
+
+### Cardiac Chambers & Dimensions
+- **Left ventricle (LV)**: LVID (LV internal dimension) normal 4.5-5.5 cm diastole; dilated >5.5 cm
+- **Left atrium (LA)**: Normal 2.4-4.0 cm
+- **Right atrium (RA)**: Normal 2.6-4.2 cm
+- **Right ventricle (RV)**: Normal 2.5-4.0 cm base
+
+### Ejection Fraction (EF)
+- **Definition**: % blood ejected from LV per beat
+- **Normal**: >50%
+- **Mild dysfunction**: 40-49%
+- **Moderate dysfunction**: 30-39%
+- **Severe dysfunction**: <30%
+
+## Cardiac MRI Advantages
+- **Tissue characterization**: Fibrosis, edema, scar (late gadolinium enhancement)
+- **Functional assessment**: LV/RV volumes, EF
+- **No radiation**: Non-ionizing
+- **Myocardial viability**: LGE shows scar
+
+## CT Angiography for Coronary
+- **Coronary CTA**: For CAD assessment, sensitivity 95% for >50% stenosis
+- **Radiation**: 1-2 mSv (lower than invasive angiography 5-7 mSv)
+- **Heart rate control**: <60 bpm optimal
+- **Calcium score**: Risk stratification (0=low, >400=high)
+
+## Chest X-Ray Cardiac Assessment
+- **Cardiothoracic ratio**: Normal <0.5; >0.5 = cardiomegaly
+- **Pulmonary edema**: "Bat-wing" distribution; Kerley B lines`,
+        mnemonics: [
+          { text: "Echo chambers: LA, RA, LV, RV", explanation: "Normal LA 2.4-4.0, LV 4.5-5.5 (diastole), LVEF >50%" },
+          { text: "EF: >50 normal, 40-49 mild, 30-39 moderate, <30 severe", explanation: "Dysfunction grading" },
+          { text: "MRI: CFPM = Cine (function), Fibrosis (LGE), Perfusion, edema (T2)", explanation: "Cardiac MRI sequences" }
+        ],
+        keyPoints: [
+          "Echocardiography standard for cardiac structure/function; LVEF >50% normal",
+          "Cardiac MRI excellent for tissue characterization, viability, scarring",
+          "Coronary CTA: 95% sensitivity; 1-2 mSv radiation",
+          "Heart size on CXR: cardiothoracic ratio >0.5 = cardiomegaly",
+          "Pulmonary edema: bat-wing distribution, Kerley B lines"
+        ],
+        textbookRefs: [
+          { book: "Grainger & Allison's Diagnostic Radiology", chapter: "Cardiac Imaging", edition: "7th" },
+          { book: "Sutton's Textbook of Radiology", chapter: "The Heart and Great Vessels", edition: "8th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "cardiac-pathologies",
+        title: "Cardiac Imaging - Common Pathologies",
+        estimatedMinutes: 30,
+        summary: "Valvular disease, cardiomyopathy, ischemic heart disease on imaging.",
+        contentMd: `# Cardiac Pathologies - Imaging Features
+
+## Valvular Disease
+### Mitral Stenosis
+- **Echo**: Thickened, domed mitral valve; reduced opening
+- **Severity**: MVA <1.5 cm² = severe
+- **Associated**: LA enlargement, AF, pulmonary hypertension
+- **CXR**: LA enlargement (straightened left border, splayed carina)
+
+### Mitral Regurgitation
+- **Echo**: Color Doppler flow into LA during systole
+- **Severity**: Jet area, regurgitant volume, LA/LV size
+- **Chronic**: LV dilates (eccentric hypertrophy)
+
+### Aortic Stenosis
+- **Echo**: Thickened aortic valve, reduced opening
+- **Severity**: AVA <1.0 cm² = severe; mean gradient >40 mmHg
+- **Associated**: LV hypertrophy initially; eventual dilation
+
+### Aortic Regurgitation
+- **Echo**: Widened color jet in LV (diastole)
+- **Severity**: Jet width, holodiastolic reversal in abdominal aorta
+- **Chronic**: LV dilation (eccentric hypertrophy)
+
+## Cardiomyopathies
+### Dilated Cardiomyopathy
+- **Echo**: Global LV dilation (LVID >5.5), reduced EF (<40%)
+- **Causes**: Ischemic, viral, idiopathic, toxic
+- **Features**: Enlarged LA, functional MR, reduced LV strain
+- **CXR**: Cardiomegaly, pulmonary edema
+
+### Hypertrophic Cardiomyopathy
+- **Echo**: Asymmetric LV hypertrophy; often septal predominance
+- **SAM**: Systolic anterior motion of mitral valve (obstruction)
+- **Risk**: Sudden cardiac death; syncope in young
+
+### Restrictive Cardiomyopathy
+- **Echo**: Normal LV size, diastolic dysfunction
+- **Atria**: Markedly enlarged
+- **Causes**: Amyloidosis, sarcoidosis, hemochromatosis
+
+## Myocardial Infarction
+### Acute MI
+- **Echo**: Wall motion abnormality (hypokinesis/akinesis)
+- **Troponin**: Elevated (highly specific)
+- **Territory**: Follows vascular distribution (RCA, LAD, LCx)
+
+### Chronic MI
+- **Echo**: Thinning of affected wall; scar (bright on MRI LGE)
+- **MRI**: Transmural LGE in infarct territory (diagnostic)
+- **Viability**: MRI shows if segment salvageable
+
+## Pericardial Disease
+- **Effusion**: Fluid echo-free space around heart
+- **Tamponade**: RA/RV diastolic collapse if hemodynamically significant
+- **Constrictive pericarditis**: Thickened pericardium, restrictive pattern`,
+        mnemonics: [
+          { text: "Mitral stenosis: MVA <1.5 cm²; Aortic stenosis: AVA <1.0 cm²", explanation: "Severity cutoffs" },
+          { text: "Dilated cardiomyopathy: LVID >5.5 cm, EF <40%", explanation: "Chamber dimensions" },
+          { text: "Hypertrophic cardiomyopathy: asymmetric hypertrophy, SAM = obstruction", explanation: "Key features" }
+        ],
+        keyPoints: [
+          "Valvular disease: MVA/AVA quantify severity; echo gold standard",
+          "Dilated cardiomyopathy: global LV dilation, reduced EF, LA enlargement",
+          "HCM: asymmetric hypertrophy with SAM causing LVOT obstruction",
+          "Acute MI: wall motion abnormality in vascular territory",
+          "MRI LGE: shows transmural scar (infarction), subendocardial edema (ischemia)"
+        ],
+        textbookRefs: [
+          { book: "Grainger & Allison's Diagnostic Radiology", chapter: "Cardiac Pathology", edition: "7th" },
+          { book: "Sutton's Textbook of Radiology", chapter: "Cardiac Disease", edition: "8th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "cardiac-stress-ischemia",
+        title: "Cardiac Imaging - Stress Testing & CAD Assessment",
+        estimatedMinutes: 35,
+        summary: "Stress echo, nuclear imaging, CTA for CAD, prognostic value.",
+        contentMd: `# Cardiac Stress Testing - Physiology & Interpretation
+
+## Stress Echocardiography
+### Protocol
+- **Baseline**: Resting echo with wall motion assessment
+- **Stress induction**: Exercise or dobutamine
+- **Monitoring**: ECG, BP, HR throughout
+- **Post-stress echo**: Reassess wall motion in all segments
+
+### Wall Motion Scoring
+- **Normal**: Hyperkinetic motion (10-20% systolic excursion)
+- **Hypokinesis**: Reduced motion (5-10% excursion)
+- **Akinesis**: No motion
+- **Dyskinesis**: Paradoxical outward motion
+
+### Interpretation
+- **Normal stress echo**: No new wall motion abnormalities; excellent prognosis
+- **Ischemia**: New/worsening wall motion with stress; indicates significant CAD
+- **Fixed scar**: Abnormal at baseline and stress (prior infarction)
+
+## Nuclear Imaging (SPECT)
+### Mechanism
+- **Tracer**: Tc-99m sestamibi or Tl-201
+- **Uptake**: Tracer distributes with myocardial blood flow
+- **Ischemia**: Reduced uptake during stress; normalizes at rest (reversible)
+- **Infarction**: Reduced uptake both stress and rest (fixed)
+
+### Interpretation
+- **Reversible defect**: Reduced stress, normal rest = ischemia (60-70% stenosis)
+- **Fixed defect**: Reduced stress and rest = scar/infarction
+- **Normal**: Uniform tracer distribution stress and rest
+
+### Prognosis
+- **Normal**: <1% cardiac events/year
+- **Reversible defect**: 2-5% events/year (depends on size, severity)
+- **Fixed defect**: <2% events/year (established scar)
+- **Multivessel ischemia**: >5% events/year (high-risk)
+
+## Coronary CTA for Calcium & Stenosis
+### Calcium Score Risk Stratification
+- **0**: No calcification; low risk
+- **1-100**: Mild; intermediate risk
+- **101-400**: Moderate; higher risk
+- **>400**: Extensive; high risk
+
+### CTA Stenosis Assessment
+- **Sensitivity**: 95% for >50% stenosis
+- **Specificity**: 86% for significant stenosis
+- **Advantages**: Non-invasive; assess anatomic variants, left main disease
+- **Limitations**: Radiation, motion artifact, calcification blooming
+
+## Prognostic Value
+- **Normal CTA**: <1% events/year
+- **Significant stenosis**: Depends on vessel (LAD worse); may need intervention
+- **Normal stress echo**: <1% events/year
+- **Reversible ischemia**: 2-8% events/year`,
+        mnemonics: [
+          { text: "Stress echo: new wall motion = ischemia; normal = excellent prognosis", explanation: "Interpretation" },
+          { text: "SPECT: reversible = ischemia, fixed = scar", explanation: "Defect classification" },
+          { text: "CTA calcium: 0=low, 1-100=intermediate, 101-400=moderate, >400=high risk", explanation: "Risk stratification" }
+        ],
+        keyPoints: [
+          "Stress echo: new wall motion abnormality indicates ischemia; normal <1% events/yr",
+          "SPECT: reversible defect = ischemia; fixed = scar (no viability)",
+          "Coronary CTA: 95% sensitivity for >50% stenosis; non-invasive alternative to angiography",
+          "Calcium score risk stratification; 0=low, >400=high",
+          "Prognostic value: normal <1%, reversible ischemia 2-8%, multivessel >5% events/year"
+        ],
+        textbookRefs: [
+          { book: "Grainger & Allison's Diagnostic Radiology", chapter: "Cardiac Ischemia Imaging", edition: "7th" },
+          { book: "Sutton's Textbook of Radiology", chapter: "Coronary Artery Disease", edition: "8th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "cardiac-imaging-exam",
+        title: "Cardiac Imaging - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "High-yield facts, case analysis, critical thresholds.",
+        contentMd: `# Cardiac Imaging - Exam Prep
+
+## High-Yield Facts
+- **LVEF normal**: >50% (40-49% mild dysfunction; 30-39% moderate; <30% severe)
+- **Chamber dimensions**: LA normal 2.4-4.0 cm; LV normal 4.5-5.5 cm (diastole)
+- **Valvular thresholds**: MVA <1.5 cm² severe; AVA <1.0 cm² severe
+- **Cardiothoracic ratio**: Normal <0.5; >0.5 = cardiomegaly
+- **MRI LGE**: Shows transmural scar (acute/chronic MI)
+- **Stress test normal**: <1% cardiac events/year
+- **Reversible ischemia**: 2-8% events/year (depends on size)
+- **Coronary CTA sensitivity**: 95% for >50% stenosis
+
+## Common Exam Questions
+- "Normal LVEF?" = >50%
+- "Severe mitral stenosis MVA?" = <1.5 cm²
+- "Severe aortic stenosis AVA?" = <1.0 cm²
+- "Asymmetric LV hypertrophy with SAM?" = Hypertrophic cardiomyopathy
+- "Global LV dilation, reduced EF?" = Dilated cardiomyopathy
+- "Tranmural scar on MRI LGE?" = Chronic myocardial infarction
+- "New wall motion abnormality on stress echo?" = Ischemia (significant CAD)
+- "Reversible SPECT defect?" = Ischemia (60-70% stenosis)
+- "Fixed SPECT defect?" = Scar/infarction (no viability)
+- "CTA coronary sensitivity?" = 95% for >50% stenosis`,
+        mnemonics: [
+          { text: "LVEF >50 normal, 40-49 mild, 30-39 moderate, <30 severe", explanation: "Dysfunction grading" },
+          { text: "MVA <1.5, AVA <1.0 = severe valvular disease", explanation: "Severity thresholds" },
+          { text: "LGE transmural = infarct, subendocardial = ischemia", explanation: "MRI patterns" },
+          { text: "Stress echo normal <1%, reversible ischemia 2-8% events/year", explanation: "Prognosis" }
+        ],
+        keyPoints: [
+          "LVEF >50% normal; assessment predicts prognosis",
+          "Mitral stenosis MVA <1.5 cm²; aortic stenosis AVA <1.0 cm²",
+          "Dilated cardiomyopathy: LVID >5.5 cm, EF <40%",
+          "HCM: asymmetric hypertrophy, SAM, high-risk for SCD",
+          "MRI LGE: transmural = infarction, subendocardial = ischemia"
+        ],
+        textbookRefs: [
+          { book: "Grainger & Allison's Diagnostic Radiology", chapter: "Cardiac Assessment", edition: "7th" },
+          { book: "Sutton's Textbook of Radiology", chapter: "Cardiac Imaging Pearls", edition: "8th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "cardiac-imaging-qa",
+        title: "Cardiac Imaging - Active Recall Cases",
+        estimatedMinutes: 20,
+        summary: "Clinical scenarios: acute MI, cardiomyopathy, valvular disease, CAD assessment.",
+        contentMd: `# Cardiac Imaging - Active Recall
+
+## Q1: Acute Myocardial Infarction
+**Q: 58-year-old male, acute chest pain, ST elevation in inferior leads. Echo shows regional wall motion abnormality (inferior wall hypokinesis). What's management?**
+
+A: **Acute MI inferior wall** (RCA territory). **Management**: (1) Urgent coronary angiography + PCI if suitable, (2) Medications: aspirin, P2Y12 inhibitor, beta-blockers, ACE inhibitors, statins, (3) Oxygen if hypoxic, (4) Pain control, (5) Follow-up echo at 3-6 months to assess recovery + viability (MRI if uncertain). **Prognosis**: Depends on infarct size, collateral flow, extent of myocardium salvaged by revascularization.
+
+## Q2: Dilated Cardiomyopathy
+**Q: 45-year-old with dyspnea, orthopnea. Echo shows LVID 6.5 cm, EF 35%, LA enlargement. CXR shows cardiomegaly, pulmonary edema. Diagnosis and management?**
+
+A: **Dilated cardiomyopathy with systolic heart failure**. **Echo findings**: LV severely dilated (LVID >5.5), EF severely reduced (35%), LA enlarged. **Management**: (1) ACE inhibitors + beta-blockers (proven mortality benefit), (2) Diuretics for volume overload, (3) ICD if EF <35% despite optimal therapy (mortality reduction), (4) Investigate cause (ischemic, viral, toxic, idiopathic), (5) Lifestyle modification (salt restriction, fluid limitation). **Prognosis**: Variable; depends on cause, response to therapy, EF recovery.
+
+## Q3: Hypertrophic Cardiomyopathy
+**Q: 28-year-old with syncope on exertion, family history sudden cardiac death. Echo shows asymmetric septal hypertrophy, SAM of mitral valve, LV outflow gradient 45 mmHg. Management?**
+
+A: **Hypertrophic cardiomyopathy (HCM), obstructive form**. **Risk factors present**: Syncope (high-risk), family history SCD, high gradient (obstructive). **Management**: (1) Activity restriction (avoid strenuous exercise), (2) Beta-blockers or calcium channel blockers (first-line), (3) ICD if high-risk features (syncope, family history SCD, severe gradient >60, massive LVH), (4) Genetic testing (identify family members), (5) Avoid positive inotropes (worsen obstruction), (6) Surgical myectomy if refractory symptoms. **Prognosis**: Risk of SCD; ICD dramatically reduces mortality in high-risk patients.
+
+## Q4: Stress Echo for CAD
+**Q: 55-year-old with chest pain, baseline echo normal. Stress echo performed: normal at baseline, new wall motion abnormality in anterior wall with dobutamine stress. What does this indicate?**
+
+A: **Ischemia in LAD territory** (anterior wall = LAD supplied). **Findings indicate**: Significant LAD stenosis (likely >70%) causing demand ischemia when heart rate/contractility increased. **Next steps**: (1) Coronary angiography for definitive diagnosis + revascularization, or (2) CTA if angiography not immediately available. **Prognosis**: Single vessel ischemia 2-5% events/year (varies with size, response to treatment). **vs normal stress echo**: <1% events/year (can safely defer catheterization).
+
+## Q5: Valvular Disease - Severity Assessment
+**Q: 60-year-old with new cardiac murmur. Echo shows thickened mitral valve, limited opening, MVA measured at 1.2 cm², LA enlargement, elevated pulmonary pressures (estimated RVSP 60 mmHg). Severity of stenosis and management?**
+
+A: **Severe mitral stenosis** (MVA <1.5 cm²; 1.2 = severe). **Associated findings**: LA enlargement (from obstruction), pulmonary hypertension (from back-pressure). **Hemodynamic consequences**: Elevated left atrial pressure → pulmonary congestion → dyspnea. **Risk of AF**: High (LA stretch); if AF develops → rapid RVR (loss of LA contraction worsens hemodynamics). **Management**: (1) Activity restriction if symptomatic, (2) Diuretics for congestion, (3) Rate control if AF develops (beta-blockers), (4) Consider percutaneous balloon mitral commissurotomy (PBMC) if suitable anatomy + symptoms, or surgical mitral valve replacement if anatomy not suitable, (5) Anticoagulation if AF develops (thromboembolic risk). **Prognosis**: Progressive; surgical/interventional treatment needed when symptomatic.
+
+## Q6: Coronary CTA for CAD
+**Q: 50-year-old with atypical chest pain, low pretest probability. Calcium score 15. CTA shows no significant stenosis. Risk assessment and follow-up?**
+
+A: **Low-risk CAD on CTA** (normal coronary arteries). **Findings**: (1) Minimal calcium burden (15 = low), (2) No significant stenosis on CTA, (3) Therefore: very low likelihood of significant CAD. **Risk**: <1% cardiac events/year (same as normal stress echo). **Management**: (1) Reassurance (coronary obstruction ruled out), (2) Continue preventive measures (exercise, healthy diet, smoking cessation), (3) Can safely defer catheterization, (4) Long-term follow-up: reassess if symptoms change. **Note**: Normal CTA excellent for excluding CAD in intermediate-risk patients (saves unnecessary catheterization).`
+      }
+    ]
+  }
 ];

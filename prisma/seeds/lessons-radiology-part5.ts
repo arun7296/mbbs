@@ -1,14 +1,352 @@
-// Radiology Part 5: Remaining topics (abbreviated for brevity)
+import type { TopicLessons } from "./content-loader";
 
-export const radiologyPart5Lessons = [
-  // RD-MOD-01-TOP-02: Ultrasound Physics & Imaging
+export const radiologyPart5Lessons: TopicLessons[] = [
   {
     topicCode: "RD-MOD-01-TOP-02",
     layers: [
-      { layer: 1, slug: "ultrasound-physics-foundation", title: "Ultrasound Physics & Imaging - Foundation", estimatedMinutes: 25,
-        summary: "Sound wave physics, frequency, resolution, Doppler effect, artifact types.",
-        contentMd: "# Ultrasound Physics & Imaging - Foundation\n\n## Sound Wave Physics\n\n### Basic Principles\n- **Sound waves**: Mechanical vibrations propagating through medium (NOT electromagnetic)\n- **Speed in tissue**: ~1500 m/sec (faster in bone ~3600, slower in fat ~1450)\n- **Frequency**: Number of cycles per second (Hz); clinical ultrasound 2-15 MHz\n- **Wavelength**: λ = speed/frequency; shorter wavelength = better resolution\n- **Amplitude**: Height of wave = signal intensity\n\n### Attenuation\n- **Definition**: Weakening of sound as it travels\n- **Causes**: Absorption, scattering, reflection\n- **Rate**: Proportional to frequency (higher frequency = more attenuation)\n- **Penetration depth**: Trade-off (high frequency = better resolution but less penetration)\n\n## Transducer Types\n\n### Phased Array (Cardiac, Emergency)\n- **Piezoelectric crystals**: Arranged to focus sound beam\n- **Advantage**: Small footprint, variable focus, real-time imaging\n- **Use**: Cardiac, emergency ultrasound, difficult access\n\n### Linear Array (Vascular, Musculoskeletal)\n- **Crystals in line**: Parallel beam\n- **Advantage**: Excellent resolution, uniform field\n- **Use**: Carotid, peripheral veins, tendons, thyroid\n\n### Curved Array (Abdominal)\n- **Curved arrangement**: Wider field at depth\n- **Advantage**: Large field of view for abdominal organs\n- **Use**: Liver, kidney, obstetrics\n\n### Sector/Mechanical (Specialized)\n- **Rotating crystal**: 360° sweep\n- **Use**: Endoscopic ultrasound, specialized applications\n\n## Image Formation\n\n### B-Mode (Brightness Mode)\n- **Principle**: Gray-scale image based on echo strength\n- **Display**: Brighter = stronger echo (more reflection)\n- **Real-time**: Live image updating (30+ frames/second)\n- **2D slice**: Cross-sectional view of tissue\n\n### Echogenicity Classification\n- **Hyperechoic** (bright): Bone, air, fat\n- **Isoechoic** (medium gray): Liver, kidney normal\n- **Hypoechoic** (dark): Blood, fluid, edema\n- **Anechoic** (black): Fluid (cyst, blood vessel lumen)\n\n## Resolution\n\n### Axial Resolution\n- **Definition**: Ability to distinguish objects along sound beam direction\n- **Determined by**: Wavelength (shorter wavelength = better)\n- **Improved by**: Higher frequency transducer\n- **Typical**: 0.3-1.0 mm\n\n### Lateral Resolution\n- **Definition**: Ability to distinguish objects perpendicular to beam\n- **Determined by**: Beam width, aperture size\n- **Typical**: 1-3 mm\n\n### Temporal Resolution\n- **Definition**: Ability to capture motion (frame rate)\n- **Frame rate**: 30-100 Hz (depending on mode, depth)\n- **Critical for**: Cardiac imaging, vessel flow assessment\n\n## Doppler Ultrasound\n\n### Doppler Effect\n- **Principle**: Frequency shift when sound reflects off moving object\n- **Formula**: Δf = 2f₀v cosθ / c\n  - f₀ = transmitted frequency\n  - v = velocity of moving object\n  - c = sound speed\n  - θ = angle of insonation\n\n### Color Doppler\n- **Red**: Flow toward transducer\n- **Blue**: Flow away from transducer\n- **Yellow/Green**: Turbulent flow (mixed directions)\n- **Angle dependency**: Accurate at angles <60°\n\n### Spectral Doppler\n- **Waveform display**: Velocity vs. time graph\n- **Pulsed Doppler**: Better depth localization, lower velocity range\n- **Continuous Doppler**: Higher velocity range, no depth localization\n- **Clinical use**: Quantify flow velocity\n\n### Power Doppler\n- **Advantage**: Angle-independent, more sensitive to low flow\n- **Use**: Detecting small vessels, abnormal vascularity\n\n## Artifacts\n\n### Acoustic Shadowing\n- **Cause**: Sound absorbed/reflected by structure (bone, air, calcification)\n- **Appearance**: Dark area behind object\n- **Example**: Bone cortex creates shadow; calculus creates shadow\n- **Clinical use**: Detecting calcifications\n\n### Enhancement Artifact\n- **Cause**: Sound passes easily through anechoic structure (fluid)\n- **Appearance**: Bright area behind fluid collection\n- **Example**: Behind urinary bladder, cyst\n- **Clinical pearl**: Indicates structure is fluid-filled (benign finding)\n\n### Reverberation\n- **Cause**: Multiple reflections between structures\n- **Appearance**: Parallel echoes (comet-tail sign)\n- **Example**: Rib echoes, air reverberations\n- **Mitigation**: Adjust frequency, angle, gain\n\n### Refraction\n- **Cause**: Sound bent by curved structures\n- **Appearance**: Misplaced echoes\n- **Example**: Renal sinus artifacts\n- **Clinical concern**: Can mimic pathology\n\n### Motion Artifact\n- **Cause**: Patient movement, breathing\n- **Appearance**: Streaking, blurring\n- **Mitigation**: Patient cooperation, transducer stability\n\n## Advantages vs. Disadvantages\n\n### Advantages\n- **No ionizing radiation**: Safe for pregnancy, pediatrics, repeated imaging\n- **Real-time**: Dynamic assessment of organ function\n- **Portable**: Bedside imaging possible\n- **Cost-effective**: Relatively cheap equipment\n- **Soft tissue contrast**: Excellent for organs, vessels\n\n### Disadvantages\n- **Operator-dependent**: Requires training and experience\n- **Air/bone blocking**: Limited acoustic access (lungs, bone imaging)\n- **Limited penetration**: Obese patients difficult to image\n- **Field of view**: Limited compared to CT/MRI\n- **No tissue characterization**: Cannot definitively characterize lesions (vs. CT/MRI)\n      },\n      { layer: 2, slug: \"ultrasound-clinical-applications\", title: \"Ultrasound - Clinical Applications & Image Interpretation\", estimatedMinutes: 30,\n        summary: \"Abdominal ultrasound, vascular assessment, obstetric dating, emergency ultrasound.\",\n        contentMd: "# Ultrasound - Clinical Applications\\n\\n## Abdominal Ultrasound (Organ Assessment)\\n\\n### Liver Assessment\\n- **Size**: Normal 12-15 cm (right lobe)\\n- **Echogenicity**: Slightly hyperechoic to kidney (normal)\\n- **Fatty infiltration**: Increased echogenicity (diffuse brightening)\\n- **Cirrhosis**: Coarse echotexture, nodular surface, portal hypertension signs\\n- **Lesions**: Cysts (anechoic), hemangiomas (hyperechoic), metastases (variable), HCC (hypoechoic)\\n\\n### Gallbladder Assessment\\n- **Size**: <4 cm (normal)\\n- **Stones**: Echogenic with acoustic shadowing (pathognomonic)\\n- **Cholecystitis**: Dilated GB, thickened wall (>3 mm), positive Murphy sign\\n- **Polyps**: Echogenic without shadow\\n- **Common duct**: <6 mm (normal); dilated if >8 mm\\n\\n### Pancreas Assessment\\n- **Echogenicity**: Isoechoic to slightly hyperechoic (similar to liver)\\n- **Size**: 2-3 cm head, 2-3 cm body, 2-2.5 cm tail\\n- **Acute pancreatitis**: Enlarged, hypoechoic, edema\\n- **Chronic pancreatitis**: Atrophy, calcifications, duct dilation\\n- **Malignancy**: Hypoechoic focal mass, obstructive jaundice\\n\\n### Kidney Assessment\\n- **Size**: 10-12 cm long (normal)\\n- **Echogenicity**: Hypoechoic to liver (normal)\\n- **Hydronephrosis**: Dilated collecting system (anechoic)\\n- **Renal cysts**: Anechoic, no enhancement artifact behind\\n- **Renal masses**: Size >2 cm require characterization\\n\\n## Vascular Assessment (Doppler Applications)\\n\\n### Carotid Artery Assessment\\n- **Intima-media thickness**: <1 mm (normal)\\n- **Plaque**: Focal atherosclerotic burden assessment\\n- **Stenosis**: Velocity increase (>125 cm/sec = significant stenosis)\\n- **Occlusion**: No color flow signal\\n\\n### Venous Assessment\\n- **Compressibility**: Normal veins compress with transducer pressure\\n- **Thrombus**: Non-compressible (echogenic) within vein\\n- **Flow**: Present with Doppler (augmentation with distal compression)\\n- **DVT features**: Hypoechoic or isoechoic thrombus, loss of compressibility\\n\\n### Aortic Assessment\\n- **Diameter**: <3 cm (normal)\\n- **AAA**: >3 cm (abdominal aortic aneurysm)\\n- **Dissection**: Intimal flap visible with Doppler\\n\\n## Obstetric Ultrasound\\n\\n### First Trimester Dating\\n- **CRL** (crown-rump length): Most accurate dating (±3-5 days)\\n- **Accuracy decreases**: 2nd trimester (±1-2 weeks), 3rd trimester (±3-4 weeks)\\n- **Dating criteria**: Based on gestational age\\n\\n### Anomaly Screening (18-22 weeks)\\n- **Cardiac**: Four-chamber view, outflow tracts\\n- **CNS**: Spine, cerebellum, ventricles, facial features\\n- **Abdomen**: Stomach, kidneys, bladder\\n- **Extremities**: Femur length, hand/foot assessment\\n- **Placenta**: Location, echotexture\\n\\n### Fetal Viability Assessment\\n- **Cardiac activity**: Present by 6 weeks (gestational sac)\\n- **Fetal heart rate**: 120-160 bpm (normal)\\n- **Growth**: Biometry parameters (femur, HC, AC, EFW)\\n\\n## Emergency Ultrasound (FAST)\\n\\n### FAST Protocol (Focused Assessment with Sonography for Trauma)\\n- **Goal**: Detect free fluid (blood) in trauma patient\\n- **4 views**:\\n  1. **Perihepatic** (Morrison's pouch): Most sensitive for hemoperitoneum\\n  2. **Perisplenic**: Right paracolic gutter\\n  3. **Pelvic**: Bladder wall posterior, pouch of Douglas\\n  4. **Pericardial**: Rule out hemopericardium\\n- **Positive FAST**: Free fluid in any view = likely intra-abdominal bleeding\\n\\n### E-FAST (Extended FAST)\\n- **Added**: Bilateral anterior thorax assessment\\n- **Goal**: Detect pneumothorax (absent lung sliding)\\n- **Lung sliding**: Normal; loss indicates PTX\\n\\n### Advantages\\n- **Rapid**: <3 minutes\\n- **Sensitive**: ~95% for hemoperitoneum if >500 mL\\n- **Portable**: Bedside assessment\\n- **Repeatable**: Serial assessment for bleeding\\n\\n## Advantages by Application\\n\\n### Pregnancy Monitoring\\n- **No radiation**: Safe entire pregnancy\\n- **Real-time motion**: Fetal movement, cardiac function\\n- **Repeated imaging**: Serial assessment (growth)\\n\\n### Acute Assessment\\n- **Portable**: Bedside emergency evaluation\\n- **Real-time**: Dynamic assessment (e.g., diaphragm movement)\\n- **Non-invasive**: No contrast needed\\n\\n### Vascular Assessment\\n- **Flow information**: Doppler quantification\\n- **Non-invasive**: No arterial puncture needed\\n- **Repeated**: Serial follow-up (stenosis progression)\\n      },\\n      { layer: 3, slug: \\\"ultrasound-clinical-pearls\\\", title: \\\"Ultrasound - Clinical Pearls & Limitations\\\", estimatedMinutes: 35,\\n        summary: \\\"Image optimization, common pitfalls, when to use vs. alternatives, quality assurance.\\\",\\n        contentMd: ``# Ultrasound - Clinical Pearls & Limitations\\n\\n## Image Optimization Techniques\\n\\n### Window Selection\\n- **Acoustic window**: Area with least shadowing\\n- **Liver**: Used as \\\"window\\\" for pancreas, kidneys\\n- **Bladder**: Fluid-filled window for pelvic structures\\n- **Ribs**: Avoid (cause shadowing)\\n\\n### Transducer Frequency Optimization\\n- **High frequency (7-15 MHz)**: Better resolution (superficial structures)\\n  - Use for: Thyroid, breast, skin, vessels\\n- **Low frequency (2-5 MHz)**: Better penetration (deep structures)\\n  - Use for: Abdominal organs, cardiac (through ribs)\\n- **Intermediate**: 5-7 MHz (good balance)\\n\\n### Gain/TGC Adjustment\\n- **Gain**: Overall brightness (too high = noise, too low = data loss)\\n- **TGC** (Time-gain compensation): Adjust brightness by depth\\n- **Goal**: Uniform appearance throughout image depth\\n\\n### Angle of Insonation\\n- **Perpendicular**: Best acoustic coupling (least refraction)\\n- **Doppler**: <60° angle for accurate velocity measurement\\n- **Tissue-specific**: Rotate transducer for optimal visualization\\n\\n## Common Pitfalls\\n\\n### Operator-Dependent Errors\\n1. **Inadequate scanning**: Incomplete organ assessment (missed pathology)\\n2. **Misidentification**: Mistaking one structure for another\\n3. **Artifacts misinterpreted**: Reverberation as pathology\\n4. **Angle errors**: Doppler at wrong angle (incorrect velocity)\\n\\n### Technical Errors\\n- **Inadequate pressure**: Poor contact → reduced image quality\\n- **Excessive pressure**: Vessel compression (missed flow)\\n- **Wrong transducer**: Wrong frequency for depth/application\\n- **Patient positioning**: Suboptimal visualization of organs\\n\\n### False Positives\\n- **Enhancement artifact**: Behind cyst (benign, not pathology)\\n- **Shadowing**: Behind rib (normal, not mass)\\n- **Reverberation**: Comet-tail artifact (benign gas finding)\\n\\n## Limitations\\n\\n### Acoustic Window\\n- **Bone**: Cannot image through cortical bone\\n- **Air**: Cannot penetrate (lungs, bowel gas obscure deeper structures)\\n- **Obesity**: Excessive fat attenuates sound; limited visualization\\n- **Surgical drains/dressings**: Prevent acoustic contact\\n\\n### Field of View\\n- **Limited scanning plane**: 2D slices (3D/4D available but expensive)\\n- **Operator skill**: Requires training to reconstruct 3D anatomy\\n- **Deep structures**: Limited visualization beyond 15 cm depth\\n\\n### Tissue Characterization\\n- **Nonspecific findings**: Multiple conditions appear similar\\n- **Cannot definitively diagnose**: Often requires CT/MRI confirmation\\n- **Example**: Hypoechoic mass = cyst vs. solid lesion (needs contrast/MRI)\\n\\n## When to Use Alternatives\\n\\n### Ultrasound Better Than CT\\n- **Pregnancy**: No radiation\\n- **Real-time motion**: Better than static CT\\n- **Soft tissue contrast**: Liver lesions, cystic structures\\n- **Cost**: Significantly cheaper\\n- **Portability**: Bedside assessment\\n\\n### CT Better Than Ultrasound\\n- **Bone detail**: Fracture assessment, cortical detail\\n- **Lung parenchyma**: Pulmonary lesions\\n- **Acute stroke**: CT head (air doesn't transmit ultrasound)\\n- **Whole-body survey**: Trauma patients (completeness)\\n- **Tissue characterization**: Density information (Hounsfield units)\\n\\n### MRI Better Than Ultrasound\\n- **Soft tissue detail**: Brain, spinal cord\\n- **No gadolinium needed**: For many sequences\\n- **Tissue characterization**: T1/T2 weighting\\n- **Ligament detail**: ACL, menisci (musculoskeletal)\\n\\n## Quality Assurance\\n\\n### Operator Credentials\\n- **Training required**: Focused training programs (varies by institution)\\n- **Competency assessment**: Standardized evaluation\\n- **Credentialing**: Only certified operators perform clinical scans\\n- **Continuing education**: Regular updates on technique\\n\\n### Machine Maintenance\\n- **Quality control**: Regular calibration\\n- **Transducer care**: Proper cleaning, sterilization\\n- **Software updates**: Latest imaging algorithms\\n- **Preventive maintenance**: Equipment failure prevention\\n\\n### Image Documentation\\n- **Standard views**: Reproducible documentation\\n- **Measurements**: Caliper placement standardized\\n- **Archiving**: DICOM format storage, retrieval\\n- **Interpretation**: Written report within 24 hours standard\\n\\n## Indian Context\\n\\n### Accessibility\\n- **Availability**: Good in urban centers, limited in rural areas\\n- **Cost**: Affordable (much cheaper than CT/MRI)\\n- **Radiation concerns**: Major advantage over CT\\n- **Training**: Growing number of ultrasound schools\\n\\n### Common Applications\\n- **Obstetrics**: Dating, anomaly screening\\n- **Abdominal**: Liver disease, stone disease\\n- **Vascular**: Carotid screening, DVT assessment\\n- **Cardiac**: TTE in patients with poor acoustic windows\\n\\n### Resource Limitations\\n- **Expertise**: Limited specialized ultrasound radiologists in rural settings\\n- **Equipment**: Older machines in government hospitals\\n- **Quality**: Variability in image acquisition\\n- **Follow-up**: Patients often cannot afford follow-up imaging (CT/MRI)\\n\\n### Clinical Practice\\n- **Often first-line**: Due to cost, availability, lack of radiation\\n- **Limitations understood**: Radiologists order CT/MRI when ultrasound inconclusive\\n- **Doppler valuable**: Vascular assessment without angiography\\n- **Serial imaging**: Repeated ultrasounds for follow-up (monitoring disease progression)\\n      },\\n      { layer: 4, slug: \\\"ultrasound-exam-prep\\\", title: \\\"Ultrasound Physics - Exam Prep\\\", estimatedMinutes: 25,\\n        summary: \\\"High-yield facts, physics formulas, artifact recognition, clinical pearls.\\\",\\n        contentMd: ``# Ultrasound Physics - Exam Prep\\n\\n## Key Physics Concepts\\n\\n### Sound Wave Properties\\n- **Speed in tissue**: ~1500 m/sec (constant for soft tissue, varies for bone/air)\\n- **Frequency**: 2-15 MHz (clinical ultrasound)\\n- **Wavelength**: λ = c/f (inversely related to frequency)\\n- **Resolution**: Better with higher frequency (shorter wavelength)\\n- **Penetration**: Better with lower frequency (less attenuation)\\n\\n### Doppler Effect\\n- **Principle**: Frequency shift from moving reflectors\\n- **Frequency shift formula**: Δf = 2f₀v cosθ / c\\n- **Red color**: Flow toward transducer\\n- **Blue color**: Flow away from transducer\\n- **Velocity limitations**: Angle dependency (best <60°)\\n\\n### Attenuation\\n- **Definition**: Weakening of sound with depth\\n- **Causes**: Absorption, scattering, reflection\\n- **Rate**: Increases with frequency\\n- **Clinical**: Explains resolution vs. penetration trade-off\\n\\n## Artifact Recognition (Exam Favorite!)\\n\\n| Artifact | Cause | Appearance | Clinical Use |\\n|----------|-------|-----------|-------------|\\n| **Shadowing** | Reflection/absorption (bone, air, calcification) | Dark area behind object | Confirms calculus, bone |\\n| **Enhancement** | Reduced attenuation (fluid pathway) | Bright area behind fluid | Confirms benign cyst |\\n| **Reverberation** | Multiple reflections | Parallel echoes, comet-tail | Indicates air (free air), rib artifact |\\n| **Refraction** | Bending at curved interface | Misplaced echo | Can mimic pathology |\\n| **Motion** | Patient movement | Streaking, blurring | Reduce with patient cooperation |\\n\\n## Transducer Types & Applications\\n\\n| Type | Frequency | Use |\\n|------|-----------|-----|\\n| **Phased array** | 1-4 MHz | Cardiac, emergency, pericardium |\\n| **Linear** | 7-15 MHz | Carotid, vessels, thyroid, musculoskeletal |\\n| **Curved** | 3-5 MHz | Abdominal organs, obstetrics |\\n| **Sector** | Variable | Endoscopic ultrasound, specialized |\\n\\n## Resolution Concepts\\n\\n- **Axial**: Along beam direction (wavelength dependent; λ = c/f)\\n  - Better at high frequency, shallow depth\\n  - Typical: 0.3-1.0 mm\\n- **Lateral**: Perpendicular to beam (beam width dependent)\\n  - Better with smaller transducer aperture\\n  - Typical: 1-3 mm\\n- **Temporal**: Frame rate (30-100 Hz); critical for cardiac, motion\\n\\n## High-Yield Exam Facts\\n\\n**Physics**:\\n- Frequency ↑ = Resolution ↑, Penetration ↓\\n- Speed constant in soft tissue (~1500 m/s)\\n- Wavelength ↑ = Penetration ↑\\n- Attenuation increases with frequency\\n\\n**Artifacts**:\\n- Acoustic shadowing = calculus confirmed\\n- Enhancement artifact = benign cyst (good prognosis)\\n- Comet-tail = air (free air confirmed)\\n- Reverberation = rib artifact (normal, ignore)\\n\\n**Doppler**:\\n- Red = toward, Blue = away\\n- Angle <60° for accurate velocity\\n- Power Doppler = angle-independent\\n\\n**Resolution vs. Penetration**:\\n- High frequency (linear, 10-15 MHz) = superficial structures\\n- Low frequency (curved, 2-5 MHz) = deep structures\\n\\n## Common Exam Question Patterns\\n\\n1. \\\"Best resolution?\\\" → **High frequency (linear transducer, >10 MHz)**\\n2. \\\"Best penetration?\\\" → **Low frequency (curved, 2-5 MHz)**\\n3. \\\"Acoustic shadowing indicates?\\\" → **Calcification/bone (confirms calculus)**\\n4. \\\"Enhancement artifact means?\\\" → **Fluid-filled structure (benign cyst)**\\n5. \\\"Doppler shift depends on?\\\" → **Angle of insonation, velocity, frequency**\\n6. \\\"Comet-tail artifact?\\\" → **Air (free air, pneumothorax)**\\n7. \\\"Resolution determined by?\\\" → **Wavelength (frequency)**\\n8. \\\"Penetration determined by?\\\" → **Frequency (lower = deeper)**\\n9. \\\"Red in Doppler?\\\" → **Flow toward transducer**\\n10. \\\"Best for cardiac?\\\" → **Phased array transducer (low frequency, small footprint)**,\\n        mnemonics: [\\n          { text: \\\"FRP = Frequency (high) = Resolution, (low) = Penetration\\\", explanation: \\\"Frequency trade-off\\\" },\\n          { text: \\\"DA = Doppler Angle = determines accuracy (<60° best)\\\", explanation: \\\"Doppler limitation\\\" },\\n          { text: \\\"SET = Shadowing/Enhancement/Tail (comet) = artifact types\\\", explanation: \\\"Common artifacts\\\" },\\n          { text: \\\"Red away = Toward (mnemonic: Radar away = toward)\\\", explanation: \\\"Doppler color coding\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"High frequency = better resolution but less penetration\\\",\\n          \\\"Acoustic shadowing diagnostic for calcifications\\\",\\n          \\\"Enhancement artifact behind fluid = confirms benign cyst\\\",\\n          \\\"Doppler angle <60° required for accurate velocity measurement\\\",\\n          \\\"Comet-tail artifact = air (pneumothorax, free air indicator)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Radiology by Bhide\\\", chapter: \\\"Ultrasound Physics\\\", edition: \\\"Current\\\" },\\n          { book: \\\"Diagnostic Ultrasound\\\", chapter: \\\"Physics & Instrumentation\\\", edition: \\\"5th\\\" }\\n        ]\\n      },\\n      { layer: 5, slug: \\\"ultrasound-active-recall\\\", title: \\\"Ultrasound - Active Recall Cases\\\", estimatedMinutes: 20,\\n        summary: \\\"Clinical scenarios testing image interpretation, physics application, artifact recognition.\\\",\\n        contentMd: ``# Ultrasound - Active Recall\\n\\n## Q1: Gallstone Diagnosis via Shadowing Artifact\\n\\n**Q: Ultrasound shows echogenic mass in gallbladder with acoustic shadow behind. What does this confirm?**\\n\\nA: **GALLSTONE (cholelithiasis)** confirmed by acoustic shadowing\\n\\n**Why shadowing = gallstone**:\\n- **Gallstone composition**: Often contains calcification/cholesterol crystals\\n- **Acoustic properties**: Acts like bone/calcification (highly reflective)\\n- **Shadowing created**: Sound reflects off stone; none penetrates beyond (dark shadow)\\n- **Pathognomonic finding**: Echogenic + shadow = stone (highly specific)\\n\\n**Additional assessment**:\\n- **Stone size**: Measure dimensions\\n- **GB dilation**: Check if >4 cm (cholecystitis possible)\\n- **Wall thickness**: >3 mm suggests inflammation\\n- **Murphy sign**: Sonographic (pain with transducer compression over GB)\\n\\n**Management**: Asymptomatic stones (no treatment); Symptomatic (surgery)\\n\\n## Q2: FAST Exam in Trauma\\n\\n**Q: Trauma patient after motor vehicle accident. FAST exam shows free fluid in Morrison's pouch (perihepatic space). What does this indicate and what's next?**\\n\\nA: **FREE INTRA-ABDOMINAL FLUID = likely blood (hemorrhage)**\\n\\n**Clinical interpretation**:\\n- **Positive FAST**: Free fluid + trauma + hemodynamic abnormality = internal bleeding\\n- **Source unknown**: Could be liver, spleen, kidney, mesentery (usually multiple organs)\\n- **Volume**: >500 mL typically visible; <250 mL may be missed\\n\\n**Next steps**:\\n1. **Hemodynamic assessment**: Vital signs (hypotension suggests significant bleeding)\\n2. **FAST repeat**: Serial assessment (expanding hemoperitoneum = ongoing bleeding)\\n3. **Imaging escalation**: CT trauma protocol (if hemodynamically stable) OR\\n4. **Operating room**: If unstable + positive FAST (no time for CT)\\n5. **Blood products**: Type & cross, activate massive transfusion protocol if unstable\\n\\n**Clinical decision**:\\n- **Stable + positive FAST**: CT abdomen/pelvis (define injuries, decide management)\\n- **Unstable + positive FAST**: Operating room immediately (exploratory lap)\\n\\n## Q3: Enhancement Artifact Behind Cyst\\n\\n**Q: Ultrasound shows anechoic structure in kidney with bright echoes behind it (enhancement artifact). What does this indicate about the lesion?**\\n\\nA: **BENIGN CYST** (simple cyst)\\n\\n**Why enhancement = benign**:\\n- **Simple cyst characteristics**: Fluid-filled, no attenuation of sound\\n- **Sound passes through**: Minimal absorption within fluid\\n- **Brightness behind**: Enhancement artifact (hallmark of cyst)\\n- **Clinical significance**: Simple cysts benign; no follow-up needed\\n\\n**Cyst criteria** (benign):\\n- Anechoic (black, no echoes inside)\\n- Round/oval shape\\n- Thin smooth wall\\n- Enhancement artifact (bright area behind)\\n- No septations or echoes within\\n\\n**False positive risk if missed**:\\n- If cyst had internal echoes → might be infected cyst or abscess\\n- If cyst had thick wall → might be complex cyst (needs follow-up)\\n- If cyst had septations → might be cystic neoplasm (needs imaging/intervention)\\n\\n## Q4: Doppler Angle Importance\\n\\n**Q: Doppler assessment of carotid stenosis shows low velocity (20 cm/s). Operator realizes angle of insonation was 75°. Is this velocity accurate?**\\n\\nA: **NO - ANGLE TOO STEEP, VELOCITY UNRELIABLE**\\n\\n**Physics explanation**:\\n- **Doppler formula**: Δf = 2f₀v cosθ / c\\n- **cos(75°) = 0.26** (very small multiplier)\\n- **Actual velocity**: Much higher than measured (formula shows inversely)\\n- **Result**: Understimation of velocity\\n\\n**Correct technique**:\\n- **Optimal angle**: <60° from vessel direction\\n- **cos(0°) = 1**: Best accuracy (parallel to vessel)\\n- **cos(60°) = 0.5**: Acceptable (halves measured velocity, but correctable)\\n- **>60°**: Inaccurate (avoid)\\n\\n**Clinical consequence**:\\n- **Measured 20 cm/s at 75°**: Actual velocity likely 50-80 cm/s\\n- **Misinterpretation risk**: May underestimate stenosis severity\\n- **Solution**: Repeat at better angle (<45°) for accurate velocity\\n\\n## Q5: Liver Cirrhosis Ultrasound Features\\n\\n**Q: Cirrhotic patient presents with portal hypertension. What ultrasound findings confirm cirrhosis and assess severity?**\\n\\nA: **Cirrhosis ultrasound findings** (multiple indicators):\\n\\n**Parenchymal changes**:\\n- **Coarse echotexture**: Nodular, irregular appearance (vs. normal smooth)\\n- **Size**: Small liver (atrophy from chronic damage)\\n- **Echogenicity**: Variable (may be hyperechoic from fat, or hypoechoic from fibrosis)\\n\\n**Portal hypertension signs**:\\n- **Portal vein dilation**: >13 mm (normal 10-13 mm)\\n- **Splenic vein dilation**: >10 mm (normally <10 mm)\\n- **Ascites**: Free fluid in abdomen (anechoic areas)\\n- **Splenomegaly**: Spleen >12 cm\\n\\n**Hemodynamic assessment** (Doppler):\\n- **Portal vein flow**: Reversed or minimal (normally hepatopetal)\\n- **Hepatic artery**: Increased resistance (thickened)\\n- **Collaterals**: Portosystemic collaterals (recanalized umbilical vein, splenic to renal varices)\\n\\n**Complications assessment**:\\n- **Hepatocellular carcinoma**: Irregular nodules within cirrhotic liver\\n- **Portal vein thrombosis**: Loss of flow signal within PV lumen\\n- **Ascites**: Can quantify volume, screen for loculation\\n\\n**Severity assessment**:\\n- **Child-Pugh score**: Ultrasound findings contribute to severity (ascites = C score)\\n- **Prognosis**: More severe findings = worse prognosis\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-];
+      {
+        layer: 1,
+        slug: "radiation-physics-foundation",
+        title: "Radiation Physics & Protection - Foundation",
+        estimatedMinutes: 25,
+        summary: "Ionizing radiation types, dose measurement, biological effects, ALARA principle.",
+        contentMd: `# Radiation Physics & Protection - Foundation
+
+## Types of Ionizing Radiation
+### X-rays & Gamma Rays
+- **Photons**: Electromagnetic radiation with no mass/charge
+- **X-rays**: Generated artificially in tube (diagnostic imaging)
+- **Gamma rays**: From radioactive decay (nuclear medicine)
+- **Energy**: Measured in keV (kiloelectronvolts); 10-150 keV diagnostic X-rays
+
+### Particulate Radiation
+- **Alpha particles**: Helium nuclei (heavy, low penetration)
+- **Beta particles**: Electrons (intermediate penetration)
+- **Neutrons**: Uncharged nucleons (high LET, high biological effect)
+
+## Dose Measurement
+### Units
+- **Exposure**: Roentgen (R) - measure of ionization in air (outdated)
+- **Absorbed dose**: Gray (Gy) = 1 joule/kg; rad (older) = 0.01 Gy
+- **Equivalent dose**: Sievert (Sv) = Gy × weighting factor; rem (older) = 0.01 Sv
+- **Weighting factors**: X-rays/gamma = 1; alpha = 20; neutrons = 5-20
+
+### Effective Dose
+- **Purpose**: Accounts for organ sensitivity to radiation
+- **Expressed in**: mSv (millisieverts)
+- **Background**: ~3 mSv/year (varies by location, altitude)
+- **Diagnostic**: CXR ~0.1 mSv; CT abdomen ~10 mSv; Fluoroscopy ~50-100 mSv
+
+## Biological Effects of Radiation
+### Deterministic (Threshold) Effects
+- **Requires minimum dose**: Below threshold, no effect
+- **Dose-dependent**: Severity increases with dose
+- **Examples**: Cataracts (>2 Gy), erythema (>6 Gy), sterility (>0.5 Gy)
+- **Clinical**: Rare with diagnostic radiation
+
+### Stochastic (Random) Effects
+- **No threshold**: Any dose has probability
+- **Risk increases linearly** with dose (at low doses)
+- **Examples**: Leukemia, solid cancer
+- **Clinical**: Main concern for diagnostic radiation exposure
+
+## Radiation Protection Principles
+### ALARA (As Low As Reasonably Achievable)
+- Minimize dose while maintaining diagnostic quality
+- Balance benefits vs risks
+
+### Time, Distance, Shielding (TDS)
+- **Time**: Minimize exposure duration
+- **Distance**: Increase distance from source (inverse square law)
+- **Shielding**: Lead aprons, barriers`,
+        mnemonics: [
+          { text: "Dose units: Gray (Gy) = absorbed, Sievert (Sv) = equivalent (biologic effect)", explanation: "Radiation units" },
+          { text: "Weighting factors: X-rays=1, beta=1, alpha=20, neutrons=5-20", explanation: "Biological effectiveness" },
+          { text: "ALARA = As Low As Reasonably Achievable", explanation: "Radiation protection philosophy" }
+        ],
+        keyPoints: [
+          "X-rays photons (no mass), 10-150 keV diagnostic energy",
+          "Dose measured in Sv (sievert); mSv for typical studies",
+          "Background radiation ~3 mSv/year",
+          "Deterministic: threshold effects (rare in diagnostic); Stochastic: cancer risk (main concern)",
+          "ALARA: minimize dose while maintaining diagnostic quality"
+        ],
+        textbookRefs: [
+          { book: "Grainger & Allison's Diagnostic Radiology", chapter: "Radiation Physics & Protection", edition: "7th" },
+          { book: "NCRP Report 160: Ionizing Radiation Exposure of the Population", edition: "2009" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "radiation-dosimetry-mechanism",
+        title: "Radiation Physics - Dosimetry & Mechanism",
+        estimatedMinutes: 30,
+        summary: "Dose calculation, organ sensitivity, linear energy transfer, dose-response relationships.",
+        contentMd: `# Radiation Dosimetry - Mechanism
+
+## Dose Calculation
+### Effective Dose Formula
+- E = Σ (HT × wT)
+  - HT = equivalent dose to organ (Sv)
+  - wT = tissue weighting factor (0.01-0.25 depending on radiosensitivity)
+
+### Organ Weighting Factors (wT)
+- **High sensitivity** (0.12 each): Gonads, marrow, colon, lung, stomach
+- **Medium** (0.05 each): Breast, liver, esophagus, thyroid, bladder, bone surface, brain
+- **Low** (0.01 each): Skin, limbs, teeth
+- **Remainder**: 0.05 (split among remaining organs)
+
+## Linear Energy Transfer (LET)
+- **Definition**: Energy deposited per unit length of particle path
+- **Low LET** (X-rays, electrons): Less biological damage per Gy
+- **High LET** (alpha, neutrons): More biological damage per Gy
+- **Relative biological effectiveness (RBE)**: Ratio of biological effect to X-rays
+
+## Dose-Response Relationship
+### Linear-Quadratic Model
+- **At low doses** (<200 mSv): Linear relationship (doubling dose = doubling risk)
+- **At high doses**: Quadratic component becomes significant
+- **Threshold debate**: Recent evidence suggests no safe threshold (UNSCEAR 2020)
+
+### Cancer Risk from Radiation
+- **Baseline risk**: ~20% lifetime cancer (all causes)
+- **From 100 mSv exposure**: Increased risk ~0.5-1% (small but real)
+- **Dose-dependent**: Risk increases with dose
+- **Age-dependent**: Younger age = higher lifetime risk (more time for cancer development)
+
+## Doubling Dose
+- **Definition**: Dose that doubles spontaneous mutation rate
+- **Estimate**: ~1-2 Sv for humans (extrapolated from animal studies, atomic bomb data)
+- **Diagnostic significance**: CXR (~0.1 mSv) = 1/10,000 of doubling dose`,
+        mnemonics: [
+          { text: "High radiosensitivity organs: Gonads, marrow, colon, lung (wT=0.12)", explanation: "Weighting factors" },
+          { text: "Linear-quadratic: low dose linear, high dose quadratic", explanation: "Dose-response model" },
+          { text: "RBE = relative biologic effectiveness (alpha >neutrons >electrons)", explanation: "Biological effectiveness" }
+        ],
+        keyPoints: [
+          "Effective dose = absorbed dose × organ weighting × LET factor",
+          "Gonadal exposure most concerning (reproductive risk, genetic effects)",
+          "LET higher for alpha/neutrons = greater biological damage per Gy",
+          "Linear-quadratic model: low dose ~linear risk; high dose increases quadratically",
+          "Doubling dose ~1-2 Sv (very high; diagnostic doses <<< doubling dose)"
+        ],
+        textbookRefs: [
+          { book: "Grainger & Allison's Diagnostic Radiology", chapter: "Radiation Dosimetry", edition: "7th" },
+          { book: "UNSCEAR Report: Effects of Ionizing Radiation", edition: "2020" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "radiation-pregnancy-pediatric",
+        title: "Radiation - Pregnancy & Pediatric Considerations",
+        estimatedMinutes: 35,
+        summary: "Fetal dose, teratogenic effects, pediatric radiosensitivity, risk assessment.",
+        contentMd: `# Radiation in Special Populations
+
+## Radiation in Pregnancy
+### Gestational Stage Sensitivity
+- **Preimplantation** (0-10 days): "All or nothing" - high lethality or normal
+- **Organogenesis** (2-8 weeks): Peak teratogenic risk
+  - Microcephaly, intellectual disability, growth retardation
+  - Risk >100 mGy (10 rad)
+- **Fetal period** (8+ weeks): Lower risk; growth retardation, cancer risk remain
+
+### Fetal Dose by Procedure
+- **CXR**: <0.01 mGy (essentially no risk)
+- **CT head**: ~0.05 mGy (no fetal risk; below teratogenic threshold)
+- **CT abdomen/pelvis**: ~30-50 mGy (approach cautionary threshold; discuss with OB)
+- **Fluoroscopy (prolonged)**: Dose-dependent (can accumulate >100 mGy)
+
+### Risk Assessment
+- **<50 mGy**: No increased teratogenic risk
+- **50-100 mGy**: Gray zone; discuss benefits vs risks
+- **>100 mGy**: Consider termination (risk of malformation ~10-20%)
+
+### Clinical Approach
+- (1) Confirm pregnancy dates; assess timing (organogenesis highest risk)
+- (2) Calculate fetal dose (physics/radiation safety)
+- (3) Discuss with OB + patient (informed decision)
+- (4) If diagnostic value high: proceed with reasonable precautions (shield pelvis if possible)
+- (5) Avoid unnecessary imaging; MRI preferred if safe alternative available
+
+## Pediatric Radiosensitivity
+### Why Children at Higher Risk
+- **Dividing cells**: Rapidly dividing cells (marrow, GI) more radiosensitive
+- **Lifetime risk**: More time for cancer to develop (follow child decades)
+- **Organ dose higher**: Smaller body size = concentration of dose
+
+### Lifetime Risk Comparison
+- **Adult 50 mSv CT**: Risk ~0.1-0.3%
+- **Child 50 mSv CT**: Risk ~0.5-1% (3-5× higher)
+- **Cumulative risk**: Repeated CTs in child (multiple studies) → higher lifetime risk
+
+### Clinical Optimization
+- (1) **Justified imaging**: Only when clinically indicated
+- (2) **Optimize dose**: Use lowest mAs, shortest exposure time
+- (3) **Right study**: Choose imaging modality (US/MRI preferred if diagnostic)
+- (4) **Shielding**: Protect radiosensitive organs (gonads, thyroid, lens)
+- (5) **Tracking**: Document cumulative dose if multiple studies
+
+### Age-Specific Sensitivities
+- **<5 years**: Peak sensitivity (rapid growth, development)
+- **5-15 years**: Still elevated risk (ongoing growth)
+- **>15 years**: Approaching adult risk
+- **Prenatal**: Highest sensitivity (organogenesis)
+
+## Cancer Risk Estimates
+- **Baseline childhood cancer risk**: ~0.3-0.4%
+- **From 50 mSv CT**: Increased risk ~0.1-0.2% (small but real)
+- **Cumulative risk**: 5 CT studies = ~0.5-1% increased risk`,
+        mnemonics: [
+          { text: "Fetal dose <50 mGy safe, 50-100 mGy gray zone, >100 mGy concerning", explanation: "Pregnancy risk thresholds" },
+          { text: "Organogenesis (2-8 weeks) = peak teratogenic risk", explanation: "Critical period" },
+          { text: "Pediatric risk 3-5× adult (longer lifetime, dividing cells)", explanation: "Age-dependent sensitivity" }
+        ],
+        keyPoints: [
+          "Pregnancy: <50 mGy = no teratogenic risk; >100 mGy = significant risk",
+          "Organogenesis (2-8 weeks) = peak teratogenic risk (microcephaly, ID, growth retardation)",
+          "Pediatric lifetime cancer risk 3-5× adult (small absolute risk, but multiplicative)",
+          "CXR in pregnancy: <0.01 mGy (essentially no fetal risk)",
+          "CT abdomen in pregnancy: 30-50 mGy (discuss benefits vs risks with OB)"
+        ],
+        textbookRefs: [
+          { book: "ACR Manual: MRI Safety & Bioeffects", chapter: "Pregnancy & Radiation", edition: "2024" },
+          { book: "Grainger & Allison's Diagnostic Radiology", chapter: "Radiation Risk in Pregnancy & Pediatrics", edition: "7th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "radiation-protection-exam",
+        title: "Radiation Protection - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "High-yield facts, risk numbers, clinical decision-making.",
+        contentMd: `# Radiation Protection - Exam Prep
+
+## High-Yield Facts
+- **Background radiation**: ~3 mSv/year
+- **CXR dose**: ~0.1 mSv (equivalent to 10 days background)
+- **CT abdomen dose**: ~10 mSv (equivalent to 3+ years background)
+- **Effective dose**: Accounts for organ sensitivity (Sv, not Gy)
+- **ALARA principle**: As Low As Reasonably Achievable
+- **Teratogenic threshold**: >100 mGy (50 mGy = safe)
+- **Pediatric risk**: 3-5× adult (longer lifetime)
+- **Linear relationship**: Doubling dose = doubling cancer risk (low-dose model)
+- **Stochastic effects**: No safe threshold; any dose has probability of cancer
+- **Time, Distance, Shielding**: Main protection mechanisms
+
+## Dose Equivalents (Quick Reference)
+- **CXR**: 0.1 mSv (10 days background)
+- **CT head**: 2 mSv (2/3 year background)
+- **CT chest**: 7 mSv (2+ years background)
+- **CT abdomen/pelvis**: 10 mSv (3+ years background)
+- **Fluoroscopy (1 hour)**: 50-100 mSv (15-30+ years background)
+
+## Pregnancy Risk Thresholds
+- **<50 mGy**: No increase teratogenic risk → proceed if clinical indication
+- **50-100 mGy**: Gray zone → discuss benefits vs risks
+- **>100 mGy**: Increased risk malformation (10-20%) → consider alternatives/termination
+
+## Common Exam Questions
+- "ALARA principle?" = As Low As Reasonably Achievable dose
+- "Fetal dose <50 mGy safety?" = Safe; no teratogenic risk
+- "Pediatric lifetime cancer risk?" = 3-5× adult (smaller body, longer lifetime)
+- "Teratogenic threshold?" = >100 mGy (organogenesis most sensitive period)
+- "CXR in pregnancy?" = <0.01 mGy; safe throughout pregnancy
+- "Doubling dose?" = ~1-2 Sv (diagnostic doses <<< doubling dose)
+- "Relative biological effectiveness alpha?" = ~20 (20× more damaging than X-rays)`,
+        mnemonics: [
+          { text: "Dose time: CXR = 1 mSv/10, CT head = 1 mSv/0.5, CT abd = 1 mSv/0.1", explanation: "mSv to years background" },
+          { text: "Fetal: <50 safe, 50-100 gray, >100 concerning", explanation: "Pregnancy risk zones" },
+          { text: "Organogenesis = 2-8 weeks = peak teratogenic risk", explanation: "Critical period" },
+          { text: "ALARA = Time, Distance, Shielding (minimize exposure)", explanation: "Protection methods" }
+        ],
+        keyPoints: [
+          "ALARA: minimize dose while maintaining diagnostic quality",
+          "Background ~3 mSv/year; CXR ~0.1 mSv (low risk)",
+          "CT abdomen ~10 mSv (3+ years background); evaluate necessity",
+          "Pregnancy: <50 mGy safe; >100 mGy = increased malformation risk",
+          "Pediatric risk 3-5× adult (longer lifetime for cancer development)"
+        ],
+        textbookRefs: [
+          { book: "Grainger & Allison's Diagnostic Radiology", chapter: "Radiation Protection", edition: "7th" },
+          { book: "ACR Manual: Radiation Safety & Bioeffects", edition: "2024" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "radiation-clinical-decisions",
+        title: "Radiation Protection - Active Recall",
+        estimatedMinutes: 20,
+        summary: "Clinical scenarios: pregnancy imaging, pediatric dose optimization, risk communication.",
+        contentMd: `# Radiation Protection - Active Recall
+
+## Q1: Pregnant Woman with Suspected PE
+**Q: 28-week pregnant woman with acute dyspnea, chest pain, suspected PE. Conventional CXR normal. Should CTPA be done? Calculate fetal dose risk.**
+
+A: **Diagnosis critical** - PE can be fatal if missed; benefits of CTPA likely outweigh risks. **Fetal dose analysis**: (1) CTPA involves irradiation of chest (not direct pelvis), (2) Fetal dose from CTPA ~1-2 mGy (well below 50 mGy threshold), (3) **Fetal risk negligible** (<50 mGy = no teratogenic risk). **Procedure**: (1) Discuss with OB (inform of radiation dose), (2) Proceed with CTPA if clinical suspicion high (diagnostic yield high), (3) Perform with optimization (reduce mA if possible, limit scout/repeat exposures), (4) Shield abdomen/pelvis if possible (protective apron may help). **Alternative considered**: VQ scan (lower fetal dose ~1 mGy, but CTPA more sensitive/specific for PE in pregnancy). **Decision**: CTPA reasonable if clinical suspicion high (benefits >> risks). **Reassurance**: Fetal dose far below teratogenic threshold.
+
+## Q2: Child with Head Injury - CT Indications
+**Q: 5-year-old with minor fall, normal neuro exam. Parents insist on CT head. Is imaging indicated? Discuss radiation risk.**
+
+A: **CT NOT indicated** (minor mechanism, normal exam). **Clinical decision**: PECARN criteria recommend CT only if: (1) GCS <15, (2) Severe mechanism (MVA, fall >1.5m), (3) Vomiting, headache, altered behavior, skull fracture signs. **This child**: Meets NONE of criteria. **Radiation risk**:
+- **CT head in 5-year-old**: ~2 mSv
+- **Pediatric lifetime cancer risk**: 3-5× adult (~0.1-0.2% excess risk)
+- **Lifetime context**: Small absolute risk, but real; child has 80+ years for cancer development
+
+**Parent education**: (1) Explain imaging not indicated (avoids unnecessary radiation), (2) Reassure about exam findings (normal = low risk), (3) Provide head injury precautions, (4) "Choosing wisely" principle (reducing low-value imaging in pediatrics). **Appropriate approach**: Observation at home with return precautions (vomiting, severe headache, behavioral changes = return).
+
+## Q3: Occupational Radiation Exposure
+**Q: Interventional radiologist chronically exposed to fluoroscopy. Annual badge reading shows 2000 mrem/year (20 mSv). Is this acceptable? What precautions needed?**
+
+A: **Annual dose EXCESSIVE** (occupational limit 5 rem/year = 50 mSv; this is 40% of limit). **Concern**: (1) Cumulative dose over career (40 years × 20 mSv = 800 mSv total), (2) Cataracts risk (threshold 2 Gy acutely; chronic exposure lower), (3) Cancer risk (doubling approach with cumulative dose). **Precautions needed**:
+- (1) **Lead apron**: Wear consistently (reduces exposure by 90%+)
+- (2) **Thyroid collar**: Protects thyroid from scattered radiation
+- (3) **Distance**: Step away from fluoroscopy when not actively intervening (inverse square law)
+- (4) **Time**: Minimize procedure duration; optimize technique
+- (5) **Shielding**: Ceiling-suspended shields, table-mounted shields
+- (6) **Monitoring**: Use extremity badges (ring dosimeter) to track hand dose
+
+**Dose reduction targets**: Goal is <10 mSv/year (well below occupational limit) through optimization. **Investigate**: Review technique; may have facility-wide optimization opportunities (equipment maintenance, procedural modifications).
+
+## Q4: Risk Communication in Pregnancy
+**Q: 32-week pregnant woman needs CT abdomen/pelvis for hematuria evaluation. Calculated fetal dose = 45 mGy. How to communicate risk?**
+
+A: **Fetal dose 45 mGy = in safe range** (<50 mGy threshold). **Risk communication approach**:
+
+1. **Contextualize**: "Your fetal dose of 45 mGy is below the threshold (50 mGy) where we see increased birth defects. In fact, it's far below the dose where teratogenic effects occur."
+
+2. **Baseline comparison**: "Background radiation exposes your fetus to ~1 mGy over your entire pregnancy. This single CT = 45× that."
+
+3. **Perspective**: "Studies of radiation exposure in pregnancy show that below 100 mGy, we do not see increased birth defects. Your dose is below that."
+
+4. **Benefits frame**: "For your hematuria workup, CT is highly likely to find the cause (tumor, stone, etc.), which is important for your health."
+
+5. **Discussion**: Confirm patient understands; address specific concerns; document shared decision-making.
+
+6. **Proceed confidently** with imaging (benefits clearly outweigh risks).
+
+## Q5: Pediatric CT Optimization
+**Q: 8-year-old needs abdominal CT for appendicitis evaluation. How can dose be minimized while maintaining diagnostic quality?**
+
+A: **Dose optimization strategies**:
+
+1. **Justification**: Confirm ultrasound not diagnostic first (US preferred in children if feasible)
+
+2. **Technique optimization**:
+   - Use **lower mA** (80-120 mA, vs. 250+ in adults)
+   - Use **lower kV** if soft tissue contrast acceptable (80 kV vs. 120 kV) - reduces dose significantly
+   - **Limit field of view**: Scan abdomen only (not entire trunk)
+   - **Single phase**: Avoid multiphasic imaging (diagnostic for appendicitis with portal venous phase only)
+   - **Reduce scout**: One or two scout views (not multiple)
+
+3. **Iterative reconstruction**: Modern CT uses iterative reconstruction (reduces noise, maintains quality at lower dose)
+
+4. **Shielding**: Thyroid collar if not interfering with diagnostic area
+
+5. **Goal**: Target dose ~3-5 mSv (vs. 10+ mSv adult standard), maintaining diagnostic quality
+
+6. **Result**: ~50% dose reduction possible with optimization without loss of diagnostic accuracy for appendicitis.`
+      }
+    ]
+  }
 ];
