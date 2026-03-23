@@ -1,20 +1,436 @@
-// Dermatology Part 4: Remaining topics from modules 3, 4, 5
+import type { TopicLessons } from "./content-loader";
 
-export const dermatologyPart4Lessons = [
-  // DR-MOD-03-TOP-03: Pemphigus & Bullous Pemphigoid
+export const dermatologyPart4Lessons: TopicLessons[] = [
   {
     topicCode: "DR-MOD-03-TOP-03",
     layers: [
       {
         layer: 1,
-        slug: "pemphigus-foundation",
+        slug: "pemphigus-bullous-pemphigoid-layer-1-foundation",
         title: "Pemphigus & Bullous Pemphigoid - Foundation",
         estimatedMinutes: 25,
-        summary: "Classification, pathophysiology, epidemiology of autoimmune blistering diseases.",
-        contentMd: "# Pemphigus & Bullous Pemphigoid - Foundation\n\n## Pemphigus\n\n### Definition\n- **Autoimmune blistering disorder**: IgG antibodies against desmoglein\n- **Acantholysis**: Loss of cell-to-cell adhesion (intraepidermal)\n- **Suprabasal blisters**: Characteristic location\n\n### Types\n- **Pemphigus vulgaris**: Most common (60-70% of pemphigus cases)\n  - **Mucosa first**: 90% have oral involvement\n  - **Antibodies**: Against desmoglein 3 (suprabasal) and/or desmoglein 1 (superficial)\n- **Pemphigus foliaceus**: Superficial; often no mucosal involvement\n  - **Antibodies**: Against desmoglein 1 only\n- **Paraneoplastic pemphigus**: Associated with malignancy (rare)\n\n## Bullous Pemphigoid\n\n### Definition\n- **Autoimmune blistering disorder**: IgG antibodies against basement membrane (BP180, BP230)\n- **Subepidermal blisters**: Below basal layer\n- **Linear IgG deposition**: Along basement membrane zone\n\n### Epidemiology\n- **Age**: Primarily elderly (>60 years)\n- **Pemphigus vulgaris**: Any age; female > male\n- **Bullous pemphigoid**: More common than pemphigus in elderly\n\n## Clinical Differences\n\n| Feature | Pemphigus Vulgaris | Bullous Pemphigoid |\n|---------|-------|---------|\n| **Blister location** | Intraepidermal (suprabasal) | Subepidermal |\n| **Blister fragility** | Very fragile, rupture easily | Firm, less fragile |\n| **Mucosa involvement** | 90% | Rare (10%) |\n| **Antibodies** | IgG to desmoglein | IgG to BP180/BP230 |\n| **Age** | All ages; common in India | Elderly |\n| **Pruritus** | Less common | Often pruritic |\n| **Mortality untreated** | High | Lower |,\n        mnemonics: [\n          { text: \"Pemphigus = Peeling (acantholysis); Bullous pemphigoid = Basement membrane\", explanation: \"Pemphigus intraepidermal; BP subepidermal\" },\n          { text: \"Pemphigus vulgaris: Mucosa first (90%)\", explanation: \"Oral ulcers precede skin lesions in PV\" }\n        ],\n        keyPoints: [\n          \"Pemphigus: intraepidermal acantholysis; mucosal involvement common\",\n          \"Bullous pemphigoid: subepidermal; less mucosal; elderly\",\n          \"PV antibodies: desmoglein 3 (mucosal) and/or 1 (cutaneous)\",\n          \"BP antibodies: BP180, BP230 (basement membrane)\"\n        ],\n        textbookRefs: [\n          { book: \"Textbook of Dermatology by Valia & Valia\", chapter: \"Bullous Diseases\", edition: \"5th\" },\n          { book: \"IADVL - Indian Dermatology Atlas\", chapter: \"Autoimmune Blistering Diseases\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"pemphigus-diagnosis\",\n        title: \"Pemphigus & Bullous Pemphigoid - Diagnosis\",\n        estimatedMinutes: 30,\n        summary: \"Clinical features, histopathology, immunology, investigations.\",\n        contentMd: "# Pemphigus & Bullous Pemphigoid - Diagnosis\\n\\n## Pemphigus Vulgaris: Clinical Features\\n- **Oral ulcers**: Painful erosions; often first manifestation\\n- **Skin lesions**: Flaccid blisters on erythematous base\\n- **Nikolsky sign**: Positive (exerting lateral pressure on skin causes erosion)\\n- **Erosions**: Tender, slow-healing\\n- **Secondary infection**: Risk from erosions\\n- **Scalp, axillae, groin**: Commonly affected\\n\\n## Bullous Pemphigoid: Clinical Features\\n- **Intact blisters**: Firm, tense; may remain intact for days\\n- **Erosions**: From ruptured blisters\\n- **Urticarial base**: Often vesicles on urticarial/eczematous base\\n- **Pruritus**: Common feature\\n- **Predilection**: Flexural areas, lower abdomen, medial thighs\\n- **Oral involvement**: Rare (10%)\\n\\n## Histopathology\\n\\n### Pemphigus Vulgaris\\n- **Suprabasal acantholysis**: Loss of intercellular adhesion above basal layer\\n- **Basal cells remain**: Attached to basement membrane (\\\"tombstone\\\" appearance)\\n- **Keratinocytes**: Isolated, appearing as single cells in the blister cavity\\n- **Intercellular IgG**: Chicken-wire pattern on immunofluorescence\\n\\n### Bullous Pemphigoid\\n- **Subepidermal blister**: Blister below basal layer\\n- **Basal cell layer intact**: Remains at blister base\\n- **Linear IgG and C3**: Along basement membrane zone\\n- **Eosinophilic infiltrate**: In roof of blister\\n\\n## Immunology\\n\\n### Direct Immunofluorescence (DIF)\\n- **Pemphigus vulgaris**: Intercellular IgG in epidermis (chicken-wire pattern)\\n- **Bullous pemphigoid**: Linear IgG along basement membrane zone\\n- **Diagnostic**: Essential for diagnosis\\n\\n### Indirect Immunofluorescence & ELISA\\n- **Pemphigus vulgaris**: Serum IgG to desmoglein 3 ± desmoglein 1\\n- **Bullous pemphigoid**: Serum IgG to BP180, BP230\\n- **Titers**: Correlate with disease activity\\n\\n## Investigations\\n- **Skin biopsy**: H&E for histology; DIF for immunology\\n- **Serology**: Anti-desmoglein (ELISA) for PV; anti-BP180/BP230 for BP\\n- **Complete blood count**: Monitor for infections, anemia\\n- **Liver and kidney function**: Before starting systemic therapy,\\n        keyPoints: [\\n          \\\"PV: flaccid blisters, Nikolsky positive, oral ulcers first\\\",\\n          \\\"BP: tense blisters, pruritic, rare mucosal involvement\\\",\\n          \\\"PV histology: suprabasal acantholysis, chicken-wire IgG\\\",\\n          \\\"BP histology: subepidermal blister, linear IgG at basement membrane\\\",\\n          \\\"DIF diagnostic; serology (ELISA) confirms and monitors disease activity\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Dermatology by Valia & Valia\\\", chapter: \\\"Bullous Diseases\\\", edition: \\\"5th\\\" },\\n          { book: \\\"IADVL - Clinical Dermatology\\\", chapter: \\\"Autoimmune Blistering Diseases\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"pemphigus-management\\\",\\n        title: \\\"Pemphigus & Bullous Pemphigoid - Management\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Topical and systemic therapy, corticosteroids, steroid-sparing agents.\\\",\\n        contentMd: "# Pemphigus & Bullous Pemphigoid - Management\\\\n\\\\n## Pemphigus Vulgaris: Treatment\\\\n\\\\n### Topical Therapy\\\\n- **Potent topical corticosteroids**: Triamcinolone 0.1%, fluticasone propionate\\\\n- **Intralesional steroids**: For localized lesions\\\\n- **Antiseptic mouthwashes**: Chlorhexidine for oral ulcers\\\\n- **Supportive care**: Soft diet, pain relief\\\\n\\\\n### Systemic Corticosteroids (First-line)\\\\n- **Induction**: Prednisolone 1-2 mg/kg/day (0.5-1 mg/kg if mild)\\\\n- **Duration**: Taper over 6-12 months based on response\\\\n- **Serum titers**: Monitor anti-desmoglein levels; guide taper\\\\n- **Complications**: Infection (major), hyperglycemia, osteoporosis\\\\n\\\\n### Steroid-Sparing Agents (Second-line)\\\\n- **Azathioprine**: 1-2 mg/kg/day; used with lower-dose steroids\\\\n- **Mycophenolate mofetil (MMF)**: 1-3 g/day\\\\n- **Methotrexate**: 10-25 mg weekly\\\\n- **Cyclophosphamide**: For severe, refractory disease\\\\n\\\\n### Biologic Therapy (Third-line)\\\\n- **IVIG (Intravenous immunoglobulin)**: 2 g/kg per course\\\\n- **Rituximab**: B-cell depletion; emerging therapy\\\\n- **Adjuvant photopheresis**: Selective removal of pathogenic lymphocytes\\\\n\\\\n## Bullous Pemphigoid: Treatment\\\\n\\\\n### Topical Therapy (Mild-Moderate)\\\\n- **Very potent topical corticosteroids**: Clobetasol propionate 0.05%\\\\n- **Calcineurin inhibitors**: Tacrolimus 0.1% ointment\\\\n- **Often sufficient** for limited disease\\\\n\\\\n### Systemic Corticosteroids\\\\n- **Lower doses**: 0.5 mg/kg/day (less than PV)\\\\n- **Better prognosis**: 70% remission with prednisolone alone\\\\n- **Taper**: Over 3-6 months\\\\n\\\\n### Steroid-Sparing Agents\\\\n- **Azathioprine**: 1-2 mg/kg/day\\\\n- **Mycophenolate mofetil**: 1-3 g/day\\\\n- **Methotrexate**: For steroid-dependent patients\\\\n- **Dapsone**: 100-200 mg/day (works in BP through anti-inflammatory mechanism)\\\\n\\\\n### Biologic Therapy\\\\n- **Rituximab**: Emerging role; B-cell depletion\\\\n- **IVIG**: For refractory cases\\\\n\\\\n## Treatment Algorithm\\\\n\\\\n### Pemphigus Vulgaris\\\\n```\\\\nMild → Potent topical steroids + intralesional injections\\\\nModerate → Prednisolone 0.5-1 mg/kg/day + topical\\\\nSevere → Prednisolone 1-2 mg/kg/day + topical\\\\nFailing → Add azathioprine/MMF + lower steroid dose\\\\nRefractory → IVIG, rituximab, cyclophosphamide\\\\n```\\\\n\\\\n### Bullous Pemphigoid\\\\n```\\\\nMild/Localized → Clobetasol propionate topical\\\\nModerate → Prednisolone 0.5 mg/kg/day + topical\\\\nExtensive → Prednisolone 0.5-1 mg/kg/day + azathioprine/MMF\\\\n```\\\\n\\\\n## Monitoring\\\\n- **Clinical response**: Healing of new lesions, epithelialization\\\\n- **Serum titers**: Anti-desmoglein (PV) or anti-BP180 (BP); guide therapy\\\\n- **Steroid taper**: Based on titers and clinical response\\\\n- **Complications**: Monitor for secondary infection, drug toxicity\\\\n- **Long-term**: Remission achievable in 60-80% with modern therapy,\\\\n        keyPoints: [\\\\n          \\\\\\\"PV: systemic corticosteroids essential; prednisolone 0.5-2 mg/kg\\\\\\\",\\\\n          \\\\\\\"BP: milder; topical steroids often sufficient; prednisolone 0.5 mg/kg\\\\\\\",\\\\n          \\\\\\\"Steroid-sparing: azathioprine, MMF for long-term management\\\\\\\",\\\\n          \\\\\\\"Serum titers: guide therapy adjustment and predict flares\\\\\\\",\\\\n          \\\\\\\"Biologic therapy: IVIG and rituximab for refractory cases\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\", chapter: \\\\\\\"Bullous Diseases\\\\\\\", edition: \\\\\\\"5th\\\\\\\" },\\\\n          { book: \\\\\\\"IADVL - Clinical Dermatology\\\\\\\", chapter: \\\\\\\"Treatment of Pemphigus\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"pemphigus-exam\\\\\\\",\\\\n        title: \\\\\\\"Pemphigus & Bullous Pemphigoid - Exam Preparation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Case analysis and management decisions.\\\\\\\",\\\\n        contentMd: "# Pemphigus & Bullous Pemphigoid - Exam Preparation\\\\\\\\n\\\\\\\\n## Case 1: Pemphigus Vulgaris\\\\\\\\n**Scenario**: 45-year-old female, painful oral ulcers, flaccid blisters on arms/legs, positive Nikolsky sign.\\\\\\\\n\\\\\\\\n**Diagnosis**: Pemphigus vulgaris.\\\\\\\\n\\\\\\\\n**Investigations**:\\\\\\\\n- Skin biopsy: suprabasal acantholysis, tombstone appearance\\\\\\\\n- DIF: chicken-wire intercellular IgG pattern\\\\\\\\n- ELISA: anti-desmoglein 3 (mucosal) and/or 1 (cutaneous)\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- Moderate disease: Prednisolone 0.5-1 mg/kg/day + topical steroids\\\\\\\\n- Oral care: Soft diet, chlorhexidine mouthwash\\\\\\\\n- Monitor: Serum titers; secondary infection\\\\\\\\n- If severe: Add azathioprine 1-2 mg/kg/day; consider IVIG\\\\\\\\n- Taper: Over 6-12 months based on clinical response and titers\\\\\\\\n\\\\\\\\n## Case 2: Bullous Pemphigoid\\\\\\\\n**Scenario**: 72-year-old male, tense blisters on legs/abdomen, pruritic urticarial lesions.\\\\\\\\n\\\\\\\\n**Diagnosis**: Bullous pemphigoid.\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- **Topical**: Clobetasol propionate 0.05% BID (often sufficient)\\\\\\\\n- **If extensive**: Prednisolone 0.5 mg/kg/day\\\\\\\\n- **Add**: Azathioprine 1-2 mg/kg/day for steroid-sparing\\\\\\\\n- **Monitor**: For secondary infection; drug toxicity\\\\\\\\n- **Taper**: Over 3-6 months once controlled,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"PV: flaccid blisters, Nikolsky positive, oral first; suprabasal acantholysis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"BP: tense blisters, pruritic, subepidermal; older age\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PV serology: anti-desmoglein 3 ± 1; BP: anti-BP180/230\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PV systemic steroids mandatory; BP may respond to topical\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Serum titers guide therapy; remission 60-80% with modern treatment\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Bullous Diseases\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IADVL - Clinical Dermatology\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Pemphigus & Bullous Pemphigoid\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"pemphigus-qa\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Pemphigus & Bullous Pemphigoid - Q&A\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Key MCQs on autoimmune blistering diseases.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Pemphigus & Bullous Pemphigoid - Q&A\\\\\\\\n\\\\\\\\n## Q1: What is the pathologic hallmark of pemphigus vulgaris?\\\\\\\\n\\\\\\\\n**Answer**: Suprabasal acantholysis (intraepidermal blister). Loss of cell-to-cell adhesion (desmoglein) causes isolated keratinocytes appearing as \\\\\\\\\\\\\\\"tombstones\\\\\\\\\\\\\\\" at the basal layer.\\\\\\\\n\\\\\\\\n## Q2: A patient presents with tense blisters on the flexural areas, pruritic urticarial base, and negative Nikolsky sign. What is the diagnosis?\\\\\\\\n\\\\\\\\n**Answer**: Bullous pemphigoid. Tense blisters, subepidermal location, and rare mucosal involvement are characteristic.\\\\\\\\n\\\\\\\\n## Q3: What is the difference between direct and indirect immunofluorescence in pemphigus vulgaris?\\\\\\\\n\\\\\\\\n**Answer**: DIF (direct) shows chicken-wire intercellular IgG on skin biopsy. IIF (indirect) shows serum IgG antibodies to desmoglein. Both are diagnostic but IIF (ELISA) titers correlate with disease activity and guide therapy.\\\\\\\\n\\\\\\\\n## Q4: A patient with bullous pemphigoid is started on topical clobetasol 0.05% cream. Why is this effective in BP but not PV?\\\\\\\\n\\\\\\\\n**Answer**: BP is subepidermal; topical steroids penetrate to basement membrane zone. PV is intraepidermal with systemic involvement; requires systemic steroids for adequate penetration.\\\\\\\\n\\\\\\\\n## Q5: What is the anti-desmoglein antibody profile in pemphigus foliaceus vs vulgaris?\\\\\\\\n\\\\\\\\n**Answer**: PF (pemphigus foliaceus): Anti-desmoglein 1 only (superficial). PV: Anti-desmoglein 3 ± 1 (mucosal and/or cutaneous).,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"PV: suprabasal acantholysis; chicken-wire IgG; anti-desmoglein 3 ± 1\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"BP: subepidermal; linear IgG; anti-BP180/230\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PV requires systemic steroids; BP responds to potent topical\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Nikolsky positive in PV; negative in BP\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Serum titers correlate with disease activity and guide taper\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Bullous Diseases\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IADVL - Indian Dermatology Atlas\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Autoimmune Blistering Diseases\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  },\\\\\\\\n  // DR-MOD-04-TOP-03: Gonorrhea & Genital Ulcer Diseases\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"DR-MOD-04-TOP-03\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      {\\\\\\\\n        layer: 1,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"std-gonorrhea-foundation\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Gonorrhea & Genital Ulcer Diseases - Foundation\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 25,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Classification of STIs, genital ulcer diseases, differential diagnosis.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Gonorrhea & Genital Ulcer Diseases - Foundation\\\\\\\\n\\\\\\\\n## Genital Ulcer Diseases (GUD)\\\\\\\\n\\\\\\\\n### Classification\\\\\\\\n- **Painful ulcers**: Herpes, chancroid\\\\\\\\n- **Painless ulcers**: Chancre (syphilis), LGV\\\\\\\\n- **Painful with lymphadenopathy**: Chancroid\\\\\\\\n\\\\\\\\n## Individual Diseases\\\\\\\\n\\\\\\\\n### Syphilis (See also DR-MOD-04-TOP-02)\\\\\\\\n- **Primary**: Painless ulcer (chancre); indurated borders\\\\\\\\n- **Organism**: Treponema pallidum (spirochete)\\\\\\\\n- **Incubation**: 3-90 days (average 21 days)\\\\\\\\n- **Lymphadenopathy**: Rubbery, non-suppurative\\\\\\\\n\\\\\\\\n### Chancroid\\\\\\\\n- **Agent**: Haemophilus ducreyi (gram-negative bacillus)\\\\\\\\n- **Ulcer**: Painful, ragged borders, purulent base (yellow-grey)\\\\\\\\n- **Lymph nodes**: Suppurative, tender (bubo)\\\\\\\\n- **Incubation**: 3-10 days\\\\\\\\n- **Risk**: High transmission; requires treatment to prevent spread\\\\\\\\n\\\\\\\\n### Lymphogranuloma Venereum (LGV)\\\\\\\\n- **Agent**: Chlamydia trachomatis (serovars L1, L2, L3)\\\\\\\\n- **Primary lesion**: Small, painless ulcer/papule\\\\\\\\n- **Secondary**: Severe inguinal lymphadenopathy (bubo)\\\\\\\\n- **Incubation**: 3-30 days\\\\\\\\n- **Systemic symptoms**: Fever, malaise\\\\\\\\n\\\\\\\\n### Genital Herpes\\\\\\\\n- **Agent**: HSV-1 or HSV-2\\\\\\\\n- **Lesions**: Painful vesicles → ulcers\\\\\\\\n- **Recurrence**: Common after primary infection\\\\\\\\n- **Symptoms**: Pain, dysuria, systemic symptoms (fever)\\\\\\\\n\\\\\\\\n### Donovanosis (Klebsiella granulomatis)\\\\\\\\n- **Ulcer**: Painless, slowly progressive\\\\\\\\n- **Appearance**: \\\\\\\\\\\\\\\"Beef-red\\\\\\\\\\\\\\\" (friable, vascular)\\\\\\\\n- **Lymphadenopathy**: Absent (distinguishing feature)\\\\\\\\n- **Incubation**: Variable\\\\\\\\n\\\\\\\\n## Gonorrhea\\\\\\\\n\\\\\\\\n### Organism\\\\\\\\n- **Neisseria gonorrhoeae**: Gram-negative diplococci\\\\\\\\n- **Intracellular**: Within PMNs\\\\\\\\n\\\\\\\\n### Clinical Features (Male)\\\\\\\\n- **Urethritis**: Purulent urethral discharge (green/yellow)\\\\\\\\n- **Dysuria**: Burning on urination\\\\\\\\n- **Symptoms**: Appear 2-7 days after exposure\\\\\\\\n- **Untreated**: Risk of strictures, epididymitis, prostatitis\\\\\\\\n\\\\\\\\n### Clinical Features (Female)\\\\\\\\n- **Cervicitis**: Purulent cervical discharge\\\\\\\\n- **Pelvic inflammatory disease (PID)**: Pelvic pain, fever\\\\\\\\n- **Asymptomatic**: 50% of infected females\\\\\\\\n- **Complications**: Infertility, ectopic pregnancy\\\\\\\\n\\\\\\\\n### Disseminated Gonococcal Infection\\\\\\\\n- **Arthritis**: Migratory polyarthralgia, septic arthritis (1% gonorrhea)\\\\\\\\n- **Dermatitis**: Small pustules on hands/feet (gonococcal dermatitis-arthritis syndrome)\\\\\\\\n- **Endocarditis**: Rare,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"GUD: Painful (Herpes, Chancroid) vs Painless (Chancre, LGV)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"PHLC: Painful Herpes Lymphogranuloma Chancroid; Painless Primary syphilis, LGV early\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Chancroid = Haemophilus; painful bubo\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Chlamydia = LGV; fever, systemic\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"GUD differentiation: painful vs painless; bubo suppurative vs non-suppurative\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Gonorrhea: purulent urethral/cervical discharge; male symptomatic, female often asymptomatic\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Chancroid: painful ulcer, suppurative bubo; Haemophilus ducreyi\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"LGV: severe inguinal lymphadenopathy; Chlamydia trachomatis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Syphilis: painless chancre, rubbery bubo; Treponema pallidum\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"STIs\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IADVL - Clinics\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Sexually Transmitted Infections\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 2,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"std-gonorrhea-diagnosis\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Gonorrhea & Genital Ulcers - Diagnosis\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 30,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Investigations, syndromic approach, differential diagnosis.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Gonorrhea & Genital Ulcer Diseases - Diagnosis\\\\\\\\n\\\\\\\\n## Clinical Syndromic Approach (WHO)\\\\\\\\n\\\\\\\\n### Urethral Discharge Syndrome\\\\\\\\n- **Gonorrhea**: Purulent discharge, dysuria\\\\\\\\n- **NGU (Non-gonococcal urethritis)**: Chlamydia, Mycoplasma\\\\\\\\n- **Management**: Treat both empirically\\\\\\\\n\\\\\\\\n### Genital Ulcer Syndrome\\\\\\\\n- **Differential**: Chancre vs chancroid vs LGV vs herpes\\\\\\\\n- **Clinical examination**: Nature, borders, pain, lymphadenopathy\\\\\\\\n- **Investigations**: Serology (syphilis), culture/PCR\\\\\\\\n\\\\\\\\n## Gonorrhea: Investigations\\\\\\\\n\\\\\\\\n### Gram Stain\\\\\\\\n- **Male urethritis**: Gram-negative diplococci within PMNs\\\\\\\\n- **Sensitivity**: 95% in symptomatic males\\\\\\\\n- **Female cervicitis**: Lower sensitivity (50%)\\\\\\\\n\\\\\\\\n### Culture\\\\\\\\n- **Medium**: Thayer-Martin (selective medium with antibiotics)\\\\\\\\n- **Incubation**: 5% CO2, 35-37°C, 24-48 hours\\\\\\\\n- **Sensitivity**: 90% male, 80% female\\\\\\\\n\\\\\\\\n### Nucleic Acid Amplification Tests (NAATs)\\\\\\\\n- **PCR/TMA**: Gold standard; >99% sensitivity\\\\\\\\n- **Samples**: Urine, urethral, cervical, rectal, pharyngeal\\\\\\\\n- **Advantage**: High sensitivity even in asymptomatic patients\\\\\\\\n\\\\\\\\n## Genital Ulcer Investigations\\\\\\\\n\\\\\\\\n### Herpes Simplex\\\\\\\\n- **Tzanck smear**: Multinucleated giant cells (not specific)\\\\\\\\n- **Viral culture**: Gold standard (takes time)\\\\\\\\n- **PCR**: Most sensitive; gold standard\\\\\\\\n- **Serology**: IgM (primary), IgG (recurrence)\\\\\\\\n\\\\\\\\n### Syphilis\\\\\\\\n- **Primary/secondary**: Dark-field microscopy of ulcer exudate (Treponema)\\\\\\\\n- **Serology**: RPR/VDRL (non-specific); FTA-ABS/TP-PA (specific, treponemal)\\\\\\\\n- **All partners**: Should be tested\\\\\\\\n\\\\\\\\n### Chancroid\\\\\\\\n- **Culture**: Gram stain shows gram-negative bacilli\\\\\\\\n- **PCR**: Most sensitive\\\\\\\\n- **Clinical diagnosis**: Often presumptive based on features\\\\\\\\n\\\\\\\\n### LGV\\\\\\\\n- **Chlamydia PCR**: Positive; identifies serovars L1-L3\\\\\\\\n- **Serology**: Chlamydia complement fixation (older test)\\\\\\\\n- **Diagnosis**: Based on clinical + PCR or serology\\\\\\\\n\\\\\\\\n## Syndromic Algorithm for Genital Ulcers\\\\\\\\n```\\\\\\\\nGenital Ulcer\\\\\\\\n├─ Painful ulcer + suppurative bubo → Chancroid (Haemophilus)\\\\\\\\n├─ Painful vesicles + systemic → Herpes (PCR/culture)\\\\\\\\n├─ Painless ulcer + rubbery bubo → Primary syphilis (dark-field, serology)\\\\\\\\n├─ Painless ulcer + severe adenitis → LGV (PCR, serology)\\\\\\\\n└─ Painless + no adenopathy + \\\\\\\\\\\\\\\"beef-red\\\\\\\\\\\\\\\" → Donovanosis\\\\\\\\n``\\\\\\\",\\\\n        keyPoints: [\\\\n          \\\\\\\"Gonorrhea: Gram stain (sensitivity 95% males); culture/NAATs gold standard\\\\\\\",\\\\n          \\\\\\\"Herpes: PCR most sensitive; clinical presentation distinctive (vesicles)\\\\\\\",\\\\n          \\\\\\\"Syphilis: Dark-field for spirochetes; serology confirmatory\\\\\\\",\\\\n          \\\\\\\"Chancroid: Painful ulcer, suppurative bubo, Haemophilus\\\\\\\",\\\\n          \\\\\\\"LGV: Severe adenitis, Chlamydia, PCR diagnostic\\\\\\\",\\\\n          \\\\\\\"Syndromic management covers likely causes empirically\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\", chapter: \\\\\\\"STIs\\\\\\\", edition: \\\\\\\"5th\\\\\\\" },\\\\n          { book: \\\\\\\"IADVL - Clinics\\\\\\\", chapter: \\\\\\\"Syndromic STI Management\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"std-gonorrhea-management\\\\\\\",\\\\n        title: \\\\\\\"Gonorrhea & Genital Ulcers - Management\\\\\\\",\\\\n        estimatedMinutes: 35,\\\\n        summary: \\\\\\\"Treatment regimens, syndromic management, contact tracing.\\\\\\\",\\\\n        contentMd: \\\\\\\"# Gonorrhea & Genital Ulcer Diseases - Management\\\\\\\\n\\\\\\\\n## Gonorrhea: Treatment\\\\\\\\n\\\\\\\\n### Uncomplicated Gonorrhea\\\\\\\\n- **First-line**: Ceftriaxone 250 mg IM single dose + Azithromycin 1 g PO single dose\\\\\\\\n- **Alternative**: Cefixime 400 mg PO single dose + Azithromycin 1 g\\\\\\\\n- **NGU coverage**: Azithromycin covers Chlamydia (20-30% co-infection)\\\\\\\\n\\\\\\\\n### Complicated Gonorrhea (Disseminated)\\\\\\\\n- **Gonococcal arthritis-dermatitis**: Ceftriaxone 1 g IV/IM q12h x 24-48 hours, then oral therapy\\\\\\\\n- **Duration**: Total 7-10 days\\\\\\\\n\\\\\\\\n### Resistance Concerns\\\\\\\\n- **QRNG (Quinolone-resistant)**: Avoid fluoroquinolones\\\\\\\\n- **CRNG (Cephalosporin-resistant)**: Emerging; use highest doses\\\\\\\\n\\\\\\\\n### Treatment Failure\\\\\\\\n- **Re-test**: If symptoms persist; assess for re-infection vs resistance\\\\\\\\n- **Azithromycin resistance**: Increasing; monitor trends\\\\\\\\n\\\\\\\\n## Genital Ulcer Diseases: Treatment\\\\\\\\n\\\\\\\\n### Herpes Simplex\\\\\\\\n- **Primary**: Acyclovir 400-800 mg x 5 daily x 7-10 days\\\\\\\\n- **Recurrent**: Acyclovir 400 mg x 3 daily x 5 days (or higher dose)\\\\\\\\n- **Suppressive**: Acyclovir 400 mg x 2 daily (for frequent recurrences)\\\\\\\\n\\\\\\\\n### Syphilis (See also DR-MOD-04-TOP-02)\\\\\\\\n- **Primary/secondary**: Benzyl penicillin 2.4 million units IM single dose (or 7-10 days benzathine penicillin)\\\\\\\\n- **Early latent**: Single dose IM\\\\\\\\n- **Late latent/tertiary**: 3 weekly doses (3 x 2.4 million units)\\\\\\\\n- **Neurosyphilis**: IV aqueous penicillin (18-24 million units/day x 10-14 days)\\\\\\\\n\\\\\\\\n### Chancroid\\\\\\\\n- **Azithromycin**: 1 g PO single dose\\\\\\\\n- **Ceftriaxone**: 250 mg IM single dose\\\\\\\\n- **Fluoroquinolone**: Ciprofloxacin 500 mg x 2 daily x 3 days (if susceptible)\\\\\\\\n\\\\\\\\n### LGV\\\\\\\\n- **Doxycycline**: 100 mg x 2 daily x 21 days (first-line)\\\\\\\\n- **Alternative**: Erythromycin 500 mg x 4 daily x 21 days\\\\\\\\n- **Buboes**: May require drainage/aspiration (avoid incision to prevent sinus formation)\\\\\\\\n\\\\\\\\n## Syndromic Management (Empiric)\\\\\\\\n\\\\\\\\n### Urethral Discharge Syndrome\\\\\\\\n- **Ceftriaxone 250 mg IM** + **Azithromycin 1 g PO** (covers both gonococcal and chlamydial)\\\\\\\\n\\\\\\\\n### Genital Ulcer Syndrome\\\\\\\\n- **Benzyl penicillin** (covers syphilis) + **Azithromycin** (covers chlamydia/LGV) + **Acyclovir** (covers herpes)\\\\\\\\n- Or disease-specific based on clinical judgment\\\\\\\\n\\\\\\\\n## Contact Tracing & Prevention\\\\\\\\n- **Partner notification**: All sexual contacts in last 3 months\\\\\\\\n- **Partner examination**: For symptoms; treat empirically if test unavailable\\\\\\\\n- **Abstinence**: Until patient and partner complete treatment\\\\\\\\n- **Follow-up**: Test of cure (if resources allow); serology for syphilis at follow-up\\\\\\\\n- **Screening**: Periodic STI screening for high-risk groups\\\\\\\\n- **Prevention**: Condoms, safe sex counseling, HPV vaccination (females <25),\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Gonorrhea: Ceftriaxone 250 mg IM + Azithromycin 1 g PO (single dose)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Herpes: Acyclovir 400-800 mg x 3-5 daily x 7-10 days\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Syphilis: Benzyl penicillin 2.4 million units IM (primary/secondary)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"LGV: Doxycycline 100 mg x 2 daily x 21 days\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Partner notification, testing, and treatment essential for all STIs\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Syndromic approach covers likely causes if diagnosis uncertain\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"STIs\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IADVL - Clinical Dermatology\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"STI Management\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 4,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"std-gonorrhea-exam\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Gonorrhea & Genital Ulcers - Exam Preparation\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Case analysis and syndromic management.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Gonorrhea & Genital Ulcer Diseases - Exam Preparation\\\\\\\\n\\\\\\\\n## Case 1: Acute Gonorrhea\\\\\\\\n**Scenario**: 25-year-old male, purulent urethral discharge, dysuria x 3 days.\\\\\\\\n\\\\\\\\n**Diagnosis**: Acute gonorrhea.\\\\\\\\n\\\\\\\\n**Investigations**:\\\\\\\\n- Gram stain: Gram-negative diplococci within PMNs\\\\\\\\n- Culture: Thayer-Martin medium\\\\\\\\n- NAAT (PCR): Gold standard\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- Ceftriaxone 250 mg IM single dose\\\\\\\\n- Azithromycin 1 g PO single dose\\\\\\\\n- Partner notification and treatment\\\\\\\\n- Abstinence until completion of treatment\\\\\\\\n- Follow-up: 1-2 weeks; assess for complications (epididymitis, prostatitis)\\\\\\\\n\\\\\\\\n## Case 2: Genital Ulcer Syndrome\\\\\\\\n**Scenario**: 30-year-old male, painful ulcer with suppurative inguinal lymph node.\\\\\\\\n\\\\\\\\n**Clinical Diagnosis**: Likely chancroid.\\\\\\\\n\\\\\\\\n**Syndromic Management**:\\\\\\\\n- Azithromycin 1 g PO single dose (chancroid)\\\\\\\\n- PLUS Benzyl penicillin 2.4 million units IM (covers syphilis)\\\\\\\\n- PLUS Acyclovir 400 mg x 3 daily x 7-10 days (covers herpes)\\\\\\\\n- Dark-field microscopy if available (syphilis)\\\\\\\\n- Serology for syphilis, herpes, LGV\\\\\\\\n\\\\\\\\n**Follow-up**: Reassess ulcer healing; confirm diagnosis with culture/PCR\\\\\\\\n\\\\\\\\n## Case 3: Lymphogranuloma Venereum\\\\\\\\n**Scenario**: 28-year-old male, small painless ulcer, severe inguinal lymphadenopathy, fever, malaise.\\\\\\\\n\\\\\\\\n**Diagnosis**: LGV (clinical + Chlamydia PCR).\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- Doxycycline 100 mg x 2 daily x 21 days\\\\\\\\n- Buboes: Aspirate if needed (avoid incision to prevent chronic sinuses)\\\\\\\\n- Partner notification; screen for other STIs\\\\\\\\n- Ensure full 21-day course (partial treatment risks relapse),\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Gonorrhea: Ceftriaxone 250 mg IM + Azithromycin 1 g PO\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Chancroid: Azithromycin; suppurative bubo; Haemophilus\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"LGV: Doxycycline 21 days; severe adenitis; Chlamydia\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Syphilis: Benzyl penicillin; painless ulcer, rubbery bubo\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Syndromic approach empirically covers multiple causes if diagnosis uncertain\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"STIs\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IADVL - Clinics\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Syndromic STI Management\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"std-gonorrhea-qa\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Gonorrhea & Genital Ulcers - Q&A\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Key MCQs on gonorrhea and genital ulcer diseases.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Gonorrhea & Genital Ulcer Diseases - Q&A\\\\\\\\n\\\\\\\\n## Q1: What is the most specific test for gonorrhea diagnosis?\\\\\\\\n\\\\\\\\n**Answer**: NAAT (NucleicAcidAmplificationTest) such as PCR is gold standard with >99% sensitivity and specificity. In males, Gram stain is sensitive (95%) but NAAT is gold standard for females and extra-genital sites.\\\\\\\\n\\\\\\\\n## Q2: A patient presents with a painful genital ulcer and suppurative inguinal lymphadenopathy. What is the most likely diagnosis?\\\\\\\\n\\\\\\\\n**Answer**: Chancroid (caused by Haemophilus ducreyi). Painful ulcer with ragged borders and suppurative (pus-filled) bubo are characteristic. Treatment: Azithromycin 1 g or Ceftriaxone 250 mg IM.\\\\\\\\n\\\\\\\\n## Q3: What is the difference between herpes simplex and syphilis (primary chancre)?\\\\\\\\n\\\\\\\\n**Answer**: Herpes: painful vesicles, multiple, painful ulcers. Syphilis: painless ulcer, indurated borders, non-suppurative bubo. Herpes develops over days; chancre over 3 weeks.\\\\\\\\n\\\\\\\\n## Q4: A patient with LGV has severe inguinal lymphadenopathy (bubo). Should the bubo be incised and drained?\\\\\\\\n\\\\\\\\n**Answer**: No. Incision increases risk of chronic sinus formation. Instead, aspirate with needle (FNA) if needed for diagnosis or symptomatic relief. Complete Doxycycline course (21 days) is definitive treatment.\\\\\\\\n\\\\\\\\n## Q5: What percentage of females with gonorrhea are asymptomatic?\\\\\\\\n\\\\\\\\n**Answer**: 50% of infected females are asymptomatic (no cervical discharge or symptoms). Males are mostly symptomatic. This makes partner screening and STI surveillance critical in females.,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Gonorrhea: NAAT gold standard; Ceftriaxone 250 mg IM + Azithromycin 1 g\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Chancroid: Painful ulcer, suppurative bubo; Azithromycin or Ceftriaxone\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Herpes: Painful vesicles; Acyclovir 400-800 mg x 3-5 daily\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"LGV: Severe adenitis, Doxycycline 21 days; aspirate bubo, don't incise\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"50% females with gonorrhea asymptomatic; partner screening essential\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"STIs\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IADVL - Clinical Dermatology\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Genital Ulcer Diseases\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  },\\\\\\\\n  // DR-MOD-05-TOP-02: Skin Tumors & Melanoma\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"DR-MOD-05-TOP-02\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      {\\\\\\\\n        layer: 1,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"skin-tumors-foundation\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Skin Tumors & Melanoma - Foundation\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 25,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Classification of skin cancers, melanoma vs non-melanoma, epidemiology.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Skin Tumors & Melanoma - Foundation\\\\\\\\n\\\\\\\\n## Classification of Skin Cancers\\\\\\\\n\\\\\\\\n### Non-Melanoma Skin Cancers (NMSC)\\\\\\\\n- **Basal cell carcinoma (BCC)**: Most common (70-80% of NMSC)\\\\\\\\n- **Squamous cell carcinoma (SCC)**: Second most common (15-25%)\\\\\\\\n- **Other**: Merkel cell carcinoma, sebaceous carcinoma (rare)\\\\\\\\n\\\\\\\\n### Melanoma\\\\\\\\n- **Cutaneous melanoma**: From melanocytes\\\\\\\\n- **Subtypes**: Superficial spreading (70%), nodular (15%), lentigo maligna (10%), acral (5%)\\\\\\\\n- **Incidence**: Increasing globally; 10-20 per 100,000 in developed countries\\\\\\\\n- **India**: Lower incidence (1-2 per 100,000); higher in South India\\\\\\\\n\\\\\\\\n## Risk Factors\\\\\\\\n\\\\\\\\n### Non-Melanoma Skin Cancer\\\\\\\\n- **UV exposure**: Cumulative (BCC/SCC)\\\\\\\\n- **Chronic sun exposure**: Outdoor workers, farmers\\\\\\\\n- **Older age**: BCC and SCC typically >50 years\\\\\\\\n- **Fair skin**: Fitzpatrick types I-III\\\\\\\\n- **Immunosuppression**: Transplant patients, HIV\\\\\\\\n\\\\\\\\n### Melanoma\\\\\\\\n- **Solar exposure**: Intermittent severe sunburns (childhood important)\\\\\\\\n- **Nevi**: Dysplastic nevi (atypical moles) increase risk\\\\\\\\n- **Fair skin**: Fitzpatrick I-III highest risk\\\\\\\\n- **Family history**: 5-10% familial; CDKN2A mutations\\\\\\\\n- **Age**: Can occur at any age; peak 40-60 years\\\\\\\\n- **Occupational**: Welders, dock workers\\\\\\\\n\\\\\\\\n## ABCDE Features of Melanoma\\\\\\\\n- **Asymmetry**: Irregular shape\\\\\\\\n- **Border irregularity**: Notched, scalloped edges\\\\\\\\n- **Color variation**: Multiple colors (brown, black, red, blue)\\\\\\\\n- **Diameter**: >6 mm (though not absolute)\\\\\\\\n- **Evolution**: Changing size, shape, color (most important)\\\\\\\\n\\\\\\\\n## Premalignant Lesions\\\\\\\\n- **Actinic keratosis (AK)**: Scaly, erythematous; malignant potential 1-5%\\\\\\\\n- **Dysplastic nevi (atypical moles)**: Irregular borders, color; melanoma risk\\\\\\\\n- **Bowen's disease**: SCC in situ; risk of invasive SCC 3-5%,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"ABCDE of melanoma: Asymmetry, Border, Color, Diameter, Evolution\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Evolution (changing) most important; E for Emergency referral\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"BCC > SCC > Others\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"BCC 70-80% NMSC; SCC 15-25%; others rare\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"BCC most common skin cancer; UV exposure main risk\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Melanoma increasing globally; intermittent sun exposure + family history key\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"ABCDE features screen for melanoma; evolution most important\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Dysplastic nevi significant risk factor for melanoma\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Fair skin (Fitzpatrick I-III) highest risk for all skin cancers\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Skin Cancers\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IADVL - Clinical Dermatology\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Melanoma and Non-Melanoma Skin Cancers\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 2,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"skin-tumors-diagnosis\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Skin Tumors & Melanoma - Diagnosis\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 30,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Clinical diagnosis, dermoscopy, histopathology, staging.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Skin Tumors & Melanoma - Diagnosis\\\\\\\\n\\\\\\\\n## Basal Cell Carcinoma: Clinical Features\\\\\\\\n- **Appearance**: Pearly papule/nodule with rolled borders, telangiectasia\\\\\\\\n- **Ulceration**: Central ulcer with pearly margins (rodent ulcer)\\\\\\\\n- **Location**: Face (80%), especially nose, nasolabial fold\\\\\\\\n- **Growth**: Slow, indolent\\\\\\\\n- **Metastasis**: Rare (<1%)\\\\\\\\n\\\\\\\\n## Squamous Cell Carcinoma: Clinical Features\\\\\\\\n- **Appearance**: Scaly, hyperkeratotic papule/plaque\\\\\\\\n- **Location**: Sun-exposed areas (face, ears, scalp)\\\\\\\\n- **Higher risk lesions**: Arise from Bowen's disease, chronic ulcers\\\\\\\\n- **Metastasis**: Risk higher than BCC (5-10%); higher if poorly differentiated\\\\\\\\n\\\\\\\\n## Melanoma: Clinical Features\\\\\\\\n- **Superficial Spreading (70%)**: ABCDE features; variable pigmentation\\\\\\\\n- **Nodular (15%)**: Rapidly growing nodule; poor prognosis\\\\\\\\n- **Lentigo Maligna (10%)**: Flat patch on face; slow growth\\\\\\\\n- **Acral (5%)**: Palms, soles; darker skin more common in India\\\\\\\\n\\\\\\\\n## Dermoscopy\\\\\\\\n- **BCC**: Arborizing vessels, leaf-like areas, ulceration\\\\\\\\n- **SCC**: Linear and punctate vessels, scales, hyperkeratosis\\\\\\\\n- **Melanoma**: Asymmetric pattern; color variability; negative network; atypical globules\\\\\\\\n- **Benign nevi**: Symmetric; uniform color; regular pattern\\\\\\\\n\\\\\\\\n## Histopathology\\\\\\\\n\\\\\\\\n### Melanoma: Breslow Thickness\\\\\\\\n- **T1**: <1.0 mm (excellent prognosis, 90% 5-year survival)\\\\\\\\n- **T2**: 1.01-2.0 mm (82% 5-year survival)\\\\\\\\n- **T3**: 2.01-4.0 mm (67% 5-year survival)\\\\\\\\n- **T4**: >4.0 mm (45% 5-year survival)\\\\\\\\n- **Clark Level**: Depth of invasion (I-V)\\\\\\\\n\\\\\\\\n### Other Features\\\\\\\\n- **Mitotic rate**: Prognostication (>1 mitosis/mm²)\\\\\\\\n- **Ulceration**: Poor prognostic sign\\\\\\\\n- **Lymphovascular invasion**: Associated with higher risk\\\\\\\\n\\\\\\\\n## Staging\\\\\\\\n\\\\\\\\n### AJCC Staging (TNM)\\\\\\\\n- **Stage I**: Local disease, thin melanoma (low mitotic rate)\\\\\\\\n- **Stage II**: Local disease with adverse features (thick, high mitoses, ulceration)\\\\\\\\n- **Stage III**: Regional nodal metastases\\\\\\\\n- **Stage IV**: Distant metastases (lung, brain, bone)\\\\\\\\n\\\\\\\\n### Investigation for Metastases\\\\\\\\n- **Imaging**: CT chest/abdomen, PET-CT (if stage III or higher)\\\\\\\\n- **Sentinel lymph node biopsy**: Standard for T1b-T4 melanomas\\\\\\\\n- **Lab work**: LDH (prognostic marker),\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"BCC: pearly nodule with rolled borders; face most common\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"SCC: scaly plaque, sun-exposed; Bowen's disease precursor\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Melanoma: ABCDE features; Breslow thickness most important prognostic factor\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Dermoscopy helpful; asymmetry, color variation suggest melanoma\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Sentinel lymph node biopsy standard for T1b-T4 melanomas\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Skin Cancers\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IADVL - Atlas of Dermatology\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Malignant Melanoma\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 3,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"skin-tumors-treatment\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Skin Tumors & Melanoma - Treatment\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 35,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Surgical management, adjuvant therapy, prognosis.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Skin Tumors & Melanoma - Treatment\\\\\\\\n\\\\\\\\n## Basal Cell Carcinoma: Treatment\\\\\\\\n\\\\\\\\n### Surgical Options\\\\\\\\n- **Mohs micrographic surgery**: Gold standard; preserves tissue, high cure rate (95-99%)\\\\\\\\n- **Excision with margins**: 4-5 mm margins adequate\\\\\\\\n- **Curettage and electrodesiccation**: Small lesions; lower cost\\\\\\\\n- **Cryotherapy**: Very small lesions; limited utility\\\\\\\\n\\\\\\\\n### Non-Surgical Options\\\\\\\\n- **Topical 5-FU**: Superficial BCC\\\\\\\\n- **Imiquimod**: Superficial BCC\\\\\\\\n- **Radiotherapy**: If surgery contraindicated; poor for recurrent\\\\\\\\n\\\\\\\\n### Outcomes\\\\\\\\n- **Cure rate**: >90-95% with proper treatment\\\\\\\\n- **Recurrence**: <5% with adequate margins\\\\\\\\n- **Metastasis**: Rare (<1%)\\\\\\\\n\\\\\\\\n## Squamous Cell Carcinoma: Treatment\\\\\\\\n\\\\\\\\n### Surgical Management\\\\\\\\n- **Wide excision**: 5-10 mm margins (depends on grade, location)\\\\\\\\n- **Mohs micrographic surgery**: For high-risk lesions\\\\\\\\n- **Neck dissection**: If lymph node involvement\\\\\\\\n\\\\\\\\n### Adjuvant Therapy\\\\\\\\n- **Radiotherapy**: High-grade, large, or recurrent lesions\\\\\\\\n- **Chemotherapy**: Metastatic or palliative\\\\\\\\n\\\\\\\\n### Prognosis\\\\\\\\n- **Well-differentiated**: 5-year survival 90-95%\\\\\\\\n- **Poorly differentiated**: 5-year survival 50-60%\\\\\\\\n\\\\\\\\n## Melanoma: Treatment\\\\\\\\n\\\\\\\\n### Surgery\\\\\\\\n- **Primary tumor excision**: Wide excision (margins based on thickness)\\\\\\\\n  - **<1mm**: 1 cm margin\\\\\\\\n  - **1-2 mm**: 1-2 cm margin\\\\\\\\n  - **2-4 mm**: 2-3 cm margin\\\\\\\\n  - **>4 mm**: 2-3 cm margin\\\\\\\\n- **Sentinel lymph node biopsy**: Standard for T1b-T4 melanomas\\\\\\\\n- **Lymph node dissection**: If sentinel node positive\\\\\\\\n\\\\\\\\n### Adjuvant Therapy\\\\\\\\n\\\\\\\\n**Immunotherapy**:\\\\\\\\n- **Checkpoint inhibitors**: Pembrolizumab, Nivolumab\\\\\\\\n- **Stage III (with nodal involvement)**: Adjuvant immunotherapy improves recurrence-free and overall survival\\\\\\\\n- **Efficacy**: 50-60% reduction in recurrence risk\\\\\\\\n\\\\\\\\n**Target Therapy**:\\\\\\\\n- **BRAF mutation**: Dabrafenib + Trametinib (if BRAF V600E/K positive)\\\\\\\\n\\\\\\\\n### Prognosis by Breslow Thickness\\\\\\\\n- **<1 mm**: 90-95% 5-year survival\\\\\\\\n- **1-2 mm**: 80-85% 5-year survival\\\\\\\\n- **2-4 mm**: 60-70% 5-year survival\\\\\\\\n- **>4 mm**: 40-50% 5-year survival\\\\\\\\n- **Stage IV (metastatic)**: 5-10% 5-year survival without immunotherapy; improved with checkpoint inhibitors\\\\\\\\n\\\\\\\\n## Follow-up\\\\\\\\n- **Melanoma**: Regular skin examination + imaging (CT/PET) based on stage\\\\\\\\n- **Frequency**: Every 3-6 months initially, then annually\\\\\\\\n- **Patient self-examination**: Monthly body check crucial\\\\\\\\n- **Sun protection**: Lifetime recommendation,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"BCC: Mohs surgery gold standard; >95% cure rate\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"SCC: Wide excision; grade determines margins and prognosis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Melanoma: Breslow thickness most important prognostic factor\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Sentinel lymph node biopsy standard for T1b-T4\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Immunotherapy (checkpoint inhibitors) adjuvant treatment for stage III melanoma\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"5-year survival: <1mm 90-95%; >4mm 40-50%; stage IV 5-10%\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Skin Cancer Treatment\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IADVL - Clinical Dermatology\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Management of Melanoma\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 4,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"skin-tumors-exam\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Skin Tumors & Melanoma - Exam Preparation\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Case analysis and management decisions.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Skin Tumors & Melanoma - Exam Preparation\\\\\\\\n\\\\\\\\n## Case 1: Basal Cell Carcinoma\\\\\\\\n**Scenario**: 62-year-old farmer, nodule on nose with rolled borders and central ulceration (2 cm).\\\\\\\\n\\\\\\\\n**Diagnosis**: BCC (rodent ulcer type).\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- **Surgical**: Mohs micrographic surgery (gold standard) or wide excision (4-5 mm margins)\\\\\\\\n- **Pathology**: Confirm histology; assess for perineural invasion\\\\\\\\n- **Outcome**: >95% cure rate\\\\\\\\n- **Follow-up**: Annual skin exam; sun protection counseling\\\\\\\\n\\\\\\\\n## Case 2: Melanoma\\\\\\\\n**Scenario**: 45-year-old, irregular pigmented lesion on back, ABCDE features positive, 2.5 mm Breslow thickness.\\\\\\\\n\\\\\\\\n**Diagnosis**: Melanoma (T3, stage IIA/IIB).\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- **Surgical**: Wide excision (2-3 cm margins)\\\\\\\\n- **Staging**: Sentinel lymph node biopsy (indicated for >1 mm thickness)\\\\\\\\n- **Adjuvant**: If SLN positive → lymph node dissection + immunotherapy\\\\\\\\n- **If SLN negative**: Consider adjuvant immunotherapy (if high-risk features)\\\\\\\\n- **Prognosis**: 60-70% 5-year survival for 2.5 mm thickness\\\\\\\\n- **Follow-up**: Every 3-6 months; imaging (CT/PET) based on stage\\\\\\\\n\\\\\\\\n## Case 3: Squamous Cell Carcinoma\\\\\\\\n**Scenario**: 55-year-old, poorly differentiated SCC on ear, 1.5 cm, high-risk features.\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- **Surgical**: Mohs surgery or wide excision (5-10 mm)\\\\\\\\n- **Neck nodes**: Palpate; imaging if suspicious\\\\\\\\n- **Adjuvant**: Radiotherapy if poorly differentiated, large, or recurrent\\\\\\\\n- **Prognosis**: Depends on grade; poorly differentiated 50-60% 5-year survival,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"BCC: Mohs surgery gold standard; >95% cure rate; rarely metastasizes\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"SCC: Wide excision with adequate margins; adjuvant RT for high-grade\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Melanoma: Breslow thickness key prognostic factor; SLN biopsy for >1mm\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Adjuvant immunotherapy for stage III (nodal involvement) or high-risk stage II\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Follow-up essential; annual exam for BCC; regular imaging for melanoma\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Skin Cancers\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IADVL - Clinical Dermatology\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Melanoma and Non-Melanoma Cancers\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"skin-tumors-qa\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Skin Tumors & Melanoma - Q&A\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Key MCQs on skin cancers.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Skin Tumors & Melanoma - Q&A\\\\\\\\n\\\\\\\\n## Q1: What is the most important prognostic factor in melanoma?\\\\\\\\n\\\\\\\\n**Answer**: Breslow thickness (depth of invasion). It correlates with risk of metastasis and survival. <1mm = 90-95% 5-year survival; >4mm = 40-50%.\\\\\\\\n\\\\\\\\n## Q2: A 50-year-old has a pearly nodule on the nose with telangiectasia. What is the diagnosis?\\\\\\\\n\\\\\\\\n**Answer**: Basal cell carcinoma. Pearly appearance with rolled borders and telangiectasia are characteristic. Face (especially nose) is most common site.\\\\\\\\n\\\\\\\\n## Q3: What is the significance of sentinel lymph node biopsy in melanoma?\\\\\\\\n\\\\\\\\n**Answer**: Identifies regional lymph node metastases. Standard for T1b-T4 melanomas. Positive SLN → lymph node dissection + adjuvant immunotherapy. Prognosis significantly worsened if SLN positive.\\\\\\\\n\\\\\\\\n## Q4: What is the 5-year survival rate for stage IV melanoma (metastatic) with modern immunotherapy?\\\\\\\\n\\\\\\\\n**Answer**: 20-40% with checkpoint inhibitors (pembrolizumab, nivolumab) vs 5-10% without. Immunotherapy has dramatically improved outcomes in metastatic melanoma.\\\\\\\\n\\\\\\\\n## Q5: A patient with well-differentiated squamous cell carcinoma (1 cm) on forearm. What margin is recommended?\\\\\\\\n\\\\\\\\n**Answer**: 5 mm margin for well-differentiated, low-risk SCC. High-grade or large lesions → 10 mm. Mohs surgery preferred for high-risk locations (face, ears).,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Melanoma: Breslow thickness most important; affects staging and survival\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"BCC: Pearly nodule with rolled borders; face; >95% cure with surgery\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"SCC: Scaly plaque; margins based on differentiation (5-10 mm)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Sentinel lymph node biopsy: Standard for melanoma T1b-T4\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Immunotherapy: Checkpoint inhibitors improve metastatic melanoma survival 2-4x\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Dermatology by Valia & Valia\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Skin Cancers\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IADVL - Atlas of Dermatology\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Malignant Melanoma and BCC/SCC\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-];
-];
-];
+        summary: "Overview of autoimmune blistering disorders including clinical presentation, epidemiology, and classification.",
+        contentMd: `# Pemphigus & Bullous Pemphigoid - Foundation
+
+## Pemphigus
+### Classification
+- **Pemphigus Vulgaris**: Most common form (50-60% of pemphigus cases)
+  - Oral involvement: 90% of patients (mucosal onset)
+  - Skin involvement: May follow or precede oral lesions
+  - Age: 40-60 years; lower age in Indian population (35-45 years)
+- **Pemphigus Foliaceus**: Superficial pemphigus
+  - Absence of mucosal involvement (distinguishing feature)
+  - Flaccid bullae and crusting more prominent than erosions
+  - Age: Slightly older than pemphigus vulgaris
+
+### Clinical Features - Pemphigus Vulgaris
+- **Oral lesions**: Painful erosions on buccal mucosa, palate, tongue; mucosal onset
+- **Flaccid bullae**: Easily ruptured; appear on erythematous base
+- **Negative Nikolsky sign**: In intact skin (positive in bullae/erosions)
+- **Positive intraoral Nikolsky**: Mucosal involvement (90% of cases)
+- **Distribution**: Face, scalp, chest, flexural areas
+- **Secondary bacterial infection**: Common complication
+
+### Clinical Features - Pemphigus Foliaceus
+- **Superficial bullae**: Rapid rupture → crusting (resembles impetigo)
+- **Absence of mucosal involvement**: Key distinguishing feature
+- **No oral erosions**: Differentiates from pemphigus vulgaris
+- **Crusts on face, scalp, chest**: Golden crusts (can mimic impetigo)
+- **Seborrheic distribution**: Face, scalp, upper chest
+
+## Bullous Pemphigoid
+### Characteristics
+- **Tense bullae**: Do not rupture easily (unlike pemphigus)
+- **Negative Nikolsky sign**: Bullae intact; Nikolsky negative
+- **Age**: Usually >60 years; older population
+- **Distribution**: Lower abdomen, inner thighs, flexural areas
+- **Oral involvement**: Rare (<10% of cases)
+
+### Clinical Features
+- **Urticarial phase**: Erythematous urticarial lesions preceding bullae (weeks to months)
+- **Large tense bullae**: Thick roof, fluid clear to hemorrhagic
+- **Erosions**: Due to rupture of bullae; heal without scarring
+- **Pruritus**: Can be severe, may precede lesions
+- **Systemic involvement**: Associated with internal malignancy in 10-15% of cases
+
+## Comparisons
+| Feature | Pemphigus Vulgaris | Bullous Pemphigoid |
+|---------|-------------------|-------------------|
+| Bullae | Flaccid | Tense |
+| Nikolsky | Positive in lesions | Negative |
+| Mucosal | Yes (90%) | Rare |
+| Age | 40-60 years | >60 years |
+| Antigens | Desmoglein 3 (mucosal), Desmoglein 1 (skin) | BP180, BP230 |
+| IgG target | Desmosomes | Hemidesmosomes |`,
+        mnemonics: [
+          { text: "Pemphigus = Flaccid bullae + Positive Nikolsky + Mucosal", explanation: "Key features" },
+          { text: "Bullous Pemphigoid = Tense bullae + Negative Nikolsky + No mucosal", explanation: "Key differences" },
+          { text: "Pemphigus Foliaceus = No mucosal involvement (vs Vulgaris)", explanation: "Distinguishing feature" }
+        ],
+        keyPoints: [
+          "Pemphigus: autoimmune against desmogleins (cell-to-cell adhesion)",
+          "Bullous pemphigoid: autoimmune against hemidesmosomes (epidermal anchoring)",
+          "Pemphigus vulgaris: oral mucosal involvement in 90% (early sign)",
+          "Pemphigus foliaceus: NO mucosal involvement (key differentiator)",
+          "Pemphigus: flaccid bullae rupture easily; erosions on erythematous base",
+          "Bullous pemphigoid: tense bullae; may be preceded by urticarial phase",
+          "Nikolsky sign: positive in pemphigus, negative in pemphigoid",
+          "Age: pemphigus (40-60 yrs), bullous pemphigoid (>60 yrs)"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "15 - Autoimmune Bullous Disorders", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Bullous Disorders", edition: "20th" }
+        ],
+      },
+      {
+        layer: 2,
+        slug: "pemphigus-bullous-pemphigoid-layer-2-mechanism",
+        title: "Pemphigus & Bullous Pemphigoid - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pathogenesis of autoimmune blistering disorders, antibody mechanisms, and immune dysregulation.",
+        contentMd: `# Pemphigus & Bullous Pemphigoid - Mechanism
+
+## Pemphigus Pathogenesis
+### Target Antigens
+- **Pemphigus Vulgaris**:
+  - Desmoglein 3 (Dsg3): Mucosal involvement, ~95% of cases
+  - Desmoglein 1 (Dsg1): Skin involvement, ~50% of cases
+  - Anti-Dsg3 alone → mucosal-dominant disease
+  - Anti-Dsg1 + Dsg3 → mucocutaneous disease
+- **Pemphigus Foliaceus**: Desmoglein 1 (Dsg1) alone; NO Dsg3
+
+### Antibody-Mediated Pathogenesis
+- **IgG autoantibodies**: Bind to desmoglein on keratinocyte surface
+- **Complement activation**: Classical pathway; C3 deposition on keratinocytes
+- **Acantholysis mechanism**: 
+  - Direct IgG binding → steric hindrance of Dsg-Dsg interactions
+  - Signaling through keratinocyte receptors → loss of adhesion
+  - Complement-mediated: C3a/C5a activation → neutrophil infiltration
+- **Result**: Loss of cell-to-cell adhesion (acantholysis) → intraepidermal bulla formation
+
+### Bulla Formation
+- **Intraepidermal location**: Acantholysis occurs in spinosum/granulosum layer
+- **"Suprabasal acantholysis"**: Pemphigus vulgaris; basal layer cells remain attached to BMZ
+- **"Subcorneal acantholysis"**: Pemphigus foliaceus; very superficial (stratum corneum)
+- **Tombstone appearance**: Basal cells appear rounded, attached to BMZ
+
+## Bullous Pemphigoid Pathogenesis
+### Target Antigens
+- **BP180** (XVIIIC): Transmembrane component of hemidesmosomes
+- **BP230** (BPAG1): Intracellular plakin protein
+- **Hemidesmosomes**: Anchor basal keratinocytes to basement membrane zone
+
+### Antibody-Mediated Pathogenesis
+- **IgG autoantibodies**: Bind to BP180 and BP230 at hemidesmosomes
+- **IgE involvement**: IgE autoantibodies also present; activate mast cells → inflammatory response
+- **Complement activation**: Classical pathway; C3 deposition; IgE-mediated degranulation
+- **Inflammation**: Neutrophils, mast cells infiltrate BMZ; release protease, elastase, heparin
+- **Subepidermal blister**: Formation due to destruction of hemidesmosomes and anchoring filaments
+
+### Bulla Formation
+- **Subepidermal location**: Separation occurs between epidermis and dermis
+- **Thick-roofed bulla**: Roof is intact epidermis (tense bullae)
+- **Dermal side**: May contain fibrin, inflammatory cells
+- **Healing**: Without scarring (unlike dermatitis herpetiformis)
+
+## Genetic Factors
+- **HLA associations**: 
+  - Pemphigus vulgaris: HLA-DRB1*04:02 (strongest), HLA-DQ5 (DQA1*05, DQB1*05:01)
+  - Bullous pemphigoid: Weaker HLA associations; older population, more environmental factors
+- **T cell response**: Th1-mediated autoimmune response; helper T cells specific for Dsg3/Dsg1
+
+## Immune Dysregulation
+- **Regulatory T cells (Tregs)**: Reduced numbers/function in pemphigus
+- **Th17 cells**: Elevated; produce IL-17 (inflammatory)
+- **B cell activation**: Polyclonal B cell activation; production of pathogenic IgG
+- **Loss of tolerance**: Breakdown of immune tolerance to Dsg antigens`,
+        mnemonics: [
+          { text: "Dsg3 = Mucosal (pemphigus vulgaris); Dsg1 = Skin (pemphigus foliaceus)", explanation: "Antigen distribution" },
+          { text: "BP180 + BP230 = Hemidesmosomes; Bullous Pemphigoid", explanation: "Target antigens" },
+          { text: "Acantholysis = Pemphigus (intraepidermal); Hemidesmosomes lost = Pemphigoid (subepidermal)", explanation: "Mechanism and location" }
+        ],
+        keyPoints: [
+          "Pemphigus: IgG against desmogleins; intraepidermal acantholysis",
+          "Dsg3-only disease → mucosal pemphigus vulgaris",
+          "Dsg1+Dsg3 disease → mucocutaneous pemphigus vulgaris",
+          "Dsg1-only disease → pemphigus foliaceus",
+          "Bullous pemphigoid: IgG against hemidesmosomes; subepidermal bulla",
+          "BP180 is target for both IgG and IgE; IgE-mediated inflammation",
+          "Complement activation in both disorders; C3 deposition at target antigen",
+          "HLA-DRB1*04:02 strong association with pemphigus vulgaris",
+          "Reduced Tregs and elevated Th17 in autoimmune blistering disorders"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "15 - Autoimmune Bullous Disorders", edition: "4th" },
+          { book: "Robbins & Kumar Pathologic Basis of Disease", chapter: "25 - Skin Disorders", edition: "10th" }
+        ],
+      },
+      {
+        layer: 3,
+        slug: "pemphigus-bullous-pemphigoid-layer-3-clinical",
+        title: "Pemphigus & Bullous Pemphigoid - Clinical",
+        estimatedMinutes: 35,
+        summary: "Diagnosis, investigations, and management of pemphigus and bullous pemphigoid.",
+        contentMd: `# Pemphigus & Bullous Pemphigoid - Clinical
+
+## Diagnosis and Investigations
+### Clinical Diagnosis
+- **Nikolsky sign**: Positive in pemphigus (fragile epidermis); negative in bullous pemphigoid
+- **Presentation**: Pemphigus = oral onset common; bullous pemphigoid = skin lesions primarily
+
+### Histopathology
+- **Pemphigus Vulgaris**: 
+  - Suprabasal acantholysis
+  - Intact basal layer cells ("tombstone cells") anchored to BMZ
+  - Minimal inflammatory infiltrate
+- **Pemphigus Foliaceus**: 
+  - Subcorneal acantholysis
+  - Intraepidermal bulla formation very superficial
+- **Bullous Pemphigoid**: 
+  - Subepidermal blister
+  - Dense eosinophilic infiltrate at BMZ
+  - Intact epidermis (tense roof)
+
+### Immunofluorescence
+- **Direct Immunofluorescence (DIF)**:
+  - Pemphigus: IgG + C3 deposition on keratinocyte surface (intercellular pattern)
+  - Bullous pemphigoid: IgG + C3 deposition at basement membrane zone
+- **Indirect Immunofluorescence (IIF)**:
+  - Detects circulating antibodies in serum
+  - Titer correlates with disease activity
+
+### Serologic Tests
+- **ELISA/Western blot**: Anti-Dsg3 and anti-Dsg1 antibodies
+  - Dsg3 alone → mucosal-dominant pemphigus vulgaris
+  - Dsg1+Dsg3 → mucocutaneous pemphigus vulgaris
+- **Anti-BP180, anti-BP230**: In bullous pemphigoid
+
+## Management
+### Pemphigus Management
+- **Systemic corticosteroids**: First-line
+  - Prednisone 0.5-1.5 mg/kg/day initially
+  - Gradual taper based on clinical response
+- **Corticosteroid-sparing agents**:
+  - Azathioprine 1-2 mg/kg/day
+  - Mycophenolate mofetil 1-3 g/day
+  - Cyclosporine 3-5 mg/kg/day
+- **Biologics**:
+  - Rituximab (anti-B cell monoclonal antibody): Effective for severe, refractory disease
+  - IVIG (intravenous immunoglobulin): For resistant cases
+- **Supportive care**: Topical anesthetics, antimicrobial therapy for secondary infection
+
+### Bullous Pemphigoid Management
+- **Systemic corticosteroids**: Prednisone 0.5-1 mg/kg/day
+  - Lower doses often effective than in pemphigus
+  - Gradual taper
+- **Topical corticosteroids**: High-potency (clobetasol propionate) for localized lesions
+- **Corticosteroid-sparing agents**:
+  - Azathioprine: Second-line steroid-sparing agent
+  - Cyclosporine: Alternative
+- **Dapsone**: 50-100 mg/day (steroid-sparing in some patients)
+
+## Complications
+### Pemphigus
+- **Secondary bacterial infection**: Common due to erosions
+- **Septicemia**: From spread of infection
+- **Electrolyte imbalance**: Fluid loss from extensive erosions
+- **Malnutrition**: Due to oral ulcers and pain
+- **Medication side effects**: Corticosteroid complications (osteoporosis, infection risk)
+
+### Bullous Pemphigoid
+- **Internal malignancy**: Associated in 10-15% of older patients (paraneoplastic)
+- **Secondary infection**: Less common than pemphigus
+- **Drug-induced**: Medications can trigger (ACE inhibitors, penicillamine, NSAIDs)
+
+## Monitoring & Follow-up
+- **Disease activity**: Clinical examination, photographic documentation
+- **Antibody titers**: Serial IgG titers (Dsg3, Dsg1, BP180, BP230)
+- **Corticosteroid monitoring**: Bone density, metabolic screening
+- **Medication monitoring**: LFTs, CBC for azathioprine/cyclosporine
+- **Malignancy screening**: Bullous pemphigoid >60 years old`,
+        mnemonics: [
+          { text: "Pemphigus = Nikolsky +ve, Intraepidermal, Desmoglein IgG", explanation: "Diagnostic triad" },
+          { text: "Bullous Pemphigoid = Nikolsky -ve, Subepidermal, BMZ IgG", explanation: "Diagnostic triad" },
+          { text: "Rituximab = Severe/Refractory pemphigus", explanation: "Biologic therapy" }
+        ],
+        keyPoints: [
+          "Nikolsky sign: positive in pemphigus (loss of cell adhesion), negative in bullous pemphigoid",
+          "DIF: intercellular IgG pattern in pemphigus; linear BMZ pattern in bullous pemphigoid",
+          "Anti-Dsg3 serology = mucosal pemphigus vulgaris",
+          "Anti-Dsg1+Dsg3 = mucocutaneous pemphigus vulgaris",
+          "Suprabasal acantholysis in pemphigus vulgaris (basal cells remain)",
+          "Subepidermal blister in bullous pemphigoid (intact epidermis as roof)",
+          "Systemic corticosteroids: first-line for both disorders",
+          "Rituximab effective for refractory pemphigus",
+          "Bullous pemphigoid: screen for internal malignancy in older patients"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "15 - Autoimmune Bullous Disorders", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Bullous Disorders", edition: "20th" }
+        ],
+      },
+      {
+        layer: 4,
+        slug: "pemphigus-bullous-pemphigoid-layer-4-exam",
+        title: "Pemphigus & Bullous Pemphigoid - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "High-yield facts, differentials, and NEXT-pattern questions for blistering disorders.",
+        contentMd: `# Pemphigus & Bullous Pemphigoid - Exam Prep
+
+## High-Yield Exam Facts
+- **Pemphigus vulgaris**: Oral erosions in 90% (mucosal onset); most common pemphigus type (50-60%)
+- **Pemphigus foliaceus**: NO oral involvement (key differentiator); more superficial bullae
+- **Bullous pemphigoid**: Older patients (>60 yrs); tense bullae; associated with malignancy (10-15%)
+- **Nikolsky sign**: Positive in pemphigus; negative in bullous pemphigoid (determines diagnosis)
+- **DIF pattern**: Intercellular (pemphigus) vs linear BMZ (bullous pemphigoid)
+
+## Differential Diagnosis
+### Erosions with Flaccid Bullae:
+- **Pemphigus**: Positive Nikolsky, intraepidermal, intercellular IgG on DIF
+- **Herpes simplex**: Viral prodrome, vesicles grouped, Tzanck multinucleate cells
+- **Bullous diabetic blisters**: Bullae on lower extremities, diabetes history, trauma-induced
+
+### Tense Bullae:
+- **Bullous pemphigoid**: Negative Nikolsky, subepidermal, linear IgG on DIF
+- **Dermatitis herpetiformis**: Associated celiac disease, intensely pruritic, IgA at BMZ
+- **Porphyria cutanea tarda**: Blisters on sun-exposed areas, photosensitivity, porphyrin elevation
+
+## NEXT-Pattern Questions
+### Recall (10%):
+- Q: "90% of pemphigus vulgaris presents with?" → A: Oral mucosal erosions
+- Q: "Tense vs flaccid bullae?" → A: Tense = bullous pemphigoid; Flaccid = pemphigus
+
+### Analysis (30%):
+- Q: "Patient with positive Nikolsky sign, intercellular IgG on DIF. Diagnosis?" → A: Pemphigus
+- Q: "Oral erosions + skin bullae + anti-Dsg3 + anti-Dsg1 serology?" → A: Mucocutaneous pemphigus vulgaris
+
+### Problem-Solving (60%):
+- Q: "72-year-old with tense bullae, linear IgG at BMZ on DIF, not responding to 1 mg/kg prednisone after 4 weeks. Next step?" → A: Add corticosteroid-sparing agent (azathioprine) or consider cyclosporine; screen for malignancy
+- Q: "30-year-old with anti-Dsg3 serology only, oral erosions, no skin lesions. Counseling?" → A: Mucosal-dominant pemphigus vulgaris; may progress to mucocutaneous with time
+
+## Clinical Pearls
+- **Dsg3-only disease**: Mucosal-dominant; less aggressive, may remain localized
+- **Dsg1+Dsg3 disease**: Mucocutaneous; more extensive, systemic corticosteroids needed
+- **Tombstone cells**: Diagnostic feature of pemphigus vulgaris; basal cells anchored, suprabasal acantholysis
+- **Drug-induced bullous pemphigoid**: ACE inhibitors, penicillamine, NSAIDs (withdraw medication)
+- **Paraneoplastic pemphigus**: Rare, associated with malignancy; different antibody profile
+
+## Common Mistakes
+- Confusing flaccid (pemphigus) with tense (bullous pemphigoid) bullae
+- Forgetting Nikolsky negative in bullous pemphigoid
+- Not screening for malignancy in bullous pemphigoid >60 years
+- Starting high-dose corticosteroids when lower doses often sufficient in bullous pemphigoid
+- Missing mucosal involvement in pemphigus vulgaris (90% have oral erosions)`,
+        mnemonics: [
+          { text: "PEMPHIGUS = Positive Nikolsky + intercellular IgG + intraepidermal", explanation: "Diagnostic features" },
+          { text: "BULLOUS PEMPHIGOID = Negative Nikolsky + linear BMZ IgG + subepidermal", explanation: "Diagnostic features" },
+          { text: "Dsg3 alone = Mucosal; Dsg1+Dsg3 = Mucocutaneous", explanation: "Serology correlation" }
+        ],
+        keyPoints: [
+          "Pemphigus vulgaris: oral erosions (90%), positive Nikolsky, intraepidermal acantholysis",
+          "Pemphigus foliaceus: no oral involvement, superficial bullae, subcorneal acantholysis",
+          "Bullous pemphigoid: older patients, tense bullae, negative Nikolsky, subepidermal",
+          "DIF shows intercellular pattern in pemphigus; linear BMZ pattern in bullous pemphigoid",
+          "Anti-Dsg3 serology = mucosal pemphigus vulgaris",
+          "Anti-Dsg1+Dsg3 = mucocutaneous pemphigus vulgaris",
+          "Corticosteroids first-line; lower doses effective in bullous pemphigoid",
+          "Rituximab for refractory pemphigus",
+          "Paraneoplastic pemphigus has different antibody pattern"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "15 - Autoimmune Bullous Disorders", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Bullous Disorders", edition: "20th" }
+        ],
+      },
+      {
+        layer: 5,
+        slug: "pemphigus-bullous-pemphigoid-layer-5-active-recall",
+        title: "Pemphigus & Bullous Pemphigoid - Active Recall",
+        estimatedMinutes: 30,
+        summary: "Flashcard Q&A pairs for autoimmune blistering disorder diagnosis and management.",
+        contentMd: `# Pemphigus & Bullous Pemphigoid - Active Recall Flashcards
+
+## Q1: Pemphigus Definition
+**Q: Define pemphigus and name its most common form.**
+A: Autoimmune blistering disorder with intraepidermal bulla formation; pemphigus vulgaris is most common (50-60% of pemphigus cases)
+
+## Q2: Oral Involvement
+**Q: What percentage of pemphigus vulgaris cases present with oral mucosal involvement?**
+A: 90% of pemphigus vulgaris patients have oral mucosal erosions as presenting symptom
+
+## Q3: Pemphigus Foliaceus Distinction
+**Q: What distinguishes pemphigus foliaceus from pemphigus vulgaris?**
+A: Pemphigus foliaceus: NO oral mucosal involvement (key differentiator); subcorneal acantholysis; only anti-Dsg1 serology
+
+## Q4: Target Antigens Vulgaris
+**Q: What are the target antigens in pemphigus vulgaris?**
+A: Desmoglein 3 (Dsg3) in mucosal-dominant disease; Desmoglein 1 (Dsg1) + Dsg3 in mucocutaneous disease
+
+## Q5: Bullae Location
+**Q: What is the anatomical location of blister formation in pemphigus?**
+A: Intraepidermal (within epidermis); specifically suprabasal in pemphigus vulgaris (basal cells remain attached to BMZ)
+
+## Q6: Nikolsky Sign
+**Q: What is the Nikolsky sign, and what does a positive result indicate?**
+A: Gentle rubbing of skin causes epidermis to separate; positive indicates loss of keratinocyte-to-keratinocyte adhesion (acantholysis)
+
+## Q7: Bullous Pemphigoid Characteristics
+**Q: What are the key clinical characteristics of bullous pemphigoid?**
+A: Tense (firm) bullae, negative Nikolsky sign, subepidermal blister location, rare oral involvement, older patients (>60 yrs)
+
+## Q8: Target Antigens Bullous Pemphigoid
+**Q: What are the target antigens in bullous pemphigoid?**
+A: BP180 (transmembrane hemidesmosmal component) and BP230 (intracellular plakin protein)
+
+## Q9: Hemidesmosomes Function
+**Q: What are hemidesmosomes, and what is their function?**
+A: Anchoring junctions connecting basal keratinocytes to basement membrane zone via integrin-collagen interactions; provide mechanical attachment
+
+## Q10: DIF Patterns
+**Q: What are the direct immunofluorescence patterns in pemphigus and bullous pemphigoid?**
+A: Pemphigus = intercellular IgG pattern (surface of keratinocytes); Bullous pemphigoid = linear IgG at basement membrane zone
+
+## Q11: Corticosteroid Dosing
+**Q: What is the typical starting dose of systemic corticosteroids for pemphigus vulgaris?**
+A: Prednisone 0.5-1.5 mg/kg/day; higher doses often needed than in bullous pemphigoid
+
+## Q12: Steroid-Sparing Agents
+**Q: Name three corticosteroid-sparing agents used in pemphigus management.**
+A: Azathioprine (1-2 mg/kg/day), Mycophenolate mofetil (1-3 g/day), Cyclosporine (3-5 mg/kg/day)
+
+## Q13: Rituximab Indication
+**Q: When is rituximab indicated in pemphigus management?**
+A: For severe, refractory pemphigus that fails conventional therapy; anti-B cell monoclonal antibody targeting CD20
+
+## Q14: Malignancy Association
+**Q: What is the association between bullous pemphigoid and internal malignancy?**
+A: 10-15% of bullous pemphigoid patients have underlying malignancy; screen all patients >60 years
+
+## Q15: Serology Interpretation
+**Q: Interpret serology: Anti-Dsg3 positive, Anti-Dsg1 negative.**
+A: Mucosal-dominant pemphigus vulgaris; localized to oral mucosa; may progress to include skin involvement`,
+        mnemonics: [
+          { text: "PEMPHIGUS = Flaccid + Nikolsky +ve + Intraepidermal + Desmoglein IgG", explanation: "Complete diagnostic picture" },
+          { text: "BULLOUS PEMPHIGOID = Tense + Nikolsky -ve + Subepidermal + Hemidesmosomes IgG", explanation: "Complete diagnostic picture" },
+          { text: "Dsg3 = Mucosal; Dsg1 = Skin; Dsg3+Dsg1 = Both", explanation: "Serology-clinical correlation" }
+        ],
+        keyPoints: [
+          "Pemphigus: intraepidermal acantholysis; antibodies against desmoglein (cell-cell adhesion)",
+          "Pemphigus vulgaris: 90% oral involvement (mucosal erosions)",
+          "Pemphigus foliaceus: NO oral involvement; only anti-Dsg1",
+          "Bullous pemphigoid: subepidermal blister; antibodies against hemidesmosomes",
+          "Nikolsky sign: positive in pemphigus (cell adhesion loss); negative in bullous pemphigoid",
+          "DIF: intercellular in pemphigus; linear at BMZ in bullous pemphigoid",
+          "Systemic corticosteroids: first-line treatment for both",
+          "Rituximab: effective for refractory pemphigus",
+          "Bullous pemphigoid: malignancy screening in older patients (10-15% association)",
+          "Dsg3 alone = mucosal-dominant (may progress); Dsg1+Dsg3 = mucocutaneous"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "15 - Autoimmune Bullous Disorders", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Bullous Disorders", edition: "20th" }
+        ],
+      },
+    ],
+  },
 ];

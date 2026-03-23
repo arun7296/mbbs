@@ -1,20 +1,408 @@
-export const dermatologyPart3Lessons = [
-  // DR-MOD-02-TOP-02: Bacterial Skin Infections
+import type { TopicLessons } from "./content-loader";
+
+export const dermatologyPart3Lessons: TopicLessons[] = [
   {
     topicCode: "DR-MOD-02-TOP-02",
     layers: [
       {
         layer: 1,
-        slug: "bacterial-infections-foundation",
+        slug: "bacterial-infections-layer-1-foundation",
         title: "Bacterial Skin Infections - Foundation",
         estimatedMinutes: 25,
-        summary: "Classification of bacterial skin infections, common causative organisms, clinical presentation of pyoderma, impetigo, cellulitis, and furuncles.",
-        contentMd: "# Bacterial Skin Infections - Foundation\n\n## Classification of Bacterial Skin Infections\n\n**Superficial infections** (epidermis/dermis boundary):\n- Impetigo (streptococcal/staphylococcal)\n- Erythrasma (Corynebacterium minutissimum)\n- Pseudomonas folliculitis\n\n**Folliculitis & adnexal infections**:\n- Folliculitis (Staphylococcus aureus)\n- Furuncle (boil, walled-off folliculitis)\n- Carbuncle (multiple connected furuncles)\n\n**Deeper infections**:\n- Cellulitis (acute, spreading, no collection)\n- Abscess (localized collection with fluctuance)\n- Erysipelas (superficial lymphatic involvement)\n\n## Impetigo\n**Definition**: Most common superficial bacterial skin infection in children\n**Incidence**: 1% of children in developed countries; 16% in tropical countries like India\n\n**Types**:\n1. **Non-bullous** (70%, most common):\n   - Golden-yellow crusts on erythematous base\n   - Honey-colored appearance\n   - Common sites: Face, extremities, areas of trauma\n   - Agent: S. aureus (60%), S. pyogenes (40%)\n\n2. **Bullous** (30%):\n   - Flaccid blisters on erythematous base\n   - Blisters rupture easily → erosions with crust\n   - Exfoliative toxin-producing S. aureus (phage group 71, 55)\n   - More common in neonates/infants\n\n**Clinical features**:\n- Starts at minor trauma/insect bites\n- Lesions: Painless, itchy, crusted\n- Regional lymphadenopathy: Common\n- Systemic symptoms: Absent (unlike cellulitis)\n\n**Complications**:\n- Post-streptococcal glomerulonephritis (pyoderma-related, 1-5%)\n- Rheumatic fever (rare from pyoderma; high from pharyngitis)\n- Cellulitis (if untreated)\n\n## Folliculitis & Furuncles\n**Folliculitis**:\n- Inflammation of hair follicles with pustules\n- Causative: S. aureus (most common), Pseudomonas aeruginosa (hot tub), Gram-negative rods\n- Sites: Beard area (barber's itch), scalp, thighs (friction)\n- Systemic symptoms: None\n\n**Furuncle (Boil)**:\n- Walled-off abscess involving follicle and surrounding tissue\n- Causative: S. aureus (especially MRSA strains in hospital settings)\n- Clinical: Central pustule with surrounding erythema/edema; painful, indurated\n- Natural history: Pustule ruptures spontaneously, drains pus, heals in 1-2 weeks\n- Sites: Common in buttocks, groin, axilla\n\n**Carbuncle**:\n- Multiple interconnecting furuncles\n- Deeper, more extensive, systemic symptoms (fever, malaise)\n- Higher risk of bacteremia\n- Sites: Nape of neck, upper back, thighs\n\n## Cellulitis & Erysipelas\n**Cellulitis**:\n- Acute, spreading, edematous, non-suppurative infection\n- Causative: S. aureus, S. pyogenes (β-hemolytic streptococci)\n- Features: Ill-defined borders, no central fluctuance, warm/tender/erythematous\n- Systemic: Fever (>38.5°C), malaise, chills\n- Sites: Lower extremities (70%), face, arms\n- Risk factors: Lymphedema, diabetes, cirrhosis, immunosuppression\n\n**Erysipelas**:\n- Superficial cellulitis with lymphatic involvement\n- Causative: S. pyogenes only (Group A Streptococcus)\n- Features: Well-demarcated borders, raised edematous plaques, shiny appearance\n- Systemic: High fever (39-40°C), severe systemic symptoms\n- Sites: Face (butterfly distribution), lower legs\n- Recurrence: 30% (chronic lymphedema predisposes)\n\n## Causative Organisms\n**Gram-positive**:\n- S. aureus: Most common (including MRSA)\n- S. pyogenes (Group A Strep): Impetigo, erysipelas\n- Corynebacterium minutissimum: Erythrasma\n\n**Gram-negative** (aquatic environments):\n- Pseudomonas aeruginosa: Hot tub folliculitis, wound infections\n- Aeromonas, Vibrio: Marine injuries,\n        mnemonics: [\n          { text: \"Impetigo: 70% non-bullous (golden crusts), 30% bullous (flaccid blisters)\", explanation: \"Types and morphology\" },\n          { text: \"Furuncle = S. aureus abscess, Erysipelas = S. pyogenes superficial (well-demarcated)\", explanation: \"Key organisms and features\" },\n          { text: \"Cellulitis: Ill-defined edges, no pus; Erysipelas: Well-defined, shiny, high fever\", explanation: \"Clinical distinction\" },\n          { text: \"Pyoderma-related GN risk: 1-5% post-impetigo (S. pyogenes strains)\", explanation: \"Important complication\" }\n        ],\n        keyPoints: [\n          \"Impetigo most common superficial bacterial infection in children (16% incidence in tropics)\",\n          \"Non-bullous impetigo (golden crusts) accounts for 70% of cases\",\n          \"S. aureus now major cause of impetigo (not just S. pyogenes)\",\n          \"Furuncles are walled-off abscesses; carbuncles are multiple connected furuncles\",\n          \"Cellulitis has ill-defined borders; erysipelas has well-demarcated borders and high fever\",\n          \"Erysipelas caused by S. pyogenes only; higher recurrence risk than cellulitis\"\n        ],\n        textbookRefs: [\n          { book: \"Fitzpatrick's Dermatology\", chapter: \"Bacterial Infections of Skin\", edition: \"9th\" },\n          { book: \"IADVL Textbook\", chapter: \"Pyodermas\", edition: \"5th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"bacterial-infections-mechanism\",\n        title: \"Bacterial Skin Infections - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathogenesis of bacterial infections, virulence factors, immune response, antibiotic resistance mechanisms, and progression from folliculitis to deeper infections.\",\n        contentMd: "# Bacterial Skin Infections - Mechanism\\n\\n## Skin as Barrier & Infection Entry\\n**Normal defense**:\\n- Skin pH (4.5-5.5): Inhibits bacterial growth\\n- Normal flora (Corynebacterium, Propionibacterium): Competitive inhibition\\n- Lipid barrier: Contains free fatty acids (bacteriostatic)\\n- Immune: Langerhans cells, commensal microbiota-derived antimicrobial peptides\\n\\n**Breaches enabling infection**:\\n- Trauma: Scratches, insect bites, surgical wounds\\n- Disrupted barrier: Eczema, dermatitis, ichthyosis\\n- Immunosuppression: HIV, chemotherapy, biologics\\n- Colonization: MRSA carriage (nares, skin folds)\\n\\n## Virulence Factors of S. aureus\\n**Adhesins**:\\n- Fibrinogen-binding proteins: Fibronectin-binding adhesin (FnbA, FnbB)\\n- Clumping factor (ClsA): Binds fibrinogen/fibrin\\n- Enable biofilm formation on skin\\n\\n**Exotoxins**:\\n- **α-toxin**: Pore-forming toxin, kills neutrophils, causes necrosis\\n- **Exfoliative toxins (ETA, ETB)**: Protease that cleaves desmoglein-1 → bullous impetigo\\n- **Enterotoxins**: Superantigens, trigger massive T-cell activation\\n\\n**Enzymes**:\\n- **Hyaluronidase**: Dissolves hyaluronic acid (skin matrix), spreads infection\\n- **Lipases**: Degrade skin lipids, disrupts barrier\\n- **Serine proteases**: Degrade fibronectin, immunoglobulins\\n\\n**Biofilm formation**:\\n- Polysaccharide capsule protects from antibiotics/immune attack\\n- In chronic furuncles/pilonidal disease\\n\\n## S. pyogenes (Group A Streptococcus) Virulence\\n**M protein**:\\n- Mimics human tropomyosin (molecular mimicry)\\n- Prevents opsonization, inhibits complement\\n- Basis for post-streptococcal sequelae (RF, GN)\\n\\n**Hyaluronidase & protease**:\\n- Spread infection laterally (erysipelas, cellulitis)\\n- Degrade skin matrix\\n\\n**Streptolysins**:\\n- O: Oxygen-labile, intracellular\\n- S: Oxygen-stable, extracellular\\n- Cause hemolysis, tissue necrosis\\n\\n## Progression from Superficial to Deep Infection\\n**Impetigo** (epidermis):\\n- Organisms colonize at minor trauma\\n- Exotoxins damage tight junctions\\n- Spongiosis develops (fluid between cells)\\n- Pustule forms, then crusts\\n\\n**Folliculitis** (follicle):\\n- S. aureus infection of follicular epithelium\\n- Localized inflammation and pustule formation\\n- Usually resolves without antibiotic if drained\\n\\n**Furuncle** (dermis, subcutis):\\n- Progression when folliculitis walled off by fibrin\\n- Central pustule with surrounding erythema\\n- Abscess formation (collection of pus)\\n- Natural drainage or requires incision and drainage (I&D)\\n\\n**Carbuncle/Cellulitis** (spreading):\\n- Multiple furuncles coalesce → carbuncle\\n- Or folliculitis spreads laterally → cellulitis\\n- Hyaluronidase degrades tissue planes → rapid spread\\n- Systemic inflammation: Fever, chills, systemic cytokine response\\n\\n## Immune Response\\n**Innate immunity**:\\n- Neutrophils: Primary responders (PMNL infiltration in pustule)\\n- Complement activation: C3 deposition, MAC formation (but S. aureus resistant)\\n- Antimicrobial peptides: Cathelicidin (LL-37), β-defensins\\n\\n**Adaptive immunity**:\\n- Th1 response: IFN-γ, IL-2 (enhance phagocytosis)\\n- Antibodies: IgG against M protein, lipoteichoic acid\\n- T-cell mediated: CD8+ killing of infected cells\\n\\n**Host factors favoring infection**:\\n- Diabetes: Hyperglycemia impairs neutrophil migration, oxidative burst\\n- Immunosuppression: Reduced CD4 counts (HIV) → recurrent infections\\n- Lymphedema: ↓ lymphatic clearance, ↑ infection risk\\n\\n## Antibiotic Resistance Mechanisms\\n**β-lactamase production** (S. aureus):\\n- Plasmid-encoded enzyme\\n- Degrades penicillin, amoxicillin\\n- Prevents binding to PBP (penicillin-binding proteins)\\n\\n**MRSA** (Methicillin-Resistant S. aureus):\\n- mecA gene (from mobile genetic element SCCmec)\\n- Altered penicillin-binding protein (PBP2a)\\n- Resistance to all β-lactams\\n\\n**Macrolide resistance** (S. aureus, S. pyogenes):\\n- Ribosomal methylation (ermB gene)\\n- Efflux pumps (msr genes)\\n- Results in cross-resistance to erythromycin, azithromycin,\\n        mnemonics: [\\n          { text: \\\"S. aureus: Exfoliative toxins → bullous, hyaluronidase → spread, biofilms\\\", explanation: \\\"Main virulence factors\\\" },\\n          { text: \\\"S. pyogenes: M protein (molecular mimicry), hyaluronidase, streptolysins\\\", explanation: \\\"Virulence and post-strep sequelae\\\" },\\n          { text: \\\"Progression: Impetigo (epidermis) → Folliculitis (follicle) → Furuncle (dermis) → Carbuncle/Cellulitis (spread)\\\", explanation: \\\"Infection depth\\\" },\\n          { text: \\\"MRSA: mecA gene → altered PBP2a → β-lactam resistance\\\", explanation: \\\"Mechanism of resistance\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"S. aureus exfoliative toxins cleave desmoglein-1 → bullous impetigo\\\",\\n          \\\"S. pyogenes M protein mimics human tropomyosin → post-streptococcal sequelae (RF, GN)\\\",\\n          \\\"Hyaluronidase enables lateral spread of infection (erysipelas, cellulitis)\\\",\\n          \\\"Biofilms protect bacteria from antibiotics and immune attack\\\",\\n          \\\"Diabetes impairs neutrophil function → increased infection risk\\\",\\n          \\\"MRSA resistance via altered PBP2a; β-lactams ineffective\\\",\\n          \\\"Natural immune response: Neutrophils → Th1 → IgG antibodies\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Molecular Basis of Medical Microbiology\\\", chapter: \\\"Staphylococcus and Streptococcus Pathogenesis\\\", edition: \\\"2nd\\\" },\\n          { book: \\\"IADVL Textbook\\\", chapter: \\\"Bacterial Pathogenesis in Skin\\\", edition: \\\"5th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"bacterial-infections-clinical\\\",\\n        title: \\\"Bacterial Skin Infections - Clinical\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Management of impetigo, folliculitis, furuncles, cellulitis, erysipelas, including topical/systemic antibiotics, adjunctive care, and prevention of recurrence.\\\",\\n        contentMd: "# Bacterial Skin Infections - Clinical\\\\n\\\\n## Management by Infection Type\\\\n\\\\n### Impetigo Management\\\\n**Topical antibiotics** (localized, small number of lesions):\\\\n- **Mupirocin ointment**: 2% applied TID × 5-7 days (most effective)\\\\n  - Mechanism: Inhibits isoleucyl-tRNA synthetase\\\\n  - Covers S. aureus and S. pyogenes\\\\n  - Resistance: Emerging (15-20% MRSA resistance in some centers)\\\\n\\\\n- **Bacitracin**: 10,000 units/g TID × 7 days (alternative, less effective)\\\\n- **Neomycin + Bacitracin + Polymyxin B**: Triple antibiotic ointment\\\\n\\\\n**Systemic antibiotics** (extensive, numerous lesions, failed topical):\\\\n- **First-line**:\\\\n  - Cephalexin: 500 mg QID × 5-7 days (covers both organisms)\\\\n  - Amoxicillin-clavulanate: 250-500 mg TID × 5-7 days\\\\n\\\\n- **Alternatives**:\\\\n  - Azithromycin: 500 mg day 1, then 250 mg daily × 4 days (macrolide, covers both)\\\\n  - Erythromycin: 250-500 mg QID × 5-7 days (if penicillin allergy)\\\\n  - Clindamycin: 150-300 mg TID × 5-7 days (if MRSA suspected)\\\\n\\\\n**Adjunctive care**:\\\\n- Wash with soap and water (remove crusts, reduce spread)\\\\n- Soaking with salt water (improves penetration of topical agents)\\\\n- Avoid occlusive dressings\\\\n- Isolate from school/kindergarten (high contagion) until 48 hours antibiotics\\\\n\\\\n**Prevention of recurrence**:\\\\n- Trim nails (prevent trauma/scratching)\\\\n- Avoid picking/scratching lesions\\\\n- Treat minor cuts promptly\\\\n- Hygiene education (especially in endemic areas)\\\\n\\\\n### Folliculitis Management\\\\n**Mild folliculitis**:\\\\n- Topical antibiotics: Mupirocin or clindamycin lotion TID × 5-7 days\\\\n- Keep area clean, avoid occlusion\\\\n- Shaving: Use clean razors, avoid close shaving (trauma predisposes)\\\\n\\\\n**Moderate/Severe folliculitis**:\\\\n- Systemic antibiotics: Cephalexin 500 mg QID or doxycycline 100 mg BD × 7 days\\\\n- Clindamycin if MRSA suspected (increasing prevalence)\\\\n\\\\n**Hot tub folliculitis** (Pseudomonas):\\\\n- Usually self-limited in immunocompetent (resolves in 1-2 weeks)\\\\n- Ciprofloxacin 500 mg BD × 5-7 days if severe/persistent\\\\n- Avoid hot tubs until resolved\\\\n\\\\n### Furuncle & Carbuncle Management\\\\n**Small furuncles** (<1 cm):\\\\n- Topical: Warm compresses QID (increases blood flow, drainage)\\\\n- Mupirocin ointment\\\\n- May resolve spontaneously with pustule drainage\\\\n\\\\n**Larger furuncles** (>1-2 cm, fluctuant):\\\\n- **Incision and drainage (I&D)**: Definitive treatment\\\\n  - Procedure: Local anesthesia, small incision, drain pus, break loculation, gentle probing\\\\n  - Culture if hospitalized/immunocompromised/recurrent\\\\n  - Do NOT forcefully squeeze (risk of bacteremia)\\\\n\\\\n- Systemic antibiotics post-I&D: Cephalexin or clindamycin × 7 days\\\\n\\\\n**Carbuncles**:\\\\n- Require I&D (multiple pockets need drainage)\\\\n- Systemic antibiotics mandatory: Cephalexin 500 mg QID or clindamycin 150-300 mg TID × 7-10 days\\\\n- Hospitalization if: Fever, cellulitis, immunocompromised, face/scalp (risk of cavernous sinus thrombosis)\\\\n\\\\n**Adjunctive care**:\\\\n- Warm compresses accelerate drainage\\\\n- Avoid squeezing (introduces bacteria)\\\\n- Pain management: Topical lidocaine, paracetamol\\\\n- Anti-staphylococcal hygiene: Regular bathing, clean clothes\\\\n\\\\n### Cellulitis Management\\\\n**Assessment**:\\\\n- Define margins (mark with pen, date for progression assessment)\\\\n- Check for systemic symptoms (fever, chills, hypotension = bacteremia risk)\\\\n- Check for portal of entry (cut, insect bite, athlete's foot)\\\\n- Assess risk factors (diabetes, immunosuppression, lymphedema)\\\\n\\\\n**Systemic antibiotics** (mandatory):\\\\n- **First-line**:\\\\n  - Cephalexin: 500 mg QID × 7-10 days (covers S. aureus, S. pyogenes)\\\\n  - Amoxicillin-clavulanate: 500 mg TID × 7-10 days\\\\n\\\\n- **If MRSA suspected** (recent hospitalization, IV drug use, MRSA contact):\\\\n  - Clindamycin: 150-300 mg QID × 7-10 days\\\\n  - Doxycycline: 100 mg BD × 7-10 days\\\\n\\\\n- **Severe/Hospitalized**:\\\\n  - IV Cefazolin: 1 g QID (or ceftriaxone)\\\\n  - IV Cloxacillin: 500 mg QID if MRSA risk\\\\n\\\\n**Adjunctive care**:\\\\n- Elevation of affected limb (reduce edema)\\\\n- NSAIDs: Diclofenac 50 mg BD (pain, inflammation)\\\\n- Cool compresses for comfort\\\\n- Address portal of entry (treat athlete's foot, heal cracks)\\\\n\\\\n**Follow-up**:\\\\n- Reassess after 48 hours: Erythema should stabilize/improve\\\\n- If worsening despite antibiotics: Consider abscess formation (needs I&D), resistant organism (change antibiotic)\\\\n- Mark and date margins of erythema for objective assessment\\\\n\\\\n### Erysipelas Management\\\\n**Similar to cellulitis**, but S. pyogenes-specific:\\\\n- **First-line antibiotics**:\\\\n  - Penicillin V: 500 mg QID × 7-10 days (choice agent for Group A Strep)\\\\n  - Cephalexin: 500 mg QID × 7-10 days (if β-lactam allergy)\\\\n  - Erythromycin: 250-500 mg QID × 7-10 days (if penicillin allergy)\\\\n\\\\n- **Severe/Hospitalized**:\\\\n  - IV Penicillin G: 2-4 million units QID\\\\n  - IV Cefazolin: 1-2 g QID\\\\n\\\\n**Prevention of recurrence**:\\\\n- Prophylactic antibiotics (controversial but used):\\\\n  - Benzyl penicillin G 1.2 million units IM monthly (if recurrent erysipelas)\\\\n  - Oral penicillin V 250 mg BD long-term\\\\n- Compression stocking: Reduce lymphedema (risk factor)\\\\n- Manage underlying lymphedema: Massage, elevation\\\\n\\\\n## Drug Resistance & Surveillance\\\\n**MRSA prevalence** (India):\\\\n- Community-associated MRSA (CA-MRSA): Increasing (20-30% of S. aureus in some regions)\\\\n- Hospital-associated MRSA (HA-MRSA): 40-60% of S. aureus in hospitals\\\\n\\\\n**Antibiotic stewardship**:\\\\n- Use topical antibiotics first (impetigo, folliculitis)\\\\n- Limit fluoroquinolones (resistance development, side effects)\\\\n- Culture when: Hospitalized, MRSA suspected, recurring infections,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Impetigo: Topical mupirocin (localized); systemic cephalexin (extensive)\\\\\\\", explanation: \\\\\\\"Treatment approach\\\\\\\" },\\\\n          { text: \\\\\\\"Furuncle: Warm compress + I&D (if >1-2cm); antibiotics × 7 days\\\\\\\", explanation: \\\\\\\"Management\\\\\\\" },\\\\n          { text: \\\\\\\"Cellulitis: Mark margins, elevate limb, systemic antibiotics × 7-10 days, reassess 48h\\\\\\\", explanation: \\\\\\\"Clinical approach\\\\\\\" },\\\\n          { text: \\\\\\\"Erysipelas: Penicillin V preferred (Group A Strep); prevent recurrence with prophylaxis\\\\\\\", explanation: \\\\\\\"Treatment\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Topical antibiotics (mupirocin) sufficient for localized impetigo\\\\\\\",\\\\n          \\\\\\\"Systemic antibiotics needed for extensive impetigo or closed lesions\\\\\\\",\\\\n          \\\\\\\"Furuncles: I&D definitive if >1-2 cm with fluctuance\\\\\\\",\\\\n          \\\\\\\"Warm compresses accelerate drainage and pain relief in furuncles\\\\\\\",\\\\n          \\\\\\\"Cellulitis margins should improve by 48 hours with appropriate antibiotics\\\\\\\",\\\\n          \\\\\\\"MRSA surveillance important; consider resistance patterns locally\\\\\\\",\\\\n          \\\\\\\"Erysipelas has higher recurrence (30%); prophylactic antibiotics for recurrent disease\\\\\\\",\\\\n          \\\\\\\"Avoid squeezing furuncles/abscesses (risk of bacteremia, spread)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Fitzpatrick's Dermatology\\\\\\\", chapter: \\\\\\\"Bacterial Infection Management\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"IADVL Textbook\\\\\\\", chapter: \\\\\\\"Treatment of Pyodermas\\\\\\\", edition: \\\\\\\"5th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"bacterial-infections-exam\\\\\\\",\\\\n        title: \\\\\\\"Bacterial Skin Infections - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"NEET/NMC exam patterns: Clinical presentation differentiation, antibiotic selection, complications, and MRSA management.\\\\\\\",\\\\n        contentMd: "# Bacterial Skin Infections - Exam Prep\\\\\\\\n\\\\\\\\n## Clinical Differentiation Table (Exam Questions)\\\\\\\\n\\\\\\\\n| Feature | Impetigo | Folliculitis | Furuncle | Cellulitis | Erysipelas |\\\\\\\\n|---------|----------|-------------|----------|-----------|-----------|\\\\\\\\n| Location | Epidermis | Follicle | Dermis | Dermis/SC | Superficial |\\\\\\\\n| Organism | S. aureus, S. pyogenes | S. aureus | S. aureus | S. aureus, S. pyogenes | S. pyogenes only |\\\\\\\\n| Appearance | Golden crusts (non-bull), flaccid bulla (bull) | Follicular pustule | Central pustule, surrounding erythema | Ill-defined, edematous | Well-demarcated, shiny |\\\\\\\\n| Systemic | No | No | Mild (pain) | Fever, malaise | High fever (39-40°C) |\\\\\\\\n| Drainage | Crust | Pustule | Purulent (I&D) | Cellulitis (no collection) | Cellulitis (no collection) |\\\\\\\\n| Treatment | Topical mupirocin; systemic cephalexin | Topical mupirocin; systemic if severe | Warm compress, I&D, cephalexin | Systemic cephalexin, elevation | Penicillin V, elevation |\\\\\\\\n\\\\\\\\n## Antibiotic Selection Algorithms\\\\\\\\n\\\\\\\\n**First-line for S. aureus (non-MRSA)**:\\\\\\\\n- Oral: Cephalexin 500 mg QID, Amoxicillin-clavulanate 500 mg TID\\\\\\\\n- IV: Cefazolin 1 g QID, Cloxacillin 500 mg QID\\\\\\\\n\\\\\\\\n**If MRSA suspected/confirmed**:\\\\\\\\n- Oral: Clindamycin 150-300 mg QID, Doxycycline 100 mg BD\\\\\\\\n- IV: Vancomycin 1 g QID, Clindamycin 300-600 mg QID\\\\\\\\n\\\\\\\\n**For S. pyogenes (erysipelas, cellulitis)**:\\\\\\\\n- First-line: Penicillin V 500 mg QID\\\\\\\\n- If penicillin allergy: Cephalexin (cross-reactivity <2%), Erythromycin\\\\\\\\n\\\\\\\\n## Complications Recognition (Exam)\\\\\\\\n\\\\\\\\n**Impetigo complications**:\\\\\\\\n- Post-streptococcal glomerulonephritis (PSGN): 1-5% (pyoderma strain 49, 57, 60)\\\\\\\\n- Rheumatic fever: Rare from skin infection\\\\\\\\n- Cellulitis: If untreated, bacteria spread to dermis\\\\\\\\n\\\\\\\\n**Furuncle/Carbuncle complications**:\\\\\\\\n- Bacteremia: Risk if squeezed or on face (cavernous sinus connection)\\\\\\\\n- Cavernous sinus thrombosis: Furunculosis of face → ophthalmoplegia, fever, death (rare)\\\\\\\\n\\\\\\\\n**Cellulitis complications**:\\\\\\\\n- Abscess formation: If not improving on antibiotics by 48 hours → I&D needed\\\\\\\\n- Bacteremia/sepsis: If untreated or immunocompromised\\\\\\\\n- Lymphangitis: Spread along lymphatic vessels (red streaking)\\\\\\\\n\\\\\\\\n**Erysipelas complications**:\\\\\\\\n- Recurrence: 30% (due to chronic lymphedema)\\\\\\\\n- Cellulitis: If not treated adequately\\\\\\\\n\\\\\\\\n## Exam-Style Questions\\\\\\\\n\\\\\\\\n**Q: A 4-year-old with golden crusts on face + regional lymphadenopathy. Most likely organism?**\\\\\\\\nA: S. aureus (60% of non-bullous impetigo). Non-bullous form (70% of impetigo) presents with golden-yellow crusts. Treatment: Topical mupirocin 2% TID × 5-7 days. Regional lymphadenopathy is common despite no systemic symptoms.\\\\\\\\n\\\\\\\\n**Q: A 25-year-old with firm, tender nodule on buttock with central pustule. Optimal management?**\\\\\\\\nA: Furuncle (S. aureus abscess). Since >1-2 cm and has pustule, I&D indicated. Treatment: (1) Incision and drainage under local anesthesia; (2) Cephalexin 500 mg QID × 7 days; (3) Warm compresses × 10 min QID. Avoid squeezing (bacteremia risk).\\\\\\\\n\\\\\\\\n**Q: Cellulitis at lower leg, margins marked \\\\\\\\\\\\\\\"X\\\\\\\\\\\\\\\" at initial visit. 48 hours later despite antibiotics, erythema extends beyond X. What changed?**\\\\\\\\nA: Worsening cellulitis despite appropriate antibiotics suggests: (1) Abscess formation (needs I&D), (2) Resistant organism (consider MRSA, switch to clindamycin/doxycycline), or (3) Wrong diagnosis. Switch antibiotic and consider imaging (ultrasound) to rule out abscess.\\\\\\\\n\\\\\\\\n**Q: A patient with recurrent erysipelas of leg (3 episodes in 1 year). Underlying risk?**\\\\\\\\nA: Chronic lymphedema. Erysipelas has 30% recurrence, especially with lymphedema. Prevention: (1) Prophylactic penicillin V 250 mg BD; (2) Compression stockings; (3) Address underlying lymphedema. Consider benzyl penicillin IM monthly if recurrent.\\\\\\\\n\\\\\\\\n## Public Health Aspects (India)\\\\\\\\n- **Impetigo prevalence**: 16% in children (tropical climates), associated with poverty, poor hygiene\\\\\\\\n- **MRSA burden**: Growing (CA-MRSA increasing in community settings)\\\\\\\\n- **Prevention**: Health education on hand hygiene, wound care, avoiding skin-to-skin contact\\\\\\\\n- **Cost-effective**: Topical antibiotics reduce antibiotic burden vs systemic,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Golden crusts (non-bullous 70%) = impetigo; Flaccid bulla (bullous 30%) = bullous impetigo\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Impetigo types\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Furuncle > 1-2cm with fluctuance = I&D; <1cm = warm compress + topical\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"I&D indication\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Cellulitis: Ill-defined margins, S. aureus + S. pyogenes; Erysipelas: Well-defined, S. pyogenes only\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Key difference\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"MRSA suspected = Clindamycin or doxycycline (not cephalexin)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Resistance management\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Non-bullous impetigo (70%) most common; golden-yellow crusts\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Bullous impetigo (30%) due to exfoliative toxins; flaccid blisters\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Regional lymphadenopathy common in impetigo despite no systemic symptoms\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Furuncles <1 cm treat conservatively; >1-2 cm require I&D\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Cellulitis margins should improve by 48 hours with antibiotics\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Erysipelas = S. pyogenes ONLY; penicillin V preferred\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"MRSA now causes 20-30% CA-MRSA infections in many regions\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Post-streptococcal GN complication: 1-5% of impetigo (pyoderma strain)\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"NMC Standard Textbook\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Bacterial Skin Infections\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2024\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IADVL Quick Guide\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Pyodermas: Diagnosis and Treatment\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2023\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"bacterial-infections-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Bacterial Skin Infections - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"8 targeted Q&A on impetigo diagnosis, furuncle management, cellulitis treatment, erysipelas, and MRSA resistance.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Bacterial Skin Infections - Active Recall\\\\\\\\n\\\\\\\\n## Questions & Answers\\\\\\\\n\\\\\\\\n**Q1: A 5-year-old has multiple lesions with golden-yellow crusts on face and arms. Systemic symptoms: none. Most likely diagnosis?**\\\\\\\\nA: Non-bullous impetigo (most common form, 70% of cases). Golden-yellow crusts are pathognomonic. Causative: S. aureus (60%) or S. pyogenes (40%). Absence of systemic symptoms typical (unlike cellulitis). Regional lymphadenopathy expected despite no fever. Management: Topical mupirocin 2% TID × 5-7 days (first-line). Systemic antibiotics (cephalexin 500 mg QID × 5-7 days) if extensive or failed topical.\\\\\\\\n\\\\\\\\n**Q2: What is the key difference between impetigo and folliculitis in terms of depth and presentation?**\\\\\\\\nA: Impetigo: Superficial, at epidermis/skin surface. Appears as golden crusts (non-bullous) or flaccid blisters (bullous). Folliculitis: Centered on hair follicle. Appears as follicular pustules. Both are relatively superficial, but folliculitis specifically involves follicular apparatus. Folliculitis usually self-limited if drained; impetigo contagious until treated. Impetigo more common in children; folliculitis any age.\\\\\\\\n\\\\\\\\n**Q3: A 30-year-old male has a tender, firm nodule on his buttock (3 cm) with central pustule and surrounding erythema. He asks if he needs antibiotics. What is optimal management?**\\\\\\\\nA: This is a furuncle (S. aureus abscess). Size >1-2 cm with fluctuance warrants incision and drainage (I&D). Procedure: Local anesthesia, small incision, drain pus, break loculation gently. Systemic antibiotic: Cephalexin 500 mg QID × 7 days. Adjunctive: Warm compresses × 10 min QID (increase blood flow, drainage). Do NOT squeeze (bacteremia risk). Avoid occlusive dressings. Should improve within 5-7 days.\\\\\\\\n\\\\\\\\n**Q4: A 22-year-old has erythema and edema of entire lower leg with ill-defined borders, fever 38.8°C, and pain. Systemic symptoms: chills, malaise. What is this and initial management?**\\\\\\\\nA: Cellulitis (spreading, edematous, non-suppurative infection). Caused by S. aureus or S. pyogenes. Management: (1) Mark borders with pen and date (objective progression assessment); (2) Elevation of affected leg (reduce edema); (3) Systemic antibiotics: Cephalexin 500 mg QID × 7-10 days (covers both organisms); (4) NSAIDs: Diclofenac 50 mg BD (pain, inflammation); (5) Reassess at 48 hours—erythema should stabilize/improve. If worsening, consider abscess (needs I&D), resistance (change antibiotic), or wrong diagnosis.\\\\\\\\n\\\\\\\\n**Q5: What is the clinical difference between cellulitis and erysipelas?**\\\\\\\\nA: **Cellulitis**: Ill-defined borders, caused by S. aureus or S. pyogenes, systemic symptoms mild-moderate (fever ~38-38.5°C). **Erysipelas**: Well-demarcated raised borders, shiny appearance, caused by S. pyogenes ONLY, systemic symptoms severe (fever 39-40°C, chills, malaise). Erysipelas more likely on face (butterfly distribution) and legs; higher recurrence risk (30%, especially with lymphedema). Treatment similar but penicillin V preferred for erysipelas (Group A Strep).\\\\\\\\n\\\\\\\\n**Q6: A patient with recurrent cellulitis of lower leg (2 episodes in 1 year). What underlying condition should you investigate?**\\\\\\\\nA: Chronic lymphedema (most common cause of recurrent cellulitis). Other risk factors: Diabetes, venous insufficiency, obesity, immobility. Evaluation: (1) Check for history of lymphadenectomy, radiation, DVT; (2) Assess for pitting edema, skin thickening, hyperpigmentation; (3) Leg circumference measurement (compare sides); (4) Ultrasound if DVT suspected. Prevention: (1) Compression stockings; (2) Leg elevation; (3) Prophylactic antibiotics (controversial); (4) Lymphatic massage if available; (5) Prompt treatment of skin breaks/athlete's foot (prevent entry).\\\\\\\\n\\\\\\\\n**Q7: A 35-year-old with recurrent furunculosis (4 episodes in 6 months) is found to be MRSA-positive on nasal swab. What is causing the recurrence and how to prevent?**\\\\\\\\nA: MRSA carriage (nasal colonization) → recurrent skin infections. Mechanism: MRSA on skin → minor trauma/folliculitis → boil/abscess. Prevention: (1) Nasal mupirocin 2% BID × 5-7 days (eradicate nasal carriage); (2) Body wash with chlorhexidine daily (reduce skin colonization); (3) Hygiene: Clean hands, avoid sharing towels/razors, wash clothes separately; (4) Drain any boils (I&D); (5) Treatment of active infections: Clindamycin or doxycycline (MRSA coverage, not cephalexin). Recurrence common (30-50%) if carriage not eradicated.\\\\\\\\n\\\\\\\\n**Q8: A child with impetigo has renal symptoms (hematuria, edema) 4 weeks after treatment. What complication occurred and what is the underlying organism?**\\\\\\\\nA: Post-streptococcal glomerulonephritis (PSGN). Occurs in 1-5% of children with pyoderma (higher risk than pharyngitis). Usually S. pyogenes with nephritogenic strains (type 49, 57, 60). Latency: 10-21 days (median 3 weeks from skin infection). Presentation: Hematuria, proteinuria, edema, hypertension, ↑ creatinine. Management: (1) Supportive care (fluids, antihypertensive if needed); (2) No specific therapy (unlike post-pharyngitis GN); (3) Prognosis: Usually complete recovery in children; <5% progress to chronic kidney disease. Long-term: Annual urinalysis × 1-2 years to document resolution.\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-}
-}
-];
-];
-];
+        summary: "Overview of common bacterial skin infections including impetigo, cellulitis, and skin structure involvement.",
+        contentMd: `# Bacterial Skin Infections - Foundation
+
+## Impetigo
+### Characteristics
+- **Definition**: Non-bullous and bullous forms of superficial bacterial skin infection
+- **Common organisms**: Staphylococcus aureus (most common, 60-80%), Streptococcus pyogenes (GAS)
+- **Age group**: Children 2-6 years; can occur at any age
+- **MRSA prevalence**: Increasing in community-acquired infections
+
+### Non-Bullous Impetigo (60-70%)
+- **Presentation**: Pustules on erythematous base progressing to crusted lesions
+- **Golden crusts**: Characteristic honey-colored crusts on face, limbs
+- **Distribution**: Face (most common), lips, lower legs, sites of minor trauma
+- **Contagious**: Highly contagious; spread by contact
+
+### Bullous Impetigo
+- **Presentation**: Flaccid bullae leading to erosions and crusting
+- **Exotoxin**: Exfoliative toxins (ETA, ETB) from S. aureus cause blister
+- **Bulla location**: Subcorneal (superficial), ruptures easily
+- **Bullae fluid**: Clear to turbid, non-purulent initially
+
+### Complications
+- **Local**: Autoinoculation spreading to other body sites
+- **Systemic**: Post-streptococcal glomerulonephritis (especially M protein types 2, 49, 60)
+- **Scarring**: Usually minimal unless bullous with deep erosions
+
+## Cellulitis
+### Characteristics
+- **Definition**: Acute, spreading, purulent inflammation of dermis and subcutaneous tissue
+- **Common organisms**: S. pyogenes (GAS), S. aureus; Gram-negative bacteria less common
+- **Predisposing factors**: Lymphedema, venous insufficiency, obesity, immunosuppression
+
+### Clinical Features
+- **Presentation**: Erythema, edema, warmth, pain; no distinct borders (diffuse)
+- **Distribution**: Usually unilateral (one leg); lower extremities most common
+- **Systemic signs**: Fever, chills, malaise, lymphadenopathy
+- **Progression**: Spreads rapidly; can lead to abscess formation
+
+### Differential from Erysipelas
+- **Cellulitis**: Diffuse borders, deeper involvement (dermis/subcutis), non-suppurative usually
+- **Erysipelas**: Well-demarcated borders, superficial (dermis/superficial lymphatics), may have fluid-filled bullae
+
+## Folliculitis
+### Types
+- **Superficial folliculitis**: Involves hair follicle infundibulum; common with S. aureus, pseudomonas
+- **Deep folliculitis (furuncle)**: Involves entire hair follicle; forms painful nodule with central pus
+- **Carbuncle**: Multiple interconnected furuncles involving deep dermis/subcutis
+
+### Pseudomonas Folliculitis ("Hot Tub Folliculitis")
+- **Risk factor**: Exposure to contaminated water (hot tubs, whirlpools)
+- **Presentation**: Pustules on torso, neck, extremities within 48 hours of exposure
+- **Self-limited**: Usually resolves without treatment in 7-10 days
+
+## Erythrasma
+### Characteristics
+- **Organism**: Corynebacterium minutissimum
+- **Presentation**: Non-itchy, scaly patch, reddish-brown (maceration in skin folds)
+- **Distribution**: Inframammary, groin, web spaces, axillae
+- **Wood's lamp**: Pathognomonic coral-red fluorescence (porphyrin production)`,
+        mnemonics: [
+          { text: "Golden crusts = Impetigo (honey-colored, contagious)", explanation: "Characteristic presentation" },
+          { text: "Bullae subcorneal = Bullous impetigo (exotoxin-mediated)", explanation: "Location of bulla formation" },
+          { text: "Cellulitis = Diffuse, no borders; Erysipelas = Well-demarcated, superficial", explanation: "Differential diagnosis" },
+          { text: "Coral-red fluorescence = Erythrasma (C. minutissimum)", explanation: "Wood's lamp finding" }
+        ],
+        keyPoints: [
+          "Impetigo most common in children; golden crusts are pathognomonic",
+          "S. aureus most common cause; MRSA prevalence increasing",
+          "Bullous impetigo caused by exfoliative toxins (ETA, ETB)",
+          "Cellulitis: diffuse borders, deeper involvement, fever/systemic signs",
+          "Erysipelas: well-demarcated borders, superficial, painful",
+          "Post-streptococcal glomerulonephritis associated with impetigo",
+          "Folliculitis: superficial vs deep (furuncle); carbuncle = multiple furuncles",
+          "Erythrasma: coral-red with Wood's lamp; non-itchy patch in skin folds"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "9 - Bacterial Infections", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Bacterial Infections", edition: "20th" }
+        ],
+      },
+      {
+        layer: 2,
+        slug: "bacterial-infections-layer-2-mechanism",
+        title: "Bacterial Skin Infections - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pathogenesis of bacterial skin infections, virulence factors, and immune mechanisms.",
+        contentMd: `# Bacterial Skin Infections - Mechanism
+
+## Staphylococcus aureus Virulence
+- **Adhesion**: Protein A binds Fc region of IgG; clumping factor binds fibrinogen; fibronectin-binding proteins
+- **Toxins**: Alpha-toxin (pore-forming), Exfoliative toxins (ETA/ETB = serine proteases targeting desmoglein-1)
+- **Enzymes**: Hyaluronidase (spreads infection), lipases, proteases, collagenase
+- **Biofilm formation**: Polysaccharide capsule (PIA/PNAG); resistant to antibiotics and immune cells
+- **Panton-Valentine Leukocidin (PVL)**: Exotoxin killing neutrophils and macrophages
+
+## Streptococcus pyogenes (GAS) Virulence
+- **Hyaluronic acid capsule**: Mimics host connective tissue; molecular mimicry evades immune response
+- **M protein**: Major virulence factor; prevents complement deposition and opsonization
+- **Streptokinase**: Fibrinolytic enzyme; dissolves fibrin clots, spreads infection
+- **Hyaluronidase**: "Spreading factor"; breaks down hyaluronic acid in connective tissue
+- **Exotoxins**: Streptococcal pyrogenic exotoxins (SPE A, B, C); trigger superantigen response
+- **Post-infectious sequelae**: M protein cross-reactivity with myosin, tropomyosin, keratin
+
+## Cellulitis Pathogenesis
+- **Breach of skin barrier**: Trauma, surgical wound, dermatitis, lymphedema, obesity
+- **Bacterial entry**: S. pyogenes and S. aureus enter through break in skin
+- **Spreading**: Hyaluronidase and streptokinase promote local spread
+- **Inflammation**: Recruitment of neutrophils; IL-6, TNF-α production
+- **Diffuse borders**: Unlike abscess (localized), cellulitis spreads along tissue planes
+
+## Folliculitis Mechanism
+- **Follicular occlusion**: Sebum accumulation, keratin, poor hygiene
+- **Bacterial colonization**: S. aureus or Pseudomonas proliferation within hair follicle
+- **Inflammation**: Neutrophilic response to bacterial antigens/toxins
+- **Progression**: Superficial → Deep (abscess formation in dermis/subcutis)
+- **Furuncle formation**: Necrosis of follicle with pus pocket; coalescence → carbuncle
+
+## Exfoliative Toxin Mechanism
+- **ETA and ETB**: Serine proteases that cleave desmoglein-1 (cell adhesion protein)
+- **Result**: Loss of cell-to-cell adhesion in stratum granulosum/corneum
+- **Bulla formation**: Subcorneal bulla (superficial) vs pemphigus vulgaris (intraepidermal acantholysis)
+- **Flaccid bullae**: Thin-roofed due to superficial location; rupture easily
+
+## Immunity to Bacterial Infection
+- **Innate immunity**: Antimicrobial peptides (β-defensins, LL-37), lysozyme, normal skin flora
+- **Neutrophils**: Primary defense; PMNL infiltration in cellulitis
+- **Complement**: Activation via alternative pathway; opsonization of bacteria
+- **Adaptive immunity**: Specific antibodies (anti-M protein, anti-toxin) develop post-infection`,
+        mnemonics: [
+          { text: "S. aureus toxins: Alpha, Exfoliative, PVL (kills neutrophils)", explanation: "Key virulence factors" },
+          { text: "S. pyogenes: Hyaluronidase (spreads), Streptokinase (fibrinolysis), M protein (immune evasion)", explanation: "GAS pathogenesis" },
+          { text: "ETA/ETB = Serine proteases cleaving desmoglein-1", explanation: "Mechanism of subcorneal bulla" }
+        ],
+        keyPoints: [
+          "S. aureus M protein and biofilm formation confer antibiotic resistance",
+          "S. pyogenes hyaluronic acid capsule mimics host tissue (molecular mimicry)",
+          "Exfoliative toxins target desmoglein-1 in stratum granulosum",
+          "Cellulitis: diffuse spread due to hyaluronidase and streptokinase",
+          "Folliculitis: occlusion + bacterial proliferation in hair follicle",
+          "Furuncle: abscessed follicle with necrotic core and pus",
+          "Post-streptococcal sequelae: M protein cross-reactivity with host myosin",
+          "Neutrophils critical for immune response to superficial bacterial infections"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "9 - Bacterial Infections", edition: "4th" },
+          { book: "Robbins & Kumar Pathologic Basis of Disease", chapter: "25 - Skin Disorders", edition: "10th" }
+        ],
+      },
+      {
+        layer: 3,
+        slug: "bacterial-infections-layer-3-clinical",
+        title: "Bacterial Skin Infections - Clinical",
+        estimatedMinutes: 35,
+        summary: "Clinical diagnosis, treatment, and management of bacterial skin infections.",
+        contentMd: `# Bacterial Skin Infections - Clinical
+
+## Diagnosis Methods
+- **Clinical diagnosis**: Based on morphology, distribution, and clinical presentation
+- **Gram Stain**: Shows Gram-positive cocci in clusters (S. aureus) or chains (S. pyogenes)
+- **Culture**: Blood agar, selective media; identifies organism and antibiotic susceptibility
+- **Wood's lamp**: Erythrasma shows coral-red fluorescence; folliculitis fluorescens from Pseudomonas
+- **Histopathology**: Neutrophilic infiltration, bacterial clusters, PMN involvement
+
+## Treatment Approaches
+### Impetigo
+- **Non-bullous**: Topical antibiotics (mupirocin) for localized lesions (1-2% of body surface)
+- **Bullous or extensive**: Systemic antibiotics
+  - First-line: Amoxicillin + clavulanic acid, cephalexin, or cloxacillin
+  - MRSA: Clindamycin, TMP-SMX, or fluoroquinolone
+- **Duration**: 5-7 days
+- **Hygiene**: Frequent bathing, trim nails, cover lesions to prevent spread
+
+### Cellulitis
+- **Systemic antibiotics**: Required (cannot use topical for deep infection)
+- **First-line**: Cloxacillin (S. aureus) + Penicillin G (S. pyogenes)
+- **Alternatives**: Cephalexin, amoxicillin-clavulanic acid, fluoroquinolone
+- **MRSA**: Clindamycin, vancomycin, linezolid
+- **Duration**: 7-14 days depending on severity
+- **Adjunctive**: Elevation, ice packs, NSAIDs for inflammation
+- **Monitoring**: Clinical improvement in 48-72 hours; repeat imaging if abscess suspected
+
+### Folliculitis
+- **Superficial**: Topical antibiotics (mupirocin, gentamicin) or antiseptics
+- **Deep (furuncle)**: Oral antibiotics (cloxacillin, cephalexin)
+- **Recurrent**: Investigate for carrier state; nasal mupirocin eradication
+- **Incision and drainage**: For fluctuant lesions
+- **Hot compresses**: Promote drainage and resolution
+
+## Specific Conditions Management
+### Cellulitis Complications
+- **Abscess formation**: Requires incision and drainage
+- **Necrotizing fasciitis**: Life-threatening; requires emergency surgical debridement
+- **Lymphangitis**: Red streaking along lymphatic vessels; indicates systemic spread
+- **Septicemia**: Fever, chills, malaise; blood cultures, broad-spectrum antibiotics
+
+### Folliculitis Management
+- **Pseudomonas (hot tub)**: Usually self-limited; topical antibiotics; chlorine exposure prophylaxis
+- **Recurrent furunculosis**: Culture for MRSA; screen for diabetes, immunosuppression
+- **Carbuncle**: Requires incision/drainage and systemic antibiotics
+
+## Prevention and Public Health
+- **Contact precautions**: Separate towels, avoid sharing fomites
+- **Hygiene**: Hand washing, wound care, nail trimming
+- **Screening**: Post-streptococcal glomerulonephritis screening with urinalysis (hematuria, proteinuria)
+- **Prophylaxis**: Penicillin V for recurrent S. pyogenes infection`,
+        mnemonics: [
+          { text: "Mupirocin = Topical antibiotic for localized impetigo", explanation: "First-line topical" },
+          { text: "Cloxacillin + Penicillin = Cellulitis (S. aureus + GAS)", explanation: "First-line combination" },
+          { text: "MRSA = Clindamycin, TMP-SMX, or Fluoroquinolone", explanation: "Alternative agents" }
+        ],
+        keyPoints: [
+          "Impetigo topical therapy (mupirocin) for localized; systemic for extensive",
+          "Cellulitis requires systemic antibiotics; topical ineffective for deep infection",
+          "Cloxacillin covers S. aureus; penicillin G covers S. pyogenes",
+          "MRSA prevalence increasing; clindamycin alternative for community-acquired",
+          "Furuncle requires incision/drainage plus systemic antibiotics",
+          "Recurrent furunculosis: culture, investigate for diabetes/immunosuppression",
+          "Post-streptococcal glomerulonephritis possible; screen with urinalysis",
+          "Hot compresses promote drainage; good hygiene prevents recurrence"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "9 - Bacterial Infections", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Bacterial Infections", edition: "20th" }
+        ],
+      },
+      {
+        layer: 4,
+        slug: "bacterial-infections-layer-4-exam",
+        title: "Bacterial Skin Infections - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "High-yield facts, differentials, and NEXT-pattern questions for bacterial infections.",
+        contentMd: `# Bacterial Skin Infections - Exam Prep
+
+## High-Yield Exam Facts
+- **Impetigo**: Most common pyoderma in children; golden crusts pathognomonic
+- **S. aureus**: Most common cause of impetigo and skin infections (60-80%)
+- **MRSA**: Increasing prevalence in community-acquired infections; check local patterns
+- **Cellulitis**: Unilateral, diffuse borders, fever/systemic symptoms
+- **Erysipelas**: Well-demarcated borders, superficial, facial involvement common
+- **Erythrasma**: Coral-red with Wood's lamp; C. minutissimum, painless
+
+## Differential Diagnosis
+### Golden Crusts (Impetigo vs Others):
+- **Impetigo**: Golden crusts, non-bullous or bullous, positive Gram stain
+- **Eczema with secondary infection**: Vesicles/excoriations first; lichenification
+- **Psoriasis with infection**: Silvery scale, well-demarcated plaques
+
+### Cellulitis vs Erysipelas:
+- **Cellulitis**: Diffuse borders, involves dermis/subcutis, deeper inflammation
+- **Erysipelas**: Well-demarcated raised borders, superficial dermis, facial involvement
+- **Necrotizing fasciitis**: Pain out of proportion, skin changes (mottled, blister), systemic toxicity
+
+### Folliculitis vs Carbuncle:
+- **Superficial folliculitis**: Small pustules, involve follicle only
+- **Furuncle**: Painful nodule, abscess formation, single follicle
+- **Carbuncle**: Multiple interconnected furuncles, larger, deep dermis/subcutis involvement
+
+## NEXT-Pattern Questions
+### Recall (10%):
+- Q: "Golden crusts on face are characteristic of?" → A: Impetigo
+- Q: "Coral-red fluorescence is seen in?" → A: Erythrasma
+
+### Analysis (30%):
+- Q: "Child with pustules on face and lower legs, contagious to others. Likely diagnosis?" → A: Impetigo (S. aureus, highly contagious)
+- Q: "Patient with unilateral leg cellulitis, fever, diffuse borders. Next step?" → A: Systemic antibiotics (no topical, deep infection)
+
+### Problem-Solving (60%):
+- Q: "30-year-old with cellulitis not improving after 72 hours of cloxacillin. What to consider?" → A: Abscess formation (ultrasound/imaging), MRSA (change to clindamycin), gram-negative organisms
+- Q: "Post-streptococcal complication to screen for in impetigo patient?" → A: Glomerulonephritis (urinalysis for hematuria/proteinuria)
+
+## Clinical Pearls
+- **Bullous impetigo**: Exotoxin-mediated; flaccid bullae (not pemphigus which is intraepidermal)
+- **Hot tub folliculitis**: Pseudomonas, self-limited (7-10 days without treatment)
+- **Necrotizing fasciitis**: Medical emergency; pain out of proportion, rapidly spreading, systemic toxicity
+- **Staphylococcal scalded skin syndrome (SSSS)**: Exfoliative toxin in infants/children; entire skin can slough
+- **Recurrent impetigo**: Screen for carrier state (nasal carriage); eradicate with mupirocin in nares
+
+## Common Mistakes
+- Using topical antibiotics for cellulitis (requires systemic)
+- Not considering MRSA in community-acquired infections
+- Missing erysipelas (superficial) vs cellulitis (deep) distinction
+- Not screening for post-streptococcal glomerulonephritis
+- Forgetting carbuncle can lead to bacteremia`,
+        mnemonics: [
+          { text: "Golden crusts = Impetigo (contagious, common in children)", explanation: "Classic presentation" },
+          { text: "Cellulitis = Diffuse, deep, systemic signs; Erysipelas = Demarcated, superficial", explanation: "Key differential" },
+          { text: "MRSA = Clindamycin or TMP-SMX (adjust from beta-lactam)", explanation: "Antibiotic change" }
+        ],
+        keyPoints: [
+          "Impetigo most common in children; contagious via contact",
+          "S. aureus most common (60-80% of cases)",
+          "Golden/honey-colored crusts are pathognomonic for impetigo",
+          "Bullous impetigo: exotoxin-mediated, flaccid bullae, subcorneal",
+          "Cellulitis: deep infection, diffuse borders, requires systemic antibiotics",
+          "Erysipelas: superficial, well-demarcated, painful, facial involvement",
+          "Post-streptococcal glomerulonephritis: screen with urinalysis",
+          "MRSA prevalence increasing; adjust therapy if no improvement in 72 hours",
+          "Necrotizing fasciitis: emergency; pain out of proportion, rapid spread"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "9 - Bacterial Infections", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Bacterial Infections", edition: "20th" }
+        ],
+      },
+      {
+        layer: 5,
+        slug: "bacterial-infections-layer-5-active-recall",
+        title: "Bacterial Skin Infections - Active Recall",
+        estimatedMinutes: 30,
+        summary: "Flashcard Q&A pairs for bacterial infections diagnosis and management.",
+        contentMd: `# Bacterial Skin Infections - Active Recall Flashcards
+
+## Q1: Impetigo Definition
+**Q: Define impetigo and list its two main clinical variants.**
+A: Superficial pyoderma characterized by golden/honey-colored crusts or flaccid bullae; variants are non-bullous (60-70%) and bullous (30-40%)
+
+## Q2: Common Organisms
+**Q: What are the two most common causative organisms of impetigo?**
+A: Staphylococcus aureus (60-80%, most common) and Streptococcus pyogenes (Group A Streptococcus)
+
+## Q3: Bullous Impetigo Toxin
+**Q: What toxins cause bullous impetigo, and how do they work?**
+A: Exfoliative toxins ETA and ETB; these are serine proteases that cleave desmoglein-1, disrupting cell-to-cell adhesion
+
+## Q4: Golden Crusts
+**Q: Why are golden/honey-colored crusts characteristic of non-bullous impetigo?**
+A: The crusts are composed of dried serum, fibrin, and bacterial debris with carotenoid pigmentation from S. aureus
+
+## Q5: Cellulitis Definition
+**Q: Define cellulitis and list its predisposing factors.**
+A: Acute spreading inflammation of dermis and subcutaneous tissue; predisposing factors include lymphedema, venous insufficiency, obesity, and immunosuppression
+
+## Q6: Cellulitis vs Erysipelas
+**Q: Compare cellulitis and erysipelas in terms of borders, depth, and distribution.**
+A: Cellulitis = diffuse borders, deeper (dermis/subcutis), unilateral lower extremity; Erysipelas = well-demarcated raised borders, superficial (dermis), facial involvement common
+
+## Q7: Systemic Signs Cellulitis
+**Q: What systemic signs suggest cellulitis?**
+A: Fever, chills, malaise, lymphadenopathy, lymphangitis (red streaking along lymphatic vessels)
+
+## Q8: Folliculitis Types
+**Q: Name three types of folliculitis and their depth of involvement.**
+A: Superficial folliculitis (follicle infundibulum only), Furuncle (entire hair follicle), Carbuncle (multiple interconnected furuncles)
+
+## Q9: Hot Tub Folliculitis
+**Q: What organism causes hot tub folliculitis, and what is its natural course?**
+A: Pseudomonas aeruginosa; usually self-limited, resolves in 7-10 days without treatment
+
+## Q10: Erythrasma Organism
+**Q: What organism causes erythrasma, and what is its characteristic finding on Wood's lamp?**
+A: Corynebacterium minutissimum; produces porphyrins causing pathognomonic coral-red fluorescence with Wood's lamp
+
+## Q11: Topical Antibiotic
+**Q: What is the first-line topical antibiotic for localized impetigo?**
+A: Mupirocin (pseudomonic acid); effective for both S. aureus and S. pyogenes
+
+## Q12: Systemic Antibiotics Impetigo
+**Q: What are the first-line systemic antibiotics for impetigo?**
+A: Amoxicillin-clavulanic acid, cephalexin, or cloxacillin for 5-7 days
+
+## Q13: Cellulitis Antibiotic
+**Q: What is the first-line antibiotic combination for cellulitis?**
+A: Cloxacillin (S. aureus) plus Penicillin G (S. pyogenes); alternatives include cephalexin or amoxicillin-clavulanic acid
+
+## Q14: MRSA Therapy
+**Q: What are alternatives if MRSA is suspected in cellulitis or folliculitis?**
+A: Clindamycin, trimethoprim-sulfamethoxazole (TMP-SMX), fluoroquinolone, or vancomycin (severe)
+
+## Q15: Post-Streptococcal Screening
+**Q: What complication should be screened for after S. pyogenes impetigo?**
+A: Post-streptococcal glomerulonephritis; screen with urinalysis for hematuria and proteinuria`,
+        mnemonics: [
+          { text: "Golden crusts = Impetigo; Bullae = Bullous impetigo (exotoxin)", explanation: "Clinical variants" },
+          { text: "Cellulitis = Diffuse borders, fever, systemic signs", explanation: "Key features" },
+          { text: "MRSA = Switch to Clindamycin or TMP-SMX", explanation: "Antibiotic adjustment" }
+        ],
+        keyPoints: [
+          "Impetigo: most common pyoderma in children; highly contagious",
+          "Non-bullous impetigo: golden crusts on erythematous base",
+          "Bullous impetigo: exotoxin-mediated (ETA/ETB), flaccid bullae",
+          "Cellulitis: requires systemic antibiotics (topical ineffective)",
+          "Erysipelas: superficial, well-demarcated, facial involvement common",
+          "Post-streptococcal glomerulonephritis possible; screen with urinalysis",
+          "MRSA prevalence increasing; culture if no improvement in 72 hours",
+          "Furuncle: abscess of entire hair follicle; requires incision/drainage",
+          "Carbuncle: multiple furuncles; can lead to bacteremia",
+          "Erythrasma: coral-red with Wood's lamp; treat with erythromycin/azithromycin"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "9 - Bacterial Infections", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Bacterial Infections", edition: "20th" }
+        ],
+      },
+    ],
+  },
 ];

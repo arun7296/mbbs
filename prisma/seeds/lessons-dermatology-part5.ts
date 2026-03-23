@@ -1,14 +1,409 @@
-// Dermatology Part 5: Remaining topics (abbreviated for brevity)
+import type { TopicLessons } from "./content-loader";
 
-export const dermatologyPart5Lessons = [
-  // DR-MOD-01-TOP-04: Vesiculobullous Disorders
+export const dermatologyPart5Lessons: TopicLessons[] = [
   {
     topicCode: "DR-MOD-01-TOP-04",
     layers: [
-      { layer: 1, slug: "vesiculobullous-foundation", title: "Vesiculobullous Disorders - Foundation", estimatedMinutes: 25,
-        summary: "Types of blisters, pemphigus, bullous pemphigoid, dermatitis herpetiformis, classification.",
-        contentMd: "# Vesiculobullous Disorders - Foundation\n\n## Classification by Location\n\n### Intraepidermal (Acantholysis)\n- **Pemphigus**: Autoimmune antibodies against desmoglein\n- **Acantholytic disorders**: Loss of cell-to-cell adhesion\n- **Characteristics**: Flaccid blisters (break easily), positive Nikolsky sign\n\n### Subepidermal\n- **Bullous pemphigoid**: Antibodies against basement membrane\n- **Dermatitis herpetiformis**: Granular IgA deposits\n- **Pemphigoid gestationis**: Pregnancy-associated\n- **Characteristics**: Tense blisters (don't break easily), negative Nikolsky sign\n\n## Pemphigus Group\n\n### Pemphigus Vulgaris (Most Common)\n- **Pathophysiology**: IgG autoantibodies against desmoglein 3 (oral) and desmoglein 1 (skin)\n- **Presentation**:\n  - Oral ulcers (first sign in 50%)\n  - Flaccid blisters on skin (break easily, erosions)\n  - Positive Nikolsky sign (light friction causes blistering)\n- **Histology**: Acantholysis (loss of desmosomes), intraepidermal blistering\n- **Direct immunofluorescence**: IgG deposits between keratinocytes (\"tombstone appearance\")\n- **Indirect immunofluorescence**: Circulating IgG antibodies\n- **Treatment**:\n  - Systemic corticosteroids (50-100 mg/day initially)\n  - Steroid-sparing: Azathioprine, mycophenolate mofetil\n  - Immunoglobulin if severe\n- **Prognosis**: Chronic, can go into remission with treatment; high mortality if untreated\n\n### Pemphigus Foliaceus\n- **Pathophysiology**: IgG against desmoglein 1 only (SUPERFICIAL)\n- **Presentation**: Scaly erosions (more superficial), rarely oral involvement\n- **Milder**: Than pemphigus vulgaris\n- **Treatment**: Similar (steroids + steroid-sparing agents)\n- **Rare endemic form**: In Central/South America\n\n## Bullous Pemphigoid\n\n### Pathophysiology\n- **Autoimmune**: IgG antibodies against basement membrane zone\n- **Target antigen**: BP180 (collagen XVII) and BP230\n- **Subepidermal blister formation**: Blisters below epidermis\n\n### Clinical Features\n- **Tense blisters**: Don't rupture easily (unlike pemphigus)\n- **Urticarial plaques**: Bullae often arise on urticarial base\n- **Location**: Flexural areas (groin, axillae), abdomen\n- **Oral involvement**: Rare\n- **Negative Nikolsky sign**: Characteristic (unlike pemphigus)\n- **More common in elderly** (age >60 usually)\n\n### Diagnosis\n- **Histology**: Subepidermal blistering with intact epidermis above\n- **Direct immunofluorescence**: Linear IgG deposits at basement membrane (\"linear pattern\")\n- **Indirect immunofluorescence**: Circulating IgG antibodies\n\n### Treatment\n- **Topical corticosteroids**: Often sufficient for mild disease\n- **Systemic corticosteroids**: Moderate-severe (prednisone 0.5-1 mg/kg)\n- **Steroid-sparing**: Azathioprine, mycofenolate, tetracyclines (doxycycline)\n- **Prognosis**: Often remits in 50% within 3-4 years; lower mortality than pemphigus\n\n## Dermatitis Herpetiformis\n\n### Association\n- **Associated with celiac disease**: 75-80% have silent celiac\n- **Dermatologic manifestation of celiac disease**: Gluten-sensitive enteropathy\n\n### Pathophysiology\n- **Granular IgA deposits**: At dermal-epidermal junction\n- **Trigger**: Gluten (wheat, barley, rye)\n- **Mechanism**: Not fully understood; cross-reactivity?\n\n### Clinical Features\n- **Intensely pruritic**: Often more bothersome than appearance\n- **Grouped vesicles**: Extensor surfaces (elbows, knees, buttocks)\n- **Excoriations**: From severe scratching\n- **Associated with diarrhea**: If untreated celiac disease\n- **More common in males**: And Northern European ancestry\n\n### Diagnosis\n- **Direct immunofluorescence**: Granular IgA at dermal-epidermal junction (DIAGNOSTIC)\n- **Skin biopsy**: Before diagnosis (confirm)\n- **Celiac serology**: Check tissue transglutaminase (tTG) antibodies\n\n### Treatment\n- **Gluten-free diet**: First-line, curative if compliant\n- **Dapsone**: For itching (rapid response, often <1 week)\n  - Requires G6PD testing (hemolysis risk)\n  - Requires blood count monitoring\n- **Timeline**: Skin clears with gluten-free diet (months-years); Dapsone helps interim\n\n### Prognosis\n- **Excellent** with gluten-free diet (skin heals, GI heals)\n- **Most patients**: Become dermatitis herpetiformis-free if strictly compliant\n\n## Pemphigoid Gestationis\n\n### Definition\n- **Autoimmune blistering disorder of pregnancy**\n- **IgG/C3 antibodies**: Against BP180 (similar to bullous pemphigoid)\n- **Timing**: Usually starts 2nd/3rd trimester\n\n### Clinical Features\n- **Urticarial papules**: Often on abdomen, around navel\n- **Progress to blisters**: After days to weeks\n- **Severe itching**: Often precedes blisters\n- **No oral involvement**\n\n### Diagnosis\n- **Direct immunofluorescence**: Linear C3 deposits (IgG may be absent!)\n- **Indirect immunofluorescence**: IgG against BP180\n\n### Management\n- **Topical corticosteroids**: Often sufficient\n- **Systemic corticosteroids**: If severe (prednisone 0.5-1 mg/kg)\n- **Pregnancy-safe**: Systemic corticosteroids acceptable in pregnancy\n- **Delivery**: Often resolves after delivery (3-6 months postpartum)\n\n### Prognosis\n- Usually resolves postpartum\n- May flare with oral contraceptives\n- Neonatal involvement: Rare (transplacental IgG rare)\n      },\n      { layer: 2, slug: \"vesiculobullous-mechanism\", title: \"Vesiculobullous - Mechanism & Complications\", estimatedMinutes: 30,\n        summary: \"Immunopathology, Nikolsky sign, histology findings, secondary infection risk.\",\n        contentMd: "# Vesiculobullous Disorders - Mechanism & Complications\\n\\n## Immunopathology\\n\\n### Acantholysis (Pemphigus)\\n- **Definition**: Loss of cell-to-cell adhesion (desmosomal breakdown)\\n- **Mechanism**: IgG antibodies against desmoglein (adhesion molecules)\\n- **Desmoglein types**:\\n  - Desmoglein 1: Superficial (upper epidermis)\\n  - Desmoglein 3: Deeper (basal layer, also in oral mucosa)\\n- **Pemphigus vulgaris**: Anti-Dsg3 (oral) + Anti-Dsg1 (skin) = severe\\n- **Pemphigus foliaceus**: Anti-Dsg1 only = milder\\n\\n### Basement Membrane Attacks (Bullous Pemphigoid)\\n- **Target**: Hemidesmosomal antigens (BP180, BP230)\\n- **Antibodies**: IgG + IgE (IgE causes mast cell degranulation)\\n- **Result**: Complement activation → neutrophil infiltration → subepidermal split\\n- **Subepidermal location**: Blisters below intact epidermis\\n\\n## Nikolsky Sign\\n\\n### Definition\\n- **Light rubbing/pressure on skin → blistering/erosion**\\n- **Positive**: Easy separation (indicates acantholysis or poor adhesion)\\n- **Negative**: Skin intact (normal or good basement membrane adhesion)\\n\\n### Interpretation\\n- **POSITIVE**: Pemphigus (positive), toxic epidermal necrolysis (positive), Stevens-Johnson (positive)\\n- **NEGATIVE**: Bullous pemphigoid (negative), pemphigoid gestationis (negative)\\n\\n### Mechanism\\n- Pemphigus: Acantholysis = no cell-to-cell adhesion = easy separation\\n- Bullous pemphigoid: Subepidermal = intact epidermis above = resistant to rubbing\\n\\n## Complications\\n\\n### Infection\\n- **Open blisters/erosions**: Breach of skin barrier\\n- **Risk**: Bacterial infection (Staphylococcus aureus most common)\\n- **Presentation**: Pustules, purulent drainage, fever\\n- **Treatment**: Antibiotics (topical or systemic)\\n- **Prevention**: Antiseptic care, avoid contamination\\n\\n### Secondary Infection Severe\\n- **Sepsis**: Can develop rapidly in extensive disease\\n- **Cellulitis**: Local spread\\n- **Impetigo**: Superficial streptococcal infection\\n- **Risk factors**: Extensive blistering, immunosuppression (steroids)\\n\\n### Fluid Loss & Electrolyte Imbalance\\n- **Extensive blistering**: Massive fluid loss (like severe burns)\\n- **Protein loss**: Albumin in fluid → hypoproteinemia\\n- **Electrolyte losses**: Sodium, potassium\\n- **Management**: IV hydration, electrolyte monitoring\\n- **Severity**: Can be life-threatening if >30% body involved\\n\\n### Nutritional Compromise\\n- **Oral pemphigus**: Difficulty eating (oral ulcers)\\n- **Nutritional deficiencies**: Protein, micronutrients\\n- **Weight loss**: Common with disease activity\\n- **Management**: Nutritional supplements, soft diet\\n\\n### Steroid Side Effects (Long-term)\\n- **Systemic corticosteroids**: Necessary for disease control\\n- **Complications**: Osteoporosis, hypertension, diabetes, infections\\n- **Steroid-sparing agents**: Minimize long-term steroid exposure\\n\\n### Ocular Involvement\\n- **Rare**: But can occur (erosions on eyelid margin)\\n- **Risk**: Conjunctival involvement, visual impairment\\n- **Management**: Ophthalmology referral if suspected\\n      },\\n      { layer: 3, slug: \\\"vesiculobullous-clinical\\\", title: \\\"Vesiculobullous - Clinical Application\\\", estimatedMinutes: 35,\\n        summary: \\\"Diagnosis approach, management algorithms, Indian context, differential diagnosis.\\\",\\n        contentMd: "# Vesiculobullous Disorders - Clinical Application\\\\n\\\\n## Diagnostic Algorithm\\\\n\\\\n### Step 1: History & Physical Exam\\\\n- **Onset**: Acute vs. chronic, associated symptoms\\\\n- **Location**: Oral, skin, flexural, extensor\\\\n- **Blisters**: Flaccid vs. tense, easy vs. difficult rupture\\\\n- **Nikolsky sign**: Positive (pemphigus) vs. negative (pemphigoid)\\\\n- **Associated conditions**: Pregnancy (pemphigoid gestationis), GI symptoms (dermatitis herpetiformis)\\\\n\\\\n### Step 2: Skin Biopsy for Histology\\\\n- **REQUIRED**: Distinguish intraepidermal from subepidermal\\\\n- **Pemphigus**: Acantholysis within epidermis (acantholytic cells)\\\\n- **Bullous pemphigoid**: Subepidermal blister with intact epidermis\\\\n- **Dermatitis herpetiformis**: Microabscesses at dermal-epidermal junction\\\\n\\\\n### Step 3: Direct Immunofluorescence (on perilesional skin!)\\\\n- **CRITICAL**: Often diagnostic\\\\n- **Pemphigus**: IgG deposits between keratinocytes (\\\\\\\"intercellular\\\\\\\" pattern)\\\\n- **Bullous pemphigoid**: IgG linear at basement membrane\\\\n- **Dermatitis herpetiformis**: IgA granular at dermal-epidermal junction\\\\n- **Note**: Sample perilesional (not the blister itself, won't show deposits)\\\\n\\\\n### Step 4: Indirect Immunofluorescence (Serology)\\\\n- **Circulating antibodies**: Higher titer = more active disease\\\\n- **Pemphigus**: IgG antibody levels correlate with disease activity\\\\n- **Bullous pemphigoid**: Lower antibody titers than pemphigus\\\\n- **Can monitor treatment**: Antibody titer decreases with successful treatment\\\\n\\\\n### Step 5: Consider Associated Conditions\\\\n- **Dermatitis herpetiformis**: Celiac serology (tTG antibodies)\\\\n- **Pemphigoid gestationis**: Pregnancy status\\\\n- **Drug-induced**: Medications (minocycline, amoxicillin can cause pemphigoid)\\\\n\\\\n## Treatment Approaches\\\\n\\\\n### Pemphigus Vulgaris\\\\n- **Initial**: Systemic corticosteroids 0.5-1 mg/kg/day (50-100 mg for average adult)\\\\n- **Maintenance**: Taper slowly over months-years\\\\n- **Steroid-sparing**: Add azathioprine (1-2 mg/kg) or mycophenolate mofetil (1-3 g/day)\\\\n- **Severe**: IV immunoglobulin or plasmapheresis\\\\n- **Prognosis**: Requires prolonged treatment; aim for lowest effective dose\\\\n\\\\n### Bullous Pemphigoid\\\\n- **Mild**: Topical corticosteroids (clobetasol propionate)\\\\n- **Moderate**: Systemic corticosteroids 0.5-1 mg/kg\\\\n- **Steroid-sparing**: Tetracyclines (doxycycline) + nicotinamide (synergistic)\\\\n- **Advantage**: Often remits faster than pemphigus; lower steroid doses needed\\\\n\\\\n### Dermatitis Herpetiformis\\\\n- **First-line**: Gluten-free diet (curative but slow)\\\\n- **Interim**: Dapsone (rapid symptom relief, 50-100 mg daily)\\\\n  - **Caveat**: Requires G6PD testing (hemolysis risk in deficiency)\\\\n  - **Monitoring**: CBC (hemolysis, agranulocytosis)\\\\n  - **Timeline**: Response within 1 week; skin may clear slowly over months\\\\n- **Celiac workup**: Gastroenterology referral, intestinal biopsy if indicated\\\\n\\\\n### Pemphigoid Gestationis\\\\n- **First-line**: Topical corticosteroids (usually sufficient)\\\\n- **Severe**: Systemic corticosteroids (safe in pregnancy)\\\\n- **Post-delivery**: Usually resolves, but may need continued treatment 3-6 months\\\\n\\\\n## Management Timeline\\\\n\\\\n| Phase | Timeline | Approach |\\\\n|-------|----------|----------|\\\\n| **Acute** | 0-4 weeks | High-dose corticosteroids, identify/treat infection |\\\\n| **Consolidation** | 1-3 months | Add steroid-sparing agents, taper corticosteroids slowly |\\\\n| **Maintenance** | 3-12 months | Lowest effective dose, monitor for recurrence |\\\\n| **Remission** | 1-5 years | Gradual discontinuation, monitor for flares |\\\\n\\\\n## Indian Context Considerations\\\\n\\\\n### Prevalence\\\\n- **Pemphigus**: Higher in India (particularly North India, Rajasthan)\\\\n- **Dermatitis herpetiformis**: Rare in India (celiac disease less common)\\\\n- **Bullous pemphigoid**: Common in elderly\\\\n\\\\n### Challenges\\\\n- **Cost of medications**: Systemic corticosteroids affordable; steroid-sparing agents expensive\\\\n- **Immunofluorescence availability**: Not universally available; diagnosis often clinical\\\\n- **Delayed diagnosis**: Rural areas may present late with extensive disease\\\\n- **Malnutrition**: Baseline nutritional status worse; protein loss significant impact\\\\n\\\\n### Practical Approach\\\\n- **Systemic corticosteroids**: Often first-line (cost)\\\\n- **Topical care**: Antiseptic dressings, prevent secondary infection\\\\n- **Nutrition**: Emphasize adequate protein\\\\n- **Follow-up**: Regular monitoring for steroid complications\\\\n      },\\\\n      { layer: 4, slug: \\\\\\\"vesiculobullous-exam-prep\\\\\\\", title: \\\\\\\"Vesiculobullous - Exam Prep\\\\\\\", estimatedMinutes: 25,\\\\n        summary: \\\\\\\"High-yield facts, diagnostic criteria, differentials, treatment algorithms.\\\\\\\",\\\\n        contentMd: "# Vesiculobullous Disorders - Exam Prep\\\\\\\\n\\\\\\\\n## Quick Comparison Table\\\\\\\\n\\\\\\\\n| Feature | Pemphigus | Bullous Pemphigoid | Dermatitis Herpetiformis |\\\\\\\\n|---------|-----------|------------------|----------------------|\\\\\\\\n| **Pathophysiology** | Anti-Dsg (acantholysis) | Anti-BP180 (basement membrane) | Anti-Dsg3 (IgA deposition) |\\\\\\\\n| **Blisters** | Flaccid (break easily) | Tense (don't break) | Vesicles (ruptured = erosions) |\\\\\\\\n| **Nikolsky** | POSITIVE | NEGATIVE | Negative |\\\\\\\\n| **Location** | Oral/skin | Flexural/skin | Extensor (elbows, knees) |\\\\\\\\n| **Histology** | Intraepidermal acantholysis | Subepidermal blister | Microabscesses at junction |\\\\\\\\n| **DIF** | IgG intercellular | IgG linear BMZ | IgA granular |\\\\\\\\n| **Treatment** | Corticosteroids ± steroid-sparing | Topical/systemic steroids ± tetracyclines | Gluten-free diet + dapsone |\\\\\\\\n| **Associated** | None | Often elderly | Celiac disease (75%) |\\\\\\\\n\\\\\\\\n## High-Yield Exam Facts\\\\\\\\n\\\\\\\\n**Pemphigus vulgaris**:\\\\\\\\n- **Positive Nikolsky sign** (pathognomonic finding)\\\\\\\\n- **IgG against desmoglein 3 (oral) + desmoglein 1 (skin)**\\\\\\\\n- **Flaccid blisters** (break easily)\\\\\\\\n- **Requires systemic corticosteroids** (topical insufficient)\\\\\\\\n- **Can be life-threatening** (infection, fluid loss)\\\\\\\\n\\\\\\\\n**Bullous pemphigoid**:\\\\\\\\n- **NEGATIVE Nikolsky sign** (distinguishes from pemphigus)\\\\\\\\n- **Linear IgG at basement membrane** (direct immunofluorescence)\\\\\\\\n- **Tense blisters** (don't rupture easily)\\\\\\\\n- **Often responds to topical corticosteroids** alone\\\\\\\\n- **Tetracyclines effective** (doxycycline + nicotinamide)\\\\\\\\n- **More common in elderly**\\\\\\\\n\\\\\\\\n**Dermatitis herpetiformis**:\\\\\\\\n- **Associated with celiac disease** (75-80%)\\\\\\\\n- **Granular IgA deposits** (DIAGNOSTIC direct immunofluorescence)\\\\\\\\n- **Intensely pruritic** (more bothersome than appearance)\\\\\\\\n- **Gluten-free diet = curative** (if compliant)\\\\\\\\n- **Dapsone for symptom relief** (rapid, 1 week)\\\\\\\\n- **Requires G6PD testing** (dapsone hemolysis risk)\\\\\\\\n\\\\\\\\n**Pemphigoid gestationis**:\\\\\\\\n- **Pregnancy-associated**\\\\\\\\n- **Usually resolves postpartum**\\\\\\\\n- **Linear C3 deposits** (sometimes IgG absent)\\\\\\\\n- **Systemic corticosteroids safe in pregnancy**\\\\\\\\n\\\\\\\\n## Diagnostic Pearls\\\\\\\\n\\\\\\\\n1. **Positive Nikolsky sign** = Think pemphigus\\\\\\\\n2. **Elderly + tense blisters** = Think bullous pemphigoid\\\\\\\\n3. **Extensor surfaces + itching** = Think dermatitis herpetiformis\\\\\\\\n4. **Pregnancy + urticarial base** = Think pemphigoid gestationis\\\\\\\\n5. **No immunofluorescence available** = Biopsy findings + clinical pattern diagnoses\\\\\\\\n\\\\\\\\n## DIF (Direct Immunofluorescence) Patterns\\\\\\\\n\\\\\\\\n- **Intercellular IgG** = Pemphigus\\\\\\\\n- **Linear IgG at BMZ** = Bullous pemphigoid\\\\\\\\n- **Granular IgA at BMZ** = Dermatitis herpetiformis\\\\\\\\n- **Linear C3 at BMZ** = Pemphigoid gestationis\\\\\\\\n\\\\\\\\n## Common Exam Question Patterns\\\\\\\\n\\\\\\\\n1. \\\\\\\\\\\\\\\"Positive Nikolsky sign?\\\\\\\\\\\\\\\" → **Pemphigus**\\\\\\\\n2. \\\\\\\\\\\\\\\"Flaccid blisters?\\\\\\\\\\\\\\\" → **Pemphigus**\\\\\\\\n3. \\\\\\\\\\\\\\\"Tense blisters, elderly?\\\\\\\\\\\\\\\" → **Bullous pemphigoid**\\\\\\\\n4. \\\\\\\\\\\\\\\"Extensor surfaces, elbows, knees?\\\\\\\\\\\\\\\" → **Dermatitis herpetiformis**\\\\\\\\n5. \\\\\\\\\\\\\\\"Associated with celiac?\\\\\\\\\\\\\\\" → **Dermatitis herpetiformis**\\\\\\\\n6. \\\\\\\\\\\\\\\"Responds to tetracyclines?\\\\\\\\\\\\\\\" → **Bullous pemphigoid**\\\\\\\\n7. \\\\\\\\\\\\\\\"IgA deposits?\\\\\\\\\\\\\\\" → **Dermatitis herpetiformis**\\\\\\\\n8. \\\\\\\\\\\\\\\"Pregnancy-associated?\\\\\\\\\\\\\\\" → **Pemphigoid gestationis**\\\\\\\\n9. \\\\\\\\\\\\\\\"Requires systemic steroids?\\\\\\\\\\\\\\\" → **Pemphigus**\\\\\\\\n10. \\\\\\\\\\\\\\\"First-line gluten-free diet?\\\\\\\\\\\\\\\" → **Dermatitis herpetiformis**,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"PV = Pemphigus Vulgaris = Positive Nikolsky, intra-epidermal, severe\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Pemphigus characteristics\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"BP = Bullous Pemphigoid = Basement membrane, negative Nikolsky, elderly\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Bullous pemphigoid features\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"DH = Dermatitis Herpetiformis = Diet (gluten-free), Dapsone, Diarrhea\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"DH features (3 D's)\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"DIF patterns: Intercellular (PV), Linear (BP/PG), Granular (DH)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Immunofluorescence patterns\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Pemphigus: Positive Nikolsky, flaccid blisters, intraepidermal acantholysis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Bullous pemphigoid: Negative Nikolsky, tense blisters, subepidermal\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Dermatitis herpetiformis: Associated with celiac, IgA granular deposits, gluten-free diet curative\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"DIF critical for diagnosis (immunofluorescence patterns diagnostic)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Pemphigus requires systemic corticosteroids; bullous pemphigoid often topical sufficient\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Dermatology\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Vesiculobullous Disorders\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"4th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Fitzpatrick's Dermatology\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Autoimmune Blistering Disorders\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"9th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      { layer: 5, slug: \\\\\\\\\\\\\\\"vesiculobullous-active-recall\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Vesiculobullous - Active Recall\\\\\\\\\\\\\\\", estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Clinical scenarios testing diagnosis, management, complications, and rare presentations.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Vesiculobullous Disorders - Active Recall\\\\\\\\n\\\\\\\\n## Q1: Pemphigus Vulgaris Diagnosis\\\\\\\\n\\\\\\\\n**Q: 45-year-old presents with painful oral erosions × 2 weeks, followed by flaccid blisters on skin (face, chest, lower abdomen). Positive Nikolsky sign on perioral skin. Biopsy shows intraepidermal acantholysis. What's the diagnosis and immediate management?**\\\\\\\\n\\\\\\\\nA: **PEMPHIGUS VULGARIS** (oral involvement = classic)\\\\\\\\n\\\\\\\\n**Confirmation**: IgG intercellular deposits on direct immunofluorescence (should be ordered)\\\\\\\\n\\\\\\\\n**Immediate management**:\\\\\\\\n1. Systemic corticosteroids 1 mg/kg/day (prednisone ~50 mg for average adult)\\\\\\\\n2. Topical corticosteroid creams (for skin lesions)\\\\\\\\n3. Antiseptic mouth rinses (prevent oral infection)\\\\\\\\n4. Nutritional assessment (oral pain → eating difficulty)\\\\\\\\n5. Plan steroid-sparing agent (azathioprine 1-2 mg/kg) to start after 2-4 weeks\\\\\\\\n6. Baseline labs: CBC, LFTs (for steroid/azathioprine monitoring)\\\\\\\\n\\\\\\\\n**Prognosis**: Chronic disease; requires months-years of treatment; mortality ~5-10% if untreated (infection/sepsis)\\\\\\\\n\\\\\\\\n## Q2: Bullous Pemphigoid Management Decision\\\\\\\\n\\\\\\\\n**Q: 68-year-old with tense blisters on abdomen/groin, negative Nikolsky sign, linear IgG at BMZ on immunofluorescence. Only ~5% body involvement. Would you start systemic corticosteroids or try topical first?**\\\\\\\\n\\\\\\\\nA: **START TOPICAL CORTICOSTEROIDS FIRST**\\\\\\\\n\\\\\\\\n**Reasoning**:\\\\\\\\n- Bullous pemphigoid often responds to topical agents (unlike pemphigus)\\\\\\\\n- Limited involvement (5%) = better chance of topical efficacy\\\\\\\\n- Elderly patient = benefits from avoiding systemic steroids (osteoporosis, infections risk)\\\\\\\\n\\\\\\\\n**Topical regimen**:\\\\\\\\n- Clobetasol propionate 0.05% cream (super-potent) BID-TID to lesions\\\\\\\\n- Continue 2-4 weeks; reassess\\\\\\\\n\\\\\\\\n**If topical fails**:\\\\\\\\n- Add oral tetracycline (doxycycline 100 mg BID) + nicotinamide 500 mg TID\\\\\\\\n- If still no response, then systemic corticosteroids\\\\\\\\n\\\\\\\\n**Why tetracyclines work**: Inhibit neutrophil function (reduce inflammatory infiltrate)\\\\\\\\n\\\\\\\\n## Q3: Dermatitis Herpetiformis Screening\\\\\\\\n\\\\\\\\n**Q: 32-year-old with intensely pruritic grouped vesicles on elbows and knees for 3 months. Direct immunofluorescence shows granular IgA deposits. Patient has history of diarrhea. What's your next step?**\\\\\\\\n\\\\\\\\nA: **CELIAC DISEASE SCREENING** (must be done!)\\\\\\\\n\\\\\\\\n**Reasoning**: 75-80% of dermatitis herpetiformis patients have celiac disease (often silent)\\\\\\\\n\\\\\\\\n**Screening tests**:\\\\\\\\n1. **Tissue transglutaminase (tTG) IgA antibodies** (serology)\\\\\\\\n2. **Total IgA level** (ensure not IgA deficient)\\\\\\\\n3. **Endomysial antibodies** (if tTG borderline)\\\\\\\\n\\\\\\\\n**If positive serology**:\\\\\\\\n- Gastroenterology referral\\\\\\\\n- Upper endoscopy + duodenal biopsy (confirm celiac enteropathy)\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n1. **Gluten-free diet** (first-line, curative if compliant)\\\\\\\\n2. **Dapsone 50-100 mg daily** (for symptom relief while starting diet)\\\\\\\\n   - G6PD testing BEFORE starting (hemolysis risk)\\\\\\\\n   - CBC monitoring (monthly initially for agranulocytosis, hemolysis)\\\\\\\\n3. **Timeline**: Dapsone symptom relief in <1 week; skin clears over months; GI heals if compliant with diet\\\\\\\\n\\\\\\\\n**Prognosis**: Excellent with gluten-free diet (both skin and GI normalize)\\\\\\\\n\\\\\\\\n## Q4: Pemphigoid Gestationis in Pregnant Patient\\\\\\\\n\\\\\\\\n**Q: 28-year-old at 24 weeks gestation with urticarial papules progressing to blisters on abdomen. Direct immunofluorescence shows linear C3 deposits (IgG negative). What's causing this and how to manage?**\\\\\\\\n\\\\\\\\nA: **PEMPHIGOID GESTATIONIS** (pregnancy-specific autoimmune disorder)\\\\\\\\n\\\\\\\\n**Diagnosis**: Linear C3 deposits + pregnancy = pathognomonic (IgG often absent!)\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n1. **Topical corticosteroids** first-line (clobetasol propionate cream BID-TID)\\\\\\\\n   - Usually sufficient for mild-moderate disease\\\\\\\\n   - No fetal risk\\\\\\\\n2. **If severe**: Systemic corticosteroids (prednisone 0.5-1 mg/kg)\\\\\\\\n   - Safe in pregnancy (low teratogenic risk)\\\\\\\\n3. **Monitoring**: Obstetric follow-up for typical pregnancy issues\\\\\\\\n4. **Postpartum**: Usually resolves 3-6 months postdelivery (but may need continued treatment)\\\\\\\\n\\\\\\\\n**Neonatal risk**: Rare (<5%) neonatal pemphigoid possible from transplacental IgG (usually self-limited)\\\\\\\\n\\\\\\\\n**Oral contraceptive caution**: May flare with OCPs postpartum\\\\\\\\n\\\\\\\\n## Q5: Steroid-Sparing Strategy in Pemphigus\\\\\\\\n\\\\\\\\n**Q: 50-year-old with pemphigus vulgaris, requires prednisone 60 mg daily at 3 months post-diagnosis to control disease. Side effects developing (hyperglycemia, osteoporosis). How to minimize steroid exposure?**\\\\\\\\n\\\\\\\\nA: **ADD STEROID-SPARING AGENT** (standard approach at 3-4 weeks)\\\\\\\\n\\\\\\\\n**Options**:\\\\\\\\n1. **Azathioprine** 1-2 mg/kg/day (first-line steroid-sparing)\\\\\\\\n   - Takes 2-4 weeks to work\\\\\\\\n   - Requires TPMT testing (genetic enzyme deficiency increases toxicity)\\\\\\\\n   - Monitoring: CBC, LFTs (monthly)\\\\\\\\n\\\\\\\\n2. **Mycophenolate mofetil (MMF)** 1-3 g/day (alternative)\\\\\\\\n   - Faster onset than azathioprine (1-2 weeks)\\\\\\\\n   - Better tolerated in some\\\\\\\\n\\\\\\\\n3. **Rituximab** (anti-CD20, expensive, for severe refractory disease)\\\\\\\\n\\\\\\\\n**Timeline for dose reduction**:\\\\\\\\n- Week 0-4: Prednisone monotherapy at high dose\\\\\\\\n- Week 4-8: Add steroid-sparing agent + begin prednisone taper\\\\\\\\n- Month 3-6: Continue dose reduction as steroid-sparing agent takes effect\\\\\\\\n- Month 6-12: Aim for lowest effective prednisone dose (often 10-20 mg/day maintenance)\\\\\\\\n\\\\\\\\n**Goal**: Minimize steroid complications while maintaining disease control with combination therapy\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-];
+      {
+        layer: 1,
+        slug: "eczema-atopic-dermatitis-layer-1-foundation",
+        title: "Eczema & Atopic Dermatitis - Foundation",
+        estimatedMinutes: 25,
+        summary: "Overview of eczema and atopic dermatitis, clinical features, and epidemiology.",
+        contentMd: `# Eczema & Atopic Dermatitis - Foundation
+
+## Eczema Classification
+### Types of Eczema
+- **Atopic dermatitis**: Most common (80% of eczema); genetic predisposition, "atopic march"
+- **Contact dermatitis**: Allergic (delayed hypersensitivity) or irritant
+- **Seborrheic dermatitis**: Scalp, face, flexural areas; Malassezia furfur association
+- **Dyshidrotic eczema**: Vesicles on palms/soles; intensely pruritic
+- **Nummular eczema**: Coin-shaped lesions; common in men, winter months
+- **Lichenoid eczema**: Chronic, lichenified plaques from prolonged friction
+
+## Atopic Dermatitis
+### Epidemiology
+- **Prevalence**: 10-20% of children; 1-3% of adults
+- **Age of onset**: Infants (50-80%), childhood (20-30%), adults (10%)
+- **Female predominance**: Slightly higher in females
+- **Heritability**: 60-80% (genetic predisposition)
+- **"Atopic march"**: Progression from AD → asthma → allergic rhinitis
+
+### Clinical Features
+- **Intense pruritus**: "Itch that rashes" (pruritus precedes lesion appearance)
+- **Acute phase**: Erythema, vesicles, oozing exudate
+- **Chronic phase**: Lichenification, thickened plaques, excoriations, hyperpigmentation
+- **Distribution**: Face (young children), neck, flexural areas (older children/adults)
+  - Antecubital/popliteal fossae
+  - Wrists, ankles
+  - Eyelids, lips
+
+### Diagnostic Criteria (UK Working Party)
+- Requires 4 of 6:
+  1. History of itching
+  2. Onset <4 years (for childhood AD)
+  3. Flexural involvement
+  4. Tendency toward dry skin
+  5. Personal history of other atopic disease
+  6. Visible flexural dermatitis
+
+## Pathologic Features
+- **Acute phase**: Spongiosis (intercellular edema), Langerhans cell infiltration
+- **Chronic phase**: Acanthosis, hyperkeratosis, parakeratosis, lichenification
+- **Normal epidermis**: CD4+ T cells; AD increased Th2 cells (IL-4, IL-5, IL-13)`,
+        mnemonics: [
+          { text: "Atopic = Eczema + Asthma + Allergic Rhinitis (Atopic March)", explanation: "Classic triad progression" },
+          { text: "AD = Itch that Rashes (pruritus precedes lesion)", explanation: "Distinguishing feature" },
+          { text: "Flexural + Xerosis + Pruritus = Atopic Dermatitis", explanation: "Key features" }
+        ],
+        keyPoints: [
+          "Atopic dermatitis: most common eczema (80%); genetic predisposition",
+          "Intense pruritus ('itch that rashes') is hallmark symptom",
+          "Flexural involvement in children and adults",
+          "Acute phase: erythema, vesicles, exudate",
+          "Chronic phase: lichenification, thickened plaques, excoriations",
+          "Atopic march: AD → asthma → allergic rhinitis progression",
+          "High heritability (60-80%); familial clustering common",
+          "Spongiosis on histology (acute phase); acanthosis/hyperkeratosis (chronic)"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "6 - Eczematous Dermatitis", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Eczema", edition: "20th" }
+        ],
+      },
+      {
+        layer: 2,
+        slug: "eczema-atopic-dermatitis-layer-2-mechanism",
+        title: "Eczema & Atopic Dermatitis - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pathogenesis of atopic dermatitis, immune mechanisms, and barrier dysfunction.",
+        contentMd: `# Eczema & Atopic Dermatitis - Mechanism
+
+## Barrier Dysfunction in AD
+### Structural Defects
+- **Filaggrin mutations**: Most common genetic association (10-30% of AD)
+  - Filaggrin = filament-aggregating protein in stratum corneum
+  - Loss of function → defective barrier, increased transepidermal water loss (TEWL)
+- **Tight junction proteins**: Claudins, occludin, junction adhesion molecules disrupted
+- **Lipid abnormalities**: Reduced ceramides, cholesterol, fatty acids in stratum corneum
+  - Reduced ceramide synthesis (reduced β-glucocerebrosidase activity)
+  - Altered lipid composition → increased permeability
+
+### Clinical Consequence
+- **Xerosis (dry skin)**: Increased TEWL, reduced skin hydration
+- **Increased allergen penetration**: Breach of barrier facilitates antigen entry
+- **Enhanced irritant penetration**: Lower threshold for irritant reactions
+
+## Immune Dysregulation
+### Th2 Shift
+- **Normal skin**: Th1/Th2 balance
+- **Acute AD**: Th2 cytokines predominate
+  - IL-4, IL-5: Th2 differentiation, IgE production
+  - IL-13: Alternative macrophage activation, barrier dysfunction
+- **Chronic AD**: IL-17 (Th17), IFN-γ (residual Th1) involvement
+
+### Immune Cell Infiltration
+- **Langerhans cells**: Increased activation, antigen presentation
+- **T cells**: CD4+ predominance; expansion of skin-homing T cells (CLA+)
+- **Eosinophils**: Infiltration in acute lesions; produce IL-4, IL-5
+- **Mast cells**: Degranulation (histamine, tryptase) → pruritus
+
+### IgE Elevation
+- **Polyclonal IgE**: Elevated serum IgE in 80% of patients
+- **Specific IgE**: Against allergens (dust mites, pollen, food allergens)
+- **IgE-mediated**: Mast cell and basophil activation
+
+## Pruritus Mechanism
+- **Neurogenic inflammation**: TRPV1 and TRPA1 sensory neurons (itch-specific)
+- **Histamine**: Released by mast cells; activates H1 and H4 receptors on nerves
+- **Protease-activated receptors (PAR-2)**: Activated by kallikrein-related peptidases
+- **Neuropeptides**: Substance P, CGRP involved in neurogenic inflammation
+- **Itch-scratch cycle**: Mechanical trauma → further barrier disruption
+
+## Microbial Colonization
+- **Staphylococcus aureus**: 90% of AD patients colonized (vs 5% of normal)
+- **Mechanisms**: 
+  - Increased serum IgE against S. aureus
+  - Lack of antimicrobial peptides (reduced β-defensins, LL-37)
+  - Impaired innate immunity
+- **Exotoxins**: S. aureus enterotoxins (TSST-1) act as superantigens; amplify T cell response`,
+        mnemonics: [
+          { text: "Filaggrin mutations → Barrier dysfunction → TEWL ↑ → AD", explanation: "Genetic pathway" },
+          { text: "Th2 shift: IL-4, IL-5, IL-13 → IgE ↑, Eosinophils ↑", explanation: "Immune pathway" },
+          { text: "Staphylococcus aureus: 90% AD patients colonized", explanation: "Microbial factor" }
+        ],
+        keyPoints: [
+          "Filaggrin mutations most common genetic association (10-30% of AD)",
+          "Reduced ceramides and lipids in stratum corneum → increased TEWL",
+          "Th2 cytokines predominate (IL-4, IL-5, IL-13)",
+          "IgE elevated in 80% of AD patients",
+          "Langerhans cell activation increases antigen presentation",
+          "TRPV1/TRPA1 neurons mediate itch sensation",
+          "Histamine, PAR-2 activation contribute to pruritus",
+          "Itch-scratch cycle perpetuates barrier disruption",
+          "S. aureus colonization in 90% of AD (vs 5% normal skin)"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "6 - Eczematous Dermatitis", edition: "4th" },
+          { book: "Robbins & Kumar Pathologic Basis of Disease", chapter: "25 - Skin Disorders", edition: "10th" }
+        ],
+      },
+      {
+        layer: 3,
+        slug: "eczema-atopic-dermatitis-layer-3-clinical",
+        title: "Eczema & Atopic Dermatitis - Clinical",
+        estimatedMinutes: 35,
+        summary: "Clinical assessment, triggers, and comprehensive management of atopic dermatitis.",
+        contentMd: `# Eczema & Atopic Dermatitis - Clinical
+
+## Clinical Assessment
+### Severity Scoring
+- **EASI (Eczema Area and Severity Index)**: Measures area and intensity; 0-72 scale
+- **SCORAD (Scoring Atopic Dermatitis)**: Area, intensity, subjective symptoms; 0-103 scale
+- **IGA (Investigator Global Assessment)**: 5-point scale (clear to severe)
+- **Mild**: Localized, minimal impact on QoL
+- **Moderate**: Multiple sites, moderate pruritus, impacts daily activities
+- **Severe**: Extensive involvement, severe pruritus, sleep disruption, school/work impact
+
+### Diagnostic Confirmation
+- **Clinical diagnosis**: Based on criteria (UK Working Party 4/6)
+- **Serum IgE**: Elevated in 80% (nonspecific)
+- **Specific IgE/Allergy testing**: Identify triggers if atopic
+- **Patch testing**: Rule out allergic contact dermatitis
+- **Skin biopsy**: When diagnosis unclear; shows spongiosis, acanthosis
+
+## Trigger Identification
+### Common Triggers
+- **Allergens**: House dust mite, pollen, animal dander, food allergens
+- **Irritants**: Soaps, detergents, fragrances, rough textiles (wool)
+- **Environmental**: Dry air, cold, humidity changes, temperature extremes
+- **Stress**: Emotional stress exacerbates lesions
+- **Infections**: Viral (HSV, EBV) or bacterial (S. aureus superinfection)
+- **Food**: Milk, peanuts, tree nuts, fish, eggs (in children)
+
+## Management Approach
+### Skin Care (Most Important)
+- **Cleansing**: Lukewarm water, non-soap cleansers (seborrheic areas use soap-free)
+- **Emollient therapy**: 
+  - Immediately after bathing (within 3 minutes)
+  - Creams (oil-in-water) or ointments (water-in-oil), petrolatum base
+  - Frequent application (3-4× daily)
+  - Urea/lactic acid creams for ichthyosis
+- **Avoid irritants**: Fragrance, preservatives, sulfates
+
+### Topical Anti-inflammatory
+- **Topical corticosteroids**: First-line
+  - Mild: Hydrocortisone 1%
+  - Moderate: Mometasone, fluticasone
+  - Potent: Clobetasol propionate for short-term use
+  - Taper once control achieved
+- **Topical calcineurin inhibitors** (TCI): Tacrolimus, pimecrolimus
+  - Non-steroidal; especially useful on face, intertriginous areas
+  - Steroid-sparing in maintenance
+
+### Systemic Therapy (for moderate-severe)
+- **Systemic corticosteroids**: Short-term only (rebound on withdrawal)
+- **Antihistamines**: For pruritus; first-generation (sedating) useful for sleep
+- **Biologic agents**: 
+  - Dupilumab (anti-IL-4Rα): FDA-approved, highly effective
+  - JAK inhibitors: Baricitinib, upadacitinib (newer agents)
+- **Cyclosporine**: For severe, refractory AD
+- **Azathioprine, mycophenolate**: Steroid-sparing agents
+
+### Infection Management
+- **Prophylaxis**: Antimicrobial ointments (mupirocin) if high S. aureus colonization
+- **Treatment**: Systemic antibiotics for active infection (cellulitis, impetigo)
+- **Dilute bleach baths**: May reduce S. aureus colonization`,
+        mnemonics: [
+          { text: "Emollient FIRST, then topical corticosteroid, then systemic if severe", explanation: "Step-wise approach" },
+          { text: "Avoid: Soap, irritants, fragrance, rough textiles", explanation: "Trigger avoidance" },
+          { text: "Dupilumab = Anti-IL-4Rα for moderate-severe AD", explanation: "Biologic therapy" }
+        ],
+        keyPoints: [
+          "Emollient therapy cornerstone of management (before other treatments)",
+          "Cleanse with non-soap cleanser; moisturize within 3 minutes of bathing",
+          "Topical corticosteroids: mild to moderate, taper when controlled",
+          "Calcineurin inhibitors: useful on face and intertriginous areas",
+          "Antihistamines: first-generation for pruritus and sleep",
+          "Dupilumab: highly effective for moderate-severe AD",
+          "Manage S. aureus: prophylactic mupirocin or dilute bleach baths",
+          "Identify and avoid triggers: allergens, irritants, environmental",
+          "Stress management important (psychological trigger)",
+          "Regular monitoring for complications (infection, sleep disruption)"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "6 - Eczematous Dermatitis", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Eczema", edition: "20th" }
+        ],
+      },
+      {
+        layer: 4,
+        slug: "eczema-atopic-dermatitis-layer-4-exam",
+        title: "Eczema & Atopic Dermatitis - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "High-yield facts, differentials, and NEXT-pattern questions for atopic dermatitis.",
+        contentMd: `# Eczema & Atopic Dermatitis - Exam Prep
+
+## High-Yield Exam Facts
+- **AD prevalence**: 10-20% of children; 1-3% of adults
+- **Onset**: 50-80% before age 5 years
+- **Hallmark**: Intense pruritus ("itch that rashes")
+- **Heritability**: 60-80% (genetic predisposition)
+- **Filaggrin mutations**: Most common genetic association (10-30%)
+- **S. aureus colonization**: 90% of AD patients (vs 5% normal)
+- **IgE elevation**: 80% of AD patients
+
+## Differential Diagnosis
+### Flexural Dermatitis in Children:
+- **Atopic dermatitis**: Intense pruritus, family history, age <4 years, dry skin
+- **Seborrheic dermatitis**: Yellow scale, scalp/face, less pruritus
+- **Contact dermatitis**: Clear exposure history, linear/geometric distribution
+- **Tinea corporis**: Scaling, KOH positive, annular lesions
+
+### Chronic Lichenified Lesions:
+- **Chronic eczema (AD)**: History of acute phase, flexural locations
+- **Lichen planus**: Purple papules with Wickham's striae, wickets on shins
+- **Psoriasis**: Silvery scale, non-flexural, well-demarcated, mica sign
+
+## NEXT-Pattern Questions
+### Recall (10%):
+- Q: "Intense itching preceding rash is characteristic of?" → A: Atopic dermatitis
+- Q: "Most common genetic association in AD?" → A: Filaggrin mutations
+
+### Analysis (30%):
+- Q: "Child with flexural eczema, family history of asthma, IgE 500. Likely diagnosis?" → A: Atopic dermatitis with atopic family history
+- Q: "Acute exacerbation of eczema with pustules/oozing. Most likely cause?" → A: S. aureus superinfection
+
+### Problem-Solving (60%):
+- Q: "6-year-old with moderate AD failing topical corticosteroids and emollients for 2 months. Next step?" → A: Consider systemic therapy; screen for triggers (allergy testing); add calcineurin inhibitors; evaluate for S. aureus infection
+- Q: "Patient with severe AD resistant to topical therapy, dupilumab not tolerated. Alternative?" → A: JAK inhibitors (baricitinib, upadacitinib) or cyclosporine
+
+## Clinical Pearls
+- **Atopic march**: AD → asthma → allergic rhinitis (preventive therapy in AD)
+- **Flare triggers**: Stress, irritants, allergens, infections, climate change
+- **Dupilumab efficacy**: 50-75% clear/almost clear at 16 weeks
+- **Systemic corticosteroids**: Avoid long-term (rebound flares); reserve for acute severe flares
+- **Itch-scratch cycle**: Breaking this is key to management
+- **Infection risk**: S. aureus and herpes simplex (can disseminate as eczema herpeticum)
+
+## Common Mistakes
+- Starting systemic corticosteroids without trying emollients and topical steroids first
+- Using irritant soaps instead of non-soap cleanser
+- Moisturizing hours after bathing (should be <3 minutes)
+- Missing S. aureus superinfection (oozing, pustules, crust)
+- Not identifying triggers (allergy testing in atopic patients)
+- Discontinuing emollient therapy (maintenance therapy)`,
+        mnemonics: [
+          { text: "EMOLLIENT > TOPICAL CS > SYSTEMIC (escalating therapy)", explanation: "Treatment algorithm" },
+          { text: "Filaggrin → Barrier → TEWL ↑ → Pruritus ↑ → Itch-scratch cycle", explanation: "Pathogenic cascade" },
+          { text: "Atopic march: AD → Asthma → Rhinitis", explanation: "Disease progression" }
+        ],
+        keyPoints: [
+          "Atopic dermatitis: intense pruritus is hallmark ('itch that rashes')",
+          "Filaggrin mutations: 10-30% of AD (most common genetic association)",
+          "Barrier dysfunction: increased TEWL, lipid abnormalities",
+          "Th2 shift: IL-4, IL-5, IL-13 predominance; IgE elevated (80%)",
+          "S. aureus: colonizes 90% of AD patients; produces superantigens",
+          "Emollient therapy: cornerstone of management (non-negotiable)",
+          "Flexural involvement: neck, antecubital/popliteal fossae",
+          "Dupilumab: highly effective (anti-IL-4Rα); FDA-approved",
+          "Itch-scratch cycle: breaking this is key to preventing flares",
+          "Atopic march prevention: treat AD early to prevent asthma/rhinitis"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "6 - Eczematous Dermatitis", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Eczema", edition: "20th" }
+        ],
+      },
+      {
+        layer: 5,
+        slug: "eczema-atopic-dermatitis-layer-5-active-recall",
+        title: "Eczema & Atopic Dermatitis - Active Recall",
+        estimatedMinutes: 30,
+        summary: "Flashcard Q&A pairs for atopic dermatitis diagnosis and management.",
+        contentMd: `# Eczema & Atopic Dermatitis - Active Recall Flashcards
+
+## Q1: Atopic Dermatitis Definition
+**Q: Define atopic dermatitis and list its key clinical features.**
+A: Chronic inflammatory eczema with intense pruritus, flexural involvement, barrier dysfunction, and genetic predisposition; characterized by "itch that rashes"
+
+## Q2: Prevalence and Age
+**Q: What is the prevalence of atopic dermatitis, and when does it typically onset?**
+A: 10-20% of children and 1-3% of adults; 50-80% of cases onset before age 5 years
+
+## Q3: Filaggrin Mutations
+**Q: What is the role of filaggrin, and how do mutations contribute to AD?**
+A: Filaggrin = filament-aggregating protein providing barrier function; mutations cause loss of function → increased TEWL, xerosis, barrier disruption
+
+## Q4: Heritability
+**Q: What is the heritability of atopic dermatitis?**
+A: 60-80% heritable; familial clustering common; genetic predisposition is major risk factor
+
+## Q5: Atopic March
+**Q: What is the atopic march, and what is its clinical significance?**
+A: Progression from atopic dermatitis → asthma → allergic rhinitis; early AD treatment may prevent development of other atopic diseases
+
+## Q6: Immune Dysregulation
+**Q: What is the primary immune dysregulation in atopic dermatitis?**
+A: Th2 shift with elevation of IL-4, IL-5, and IL-13; increased IgE production (80% of patients); enhanced eosinophilic response
+
+## Q7: Staphylococcus aureus
+**Q: What is the prevalence of S. aureus colonization in AD patients, and why is it significant?**
+A: 90% of AD patients are colonized (vs 5% of normal skin); S. aureus produces superantigens and exotoxins that amplify immune response
+
+## Q8: IgE Elevation
+**Q: Is serum IgE elevation diagnostic for atopic dermatitis?**
+A: No; serum IgE is elevated in 80% of AD patients, but elevation is nonspecific; polyclonal IgE, not diagnostic alone
+
+## Q9: Diagnostic Criteria
+**Q: What are the UK Working Party diagnostic criteria for atopic dermatitis?**
+A: Requires 4 of 6: (1) history of itching, (2) onset <4 years, (3) flexural involvement, (4) tendency toward dry skin, (5) personal history of atopic disease, (6) visible flexural dermatitis
+
+## Q10: Histopathology
+**Q: What are the histopathologic findings in atopic dermatitis?**
+A: Acute phase = spongiosis (intercellular edema), Langerhans cell infiltration; Chronic phase = acanthosis, hyperkeratosis, parakeratosis, lichenification
+
+## Q11: Pruritus Mechanism
+**Q: What are the mechanisms of pruritus in atopic dermatitis?**
+A: Neurogenic inflammation via TRPV1/TRPA1 neurons; histamine from mast cells; PAR-2 activation; elevated substance P and CGRP
+
+## Q12: Trigger Identification
+**Q: Name five common triggers for AD exacerbation.**
+A: Allergens (dust mites, pollen), irritants (soaps, detergents), environmental (dry air, cold), stress, infections (S. aureus, HSV)
+
+## Q13: Emollient Therapy
+**Q: What is the most important time to apply emollient therapy?**
+A: Immediately after bathing (within 3 minutes); prevents water loss and maintains skin hydration; apply 3-4 times daily
+
+## Q14: Dupilumab Mechanism
+**Q: What is the mechanism of action of dupilumab in atopic dermatitis?**
+A: Monoclonal antibody against IL-4 receptor alpha (IL-4Rα); blocks both IL-4 and IL-13 signaling; addresses Th2 immune dysregulation
+
+## Q15: Treatment Algorithm
+**Q: What is the general step-wise treatment algorithm for atopic dermatitis?**
+A: Step 1: Emollient therapy (ALL patients); Step 2: Topical corticosteroids (mild-moderate); Step 3: Topical calcineurin inhibitors (face, folds); Step 4: Systemic agents (severe); Step 5: Biologic therapy (dupilumab, JAK inhibitors)`,
+        mnemonics: [
+          { text: "AD = Itch + Flexural + Dry + Family history + Pruritus", explanation: "Key diagnostic features" },
+          { text: "Emollient ALWAYS first; then topical CS; then systemic if needed", explanation: "Treatment escalation" },
+          { text: "Filaggrin → TEWL ↑ → Allergen entry ↑ → Immune activation ↑", explanation: "Pathogenic cascade" }
+        ],
+        keyPoints: [
+          "Atopic dermatitis: intense pruritus precedes rash ('itch that rashes')",
+          "Filaggrin mutations: 10-30% of AD; cause barrier dysfunction",
+          "Heritability 60-80%; strong family history common",
+          "Th2 immune shift: IL-4, IL-5, IL-13; IgE elevated (80%)",
+          "S. aureus colonization: 90% of AD patients; produces superantigens",
+          "Flexural involvement: neck, antecubital/popliteal fossae",
+          "Spongiosis on histology (acute phase); acanthosis (chronic phase)",
+          "Emollient therapy: cornerstone; apply within 3 minutes of bathing",
+          "Topical corticosteroids: mild-moderate disease first-line",
+          "Dupilumab: anti-IL-4Rα; highly effective for moderate-severe AD"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "6 - Eczematous Dermatitis", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Eczema", edition: "20th" }
+        ],
+      },
+    ],
+  },
 ];

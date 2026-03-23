@@ -1,22 +1,383 @@
-export const dermatologyPart2Lessons = [
-  // DR-MOD-02-TOP-01: Fungal Infections
+import type { TopicLessons } from "./content-loader";
+
+export const dermatologyPart2Lessons: TopicLessons[] = [
   {
     topicCode: "DR-MOD-02-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "fungal-infections-foundation",
+        slug: "fungal-infections-layer-1-foundation",
         title: "Fungal Infections - Foundation",
         estimatedMinutes: 25,
-        summary: "Overview of dermatophytes, candidiasis, and pityriasis versicolor with clinical presentations.",
-        contentMd: "# Fungal Infections - Foundation\n\n## Dermatophytosis (Ringworm)\n### Epidemiology\n- **Organisms**: Trichophyton, Microsporum, Epidermophyton (keratinophilic fungi)\n- **Prevalence**: Most common fungal infection worldwide, 20-25% population in India\n- **Transmission**: Anthropophilic (person-person), zoophilic (animals), geophilic (soil)\n- **Risk factors**: Warm humid climate, poor hygiene, friction, immunosuppression\n\n### Clinical Classification by Site\n- **Tinea corporis** (body): Annular erythematous plaques, scaling border, central clearing\n- **Tinea pedis** (athlete's foot): Web space maceration, scaling, fissuring, hyperkeratosis\n- **Tinea cruris**: Groin/inner thigh, bilateral symmetry, spares scrotum\n- **Tinea unguium** (onychomycosis): Nail thickening, yellowing, subungual debris\n- **Tinea capitis** (scalp): Patchy alopecia, scaling, may have pustules (kerion)\n\n### Diagnosis\n- **KOH mount**: 10-20% KOH dissolves cellular material, shows fungal septate hyphae\n- **Wood's lamp**: Slight yellow-brown (not diagnostic, T. versicolor fluoresces blue)\n- **Culture**: Sabouraud dextrose agar, identifies organism\n\n## Candidiasis\n### Candida Species\n- **C. albicans**: Most common (80%)\n- **C. tropicalis, C. glabrata**: Increasingly resistant\n- **Normal flora**: Skin, mucous membranes, GI tract\n\n### Clinical Presentations\n- **Oral candidiasis (Thrush)**: White plaques on tongue/buccal mucosa, painful, associated with antibiotics/immunosuppression\n- **Vaginal candidiasis**: Thick white discharge, vulvar erythema, pruritus, burning\n- **Diaper dermatitis**: Perianal erythema, pustules, confluent maceration in infants\n- **Intertrigo**: Skin fold infection (axilla, groin, under breasts), maceration, erythema\n- **Paronychia**: Nail fold swelling, erythema, nail dystrophy\n\n### Risk Factors\n- Antibiotic therapy (disrupts normal flora)\n- Corticosteroids (especially topical in skinfolds)\n- Diabetes (glycosuria promotes growth)\n- Immunosuppression (HIV, chemotherapy)\n- Pregnancy (increased vaginal glycogen)\n\n## Pityriasis Versicolor (Tinea Versicolor)\n### Etiology\n- **Organism**: Malassezia furfur (lipophilic yeast, normal skin flora)\n- **Conversion**: Mycelial form (pathogenic) triggered by warm humidity, sebum\n\n### Clinical Features\n- **Lesions**: Hypopigmented/hyperpigmented macules coalescing into patches\n- **Distribution**: Chest, back, shoulders, neck (seborrheic areas)\n- **Scale**: Fine \"powder\" appearance, easily wiped off\n- **Color variation**: \"Versicolor\" = variable colors (tan, brown, pink, white patches simultaneously)\n\n### Diagnosis\n- **Wood's lamp**: Gold/orange-yellow or green fluorescence (diagnostic)\n- **KOH mount**: \"Spaghetti and meatballs\" appearance (short hyphae + budding yeast),\n        mnemonics: [\n          { text: \"Dermatophytes = Trichophyton/Microsporum/Epidermophyton\", explanation: \"Main fungal species\" },\n          { text: \"Tinea = by body site (corporis=body, pedis=feet, cruris=groin, unguium=nails, capitis=scalp)\", explanation: \"Classification system\" },\n          { text: \"Candida = white plaques (oral), thick discharge (vaginal), maceration (folds)\", explanation: \"Yeast presentations\" },\n          { text: \"Pityriasis versicolor = 'spaghetti & meatballs' on KOH, gold fluorescence on Wood's\", explanation: \"Diagnostic findings\" }\n        ],\n        keyPoints: [\n          \"Dermatophytes most common fungal infection globally; warm humid climate risk factor\",\n          \"Candida opportunistic infection; antibiotics and diabetes major risk factors\",\n          \"Pityriasis versicolor lipophilic yeast; asymptomatic except cosmetic concern\",\n          \"KOH mount definitive for fungal diagnosis; Wood's lamp helpful for P. versicolor\",\n          \"Tinea corporis classic ring shape with central clearing\"\n        ],\n        textbookRefs: [\n          { book: \"Fitzpatrick\", chapter: \"Fungal Infections of Skin\", edition: \"9th\" },\n          { book: \"Textbook of Dermatology\", chapter: \"Mycology\", edition: \"4th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"fungal-infections-mechanism\",\n        title: \"Fungal Infections - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiology of fungal invasion, immune response, keratinophilia, and host factors.\",\n        contentMd: "# Fungal Infections - Mechanism\\n\\n## Dermatophyte Invasion\\n### Keratinolytic Enzymes\\n- **Keratinolytic serine protease**: Degrades keratin in stratum corneum\\n- **Pathogenic potential**: Ability to produce keratinolytic enzymes correlates with virulence\\n- **Fungal colonization**: Fungus invades only dead keratin; never living epidermis\\n- **Depth**: Confined to stratum corneum (superficial mycosis)\\n\\n### Immune Response\\n- **Innate immunity**: Langerhans cells, inflammatory response, acidic pH of skin\\n- **Cell-mediated immunity (CMI)**: TH1 response essential for clearance (IL-2, TNF-α)\\n- **Dermatophyte immune evasion**: Some species produce immunosuppressive substances\\n- **Host factors**: T-cell deficiency (HIV) → severe/disseminated infection\\n\\n## Candida Pathogenesis\\n### Yeast-Mycelial Transition\\n- **Yeast form**: Commensal, non-pathogenic\\n- **Mycelial form**: Invasive hyphae (penetrate tissue)\\n- **Trigger factors**: Increased temperature, alkaline pH, estrogen, hydration\\n\\n### Adhesion Factors\\n- **Hyphal development**: Allows deeper tissue invasion\\n- **Cell wall proteins**: Agglutinin-like sequence (ALS) proteins mediate adhesion\\n- **Epithelial invasion**: Damage occurs at adherence site\\n\\n## Risk Factor Pathophysiology\\n### Antibiotic-Associated Candidiasis\\n- **Normal flora destruction**: Lactobacilli (produce lactic acid, H2O2) suppressed\\n- **pH change**: Vagina becomes more alkaline (increases Candida growth)\\n- **Consequence**: Overgrowth of remaining Candida species\\n\\n### Diabetes and Candidiasis\\n- **Glycosuria**: Glucose in urine/sweat promotes Candida growth\\n- **Glucose in tissues**: Elevated glucose supports mycelial formation\\n- **Phagocyte dysfunction**: Hyperglycemia impairs neutrophil function\\n- **Result**: Increased susceptibility to recurrent infection\\n\\n### Corticosteroid-Induced Candidiasis\\n- **Immune suppression**: TH1 response reduced (IL-2, IFN-γ decreased)\\n- **Local effects**: Corticosteroid in skinfolds increases moisture/occlusion\\n- **Skin atrophy**: Reduces barrier function\\n- **Effect**: Candida proliferation and deeper invasion\\n\\n## Malassezia Pathogenesis\\n### Lipophilia\\n- **Lipid dependency**: Requires exogenous lipids for growth (sebaceous areas)\\n- **Sebum elevation**: Higher in post-puberty, warm climate\\n- **Condition**: Pityriasis versicolor occurs when yeast converts to mycelial form\\n\\n### Pigmentation Changes\\n- **Hypopigmented lesions**: Fungal production of azelaic acid inhibits tyrosinase → blocks melanin synthesis\\n- **Hyperpigmented lesions**: Inflammatory hyperpigmentation in some lesions\\n- **Patchy pattern**: Variable conversion/response creates variegated appearance\\n\\n## Species-Specific Pathophysiology\\n### Trichophyton tonsurans (North America) vs T. rubrum (Worldwide)\\n- **T. rubrum**: Chronic infection, less inflammatory, most common globally\\n- **T. tonsurans**: Acute infection, more inflammatory\\n- **Severity**: T. mentagrophytes (zoophilic) causes more severe inflammation\\n\\n### Candida Species Virulence\\n- **C. albicans**: Most virulent, produces adhesins, hyaluronidase\\n- **C. glabrata**: Increasing resistance to azoles\\n- **Candida auris**: Emerging multidrug-resistant species,\\n        mnemonics: [\\n          { text: \\\"Keratinolytic enzymes = fungus eats dead keratin, never living tissue\\\", explanation: \\\"Why tinea superficial\\\" },\\n          { text: \\\"Candida: Yeast (normal) → Mycelium (invasive)\\\", explanation: \\\"Pathogenic conversion\\\" },\\n          { text: \\\"Antibiotics destroy lactobacilli → alkaline pH → Candida overgrowth\\\", explanation: \\\"Mechanism of AAC\\\" },\\n          { text: \\\"Malassezia produces azelaic acid → blocks tyrosinase → hypopigmentation\\\", explanation: \\\"Why P. versicolor pale\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Dermatophytes produce keratinolytic enzymes; invasion limited to dead keratin\\\",\\n          \\\"T-cell immunity essential for fungal clearance; HIV patients have disseminated infections\\\",\\n          \\\"Candida adhesion and mycelial formation key to pathogenicity\\\",\\n          \\\"Corticosteroids suppress TH1 response and local skin barrier\\\",\\n          \\\"Malassezia lipophilic; pityriasis versicolor develops when conditions favor mycelial form\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Fitzpatrick\\\", chapter: \\\"Pathophysiology of Dermatophytosis\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Robbins Pathology\\\", chapter: \\\"Infections and Inflammatory Dermatoses\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"fungal-infections-clinical\\\",\\n        title: \\\"Fungal Infections - Clinical\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Clinical diagnosis, management protocols, treatment algorithms, Indian context.\\\",\\n        contentMd: "# Fungal Infections - Clinical\\\\n\\\\n## Diagnostic Approach\\\\n### Tinea Corporis Diagnosis\\\\n- **Clinical clue**: Annular scale, central clearing\\\\n- **Differential**: Pityriasis rosea (ovoid lesions, collarette scale), contact dermatitis (pruritic, unclear outline)\\\\n- **Confirmation**: KOH mount (shows septate hyphae)\\\\n- **Culture**: Sabouraud agar (organism identification if needed for resistant cases)\\\\n\\\\n### Candidiasis Diagnosis\\\\n- **Oral thrush**: Clinical appearance usually diagnostic (white removable plaques); culture/KOH if atypical\\\\n- **Vaginal candidiasis**: Wet mount shows budding yeast/pseudohyphae (>50% sensitivity)\\\\n- **Intertrigo**: Clinical appearance + negative KOH rules out tinea\\\\n- **Paronychia**: Distinguish chronic candida paronychia (slow, multiple nails) from acute bacterial (single nail, pain, purulent)\\\\n\\\\n### Pityriasis Versicolor\\\\n- **Wood's lamp**: Gold fluorescence diagnostic (but negative in ~50% due to minimal organisms)\\\\n- **KOH mount**: Spaghetti and meatballs pattern on examination\\\\n- **Culture**: Usually not done (slow growth, not helpful clinically)\\\\n\\\\n## Treatment Protocols\\\\n### Tinea Corporis\\\\n- **Mild/localized**: Topical azole (clotrimazole, miconazole) BID × 2-4 weeks\\\\n- **Extensive/refractory**: Systemic agent:\\\\n  - **Terbinafine** (allylamine): 250 mg OD × 2-4 weeks (preferred for dermatophytes, most effective)\\\\n  - **Fluconazole**: 150-200 mg weekly × 3-4 weeks\\\\n  - **Itraconazole**: 200 mg OD × 2-4 weeks\\\\n- **Indian context**: Terbinafine preferred (cost-effective, shorter duration)\\\\n\\\\n### Candidiasis\\\\n- **Oral thrush**:\\\\n  - Topical: Nystatin suspension 100,000 units 4× daily × 7-14 days\\\\n  - Systemic: Fluconazole 100-200 mg OD × 7-14 days (better absorption)\\\\n- **Vaginal candidiasis**:\\\\n  - **Acute**: Fluconazole 150 mg single dose (simplest)\\\\n  - Topical azole cream × 7 days alternative\\\\n  - **Recurrent (>4×/year)**: Fluconazole 150 mg weekly × 6 months (maintenance)\\\\n- **Diaper dermatitis**:\\\\n  - Topical nystatin + barrier (zinc oxide) paste TID-QID\\\\n  - Add topical corticosteroid (hydrocortisone 1%) if inflamed\\\\n- **Paronychia**:\\\\n  - Chronic candida: Terbinafine 250 mg OD × 3-6 months (penetrates nail bed)\\\\n  - Topical antifungal under occlusion (polythene wrap, glove at night)\\\\n\\\\n### Pityriasis Versicolor\\\\n- **Topical**: Selenium sulfide 2.5% lotion application full body × 10 minutes, daily × 7-10 days\\\\n  - Alternative: Zinc pyrithione shampoo\\\\n  - Miconazole/clotrimazole cream × 3-4 weeks\\\\n- **Systemic** (if extensive/recurrent):\\\\n  - Fluconazole 200 mg OD × 10-14 days\\\\n  - Itraconazole 200 mg OD × 7 days (pulsed dosing)\\\\n- **Maintenance** (prevent recurrence): Selenium sulfide monthly application, pityriasis versicolor recurs in 50% if untreated\\\\n\\\\n## Management by Site and Special Circumstances\\\\n### Tinea Pedis Management\\\\n- **Interdigital**: Topical azole + oral systemic if severe\\\\n- **Hyperkeratotic**: Requires systemic therapy (topical penetration limited) + keratolytic (salicylic acid 10%)\\\\n- **Vesicular**: May be hypersensitivity reaction (dermatophytid); treat primary infection\\\\n\\\\n### Tinea Capitis (Pediatric)\\\\n- **Topical antifungal alone insufficient** (doesn't reach hair follicle)\\\\n- **Systemic required**: Terbinafine or griseofulvin\\\\n  - Terbinafine preferred (shorter course: 4 weeks vs 6-8 weeks griseofulvin)\\\\n  - Adjunct: Antifungal shampoo (selenium sulfide) 2×/week to reduce spore shedding\\\\n- **Exam contacts**: Treat if cultures positive or symptomatic\\\\n\\\\n### Onychomycosis (Nail Fungus)\\\\n- **Challenge**: Poor topical penetration through nail plate\\\\n- **Systemic therapy required**:\\\\n  - **Terbinafine** 250 mg OD: 12 weeks for toenail (60-80% cure), 6 weeks for fingernail\\\\n  - **Itraconazole** 200 mg OD: 12 weeks continuous OR pulsed (1 week/month × 3 months)\\\\n  - **Fluconazole**: Alternative (slower, 200-400 mg weekly × 3-12 months)\\\\n- **Nail debridement**: Mechanically remove infected nail (increases drug penetration)\\\\n- **Monitoring**: Check LFTs monthly (hepatotoxicity risk, especially itraconazole)\\\\n\\\\n### Immunocompromised Patients\\\\n- **HIV/AIDS** (CD4 <50): Severe disseminated candidiasis risk\\\\n  - Systemic antifungal prophylaxis if CD4 <50\\\\n  - Fluconazole 200 mg OD (maintenance after ART)\\\\n- **Cancer patients** (chemotherapy): Candida prophylaxis with fluconazole during mucositis risk\\\\n- **Organ transplant**: Similar prophylaxis as HIV/AIDS (immunosuppressive therapy)\\\\n\\\\n## Indian Context Considerations\\\\n### High Prevalence Factors\\\\n- Warm humid climate (year-round transmission)\\\\n- Poor hygiene in some populations\\\\n- Overcrowding\\\\n- Limited healthcare access (delayed diagnosis)\\\\n\\\\n### Antifungal Resistance\\\\n- Increasing azole resistance (Candida glabrata, C. auris)\\\\n- Allylamine (terbinafine) preferred for dermatophytes (no resistance yet)\\\\n- Monitoring: If treatment failure, culture + susceptibility testing\\\\n\\\\n### Cost-Effective Approach\\\\n- Tinea: Topical azole first (affordable), systemic terbinafine if extensive\\\\n- Candida: Single-dose fluconazole for vaginal (cost-effective)\\\\n- Pityriasis: Selenium sulfide shampoo (inexpensive) monthly maintenance,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Tinea extensive/refractory = Terbinafine (best for dermatophytes)\\\\\\\", explanation: \\\\\\\"First-line systemic\\\\\\\" },\\\\n          { text: \\\\\\\"Candida: Thrush = Fluconazole (oral), Vaginal = Single-dose fluconazole\\\\\\\", explanation: \\\\\\\"Rapid treatment\\\\\\\" },\\\\n          { text: \\\\\\\"Onychomycosis = Terbinafine 12 weeks (toenail), 6 weeks (fingernail)\\\\\\\", explanation: \\\\\\\"Duration varies\\\\\\\" },\\\\n          { text: \\\\\\\"Pityriasis = Selenium sulfide monthly (maintenance prevents 50% recurrence)\\\\\\\", explanation: \\\\\\\"Long-term strategy\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Tinea: KOH confirms; topical azole for localized; systemic terbinafine for extensive\\\\\\\",\\\\n          \\\\\\\"Candida: Thrush responds to fluconazole; recurrent vaginal = weekly maintenance\\\\\\\",\\\\n          \\\\\\\"Pityriasis versicolor: Topical selenium sulfide first; high recurrence requires maintenance\\\\\\\",\\\\n          \\\\\\\"Onychomycosis: Poor topical penetration; systemic therapy 6-12 weeks required\\\\\\\",\\\\n          \\\\\\\"India-specific: Warm climate increases fungal infections; terbinafine most cost-effective\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Fitzpatrick\\\\\\\", chapter: \\\\\\\"Fungal Infection Treatment\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"IAD Guidelines\\\\\\\", chapter: \\\\\\\"Management of Dermatophytosis\\\\\\\", edition: \\\\\\\"2023\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"fungal-infections-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Fungal Infections - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"High-yield facts, treatment tables, diagnostic pearls, common exam questions.\\\\\\\",\\\\n        contentMd: "# Fungal Infections - Exam Prep\\\\\\\\n\\\\\\\\n## Quick Diagnostic Reference\\\\\\\\n| Infection | Site | Appearance | KOH Finding | Treatment |\\\\\\\\n|-----------|------|-----------|-------------|-----------|\\\\\\\\n| Tinea corporis | Body | Annular, central clear | Septate hyphae | Terbinafine/azole |\\\\\\\\n| Tinea pedis | Feet | Maceration, fissure | Septate hyphae | Systemic if severe |\\\\\\\\n| Tinea cruris | Groin | Bilateral, spares scrotum | Septate hyphae | Topical azole |\\\\\\\\n| Tinea unguium | Nail | Thickening, yellowing | Hyphae in nail | Terbinafine 12w |\\\\\\\\n| Candida oral | Mouth | White removable plaques | Budding yeast | Fluconazole |\\\\\\\\n| Candida vaginal | Vagina | Thick white discharge | Budding yeast | Single-dose fluconazole |\\\\\\\\n| P. versicolor | Chest/back | Hypopigmented patches | Spaghetti & meatballs | Selenium sulfide |\\\\\\\\n\\\\\\\\n## High-Yield Facts\\\\\\\\n- **Tinea**: Fungus eats DEAD keratin only (never living tissue → superficial)\\\\\\\\n- **Candida**: Antibiotic use kills lactobacilli → alkaline pH → overgrowth\\\\\\\\n- **Terbinafine**: Best for dermatophytes (allylamine class); fastest onset\\\\\\\\n- **Fluconazole**: Best for systemic candidiasis (CSF penetration, oral absorption)\\\\\\\\n- **Pityriasis**: Lipophilic yeast; warm humidity + sebum = mycelial form\\\\\\\\n- **Onychomycosis**: 12 weeks terbinafine for toenail; check LFTs\\\\\\\\n- **Recurrent candida**: Weekly fluconazole maintenance (addresses recurrent risk)\\\\\\\\n- **Wood's lamp**: P. versicolor = gold fluorescence (50% sensitivity)\\\\\\\\n\\\\\\\\n## Common Exam Question Patterns\\\\\\\\n- \\\\\\\\\\\\\\\"Annular scale with central clearing?\\\\\\\\\\\\\\\" = Tinea corporis (confirm with KOH)\\\\\\\\n- \\\\\\\\\\\\\\\"White mouth plaques in antibiotics?\\\\\\\\\\\\\\\" = Oral candidiasis (thrush)\\\\\\\\n- \\\\\\\\\\\\\\\"Thick vaginal discharge post-antibiotics?\\\\\\\\\\\\\\\" = Candida vaginitis (fluconazole 150mg single)\\\\\\\\n- \\\\\\\\\\\\\\\"Nail thickening/yellowing?\\\\\\\\\\\\\\\" = Onychomycosis (terbinafine, check LFTs)\\\\\\\\n- \\\\\\\\\\\\\\\"Hypopigmented patches on trunk with gold fluorescence?\\\\\\\\\\\\\\\" = P. versicolor\\\\\\\\n- \\\\\\\\\\\\\\\"Which antifungal crosses into CSF?\\\\\\\\\\\\\\\" = Fluconazole\\\\\\\\n- \\\\\\\\\\\\\\\"Best for onychomycosis?\\\\\\\\\\\\\\\" = Terbinafine (6 weeks fingernail, 12 weeks toenail)\\\\\\\\n- \\\\\\\\\\\\\\\"Diabetes + candidiasis mechanism?\\\\\\\\\\\\\\\" = Glycosuria promotes growth + immune dysfunction\\\\\\\\n- \\\\\\\\\\\\\\\"Intertrigo (skinfolds)?\\\\\\\\\\\\\\\" = Candida (maceration); treat with azole + keep dry\\\\\\\\n\\\\\\\\n## Contraindications & Interactions\\\\\\\\n- **Terbinafine**: Hepatotoxicity (check LFTs), drug interactions (CYP3A4/2D6)\\\\\\\\n- **Fluconazole**: Safe in pregnancy (recent guidelines), liver disease (reduce dose)\\\\\\\\n- **Itraconazole**: Drug interactions (many), reduced absorption with antacids\\\\\\\\n- **Griseofulvin**: Photosensitivity, teratogenic (avoid pregnancy)\\\\\\\\n\\\\\\\\n## Clinical Pearls\\\\\\\\n- Tinea pedis hyperkeratotic form = **systemic required** (poor topical penetration)\\\\\\\\n- Tinea capitis = **systemic required** (topical can't reach hair follicle)\\\\\\\\n- Onychomycosis = **mechanical debridement + systemic** (improve drug penetration)\\\\\\\\n- Candida paronychia = chronic (multiple nails, slow) vs acute bacterial (single nail, purulent)\\\\\\\\n- Diaper dermatitis candida = nystatin + zinc oxide, add hydrocortisone if inflamed\\\\\\\\n- Recurrent candida vaginitis = fluconazole 150mg weekly × 6 months (maintenance),\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"TFTC = Terbinafine For Tinea/dermatophytes, Fluconazole for Candida\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Drug selection\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Toenail = 12 weeks (longer, thicker), Fingernail = 6 weeks (faster)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Treatment duration\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Candida: Antibiotics → lactobacilli gone → alkaline → overgrow\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"AAC mechanism\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"P. versicolor = Wood's gold, KOH spaghetti-meatballs, selenium sulfide monthly\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Diagnostic + treatment\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Tinea corporis annular scale = KOH confirms; terbinafine systemic if extensive\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Candida thrush = white plaques; vaginal = single-dose fluconazole\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Onychomycosis = 6-12 weeks terbinafine; check LFTs monthly\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"P. versicolor = asymptomatic cosmetic concern; selenium monthly prevents recurrence\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Antibiotic use = major Candida risk; lactobacilli depletion + pH change\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Fitzpatrick\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Fungal Infection Summary Tables\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"9th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"AAFP\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Dermatophytosis and Candidiasis\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2024\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"fungal-infections-active-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Fungal Infections - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"8 clinical cases testing diagnosis, treatment selection, and management.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Fungal Infections - Active Recall\\\\\\\\n\\\\\\\\n## Q1: Diagnosing Tinea Corporis\\\\\\\\n**Q: Young athletic male with 2-week history of scaly patch on chest. Annular lesion with central clearing, mildly pruritic. Clinical diagnosis suspected. How confirm and treat?**\\\\\\\\n\\\\\\\\nA: **Tinea corporis most likely** (classic annular lesion with central clearing). **Confirmation**: KOH mount (scrape scale, add 10-20% KOH, examine under microscope for septate hyphae). **Differential ruled out**: Pityriasis rosea (ovoid lesions, collarette scale, not annular), psoriasis (well-demarcated plaques, not ringworm shape). **Treatment approach**: (1) Localized/small lesion: Topical azole (clotrimazole, miconazole cream) BID × 2-4 weeks, (2) If extensive/multiple lesions or failure: Systemic terbinafine 250 mg OD × 2-4 weeks (preferred for dermatophytes). **Patient education**: (1) Avoid sharing towels, razors, (2) Keep area dry (moisture promotes spread), (3) Wash hands after scratching. **Follow-up**: Repeat KOH if not improving by week 4 (may need culture/different agent).\\\\\\\\n\\\\\\\\n## Q2: Recurrent Vaginal Candidiasis\\\\\\\\n**Q: 28-year-old woman with 4th episode of vaginal candidiasis in 10 months. Fluconazole 150 mg single dose worked each time, but keeps recurring. Why recurrent and how prevent?**\\\\\\\\n\\\\\\\\nA: **Recurrent vulvovaginal candidiasis (RVVC)** defined as ≥4 episodes/year. **Possible causes**: (1) Inadequate treatment (resistant species like C. glabrata), (2) Persistent vaginal colonization (partial clearance), (3) Host factors (diabetes, immunosuppression, oral contraceptive estrogen). **Mechanism of recurrence**: Candida survives in biofilms or persists at low levels; when local immune response wanes, reactivation occurs. **Management**: (1) Confirm diagnosis (wet mount/culture on first recurrence to rule out other causes), (2) Test blood glucose (diabetes risk factor), (3) **Maintenance therapy**: Fluconazole 150 mg **weekly × 6 months** (suppression regimen reduces recurrence to <25%). (4) Alternative: Topical azole suppression (miconazole weekly). **After maintenance**: Recurrence may occur (natural candida reservoir), retreat as needed. **Counsel**: This is NOT treatment failure; recurrent Candida common in some women; maintenance therapy works well.\\\\\\\\n\\\\\\\\n## Q3: Candida Oral Thrush in HIV Patient\\\\\\\\n**Q: 35-year-old male newly diagnosed HIV (CD4 199) presents with white plaques on tongue, difficulty swallowing. Diagnosis and treatment?**\\\\\\\\n\\\\\\\\nA: **Oral candidiasis (thrush)** confirmed clinically (white plaques). **CD4 count significance**: CD4 <200 = high AIDS-defining opportunistic infection risk; thrush common (40-90% of untreated AIDS). **Why happens at low CD4**: T-cell immunity (TH1, especially IL-2, IFN-γ) essential for Candida clearance; CD4 <200 = profound immunosuppression. **Treatment**: (1) **Acute treatment**: Fluconazole 100-200 mg OD × 7-14 days (oral absorption better than nystatin), (2) **Prophylaxis if CD4 <50**: Fluconazole 200 mg OD (daily prophylaxis prevents recurrence), (3) **ART initiation**: Urgent (restore immune function). **Monitoring**: Thrush typically resolves within 2-3 weeks of fluconazole; failure = fungal resistance (consider other Candida species or micafungin if resistant). **Prognosis**: With CD4 >200 (on ART), thrush risk dramatically decreases.\\\\\\\\n\\\\\\\\n## Q4: Onychomycosis Treatment and Monitoring\\\\\\\\n**Q: 55-year-old diabetic with thickened, yellowed toenails (all 10 nails). KOH positive. Treatment and what labs needed?**\\\\\\\\n\\\\\\\\nA: **Onychomycosis confirmed** (positive KOH). **Diabetic context**: Increased risk (high glucose, impaired immunity), also higher risk of complications (foot ulceration). **Challenge**: Fungus embedded in nail plate; topical agents penetrate poorly. **Systemic therapy required**: **Terbinafine 250 mg OD × 12 weeks** (toenail, most effective). **Rationale for terbinafine**: (1) Most fungicidal (not fungistatic), (2) Shortest course, (3) Best cure rates (60-80%), (4) Concentrates in nail plate. **Pre-treatment labs**: (1) **LFTs** (AST/ALT, baseline hepatic function; terbinafine hepatotoxic), (2) **Creatinine** (renal dosing not needed but assess baseline). **During treatment**: (1) Repeat LFTs at 4-6 weeks (if elevated, stop), (2) Nail debridement mechanically (file away loose nail plate; improves drug penetration), (3) Antifungal nail lacquer adjunctively (ciclopirox 8%). **Post-treatment**: Cure defined as clear nails (may take 3-6 months for new nail to grow out); recurrence ~20% at 1 year.\\\\\\\\n\\\\\\\\n## Q5: Tinea Capitis in Child\\\\\\\\n**Q: 8-year-old with patchy scalp alopecia, scales, and pustules. Two school contacts have similar findings. Suspected tinea capitis. Diagnosis and management?**\\\\\\\\n\\\\\\\\nA: **Tinea capitis suspected** (patchy alopecia, scale, pustules; school exposure). **Diagnosis confirmation**: KOH mount (pluck 10-15 hairs + roots, add KOH) shows fungal hyphae; culture on Sabouraud agar identifies species. **Classification**: (1) **Endothrix** (spores inside hair shaft; easier to treat), (2) **Ectothrix** (spores outside hair; T. tonsurans, common in USA). **Treatment challenge**: Topical antifungal **ALONE insufficient** (doesn't penetrate hair follicle); requires systemic therapy. **Systemic options**: (1) **Terbinafine 125 mg OD × 4 weeks** (preferred; shortest course, fungicidal), (2) **Griseofulvin 20 mg/kg/day × 6-8 weeks** (older, longer course). **Adjunct**: Antifungal shampoo (selenium sulfide 2.5%) 2×/week to reduce spore shedding (prevents transmission). **School contacts**: Examine scalp; culture if symptomatic; treat if positive. **Duration**: 4-6 weeks post-treatment before return to school (prevent spread). **Follow-up**: Hair typically regrows over 2-3 months; KOH negative at end of treatment confirms cure.\\\\\\\\n\\\\\\\\n## Q6: Pityriasis Versicolor Diagnosis\\\\\\\\n**Q: 22-year-old with multiple hypopigmented patches on chest/back (spares face/extremities). Mildly itchy but mostly cosmetic concern. Diagnosis?**\\\\\\\\n\\\\\\\\nA: **Pityriasis versicolor (Tinea versicolor) most likely** (classic distribution: sebaceous areas = chest, back, shoulders; hypopigmentation). **Diagnosis**: (1) **Wood's lamp**: Gold/orange-yellow fluorescence (diagnostic if positive; 50% sensitivity), (2) **KOH mount**: Unique \\\\\\\\\\\\\\\"spaghetti and meatballs\\\\\\\\\\\\\\\" appearance (short hyphae + round budding yeast) diagnostic, (3) **Culture**: Usually not done (slow, not helpful clinically). **Organism**: Malassezia furfur (lipophilic yeast, normal skin flora; converts to pathogenic mycelial form with warm humidity + sebum). **Why hypopigmented**: Fungus produces azelaic acid → inhibits tyrosinase → blocks melanin synthesis. **Pathophysiology**: Asymptomatic except cosmetic concern (hypopigmented patches remain pale for weeks after treatment as melanin takes time to reappear). **Treatment**: (1) **Topical**: Selenium sulfide 2.5% lotion application (full body) × 10 minutes daily × 7-10 days (cheapest), (2) **Alternative topical**: Miconazole/clotrimazole cream × 3-4 weeks, (3) **Systemic**: Fluconazole 200 mg OD × 10-14 days (if extensive/recurrent). **High recurrence**: 50% recurrence if untreated; **monthly prophylaxis** with selenium sulfide shampoo (apply × 10 min monthly) prevents recurrence. **Patient education**: Warn about cosmetic delay in repigmentation (may take months).\\\\\\\\n\\\\\\\\n## Q7: Drug Selection in Immunocompromised\\\\\\\\n**Q: 29-year-old with CD4 <50, disseminated candidiasis (esophageal, oral). Which antifungal penetrates esophagus and CNS?**\\\\\\\\n\\\\\\\\nA: **Disseminated candidiasis at CD4 <50** = AIDS-defining illness requiring hospital treatment. **Clinical question**: Which antifungal covers both esophagus and CNS (concern for candidemia, meningitis). **Options evaluation**: (1) **Fluconazole**: Excellent esophageal penetration, EXCELLENT CNS penetration (CSF concentration ~60% serum), fungistatic, oral/IV available, (2) **Itraconazole**: Poor CNS penetration, not suitable, (3) **Micafungin**: Good esophageal penetration, poor CNS penetration. **Answer: Fluconazole** (only adequate CNS penetration for Candida meningitis). **Dosing**: IV fluconazole 400-600 mg OD × 2-3 weeks (systemic candidiasis; IV for severe esophagitis). **CD4 considerations**: (1) Continue until CD4 >200 on ART, (2) **Prophylaxis at CD4 <50**: Continue fluconazole 200 mg OD even after acute infection clears, (3) Prophylaxis can discontinue when CD4 >200 × 3 months on ART. **Monitoring**: Repeat blood cultures to document clearance; esophageal symptoms should improve within 7-10 days.\\\\\\\\n\\\\\\\\n## Q8: Distinguishing Intertrigo from Tinea\\\\\\\\n**Q: 45-year-old obese man with inguinal maceration, erythema, moisture. Is this tinea cruris or candida intertrigo? How differentiate treatment?**\\\\\\\\n\\\\\\\\nA: **Clinical confusion**: Both cause groin/skin fold maceration. **Key differences**: (1) **Tinea cruris**: Sharp defined borders, central clearing often, \\\\\\\\\\\\\\\"moccasin\\\\\\\\\\\\\\\" pattern in feet (if athlete's foot coexists), scaling, bilateral symmetric, spares scrotum, KOH shows septate hyphae, (2) **Candida intertrigo**: Poorly demarcated, erythematous, macerated, satellite pustules/papules (pathognomonic), inguinal folds/under breasts/axillae (other sites than tinea), KOH shows budding yeast. **Diagnosis**: (1) **KOH mount**: Distinguishes definitively (hyphae vs yeast), (2) **Clinical clues**: Satellite pustules = Candida, sharp border = Tinea, (3) **History**: Recent antibiotic use = favors Candida. **Treatment difference**: (1) **Tinea cruris**: Topical azole (clotrimazole) BID × 2-4 weeks; systemic if extensive, (2) **Candida intertrigo**: Topical azole + barrier function restoration (zinc oxide paste) TID-QID ± hydrocortisone 1% if inflamed (usually resolves faster than tinea). **Prevention**: Keep folds dry, moisture management is KEY (regular drying, antifungal powder if recurrent). **Recurrence risk**: High in obese patients; address weight/humidity control.\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-}
-}
-}
-];
-];
-];
-];
+        summary: "Overview of dermatophytes, candidiasis, and pityriasis versicolor with clinical presentations and epidemiology.",
+        contentMd: `# Fungal Infections - Foundation
+
+## Dermatophytosis (Ringworm)
+### Epidemiology
+- **Organisms**: Trichophyton, Microsporum, Epidermophyton (keratinophilic fungi)
+- **Prevalence**: Most common fungal infection worldwide, 20-25% population in India
+- **Transmission**: Anthropophilic (person-person), zoophilic (animals), geophilic (soil)
+- **Risk factors**: Warm humid climate, poor hygiene, friction, immunosuppression
+
+### Clinical Classification by Site
+- **Tinea corporis** (body): Annular erythematous plaques, scaling border, central clearing
+- **Tinea pedis** (athlete's foot): Web space maceration, scaling, fissuring, hyperkeratosis
+- **Tinea cruris**: Groin/inner thigh, bilateral symmetry, spares scrotum
+- **Tinea unguium** (onychomycosis): Nail thickening, yellowing, subungual debris
+- **Tinea capitis** (scalp): Patchy alopecia, scaling, may have pustules (kerion)
+
+### Diagnosis
+- **KOH mount**: 10-20% KOH dissolves cellular material, shows fungal septate hyphae
+- **Wood's lamp**: Slight yellow-brown (not diagnostic)
+- **Culture**: Sabouraud dextrose agar, identifies organism
+
+## Candidiasis
+### Candida Species
+- **C. albicans**: Most common (80%)
+- **C. tropicalis, C. glabrata**: Increasingly resistant
+- **Normal flora**: Skin, mucous membranes, GI tract
+
+### Clinical Presentations
+- **Oral candidiasis (Thrush)**: White plaques on tongue/buccal mucosa, erythematous base
+- **Esophageal candidiasis**: Dysphagia, chest pain; in immunocompromised
+- **Vulvovaginal candidiasis**: Vaginal itching, white curd-like discharge, vulvar erythema
+- **Cutaneous candidiasis**: Maceration in skin folds (inframammary, groin, web spaces)
+- **Diaper dermatitis**: Erythema with satellite lesions in infants
+
+### Risk Factors
+- Immunosuppression (HIV/AIDS, chemotherapy)
+- Antibiotics (destroy normal flora)
+- Pregnancy (hormonal changes)
+- Diabetes mellitus (hyperglycemia)
+- Occlusion and moisture (intertriginous areas)
+
+## Pityriasis Versicolor
+### Characteristics
+- **Organism**: Malassezia furfur (lipophilic yeast)
+- **Presentation**: Multiple hypo- or hyper-pigmented patches on trunk/neck
+- **Color variants**: "Tinea" versicolor = pityriasis versicolor (misnomer, not dermatophyte)
+- **Fine scaling**: Minimal, non-inflammatory
+- **Distribution**: Upper back, chest, shoulders, neck
+
+### Diagnosis
+- **KOH mount**: "Spaghetti and meatballs" pattern (short septate hyphae + round yeast)
+- **Wood's lamp**: Pale yellow-green or coppery-orange fluorescence
+- **Culture**: Grows on lipid-rich media`,
+        mnemonics: [
+          { text: "Trichophyton, Microsporum, Epidermophyton = TME (Dermatophytes)", explanation: "Three main dermatophyte genera" },
+          { text: "Tinea Corporis Annular = TCA (ring-shaped with clear center)", explanation: "Classic presentation" },
+          { text: "KOH = Candida/Fungal visualization; Sabouraud = Culture/ID", explanation: "Diagnostic techniques" },
+          { text: "Malassezia = Pityriasis Versicolor (not tinea)", explanation: "Common misnomer" }
+        ],
+        keyPoints: [
+          "Dermatophytes are keratinophilic (need keratin to survive)",
+          "Tinea corporis classically presents with annular lesion with central clearing",
+          "Tinea pedis most common in tropical climate and with poor hygiene",
+          "KOH mount shows septate hyphae for dermatophytes",
+          "Candidiasis is opportunistic; common in immunocompromised and diabetic patients",
+          "Malassezia is lipophilic yeast; causes pityriasis versicolor with hypopigmentation",
+          "Pityriasis versicolor shows 'spaghetti and meatballs' on KOH mount",
+          "Malassezia fluorescence with Wood's lamp is pathognomonic"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "12 - Fungal Infections", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Fungal Infections", edition: "20th" }
+        ],
+      },
+      {
+        layer: 2,
+        slug: "fungal-infections-layer-2-mechanism",
+        title: "Fungal Infections - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pathogenesis of fungal infection, fungal cell wall structure, and immune mechanisms.",
+        contentMd: `# Fungal Infections - Mechanism
+
+## Dermatophyte Pathogenesis
+- **Keratinolytic enzymes**: Produce keratinases that degrade alpha-keratin, collagen (Type I, III), elastin
+- **Adhesion**: Specialized adhesins bind to keratinocytes; fungal surface proteins interact with host cells
+- **Invasion**: Germination within stratum corneum; mycelial growth in keratinized tissue
+- **Immune evasion**: Produce antigens that trigger Th2 response (less protective than Th1)
+- **Persistence**: In nails, difficult to treat due to poor penetration; in chronic infections
+
+## Candida Pathogenesis
+- **Transition**: Yeast (commensal) → Hyphal (invasive) form driven by pH, temperature, glucose
+- **Adhesion**: Agglutinin-like sequence (Als) proteins bind to epithelial cells
+- **Invasion**: Hyphae penetrate epithelium using protease secretion
+- **Immune response**: Neutrophils crucial for superficial candidiasis; cellular immunity for invasive disease
+- **Biofilm formation**: Protected community of yeasts/hyphae; resistant to antifungals
+
+## Malassezia Pathogenesis
+- **Lipid dependency**: Requires long-chain fatty acids (C11-C24) for growth
+- **Hydrophobic growth**: Occurs in sebaceous-rich areas (chest, back)
+- **Polymorphic transition**: Yeast-mycelial transformation in pityriasis versicolor
+- **Enzymatic activity**: Lipases degrade lipids; phosphatase activity modulates lipid metabolism
+- **Immune dysregulation**: Triggers Th17 response; reduced Th1 response
+
+## Fungal Cell Wall & Drug Target
+- **Composition**: Chitin (N-acetylglucosamine), β-glucan, mannoproteins
+- **Ergosterol**: Unique to fungi (vs cholesterol in human cells); target for azoles, polyenes
+- **β-1,3-glucan synthase**: Target for echinocandins
+- **Chitin/cellulose synthesis**: Target for morpholine antifungals
+
+## Host Immune Response
+- **Innate immunity**: Keratinocytes produce antimicrobial peptides (β-defensins); neutrophils phagocytose
+- **Adaptive immunity**: Th1 response protective (IFN-γ, IL-2); Th2 response less protective
+- **Complement**: Activation via alternative pathway
+- **Antifungal factors**: Skin surface lipids, low pH, antimicrobial proteins (lysozyme)`,
+        mnemonics: [
+          { text: "Keratinases = Fungal proteases that degrade keratin", explanation: "Why dermatophytes infect skin" },
+          { text: "Candida: Yeast→Hyphal transition (temperature, pH, glucose)", explanation: "Virulence switch mechanism" },
+          { text: "Malassezia = Lipid-loving (lipophilic); grows in oily areas", explanation: "Ecological niche" }
+        ],
+        keyPoints: [
+          "Dermatophytes produce keratinases to invade and survive in keratin",
+          "Th2 response predominates in dermatophyte infection (less protective)",
+          "Candida transition from yeast to hyphal form increases pathogenicity",
+          "Neutrophils are critical for superficial candidiasis immunity",
+          "Malassezia requires lipids; thrives in sebaceous-rich areas",
+          "Ergosterol is unique to fungi; target for azole antifungals",
+          "β-glucan synthesis targeted by echinocandins",
+          "Biofilm formation in candidiasis confers antifungal resistance"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "12 - Fungal Infections", edition: "4th" },
+          { book: "Robbins & Kumar Pathologic Basis of Disease", chapter: "25 - Skin Disorders", edition: "10th" }
+        ],
+      },
+      {
+        layer: 3,
+        slug: "fungal-infections-layer-3-clinical",
+        title: "Fungal Infections - Clinical",
+        estimatedMinutes: 35,
+        summary: "Clinical diagnosis, treatment approaches, and management of fungal skin infections.",
+        contentMd: `# Fungal Infections - Clinical
+
+## Clinical Diagnosis Methods
+- **KOH Mount Preparation**: Scrape scale, mount on KOH, visualize septate hyphae for dermatophytes
+- **Gram Stain**: Candida appears as Gram-positive cocci (yeast) and pseudohyphae
+- **Fungal Culture**: Sabouraud dextrose agar (dermatophytes), blood agar (candida)
+- **Wood's Lamp**: Pityriasis versicolor fluoresces (coppery-orange); microsporum canis (blue-green)
+- **Dermoscopy**: Polarized microscopy for fungal elements
+- **Histopathology**: PAS stain highlights fungal elements within tissue
+
+## Treatment Approaches
+### Topical Antifungals
+- **Azoles** (clotrimazole, miconazole, ketoconazole): Target ergosterol; broad spectrum
+- **Allylamines** (terbinafine): Target squalene epoxidase; highly effective for dermatophytes
+- **Polyenes** (nystatin): Bind ergosterol; less effective for dermatophytes, good for candida
+- **Morpholines** (amorolfine): Nail lacquer; penetrates nail plate
+- **Duration**: 2-4 weeks for tinea corporis; 4-12 weeks for onychomycosis
+
+### Systemic Antifungals
+- **Griseofulvin**: Fungistatic; used historically, now less common
+- **Terbinafine** (allylamine): Fungicidal; first-line for onychomycosis (12 weeks)
+- **Azoles** (fluconazole, itraconazole): Broad spectrum; for systemic candidiasis, pityriasis versicolor
+- **Echinocandins** (caspofungin): For invasive candidiasis in hospitalized patients
+
+## Specific Infection Management
+### Tinea Corporis
+- Topical azole or terbinafine for uncomplicated lesions
+- Systemic therapy if extensive, failed topical, immunocompromised
+- Avoid occlusive clothing; maintain dryness
+
+### Tinea Pedis
+- Topical treatment with good foot hygiene and drying
+- Antifungal powder for moisture control
+- Oral therapy if severe or unresponsive
+
+### Candidiasis
+- Topical azole for limited cutaneous disease
+- Systemic azole for extensive, oral, esophageal candidiasis
+- Fluconazole for invasive disease or in immunocompromised
+
+## Prevention & Management
+- **Environmental**: Keep skin dry, avoid humidity, proper hygiene
+- **Contact**: Avoid sharing towels, fomites in tinea pedis
+- **Immunization**: No vaccine available
+- **Prophylaxis**: Fluconazole for high-risk immunocompromised patients (CD4 <50)`,
+        mnemonics: [
+          { text: "KOH = fungal visualization; Sabouraud = fungal culture", explanation: "Diagnostic techniques" },
+          { text: "Azoles (ketoconazole), Allylamines (terbinafine), Polyenes (nystatin)", explanation: "Antifungal classes" },
+          { text: "Onychomycosis = Oral terbinafine 12 weeks", explanation: "Standard therapy" }
+        ],
+        keyPoints: [
+          "KOH mount shows septate hyphae for dermatophytes; yeast for candida",
+          "Pityriasis versicolor fluorescence is pathognomonic with Wood's lamp",
+          "Terbinafine is most effective for dermatophyte infection",
+          "Azoles cover both dermatophytes and candida",
+          "Onychomycosis requires prolonged systemic therapy (months)",
+          "Candidiasis in immunocompromised needs systemic azole therapy",
+          "Fluconazole prophylaxis for CD4 <50 in HIV/AIDS",
+          "Good hygiene and dryness prevent recurrence"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "12 - Fungal Infections", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Fungal Infections", edition: "20th" }
+        ],
+      },
+      {
+        layer: 4,
+        slug: "fungal-infections-layer-4-exam",
+        title: "Fungal Infections - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "High-yield facts, differentials, and NEXT-pattern questions for fungal infections.",
+        contentMd: `# Fungal Infections - Exam Prep
+
+## High-Yield Exam Facts
+- **Most common fungal infection**: Tinea corporis (20-25% of India population)
+- **Most common organism**: Trichophyton (anthropophilic > zoophilic > geophilic)
+- **Pityriasis versicolor**: NOT a dermatophyte; caused by Malassezia (lipophilic yeast)
+- **KOH 'spaghetti and meatballs'**: Pathognomonic for pityriasis versicolor
+- **Oral candidiasis**: White plaques on erythematous base; pseudomembranous candidiasis
+- **Diaper dermatitis**: Satellite lesions (candida); Ammoniacal odor
+
+## Differential Diagnosis
+### Annular Lesions (Tinea Corporis vs Others):
+- **Tinea corporis**: Scaly, raised border, central clearing, KOH +ve
+- **Pityriasis rosea**: Non-scaly, trunk, Herald patch, viral
+- **Discoid lupus**: Scarring, photosensitive, ANA +ve
+- **Granuloma annulare**: Deep lesions, non-scaly, epithelioid granuloma
+
+### Nail Changes (Onychomycosis vs Others):
+- **Dermatophyte onychomycosis**: Distal subungual, yellow, debris
+- **Psoriatic nails**: Pitting, onycholysis, oil drop sign
+- **Lichen planus**: Thinning, pterygium unguium, red streaks
+
+## NEXT-Pattern Questions
+### Recall (10%):
+- Q: "Malassezia furfur causes?" → A: Pityriasis versicolor (not tinea versicolor)
+- Q: "KOH mount finding in candidiasis?" → A: Pseudohyphae and budding yeast
+
+### Analysis (30%):
+- Q: "Patient with annular lesion, erythema, scaling. KOH negative. What else?" → A: Rule out pityriasis rosea (viral), discoid lupus
+- Q: "Onychomycosis resistant to topical therapy. Why?" → A: Poor penetration, biofilm formation in nail
+
+### Problem-Solving (60%):
+- Q: "32-year-old with CD4 <50, white plaques on tongue. First-line treatment?" → A: Fluconazole 200mg daily for oral candidiasis
+- Q: "Extensive tinea corporis in immunocompromised. 6-week topical treatment failed. Next step?" → A: Systemic terbinafine or azole
+
+## Clinical Pearls
+- **Kerion**: Severe tinea capitis with pustules; may indicate host immune response
+- **Id reaction**: Autosensitization to fungal antigen causing vesicles; treat primary infection
+- **Malassezia**: Lipid-dependent growth; thrives in oily, humid areas
+- **Candida albicans**: Normal flora but becomes pathogenic with immunosuppression or disrupted ecology
+- **Griseofulvin**: Concentrates in nails due to lipophilic nature; FDA pregnancy category X
+
+## Common Mistakes
+- Confusing pityriasis versicolor with tinea versicolor (not dermatophyte)
+- Missing candidiasis in diabetics (hyperglycemia favors candida)
+- Not recognizing id reaction (hypersensitivity to dermatophyte)
+- Inadequate duration of therapy (onychomycosis needs months)
+- Not screening for immunosuppression in recurrent candidiasis`,
+        mnemonics: [
+          { text: "TERBINAFINE = First-line for dermatophytes (especially nails)", explanation: "Antifungal of choice" },
+          { text: "MALASSEZIA = Lipophilic; causes Pityriasis Versicolor (NOT tinea)", explanation: "Common exam error" },
+          { text: "KOH: Septate hyphae (dermatophyte), Pseudohyphae + budding (candida), Spores + hyphae (versicolor)", explanation: "Morphology patterns" }
+        ],
+        keyPoints: [
+          "Dermatophytes cause 80% of fungal skin infections in India",
+          "Trichophyton tonsurans most common anthropophilic dermatophyte",
+          "Pityriasis versicolor: KOH shows 'spaghetti and meatballs', Wood's lamp fluorescence",
+          "Candida pseudohyphae on KOH; confirmed with culture on Sabouraud agar",
+          "Onychomycosis: terbinafine 250mg daily × 12 weeks (dermatophyte)",
+          "Oral candidiasis prophylaxis: fluconazole 200mg daily if CD4 <50",
+          "Kerion indicates severe host immune response; may need systemic therapy",
+          "Id reaction is hypersensitivity; treat primary infection"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "12 - Fungal Infections", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Fungal Infections", edition: "20th" }
+        ],
+      },
+      {
+        layer: 5,
+        slug: "fungal-infections-layer-5-active-recall",
+        title: "Fungal Infections - Active Recall",
+        estimatedMinutes: 30,
+        summary: "Flashcard Q&A pairs for fungal infections diagnosis and management.",
+        contentMd: `# Fungal Infections - Active Recall Flashcards
+
+## Q1: Dermatophyte Organisms
+**Q: Name the three genera of dermatophytes and give one organism from each.**
+A: Trichophyton (T. rubrum, T. mentagrophytes), Microsporum (M. canis, M. gypseum), Epidermophyton (E. floccosum)
+
+## Q2: Epidemiology India
+**Q: What is the prevalence of tinea corporis in India?**
+A: 20-25% of population; highest prevalence in tropical/subtropical regions
+
+## Q3: Tinea Classification Sites
+**Q: List five types of tinea based on location.**
+A: Tinea corporis (body), Tinea pedis (foot), Tinea cruris (groin), Tinea unguium/onychomycosis (nail), Tinea capitis (scalp)
+
+## Q4: KOH Mount Technique
+**Q: What is the purpose of KOH in fungal diagnosis?**
+A: 10-20% KOH dissolves cellular components (keratin, nuclear material), allowing visualization of fungal elements (septate hyphae, yeast)
+
+## Q5: Culture Medium
+**Q: What is the standard culture medium for dermatophytes?**
+A: Sabouraud dextrose agar (SDA); slow growth (2-4 weeks), requires room temperature incubation
+
+## Q6: Candidiasis Risk Factors
+**Q: Name five risk factors for candidiasis.**
+A: Immunosuppression (HIV), antibiotics (destroy normal flora), pregnancy, diabetes mellitus, occlusion/moisture
+
+## Q7: Candida Species
+**Q: Which Candida species is most common, and which are increasingly resistant?**
+A: C. albicans is most common (80%); C. tropicalis and C. glabrata increasingly resistant
+
+## Q8: Pityriasis Versicolor Organism
+**Q: What organism causes pityriasis versicolor, and what is its unique characteristic?**
+A: Malassezia furfur (lipophilic yeast); requires long-chain fatty acids (C11-C24) for growth
+
+## Q9: Wood's Lamp Findings
+**Q: What are the Wood's lamp findings for pityriasis versicolor?**
+A: Pale yellow-green or coppery-orange fluorescence (pathognomonic)
+
+## Q10: KOH Pattern Versicolor
+**Q: What is the characteristic KOH mount finding in pityriasis versicolor?**
+A: "Spaghetti and meatballs" pattern (short septate hyphae + round yeast cells)
+
+## Q11: Terbinafine Indication
+**Q: What is the standard dose and duration of terbinafine for onychomycosis?**
+A: 250 mg daily for 12 weeks (dermatophyte); 6 weeks for toenail, 12 weeks for fingernail
+
+## Q12: Systemic Candidiasis Treatment
+**Q: What is the first-line treatment for oral candidiasis in CD4 <50 patients?**
+A: Fluconazole 200 mg daily; prophylaxis if CD4 <50 to prevent recurrence
+
+## Q13: Diaper Dermatitis
+**Q: Why does candida cause satellite lesions in diaper dermatitis?**
+A: Occlusion and moisture in diaper area creates ideal environment; satellite lesions indicate cutaneous candida spread
+
+## Q14: Kerion Definition
+**Q: What is a kerion, and what does it indicate?**
+A: Severe tinea capitis with pustules and lymphadenopathy; indicates strong host immune response; may need systemic therapy
+
+## Q15: Id Reaction
+**Q: What is an id reaction in fungal infection?**
+A: Hypersensitivity skin reaction to fungal antigens manifesting as vesicles/urticaria; treat primary fungal infection to resolve id reaction`,
+        mnemonics: [
+          { text: "TME = Trichophyton, Microsporum, Epidermophyton (dermatophyte genera)", explanation: "Three main dermatophytes" },
+          { text: "KOH: Septate hyphae (dermatophyte), Pseudohyphae (candida), Spores+hyphae (versicolor)", explanation: "Morphology patterns" },
+          { text: "TERBINAFINE 12 weeks = Onychomycosis gold standard", explanation: "Drug of choice for nails" }
+        ],
+        keyPoints: [
+          "Dermatophytes are keratinophilic; produce keratinases to invade skin",
+          "KOH mount shows septate hyphae for dermatophytes; pseudohyphae for candida",
+          "Sabouraud agar is standard culture medium for fungal identification",
+          "Malassezia is lipophilic; causes pityriasis versicolor (NOT a dermatophyte)",
+          "Pityriasis versicolor: 'spaghetti and meatballs' on KOH, fluorescence with Wood's lamp",
+          "Candida transition from yeast to hyphal form increases virulence",
+          "Terbinafine is fungicidal and highly effective for dermatophytes",
+          "Onychomycosis requires prolonged systemic therapy (months); topical insufficient",
+          "Fluconazole prophylaxis for CD4 <50 prevents oral candidiasis",
+          "Id reaction is immune response to fungal antigen; improves with primary treatment"
+        ],
+        textbookRefs: [
+          { book: "IADVL Textbook of Dermatology", chapter: "12 - Fungal Infections", edition: "4th" },
+          { book: "Roxburgh's Common Skin Diseases", chapter: "Fungal Infections", edition: "20th" }
+        ],
+      },
+    ],
+  },
 ];
