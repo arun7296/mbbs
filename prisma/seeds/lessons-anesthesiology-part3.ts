@@ -1,5 +1,6 @@
-// Anesthesiology Module 5: Pain Management & Palliative Care
-export const anesthesiologyPart3Lessons = [
+import type { TopicLessons } from "./content-loader";
+
+export const anesthesiologyPart3Lessons: TopicLessons[] = [
   {
     topicCode: "AS-MOD-05-TOP-01",
     layers: [
@@ -8,11 +9,550 @@ export const anesthesiologyPart3Lessons = [
         slug: "acute-pain-management-foundation",
         title: "Acute Pain Management - Foundation",
         estimatedMinutes: 25,
-        summary: "Pain pathophysiology, WHO analgesic ladder, acute pain protocols.",
-        contentMd: "# Acute Pain Management - Foundation\n\n## Pain Physiology\n\n### Nociception (4 Steps)\n1. **Transduction**: Tissue injury → nociceptor activation (C and A-delta fibers)\n2. **Transmission**: Action potentials travel to dorsal horn\n3. **Modulation**: Spinal cord gates pain signals (endogenous opioids, descending inhibition)\n4. **Perception**: Brain integrates signal with emotion, cognition, context\n\n### Pain Classifications\n- **Nociceptive**: Somatic (bone, muscle), visceral (organ)\n- **Neuropathic**: Nerve injury (burning, shooting)\n- **Functional**: No clear tissue injury (centralized pain)\n\n## Consequences of Acute Pain\n\n### Physiologic Effects\n- **Sympathetic activation**: Tachycardia, hypertension, sweating\n- **Neuroendocrine**: Cortisol, catecholamines elevated\n- **Respiratory**: Shallow breathing (splinting) → atelectasis, pneumonia risk\n- **Metabolic**: Hyperglycemia, increased metabolism\n\n### Consequences\n- **Delayed healing**: Increased catabolic state\n- **Thromboembolic**: Immobility → DVT risk\n- **Psychological**: Anxiety, depression, chronic pain development\n\n## Goals of Acute Pain Management\n- **Pain relief**: Allow function, sleep, psychological comfort\n- **Prevent complications**: DVT, pneumonia, delirium\n- **Prevent chronic pain**: Early aggressive management reduces transition\n- **Minimal side effects**: Nausea, respiratory depression, addiction\n- **Facilitate rehabilitation**: Early mobilization\n\n## Special Populations\n\n### Elderly\n- **Reduced metabolism**: Lower drug clearance; longer duration\n- **Polypharmacy**: Drug interactions\n- **Sensitivity**: Higher risk delirium, respiratory depression\n- **Management**: Lower doses, longer intervals, careful monitoring\n\n### Renal Impairment\n- **Morphine metabolite accumulation**: Risk of respiratory depression\n- **Avoid**: Long-acting, accumulating metabolites\n- **Use**: Fentanyl (no active metabolites); adjust dose intervals\n\n### Hepatic Impairment\n- **Reduced metabolism**: Risk of drug accumulation\n- **First-pass elimination impaired**: Higher bioavailability\n- **Management**: Reduce dose, avoid hepatotoxic drugs (acetaminophen if severe),\n        keyPoints: [\n          \"Pain is nociception + perception; modulation possible at spinal level\",\n          \"Acute pain consequences: splinting, DVT risk, chronic pain development\",\n          \"Management goals: pain relief, prevent complications, facilitate rehabilitation\",\n          \"Special populations (elderly, renal/hepatic impairment) need dose adjustment\",\n        ],\n        textbookRefs: [\n          { book: \"Bailey & Love\", chapter: \"Critical care\", edition: \"28th\" },\n          { book: \"Sabiston Textbook of Surgery\", chapter: \"Critical care\", edition: \"21st\" },\n        ],\n      },\n      {\n        layer: 2,\n        slug: \"pain-assessment-tools\",\n        title: \"Acute Pain - Assessment & WHO Analgesic Ladder\",\n        estimatedMinutes: 25,\n        summary: \"Pain assessment scales, WHO ladder, multimodal analgesia.\",\n        contentMd: "# Acute Pain - Assessment & WHO Analgesic Ladder\\n\\n## Pain Assessment Scales\\n\\n### Verbal Rating Scale (VRS)\\n- **0**: None\\n- **1**: Mild\\n- **2**: Moderate\\n- **3**: Severe\\n- **Limitation**: Ordinal scale; subjective\\n\\n### Numeric Rating Scale (NRS)\\n- **0-10**: 0 = no pain, 10 = worst possible pain\\n- **Advantage**: Quantitative; easier statistical analysis\\n- **Commonly used in clinical practice**\\n\\n### Visual Analog Scale (VAS)\\n- **10cm line**: Patient marks pain intensity\\n- **Sensitive** to small changes; useful for research\\n\\n### Faces Pain Scale\\n- **6 faces** showing expressions (happy to crying)\\n- **Use**: Pediatric patients, non-verbal patients\\n\\n### CRIES Score (Pediatric)\\n- **Crying**, **Requires O2**, **Increased vital signs**, **Expression**, **Sleeplessness**\\n- **0-10 scale**: Used for infants/toddlers\\n\\n## WHO Analgesic Ladder\\n\\n### Step 1 (Mild Pain, 1-3/10)\\n- **Non-opioid**:\\n  - Acetaminophen (Paracetamol): 500-1000mg Q4-6H (max 4g/day)\\n  - NSAIDs: Ibuprofen 400-800mg Q6-8H, Naproxen 250-500mg Q12H\\n  - Topical: Diclofenac gel, capsaicin cream\\n- **Adjuvant**: Gabapentin for neuropathic component\\n- **Non-pharmacologic**: Ice, elevation, PT\\n\\n### Step 2 (Moderate Pain, 4-6/10)\\n- **Weak opioid**:\\n  - Tramadol: 100-150mg Q4-6H (max 400mg/day; seizure risk >400mg)\\n  - Codeine: 30-60mg Q4-6H (poor metabolism in some; active metabolite morphine)\\n  - Hydrocodone: 5-10mg Q4-6H\\n  - Combination (acetaminophen + opioid): Tylenol #3 (paracetamol 300mg + codeine 30mg)\\n- **Plus non-opioid**: Continue acetaminophen or NSAID\\n- **Adjuvant**: Gabapentin, pregabalin (neuropathic pain)\\n\\n### Step 3 (Severe Pain, 7-10/10)\\n- **Strong opioid**:\\n  - **Morphine**: 5-10mg IV/SC Q2-4H (rapid onset, short duration)\\n  - **Fentanyl**: 50-100mcg IV; transdermal patch 25-100mcg/72H (no active metabolites)\\n  - **Hydromorphone**: 1-2mg IV Q2-4H (more potent than morphine)\\n  - **Oxycodone**: 5-10mg PO Q4-6H (good oral bioavailability)\\n- **Dosing**: Pain-titrated; increase until adequate relief or side effects limit\\n- **Long-acting vs immediate-release**:\\n  - **Immediate-release**: Q4-6H dosing; adjust to effect\\n  - **Long-acting** (extended-release): Once pain controlled; for chronic pain\\n- **Multimodal approach**: Add non-opioid, regional anesthesia, non-pharmacologic\\n\\n## Multimodal Analgesia Concept\\n\\n### Rationale\\n- **Synergistic effects**: Different mechanisms → better pain control\\n- **Lower total opioid dose**: Reduced side effects\\n- **Prevent tolerance**: Less opioid escalation needed\\n\\n### Components\\n1. **Non-opioid**: Acetaminophen, NSAID\\n2. **Opioid**: Titrated to effect\\n3. **Adjuvant**: Gabapentin, pregabalin, duloxetine\\n4. **Regional anesthesia**: Nerve blocks, epidural (if suitable)\\n5. **Non-pharmacologic**: PT, relaxation, distraction\\n\\n### Example Regimen (Post-op Day 1-2)\\n- **Base**: Acetaminophen 1g Q6H + Ibuprofen 400mg Q8H (if no contraindications)\\n- **Opioid**: Morphine 5mg IV Q2-4H PRN (pain >4/10)\\n- **Adjuvant**: Gabapentin 300mg Q8H (neuropathic component)\\n- **Regional**: Epidural morphine 5mg if major surgery (pain control 24+ hours)\\n\\n### Opioid Side Effects & Management\\n\\n| Side Effect | Incidence | Management |\\n|-------------|-----------|-----------|\\n| Constipation | 80% (most common) | Stool softener + laxative; avoid anticholinergics |\\n| Nausea/vomiting | 30% | 5-HT3 antagonist, antiemetic, change opioid |\\n| Respiratory depression | 2-5% | Monitor respiratory rate; naloxone (Narcan) if needed |\\n| Sedation | 20% | Often resolves in 3-5 days; stimulants if persistent |\\n| Pruritus | 10% | Antihistamine; change opioid |\\n| Urinary retention | 10% | Monitor I/O; catheter if needed; cholinergic agonist |\\n\\n## Monitoring\\n- **Vital signs**: BP, HR, RR (esp. RR if >18/min → adequate); O2 sat\\n- **Sedation level**: Pasero Opioid-Induced Sedation Scale (POSS) - 0 (alert) to 3 (sleep, unarousable)\\n- **Pain relief**: VAS/NRS q1-2H initially; adjust analgesics\\n- **Complications**: Constipation, urinary retention, delirium,\\n        keyPoints: [\\n          \\\"WHO ladder: Step 1 (non-opioid), Step 2 (weak opioid), Step 3 (strong opioid)\\\",\\n          \\\"Pain assessment: NRS 0-10 most common; reassess after intervention\\\",\\n          \\\"Multimodal analgesia: synergistic, lower opioid doses, fewer side effects\\\",\\n          \\\"Opioid constipation most common (80%); other side effects 2-30%\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Critical care\\\", edition: \\\"28th\\\" },\\n          { book: \\\"Sabiston Textbook of Surgery\\\", chapter: \\\"Critical care\\\", edition: \\\"21st\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"acute-pain-special-situations\\\",\\n        title: \\\"Acute Pain - Regional Anesthesia & Special Situations\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Regional techniques, epidural analgesia, opioid-sparing approaches.\\\",\\n        contentMd: "# Acute Pain - Regional Anesthesia & Special Situations\\\\n\\\\n## Regional Anesthesia Techniques\\\\n\\\\n### Peripheral Nerve Blocks\\\\n- **Single-injection blocks**:\\\\n  - Femoral (knee surgery)\\\\n  - Interscalene (shoulder)\\\\n  - Wrist/hand blocks\\\\n  - Success rate: 90-95%; duration 6-24 hours\\\\n- **Catheter-based**:\\\\n  - Placed intra-op; left in place 2-3 days\\\\n  - Infusion: Local anesthetic Q4-8H, or continuous infusion\\\\n  - Excellent pain control; patient-managed\\\\n\\\\n### Epidural Analgesia\\\\n- **Indication**: Major surgery (thoracic, abdominal, lower extremity)\\\\n- **Agent**:\\\\n  - Epidural morphine: 5-10mg single dose (24h analgesia) or infusion\\\\n  - Epidural fentanyl: 50-100mcg with local anesthetic (bupivacaine 0.125%)\\\\n- **Routes**:\\\\n  - **Patient-controlled epidural analgesia (PCEA)**: Patient pushes button; pump delivers small bolus\\\\n  - **Continuous infusion**: Hourly baseline + demand doses\\\\n- **Advantage**: Excellent analgesia, less systemic opioid, faster mobilization\\\\n- **Complication**: Epidural hematoma (rare, 1:150,000); neuraxial infection\\\\n- **Contraindication**: Anticoagulation (relative; timing dependent)\\\\n\\\\n### Subarachnoid/Spinal Morphine\\\\n- **Single-dose**: 0.1-0.5mg preservative-free morphine intrathecal\\\\n- **Duration**: 12-24 hours pain relief\\\\n- **Risk**: Respiratory depression (delayed, 8-24 hours)\\\\n- **Monitoring**: Vital signs, sedation score; naloxone available\\\\n\\\\n### Intrathecal Anesthesia + Perioperative Opioids\\\\n- **Lower overall opioid doses**: Spinal anesthesia reduces perioperative requirements\\\\n- **Benefit**: Less nausea, respiratory depression risk\\\\n\\\\n## Specific Clinical Scenarios\\\\n\\\\n### Post-operative Pain Management\\\\n\\\\n**Immediate Post-op (PACU, 0-2 hours)**:\\\\n- **Assess**: Pain severity, vital signs, mental status\\\\n- **Analgesics**:\\\\n  - IV morphine 2-3mg Q10-15min (titrate to effect)\\\\n  - Or fentanyl 25-50mcg IV\\\\n  - Continue until pain <4/10 or side effects limit\\\\n- **Avoid**: IM injections (unpredictable absorption); oral if not yet awake\\\\n\\\\n**Ward (Hours 2-24)**:\\\\n- **Scheduled**: Acetaminophen 1g Q6H + NSAID Q8H\\\\n- **PRN opioid**: Morphine 5-10mg PO/IV Q2-4H\\\\n- **Transition**: Start long-acting opioid only if pain >5/10 sustained (not early post-op)\\\\n- **Regional block**: If in place, reduces opioid need\\\\n\\\\n**Home/Discharge (Days 1-14)**:\\\\n- **First week**: Opioid + acetaminophen/NSAID\\\\n- **Second week**: Wean opioid; continue NSAID\\\\n- **Avoid**: Long-term opioid use (addiction risk increases weekly)\\\\n\\\\n### Trauma & Acute Injuries\\\\n\\\\n**Goals**: Aggressive analgesia to prevent splinting, improve pulmonary function\\\\n\\\\n- **Multimodal**: NSAIDs (if stable), acetaminophen, gabapentin\\\\n- **Opioid**: Titrate IV; use regional block if possible\\\\n- **Regional**: Rib blocks (fractured ribs), intercostal nerve blocks\\\\n- **Special**: Incentive spirometry, coughing (pain-limited; prevent pneumonia)\\\\n\\\\n### Burn Pain\\\\n\\\\n**Severe nociceptive pain; often undertreated**:\\\\n- **Scheduled**: Acetaminophen, NSAIDs (early burn care)\\\\n- **Opioid**: Generous; often need high doses (tolerance develops quickly)\\\\n- **Procedure pain**: Pre-medication (morphine + anxiolytic before dressing changes)\\\\n- **Multimodal**: Ketamine (useful for procedural pain); gabapentin\\\\n- **Non-pharmacologic**: Immersion in warm water reduces pain perception\\\\n\\\\n### Pancreatitis/Pancreatic Pain\\\\n\\\\n**Epigastric, severe visceral pain**:\\\\n- **Avoid morphine**: Spasm of sphincter of Oddi worsens pain\\\\n- **Use**: Hydromorphone, fentanyl (don't trigger sphincter spasm)\\\\n- **NSAIDs**: Avoid (worsen pancreatitis)\\\\n- **Adjuvant**: Gabapentin for neuropathic component\\\\n\\\\n### Opioid-Naive vs Opioid-Tolerant Patients\\\\n\\\\n**Opioid-Naive**:\\\\n- **Starting doses**: Lower; increase gradually\\\\n- **Risk**: Respiratory depression, oversedation\\\\n\\\\n**Opioid-Tolerant** (chronic pain, substance use):\\\\n- **Starting dose**: 50-100% higher than opioid-naive\\\\n- **Escalation**: May need rapid titration\\\\n- **Concern**: Addiction vs medical need (treat pain, but aware of risk)\\\\n\\\\n## Non-Pharmacologic Approaches\\\\n\\\\n### Effective Modalities\\\\n- **Physical therapy**: Early mobilization, exercises\\\\n- **Relaxation**: Deep breathing, meditation\\\\n- **Distraction**: Music, TV, family presence\\\\n- **Cold/heat**: Ice (first 48h), heat after\\\\n- **Acupuncture**: Some evidence for certain pain types\\\\n- **Hypnosis**: Useful adjunct for anxiety\\\\n\\\\n### Psychological Management\\\\n- **Education**: Explain pain expected; reassurance\\\\n- **Anxiety reduction**: Anxiolytics if severe; cognitive behavioral therapy\\\\n- **Sleep**: Adequate sleep promotes healing; ensure rest,\\\\n        keyPoints: [\\\\n          \\\\\\\"Regional anesthesia (blocks, epidural) excellent for post-op pain; opioid-sparing\\\\\\\",\\\\n          \\\\\\\"Epidural morphine 5-10mg provides 24h analgesia; monitor for delayed respiratory depression\\\\\\\",\\\\n          \\\\\\\"Multimodal approach: non-opioid + opioid + regional + non-pharmacologic\\\\\\\",\\\\n          \\\\\\\"Avoid morphine in pancreatitis (sphincter spasm); use fentanyl/hydromorphone\\\\\\\",\\\\n          \\\\\\\"Opioid-tolerant: higher starting doses; concern for addiction but treat pain\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Bailey & Love\\\\\\\", chapter: \\\\\\\"Critical care\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"Sabiston Textbook of Surgery\\\\\\\", chapter: \\\\\\\"Perioperative management\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n        ],\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"acute-pain-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Acute Pain - Exam Preparation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Case analysis, WHO ladder application, complications.\\\\\\\",\\\\n        contentMd: "# Acute Pain - Exam Preparation\\\\\\\\n\\\\\\\\n## Case 1: Moderate Post-op Pain\\\\\\\\n**Scenario**: POD1 femur fracture ORIF, pain 5/10, nausea from IV morphine.\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- Switch to less nausea-inducing opioid (fentanyl patch 25mcg Q72H or hydromorphone)\\\\\\\\n- Add antiemetic (metoclopramide, ondansetron)\\\\\\\\n- Continue acetaminophen + NSAID\\\\\\\\n- Consider femoral nerve block catheter if not already placed\\\\\\\\n- Avoid IM injections; use oral/IV\\\\\\\\n\\\\\\\\n## Case 2: Severe Opioid-Tolerant Patient\\\\\\\\n**Scenario**: 55-year-old with chronic back pain on morphine ER 60mg BID, now post-op with severe pain.\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- Continue baseline morphine ER (don't stop; prevent withdrawal)\\\\\\\\n- Add PRN opioid (morphine 10-20mg Q2H) for acute pain\\\\\\\\n- Regional anesthesia preferred (epidural, blocks)\\\\\\\\n- Watch for respiratory depression (but patient tolerant; less risk)\\\\\\\\n\\\\\\\\n## Case 3: Pancreatitis Pain\\\\\\\\n**Scenario**: Acute pancreatitis, severe epigastric pain 9/10, elevated amylase.\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- AVOID morphine (sphincter of Oddi spasm)\\\\\\\\n- Use fentanyl 50-100mcg IV OR hydromorphone 2-4mg IV\\\\\\\\n- NSAIDs contraindicated\\\\\\\\n- Acetaminophen acceptable\\\\\\\\n- Aggressive fluid resuscitation,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"WHO ladder application: mild → non-opioid, moderate → weak opioid, severe → strong opioid\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Multimodal reduces total opioid; fewer side effects\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Regional anesthesia excellent adjunct; opioid-sparing\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Pancreatitis: AVOID morphine; use fentanyl/hydromorphone\\\\\\\\\\\\\\\",\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Bailey & Love\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Critical care\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"28th\\\\\\\\\\\\\\\" },\\\\\\\\n        ],\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"acute-pain-qa\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Acute Pain - Q&A\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Key MCQs on pain assessment and management.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Acute Pain - Q&A\\\\\\\\n\\\\\\\\n## Q1: A patient reports pain 7/10 on NRS post-op. Next step?\\\\\\\\n\\\\\\\\n**Answer**: WHO Step 3 (severe pain). If on Step 1 or 2, escalate to stronger opioid. Assess: adequacy of current regimen, reason for inadequate control (not taking on schedule, too long interval), side effects limiting dose escalation.\\\\\\\\n\\\\\\\\n## Q2: What is multimodal analgesia and why is it superior to opioid monotherapy?\\\\\\\\n\\\\\\\\n**Answer**: Combination of different analgesic classes (non-opioid, opioid, adjuvant, regional). Synergistic effects allow lower opioid doses, reducing side effects while maintaining pain control.\\\\\\\\n\\\\\\\\n## Q3: Avoid morphine in which condition and what alternative?\\\\\\\\n\\\\\\\\n**Answer**: Avoid morphine in acute pancreatitis (causes sphincter of Oddi spasm). Alternative: Fentanyl or hydromorphone (don't trigger sphincter spasm).\\\\\\\\n\\\\\\\\n## Q4: Epidural morphine 10mg provides how long of pain relief and what is the main complication?\\\\\\\\n\\\\\\\\n**Answer**: 12-24 hours pain relief. Main complication: Delayed respiratory depression (8-24 hours post-injection). Requires monitoring of respiratory rate and sedation level post-op. Naloxone should be available.,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"NRS 7/10 = severe pain (WHO Step 3); use strong opioid\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Multimodal = synergistic, lower opioid doses, fewer side effects\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Morphine contraindicated in pancreatitis; use fentanyl\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Epidural morphine 24h analgesia; monitor for delayed respiratory depression\\\\\\\\\\\\\\\",\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Bailey & Love\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Critical care\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"28th\\\\\\\\\\\\\\\" },\\\\\\\\n        ],\\\\\\\\n      },\\\\\\\\n    ],\\\\\\\\n  },\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"AS-MOD-05-TOP-02\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      {\\\\\\\\n        layer: 1,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"chronic-pain-palliative-foundation\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Chronic Pain & Palliative Care - Foundation\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 25,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Chronic pain definition, palliative care principles, symptom management.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Chronic Pain & Palliative Care - Foundation\\\\\\\\n\\\\\\\\n## Chronic Pain Definition\\\\\\\\n- **Duration**: >3 months (vs acute <3 months)\\\\\\\\n- **Characteristics**: Often low-intensity but persistent; high psychological impact\\\\\\\\n- **Risk of development**: If acute pain inadequately managed; transitions to chronic in 2-5% post-op patients\\\\\\\\n\\\\\\\\n## Transition from Acute to Chronic Pain\\\\\\\\n- **Neuroplasticity**: Changes in spinal cord, brain structure (central sensitization)\\\\\\\\n- **Risk factors**:\\\\\\\\n  - Severe acute pain in first weeks\\\\\\\\n  - Prolonged opioid use\\\\\\\\n  - Anxiety, depression\\\\\\\\n  - Poor coping mechanisms\\\\\\\\n  - Delayed rehabilitation\\\\\\\\n- **Prevention**: Early aggressive analgesia, rapid weaning of opioids, early PT\\\\\\\\n\\\\\\\\n## Palliative Care (Vs Hospice)\\\\\\\\n- **Palliative care**: Symptom management + quality of life for any serious illness (cancer, advanced heart disease, end-stage renal disease)\\\\\\\\n- **Timing**: Concurrent with curative treatment or at end-of-life\\\\\\\\n- **Goals**: Comfort, dignity, autonomy, family support\\\\\\\\n\\\\\\\\n### Symptoms in Advanced Illness\\\\\\\\n- **Pain** (most common, 50-80%)\\\\\\\\n- **Dyspnea** (difficulty breathing)\\\\\\\\n- **Nausea/vomiting**\\\\\\\\n- **Constipation** (opioid side effect)\\\\\\\\n- **Fatigue**\\\\\\\\n- **Psychological**: Anxiety, depression, existential suffering\\\\\\\\n\\\\\\\\n## Pharmacotherapy for Chronic Pain\\\\\\\\n\\\\\\\\n### Neuropathic Pain (Nerve-Related)\\\\\\\\n- **First-line**: Gabapentin, pregabalin\\\\\\\\n- **Alternative**: Duloxetine (SNRI)\\\\\\\\n- **Topical**: Lidocaine patch, capsaicin cream\\\\\\\\n\\\\\\\\n### Musculoskeletal Pain\\\\\\\\n- **NSAIDs**: Long-term use; gastroprotection with PPI\\\\\\\\n- **Topical**: Diclofenac gel, capsaicin\\\\\\\\n- **Muscle relaxants**: Cyclobenzaprine, baclofen\\\\\\\\n\\\\\\\\n### Cancer Pain (WHO Ladder Approach)\\\\\\\\n- **Step 1**: Acetaminophen, NSAIDs\\\\\\\\n- **Step 2**: Add weak opioid (codeine, tramadol)\\\\\\\\n- **Step 3**: Strong opioid (morphine ER, fentanyl)\\\\\\\\n- **Adjuvant**: Antidepressants, anticonvulsants, corticosteroids (short-term)\\\\\\\\n\\\\\\\\n## Goals of Palliative Care\\\\\\\\n- **Symptom control**: Pain, nausea, dyspnea, fatigue\\\\\\\\n- **Psychosocial support**: Anxiety, depression, existential concerns\\\\\\\\n- **Spiritual care**: Chaplain, religious support\\\\\\\\n- **Family support**: Education, bereavement counseling\\\\\\\\n- **Advance planning**: DNR, goals of care discussions,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Chronic pain: >3 months; risk of development if acute pain inadequate\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Transition: central sensitization, neuroplasticity; prevent with early aggressive management\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Palliative care: symptom control + QoL for serious illness (not just hospice)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Neuropathic pain: gabapentin/pregabalin; cancer pain: WHO ladder\\\\\\\\\\\\\\\",\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Bailey & Love\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Critical care\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"28th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Sabiston Textbook of Surgery\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Perioperative management\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"21st\\\\\\\\\\\\\\\" },\\\\\\\\n        ],\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 2,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"symptom-management-palliative\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Palliative Care - Symptom Management\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 30,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Management of dyspnea, nausea, constipation, end-of-life symptoms.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Palliative Care - Symptom Management\\\\\\\\n\\\\\\\\n## Dyspnea (Breathlessness)\\\\\\\\n\\\\\\\\n### Causes\\\\\\\\n- **Pulmonary**: Pneumonia, pulmonary embolism, pleural effusion\\\\\\\\n- **Cardiac**: Heart failure, pericardial effusion\\\\\\\\n- **Neurologic/Metabolic**: Anxiety, delirium, sepsis\\\\\\\\n\\\\\\\\n### Management\\\\\\\\n- **Treat underlying cause** if reversible (antibiotics, diuretics)\\\\\\\\n- **Pharmacotherapy**:\\\\\\\\n  - **Opioids**: Morphine reduces dyspnea perception (anxiolytic effect)\\\\\\\\n  - **Anxiolytics**: Benzodiazepines (lorazepam) reduce anxiety-driven dyspnea\\\\\\\\n  - **Bronchodilators**: Albuterol if asthma/COPD component\\\\\\\\n- **Non-pharmacologic**:\\\\\\\\n  - **Oxygen**: If hypoxic (SaO2 <90%); limited benefit if normoxic\\\\\\\\n  - **Fan**: Directed at face; cooling effect helpful\\\\\\\\n  - **Positioning**: Sitting upright, pillows\\\\\\\\n  - **Relaxation**: Guided breathing\\\\\\\\n\\\\\\\\n## Nausea & Vomiting\\\\\\\\n\\\\\\\\n### Causes\\\\\\\\n- **Medication-induced**: Opioids (30%), chemotherapy\\\\\\\\n- **Gastric**: GERD, gastroparesis, gastric outlet obstruction\\\\\\\\n- **Central**: Increased ICP, vestibular dysfunction\\\\\\\\n- **Metabolic**: Uremia, hypercalcemia\\\\\\\\n\\\\\\\\n### Management\\\\\\\\n- **Identify cause**: Address reversible (stop offending medication)\\\\\\\\n- **Pharmacotherapy**:\\\\\\\\n  - **5-HT3 antagonist**: Ondansetron (most common; blocks emetic center)\\\\\\\\n  - **Antihistamine**: Promethazine (anticholinergic + sedating)\\\\\\\\n  - **Dopamine antagonist**: Metoclopramide (prokinetic; blocks dopamine)\\\\\\\\n  - **Corticosteroid**: Dexamethasone (anti-inflammatory)\\\\\\\\n  - **NK1 antagonist**: Aprepitant (newer; for chemotherapy-induced)\\\\\\\\n- **Non-pharmacologic**:\\\\\\\\n  - **Small frequent meals**\\\\\\\\n  - **Ginger**: May help mild nausea\\\\\\\\n  - **Acupressure**: PC6 wrist point\\\\\\\\n\\\\\\\\n## Constipation\\\\\\\\n\\\\\\\\n### Cause\\\\\\\\n- **Opioid-induced** (most common, 80% on opioids)\\\\\\\\n- **Dehydration**, low fiber, immobility\\\\\\\\n- **Medications**: Anticholinergics, 5-HT3 antagonists\\\\\\\\n\\\\\\\\n### Prevention & Management\\\\\\\\n- **Aggressive prevention**: Essential (constipation preventable in 80%)\\\\\\\\n- **Stool softener**: Docusate 100-300mg daily\\\\\\\\n- **Laxative**:\\\\\\\\n  - **Osmotic**: Miralax, lactulose (safe, slow)\\\\\\\\n  - **Stimulant**: Senna, bisacodyl (faster; may cause cramping)\\\\\\\\n  - **Combination**: Senna + docusate (docusate-senna)\\\\\\\\n- **Prokinetic**: Metoclopramide (minimal effect but may help)\\\\\\\\n- **Regimen**:\\\\\\\\n  - **Baseline**: Docusate + osmotic laxative daily\\\\\\\\n  - **PRN**: Add stimulant if no BM x 3 days\\\\\\\\n  - **Rescue**: Suppository, enema if impaction develops\\\\\\\\n\\\\\\\\n## Delirium\\\\\\\\n\\\\\\\\n### Causes\\\\\\\\n- **Medications**: Opioids, benzodiazepines, anticholinergics\\\\\\\\n- **Infections**: UTI, pneumonia\\\\\\\\n- **Metabolic**: Hypoxia, hypoglycemia, hypercarbia\\\\\\\\n- **Withdrawal**: Alcohol, benzodiazepine discontinuation\\\\\\\\n\\\\\\\\n### Management\\\\\\\\n- **Identify & treat cause**: Usually reversible in early stages\\\\\\\\n- **Pharmacotherapy** (if refractory):\\\\\\\\n  - **Antipsychotic**: Haloperidol, risperidone (for agitation)\\\\\\\\n  - **Anxiolytic**: Lorazepam (if anxiety-driven)\\\\\\\\n  - **Avoid**: Anticholinergics, opioid escalation (worsen delirium)\\\\\\\\n- **Non-pharmacologic**:\\\\\\\\n  - **Reorientation**: Clock, calendar, family at bedside\\\\\\\\n  - **Sleep promotion**: Reduced stimulation at night\\\\\\\\n  - **Adequate pain control**: Paradoxically, severe pain causes delirium\\\\\\\\n\\\\\\\\n## Fatigue\\\\\\\\n\\\\\\\\n### Cause\\\\\\\\n- **Metabolic**: Anemia, thyroid dysfunction\\\\\\\\n- **Medications**: Chemotherapy, analgesics\\\\\\\\n- **Psychological**: Depression, anxiety\\\\\\\\n\\\\\\\\n### Management\\\\\\\\n- **Address reversible causes**: Anemia (transfusion), thyroid\\\\\\\\n- **Pharmacotherapy**:\\\\\\\\n  - **Corticosteroid**: Short-term (prednisone 20-30mg daily); improves energy\\\\\\\\n  - **Psychostimulant**: Methylphenidate (rare; in specialized centers)\\\\\\\\n- **Non-pharmacologic**:\\\\\\\\n  - **Gentle exercise**: PT, walking\\\\\\\\n  - **Nutritional support**: Protein, calories\\\\\\\\n  - **Psychological**: Address depression, anxiety\\\\\\\\n\\\\\\\\n## End-of-Life Care\\\\\\\\n\\\\\\\\n### Last Hours/Days Management\\\\\\\\n- **Respiratory distress**: Morphine 5-10mg IV Q1H, lorazepam 2-4mg IV Q1H\\\\\\\\n- **Secretions** (death rattle): Scopolamine patch, glycopyrrolate (anticholinergic reduces secretions)\\\\\\\\n- **Pain**: Assume patient in pain; opioid dose increased as needed\\\\\\\\n- **Anxiety**: Lorazepam, phenothiazine\\\\\\\\n- **Seizures**: Lorazepam, phenytoin (if at risk)\\\\\\\\n\\\\\\\\n### Comfort Measures\\\\\\\\n- **Positioning**: Pillows, frequent turning\\\\\\\\n- **Mouth care**: Ice chips, lip balm\\\\\\\\n- **Temperature**: Blankets as needed\\\\\\\\n- **Family presence**: Encouraged; may facilitate \\\\\\\\\\\\\\\"permission to die\\\\\\\\\\\\\\\"\\\\\\\\n\\\\\\\\n### Goals of Care Discussion\\\\\\\\n- **Early in illness**: Discuss wishes, DNR status, tube feeding, mechanical ventilation\\\\\\\\n- **Document**: Advance directive, living will\\\\\\\\n- **Respect**: Autonomy; some patients want aggressive care despite prognosis,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Dyspnea: morphine helpful (anxiolytic effect); oxygen if hypoxic\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Nausea: 5-HT3 antagonist first-line; identify reversible causes\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Constipation: prevention key; opioid-induced (stool softener + laxative)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Delirium: treat underlying cause (infection, hypoxia); reverse medications if possible\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"End-of-life: morphine for dyspnea/pain; lorazepam for anxiety; family presence valued\\\\\\\\\\\\\\\",\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Bailey & Love\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Critical care\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"28th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Sabiston Textbook of Surgery\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Perioperative management\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"21st\\\\\\\\\\\\\\\" },\\\\\\\\n        ],\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 3,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"palliative-assessment\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Palliative Care - Assessment & Planning\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 25,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Symptom assessment tools, multidisciplinary team, advance planning.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Palliative Care - Assessment & Planning\\\\\\\\n\\\\\\\\n## Symptom Assessment Tools\\\\\\\\n\\\\\\\\n### Edmonton Symptom Assessment Scale (ESAS)\\\\\\\\n- **10 symptoms**: Pain, tiredness, nausea, depression, anxiety, drowsiness, appetite, well-being, shortness of breath, other problem\\\\\\\\n- **0-10 scale** for each\\\\\\\\n- **Useful for**: Routine monitoring, identifying priority symptoms\\\\\\\\n- **Advantage**: Standardized, easy to administer\\\\\\\\n\\\\\\\\n### KARNOFSKY Performance Status\\\\\\\\n- **0-100 scale**: 0 = dead, 100 = normal function\\\\\\\\n- **Predicts prognosis**: Scores <60 indicate limited life expectancy\\\\\\\\n- **Used for**: Treatment selection, enrollment in clinical trials\\\\\\\\n\\\\\\\\n### Palliative Performance Scale (PPS)\\\\\\\\n- **100-0%**: 100 = normal, 50 = mostly bedbound, 0 = death\\\\\\\\n- **Simpler than Karnofsky**: Easier to use in practice\\\\\\\\n\\\\\\\\n## Multidisciplinary Team\\\\\\\\n\\\\\\\\n### Core Members\\\\\\\\n- **Physician**: Pain specialist, palliative care physician\\\\\\\\n- **Nurse**: Symptom management, patient/family education\\\\\\\\n- **Social worker**: Psychosocial support, financial resources\\\\\\\\n- **Chaplain/Spiritual care**: Religious/existential support\\\\\\\\n- **Pharmacist**: Medication optimization, interactions\\\\\\\\n\\\\\\\\n### Additional Resources\\\\\\\\n- **Psychologist**: Depression, anxiety management\\\\\\\\n- **Physical/occupational therapy**: Mobility, ADL assistance\\\\\\\\n- **Nutritionist**: Dietary support\\\\\\\\n- **Volunteer**: Companionship, caregiver respite\\\\\\\\n\\\\\\\\n## Advance Care Planning\\\\\\\\n\\\\\\\\n### Goals of Care Discussion\\\\\\\\n- **Timing**: When patient has serious illness (cancer diagnosis, advanced heart failure, ICU admission)\\\\\\\\n- **Setting**: Private, unhurried conversation; include patient + family\\\\\\\\n- **Topics**:\\\\\\\\n  - **Current disease status & prognosis**\\\\\\\\n  - **Patient values & priorities**: What matters most? Quality of life vs quantity?\\\\\\\\n  - **Preferences for resuscitation**: DNR/DNI vs full code\\\\\\\\n  - **Life support**: Mechanical ventilation, feeding tubes\\\\\\\\n  - **Pain & symptom management**: How much is acceptable?\\\\\\\\n- **Document**: Advance directive, living will, healthcare proxy designation\\\\\\\\n\\\\\\\\n### Advance Directives\\\\\\\\n- **Living will**: Specifies care preferences (DNR, no intubation, feeding tube)\\\\\\\\n- **Healthcare power of attorney**: Designates surrogate decision-maker\\\\\\\\n- **DNR order**: Do not resuscitate; no CPR, no mechanical ventilation\\\\\\\\n- **Legally binding**: Varies by jurisdiction\\\\\\\\n\\\\\\\\n## Prognosis Communication\\\\\\\\n\\\\\\\\n### Role of Prognostication\\\\\\\\n- **Honest but compassionate**: Allow realistic hope while acknowledging prognosis\\\\\\\\n- **Uncertain science**: Estimates can vary; avoid false precision\\\\\\\\n- **Iterative**: Prognosis changes; revisit discussions\\\\\\\\n\\\\\\\\n### Approach\\\\\\\\n- **Ask**: \\\\\\\\\\\\\\\"What have you understood about your condition?\\\\\\\\\\\\\\\"\\\\\\\\n- **Inform**: Provide evidence-based prognosis; allow time for questions\\\\\\\\n- **Clarify**: Distinguish life expectancy from chance of cure\\\\\\\\n- **Hope**: Reframe toward achievable goals (comfort, relationship time, bucket list)\\\\\\\\n\\\\\\\\n### Example Conversation\\\\\\\\n**Patient**: \\\\\\\\\\\\\\\"Will I get better?\\\\\\\\\\\\\\\"\\\\\\\\n**Physician**: \\\\\\\\\\\\\\\"Your cancer has progressed despite treatment. Based on your current health, I'm concerned you may have weeks to months to live. However, we can focus on keeping you comfortable and making the most of your time with family. What matters most to you right now?\\\\\\\\\\\\\\\"\\\\\\\\n\\\\\\\\n## Family Support & Bereavement\\\\\\\\n\\\\\\\\n### During Illness\\\\\\\\n- **Education**: Explain disease, treatments, what to expect\\\\\\\\n- **Emotional support**: Counseling, support groups\\\\\\\\n- **Practical help**: Arrange meal trains, respite care\\\\\\\\n- **Communication**: Regular updates, involve in decisions\\\\\\\\n\\\\\\\\n### After Death\\\\\\\\n- **Bereavement support**: Grief counseling available\\\\\\\\n- **Memorialization**: Allow family to sit with body, funeral planning\\\\\\\\n- **Follow-up**: Phone call, memorial gathering\\\\\\\\n\\\\\\\\n## Special Considerations\\\\\\\\n\\\\\\\\n### Culture & Spirituality\\\\\\\\n- **Diverse beliefs**: Respect family preferences (prayer, rituals)\\\\\\\\n- **Language barriers**: Use interpreters; ensure family understanding\\\\\\\\n- **Religious support**: Offer chaplain, clergy presence\\\\\\\\n\\\\\\\\n### Pediatric Palliative Care\\\\\\\\n- **Different approach**: Child cannot understand complex medical concepts\\\\\\\\n- **Parent-centered**: Often focus on parental grief, sibling support\\\\\\\\n- **Play therapy**: Age-appropriate communication\\\\\\\\n\\\\\\\\n### Sudden Death (Trauma, ICU)\\\\\\\\n- **Family notification**: Honest, compassionate, private setting\\\\\\\\n- **Organ donation**: Discuss if appropriate\\\\\\\\n- **Bereavement follow-up**: Critical; high risk of complicated grief,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"ESAS useful for symptom monitoring; Karnofsky predicts prognosis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Multidisciplinary team: physician, nurse, social worker, chaplain, PT/OT\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Advance directives: living will, healthcare proxy, DNR order\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Prognostication: honest, compassionate, iterative; acknowledge uncertainty\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Family support crucial: education, emotional help, bereavement care\\\\\\\\\\\\\\\",\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Bailey & Love\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Critical care\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"28th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Sabiston Textbook of Surgery\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Perioperative management\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"21st\\\\\\\\\\\\\\\" },\\\\\\\\n        ],\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 4,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"palliative-exam-prep\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Palliative Care - Exam Preparation\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Case analysis, symptom management scenarios.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Palliative Care - Exam Preparation\\\\\\\\n\\\\\\\\n## Case 1: Cancer Pain Management\\\\\\\\n**Scenario**: 68-year-old with metastatic colon cancer, pain 8/10 on current morphine 10mg Q4H.\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- Escalate opioid (increase dose or add long-acting)\\\\\\\\n- Assess: inadequate dosing vs poor absorption vs rapidly escalating pain\\\\\\\\n- Treat underlying cause (metastatic bone disease → radiation, corticosteroid)\\\\\\\\n- Add adjuvant: Gabapentin for neuropathic component if present\\\\\\\\n- Consider interventional pain management (nerve block, epidural) if medical management fails\\\\\\\\n\\\\\\\\n## Case 2: Respiratory Distress at End-of-Life\\\\\\\\n**Scenario**: 72-year-old with advanced COPD, severe dyspnea, O2 sat 85% despite supplemental oxygen.\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- Morphine 5mg IV Q1H as needed (reduces dyspnea perception)\\\\\\\\n- Lorazepam 2mg IV Q1H as needed (reduces anxiety)\\\\\\\\n- Position upright, fan at face\\\\\\\\n- Limit supplemental oxygen (normoxic patients don't benefit)\\\\\\\\n- Goals of care discussion: what patient wants (comfort vs prolonging)\\\\\\\\n\\\\\\\\n## Case 3: Constipation Prevention\\\\\\\\n**Scenario**: 55-year-old starting morphine ER 30mg BID for cancer pain.\\\\\\\\n\\\\\\\\n**Management**:\\\\\\\\n- Initiate stool softener (docusate 100mg BID) immediately\\\\\\\\n- Add osmotic laxative (miralax daily)\\\\\\\\n- Educate on bowel regimen\\\\\\\\n- Reassess in 3-5 days; add stimulant laxative if no BM\\\\\\\\n- Continue throughout opioid therapy,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Cancer pain escalation: increase opioid dose systematically\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Dyspnea EOL: morphine + lorazepam; position upright; minimal O2 benefit if normoxic\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Constipation prevention: docusate + osmotic laxative at opioid initiation\\\\\\\\\\\\\\\",\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Bailey & Love\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Critical care\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"28th\\\\\\\\\\\\\\\" },\\\\\\\\n        ],\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"palliative-qa\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Palliative Care - Q&A\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Key MCQs on palliative care principles.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Palliative Care - Q&A\\\\\\\\n\\\\\\\\n## Q1: What is palliative care and when should it start?\\\\\\\\n\\\\\\\\n**Answer**: Palliative care is symptom management + quality of life for serious illness. It should start concurrently with curative treatment, not just at end-of-life. Example: cancer patient on chemotherapy can benefit from palliative pain management simultaneously.\\\\\\\\n\\\\\\\\n## Q2: A patient has opioid-induced constipation. What is the best prevention strategy?\\\\\\\\n\\\\\\\\n**Answer**: Prescribe stool softener + osmotic laxative at opioid initiation (docusate 100-300mg daily + miralax daily). This prevents 80% of cases. Reserve stimulant laxatives for refractory constipation.\\\\\\\\n\\\\\\\\n## Q3: Morphine is appropriate for dyspnea management. What is the mechanism?\\\\\\\\n\\\\\\\\n**Answer**: Morphine reduces dyspnea perception through anxiolytic effect (reduces fear of breathlessness) and slight respiratory depression. It does NOT relieve dyspnea by treating underlying lung disease.\\\\\\\\n\\\\\\\\n## Q4: A terminal patient has secretions (death rattle). What medication helps?\\\\\\\\n\\\\\\\\n**Answer**: Anticholinergic agents (scopolamine patch or glycopyrrolate) reduce secretions by blocking cholinergic stimulation. This makes breathing quieter but does NOT prolong life.,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Palliative care: concurrent with curative treatment, not just EOL\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Constipation prevention: docusate + osmotic laxative at opioid initiation\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Morphine for dyspnea: anxiolytic mechanism, reduces fear of breathlessness\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Anticholinergic for death rattle: reduces secretions, improves comfort\\\\\\\\\\\\\\\",\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Bailey & Love\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Critical care\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"28th\\\\\\\\\\\\\\\" },\\\\\\\\n        ],\\\\\\\\n      },\\\\\\\\n    ],\\\\\\\\n  },\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-];
-];
-];
+        summary: "Pain pathophysiology, nociception vs pain, acute consequences, special populations.",
+        contentMd: `# Acute Pain Management - Foundation
+
+## Pain Physiology: Nociception vs Pain
+
+### Nociception (4 Steps - Objective)
+1. **Transduction**: Tissue injury → nociceptor activation (C fibers: slow/burning; A-delta: fast/sharp)
+2. **Transmission**: Action potentials travel from periphery → dorsal horn → brain
+3. **Modulation**: Spinal cord gates pain signals (descending inhibition via endogenous opioids, serotonin, norepinephrine)
+4. **Perception**: Brain integrates signal with emotion, cognition, context → subjective pain experience
+
+### Pain Definition (WHO)
+- **Subjective**: "An unpleasant sensory and emotional experience associated with actual or potential tissue damage"
+- **Key**: Can exist without nociception (phantom pain); nociception can exist without pain (anesthesia)
+
+## Pain Classifications
+
+### By Etiology
+- **Nociceptive**: Somatic (bone, muscle, joint), visceral (organs)
+- **Neuropathic**: Nerve injury (burning, shooting, tingling)
+- **Functional**: No clear tissue injury; centralized pain (fibromyalgia, CRPS)
+
+### By Duration
+- **Acute**: <3 months (postoperative, trauma, acute illness)
+- **Chronic**: >3 months (development risk 2-5% post-op if inadequately managed)
+
+## Consequences of Acute Pain
+
+### Physiologic Effects
+- **Sympathetic activation**: Tachycardia, hypertension, diaphoresis, tremor
+- **Neuroendocrine**: Cortisol ↑↑, ACTH ↑, catecholamines ↑, prolactin ↑
+- **Respiratory**: Shallow breathing (splinting) → atelectasis risk, pneumonia risk
+- **Metabolic**: Hyperglycemia, protein catabolism, increased metabolic rate
+- **Cardiovascular**: Increased O2 demand, increased cardiac workload, MI risk in CAD patients
+- **Immunologic**: Suppressed cell-mediated immunity, delayed wound healing
+- **Coagulation**: Hypercoagulable (VTE risk)
+
+### Clinical Consequences
+- **Delayed healing**: Increased catabolic state opposes anabolism
+- **Thromboembolic**: Immobility from pain → DVT/PE risk
+- **Respiratory**: Splinting → reduced ventilation → pneumonia
+- **Psychological**: Anxiety, depression, sleep deprivation
+- **Transition to chronic pain**: Early aggressive management prevents
+
+## Goals of Acute Pain Management
+
+1. **Pain relief**: Enable function, sleep, psychological comfort
+2. **Prevent complications**: DVT, pneumonia, delirium, cardiac events
+3. **Prevent chronic pain transition**: Early aggressive = reduced risk
+4. **Minimize side effects**: Nausea, respiratory depression, addiction
+5. **Facilitate rehabilitation**: Early mobilization, PT, return to function
+
+## Special Populations
+
+### Elderly (>65 years)
+- **Reduced metabolism**: Lower hepatic clearance; longer duration of action
+- **Polypharmacy**: Drug interactions common; adjust doses
+- **Increased sensitivity**: CNS effects magnified; delirium risk, respiratory depression risk
+- **Comorbidities**: Cardiac, renal, hepatic disease affects dosing
+- **Management**: Lower doses, longer intervals, careful monitoring, avoid anticholinergics
+
+### Renal Impairment (GFR <30)
+- **Morphine metabolites accumulate**: Active metabolites (M6G, M3G) → respiratory depression risk
+- **Bupivacaine clearance impaired**: Risk of local anesthetic toxicity
+- **Avoid**: Morphine, meperidine (toxic metabolites); long-acting agents
+- **Use**: Fentanyl (no active metabolites), hydromorphone, oxycodone; adjust interval
+
+### Hepatic Impairment (Child-Pugh B/C)
+- **Reduced metabolism**: Risk of accumulation, higher bioavailability
+- **Reduced protein synthesis**: Hypoalbuminemia → higher free drug levels
+- **Avoid**: Acetaminophen (hepatotoxic if >2 g/day); morphine (slow metabolism)
+- **Use**: Fentanyl (extrahepatic metabolism); adjust dose ↓ by 50%
+
+### Obesity
+- **Altered pharmacokinetics**: Lipophilic drugs (propofol, fentanyl) distribute to fat; prolonged duration
+- **Dosing**: Weight-based dosing problematic; use ideal body weight or intermediate weights
+- **Special**: Epidural/regional blocks preferred (avoid airway manipulation)
+
+### Substance Use Disorder (Opioid Tolerance)
+- **Higher baseline opioid requirement**: Continue baseline + acute pain dosing
+- **Avoid withdrawal**: Never discontinue chronic opioids (precipitates withdrawal)
+- **Concern**: Addiction vs medical need; treat pain, but monitor closely
+- **Methadone**: Continue baseline; add short-acting for acute pain`,
+        mnemonics: [
+          { text: "Nociception = TTMP: Transduction, Transmission, Modulation, Perception", explanation: "4-step pathway" },
+          { text: "Acute pain → splinting → pneumonia; aggressive management prevents", explanation: "Respiratory consequence" },
+          { text: "Elderly/renal: reduce dose, extend interval; avoid morphine metabolites", explanation: "Special populations" },
+          { text: "Goal: pain relief + prevent complications + enable rehab + prevent chronic transition", explanation: "Management objectives" },
+        ],
+        keyPoints: [
+          "Pain = subjective experience; nociception = objective stimulus (can be dissociated)",
+          "Acute pain consequences: splinting → pneumonia, immobility → VTE, → chronic pain transition",
+          "Special populations: elderly/renal/hepatic need dose reduction; opioid-tolerant need higher doses",
+          "Early aggressive management prevents transition to chronic pain",
+          "Multimodal analgesia synergistic; reduces total opioid dose needed",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Postoperative Pain Management", edition: "14th" },
+          { book: "Aitkenhead's Textbook of Anaesthesia", chapter: "Pain Management", edition: "6th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "pain-assessment-who-ladder",
+        title: "Acute Pain Management - Assessment & WHO Ladder",
+        estimatedMinutes: 30,
+        summary: "Pain assessment scales, WHO analgesic ladder, multimodal approach.",
+        contentMd: `# Acute Pain Management - Assessment & WHO Ladder
+
+## Pain Assessment Scales
+
+### Numeric Rating Scale (NRS) - STANDARD
+- **0-10 scale**: 0 = no pain, 10 = worst possible pain
+- **Advantage**: Quantitative, easy, reproducible
+- **Use**: Reassess after intervention; <4/10 target for postop
+- **Most common** in clinical practice
+
+### Verbal Rating Scale (VRS)
+- **Descriptive**: None, mild, moderate, severe
+- **Advantage**: Simple for cognitively impaired
+- **Limitation**: Ordinal, not quantitative
+
+### Visual Analog Scale (VAS)
+- **10 cm line**: Patient marks pain intensity
+- **Sensitive** to small changes; useful for research
+- **Limitation**: Harder for elderly/confused patients
+
+### Faces Pain Scale
+- **6 faces** (happy to crying expression)
+- **Use**: Pediatric, non-verbal, elderly with dementia
+- **Age**: Validated 3+ years
+
+### CRIES Score (Pediatric <6 years)
+- **Crying, Requires O2, Increased vitals, Expression, Sleeplessness**
+- **0-10 score**: Objective assessment in pre-verbal children
+- **Useful**: First 24-48 hours post-op
+
+## WHO Analgesic Ladder (3-Step Approach)
+
+### Step 1: Mild Pain (1-3/10 NRS)
+
+**Non-opioid agents:**
+- **Acetaminophen (Paracetamol)**: 500-1000 mg Q4-6H (max 3-4 g/day to avoid hepatotoxicity)
+- **NSAIDs**: Ibuprofen 400-800 mg Q6-8H, naproxen 250-500 mg Q12H
+- **Topical**: Diclofenac gel, capsaicin cream (excellent local efficacy, minimal systemic)
+
+**Adjuvants:**
+- **Gabapentin**: 300-900 mg TID (for neuropathic component if present)
+- **Duloxetine**: 30-60 mg daily (SNRI; for pain + mood)
+
+**Non-pharmacologic:**
+- Physical therapy, ice/heat, elevation, relaxation, distraction
+
+### Step 2: Moderate Pain (4-6/10)
+
+**Weak opioids:**
+- **Tramadol**: 100-150 mg Q4-6H (max 400 mg/day; seizure risk >400 mg, MAOI interaction)
+- **Codeine**: 30-60 mg Q4-6H (poor metabolism in ~10% population; metabolized to morphine by CYP2D6)
+- **Hydrocodone**: 5-10 mg Q4-6H (combined with acetaminophen in Vicodin)
+- **Combination preparations**: Tylenol #3 (acetaminophen 300 mg + codeine 30 mg)
+
+**Plus non-opioid:** Continue acetaminophen or NSAID
+
+**Adjuvants:** Gabapentin, pregabalin for neuropathic pain
+
+### Step 3: Severe Pain (7-10/10)
+
+**Strong opioids:**
+- **Morphine**: 5-10 mg IV/SC Q2-4H (gold standard; rapid onset 5-10 min; good for acute)
+- **Fentanyl**: 50-100 mcg IV; transdermal patch 25-100 mcg/72H (no active metabolites; lipophilic)
+- **Hydromorphone**: 1-2 mg IV Q2-4H (more potent than morphine; good for opioid-tolerant)
+- **Oxycodone**: 5-10 mg PO Q4-6H (good oral bioavailability; avoid IV - formulation risk)
+
+**Dosing principle**: Pain-titrated; increase until adequate relief or side effects limit dose
+
+**Long-acting vs immediate-release:**
+- **Immediate-release**: Q4-6H dosing; adjust to effect (good for acute)
+- **Long-acting (ER)**: Use only after pain controlled; for chronic pain (NOT acute post-op)
+
+## Multimodal Analgesia Concept
+
+### Rationale
+- **Synergistic effects**: Different mechanisms → better pain control at lower doses
+- **Reduced opioid requirement**: 30-50% less opioid needed; fewer side effects
+- **Prevent tolerance**: Less opioid escalation needed over time
+
+### Components of Multimodal Regimen
+1. **Non-opioid baseline**: Acetaminophen ± NSAID
+2. **Opioid PRN**: Titrated to effect
+3. **Adjuvant**: Gabapentin, pregabalin, duloxetine
+4. **Regional anesthesia**: Blocks, epidural (if suitable for procedure)
+5. **Non-pharmacologic**: PT, relaxation, ice/heat
+
+### Example Regimen (Post-op Day 1-2)
+- **Base**: Acetaminophen 1 g Q6H + Ibuprofen 400 mg Q8H (if no contraindications)
+- **Opioid**: Morphine 5 mg IV Q2-4H PRN (pain >4/10)
+- **Adjuvant**: Gabapentin 300 mg Q8H (if neuropathic pain component)
+- **Regional**: Epidural morphine 5 mg if major surgery (24+ hours analgesia)
+
+## Opioid Side Effects and Management
+
+| Side Effect | Incidence | Mechanism | Management |
+|-------------|-----------|-----------|------------|
+| **Constipation** | 80% (most common) | Opioid slows gut motility | Stool softener + osmotic laxative at initiation |
+| **Nausea/vomiting** | 30% | Chemoreceptor trigger zone, vestibular | 5-HT3 antagonist (ondansetron), change opioid |
+| **Respiratory depression** | 2-5% | CNS depression of respiratory center | Monitor RR; naloxone if RR <8 |
+| **Sedation** | 20-30% | CNS depression | Usually resolves in 3-5 days; hold ETOH |
+| **Pruritus** | 10% | Histamine release + opioid receptor | Antihistamine; change opioid |
+| **Urinary retention** | 10% (post-op) | Opioid effects on bladder smooth muscle | Monitor I/O; catheter if needed |
+| **Myosis** | Common | Opioid action on oculomotor nucleus | Monitor pupils; expected |
+
+## Monitoring Parameters
+
+- **Pain reassessment**: NRS Q1-2H initially; adjust analgesics
+- **Vital signs**: BP, HR, RR (especially RR; should stay >10); SpO2
+- **Sedation level**: Pasero Opioid-Induced Sedation Scale (0=alert to 3=sleep, unarousable)
+- **Complications**: Constipation (daily), urinary retention (I/O), delirium
+- **Function**: Ability to cough, move, mobilize`,
+        mnemonics: [
+          { text: "NRS 0-10 most common; reassess after intervention every 1-2 hours initially", explanation: "Assessment" },
+          { text: "WHO Step 1 = non-opioid, Step 2 = weak opioid + non-opioid, Step 3 = strong opioid + adjuvant", explanation: "Ladder" },
+          { text: "Opioid constipation 80% most common; prevent with stool softener + laxative AT initiation", explanation: "Side effect" },
+          { text: "Multimodal = synergistic; 30-50% less opioid needed at same pain control", explanation: "Approach" },
+        ],
+        keyPoints: [
+          "NRS 0-10 standard; reassess after intervention; target <4/10 postop",
+          "WHO ladder: Step 1 (non-opioid) → Step 2 (weak opioid) → Step 3 (strong opioid)",
+          "Multimodal approach: non-opioid baseline + opioid PRN + adjuvant + regional if suitable",
+          "Opioid constipation most common (80%); prevent at initiation with docusate + osmotic laxative",
+          "Respiratory depression rare (2-5%); monitor RR; maintain >10",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Pain Management", edition: "14th" },
+          { book: "WHO Analgesic Ladder Guidelines", chapter: "Cancer Pain Relief", edition: "3rd" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "acute-pain-regional-special-situations",
+        title: "Acute Pain Management - Regional & Special Situations",
+        estimatedMinutes: 30,
+        summary: "Regional anesthesia for pain, epidural analgesia, opioid-sparing approaches, special cases.",
+        contentMd: `# Acute Pain Management - Regional & Special Situations
+
+## Regional Anesthesia Techniques for Postoperative Pain
+
+### Peripheral Nerve Blocks
+- **Single-injection blocks**: Femoral, interscalene, wrist blocks
+- **Success rate**: 90-95%; duration 6-24 hours depending on agent/anatomy
+- **Catheter-based blocks**: Placed intra-op, left in place 2-3 days
+- **Infusion**: Local anesthetic bolus Q4-8H or continuous infusion pump
+- **Advantage**: Excellent pain control, opioid-sparing, patient-directed
+
+### Epidural Analgesia (Gold Standard for Major Surgery)
+- **Agents**:
+  - Epidural morphine 5-10 mg (single dose, 24h analgesia)
+  - Epidural fentanyl 50-100 mcg + bupivacaine 0.125% (infusion)
+  - Patient-controlled epidural analgesia (PCEA): Patient pushes button; pump delivers small bolus
+- **Advantages**:
+  - Excellent analgesia, less systemic opioid, faster mobilization
+  - Reduced postop complications (pneumonia, VTE)
+- **Complications**: Epidural hematoma (1:150,000); neuraxial infection (rare)
+- **Contraindication**: Anticoagulation (timing-dependent)
+
+### Spinal Morphine (Single-Dose Intrathecal)
+- **Dose**: 0.1-0.5 mg preservative-free morphine intrathecal
+- **Duration**: 12-24 hours pain relief
+- **Risk**: Respiratory depression (delayed 8-24 hours post-injection)
+- **Monitoring**: Vital signs, sedation score; naloxone available
+
+## Specific Clinical Scenarios
+
+### Postoperative Pain Management Timeline
+
+**Immediate Post-op (PACU, 0-2 hours):**
+- Assess pain, mental status, vitals
+- **Analgesics**: IV morphine 2-3 mg Q10-15 min (titrate to effect) OR fentanyl 25-50 mcg IV
+- Continue until pain <4/10 or side effects limit
+- Avoid IM (unpredictable); oral only if awake/alert
+
+**Ward (2-24 hours):**
+- **Scheduled**: Acetaminophen 1g Q6H + NSAID Q8H
+- **PRN opioid**: Morphine 5-10 mg IV/PO Q2-4H
+- **Transition**: Start long-acting ONLY if pain >5/10 sustained (not early post-op)
+- **Regional block**: If in place, reduces opioid need significantly
+
+**Discharge (Days 1-14):**
+- **First week**: Opioid + acetaminophen/NSAID
+- **Second week**: Wean opioid; continue NSAID as needed
+- **Avoid**: Long-term opioid use (addiction risk increases weekly)
+
+### Trauma & Acute Injuries
+
+**Goals**: Aggressive analgesia to prevent splinting, improve pulmonary function
+
+- **Multimodal**: NSAIDs (if hemodynamically stable), acetaminophen, gabapentin
+- **Opioid**: IV titration; use regional block if possible
+- **Regional blocks**: Rib blocks (fractured ribs), intercostal nerve blocks
+- **Special emphasis**: Incentive spirometry, coughing (pain-limited; prevent pneumonia)
+
+### Burn Pain (Severe, Often Undertreated)
+
+**Characteristics**: Severe nociceptive pain; tolerance develops quickly
+
+- **Scheduled analgesia**: Acetaminophen, NSAIDs (early burn care)
+- **Opioid**: Generous dosing; often need high doses
+- **Procedure pain**: Pre-medication (morphine + anxiolytic before dressing changes)
+- **Multimodal**: Ketamine useful for procedural pain; gabapentin
+- **Non-pharmacologic**: Immersion in warm water reduces pain perception
+
+### Pancreatitis Pain (Epigastric Severe Visceral)
+
+**Key principle**: AVOID morphine (spasm of sphincter of Oddi worsens pain)
+
+- **Use instead**: Hydromorphone, fentanyl (don't trigger sphincter spasm)
+- **NSAIDs**: Avoid (worsen acute pancreatitis)
+- **Adjuvant**: Gabapentin for neuropathic component if present
+
+### Opioid-Naive vs Opioid-Tolerant Patients
+
+**Opioid-Naive:**
+- Starting doses: Lower; increase gradually
+- Risk: Respiratory depression, oversedation
+- Concern: First-time users sensitive to side effects
+
+**Opioid-Tolerant** (chronic pain, substance use):
+- Starting dose: 50-100% higher than opioid-naive
+- Escalation: May need rapid titration for acute pain
+- Concern: Addiction vs medical need (treat pain, but aware of risk)
+- **Key**: Continue baseline chronic opioid (don't discontinue; precipitates withdrawal)
+
+## Non-Pharmacologic Approaches
+
+### Effective Modalities
+- **Physical therapy**: Early mobilization, exercises reduce pain
+- **Relaxation**: Deep breathing, meditation, guided imagery
+- **Distraction**: Music, TV, family presence
+- **Cold/heat**: Ice first 48h (reduces inflammation); heat after (muscle relaxation)
+- **Acupuncture**: Some evidence for certain pain types
+- **Hypnosis**: Adjunct for anxiety
+
+### Psychological Management
+- **Education**: Explain pain expected; reassurance reduces anxiety
+- **Anxiety reduction**: Anxiolytics if severe; cognitive behavioral therapy
+- **Sleep**: Adequate sleep promotes healing; ensure rest (avoid stimulation at night)
+- **Family support**: Presence, encouragement facilitates coping`,
+        mnemonics: [
+          { text: "Regional anesthesia excellent for pain; opioid-sparing approach", explanation: "Preference" },
+          { text: "Epidural morphine 5-10mg = 24h analgesia; monitor for delayed respiratory depression", explanation: "Key use" },
+          { text: "Pancreatitis: AVOID morphine (sphincter spasm); use fentanyl/hydromorphone", explanation: "Contraindication" },
+          { text: "Opioid-tolerant: continue baseline + acute pain dosing; avoid withdrawal", explanation: "Special population" },
+        ],
+        keyPoints: [
+          "Regional anesthesia excellent for post-op pain; opioid-sparing, reduces complications",
+          "Epidural morphine provides 24h analgesia; requires monitoring for delayed respiratory depression",
+          "Pancreatitis: avoid morphine (sphincter of Oddi spasm); use fentanyl/hydromorphone instead",
+          "Opioid-tolerant: continue baseline medication; add acute pain dosing (don't discontinue)",
+          "Non-pharmacologic adjuncts essential: PT, relaxation, distraction, psychological support",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Regional Anesthesia for Analgesia", edition: "14th" },
+          { book: "Sabiston Textbook of Surgery", chapter: "Perioperative Management", edition: "21st" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "acute-pain-exam-prep",
+        title: "Acute Pain Management - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "High-yield facts, case scenarios, WHO ladder application, complications.",
+        contentMd: `# Acute Pain Management - Exam Prep
+
+## WHO Ladder Quick Reference
+
+| Step | Pain Level | Agents | Examples |
+|------|-----------|--------|----------|
+| 1 | 1-3/10 | Non-opioid ± adjuvant | Acetaminophen, NSAID, gabapentin |
+| 2 | 4-6/10 | Weak opioid + non-opioid ± adjuvant | Tramadol, codeine + acetaminophen |
+| 3 | 7-10/10 | Strong opioid + non-opioid ± adjuvant | Morphine, fentanyl, hydromorphone |
+
+## High-Yield Facts
+
+**Assessment:**
+- NRS 0-10 most common; assess Q1-2H initially
+- Target <4/10 postop for mobilization
+
+**Pharmacology:**
+- Acetaminophen max 3-4 g/day (hepatotoxicity risk)
+- Morphine 5-10 mg IV Q2-4H titrated
+- Tramadol max 400 mg/day (seizure risk >400)
+
+**Special situations:**
+- **Pancreatitis**: AVOID morphine (sphincter spasm); use fentanyl
+- **Renal impairment**: Avoid morphine (metabolite accumulation); use fentanyl
+- **Elderly**: Reduce dose 25-50%; longer intervals; avoid anticholinergics
+- **Opioid-tolerant**: Higher starting dose; continue baseline
+
+**Multimodal approach:**
+- Reduces total opioid 30-50%
+- Synergistic effects
+- Fewer side effects
+
+**Constipation:**
+- 80% with opioids; prevent at initiation
+- Stool softener (docusate) + osmotic laxative (miralax)
+- Stimulant laxative if no BM x 3 days
+
+## Common Exam Question Patterns
+
+- **Moderate pain 5/10 management?** → WHO Step 2: weak opioid + non-opioid
+- **Severe pain 8/10?** → WHO Step 3: strong opioid
+- **Pancreatitis pain drug to AVOID?** → Morphine (sphincter of Oddi spasm)
+- **Renal impairment opioid choice?** → Fentanyl (no active metabolites)
+- **Opioid constipation prevention?** → Docusate + osmotic laxative at initiation
+- **Respiratory depression threshold?** → RR <8 (monitor all opioid patients)
+- **Multimodal benefit?** → Reduced opioid dose, fewer side effects, better pain control
+- **Epidural morphine duration?** → 12-24 hours (monitor for delayed respiratory depression)
+
+## Case Scenarios
+
+### Case 1: Moderate Pain with Nausea
+**Scenario**: POD1 femur ORIF, pain 5/10, nausea from IV morphine.
+
+**Management:**
+- Switch to less nauseating opioid (fentanyl or hydromorphone)
+- Add antiemetic (ondansetron 4 mg IV, metoclopramide 10 mg Q8H)
+- Continue acetaminophen + NSAID
+- Consider femoral nerve block catheter if not already placed
+
+### Case 2: Severe Pain Opioid-Tolerant
+**Scenario**: 55-year-old chronic back pain on morphine ER 60 mg BID, now post-op with severe pain.
+
+**Management:**
+- Continue baseline morphine ER (prevent withdrawal)
+- Add PRN opioid: morphine 10-20 mg Q2H (pain >4/10)
+- Regional anesthesia preferred (epidural, blocks)
+- Expect higher opioid requirement
+
+### Case 3: Pancreatitis
+**Scenario**: Acute pancreatitis, epigastric pain 9/10, amylase elevated.
+
+**Management:**
+- AVOID morphine (sphincter of Oddi spasm worsens pain)
+- Use: Fentanyl 50-100 mcg IV OR hydromorphone 2-4 mg IV
+- NSAIDs contraindicated
+- Aggressive fluids`,
+        mnemonics: [
+          { text: "WHO ladder: Step 1 (non-opioid), Step 2 (weak opioid + non-opioid), Step 3 (strong opioid + adjuvant)", explanation: "Framework" },
+          { text: "Pancreatitis: AVOID morphine; use Fentanyl/Hydromorphone", explanation: "Critical rule" },
+          { text: "Opioid constipation 80%: prevent with docusate + osmotic laxative AT INITIATION", explanation: "Prevention" },
+          { text: "Multimodal: reduces opioid by 30-50%, fewer side effects, synergistic", explanation: "Advantage" },
+        ],
+        keyPoints: [
+          "WHO ladder: mild (non-opioid), moderate (weak opioid), severe (strong opioid)",
+          "NRS <4/10 target postop for mobilization",
+          "Pancreatitis: AVOID morphine (sphincter spasm); use fentanyl",
+          "Opioid constipation prevention is key; use docusate + osmotic at initiation",
+          "Multimodal reduces opioid requirement 30-50%",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Pain Management", edition: "14th" },
+          { book: "WHO Cancer Pain Relief Guidelines", chapter: "Analgesic Ladder", edition: "3rd" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "acute-pain-qa",
+        title: "Acute Pain Management - Active Recall",
+        estimatedMinutes: 15,
+        summary: "10 clinical cases and flashcards testing WHO ladder, special situations, drug selection.",
+        contentMd: `# Acute Pain Management - Active Recall
+
+## Q1: WHO Ladder Application
+**Q: Patient reports pain 5/10 on postop day 1. Currently on acetaminophen only. What's the next step?**
+
+A: **Escalate to WHO Step 2** (moderate pain 4-6/10). Continue acetaminophen + add weak opioid: tramadol 100-150 mg Q4-6H OR codeine 30-60 mg Q4-6H. Could also add NSAID if no contraindication (max 3-4 days post-op in most). Reassess in 1-2 hours.
+
+## Q2: Pancreatitis Pain - Critical Drug Avoidance
+**Q: Patient with acute pancreatitis and severe pain. Ordered morphine 10 mg IV. Why is this contraindicated?**
+
+A: **Morphine causes sphincter of Oddi spasm** - worsens pancreatitis pain, increases intracranial pressure, delays pain relief. **Avoid morphine entirely in pancreatitis.** Use instead: **Fentanyl 50-100 mcg IV** or **hydromorphone 2-4 mg IV** (don't trigger sphincter spasm). NSAIDs also contraindicated (worsen acute pancreatitis).
+
+## Q3: Opioid Constipation Prevention
+**Q: Patient started on morphine 10 mg IV Q3H for acute post-op pain. What must be prescribed concurrently?**
+
+A: **Stool softener + osmotic laxative at initiation.** Opioid-induced constipation occurs in 80% (most common side effect). **Prescription**: Docusate 100-300 mg daily + miralax daily. If no BM x 3 days, add stimulant laxative (senna). This prevents constipation better than treating after it develops.
+
+## Q4: Respiratory Depression Monitoring
+**Q: How often should you monitor respiratory rate in post-op opioid patient? What RR triggers intervention?**
+
+A: **Monitor RR Q1-2H initially**, then Q4H if stable. **Respiratory depression threshold: RR <8 or altered mental status.** At RR <8: (1) Stimulate patient, (2) Check O2 sat, (3) Apply O2, (4) Consider naloxone 0.4 mg IV if severe. Respiratory depression rare (2-5%) but serious.
+
+## Q5: Renal Impairment - Opioid Selection
+**Q: Patient with GFR 15 on chronic dialysis needs acute pain management. Which opioid to avoid and which to use?**
+
+A: **AVOID morphine** (active metabolites M6G, M3G accumulate; respiratory depression risk). **Use: Fentanyl** (no active metabolites; extrahepatic metabolism; lipophilic). Alternative: hydromorphone (shorter-acting metabolites). Avoid: meperidine (toxic metabolite normeperidine).
+
+## Q6: Elderly Patient Dosing
+**Q: 82-year-old post-op hip fracture with pain 6/10. Typical morphine dose 10 mg IV, but elderly patient on multiple medications. What dosing adjustment?**
+
+A: **Reduce by 25-50%**: Start morphine 5 mg IV Q4H (not 10 mg). Elderly have: reduced hepatic clearance, increased CNS sensitivity, polypharmacy interactions. Escalate slowly. Risk of oversedation, respiratory depression, delirium much higher than younger patients.
+
+## Q7: Multimodal Analgesia Benefits
+**Q: Why is multimodal analgesia superior to opioid monotherapy?**
+
+A: **Synergistic effects**: Different mechanisms (opioid + non-opioid + adjuvant) work together. **Benefits**: (1) 30-50% reduction in total opioid dose, (2) Fewer side effects (less constipation, nausea, respiratory depression), (3) Better pain control at lower doses, (4) Prevents tolerance. Example: morphine 5 mg + acetaminophen + gabapentin = better pain control than morphine 10 mg alone.
+
+## Q8: Epidural Morphine Complications
+**Q: Patient received epidural morphine 5 mg for major abdominal surgery. What complication must be monitored for and when?**
+
+A: **Delayed respiratory depression** (8-24 hours post-injection). Epidural morphine provides 24-hour analgesia BUT carries risk of respiratory depression developing hours after injection. **Monitoring**: Vital signs Q1H × 24H, sedation score, respiratory rate. **Naloxone** available for emergency. Mechanism: morphine diffuses from epidural space over hours → accumulates in CSF.
+
+## Q9: Opioid-Tolerant Patient Post-op
+**Q: 45-year-old on methadone 40 mg daily for pain management. Now post-op with acute severe pain. How manage?**
+
+A: **CONTINUE baseline methadone 40 mg daily** (prevent withdrawal). **Add acute pain opioid separately**: Morphine 10-20 mg IV Q2H PRN (pain >4/10). Opioid-tolerant patients need 50-100% higher baseline + additional acute pain dosing. Monitor closely for addiction/aberrant behavior, but treat pain (medical need distinct from addiction).
+
+## Q10: Transition from Acute to Chronic Pain
+**Q: 3-week post-op patient still on opioids; pain 6/10. What's the risk of continuing high-dose opioids?**
+
+A: **Risk of transition to chronic pain**, especially if pain inadequately controlled early. **Mechanism**: Neuroplasticity changes → central sensitization if pain persists. **Prevention**: Early aggressive multimodal management (first week especially critical). After 3 weeks: should be weaning off opioids, continuing non-opioid + PT. If pain still 6/10, reassess for complications (infection, hardware issues) rather than escalating opioids. Addiction risk increases weekly with continued opioid use.`,
+        mnemonics: [
+          { text: "WHO ladder: 1-3/10 = non-opioid, 4-6/10 = weak opioid, 7-10/10 = strong opioid", explanation: "Framework" },
+          { text: "Pancreatitis pain: AVOID morphine (sphincter spasm); use Fentanyl/Hydromorphone (F-H)", explanation: "Critical rule" },
+          { text: "Opioid constipation 80%: Docusate + osmotic laxative AT INITIATION (prevent)", explanation: "Prevention" },
+          { text: "Elderly: reduce dose 25-50%, longer intervals, avoid anticholinergics (CNS risk)", explanation: "Special population" },
+          { text: "Respiratory depression RR <8: stimulate, O2, consider naloxone", explanation: "Emergency response" },
+          { text: "Epidural morphine: delayed respiratory depression 8-24h post-injection; monitor vitals Q1H", explanation: "Complication" },
+        ],
+        keyPoints: [
+          "WHO ladder: non-opioid (1-3/10), weak opioid (4-6/10), strong opioid (7-10/10)",
+          "Pancreatitis: AVOID morphine (sphincter of Oddi spasm); use fentanyl/hydromorphone",
+          "Opioid constipation most common side effect (80%); prevent with docusate + laxative at initiation",
+          "Elderly: reduce dose 25-50%; longer intervals; polypharmacy interactions",
+          "Respiratory depression rare (2-5%); monitor RR; naloxone for RR <8",
+          "Epidural morphine: 24h analgesia but delayed respiratory depression risk 8-24h",
+          "Multimodal reduces opioid by 30-50%; synergistic, fewer side effects",
+          "Opioid-tolerant: continue baseline + add acute pain dosing (don't discontinue)",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Pain Management", edition: "14th" },
+          { book: "WHO Cancer Pain Relief Guidelines", chapter: "Analgesic Ladder", edition: "3rd" },
+        ],
+      },
+    ],
+  },
 ];

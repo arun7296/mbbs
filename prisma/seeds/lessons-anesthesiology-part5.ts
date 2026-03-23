@@ -1,22 +1,599 @@
-// Anesthesiology Part 5: Remaining topics from modules 1, 2, 4, 5
+import type { TopicLessons } from "./content-loader";
 
-export const anesthesiologyPart5Lessons = [
-  // AS-MOD-01-TOP-02: Neuromuscular Blocking Agents
+export const anesthesiologyPart5Lessons: TopicLessons[] = [
   {
     topicCode: "AS-MOD-01-TOP-02",
     layers: [
       {
         layer: 1,
-        slug: "nmb-agents-foundation",
-        title: "Neuromuscular Blocking Agents - Foundation",
+        slug: "airway-management-foundation",
+        title: "Airway Management & Intubation - Foundation",
         estimatedMinutes: 25,
-        summary: "Classification, mechanism, pharmacology, depolarizing vs non-depolarizing agents.",
-        contentMd: "# Neuromuscular Blocking Agents - Foundation\n\n## Normal Neuromuscular Transmission\n\n### Acetylcholine Release\n- Presynaptic: Action potential → calcium influx → ACh vesicles release\n- Synaptic cleft: ACh diffuses across (distance ~50 nm)\n- Postsynaptic: ACh binds nicotinic receptors (2 ACh molecules per receptor)\n\n### Receptor Activation\n- **Nicotinic receptor**: Ion channel, opens when ACh binds\n- **Opening**: Sodium influx → depolarization → muscle contraction\n- **Closure**: ACh hydrolyzed by acetylcholinesterase → channel closes\n- **Result**: Muscle relaxation\n\n## Classification of NMB Agents\n\n### Depolarizing Agents (Succinylcholine/Suxamethonium)\n- **Mechanism**: Mimic ACh, bind nicotinic receptors → sustained depolarization\n- **Onset**: Very rapid (30-60 seconds)\n- **Duration**: Very short (5-10 minutes, hydrolyzed by pseudocholinesterase)\n- **Use**: Intubation (RSI = Rapid Sequence Intubation)\n- **Fasciculations**: Visible muscle contractions (risk: increased ICP, hyperkalemia)\n\n### Non-Depolarizing Agents\n#### Competitive (Reversible) Blockers\n- **Mechanism**: Occupy ACh receptor but don't activate → competitive blockade\n- **Examples**: Atracurium, vecuronium, rocuronium, cisatracurium\n- **Onset**: Slower than succinylcholine (60-90 seconds)\n- **Duration**: Longer (30-60 minutes depending on agent)\n- **Reversal**: Spontaneous (degradation) or pharmacological (neostigmine)\n- **Use**: Maintenance paralysis during anesthesia\n\n#### Characteristics\n- **No fasciculations**: No visible muscle contractions\n- **Gradual onset**: Titratable\n- **Reversible**: Can be reversed with anticholinesterase\n- **No hyperkalemia**: Unlike succinylcholine\n\n## Succinylcholine (Depolarizing)\n\n### Advantages\n- **Ultra-rapid onset**: 30-60 seconds (fastest agent)\n- **Short duration**: 5-10 minutes (pseudocholinesterase metabolism)\n- **Excellent for RSI**: Fast intubation needed\n\n### Disadvantages\n- **Fasciculations**: Visible muscle contractions → pain (postoperative myalgia)\n- **Hyperkalemia risk**: K+ release from muscles (dangerous in burns, crush injuries, denervation)\n- **Malignant hyperthermia trigger**: Can cause MH crisis\n- **Increased ICP**: Fasciculations increase intracranial pressure\n- **Increased intraocular pressure**: Risk in open eye injury\n- **Bradycardia**: Muscarinic effects (more in children)\n- **Jaw rigidity**: Risk of aspiration, masseter spasm\n\n### Clinical use\n- **RSI**: Drug of choice (onset fastest)\n- **Short procedures**: Laryngoscopy, intubation, ECT\n- **NOT used**: Chronic illness (burn, spinal cord injury, denervation - hyperkalemia risk)\n\n## Common Non-Depolarizing Agents\n\n### Atracurium\n- **Onset**: 60-90 seconds\n- **Duration**: 30-45 minutes\n- **Metabolism**: Hofmann elimination (temperature-dependent) + ester hydrolysis\n- **Advantage**: Minimal organ dependence (good in renal/hepatic failure)\n- **Disadvantage**: Histamine release (flushing, hypotension)\n- **Cost**: Moderate (cheaper than rocuronium)\n\n### Vecuronium\n- **Onset**: 60-90 seconds\n- **Duration**: 30-40 minutes\n- **Metabolism**: Hepatic (organ-dependent)\n- **Advantage**: No histamine release, good cardiovascular stability\n- **Disadvantage**: Slower onset than rocuronium\n- **Cost**: Expensive\n\n### Rocuronium\n- **Onset**: 45-60 seconds (faster than atracurium/vecuronium)\n- **Duration**: 30-40 minutes\n- **Metabolism**: Hepatic\n- **Advantage**: Rapid onset (closer to succinylcholine), no histamine\n- **Use**: Preferred in modern anesthesia (when rapid onset needed without succ risks)\n- **Cost**: Very expensive\n\n### Cisatracurium\n- **Onset**: 60-90 seconds\n- **Duration**: 45-60 minutes\n- **Metabolism**: Hofmann elimination (organ-independent, like atracurium)\n- **Advantage**: No histamine, organ-independent\n- **Use**: Renal/hepatic failure (predictable metabolism)\n- **Cost**: Expensive\n\n## Monitoring Neuromuscular Block\n\n### Train-of-Four (TOF) Stimulation\n- **Method**: Apply 4 electrical stimuli in rapid succession to peripheral nerve\n- **Normal response**: 4 twitches of equal amplitude (100% block = 0 twitches)\n- **Partial block**: 1-3 twitches visible\n- **Complete block**: No twitches\n- **Assessment**: Count twitches to assess block depth\n\n### Clinical Assessment\n- **Fade**: Decrease in twitch height → indicates residual block\n- **Post-tetanic potentiation**: Response to continued stimulation → assesses deep block\n- **Timing**: Used throughout case to assess need for additional agent dose\n\n### Recovery Assessment\n- **Spontaneous recovery**: Non-depolarizing agents gradually wear off\n- **Train-of-Four ratio**: Should be >0.9 for adequate recovery (respiratory function)\n- **At end of case**: Reverse agent if residual block present\n\n## Reversal of Non-Depolarizing Block\n\n### Neostigmine + Anticholinergic\n- **Neostigmine**: Acetylcholinesterase inhibitor → increases ACh level\n- **Dose**: 0.04-0.06 mg/kg IV\n- **Anticholinergic**: Atropine or glycopyrrolate (prevent muscarinic side effects)\n- **Effective**: Only if some spontaneous recovery occurred (can't reverse complete block)\n- **Onset**: 5-10 minutes\n\n### Newer Agents\n- **Sugammadex**: Selective relaxant binding agent\n  - Encapsulates rocuronium/vecuronium molecules\n  - Very rapid reversal (1-2 minutes)\n  - Can reverse deep block (unlike neostigmine)\n  - Very expensive (rarely used in India)\n\n## Complications\n\n### Succinylcholine complications\n- **Hyperkalemia**: Especially with burns, crush, denervation (contraindication)\n- **Malignant hyperthermia**: Severe reaction (contraindication)\n- **Myalgia**: Postoperative muscle pain (minimize with pre-treatment)\n- **Jaw rigidity**: Masseter spasm (aspiration risk)\n- **Increased ICP**: Risk in head injury\n\n### Non-depolarizing complications\n- **Histamine release**: Atracurium → flushing, hypotension\n- **Allergy**: Rare but possible (anaphylaxis)\n- **Prolonged block**: If pseudocholinesterase deficiency (succinylcholine)\n- **Drug interactions**: Antibiotics (aminoglycosides potentiate block)\n- **Recurarization**: Sudden re-paralysis if no reversal given,\n        mnemonics: [\n          { text: \"Succinylcholine = S = Short-acting (5-10 min), S = Super-fast (RSI), S = Scary side effects (hyperK, MH)\", explanation: \"Depolarizing agent properties\" },\n          { text: \"ARVC = Atracurium, Rocuronium, Vecuronium, Cisatracurium (non-depolarizing agents)\", explanation: \"Common non-depolarizing agents\" },\n          { text: \"TOF = Train-of-Four assessment (count twitches to monitor block)\", explanation: \"Neuromuscular monitoring\" },\n          { text: \"Succinylcholine contraindicated: Burns, Crush, Denervation, Unknown MH family (hyperK risk)\", explanation: \"When to avoid succinylcholine\" }\n        ],\n        keyPoints: [\n          \"Succinylcholine: Fastest onset (30-60s), shortest duration (5-10 min), used for RSI\",\n          \"Non-depolarizing: Slower onset (60-90s), longer duration (30-60 min), reversible\",\n          \"Rocuronium preferred modern agent (faster onset than other non-depolarizing)\",\n          \"Hyperkalemia major risk with succinylcholine in burns/denervation\",\n          \"Train-of-Four monitoring ensures adequate reversal before extubation\"\n        ],\n        textbookRefs: [\n          { book: \"Textbook of Anesthesia by Gupta & Singh\", chapter: \"Neuromuscular Blocking Agents\", edition: \"6th\" },\n          { book: \"Miller's Anesthesia\", chapter: \"Muscle Relaxants\", edition: \"8th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"nmb-agents-mechanism\",\n        title: \"Neuromuscular Blocking Agents - Pharmacology\",\n        estimatedMinutes: 30,\n        summary: \"Pharmacokinetics, onset-offset factors, drug interactions, special populations.\",\n        contentMd: "# Neuromuscular Blocking Agents - Mechanism\\n\\n## Depolarizing Agent Mechanism (Succinylcholine)\\n\\n### Molecular Interaction\\n- **Structure**: Two ACh molecules linked together\\n- **Binding**: Binds nicotinic receptor (mimics ACh)\\n- **Channel opening**: Causes sodium influx → depolarization (membrane potential -70mV → -50mV)\\n- **Sustained depolarization**: Unlike ACh (brief opening), succinylcholine keeps channel open\\n- **Result**: Sustained muscle contraction → fasciculations\\n\\n### Phase 1 Block (Depolarizing)\\n- **Early phase**: Fasciculations visible (random muscle contractions)\\n- **Mechanism**: Depolarized muscle cannot re-polarize due to sustained ACh analog binding\\n- **Muscle appearance**: Contracted, rigid\\n- **ICP increase**: Intracranial pressure rises from muscle contraction\\n- **K+ release**: Myocytes release potassium (hyperkalemia risk)\\n\\n### Phase 2 Block (Desensitization)\\n- **Later phase**: Continued exposure → receptors desensitize\\n- **Mechanism**: Channel closes despite continued agonist binding\\n- **Appearance**: Appears like non-depolarizing block (no fasciculations)\\n- **Reversal**: Difficult; usually wait for drug metabolism\\n- **Pseudocholinesterase**: Ester bonds hydrolyzed by plasma enzyme → drug inactivated\\n\\n## Non-Depolarizing Agent Mechanism\\n\\n### Competitive Antagonism\\n- **Binding**: Competitive with ACh for nicotinic receptor\\n- **Non-activating**: Block receptor without opening channel\\n- **Result**: Sodium influx blocked → no depolarization → muscle relaxation\\n- **Reversibility**: High ACh concentration can overcome block (neostigmine/sugammadex)\\n\\n### Onset Factors\\n- **Blood flow to muscle**: Higher cardiac output → faster onset\\n- **Neuromuscular junction perfusion**: Better perfusion = faster drug arrival\\n- **Receptor affinity**: Different agents have different affinities (rocuronium faster than vecuronium)\\n- **ED95 concentration**: Effective dose for 95% block (varies by agent)\\n\\n### Offset/Duration Factors\\n- **Hepatic metabolism**: Vecuronium, rocuronium → hepatic (longer if hepatic failure)\\n- **Renal clearance**: Some agents cleared by kidneys → prolonged in renal failure\\n- **Hofmann elimination**: Atracurium, cisatracurium → temperature/pH dependent (organ-independent)\\n- **Ester metabolism**: Some agents hydrolyzed by plasma esterases\\n- **Pseudocholinesterase**: Genetic variation affects succinylcholine metabolism\\n\\n## Pharmacokinetics Comparison\\n\\n| Agent | Onset (s) | Duration (min) | Metabolism | Organ Failure Effect |\\n|-------|-----------|----------------|-----------  |------------|\\n| Succinylcholine | 30-60 | 5-10 | Pseudocholinesterase | Prolonged (if deficiency) |\\n| Rocuronium | 45-60 | 30-40 | Hepatic | Prolonged (liver failure) |\\n| Vecuronium | 60-90 | 30-40 | Hepatic | Prolonged (liver failure) |\\n| Atracurium | 60-90 | 30-45 | Hofmann + ester | Minimal |\\n| Cisatracurium | 60-90 | 45-60 | Hofmann | Minimal |\\n\\n## Pseudocholinesterase Deficiency\\n\\n### Genetics\\n- **Normal metabolism**: Succinylcholine metabolized in 5-10 minutes\\n- **Pseudocholinesterase deficiency**: Autosomal recessive trait (1 in 3000)\\n- **Genetic variants**: Atypical enzyme has reduced/absent activity\\n- **Result**: Succinylcholine effect prolonged (hours instead of minutes)\\n\\n### Clinical Recognition\\n- **Prolonged apnea**: Patient remains apneic after succinylcholine (paralyzed, cannot breathe)\\n- **Continued paralysis**: Train-of-Four shows complete block (no twitches)\\n- **Management**: Continue mechanical ventilation until drug metabolized (may take hours)\\n- **Family history**: Ask about prolonged paralysis after anesthesia in relatives\\n- **Plasma level**: Can measure pseudocholinesterase activity\\n- **Alert**: Patients with deficiency should wear MedicAlert bracelet\\n\\n## Drug Interactions\\n\\n### Antibiotics potentiating block\\n- **Aminoglycosides**: Gentamicin, streptomycin (presynaptic ACh release inhibition)\\n- **Fluoroquinolones**: May potentiate\\n- **Effect**: Prolonged neuromuscular block, apnea risk\\n- **Management**: Reduce NMB agent dose; monitor closely\\n\\n### Inhalational anesthetics\\n- **Isoflurane, sevoflurane**: Potentiate non-depolarizing agents\\n- **Effect**: Reduced dose needed; prolonged duration\\n- **Clinical**: Use lower doses if volatile agent used\\n\\n### Calcium channel blockers\\n- **Verapamil, diltiazem**: Potentiate NMB agents\\n- **Mechanism**: Reduced neuromuscular transmission\\n- **Management**: Reduce NMB dose\\n\\n### Corticosteroids\\n- **Chronic use**: May cause resistance to NMB agents\\n- **Effect**: Higher doses needed\\n- **Mechanism**: Unknown (possibly altered receptor sensitivity)\\n\\n## Special Populations\\n\\n### Elderly\\n- **Reduced clearance**: Slower metabolism\\n- **Increased sensitivity**: Lower doses needed\\n- **Management**: Reduce NMB dose by 20-30%; monitor closely\\n\\n### Obese\\n- **Dosing**: Use ideal body weight (not actual) for NMB dosing\\n- **Exception**: Rocuronium may use actual body weight (debated)\\n- **Duration**: May be prolonged if organ-dependent agent used\\n\\n### Hepatic failure\\n- **Vecuronium, rocuronium**: Prolonged (hepatic metabolism)\\n- **Atracurium, cisatracurium**: Predictable (Hofmann elimination)\\n- **Recommendation**: Use atracurium/cisatracurium in liver failure\\n\\n### Renal failure\\n- **Most agents**: Minimal concern if single dose\\n- **Repeated dosing**: Some agents accumulate (rocuronium slightly)\\n- **Best choice**: Hofmann-eliminated agents (atracurium, cisatracurium)\\n\\n### Burns\\n- **CONTRAINDICATION**: Succinylcholine ABSOLUTELY CONTRAINDICATED\\n- **Reason**: Massive hyperkalemia (potassium release from damaged muscle)\\n- **Use**: Non-depolarizing agents only (rocuronium preferred)\\n- **Timeline**: Danger extends weeks post-burn (denervated muscle),\\n        mnemonics: [\\n          { text: \\\"S-P-C = Succinylcholine, Pseudocholinesterase, Catabolism (ester bonds hydrolyzed)\\\", explanation: \\\"Succinylcholine metabolism\\\" },\\n          { text: \\\"Rocuronium = Rapid, Rocuronium preferred modern agent\\\", explanation: \\\"Fastest non-depolarizing\\\" },\\n          { text: \\\"Hofmann = Hepatic-independent (Atracurium, Cisatracurium = organ failure safe)\\\", explanation: \\\"Temperature/pH dependent metabolism\\\" },\\n          { text: \\\"Burns = Broken muscles = Dangerous K+ release = No succinylcholine (use rocuronium)\\\", explanation: \\\"Succinylcholine contraindication\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Succinylcholine: Depolarizing → fasciculations → sustained channel opening → muscle paralysis\\\",\\n          \\\"Non-depolarizing: Competitive antagonism → blocks receptor → no depolarization\\\",\\n          \\\"Rocuronium: Fastest non-depolarizing (45-60s onset)\\\",\\n          \\\"Pseudocholinesterase deficiency → prolonged succinylcholine effect (hours)\\\",\\n          \\\"Atracurium/cisatracurium: Safest in organ failure (Hofmann elimination)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Guyton Textbook of Medical Physiology\\\", chapter: \\\"Neuromuscular Transmission\\\", edition: \\\"12th\\\" },\\n          { book: \\\"Miller's Anesthesia\\\", chapter: \\\"Pharmacology of Muscle Relaxants\\\", edition: \\\"8th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"nmb-agents-clinical\\\",\\n        title: \\\"Neuromuscular Blocking Agents - Clinical Application\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Agent selection by patient/procedure, avoiding complications, Indian context.\\\",\\n        contentMd: "# Neuromuscular Blocking Agents - Clinical Application\\\\n\\\\n## Agent Selection by Procedure Type\\\\n\\\\n### RSI (Rapid Sequence Intubation)\\\\n- **Indication**: Full stomach, emergency surgery, aspiration risk\\\\n- **Agent choice**:\\\\n  - **First choice**: Succinylcholine 1-1.5 mg/kg (fastest onset)\\\\n  - **Alternative**: Rocuronium 1.2 mg/kg (if succinylcholine contraindicated)\\\\n- **Combined**: Usually used with propofol induction\\\\n- **Goal**: Rapid loss of consciousness + paralysis for intubation\\\\n\\\\n### Routine Procedures (Elective Surgery)\\\\n- **Agent**: Rocuronium 0.6 mg/kg IV (preferred)\\\\n- **Alternative**: Atracurium 0.5 mg/kg (if cost is issue)\\\\n- **Onset**: 60-90 seconds\\\\n- **Duration**: 30-40 minutes (allow 10 minutes of surgery before additional dose)\\\\n- **Maintenance**: Redose or infusion as needed (monitor TOF)\\\\n\\\\n### Brief Procedures (Laryngoscopy, Intubation, ECT)\\\\n- **Agent**: Succinylcholine 1-1.5 mg/kg IV\\\\n- **Advantage**: Short duration (back to spontaneous breathing in 5-10 min)\\\\n- **Limitation**: Side effects (fasciculations, myalgia, hyperkalemia)\\\\n- **Caution**: Only if no contraindications\\\\n\\\\n### Long Procedures\\\\n- **Agent**: Rocuronium infusion or repeated dosing\\\\n- **Initial dose**: Rocuronium 0.6 mg/kg\\\\n- **Redose**: 0.1-0.2 mg/kg every 20-30 minutes PRN\\\\n- **OR infusion**: 0.01-0.02 mg/kg/min after initial bolus\\\\n- **Monitor**: Train-of-Four to titrate dosing\\\\n- **Avoidance**: Succinylcholine (tachyphylaxis + cost)\\\\n\\\\n## Special Situation Management\\\\n\\\\n### Preventing Succinylcholine Complications\\\\n\\\\n**Fasciculations (cause myalgia)**:\\\\n- **Prevention**: Pre-treat with small non-depolarizing dose (0.01 mg/kg rocuronium) 3 minutes before succinylcholine\\\\n- **Result**: Prevents visible fasciculations (pain reduced)\\\\n- **Trade-off**: Delays induction slightly\\\\n\\\\n**Hyperkalemia**:\\\\n- **Risk groups**: Burns, crush injuries, denervation, spinal cord injury (weeks post-injury)\\\\n- **CONTRAINDICATION**: Avoid succinylcholine absolutely\\\\n- **Use instead**: Rocuronium 1.2 mg/kg (takes longer onset but safe)\\\\n\\\\n**Malignant Hyperthermia**:\\\\n- **CONTRAINDICATION**: Succinylcholine absolutely contraindicated\\\\n- **Use**: Non-depolarizing agents (rocuronium)\\\\n- **Avoid**: All volatile agents also contraindicated\\\\n- **Use for maintenance**: TIVA (propofol) or safe agents\\\\n\\\\n**ICP elevation risk**:\\\\n- **CONTRAINDICATION**: Succinylcholine in head injury/elevated ICP\\\\n- **Reason**: Fasciculations increase intracranial pressure\\\\n- **Use**: Rocuronium + smooth induction (propofol 1-2 mg/kg reduced dose)\\\\n\\\\n### Difficult Intubation Management\\\\n\\\\n**If unable to intubate after RSI**:\\\\n- **Rapid assessment**: Is oxygenation adequate? (Use bag-mask)\\\\n- **If adequate oxygenation**: Can wait for succinylcholine to wear off (5-10 min) or use sugammadex (rare)\\\\n- **If hypoxia developing**: May need emergency airway (cricothyrotomy) or continue attempts\\\\n\\\\n**Rocuronium RSI consideration**:\\\\n- **Advantage**: Sugammadex reversal available (can reverse if intubation fails)\\\\n- **Disadvantage**: Much more expensive than succinylcholine\\\\n- **Reality in India**: Succinylcholine remains standard (cost, availability)\\\\n\\\\n## Monitoring Adequacy of Block\\\\n\\\\n### Train-of-Four Monitoring\\\\n- **Application**: Stimulate ulnar nerve at wrist (or other peripheral nerve)\\\\n- **Response**: 4 electrical stimuli → observe finger twitches\\\\n- **Interpretation**:\\\\n  - 4/4 twitches: No block (0% block)\\\\n  - 3/4 twitches: Partial block (25% block)\\\\n  - 2/4 twitches: Moderate block (50% block)\\\\n  - 1/4 twitch: Deep block (75% block)\\\\n  - 0 twitches: Complete block (100% block)\\\\n\\\\n### Clinical Assessment (Without monitor)\\\\n- **Jaw clenching**: Can teeth be pried open? (Indicates incomplete recovery)\\\\n- **Grip strength**: Can patient squeeze examiner's hand? (Gross assessment)\\\\n- **Ventilation**: Can patient breathe spontaneously? (Best indicator)\\\\n- **Reversal timing**: If no spontaneous movement after 1 hour, likely inadequate metabolism\\\\n\\\\n### Post-operative residual block (PORB)\\\\n- **Definition**: Persistent neuromuscular block after operation\\\\n- **Incidence**: 10-50% if not monitored/reversed\\\\n- **Symptoms**: Weakness, difficulty breathing, tongue falling back\\\\n- **Prevention**: Neostigmine reversal (0.04-0.06 mg/kg) if residual block present\\\\n- **Sugammadex**: Can reverse deep block (not available in most Indian hospitals)\\\\n\\\\n## Drug Dosing by Patient Characteristics\\\\n\\\\n### Normal adult (70 kg)\\\\n- Succinylcholine: 70 mg IV (1 mg/kg)\\\\n- Rocuronium: 42-84 mg IV (0.6-1.2 mg/kg for RSI)\\\\n- Atracurium: 35 mg IV (0.5 mg/kg)\\\\n\\\\n### Elderly (65+ years)\\\\n- **Reduced dose**: 30-50% reduction recommended\\\\n- **Reason**: Reduced metabolism, increased sensitivity\\\\n- **Example**: Rocuronium 30-40 mg (instead of 70 mg for normal adult)\\\\n- **Monitoring**: Strict TOF monitoring essential\\\\n\\\\n### Obese (BMI >30)\\\\n- **Succinylcholine**: Use ideal body weight (NOT actual)\\\\n- **Non-depolarizing**: Debate on ideal vs. actual; generally use ideal body weight\\\\n- **Effect**: Less drug needed (obesity doesn't increase volume of distribution for lipophilic agents)\\\\n\\\\n### Liver failure\\\\n- **Succinylcholine**: Safe (pseudocholinesterase may be reduced, but usually OK)\\\\n- **Rocuronium/Vecuronium**: Use reduced doses (prolonged duration)\\\\n- **Best choice**: Atracurium/Cisatracurium (use normal doses, organ-independent)\\\\n\\\\n### Renal failure\\\\n- **Single dose**: Most agents safe\\\\n- **Repeated dosing**: Atracurium/Cisatracurium preferred\\\\n- **Avoid repeated**: Rocuronium (accumulates slightly in renal failure)\\\\n\\\\n## Indian Context Considerations\\\\n\\\\n### Succinylcholine Standard\\\\n- **Availability**: Widely available, cheap\\\\n- **Cost**: Much cheaper than rocuronium\\\\n- **Use**: Remains standard for RSI in most Indian hospitals\\\\n- **Limitation**: No sugammadex reversal availability\\\\n\\\\n### Rocuronium Increasing Use\\\\n- **Availability**: Increasingly available in cities\\\\n- **Cost**: 10-20× more expensive than succinylcholine\\\\n- **Use**: Preferred in private hospitals; rare in government hospitals\\\\n- **Advantage**: Fewer side effects, faster than other non-depolarizing\\\\n\\\\n### Atracurium Popularity\\\\n- **Cost**: Moderate (cheaper than rocuronium, more expensive than succinylcholine)\\\\n- **Use**: Popular choice in India (good balance of cost/benefit)\\\\n- **Advantage**: Minimal organ dependence (safe in renal/hepatic failure)\\\\n- **Limitation**: Histamine release (avoid if hypotension risk)\\\\n\\\\n### Vecuronium Limited\\\\n- **Cost**: Expensive\\\\n- **Use**: Limited to high-end hospitals\\\\n- **Advantage**: No histamine release, stable CVS\\\\n- **Disadvantage**: Hepatic metabolism (concern in organ failure),\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"RSI-S = RSI = Succinylcholine (or Rocuronium if contraindicated)\\\\\\\", explanation: \\\\\\\"Rapid intubation agent\\\\\\\" },\\\\n          { text: \\\\\\\"TOF = Train-of-Four monitoring = Twitch count guides reversal\\\\\\\", explanation: \\\\\\\"Block adequacy assessment\\\\\\\" },\\\\n          { text: \\\\\\\"PORB = Post-Operative Residual Block = Prevent with neostigmine reversal\\\\\\\", explanation: \\\\\\\"Post-op complication\\\\\\\" },\\\\n          { text: \\\\\\\"Elderly/Obese/Liver = Reduced dose; Kidney = Hofmann agents (Atracurium)\\\\\\\", explanation: \\\\\\\"Special population dosing\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"RSI: Succinylcholine 1-1.5 mg/kg (fastest) or Rocuronium 1.2 mg/kg (if contraindicated)\\\\\\\",\\\\n          \\\\\\\"Routine surgery: Rocuronium 0.6 mg/kg preferred; Atracurium budget alternative\\\\\\\",\\\\n          \\\\\\\"Prevent fasciculation myalgia: Pre-treat with 0.01 mg/kg rocuronium before succinylcholine\\\\\\\",\\\\n          \\\\\\\"Post-operative reversal: Neostigmine 0.04-0.06 mg/kg if TOF shows residual block\\\\\\\",\\\\n          \\\\\\\"Atracurium safest in liver/renal failure (Hofmann-independent metabolism)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Textbook of Anesthesia by Gupta & Singh\\\\\\\", chapter: \\\\\\\"Neuromuscular Block Management\\\\\\\", edition: \\\\\\\"6th\\\\\\\" },\\\\n          { book: \\\\\\\"AANA Textbook\\\\\\\", chapter: \\\\\\\"Muscle Relaxant Selection\\\\\\\", edition: \\\\\\\"7th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"nmb-agents-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Neuromuscular Blocking Agents - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Quick facts, comparison tables, mnemonics, common exam questions.\\\\\\\",\\\\n        contentMd: "# Neuromuscular Blocking Agents - Exam Prep\\\\\\\\n\\\\\\\\n## Quick Reference Table\\\\\\\\n\\\\\\\\n| Agent | Type | Onset | Duration | Metabolism | Key Feature |\\\\\\\\n|-------|------|-------|----------|------------|-----------|\\\\\\\\n| Succinylcholine | Depolarizing | 30-60s | 5-10min | Pseudocholinesterase | Ultra-fast, hyperK risk |\\\\\\\\n| Rocuronium | Non-depolarizing | 45-60s | 30-40min | Hepatic | Fastest non-depolarizing |\\\\\\\\n| Atracurium | Non-depolarizing | 60-90s | 30-45min | Hofmann + ester | Organ-independent |\\\\\\\\n| Vecuronium | Non-depolarizing | 60-90s | 30-40min | Hepatic | Expensive, stable CVS |\\\\\\\\n| Cisatracurium | Non-depolarizing | 60-90s | 45-60min | Hofmann | Organ-independent, long |\\\\\\\\n\\\\\\\\n## Mechanism Comparison\\\\\\\\n\\\\\\\\n**Depolarizing (Succinylcholine)**:\\\\\\\\n- Mimics ACh, binds receptor → sustained depolarization\\\\\\\\n- Fasciculations visible → muscle pain risk\\\\\\\\n- Hyperkalemia risk\\\\\\\\n- Fast metabolism (pseudocholinesterase)\\\\\\\\n- **Use**: RSI only\\\\\\\\n\\\\\\\\n**Non-Depolarizing**:\\\\\\\\n- Competes with ACh, blocks receptor\\\\\\\\n- No fasciculations\\\\\\\\n- Reversible (neostigmine, sugammadex)\\\\\\\\n- Organ/renal dependent (varies by agent)\\\\\\\\n- **Use**: Maintenance paralysis\\\\\\\\n\\\\\\\\n## High-Yield Exam Facts\\\\\\\\n\\\\\\\\n**Succinylcholine**:\\\\\\\\n- Onset: 30-60 seconds (FASTEST)\\\\\\\\n- Duration: 5-10 minutes (SHORTEST)\\\\\\\\n- Contraindicated: Burns, crush, denervation, malignant hyperthermia, head injury\\\\\\\\n- Complication: Hyperkalemia (K+ release from muscle)\\\\\\\\n- Side effect: Fasciculations → myalgia, jaw rigidity, ICP increase\\\\\\\\n- Metabolism: Pseudocholinesterase (ester hydrolysis)\\\\\\\\n\\\\\\\\n**Rocuronium**:\\\\\\\\n- Onset: 45-60 seconds (fastest non-depolarizing)\\\\\\\\n- Duration: 30-40 minutes\\\\\\\\n- Metabolism: Hepatic\\\\\\\\n- Cost: Very expensive (rarely used in India)\\\\\\\\n- Advantage: No histamine, no hyperkalemia, can use in succinylcholine contraindications\\\\\\\\n- Reversible: Sugammadex (expensive, rare in India)\\\\\\\\n\\\\\\\\n**Atracurium**:\\\\\\\\n- Onset: 60-90 seconds\\\\\\\\n- Duration: 30-45 minutes\\\\\\\\n- Metabolism: Hofmann (organ-independent) + ester\\\\\\\\n- Advantage: Safe in liver/kidney failure\\\\\\\\n- Disadvantage: Histamine release (hypotension risk)\\\\\\\\n- Cost: Moderate (popular in India)\\\\\\\\n\\\\\\\\n**Vecuronium**:\\\\\\\\n- Onset: 60-90 seconds\\\\\\\\n- Duration: 30-40 minutes\\\\\\\\n- Metabolism: Hepatic (organ-dependent)\\\\\\\\n- Advantage: No histamine, stable CVS\\\\\\\\n- Disadvantage: Hepatic metabolism (problem in liver failure)\\\\\\\\n- Cost: Expensive\\\\\\\\n\\\\\\\\n**Cisatracurium**:\\\\\\\\n- Onset: 60-90 seconds\\\\\\\\n- Duration: 45-60 minutes (longer than atracurium)\\\\\\\\n- Metabolism: Hofmann (organ-independent)\\\\\\\\n- Advantage: Organ-independent, no histamine\\\\\\\\n- Cost: Expensive\\\\\\\\n- Use: Renal/hepatic failure preferred\\\\\\\\n\\\\\\\\n## RSI Drug Selection Algorithm\\\\\\\\n\\\\\\\\n```\\\\\\\\nUrgency = HIGH (RSI needed)?\\\\\\\\n├─ Succinylcholine contraindication? (burns, crush, MH, head injury)\\\\\\\\n│  ├─ YES → Use Rocuronium 1.2 mg/kg (takes longer, can use sugammadex if available)\\\\\\\\n│  └─ NO → Use Succinylcholine 1-1.5 mg/kg (fastest induction)\\\\\\\\n├─ Possible difficult intubation?\\\\\\\\n│  ├─ YES → Consider Rocuronium (sugammadex reversal available, if affordable)\\\\\\\\n│  └─ NO → Succinylcholine fine\\\\\\\\n└─ Cost is major factor? (India reality)\\\\\\\\n   ├─ YES → Succinylcholine (cheapest, fastest, most available)\\\\\\\\n   └─ NO → Rocuronium (fewer side effects)\\\\\\\\n```\\\\\\\\n\\\\\\\\n## Common Exam Question Patterns\\\\\\\\n\\\\\\\\n1. \\\\\\\\\\\\\\\"Which agent for RSI?\\\\\\\\\\\\\\\" → **Succinylcholine** (or Rocuronium if contraindicated)\\\\\\\\n2. \\\\\\\\\\\\\\\"Fastest onset?\\\\\\\\\\\\\\\" → **Succinylcholine** (30-60s)\\\\\\\\n3. \\\\\\\\\\\\\\\"Shortest duration?\\\\\\\\\\\\\\\" → **Succinylcholine** (5-10 min)\\\\\\\\n4. \\\\\\\\\\\\\\\"Which agent causes hyperkalemia?\\\\\\\\\\\\\\\" → **Succinylcholine**\\\\\\\\n5. \\\\\\\\\\\\\\\"Which agent causes fasciculations?\\\\\\\\\\\\\\\" → **Succinylcholine**\\\\\\\\n6. \\\\\\\\\\\\\\\"Which non-depolarizing fastest?\\\\\\\\\\\\\\\" → **Rocuronium** (45-60s)\\\\\\\\n7. \\\\\\\\\\\\\\\"Which safe in liver failure?\\\\\\\\\\\\\\\" → **Atracurium/Cisatracurium** (Hofmann-independent)\\\\\\\\n8. \\\\\\\\\\\\\\\"Which causes histamine release?\\\\\\\\\\\\\\\" → **Atracurium**\\\\\\\\n9. \\\\\\\\\\\\\\\"Pseudocholinesterase deficiency → ?\\\\\\\\\\\\\\\" → **Prolonged succinylcholine effect** (apnea)\\\\\\\\n10. \\\\\\\\\\\\\\\"How to reverse non-depolarizing block?\\\\\\\\\\\\\\\" → **Neostigmine 0.04-0.06 mg/kg** (or Sugammadex)\\\\\\\\n\\\\\\\\n## Pseudocholinesterase Deficiency\\\\\\\\n\\\\\\\\n**Genetic deficiency**:\\\\\\\\n- Autosomal recessive (1 in 3000)\\\\\\\\n- Atypical enzyme → reduced/absent activity\\\\\\\\n- Result: Succinylcholine metabolized slowly (hours vs. minutes)\\\\\\\\n\\\\\\\\n**Clinical presentation**:\\\\\\\\n- Post-operative apnea (ventilator needed)\\\\\\\\n- Prolonged paralysis (TOF shows complete block)\\\\\\\\n- Management: Continue mechanical ventilation until metabolized\\\\\\\\n\\\\\\\\n**Risk factors**:\\\\\\\\n- Family history (genetic)\\\\\\\\n- Liver disease (reduced enzyme production)\\\\\\\\n- Pregnancy (enzyme activity decreased)\\\\\\\\n\\\\\\\\n**Testing**:\\\\\\\\n- Plasma pseudocholinesterase level\\\\\\\\n- Genetic testing (variants)\\\\\\\\n- Patient should wear MedicAlert bracelet\\\\\\\\n\\\\\\\\n## Malignant Hyperthermia & NMB Agents\\\\\\\\n\\\\\\\\n**Succinylcholine trigger**:\\\\\\\\n- ABSOLUTELY CONTRAINDICATED in MH-susceptible\\\\\\\\n- Risk: MH crisis (severe reaction)\\\\\\\\n\\\\\\\\n**Rocuronium safe**:\\\\\\\\n- Used in MH patients\\\\\\\\n- Use TIVA (propofol) for maintenance (avoid volatile agents)\\\\\\\\n- No succinylcholine ever\\\\\\\\n\\\\\\\\n**Dantrolene**:\\\\\\\\n- Treatment if MH crisis occurs\\\\\\\\n- Blocks calcium release from SR\\\\\\\\n- Given if MH suspected (rigidity, tachycardia, hypercarbia)\\\\\\\\n\\\\\\\\n## Dosing Pearls (High-yield)\\\\\\\\n\\\\\\\\n**Normal adult 70 kg**:\\\\\\\\n- Succinylcholine: 70 mg (1 mg/kg)\\\\\\\\n- Rocuronium: 70-85 mg (0.6-1.2 mg/kg)\\\\\\\\n- Atracurium: 35 mg (0.5 mg/kg)\\\\\\\\n\\\\\\\\n**Elderly/Reduced dose**: -30-50% reduction\\\\\\\\n\\\\\\\\n**Obese**: Use IDEAL body weight (not actual)\\\\\\\\n\\\\\\\\n**Organ failure**:\\\\\\\\n- Liver: Use atracurium/cisatracurium (not rocuronium/vecuronium)\\\\\\\\n- Kidney: Use Hofmann agents (atracurium, cisatracurium),\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"SRAC = Succinylcholine, Rocuronium, Atracurium, Cisatracurium (common agents)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Drug memory trio\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"SUC = Super fast (30-60s), Ultra-short (5-10 min), Concerning K+\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Succinylcholine features\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"FARV = Fast (Rocuronium), Atracurium, Rocuronium, Vecuronium (non-depolarizing)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Non-depolarizing agents\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"HOF = Hofmann = Organ/Hepatic Failure safe (Atracurium, Cisatracurium)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Organ failure drugs\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Succinylcholine: Fastest onset, shortest duration, highest side effects\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Rocuronium: Fastest non-depolarizing, expensive, reversible with sugammadex\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Atracurium: Safest in organ failure (Hofmann-independent), popular in India\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Pseudocholinesterase deficiency: Genetic condition → prolonged succinylcholine effect\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Reversal: Neostigmine after spontaneous recovery begins; sugammadex only available in select centers\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"AANA Textbook\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Neuromuscular Blocking Drugs Summary\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"7th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"AIPG Anesthesia Review\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"NMB Agents Quick Facts\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"Current\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"nmb-agents-active-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Neuromuscular Blocking Agents - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"7 clinical scenarios testing agent selection, complication management, and special situations.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Neuromuscular Blocking Agents - Active Recall\\\\\\\\n\\\\\\\\n## Q1: RSI in Burn Patient\\\\\\\\n\\\\\\\\n**Q: 30-year-old with 40% burns 3 days post-burn requires emergency intubation for airway management. Which induction agent + paralytic would you use?**\\\\\\\\n\\\\\\\\nA: **ROCURONIUM 1.2 mg/kg IV** (NEVER succinylcholine)\\\\\\\\n\\\\\\\\n**Why NOT succinylcholine**:\\\\\\\\n- **Massive hyperkalemia risk**: Burned muscle releases tons of K+ (can reach 9-13 mEq/L, normal 3.5-5.0)\\\\\\\\n- **Cardiac arrhythmias**: Severe hyperkalemia → cardiac arrest risk\\\\\\\\n- **Timeline**: Risk extends 2-3 weeks post-burn (denervated muscle continues releasing K+)\\\\\\\\n- **Contraindication**: Absolute contraindication in burn patients\\\\\\\\n\\\\\\\\n**Why rocuronium**:\\\\\\\\n- **Safe**: No additional K+ release\\\\\\\\n- **Rapid onset**: 45-60 seconds (adequate for RSI)\\\\\\\\n- **Reversible**: Sugammadex available (if informed consent/cost allows)\\\\\\\\n\\\\\\\\n**Induction drug**: Etomidate (hemodynamic stability in stressed burn patient) or Propofol (if stable)\\\\\\\\n\\\\\\\\n**Temperature monitoring**: Burn patients often hypothermic (watch for prolonged block)\\\\\\\\n\\\\\\\\n## Q2: Pseudocholinesterase Deficiency Discovery\\\\\\\\n\\\\\\\\n**Q: 45-year-old receives succinylcholine for routine surgery. After 2 hours, patient still paralyzed (TOF = 0 twitches), requires mechanical ventilation. What happened and how to manage?**\\\\\\\\n\\\\\\\\nA: **PSEUDOCHOLINESTERASE DEFICIENCY** (likely)\\\\\\\\n\\\\\\\\n**What happened**:\\\\\\\\n- Normal succinylcholine metabolism: 5-10 minutes (pseudocholinesterase hydrolyzes ester bonds)\\\\\\\\n- This patient: Drug still active after 2 hours = deficient enzyme\\\\\\\\n- Genetic condition (autosomal recessive, 1 in 3000)\\\\\\\\n\\\\\\\\n**Immediate management**:\\\\\\\\n1. **Continue mechanical ventilation**: Only treatment is waiting for drug to be metabolized\\\\\\\\n2. **Monitor TOF**: Check every 30 minutes (eventually recovery will occur)\\\\\\\\n3. **Supportive care**: Maintain fluid balance, prevent aspiration\\\\\\\\n4. **Test**: Send blood for plasma pseudocholinesterase level\\\\\\\\n5. **Family**: Genetic testing; relatives should be screened\\\\\\\\n\\\\\\\\n**Duration**:\\\\\\\\n- Normal: 5-10 minutes (wear off time)\\\\\\\\n- Deficiency: Can take several hours\\\\\\\\n- Management: Ventilate patient until recovery (apnea)\\\\\\\\n\\\\\\\\n**Prevention for future**:\\\\\\\\n- Patient wears MedicAlert bracelet \\\\\\\\\\\\\\\"Pseudocholinesterase deficiency\\\\\\\\\\\\\\\"\\\\\\\\n- Document in medical records\\\\\\\\n- Family members tested/educated\\\\\\\\n- Avoid succinylcholine in future surgeries\\\\\\\\n- Use rocuronium instead\\\\\\\\n\\\\\\\\n## Q3: Preventing Succinylcholine Myalgia\\\\\\\\n\\\\\\\\n**Q: 20-year-old healthy male needs RSI for appendicitis. Wants to avoid postoperative myalgia. How would you modify succinylcholine technique?**\\\\\\\\n\\\\\\\\nA: **PRE-TREAT with non-depolarizing agent BEFORE succinylcholine**:\\\\\\\\n\\\\\\\\n**Technique**:\\\\\\\\n1. **3 minutes before succinylcholine**: Give small dose rocuronium 0.01 mg/kg IV (0.7 mg for 70 kg)\\\\\\\\n2. **Wait 3 minutes**: Allows rocuronium to bind some receptors\\\\\\\\n3. **Give succinylcholine**: Normal dose 1-1.5 mg/kg\\\\\\\\n4. **Result**: Fewer fasciculations visible → reduced myalgia risk\\\\\\\\n\\\\\\\\n**Mechanism**:\\\\\\\\n- Pre-treatment rocuronium occupies some receptors\\\\\\\\n- Succinylcholine has fewer receptors to bind\\\\\\\\n- Fewer fasciculations occur → less muscle contraction → less postoperative myalgia\\\\\\\\n\\\\\\\\n**Myalgia incidence**:\\\\\\\\n- Without pre-treatment: 50-80% (mild to severe)\\\\\\\\n- With pre-treatment: 10-20% (significantly reduced)\\\\\\\\n- Female patients: Higher risk of myalgia (women complain more?)\\\\\\\\n- Young, muscular patients: Higher risk\\\\\\\\n\\\\\\\\n**Alternative**: Use rocuronium 1.2 mg/kg instead (no myalgia risk at all, but longer onset)\\\\\\\\n\\\\\\\\n## Q4: Atracurium in Septic Patient with Organ Failure\\\\\\\\n\\\\\\\\n**Q: Septic patient on ARDS protocol, already on renal replacement therapy (RRT). Needs mechanical ventilation. Which NMB agent safest?**\\\\\\\\n\\\\\\\\nA: **ATRACURIUM** (or Cisatracurium)\\\\\\\\n\\\\\\\\n**Why atracurium**:\\\\\\\\n- **Hofmann elimination**: Temperature and pH dependent\\\\\\\\n- **Organ-independent**: Doesn't rely on liver or kidney function\\\\\\\\n- **Predictable duration**: Duration unchanged in renal/hepatic failure\\\\\\\\n- **Safe in RRT**: Dialysis won't change drug levels\\\\\\\\n\\\\\\\\n**Why avoid others**:\\\\\\\\n- **Rocuronium**: Hepatic metabolism (problem if septic liver dysfunction)\\\\\\\\n- **Vecuronium**: Hepatic (same problem)\\\\\\\\n- **Succinylcholine**: Not for continuous infusion (tachyphylaxis)\\\\\\\\n\\\\\\\\n**Dosing**:\\\\\\\\n- Initial bolus: Atracurium 0.5 mg/kg IV\\\\\\\\n- Maintenance: 0.01-0.02 mg/kg/min infusion\\\\\\\\n- Monitor TOF: Adjust infusion to maintain 1-2 twitches (light sedation goal)\\\\\\\\n\\\\\\\\n**Additional benefit**: Hofmann elimination means no accumulation of metabolites (problem with other agents in organ failure)\\\\\\\\n\\\\\\\\n## Q5: Difficult Airway & Rocuronium Advantage\\\\\\\\n\\\\\\\\n**Q: 55-year-old with anterior laryngeal cancer, limited mouth opening, Mallampati 4. After induction + rocuronium 1.2 mg/kg, after multiple intubation attempts, still cannot visualize vocal cords. What's the advantage of rocuronium here vs. succinylcholine?**\\\\\\\\n\\\\\\\\nA: **SUGAMMADEX REVERSAL AVAILABLE** (if cost permits)\\\\\\\\n\\\\\\\\n**Succinylcholine scenario**:\\\\\\\\n- If intubation fails and oxygenation becomes critical\\\\\\\\n- Must wait 5-10 minutes for drug to wear off\\\\\\\\n- Risk of severe hypoxia during this wait\\\\\\\\n- Only option: Emergency cricothyrotomy\\\\\\\\n\\\\\\\\n**Rocuronium advantage**:\\\\\\\\n- If intubation fails after rocuronium\\\\\\\\n- Sugammadex 16 mg/kg IV can be given\\\\\\\\n- Reversal in 1-2 minutes (immediate!)\\\\\\\\n- Can abort case and wake patient up\\\\\\\\n- Prevents emergency airway procedures\\\\\\\\n\\\\\\\\n**Reality in India**:\\\\\\\\n- Sugammadex very expensive (rarely available outside major cities)\\\\\\\\n- Most hospitals still use succinylcholine for this reason\\\\\\\\n- Cost-benefit in resource-limited settings: Succinylcholine wins\\\\\\\\n\\\\\\\\n**Lesson**: Rocuronium advantage IF sugammadex available; otherwise no clear advantage for cost-conscious practice\\\\\\\\n\\\\\\\\n## Q6: Liver Failure & NMB Agent Choice\\\\\\\\n\\\\\\\\n**Q: Cirrhotic patient (Child C liver disease) needs paralysis for mechanical ventilation. What's the optimal agent and dosing?**\\\\\\\\n\\\\\\\\nA: **ATRACURIUM or CISATRACURIUM** (organ-independent metabolism)\\\\\\\\n\\\\\\\\n**Why NOT rocuronium/vecuronium**:\\\\\\\\n- Hepatic metabolism\\\\\\\\n- Liver failure → prolonged duration, accumulation with repeated dosing\\\\\\\\n- Risk of oversedation (prolonged paralysis) → difficult weaning\\\\\\\\n\\\\\\\\n**Atracurium advantages**:\\\\\\\\n- Hofmann elimination (pH and temperature dependent)\\\\\\\\n- Duration unchanged in liver failure\\\\\\\\n- Repeated dosing safe (no accumulation)\\\\\\\\n- Standard dosing can be used\\\\\\\\n\\\\\\\\n**Dosing**:\\\\\\\\n- Initial bolus: 0.5 mg/kg IV\\\\\\\\n- Maintenance infusion: 0.01-0.02 mg/kg/min\\\\\\\\n- Monitor TOF: Adjust to maintain 1-2 twitches\\\\\\\\n- No dose reduction needed\\\\\\\\n\\\\\\\\n**Cost consideration**:\\\\\\\\n- Atracurium cheaper than rocuronium\\\\\\\\n- In liver failure, atracurium is both safer AND cheaper (dual advantage)\\\\\\\\n\\\\\\\\n**Alternative**: Cisatracurium (organ-independent like atracurium, slightly longer duration)\\\\\\\\n\\\\\\\\n## Q7: Elderly Patient - Dose Adjustment\\\\\\\\n\\\\\\\\n**Q: 78-year-old, 60 kg, hepatic steatosis, needs routine surgery. What rocuronium dose would you use?**\\\\\\\\n\\\\\\\\nA: **ROCURONIUM 30-40 mg** (reduced from normal 70 mg)\\\\\\\\n\\\\\\\\n**Rationale**:\\\\\\\\n- Normal dose: 0.6 mg/kg × 70 kg = 42 mg\\\\\\\\n- Elderly adjustment: Reduce by 30-40% → 30 mg\\\\\\\\n- Actually gives: 0.4-0.5 mg/kg (vs. normal 0.6)\\\\\\\\n- Reason: Reduced clearance, increased sensitivity, comorbidities\\\\\\\\n\\\\\\\\n**Expected changes**:\\\\\\\\n- Onset: May be slightly slower (still acceptable)\\\\\\\\n- Duration: Will be prolonged compared to young patient\\\\\\\\n- Sensitivity: Will show deeper block than young patient at same dose\\\\\\\\n\\\\\\\\n**Monitoring**:\\\\\\\\n- Strict TOF monitoring essential\\\\\\\\n- May need less redosing (longer duration from single dose)\\\\\\\\n- Plan for neostigmine reversal (standard practice)\\\\\\\\n\\\\\\\\n**Alternative dosing**:\\\\\\\\n- Use atracurium instead (organ-independent, more predictable)\\\\\\\\n- Or use succinylcholine (shorter duration = less risk of prolonged block)\\\\\\\\n\\\\\\\\n**Lesson**: Elderly = less drug, closer monitoring, anticipate longer duration,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Burned = No succinylcholine (HyperK!); use Rocuronium\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Burn patient management\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Apnea after succ = Pseudocholinesterase deficiency (continue ventilation)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Complication recognition\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Pre-treat rocuronium = Reduce fasciculations = Reduce myalgia\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Myalgia prevention\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Organ failure = Atracurium/Cisatracurium (Hofmann-independent)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Organ failure safety\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Succinylcholine contraindicated in burns (hyperkalemia risk extends weeks)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Pseudocholinesterase deficiency → prolonged paralysis; requires mechanical ventilation\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Pre-treat with non-depolarizing before succinylcholine reduces myalgia risk\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Atracurium safest in organ failure (Hofmann elimination organ-independent)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Rocuronium advantage only if sugammadex available (rare/expensive in India)\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Textbook of Anesthesia by Gupta & Singh\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"NMB Clinical Cases\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"6th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Miller's Anesthesia\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Case Studies - Neuromuscular Blocking\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-}
-}
-];
-];
-];
+        summary: "Anatomy, difficult airway prediction, basic airway maneuvers, equipment.",
+        contentMd: `# Airway Management & Intubation - Foundation
+
+## Upper Airway Anatomy
+
+### Anatomical Landmarks
+- **Epiglottis**: Leaf-shaped cartilage protecting laryngeal inlet during swallowing
+- **Arytenoid cartilages**: Pyramid-shaped; attach to vocal cords
+- **Vocal cords**: White triangular structures; open during breathing, close during swallowing
+- **Larynx (Voice Box)**: C3-C6 level; contains vocal cords
+- **Trachea**: Begins at C6; supported by C-shaped cartilage rings; 10-12 cm long in adults
+
+### Airway Dimensions (Adult)
+- **Oral cavity**: Depth 6-7 cm
+- **Pharynx**: Nasopharynx, oropharynx, laryngopharynx
+- **Laryngeal inlet**: Narrowest point in adults; widest in children (subglottis)
+- **Trachea**: 2-2.5 cm diameter; 2 cm deeper from larynx
+
+## Difficult Airway Predictors (LEMON)
+
+### L: Look Externally
+- **Facial abnormalities**: Micrognathia (small jaw), macroglossia (large tongue)
+- **Obstructive features**: Facial edema, trauma, burns
+- **Body habitus**: Obesity, short neck
+
+### E: Evaluate Mallampati Score
+- **Class I**: All structures visible (easy)
+- **Class II**: Soft palate and uvula visible (mild)
+- **Class III**: Only soft palate visible (moderate)
+- **Class IV**: Only hard palate visible (difficult)
+
+### M: Measure Distances
+- **Thyromental distance**: <6 cm → difficult (mandible too small)
+- **Interincisor distance**: <3 cm or <3 fingers → limited mouth opening
+- **Neck circumference**: >40 cm → obesity marker
+
+### O: Obesity
+- **BMI >40**: Increased risk difficult airway
+- **Mechanism**: Short neck, airway edema, neck fat accumulation
+- **Positioning**: Ramp positioning helpful (shoulder roll + head elevation)
+
+### N: Neck Mobility
+- **Limited extension**: Rheumatoid arthritis, ankylosing spondylitis, cervical fusion
+- **Test**: Ask patient to extend neck; if limited, expect difficult intubation
+- **Implication**: May need awake fiberoptic intubation
+
+## Basic Airway Maneuvers
+
+### Chin Lift
+- **Purpose**: Elevate mandible to open airway; move tongue forward
+- **Technique**: Place fingers under angle of mandible; lift upward gently
+- **Caution**: Avoid soft tissue compression
+
+### Jaw Thrust
+- **Purpose**: Displace mandible forward to open airway
+- **Technique**: Place fingers behind angle of mandible; push forward
+- **Indication**: Suspected cervical spine injury (safer than head tilt)
+- **Mechanism**: Moves tongue away from posterior pharynx
+
+### Head Tilt
+- **Purpose**: Extend head to straighten oral/pharyngeal axis
+- **Technique**: Place hand on forehead; gently tilt head backward
+- **Caution**: Avoid in cervical spine injury
+
+## Airway Equipment
+
+### Laryngoscopes
+
+**Direct Laryngoscopy:**
+- **Macintosh blade** (curved): Tip touches epiglottis; indirectly lifts for view
+- **Miller blade** (straight): Lifts epiglottis directly
+- **Light source**: Halogen or LED bulb at blade tip
+
+**Video Laryngoscopy (VL):**
+- **Advantages**: Indirect visualization; better view in difficult airway
+- **Technique**: Blade tip in vallecula or epiglottis; view on monitor
+- **Examples**: Glidescope, C-Mac, Pentax
+- **Limitation**: Requires skill; can't intubate on first pass without adjuncts
+
+### Endotracheal Tubes (ET Tubes)
+
+**Size (Adult):**
+- **Standard**: 7.5-8.5 mm internal diameter
+- **Cuff**: Inflatable balloon to seal; prevents aspiration
+- **Depth**: Insert 21-23 cm at teeth (males typically deeper)
+
+**Placement Verification:**
+- **Clinical**: Bilateral breath sounds, no epigastric sounds
+- **Capnography**: Gold standard (CO2 detection)
+- **CXR**: Tube position (should be 2-3 cm above carina)
+
+### Difficult Airway Equipment
+
+**Difficult Airway Cart Must Include:**
+- Laryngoscopes (direct + video)
+- Multiple ET tube sizes
+- Fiberoptic bronchoscope (awake intubation)
+- Lighted stylet
+- Combitube (emergency airway)
+- Laryngeal mask airway (LMA)
+- Retrograde intubation kit
+- Surgical airway kit (cricothyrotomy)`,
+        mnemonics: [
+          { text: "LEMON: Look, Evaluate Mallampati, Measure (thyromental/interincisor), Obesity, Neck mobility", explanation: "Difficult airway prediction" },
+          { text: "Mallampati I-II = easy, III = moderate, IV = difficult", explanation: "Airway classification" },
+          { text: "MAC curved blade, Miller straight blade; MAC indirectly lifts, Miller directly lifts", explanation: "Laryngoscope types" },
+          { text: "ET tube depth: 21-23 cm at teeth; cuff inflates to seal", explanation: "Placement" },
+        ],
+        keyPoints: [
+          "LEMON assessment predicts difficult airway; multiple positive features → awake fiberoptic",
+          "Mallampati III-IV + limited mouth opening + short neck → high risk",
+          "Jaw thrust preferred for cervical spine injury (avoids extension)",
+          "Direct laryngoscopy: visualize cords directly; video laryngoscopy: indirect via monitor",
+          "ET tube placement verified by capnography, bilateral breath sounds, CXR",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Airway Management", edition: "14th" },
+          { book: "Aitkenhead's Textbook of Anaesthesia", chapter: "Airway and Ventilation", edition: "6th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "intubation-technique",
+        title: "Airway Management - Intubation Technique",
+        estimatedMinutes: 30,
+        summary: "Oral intubation, awake fiberoptic, RSI, blind nasal intubation, post-intubation complications.",
+        contentMd: `# Airway Management - Intubation Technique
+
+## Oral Endotracheal Intubation (Standard Technique)
+
+### Patient Positioning (Sniffing Position)
+- **Goal**: Align oral, pharyngeal, laryngeal axes
+- **Achieve**: Head extension + neck flexion (bump/ramp under shoulders)
+- **Benefit**: Improves laryngeal view 50-70%
+
+### Step-by-Step Technique
+1. **Preoxygenate**: 3-5 minutes 100% O2 (or 8 vital capacity breaths)
+2. **Induction**: IV anesthetic agent (propofol, etomidate, ketamine)
+3. **Paralysis**: Succinylcholine 1-1.5 mg/kg or rocuronium 1.2 mg/kg
+4. **Wait**: 30-45 seconds for paralysis
+5. **Laryngoscopy**: Insert blade, visualize cords
+6. **Intubation**: Insert ET tube through cords to appropriate depth
+7. **Confirmation**: Auscultate breath sounds, check capnography, secure with tape/tube holder
+
+### Laryngoscopic Views (Cormack & Lehane)
+- **Grade I**: Full view of vocal cords → easy intubation
+- **Grade II**: Partial view of cords (arytenoids visible)
+- **Grade III**: Epiglottis only visible → difficult
+- **Grade IV**: Only soft palate visible → very difficult/failed
+
+## Awake Fiberoptic Intubation
+
+### Indications
+- **Predicted difficult airway** (LEMON positive)
+- **Cervical spine precautions** (emergency trauma)
+- **Full stomach + difficult airway** (reduce aspiration risk)
+- **Sleep apnea + difficult airway**
+
+### Technique
+1. **Topical anesthesia**: Lidocaine spray 10% to nasal passages, pharynx
+2. **Mild sedation**: Midazolam 1-2 mg IV titrated (patient responsive)
+3. **Fiberoptic scope insertion**: Via nose or mouth (nasal easier; oral if nasal obstruction)
+4. **Landmark identification**: Identify tracheal rings, carina
+5. **ET tube advancement**: Pass tube over scope, advance through cords
+6. **Confirmation**: Check breath sounds, capnography
+
+### Advantages
+- **Patient breathing maintained** → no apnea risk
+- **Cords visualized directly** → confirm correct placement
+- **Aspiration risk reduced** → patient protective reflexes intact until intubated
+
+### Disadvantages
+- **Time-consuming**: 10-20 minutes (not suitable for emergency)
+- **Technical skill required**: Requires practice
+- **Post-sedation apnea risk**: If sedation used
+
+## Rapid Sequence Intubation (RSI) - Full Stomach/Emergency
+
+### Key Features
+- **Goal**: Minimize aspiration risk during induction/intubation
+- **Components**: Pre-oxygenation, cricoid pressure, rapid intubation
+
+### Cricoid Pressure (Sellick Maneuver)
+- **Technique**: Apply 10 N pressure to cricoid cartilage when patient loses consciousness
+- **Purpose**: Compresses esophagus against cervical spine → prevents gastric reflux
+- **Timing**: Apply during induction; release after cuff inflated or if unable to intubate
+
+### RSI Sequence
+1. **Preoxygenation**: 3-5 minutes (maximize FRC)
+2. **Induction**: Rapid-onset agent (propofol 2 mg/kg, etomidate 0.2 mg/kg)
+3. **Cricoid pressure**: 10 N applied (assistant applies at loss of consciousness)
+4. **Paralysis**: Succinylcholine 1-1.5 mg/kg (fastest) or rocuronium 1.2 mg/kg
+5. **Avoid mask ventilation**: If possible (distends stomach, increases aspiration risk)
+6. **Intubation**: Once paralyzed; confirm tube placement
+7. **Release cricoid**: After cuff inflated + tube position confirmed
+
+## Blind Nasal Intubation
+
+### Indications
+- **Limited mouth opening**: Trismus, TMJ dysfunction
+- **Cervical spine precaution** (relative)
+
+### Technique
+1. **Prepare nose**: Topical vasoconstrictor (phenylephrine) + lidocaine 10%
+2. **Choose larger tube**: 6.5-7.5 mm (nasal anatomy narrower)
+3. **Lubricate**: Use lidocaine gel on tube
+4. **Insert slowly**: Along nasal floor (avoid septum)
+5. **Feel breath**: Tube should move with patient breathing (indicates airway proximity)
+6. **Advance gently**: During inspiration; feel "give" when past cords
+7. **Confirmation**: Bilateral breath sounds, capnography, CXR
+
+### Complications
+- **Epistaxis**: Trauma to nasal mucosa (use vasconstrictor)
+- **Tube obstruction**: Nasal secretions; can cause hypoxia
+
+## Post-Intubation Management
+
+### Tube Securement
+- **Method**: Tape + tube holder (most secure)
+- **Avoid**: Adhesive only (insufficient; high extubation risk)
+- **Depth mark**: Document tube position (21-23 cm at teeth in adults)
+
+### Cuff Management
+- **Inflation**: Use minimum volume to seal (prevent aspiration)
+- **Pressure**: Monitor cuff pressure (20-30 cm H2O); avoid excessive (tracheal injury)
+- **Release**: Deflate at regular intervals (prevent tracheal necrosis)
+
+### Ventilator Settings (Post-Intubation)
+- **Mode**: Assist-control, synchronized intermittent mandatory ventilation
+- **Tidal volume**: 6-8 mL/kg ideal body weight (lung protective)
+- **Rate**: 12-16 breaths/min (avoid hyperventilation)
+- **PEEP**: 5-8 cm H2O (prevent atelectasis)
+
+## Complications
+
+### During Intubation
+- **Dental trauma**: Blade contact with teeth; use care
+- **Lip/tongue laceration**: Blade insertion too forceful
+- **Esophageal intubation**: ET tube in esophagus (check capnography)
+- **Right mainstem intubation**: Tube too far; insert 21-23 cm
+
+### Post-Intubation
+- **Sore throat**: Common; usually self-limited
+- **Hoarseness/vocal cord injury**: If tube too large or high cuff pressure
+- **Tracheal stenosis**: Prolonged intubation >7 days; rare in short-term`,
+        mnemonics: [
+          { text: "Sniffing position: head extension + neck flexion (ramp under shoulders)", explanation: "Optimal laryngeal view" },
+          { text: "Cormack grades I-II = easy, III = difficult, IV = very difficult", explanation: "Laryngoscopic view" },
+          { text: "RSI: preoxygenation, induction, cricoid pressure, paralysis, intubation (PICPI)", explanation: "Sequence" },
+          { text: "ET tube depth 21-23 cm at teeth; verify capnography + bilateral breath sounds", explanation: "Placement" },
+        ],
+        keyPoints: [
+          "Awake fiberoptic: patient breathing maintained, excellent visualization, no aspiration risk",
+          "RSI: for full stomach/emergency; cricoid pressure compresses esophagus to prevent reflux",
+          "Sniffing position critical: aligns oral-pharyngeal-laryngeal axes → improves view",
+          "Tube placement verified by capnography (gold standard), bilateral breath sounds, CXR",
+          "Cuff pressure 20-30 cm H2O prevents aspiration while protecting tracheal mucosa",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Airway and Intubation", edition: "14th" },
+          { book: "Aitkenhead's Textbook of Anaesthesia", chapter: "Airway Management", edition: "6th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "airway-clinical-application",
+        title: "Airway Management - Clinical Application",
+        estimatedMinutes: 30,
+        summary: "Failed intubation management, emergency airways, video laryngoscopy, difficult cases.",
+        contentMd: `# Airway Management - Clinical Application
+
+## Failed Intubation Algorithm
+
+### Definition
+- **Failed intubation**: Unable to visualize cords or pass tube after 3 attempts (or 10 minutes)
+
+### Immediate Actions
+1. **STOP intubation attempts**
+2. **Reoxygenate**: Mask ventilation with 100% O2 (if possible)
+3. **Call for help**: Senior anesthesiologist, ENT if available
+4. **Reassess**: Why did attempt fail? (Swelling, malposition, equipment issue?)
+5. **Alternative plan**: Use Plan B, C, D
+
+### Plan B: Alternative Intubation Techniques
+- **Video laryngoscopy**: Often provides better view than direct laryngoscopy
+- **Lighted stylet**: Transvascular light approach; visualize glow at anterior neck
+- **Flexible scope**: Fiberoptic (if time permits); slower but more control
+- **Change blade**: Switch from Macintosh to Miller (or vice versa)
+
+### Plan C: Ventilate via Alternative Airway
+- **Laryngeal mask airway (LMA)**: Supraglottic device; allows ventilation without intubation
+- **Combitube**: Allows ventilation via either esophageal or tracheal placement
+- **Mask ventilation**: Gold standard if possible; avoid gastric distension (cricoid pressure)
+
+### Plan D: Surgical Airway (Emergency Only)
+- **Cricothyrotomy**: Scalpel through cricothyroid membrane → access trachea below obstruction
+- **Indications**: Failed all other approaches + apneic patient (can't intubate, can't ventilate)
+- **Temporary**: Bridge to more definitive airway
+
+## Emergency Airway Management (Can't Intubate, Can't Ventilate)
+
+### Definition
+- **Immediate airway emergency**: Unable to maintain oxygenation via any method
+
+### Management (CICO Protocol)
+1. **Call for help immediately**
+2. **100% O2, confirm apnea** (only if already paralyzed/sedated)
+3. **Consider paralysis reversal**: If rocuronium used, give sugammadex 16 mg/kg IV
+4. **Attempt intubation**: 1 attempt with best technique
+5. **Surgical airway**: If above fails
+   - **Cricothyrotomy** (standard): Scalpel through cricothyroid membrane
+   - **Techniques**:
+     - **Scalpel-finger-bougie**: Make incision, insert bougie, thread ET tube
+     - **Seldinger kit**: Use guidewire, dilators, smaller tube over wire
+
+## Video Laryngoscopy (VL) in Difficult Airway
+
+### Advantages Over Direct Laryngoscopy
+- **Indirect visualization**: Circumvents mouth opening/tongue obstruction
+- **Better view**: 90%+ of cases have improved view vs direct
+- **Less force**: Gentler blade insertion (reduced trauma risk)
+- **Teaches**: Video monitor allows team learning/confirmation
+
+### Limitations
+- **Learning curve**: Requires practice to intubate on first pass
+- **Hyperangulated blades**: Epiglottis lifted but cords not aligned → difficult intubation without adjuncts
+- **Fogging**: Monitor view can fog; need anti-fog solution
+
+### Technique
+1. **Positioning**: Still use sniffing position
+2. **Blade insertion**: Slower than direct; advance tip past epiglottis
+3. **Identify cords**: View on monitor; manipulate to get best view
+4. **Intubate**: Pass tube through cords under video guidance
+5. **Confirmation**: Same as direct laryngoscopy
+
+## Cervical Spine Injury - Airway Considerations
+
+### Mechanism
+- **Risk**: Intubation maneuvers extend neck → further cord injury
+
+### Management
+- **Assume spine injury** until proven otherwise (trauma patients)
+- **Jaw thrust preferred**: Doesn't require neck extension
+- **Awake fiberoptic intubation**: Gold standard (maintains breathing)
+- **In-line stabilization**: Manual stabilization of head/neck during intubation
+- **Rapid sequence intubation acceptable**: If unstable/emergency (prioritize breathing over spine)
+
+### Equipment
+- **Cervical collar**: Maintain throughout procedure
+- **Manual in-line stabilization**: Assistant holds head/neck in neutral
+- **Difficult airway cart**: Readily available
+
+## Special Populations
+
+### Obese Patients
+- **Position**: Ramp positioning (20-30° head-up, shoulder roll)
+- **Preoxygenation**: Longer (FRC reduced); 5-8 vital capacity breaths
+- **Rapid sequence**: Often needed (aspiration risk)
+- **Prediction**: Difficult airway common; prepare accordingly
+- **Post-intubation**: Ensure adequate PEEP (prevent atelectasis)
+
+### Pregnant Patients (>20 weeks)
+- **Airway edema**: Common; smaller ET tubes required
+- **Aspiration risk**: Increased; RSI standard
+- **Positioning**: Left lateral tilt (prevent aortocaval compression)
+- **Preoxygenation**: Longer (O2 consumption increased)
+- **Desaturation faster**: Monitor closely
+
+### Pediatric Patients
+- **Anatomy**: Larger tongue, anterior larynx, funnel-shaped subglottis
+- **Tube size**: Age-based formula (4 + age/4 for mm ID)
+- **Uncuffed tubes**: <8 years old (cuff not needed due to subglottic narrowness)
+- **Inhalational induction**: Sevoflurane common in children
+- **Depth**: ~3 × tube size (in cm) from lips`,
+        mnemonics: [
+          { text: "Failed intubation: STOP, reoxygenate, call for help, reassess, Plan B/C/D", explanation: "Algorithm" },
+          { text: "CICO (can't intubate, can't ventilate): call → O2 → reversal → intubate → cricothyrotomy", explanation: "Emergency sequence" },
+          { text: "Video laryngoscopy: advantages over direct (indirect view, less force), disadvantages (learning curve)", explanation: "Comparison" },
+          { text: "Difficult airway cart: laryngoscopes, tubes, LMA, fiberscope, lighted stylet, cricothyrotomy kit", explanation: "Essential equipment" },
+        ],
+        keyPoints: [
+          "Failed intubation: never continue attempting; call for help, try alternatives (VL, LMA, etc)",
+          "Surgical airway (cricothyrotomy) only for emergency (can't intubate, can't ventilate)",
+          "Video laryngoscopy advantages: indirect visualization, better view, less force; disadvantages: learning curve",
+          "Cervical spine injury: use jaw thrust, in-line stabilization, awake fiberoptic if possible",
+          "Obese/pregnant patients: ramp positioning, longer preoxygenation, RSI, smaller tubes",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Difficult Airway Management", edition: "14th" },
+          { book: "ASA Difficult Airway Algorithm", chapter: "Perioperative Care", edition: "2013" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "airway-exam-prep",
+        title: "Airway Management - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "High-yield facts, Cormack grades, LEMON assessment, failed airway algorithm.",
+        contentMd: `# Airway Management - Exam Prep
+
+## LEMON Assessment Quick Reference
+
+| Component | Assessment | Difficult Indicator |
+|-----------|------------|-------------------|
+| **L**ook | Facial anatomy, edema, tongue size | Micrognathia, macroglossia, facial edema |
+| **E**valuate Mallampati | Soft tissue obstruction | Class III or IV |
+| **M**easure | Thyromental distance, interincisor | <6cm thyromental, <3cm interincisor |
+| **O**besity | BMI, neck circumference | BMI >40, neck >40cm |
+| **N**eck | Mobility, trauma, stiffness | Limited extension, fusion |
+
+## Cormack & Lehane Grades
+
+| Grade | View | Difficulty | Management |
+|-------|------|-----------|------------|
+| I | Full cords | Easy | Straightforward intubation |
+| II | Partial cords (arytenoids) | Mild | Usually successful |
+| III | Epiglottis only | Difficult | May need assistance, adjuncts |
+| IV | Only soft palate | Very difficult | Consider awake fiberoptic, alternatives |
+
+## High-Yield Airway Facts
+
+**Preoxygenation:**
+- 3-5 minutes 100% O2 (standard)
+- 8 vital capacity breaths alternative
+- Goal: Denitrogenate lungs, maximize FRC
+
+**ET Tube Sizing:**
+- Adult: 7.5-8.5 mm (females 7.5, males 8.0-8.5)
+- Pediatric: 4 + (age/4) in mm ID
+- Depth: 21-23 cm at teeth (adults); 3× tube size (peds)
+
+**Succinylcholine (Depolarizing Paralytic):**
+- Onset: 30-45 seconds (fastest)
+- Duration: 5-10 minutes (short)
+- Risks: Malignant hyperthermia, hyperkalemia
+- Advantages: Rapid paralysis for emergency
+
+**Rocuronium (Non-depolarizing):**
+- Onset: 60-90 seconds (slower than succinylcholine)
+- Duration: 30-40 minutes
+- Reversal: Sugammadex 4-16 mg/kg IV (instant reversal available)
+- Advantage: No malignant hyperthermia/hyperkalemia risk
+
+## Common Exam Question Patterns
+
+- **Patient with micrognathia, Mallampati IV → prediction?** → Difficult airway (LEMON positive); prepare awake fiberoptic
+- **Thyromental distance 4.5 cm → expect?** → Difficult intubation (normal >6cm)
+- **Failed intubation after 3 attempts → next step?** → Stop, reoxygenate, call for help, try video laryngoscopy
+- **Can't intubate, can't ventilate for 5 minutes → do what?** → Cricothyrotomy (emergency surgical airway)
+- **Cormack Grade IV on intubation → difficulty?** → Very difficult; try video laryngoscopy or adjuncts
+- **Right mainstem intubation evidenced by no left breath sounds → management?** → Withdraw ET tube 1-2 cm; recheck breath sounds
+- **ET tube at 28 cm depth in 180 cm tall male → position?** → Too deep (correct is 21-23 cm); withdraw to avoid mainstem
+
+## Failed Airway Algorithm (ASA)
+
+**Plan A: Initial Intubation Attempt**
+- Direct laryngoscopy with Macintosh/Miller blade
+- If Grade III-IV → proceed to Plan B
+
+**Plan B: Alternative Techniques (awake intubation not yet attempted)**
+- Video laryngoscopy (often succeeds)
+- Flexible scope (slower but effective)
+- Lighted stylet, retrograde intubation
+- Change blade type/size
+
+**Plan C: Non-intubating Techniques (if intubation unsuccessful)**
+- Laryngeal mask airway (LMA)
+- Combitube
+- Mask ventilation with cricoid pressure
+
+**Plan D: Emergency Surgical Airway (only if can't intubate AND can't ventilate)**
+- Cricothyrotomy via scalpel-finger-bougie or Seldinger
+- Last resort; time-sensitive
+
+## Emergency Airway (CICO Protocol)
+
+**Can't Intubate, Can't Oxygenate:**
+1. **Call for help**
+2. **100% O2, confirm apnea**
+3. **Paralysis reversal** (if rocuronium → sugammadex 16 mg/kg)
+4. **Attempt intubation** (1 try, best technique)
+5. **Surgical airway** (cricothyrotomy if intubation fails)
+
+**Cricothyrotomy Landmarks:**
+- Cricoid cartilage: Below larynx, above trachea
+- Cricothyroid membrane: Between cricoid + thyroid
+- Insert scalpel horizontally into membrane, then advance bougie, thread ET tube`,
+        mnemonics: [
+          { text: "LEMON: Look (anatomy), Evaluate Mallampati, Measure (distances), Obesity, Neck", explanation: "Difficult airway prediction" },
+          { text: "Cormack I-II easy, III difficult, IV very difficult", explanation: "Laryngoscopic view" },
+          { text: "ET tube depth 21-23 cm (adults); if no left breath sounds → withdrew to mainstem", explanation: "Position" },
+          { text: "Failed airway: Plan A (intubation) → Plan B (alternatives) → Plan C (ventilation) → Plan D (surgical)", explanation: "Algorithm" },
+          { text: "CICO: Call → O2 → reversal (sugammadex) → intubate → cricothyrotomy", explanation: "Emergency sequence" },
+        ],
+        keyPoints: [
+          "LEMON assessment guides difficult airway prediction; multiple positive features → awake fiberoptic",
+          "Cormack Grade IV requires video laryngoscopy, lighted stylet, or awake fiberoptic",
+          "Succinylcholine (fast, 30-45s) vs rocuronium (slower 60-90s) for induction paralysis",
+          "ET tube depth 21-23 cm in adults; verify capnography + bilateral breath sounds",
+          "Failed intubation: Plan B (video laryngoscopy), Plan C (LMA), Plan D (cricothyrotomy)",
+          "CICO emergency: cricothyrotomy only if can't intubate AND can't ventilate",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Difficult Airway", edition: "14th" },
+          { book: "ASA Difficult Airway Algorithm", chapter: "Perioperative Management", edition: "2013" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "airway-active-recall",
+        title: "Airway Management - Active Recall",
+        estimatedMinutes: 15,
+        summary: "10 clinical cases: difficult airway, failed intubation, emergency airway, special populations.",
+        contentMd: `# Airway Management - Active Recall
+
+## Q1: LEMON Assessment
+**Q: 55-year-old, BMI 38, Mallampati IV, interincisor 2 cm, thyromental 5 cm. Predict airway difficulty?**
+
+A: **Difficult airway (LEMON positive**: Obesity (O), Mallampati IV (E), limited interincisor (M), short thyromental (M). Multiple positive factors → **Recommend awake fiberoptic intubation** rather than standard induction. Risk of failed intubation > benefit of rapid intubation.
+
+## Q2: Failed Intubation - Plan B
+**Q: After direct laryngoscopy Cormack Grade IV, unable to pass tube. Tried 2 times already. What's next?**
+
+A: **STOP direct laryngoscopy attempts.** **Plan B**: Try **video laryngoscopy** (often succeeds where direct fails due to indirect visualization). If VL also fails → **Plan C: LMA ventilation** to maintain oxygenation while reassessing. Avoid multiple direct laryngoscopy attempts (cause airway swelling).
+
+## Q3: Emergency Surgical Airway
+**Q: Patient apneic, unable to intubate despite VL attempt, cannot ventilate via mask/LMA. SpO2 68%. Immediate action?**
+
+A: **Cricothyrotomy** (emergency surgical airway). **Landmarks**: Palpate cricoid below larynx; incise cricothyroid membrane horizontally. **Technique**: Scalpel-finger-bougie: (1) Make incision (1-2 cm), (2) Insert bougie through hole, (3) Thread 6.0 ET tube over bougie, (4) Remove bougie, inflate cuff, ventilate. **Time sensitive**: Do immediately when intubation fails + can't ventilate.
+
+## Q4: Etiology of Failed Intubation
+**Q: Routine intubation, Cormack Grade II initially (good view), but tube won't pass through cords. Why and what to do?**
+
+A: **Possible causes**: (1) **Tracheal stenosis** (narrowing below cords), (2) **Vocal cord paralysis** (one or both), (3) **Swelling/edema** below larynx, (4) **Angle of tube/stylet prevents passage**. **Management**: (1) Withdraw tube, (2) Try **smaller tube size** (6.5 instead of 7.5), (3) Use **straight blade** (different angle approach), (4) Consider **awake fiberoptic** to assess anatomy. If emergency: use **LMA to maintain oxygenation** while assessing cause.
+
+## Q5: Right Mainstem Intubation
+**Q: Post-intubation: right breath sounds present, left breath sounds absent. ET tube at 28 cm. Patient desaturating. Diagnosis and management?**
+
+A: **Right mainstem intubation** (tube too far; entered right mainstem bronchus → left lung not ventilated). **Clinical signs**: Absent left breath sounds, hypoxia, hyperinflated right hemithorax on CXR. **Management**: (1) **Withdraw ET tube** 2-3 cm (to ~24-25 cm in adult), (2) Recheck **bilateral breath sounds** (should improve immediately), (3) Check **capnography** on left side, (4) **CXR** to confirm position. **Prevention**: Always verify tube position by auscultation + capnography immediately post-intubation.
+
+## Q6: Difficult Airway Prediction - Mallampati
+**Q: Patient has Mallampati Class III. Is difficult intubation guaranteed? What other factors matter?**
+
+A: **No guarantee; Mallampati alone insufficient.** Class III → **increased risk**, but not diagnostic. **Other LEMON factors** must be assessed: (1) Mouth opening adequate? (>3 fingers), (2) Thyromental distance >6 cm?, (3) Neck mobile?, (4) Normal jaw/tongue size? (5) No facial edema?. If other factors normal → **routine intubation safe**. Multiple LEMON positive factors → **difficult airway; prepare accordingly**.
+
+## Q7: Awake Fiberoptic Intubation - Technique
+**Q: 70-year-old predicted difficult airway, needs urgent surgery. Plan awake fiberoptic intubation. What's your approach?**
+
+A: **Preparation**: (1) **NPO status** verified (can aspirate), (2) **Topical anesthesia**: Lidocaine 10% spray to nose/pharynx, (3) **Mild sedation**: Midazolam 1-2 mg IV titrated (goal: calm but responsive), (4) **Vasoconstrictor**: Phenylephrine nasal spray (reduces epistaxis). **Technique**: (1) Insert scope via **nose** (easier than mouth), (2) **Identify landmarks**: Epiglottis, vocal cords, tracheal rings, (3) **Thread ET tube** over scope, (4) **Advance tube** through cords, (5) **Confirm placement**: Capnography, bilateral breath sounds. **Advantage**: Patient breathing maintained throughout → no apnea risk; excellent visualization.
+
+## Q8: Succinylcholine vs Rocuronium
+**Q: Emergency intubation, full stomach. Choose succinylcholine or rocuronium for rapid paralysis. Why?**
+
+A: **Succinylcholine preferred** for **emergency/RSI** because: (1) **Faster onset** (30-45 sec vs 60-90 sec rocuronium), (2) **Shorter duration** (5-10 min vs 30-40 min rocuronium) → if failed intubation, patient wakes quickly, (3) **Allows reattempts** if first attempt fails. **Risk**: Hyperkalemia, malignant hyperthermia. **Rocuronium** advantage: **Sugammadex reversal** (instant reversal, ~2 minutes), but slower onset disadvantage in emergency.
+
+## Q9: Aspiration Risk - RSI Components
+**Q: Patient with full stomach, GERD, BMI 45, needs emergency surgery. Design rapid sequence intubation. Key components?**
+
+A: **RSI sequence** for **high aspiration risk**: (1) **Preoxygenation**: 5 minutes or 8 vital capacity breaths (maximize FRC), (2) **Cricoid pressure**: Assistant applies 10 N during induction (compress esophagus), (3) **No mask ventilation** if possible (distends stomach), (4) **Rapid induction**: Propofol 2 mg/kg (or etomidate if unstable), (5) **Rapid paralysis**: Succinylcholine 1.5 mg/kg, (6) **Quick intubation**: Once paralyzed, intubate immediately, (7) **Cuff inflation**: Release cricoid pressure after cuff inflated + tube position confirmed. **Goal**: Minimize aspiration risk by occluding esophagus with cricoid pressure + rapid intubation.
+
+## Q10: Pediatric Airway - Size and Technique
+**Q: 6-year-old needs intubation for emergency appendicitis. What ET tube size? Uncuffed or cuffed? Expected tube depth?**
+
+A: **ET tube size** (age-based formula): **4 + (age/4)** = 4 + (6/4) = 4 + 1.5 = **5.5 mm ID**. **Uncuffed tube** standard <8 years (subglottis narrowest point; cuff not needed due to funnel shape; cuff risks tracheal injury). **Tube depth**: **3 × tube size (in cm)** = 3 × 5.5 = **16.5 cm** from lips. **Confirm placement**: Auscultate bilateral breath sounds (left axilla especially), capnography, CXR. **Note**: Pediatric airways different from adult (larger tongue, anterior larynx); smaller movements = big changes in tube position.`,
+        mnemonics: [
+          { text: "LEMON positive → difficult airway; multiple factors → awake fiberoptic intubation", explanation: "Prediction" },
+          { text: "Failed intubation: Stop → Plan B (VL/alternatives) → Plan C (LMA) → Plan D (cricothyrotomy)", explanation: "Algorithm" },
+          { text: "Cormack I-II easy, III difficult, IV very difficult/surgical airway", explanation: "View" },
+          { text: "Right mainstem intubation: no left breath sounds, SpO2 down; withdraw tube 2-3 cm", explanation: "Management" },
+          { text: "RSI: preoxygenation, cricoid pressure, rapid induction, succinylcholine, intubate ASAP", explanation: "Sequence" },
+          { text: "Pediatric tube size: 4 + (age/4) mm; depth 3× tube size in cm; uncuffed <8y", explanation: "Calculation" },
+        ],
+        keyPoints: [
+          "LEMON assessment identifies difficult airway; multiple factors → awake fiberoptic",
+          "Failed intubation: Plan B (video laryngoscopy), Plan C (LMA), Plan D (cricothyrotomy if emergency)",
+          "Succinylcholine for emergency/RSI (fast onset, short duration); rocuronium has sugammadex reversal",
+          "RSI: preoxygenation → induction → cricoid pressure → paralysis → intubate (avoid masking if possible)",
+          "ET tube depth: 21-23 cm (adults), 3× size in cm (children); verify capnography + bilateral breath sounds",
+          "Pediatric tube uncuffed <8 years; size formula 4 + (age/4) mm",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Airway Management", edition: "14th" },
+          { book: "ASA Difficult Airway Algorithm", chapter: "Perioperative Management", edition: "2013" },
+        ],
+      },
+    ],
+  },
 ];

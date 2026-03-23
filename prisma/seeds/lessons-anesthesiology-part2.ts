@@ -1,5 +1,6 @@
-export const anesthesiologyPart2Lessons = [
-  // AS-MOD-02-TOP-01: Spinal & Epidural Anesthesia
+import type { TopicLessons } from "./content-loader";
+
+export const anesthesiologyPart2Lessons: TopicLessons[] = [
   {
     topicCode: "AS-MOD-02-TOP-01",
     layers: [
@@ -8,11 +9,564 @@ export const anesthesiologyPart2Lessons = [
         slug: "spinal-epidural-foundation",
         title: "Spinal & Epidural Anesthesia - Foundation",
         estimatedMinutes: 25,
-        summary: "Anatomical basis, technique, agents, complications, and contraindications.",
-        contentMd: "# Spinal & Epidural Anesthesia - Foundation\n\n## Spinal Anesthesia (Subarachnoid Block)\n### Anatomy\n- **Injection site**: Cerebrospinal fluid (CSF) in subarachnoid space (L3-L4, L4-L5 common)\n- **Needle path**: Skin → subcutaneous → ligamentum flavum → dura mater → arachnoid → CSF\n- **Dermatomes**: Anesthesia extends based on agent spread in CSF\n- **Duration**: Dependent on local anesthetic agent (lidocaine 1-2 hours, bupivacaine 3-4 hours)\n\n### Technique\n- **Position**: Patient sitting or lateral decubitus (knee-chest position aids midline identification)\n- **Needle**: 25-27 gauge (thinner = lower CSF leak risk), inserted at slight cephalad angle\n- **\"Click\" felt**: Dura penetration creates tactile sensation\n- **CSF confirmation**: Clear colorless fluid confirms subarachnoid placement\n- **Dose**: Varies by agent (lidocaine 50-75 mg, bupivacaine 7.5-15 mg)\n\n### Spread in CSF\n- **Baricity**: Hyperbaric (dextrose solution) spreads downward, hypobaric spreads upward, isobaric minimal spread\n- **Patient position post-injection**: Tilting changes spread direction (head-up restricts cephalad spread)\n- **Level of block**: Achieved ~10-15 minutes post-injection\n\n## Epidural Anesthesia\n### Anatomy\n- **Injection site**: Epidural space (outside dura mater, between dura and ligamentum flavum)\n- **Access**: L1-L2, L2-L3, L3-L4, L4-L5 (safer than spinal at lower lumbar levels)\n- **Needle path**: Skin → ligamentum flavum (loss of resistance marks entry)\n- **Catheter placement**: Allows repeated dosing or continuous infusion\n\n### Technique - Loss of Resistance Method\n- **Needle**: 17-18 gauge Tuohy needle (blunt bevel reduces dural puncture)\n- **Loss of resistance**: Syringe with air or saline; resistance suddenly lost at epidural space\n- **Catheter threading**: 3-5 cm beyond needle tip into epidural space\n- **Dose**: Much larger than spinal (because diffusion across dura delayed and limited)\n  - Lidocaine: 300-500 mg\n  - Bupivacaine: 75-150 mg\n- **Onset**: Slower than spinal (10-20 minutes for full effect)\n\n### Epidural Advantages\n- **Continuous dosing**: Catheter allows repeated injection or infusion pump\n- **Flexibility**: Can increase/decrease anesthesia level during surgery\n- **Lower incidence PDPH**: Dura not punctured (no CSF leakage)\n- **Postoperative analgesia**: Catheter left in place for pain relief\n\n## Local Anesthetics Used\n### Lidocaine (Xylocaine)\n- **Duration**: 1-2 hours (short-acting)\n- **Onset**: 5-10 minutes\n- **Use**: Spinal for short procedures, epidural for continuous\n\n### Bupivacaine (Marcaine)\n- **Duration**: 3-4 hours (long-acting)\n- **Onset**: 5-15 minutes (slightly slower than lidocaine)\n- **Use**: Preferred for spinal (longer effect), epidural (continuous infusion)\n- **Cardiotoxicity**: Higher risk of CVS toxicity if overdose (avoid in high doses)\n\n### Ropivacaine (Newer alternative)\n- **Duration**: 3-4 hours\n- **Advantage**: Less cardiotoxic than bupivacaine\n- **Cost**: More expensive than bupivacaine\n\n## Immediate Complications\n### Spinal-Specific\n- **Bloody tap**: Blood in needle/catheter (contamination, retry at different level)\n- **Dural puncture headache (PDPH)**: CSF leak through dura hole (post-dural puncture headache)\n- **High spinal block**: Block extends to respiratory muscles (intubation needed)\n\n### Epidural-Specific\n- **Dural puncture**: Needle inadvertently enters dura (convert to spinal, may cause PDPH)\n- **Subdural injection**: Agent enters subdural space (slow onset, unilateral block, unpredictable)\n- **Vascular puncture**: Needle hits blood vessel (must redirect to avoid intravascular injection)\n\n### Both Spinal and Epidural\n- **Hypotension**: Sympathetic blockade → vasodilation, reduced venous return\n- **Bradycardia**: High sympathetic blockade (T1-T4) blocks cardiac accelerator fibers\n- **Nausea/vomiting**: From hypotension, rapid drop in BP\n- **Infection/meningitis**: Poor sterile technique (rare but serious),\n        mnemonics: [\n          { text: \"Spinal = subarachnoid (in CSF), Epidural = outside dura\", explanation: \"Location difference\" },\n          { text: \"Spinal faster (10-15 min), Epidural slower (20 min onset)\", explanation: \"Onset comparison\" },\n          { text: \"Spinal PDPH common (10%), Epidural PDPH if accidental dural puncture\", explanation: \"Headache risk\" },\n          { text: \"Hyperbaric spreads down, hypobaric up, patient position controls spread\", explanation: \"Baricity concept\" }\n        ],\n        keyPoints: [\n          \"Spinal: Direct CSF injection, faster onset, shorter duration, single shot technique\",\n          \"Epidural: Diffusion across dura, slower onset, catheter allows continuous dosing\",\n          \"Local anesthetic choice: Lidocaine (1-2h) or bupivacaine (3-4h)\",\n          \"PDPH risk higher with spinal than epidural; thinner needles reduce risk\",\n          \"Hypotension major complication of both; sympathetic blockade primary mechanism\"\n        ],\n        textbookRefs: [\n          { book: \"Morgan & Mikhail\", chapter: \"Regional Anesthesia\", edition: \"6th\" },\n          { book: \"Miller's Anesthesia\", chapter: \"Spinal and Epidural\", edition: \"8th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"spinal-epidural-mechanism\",\n        title: \"Spinal & Epidural Anesthesia - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiology of blockade, sympathetic effects, compensatory mechanisms, pharmacokinetics.\",\n        contentMd: "# Spinal & Epidural Anesthesia - Mechanism\\n\\n## Local Anesthetic Mechanism\\n### Sodium Channel Blockade\\n- **Action**: LA blocks voltage-gated sodium channels in nerve membranes\\n- **Result**: Prevents depolarization → blocks action potential propagation\\n- **Differential blockade**: Autonomic (smallest) > sensory > motor (largest) fibers blocked first\\n- **Recovery**: Reverse order = motor recovery before sensory before autonomic\\n\\n### Nerve Fiber Sensitivity (by fiber size)\\n| Fiber | Size | Function | Blocked Order |\\n|-------|------|----------|---------------|\\n| B (autonomic) | Smallest | Sympathetic preganglionic | 1st (most sensitive) |\\n| A-delta (sensory) | Small | Pain, temperature | 2nd |\\n| A-beta (sensory) | Larger | Pressure, touch | 3rd |\\n| A-alpha (motor) | Largest | Skeletal muscle | 4th (least sensitive) |\\n\\n## Sympathetic Blockade Effects\\n### Initial Phase (0-5 minutes after block)\\n- **Vasodilation**: Loss of sympathetic tone → arteriolar dilation → ↓ SVR\\n- **Venous pooling**: Venous return decreases (preload ↓)\\n- **Hypotension**: SBP can drop 20-40 mmHg acutely\\n- **Reflex tachycardia**: Baroreceptor response (if hypotension not severe)\\n\\n### Cardiovascular Compensation (5-15 minutes)\\n- **Baroreceptor reflex**: Sympathetic tone increases in non-blocked areas (head/neck, upper extremities)\\n- **Catecholamine release**: Compensatory increase in sympathetic output\\n- **Cardiac output maintenance**: Initially preserved despite decreased venous return\\n- **Limitation**: Cannot fully compensate for extensive sympathetic blockade\\n\\n### High Spinal Block Consequences\\n- **T4 level or higher**: Blocks cardiac accelerator fibers (T1-T4) → profound bradycardia\\n- **Mechanism**: Loss of beta-1 adrenergic tone + vagal unopposed effect\\n- **Result**: Severe bradycardia (HR <40) + hypotension = cardiovascular collapse risk\\n- **Treatment**: Atropine IV, fluid bolus, vasopressors (phenylephrine)\\n\\n## Mechanisms of Common Complications\\n### Dural Puncture Headache (PDPH)\\n- **CSF leakage**: Needle/catheter punctures dura → CSF leaks into epidural space\\n- **Intracranial hypotension**: Reduced CSF volume → brain sags downward\\n- **Traction on pain-sensitive structures**: Meninges, cranial nerves stretched\\n- **Position-dependence**: Sitting upright increases pain (CSF gravitates downward); lying flat relieves (CSF redistributes)\\n- **Timeline**: Develops within 24-48 hours typically\\n\\n### Hypotension Mechanisms\\n- **Sympathetic blockade**: ↓ Vascular smooth muscle tone (arteriolar dilation)\\n- **Venous pooling**: ↓ Venous return, ↓ cardiac preload\\n- **Height of block**: Higher blocks = more sympathetic fibers blocked = worse hypotension\\n- **Patient factors**: Hypovolemia, elderly, aortic stenosis → more susceptible\\n\\n### Total Spinal (High Block)\\n- **Overdosage**: Agent spread beyond intended (excessive volume or concentration)\\n- **Result**: Block reaches upper thoracic/cervical levels\\n- **Effects**: Respiratory muscle paralysis (if ≥C3-C4), hypotension, bradycardia\\n- **Treatment**: Immediate intubation + ventilation, fluid resuscitation, vasopressors\\n\\n## Pharmacokinetics of Neuraxial Agents\\n### Spinal Anesthetic Absorption\\n- **Slow absorption**: Vascular uptake from CSF limited (poor blood flow in CSF)\\n- **Duration prolonged**: Agent remains in CSF longer than when given IV\\n- **Metabolism**: Slowly absorbed into blood → hepatic metabolism (for amides)\\n- **Peak blood levels**: 30-60 minutes post-injection (delayed compared to IV)\\n\\n### Epidural Anesthetic Absorption\\n- **Faster absorption**: Through dura into CSF + systemic vascular absorption\\n- **Variable peak levels**: Depends on vascularity, concentration used\\n- **First-pass**: Some metabolism in epidural fat/liver\\n- **Systemic toxicity risk**: Higher if doses are large (vascular injection, rapid absorption)\\n\\n## Factors Affecting Block Height\\n### Baricity Factors\\n- **Hyperbaric solution**: Dextrose-containing (higher specific gravity than CSF)\\n  - Spreads dependent (downward), useful for lower body\\n  - Affected by patient position\\n- **Hypobaric solution**: Lower specific gravity than CSF\\n  - Spreads cephalad (upward), useful for upper body\\n- **Isobaric solution**: Equal to CSF\\n  - Minimal barometric spread; block affects injection site only\\n\\n### Patient Factors\\n- **Intrathecal pressure**: Higher in obese patients (compressed CSF space)\\n  - Same dose achieves higher block level in obesity\\n- **Age**: Elderly have reduced CSF, block spreads more widely\\n- **Pregnancy**: Enlarged uterus compresses CSF space, ↑ block height\\n- **Height**: Tall patients may have lower block with fixed dose,\\n        mnemonics: [\\n          { text: \\\"B-A-A-A: Autonomic → sensory (delta) → sensory (beta) → motor (alpha)\\\", explanation: \\\"Blockade sequence\\\" },\\n          { text: \\\"Sympathetic block = vasodilation + ↓ venous return = hypotension + reflex tachycardia\\\", explanation: \\\"CV effects\\\" },\\n          { text: \\\"High spinal (T4+) = bradycardia + hypotension (blocks cardiac accelerator)\\\", explanation: \\\"Danger of high block\\\" },\\n          { text: \\\"PDPH = intracranial hypotension from CSF leak; worse sitting up, better lying flat\\\", explanation: \\\"Position-dependent\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Local anesthetics block sodium channels; differential blockade by fiber size\\\",\\n          \\\"Sympathetic blockade cause of hypotension; venous pooling + arteriolar dilation\\\",\\n          \\\"Baricity controls spread in CSF; patient position modulates block level\\\",\\n          \\\"PDPH develops 24-48h post-dural puncture from CSF leakage\\\",\\n          \\\"High spinal block emergency requiring intubation + resuscitation\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Morgan & Mikhail\\\", chapter: \\\"Mechanisms of Regional Anesthesia\\\", edition: \\\"6th\\\" },\\n          { book: \\\"Guyton\\\", chapter: \\\"Neurophysiology of Local Anesthetics\\\", edition: \\\"12th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"spinal-epidural-clinical\\\",\\n        title: \\\"Spinal & Epidural Anesthesia - Clinical\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Clinical selection, patient positioning, problem management, Indian context.\\\",\\n        contentMd: "# Spinal & Epidural Anesthesia - Clinical\\\\n\\\\n## Patient Selection: Spinal vs Epidural vs General\\\\n### Spinal Anesthesia Ideal For\\\\n- **Lower abdominal surgery**: Cesarean section, hysterectomy, appendectomy\\\\n- **Lower limb surgery**: Hip/knee replacement, fracture repair, femur fracture\\\\n- **Perineal procedures**: Hemorrhoidectomy, prostatectomy\\\\n- **Urological procedures**: TURP, cystoscopy\\\\n- **Duration**: <2 hours (limited by agent duration)\\\\n- **Risk**: Low (no airway manipulation, minimal aspiration risk)\\\\n\\\\n### Epidural Anesthesia Ideal For\\\\n- **Prolonged procedures**: Epidural catheter allows continuous dosing\\\\n- **Labor analgesia**: Continuous epidural pump for pain relief during labor\\\\n- **Postoperative analgesia**: Catheter left in place (pain relief first 48 hours)\\\\n- **High-risk airway**: Maintains spontaneous ventilation (no airway compromise)\\\\n- **Thoracic procedures**: Thoracotomy (epidural provides analgesia)\\\\n\\\\n### Contraindications to Neuraxial\\\\n#### Absolute\\\\n- **Patient refusal**\\\\n- **Infection at insertion site**: Risk of meningitis/epidural abscess\\\\n- **Anticoagulation/coagulopathy**: INR >2, platelet <50K, on warfarin/heparin\\\\n- **Hemodynamic instability**: Relative (spinal likely to worsen; epidural safer)\\\\n\\\\n#### Relative\\\\n- **Sepsis**: Controversial (risk of seeding meningitis); epidural safer than spinal\\\\n- **Uncontrolled hypertension**: Risk of intracranial hemorrhage\\\\n- **Obesity**: Difficult anatomy, higher block; still possible but requires experience\\\\n\\\\n## Technique - Practical Approach\\\\n### Spinal Anesthesia Step-by-Step\\\\n1. **Patient positioning**: Sitting (easier for patient, midline identification) OR lateral decubitus\\\\n2. **Palpate landmarks**: PSIS (posterior superior iliac spine) at L4 level; count up/down to L3-L4\\\\n3. **Skin preparation**: Sterile prep with chlorhexidine/povidone-iodine, drape\\\\n4. **Local infiltration**: 1% lidocaine SC to minimize pain\\\\n5. **Needle insertion**: 25-27 G needle at slight cephalad angle (perpendicular to skin)\\\\n6. **Advance**: Feel for \\\\\\\"pop\\\\\\\" when dura penetrated (sudden loss of resistance)\\\\n7. **Confirm CSF**: Clear colorless fluid (not blood, not clear synovial fluid)\\\\n8. **Inject agent**: Slowly (1 sec per mL to ensure proper spread)\\\\n9. **Remove needle**: Withdraw, place dressing\\\\n10. **Position patient**: Supine if hyperbaric (increases cephalad spread); head-elevated if hypobaric\\\\n\\\\n### Epidural Anesthesia Step-by-Step\\\\n1. **Patient positioning**: Sitting (better for midline) or lateral with hips flexed\\\\n2. **Landmarks**: Spinous process L3 at iliac crest level\\\\n3. **Skin preparation**: Sterile as spinal\\\\n4. **Local infiltration**: 1% lidocaine deeper (through ligaments)\\\\n5. **Needle insertion**: 17-18 G Tuohy needle, 45° angle (facilitates catheter threading)\\\\n6. **Loss of resistance**: Tuohy needle with syringe (air or saline); sudden loss when epidural space entered\\\\n7. **Catheter insertion**: Thread 3-5 cm into epidural space (distal to needle tip)\\\\n8. **Secure catheter**: Tape securely, label clearly\\\\n9. **Test dose**: 3 mL with 1:200,000 epinephrine IV (tests for IV placement); wait for vitals response\\\\n10. **Injection**: 8-12 mL initial dose, assess block height in 10-20 minutes\\\\n\\\\n## Management of Common Problems\\\\n### Hypotension During Spinal\\\\n- **Prevention**: Preload with 500-1000 mL crystalloid 15 mins before block\\\\n- **Treatment** (if SBP drops >20% or <90 mmHg):\\\\n  - Immediate: Elevate legs (increase venous return)\\\\n  - Fluid bolus: 500-1000 mL IV rapidly\\\\n  - Vasopressor: Phenylephrine 50-100 mcg IV or ephedrine 5-10 mg IV\\\\n  - Position: Supine immediately (if not already)\\\\n\\\\n### Bradycardia During Spinal (High Block Risk)\\\\n- **Assess**: If HR <50 with hypotension, likely high block with cardiac accelerator fiber blockade\\\\n- **Treatment**:\\\\n  - Atropine 0.4-0.6 mg IV (anticholinergic, increases HR)\\\\n  - Fluid bolus (increase preload)\\\\n  - Vasopressor (phenylephrine)\\\\n  - Consider intubation if respiratory distress (C3-C4 block)\\\\n\\\\n### Dural Puncture Headache (PDPH)\\\\n- **Timing**: 24-48 hours post-procedure (occasionally delayed weeks)\\\\n- **Characteristics**: Positional (worse sitting, better lying), worse with Valsalva\\\\n- **Treatment**:\\\\n  - Conservative (48 hours): Bed rest, fluids, NSAIDs, caffeine (helps initially)\\\\n  - Epidural blood patch (EBP): Gold standard if conservative fails (15-20 mL autologous blood injected into epidural space; seals dura hole)\\\\n\\\\n### Failed Block/Inadequate Anesthesia\\\\n- **Causes**: Misdirection, patient movement, insufficient dose\\\\n- **Spinal inadequate**: Can use epidural supplementation or general anesthesia\\\\n- **Epidural inadequate**: Reposition catheter or add general anesthesia\\\\n\\\\n## Indian Context Considerations\\\\n### High Volume Settings\\\\n- **Cost-effective**: Spinal/epidural cheaper than general anesthesia (no gas consumption, less drug)\\\\n- **Cesarean section**: Spinal standard (not general) = faster, safer, cost-effective\\\\n- **Postoperative pain**: Epidural catheter common in tertiary centers (reduced ICU admission)\\\\n\\\\n### Resource Limitations\\\\n- **Ultrasound guidance**: Limited availability; landmark-based technique standard\\\\n- **Monitoring**: Often minimal (lack of pulse oximetry, BP cuff); vigilance essential\\\\n- **Vasopressor availability**: Limited (phenylephrine often unavailable; ephedrine or adrenaline used)\\\\n\\\\n### Training Gap\\\\n- **Spinal more common**: Easier to teach, standardized, predictable\\\\n- **Epidural skills limited**: Requires training; fewer trained anesthesiologists in smaller centers\\\\n- **Regional anesthesia courses**: Increasing but still limited availability,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Spinal = quick (10-15 min), short duration (1-4h); Epidural = slow (20 min), continuous\\\\\\\", explanation: \\\\\\\"Clinical timing\\\\\\\" },\\\\n          { text: \\\\\\\"Hypotension management = Elevate legs, Fluid, Vasopressor (phenylephrine preferred)\\\\\\\", explanation: \\\\\\\"Treatment sequence\\\\\\\" },\\\\n          { text: \\\\\\\"PDPH = Positional (worse sitting, better flat); EBP = gold standard treatment\\\\\\\", explanation: \\\\\\\"Headache management\\\\\\\" },\\\\n          { text: \\\\\\\"Spinal contraindications = Refusal, infection, anticoagulation, hemodynamic instability\\\\\\\", explanation: \\\\\\\"Patient screening\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Spinal ideal for short procedures; epidural for long/continuous analgesia\\\\\\\",\\\\n          \\\\\\\"Preload with fluids reduces hypotension incidence\\\\\\\",\\\\n          \\\\\\\"High spinal block emergency requiring intubation/resuscitation\\\\\\\",\\\\n          \\\\\\\"PDPH self-limited (24-48h); EBP if conservative measures fail\\\\\\\",\\\\n          \\\\\\\"India: Spinal standard for cesarean; epidural underutilized due to training/cost\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Morgan & Mikhail\\\\\\\", chapter: \\\\\\\"Regional Anesthesia Clinical Application\\\\\\\", edition: \\\\\\\"6th\\\\\\\" },\\\\n          { book: \\\\\\\"IAA Guidelines\\\\\\\", chapter: \\\\\\\"Regional Anesthesia Standards\\\\\\\", edition: \\\\\\\"2023\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"spinal-epidural-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Spinal & Epidural Anesthesia - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"High-yield facts, technique pearls, complication management, exam questions.\\\\\\\",\\\\n        contentMd: "# Spinal & Epidural Anesthesia - Exam Prep\\\\\\\\n\\\\\\\\n## Quick Reference: Spinal vs Epidural\\\\\\\\n| Feature | Spinal | Epidural |\\\\\\\\n|---------|--------|----------|\\\\\\\\n| Site | Subarachnoid (CSF) | Outside dura |\\\\\\\\n| Needle gauge | 25-27 (thin) | 17-18 (thick) |\\\\\\\\n| Onset | 10-15 min | 20-30 min |\\\\\\\\n| Duration | 1-4 hours | 1-2 hours (single shot); continuous with catheter |\\\\\\\\n| PDPH risk | 10-15% (1-2 weeks) | <1% (unless dural puncture) |\\\\\\\\n| Hypotension | Marked initially | Gradual, less severe |\\\\\\\\n| Catheter | No | Yes (allows continuous) |\\\\\\\\n| Cost | Cheaper | More expensive (catheter) |\\\\\\\\n\\\\\\\\n## Local Anesthetic Agents\\\\\\\\n| Agent | Spinal Dose | Epidural Dose | Duration | Notes |\\\\\\\\n|-------|-------------|---------------|----------|-------|\\\\\\\\n| Lidocaine | 50-75 mg | 300-500 mg | 1-2 hours | Fast onset |\\\\\\\\n| Bupivacaine | 7.5-15 mg | 75-150 mg | 3-4 hours | Preferred for longer |\\\\\\\\n| Ropivacaine | 10-15 mg | 100-200 mg | 3-4 hours | Less cardiotoxic |\\\\\\\\n\\\\\\\\n## Baricity Effects\\\\\\\\n- **Hyperbaric**: ↓ specific gravity; spreads upward (head); use in high sitting\\\\\\\\n- **Hypobaric**: ↑ specific gravity; spreads downward (feet); use in low lying flat\\\\\\\\n- **Isobaric**: = CSF; minimal spread (injection site only)\\\\\\\\n\\\\\\\\n## High-Yield Facts\\\\\\\\n- **Spinal fastest onset** (10-15 min vs epidural 20-30 min)\\\\\\\\n- **PDPH caused by CSF leak** through dura hole; positional (worse sitting)\\\\\\\\n- **Hypotension mechanism**: Sympathetic blockade (vasodilation + ↓ venous return)\\\\\\\\n- **High spinal block** (T4+): Respiratory paralysis + profound bradycardia (emergency)\\\\\\\\n- **Differential blockade**: Autonomic > sensory > motor (blocked in this order)\\\\\\\\n- **Baricity controls spread**: Position patient accordingly\\\\\\\\n- **PDPH treatment**: Conservative first (bed rest, fluids, caffeine); EBP if refractory\\\\\\\\n- **Epidural catheter advantage**: Allows continuous infusion + postop analgesia\\\\\\\\n- **Loss of resistance**: Hallmark of epidural space entry\\\\\\\\n- **Absolute contraindications**: Refusal, infection at site, anticoagulation, hemodynamic instability\\\\\\\\n\\\\\\\\n## Complications Management\\\\\\\\n### Hypotension Sequence\\\\\\\\n1. Elevate legs (immediate venous return)\\\\\\\\n2. IV fluid bolus 500-1000 mL\\\\\\\\n3. Vasopressor: Phenylephrine 50-100 mcg (preferred) or ephedrine 5-10 mg\\\\\\\\n\\\\\\\\n### Bradycardia (High Block Risk)\\\\\\\\n1. Atropine 0.4-0.6 mg IV\\\\\\\\n2. IV fluid + vasopressor\\\\\\\\n3. Consider intubation if respiratory distress\\\\\\\\n\\\\\\\\n### PDPH (24-48h post-dural puncture)\\\\\\\\n1. Conservative: Bed rest, hydration, caffeine, NSAIDs × 48 hours\\\\\\\\n2. If persistent: Epidural blood patch (15-20 mL autologous blood)\\\\\\\\n\\\\\\\\n## Common Exam Question Patterns\\\\\\\\n- \\\\\\\\\\\\\\\"Needle gauge for spinal?\\\\\\\\\\\\\\\" = 25-27 G (thin to reduce PDPH)\\\\\\\\n- \\\\\\\\\\\\\\\"Onset time comparison?\\\\\\\\\\\\\\\" = Spinal 10-15 min, epidural 20-30 min\\\\\\\\n- \\\\\\\\\\\\\\\"PDPH mechanism?\\\\\\\\\\\\\\\" = CSF leak through dura hole; positional\\\\\\\\n- \\\\\\\\\\\\\\\"Hypotension cause in spinal?\\\\\\\\\\\\\\\" = Sympathetic blockade (vasodilation + ↓ venous return)\\\\\\\\n- \\\\\\\\\\\\\\\"Which block can be continuous?\\\\\\\\\\\\\\\" = Epidural (catheter)\\\\\\\\n- \\\\\\\\\\\\\\\"High spinal (T4+) problem?\\\\\\\\\\\\\\\" = Respiratory paralysis, bradycardia\\\\\\\\n- \\\\\\\\\\\\\\\"Loss of resistance indicates?\\\\\\\\\\\\\\\" = Entry into epidural space\\\\\\\\n- \\\\\\\\\\\\\\\"Baricity defines?\\\\\\\\\\\\\\\" = Specific gravity relative to CSF (hyperbaric spreads down)\\\\\\\\n- \\\\\\\\\\\\\\\"Absolute contraindication?\\\\\\\\\\\\\\\" = Infection at site, anticoagulation\\\\\\\\n- \\\\\\\\\\\\\\\"Best agent for long surgery on spinal?\\\\\\\\\\\\\\\" = Bupivacaine (3-4 hours),\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"SED = Spinal (small needle, Early onset, Dural puncture PDPH)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Spinal characteristics\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Hypotension = Sympathetic block → Vasodilation + venous pooling\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Mechanism\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"High block = T4+, Respiratory muscle paralysis + bradycardia (emergency)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Danger zone\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"PDPH = Positional Dural Puncture Headache; EBP = Epidural Blood Patch cure\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Headache\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Spinal: 10-15 min onset, thin needle, high PDPH risk; epidural: slower, catheter, continuous\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Hypotension managed: legs up, fluids, vasopressor (phenylephrine)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"High spinal emergency: T4+ = respiratory paralysis + cardiac block\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PDPH: positional headache 24-48h; conservative first, EBP if refractory\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Baricity controls spread direction; position patient accordingly post-injection\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Morgan & Mikhail\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Regional Anesthesia Summary\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"6th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"AANA Textbook\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Spinal and Epidural Anesthesia\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"7th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"spinal-epidural-active-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Spinal & Epidural Anesthesia - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"8 clinical cases testing technique, problem management, block troubleshooting.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Spinal & Epidural Anesthesia - Active Recall\\\\\\\\n\\\\\\\\n## Q1: Spinal Hypotension Management\\\\\\\\n**Q: 35-year-old female scheduled for cesarean section receives spinal with bupivacaine 12 mg. 5 minutes post-injection, BP 85/45 (baseline 120/80), HR 95. Abdomen not yet prepped. What's happening and what to do immediately?**\\\\\\\\n\\\\\\\\nA: **Hypotension from sympathetic blockade** - vasodilation + venous pooling. **Immediate management**: (1) **Elevate legs** (head-down tilt not ideal; leg elevation increases venous return), (2) **IV fluid bolus** 500-1000 mL crystalloid rapidly, (3) **Call surgeon** - delay incision until BP recovered. (4) **Vasopressor**: If BP doesn't improve with fluids, phenylephrine 50-100 mcg IV (causes vasoconstriction, increases SVR). **Why not ephedrine**: Ephedrine has beta effects (may increase HR excessively); phenylephrine preferred (alpha-1 specific, pure vasoconstriction without tachycardia). **Prevention**: Preload with 1000 mL IV fluid 15-20 mins before spinal reduces incidence to <5%. **Reassurance**: Hypotension self-limited; prophylaxis more cost-effective than treatment.\\\\\\\\n\\\\\\\\n## Q2: Identifying High Spinal Block\\\\\\\\n**Q: Patient receives spinal anesthesia for hip fracture repair. 20 minutes post-injection: BP 70/40, HR 35 (severe bradycardia), dyspneic (RR shallow), voice hoarse. Pupils constricted. What's diagnosis and emergency management?**\\\\\\\\n\\\\\\\\nA: **HIGH SPINAL BLOCK (T1-T4 level or above)** - blocking cardiac accelerator fibers + respiratory muscles. **Findings**: (1) Profound hypotension + severe bradycardia (HR <50) = hallmark, (2) Respiratory distress (intercostal paralysis), (3) Altered voice (vagus nerve involvement), (4) Miosis (pupils). **Mechanism**: Loss of T1-T4 sympathetic fibers → unopposed vagal effects on heart (profound bradycardia). **EMERGENCY MANAGEMENT**: (1) **Intubation + mechanical ventilation immediately** (respiratory muscles paralyzed), (2) **Atropine 0.4-0.6 mg IV** (blocks vagal bradycardia), (3) **IV fluid bolus** 1000 mL rapid, (4) **Vasopressor**: Epinephrine 0.5 mg IM or phenylephrine IV (cardiac support), (5) **Call for help** - ICU/senior anesthesiologist needed. **Prevention**: Calculated dosing (lower doses), patient position control (head-elevated if hyperbaric to limit cephalad spread), slower injection. **Outcome**: Most recover fully once intubated + supported; blocks eventually regress.\\\\\\\\n\\\\\\\\n## Q3: Dural Puncture in Epidural\\\\\\\\n**Q: During epidural catheter placement for labor analgesia, anesthesiologist reports \\\\\\\\\\\\\\\"unexpected CSF aspirated through needle.\\\\\\\\\\\\\\\" Diagnosis and management?**\\\\\\\\n\\\\\\\\nA: **ACCIDENTAL DURAL PUNCTURE during epidural attempt** - needle advanced through dura into subarachnoid space. **Risk of complication**: Post-dural puncture headache (PDPH) likely to develop 24-48 hours. **Immediate management**: (1) **Remove needle** - pull back (confirm you're out of CSF), (2) **Reattempt epidural** at different level (L2-L3 if initial was L3-L4), (3) **Inform patient** about PDPH risk (develops in ~50% of dural punctures with epidural needle). **Counseling**: \\\\\\\\\\\\\\\"There was a small tear in the membrane around the spinal cord. Headache may develop - it's positional (better lying flat, worse sitting) and self-limited. If it develops, tell us - we have treatment.\\\\\\\\\\\\\\\" **Treatment if PDPH occurs**: (1) Conservative (48 hours): Bed rest, hydration, caffeine, NSAIDs, (2) If persists: Epidural blood patch (15-20 mL autologous blood injected into epidural space to seal the dura tear; 70-90% effective). **Going forward**: Single-shot spinal acceptable if patient prefers (already have dural puncture).\\\\\\\\n\\\\\\\\n## Q4: Failed Spinal Block\\\\\\\\n**Q: Patient receives spinal anesthesia for hemorrhoidectomy. 30 minutes post-injection, patient reports pain during initial incision. Surgical team looks to anesthesiologist. Patient's leg movement intact. What happened and options?**\\\\\\\\n\\\\\\\\nA: **FAILED SPINAL BLOCK** - inadequate level or incomplete block. **Causes**: (1) Misdirection (needle didn't reach subarachnoid), (2) Patient moved, (3) Inadequate dose, (4) Wrong agent/concentration. **Differential signs**: Intact leg movement (should be paralyzed) + pain sensation = block too low or failed entirely. **Options at this point**: (1) **Supplemental regional**: Add epidural anesthesia (can supplement spinal); takes 20-30 mins (too slow for emergency), (2) **Convert to general anesthesia**: Intubate, provide general (quickest), (3) **Additional spinal at different level**: High risk (second dural puncture), usually avoided. **Clinical decision**: Most would convert to general (safest, fastest). **Prevention of failure**: (1) Landmark palpation carefully, (2) Position patient correctly (sitting for midline identification), (3) Confirm CSF before injection (clear colorless fluid), (4) Correct dose based on needle level, (5) Verify sensory/motor block before incision (test for temperature loss).\\\\\\\\n\\\\\\\\n## Q5: Epidural Catheter Malposition\\\\\\\\n**Q: During epidural labor analgesia, after injection of 10 mL bupivacaine, patient reports only LEFT-SIDED numbness, no right-sided sensation loss. What's likely wrong?**\\\\\\\\n\\\\\\\\nA: **SUBDURAL INJECTION** - epidural needle/catheter entered subdural space (between dura and arachnoid) instead of epidural space. **Characteristic findings**: (1) **Unilateral block** (left side only), (2) **Slow onset** (30-60 min vs 15-20 min for epidural), (3) **Unpredictable spread**, (4) Variable motor block. **Why unilateral**: Subdural space narrow, agent doesn't spread as widely as epidural. **Management**: (1) **Stop further injections** through this catheter, (2) **Reposition or replace** epidural at different level, (3) **Monitor closely** - if any symptoms of high block (respiratory distress), be ready to intubate. **Why not leave it**: Unilateral block inadequate for labor (patient in pain on right side); need bilateral coverage. **Prevention**: Proper needle insertion technique (loss of resistance clear), slow injection (resistance should remain), test dosing (3 mL with epinephrine first; observe for unilateral signs before full dose).\\\\\\\\n\\\\\\\\n## Q6: Baricity and Patient Position\\\\\\\\n**Q: Spinal anesthesia for hip surgery uses hyperbaric solution. Patient positioned supine immediately post-injection. Block progresses to T1 (chest level) unexpectedly. Why? How prevent?**\\\\\\\\n\\\\\\\\nA: **BARICITY EFFECT** - hyperbaric solution (dextrose) heavier than CSF; spreads downward when patient supine (toward feet), but if patient moved/elevated head after injection, it migrates cephalad. **Why unexpected block high**: (1) Patient likely tilted/elevated head at some point post-injection, (2) Hyperbaric agent pools in dependent areas - with upright position change, it flowed cephalad, (3) Dose was adequate for mid-thoracic; higher spread = respiratory muscles involved. **Clinical consequence**: Risk of respiratory compromise (T1-T2 = intercostal paralysis). **Prevention**: (1) **Position patient correctly BEFORE injection** and maintain position for 10-15 minutes, (2) **Head-elevated position** if hypobaric (spreads upward anyway), (3) **Head-down position** if hyperbaric (keeps agent low), (4) **Communicate positioning** to OR staff - no moving patient immediately post-injection, (5) **Consider isobaric** if anxious about spread control (minimal gravity effect). **Reassurance**: Most cases are self-limited (block regresses); respiratory support if needed.\\\\\\\\n\\\\\\\\n## Q7: PDPH Diagnosis and Management Timeline\\\\\\\\n**Q: Patient had cesarean section with spinal 48 hours ago. Now presents with worst headache of life, worse with sitting/standing, neck stiffness. Concerned about meningitis. How differentiate PDPH from infection? Treatment?**\\\\\\\\n\\\\\\\\nA: **LIKELY POST-DURAL PUNCTURE HEADACHE (PDPH)**, but must rule out meningitis. **Differential features**: (1) **PDPH**: Positional (better lying flat), worse Valsalva, develops 24-48h post-procedure, neck stiffness from traction (not infection), fever absent, (2) **Meningitis**: Non-positional, fever present, CSF shows elevated WBC/protein, cultures positive, meningeal signs (photophobia). **Diagnostic approach**: (1) **Assess temperature** - if febrile, meningitis more likely, (2) **Check CSF** (LP) if meningitis suspected (elevated lymphocytes, elevated protein, negative cultures), (3) **Reassess after lying flat** - if PDPH, symptoms dramatically improve when supine (within minutes). **PDPH management** (48h conservative failed): (1) **Epidural blood patch**: Gold standard (15-20 mL autologous blood), 70-90% success rate, relief often immediate, (2) Repeat EBP if first fails, (3) **Conservative adjuncts**: Caffeine 500 mg IV (helps initially, bridges to EBP), aggressive hydration. **Timing**: Can do EBP anytime after PDPH diagnosis confirmed (doesn't need to wait past 48h). **Prognosis**: EBP highly effective; most patients return to normal within 24 hours.\\\\\\\\n\\\\\\\\n## Q8: Epidural vs Spinal Selection\\\\\\\\n**Q: 56-year-old for open prostate cancer surgery (likely 3-4 hour procedure). Anesthesiologist considering regional vs general. Why might epidural be preferred over spinal for this case?**\\\\\\\\n\\\\\\\\nA: **EPIDURAL PREFERRED for this case** because: (1) **Duration**: Spinal agents (lidocaine/bupivacaine) last 1-4 hours (surgery 3-4 hours = likely inadequate); epidural catheter allows continuous infusion (dosing as needed throughout), (2) **Continuous analgesia**: Epidural catheter can stay for postop pain management (reduces opioid use, postop complications), (3) **Hemodynamic stability**: Slower onset of epidural less precipitous hypotension (gradual vs sudden with spinal), (4) **Flexibility**: Can adjust level/intensity during surgery if needed, (5) **Postop recovery**: Better pain control = faster mobilization, reduced DVT/PE risk. **Why not spinal**: Spinal would require (a) redosing (complications, PDPH risk) or (b) conversion to general (defeats purpose of regional), (c) Single-shot spinal inadequate for 3-4 hour procedure. **Clinical pearl**: Epidural superior for prolonged surgery; spinal better for short procedures (<2 hours). **Consideration**: Patient medical comorbidities (cardiac, renal) might favor epidural (maintains spontaneous ventilation, avoids intubation).\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-}
-];
-];
+        summary: "Anatomical basis, technique, agents, complications, contraindications.",
+        contentMd: `# Spinal & Epidural Anesthesia - Foundation
+
+## Spinal Anesthesia (Subarachnoid Block)
+
+### Anatomy
+- **Injection site**: Cerebrospinal fluid (CSF) in subarachnoid space (L3-L4, L4-L5 common)
+- **Needle path**: Skin → subcutaneous → ligamentum flavum → dura mater → arachnoid → CSF
+- **Dermatome coverage**: Anesthesia extends based on agent spread in CSF
+- **Duration**: Dependent on local anesthetic agent (lidocaine 1-2 hours, bupivacaine 3-4 hours)
+
+### Technique
+- **Position**: Patient sitting or lateral decubitus (knee-chest position aids midline identification)
+- **Needle**: 25-27 gauge (thinner = lower CSF leak risk), inserted at slight cephalad angle
+- **Dura puncture**: "Pop" or "click" felt when needle penetrates dura
+- **CSF confirmation**: Clear colorless fluid (not blood, not synovial fluid)
+- **Dosing**: Lidocaine 50-75 mg, bupivacaine 7.5-15 mg (varies by height, pregnancy, obesity)
+
+### Baricity and Spread
+- **Hyperbaric** (dextrose added): Heavier than CSF; spreads downward (foot end)
+- **Hypobaric** (less dextrose): Lighter than CSF; spreads upward (head)
+- **Isobaric** (equal density): Minimal spread; localized to injection site
+- **Patient position post-injection**: Controls block height (head-up restricts cephalad spread)
+- **Block onset**: 10-15 minutes for complete sensory level
+
+## Epidural Anesthesia
+
+### Anatomy
+- **Injection site**: Epidural space (outside dura mater, between dura and ligamentum flavum)
+- **Access levels**: L1-L2, L2-L3, L3-L4, L4-L5 (lower levels safer than spinal; less meningitis risk)
+- **Needle entry**: Loss of resistance at epidural space (characteristic hallmark)
+- **Catheter**: Threading 3-5 cm into epidural space allows repeat dosing/continuous infusion
+
+### Technique - Loss of Resistance
+- **Needle**: 17-18 gauge Tuohy needle (blunt bevel reduces dural puncture risk)
+- **Loss of resistance method**: Syringe filled with air or saline; sudden loss when epidural space entered
+- **Catheter**: Threaded 3-5 cm; secured with tape, labeled clearly
+- **Higher dosing**: Much larger than spinal (lidocaine 300-500 mg, bupivacaine 75-150 mg; diffusion across dura slower)
+- **Onset time**: 20-30 minutes for full effect (slower than spinal due to dural diffusion)
+
+### Epidural Advantages
+- **Continuous dosing**: Catheter allows repeat injection or infusion pump
+- **Flexibility**: Block intensity adjustable during surgery
+- **Lower PDPH risk**: Dura intact (no CSF leakage)
+- **Postoperative analgesia**: Catheter left in place 24-48 hours for pain relief
+
+## Local Anesthetic Agents
+
+### Lidocaine (Xylocaine)
+- **Duration**: 1-2 hours (short-acting)
+- **Onset**: 5-10 minutes
+- **Use**: Spinal for short procedures (<1 hour); epidural for repeated dosing
+
+### Bupivacaine (Marcaine)
+- **Duration**: 3-4 hours (long-acting)
+- **Onset**: 5-15 minutes (slightly slower than lidocaine)
+- **Use**: Preferred for spinal (longer effect); epidural continuous infusion
+- **Concern**: Cardiotoxicity if overdosed (avoid high doses; controversial in obstetrics)
+
+### Ropivacaine
+- **Duration**: 3-4 hours
+- **Advantage**: Less cardiotoxic than bupivacaine
+- **Disadvantage**: More expensive; less commonly used in India
+
+## Immediate Complications
+
+### Spinal-Specific
+- **Bloody tap**: Blood in CSF (traumatic puncture; usually inconsequential)
+- **Post-dural puncture headache (PDPH)**: CSF leak through dura hole
+- **High spinal block**: Unintended extension to respiratory muscles (emergency)
+
+### Epidural-Specific
+- **Dural puncture**: Needle inadvertently enters dura (may cause PDPH; ~50% risk)
+- **Subdural injection**: Agent in subdural space (unilateral block, unpredictable spread)
+- **Vascular puncture**: Needle enters blood vessel (risk of intravascular injection, toxicity)
+
+### Both Techniques
+- **Hypotension**: Sympathetic blockade → vasodilation + venous pooling
+- **Bradycardia**: High blockade (T1-T4) blocks cardiac accelerator fibers
+- **Nausea/vomiting**: From acute hypotension
+- **Infection**: Poor sterile technique (meningitis, epidural abscess - rare but serious)`,
+        mnemonics: [
+          { text: "Spinal = subarachnoid (IN CSF), Epidural = outside dura", explanation: "Location difference" },
+          { text: "Spinal faster onset (10-15 min), Epidural slower (20-30 min)", explanation: "Onset comparison" },
+          { text: "Hyperbaric spreads DOWN, hypobaric spreads UP, isobaric stays put", explanation: "Baricity effects" },
+          { text: "Spinal PDPH 10%, epidural PDPH <1% unless accidental dural puncture", explanation: "Headache risk" },
+        ],
+        keyPoints: [
+          "Spinal: Direct CSF injection, thin needle, faster onset, single-shot, higher PDPH risk",
+          "Epidural: Diffusion across dura, thick needle, slower onset, catheter allows continuous dosing",
+          "Local anesthetic choice: Lidocaine (1-2h) for short, bupivacaine (3-4h) for longer procedures",
+          "Baricity controls spread direction; patient position post-injection critical for block height",
+          "Hypotension major complication of both; sympathetic blockade is primary mechanism",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Regional Anesthesia", edition: "14th" },
+          { book: "Aitkenhead's Textbook of Anaesthesia", chapter: "Spinal and Epidural Blocks", edition: "6th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "spinal-epidural-mechanism",
+        title: "Spinal & Epidural Anesthesia - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Sodium channel blockade, differential fiber blockade, sympathetic effects, PDPH pathophysiology.",
+        contentMd: `# Spinal & Epidural Anesthesia - Mechanism
+
+## Local Anesthetic Mechanism: Sodium Channel Blockade
+
+### Action
+- **Primary effect**: Local anesthetics block voltage-gated sodium channels in nerve membranes
+- **Result**: Prevents depolarization → blocks action potential propagation → sensory loss
+- **Differential blockade**: Autonomic (smallest) > sensory > motor (largest) fibers blocked first
+- **Recovery order**: Reverse of blockade → motor recovery first, then sensory, then autonomic
+
+### Nerve Fiber Sensitivity (by size)
+| Fiber Type | Size | Function | Blockade Order |
+|-----------|------|----------|----------------|
+| B (autonomic) | Smallest | Sympathetic preganglionic | 1st (most sensitive) |
+| A-delta | Small | Pain, temperature | 2nd |
+| A-beta | Medium | Pressure, touch | 3rd |
+| A-alpha (motor) | Largest | Skeletal muscle | 4th (least sensitive) |
+
+## Sympathetic Blockade Pathophysiology
+
+### Initial Phase (0-5 minutes)
+- **Vasodilation**: Loss of sympathetic tone → arteriolar dilation → decreased systemic vascular resistance (SVR)
+- **Venous pooling**: Unopposed parasympathetic tone → veins dilate → decreased venous return
+- **Preload reduction**: Decreased cardiac filling → reduced stroke volume
+- **Hypotension**: SBP drops 20-40 mmHg acutely; MAP falls 10-15 mmHg
+- **Reflex response**: Baroreceptor-mediated sympathetic surge (if mild hypotension)
+
+### Cardiovascular Compensation (5-15 minutes)
+- **Baroreceptor reflex**: Sympathetic tone increases in non-blocked dermatomes (head, neck, upper extremities)
+- **Catecholamine release**: Epinephrine, norepinephrine increase to maintain BP
+- **Cardiac output**: Initially maintained despite preload reduction (via increased contractility)
+- **Limitation**: Cannot fully compensate for extensive sympathetic blockade; hypotension often persists
+
+### High Spinal Block Consequences (T4 or higher)
+- **Cardiac accelerator fibers blocked**: T1-T4 sympathetic fibers responsible for HR increase
+- **Unopposed vagal tone**: Parasympathetic dominance → profound bradycardia (HR <40)
+- **Double hit**: Hypotension + bradycardia = cardiovascular collapse risk
+- **Emergency**: Requires immediate intubation + vasopressor/inotrope support
+
+## Dural Puncture Headache (PDPH) Pathophysiology
+
+### CSF Leakage
+- **Mechanism**: Needle/catheter punctures dura mater → CSF leaks into epidural space
+- **Volume loss**: CSF production ~20 mL/hour but leakage often exceeds production
+- **CSF pressure**: Intracranial hypotension develops (normally 5-15 cm H2O)
+
+### Intracranial Hypotension Effects
+- **Brain sagging**: Brain descends due to reduced CSF buoyancy
+- **Meningeal traction**: Dura, arachnoid stretched → activation of pain fibers
+- **Cranial nerve traction**: CN I-XII stretched → neurologic symptoms possible
+- **Timeline**: Develops 24-48 hours post-puncture (can be delayed weeks)
+
+### Positional Nature
+- **Upright position**: Gravity worsens brain sagging → severe headache
+- **Supine position**: Gravity reduces traction → symptom relief (within minutes)
+- **Valsalva effect**: Increased intracranial pressure → worsens headache
+- **Coughing/straining**: Same mechanism; exacerbates pain
+
+## Baricity Effects on Block Distribution
+
+### Hyperbaric Solution
+- **Specific gravity**: >1.008 (heavier than CSF due to dextrose)
+- **Spread pattern**: Spreads to dependent (lower) areas
+- **Patient positioning**: Supine or head-down = caudal spread (feet); head-up = rostral spread (head)
+- **Clinical use**: Cesarean section (spread to sacral), lower extremity surgery
+
+### Hypobaric Solution
+- **Specific gravity**: <1.003 (lighter than CSF)
+- **Spread pattern**: Spreads to non-dependent (upper) areas
+- **Patient positioning**: Head-up = cephalad spread (head); head-down = prevents spread
+- **Clinical use**: Upper abdominal, chest procedures
+
+### Isobaric Solution
+- **Specific gravity**: ~1.005 (equal to CSF)
+- **Spread pattern**: Minimal gravity effect; stays near injection site
+- **Clinical use**: Predictable, localized block (useful if spread control critical)
+
+## Pharmacokinetics
+
+### Spinal Anesthetic Absorption
+- **Slow absorption**: Limited vascular uptake from CSF (poor blood flow)
+- **Duration prolonged**: Agent remains in CSF longer than IV administration
+- **Metabolism**: Slowly absorbed into blood → hepatic metabolism (amide agents) or pseudocholinesterase (ester agents)
+- **Peak plasma levels**: 30-60 minutes post-injection (delayed vs IV)
+- **Systemic toxicity**: Less likely with spinal due to slow absorption
+
+### Epidural Anesthetic Absorption
+- **Faster absorption**: Through dura into CSF + systemic vascular absorption
+- **Epidural fat**: Acts as depot; delays systemic absorption
+- **Peak levels**: 10-20 minutes post-injection (faster than spinal)
+- **Systemic toxicity risk**: Higher if large doses; intravascular injection increases risk`,
+        mnemonics: [
+          { text: "B-A-A-A: Autonomic → sensory (A-delta) → sensory (A-beta) → motor (A-alpha)", explanation: "Blockade sequence" },
+          { text: "Sympathetic block = vasodilation + venous pooling = hypotension + reflex tachy", explanation: "CV pathophysiology" },
+          { text: "High spinal (T4+) = bradycardia + hypotension (blocks cardiac accelerator)", explanation: "Emergency condition" },
+          { text: "PDPH = intracranial hypotension from CSF leak; worse sitting, better lying flat", explanation: "Positional headache" },
+        ],
+        keyPoints: [
+          "Sodium channel blockade → differential fiber blockade; autonomic most sensitive, motor least sensitive",
+          "Sympathetic blockade causes vasodilation + venous pooling = hypotension + initial reflex tachycardia",
+          "High spinal blocks (T4+) = profound bradycardia from loss of cardiac accelerator fibers + unopposed vagus",
+          "PDPH from CSF leakage causing intracranial hypotension; meningeal traction activates pain fibers",
+          "Baricity controls block distribution; position patient pre-injection and maintain position 10-15 minutes",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Regional Anesthesia Pharmacology", edition: "14th" },
+          { book: "Guyton & Hall", chapter: "Neurophysiology of Local Anesthetics", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "spinal-epidural-clinical",
+        title: "Spinal & Epidural Anesthesia - Clinical",
+        estimatedMinutes: 35,
+        summary: "Clinical patient selection, technique pearls, hypotension management, Indian context.",
+        contentMd: `# Spinal & Epidural Anesthesia - Clinical
+
+## Patient Selection: Spinal vs Epidural vs General
+
+### Spinal Anesthesia Ideal For
+- **Duration <2 hours**: Single-shot technique; repeated dosing risky
+- **Lower abdominal**: Cesarean section (spinal standard in India), hysterectomy, appendectomy
+- **Lower extremity**: Hip/knee replacement, femur fracture, below-knee amputation
+- **Perineal**: Hemorrhoidectomy, prostatectomy
+- **Urological**: TURP, cystoscopy
+- **Advantages**: Fast onset, predictable, avoids airway manipulation, no intubation
+
+### Epidural Anesthesia Ideal For
+- **Duration >2 hours**: Catheter allows continuous dosing
+- **Labor analgesia**: Standard in tertiary centers; patient-controlled epidural analgesia (PCEA)
+- **Postoperative analgesia**: Catheter left 24-48 hours for pain management
+- **High-risk airway**: Maintains spontaneous ventilation (no airway compromise)
+- **Thoracic surgery**: Thoracotomy, esophagectomy (provides analgesia for rib/pleural trauma)
+- **Advantages**: Flexible, continuous, lower PDPH risk, excellent postop pain control
+
+### Contraindications to Neuraxial Block
+
+#### Absolute
+- **Patient refusal**: Paramount (autonomy)
+- **Infection at insertion site**: Risk of meningitis/epidural abscess (skin, soft tissue infection)
+- **Anticoagulation/severe coagulopathy**: INR >2, platelets <50,000, on warfarin/heparin
+- **Hemodynamic instability**: Relative (spinal worsens; epidural safer but still risky)
+
+#### Relative
+- **Sepsis**: Controversial (risk of seeding meningitis; epidural safer than spinal)
+- **Uncontrolled hypertension**: Risk of intracranial hemorrhage
+- **Obesity**: Difficult landmark anatomy; still possible with experience
+
+## Practical Technique
+
+### Spinal Block Step-by-Step
+1. **Positioning**: Sitting (easier, better midline) or lateral decubitus (knee-chest position)
+2. **Landmarks**: PSIS at L4; count up/down to identify L3-L4 or L4-L5
+3. **Sterile prep**: Chlorhexidine/povidone-iodine prep, sterile drape
+4. **Local infiltration**: 1% lidocaine subcutaneous to minimize pain
+5. **Needle insertion**: 25-27 G needle, slight cephalad angle (perpendicular to skin)
+6. **Dura puncture**: Feel "pop" or sudden loss of resistance when dura penetrated
+7. **CSF confirmation**: Clear colorless fluid (not blood, not synovial); do NOT inject if uncertain
+8. **Agent injection**: Slowly (1 mL per second) to allow proper CSF mixing/spread
+9. **Needle removal**: Withdraw needle; apply dressing
+10. **Patient positioning**: Supine if hyperbaric (increases spread), head-elevated if hypobaric
+
+### Epidural Block Step-by-Step
+1. **Positioning**: Sitting (better midline) or lateral decubitus (hips flexed 90°)
+2. **Landmarks**: L3 spinous process at iliac crest level; palpate carefully
+3. **Sterile prep**: Chlorhexidine/povidone-iodine; larger sterile field than spinal
+4. **Local infiltration**: 1% lidocaine deeper, through ligaments
+5. **Needle insertion**: 17-18 G Tuohy needle, 45° angle toward midline (facilitates catheter threading)
+6. **Loss of resistance**: Syringe (air or saline) attached to needle; sudden loss when epidural space entered
+7. **Catheter insertion**: Thread 3-5 cm into epidural space (distance beyond needle tip)
+8. **Secure catheter**: Tape securely (multiple anchoring points), label clearly with level/date
+9. **Test dose**: 3 mL with 1:200,000 epinephrine to test for intravascular placement (watch for HR increase)
+10. **Initial injection**: 8-12 mL, assess block height at 20-30 minutes before proceeding
+
+## Management of Common Intraoperative Problems
+
+### Hypotension During Spinal (SBP <90 or >20% drop)
+- **Prevention**: Preload 500-1000 mL crystalloid 15-20 minutes before block
+- **Immediate treatment**:
+  1. **Elevate legs**: Increases venous return (20-30° reverse Trendelenburg)
+  2. **IV fluid bolus**: 500-1000 mL crystalloid rapidly
+  3. **Reassess**: If BP improves, no vasopressor needed
+  4. **Vasopressor**: Phenylephrine 50-100 mcg IV (preferred; pure alpha-1) OR ephedrine 5-10 mg (less preferred; beta effects)
+- **Prophylaxis**: Fluids + low-dose ephedrine infusion effective but not routine
+
+### Bradycardia During Spinal (HR <50)
+- **Assess**: If associated with hypotension, likely high block (T4+) with cardiac accelerator fiber blockade
+- **Emergency treatment**:
+  1. **Atropine**: 0.4-0.6 mg IV (anticholinergic; increases HR)
+  2. **Fluid bolus**: 500-1000 mL IV
+  3. **Vasopressor**: Phenylephrine or epinephrine
+  4. **Intubation**: If RR shallow (respiratory muscle paralysis from very high block)
+
+### Dural Puncture Headache (Develops 24-48 hours)
+- **Symptoms**: Worst headache of life, worse with sitting/standing, better lying flat
+- **Conservative treatment** (first 48 hours):
+  - Bed rest (but mobilization safe if mild)
+  - Aggressive IV hydration
+  - NSAIDs (ibuprofen, aspirin)
+  - Caffeine 500 mg IV (provides 4-6 hour relief; bridges to definitive treatment)
+- **Epidural blood patch** (gold standard if conservative fails):
+  - 15-20 mL autologous blood injected into epidural space
+  - Seals dura hole; 70-90% success rate
+  - Relief often immediate
+  - Can repeat if first fails
+
+### Failed Block (Inadequate Anesthesia)
+- **Causes**: Misdirection, patient movement, insufficient dose, wrong agent concentration
+- **Clinical signs**: Motor blockade absent or inadequate sensory level at incision time
+- **Options**:
+  1. **Supplemental epidural**: If time permits (20-30 minutes for onset)
+  2. **Convert to general anesthesia**: Fastest, safest option
+  3. **Re-attempt spinal**: Higher PDPH risk; usually avoided
+
+## Indian Context Considerations
+
+### High-Volume Setting
+- **Cost-effectiveness**: Spinal/epidural much cheaper than general (no volatile gas, less drug)
+- **Cesarean section**: Spinal standard throughout India (not general anesthesia)
+- **Postoperative pain**: Epidural catheters increasingly common in tertiary centers
+
+### Resource Limitations
+- **Ultrasound guidance**: Limited availability; landmark-based technique predominant
+- **Monitoring**: Often minimal (lack of BP cuff, pulse oximetry); clinical vigilance essential
+- **Vasopressor**: Limited phenylephrine availability; ephedrine or adrenaline used instead
+- **Facilities**: Smaller centers lack ICU beds; shorter anesthesia recovery preferred
+
+### Training & Skills
+- **Spinal high proficiency**: Widely taught, standardized technique, predictable outcomes
+- **Epidural underutilized**: Requires more training; fewer trained anesthesiologists in smaller centers
+- **Regional anesthesia courses**: Increasing availability; still not standard training everywhere`,
+        mnemonics: [
+          { text: "Spinal = quick (10-15 min), short duration (1-4h); Epidural = slow (20-30 min), continuous", explanation: "Clinical timing" },
+          { text: "Hypotension = Elevate legs, Fluids, Vasopressor (sequence)", explanation: "Treatment algorithm" },
+          { text: "PDPH = Positional (worse sitting, better flat), positional (lie down); EBP = gold standard", explanation: "Headache management" },
+          { text: "India: Spinal standard for cesarean; epidural limited by training/cost", explanation: "Regional practice patterns" },
+        ],
+        keyPoints: [
+          "Spinal ideal for short procedures; epidural for long/continuous analgesia",
+          "Preload fluids reduces hypotension incidence to <5%",
+          "High spinal block (T4+) is emergency requiring intubation + resuscitation",
+          "PDPH develops 24-48h; conservative management first; EBP if refractory",
+          "Indian practice: Spinal standard for cesarean; epidural underutilized despite advantages",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Regional Anesthesia Clinical Application", edition: "14th" },
+          { book: "IAA Textbook of Anaesthesia", chapter: "Regional Anesthesia Standards", edition: "3rd" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "spinal-epidural-exam-prep",
+        title: "Spinal & Epidural Anesthesia - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "High-yield facts, drug tables, complication pearls, exam question patterns.",
+        contentMd: `# Spinal & Epidural Anesthesia - Exam Prep
+
+## Quick Reference: Spinal vs Epidural
+
+| Feature | Spinal | Epidural |
+|---------|--------|----------|
+| **Site** | Subarachnoid (CSF) | Epidural space (outside dura) |
+| **Needle gauge** | 25-27 G (thin) | 17-18 G (thick/Tuohy) |
+| **Onset** | 10-15 min | 20-30 min |
+| **Duration** | 1-4 hours | 1-2 hours (single shot); continuous with catheter |
+| **PDPH risk** | 10-15% (develops 24-48h) | <1% (unless dural puncture) |
+| **Hypotension** | Marked, sudden (20-40 mmHg) | Gradual, less severe |
+| **Catheter** | No (single shot) | Yes (continuous) |
+| **Cost** | Cheaper | More expensive (catheter, drugs) |
+| **Common use** | Cesarean, lower limb, <2h | Labor, >2h surgery, postop analgesia |
+
+## Local Anesthetic Drugs
+
+| Agent | Spinal Dose | Epidural Dose | Duration | Notes |
+|-------|-------------|---------------|----------|-------|
+| Lidocaine | 50-75 mg | 300-500 mg | 1-2 hours | Fastest onset; short duration |
+| Bupivacaine | 7.5-15 mg | 75-150 mg | 3-4 hours | Preferred for longer; cardiotoxicity concern |
+| Ropivacaine | 10-15 mg | 100-200 mg | 3-4 hours | Less cardiotoxic; more expensive |
+
+## Baricity Effects (CRITICAL)
+
+- **Hyperbaric** (added dextrose, SG >1.008): Spreads DOWN (to feet/sacrum); patient head-up = restricts cephalad spread
+- **Hypobaric** (SG <1.003): Spreads UP (to head); patient head-down = restricts cephalad spread
+- **Isobaric** (SG ~1.005): Minimal spread; stays near injection site
+
+## High-Yield Facts
+
+**Technique:**
+- Spinal fastest onset (10-15 min vs epidural 20-30 min)
+- Loss of resistance = hallmark of epidural space entry
+- Needle gauge: Spinal thin (25-27 G), epidural thick (17-18 G Tuohy)
+
+**Physiology:**
+- Sympathetic blockade = vasodilation + venous pooling = hypotension + reflex tachycardia
+- High spinal (T4+) = blocks cardiac accelerator fibers → profound bradycardia + hypotension
+- PDPH caused by CSF leakage → intracranial hypotension → meningeal traction
+
+**Complications:**
+- PDPH 10-15% with spinal, <1% with epidural (unless dural puncture)
+- PDPH positional: worse sitting (gravity worsens), better lying flat
+- Hypotension managed: legs up → fluids → vasopressor (phenylephrine preferred)
+- High block emergency: intubate + atropine + fluids + vasopressor
+
+**Contraindications:**
+- Absolute: Refusal, infection at site, anticoagulation/severe coagulopathy, unstable hemodynamics
+- Relative: Sepsis, uncontrolled hypertension, obesity
+
+## Exam Question Patterns
+
+- **Needle gauge for spinal?** → 25-27 G (thin = less PDPH)
+- **Onset time comparison?** → Spinal 10-15 min, epidural 20-30 min
+- **PDPH mechanism?** → CSF leak through dura hole; intracranial hypotension; meningeal traction
+- **Hypotension in spinal cause?** → Sympathetic blockade (vasodilation + ↓ venous return)
+- **Which block continuous?** → Epidural (catheter)
+- **High spinal problem?** → Respiratory paralysis (T2+), profound bradycardia (T1-T4)
+- **Loss of resistance indicates?** → Entry into epidural space
+- **Baricity defines?** → Specific gravity relative to CSF (affects spread direction)
+- **Absolute contraindication?** → Infection at site, anticoagulation, patient refusal
+- **Best agent for long spinal?** → Bupivacaine (3-4 hours vs lidocaine 1-2 hours)
+- **PDPH treatment?** → Conservative first (bed rest, fluids, caffeine); EBP if refractory
+- **Phenylephrine vs ephedrine in spinal?** → Phenylephrine (alpha-1 specific, no tachycardia); ephedrine has beta effects
+
+## Complication Management Algorithms
+
+**Hypotension (SBP <90 or >20% drop):**
+1. Elevate legs (20-30°)
+2. IV fluid bolus 500-1000 mL
+3. If no improvement: Phenylephrine 50-100 mcg IV OR ephedrine 5-10 mg IV
+
+**Bradycardia (HR <50, especially with hypotension):**
+1. Atropine 0.4-0.6 mg IV
+2. Fluid bolus 1000 mL
+3. Vasopressor (phenylephrine or epinephrine)
+4. Prepare intubation if RR shallow
+
+**PDPH (24-48 hours post-procedure):**
+1. Conservative (48h): Bed rest, hydration, NSAIDs, caffeine 500 mg IV
+2. If refractory: Epidural blood patch (15-20 mL autologous blood)`,
+        mnemonics: [
+          { text: "SED = Spinal (small needle, Early onset, Dural puncture risk)", explanation: "Spinal characteristics" },
+          { text: "Sympathetic block = Vasodilation + Venous pooling = Hypotension", explanation: "Mechanism" },
+          { text: "High block = T4+, Respiratory paralysis + profound Bradycardia (emergency)", explanation: "Danger" },
+          { text: "PDPH = Positional, Dural, Puncture, Headache; EBP = cure", explanation: "Headache" },
+          { text: "Phenylephrine = α-1 (pure vasoconstriction), Ephedrine = α + β (may cause tachycardia)", explanation: "Vasopressor choice" },
+        ],
+        keyPoints: [
+          "Spinal: 10-15 min onset, thin needle, 1-4h duration, 10-15% PDPH; epidural: 20-30 min, thick needle, continuous, <1% PDPH",
+          "Hypotension managed: elevate legs → fluids → vasopressor (phenylephrine)",
+          "High spinal (T4+) = respiratory paralysis + severe bradycardia; intubate + resuscitate immediately",
+          "PDPH: positional headache 24-48h; conservative first (fluids, caffeine); EBP 70-90% success",
+          "Baricity critical: hyperbaric spreads down, hypobaric spreads up, isobaric stays put",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Regional Anesthesia Summary", edition: "14th" },
+          { book: "AANA Textbook", chapter: "Spinal and Epidural Anesthesia", edition: "7th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "spinal-epidural-active-recall",
+        title: "Spinal & Epidural Anesthesia - Active Recall",
+        estimatedMinutes: 20,
+        summary: "8 clinical cases: hypotension, high block, dural puncture, failed block, catheter malposition, baricity, PDPH, selection.",
+        contentMd: `# Spinal & Epidural Anesthesia - Active Recall
+
+## Q1: Spinal Hypotension Management
+**Q: 35-year-old female for cesarean section receives spinal with bupivacaine 12 mg. 5 minutes post-injection: BP 85/45 (baseline 120/80), HR 95. Abdomen not prepped. What's happening and immediate management?**
+
+A: **Hypotension from sympathetic blockade** - vasodilation + venous pooling. **Immediate management**: (1) **Elevate legs** (increases venous return; reverse Trendelenburg 20-30°), (2) **IV fluid bolus** 500-1000 mL crystalloid rapidly, (3) **Call surgeon** - delay incision until BP recovers, (4) **Reassess**: If BP improves with fluids alone, no vasopressor needed. If persistent SBP <90: Phenylephrine 50-100 mcg IV (alpha-1 specific; causes pure vasoconstriction without tachycardia). **Why phenylephrine over ephedrine**: Ephedrine has beta effects (may increase HR excessively); phenylephrine cleaner for this scenario. **Prevention**: Preload 1000 mL IV fluid 15-20 minutes pre-block reduces hypotension incidence to <5%. **Key point**: Hypotension self-limited; prophylaxis more cost-effective than treatment post-hoc.
+
+## Q2: High Spinal Block Emergency
+**Q: Hip fracture repair under spinal. 20 minutes post-injection: BP 70/40, HR 35 (severe bradycardia), dyspneic (RR shallow, difficulty breathing), voice hoarse, pupils constricted. Diagnosis and emergency management?**
+
+A: **HIGH SPINAL BLOCK (T1-T4 level or above)** - blocking cardiac accelerator fibers + respiratory muscles. **Key findings**: (1) Profound hypotension + severe bradycardia (HR <50) = hallmark, (2) Respiratory distress (intercostal paralysis → shallow breathing), (3) Altered voice (vagus nerve CN X involvement), (4) Miosis (parasympathetic dominance). **Mechanism**: Loss of T1-T4 sympathetic fibers → unopposed vagal effects → profound bradycardia. **EMERGENCY MANAGEMENT**: (1) **Intubate immediately** + 100% O2 + mechanical ventilation (respiratory muscles paralyzed), (2) **Atropine 0.4-0.6 mg IV** (anticholinergic; blocks vagal bradycardia), (3) **IV fluid bolus** 1000 mL rapid, (4) **Vasopressor**: Epinephrine 0.5 mg IM or IV phenylephrine (cardiac support), (5) **Call ICU** - senior anesthesiologist needed. **Prevention**: (1) Calculate dose based on patient height/age/weight, (2) Lower doses, (3) Patient position control (head-elevated if hyperbaric; restricts cephalad spread), (4) Slower injection. **Outcome**: Most recover fully once intubated + supported; block eventually regresses (duration of agent determines).
+
+## Q3: Accidental Dural Puncture in Epidural Attempt
+**Q: During epidural catheter placement for labor analgesia, anesthesiologist reports "unexpected CSF aspirated through needle." Diagnosis, management, and prognosis?**
+
+A: **ACCIDENTAL DURAL PUNCTURE during epidural attempt** - needle passed through dura into subarachnoid space. **PDPH risk**: ~50% develop PDPH (depends on needle size; 17 G epidural needle → higher PDPH risk than spinal). **Immediate management**: (1) **Remove needle** - pull back (confirm you're out of CSF), (2) **Reattempt epidural** at different interspace (L2-L3 if original attempt was L3-L4), OR (3) **Convert to spinal** (already have dural puncture; can inject local anesthetic into subarachnoid space if patient agrees). **Patient counseling**: "We made a small tear in the membrane around your spinal cord. Headache may develop in the next 1-2 days - it will be worse when sitting up, better when lying flat. If it develops, tell us - we have effective treatment." **PDPH treatment if develops**: (1) Conservative (48 hours): Bed rest, hydration, NSAIDs, caffeine 500 mg IV, (2) If persistent: Epidural blood patch (15-20 mL autologous blood injected into epidural space; seals dura tear; 70-90% effective). **Timing**: Can do EBP anytime after PDPH confirmed; don't need to wait past 48 hours. **Prognosis**: EBP highly effective; symptom relief often immediate.
+
+## Q4: Failed Spinal Block - Inadequate Anesthesia
+**Q: Spinal anesthesia for hemorrhoidectomy. 30 minutes post-injection: patient reports pain during initial incision. Surgical team looks to anesthesiologist. Leg movement still intact (should be paralyzed). What's likely and options?**
+
+A: **FAILED SPINAL BLOCK** - inadequate or absent blockade. **Possible causes**: (1) Needle misdirected (didn't reach subarachnoid), (2) Patient moved during injection, (3) Inadequate dose given, (4) Wrong agent/concentration used, (5) CSF not actually aspirated (synovial fluid mistaken for CSF). **Clinical sign**: Motor blockade absent (leg movement intact) → sensory blockade also inadequate. **Options available**: (1) **Supplemental epidural anesthesia**: Reposition patient, place epidural catheter, inject local anesthetic; takes 20-30 minutes (too slow if surgery imminent), (2) **Convert to general anesthesia**: Intubate, provide general anesthesia (fastest, safest option), (3) **Attempt second spinal**: Higher PDPH risk (multiple dural punctures); usually avoided. **Clinical decision**: Most would convert to general anesthesia (safest, fastest). **Prevention of failure**: (1) Landmark palpation carefully (PSIS at L4), (2) Position patient correctly (sitting for optimal midline), (3) Confirm clear colorless CSF before injection (not blood, not synovial), (4) Use correct dose, (5) Verify block: test sensory level (temperature loss to ice cube) + motor block (can't lift legs) before incision.
+
+## Q5: Epidural Catheter Malposition - Subdural Injection
+**Q: Epidural labor analgesia. After 10 mL bupivacaine injection, patient reports ONLY left-sided numbness; right side sensation intact. What's likely diagnosis?**
+
+A: **SUBDURAL INJECTION** - catheter/needle entered subdural space (between dura and arachnoid) instead of epidural. **Characteristic findings**: (1) **Unilateral block** (only left side), (2) **Slow onset** (30-60 minutes vs 15-20 minutes for proper epidural), (3) **Unpredictable spread**, (4) **Variable motor block**, (5) **Often incomplete anesthesia**. **Why unilateral**: Subdural space narrow (~potential space); agent doesn't diffuse widely as it would in spacious epidural space. **Mechanism of error**: Needle catheter entered between dura and arachnoid at angle; didn't fully traverse dura. **Management**: (1) **STOP further injections** through this catheter, (2) **Remove catheter**, (3) **Reattempt epidural** at different level (L2-L3 if original L3-L4), (4) **Monitor closely**: If any respiratory distress (could be unrecognized high block), prepare intubation. **Why not leave it**: Unilateral block inadequate for labor (patient in pain on right side); need bilateral coverage. **Prevention**: (1) Proper needle insertion technique (loss of resistance clear, not gradual), (2) Slow injection (resistance should remain), (3) Test dosing: 3 mL with 1:200,000 epinephrine first; observe for unilateral signs before full dose, (4) Catheter behavior: should thread smoothly without resistance.
+
+## Q6: Baricity and Unexpected High Block
+**Q: Hip surgery under spinal with hyperbaric bupivacaine 12 mg. Patient positioned supine immediately post-injection. Block extends to T1 (chest) unexpectedly - above surgical requirement. Why? Risks? Prevention?**
+
+A: **BARICITY EFFECT** - hyperbaric solution (dextrose-containing) heavier than CSF; spreads to dependent (lower) areas. **Why unexpected high block**: (1) Hyperbaric agent should spread downward in supine patient (to sacrum/lumbar), but (2) Patient likely moved/elevated head within 10-15 minutes post-injection, OR (3) Head-down tilt applied by surgery staff, causing cephalad migration, (4) Block spread further than calculated due to position changes. **Clinical consequence**: T1-T2 level = intercostal paralysis → respiratory compromise risk. **Risk assessment**: If T4+ involved, also cardiac accelerator fiber blockade → bradycardia. **Prevention**: (1) **Position patient BEFORE injection** and maintain position for 10-15 minutes, (2) **Clear communication**: Tell surgery/recovery staff "no head movements for next 15 minutes; critical for block control", (3) **Head-elevated position** if hypobaric solution used (spreads upward anyway), (4) **Head-down position** if hyperbaric (keeps agent low), (5) **Consider isobaric** if anxious about spread control (minimal gravity effect; stays near injection site). **Management if high block occurs**: (1) Reassure patient, (2) Monitor respiratory rate closely, (3) Supplemental O2, (4) Intubate if RR <10 or SpO2 <90%, (5) Block eventually regresses (duration of agent). **Key point**: Position changes in first 10-15 minutes critical for baricity effects.
+
+## Q7: PDPH Diagnosis and Management Timeline
+**Q: Cesarean section with spinal 48 hours ago. Now: worst headache of life, worse with sitting/standing, neck stiffness, concerned about meningitis. Differentiate PDPH from infection? Management timeline?**
+
+A: **LIKELY POST-DURAL PUNCTURE HEADACHE (PDPH)**, but rule out meningitis. **Differential features**:
+- **PDPH**: Positional (better lying flat, worse sitting), worse with Valsalva/coughing, develops 24-48h post-procedure, neck stiffness from meningeal traction (not infection), NO fever, no photophobia
+- **Meningitis**: Non-positional headache, HIGH fever, CSF shows elevated WBC/protein/positive cultures, meningeal signs (photophobia, neck rigidity from inflammation)
+
+**Diagnostic approach**: (1) **Check temperature**: If febrile >38.5°C, meningitis more likely, (2) **Repeat positional test**: Lie patient flat; if PDPH, symptoms improve dramatically within 5 minutes, (3) **Lumbar puncture if meningitis suspected**: CSF elevated lymphocytes, elevated protein, negative cultures. **PDPH management timeline** (first attempt conservative):
+- **Hours 0-48**: Bed rest (though mobilization safe if mild), aggressive IV hydration (3L/day), NSAIDs (ibuprofen, aspirin), caffeine 500 mg IV (provides 4-6h relief)
+- **After 48 hours**: If symptoms persist despite conservative care, **Epidural blood patch** (gold standard):
+  - 15-20 mL autologous blood injected into epidural space (seals dura tear)
+  - 70-90% first-time success rate
+  - Relief often immediate (within 5-10 minutes post-injection)
+  - Can repeat if first attempt fails (90%+ cumulative success)
+
+**Prognosis**: EBP highly effective; most patients return to normal within 24 hours post-procedure.
+
+## Q8: Spinal vs Epidural Selection for Long Surgery
+**Q: 56-year-old for open prostate cancer surgery (3-4 hour procedure). Why might epidural be preferred over spinal? Discuss advantages of epidural.**
+
+A: **EPIDURAL PREFERRED for this 3-4 hour case** because:
+
+1. **Duration**: Spinal agents (lidocaine 1-2h, bupivacaine 3-4h) inadequate for 3-4 hour surgery; would need re-dosing or conversion to general. Epidural catheter allows **continuous infusion** (titrate local anesthetic + opioid as needed throughout).
+
+2. **Continuous analgesia**: Epidural catheter remains in place 24-48 hours for **postoperative pain relief** (reduces opioid use, side effects, complications).
+
+3. **Hemodynamic stability**: Epidural onset **gradual** (20-30 min) → slower sympathetic blockade → less precipitous hypotension. Spinal = sudden hypotension (20-40 mmHg immediately).
+
+4. **Flexibility**: During surgery, can **adjust block intensity** (increase concentration/rate if inadequate; decrease if too high). Spinal = fixed dose; no adjustment.
+
+5. **Postoperative recovery**: Better pain control → faster mobilization, reduced DVT/PE risk, better pulmonary function.
+
+**Why NOT spinal**: (1) Spinal agents don't last 3-4 hours adequately, (2) Re-dosing requires second dural puncture (PDPH risk), (3) Conversion to general defeats purpose of regional, (4) Single-shot spinal inadequate planning for this duration.
+
+**Clinical pearl**: **Epidural superior for prolonged surgery (>2 hours); spinal better for short procedures (<2 hours)**.
+
+**Additional considerations**: If patient has significant cardiac comorbidities, epidural safer (maintains spontaneous ventilation, avoids intubation risk).`,
+        mnemonics: [
+          { text: "Hypotension = Elevate legs, Fluids, Vasopressor (E-F-V sequence)", explanation: "Management algorithm" },
+          { text: "High spinal = Intubate, Atropine, fluids, Vasopressor (IAVP)", explanation: "Emergency response" },
+          { text: "PDPH = Positional (worse sitting), Dural puncture, Puncture headache; EBP = cure", explanation: "Headache management" },
+          { text: "Baricity BEFORE injection, position AFTER injection for 10-15 min critical", explanation: "Prevention strategy" },
+          { text: "Spinal = short (<2h), Epidural = long (>2h) procedures", explanation: "Selection guide" },
+        ],
+        keyPoints: [
+          "Hypotension: legs up → fluids → vasopressor (phenylephrine); prevent with preload",
+          "High spinal (T4+) emergency: intubate + atropine + fluids + vasopressor immediately",
+          "Dural puncture: 50% PDPH risk; conservative first, EBP if refractory",
+          "Failed block: convert to general (safest, fastest); prevention = careful landmark + CSF confirmation",
+          "Epidural malposition (subdural): unilateral block; remove catheter + reattempt",
+          "Baricity: position BEFORE injection; maintain position 10-15 min critical",
+          "Spinal ideal <2h, epidural ideal >2h; selection based on surgery duration",
+        ],
+        textbookRefs: [
+          { book: "Lee's Synopsis of Anaesthesia", chapter: "Regional Anesthesia Case Management", edition: "14th" },
+          { book: "Aitkenhead's Textbook of Anaesthesia", chapter: "Regional Anesthesia Complications", edition: "6th" },
+        ],
+      },
+    ],
+  },
 ];
