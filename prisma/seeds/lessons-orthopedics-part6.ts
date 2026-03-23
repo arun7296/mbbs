@@ -1,19 +1,459 @@
-// Orthopedics Part 6: Remaining Lower Limb, Spine, Bone Diseases
+import type { TopicLessons } from "./content-loader";
 
-export const orthopedicsPart6Lessons = [
-  // OR-MOD-03-TOP-01: Femur Fractures
+export const orthopedicsPart6Lessons: TopicLessons[] = [
   {
     topicCode: "OR-MOD-03-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "femur-fractures-foundation",
+        slug: "femur-fractures-layer-1-foundation",
         title: "Femur Fractures - Foundation",
+        estimatedMinutes: 20,
+        summary: "Epidemiology, anatomy, and classification of femoral fractures by location and displacement.",
+        contentMd: `# Femur Fractures - Foundation
+
+## Epidemiology
+- **Incidence**: 1 per 1000 population/year in elderly
+- **Gender**: Female > Male (3:1 after age 60 due to osteoporosis)
+- **Mechanism**: High-energy trauma (younger), minimal trauma (elderly falls)
+- **Mortality**: 15-20% within 1 year of hip fracture in elderly
+- **Indian context**: Rising incidence due to aging population
+
+## Femoral Fracture Types by Location
+
+### Femoral Neck Fractures
+- **Location**: Between femoral head and greater trochanter
+- **Incidence**: 50% of hip fractures
+- **Intracapsular**: Medial to capsular attachment; higher AVN risk
+- **Extracapsular**: Lateral to capsule; better prognosis
+- **Garden Classification**:
+  - Grade 1: Incomplete (stress fracture)
+  - Grade 2: Complete but undisplaced
+  - Grade 3: Displaced <50%
+  - Grade 4: Complete displacement (>50%)
+
+### Intertrochanteric Fractures
+- **Location**: Between greater and lesser trochanter
+- **Incidence**: 45% of hip fractures
+- **Extracapsular**: Better blood supply, lower AVN risk
+- **Evans classification**: Type I (stable) to Type IV (unstable, 4-part)
+- **Key feature**: Significant medial comminution predicts instability
+
+### Subtrochanteric Fractures
+- **Location**: Below lesser trochanter (within 5 cm)
+- **Incidence**: 5-10% of hip fractures
+- **High-energy injury**: More common in younger patients
+- **Instability**: Significant medial angulation forces from hip adductors
+
+### Femoral Shaft Fractures
+- **Mechanism**: High-energy trauma (RTA, fall from height)
+- **Age**: Any age
+- **Classification**: Transverse, oblique, comminuted, segmental
+- **Associated injuries**: Femoral artery injury (2-5%), compartment syndrome
+
+## Clinical Features
+- **Pain**: Groin or hip pain (neck), thigh pain (shaft)
+- **Mobility**: Unable to bear weight
+- **Limb position**: External rotation, apparent shortening (if displaced)
+- **Deformity**: May not be obvious in undisplaced fractures
+- **Neurovascular**: Assess sensation, pulses distal to fracture
+
+## Initial Assessment
+### History
+- Mechanism of injury (fall, trauma)
+- Timing of injury
+- Associated injuries
+- Comorbidities
+- Mobility status before injury
+
+### Examination
+- Inspect: Deformity, shortening, swelling, bruising
+- Palpate: Tenderness, crepitus
+- Neurovascular: Distal pulses, sensation, motor function
+- Assess pain, ROM (limited due to pain)`,
+        mnemonics: [
+          { text: "Hip Fractures: NIS", explanation: "Neck (50%), Intertrochanteric (45%), Subtrochanteric (5%)" },
+          { text: "Garden Grades 1-4", explanation: "Incomplete to Full displacement" }
+        ],
+        keyPoints: [
+          "Neck = 50%, Intertrochanteric = 45%, Subtrochanteric = 5% of hip fractures",
+          "Garden grading: undisplaced (1-2) vs displaced (3-4)",
+          "Intracapsular = AVN risk; extracapsular = better healing",
+          "Elderly: osteoporosis; Young: high-energy trauma",
+          "Femoral shaft fractures associated with vascular/compartment syndrome risk"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Hip Fractures", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Femoral Fractures", edition: "10th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "femur-fractures-layer-2-mechanism",
+        title: "Femur Fractures - Vascular Supply and Complications",
         estimatedMinutes: 25,
-        summary: "Classification of femoral fractures: neck, intertrochanteric, subtrochanteric, shaft.",
-        contentMd: "# Femur Fractures - Foundation\n\n## Epidemiology\n- **Incidence**: 1 per 1000 population/year in elderly\n- **Gender**: Female > Male (3:1 after age 60 due to osteoporosis)\n- **Mechanism**: High-energy trauma (younger), minimal trauma (elderly)\n- **Mortality**: 15-20% within 1 year of hip fracture in elderly\n\n## Classification by Location\n\n### Femoral Neck Fractures\n- **Location**: Between femoral head and greater trochanter\n- **Incidence**: 50% of hip fractures\n- **Intracapsular**: Medial to capsular attachment; higher AVN risk\n- **Extracapsular**: Lateral; better prognosis\n\n### Intertrochanteric Fractures\n- **Location**: Between greater and lesser trochanter\n- **Incidence**: 45% of hip fractures\n- **Extracapsular**: Better blood supply, lower AVN risk\n- **Evans classification**: Type I (stable) to Type IV (unstable, 4-part)\n\n### Subtrochanteric Fractures\n- **Location**: Below lesser trochanter (within 5 cm)\n- **Incidence**: 5-10% of hip fractures\n- **High-energy injury**: More common in younger patients\n- **Instability**: Significant medial angulation forces\n\n### Femoral Shaft Fractures\n- **Mechanism**: High-energy trauma (RTA, fall from height)\n- **Age**: Any age\n- **Classification**: Transverse, oblique, comminuted, segmental\n\n## Femoral Neck Fractures: Garden Classification\n- **Grade 1**: Incomplete (stress fracture)\n- **Grade 2**: Complete but undisplaced\n- **Grade 3**: Displaced <50%\n- **Grade 4**: Complete displacement\n\n## Clinical Features\n- **Pain**: Groin or hip pain\n- **Mobility**: Unable to bear weight\n- **Limb position**: External rotation, apparent shortening (if displaced)\n- **Deformity**: May not be obvious in undisplaced fractures,\n        mnemonics: [\n          { text: \"Femur hip fractures: NISS\", explanation: \"Neck (50%), Intertrochanteric (45%), Subtrochanteric (5%)\" },\n          { text: \"Garden grades 1-4: stress to full displacement\", explanation: \"Grade 1 incomplete, Grade 4 full displacement\" }\n        ],\n        keyPoints: [\n          \"Neck fractures = 50% of hip fractures; intertrochanteric = 45%\",\n          \"Garden grading: undisplaced (1-2) vs displaced (3-4)\",\n          \"Intracapsular = AVN risk; extracapsular = union better\",\n          \"Elderly: osteoporosis common cause; young: high-energy trauma\"\n        ],\n        textbookRefs: [\n          { book: \"Maheshwari's Orthopedics\", chapter: \"Hip Fractures\", edition: \"Latest\" },\n          { book: \"Apley & Solomon\", chapter: \"Femoral Fractures\", edition: \"9th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"femur-fractures-mechanism\",\n        title: \"Femur Fractures - Vascular & Healing\",\n        estimatedMinutes: 30,\n        summary: \"Blood supply, complications (AVN, non-union), healing patterns.\",\n        contentMd: "# Femur Fractures - Vascular Supply & Complications\\n\\n## Femoral Head Blood Supply\\n- **Medial femoral circumflex artery (MFCA)**: Main supply (posterolateral)\\n- **Lateral femoral circumflex artery (LFCA)**: Minor contribution\\n- **Ligamentum teres artery**: Small contribution\\n- **Intracapsular fractures**: MFCA disruption → AVN risk 30-60%\\n\\n## Avascular Necrosis (AVN)\\n- **Definition**: Femoral head bone death from loss of blood supply\\n- **Timing**: May appear months to years after injury\\n- **Incidence**: Garden 3-4 fractures = 30-60% AVN risk\\n\\n### Risk Factors for AVN\\n- Displaced neck fractures (Garden 3-4)\\n- Delay in treatment >24 hours\\n- Inadequate reduction\\n- Age >50 years\\n\\n### Symptoms of AVN\\n- Persistent pain\\n- Groin pain on movement\\n- Limp\\n- Eventually leads to OA (secondary)\\n\\n### Investigation\\n- X-ray: late finding (crescent sign, sclerosis)\\n- MRI: Early detection (T2 signal loss in femoral head)\\n\\n## Non-union & Delayed Union\\n- **Intracapsular neck fractures**: 15-30% non-union rate\\n- **Intertrochanteric**: <5% non-union (better blood supply)\\n- **Risk factors**: Displacement, poor reduction, early weight-bearing\\n- **Timing**: Union typically 12-16 weeks; non-union if >6 months\\n\\n## Healing Pattern\\n- **Neck fractures**: Slower (4-6 months) due to intracapsular location\\n- **Intertrochanteric**: Faster (8-12 weeks) due to cancellous bone\\n- **Subtrochanteric**: Slower (12-16 weeks) due to muscle forces,\\n        keyPoints: [\\n          \\\"MFCA supplies femoral head; disruption in neck fractures causes AVN\\\",\\n          \\\"AVN risk: displaced neck fractures 30-60%\\\",\\n          \\\"Non-union: neck 15-30%; intertrochanteric <5%\\\",\\n          \\\"MRI detects early AVN; X-ray shows late findings (crescent sign)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Hip Fractures\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Apley & Solomon\\\", chapter: \\\"Femoral Head AVN\\\", edition: \\\"9th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"femur-fractures-management\\\",\\n        title: \\\"Femur Fractures - Management\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Conservative vs surgical management, implant selection, outcomes.\\\",\\n        contentMd: ``# Femur Fractures - Management\\n\\n## Neck Fractures Management\\n\\n### Undisplaced (Garden 1-2)\\n- **Conservative**: Bed rest x 2-4 weeks (if high surgical risk)\\n- **Surgical**: Internal fixation (preferred)\\n  - **Cannulated screws**: 3 parallel screws\\n  - **Timing**: ASAP (within 24 hours)\\n  - **Success rate**: 90% union if properly reduced\\n\\n### Displaced (Garden 3-4)\\n- **Age <65 years**: ORIF with cannulated screws or plate\\n- **Age >65 years**: Hemiarthroplasty (replacement)\\n  - **Advantage**: No AVN risk; immediate weight-bearing\\n  - **Disadvantage**: Implant loosening; higher revision risk\\n  - **Success**: 85% pain-free at 2 years\\n\\n## Intertrochanteric Fractures\\n\\n### Stable Fractures (Evans I)\\n- **Conservative**: Traction x 2 weeks then protected weight-bearing\\n- **Surgical**: DHS (Dynamic Hip Screw) or IM nail (locked)\\n\\n### Unstable Fractures (Evans II-IV)\\n- **Surgical**: Locked IM nail (cephalomedullary nail)\\n  - **Advantage**: Resists medial angulation, varus\\n  - **Success**: Union 95% at 12 weeks\\n  - **Weight-bearing**: Full immediately\\n\\n### DHS vs IM Nail\\n- **DHS**: Lower cost, simpler surgery; shaft fractures uncommon\\n- **IM nail**: Better for unstable, subtrochanteric, reverse obliquity\\n- **Both**: Effective if properly inserted\\n\\n## Subtrochanteric Fractures\\n\\n### Management\\n- **Always surgical**: High-energy, unstable\\n- **IM nail with proximal locking**: Gold standard\\n- **Alternative**: Plate fixation (95-plate, compression plate)\\n- **Weight-bearing**: Protected initially; full weight-bearing after 8-12 weeks\\n\\n## Femoral Shaft Fractures\\n\\n### Operative Management\\n- **IM nailing**: Gold standard (locked IM nail)\\n- **Plate fixation**: Alternative (ORIF with compression plate)\\n- **Traction**: Temporary; not definitive\\n\\n### IM Nailing Advantages\\n- Early mobilization\\n- Lower infection rate\\n- Excellent union rate (95%)\\n- Allows weight-bearing early\\n\\n## Postoperative Protocol\\n- **Deep vein thrombosis prophylaxis**: Enoxaparin or warfarin\\n- **Antibiotics**: 24-48 hours post-op\\n- **Mobilization**: Begin day 1; ambulation with walker\\n- **Weight-bearing**: Depends on fracture stability and fixation\\n- **Follow-up**: X-rays at 6 weeks, 3 months to assess union,\\n        keyPoints: [\\n          \\\"Undisplaced neck: ORIF with 3 screws; 90% union\\\",\\n          \\\"Displaced neck >65 yrs: hemiarthroplasty; <65 yrs: ORIF or THA\\\",\\n          \\\"Intertrochanteric unstable: locked IM nail preferred\\\",\\n          \\\"Subtrochanteric: always surgical; IM nail gold standard\\\",\\n          \\\"Shaft fractures: IM nailing; 95% union rate\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Hip Fractures Management\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Surgery\\\", edition: \\\"28th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"femur-fractures-exam\\\",\\n        title: \\\"Femur Fractures - Exam Preparation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Case analysis and surgical decision-making.\\\",\\n        contentMd: ``# Femur Fractures - Exam Preparation\\n\\n## Case 1: Displaced Femoral Neck Fracture\\n**Scenario**: 72-year-old female, Garden 4 femoral neck fracture, high comorbidities (COPD, HTN).\\n\\n**Diagnosis**: Displaced femoral neck fracture (intracapsular).\\n\\n**Management**:\\n- **Surgery**: Hemiarthroplasty (not ORIF)\\n- **Reason**: Age >65, displaced; AVN risk high with ORIF; hemiarthroplasty allows immediate weight-bearing\\n- **Timing**: Within 48 hours\\n- **Post-op**: DVT prophylaxis, early ambulation\\n- **Expected outcome**: 85% pain relief; 50% able to return to prior function\\n\\n## Case 2: Unstable Intertrochanteric Fracture\\n**Scenario**: 65-year-old male, Evans IV (unstable 4-part) intertrochanteric fracture.\\n\\n**Management**:\\n- **Surgery**: Locked IM nail (cephalomedullary nail)\\n- **Reason**: Unstable fracture resists varus/medial angulation\\n- **Weight-bearing**: Full immediate post-op\\n- **Union**: 95% at 12 weeks\\n- **Expected outcome**: Return to ambulation in 4-6 weeks\\n\\n## Case 3: Subtrochanteric Fracture\\n**Scenario**: 45-year-old male, RTA, subtrochanteric fracture with 3 cm medial angulation.\\n\\n**Management**:\\n- **Surgery**: Locked IM nail with proximal locking\\n- **Reason**: High-energy, significant instability; IM nail resists deforming forces\\n- **Protected weight-bearing**: 6-8 weeks\\n- **Full weight-bearing**: 12 weeks\\n- **Union**: Expected 16-20 weeks,\\n        keyPoints: [\\n          \\\"Displaced neck >65 yrs: hemiarthroplasty preferred (AVN, immediate weight-bearing)\\\",\\n          \\\"Unstable intertrochanteric: locked IM nail (resists varus)\\\",\\n          \\\"Subtrochanteric: always IM nail; proximal locking essential\\\",\\n          \\\"DVT prophylaxis mandatory; early mobilization critical\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Hip Fractures Management\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Surgery\\\", edition: \\\"28th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"femur-fractures-qa\\\",\\n        title: \\\"Femur Fractures - Q&A\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"Key MCQs on femoral fractures.\\\",\\n        contentMd: ``# Femur Fractures - Q&A\\n\\n## Q1: A 70-year-old female has a Garden 3 femoral neck fracture. What is the risk of avascular necrosis?\\n\\n**Answer**: 30-50% for displaced neck fractures (Garden 3-4). Blood supply from MFCA is disrupted in intracapsular fractures.\\n\\n## Q2: What is the gold standard surgical treatment for an unstable intertrochanteric fracture (Evans IV)?\\n\\n**Answer**: Locked intramedullary nail (cephalomedullary nail). It resists medial angulation and varus collapse.\\n\\n## Q3: A 68-year-old female with Garden 4 neck fracture and multiple comorbidities. Why is hemiarthroplasty preferred over ORIF?\\n\\n**Answer**: (1) AVN risk is high (>50%) in displaced neck fractures. (2) Immediate weight-bearing without non-union risk. (3) Better outcomes in elderly with comorbidities.\\n\\n## Q4: What is the typical union time for an intertrochanteric fracture treated with IM nailing?\\n\\n**Answer**: 12 weeks (8-12 weeks). Extracapsular fractures have better blood supply than neck fractures.\\n\\n## Q5: A patient has a subtrochanteric fracture with significant medial angulation. Why is proximal locking of the IM nail critical?\\n\\n**Answer**: Subtrochanteric fractures are subjected to medial angulation forces from hip adductors. Proximal locking provides resistance to these deforming forces and prevents varus collapse.,\\n        keyPoints: [\\n          \\\"AVN risk: displaced neck 30-60%; undisplaced <10%\\\",\\n          \\\"Hemiarthroplasty: preferred for elderly displaced neck fractures\\\",\\n          \\\"IM nailing: gold standard for unstable intertrochanteric and subtrochanteric\\\",\\n          \\\"Union: neck 4-6 months; intertrochanteric 8-12 weeks\\\",\\n          \\\"Proximal locking essential in subtrochanteric fractures\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Hip Fractures\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Apley & Solomon\\\", chapter: \\\"Femoral Fractures\\\", edition: \\\"9th\\\" }\\n        ]\\n      }\\n    ]\\n  },\\n  // OR-MOD-03-TOP-02: Knee Injuries\\n  {\\n    topicCode: \\\"OR-MOD-03-TOP-02\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"knee-injuries-foundation\\\",\\n        title: \\\"Knee Injuries - Foundation\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Anatomy, meniscal vs ligamentous injuries, classification.\\\",\\n        contentMd: ``# Knee Injuries - Foundation\\n\\n## Knee Anatomy\\n- **Tibiofemoral joint**: Hinge joint; primary weight-bearing\\n- **Patellofemoral joint**: Gliding joint\\n- **Menisci**: Fibrocartilage discs; shock absorption, load distribution\\n  - **Medial meniscus**: Larger, C-shaped; attached to joint capsule\\n  - **Lateral meniscus**: Smaller, O-shaped; looser capsular attachment\\n- **Cruciate ligaments**: ACL (anterior), PCL (posterior)\\n- **Collateral ligaments**: MCL (medial), LCL (lateral)\\n\\n## McMurray's Test\\n- **Technique**: Flex knee 90°, externally rotate tibia (McMurray's), extend\\n- **Positive**: Clicking or pain (meniscal tear)\\n- **Sensitivity**: 70% for meniscal tears\\n- **Specificity**: 80%\\n\\n## Lachman Test (ACL)\\n- **Technique**: Knee 30° flexion, pull tibia forward\\n- **Positive**: Anterior tibial laxity >5mm or absent end-feel\\n- **Sensitivity**: 85% for ACL tears\\n- **Specificity**: 95%\\n\\n## Pivot Shift Test\\n- **Positive**: Subluxation of tibia at 20-30° flexion, reduction at 90°\\n- **Most specific**: 98% for ACL rupture\\n\\n## Posterior Drawer Test (PCL)\\n- **Technique**: Knee 90°, push tibia backward\\n- **Positive**: Posterior tibial laxity\\n- **Sensitivity**: 80% for PCL tears,\\n        mnemonics: [\\n          { text: \\\"Knee ligaments: ACL, PCL, MCL, LCL\\\", explanation: \\\"Anterior/posterior cruciate, medial/lateral collateral\\\" },\\n          { text: \\\"ACL tests: Lachman (sensitive), Pivot shift (specific)\\\", explanation: \\\"Lachman 30° flexion; Pivot shift checks subluxation\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Meniscal tears cause mechanical symptoms (locking, clicking)\\\",\\n          \\\"Cruciate ligament tears cause instability (pivot shift, Lachman positive)\\\",\\n          \\\"McMurray's test 70% sensitive; Lachman 85% sensitive for ACL\\\",\\n          \\\"Pivot shift 98% specific for ACL tear\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Knee Injuries\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Apley & Solomon\\\", chapter: \\\"Knee Disorders\\\", edition: \\\"9th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"knee-injuries-meniscal\\\",\\n        title: \\\"Knee Injuries - Meniscal Tears\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Meniscal tear patterns, diagnosis, management.\\\",\\n        contentMd: ``# Meniscal Tears - Mechanisms & Types\\n\\n## Common Tear Patterns\\n- **Bucket-handle tear**: Long longitudinal tear; can displace into notch\\n- **Radial tear**: From periphery toward center\\n- **Horizontal tear**: Parallel to tibial surface\\n- **Degenerative tear**: Fragmented; associated with OA\\n\\n## Mechanisms\\n- **Sports injury**: Twisting knee during deceleration\\n- **Occupational**: Prolonged squatting (meniscus injury in cricket)\\n- **Age**: Young = traumatic; elderly = degenerative\\n\\n## Clinical Features\\n- **Mechanical locking**: Sudden inability to extend knee (bucket-handle tear)\\n- **Clicking/catching**: McMurray's positive\\n- **Effusion**: Joint swelling (varies)\\n- **Tender joint line**: Medial or lateral\\n\\n## Investigation\\n- **McMurray's test**: 70% sensitive\\n- **Joint line tenderness**: 70% sensitive\\n- **MRI**: 90% sensitive; gold standard\\n  - T2-weighted images show tear hyperintensity\\n  - Assesses tear location, pattern, irreparability\\n\\n## Management\\n\\n### Uncomplicated Peripheral Tears\\n- **Conservative**: RICE (rest, ice, compression, elevation), NSAIDs, PT\\n- **Arthroscopic repair**: If persistent symptoms\\n- **Success rate**: 85-90% healing if sutured peripherally\\n\\n### Displaced Bucket-Handle Tears\\n- **Surgical**: Arthroscopic reduction ± meniscal repair\\n- **Usually needs**: Repair/suturing (peripheral) or meniscectomy (central)\\n\\n### Degenerative Tears\\n- **Conservative first**: Activity modification, PT, NSAIDs\\n- **Arthroscopic meniscectomy**: If failed conservative\\n- **Arthritis risk**: Higher if large meniscectomy performed\\n\\n## Meniscectomy vs Meniscal Repair\\n- **Repair**: Preserves meniscus; better long-term outcomes\\n- **Meniscectomy**: Faster healing; higher secondary OA risk (40% at 10 years)\\n- **Partial meniscectomy**: Remove only torn segment; better than total,\\n        keyPoints: [\\n          \\\"Mechanical locking suggests bucket-handle tear; emergency arthroscopy\\\",\\n          \\\"MRI gold standard (90% sensitive); shows tear pattern\\\",\\n          \\\"Peripheral tears: repair preferred (preserve meniscus)\\\",\\n          \\\"Meniscectomy increases OA risk 40% at 10 years\\\",\\n          \\\"Arthroscopic surgery: day case; quick recovery\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Knee Injuries\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Apley & Solomon\\\", chapter: \\\"Meniscal Disorders\\\", edition: \\\"9th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"knee-injuries-acl\\\",\\n        title: \\\"Knee Injuries - ACL Tear\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"ACL tear mechanism, diagnosis, surgical vs conservative management.\\\",\\n        contentMd: ``# ACL Tear - Diagnosis & Management\\n\\n## Mechanism\\n- **Deceleration**: Sudden knee deceleration with foot fixed\\n- **Pivoting**: Pivoting on flexed knee\\n- **Direct blow**: To posterior knee\\n- **Non-contact**: Most common in sports\\n\\n## Acute Presentation\\n- **Pain**: Acute onset; often hear \\\"pop\\\"\\n- **Swelling**: Hemarthrosis develops within 2-4 hours\\n- **Instability**: Knee feels \\\"loose\\\"\\n- **Immobility**: Often can't continue activity\\n\\n## Diagnosis\\n\\n### Clinical Tests\\n- **Lachman test**: 85% sensitive at 30° flexion\\n- **Anterior drawer**: 65% sensitive (posterior capsule relaxation required)\\n- **Pivot shift test**: 98% specific but difficult to elicit\\n- **Loss of end-feel**: Positive in both Lachman and drawer\\n\\n### Imaging\\n- **X-ray**: Rule out fracture\\n- **MRI**: 95% sensitive and specific; shows tear location, associated injuries\\n  - Segond fracture (bony avulsion of iliotibial band insertion)\\n  - Associated meniscal tears (40%)\\n  - PCL injury (20%)\\n\\n## Conservative Management\\n- **Indications**: Low-demand patients, partial tears, or wish to delay surgery\\n- **Brace**: Functional knee brace\\n- **PT**: Quadriceps, hamstring strengthening; proprioceptive training\\n- **Activity modification**: Avoid cutting, pivoting sports\\n- **Success**: 50% able to return to high-demand sports\\n\\n## Surgical Management: ACL Reconstruction\\n\\n### Indications\\n- **Symptomatic instability**: Pivot shift or patient feels instability\\n- **High-demand athlete**: Sports requiring cutting, jumping\\n- **Young age**: Better long-term function\\n- **Timing**: 3-6 weeks after injury (allow swelling to resolve)\\n\\n### Graft Options\\n- **Hamstring autograft**: High strength, good outcomes\\n- **BTB (Bone-Tendon-Bone)**: Patella tendon; excellent initial strength\\n- **Allograft**: Cadaveric; lower rejection; slight higher re-tear rate\\n- **Synthetic**: Rarely used\\n\\n### Surgical Technique\\n- **Arthroscopic reconstruction**: Gold standard\\n- **Tunnel placement**: Proper anatomic placement critical\\n- **Fixation**: Interference screws, suspensory fixation\\n\\n### Success Rates\\n- **Return to sport**: 80-90% return to recreational level; 60-70% return to competitive level\\n- **Re-rupture**: 5-10% within first 2 years\\n- **Graft failure**: Proper rehabilitation crucial\\n\\n## Postoperative Protocol\\n- **Phase 1 (0-6 weeks)**: Protect graft; ROM 0-90°; quad sets, hamstring curls\\n- **Phase 2 (6-12 weeks)**: Advance ROM; proprioceptive training; walking\\n- **Phase 3 (3-6 months)**: Strengthening; jogging; sport-specific training\\n- **Return to sport**: 6-12 months,\\n        keyPoints: [\\n          \\\"Lachman test most sensitive (85%); Pivot shift most specific (98%)\\\",\\n          \\\"MRI gold standard; assesses associated injuries (40% meniscal tears)\\\",\\n          \\\"Conservative: 50% return to high-demand sports\\\",\\n          \\\"Surgical: 80-90% return to recreational; 60-70% competitive\\\",\\n          \\\"Proper rehabilitation critical; graft protection first 6 months\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"ACL Injuries\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Apley & Solomon\\\", chapter: \\\"Ligamentous Injuries\\\", edition: \\\"9th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"knee-injuries-exam\\\",\\n        title: \\\"Knee Injuries - Exam Preparation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Case analysis and management decisions.\\\",\\n        contentMd: ``# Knee Injuries - Exam Preparation\\n\\n## Case 1: Acute Hemarthrosis with Instability\\n**Scenario**: 25-year-old football player, acute non-contact knee injury, immediate swelling, Lachman positive, Pivot shift positive.\\n\\n**Diagnosis**: ACL tear (acute).\\n\\n**Management**:\\n- **Immediate**: RICE, avoid weight-bearing, ice, compression\\n- **Imaging**: MRI to confirm ACL and assess meniscal/collateral involvement\\n- **Timing**: Plan ACL reconstruction 3-6 weeks (allow swelling to resolve)\\n- **Graft**: Hamstring autograft preferred\\n- **Expected outcome**: 85% return to sports; 60% return to competitive level\\n- **Rehabilitation**: 6-12 months post-op before return to sport\\n\\n## Case 2: Chronic Meniscal Tear\\n**Scenario**: 45-year-old with 3-month history knee clicking, McMurray's positive, no mechanical locking, preserved ROM.\\n\\n**Diagnosis**: Meniscal tear (likely degenerative).\\n\\n**Management**:\\n- **Imaging**: MRI to assess tear pattern and peripherality\\n- **Conservative first**: Activity modification, NSAIDs, PT\\n- **If fails**: Arthroscopic partial meniscectomy\\n- **Expected outcome**: Good short-term relief; monitor for early OA\\n\\n## Case 3: Bucket-Handle Tear\\n**Scenario**: 30-year-old, acute knee injury, locked knee in flexion, cannot extend.\\n\\n**Diagnosis**: Bucket-handle meniscal tear (emergency).\\n\\n**Management**:\\n- **Urgent arthroscopy**: Reduce displaced tear\\n- **Repair vs meniscectomy**: Peripheral tears → repair; central/complex → meniscectomy\\n- **Expected outcome**: 85-90% successful if repaired peripherally,\\n        keyPoints: [\\n          \\\"ACL tear: Lachman/Pivot shift positive; MRI for confirmation\\\",\\n          \\\"ACL reconstruction: 80-90% return to sport; 6-12 months rehab\\\",\\n          \\\"Meniscal tear: peripheral → repair; central/degenerative → meniscectomy\\\",\\n          \\\"Bucket-handle tear: mechanical locking → urgent arthroscopy\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Knee Injuries\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Surgery\\\", edition: \\\"28th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"knee-injuries-qa\\\",\\n        title: \\\"Knee Injuries - Q&A\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"Key MCQs on knee injuries.\\\",\\n        contentMd: ``# Knee Injuries - Q&A\\n\\n## Q1: A patient has a positive Lachman test and Pivot shift test. What ligament is most likely injured?\\n\\n**Answer**: ACL (Anterior Cruciate Ligament). Lachman test (85% sensitive) and Pivot shift (98% specific) are gold standards for ACL rupture.\\n\\n## Q2: What is the recommended timing for ACL reconstruction after acute rupture?\\n\\n**Answer**: 3-6 weeks after injury. Allows hemarthrosis to resolve, swelling to decrease, and regain baseline ROM before surgery.\\n\\n## Q3: A meniscal tear repair vs meniscectomy: when is repair preferred?\\n\\n**Answer**: Peripheral meniscal tears (red-red or red-white zones) with good blood supply → repair preferred. Central tears and degenerative tears → meniscectomy. Repair preserves meniscus and decreases OA risk.\\n\\n## Q4: What is the most specific physical examination finding for ACL tear?\\n\\n**Answer**: Pivot shift test (98% specific). Positive test confirms ACL tear. Lachman is more sensitive (85%) but less specific.\\n\\n## Q5: Post-ACL reconstruction, what percentage of patients can return to competitive sports?\\n\\n**Answer**: 60-70% return to competitive sports; 80-90% return to recreational sports. Success depends on graft quality, rehabilitation compliance, and patient motivation.,\\n        keyPoints: [\\n          \\\"Lachman 85% sensitive; Pivot shift 98% specific for ACL\\\",\\n          \\\"ACL reconstruction: hamstring or BTB graft\\\",\\n          \\\"Meniscal repair: peripheral tears with good blood supply\\\",\\n          \\\"Meniscectomy increases OA risk 40% at 10 years\\\",\\n          \\\"Return to sport: 6-12 months post-op; compliance critical\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Knee Injuries\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Apley & Solomon\\\", chapter: \\\"Knee Disorders\\\", edition: \\\"9th\\\" }\\n        ]\\n      }\\n    ]\\n  },\\n  // OR-MOD-06-TOP-02: Bone Tumors\\n  {\\n    topicCode: \\\"OR-MOD-06-TOP-02\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"bone-tumors-foundation\\\",\\n        title: \\\"Bone Tumors - Foundation\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Classification, benign vs malignant, epidemiology, age of presentation.\\\",\\n        contentMd: ``# Bone Tumors - Foundation\\n\\n## Classification\\n\\n### Benign Bone Tumors\\n- **Osteoma**: Dense bone; usually asymptomatic\\n- **Osteoid osteoma**: Painful lesion; nidus <2cm\\n- **Enchondroma**: Cartilage; hands/feet; usually asymptomatic\\n- **Osteochondroma (exostosis)**: Cartilage-capped; risk of malignant transformation 1-5%\\n- **Giant cell tumor**: Subarticular; may be locally aggressive\\n\\n### Malignant Bone Tumors\\n- **Osteosarcoma**: Most common primary bone malignancy in children; aggressive\\n- **Ewing's sarcoma**: Second most common in children; younger age\\n- **Chondrosarcoma**: Cartilage origin; older age\\n- **Fibrosarcoma**: Fibrous origin; rare\\n\\n## Location Patterns\\n\\n### Metaphyseal Location (Most Common)\\n- **Osteosarcoma**: Distal femur (40%), proximal tibia (15%), proximal humerus (10%)\\n- **Ewing's sarcoma**: Femoral diaphysis/metadiaphysis\\n- **Chondrosarcoma**: Proximal humerus, proximal femur\\n\\n### Age of Presentation\\n\\n**Osteosarcoma**:\\n- Peak: 10-20 years\\n- Associated with growth spurt\\n- 60% around knee (distal femur + proximal tibia)\\n\\n**Ewing's sarcoma**:\\n- Peak: 10-30 years\\n- Younger than osteosarcoma\\n- Femur most common\\n\\n**Chondrosarcoma**:\\n- 40-50 years\\n- Slow-growing\\n\\n**Giant Cell Tumor**:\\n- 20-40 years\\n- Distal femur, proximal tibia (subarticular)\\n\\n## Clinical Presentation\\n- **Pain**: Progressive; worse at night\\n- **Swelling**: Localized; may be rapid\\n- **Pathologic fracture**: Can be presenting symptom\\n- **Constitutional symptoms**: Fever, weight loss (suggests malignancy),\\n        mnemonics: [\\n          { text: \\\"Osteosarcoma location: Around the Knee\\\", explanation: \\\"Distal femur 40%, proximal tibia 15%\\\" },\\n          { text: \\\"Bone tumors by age: Osteosarcoma (kids), Chondrosarcoma (adults)\\\", explanation: \\\"Osteosarcoma 10-20 yrs; chondrosarcoma 40-50 yrs\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Osteosarcoma: most common primary bone malignancy; peak 10-20 years\\\",\\n          \\\"Ewing's sarcoma: second most common; younger; diaphyseal location\\\",\\n          \\\"Chondrosarcoma: older age (40-50); slow-growing\\\",\\n          \\\"Metaphyseal location most common for osteosarcoma and chondrosarcoma\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Bone Tumors\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Apley & Solomon\\\", chapter: \\\"Bone Tumors\\\", edition: \\\"9th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"bone-tumors-imaging\\\",\\n        title: \\\"Bone Tumors - Imaging & Diagnosis\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"X-ray, CT, MRI findings; biopsy techniques.\\\",\\n        contentMd: ``# Bone Tumors - Imaging & Diagnosis\\n\\n## X-ray Findings\\n\\n### Osteosarcoma\\n- **Mixed lytic and sclerotic**: \\\"Sunburst\\\" pattern (aggressive bone formation)\\n- **Cortical destruction**: Cortical breakthrough\\n- **Soft tissue mass**: Often large\\n- **Periosteal reaction**: Aggressive; Codman's triangle\\n- **Pathologic fracture**: Can occur\\n\\n### Ewing's Sarcoma\\n- **Lytic**: More lytic than osteosarcoma\\n- **Permeative margins**: Ill-defined\\n- **Periosteal reaction**: \\\"Onion-skin\\\" (lamellated)\\n- **Soft tissue mass**: Prominent\\n- **Within diaphysis**: Classic location (vs osteosarcoma metaphyseal)\\n\\n### Chondrosarcoma\\n- **Stippled (popcorn-like) calcification**: In matrix (diagnostic)\\n- **Sclerotic margins**: Well-defined initially\\n- **Slow growth**: Minimal soft tissue mass\\n- **Endosteal scalloping**: Cortical thickening\\n\\n### Giant Cell Tumor\\n- **Lytic**: Radiolucent, eccentric location\\n- **Subarticular**: Located below articular surface\\n- **Well-defined margins**: Usually (but locally aggressive)\\n- **Cortical expansion**: Thin cortex\\n\\n## CT\\n- **Extent**: Assess bone and soft tissue involvement\\n- **Staging**: Determine if metastases (lungs via CT chest)\\n- **Planning**: Surgical margin assessment\\n\\n## MRI\\n- **Gold standard**: For local staging\\n- **T1 and T2**: Assess marrow, soft tissue\\n- **Inversion recovery**: Detect skip lesions (tumor in marrow away from main mass)\\n- **Soft tissue extent**: Critical for surgical planning\\n- **Spine involvement**: MRI for tumors near neural structures\\n\\n## Biopsy\\n\\n### Technique\\n- **Open biopsy**: If needle biopsy inconclusive\\n- **Core needle**: 14-18 gauge needle\\n- **FNA (Fine needle aspiration)**: Less common; lower sensitivity\\n- **Timing**: After imaging complete; before chemotherapy\\n\\n### Principles\\n- **Biopsy tract**: Must be within future surgical excision (contamination)\\n- **Integrity**: Maintain compartmental integrity\\n- **Prevent seeding**: Minimize contamination\\n- **Diagnostic accuracy**: 90-95% with proper technique\\n\\n## Staging\\n- **Grade**: Low vs high (histologic)\\n- **Size**: <8cm vs >8cm\\n- **Location**: Intraosseous vs extraosseous, compartmental\\n- **Metastases**: Lung most common (10-20% at presentation for osteosarcoma)\\n- **Lungs**: CT chest mandatory,\\n        keyPoints: [\\n          \\\"Osteosarcoma: sunburst periosteal reaction; Codman's triangle\\\",\\n          \\\"Ewing's sarcoma: onion-skin periosteal reaction; lytic; diaphyseal\\\",\\n          \\\"Chondrosarcoma: stippled/popcorn calcification in matrix\\\",\\n          \\\"Giant cell tumor: subarticular lytic lesion\\\",\\n          \\\"MRI gold standard for local staging; CT chest for metastases\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Bone Tumors\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Apley & Solomon\\\", chapter: \\\"Bone Tumors\\\", edition: \\\"9th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"bone-tumors-treatment\\\",\\n        title: \\\"Bone Tumors - Treatment\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Chemotherapy, radiation, surgical management, survival.\\\",\\n        contentMd: ``# Bone Tumors - Treatment\\n\\n## Osteosarcoma\\n\\n### Chemotherapy (Neoadjuvant)\\n- **Agents**: Cisplatin, doxorubicin, methotrexate (MAP regime)\\n- **Duration**: 10-12 weeks pre-surgery\\n- **Objective**: Shrink tumor, assess chemosensitivity\\n- **Response**: 90% achieve good necrosis (>90% tumor necrosis)\\n\\n### Surgery\\n- **Wide excision**: Margins >2cm beyond tumor\\n- **Amputation vs limb salvage**: 80-90% limb salvage achievable if margins adequate\\n- **Reconstruction**: Prosthesis, allograft, or custom implant\\n- **Timing**: After chemotherapy (10-12 weeks)\\n\\n### Adjuvant Chemotherapy\\n- **Duration**: 10-12 weeks post-surgery\\n- **Same agents**: Cisplatin, doxorubicin, methotrexate\\n\\n### Survival\\n- **5-year survival**: 60-70% with multimodal therapy (chemotherapy + surgery)\\n- **Without chemotherapy**: 10-20%\\n- **Metastatic disease**: 20-30% 5-year survival\\n\\n## Ewing's Sarcoma\\n\\n### Chemotherapy\\n- **Agents**: Etoposide, ifosfamide, doxorubicin, cisplatin (EIOP regime)\\n- **More chemosensitive**: Than osteosarcoma\\n\\n### Radiation\\n- **Role**: Primary local control (if surgery not possible) or adjuvant\\n- **Dose**: 50-70 Gy in 25-35 fractions\\n- **Timing**: Pre- or post-surgery\\n\\n### Surgery\\n- **Wide excision**: If resectable without significant morbidity\\n- **Amputation**: If limb salvage not possible\\n\\n### Survival\\n- **5-year survival**: 60-70% localized disease\\n- **Chemotherapy critical**: Survival 10% without chemotherapy\\n\\n## Chondrosarcoma\\n\\n### Surgery (Primary Treatment)\\n- **Wide excision**: Chemotherapy less effective\\n- **Amputation/limb salvage**: Depends on margins\\n- **Radiation**: Sometimes used; less sensitive than osteosarcoma\\n\\n### Adjuvant Therapy\\n- **Chemotherapy**: Limited role (relatively chemoresistant)\\n- **Radiation**: Sometimes used for unresectable/marginal margins\\n\\n### Survival\\n- **Low-grade**: 80-90% 5-year survival\\n- **High-grade**: 30-50% 5-year survival\\n\\n## Giant Cell Tumor\\n\\n### Surgery\\n- **Curettage**: Intralesional; curet tumor and fill with cement/bone\\n- **Wide excision**: For aggressive lesions\\n- **Recurrence**: 10-40% curettage; <5% wide excision\\n\\n### Adjuvant\\n- **Phenol or liquid nitrogen**: Applied during curettage to reduce recurrence\\n- **Radiotherapy**: Reserved for recurrent or unresectable cases\\n\\n## Principles of Limb Salvage\\n- **Preoperative planning**: MRI, CT, arteriography if needed\\n- **Surgical margins**: Wide (2-3cm) with no neurovascular compromise\\n- **Soft tissue coverage**: Flap reconstruction if needed\\n- **Functional outcome**: Preserve joints, minimize morbidity\\n- **Reconstruction options**: Prosthesis, allograft, custom implant, fibula transplant,\\n        keyPoints: [\\n          \\\"Osteosarcoma: multimodal therapy (chemo + surgery) achieves 60-70% survival\\\",\\n          \\\"Ewing's sarcoma: EIOP chemotherapy; 60-70% 5-year survival\\\",\\n          \\\"Chondrosarcoma: primary treatment surgery; limited chemotherapy benefit\\\",\\n          \\\"Limb salvage: achievable in 80-90% if wide margins obtained\\\",\\n          \\\"Amputation: considered if limb salvage would sacrifice function\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Bone Tumor Treatment\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Oncology\\\", edition: \\\"28th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"bone-tumors-exam\\\",\\n        title: \\\"Bone Tumors - Exam Preparation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Case analysis and clinical decision-making.\\\",\\n        contentMd: ``# Bone Tumors - Exam Preparation\\n\\n## Case 1: Osteosarcoma\\n**Scenario**: 16-year-old male, progressive thigh pain, swelling for 2 months, X-ray shows metaphyseal lesion with sunburst periosteal reaction.\\n\\n**Diagnosis**: Osteosarcoma (presumed).\\n\\n**Workup**:\\n- **MRI**: Local staging; assess soft tissue extension\\n- **CT chest**: Screen for pulmonary metastases (10-20% at presentation)\\n- **Biopsy**: Core needle or open biopsy for histologic confirmation\\n- **Labs**: Alkaline phosphatase (often elevated)\\n\\n**Management**:\\n- **Neoadjuvant chemotherapy**: MAP regime x 10-12 weeks\\n- **Surgery**: Wide excision (amputation vs limb salvage) based on margins\\n- **Adjuvant chemotherapy**: MAP regime x 10-12 weeks\\n- **Expected outcome**: 60-70% 5-year survival with multimodal therapy\\n\\n## Case 2: Ewing's Sarcoma\\n**Scenario**: 12-year-old, femoral diaphyseal lesion, onion-skin periosteal reaction, fever, elevated ESR.\\n\\n**Diagnosis**: Ewing's sarcoma.\\n\\n**Management**:\\n- **Chemotherapy**: EIOP regime (neoadjuvant)\\n- **Surgery or radiation**: After chemotherapy for local control\\n- **Expected outcome**: 60-70% 5-year survival localized disease\\n\\n## Case 3: Giant Cell Tumor\\n**Scenario**: 28-year-old, subarticular distal femoral lytic lesion, mild swelling.\\n\\n**Diagnosis**: Giant cell tumor.\\n\\n**Management**:\\n- **Curettage**: Intralesional with phenol/liquid nitrogen\\n- **Reconstruction**: Cement or bone graft filling\\n- **Recurrence risk**: 10-40% with curettage; <5% with wide excision\\n- **Follow-up**: Regular imaging for recurrence,\\n        keyPoints: [\\n          \\\"Osteosarcoma: sunburst pattern; multimodal therapy; 60-70% survival\\\",\\n          \\\"Ewing's sarcoma: onion-skin; diaphyseal; EIOP chemotherapy\\\",\\n          \\\"Chondrosarcoma: stippled calcification; surgery primary; older age\\\",\\n          \\\"Giant cell tumor: subarticular; curettage +/- adjuvant; recurrence 10-40%\\\",\\n          \\\"Limb salvage: preferred when wide margins achievable with good function\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Bone Tumors\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Oncology\\\", edition: \\\"28th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"bone-tumors-qa\\\",\\n        title: \\\"Bone Tumors - Q&A\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"Key MCQs on bone tumors.\\\",\\n        contentMd: ``# Bone Tumors - Q&A\\n\\n## Q1: A 15-year-old boy presents with pain in the distal femur. X-ray shows mixed lytic-sclerotic lesion with sunburst pattern. What is the diagnosis?\\n\\n**Answer**: Osteosarcoma. Sunburst periosteal reaction is pathognomonic. Peak age 10-20 years. Distal femur is most common location (40%).\\n\\n## Q2: What imaging finding is diagnostic of chondrosarcoma?\\n\\n**Answer**: Stippled or popcorn-like calcification in the matrix (on X-ray). MRI shows hyaline cartilage on T2-weighted images.\\n\\n## Q3: A 25-year-old has Ewing's sarcoma of the femur. What is the characteristic periosteal reaction?\\n\\n**Answer**: Onion-skin (lamellated) periosteal reaction. Lesion is typically lytic, in the diaphysis or metadiaphysis. More chemosensitive than osteosarcoma.\\n\\n## Q4: What is the role of neoadjuvant chemotherapy in osteosarcoma?\\n\\n**Answer**: (1) Shrink tumor; (2) Assess chemosensitivity (histologic response guides prognosis); (3) Allow surgical planning with reduced tumor burden. Good histologic response (>90% necrosis) predicts better survival.\\n\\n## Q5: What is the 5-year survival rate for osteosarcoma with multimodal therapy (chemotherapy + surgery)?\\n\\n**Answer**: 60-70% with modern multimodal therapy. Without chemotherapy, survival <20%. Chemotherapy increased survival dramatically from 5-10% to 60-70%.,\\n        keyPoints: [\\n          \\\"Osteosarcoma: sunburst; metaphyseal; age 10-20; 60-70% survival with therapy\\\",\\n          \\\"Ewing's sarcoma: onion-skin; diaphyseal; age 10-30; EIOP chemotherapy\\\",\\n          \\\"Chondrosarcoma: stippled calcification; older; surgery primary\\\",\\n          \\\"Giant cell tumor: subarticular; curettage; benign but locally aggressive\\\",\\n          \\\"Limb salvage achievable 80-90%; amputation reserved for unresectable/functional loss\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Bone Tumors\\\", edition: \\\"Latest\\\" },\\n          { book: \\\"Apley & Solomon\\\", chapter: \\\"Bone Tumors\\\", edition: \\\"9th\\\" }\\n        ]\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-];
-];
+        summary: "Blood supply to femoral head, complications of fractures (AVN, non-union), and healing patterns.",
+        contentMd: `# Femur Fractures - Vascular Supply and Complications
+
+## Femoral Head Blood Supply
+### Arterial Supply
+- **Medial femoral circumflex artery (MFCA)**: Main supply (posterolateral branch)
+- **Lateral femoral circumflex artery (LFCA)**: Minor contribution
+- **Ligamentum teres artery**: Small contribution from round ligament
+- **Critical zones**: Femoral head supplied by MFCA; disruption → ischemia
+
+### Intracapsular vs Extracapsular Blood Supply
+- **Intracapsular neck fractures**: MFCA disruption → AVN risk 30-60%
+- **Extracapsular fractures**: Better blood supply → lower AVN risk
+- **Timing of disruption**: Immediate vs gradual affects AVN development
+
+## Avascular Necrosis (AVN)
+### Mechanism
+1. Fracture disrupts blood supply to femoral head
+2. Proximal fragment becomes ischemic (no new vessels immediately)
+3. Osteocyte death in proximal fragment
+4. Bone architecture weakens over months
+5. Collapse occurs under weight-bearing (Stage IV)
+
+### Risk Factors for AVN
+- **Displaced neck fractures** (Garden 3-4): 30-60% AVN risk
+- **Delay in treatment** >24 hours
+- **Inadequate reduction**: Persistent displacement
+- **Age >50 years**: Poorer vascular response
+- **Intracapsular location**: Higher risk than extracapsular
+
+### Timing of AVN Development
+- **Radiographic signs appear**: 6-12 months post-fracture
+- **Crescent sign**: Subchondral lucency (characteristic finding on X-ray)
+- **MRI**: Early detection (T2 signal loss in femoral head)
+- **Clinical symptoms**: Groin pain, limp, progressive dysfunction
+
+### Management of AVN
+- **Prevention**: Early diagnosis, proper reduction, internal fixation
+- **Early AVN** (<50% head involvement): Vascularized bone graft attempt
+- **Established AVN**: Hemiarthroplasty (hip replacement), THA (total hip)
+
+## Non-union and Delayed Union
+### Definition
+- **Delayed union**: Union not achieved by expected time but healing continues
+- **Non-union**: No healing after 6 months, pseudarthrosis develops
+
+### Incidence by Fracture Type
+- **Intracapsular neck**: 15-30% non-union rate (highest)
+- **Intertrochanteric**: <5% non-union rate (better blood supply)
+- **Subtrochanteric**: 5-10% non-union rate
+- **Femoral shaft**: <2% non-union with proper fixation
+
+### Risk Factors for Non-union
+- **Displacement**: Interferes with fracture healing
+- **Poor reduction**: Persisting gap prevents bony bridging
+- **Early weight-bearing**: On inadequately fixed fractures
+- **Osteoporosis**: Reduces healing capacity
+- **Comorbidities**: Diabetes, smoking, poor nutrition
+
+### Healing Patterns
+- **Neck fractures**: Slower (4-6 months) due to intracapsular location
+- **Intertrochanteric**: Faster (8-12 weeks) due to good blood supply and cancellous bone
+- **Subtrochanteric**: Slower (12-16 weeks) due to muscle forces
+- **Shaft fractures**: 12-16 weeks with IM nailing`,
+        mnemonics: [
+          { text: "MFCA supplies femoral head; AVN from disruption", explanation: "Medial Femoral Circumflex Artery main supply" },
+          { text: "AVN Risk: Garden 3-4 = 30-60%", explanation: "Displaced neck fractures highest AVN risk" }
+        ],
+        keyPoints: [
+          "MFCA supplies femoral head; disruption in neck fractures causes AVN",
+          "AVN risk: displaced neck 30-60%; undisplaced <10%",
+          "Non-union: neck 15-30%; intertrochanteric <5%",
+          "MRI early AVN detection; X-ray shows late findings (crescent sign)",
+          "Healing: neck 4-6 months; intertrochanteric 8-12 weeks; shaft 12-16 weeks"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Hip Fractures", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Femoral Fracture Complications", edition: "10th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "femur-fractures-layer-3-clinical",
+        title: "Femur Fractures - Management Strategies",
+        estimatedMinutes: 25,
+        summary: "Conservative vs surgical management, implant selection, and outcomes by fracture type.",
+        contentMd: `# Femur Fractures - Management Strategies
+
+## Neck Fractures Management
+
+### Undisplaced (Garden 1-2)
+**Conservative Management**:
+- Bed rest 2-4 weeks (if high surgical risk, poor health)
+- Limited evidence for conservative success
+
+**Surgical Management** (Preferred):
+- **Cannulated screws**: 3 parallel screws (gold standard)
+- **Timing**: ASAP, ideally within 24 hours
+- **Technique**: Percutaneous or small open incision
+- **Success rate**: 90% union if properly reduced
+- **Advantages**: Early weight-bearing, lower stiffness
+- **Post-operative**: Weight-bearing as tolerated after fixation
+
+### Displaced (Garden 3-4)
+**Age <65 years**:
+- **ORIF** (Open Reduction, Internal Fixation) with cannulated screws
+- **Alternative**: Plate fixation if anatomy unfavorable
+- **Reason**: Preserve femoral head, avoid hip replacement
+- **AVN risk**: Still 30-60% even with proper ORIF; monitor closely
+
+**Age >65 years**:
+- **Hemiarthroplasty** (Bipolar or unipolar implant) preferred
+- **Advantages**: No AVN risk, immediate weight-bearing, simpler rehabilitation
+- **Disadvantage**: Implant loosening over time, revision risk
+- **Success**: 85% pain-free at 2 years
+- **Functional**: 50% return to prior function; 80-90% can walk with aids
+
+**Age 65-80 (controversial)**:
+- **Choice between ORIF and hemiarthroplasty** based on patient factors
+- **ORIF**: If good bone quality, motivated, good compliance
+- **Hemiarthroplasty**: If poor health, comorbidities, poor functional reserve
+
+## Intertrochanteric Fractures Management
+
+### Stable Fractures (Evans Type I)
+- **Conservative**: Traction 2 weeks, then protected weight-bearing (selected elderly)
+- **Surgical**: DHS (Dynamic Hip Screw) or IM nail (preferred)
+- **Weight-bearing**: Protected initially; full by 8-12 weeks
+
+### Unstable Fractures (Evans Type II-IV)
+- **Gold standard**: Locked IM nail (cephalomedullary nail)
+- **Advantages**: Resists medial angulation and varus collapse
+- **Timing**: ASAP, within 24-48 hours
+- **Success**: Union 95% at 12 weeks
+- **Weight-bearing**: Full immediately (stable fixation)
+
+### DHS vs IM Nail
+- **DHS (Dynamic Hip Screw)**: Lower cost, simpler; shaft fractures uncommon with DHS
+- **IM nail (Intramedullary)**: Better for unstable, subtrochanteric, reverse obliquity, comminuted
+- **Both effective** if properly inserted
+- **Modern trend**: IM nailing preferred for unstable fractures
+
+## Subtrochanteric Fractures Management
+
+### Always Surgical (High-energy, Unstable)
+- **IM nail with proximal locking**: Gold standard
+- **Mechanism**: Proximal locking resists medial angulation forces
+- **Technique**: Retrograde or antegrade insertion with proximal + distal locking
+- **Alternative**: Compression plate (95-plate, LISS plate) if IM nail not feasible
+- **Weight-bearing**: Protected initially (4-6 weeks); full after 8-12 weeks
+- **Healing**: Typically 12-16 weeks
+- **Outcome**: 95% union with proper technique
+
+## Femoral Shaft Fractures Management
+
+### Operative Treatment (Gold Standard)
+- **IM nailing**: Locked intramedullary nail (best outcomes)
+- **Technique**: Entry point (piriformis, lateral), reaming, nail insertion, proximal + distal locking
+- **Advantages**: Early mobilization, full weight-bearing, excellent union rate (95%), low infection
+- **Alternative**: Plate fixation (ORIF with compression plate) if IM nail contraindicated
+
+### Special Considerations
+- **Segmental fractures**: IM nailing preserves blood supply better
+- **Comminuted fractures**: IM nailing provides load-sharing
+- **Pathological fractures**: IM nailing for stability
+
+### Postoperative Protocol
+- **DVT prophylaxis**: Enoxaparin 40 mg SC daily or rivaroxaban
+- **Antibiotics**: 24-48 hours (cefazolin or ceftriaxone)
+- **Mobilization**: Begin POD #1; ambulation with walker by POD #2-3
+- **Weight-bearing**: Full weight-bearing as tolerated post-op
+- **Follow-up X-rays**: 6 weeks, 3 months to assess union
+- **Plate removal**: If plate fixation, consider removal after 12-18 months
+
+## Postoperative Complications Prevention
+- **Malunion**: Inadequate reduction, early mobilization; prevent by stable fixation
+- **Non-union**: Ensure compression if possible, avoid early weight-bearing in at-risk patients
+- **Rotational deformity**: Watch during surgery for internal/external rotation
+- **Shortening**: Ensure length restoration during fixation
+- **Thromboembolic**: DVT/PE risk; use prophylaxis`,
+        mnemonics: [
+          { text: "Displaced Neck: Age Guide", explanation: "<65 ORIF, >65 Hemiarthroplasty" },
+          { text: "Unstable Intertrochanteric/Subtrochanteric: IM Nail", explanation: "Locked IM nail gold standard for unstable fractures" }
+        ],
+        keyPoints: [
+          "Undisplaced neck: ORIF with 3 screws; 90% union",
+          "Displaced neck >65 years: Hemiarthroplasty preferred (AVN risk, immediate weight-bearing)",
+          "Unstable intertrochanteric: Locked IM nail; 95% union at 12 weeks",
+          "Subtrochanteric: Always surgical; IM nail gold standard with proximal locking",
+          "Shaft fractures: IM nailing; 95% union, early mobilization"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Hip Fracture Management", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Femoral Fracture Treatment", edition: "10th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "femur-fractures-layer-4-exam",
+        title: "Femur Fractures - Exam Preparation",
+        estimatedMinutes: 20,
+        summary: "Case-based management decisions and surgical problem-solving for femoral fractures.",
+        contentMd: `# Femur Fractures - Exam Preparation
+
+## Case 1: Displaced Femoral Neck Fracture in Elderly
+**Scenario**: 72-year-old female, Garden 4 femoral neck fracture, fall at home, COPD, HTN, limited mobility.
+
+**Assessment**:
+- **Diagnosis**: Displaced femoral neck fracture (intracapsular)
+- **AVN risk**: High (>50%) with ORIF due to displacement
+- **Functional status**: Pre-injury: walking with walker, ADL dependent
+
+**Management Decision**:
+- **Surgery**: Hemiarthroplasty (not ORIF)
+- **Reasoning**:
+  1. Age >65 with comorbidities
+  2. AVN risk high (displaced) = ORIF poor outcome likely
+  3. Hemiarthroplasty allows immediate weight-bearing
+  4. No non-union risk (no biological healing required)
+  5. Better functional outcome despite lower activity level
+- **Timing**: Within 48 hours (reduce perioperative risk)
+- **Post-op**: DVT prophylaxis, early PT, weight-bearing as tolerated
+- **Expected outcome**: 85% pain relief, 50% return to prior function, most can walk with aids
+
+## Case 2: Unstable Intertrochanteric Fracture
+**Scenario**: 65-year-old male, Evans IV intertrochanteric fracture (unstable 4-part), RTA.
+
+**Assessment**:
+- **Diagnosis**: Unstable intertrochanteric fracture (4-part comminution)
+- **Instability**: Significant medial comminution = varus collapse risk
+- **EVans IV**: Most unstable type
+
+**Management Decision**:
+- **Surgery**: Locked IM nail (cephalomedullary nail)
+- **Reasoning**:
+  1. Unstable fracture requires stable fixation
+  2. IM nail resists varus/medial angulation better than DHS
+  3. Locked IM nail provides proximal + distal control
+  4. Early weight-bearing possible (stable fixation)
+  5. Better outcomes than DHS for Evans IV fractures
+- **Technique**: Antegrade IM nail with proximal + distal locking
+- **Weight-bearing**: Full immediately post-op (stable fixation)
+- **Expected outcome**: 95% union at 12 weeks, early functional recovery
+
+## Case 3: Subtrochanteric Fracture with Medial Angulation
+**Scenario**: 45-year-old male, RTA, subtrochanteric fracture, 3 cm medial angulation.
+
+**Assessment**:
+- **Diagnosis**: Subtrochanteric fracture (below lesser trochanter, within 5 cm)
+- **Instability**: Medial angulation 3 cm = significant (hip adductors exert medial force)
+- **Mechanism**: High-energy injury
+
+**Management Decision**:
+- **Surgery**: Always surgical (high-energy, unstable)
+- **Implant**: Locked IM nail with proximal locking (MUST have proximal locking)
+- **Reasoning**:
+  1. Subtrochanteric location = adductor forces cause medial angulation
+  2. Proximal locking resists these deforming forces
+  3. IM nail better than plate for load distribution
+  4. Retrograde or antegrade approach depending on anatomy
+- **Weight-bearing**: Protected initially (4-6 weeks), full after 8-12 weeks
+- **Healing timeline**: 12-16 weeks expected
+- **Post-op**: Watch for malunion/varus collapse; ensure proximal locking intact
+
+## Case 4: Femoral Shaft Fracture
+**Scenario**: 35-year-old male, fall from height, comminuted femoral shaft fracture, anterior tibial artery at risk.
+
+**Assessment**:
+- **Diagnosis**: Comminuted femoral shaft fracture
+- **Neurovascular**: Check distal pulses, assess vascular status (anterior tibial artery)
+- **Bleeding**: Risk of hemodynamic instability
+
+**Management Decision**:
+- **Surgery**: Locked IM nailing (gold standard)
+- **Timing**: Urgent (within 24 hours); address vascular injury if present
+- **Technique**:
+  1. Assess vascular status pre-operatively (Doppler, angio if vascular injury suspected)
+  2. IM nail: Antegrade entry, reaming, locked nail
+  3. Proximal + distal locking for comminuted fracture
+- **Vascular**: If vascular injury present, vascular surgery consult; may need angiography
+- **Weight-bearing**: Full weight-bearing post-op
+- **Expected outcome**: 95% union, early mobilization, low infection rate
+- **Post-op**: DVT prophylaxis, monitor distal perfusion`,
+        mnemonics: [
+          { text: "Displaced Neck >65: Hemi", explanation: "Hemiarthroplasty preferred (AVN risk, immediate weight-bearing)" },
+          { text: "Subtrochanteric: IM Nail + PROXIMAL locking", explanation: "Proximal locking essential to resist medial angulation" }
+        ],
+        keyPoints: [
+          "Displaced neck >65: Hemiarthroplasty (AVN risk, comorbidities)",
+          "Unstable intertrochanteric: Locked IM nail resists varus",
+          "Subtrochanteric: MUST have proximal locking on IM nail",
+          "Shaft fractures: IM nailing; 95% union, full weight-bearing",
+          "DVT prophylaxis mandatory; early mobilization critical for outcomes"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Hip Fracture Management", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Femoral Fracture Treatment", edition: "10th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "femur-fractures-layer-5-active-recall",
+        title: "Femur Fractures - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Key questions reinforcing classification, complications, and management of femoral fractures.",
+        contentMd: `# Active Recall - Femur Fractures
+
+**Q1**: Classify femoral fractures by location. What percentage does each type represent of hip fractures?
+
+**A1**: (1) **Femoral neck**: 50% of hip fractures; intracapsular (AVN risk) or extracapsular. (2) **Intertrochanteric**: 45% of hip fractures; between trochanters; extracapsular, better blood supply. (3) **Subtrochanteric**: 5% of hip fractures; below lesser trochanter within 5 cm; high-energy, unstable. **Garden grading** for neck: 1 (incomplete) to 4 (full displacement). **Evans grading** for intertrochanteric: I-IV (increasing instability).
+
+**Q2**: A 70-year-old female has a Garden 3 femoral neck fracture. What is the risk of avascular necrosis? Explain the mechanism.
+
+**A2**: **AVN risk**: 30-50% for displaced neck fractures (Garden 3-4). **Mechanism**: (1) Fracture disrupts MFCA (medial femoral circumflex artery), main blood supply to femoral head. (2) Proximal fragment isolated from blood supply. (3) Osteocytes die from ischemia (bone cell death). (4) Radiographic findings appear 6-12 months later (crescent sign). (5) Progressive collapse under weight-bearing. (6) MRI detects early AVN (T2 signal loss); X-ray shows late findings. **Prevention**: Early diagnosis, proper reduction, internal fixation, close follow-up.
+
+**Q3**: Why is hemiarthroplasty preferred over ORIF for displaced femoral neck fractures in elderly patients >65 years?
+
+**A3**: **Reasons for hemiarthroplasty** in elderly (>65): (1) **AVN risk high**: Displaced neck = 30-60% AVN risk; hemiarthroplasty eliminates this (no living bone required). (2) **Immediate weight-bearing**: No non-union risk; patient can walk immediately post-op. (3) **Simpler rehabilitation**: No need to protect fracture healing; aggressive PT possible. (4) **Reduced morbidity**: Elderly less able to tolerate prolonged immobility. (5) **Better outcomes**: Despite implant limitations, functional outcomes better in this population. **vs ORIF**: ORIF more likely to fail (AVN, non-union) in elderly with comorbidities. **Disadvantages of hemiarthroplasty**: Implant loosening (15-25% at 10 years), revision risk, but acceptable trade-off in elderly.
+
+**Q4**: What is the gold standard treatment for an unstable intertrochanteric fracture (Evans Type IV)? Why?
+
+**A4**: **Gold standard**: Locked intramedullary nail (cephalomedullary nail). **Advantages**: (1) **Resists varus**: Proximal + distal locking resists medial angulation and varus collapse. (2) **Axial loading**: IM nail closer to femoral axis; better load distribution. (3) **Stability**: Evans IV has significant medial comminution = DHS may fail. (4) **Early weight-bearing**: Stable fixation allows full weight-bearing immediately. (5) **Success rate**: 95% union at 12 weeks. **vs DHS**: DHS lower cost, simpler, but shaft fractures more common; less ideal for unstable fractures. **Key technique**: Ensure proximal + distal locking correct; check on post-op X-ray.
+
+**Q5**: A 45-year-old has a subtrochanteric fracture with 3 cm medial angulation. Explain why proximal locking of the IM nail is critical.
+
+**A5**: **Biomechanics of subtrochanteric fractures**: (1) **Location**: Below lesser trochanter; lacks muscle attachments that provide stability elsewhere. (2) **Deforming forces**: Hip adductors (adductor longus, gracilis) insert nearby; pull medially, causing medial angulation. (3) **High-energy injuries**: Typically more comminuted = unstable. **Proximal locking importance**: (1) **Resists medial angulation**: Proximal locking screw prevents fragment from sliding medially. (2) **Prevents varus collapse**: Maintains reduction against adductor forces. (3) **Ensures stability**: Without proximal locking, malunion likely (varus deformity). (4) **Better outcomes**: Proximal locking = union, return to function; without = malunion, pain, dysfunction. **Clinical point**: Always check proximal locking intact on post-op X-ray in subtrochanteric fractures.
+
+**Q6**: Compare non-union rates for different hip fractures. What factors increase non-union risk?
+
+**A6**: **Non-union rates by fracture type**: (1) **Intracapsular neck**: 15-30% (highest) due to limited blood supply, intracapsular location. (2) **Intertrochanteric**: <5% (better blood supply, cancellous bone). (3) **Subtrochanteric**: 5-10% (moderate blood supply, high muscle forces). (4) **Femoral shaft**: <2% with IM nailing (excellent if properly fixated). **Risk factors for non-union**: (1) **Displacement**: Persisting gap = poor healing. (2) **Poor reduction**: Inadequate apposition. (3) **Early weight-bearing**: On unstable fixation. (4) **Osteoporosis**: Reduced healing capacity. (5) **Comorbidities**: Diabetes, smoking, poor nutrition. (6) **Age**: Elderly poorer healing. **Prevention**: Stable fixation, proper reduction, protected weight-bearing initially.
+
+**Q7**: What is the typical healing timeline for different femoral fractures?
+
+**A7**: (1) **Femoral neck**: 4-6 months (slow due to intracapsular location, limited blood supply). (2) **Intertrochanteric**: 8-12 weeks (faster due to extracapsular location, good blood supply, cancellous bone). (3) **Subtrochanteric**: 12-16 weeks (moderate, high muscle forces). (4) **Femoral shaft**: 12-16 weeks (cortical bone slower than cancellous). **Monitoring**: Clinical union (painless weight-bearing), radiographic union (bridging callus on 2 views), time varies by fracture type and fixation. **Weight-bearing**: Depends on fracture stability and fixation robustness.
+
+**Q8**: A patient has a femoral shaft fracture. Why is IM nailing preferred over plate fixation?
+
+**A8**: **IM nailing advantages**: (1) **Load-sharing**: Nail shares load with bone (vs plate load-shielding). (2) **Preservation of blood supply**: Endosteal blood supply maintained; less periosteal stripping. (3) **Earlier mobilization**: Stable fixation allows POD #1 mobilization. (4) **Full weight-bearing**: Early weight-bearing possible. (5) **High union rate**: 95-98% with proper technique. (6) **Lower infection**: Less soft tissue stripping. (7) **Avoids extensive incision**: Smaller soft tissue trauma. **Plate fixation**: Useful if IM nail contraindicated (severe comminution, segmental, pathological); open reduction required = larger incision, more soft tissue damage, potential for delayed union.
+
+**Q9**: Describe postoperative DVT prophylaxis protocol for femoral fracture fixation.
+
+**A9**: **DVT Prophylaxis** (mandatory): (1) **Mechanical**: Early mobilization (POD #1 if possible), compression devices, leg elevation. (2) **Pharmacological**: Enoxaparin 40 mg SC daily x 10-14 days OR rivaroxaban 10 mg daily x 14 days OR apixaban 5 mg BID x 10 days. (3) **Timing**: Start within 12-24 hours post-op. (4) **Monitoring**: Clinical signs (calf swelling, pain, Homan's sign); consider compression ultrasound if suspicious. (5) **Complications**: Bleeding (rare with modern anticoagulation); monitor wound. (6) **Extended prophylaxis**: Consider if high-risk (elderly, immobilized, obesity, malignancy).
+
+**Q10**: A 72-year-old with Garden 4 femoral neck fracture and multiple comorbidities (COPD, DM, HTN) is scheduled for hemiarthroplasty. What pre-operative optimization is needed?
+
+**A10**: **Pre-operative assessment**: (1) **Cardiac**: ECG, troponin baseline, assess angina/prior MI; echo if ejection fraction concern. (2) **Pulmonary**: PFTs (COPD already known); assess exercise tolerance; consider pulmonary consult. (3) **Metabolic**: Blood glucose, HbA1c (DM); target glucose <200 mg/dL perioperatively. (4) **Renal**: Creatinine, eGFR; adjust medications if renal impairment. (5) **Anticoagulation**: Hold aspirin (if on it) day of surgery; warfarin 5 days pre-op, bridge with lovenox if needed; DOACs per protocol. (6) **Anesthesia**: Consult for medical optimization; ASA score assessment. (7) **Medications**: Hold metformin if contrast needed; continue beta-blockers, statins. (8) **Clearance**: Obtain cardiology and anesthesia clearance. (9) **Expectations counseling**: Pain relief 85%, functional goal realistic (walking with aids likely), 3-6 month recovery. (10) **DVT prophylaxis**: Plan for post-op mechanical + chemical.`,
+        mnemonics: [
+          { text: "Hip Fracture Types: NIS", explanation: "Neck 50%, Intertrochanteric 45%, Subtrochanteric 5%" },
+          { text: "AVN Risk: Displaced Neck 30-60%", explanation: "Higher with proximal pole, older age, delayed treatment" }
+        ],
+        keyPoints: [
+          "Neck 50%, Intertrochanteric 45%, Subtrochanteric 5% of hip fractures",
+          "AVN risk: displaced neck 30-60%; undisplaced <10%",
+          "Hemiarthroplasty: preferred for elderly displaced neck (>65 years)",
+          "Unstable intertrochanteric: locked IM nail; 95% union at 12 weeks",
+          "Subtrochanteric: MUST have proximal locking; critical for stability"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Hip Fractures", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Femoral Fractures", edition: "10th" }
+        ]
+      }
+    ]
+  }
 ];

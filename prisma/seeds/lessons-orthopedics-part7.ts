@@ -1,20 +1,1020 @@
-// Orthopedics Part 7: Remaining topics from modules 2, 4, 6
+import type { TopicLessons } from "./content-loader";
 
-export const orthopedicsPart7Lessons = [
-  // OR-MOD-02-TOP-03: Spinal Cord Injuries
+export const orthopedicsPart7Lessons: TopicLessons[] = [
   {
     topicCode: "OR-MOD-02-TOP-03",
     layers: [
       {
         layer: 1,
-        slug: "spinal-cord-injury-foundation",
-        title: "Spinal Cord Injuries - Foundation",
+        slug: "forearm-wrist-foundation",
+        title: "Forearm & Wrist Fractures - Foundation",
+        estimatedMinutes: 22,
+        summary: "Overview of forearm and wrist fractures including radius, ulna, carpal bones, classification, and epidemiology in Indian context.",
+        contentMd: `# Forearm & Wrist Fractures - Foundation
+
+## Anatomy of Forearm & Wrist
+
+### Bones Involved
+- **Radius**: Lateral bone, widened distally (epiphyseal flare), articulates with scaphoid
+- **Ulna**: Medial bone, narrower, has olecranon process proximally
+- **Carpal Bones**: 8 bones arranged in 2 rows (proximal: scaphoid, lunate, triquetrum, pisiform; distal: trapezium, trapezoid, capitate, hamate)
+- **Metacarpals**: 5 long bones supporting hand
+
+### Key Anatomical Points (Indian Context)
+- **Radial head**: Important for pronation-supination; fracture = loss of forearm rotation
+- **Interosseous membrane**: Connects radius & ulna; damage = loss of anatomical relationship
+- **Distal radioulnar joint (DRUJ)**: Critical for wrist function; distal radius fracture often associated with DRUJ injury
+- **Ulnar styloid**: Often avulsed with distal radius fracture
+
+## Fracture Classifications
+
+### Forearm Fractures (Radius & Ulna)
+
+#### Proximal Third (Supinator Ridge)
+- **Fracture pattern**: Proximal third radius usually with ulnar diaphyseal fracture
+- **Mechanism**: Direct blow or fall on outstretched hand (FOOSH)
+- **Special feature**: Supinator muscle attachment = high comminution risk
+- **Complications**: Posterior interosseous nerve (PIN) injury possible
+
+#### Middle Third
+- **Most common site** for fracture
+- **Mechanism**: Twisting injury or direct trauma
+- **Pattern**: Often spiral fractures
+- **Monteggia fracture**: Proximal third ulnar fracture + anterior dislocation radial head (Type 1 most common)
+- **Galeazzi fracture**: Distal third radial fracture + DRUJ dislocation
+
+#### Distal Third
+- **Mechanism**: Torsional or direct trauma
+- **Pattern**: Simple transverse or comminuted
+- **Note**: Must assess DRUJ stability
+
+### Distal Radius Fractures (Most Common Wrist Fracture)
+
+#### Colles' Fracture
+- **Definition**: Extra-articular distal radius fracture with dorsal displacement
+- **Mechanism**: Fall on outstretched hand (FOOSH) with wrist extended
+- **Classic presentation**: "Dinner fork deformity" (dorsal angulation)
+- **Epidemiology**: Common in elderly (>60 years) with osteoporosis
+- **Associated injury**: Ulnar styloid fracture (50%), scapholunate dissociation possible
+- **Complication risk**: Malunion, arthritis, complex regional pain syndrome (CRPS)
+
+#### Smith's Fracture
+- **Definition**: Distal radius fracture with volar (palmar) displacement
+- **Mechanism**: Fall on flexed wrist (reverse FOOSH)
+- **Less common** than Colles' (10-15% of distal radius fractures)
+- **Higher risk**: Malunion, median nerve compression
+- **Indian context**: Less common than Colles' due to different fall patterns
+
+#### Barton's Fracture
+- **Definition**: Intra-articular distal radius fracture-dislocation
+- **Dorsal Barton**: Dorsal lip fracture + dorsal radiocarpal dislocation (FOOSH with extension)
+- **Volar Barton**: Volar lip fracture + volar radiocarpal dislocation (less common)
+- **Higher complication risk**: Arthritis, chronic instability
+
+### Carpal Bone Fractures
+
+#### Scaphoid Fracture (Most Common)
+- **Epidemiology**: 60% of carpal fractures; common in young males
+- **Mechanism**: FOOSH with wrist extended and radially deviated
+- **Anatomical zones**:
+  - **Proximal pole**: Poorest blood supply (avascular necrosis risk)
+  - **Waist**: Most common fracture site
+  - **Distal pole**: Better blood supply
+- **Diagnosis**: Clinical (scaphoid tubercle tenderness, axial loading pain); X-ray may miss initially
+- **Risk**: Avascular necrosis (especially proximal pole), nonunion, post-traumatic arthritis
+
+#### Lunate Fracture
+- **Rare** in isolation
+- **Often associated** with perilunate dislocation
+- **High AVN risk** (poor blood supply)
+
+#### Triquetrum Fracture
+- **Mechanism**: Direct blow to dorsal wrist
+- **Usually** simple fracture, good prognosis
+- **Associated with** perilunate injuries in high-energy trauma
+
+#### Other Carpal Fractures (Rare)
+- **Trapezium**: Base fracture, risk of thumb CMC arthritis
+- **Hamate**: Hook fracture (occupational in golfers, racquet players)
+
+## Epidemiology & Indian Context
+
+### Incidence
+- **Distal radius fractures**: Most common wrist fracture (80% of wrist fractures)
+- **Forearm fractures**: Common in pediatric (falls during play) and adult (high-energy trauma)
+- **Age distribution**: Bimodal (children 5-14 years, elderly >60 years)
+
+### Indian-Specific Patterns
+- **Colles' fractures**: Common in elderly females (osteoporosis, falls on slippery floors)
+- **Forearm fractures**: High incidence in young males (motorcycles, industrial trauma, interpersonal violence)
+- **Occupational**: Hamate hook fractures in golfers, badminton players
+- **Delayed presentation**: Many patients arrive >1 week post-injury (rural areas, limited access)
+
+## Classification Systems
+
+### AO (Arbeitsgemeinschaft für Osteosynthese) Classification
+- **Type A**: Simple fractures (2 fragments)
+  - A1: Simple metaphyseal
+  - A2: Simple diaphyseal
+  - A3: Simple metaphyseal (other side)
+- **Type B**: Wedge fractures (3 fragments)
+  - B1: Medial wedge
+  - B2: Lateral wedge
+  - B3: Complete wedge
+- **Type C**: Complex fractures (comminuted)
+  - C1: Complex metaphyseal
+  - C2: Complex metaphyseal-diaphyseal
+  - C3: Complex diaphyseal
+
+### NMC Competency Mapping
+- Recognize distal radius fracture patterns
+- Differentiate Colles' vs Smith's fractures
+- Identify scaphoid fracture clinically
+- Assess neurovascular status
+- Order appropriate imaging
+- Understand healing potential by fracture site
+
+## Mnemonics
+- **CFX = Colles' Fall Extended (wrist), Smith's = Sprain Mechanism opposite** (flexion): Mechanism distinction
+- **Scaphoid = Slow healing (poor blood supply), Lunate = Lose to AVN (worst blood supply)**
+- **DRF = Distal Radius Fracture = 80% of wrist fractures; Forearm = 20%**
+
+## Key Points
+- Colles' fracture: FOOSH with extension → dorsal displacement (dinner fork)
+- Smith's fracture: FOOSH with flexion → volar displacement (reverse dinner fork)
+- Scaphoid fracture: High AVN risk (proximal pole worst), nonunion risk, requires immobilization 12+ weeks
+- Barton's fracture: Intra-articular, high arthritis risk, often needs surgery
+- Forearm fractures: Must assess DRUJ, maintain radial bow, prevent pronation-supination loss
+
+## Textbook References
+- Maheshwari's Essential Orthopaedics, 6th ed, Chapter: Forearm & Wrist Fractures
+- Apley & Solomon's System of Orthopaedics, 10th ed, Chapter: Upper Limb Trauma`,
+        mnemonics: [
+          { text: "Colles' = Extension (FOOSH wrist extended) = Dorsal deformity", explanation: "Colles' fracture mechanism" },
+          { text: "Smith's = Flexion (FOOSH wrist flexed) = Volar deformity (reverse Colles')", explanation: "Smith's fracture mechanism" },
+          { text: "Scaphoid = Slowest healing (avascular necrosis risk, especially proximal pole)", explanation: "Scaphoid healing" },
+          { text: "Barton's = intra-articular + dislocation (worst prognosis for wrist)", explanation: "Barton's fracture" }
+        ],
+        keyPoints: [
+          "Colles' fracture most common distal radius fracture (extension FOOSH, dorsal displacement)",
+          "Smith's fracture (flexion FOOSH, volar displacement) less common, higher nonunion risk",
+          "Scaphoid waist most common fracture site; proximal pole highest AVN risk",
+          "Barton's fracture intra-articular (dorsal or volar) with radiocarpal dislocation",
+          "Monteggia = proximal ulna fracture + radial head dislocation; Galeazzi = distal radius + DRUJ injury"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Forearm & Wrist Fractures", edition: "6th" },
+          { book: "Apley & Solomon's System of Orthopaedics", chapter: "Radius & Ulna Fractures", edition: "10th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "forearm-wrist-mechanism",
+        title: "Forearm & Wrist Fractures - Mechanism & Pathophysiology",
         estimatedMinutes: 25,
-        summary: "Types of spinal cord injuries, ASIA classification, mechanism, initial management.",
-        contentMd: "# Spinal Cord Injuries - Foundation\n\n## Epidemiology\n- **Incidence**: 500,000 new injuries annually worldwide; India ~1000 per million\n- **Age**: Bimodal (15-30 years, >60 years)\n- **Causes**: Motor vehicle accidents (40%), falls (35%), violence (15%), sports (10%)\n- **Prevalence**: ~1.3 million people in USA living with SCI; India underestimated\n\n## Anatomy Review\n- **Spinal cord segments**: C1-C8 (cervical), T1-T12 (thoracic), L1-L5 (lumbar), S1-S5 (sacral), Coccyx\n- **Dermatomes**: C5 = shoulder, C6 = thumb, C7 = middle finger, C8 = little finger, T4 = nipple line, T10 = umbilicus, L1 = groin, L5 = big toe, S1 = foot lateral border\n- **Motor levels**: C5 = shoulder abduction, C6 = wrist extension, C7 = elbow extension, C8 = finger flexion, T1 = intrinsic hand, L3 = hip flexion, L4 = knee extension, L5 = ankle dorsiflexion, S1 = ankle plantarflexion\n\n## Classification of SCI\n\n### By Spinal Level\n- **Cervical (C1-C8)**: Quadriplegia (all 4 limbs affected)\n- **Thoracic (T1-T12)**: Paraplegia (lower limbs only)\n- **Lumbar/Sacral (L1-S5)**: Paraplegia or cauda equina syndrome\n\n### By Completeness (ASIA Scale)\n- **ASIA A = Complete**: No motor/sensory function in sacral segments\n- **ASIA B = Incomplete**: Sensory preserved, no motor below level\n- **ASIA C = Incomplete**: Motor preserved <3/5 strength below level\n- **ASIA D = Incomplete**: Motor preserved ≥3/5 strength below level\n- **ASIA E = Normal**: Normal motor and sensory function\n\n### By Mechanism\n1. **Flexion-Distraction**: Forward bending + pulling apart vertebrae → anterior ligament rupture\n2. **Compression**: Direct crush → vertebral fracture + cord compression\n3. **Hyperextension**: Backward bending → posterior ligament rupture + cord damage\n4. **Rotation**: Twisting → severe ligamentous damage\n\n### By Type of Injury\n1. **Incomplete syndromes** (partial cord damage):\n   - Anterior cord syndrome: Loss of motor/pain/temperature (anterior columns)\n   - Posterior cord syndrome: Loss of proprioception/vibration (posterior columns)\n   - Brown-Sequard syndrome: Ipsilateral motor loss, contralateral pain/temperature loss (half cord)\n   - Central cord syndrome: Greater upper limb weakness (central gray matter damage)\n\n2. **Complete cord injury**: Total loss motor/sensory below level\n\n## Pathophysiology\n\n### Primary Injury (Mechanical)\n- Mechanical trauma → neuronal axon disruption\n- Immediate cell death from direct injury\n- Blood vessel rupture → hemorrhage into gray matter\n- Irreversible within minutes of injury\n\n### Secondary Injury (Biochemical - Hours to Days)\n1. **Edema**: Spinal cord swelling → increased pressure → further ischemia\n2. **Inflammation**: Cytokine release, microglial activation\n3. **Ischemia**: Reduced blood flow → hypoxia\n4. **Apoptosis**: Programmed cell death of neurons\n5. **Excitotoxicity**: Glutamate excess → calcium influx → cell death\n6. **Free radical damage**: Oxidative stress\n- **Critical window**: First 8 hours (some interventions may help during this period)\n\n## Acute Phase Management\n\n### Immobilization\n- **Rigid collar**: Immobilize cervical spine at scene\n- **Backboard**: If spinal injury suspected\n- **Goal**: Prevent additional damage from movement\n- **During transport**: Minimize motion, handle spine carefully\n\n### Initial Examination\n- **Neurological level**: Lowest level with intact motor/sensory function\n- **ASIA score**: Classify completeness of injury\n- **Document baseline**: Critical for prognostication\n- **Repeated exams**: Every 24-48 hours to detect changes\n\n### Imaging\n- **X-rays**: Lateral, AP, odontoid views (C-spine); T-L spine views\n- **CT**: High-resolution; fracture detail\n- **MRI**: Best for cord edema, ligament injury, hemorrhage; shows prognosis\n\n### Stabilization (Mechanical)\n- **Immobilization**: Cervical collar, halo vest (8-12 weeks)\n- **Surgical fusion**: If unstable fracture (indication-dependent)\n- **Timing**: Early mobilization improves outcomes\n\n## Acute Cord Syndromes\n\n### Central Cord Syndrome\n- **Mechanism**: Hyperextension → central gray matter damage (most vulnerable)\n- **Presentation**: Greater weakness in upper limbs; lower limbs less affected\n- **Prognosis**: Best prognosis (partial injury, not complete)\n- **Recovery**: Many achieve independent ambulation\n\n### Anterior Cord Syndrome\n- **Mechanism**: Flexion injury + anterior spinal artery compromise\n- **Loss**: Motor, pain, temperature (anterior 2/3 cord)\n- **Preserved**: Proprioception, vibration (posterior columns)\n- **Prognosis**: Poor (anterior columns handle motor)\n\n### Brown-Sequard Syndrome\n- **Mechanism**: Penetrating trauma (knife, bullet) → half-cord damage\n- **Presentation**: Ipsilateral motor loss + contralateral pain/temperature loss\n- **Prognosis**: Good (only half cord damaged; intact pathways provide alternative routes)\n\n### Cauda Equina Syndrome\n- **Anatomy**: Nerve roots from conus medullaris (L1-S5), not actual cord\n- **Mechanism**: Lumbar spine injury → compression of nerve bundle\n- **Presentation**: Lower limb weakness, saddle anesthesia, bowel/bladder dysfunction\n- **Emergency**: Requires urgent decompression (within 24-48 hours)\n- **Prognosis**: Better than cord injury (nerve roots can regenerate),\n        mnemonics: [\n          { text: \"ASIA = Incomplete A, B, C, D; E Normal\", explanation: \"ASIA classification scale\" },\n          { text: \"C = Cervical = Quadriplegia; T/L = Thoracic/Lumbar = Paraplegia\", explanation: \"Level-based classification\" },\n          { text: \"Central cord = Upper limb worse than lower (best prognosis)\", explanation: \"Central cord syndrome\" },\n          { text: \"Cauda equina = EMERGENCY decompression needed (nerve roots)\", explanation: \"Emergency SCI type\" }\n        ],\n        keyPoints: [\n          \"ASIA A = complete (no motor/sensory); ASIA E = normal\",\n          \"Primary injury irreversible; secondary injury (edema, inflammation) preventable in first 8 hours\",\n          \"Central cord syndrome: Greatest upper limb weakness; best prognosis\",\n          \"Cauda equina syndrome: Emergency (nerve roots recoverable, compress quickly)\",\n          \"Spinal level determines disability: C4 = ventilator-dependent; C5-C8 = variable independence\"\n        ],\n        textbookRefs: [\n          { book: \"Campbell's Operative Orthopaedics\", chapter: \"Spinal Cord Injuries\", edition: \"13th\" },\n          { book: \"Rockwood & Green\", chapter: \"Spinal Injury Management\", edition: \"8th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"spinal-cord-injury-mechanism\",\n        title: \"Spinal Cord Injuries - Mechanism & Complications\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiology secondary injury, spinal shock, neurogenic shock, long-term complications.\",\n        contentMd: "# Spinal Cord Injuries - Mechanism & Complications\\n\\n## Secondary Injury Timeline\\n\\n### Immediate (Minutes)\\n- Axonal disruption\\n- Neuronal cell death (mechanical)\\n- Hemorrhage into gray matter\\n\\n### Early (Hours - First 8)\\n- Inflammatory cell infiltration (microglia, macrophages)\\n- Edema formation (vasogenic = blood-brain barrier breakdown)\\n- Oxidative stress (free radicals)\\n- Excitotoxicity (glutamate excess)\\n- **Potential intervention window** (high-dose methylprednisolone, early decompression debated)\\n\\n### Delayed (Days-Weeks)\\n- Demyelination (glial cells attacked)\\n- Astrogliosis (scar formation)\\n- Cavitation (tissue liquefaction)\\n- Syrinx formation (fluid-filled cavity within cord)\\n\\n### Chronic (Months-Years)\\n- Scar tissue proliferation\\n- Neuronal sprouting (limited plasticity)\\n- Regeneration failure (adult CNS lacks regenerative capacity)\\n- Chronic pain syndromes\\n\\n## Spinal Shock\\n\\n### Definition\\n- Temporary loss of all reflex activity below level of injury\\n- Often confused with neurogenic shock (different condition)\\n\\n### Timeline\\n- **Onset**: Immediately after injury\\n- **Duration**: Hours to weeks (average 1-3 weeks)\\n- **Phase 1**: Flaccid paralysis, absent reflexes\\n- **Phase 2 (Weeks 2-8)**: Gradual return of reflexes\\n- **Phase 3**: Spasticity develops (hyperreflexia, clonus)\\n\\n### Important\\n- Spinal shock does NOT mean severity prognosis\\n- Can have complete injury with severe spinal shock, or minor injury with minimal spinal shock\\n- Return of bulbocavernosus reflex = end of spinal shock (prognostically important)\\n\\n## Neurogenic Shock (Different from Spinal Shock)\\n\\n### Definition\\n- Circulatory collapse from acute SCI (especially cervical/high thoracic)\\n- Loss of sympathetic tone → vasodilation\\n\\n### Mechanism\\n- T1-L2 = sympathetic nerves (vasomotor control)\\n- High SCI (C5 or above) → sympathetic denervation\\n- Loss of vasoconstriction → severe hypotension, bradycardia\\n\\n### Clinical Features\\n- **Hypotension**: Systolic BP <90 mmHg\\n- **Bradycardia**: HR <60 (parasympathetic unopposed)\\n- **Loss of sweating**: Below injury level\\n- **Poikilothermia**: Body temperature = environment temperature\\n\\n### Management\\n- **IV fluids**: Aggressive resuscitation\\n- **Vasopressors**: Dopamine, phenylephrine if fluids insufficient\\n- **Cardiac monitoring**: Risk of asystole with aggressive vagal stimulation\\n- **Atropine**: If severe bradycardia\\n- **Timeline**: Usually resolves within 1-3 weeks as body adapts\\n\\n## Autonomic Dysreflexia (Late Complication)\\n\\n### Definition\\n- Uncontrolled sympathetic activation in response to noxious stimulus below SCI level\\n- **Medical emergency** (can cause stroke, MI, death)\\n\\n### Mechanism\\n- Normal noxious stimulus (below level) triggers reflex vasoconstriction\\n- Messages cannot reach brain (spinal cord damaged)\\n- Body doesn't know to activate cerebral vasodilation\\n- Result: Severe hypertension + bradycardia (parasympathetic + unopposed sympathetics)\\n\\n### Triggers\\n- **Bladder distension**: Most common (patient doesn't feel urge, bladder overfills)\\n- **Bowel distension**: Second most common\\n- **Skin stimulation**: Pressure sores, tight clothing\\n- **Menstrual cramps**: In women with SCI\\n- **Sexual activity**: Especially in men with SCI\\n\\n### Clinical Presentation\\n- **Severe headache**: Throbbing\\n- **Hypertension**: Systolic >180 mmHg (severe)\\n- **Bradycardia**: Paradoxical (sympathetic activation usually causes tachycardia)\\n- **Profuse sweating**: Above level of injury\\n- **Flushed face**: Above level\\n- **Anxiety**\\n- **Risk**: Stroke, MI, retinal hemorrhage, death if untreated\\n\\n### Management (EMERGENCY)\\n1. **Sit patient up**: Gravity reduces blood pressure\\n2. **Loosen tight clothing/catheter**: Remove stimulus\\n3. **Bladder emptying**: Catheterize if distended\\n4. **Bowel evacuation**: If constipated\\n5. **Remove irritants**: Check for pressure sores, tight braces\\n6. **Medications** (if above measures fail):\\n   - Nifedipine (calcium channel blocker)\\n   - Hydralazine (vasodilator)\\n   - Labetalol (combined alpha/beta blocker)\\n7. **Monitoring**: Cardiac, BP monitoring until resolved\\n\\n### Prevention\\n- Regular bladder emptying (catheterization schedule)\\n- Regular bowel care (stool softeners, digital disimpaction)\\n- Skin care (prevent pressure sores)\\n- Education: Patient/family must recognize early signs\\n\\n## Long-term Complications\\n\\n### Neurological\\n- **Spasticity**: 65% of SCI patients; muscle rigidity, pain\\n- **Chronic pain**: 40-50% develop neuropathic pain (dysesthetic pain, phantom sensations)\\n- **Syrinx**: Fluid-filled cavity in cord; progressive weakness possible\\n- **Tethered cord**: Scar tissue pulls cord; progressive decline\\n\\n### Musculoskeletal\\n- **Osteoporosis**: Rapid (immobility); fracture risk\\n- **Contractures**: Joint immobility → muscle/tendon shortening\\n- **Pressure ulcers**: Stage 3-4 common; sepsis risk\\n- **Shoulder pain**: 40-50% develop shoulder pain (overuse for mobility)\\n\\n### Genitourinary\\n- **Bladder dysfunction**: Spastic or flaccid; incontinence/retention\\n- **Urinary tract infections**: Most common infection in SCI (prevent with clean intermittent catheterization)\\n- **Erectile dysfunction**: 40-90% depending on level/completeness\\n- **Infertility**: Male; female fertility usually preserved but pregnancy complications possible\\n\\n### Gastrointestinal\\n- **Bowel dysfunction**: Spasticity or atony\\n- **Constipation**: Common; impaction risk\\n- **Ileus**: Early post-injury\\n\\n### Pulmonary (Cervical SCI)\\n- **Respiratory failure**: C3-C4 phrenic nerve damage → ventilator dependence\\n- **Pneumonia**: Common cause of death (aspiration, weak cough)\\n- **Sleep apnea**: Obstructive common\\n\\n### Cardiovascular\\n- **Autonomic dysreflexia**: See above\\n- **Orthostatic hypotension**: Positional blood pressure drops\\n- **DVT/PE**: High risk (immobility)\\n\\n### Psychological\\n- **Depression**: 40-50%\\n- **PTSD**: Especially if trauma-related SCI\\n- **Sexual dysfunction**: Physical + psychological components,\\n        mnemonics: [\\n          { text: \\\"Spinal shock = Temporary (weeks), Neurogenic shock = Sympathetic loss (hours-weeks)\\\", explanation: \\\"Distinction critical\\\" },\\n          { text: \\\"AD = Autonomic Dysreflexia = Absolute Emergency (risk of stroke)\\\", explanation: \\\"Life-threatening complication\\\" },\\n          { text: \\\"AD triggers: BBS = Bladder (most common), Bowel, Skin stimulation\\\", explanation: \\\"Autonomic dysreflexia triggers\\\" },\\n          { text: \\\"UTI = Most common infection in SCI (clean intermittent catheterization prevents)\\\", explanation: \\\"Infection prevention\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Spinal shock: Temporary (1-3 weeks); flaccid paralysis → spasticity\\\",\\n          \\\"Neurogenic shock: Hypotension + bradycardia from sympathetic loss\\\",\\n          \\\"Autonomic dysreflexia: MEDICAL EMERGENCY (severe HTN risk stroke)\\\",\\n          \\\"Bladder distension most common AD trigger; emptying reverses immediately\\\",\\n          \\\"Long-term complications: Spasticity, pain, infections (UTI most common), pressure ulcers\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Campbell's Operative Orthopaedics\\\", chapter: \\\"SCI Complications\\\", edition: \\\"13th\\\" },\\n          { book: \\\"Spinal Cord Medicine\\\", chapter: \\\"Secondary Injury & Complications\\\", edition: \\\"3rd\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"spinal-cord-injury-clinical\\\",\\n        title: \\\"Spinal Cord Injuries - Clinical Management\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Acute management protocol, rehabilitation, surgical indications, Indian context.\\\",\\n        contentMd: ``# Spinal Cord Injuries - Clinical Management\\n\\n## Acute Phase Management (First Hours-Days)\\n\\n### Prehospital (Golden Hours)\\n1. **Scene safety**: Ensure rescuer safety\\n2. **Spinal precautions**: Cervical spine immobilization\\n3. **ABCs**: Airway (intubate if C-spine injury), Breathing (ventilate), Circulation\\n4. **Transport**: Minimize movement, rapid transport to trauma center\\n5. **Communication**: Alert hospital of SCI for neuro trauma team activation\\n\\n### Emergency Department\\n1. **ABC assessment**: Airway patency, breathing adequacy, circulation\\n2. **C-spine clearance**: Rule out fracture (X-ray, CT, MRI)\\n3. **Neurological exam**: ASIA score (critical baseline)\\n4. **Imaging**: High-resolution CT (fracture), MRI (cord damage, edema)\\n5. **Medical interventions**:\\n   - **High-dose methylprednisolone** (NASCIS protocol): 30 mg/kg bolus, then 5.4 mg/kg/hr × 24 hrs (must start within 8 hours of injury)\\n   - **Note**: Controversial; modest improvement if used early\\n6. **Prevent complications**: DVT prophylaxis, gastric protection, urinary catheterization\\n\\n### Acute Hospitalization (Days 1-14)\\n- **Intensive monitoring**: Neuro exams, respiratory status (C-SCI), vital signs\\n- **Management**:\\n  - Immobilization continues (collar, halo)\\n  - DVT prophylaxis (mechanical + chemical)\\n  - Bowel/bladder management (indwelling catheter → intermittent catheterization)\\n  - Pressure ulcer prevention (turning schedule q2h, air mattress)\\n  - Pulmonary care: Chest physiotherapy, incentive spirometry\\n  - Nutrition: Early feeding (increased metabolic demands)\\n  - Spasticity management: Baclofen, stretching\\n  - Pain management: Multimodal (neuropathic pain difficult)\\n  - Psychological support: Counseling, depression screening\\n\\n### Surgical Indications (Timing Debated)\\n- **Early surgery** (24-72 hours): Some trials suggest better outcomes\\n- **Indications**:\\n  - Unstable fracture-dislocation\\n  - Acute epidural hematoma\\n  - Persistent cord compression despite medical management\\n  - Progressive neurological deterioration\\n  - Fragments in spinal canal\\n\\n**Surgical goals**:\\n- Decompress spinal cord\\n- Stabilize fractured segments\\n- Realign dislocated vertebrae\\n\\n## Rehabilitation Phase (Weeks-Months)\\n\\n### Goals\\n- Maximize independence\\n- Prevent complications\\n- Psychological adjustment\\n- Return to work/social integration\\n\\n### Therapy Components\\n1. **Physical therapy**:\\n   - Range of motion (prevent contractures)\\n   - Strengthening (preserved muscle groups)\\n   - Wheelchair training\\n   - Gait training (if any ambulation potential)\\n\\n2. **Occupational therapy**:\\n   - ADL training (dressing, eating, bathing)\\n   - Hand/arm strengthening (high SCI)\\n   - Vocational assessment\\n\\n3. **Speech therapy**: If respiratory involvement\\n4. **Psychological**: Depression screening, PTSD management, adjustment counseling\\n5. **Sexual counseling**: Erectile dysfunction management, pregnancy counseling\\n\\n### Functional Outcomes by Level\\n\\n| Level | Key Features | Wheelchair? | Ambulation? | Employment? |\\n|-------|-------------|-----------|-----------|-----------|\\n| **C1-C3** | Ventilator dependent | Power chair | No | Minimal |\\n| **C4** | Phrenic nerve intact; respiration OK | Power chair | No | Possible |\\n| **C5** | Shoulder movement intact | Power/manual chair | No | Many employed |\\n| **C6-C7** | Wrist/hand movement intact | Manual chair | No | Most employed |\\n| **C8-T1** | Normal upper extremity | Manual chair | No | Most employed |\\n| **T1-T8** | Trunk control weak | Manual chair | No | Most employed |\\n| **T9-T12** | Trunk control good | Manual chair | Possible with aids | Most employed |\\n| **L1-L2** | Hip flexion intact | Crutches/braces | Some ambulation | Most employed |\\n| **L3-L5** | Knee movement intact | Crutches/AFO | Community ambulation | Most employed |\\n| **S1+** | Sacral preserved | None | Full ambulation | Most employed |\\n\\n## Chronic Management\\n\\n### Bladder Management\\n- **Goal**: Regular emptying without incontinence/infection\\n- **Methods**:\\n  - Indwelling catheter: Easy but infection risk\\n  - **Clean intermittent catheterization (CIC)**: Preferred (self-catheterization q4-6h)\\n  - Reflex voiding: If reflex intact (triggering bladder contractions)\\n  - Condom catheter: Males (external)\\n- **Monitoring**: Regular urinalysis, renal ultrasound (prevent hydronephrosis)\\n\\n### Bowel Management\\n- **Goal**: Regular defecation on schedule (prevent incontinence, impaction)\\n- **Methods**:\\n  - Stool softeners (Docusate)\\n  - Osmotic laxatives (Polyethylene glycol)\\n  - Routine digital stimulation (reflex bowel movement)\\n  - Timed suppositories\\n  - High-fiber diet\\n- **Prevention**: Regular toileting schedule, adequate fluid\\n\\n### Pressure Ulcer Prevention\\n- **Risk factors**: Immobility, poor nutrition, incontinence\\n- **Prevention**:\\n  - Pressure redistribution: Air mattress, frequent turning (q2h)\\n  - Skin care: Cleanliness, moisture control\\n  - Nutrition: Adequate protein, vitamins\\n  - Off-loading: Weight-shifting during day\\n- **Stages**:\\n  - Stage 1: Redness (blanching)\\n  - Stage 2: Blister/shallow ulcer\\n  - Stage 3: Full-thickness skin loss\\n  - Stage 4: Bone/muscle exposed\\n  - **Sepsis risk**: Especially stage 3-4\\n\\n### Pain Management\\n- **Types**:\\n  - Nociceptive: Mechanical pain (contractures, shoulder)\\n  - Neuropathic: Dysesthetic (burning), phantom limb\\n  - Visceral: Internal organ pain\\n- **Treatments**:\\n  - Physical: Stretching, positioning\\n  - Pharmacologic**: Gabapentin, pregabalin, duloxetine (neuropathic)\\n  - Interventional: Spasticity blocks, pain clinic referral\\n  - Psychological: CBT, mindfulness\\n\\n## Indian Context Considerations\\n\\n### Epidemiology (India-specific)\\n- **Higher incidence**: Traffic accidents (poor road infrastructure)\\n- **Falls**: Elderly (construction, unregulated building sites)\\n- **Violence**: Assaults, penetrating trauma (higher in certain regions)\\n- **Delayed presentation**: Many arrive >24 hours post-injury (rural access issues)\\n\\n### Management Challenges\\n- **Limited resources**: Many centers lack MRI, neurosurgery\\n- **Cost**: Methylprednisolone expensive; many patients cannot afford\\n- **Rehabilitation**: Few dedicated SCI rehabilitation centers\\n- **Infrastructure**: Ramps, accessible transport limited\\n- **Social barriers**: Stigma, marriage prospects, employment discrimination\\n\\n### Practical Approach\\n- **Focus**: Prevention (road safety), early transport, basic care\\n- **Available treatments**: Mechanical stabilization, infectious prevention\\n- **Rehabilitation**: Community-based therapy if institutional care unavailable\\n- **Education**: Self-care, prevention of complications paramount,\\n        mnemonics: [\\n          { text: \\\"ABCDE = Airway, Breathing, Circulation, Disability (neuro exam), Environment (C-spine protect)\\\", explanation: \\\"Trauma assessment\\\" },\\n          { text: \\\"CIC = Clean Intermittent Catheterization = Preferred bladder management\\\", explanation: \\\"Bladder care standard\\\" },\\n          { text: \\\"C4 = Can't go higher without ventilator (phrenic nerve C3-C4)\\\", explanation: \\\"Respiratory critical level\\\" },\\n          { text: \\\"L = Lumbar SCI = Walking possible (T12-L5 still have some motor)\\\", explanation: \\\"Ambulation potential by level\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Acute management: ABCs, C-spine immobilization, methylprednisolone within 8 hours (modest benefit)\\\",\\n          \\\"Surgical decompression if unstable fracture or progressive decline\\\",\\n          \\\"Functional outcomes variable by level (C4 ventilator-dependent; C8-T paraplegia often employed)\\\",\\n          \\\"Chronic: CIC for bladder, scheduled bowel care, pressure ulcer prevention\\\",\\n          \\\"Autonomic dysreflexia emergency (bladder emptying immediate reversal)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Campbell's Operative Orthopaedics\\\", chapter: \\\"SCI Management\\\", edition: \\\"13th\\\" },\\n          { book: \\\"Spinal Cord Medicine\\\", chapter: \\\"Rehabilitation & Long-term Care\\\", edition: \\\"3rd\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"spinal-cord-injury-exam-prep\\\",\\n        title: \\\"Spinal Cord Injuries - Exam Prep\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"High-yield facts, ASIA classification, complications, management algorithms.\\\",\\n        contentMd: ``# Spinal Cord Injuries - Exam Prep\\n\\n## ASIA Classification (Must Know!)\\n\\n| Grade | Sensory | Motor | Definition |\\n|-------|---------|-------|-----------|\\n| **A** | No | No | Complete (no function below level) |\\n| **B** | Yes | No | Sensory preserved, motor lost |\\n| **C** | Yes | Yes (<3/5) | Motor weak (<3/5 strength) |\\n| **D** | Yes | Yes (≥3/5) | Motor functional (≥3/5 strength) |\\n| **E** | Normal | Normal | Normal function |\\n\\n**Key measurement**: Sacral segments (S4-S5) = last segments to assess\\n\\n## Spinal Levels & Function\\n\\n**Cervical**:\\n- C4: Shoulder shrug (diaphragm → breathing), **ventilator-dependent**\\n- C5: Shoulder abduction/flexion\\n- C6: Wrist extension (thumb), writing possible with brace\\n- C7: Elbow extension, functional hands\\n- C8: Intrinsic hand muscles, fine motor\\n\\n**Thoracic**:\\n- T4: Nipple line\\n- T10: Umbilicus\\n- T1-T8: Trunk weakness\\n- T9-T12: Good trunk control\\n\\n**Lumbosacral**:\\n- L1: Hip flexion, groin\\n- L3: Knee extension, sits well\\n- L4: Knee jerk\\n- L5: Ankle dorsiflexion, big toe\\n- S1: Ankle jerk, foot lateral border\\n- S4-S5: Saddle sensation (perineum)\\n\\n## High-Yield Exam Facts\\n\\n**Acute management**:\\n- Immobilization critical\\n- Methylprednisolone: 30 mg/kg bolus, 5.4 mg/kg/hr × 24 hrs (must start <8 hrs)\\n- Consider early decompression if unstable/progressive\\n\\n**Syndromes**:\\n- Central cord: Upper limb > lower limb weakness; BEST prognosis\\n- Anterior cord: Motor/pain loss; WORST prognosis\\n- Brown-Sequard: Half-cord; GOOD prognosis (collateral routes)\\n- Cauda equina: EMERGENCY decompression (nerve roots)\\n\\n**Spinal shock vs. Neurogenic shock**:\\n- Spinal shock: Flaccid paralysis (temporary)\\n- Neurogenic shock: Hypotension + bradycardia (sympathetic loss)\\n\\n**Autonomic dysreflexia**:\\n- Medical emergency (>180 mmHg systolic)\\n- Most common trigger: BLADDER DISTENSION\\n- Management: Sit up, empty bladder, medications (nifedipine)\\n\\n**Functional outcomes**:\\n- C4: Ventilator-dependent, limited independence\\n- C5-C8: Variable independence, most in wheelchairs\\n- T: Wheelchair bound, good trunk control (T9+)\\n- L: Some ambulation possible, crutches/braces needed\\n- S: Full community ambulation expected\\n\\n## Common Exam Question Patterns\\n\\n1. \\\"Which SCI has best prognosis?\\\" → Central cord (incomplete, upper limb)\\n2. \\\"Which has worst prognosis?\\\" → Anterior cord (motor columns destroyed)\\n3. \\\"C4 SCI management?\\\" → Ventilator-dependent, respiratory management critical\\n4. \\\"Most common complication?\\\" → Pressure ulcers or UTI\\n5. \\\"Autonomic dysreflexia trigger?\\\" → Bladder distension (most common)\\n6. \\\"ASIA classification?\\\" → A (complete), B-D (incomplete), E (normal)\\n7. \\\"Methylprednisolone timing?\\\" → Must start <8 hours of injury\\n8. \\\"Spinal shock duration?\\\" → 1-3 weeks (temporary)\\n9. \\\"Best bladder management?\\\" → Clean intermittent catheterization (CIC)\\n10. \\\"Who needs ventilator?\\\" → C3-C4 injury (phrenic nerve damage)\\n\\n## Management Algorithm\\n\\n```\\nSCI Suspected?\\n├─ Immobilize spine immediately\\n├─ ABCs (airway, breathing, circulation)\\n├─ Neurological exam (ASIA score = baseline critical!)\\n├─ Imaging (CT, then MRI)\\n├─ Methylprednisolone <8 hrs? (Controversial, modest benefit)\\n├─ Surgical indications?\\n│  ├─ Unstable fracture → Surgery\\n│  ├─ Epidural hematoma → Surgery\\n│  ├─ Progressive neurological decline → Surgery\\n│  └─ Stable fracture + no progression → Conservative (immobilization)\\n├─ Complications prevention\\n│  ├─ DVT prophylaxis (SCD, enoxaparin)\\n│  ├─ Pressure ulcer prevention (turns q2h, air mattress)\\n│  ├─ Bladder: Catheterize (indwelling → CIC)\\n│  ├─ GI: Bowel care, nutrition\\n│  └─ Respiratory (C-SCI): Chest PT, incentive spirometry\\n└─ Rehabilitation phase\\n   ├─ PT/OT (strengthen, ADLs)\\n   ├─ Psychological support\\n   └─ Community reintegration\\n```\\n\\n## Dermatomes & Myotomes\\n\\n**Remember key levels**:\\n- C5 = Shoulder abduction (deltoid)\\n- C6 = Wrist extension (extensor carpi radialis)\\n- C7 = Elbow extension (triceps)\\n- C8 = Finger flexion (flexor digitorum)\\n- T4 = Nipple level\\n- T10 = Umbilicus\\n- L1 = Groin\\n- L4 = Knee extension (quadriceps)\\n- L5 = Ankle dorsiflexion (EDB)\\n- S1 = Ankle plantarflexion (gastrocnemius), foot lateral border\\n\\n## Treatment Controversy: High-dose Corticosteroids\\n\\n**NASCIS trial**: Methylprednisolone 30 mg/kg bolus + infusion (5.4 mg/kg/hr × 24 hrs) if <8 hrs post-injury\\n- **Benefit**: Small improvement in motor scores (~5-7 points)\\n- **Risk**: Infection, GI bleeding\\n- **Current status**: Some centers use it, others don't (not universally recommended)\\n- **Exam focus**: Know protocol, understand modest benefit, know timing critical\\n\\n## Common Errors in Exam\\n\\n- **Mistaking spinal shock for prognosis**: Spinal shock temporary; doesn't predict recovery\\n- **Confusing spinal shock with neurogenic shock**: Different mechanisms, different management\\n- **Wrong ASIA level**: Must check sacral segments (S4-S5)\\n- **Forgetting C-spine precautions**: Immediate immobilization critical\\n- **Missing autonomic dysreflexia signs**: Can present as simple headache,\\n        mnemonics: [\\n          { text: \\\"ASIA = A (complete), B-D (incomplete levels), E (normal)\\\", explanation: \\\"Classification scale\\\" },\\n          { text: \\\"C4 = ventilator, C5-C7 = variable, T = paraplegia, L = ambulation possible\\\", explanation: \\\"Functional levels\\\" },\\n          { text: \\\"Central cord = upper > lower (BEST); Anterior = motor lost (WORST)\\\", explanation: \\\"Syndrome prognosis\\\" },\\n          { text: \\\"BD = Bladder + Bowel management = Chronic SCI care foundation\\\", explanation: \\\"Long-term priorities\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"ASIA classification: A (complete) to E (normal); determines prognosis\\\",\\n          \\\"Central cord syndrome: Incomplete, best prognosis (>50% walk)\\\",\\n          \\\"Spinal shock: Temporary (1-3 weeks) flaccid paralysis → spasticity\\\",\\n          \\\"Autonomic dysreflexia: Emergency (HTN >180); bladder emptying resolves immediately\\\",\\n          \\\"Methylprednisolone: Must start <8 hrs, modest benefit (controversial)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"AIPG Orthopaedics Review\\\", chapter: \\\"Spinal Cord Injury Summary\\\", edition: \\\"Current\\\" },\\n          { book: \\\"Campbell's Operative Orthopaedics\\\", chapter: \\\"SCI Quick Facts\\\", edition: \\\"13th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"spinal-cord-injury-active-recall\\\",\\n        title: \\\"Spinal Cord Injuries - Active Recall\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"7 clinical scenarios testing SCI management, complications, and rehabilitation.\\\",\\n        contentMd: ``# Spinal Cord Injuries - Active Recall\\n\\n## Q1: Central Cord Syndrome Recognition\\n\\n**Q: 68-year-old falls backward at home, hits head on edge of table. Admitted to ED: Presents with severe weakness in arms (Grade 1-2), mild weakness in legs (Grade 3-4), intact sensation. What syndrome? What's the prognosis?**\\n\\nA: **CENTRAL CORD SYNDROME** (incomplete SCI)\\n\\n**Mechanism**: Hyperextension injury with central gray matter damage (most vulnerable area centrally located)\\n\\n**Classic pattern**:\\n- Arms weak (core of cord damaged)\\n- Legs stronger (lateral corticospinal tracts preserved)\\n- Sensation usually intact (spinothalamic tracts lateral)\\n\\n**ASIA classification**: Likely ASIA C (motor preserved <3/5 strength)\\n\\n**Prognosis**: **BEST among SCI syndromes**\\n- 50-70% eventually walk\\n- Many achieve independence\\n- Recovery often dramatic over months\\n\\n**Management**:\\n- Conservative (no surgery usually needed; incomplete injury)\\n- Aggressive rehabilitation (good potential)\\n- Early mobilization encouraged (mobility aids)\\n\\n**Why good prognosis**: Only central gray matter damaged; lateral columns intact (alternative pathways for recovery)\\n\\n## Q2: Cauda Equina Emergency\\n\\n**Q: 45-year-old with massive L4-L5 disc herniation, presents with sudden onset saddle anesthesia, bilateral leg weakness, urinary retention, and inability to void. How urgent is this?**\\n\\nA: **ABSOLUTE EMERGENCY - CAUDA EQUINA SYNDROME**\\n\\n**Red flags present**:\\n- Saddle anesthesia (S4-S5 dermatome loss = confirms cauda equina, not cord)\\n- Bilateral motor loss\\n- Urinary retention\\n- Loss of bowel/bladder control\\n\\n**Why emergency**:\\n- Nerve roots (not cord) are being compressed\\n- Nerve roots CAN regenerate (unlike cord)\\n- But only if decompressed quickly (<24-48 hours)\\n- After 48 hours: Permanent nerve damage likely\\n\\n**Immediate management**:\\n1. **Emergency MRI**: Confirm diagnosis, localize compression\\n2. **Neurosurgery notification**: STAT\\n3. **Surgical decompression**: URGENT (laminectomy + discectomy)\\n4. **Timing critical**: Goal decompression <8 hours if possible, <24 hours mandatory\\n5. **Catheterization**: Urinary retention (prevent further bladder damage)\\n\\n**Prognosis with early decompression**: Good (~70% achieve function)\\n**Prognosis with delayed decompression**: Poor (permanent nerve damage)\\n\\n**Key distinction**: Cauda equina = NERVE ROOTS = RECOVERABLE (emergency); Cord = CENTRAL NERVOUS SYSTEM = NON-RECOVERABLE (less urgent)\\n\\n## Q3: Autonomic Dysreflexia Crisis\\n\\n**Q: 32-year-old with T6 SCI (complete, 2 years post-injury) presents to clinic with severe throbbing headache, BP 190/110 (baseline 120/80), HR 52. Patient has catheter. Sweating profusely above T6 level. What's happening and what's your immediate management?**\\n\\nA: **AUTONOMIC DYSREFLEXIA** - MEDICAL EMERGENCY\\n\\n**Mechanism**:\\n- T6 injury = Sympathetic denervation (T1-L2 normally control BP)\\n- Below T6: Noxious stimulus (likely bladder distension from catheter blockage)\\n- Reflex sympathetic vasoconstriction below level\\n- Brain doesn't receive signal to activate cerebral vasodilation\\n- Unopposed sympathetic activation → severe HTN + reflex bradycardia\\n\\n**Clinical diagnosis**:\\n- Hypertension >180 mmHg + bradycardia (paradoxical)\\n- Headache, sweating above level\\n- History of SCI\\n- Acute onset\\n\\n**Immediate management** (Sequential):\\n1. **Sit patient upright** (gravity reduces BP)\\n2. **Check catheter**: Is it blocked/kinked?\\n   - If blocked: Irrigate or replace catheter immediately (most likely cause)\\n   - If flowing: Proceed to step 3\\n3. **Check bowel**: Any stool impaction?\\n   - If constipated: Digital disimpaction or enema\\n4. **Check skin**: Tight clothing, pressure ulcers, ingrown nails?\\n   - Remove constrictive items\\n5. **Medications** (if still hypertensive after above):\\n   - Nifedipine 10-20 mg PO or SL (calcium channel blocker)\\n   - OR Hydralazine IV if needed\\n6. **Monitoring**: BP/HR monitoring until resolved\\n\\n**Why catheter blockage likely trigger**:\\n- Patient has indwelling catheter\\n- Blockage causes bladder overdistension\\n- Overcystension triggers AD\\n- Draining catheter immediately resolves\\n\\n**Prevention education**:\\n- Regular catheter flushing (irrigate with saline)\\n- Scheduled catheter changes\\n- Recognition of early signs (headache onset = early warning)\\n- Keep emergency medications at home\\n\\n## Q4: Neurogenic Shock vs. Spinal Shock\\n\\n**Q: 28-year-old with C5 complete SCI, 2 hours post-injury. Presents: Flaccid paralysis below C5, absent reflexes, BP 85/45 (hypotensive), HR 42 (bradycardic), cold/clammy skin. What's the management?**\\n\\nA: **NEUROGENIC SHOCK** (not spinal shock)\\n\\n**Distinction**:\\n- **Spinal shock**: Loss of reflex activity (flaccid paralysis, absent reflexes) = normal post-SCI\\n- **Neurogenic shock**: Circulatory collapse (hypotension + bradycardia) = medical emergency\\n\\n**Mechanism** (C5 injury):\\n- C5 is cervical → affects all thoracic sympathetics (T1-T12)\\n- Loss of sympathetic tone → vasodilation\\n- Unopposed parasympathetic (vagal tone) → bradycardia\\n- Result: Hypotension + bradycardia\\n\\n**Management**:\\n1. **IV fluids**: Aggressive bolus (2-4 L normal saline) for hypotension\\n2. **Vasopressors**: If BP still <90 despite fluids\\n   - Dopamine 5-10 mcg/kg/min (cardiomimetic, vasoconstriction)\\n   - Phenylephrine if persistent (pure vasoconstrictor)\\n3. **Atropine**: If HR <40 with hemodynamic compromise\\n4. **Cardiac monitoring**: Risk of asystole with aggressive stimulation\\n5. **Continued supportive care**: Ventilation support (C5 may need assistance)\\n\\n**Timeline**:\\n- Neurogenic shock typically resolves 1-3 weeks\\n- Body adapts; sympathetic tone gradually returns\\n- Most patients normalize BP/HR by 3 weeks\\n\\n**NOT to be confused with**:\\n- Hemorrhagic shock (normal HR, weak pulse)\\n- Septic shock (fever, elevated lactate)\\n- Cardiogenic shock (elevated JVD, lung edema)\\n\\n## Q5: Pressure Ulcer Prevention Failure\\n\\n**Q: T10 SCI patient on bed rest, admitted to hospital. Despite turning schedule q2h, patient develops stage 3 pressure ulcer on sacrum within 5 days. What went wrong?**\\n\\nA: **Multifactorial failure in pressure ulcer prevention**:\\n\\n**Contributing factors** (5-day rapid development suggests multiple problems):\\n1. **Nutritional status**: Likely inadequate protein intake\\n   - Protein needed for wound healing\\n   - SCI patients have increased metabolic needs\\n   - Ensure adequate nutrition (2000+ calories, 80+ g protein)\\n\\n2. **Turning schedule breakdown**: Despite q2h orders, likely not being done\\n   - Staff workload/compliance issues\\n   - Need direct supervision/audit\\n   - Consider air mattress + turning schedule\\n\\n3. **Moisture/incontinence**: Urine/feces breakdown skin\\n   - Inadequate catheter care\\n   - Perineal cleaning needed\\n   - Moisture barriers (creams, powder)\\n\\n4. **Poor skin inspection**: Missed early stage 1-2 ulcer\\n   - Should have caught red area, taken action\\n   - Requires dedicated wound care protocols\\n\\n5. **Shear forces**: Bed friction during positioning\\n   - Use lifts/sliding sheets (not dragging patient)\\n   - Proper positioning technique\\n\\n**Management**:\\n- **Surgical consult**: Stage 3 = full-thickness skin loss (needs expert care)\\n- **Possible debridement**: Remove necrotic tissue\\n- **Flap surgery**: Large ulcers may need plastic surgery (muscle flap rotation)\\n- **Wound vac**: Negative pressure therapy for deep wounds\\n\\n**Prevention system overhaul**:\\n- Audit turning compliance\\n- Nutrition consultation (increase calories/protein)\\n- Wound care nurse involvement\\n- Air mattress + frequent position changes\\n- Moisture management\\n- Skin inspection protocols,\\n        mnemonics: [\\n          { text: \\\"Central cord = Upper > Lower (best prognosis, incomplete)\\\", explanation: \\\"Central cord syndrome\\\" },\\n          { text: \\\"Cauda equina = Emergency (nerve roots recoverable <48 hrs)\\\", explanation: \\\"Spinal emergency\\\" },\\n          { text: \\\"AD = Autonomic Dysreflexia = Bladder → sit up → drain → meds\\\", explanation: \\\"AD management sequence\\\" },\\n          { text: \\\"Neuro shock = Vasodilation (IV fluids + pressors), Spinal shock = Temporary (wait)\\\", explanation: \\\"Shock distinction\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Central cord: Incomplete, good prognosis (50-70% walk)\\\",\\n          \\\"Cauda equina: Emergency decompression <24-48 hours (nerve roots recoverable)\\\",\\n          \\\"Autonomic dysreflexia: Sit up, drain bladder (most common trigger), medications if needed\\\",\\n          \\\"Neurogenic shock: Aggressive fluids + vasopressors (resolves 1-3 weeks)\\\",\\n          \\\"Pressure ulcers: Multifactorial prevention (turning, nutrition, moisture, inspection)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Campbell's Operative Orthopaedics\\\", chapter: \\\"SCI Cases\\\", edition: \\\"13th\\\" },\\n          { book: \\\"Spinal Cord Medicine\\\", chapter: \\\"Case Studies\\\", edition: \\\"3rd\\\" }\\n        ]\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-}
-];
-];
+        summary: "Biomechanics of injury, fracture propagation, soft tissue damage, neurovascular impact, and complications.",
+        contentMd: `# Forearm & Wrist Fractures - Mechanism & Pathophysiology
+
+## Fracture Mechanics
+
+### Colles' Fracture Mechanism
+- **Mechanism**: Fall on outstretched hand with wrist extended (FOOSH) + radial deviation
+- **Force**: Axial loading through extended wrist → compression of distal radius
+- **Fracture propagation**:
+  1. Initial fracture at metaphyseal-diaphyseal junction (weak zone, higher porosity)
+  2. Dorsal cortex breaks first (dorsal tension) → dorsal displacement of distal fragment
+  3. Ulnar styloid often avulsed by triangular fibrocartilage complex (TFCC) traction
+  4. May extend into joint (intra-articular variant, higher arthritis risk)
+
+### Smith's Fracture Mechanism
+- **Mechanism**: FOOSH with wrist flexed (reverse of Colles')
+- **Force**: Palmarly directed force → compression of volar distal radius
+- **Result**: Volar displacement → "reverse dinner fork" deformity
+- **Higher complication risk**: Loss of reduction (gravity pulls distal fragment palmarly), malunion common
+
+### Scaphoid Fracture Mechanism
+- **Mechanism**: FOOSH with wrist extended + radially deviated (force transmitted to scaphoid)
+- **Mechanism variants**:
+  - **Direct**: Blow to scaphoid tubercle (rare)
+  - **Indirect**: Compressive force through wrist (common, >90% of cases)
+- **Fracture line**: Most commonly at waist (60-70%), followed by proximal pole (20-30%), distal pole (10-20%)
+- **Why proximal pole worst**: Retrograde blood supply (enters at distal/middle third) → proximal pole avascular if fracture at waist or proximal
+
+### Monteggia Fracture Mechanism
+- **Mechanism**: Direct blow to dorsal forearm or FOOSH with pronation
+- **Forces**: Axial load on pronated forearm → proximal ulnar fracture + anterior radial head dislocation
+- **Why radial head dislocates**: Annular ligament disrupted, unopposed pull of biceps brachii
+- **Types** (Bado classification):
+  - **Type 1** (60%): Anterior angulation ulna + anterior radial dislocation (fall on extended elbow)
+  - **Type 2** (15%): Posterior angulation ulna + posterior radial dislocation (high-energy, worse prognosis)
+  - **Type 3** (20%): Ulnar metaphyseal fracture (children) + anterior radial dislocation
+  - **Type 4** (5%): Both radius & ulna fractured + radial head dislocation
+
+### Galeazzi Fracture Mechanism
+- **Mechanism**: Pronation + axial load on distal radius
+- **Fracture**: Distal third radial fracture (metaphyseal or diaphyseal)
+- **DRUJ disruption**: Interosseous membrane + radioulnar ligaments torn → radial head shifts dorsally relative to ulna
+- **Why serious**: DRUJ dislocation often missed, leading to chronic instability if not recognized
+
+## Soft Tissue Injury Patterns
+
+### Associated Ligament Injuries
+- **Scapholunate ligament**: Disrupted in scaphoid fractures + perilunate injuries; leads to scapholunate dissociation
+- **Lunotriquetral ligament**: Torn with triquetral fractures or ulnar-sided wrist injuries
+- **Triangular fibrocartilage complex (TFCC)**: Disrupted in DRUJ injuries, ulnar styloid fractures; leads to chronic wrist instability
+- **Volar/dorsal radiocarpal ligaments**: Torn in intra-articular fractures (Barton's), radiolunate dissociation risk
+
+### Nerve & Artery Compression
+- **Anterior interosseous nerve (AIN)**: At risk with proximal radius fractures; loss of thumb IP flexion, index DIP flexion
+- **Posterior interosseous nerve (PIN)**: At risk with radial neck fractures; loss of wrist/finger extension
+- **Radial artery**: Compressed by dorsal fragment displacement (especially Colles' with severe dorsal angulation); signs = coldness, weak pulse, slow capillary refill
+- **Ulnar artery**: At risk in volar wrist trauma (relative risk)
+
+## Fracture Healing Characteristics
+
+### Distal Radius Fracture Healing
+- **Healing timeline**: 6-12 weeks (cancellous bone, good blood supply)
+- **Stages**:
+  - **Weeks 1-3**: Inflammatory phase, callus formation
+  - **Weeks 3-8**: Soft callus → hard callus transformation (radiographs show bridging callus)
+  - **Weeks 8-12**: Remodeling phase, fracture line may still visible but stable
+  - **12+ weeks**: Complete remodeling, full strength
+- **Factors affecting healing**: Age, osteoporosis (elderly heal slower), smoking (delays healing), nutrition
+
+### Scaphoid Fracture Healing
+- **Healing timeline**: Prolonged (12-16+ weeks)
+- **Why slow**: Limited blood supply, high mechanical stress in wrist motion
+- **Healing sequence**:
+  - **Weeks 1-6**: Callus formation (minimal radiographic change)
+  - **Weeks 6-12**: Progressive sclerosis at fracture site (hardening of bone)
+  - **Weeks 12-16+**: Fracture line consolidation (may take 6-8 months for complete union)
+- **Nonunion risk**: 5-10% if inadequately immobilized; proximal pole > waist > distal
+- **AVN risk**: 10-15% overall (proximal pole 30%+); ischemic necrosis if blood supply interrupted
+
+### Carpal Bone Healing (Other Bones)
+- **Lunate**: Slower than scaphoid (very limited blood supply); AVN risk highest among carpal bones
+- **Triquetrum**: Good healing (better blood supply than scaphoid)
+- **Trapezium/Hamate**: Generally favorable unless intra-articular
+
+## Complications During Healing
+
+### Early (Acute) Complications
+1. **Neurovascular compromise**:
+   - Nerve: Paresthesias, motor loss (check before & after reduction)
+   - Artery: Pale hand, weak pulse, pain out of proportion (emergency reduction needed)
+   - Management: Urgent reduction to relieve compression
+
+2. **Compartment syndrome** (rare in closed fractures, risk with crush injuries):
+   - Symptoms: Pain out of proportion, pain with passive stretch, paresthesias, pallor, pulselessness
+   - Emergency: Fasciotomy within 8 hours
+
+3. **Malunion** (loss of reduction):
+   - Colles': Dorsal angulation loss (gravity), loss of radial height (settling)
+   - Smith's: Volar angulation loss (gravity pulling palmarly)
+   - Management: Proper immobilization (dorsal slab for Colles', volar slab for Smith's), frequent monitoring
+
+### Late (Chronic) Complications
+1. **Post-traumatic arthritis** (chronic pain, stiffness):
+   - Risk factors: Intra-articular fractures (Barton's, comminuted), malunion, inadequate reduction
+   - Timeline: Develops months to years post-injury
+   - Prevention: Anatomic reduction, appropriate immobilization
+
+2. **Nonunion** (especially scaphoid):
+   - Risk: 5-15% if poorly immobilized
+   - Signs: Persistent pain, motion at fracture site on imaging
+   - Management: Longer immobilization or surgery (ORIF, bone graft if AVN)
+
+3. **Avascular necrosis** (especially scaphoid proximal pole, lunate):
+   - Signs: Progressive sclerosis on imaging, chronic pain
+   - Prevention: Early immobilization to preserve blood supply
+   - Management: May require scaphoidectomy if symptomatic (remove dead bone)
+
+4. **Complex regional pain syndrome (CRPS)**:
+   - Mechanism: Abnormal inflammatory/neurological response
+   - Symptoms: Burning pain, swelling, color/temperature changes, stiffness
+   - Risk factors: Severe injury, prolonged immobilization, female gender
+   - Management: Early mobilization, physiotherapy, pain management
+
+5. **Chronic wrist instability** (DRUJ/scapholunate):
+   - From: Untreated DRUJ dislocation (Galeazzi), scapholunate ligament tear
+   - Symptoms: Wrist clicking, weakness, instability
+   - Management: Surgical stabilization if functional limitation
+
+## Mnemonics
+- **Colles' = C (extension), dorsal = C-shape deformity; Smith's = S-shape (volar)**
+- **Scaphoid = AVN risk, especially proximal (80/20 rule: 80% anatomic, 20% complications)**
+- **DRUJ = Dangerous to Miss (Galeazzi); easy to overlook distal radioulnar injury**
+- **Barton's = Both (intra-articular + dislocation) = Bad prognosis**
+
+## Key Points
+- Colles' mechanism: Extension FOOSH → metaphyseal-diaphyseal junction fracture with dorsal displacement
+- Smith's mechanism: Flexion FOOSH → volar displacement; higher nonunion/malunion risk
+- Scaphoid healing: Slow (12-16+ weeks) due to retrograde blood supply; proximal pole AVN risk
+- Monteggia/Galeazzi: Dangerous paired injuries; easy to miss radial head dislocation or DRUJ disruption
+- Complications: Malunion (loss of reduction), nonunion (scaphoid), AVN (scaphoid/lunate), CRPS, chronic instability
+
+## Textbook References
+- Maheshwari's Essential Orthopaedics, 6th ed, Chapter: Fracture Healing & Complications
+- Apley & Solomon's System of Orthopaedics, 10th ed, Chapter: Soft Tissue & Vascular Injury`,
+        mnemonics: [
+          { text: "Colles' = dorsal displacement = gravity pulls distally (immobilize dorsally)", explanation: "Colles' management principle" },
+          { text: "Smith's = volar displacement = gravity pulls palmarly (immobilize volarly)", explanation: "Smith's management principle" },
+          { text: "Scaphoid AVN = Proximal pole most at risk (retrograde blood supply ends there)", explanation: "Scaphoid proximal pole AVN" },
+          { text: "DRUJ missed = DRUJ dislocation (Galeazzi) leads to chronic instability if not fixed", explanation: "Galeazzi disaster" }
+        ],
+        keyPoints: [
+          "Colles': extension FOOSH → dorsal metaphyseal fracture, ulnar styloid often avulsed",
+          "Smith's: flexion FOOSH → volar displacement, higher loss-of-reduction risk",
+          "Scaphoid: retrograde blood supply → proximal pole AVN risk (30%+), requires 12-16 weeks immobilization",
+          "Monteggia: proximal ulna + anterior radial dislocation (Type 1, 60%); easy to miss radial head",
+          "Galeazzi: distal radius + DRUJ disruption; must assess radioulnar joint on imaging"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Fracture Healing & Complications", edition: "6th" },
+          { book: "Apley & Solomon's System of Orthopaedics", chapter: "Neurovascular Complications", edition: "10th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "forearm-wrist-clinical",
+        title: "Forearm & Wrist Fractures - Clinical Management",
+        estimatedMinutes: 30,
+        summary: "Diagnosis, reduction techniques, immobilization protocols, imaging assessment, Indian healthcare context.",
+        contentMd: `# Forearm & Wrist Fractures - Clinical Management
+
+## Clinical Assessment
+
+### History
+- **Mechanism**: FOOSH (most common), direct blow, twisting injury
+- **Hand dominance**: Assess functional impact
+- **Symptoms**: Pain, swelling, deformity, neurological symptoms (tingling, weakness)
+- **Timeline**: Acute (hours) vs delayed presentation (common in rural India)
+
+### Physical Examination
+
+#### Inspection
+- **Deformity**: Dinner fork (Colles') vs reverse dinner fork (Smith's)
+- **Soft tissue**: Swelling, bruising, abrasion, wounds (open fracture?)
+- **Color**: Pale (vascular compromise), cyanosis
+- **Temperature**: Coldness (ischemia)
+
+#### Palpation
+- **Tenderness**: Anatomical snuffbox (scaphoid fracture), radial/ulnar styloid, fracture site
+- **Pulse**: Radial artery (presence, strength)
+- **Capillary refill**: Should be <2 seconds (normal perfusion)
+- **Bony landmarks**: Assess radial/ulnar styloid positions, DRUJ stability
+
+#### Neurovascular Examination (CRITICAL)
+- **Radial nerve**: Sensory (dorsal first web space), motor (wrist/finger extension)
+- **Median nerve**: Sensory (thumb/index pulp), motor (thumb opposition, wrist flexion)
+- **Ulnar nerve**: Sensory (little finger pulp), motor (finger abduction, wrist flexion)
+- **Anterior interosseous nerve (AIN)**: Thumb IP flexion (lost in some proximal radius fractures)
+- **Posterior interosseous nerve (PIN)**: Finger extension at MCP (lost in radial neck fractures)
+- **Vascular**: Radial & ulnar pulses, hand color, temperature
+
+#### Functional Assessment
+- **Pronation-supination**: Loss suggests interosseous membrane disruption (Galeazzi, Monteggia)
+- **Wrist motion**: Limited by swelling; assess gross ROM
+- **Finger motion**: Check to rule out compartment syndrome (pain with passive finger extension)
+
+### Imaging
+
+#### Plain X-rays (Initial)
+- **Views**: PA, lateral, and scaphoid view (elevated PA) for wrist
+- **Forearm**: PA, lateral, full-length forearm (entire radius & ulna in 2 views) for Monteggia/Galeazzi
+- **Assessment**:
+  - Fracture location, pattern, comminution
+  - Displacement (radial height, radial inclination, volar/dorsal angulation)
+  - Associated injuries (ulnar styloid, radial head dislocation)
+  - DRUJ alignment (assess radial/ulnar relationship)
+
+#### Computed Tomography (CT)
+- **Indications**: Complex intra-articular fractures (Barton's), comminuted fractures, scaphoid displacement
+- **Advantages**: 3D reconstruction, identifies small fragments, assesses intra-articular involvement
+- **Disadvantage**: Higher radiation exposure; not routine for simple fractures
+
+#### Magnetic Resonance Imaging (MRI)
+- **Indications**: Occult scaphoid fracture (negative X-ray but high clinical suspicion), ligament injuries (TFCC tear, scapholunate dissociation), AVN assessment
+- **Timing**: Not in acute phase (swelling interferes); useful 3-4 weeks post-injury if scaphoid injury suspected
+
+## Reduction Techniques
+
+### Colles' Fracture Reduction
+
+#### Pre-reduction Assessment
+- Neurovascular status documented
+- If vascular compromise → emergency reduction
+- Analgesia/anesthesia: Local (Bier block), regional (axillary), or general depending on setting
+
+#### Reduction Maneuvers
+1. **Position patient**: Seated, forearm pronated
+2. **Apply traction**: Gentle longitudinal traction (counteract initial shortening)
+3. **Reverse mechanism**: Extend wrist further (exaggerate dorsal displacement) → increase interosseous space
+4. **Correct deformity**: Radial deviation → straighten to neutral
+5. **Pronate forearm**: From supinated to pronated position (helps restore radial bow)
+6. **Flex and ulnar-deviate**: Final position of immobilization
+
+#### Immobilization
+- **Dorsal slab**: Maintains dorsal reduction (gravity helps)
+- **Position**: Wrist slightly flexed, forearm pronated, elbow 90 degrees
+- **Duration**: 6 weeks typically (6-8 weeks if comminuted)
+
+### Smith's Fracture Reduction
+
+#### Differences from Colles'
+- **Challenge**: Gravity pulls volar displacement → higher malunion risk
+- **Technique**: Reverse of Colles'
+  1. Exaggerate volar displacement initially
+  2. Extend wrist (opposite of Colles')
+  3. Supinate forearm
+  4. Finally flex and correct deformity
+
+#### Immobilization
+- **Volar slab**: Maintains volar reduction (counters gravity)
+- **Position**: Wrist extended (opposite of Colles'), supinated, elbow 90 degrees
+- **Duration**: 8 weeks (higher nonunion risk than Colles')
+
+### Scaphoid Fracture Management
+
+#### Non-operative (Most Common Initial Management)
+- **Immobilization**:
+  - **Waist fracture**: Thumb spica cast 12 weeks
+  - **Distal pole**: Thumb spica cast 8-10 weeks (better healing potential)
+  - **Proximal pole**: Thumb spica cast 16+ weeks (worst prognosis, highest AVN/nonunion risk)
+- **Position**: Thumb abducted, wrist slightly extended
+- **Follow-up imaging**: X-rays at 4-6 weeks to assess callus formation, CT if nonunion suspected
+
+#### Operative (Percutaneous Screw Fixation)
+- **Indications**: Displaced fracture (>2 mm), nonunion, proximal pole fracture (high AVN risk), athlete wanting early return
+- **Technique**: Percutaneous screw placement under fluoroscopy
+- **Advantage**: Early mobilization, better healing rates
+- **Cost**: Higher (important in Indian context)
+
+### Forearm Fracture (Radius & Ulna) Management
+
+#### Monteggia Fracture Management
+1. **Urgent reduction**: Reduce ulnar fracture first (restore length)
+2. **Reduce radial dislocation**: Restore anatomical alignment of radial head
+3. **Assessment**: Ensure radial head reduced on lateral X-ray
+4. **Immobilization**: Long-arm cast, supinated position (2-3 weeks), then functional brace
+5. **Follow-up**: Assess for loss of reduction (common, higher malunion rate)
+
+#### Galeazzi Fracture Management
+1. **Reduce radial fracture**: Restore radial length
+2. **Assess DRUJ**: Check radioulnar alignment on imaging
+3. **Immobilization**: Long-arm cast, pronated position (8-12 weeks)
+4. **Note**: DRUJ needs to be reduced; if not, ORIF may be needed
+5. **Follow-up**: Critical to assess DRUJ alignment at follow-up
+
+### Barton's Fracture Management
+- **Usually operative**: Intra-articular fractures have high arthritis risk
+- **Volar Barton**: Volar plate fixation (restores volar lip, reduces likelihood of dislocation)
+- **Dorsal Barton**: Dorsal plate fixation
+- **Early mobilization** encouraged post-operatively (prevent stiffness)
+
+## Follow-up Assessment
+
+### Clinical Follow-up
+- **First follow-up**: 1-2 weeks (assess swelling, neurovascular status)
+- **Subsequent**: 4-6 weeks (assess healing, callus formation)
+- **8-12 weeks**: Assess union, begin mobilization if union evident
+- **Final**: 12-16 weeks (functional assessment, return to work/activities)
+
+### Radiographic Follow-up
+- **2 weeks**: Check for loss of reduction (dorsal/volar angulation, radial height)
+- **6 weeks**: Callus formation, fracture line less visible
+- **12 weeks**: Fracture line consolidated, full strength expected
+
+### Return to Activities
+- **Non-dominant hand, simple fracture**: 8-12 weeks
+- **Dominant hand, complex fracture**: 12-16 weeks
+- **Contact sports**: 16+ weeks (risk of re-injury)
+
+## Indian Healthcare Context
+
+### Challenges
+- **Limited resources**: Many rural centers lack CT, fluoroscopy
+- **Cost**: ORIF expensive; many patients cannot afford
+- **Delayed presentation**: Patients arrive >1 week post-injury (affects healing outcomes)
+- **Follow-up compliance**: Difficult in rural areas; loss to follow-up common
+- **Rehabilitation**: Limited physiotherapy access
+
+### Practical Approach
+- **Conservative management**: Emphasis on proper immobilization, functional reduction acceptable if pain-free
+- **Non-operative preference**: For most fractures (cost, accessibility)
+- **Minimalist imaging**: X-rays for diagnosis, CT only if significant displacement
+- **Community-based PT**: Encourage home exercises, return to work per tolerance
+- **Emphasis on prevention**: Awareness about fall prevention (home modifications, elder care)
+
+## Mnemonics
+- **R.I.C.E. = Rest, Ice, Compression, Elevation** (initial management)
+- **R.O.W. = Reduction, Orthosis (immobilization), Wrist position** (management acronym)
+- **D.A.M.E. = Dorsal slab for Colles', Anterior (volar) slab for Smith's, Monteggia/Galeazzi assess DRUJ, Extended immobilization for Scaphoid**
+
+## Key Points
+- Colles': Dorsal slab, pronated position, 6-8 weeks
+- Smith's: Volar slab, supinated position, 8-10 weeks (higher risk of complications)
+- Scaphoid: Thumb spica cast 12-16 weeks (depends on fracture location), assess for AVN
+- Monteggia/Galeazzi: Must assess DRUJ, pronation-supination preservation critical
+- Barton's: Often requires surgery (intra-articular), early mobilization important
+- Indian context: Conservative management preferred, emphasize proper position & immobilization duration
+
+## Textbook References
+- Maheshwari's Essential Orthopaedics, 6th ed, Chapter: Management of Distal Radius Fractures
+- Apley & Solomon's System of Orthopaedics, 10th ed, Chapter: Practical Management of Upper Limb Fractures`,
+        mnemonics: [
+          { text: "Dorsal slab FORCE = Colles' (Flexion, Opposed dorsal, Reduction, Comfortable, Eight weeks)", explanation: "Colles' reduction & immobilization" },
+          { text: "Volar slab Smith = Super (Supination), Volar slab, Initial extended, Tricky malunion, Hold longer", explanation: "Smith's reduction & immobilization" },
+          { text: "Scaphoid = WAIST (W=Waist most common, A=Avascular necrosis risk, I=Immobilize 12-16, S=Snuffbox tenderness, T=Time-consuming healing)", explanation: "Scaphoid fracture" },
+          { text: "DRUJ = Don't miss Radioulnar (Galeazzi), Unrecognized dislocation (Monteggia), Joint disruption (both)", explanation: "Dangerous paired injuries" }
+        ],
+        keyPoints: [
+          "Colles': Dorsal displacement, immobilize dorsal slab in pronation, gravity helps reduction",
+          "Smith's: Volar displacement, immobilize volar slab in supination, gravity works against (higher malunion risk)",
+          "Scaphoid: Waist > proximal > distal; proximal has highest AVN risk (30-50%)",
+          "Monteggia: Ulnar fracture + anterior radial dislocation; easy to miss radial head",
+          "Galeazzi: Distal radius + DRUJ disruption; must confirm radioulnar reduction on imaging"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Management Protocols", edition: "6th" },
+          { book: "Apley & Solomon's System of Orthopaedics", chapter: "Practical Treatment Algorithms", edition: "10th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "forearm-wrist-exam-prep",
+        title: "Forearm & Wrist Fractures - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "High-yield facts, classification mnemonics, management algorithms, common exam questions.",
+        contentMd: `# Forearm & Wrist Fractures - Exam Prep
+
+## High-Yield Classification Facts
+
+### Distal Radius Fracture Types
+| Feature | Colles' | Smith's | Barton's |
+|---------|---------|---------|----------|
+| **Mechanism** | Extension FOOSH | Flexion FOOSH | Intra-articular FOOSH |
+| **Deformity** | Dorsal (dinner fork) | Volar (reverse) | Intra-articular ± dislocation |
+| **Incidence** | 80% of distal radius | 10% | 5% |
+| **Most common age** | Elderly females | Younger adults | Young to middle age |
+| **Union rate** | 95%+ | 90% (higher complication) | 85% (arthritis risk) |
+| **Immobilization** | Dorsal slab, 6-8 wks | Volar slab, 8-10 wks | ORIF usually |
+| **Prognosis** | Good | Fair (nonunion) | Fair (arthritis) |
+
+### Scaphoid Fracture Location & AVN Risk
+| Location | % of fractures | Healing time | AVN risk |
+|----------|----------------|--------------|----------|
+| **Distal pole** | 10-20% | 8-10 weeks | 5-10% |
+| **Waist** | 60-70% | 12 weeks | 15-20% |
+| **Proximal pole** | 20-30% | 16+ weeks | 30-50% |
+
+### Monteggia Fracture Bado Types
+| Type | Prevalence | Fracture pattern | Prognosis |
+|------|-----------|------------------|-----------|
+| **I** | 60% | Anterior angulation + anterior RH dislocation | Good |
+| **II** | 15% | Posterior angulation + posterior RH dislocation | Fair (worse) |
+| **III** | 20% | Metaphyseal ulnar (child) + anterior RH dislocation | Good (pediatric) |
+| **IV** | 5% | Both radius & ulna fractured + RH dislocation | Poor |
+
+## Management Algorithms
+
+### Distal Radius Fracture Algorithm
+```
+Distal Radius Fracture?
+├─ NEUROVASCULAR ASSESSMENT (Critical!)
+│  ├─ Vascular compromise → URGENT REDUCTION
+│  ├─ Nerve injury documented
+│  └─ Compartment syndrome signs? → Monitor closely
+│
+├─ ASSESS FRACTURE PATTERN
+│  ├─ Dorsal displacement → Colles' (extension FOOSH)
+│  ├─ Volar displacement → Smith's (flexion FOOSH)
+│  └─ Intra-articular → Barton's (consider surgery)
+│
+├─ REDUCTION
+│  ├─ Colles': Exaggerate dorsal → flatten → pronate → flex
+│  ├─ Smith's: Exaggerate volar → extend → supinate
+│  └─ Assessment: Pre & post-reduction X-rays
+│
+├─ IMMOBILIZATION
+│  ├─ Colles': Dorsal slab, pronated, 6-8 weeks
+│  ├─ Smith's: Volar slab, supinated, 8-10 weeks
+│  └─ Barton's: Often ORIF, early mobilization
+│
+└─ FOLLOW-UP
+   ├─ 2 weeks: Check for loss of reduction
+   ├─ 6 weeks: Assess callus, begin gentle mobilization
+   ├─ 12 weeks: Assess union, return to activities
+   └─ Final: Functional assessment (pronation-supination, ROM)
+```
+
+### Scaphoid Fracture Algorithm
+```
+Scaphoid Fracture Suspected?
+├─ IMAGING
+│  ├─ X-ray: PA, lateral, scaphoid view
+│  ├─ If negative but high suspicion → CT or MRI
+│  └─ Assess fracture location (distal/waist/proximal = healing time)
+│
+├─ IMMOBILIZATION (Even if X-ray negative)
+│  ├─ Distal pole: Thumb spica 8-10 weeks
+│  ├─ Waist: Thumb spica 12 weeks
+│  └─ Proximal pole: Thumb spica 16+ weeks (highest AVN risk)
+│
+├─ FOLLOW-UP IMAGING
+│  ├─ 4-6 weeks: Check for healing callus
+│  ├─ 12 weeks: Assess union
+│  └─ CT/MRI if nonunion or AVN suspected
+│
+└─ MANAGEMENT OPTIONS
+   ├─ Healing progressing → Continue immobilization
+   ├─ Nonunion risk → Consider ORIF (screw fixation)
+   ├─ AVN present → May require scaphoidectomy if symptomatic
+   └─ Athlete/non-compliant → Early ORIF for return to sport
+```
+
+## Common Exam Questions & Answers
+
+**Q1: Which distal radius fracture has best prognosis?**
+A: **Colles'** (80% of distal radius fractures, elderly, generally good union rate with proper immobilization)
+
+**Q2: What deformity distinguishes Smith's from Colles'?**
+A: **Smith's = VOLAR (reverse dinner fork), Colles' = DORSAL (dinner fork)**
+
+**Q3: What is the most common mechanism for Colles' fracture?**
+A: **FOOSH with wrist EXTENDED** (elderly falling forward on outstretched hand with wrist extended)
+
+**Q4: What is the most common site of scaphoid fracture?**
+A: **WAIST (60-70%)**, followed by proximal pole (20-30%, worst AVN risk), distal pole (10-20%)
+
+**Q5: What is the main complication risk with untreated Monteggia fracture?**
+A: **Missed radial head dislocation → chronic instability**, loss of pronation-supination
+
+**Q6: What distinguishes Galeazzi from Monteggia?**
+A: **Galeazzi = DISTAL radius fracture (+ DRUJ dislocation); Monteggia = PROXIMAL ulna (+ radial head dislocation)**
+
+**Q7: What is Barton's fracture?**
+A: **Intra-articular distal radius fracture WITH radiocarpal dislocation** (dorsal or volar), highest arthritis risk
+
+**Q8: What is the immobilization for a proximal pole scaphoid fracture?**
+A: **Thumb spica 16+ weeks** (longest immobilization due to avascular necrosis risk)
+
+**Q9: Which nerve is at risk with radial neck fracture?**
+A: **Posterior interosseous nerve (PIN)** (loss of wrist & finger extension)
+
+**Q10: What is the "snuffbox"?**
+A: **Anatomical area between thumb extensors (EPL & EPB)** - tender in scaphoid fractures, palpable scaphoid tubercle
+
+## Mnemonics for Easy Memory
+
+**Colles' vs Smith's = C vs S**:
+- **C = Coffee Cup (dorsal bump looks like holding hot cup), Extension mechanism**
+- **S = Smile Upside Down (volar deformity), Supination mechanism (immobilization)**
+
+**Scaphoid AVN = Proximal Pole**:
+- **Proximal = Problematic (poor blood supply)**
+- **Waist = Workable (reasonable healing)**
+- **Distal = Done quickly (good blood supply)**
+
+**Dangerous Missed Injuries (Monteggia, Galeazzi, Barton's)**:
+- **D.A.M. = Don't miss (Dislocation Anatomical Misses)**
+- **M = Monteggia (proximal ulna + RH dislocation)**
+- **G = Galeazzi (distal radius + DRUJ)**
+- **B = Barton's (intra-articular + dislocation)**
+
+**Treatment Duration**:
+- **Colles' = C = 6-8 weeks (short)**
+- **Smith's = S = 8-10 weeks (slightly longer)**
+- **Scaphoid = Many weeks (16+ for proximal, S = SLOW healing)**
+
+## High-Yield Exam Patterns
+
+1. **Mechanism questions**: Always think of FOOSH direction (extension vs flexion)
+2. **Deformity questions**: Dinner fork = dorsal, Reverse dinner fork = volar
+3. **Immobilization**: Gravity principle (dorsal slab for dorsal deformity, volar for volar)
+4. **Complication**: Malunion (loss of reduction), nonunion (scaphoid), AVN (scaphoid proximal)
+5. **Missed injuries**: Always assess DRUJ (Galeazzi), radial head position (Monteggia)
+6. **Return to function**: Pronation-supination critical (Monteggia/Galeazzi)
+
+## Key Points for Exam
+- Colles' 80%, dorsal displacement, extension FOOSH, dorsal slab, 6-8 weeks
+- Smith's 10%, volar displacement, flexion FOOSH, volar slab, 8-10 weeks, higher nonunion
+- Scaphoid waist most common, proximal pole highest AVN (30-50%), 12-16 weeks immobilization
+- Monteggia proximal ulna + RH anterior dislocation, easy to miss radial head
+- Galeazzi distal radius + DRUJ, must assess radioulnar joint
+- Barton's intra-articular + dislocation, high arthritis risk, often needs surgery
+
+## Textbook References
+- Maheshwari's Essential Orthopaedics, 6th ed, Chapter: Quick Revision - Wrist Fractures
+- AIPG Orthopaedics Review Notes`,
+        mnemonics: [
+          { text: "Colles' = Coffee Cup (dorsal deformity) = Extension (FOOSH)", explanation: "Colles' mechanism & deformity" },
+          { text: "Smith's = Smile (volar deformity) = Supination (immobilization)", explanation: "Smith's management" },
+          { text: "Scaphoid proximal = Proximal is Problematic (AVN 30-50%)", explanation: "Scaphoid AVN location" },
+          { text: "Monteggia missed = Medial (ulnar) fracture + Monster (RH) dislocation", explanation: "Monteggia dangers" }
+        ],
+        keyPoints: [
+          "Colles' = 80% distal radius, extension FOOSH, dorsal deformity, good prognosis",
+          "Smith's = 10% distal radius, flexion FOOSH, volar deformity, higher nonunion risk",
+          "Scaphoid = Waist most common, proximal pole highest AVN risk, longest immobilization",
+          "Monteggia = Proximal ulna + anterior RH dislocation (Type 1, 60%)",
+          "Galeazzi = Distal radius + DRUJ disruption, must assess radioulnar alignment"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Exam Revision", edition: "6th" },
+          { book: "AIPG Orthopaedics", chapter: "Wrist Fractures Quick Facts", edition: "Current" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "forearm-wrist-active-recall",
+        title: "Forearm & Wrist Fractures - Active Recall",
+        estimatedMinutes: 25,
+        summary: "8 clinical scenarios testing diagnosis, reduction, immobilization, complications, and management decisions.",
+        contentMd: `# Forearm & Wrist Fractures - Active Recall
+
+## Q1: 72-Year-Old Female with Colles' Fracture
+
+**Q: 72-year-old female, osteoporotic, falls on right wrist while walking at home (FOOSH with wrist extended). Presents with "dinner fork" deformity, swelling. What's your management plan?**
+
+**Diagnosis**: **Colles' fracture** (extra-articular distal radius with dorsal displacement)
+
+**Key clinical findings**:
+- Age 72 = elderly female, typical population for Colles'
+- Osteoporosis = poor bone quality, healing may be slower but still usually good
+- Dinner fork deformity = classic dorsal displacement
+- Extension FOOSH = mechanism consistent with Colles'
+
+**Management**:
+1. **Neurovascular assessment**: Check radial pulse, hand color, finger sensation/motor
+   - If compromised → URGENT REDUCTION
+2. **Analgesia**: Bier block, axillary block, or general anesthesia
+3. **Reduction maneuver**:
+   - Apply traction to decompress fragments
+   - Exaggerate extension (dorsal displacement) to increase interosseous space
+   - Radial deviation → straighten to neutral
+   - Pronate forearm
+   - Flex wrist slightly
+4. **Immobilization**: Dorsal plaster slab, wrist slightly flexed, forearm pronated, elbow 90°
+5. **X-ray**: Confirm reduction (compare pre/post)
+6. **Follow-up**: 2 weeks (check swelling, neurovascular status), 6 weeks (assess callus), 8 weeks (remove cast, begin PT)
+7. **Duration**: 6-8 weeks (8 weeks if significant comminution)
+
+**Why dorsal slab**: Gravity helps maintain dorsal reduction (distal fragment tends to return dorsally)
+
+**Prognosis**: Excellent with proper immobilization (95%+ union rate)
+
+## Q2: 35-Year-Old with Smith's Fracture & Malunion Risk
+
+**Q: 35-year-old male, bartender, falls on flexed wrist during work (FOOSH with wrist flexed). Presents with volar swelling, "reverse dinner fork" appearance. After initial reduction & volar slab immobilization, returns 2 weeks later with loss of reduction. Why did reduction fail?**
+
+**Diagnosis**: **Smith's fracture with loss of reduction** (malunion risk)
+
+**Why reduction lost**:
+1. **Gravity principle**: Smith's = volar displacement, gravity pulls palmarly (opposite of Colles')
+2. **Volar slab insufficient**: Volar slab provides some support but gravity wins over time
+3. **Soft tissue healing**: Initial swelling reduces, fracture may shift palmarly
+
+**Prevention of loss of reduction**:
+1. **Immobilization position**: Wrist EXTENDED (opposite of Colles'), supinated
+2. **Dorsal reinforcement**: May need dorsal slab component to counter gravity
+3. **Earlier surgical consideration**: Given malunion risk, ORIF (volar plate) may be preferred for young, active patient
+4. **Monitoring**: Serial X-rays (weekly x2, then 2-weekly) to detect early loss of reduction
+
+**Management of this patient**:
+- If loss of reduction <5 degrees → Conservative (may accept slight loss if pain-free)
+- If loss of reduction >5 degrees → Re-reduction ± ORIF (especially for working adult)
+- Consider ORIF with volar plate (maintains reduction, allows early mobilization)
+
+**Why Smith's higher complication rate**:
+- Gravity constantly pulls volar displacement
+- Higher nonunion risk (10-15% vs <5% for Colles')
+- More common in younger patients (demand for function higher)
+
+## Q3: 45-Year-Old with Scaphoid Waist Fracture & Delayed Diagnosis
+
+**Q: 45-year-old falls during bicycle accident, wrist pain & swelling. Goes to local clinic, X-ray shows "no fracture." Patient continues work for 4 weeks with persistent pain. Returns with severe pain in anatomical snuffbox. What's likely diagnosis & what went wrong?**
+
+**Diagnosis**: **Scaphoid waist fracture, missed on initial X-ray** (occult fracture)
+
+**Why X-ray missed it**:
+1. **Scaphoid waist fractures**: Often difficult to see on initial plain X-rays (especially non-displaced)
+2. **Correct views needed**: Standard X-ray views may not show scaphoid well; scaphoid view (elevated PA) needed
+3. **Initial callus minimal**: First 4-6 weeks, minimal callus formation (may appear unchanged)
+4. **Subsequent imaging**: By week 4, sclerosis becomes visible (hardening around fracture site)
+
+**Current situation (week 4)**:
+- Still early in healing timeline (waist = 12 weeks total)
+- Patient has been unimmobilized for 4 weeks → delayed healing
+- Pain now increased (overuse during unimmobilized period)
+
+**Optimal management now**:
+1. **Confirm fracture**: CT scan (shows fracture line clearly) or MRI
+2. **Assess healing**: Is there callus formation despite being unimmobilized?
+3. **Immobilize immediately**: Thumb spica cast 12 weeks total (has already lost 4 weeks)
+4. **May need extended immobilization**: 14-16 weeks to compensate for 4 weeks delay
+5. **Follow-up imaging**: 4-6 weeks (assess callus), 12-14 weeks (assess union)
+6. **AVN assessment**: None yet (waist has reasonable blood supply, 15-20% AVN risk), but monitor
+
+**Lesson**: High clinical suspicion (anatomical snuffbox tenderness, mechanism FOOSH) → immobilize even if X-ray negative, get CT/MRI if persistent pain
+
+## Q4: 28-Year-Old with Monteggia Fracture Missed Radial Head Dislocation
+
+**Q: 28-year-old gets punched in dorsal forearm. Presents with pain, swelling, forearm held in pronation. X-ray shows proximal third ulnar fracture with anterior angulation. Reduction done & long-arm cast applied. But patient returns with poor pronation-supination. What happened?**
+
+**Diagnosis**: **Monteggia fracture with missed/inadequately reduced radial head dislocation**
+
+**What went wrong**:
+1. **Radial head dislocation missed**: X-ray may not clearly show anterior radial head dislocation (lateral view critical)
+2. **Incomplete reduction**: Even if dislocation seen, if not properly reduced, patient left with anterior RH position
+3. **Loss of pronation-supination**: RH dislocation limits forearm rotation (anatomical constraint)
+
+**Key to diagnosis**:
+- **Pronation-supination loss** = DRUJ problem (Monteggia → RH dislocation or Galeazzi → DRUJ disruption)
+- This patient should have had pronation-supination tested immediately post-reduction
+
+**Management of this patient**:
+1. **Confirm current position**: New X-ray (lateral view critical), assess RH position vs ulna
+2. **If RH anteriorly dislocated**: May need ORIF to properly reduce & stabilize
+3. **Timing**: Better to identify early than after cast removal; may need casting adjustment or surgery
+
+**Prevention**:
+1. **Lateral X-ray**: Both proximal radius (RH) and distal radius (DRUJ) must be assessed
+2. **Pronation-supination assessment**: Document pre & post-reduction
+3. **Bado classification**: Type 1 (anterior dislocation, 60%) most common, easier to reduce
+4. **Repeat imaging**: Follow-up X-ray 1-2 weeks to ensure no loss of reduction
+
+**Why Monteggia dangerous**: High likelihood of missing radial head dislocation if not meticulous with imaging & clinical assessment
+
+## Q5: 52-Year-Old with Scaphoid Nonunion
+
+**Q: 52-year-old had scaphoid injury 6 months ago, inadequately immobilized (patient removed cast after 6 weeks). Now presents with persistent anatomical snuffbox pain, weak grip. Imaging shows scaphoid waist fracture with no callus across fracture line. Diagnosis?**
+
+**Diagnosis**: **Scaphoid nonunion** (failed healing despite union attempt)
+
+**Why nonunion occurred**:
+1. **Inadequate immobilization**: Removed cast after 6 weeks (waist needs 12 weeks)
+2. **Early wrist motion**: Movement prevented callus bridging (immobilization critical)
+3. **Possible AVN**: If proximal pole had poor blood supply, AVN could have contributed
+
+**Current assessment**:
+- **Imaging findings**: No callus across fracture line = no healing occurring
+- **Symptoms**: Pain (mechanical instability), weak grip (loss of function)
+- **6-month timeline**: Past acute phase, now chronic nonunion
+
+**Management options**:
+1. **Immobilization attempt**: Could try again (6-8 more weeks) with strict compliance, but failure likely at this stage
+2. **ORIF (Screw fixation)**:
+   - Percutaneous cannulated screw across fracture
+   - Preserves vascularity better than open approach
+   - Allows immediate mobilization post-op (prevents stiffness)
+   - Success rate >90%
+3. **Bone graft** (if significant gap or AVN present)
+4. **Assess AVN**: CT/MRI to rule out avascular necrosis (affects treatment choice)
+
+**Follow-up post-ORIF**:
+- Physiotherapy immediately (prevent stiffness)
+- Imaging at 6-8 weeks (assess healing)
+- Full function usually achieved by 3-4 months
+
+## Q6: 38-Year-Old with Galeazzi Fracture Missed DRUJ Disruption
+
+**Q: 38-year-old male falls on pronated forearm during sports. X-ray shows distal third radial fracture (simple transverse). Treated with long-arm cast in pronation. Returns 4 weeks later with clicking/clunking sensation at wrist, weakness in pronation-supination. What's the diagnosis & what was missed?**
+
+**Diagnosis**: **Galeazzi fracture with DRUJ (distal radioulnar joint) disruption** - missed on initial imaging
+
+**What was missed**:
+1. **DRUJ alignment**: Initial X-ray assessment should evaluate radial head position relative to ulna (overlap on PA view)
+2. **Interosseous membrane disruption**: Force that broke distal radius also tore IOMM & radioulnar ligaments
+3. **DRUJ dislocation**: Radial head shifted dorsally relative to ulna (PA view shows radial overlap absent)
+
+**Why dangerous**:
+- If DRUJ not reduced/fixed, leads to **chronic DRUJ instability**
+- Clicking, weakness, loss of pronation-supination (worst functional impact for young adult)
+- May require surgical stabilization (DRUJ pinning or ligament repair)
+
+**Current situation (week 4)**:
+- DRUJ remains unreduce
+- Mechanical instability → clicking sensation
+- Limited pronation-supination → functional impairment
+
+**Management**:
+1. **Confirm diagnosis**: Lateral X-ray (assess radial head position vs ulnar head)
+2. **Assess healing**: Is radial fracture uniting? (DRUJ disruption management depends on fracture stability)
+3. **ORIF**: Likely needed to restore both radial length AND DRUJ position
+   - Plate fixation for radial fracture (restores radial length)
+   - DRUJ reduction (may need percutaneous pinning)
+4. **Early mobilization** post-op (prevent stiffness)
+
+**Prevention**:
+- **Distal third radius fracture** = think Galeazzi, assess DRUJ
+- **Assess pronation-supination** pre & post-reduction (best clinical indicator of DRUJ problem)
+- **Imaging details**: PA & lateral views assess both radial fracture AND DRUJ relationship
+
+## Q7: 55-Year-Old with Barton's Fracture & Arthritis Risk
+
+**Q: 55-year-old falls directly on dorsal wrist. X-ray shows intra-articular distal radius fracture with dorsal lip fragment + dorsal wrist dislocation. Treated conservatively with dorsal slab, immobilized 8 weeks. Follow-up X-ray shows union, but patient develops chronic wrist pain, stiffness, arthritis signs 3 months later. What could have prevented this?**
+
+**Diagnosis**: **Barton's fracture (dorsal variant) with post-traumatic arthritis**
+
+**Why arthritis developing**:
+1. **Intra-articular fracture**: Disrupts smooth radiocarpal joint surface
+2. **Inadequate reduction**: Conservative treatment may not achieve anatomic reduction
+3. **Loose fragments**: Fracture fragments may cause joint incongruence, cartilage damage
+4. **Chronic inflammation**: Intra-articular fractures trigger post-traumatic arthritis (10-30% incidence)
+
+**What should have been done**:
+1. **Operative intervention**: ORIF preferred for Barton's (intra-articular = surgery indication)
+   - **Dorsal Barton**: Dorsal plate fixation (restores dorsal lip, improves radiocarpal contact)
+   - **Volar Barton**: Volar plate fixation (restores volar buttress)
+2. **Anatomic reduction**: Critical for intra-articular fractures (radiographic confirmation mandatory)
+3. **Early mobilization**: Post-op mobilization prevents stiffness (better long-term ROM)
+
+**Current management of arthritis**:
+- **Conservative**: NSAIDs, splinting, limited activity (minimize symptoms)
+- **Surgical**: Wrist denervation (pain relief without fusion) or wrist fusion (if severe, eliminate motion but pain-free)
+
+**Key lesson**: Barton's fracture = intra-articular + dislocation = operative management needed to prevent arthritis
+
+## Q8: 18-Year-Old Scaphoid Proximal Pole Fracture in Athlete
+
+**Q: 18-year-old gymnast falls during competition, wrist pain. Imaging shows scaphoid proximal pole fracture (displaced). Coach wants athlete back to competition in 8 weeks. What's realistic prognosis & optimal management?**
+
+**Diagnosis**: **Scaphoid proximal pole fracture** (worst location for healing/AVN risk)
+
+**Why problematic**:
+1. **Proximal pole AVN risk**: 30-50% (vs 5-10% for distal, 15-20% for waist)
+   - Retrograde blood supply ends at proximal pole
+   - If fracture disrupts supply, proximal pole becomes ischemic
+2. **Slow healing**: 16+ weeks even with perfect immobilization
+3. **Nonunion risk**: High if inadequately immobilized
+
+**Realistic prognosis**:
+- **8 weeks**: FAR too short (1/2 of necessary immobilization)
+- **Realistic timeline**: 16-24 weeks for full healing, AVN assessment needed at 12+ weeks
+- **Return to gymnastics**: Not before 6 months minimum, 12+ months safer
+
+**Optimal management for athlete**:
+1. **Operative (ORIF) preferred** over conservative:
+   - Early percutaneous screw fixation (week 1-2)
+   - Maintains blood supply better than prolonged immobilization
+   - Allows immediate mobilization post-op (prevents stiffness, joint contractures)
+   - Better union rates (>95% vs 80-90% for conservative)
+   - Allows earlier return to activity (12-16 weeks vs 24+ weeks)
+
+2. **Non-operative alternative**:
+   - Strict immobilization 16+ weeks (unlikely athlete will comply given timeline demands)
+   - MRI at 8-12 weeks (assess for AVN)
+   - If AVN develops, may need scaphoidectomy (poor long-term option)
+
+3. **Athletic considerations**:
+   - Gymnastics high-demand sport requiring wrist motion, strength, proprioception
+   - Prolonged immobilization → stiffness, weakness
+   - ORIF + early PT better prepares for return to sport
+
+**Management plan**:
+1. Surgical consultation for ORIF
+2. Percutaneous screw fixation
+3. Immediate post-op PT (mobilization, strengthening)
+4. Gradual return to activities (4-6 weeks: gentle ROM, 8-12 weeks: strengthening, 16 weeks: sport-specific training)
+5. Realistic return to gymnastics: 4-5 months minimum
+
+## Mnemonics
+- **FOOSH = Fall On Out-Stretched Hand** (wrist extended = Colles', flexed = Smith's)
+- **D.A.M.E. = Dorsal (Colles'), Anatomical assessment (scaphoid), Monteggia (RH missed), Easy to miss (Galeazzi)**
+- **S.P.I.N.E. = Scaphoid (AVN), Proximal pole (worst), Immobilize long, Never malreduce, Everyone misses DRUJ**
+
+## Key Clinical Pearls
+- Colles': Extension FOOSH, dorsal deformity, dorsal slab (gravity helps), 6-8 weeks
+- Smith's: Flexion FOOSH, volar deformity, volar slab (gravity against), 8-10 weeks, higher nonunion
+- Scaphoid: Waist most common, proximal pole highest AVN risk (30-50%), 12-16+ weeks immobilization
+- Monteggia: Proximal ulna + RH anterior dislocation (easy to miss), test pronation-supination
+- Galeazzi: Distal radius + DRUJ disruption (easy to miss), assess DRUJ on imaging
+- Barton's: Intra-articular + dislocation, operative management needed, arthritis risk
+- Athlete with scaphoid proximal pole: ORIF better than conservative (early mobilization > long immobilization)
+
+## Textbook References
+- Maheshwari's Essential Orthopaedics, 6th ed, Chapter: Case Studies - Wrist Fractures
+- Apley & Solomon's System of Orthopaedics, 10th ed, Chapter: Complications & Management Decisions`,
+        mnemonics: [
+          { text: "Colles' gravity helps (dorsal slab), Smith's gravity against (volar slab needs strict positioning)", explanation: "Immobilization principles" },
+          { text: "Scaphoid proximal = Problematic AVN (30-50%), Waist = Workable (15-20%), Distal = Done (5-10%)", explanation: "Scaphoid AVN by location" },
+          { text: "Monteggia missed = Medial (ulna) broken + Monster (RH) dislocated, Easy to miss on bad lateral view", explanation: "Monteggia dangers" },
+          { text: "Galeazzi missed = Distal radius + Dangerous (DRUJ) disruption, check pronation-supination loss", explanation: "Galeazzi red flag" }
+        ],
+        keyPoints: [
+          "Colles' malunion risk: Monitor closely first 2 weeks (loss of reduction common), dorsal slab helps",
+          "Smith's nonunion risk: Higher than Colles', consider ORIF for active patients",
+          "Scaphoid proximal pole: 30-50% AVN risk, consider ORIF for athletes (early return)",
+          "Monteggia/Galeazzi: Test pronation-supination, confirm DRUJ/RH position on imaging",
+          "Barton's: Intra-articular, arthritis risk 10-30%, operative management preferred",
+          "Indian context: Conservative management preferred (cost), but must emphasize immobilization compliance"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Case-Based Learning", edition: "6th" },
+          { book: "Apley & Solomon's System of Orthopaedics", chapter: "Clinical Scenarios", edition: "10th" }
+        ]
+      }
+    ]
+  }
 ];

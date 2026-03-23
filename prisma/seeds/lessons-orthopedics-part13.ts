@@ -1,16 +1,465 @@
-export const orthopedicsLessonsPart13 = [
+import type { TopicLessons } from "./content-loader";
+
+export const orthopedicsLessonsPart13: TopicLessons[] = [
   {
     topicCode: "OR-MOD-06-TOP-03",
     layers: [
       {
         layer: 1,
-        slug: "osteoporosis-metabolic-bone-foundation",
+        slug: "osteoporosis-layer-1-foundation",
         title: "Osteoporosis & Metabolic Bone Disease - Foundation",
         estimatedMinutes: 20,
-        summary:
-          "Osteoporosis is reduced bone mineral density (BMD) with microarchitectural deterioration increasing fracture risk. DEXA T-score ≥-2.5 confirms diagnosis. Risk factors: age, female, low calcium/vitamin D, sedentary lifestyle, smoking, corticosteroids. Rickets is defective mineralization (vitamin D deficiency most common). Treatment: calcium, vitamin D, bisphosphonates, HRT. Prevention critical through exercise, adequate nutrition.",
-        contentMd: "# Osteoporosis & Metabolic Bone Disease - Foundation\n\n## Definition & Classification\n\n### Osteoporosis\n- **Definition**: Low bone mineral density (BMD) with microarchitectural deterioration\n- **Epidemiology**: Affects 1 in 3 women, 1 in 5 men >50 years\n- **DEXA T-score**: ≥-2.5 SD below young adult mean = osteoporosis\n  - Normal: >-1.0\n  - Osteopenia: -1.0 to -2.5\n  - Osteoporosis: <-2.5\n\n### Types\n1. **Primary osteoporosis**:\n   - Postmenopausal (Type 1) - estrogen loss\n   - Age-related (Type 2) - >70 years\n\n2. **Secondary osteoporosis**:\n   - Corticosteroids (most common cause)\n   - Endocrine (hyperthyroidism, hyperparathyroidism, diabetes)\n   - GI (malabsorption, liver disease, post-gastrectomy)\n   - Renal (CKD, RTA)\n   - Malignancy, medications\n\n### Rickets\n- **Definition**: Defective mineralization of bone during growth\n- **Types**:\n  - Nutritional (vitamin D deficiency) - most common\n  - Hypophosphatemic (vitamin D-resistant rickets)\n  - Renal (CKD-mineral bone disorder)\n  - Hypophosphatasia (genetic, alkaline phosphatase deficiency)\n\n## Pathophysiology Basics\n\n### Bone Remodeling Cycle\n- **Osteoclasts**: Bone resorption → lacunae formation\n- **Osteoblasts**: Bone formation → new matrix deposition\n- **Balance**: Normally equal; in osteoporosis, resorption >formation\n\n### Risk Factors for Osteoporosis\n- **Non-modifiable**: Age, female, family history, small frame\n- **Modifiable**: Low calcium/vitamin D, smoking, alcohol, sedentary\n- **Medical**: Corticosteroids, thyroid disorder, malabsorption\n\n## Clinical Presentation\n\n### Osteoporosis (Usually Asymptomatic)\n- **Often found incidentally** on imaging\n- **Fractures**: Hip (femoral neck), spine (vertebral compression), wrist\n- **Height loss**: From vertebral compression fractures\n- **Kyphosis**: \"Dowager's hump\" appearance\n- **Pain**: From vertebral fractures (acute severe, then chronic)\n\n### Rickets (Pediatric)\n- **Skeletal**: Bowing of legs, frontal bossing, rachitic rosary (costochondral swelling)\n- **Growth**: Stunted growth, delayed milestones\n- **Systemic**: Weakness, irritability, muscle cramps (hypocalcemia)\n- **Dental**: Delayed eruption, enamel hypoplasia\n\n## Diagnostic Approach\n\n### DEXA Scan (Dual X-ray Absorptiometry)\n- **Gold standard** for BMD measurement\n- **Sites**: Lumbar spine, hip (femoral neck), whole body\n- **T-score**: Used in adults\n- **Z-score**: Used in children (compares to age-matched peers)\n- **Indications**: Women >65, men >70, postmenopausal, corticosteroid use >3 months\n- **Frequency**: Every 1-2 years if abnormal\n\n### Biochemical Markers\n- **Calcium**: Low or normal (body maintains Ca through PTH/vitamin D)\n- **Phosphate**: Low (especially rickets)\n- **Alkaline phosphatase**: High (bone turnover marker)\n- **Albumin**: To assess protein-binding\n- **Magnesium**: Low increases osteoporosis risk\n\n### Vitamin D Assessment\n- **25-OH vitamin D**: Best indicator of vitamin D status\n  - <20 ng/mL = deficiency\n  - 20-30 ng/mL = insufficiency\n  - >30 ng/mL = sufficient\n- **1,25-OH vitamin D**: Active form; less useful (PTH regulates)\n\n### Other Tests\n- **PTH**: High if secondary hyperparathyroidism\n- **Thyroid function**: Rule out hyperthyroidism\n- **Renal function**: CKD assessment\n- **Imaging**: X-rays show decreased density, fractures\n\n## Clinical Presentation of Rickets\n\n### Vitamin D Deficiency Rickets\n- **Hypocalcemia signs**: Tetany, seizures, delayed dentition\n- **Skeletal**: Bowing, frontal bossing, delayed closure of fontanelle\n- **Muscle weakness**: Difficulty standing/walking\n- **Systemic**: Irritability, poor feeding,\n        mnemonics: [\n          {\n            text: \"DEXA T-score: >-1 Normal, -1 to -2.5 Osteopenia, <-2.5 Osteoporosis\",\n            explanation: \"DEXA score interpretation\",\n          },\n          {\n            text: \"RICKETY: Rickets = Restricted mineralization, Inadequate vitamin D, Clinical bowing, Kyphosis, Elevated phosphatase, Tetany (hypocalcemia), Yellow (pale)\",\n            explanation: \"Rickets features mnemonic\",\n          },\n        ],\n        keyPoints: [\n          \"Osteoporosis: DEXA T-score <-2.5; asymptomatic until fracture occurs\",\n          \"Risk factors: postmenopause, corticosteroids, low calcium/vitamin D, smoking, sedentary\",\n          \"Rickets: defective mineralization; vitamin D deficiency most common cause\",\n          \"Management: calcium, vitamin D supplementation, bisphosphonates, weight-bearing exercise\",\n          \"Prevention: adequate nutrition, exercise, avoid smoking/excess alcohol\",\n        ],\n        textbookRefs: [\n          { book: \"Maheshwari's Orthopedics\", chapter: \"Metabolic Bone Disease\", edition: \"9th\" },\n          { book: \"OP Ghai - Essential Pediatrics\", chapter: \"Ch 20\", edition: \"9th\" },\n        ],\n      },\n      {\n        layer: 2,\n        slug: \"osteoporosis-metabolic-bone-mechanism\",\n        title: \"Osteoporosis & Metabolic Bone Disease - Mechanism\",\n        estimatedMinutes: 30,\n        summary:\n          \"Osteoporosis results from imbalance in bone remodeling: osteoclast-mediated resorption exceeds osteoblast-mediated formation. Estrogen deficiency (postmenopause) increases osteoclast activation. Vitamin D deficiency impairs calcium absorption → secondary hyperparathyroidism → accelerates bone loss. Rickets involves defective osteoid mineralization due to insufficient calcium-phosphate product.\",\n        contentMd: "# Osteoporosis & Metabolic Bone Disease - Mechanism\\n\\n## Bone Remodeling & Coupling\\n\\n### Normal Bone Remodeling (Balanced)\\n1. **Osteoclast recruitment**: RANKL signaling activates precursor cells\\n2. **Resorption phase**: Osteoclasts create lacunae in bone\\n3. **Reversal phase**: Mononuclear cells clean resorption lacunae\\n4. **Formation phase**: Osteoblasts deposit new osteoid\\n5. **Mineralization**: Calcium-phosphate crystals form (hydroxyapatite)\\n6. **Result**: Net zero bone loss (resorption = formation)\\n\\n### Osteoporosis - Uncoupled Remodeling\\n1. **Osteoclast hyperactivity**: Increased resorption (from estrogen deficiency, age)\\n2. **Osteoblast hypoactivity**: Decreased formation (impaired osteoblast function)\\n3. **Result**: Resorption >formation → net bone loss\\n4. **Architecture**: Trabecular plates become thinner, then perforate\\n5. **Fracture risk**: Microarchitectural weakness despite apparent density loss\\n\\n## Estrogen Deficiency Mechanism (Postmenopausal)\\n\\n### Estrogen's Role in Bone Homeostasis\\n1. **Osteoclast regulation**: Estrogen suppresses RANKL production\\n2. **Calcium absorption**: Estrogen supports vitamin D responsiveness\\n3. **Bone turnover**: Estrogen reduces overall turnover rate\\n\\n### Postmenopausal Estrogen Withdrawal\\n1. **RANKL ↑**: Reduced estrogen suppression → increased osteoclast activation\\n2. **Osteoclast number ↑**: More osteoclasts in resorption phase\\n3. **Bone resorption ↑↑**: Accelerated bone loss (2-3% annually initially)\\n4. **Osteoblast lag**: Formation cannot keep pace\\n5. **Result**: Rapid bone loss (first 5-10 years postmenopause; highest fracture risk)\\n\\n## Vitamin D Deficiency Mechanism\\n\\n### Calcium-Vitamin D Axis Dysfunction\\n1. **Vitamin D deficiency**: <20 ng/mL 25-OH vitamin D\\n2. **Intestinal absorption ↓**: Vitamin D normally promotes calcium absorption\\n3. **Serum calcium ↓**: Calcium levels fall\\n4. **PTH ↑↑**: Secondary hyperparathyroidism develops\\n5. **Bone resorption ↑↑**: PTH increases osteoclast activity to raise serum calcium\\n6. **Net effect**: Accelerated bone loss from PTH-mediated resorption\\n\\n### Rickets - Mineralization Failure\\n**Vitamin D Deficiency Rickets:**\\n1. **Vitamin D ↓**: Inadequate intake, limited sun exposure, or malabsorption\\n2. **1,25-OH vitamin D ↓**: Reduced active hormone production\\n3. **Calcium absorption ↓**: From intestines\\n4. **Phosphate absorption ↓**: From intestines\\n5. **Calcium-phosphate product ↓↓**: Below critical threshold (Ca × PO4 <25)\\n6. **Osteoid mineralization fails**: Osteoblasts lay down unmineralized matrix\\n7. **Result**: Defective bone with retained osteoid → weakening\\n\\n## Corticosteroid-Induced Osteoporosis (CTIOP)\\n\\n### Mechanisms\\n1. **Direct osteoblast suppression**: Glucocorticoids inhibit osteoblast proliferation\\n2. **Increased osteoclast activity**: Enhanced bone resorption\\n3. **Calcium malabsorption**: Decreased intestinal calcium absorption\\n4. **Increased renal calcium loss**: Enhanced urinary calcium excretion\\n5. **Hypogonadism**: Corticosteroids suppress sex hormone production\\n6. **PTH resistance**: Kidneys become less responsive to PTH\\n\\n### Timeframe\\n- **Rapid bone loss** in first 3-6 months of corticosteroid therapy\\n- **Stabilization** at lower level if therapy continued\\n- **Fracture risk**: Increases even at DEXA-normal densities (architecture damaged)\\n\\n## Bisphosphonate Mechanism\\n\\n### How Bisphosphonates Work\\n1. **Osteoclast uptake**: Endocytosed by active osteoclasts\\n2. **Pyrophosphate analog**: Resist enzymatic degradation\\n3. **ATP depletion**: Inhibit ATP-dependent pumps in osteoclasts\\n4. **Apoptosis**: Osteoclasts undergo programmed cell death\\n5. **Result**: Reduced osteoclast number/function → ↓ bone resorption\\n\\n### Effect on Bone Remodeling\\n- **Resorption ↓↓**: Osteoclasts inactive\\n- **Formation continues**: Osteoblasts still active\\n- **Net effect**: Net bone formation (resorption <formation temporarily)\\n- **Reversal**: Takes years (slow remodeling cycle)\\n\\n### Common Agents\\n- **Alendronate** (weekly dosing, well-absorbed oral)\\n- **Risedronate** (daily or weekly)\\n- **Zoledronic acid** (IV annual infusion; most potent),\\n        mnemonics: [\\n          {\\n            text: \\\"ESTROGEN OUT → RANKL UP → OSTEOCLASTS UP → RESORPTION UP → BONE LOSS\\\",\\n            explanation: \\\"Postmenopausal osteoporosis cascade\\\",\\n          },\\n          {\\n            text: \\\"VITAMIN D LOW → CALCIUM LOW → PTH HIGH → RESORPTION UP → BONE LOSS\\\",\\n            explanation: \\\"Vitamin D deficiency bone loss mechanism\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Osteoporosis: osteoclast hyperactivity + osteoblast hypoactivity → resorption >formation\\\",\\n          \\\"Estrogen deficiency: ↑ RANKL → ↑ osteoclasts → accelerated resorption\\\",\\n          \\\"Vitamin D deficiency: ↓ calcium absorption → ↑ PTH → ↑ resorption\\\",\\n          \\\"Rickets: ↓ calcium-phosphate product → failed osteoid mineralization\\\",\\n          \\\"Bisphosphonates: osteoclast apoptosis → reduced resorption\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Metabolic Bone Disease\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Apley & Solomon's System of Orthopedics\\\", chapter: \\\"Metabolic Disorders\\\", edition: \\\"10th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"osteoporosis-metabolic-bone-clinical\\\",\\n        title: \\\"Osteoporosis & Metabolic Bone Disease - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Management of osteoporosis includes DEXA screening, calcium (1000-1200 mg/day) + vitamin D (800-2000 IU/day) supplementation, bisphosphonates (first-line), lifestyle modifications (exercise, smoking cessation). Rickets treatment: vitamin D supplementation (high-dose depending on etiology), calcium supplementation, phosphate binders if renal rickets. Fracture prevention through weight-bearing exercise and fall prevention critical.\\\",\\n        contentMd: ``# Osteoporosis & Metabolic Bone Disease - Clinical\\n\\n## Osteoporosis Management\\n\\n### Screening & Diagnosis\\n- **DEXA scan** indicated: Women >65, postmenopausal women <65 with risk factors, men >70\\n- **Baseline labs**: Calcium, phosphate, alkaline phosphatase, magnesium, vitamin D, PTH\\n- **Fracture risk assessment**: FRAX tool (estimates 10-year fracture probability)\\n\\n### Pharmacologic Treatment\\n\\n**First-Line: Bisphosphonates**\\n- **Alendronate**: 70 mg weekly PO or 10 mg daily\\n- **Risedronate**: 35 mg weekly or 5 mg daily\\n- **Zoledronic acid**: 5 mg IV annually (highest potency)\\n- **Dosing**: Weight-bearing exercise concurrent; adequate calcium/vitamin D\\n- **Duration**: Consider 5-year maximum therapy; reevaluate after\\n\\n**Hormone Replacement Therapy (HRT)**\\n- **Estrogen ± progestin**: Prevents bone loss post-menopause\\n- **Use**: Limited to symptom relief (hot flashes, vaginal atrophy)\\n- **Caution**: Increased cardiovascular & breast cancer risk with prolonged use\\n\\n**Other Agents** (if BZD intolerant or contraindicated):\\n- **Selective estrogen receptor modulators (SERMs)**: Raloxifene (estrogenic on bone, not uterus/breast)\\n- **Denosumab**: RANKL inhibitor (alternative to bisphosphonates)\\n- **Teriparatide**: PTH analog (bone formation; expensive)\\n\\n### Supportive Therapy\\n- **Calcium**: 1000-1200 mg/day (dietary preferred)\\n- **Vitamin D**: 800-2000 IU/day (more if deficient)\\n- **Magnesium**: 300-400 mg/day (cofactor for bone mineralization)\\n\\n### Lifestyle Modifications\\n- **Weight-bearing exercise**: 30 min, 3-4 days/week (walking, jogging, dancing)\\n- **Resistance training**: 2-3 days/week (improves muscle strength, balance)\\n- **Smoking cessation**: Critical (smoking ↑ osteoclast activity)\\n- **Alcohol moderation**: Limit to ≤2 drinks/day\\n- **Fall prevention**: Remove hazards, adequate lighting, assistive devices if needed\\n\\n### Monitoring\\n- **DEXA repeat**: Every 1-2 years (earlier if on bisphosphonate)\\n- **Serum calcium/vitamin D**: Annually to ensure adequacy\\n- **Fracture occurrence**: Document any new fractures (may indicate treatment failure)\\n\\n## Rickets Management\\n\\n### Nutritional Rickets (Vitamin D Deficiency)\\n**Investigation:**\\n- 25-OH vitamin D <20 ng/mL confirms deficiency\\n- Serum calcium (may be low), phosphate (low), alkaline phosphatase (high)\\n- PTH (high from secondary hyperparathyroidism)\\n\\n**Treatment:**\\n- **Vitamin D3 supplementation**:\\n  - **Mild deficiency**: 2000-4000 IU daily PO\\n  - **Moderate-severe**: 100,000-600,000 IU weekly or in split doses\\n  - **Duration**: Until biochemical normalization (6-12 weeks)\\n  - **Maintenance**: 800-2000 IU daily after correction\\n\\n- **Calcium supplementation**:\\n  - 1000-1500 mg daily (divided doses)\\n  - Continue until clinical resolution\\n\\n**Monitoring:**\\n- Biochemistry Q4-6 weeks (calcium, phosphate, ALP, vitamin D, PTH)\\n- Clinical improvement (normalization of serum calcium, symptomatic relief)\\n- Radiographs (healing of rachitic changes over weeks-months)\\n\\n### Renal Rickets (CKD-Mineral Bone Disorder)\\n**Mechanisms:**\\n- Impaired 1,25-OH vitamin D production (kidneys)\\n- Phosphate retention → hyperphosphatemia\\n- Secondary hyperparathyroidism\\n\\n**Treatment:**\\n- **Phosphate binders**: Calcium carbonate, sevelamer (bind dietary phosphate)\\n- **Active vitamin D** (calcitriol): 0.25-0.5 mcg BID (bypasses kidney activation)\\n- **PTH suppression**: If PTH very high\\n- **Monitor**: Serum calcium, phosphate, PTH, vitamin D levels\\n\\n### Hypophosphatemic Rickets (Vitamin D-Resistant)\\n**Etiology:** Genetic defect (FGF23 overproduction)\\n\\n**Treatment:**\\n- **High-dose vitamin D**: 50,000-100,000 IU daily (doesn't correct underlying defect)\\n- **Phosphate supplementation**: Often needed (high-dose phosphate PO)\\n- **Close monitoring**: Risk of hypercalcemia from vitamin D therapy\\n- **Genetic counseling**: Familial pattern; inheritance pattern varies\\n\\n## Fracture Management in Osteoporosis\\n\\n### Common Fracture Sites\\n- **Hip (femoral neck)**: ORIF with open reduction or hemiarthroplasty\\n- **Vertebral compression**: Conservative (rest, analgesia) unless neurological compromise\\n- **Wrist (Colles)**: Cast immobilization vs ORIF depending on displacement\\n\\n### Acute Management\\n- **Analgesia**: NSAIDs initially; opioids if severe\\n- **Immobilization**: Casts, splints, bed rest as needed\\n- **Physical therapy**: Early mobilization to prevent complications (pneumonia, DVT)\\n\\n### Long-Term (Post-Fracture)\\n- **Start bisphosphonate therapy** if not already on treatment\\n- **Fall prevention strategies** (critical after first fracture)\\n- **PT/OT**: Balance training, gait assistance, home modifications\\n- **Nutritional support**: Adequate protein (healing), calcium, vitamin D\\n- **Monitor** for depression (common post-fracture, increases mortality)\\n\\n## Prevention of Osteoporosis (Primary)\\n\\n### For All Adults\\n- **Adequate calcium**: 1000-1200 mg/day\\n- **Vitamin D**: 800-2000 IU daily\\n- **Weight-bearing exercise**: 30 min, 3-5 days/week\\n- **Smoking cessation**: Critical preventive measure\\n- **Limit alcohol**: ≤2 drinks/day\\n\\n### For High-Risk Groups\\n- **Corticosteroid users** (>3 months):\\n  - Baseline DEXA\\n  - Calcium + vitamin D supplementation\\n  - Consider bisphosphonate (if >7.5 mg prednisone daily × 3 months)\\n\\n- **Postmenopausal women** with risk factors:\\n  - Early DEXA screening (age 60-65)\\n  - Counseling on hormone therapy (if symptomatic)\\n  - Bisphosphonate if T-score <-2.5 or fracture risk significant\\n\\n### Nutritional Optimization\\n- **Protein**: 1-1.2 g/kg/day (osteoblast support)\\n- **Calcium sources**: Dairy, fortified plant-based alternatives, supplements\\n- **Magnesium**: Green leafy vegetables, nuts, seeds\\n- **Vitamin C**: Collagen synthesis; citrus fruits, berries\\n- **Avoid**: Excess sodium (increases urinary calcium loss),\\n        mnemonics: [\\n          {\\n            text: \\\"BISPHOSPHONATE: Blocks osteoclasts, Inhibits resorption, Strengthens bone, Prolongs therapy duration, Helps calcium absorption, Others include denosumab\\\",\\n            explanation: \\\"Bisphosphonate action & alternatives\\\",\\n          },\\n          {\\n            text: \\\"RICKETS TREATMENT: Vitamin D (high-dose), Investigate cause, Check calcium, Kidney/renal assessment, Educate family, Treat phosphate if needed\\\",\\n            explanation: \\\"Rickets management approach\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Osteoporosis: DEXA T-score <-2.5; bisphosphonates first-line + calcium + vitamin D + exercise\\\",\\n          \\\"Rickets: vitamin D supplementation (dose based on deficiency severity), calcium supplementation, phosphate binders if renal\\\",\\n          \\\"Fracture prevention: weight-bearing exercise, smoking cessation, fall prevention, adequate nutrition\\\",\\n          \\\"Corticosteroid users: DEXA baseline, calcium + vitamin D, consider bisphosphonate\\\",\\n          \\\"Monitoring: DEXA Q1-2 years, biochemistry (calcium, phosphate, vitamin D) regularly\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Metabolic Bone Disease\\\", edition: \\\"9th\\\" },\\n          { book: \\\"OP Ghai - Essential Pediatrics\\\", chapter: \\\"Ch 20\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"osteoporosis-metabolic-bone-exam\\\",\\n        title: \\\"Osteoporosis & Metabolic Bone Disease - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary:\\n          \\\"Key facts: DEXA T-score <-2.5 diagnosis, postmenopausal women highest risk, bisphosphonates first-line, calcium 1000-1200 mg/day + vitamin D 800-2000 IU/day standard supplementation. Rickets: vitamin D deficiency most common, supplementation dose-dependent, phosphate binders for renal rickets. Common MCQ pitfalls: forgetting vitamin D in osteoporosis prevention, missing bisphosphonate contraindications (osteonecrosis jaw, atypical fractures with prolonged use).\\\",\\n        contentMd: ``# Osteoporosis & Metabolic Bone Disease - Exam Prep\\n\\n## Critical Diagnostic Cutoffs\\n- **DEXA T-score >-1**: Normal\\n- **DEXA T-score -1 to -2.5**: Osteopenia\\n- **DEXA T-score <-2.5**: Osteoporosis\\n- **DEXA T-score <-2.5 + fracture**: Severe osteoporosis (high-energy fracture)\\n\\n## Vitamin D Status Classification\\n- **25-OH vitamin D <12 ng/mL**: Severe deficiency\\n- **12-20 ng/mL**: Deficiency\\n- **20-30 ng/mL**: Insufficiency\\n- **>30 ng/mL**: Sufficient\\n\\n## High-Yield MCQ Concepts\\n\\n**Q: 65-year-old postmenopausal woman, DEXA T-score -2.8. Management?**\\nA: Diagnosis osteoporosis. Start bisphosphonate (alendronate 70 mg weekly). Add calcium 1200 mg/day + vitamin D 1000-2000 IU/day. Weight-bearing exercise 30 min, 3-4 days/week. Smoking cessation if applicable.\\n\\n**Q: Vitamin D deficiency rickets in 18-month-old. 25-OH vitamin D 8 ng/mL. Treatment?**\\nA: High-dose vitamin D supplementation (100,000-200,000 IU weekly × 6-8 weeks). Calcium supplementation 1000-1500 mg/day. Reassess biochemistry Q4-6 weeks. Maintenance vitamin D 800-2000 IU daily.\\n\\n**Q: Bisphosphonate contraindications?**\\nA: Esophageal stricture (GI side effect), active osteonecrosis of jaw, impaired renal function (Cr Cl <30 mL/min). Caution: atypical fractures with prolonged use (>5 years) - consider drug holiday.\\n\\n**Q: 60-year-old on prednisone 10 mg daily × 8 months. Osteoporosis prevention?**\\nA: DEXA baseline recommended (if >7.5 mg × 3 months). Calcium 1000-1200 mg/day + vitamin D 800-2000 IU/day. Consider bisphosphonate (indicated for >7.5 mg daily × 3 months).\\n\\n## Common Exam Mistakes\\n| Error | Why Wrong | Fix |\\n|---|---|---|\\n| Forget calcium/vitamin D with bisphosphonate | Supplementation essential for therapy | Always prescribe calcium 1200 mg + vitamin D 800-2000 IU |\\n| Start estrogen for all postmenopausal osteoporosis | HRT only for symptom relief; increases CV/breast cancer risk | Reserve for hot flashes; prefer bisphosphonates |\\n| DEXA every year | Unnecessary; minimal change year-to-year | Repeat Q1-2 years depending on therapy |\\n| Miss vitamin D in rickets diagnosis | Vitamin D is the most common cause | Always check 25-OH vitamin D in rickets workup |\\n| Miss secondary causes (hyperparathyroidism, malabsorption) | May alter treatment | Screen with PTH, calcium, phosphate, renal function |\\n\\n## Critical Pearls\\n1. **Postmenopausal women = highest risk** for osteoporosis (rapid bone loss)\\n2. **Calcium 1000-1200 mg + Vitamin D 800-2000 IU** are foundation of all treatment\\n3. **DEXA T-score <-2.5** = osteoporosis diagnosis\\n4. **Bisphosphonates = first-line** pharmacotherapy\\n5. **Exercise is critical** (30 min weight-bearing, 3-4 days/week),\\n        mnemonics: [\\n          {\\n            text: \\\"DEXA-OST: DEXA <-2.5, Estrogen deficiency (postmenopausal), X-ray shows low density, Adequate calcium + vitamin D, Osteoporosis management\\\",\\n            explanation: \\\"Osteoporosis diagnosis & management\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"DEXA T-score <-2.5 defines osteoporosis; >-1.0 normal; -1 to -2.5 osteopenia\\\",\\n          \\\"Bisphosphonate first-line; always with calcium 1200 mg + vitamin D 800-2000 IU/day\\\",\\n          \\\"Weight-bearing exercise 30 min 3-4 days/week; smoking cessation critical\\\",\\n          \\\"Rickets: vitamin D deficiency most common; supplementation (100,000-600,000 IU/week initially)\\\",\\n          \\\"Corticosteroids: DEXA baseline + bisphosphonate if >7.5 mg × 3 months\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Metabolic Bone Disease\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NEET/DNB Orthopedics - Metabolic Disorders\\\", chapter: \\\"Quick Reference\\\", edition: \\\"2024\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"osteoporosis-metabolic-bone-recall\\\",\\n        title: \\\"Osteoporosis & Metabolic Bone Disease - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary:\\n          \\\"Active recall on DEXA interpretation, management decisions, rickets diagnosis and treatment. Focus on clinical scenarios requiring specific drug selection, dosing, monitoring.\\\",\\n        contentMd: ``# Active Recall - Osteoporosis & Metabolic Bone Disease\\n\\n**Q1: 70-year-old woman, DEXA T-score -3.2, prior vertebral fracture. Diagnosis and management?**\\n> Osteoporosis with prior fragility fracture (indicates high fracture risk). Start bisphosphonate (alendronate 70 mg weekly), calcium 1200 mg/day, vitamin D 1000-2000 IU/day. Weight-bearing exercise. Consider annual DEXA monitoring.\\n\\n**Q2: Newborn with rickets, serum calcium 6.8 (low), phosphate 3.0 (low), ALP 800 (high), 25-OH vitamin D 10 ng/mL. Diagnosis?**\\n> Vitamin D deficiency rickets (most common nutritional rickets). Supplement with high-dose vitamin D3 (100,000-200,000 IU weekly × 6-8 weeks). Calcium 1000-1500 mg/day. Monitor biochemistry Q4-6 weeks. Maintenance vitamin D 800-2000 IU daily after correction.\\n\\n**Q3: Is estrogen therapy recommended for osteoporosis in postmenopausal women?**\\n> Only if symptomatic (hot flashes, vaginal atrophy). Not recommended for asymptomatic osteoporosis alone due to increased cardiovascular & breast cancer risk. Bisphosphonates are preferred for osteoporosis.\\n\\n**Q4: Bisphosphonate user develops jaw osteonecrosis. What caused this?**\\n> Osteonecrosis of jaw (ONJ) is rare but serious adverse effect of bisphosphonate therapy, especially with IV agents (zoledronic acid). Risk increases with duration >5 years. Discontinue bisphosphonate; refer to maxillofacial surgery. May occur spontaneously or after dental procedures.\\n\\n**Q5: 55-year-old on prednisone 8 mg daily for SLE × 6 months, no prior DEXA. Recommendation?**\\n> Baseline DEXA (prednisone >7.5 mg × 3 months indicates DEXA). Calcium 1000-1200 mg + vitamin D 800-2000 IU/day. Consider bisphosphonate if T-score shows osteopenia/osteoporosis. Repeat DEXA Q1-2 years.\\n\\n**Q6: Rickets patient develops hypercalcemia during vitamin D therapy. What is the concern?**\\n> Risk of vitamin D overdose (hypercalcemia) from excessive supplementation. Occurs especially in patients with granulomatous diseases (sarcoidosis). Monitor calcium levels closely. If hypercalcemia develops, reduce vitamin D dose. Ensure adequate hydration.\\n\\n**Q7: Child with renal rickets (CKD stage 4). Treatment differs from nutritional rickets how?**\\n> Renal rickets requires active vitamin D (calcitriol 0.25-0.5 mcg BID) because kidneys cannot activate vitamin D. Also add phosphate binders (calcium carbonate, sevelamer) to reduce hyperphosphatemia. Nutritional rickets responds to regular vitamin D supplementation.\\n\\n**Q8: How long should bisphosphonate therapy continue?**\\n> General recommendation: 5 years of bisphosphonate therapy for osteoporosis. Beyond 5 years, risk of atypical fractures increases (paradoxical fractures despite improved density). Consider drug holiday after 5 years; reassess with repeat DEXA & clinical status.\\n\\n**Q9: Osteoporosis patient refuses medications. Non-pharmacologic alternatives?**\\n> Weight-bearing exercise is proven effective (30 min, 3-5 days/week). Adequate calcium (1000-1200 mg) and vitamin D (800-2000 IU). Smoking cessation critical. Fall prevention (remove hazards, balance training). Some may accept denosumab or IV zoledronic acid if oral bisphosphonate intolerant.\\n\\n**Q10: What indicates need for DEXA screening in men?**\\n> Men >70 years (universal screening). Men <70 with risk factors (corticosteroids >3 months, hypogonadism, malabsorption, alcohol abuse, smoking). Family history of osteoporosis or male relative with fracture.,\\n        mnemonics: [\\n          {\\n            text: \\\"OSTEO-MANAGE: Osteoporosis diagnosis, Screen with DEXA, Treatment bisphosphonates, Exercise weight-bearing, Optimize calcium & vitamin D, Manage fractures surgically\\\",\\n            explanation: \\\"Osteoporosis comprehensive management\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"DEXA T-score <-2.5 = osteoporosis; bisphosphonate first-line + supportive therapy\\\",\\n          \\\"Calcium 1200 mg + vitamin D 800-2000 IU/day + weight-bearing exercise (30 min 3-4x/week)\\\",\\n          \\\"Rickets: vitamin D supplementation (100,000-600,000 IU/week initially), calcium; monitor biochemistry\\\",\\n          \\\"Renal rickets: active vitamin D (calcitriol) + phosphate binders, not regular vitamin D\\\",\\n          \\\"Bisphosphonate: 5-year max typical; consider drug holiday after; monitor for atypical fractures\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Orthopedics\\\", chapter: \\\"Metabolic Bone Disease\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n];\\n\""
-}
-}
-];
+        summary: "Osteoporosis is reduced bone mineral density (BMD) with microarchitectural deterioration increasing fracture risk. DEXA T-score ≥-2.5 confirms diagnosis. Risk factors: age, female, low calcium/vitamin D, sedentary lifestyle, smoking, corticosteroids. Rickets is defective bone mineralization (vitamin D deficiency most common). Treatment: calcium, vitamin D, bisphosphonates, HRT. Prevention critical through exercise, adequate nutrition.",
+        contentMd: `# Osteoporosis & Metabolic Bone Disease - Foundation
+
+## Definition & Classification
+
+### Osteoporosis
+- Low bone mineral density (BMD) with microarchitectural deterioration
+- Affects 1 in 3 women, 1 in 5 men >50 years
+- DEXA T-score: <-2.5 SD = osteoporosis
+  - Normal: >-1.0
+  - Osteopenia: -1.0 to -2.5
+  - Osteoporosis: <-2.5
+
+### Types
+1. Primary osteoporosis
+   - Postmenopausal (Type 1): estrogen loss
+   - Age-related (Type 2): >70 years
+
+2. Secondary osteoporosis
+   - Corticosteroids (most common)
+   - Endocrine (hyperthyroidism, hyperparathyroidism, diabetes)
+   - GI (malabsorption, liver disease)
+   - Renal (CKD, RTA)
+
+### Rickets
+- Defective mineralization during growth
+- Types: Nutritional (vitamin D deficiency, most common), Hypophosphatemic, Renal, Hypophosphatasia
+
+## Pathophysiology Basics
+
+### Bone Remodeling
+- **Osteoclasts**: Bone resorption → lacunae
+- **Osteoblasts**: Bone formation → new matrix
+- Osteoporosis: resorption >formation
+
+## Risk Factors
+
+### Non-modifiable
+- Age, female, small frame, family history
+
+### Modifiable
+- Low calcium/vitamin D, smoking, alcohol, sedentary
+
+### Medical
+- Corticosteroids, thyroid disorder, malabsorption
+
+## Clinical Presentation
+
+### Osteoporosis
+- Usually asymptomatic until fracture
+- Fractures: hip, spine, wrist
+- Height loss, kyphosis ("Dowager's hump")
+
+### Rickets
+- Skeletal: bowing, frontal bossing, rachitic rosary
+- Growth stunting, delayed milestones
+- Muscle weakness, hypocalcemia symptoms
+- Dental delayed eruption
+
+## Diagnostic Approach
+
+### DEXA Scan (Gold Standard)
+- T-score interpretation
+- Sites: lumbar spine, hip (femoral neck)
+- Frequency: every 1-2 years if abnormal
+- Indications: women >65, men >70, risk factors
+
+### Biochemical Markers
+- Calcium (normal or low)
+- Phosphate (low in rickets)
+- Alkaline phosphatase (high, bone turnover)
+- Vitamin D 25-OH: <20 ng/mL = deficiency
+
+### Other Tests
+- PTH (high if secondary hyperparathyroidism)
+- Thyroid function, renal function
+- X-rays (decreased density in osteoporosis)`,
+        mnemonics: [
+          {
+            text: "DEXA T-SCORE: >-1 Normal, -1 to -2.5 Osteopenia, <-2.5 Osteoporosis",
+            explanation: "DEXA score interpretation"
+          },
+          {
+            text: "RICKETY: Rickets=Restricted mineralization, Inadequate vitamin D, Clinical bowing, Kyphosis, Elevated phosphatase, Tetany (hypocalcemia)",
+            explanation: "Rickets features"
+          }
+        ],
+        keyPoints: [
+          "Osteoporosis: DEXA T-score <-2.5; asymptomatic until fracture",
+          "Risk factors: postmenopause, corticosteroids, low calcium/vitamin D, smoking, sedentary",
+          "Rickets: defective mineralization; vitamin D deficiency most common",
+          "Management: calcium, vitamin D supplementation, bisphosphonates, weight-bearing exercise",
+          "Prevention critical through exercise, adequate nutrition"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Orthopedics", chapter: "Metabolic Bone Disease", edition: "9th" },
+          { book: "OP Ghai - Essential Pediatrics", chapter: "Ch 20", edition: "9th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "osteoporosis-layer-2-mechanism",
+        title: "Osteoporosis & Metabolic Bone Disease - Mechanism",
+        estimatedMinutes: 25,
+        summary: "Osteoporosis results from imbalance in bone remodeling: osteoclast hyperactivity > osteoblast function. Estrogen deficiency (postmenopause) increases RANKL → osteoclast activation → accelerated resorption. Vitamin D deficiency impairs calcium absorption → secondary hyperparathyroidism → bone loss. Rickets involves defective osteoid mineralization due to insufficient calcium-phosphate product. Corticosteroids suppress osteoblasts, increase resorption, decrease calcium absorption.",
+        contentMd: `# Osteoporosis & Metabolic Bone Disease - Mechanism
+
+## Bone Remodeling in Osteoporosis
+
+### Normal Balanced Remodeling
+1. Osteoclast recruitment via RANKL
+2. Resorption phase
+3. Reversal phase
+4. Formation phase (osteoblasts deposit osteoid)
+5. Mineralization (hydroxyapatite formation)
+6. Net zero bone loss (resorption = formation)
+
+### Uncoupled Remodeling in Osteoporosis
+1. Osteoclast hyperactivity → increased resorption
+2. Osteoblast hypoactivity → decreased formation
+3. Result: resorption >formation → net bone loss
+4. Architecture deteriorates (trabecular plates thin, perforate)
+5. Fracture risk increases
+
+## Estrogen Deficiency Mechanism (Postmenopausal)
+
+### Estrogen's Role
+- Suppresses RANKL production → controls osteoclasts
+- Supports vitamin D responsiveness
+- Reduces overall bone turnover
+
+### Withdrawal Effects
+1. RANKL ↑ (reduced estrogen suppression)
+2. Osteoclast activation ↑
+3. Bone resorption ↑↑ (2-3% annually initially)
+4. Osteoblast lag (formation cannot keep pace)
+5. Rapid bone loss (first 5-10 years postmenopause)
+
+## Vitamin D Deficiency Mechanism
+
+### Calcium-Vitamin D Axis Dysfunction
+1. Vitamin D <20 ng/mL
+2. Intestinal calcium absorption ↓
+3. Serum calcium ↓ → PTH ↑↑ (secondary hyperparathyroidism)
+4. PTH increases osteoclast activity → resorption ↑↑
+5. Net bone loss from PTH-mediated resorption
+
+### Rickets - Mineralization Failure
+1. Vitamin D ↓ (inadequate intake/sun/malabsorption)
+2. 1,25-OH vitamin D ↓
+3. Calcium & phosphate absorption ↓
+4. Calcium-phosphate product <25 (below threshold)
+5. Osteoid mineralization fails
+6. Result: defective bone with retained osteoid
+
+## Corticosteroid-Induced Osteoporosis (CTIOP)
+
+### Mechanisms
+1. Osteoblast suppression (inhibits proliferation)
+2. Increased osteoclast activity
+3. Calcium malabsorption (decreased intestinal absorption)
+4. Increased renal calcium loss
+5. Hypogonadism (suppressed sex hormones)
+6. PTH resistance (kidneys less responsive)
+
+### Timeframe
+- Rapid bone loss first 3-6 months
+- Stabilization at lower level
+- Fracture risk even at normal DEXA (architecture damaged)
+
+## Bisphosphonate Mechanism
+
+### How They Work
+1. Osteoclast uptake (endocytosed)
+2. Pyrophosphate analog (resist degradation)
+3. ATP depletion (inhibit ATP-dependent pumps)
+4. Apoptosis (osteoclast programmed cell death)
+5. Result: reduced osteoclast number/function
+
+### Effect on Bone Remodeling
+- Resorption ↓↓ (osteoclasts inactive)
+- Formation continues (osteoblasts still active)
+- Net effect: temporary net formation
+- Reversal takes years`,
+        mnemonics: [
+          {
+            text: "ESTROGEN OUT: ESTROGEN OUT → RANKL UP → OSTEOCLASTS UP → RESORPTION UP → BONE LOSS",
+            explanation: "Postmenopausal osteoporosis cascade"
+          },
+          {
+            text: "VITAMIN D LOW: VITAMIN D LOW → CALCIUM LOW → PTH HIGH → RESORPTION UP → BONE LOSS",
+            explanation: "Vitamin D deficiency bone loss"
+          }
+        ],
+        keyPoints: [
+          "Osteoporosis: osteoclast hyperactivity + osteoblast hypoactivity",
+          "Estrogen deficiency: ↑ RANKL → ↑ osteoclasts → accelerated resorption",
+          "Vitamin D deficiency: ↓ calcium → ↑ PTH → ↑ resorption",
+          "Rickets: ↓ calcium-phosphate product → failed osteoid mineralization",
+          "Bisphosphonates: osteoclast apoptosis → reduced resorption"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Orthopedics", chapter: "Metabolic Bone Disease", edition: "9th" },
+          { book: "Apley & Solomon's System of Orthopaedics", chapter: "Metabolic Disorders", edition: "10th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "osteoporosis-layer-3-clinical",
+        title: "Osteoporosis & Metabolic Bone Disease - Clinical Management",
+        estimatedMinutes: 25,
+        summary: "Management includes DEXA screening, calcium (1000-1200 mg/day) + vitamin D (800-2000 IU/day) supplementation, bisphosphonates (first-line), lifestyle modifications (exercise, smoking cessation). Rickets treatment: vitamin D supplementation (dose-dependent), calcium supplementation, phosphate binders for renal rickets. Fracture prevention through weight-bearing exercise and fall prevention critical.",
+        contentMd: `# Osteoporosis & Metabolic Bone Disease - Clinical Management
+
+## Osteoporosis Management
+
+### Screening & Diagnosis
+- DEXA indicated: Women >65, postmenopausal <65 with risk factors, men >70
+- Baseline labs: calcium, phosphate, alkaline phosphatase, vitamin D, PTH
+- FRAX tool: estimates 10-year fracture probability
+
+### Pharmacologic Treatment
+
+**First-Line: Bisphosphonates**
+- Alendronate: 70 mg weekly or 10 mg daily
+- Risedronate: 35 mg weekly or 5 mg daily
+- Zoledronic acid: 5 mg IV annually
+- Combination with calcium/vitamin D essential
+
+**Other Options**
+- HRT: Only for symptom relief (increased CV/breast cancer risk)
+- SERMs (raloxifene): Estrogenic on bone
+- Denosumab: RANKL inhibitor
+- Teriparatide: PTH analog (bone formation)
+
+### Supportive Therapy
+- Calcium: 1000-1200 mg/day
+- Vitamin D: 800-2000 IU/day
+- Magnesium: 300-400 mg/day
+
+### Lifestyle Modifications
+- Weight-bearing exercise: 30 min, 3-4 days/week
+- Resistance training: 2-3 days/week
+- Smoking cessation (critical)
+- Alcohol moderation (≤2 drinks/day)
+- Fall prevention (remove hazards, lighting, assistive devices)
+
+### Monitoring
+- DEXA repeat every 1-2 years
+- Serum calcium/vitamin D annually
+- Fracture occurrence monitoring
+
+## Rickets Management
+
+### Nutritional Rickets (Vitamin D Deficiency)
+
+**Investigation**
+- 25-OH vitamin D <20 ng/mL
+- Calcium (low), phosphate (low), ALP (high)
+- PTH high (secondary hyperparathyroidism)
+
+**Treatment**
+- Vitamin D3: 2000-4000 IU daily (mild); 100,000-600,000 IU weekly (severe)
+- Calcium: 1000-1500 mg daily
+- Duration: Until biochemical normalization (6-12 weeks)
+- Maintenance: 800-2000 IU daily
+
+**Monitoring**
+- Biochemistry Q4-6 weeks
+- Radiographs show healing over weeks-months
+
+### Renal Rickets (CKD-Mineral Bone Disorder)
+
+**Treatment**
+- Phosphate binders: calcium carbonate, sevelamer
+- Active vitamin D (calcitriol): 0.25-0.5 mcg BID
+- PTH suppression if needed
+- Monitor: calcium, phosphate, PTH, vitamin D
+
+### Hypophosphatemic Rickets
+
+**Treatment**
+- High-dose vitamin D: 50,000-100,000 IU daily
+- Phosphate supplementation (high-dose)
+- Close monitoring for hypercalcemia
+
+## Fracture Management in Osteoporosis
+
+### Common Sites & Treatment
+- **Hip**: ORIF or hemiarthroplasty
+- **Vertebral**: Conservative (rest, analgesia) unless neurologic
+- **Wrist**: Cast immobilization or ORIF
+
+### Post-Fracture
+- Start bisphosphonate if not on treatment
+- PT/OT: balance, gait, home modifications
+- Adequate protein (healing)
+- Monitor for depression (increases mortality)
+
+## Prevention (Primary)
+
+### For All Adults
+- Calcium: 1000-1200 mg/day
+- Vitamin D: 800-2000 IU daily
+- Weight-bearing exercise: 30 min, 3-5 days/week
+- Smoking cessation
+- Limit alcohol: ≤2 drinks/day
+
+### For High-Risk Groups
+- **Corticosteroid users** (>3 months): DEXA baseline, calcium+vitamin D, consider bisphosphonate
+- **Postmenopausal**: Early screening if risk factors, counseling on HRT`,
+        mnemonics: [
+          {
+            text: "BISPHOSPHONATE: Blocks osteoclasts, Inhibits resorption, Strengthens bone, Prolongs therapy duration",
+            explanation: "Bisphosphonate action"
+          },
+          {
+            text: "RICKETS TREATMENT: Vitamin D (high-dose), Investigate cause, Check calcium, Kidney assessment, Educate family",
+            explanation: "Rickets management"
+          }
+        ],
+        keyPoints: [
+          "Osteoporosis: DEXA T-score <-2.5; bisphosphonates first-line + calcium + vitamin D + exercise",
+          "Rickets: vitamin D supplementation (dose-dependent), calcium, phosphate binders for renal",
+          "Fracture prevention: weight-bearing exercise, smoking cessation, fall prevention",
+          "Corticosteroid users: DEXA baseline, calcium+vitamin D, consider bisphosphonate",
+          "Monitoring: DEXA Q1-2 years, biochemistry regularly"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Orthopedics", chapter: "Metabolic Bone Disease", edition: "9th" },
+          { book: "OP Ghai - Essential Pediatrics", chapter: "Ch 20", edition: "9th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "osteoporosis-layer-4-exam",
+        title: "Osteoporosis & Metabolic Bone Disease - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "Key facts: DEXA T-score <-2.5 diagnosis; postmenopausal women highest risk; bisphosphonates first-line; calcium 1000-1200 mg + vitamin D 800-2000 IU standard. Rickets: vitamin D deficiency most common; supplementation dose-dependent. Common errors: forgetting vitamin D in osteoporosis prevention, missing bisphosphonate contraindications (osteonecrosis jaw, atypical fractures with prolonged use).",
+        contentMd: `# Osteoporosis & Metabolic Bone Disease - Exam Prep
+
+## Critical Diagnostic Cutoffs
+- DEXA T-score >-1: Normal
+- DEXA T-score -1 to -2.5: Osteopenia
+- DEXA T-score <-2.5: Osteoporosis
+
+## Vitamin D Status
+- <12 ng/mL: Severe deficiency
+- 12-20 ng/mL: Deficiency
+- 20-30 ng/mL: Insufficiency
+- >30 ng/mL: Sufficient
+
+## High-Yield MCQ Concepts
+
+**Q: 65-year-old postmenopausal, DEXA -2.8. Management?**
+A: Osteoporosis. Bisphosphonate (alendronate 70 mg weekly). Add calcium 1200 mg + vitamin D 1000-2000 IU daily. Weight-bearing exercise 30 min 3-4 days/week.
+
+**Q: Vitamin D deficiency rickets in child. 25-OH vitamin D 8 ng/mL. Treatment?**
+A: High-dose vitamin D (100,000-200,000 IU weekly × 6-8 weeks). Calcium 1000-1500 mg/day. Reassess Q4-6 weeks. Maintenance vitamin D 800-2000 IU daily.
+
+**Q: Bisphosphonate contraindications?**
+A: Esophageal stricture, active ONJ, Cr Cl <30 mL/min. Caution: atypical fractures >5 years (consider drug holiday).
+
+**Q: 60-year-old on prednisone 10 mg × 8 months. Prevention?**
+A: DEXA baseline (>7.5 mg × 3 months). Calcium 1200 mg + vitamin D 800-2000 IU daily. Consider bisphosphonate.
+
+## Common Mistakes
+- Forget calcium/vitamin D with bisphosphonate (ESSENTIAL)
+- Start estrogen for all postmenopausal (only if symptomatic)
+- DEXA every year (repeat Q1-2 years)
+- Miss vitamin D in rickets workup (ALWAYS check)
+- Miss secondary causes (PTH, calcium, phosphate, renal function)
+
+## Critical Pearls
+1. Postmenopausal women = highest risk
+2. Calcium 1000-1200 mg + Vitamin D 800-2000 IU = foundation
+3. DEXA T-score <-2.5 = osteoporosis diagnosis
+4. Bisphosphonates = first-line
+5. Exercise critical (30 min weight-bearing 3-4x/week)`,
+        mnemonics: [
+          {
+            text: "DEXA-OST: DEXA <-2.5, Estrogen deficiency, X-ray shows low density, Adequate calcium+vitamin D, Osteoporosis management",
+            explanation: "Osteoporosis diagnosis & management"
+          }
+        ],
+        keyPoints: [
+          "DEXA T-score <-2.5 = osteoporosis; >-1.0 = normal; -1 to -2.5 = osteopenia",
+          "Bisphosphonate first-line; always with calcium 1200 mg + vitamin D 800-2000 IU/day",
+          "Weight-bearing exercise 30 min 3-4 days/week; smoking cessation critical",
+          "Rickets: vitamin D supplementation (100,000-600,000 IU/week initially), calcium",
+          "Corticosteroids: DEXA baseline + bisphosphonate if >7.5 mg × 3 months"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Orthopedics", chapter: "Metabolic Bone Disease", edition: "9th" },
+          { book: "NEET/DNB Orthopedics - Metabolic Disorders", chapter: "Quick Reference", edition: "2024" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "osteoporosis-layer-5-active-recall",
+        title: "Osteoporosis & Metabolic Bone Disease - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Active recall on DEXA interpretation, management decisions, rickets diagnosis and treatment. Clinical scenarios requiring specific drug selection, dosing, monitoring.",
+        contentMd: `# Active Recall - Osteoporosis & Metabolic Bone Disease
+
+**Q1: 70-year-old woman, DEXA -3.2, prior vertebral fracture. Diagnosis and management?**
+> Osteoporosis with prior fragility fracture. Bisphosphonate (alendronate 70 mg weekly), calcium 1200 mg, vitamin D 1000-2000 IU daily. Weight-bearing exercise. Annual DEXA monitoring.
+
+**Q2: Newborn with rickets, calcium 6.8 (low), phosphate 3.0 (low), ALP 800, 25-OH vitamin D 10. Diagnosis?**
+> Vitamin D deficiency rickets (most common). Vitamin D3 100,000-200,000 IU weekly × 6-8 weeks. Calcium 1000-1500 mg daily. Monitor biochemistry Q4-6 weeks.
+
+**Q3: Is estrogen therapy recommended for osteoporosis in postmenopausal women?**
+> Only if symptomatic (hot flashes, vaginal atrophy). Not for asymptomatic osteoporosis (increased CV & breast cancer risk). Bisphosphonates preferred.
+
+**Q4: Bisphosphonate user develops jaw osteonecrosis. What caused this?**
+> Osteonecrosis of jaw (ONJ) rare but serious. Risk increases >5 years therapy. More common with IV agents. Discontinue bisphosphonate, refer maxillofacial surgery.
+
+**Q5: 55-year-old on prednisone 8 mg × 6 months. DEXA recommendation?**
+> DEXA baseline (prednisone >7.5 mg × 3 months). Calcium 1000-1200 mg + vitamin D 800-2000 IU daily. Consider bisphosphonate if T-score abnormal.
+
+**Q6: Rickets patient develops hypercalcemia during vitamin D therapy?**
+> Risk of vitamin D overdose. Occurs in granulomatous diseases (sarcoidosis). Monitor calcium closely. Reduce vitamin D if hypercalcemia develops.
+
+**Q7: Child with renal rickets (CKD stage 4). Treatment differs how?**
+> Requires active vitamin D (calcitriol 0.25-0.5 mcg BID) because kidneys cannot activate vitamin D. Also add phosphate binders.
+
+**Q8: How long should bisphosphonate therapy continue?**
+> Generally 5 years. Beyond 5 years, atypical fracture risk increases. Consider drug holiday after 5 years, reassess with DEXA.
+
+**Q9: Osteoporosis patient refuses medications. Non-pharmacologic alternatives?**
+> Weight-bearing exercise (proven effective: 30 min 3-5 days/week), adequate calcium (1000-1200 mg), vitamin D (800-2000 IU), smoking cessation.
+
+**Q10: What indicates need for DEXA screening in men?**
+> Men >70 years (universal). Men <70 with risk factors (corticosteroids >3 months, hypogonadism, malabsorption, alcohol, smoking, family history).`,
+        mnemonics: [
+          {
+            text: "OSTEO-MANAGE: Osteoporosis diagnosis, Screen with DEXA, Treatment bisphosphonates, Exercise weight-bearing, Optimize calcium+vitamin D",
+            explanation: "Osteoporosis comprehensive management"
+          }
+        ],
+        keyPoints: [
+          "DEXA T-score <-2.5 = osteoporosis; bisphosphonate + calcium + vitamin D + exercise",
+          "Calcium 1200 mg + vitamin D 800-2000 IU/day standard",
+          "Weight-bearing exercise 30 min 3-4x/week; smoking cessation critical",
+          "Rickets: vitamin D supplementation (100,000-600,000 IU/week initially), calcium",
+          "Bisphosphonate: 5-year max typical; consider drug holiday after"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Orthopedics", chapter: "Metabolic Bone Disease", edition: "9th" }
+        ]
+      }
+    ]
+  }
 ];

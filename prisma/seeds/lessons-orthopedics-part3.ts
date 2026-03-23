@@ -1,17 +1,713 @@
-export const orthopedicsPart3Lessons = [
+import type { TopicLessons } from "./content-loader";
+
+export const orthopedicsPart3Lessons: TopicLessons[] = [
   {
     topicCode: "OR-MOD-02-TOP-02",
     layers: [
       {
         layer: 1,
-        slug: "humerus-fractures-foundation",
+        slug: "humerus-fractures-layer-1-foundation",
         title: "Humerus Fractures - Foundation",
         estimatedMinutes: 22,
         summary: "Overview of humerus fractures including proximal, shaft, and distal fractures with epidemiology and classification.",
-        contentMd: "`# Humerus Fractures - Foundation\n\n## Anatomy & Classification\n\n### Proximal Humerus Fractures\n- **Epidemiology**: Common in elderly (>60 years) with osteoporosis\n- **Mechanism**: Fall on outstretched hand (FOOSH) or direct trauma\n- **Common types**:\n  - **Subcapital**: Neck region (most common)\n  - **Anatomical neck**: Below articular surface (rare, high AVN risk)\n  - **Surgical neck**: Below tuberosities (common)\n  - **Greater tuberosity**: Isolated or with dislocation\n  - **Lesser tuberosity**: Associated with posterior dislocation\n\n- **Neer Classification**: 4-part system based on number of fracture lines/displacement\n  - Part 1: Minimal displacement (<1 cm)\n  - Part 2: Surgical neck fracture displaced\n  - Part 3: Greater tuberosity fracture\n  - Part 4: Lesser tuberosity fracture\n\n### Shaft Fractures\n- **Location**: Between surgical neck and 5 cm proximal to condyles\n- **Common in**: Young adults; associated with high-energy trauma\n- **Patterns**:\n  - **Transverse**: Simple breaks\n  - **Spiral**: Twisting injuries\n  - **Comminuted**: Multiple fragments\n\n### Distal Humerus Fractures (Supracondylar)\n- **Common in**: Children <15 years\n- **Mechanism**: Fall on outstretched hand (FOOSH)\n- **Types**: Extension (95%) vs Flexion (5%)\n- **Complications**: Neurovascular compromise (brachial artery, median/radial nerves)\n\n## Epidemiology\n- **Proximal**: Most common shoulder fracture\n- **Shaft**: 5-10% of humeral fractures\n- **Distal**: Most common in children; less common in adults\n- **Associated injuries**: Often polytrauma with high-energy mechanism\n\n## Complications Risk\n\n### Avascular Necrosis (AVN)\n- **Risk**: Anatomical neck fractures (highest risk)\n- **Mechanism**: Disruption of blood supply to humeral head\n- **Incidence**: 10-15% with displaced proximal fractures\n- **Timeline**: May develop weeks to months post-fracture\n\n### Nerve Injuries\n- **Axillary nerve**: Most common (injury in 6-10%)\n- **Radial nerve**: Shaft fractures (spiral/comminuted)\n- **Median nerve**: Displaced distal fractures\n- **Musculocutaneous**: Less common\n\n### Stiffness\n- **Risk**: High with immobilization >4-6 weeks\n- **Prevention**: Early mobilization\n- **Rehabilitation**: Essential for shoulder function,\n        mnemonics: [\n          { text: \"PROXIMAL HUMERUS = Patho (osteoporosis elderly), Rotator cuff injury, Osteonecrosis risk, Xiphoid (AVN), Injury neurovascular, Mall (comminuted), Avulsion tuberosities, Level displacement, (Neer) classification\", explanation: \"Proximal humerus fracture characteristics\" },\n          { text: \"SUPRACONDYLAR = Superior location, Usual in children, Pulley of brachial artery, Radial nerve endangered, Avulsion tuberosity, Compression risk, Open reduction rarely, Neurovascular monitoring\", explanation: \"Distal humerus fracture features\" }\n        ],\n        keyPoints: [\n          \"Proximal humerus fractures most common; elderly with osteoporosis\",\n          \"Neer classification guides management decisions\",\n          \"Shaft fractures: High-energy trauma; radial nerve at risk\",\n          \"Distal/supracondylar: Pediatric fracture; neurovascular monitoring critical\",\n          \"Avascular necrosis risk with anatomical neck fractures\"\n        ],\n        textbookRefs: [\n          { book: \"Maheshwari's Essentials of Orthopedics\", chapter: \"Shoulder and Arm Fractures\", edition: \"7th\" },\n          { book: \"Apley's System of Orthopedics and Fractures\", chapter: \"Humerus Fractures\", edition: \"9th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"humerus-fractures-mechanism\",\n        title: \"Humerus Fractures - Mechanism\",\n        estimatedMinutes: 28,\n        summary: \"Biomechanical mechanisms of humerus fractures, vascular anatomy, nerve injury patterns, and healing factors.\",\n        contentMd: "# Humerus Fractures - Mechanism\\n\\n## Biomechanics of Injury\\n\\n### Proximal Humerus Fracture Mechanisms\\n- **FOOSH mechanism**: Arm abducted, externally rotated on impact\\n- **Compressive forces**: Crush injury causing impaction\\n- **Shearing forces**: Valgus/varus stress causing neck fractures\\n- **Avulsion**: Rotator cuff pull on tuberosities\\n\\n### Shaft Fracture Mechanics\\n- **Direct blow**: High-energy impact causing transverse fracture\\n- **Twisting/torsion**: Spiral pattern fractures\\n- **Comminution**: Multiple fragments with crush forces\\n- **Pathologic fractures**: Metastatic disease or weak bone\\n\\n### Distal Humerus Fracture Mechanisms (Pediatric)\\n- **Extension mechanism** (95%): FOOSH with forearm extended\\n  - Supracondylar fracture occurs anterior to condyles\\n  - Posterior displacement common\\n  - Neurovascular compression risk\\n\\n- **Flexion mechanism** (5%): FOOSH with forearm flexed\\n  - Rarer, different fracture pattern\\n  - Transcondylar fracture possible\\n\\n## Vascular Anatomy & Injury\\n\\n### Arterial Supply to Humerus\\n- **Anterior circumflex**: Proximal humerus, anastomoses with posterior\\n- **Posterior circumflex**: Proximal humerus, axillary artery branches\\n- **Brachial artery**: Along shaft, at risk with shaft fractures\\n- **Collateral circulation**: Extensive; some proximal fractures well-tolerated\\n\\n### Brachial Artery at Risk\\n- **Location**: Anteromedial to humerus in distal third\\n- **Supracondylar fractures**: Trapped between proximal and distal fragments\\n- **Mechanism**: Stretching, compression, kinking\\n- **Ischemia timeline**: Critical if >6 hours ischemia time\\n\\n### Signs of Vascular Compromise\\n- **Pale hand/fingers**: Reduced perfusion\\n- **Absent radial pulse**: Arterial obstruction\\n- **Cold hand**: Ischemia\\n- **Cyanosis**: Blue/purple discoloration (venous back-up)\\n- **Pain progression**: Increasing pain suggests ischemia\\n\\n## Nerve Injury Patterns\\n\\n### Axillary Nerve Injury\\n- **Location**: Passes through quadrangular space below rotator cuff\\n- **Risk**: Proximal humerus fractures (6-10% incidence)\\n- **Mechanism**: Stretch from displacement, direct trauma\\n- **Deficit**: Loss of shoulder abduction, deltoid innervation\\n- **Recovery**: Often spontaneous over weeks\\n\\n### Radial Nerve Injury\\n- **Location**: Spiral groove of humerus\\n- **Risk**: Shaft fractures, especially spiral/comminuted\\n- **Mechanism**: Bone fragment laceration or stretch\\n- **Deficit**: Wrist drop (loss of wrist extension), loss of finger extension\\n- **Recovery**: Often improve with time if not completely transected\\n\\n### Median & Ulnar Nerves\\n- **Risk**: Distal humerus fractures\\n- **Mechanism**: Stretch, compression, or direct trauma\\n- **Deficit**: Loss of pronation (median), intrinsic hand weakness (ulnar)\\n\\n## Bone Healing Factors\\n\\n### Variables Affecting Union\\n- **Age**: Young better healing; elderly delayed\\n- **Vascular integrity**: Medial cortex most important for blood supply\\n- **Fragment alignment**: Displacement increases non-union risk\\n- **Comminution**: More fragments = slower healing\\n- **Immobilization**: Balance between stability and early mobilization\\n\\n### Healing Timeline\\n- **2-3 weeks**: Early callus formation\\n- **6-8 weeks**: Bridging callus appears\\n- **12-16 weeks**: Usually solid union in adults\\n- **Delayed union**: >16 weeks; non-union risk increases\\n- **Non-union risk**: Especially shaft fractures if untreated\\n\\n## Avascular Necrosis Mechanism\\n\\n### Vascular Disruption\\n- **Anatomical neck fractures**: Highest AVN risk (>50%)\\n- **Mechanism**: Fracture line crosses major blood supply\\n- **Proximal fragment**: Loses blood supply, becomes ischemic\\n- **Timeline**: Changes appear 6-12 months after fracture\\n\\n### Repair Process\\n- **Revascularization attempt**: Creeping substitution from surrounding\\n- **Resorption**: Bone resorbed and replaced (structural compromise)\\n- **Collapse risk**: Weakened bone cannot support load\\n- **Salvage**: ORIF with internal fixation improves outcomes\\n\\n## Stiffness Development Mechanism\\n\\n### Immobilization Effects\\n- **Collagen remodeling**: Ligaments shorten\\n- **Adhesion formation**: Joint capsule thickens\\n- **Muscle atrophy**: Loss of motor coordination\\n- **Pain-induced guarding**: Muscle splinting prevents movement\\n\\n### Prevention\\n- **Early mobilization**: Within 3-5 days\\n- **Physiotherapy**: Passive → active-assisted → active\\n- **Timing**: Critical window for rehabilitation",\n        mnemonics: [\n          { text: \"NEUROVASCULAR = Nerves: Axillary>Radial>Median>Ulnar, Vascular: Brachial artery, Abduction loss (axillary), Shaft fracture risk, Can be delayed, Ulnar nerve uncommon, Loss of function\", explanation: \"Nerve injury sequence and vascular concerns in humerus fractures\" },\n          { text: \"SUPRACONDYLAR ISCHEMIA = Stretch-induced compression, Ulnar pulse absent, Pale hand, Radial pulse loss, Arterial entrapment, Crushing injury, Ischemia timeline critical, Emergency reduction\", explanation: \"Vascular emergency in supracondylar fractures\" }\n        ],\n        keyPoints: [\n          \"Proximal humerus: FOOSH mechanism; axillary nerve injury 6-10%\",\n          \"Shaft fractures: Radial nerve at risk (spiral fractures); brachial artery injury possible\",\n          \"Distal/supracondylar: Brachial artery compression (emergency); check vascular status\",\n          \"AVN risk highest with anatomical neck fractures (>50%)\",\n          \"Early mobilization (3-5 days) prevents stiffness\"\n        ],\n        textbookRefs: [\n          { book: \"Maheshwari's Essentials of Orthopedics\", chapter: \"Humerus Fractures: Mechanisms and Complications\", edition: \"7th\" },\n          { book: \"Apley's System of Orthopedics and Fractures\", chapter: \"Humeral Fractures: Pathophysiology\", edition: \"9th\" }\n        ]\n      },\n      {\n        layer: 3,\n        slug: \"humerus-fractures-clinical\",\n        title: \"Humerus Fractures - Clinical\",\n        estimatedMinutes: 28,\n        summary: \"Clinical diagnosis, investigations, imaging, and management of humerus fractures in Indian orthopedic practice.\",\n        contentMd: "# Humerus Fractures - Clinical\\n\\n## Clinical Examination\\n\\n### History\\n- **Mechanism**: FOOSH, direct blow, fall on outstretched hand\\n- **Age**: Elderly = proximal; young = shaft; children = distal\\n- **Hand dominance**: Important for functional goals\\n\\n### Proximal Humerus Fracture Examination\\n- **Inspection**: Swelling, ecchymosis (bruising)\\n- **Palpation**:\\n  - Tenderness over tuberosities\\n  - Crepitus if unstable\\n  - Fullness (hemarthrosis)\\n- **Movement**: Often limited by pain\\n- **Neurovascular**: Check axillary nerve (shoulder abduction), pulses\\n\\n### Shaft Fracture Examination\\n- **Deformity**: Angular deformity obvious\\n- **Crepitus**: Bone grinding on palpation\\n- **Neurovascular**:\\n  - Radial nerve (wrist drop, finger extension)\\n  - Brachial artery (radial pulse, hand perfusion)\\n\\n### Distal Humerus Fracture (Pediatric)\\n- **Inspection**: Severe swelling (hemarthrosis)\\n- **Deformity**: Posterior displacement common\\n- **Neurovascular**: CRITICAL\\n  - Check radial pulse, hand color\\n  - Median/radial nerve function\\n  - Brachial artery compression emergency\\n\\n## Investigations\\n\\n### X-ray Views\\n- **AP view**: Standard view\\n- **Lateral view**: Shows displacement\\n- **Axillary view**: Shows tuberosity involvement\\n- **Multiple views essential** for fracture assessment\\n\\n### CT Scan\\n- **Indications**:\\n  - Comminuted fractures\\n  - Complex patterns\\n  - Surgical planning\\n- **Provides**: 3D reconstruction, fragment patterns\\n\\n### MRI\\n- **Indications**:\\n  - Rotator cuff injury assessment\\n  - AVN detection (later stage)\\n  - Soft tissue evaluation\\n- **Not routine** for acute fracture\\n\\n### Ultrasound\\n- **Dynamic assessment**: Early detection of complications\\n- **Neurovascular**: Doppler assessment of blood flow\\n- **Cost-effective**: Available in many centers\\n\\n## Management\\n\\n### Proximal Humerus Fractures - Non-Operative (Most Common)\\n\\n**Indications for Conservative Management**\\n- Minimally displaced (Neer Part 1)\\n- Patient unable to undergo surgery\\n- Limited functional demands\\n\\n**Technique**\\n- **Sling immobilization**: 2-3 weeks\\n- **Gentle pendulum exercises**: Start immediately\\n- **Progressive mobilization**: Passive ROM (week 2-3), active-assisted (week 4+)\\n- **Physiotherapy**: Essential for outcome\\n\\n**Outcomes**\\n- Good in many elderly patients\\n- Risk: Stiffness, especially if immobilization prolonged\\n- Healing timeline: 8-12 weeks\\n\\n### Proximal Humerus Fractures - Operative (ORIF)\\n\\n**Indications**\\n- Displaced proximal fractures (Neer Part 2-4)\\n- Young, active patient\\n- Non-union/malunion\\n- Anatomical neck fractures (AVN prevention)\\n\\n**Techniques**\\n- **ORIF with locking plate**: Gold standard\\n  - Anterolateral approach\\n  - Anatomic reduction\\n  - Locking plate provides stability\\n  - Allows early mobilization\\n\\n- **Hemiarthroplasty**:\\n  - 4-part fractures in elderly\\n  - Comminuted with vascular compromise\\n  - Higher age, lower activity demand\\n\\n**Results**\\n- ORIF: Better functional outcomes\\n- Hemiarthroplasty: Useful salvage in comminuted cases\\n\\n### Shaft Fractures - Non-Operative\\n\\n**Indications**\\n- Most shaft fractures can be managed conservatively\\n- Good healing potential\\n- Safe reduction possible\\n\\n**Technique**\\n- **Closed reduction**: Under fluoroscopy or ultrasound guidance\\n- **Immobilization**: Functional brace (U-slab, coaptation splint)\\n- **Early mobilization**: Key to prevent stiffness\\n- **Radiographs**: Serial monitoring weeks 1, 2, 4, 8\\n\\n**Advantages**\\n- Avoids surgery\\n- Good union rates (90-95%)\\n- Lower infection risk\\n\\n### Shaft Fractures - Operative\\n\\n**Indications**\\n- Open fractures\\n- Neurovascular injury requiring exploration\\n- Pathologic fractures with soft tissue compromise\\n- Non-union/malunion\\n- Polytrauma (early mobilization needed)\\n\\n**Technique**\\n- **Intramedullary nailing**: Standard for operative shaft fractures\\n  - Antegrade or retrograde approach\\n  - Good alignment, early mobilization\\n  - Lower malunion rate\\n\\n- **Plate fixation**: Alternative to IM nailing\\n\\n### Distal Humerus Fractures (Supracondylar) - Pediatric\\n\\n**Urgent Assessment**\\n- **Vascular status**: Check radial pulse, hand perfusion immediately\\n- **Neurovascular compromise**: Emergency management needed\\n- **Reduction timing**: STAT if pulse absent or hand ischemic\\n\\n**Closed Reduction**\\n- **Technique**:\\n  1. Anesthesia (GA preferred)\\n  2. Gentle hyperextension to unlock fracture\\n  3. Longitudinal traction\\n  4. Correction of deformity\\n  5. Flexion of elbow to 90-100 degrees\\n\\n- **Assessment**: Confirm reduction with X-rays and neurovascular status\\n\\n**Immobilization**\\n- **Posterior splint**: Elbow 90-100 degrees flexion\\n- **Duration**: 3-4 weeks minimum\\n- **Radiographs**: Monitor for slippage\\n\\n**Operative Fixation**\\n- **Indications**:\\n  - Failed closed reduction\\n  - Unstable reduction\\n  - Open fractures\\n  - Neurovascular injury requiring exploration\\n\\n- **Technique**:\\n  - ORIF with K-wires or plate (mostly K-wires in children)\\n  - Percutaneous pinning\\n  - Lateral pinning preferred (safer)\\n\\n**Post-op Management**\\n- **Sling immobilization**: 2-3 weeks\\n- **ROM exercises**: Early, gentle\\n- **Physiotherapy**: Monitor for stiffness\\n\\n### Distal Humerus Fractures (Adult)\\n\\n**Conservative Management**\\n- Rare; most require surgery\\n\\n**Operative (ORIF)**\\n- Gold standard for displaced fractures\\n- **Olecranon osteotomy approach**: Provides exposure\\n- **Plate fixation**:\\n  - Medial and lateral plates (dual plating)\\n  - Stabilizes fragments\\n  - Allows early mobilization\\n- **Open reduction crucial** for optimal outcomes\\n\\n## Special Considerations\\n\\n### Pathologic Fractures\\n- **Assessment**: History of malignancy, osteoporosis, metabolic disease\\n- **Management**: Treat underlying cause + orthopedic fixation\\n- **Prognosis**: Depends on primary condition\\n\\n### Polytrauma Setting\\n- **Priority**: Life-threatening injuries first\\n- **Orthopedic timing**: Early fixation (within 24-48 hours) improves outcomes\\n- **IM nailing**: Preferred for mobility and nursing care\\n\\n### Osteoporotic Bone\\n- **Healing**: Often slower, higher non-union risk\\n- **Fixation**: Locking plates/screws improve purchase\\n- **Physiotherapy**: Extended rehabilitation,\\n        mnemonics: [\\n          { text: \\\"PROXIMAL MANAGEMENT = Part 1 non-op, Orthopedic fix for displaced, Restoration early (mobilization), Immobilize 2-3 weeks, Mobility critical, After 4 weeks active-assisted, Learn PT exercises\\\", explanation: \\\"Proximal humerus management algorithm\\\" },\\n          { text: \\\"SUPRACONDYLAR EMERGENCY = Severe swelling, Urgent vascular check, Pulse absent? Reduce NOW, Radial pulse critical, Anesthesia needed, Compression deadly, Open reduction if irreducible, Neurovascular emergency, Delayed reduction = ischemic loss\\\", explanation: \\\"Supracondylar fracture emergency steps\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Proximal humerus: Minimally displaced → conservative (sling + PT); displaced → ORIF\\\",\\n          \\\"Shaft fractures: Most managed conservatively with functional brace; early mobilization key\\\",\\n          \\\"Distal/supracondylar: Check vascular status immediately; emergency reduction if compromised\\\",\\n          \\\"ORIF indications: Unstable, comminuted, high-demand patient, open fracture\\\",\\n          \\\"Early mobilization (3-5 days) prevents stiffness\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari's Essentials of Orthopedics\\\", chapter: \\\"Humerus Fractures: Management\\\", edition: \\\"7th\\\" },\\n          { book: \\\"Apley's System of Orthopedics and Fractures\\\", chapter: \\\"Humeral Fractures: Treatment\\\", edition: \\\"9th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"humerus-fractures-exam\\\",\\n        title: \\\"Humerus Fractures - Exam Prep\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Exam-focused strategies and high-yield facts for humerus fractures in medical examinations.\\\",\\n        contentMd: "# Humerus Fractures - Exam Prep\\\\n\\\\n## High-Yield Facts for NEET PG / INI-CET\\\\n\\\\n### Classification Essentials\\\\n- **Proximal**: Neer classification (1-4 parts based on fragments)\\\\n- **Shaft**: Location-based (proximal/middle/distal third)\\\\n- **Distal**: Extension (95%) vs Flexion (5%); Supracondylar most common\\\\n\\\\n### Epidemiology\\\\n- Proximal: Elderly females with osteoporosis\\\\n- Shaft: Young adults; high-energy\\\\n- Distal: Children <15 years\\\\n\\\\n### Common Exam Scenarios\\\\n| Fracture | Age | Mechanism | Nerve Risk |\\\\n|----------|-----|-----------|-----------|\\\\n| Proximal | Elderly | FOOSH | Axillary (6-10%) |\\\\n| Shaft | Young | Direct/twist | Radial |\\\\n| Supracondylar | Child | FOOSH | Median/radial; Brachial artery |\\\\n\\\\n## Key Clinical Points\\\\n\\\\n### Axillary Nerve Assessment\\\\n- **Test**: Shoulder abduction (deltoid)\\\\n- **Injury**: Loss of abduction\\\\n- **Incidence**: 6-10% of proximal fractures\\\\n- **Recovery**: Usually spontaneous over weeks\\\\n\\\\n### Radial Nerve Assessment\\\\n- **Test**: Wrist extension (wrist drop)\\\\n- **Injury**: Loss of wrist/finger extension\\\\n- **Incidence**: Shaft fractures (especially spiral)\\\\n- **Recovery**: Often spontaneous; neuropraxia most common\\\\n\\\\n### Vascular Assessment (Supracondylar)\\\\n- **CRITICAL**: Check radial pulse immediately\\\\n- **Ischemia signs**: Pale hand, cold fingers, absent pulse\\\\n- **Action**: Emergency reduction if compromised\\\\n- **Timing**: Reduction within 1-2 hours optimal\\\\n\\\\n## Exam-Style Scenarios\\\\n\\\\n### Scenario 1: Elderly Woman with Proximal Fracture\\\\n\\\\\\\"75-year-old woman with minimal displacement proximal humerus fracture, medically unfit for surgery. Management?\\\\\\\"\\\\n- **Answer**: Conservative (sling + PT); Neer Part 1 = non-operative\\\\n- Mobilize early to prevent stiffness\\\\n\\\\n### Scenario 2: Young Man with Shaft Fracture\\\\n\\\\\\\"28-year-old with displaced humeral shaft fracture from high-energy trauma. Radial nerve intact. Management?\\\\\\\"\\\\n- **Answer**: Functional brace with early mobilization OR IM nailing (good option for polytrauma)\\\\n\\\\n### Scenario 3: Child with Supracondylar Fracture\\\\n\\\\\\\"6-year-old with supracondylar fracture, absent radial pulse. Management?\\\\\\\"\\\\n- **Answer**: EMERGENCY reduction immediately; check pulse after reduction\\\\n- If pulse still absent after reduction → surgical exploration of brachial artery\\\\n\\\\n### Scenario 4: Proximal Fracture Post-op Stiffness\\\\n\\\\\\\"65-year-old 6 weeks post-ORIF proximal humerus, severe ROM limitation. Cause and management?\\\\\\\"\\\\n- **Answer**: Adhesions from immobilization; intensive PT essential now\\\\n- Prevent with early mobilization post-op\\\\n\\\\n## Management Decision Tree\\\\n\\\\n```\\\\nHUMERUS FRACTURE\\\\n├─ PROXIMAL\\\\n│  ├─ Minimally displaced → Conservative (sling + PT)\\\\n│  └─ Displaced → ORIF (locking plate) or Hemiarthroplasty (elderly)\\\\n│\\\\n├─ SHAFT\\\\n│  ├─ Stable reduction → Functional brace + early mobilization\\\\n│  └─ Unstable/open → IM nailing\\\\n│\\\\n└─ DISTAL (SUPRACONDYLAR)\\\\n   ├─ Vascular compromise → EMERGENCY reduction\\\\n   └─ Closed reduction successful → Posterior splint 3-4 weeks\\\\n      Unstable/open → ORIF (K-wires or plate)\\\\n```\\\\n\\\\n## Treatment Pearls\\\\n\\\\n### Proximal Humerus ORIF\\\\n- Locking plate: Anterolateral approach\\\\n- Maintains blood supply to tuberosities\\\\n- Early mobilization (day 1-2)\\\\n- Results: Better function than conservative\\\\n\\\\n### Shaft Fracture Non-Op\\\\n- Functional brace: Allows some motion\\\\n- Key: Early mobilization (within 3-5 days)\\\\n- Union rate: 90-95%\\\\n- Avoid complete immobilization (stiffness)\\\\n\\\\n### Supracondylar Emergency Protocol\\\\n1. **Immediate vascular check**: Radial pulse\\\\n2. **Urgent reduction**: GA, closed technique\\\\n3. **Post-reduction check**: Repeat neurovascular exam\\\\n4. **If pulse not restored**: Surgical exploration needed\\\\n5. **Immobilization**: Posterior splint 3-4 weeks\\\\n\\\\n## Red Flags\\\\n- **Absent radial pulse** → Emergency (ischemic limb)\\\\n- **Posterior displacement**: Supracondylar compression risk\\\\n- **Severe swelling**: Venous obstruction/compartment syndrome risk\\\\n- **Open fracture**: Wound contamination, infection risk\\\\n- **Polytrauma**: Early fixation preferred for mobilization\\\\n\\\\n## Traps in Exams\\\\n- \\\\\\\"Proximal fracture minimally displaced → ORIF?\\\\\\\" NO, conservative usually\\\\n- \\\\\\\"Radial nerve injury always requires exploration?\\\\\\\" NO, most improve spontaneously (neuropraxia)\\\\n- \\\\\\\"Supracondylar with good reduction but absent pulse → watch?\\\\\\\" NO, exploration needed\\\\n- \\\\\\\"Post-op stiffness due to poor surgery?\\\\\\\" Often from inadequate PT, not surgery\\\\n- \\\\\\\"Conservative shaft fracture = prolonged immobilization?\\\\\\\" NO, early mobilization critical,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"NEER CLASSIFICATION = Number of fracture lines, Edema severity, Extra fragment displacement, Rotational angulation\\\\\\\", explanation: \\\\\\\"Simple way to remember Neer concept\\\\\\\" },\\\\n          { text: \\\\\\\"SUPRACONDYLAR RESCUE = Swelling severe, Urgent reduction, Pulse absent? Emergency, Radial artery at risk, Anesthesia GA, Closed reduction attempt first, Immobilize posterior splint, Emergency open if no pulse, Agonizing delay = necrosis, Reroute artery if needed\\\\\\\", explanation: \\\\\\\"Supracondylar management flowchart\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Proximal humerus: Neer classification guides treatment\\\\\\\",\\\\n          \\\\\\\"Axillary nerve injury 6-10% (usually spontaneous recovery)\\\\\\\",\\\\n          \\\\\\\"Shaft fractures: Functional brace effective (90-95% union)\\\\\\\",\\\\n          \\\\\\\"Radial nerve injury possible; wrist drop indicates involvement\\\\\\\",\\\\n          \\\\\\\"Supracondylar: Vascular emergency; immediate reduction if pulse absent\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Maheshwari's Essentials of Orthopedics\\\\\\\", chapter: \\\\\\\"Humerus Fractures\\\\\\\", edition: \\\\\\\"7th\\\\\\\" },\\\\n          { book: \\\\\\\"Apley's System of Orthopedics and Fractures\\\\\\\", chapter: \\\\\\\"Upper Limb Fractures\\\\\\\", edition: \\\\\\\"9th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"humerus-fractures-recall\\\\\\\",\\\\n        title: \\\\\\\"Humerus Fractures - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"Active recall questions on humerus fractures for comprehensive understanding.\\\\\\\",\\\\n        contentMd: ``# Humerus Fractures - Active Recall\\\\n\\\\n## Q1: Neer Classification of Proximal Humerus Fractures?\\\\n**Answer**: 1-4 parts based on number of fractured segments/displacement\\\\n- Part 1: Minimally displaced (<1 cm)\\\\n- Part 2: Surgical neck fracture with displacement\\\\n- Part 3: Greater tuberosity fracture\\\\n- Part 4: Lesser tuberosity fracture\\\\n- Guides management: Part 1 usually conservative; Parts 2-4 operative\\\\n\\\\n## Q2: Most Common Nerve Injury in Proximal Humerus Fracture?\\\\n**Answer**: Axillary nerve (6-10% incidence)\\\\n- Presents with loss of shoulder abduction (deltoid)\\\\n- Recovery often spontaneous over weeks (neuropraxia)\\\\n- Axillary nerve paralysis = cannot abduct arm >90 degrees\\\\n\\\\n## Q3: Radial Nerve Injury - Which Fracture Type?\\\\n**Answer**: Shaft fractures (especially spiral/comminuted)\\\\n- Presents with wrist drop (loss of wrist extension)\\\\n- Loss of finger extension\\\\n- Often from bone fragment laceration or stretch\\\\n- Most recover spontaneously if neuropraxia\\\\n\\\\n## Q4: Mechanism of Avascular Necrosis in Proximal Humerus?\\\\n**Answer**: Disruption of blood supply to humeral head\\\\n- Highest risk: Anatomical neck fractures (>50%)\\\\n- Mechanism: Fracture line crosses major vessels\\\\n- Timeline: Changes appear 6-12 months post-fracture\\\\n- Prevention: ORIF stabilizes blood supply\\\\n\\\\n## Q5: Management of Minimally Displaced Proximal Fracture (Neer Part 1)?\\\\n**Answer**: Conservative management with sling + physiotherapy\\\\n- Immobilization 2-3 weeks\\\\n- Early mobilization (pendulum exercises immediately)\\\\n- Good outcomes in most\\\\n- ORIF not indicated for minimally displaced\\\\n\\\\n## Q6: Best Treatment for Displaced Proximal Fracture in Young Patient?\\\\n**Answer**: ORIF with locking plate (anterolateral approach)\\\\n- Allows early mobilization\\\\n- Better functional outcomes\\\\n- Preserves blood supply to tuberosities\\\\n- Stabilizes fragments\\\\n\\\\n## Q7: Supracondylar Fracture in Child - Vascular Complication Rate?\\\\n**Answer**: Brachial artery compression in 5-10%; pulses may be absent initially\\\\n- Check radial pulse immediately post-reduction\\\\n- Most pulses restore after reduction (pressure relieved)\\\\n- If pulse absent after reduction → surgical exploration indicated\\\\n- Ischemia timeout: 6 hours critical threshold\\\\n\\\\n## Q8: Shaft Fracture Management - Conservative vs Operative?\\\\n**Answer**: Conservative with functional brace is standard (90-95% union rate)\\\\n- Key: Early mobilization (3-5 days post-injury)\\\\n- Operator-dependent (radiologist skill needed for closed reduction)\\\\n- Operative indications: Open fracture, neurovascular injury, polytrauma\\\\n- IM nailing good option for high-demand/polytrauma\\\\n\\\\n## Q9: Post-operative Stiffness After Proximal Humerus ORIF - Cause?\\\\n**Answer**: Adhesion formation from immobilization or inadequate physiotherapy\\\\n- Prevention: Early mobilization (within 1-2 days post-op)\\\\n- Immobilization >3-4 weeks increases stiffness risk\\\\n- Treatment: Intensive PT, gentle mobilization exercises\\\\n- Outcome: Often reversible with aggressive therapy\\\\n\\\\n## Q10: Extension vs Flexion Supracondylar Fractures - Incidence?\\\\n**Answer**: Extension 95%, flexion 5% (extension mechanism FOOSH most common)\\\\n- Extension: Posterior displacement typical\\\\n- Flexion: Different fracture pattern, less common\\\\n- Both require vascular assessment\\\\n- Both risk nerve injury (median/radial/brachial artery),\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"AXILLARY = Abduction loss, Xyphoid (AVN) risk different nerve, Innervates deltoid, Lymphocyte (immune) swelling, Lymphedema from edema, Arm elevation impossible\\\\\\\", explanation: \\\\\\\"Axillary nerve injury consequences\\\\\\\" },\\\\n          { text: \\\\\\\"RADIAL WRIST DROP = Radial nerve injured, Anterior arm nerve, Distal fractures, Input wrist extension lost, Anterior/posterior interosseous branch\\\\\\\", explanation: \\\\\\\"Radial nerve injury diagnosis\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Neer Part 1: Conservative; Parts 2-4: Consider ORIF based on patient factors\\\\\\\",\\\\n          \\\\\\\"Axillary nerve injury 6-10% (usually neuropraxia, spontaneous recovery)\\\\\\\",\\\\n          \\\\\\\"Radial nerve injury with shaft fractures (wrist drop sign)\\\\\\\",\\\\n          \\\\\\\"Supracondylar brachial artery compression emergency (reduce immediately)\\\\\\\",\\\\n          \\\\\\\"Early mobilization (3-5 days) prevents stiffness\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Maheshwari's Essentials of Orthopedics\\\\\\\", chapter: \\\\\\\"Humerus Fractures\\\\\\\", edition: \\\\\\\"7th\\\\\\\" },\\\\n          { book: \\\\\\\"Apley's System of Orthopedics and Fractures\\\\\\\", chapter: \\\\\\\"Upper Limb Fractures\\\\\\\", edition: \\\\\\\"9th\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\",\\n\""
-}
-}
-}
-];
-];
+        contentMd: `# Humerus Fractures - Foundation
+
+## Anatomy & Classification
+
+### Proximal Humerus Fractures
+- **Epidemiology**: Common in elderly (>60 years) with osteoporosis
+- **Mechanism**: Fall on outstretched hand (FOOSH) or direct trauma
+- **Common types**:
+  - **Subcapital**: Neck region (most common)
+  - **Anatomical neck**: Below articular surface (rare, high AVN risk)
+  - **Surgical neck**: Below tuberosities (common)
+  - **Greater tuberosity**: Isolated or with dislocation
+  - **Lesser tuberosity**: Associated with posterior dislocation
+
+- **Neer Classification**: 4-part system based on number of fracture lines/displacement
+  - Part 1: Minimal displacement (<1 cm)
+  - Part 2: Surgical neck fracture displaced
+  - Part 3: Greater tuberosity fracture
+  - Part 4: Lesser tuberosity fracture
+
+### Shaft Fractures
+- **Location**: Between surgical neck and 5 cm proximal to condyles
+- **Common in**: Young adults; associated with high-energy trauma
+- **Patterns**:
+  - **Transverse**: Simple breaks
+  - **Spiral**: Twisting injuries
+  - **Comminuted**: Multiple fragments
+
+### Distal Humerus Fractures (Supracondylar)
+- **Common in**: Children <15 years
+- **Mechanism**: Fall on outstretched hand (FOOSH)
+- **Types**: Extension (95%) vs Flexion (5%)
+- **Complications**: Neurovascular compromise (brachial artery, median/radial nerves)
+
+## Epidemiology
+- **Proximal**: Most common shoulder fracture
+- **Shaft**: 5-10% of humeral fractures
+- **Distal**: Most common in children; less common in adults
+- **Associated injuries**: Often polytrauma with high-energy mechanism
+
+## Complications Risk
+
+### Avascular Necrosis (AVN)
+- **Risk**: Anatomical neck fractures (highest risk)
+- **Mechanism**: Disruption of blood supply to humeral head
+- **Incidence**: 10-15% with displaced proximal fractures
+- **Timeline**: May develop weeks to months post-fracture
+
+### Nerve Injuries
+- **Axillary nerve**: Most common (injury in 6-10%)
+- **Radial nerve**: Shaft fractures (spiral/comminuted)
+- **Median nerve**: Displaced distal fractures
+- **Musculocutaneous**: Less common
+
+### Stiffness
+- **Risk**: High with immobilization >4-6 weeks
+- **Prevention**: Early mobilization
+- **Rehabilitation**: Essential for shoulder function`,
+        mnemonics: [
+          {
+            text: "PROXIMAL HUMERUS classification: Neer system",
+            explanation: "Part 1 minimal, Part 2 surgical neck, Part 3 greater tuberosity, Part 4 lesser tuberosity"
+          },
+          {
+            text: "SUPRACONDYLAR pediatric fractures",
+            explanation: "Extension (95%) more common than flexion (5%)"
+          }
+        ],
+        keyPoints: [
+          "Proximal humerus fractures most common; elderly with osteoporosis",
+          "Neer classification guides management decisions",
+          "Shaft fractures: High-energy trauma; radial nerve at risk",
+          "Distal/supracondylar: Pediatric fracture; neurovascular monitoring critical",
+          "Avascular necrosis risk with anatomical neck fractures"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Ch 5", edition: "6th" },
+          { book: "Apley & Solomon's System of Orthopaedics", chapter: "Ch 8", edition: "10th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "humerus-fractures-layer-2-mechanism",
+        title: "Humerus Fractures - Mechanism",
+        estimatedMinutes: 28,
+        summary: "Biomechanical mechanisms of humerus fractures, vascular anatomy, nerve injury patterns, and healing factors.",
+        contentMd: `# Humerus Fractures - Mechanism
+
+## Biomechanics of Injury
+
+### Proximal Humerus Fracture Mechanisms
+- **FOOSH mechanism**: Arm abducted, externally rotated on impact
+- **Compressive forces**: Crush injury causing impaction
+- **Shearing forces**: Valgus/varus stress causing neck fractures
+- **Avulsion**: Rotator cuff pull on tuberosities
+
+### Shaft Fracture Mechanics
+- **Direct blow**: High-energy impact causing transverse fracture
+- **Twisting/torsion**: Spiral pattern fractures
+- **Comminution**: Multiple fragments with crush forces
+- **Pathologic fractures**: Metastatic disease or weak bone
+
+### Distal Humerus Fracture Mechanisms (Pediatric)
+- **Extension mechanism** (95%): FOOSH with forearm extended
+  - Supracondylar fracture occurs anterior to condyles
+  - Posterior displacement common
+  - Neurovascular compression risk
+
+- **Flexion mechanism** (5%): FOOSH with forearm flexed
+  - Rarer, different fracture pattern
+  - Transcondylar fracture possible
+
+## Vascular Anatomy & Injury
+
+### Arterial Supply to Humerus
+- **Anterior circumflex**: Proximal humerus, anastomoses with posterior
+- **Posterior circumflex**: Proximal humerus, axillary artery branches
+- **Brachial artery**: Along shaft, at risk with shaft fractures
+- **Collateral circulation**: Extensive; some proximal fractures well-tolerated
+
+### Brachial Artery at Risk
+- **Location**: Anteromedial to humerus in distal third
+- **Supracondylar fractures**: Trapped between proximal and distal fragments
+- **Mechanism**: Stretching, compression, kinking
+- **Ischemia timeline**: Critical if >6 hours ischemia time
+
+### Signs of Vascular Compromise
+- **Pale hand/fingers**: Reduced perfusion
+- **Absent radial pulse**: Arterial obstruction
+- **Cold hand**: Ischemia
+- **Cyanosis**: Blue/purple discoloration (venous back-up)
+- **Pain progression**: Increasing pain suggests ischemia
+
+## Nerve Injury Patterns
+
+### Axillary Nerve Injury
+- **Location**: Passes through quadrangular space below rotator cuff
+- **Risk**: Proximal humerus fractures (6-10% incidence)
+- **Mechanism**: Stretch from displacement, direct trauma
+- **Deficit**: Loss of shoulder abduction, deltoid innervation
+- **Recovery**: Often spontaneous over weeks
+
+### Radial Nerve Injury
+- **Location**: Spiral groove of humerus
+- **Risk**: Shaft fractures, especially spiral/comminuted
+- **Mechanism**: Bone fragment laceration or stretch
+- **Deficit**: Wrist drop (loss of wrist extension), loss of finger extension
+- **Recovery**: Often improve with time if not completely transected
+
+### Median & Ulnar Nerves
+- **Risk**: Distal humerus fractures
+- **Mechanism**: Stretch, compression, or direct trauma
+- **Deficit**: Loss of pronation (median), intrinsic hand weakness (ulnar)
+
+## Bone Healing Factors
+
+### Variables Affecting Union
+- **Age**: Young better healing; elderly delayed
+- **Vascular integrity**: Medial cortex most important for blood supply
+- **Fragment alignment**: Displacement increases non-union risk
+- **Comminution**: More fragments = slower healing
+- **Immobilization**: Balance between stability and early mobilization
+
+### Healing Timeline
+- **2-3 weeks**: Early callus formation
+- **6-8 weeks**: Bridging callus appears
+- **12-16 weeks**: Usually solid union in adults
+- **Delayed union**: >16 weeks; non-union risk increases
+- **Non-union risk**: Especially shaft fractures if untreated
+
+## Avascular Necrosis Mechanism
+
+### Vascular Disruption
+- **Anatomical neck fractures**: Highest AVN risk (>50%)
+- **Mechanism**: Fracture line crosses major blood supply
+- **Proximal fragment**: Loses blood supply, becomes ischemic
+- **Timeline**: Changes appear 6-12 months after fracture
+
+### Repair Process
+- **Revascularization attempt**: Creeping substitution from surrounding
+- **Resorption**: Bone resorbed and replaced (structural compromise)
+- **Collapse risk**: Weakened bone cannot support load
+- **Salvage**: ORIF with internal fixation improves outcomes
+
+## Stiffness Development Mechanism
+
+### Immobilization Effects
+- **Collagen remodeling**: Ligaments shorten
+- **Adhesion formation**: Joint capsule thickens
+- **Muscle atrophy**: Loss of motor coordination
+- **Pain-induced guarding**: Muscle splinting prevents movement
+
+### Prevention
+- **Early mobilization**: Within 3-5 days
+- **Physiotherapy**: Passive → active-assisted → active
+- **Timing**: Critical window for rehabilitation`,
+        mnemonics: [
+          {
+            text: "NEUROVASCULAR complications",
+            explanation: "Nerves: Axillary>Radial>Median>Ulnar; Vascular: Brachial artery"
+          },
+          {
+            text: "SUPRACONDYLAR ISCHEMIA",
+            explanation: "Stretch-induced compression, Pale hand, Radial pulse loss, Arterial entrapment"
+          }
+        ],
+        keyPoints: [
+          "Proximal humerus: FOOSH mechanism; axillary nerve injury 6-10%",
+          "Shaft fractures: Radial nerve at risk (spiral fractures); brachial artery injury possible",
+          "Distal/supracondylar: Brachial artery compression (emergency); check vascular status",
+          "AVN risk highest with anatomical neck fractures (>50%)",
+          "Early mobilization (3-5 days) prevents stiffness"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Ch 5", edition: "6th" },
+          { book: "Apley & Solomon's System of Orthopaedics", chapter: "Ch 8", edition: "10th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "humerus-fractures-layer-3-clinical",
+        title: "Humerus Fractures - Clinical",
+        estimatedMinutes: 28,
+        summary: "Clinical diagnosis, investigations, imaging, and management of humerus fractures.",
+        contentMd: `# Humerus Fractures - Clinical
+
+## Clinical Examination
+
+### History
+- **Mechanism**: FOOSH, direct blow, fall on outstretched hand
+- **Age**: Elderly = proximal; young = shaft; children = distal
+- **Hand dominance**: Important for functional goals
+
+### Proximal Humerus Fracture Examination
+- **Inspection**: Swelling, ecchymosis (bruising)
+- **Palpation**:
+  - Tenderness over tuberosities
+  - Crepitus if unstable
+  - Fullness (hemarthrosis)
+- **Movement**: Often limited by pain
+- **Neurovascular**: Check axillary nerve (shoulder abduction), pulses
+
+### Shaft Fracture Examination
+- **Deformity**: Angular deformity obvious
+- **Crepitus**: Bone grinding on palpation
+- **Neurovascular**:
+  - Radial nerve (wrist drop, finger extension)
+  - Brachial artery (radial pulse, hand perfusion)
+
+### Distal Humerus Fracture (Pediatric)
+- **Inspection**: Severe swelling (hemarthrosis)
+- **Deformity**: Posterior displacement common
+- **Neurovascular**: CRITICAL
+  - Check radial pulse, hand color
+  - Median/radial nerve function
+  - Brachial artery compression emergency
+
+## Investigations
+
+### X-ray Views
+- **AP view**: Standard view
+- **Lateral view**: Shows displacement
+- **Axillary view**: Shows tuberosity involvement
+- **Multiple views essential** for fracture assessment
+
+### CT Scan
+- **Indications**:
+  - Comminuted fractures
+  - Complex patterns
+  - Surgical planning
+- **Provides**: 3D reconstruction, fragment patterns
+
+### MRI
+- **Indications**:
+  - Rotator cuff injury assessment
+  - AVN detection (later stage)
+  - Soft tissue evaluation
+- **Not routine** for acute fracture
+
+### Ultrasound
+- **Dynamic assessment**: Early detection of complications
+- **Neurovascular**: Doppler assessment of blood flow
+- **Cost-effective**: Available in many centers
+
+## Management
+
+### Proximal Humerus Fractures - Non-Operative (Most Common)
+
+**Indications for Conservative Management**
+- Minimally displaced (Neer Part 1)
+- Patient unable to undergo surgery
+- Limited functional demands
+
+**Technique**
+- **Sling immobilization**: 2-3 weeks
+- **Gentle pendulum exercises**: Start immediately
+- **Progressive mobilization**: Passive ROM (week 2-3), active-assisted (week 4+)
+- **Physiotherapy**: Essential for outcome
+
+**Outcomes**
+- Good in many elderly patients
+- Risk: Stiffness, especially if immobilization prolonged
+- Healing timeline: 8-12 weeks
+
+### Proximal Humerus Fractures - Operative (ORIF)
+
+**Indications**
+- Displaced proximal fractures (Neer Part 2-4)
+- Young, active patient
+- Non-union/malunion
+- Anatomical neck fractures (AVN prevention)
+
+**Techniques**
+- **ORIF with locking plate**: Gold standard
+  - Anterolateral approach
+  - Anatomic reduction
+  - Locking plate provides stability
+  - Allows early mobilization
+
+- **Hemiarthroplasty**:
+  - 4-part fractures in elderly
+  - Comminuted with vascular compromise
+  - Higher age, lower activity demand
+
+**Results**
+- ORIF: Better functional outcomes
+- Hemiarthroplasty: Useful salvage in comminuted cases
+
+### Shaft Fractures - Non-Operative
+
+**Indications**
+- Most shaft fractures can be managed conservatively
+- Good healing potential
+- Safe reduction possible
+
+**Technique**
+- **Closed reduction**: Under fluoroscopy or ultrasound guidance
+- **Immobilization**: Functional brace (U-slab, coaptation splint)
+- **Early mobilization**: Key to prevent stiffness
+- **Radiographs**: Serial monitoring weeks 1, 2, 4, 8
+
+**Advantages**
+- Avoids surgery
+- Good union rates (90-95%)
+- Lower infection risk
+
+### Shaft Fractures - Operative
+
+**Indications**
+- Open fractures
+- Neurovascular injury requiring exploration
+- Pathologic fractures with soft tissue compromise
+- Non-union/malunion
+- Polytrauma (early mobilization needed)
+
+**Technique**
+- **Intramedullary nailing**: Standard for operative shaft fractures
+  - Antegrade or retrograde approach
+  - Good alignment, early mobilization
+  - Lower malunion rate
+
+- **Plate fixation**: Alternative to IM nailing
+
+### Distal Humerus Fractures (Supracondylar) - Pediatric
+
+**Urgent Assessment**
+- **Vascular status**: Check radial pulse, hand perfusion immediately
+- **Neurovascular compromise**: Emergency management needed
+- **Reduction timing**: STAT if pulse absent or hand ischemic
+
+**Closed Reduction**
+- **Technique**:
+  1. Anesthesia (GA preferred)
+  2. Gentle hyperextension to unlock fracture
+  3. Longitudinal traction
+  4. Correction of deformity
+  5. Flexion of elbow to 90-100 degrees
+
+- **Assessment**: Confirm reduction with X-rays and neurovascular status
+
+**Immobilization**
+- **Posterior splint**: Elbow 90-100 degrees flexion
+- **Duration**: 3-4 weeks minimum
+- **Radiographs**: Monitor for slippage
+
+**Operative Fixation**
+- **Indications**:
+  - Failed closed reduction
+  - Unstable reduction
+  - Open fractures
+  - Neurovascular injury requiring exploration
+
+- **Technique**:
+  - ORIF with K-wires or plate (mostly K-wires in children)
+  - Percutaneous pinning
+  - Lateral pinning preferred (safer)
+
+**Post-op Management**
+- **Sling immobilization**: 2-3 weeks
+- **ROM exercises**: Early, gentle
+- **Physiotherapy**: Monitor for stiffness
+
+### Distal Humerus Fractures (Adult)
+
+**Conservative Management**
+- Rare; most require surgery
+
+**Operative (ORIF)**
+- Gold standard for displaced fractures
+- **Olecranon osteotomy approach**: Provides exposure
+- **Plate fixation**:
+  - Medial and lateral plates (dual plating)
+  - Stabilizes fragments
+  - Allows early mobilization
+- **Open reduction crucial** for optimal outcomes
+
+## Special Considerations
+
+### Pathologic Fractures
+- **Assessment**: History of malignancy, osteoporosis, metabolic disease
+- **Management**: Treat underlying cause + orthopedic fixation
+- **Prognosis**: Depends on primary condition
+
+### Polytrauma Setting
+- **Priority**: Life-threatening injuries first
+- **Orthopedic timing**: Early fixation (within 24-48 hours) improves outcomes
+- **IM nailing**: Preferred for mobility and nursing care
+
+### Osteoporotic Bone
+- **Healing**: Often slower, higher non-union risk
+- **Fixation**: Locking plates/screws improve purchase
+- **Physiotherapy**: Extended rehabilitation`,
+        mnemonics: [
+          {
+            text: "PROXIMAL MANAGEMENT",
+            explanation: "Part 1 non-op, Displaced → ORIF, Early mobilization, Immobilize 2-3 weeks, Physiotherapy critical"
+          },
+          {
+            text: "SUPRACONDYLAR EMERGENCY",
+            explanation: "Severe swelling, Urgent vascular check, Pulse absent = Reduce NOW, Anesthesia needed"
+          }
+        ],
+        keyPoints: [
+          "Proximal humerus: Minimally displaced → conservative (sling + PT); displaced → ORIF",
+          "Shaft fractures: Most managed conservatively with functional brace; early mobilization key",
+          "Distal/supracondylar: Check vascular status immediately; emergency reduction if compromised",
+          "ORIF indications: Unstable, comminuted, high-demand patient, open fracture",
+          "Early mobilization (3-5 days) prevents stiffness"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Ch 5", edition: "6th" },
+          { book: "Apley & Solomon's System of Orthopaedics", chapter: "Ch 8", edition: "10th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "humerus-fractures-layer-4-exam",
+        title: "Humerus Fractures - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "Exam-focused strategies and high-yield facts for humerus fractures.",
+        contentMd: `# Humerus Fractures - Exam Prep
+
+## High-Yield Facts for NEET PG / INI-CET
+
+### Classification Essentials
+- **Proximal**: Neer classification (1-4 parts based on fragments)
+- **Shaft**: Location-based (proximal/middle/distal third)
+- **Distal**: Extension (95%) vs Flexion (5%); Supracondylar most common
+
+### Epidemiology
+- Proximal: Elderly females with osteoporosis
+- Shaft: Young adults; high-energy
+- Distal: Children <15 years
+
+### Common Exam Scenarios
+| Fracture | Age | Mechanism | Nerve Risk |
+|----------|-----|-----------|-----------|
+| Proximal | Elderly | FOOSH | Axillary (6-10%) |
+| Shaft | Young | Direct/twist | Radial |
+| Supracondylar | Child | FOOSH | Median/radial; Brachial artery |
+
+## Key Clinical Points
+
+### Axillary Nerve Assessment
+- **Test**: Shoulder abduction (deltoid)
+- **Injury**: Loss of abduction
+- **Incidence**: 6-10% of proximal fractures
+- **Recovery**: Usually spontaneous over weeks
+
+### Radial Nerve Assessment
+- **Test**: Wrist extension (wrist drop)
+- **Injury**: Loss of wrist/finger extension
+- **Incidence**: Shaft fractures (especially spiral)
+- **Recovery**: Often spontaneous; neuropraxia most common
+
+### Vascular Assessment (Supracondylar)
+- **CRITICAL**: Check radial pulse immediately
+- **Ischemia signs**: Pale hand, cold fingers, absent pulse
+- **Action**: Emergency reduction if compromised
+- **Timing**: Reduction within 1-2 hours optimal
+
+## Exam-Style Scenarios
+
+### Scenario 1: Elderly Woman with Proximal Fracture
+
+"75-year-old woman with minimal displacement proximal humerus fracture, medically unfit for surgery. Management?"
+
+- **Answer**: Conservative (sling + PT); Neer Part 1 = non-operative
+- Mobilize early to prevent stiffness
+
+### Scenario 2: Young Man with Shaft Fracture
+
+"28-year-old with displaced humeral shaft fracture from high-energy trauma. Radial nerve intact. Management?"
+
+- **Answer**: Functional brace with early mobilization OR IM nailing (good option for polytrauma)
+
+### Scenario 3: Child with Supracondylar Fracture
+
+"6-year-old with supracondylar fracture, absent radial pulse. Management?"
+
+- **Answer**: EMERGENCY reduction immediately; check pulse after reduction
+- If pulse still absent after reduction → surgical exploration of brachial artery
+
+### Scenario 4: Proximal Fracture Post-op Stiffness
+
+"65-year-old 6 weeks post-ORIF proximal humerus, severe ROM limitation. Cause and management?"
+
+- **Answer**: Adhesions from immobilization; intensive PT essential now
+- Prevent with early mobilization post-op
+
+## Management Decision Tree
+
+HUMERUS FRACTURE
+- PROXIMAL
+  - Minimally displaced: Conservative (sling + PT)
+  - Displaced: ORIF (locking plate) or Hemiarthroplasty (elderly)
+- SHAFT
+  - Stable reduction: Functional brace + early mobilization
+  - Unstable/open: IM nailing
+- DISTAL (SUPRACONDYLAR)
+  - Vascular compromise: EMERGENCY reduction
+  - Closed reduction successful: Posterior splint 3-4 weeks
+  - Unstable/open: ORIF (K-wires or plate)
+
+## Treatment Pearls
+
+### Proximal Humerus ORIF
+- Locking plate: Anterolateral approach
+- Maintains blood supply to tuberosities
+- Early mobilization (day 1-2)
+- Results: Better function than conservative
+
+### Shaft Fracture Non-Op
+- Functional brace: Allows some motion
+- Key: Early mobilization (within 3-5 days)
+- Union rate: 90-95%
+- Avoid complete immobilization (stiffness)
+
+### Supracondylar Emergency Protocol
+1. **Immediate vascular check**: Radial pulse
+2. **Urgent reduction**: GA, closed technique
+3. **Post-reduction check**: Repeat neurovascular exam
+4. **If pulse not restored**: Surgical exploration needed
+5. **Immobilization**: Posterior splint 3-4 weeks
+
+## Red Flags
+- **Absent radial pulse** → Emergency (ischemic limb)
+- **Posterior displacement**: Supracondylar compression risk
+- **Severe swelling**: Venous obstruction/compartment syndrome risk
+- **Open fracture**: Wound contamination, infection risk
+- **Polytrauma**: Early fixation preferred for mobilization
+
+## Traps in Exams
+- "Proximal fracture minimally displaced → ORIF?" NO, conservative usually
+- "Radial nerve injury always requires exploration?" NO, most improve spontaneously
+- "Supracondylar with good reduction but absent pulse → watch?" NO, exploration needed
+- "Post-op stiffness due to poor surgery?" Often from inadequate PT, not surgery`,
+        mnemonics: [
+          {
+            text: "NEER CLASSIFICATION",
+            explanation: "Number of fracture lines, Edema severity, Extra fragment displacement, Rotational angulation"
+          },
+          {
+            text: "SUPRACONDYLAR RESCUE",
+            explanation: "Swelling severe, Urgent reduction, Pulse absent = Emergency, Radial artery at risk"
+          }
+        ],
+        keyPoints: [
+          "Proximal humerus: Neer classification guides treatment",
+          "Axillary nerve injury 6-10% (usually spontaneous recovery)",
+          "Shaft fractures: Functional brace effective (90-95% union)",
+          "Radial nerve injury possible; wrist drop indicates involvement",
+          "Supracondylar: Vascular emergency; immediate reduction if pulse absent"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Ch 5", edition: "6th" },
+          { book: "Apley & Solomon's System of Orthopaedics", chapter: "Ch 8", edition: "10th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "humerus-fractures-layer-5-active-recall",
+        title: "Humerus Fractures - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Active recall questions on humerus fractures.",
+        contentMd: `# Humerus Fractures - Active Recall
+
+## Q1: Neer Classification of Proximal Humerus Fractures?
+**Answer**: 1-4 parts based on number of fractured segments/displacement
+- Part 1: Minimally displaced (<1 cm)
+- Part 2: Surgical neck fracture with displacement
+- Part 3: Greater tuberosity fracture
+- Part 4: Lesser tuberosity fracture
+- Guides management: Part 1 usually conservative; Parts 2-4 operative
+
+## Q2: Most Common Nerve Injury in Proximal Humerus Fracture?
+**Answer**: Axillary nerve (6-10% incidence)
+- Presents with loss of shoulder abduction (deltoid)
+- Recovery often spontaneous over weeks (neuropraxia)
+- Axillary nerve paralysis = cannot abduct arm >90 degrees
+
+## Q3: Radial Nerve Injury - Which Fracture Type?
+**Answer**: Shaft fractures (especially spiral/comminuted)
+- Presents with wrist drop (loss of wrist extension)
+- Loss of finger extension
+- Often from bone fragment laceration or stretch
+- Most recover spontaneously if neuropraxia
+
+## Q4: Mechanism of Avascular Necrosis in Proximal Humerus?
+**Answer**: Disruption of blood supply to humeral head
+- Highest risk: Anatomical neck fractures (>50%)
+- Mechanism: Fracture line crosses major vessels
+- Timeline: Changes appear 6-12 months post-fracture
+- Prevention: ORIF stabilizes blood supply
+
+## Q5: Management of Minimally Displaced Proximal Fracture (Neer Part 1)?
+**Answer**: Conservative management with sling + physiotherapy
+- Immobilization 2-3 weeks
+- Early mobilization (pendulum exercises immediately)
+- Good outcomes in most
+- ORIF not indicated for minimally displaced
+
+## Q6: Best Treatment for Displaced Proximal Fracture in Young Patient?
+**Answer**: ORIF with locking plate (anterolateral approach)
+- Allows early mobilization
+- Better functional outcomes
+- Preserves blood supply to tuberosities
+- Stabilizes fragments
+
+## Q7: Supracondylar Fracture in Child - Vascular Complication Rate?
+**Answer**: Brachial artery compression in 5-10%; pulses may be absent initially
+- Check radial pulse immediately post-reduction
+- Most pulses restore after reduction (pressure relieved)
+- If pulse absent after reduction → surgical exploration indicated
+- Ischemia timeout: 6 hours critical threshold
+
+## Q8: Shaft Fracture Management - Conservative vs Operative?
+**Answer**: Conservative with functional brace is standard (90-95% union rate)
+- Key: Early mobilization (3-5 days post-injury)
+- Operator-dependent (radiologist skill needed for closed reduction)
+- Operative indications: Open fracture, neurovascular injury, polytrauma
+- IM nailing good option for high-demand/polytrauma
+
+## Q9: Post-operative Stiffness After Proximal Humerus ORIF - Cause?
+**Answer**: Adhesion formation from immobilization or inadequate physiotherapy
+- Prevention: Early mobilization (within 1-2 days post-op)
+- Immobilization >3-4 weeks increases stiffness risk
+- Treatment: Intensive PT, gentle mobilization exercises
+- Outcome: Often reversible with aggressive therapy
+
+## Q10: Extension vs Flexion Supracondylar Fractures - Incidence?
+**Answer**: Extension 95%, flexion 5% (extension mechanism FOOSH most common)
+- Extension: Posterior displacement typical
+- Flexion: Different fracture pattern, less common
+- Both require vascular assessment
+- Both risk nerve injury (median/radial/brachial artery)`,
+        mnemonics: [
+          {
+            text: "AXILLARY nerve injury",
+            explanation: "Abduction loss, Innervates deltoid"
+          },
+          {
+            text: "RADIAL WRIST DROP",
+            explanation: "Radial nerve injured, Distal fractures, Input wrist extension lost"
+          }
+        ],
+        keyPoints: [
+          "Neer Part 1: Conservative; Parts 2-4: Consider ORIF based on patient factors",
+          "Axillary nerve injury 6-10% (usually neuropraxia, spontaneous recovery)",
+          "Radial nerve injury with shaft fractures (wrist drop sign)",
+          "Supracondylar brachial artery compression emergency (reduce immediately)",
+          "Early mobilization (3-5 days) prevents stiffness"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Ch 5", edition: "6th" },
+          { book: "Apley & Solomon's System of Orthopaedics", chapter: "Ch 8", edition: "10th" }
+        ]
+      }
+    ]
+  }
 ];

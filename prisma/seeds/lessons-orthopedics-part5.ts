@@ -1,18 +1,422 @@
-// Orthopedics Module 5-6: Joint Disorders, Bone Diseases
-export const orthopedicspart5Lessons = [
-  // OR-MOD-05: Joint Disorders (Abbreviated for space)
+import type { TopicLessons } from "./content-loader";
+
+export const orthopedicspart5Lessons: TopicLessons[] = [
   {
     topicCode: "OR-MOD-05-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "osteoarthritis-foundation",
+        slug: "osteoarthritis-layer-1-foundation",
         title: "Osteoarthritis - Foundation",
+        estimatedMinutes: 20,
+        summary: "Epidemiology, pathophysiology, and classification of osteoarthritis including joint involvement patterns.",
+        contentMd: `# Osteoarthritis - Foundation
+
+## Epidemiology
+- **Prevalence**: 10-15% of population >60 years (India: estimated 20%)
+- **Gender**: Female > Male (3:1 at hips/knees)
+- **Most common sites**: Knee (50%), hip (20%), hand (20%), spine (15%)
+- **Incidence**: Increases with age; rare <40 years unless secondary
+
+## Pathophysiology
+- **Articular cartilage loss**: Progressive degradation of hyaline cartilage
+- **Bone response**: Subchondral sclerosis, osteophyte formation (marginal bone spurs)
+- **Joint space narrowing**: Due to cartilage loss; appears on X-ray
+- **Meniscal changes**: Degeneration, fibrillation (in knee OA)
+
+## Classification by Location
+- **Primary OA**: Idiopathic, no underlying joint disease
+- **Secondary OA**: From joint injury, malalignment, prior arthritis
+- **Generalized OA**: Multiple joint involvement (polyarticular)
+
+## Risk Factors
+### Non-modifiable
+- Age (strongest risk factor)
+- Female gender
+- Genetic predisposition (family history)
+- Anatomical variations
+
+### Modifiable
+- Obesity (each 1 kg excess weight = 4 kg pressure on knee)
+- Joint trauma or prior fractures
+- Occupational stress (repetitive motion)
+- Malalignment (varus, valgus deformities)
+- Muscle weakness (quadriceps weakness = increased OA risk)
+
+### Secondary Causes
+- Rheumatoid arthritis
+- Septic arthritis (post-septic OA)
+- Hemochromatosis (deposition arthropathy)
+- Charcot joint (neuropathic)
+
+## Hand Joints and Clinical Signs
+- **Heberden's nodes**: DIP joint involvement (distal interphalangeal)
+- **Bouchard's nodes**: PIP joint involvement (proximal interphalangeal)
+- Bony enlargement; painless or mildly tender`,
+        mnemonics: [
+          { text: "OA Risk: AFOOT", explanation: "Age, Female, Obesity, Old injuries, Trauma" },
+          { text: "Hand nodes: HB", explanation: "Heberden (DIP), Bouchard (PIP)" }
+        ],
+        keyPoints: [
+          "Most common joint disease; 10-15% prevalence in elderly",
+          "Pathophysiology: cartilage loss + bone response + joint space narrowing",
+          "Risk factors: age, female, obesity, joint injury, malalignment, muscle weakness",
+          "Female > male (3:1); knee most common site",
+          "Heberden's nodes (DIP) classic sign; can be painless"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Osteoarthritis", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Degenerative Disease of Joints", edition: "10th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "osteoarthritis-layer-2-mechanism",
+        title: "Osteoarthritis - Pathophysiological Mechanism",
         estimatedMinutes: 25,
-        summary: "Pathogenesis, risk factors, epidemiology of degenerative joint disease.",
-        contentMd: "# Osteoarthritis - Foundation\n\n## Epidemiology\n- **Prevalence**: 10-15% of population >60 years\n- **Gender**: Female > Male (3:1 at hips/knees)\n- **Most common**: Knee (50%), hip (20%), hand (20%), spine (15%)\n- **Indian prevalence**: Higher in tropical climate (heat); estimated 20% in >60 years\n\n## Pathophysiology\n- **Cartilage degeneration**: Progressive loss of articular cartilage\n- **Bone response**: Subchondral sclerosis, osteophyte formation (bone spurs)\n- **Joint space narrowing**: Loss of cartilage leads to close approximation of bones\n\n## Risk Factors\n- **Non-modifiable**: Age, female gender, genetic predisposition\n- **Modifiable**: Obesity, joint injury, occupational stress, malalignment, muscle weakness\n- **Secondary causes**: RA, septic arthritis, hemochromatosis, Charcot joint\n\n## Heberden's & Bouchard's Nodes\n- **Heberden's**: DIP joint OA (distal interphalangeal)\n- **Bouchard's**: PIP joint OA (proximal interphalangeal)\n- Bony lumps; painless or slightly tender,\n        keyPoints: [\n          \"OA: most common joint disease; prevalence 10-15% >60 years\",\n          \"Pathophysiology: cartilage degeneration + bone response (osteophytes)\",\n          \"Risk factors: age, female, obesity, injury, malalignment\",\n        ],\n        textbookRefs: [\n          { book: \"Bailey & Love\", chapter: \"Orthopedic Surgery\", edition: \"28th\" },\n        ],\n      },\n      {\n        layer: 2,\n        slug: \"osteoarthritis-clinical\",\n        title: \"Osteoarthritis - Clinical Features & Diagnosis\",\n        estimatedMinutes: 25,\n        summary: \"Symptoms, investigations, Kellgren-Lawrence grading.\",\n        contentMd: "# Osteoarthritis - Clinical Features & Diagnosis\\n\\n## Symptoms\\n- **Pain**: Worse with activity, improves with rest (early); later pain even at rest\\n- **Stiffness**: Morning stiffness <30 minutes (vs RA >1 hour)\\n- **Swelling**: Mild, bony swelling (vs RA soft tissue swelling)\\n- **Functional impairment**: Limited ROM, limping, difficulty stairs\\n\\n## Physical Examination\\n- **Inspection**: Bony swelling, malalignment (varus/valgus)\\n- **Palpation**: Bony hard swelling, joint line tenderness, crepitus\\n- **ROM**: Restricted (vs normal ROM in early OA)\\n- **Special tests**: Lachman test, anterior drawer (if knee)\\n\\n## Investigations\\n\\n### X-ray (First-line)\\n- **Findings**:\\n  - Joint space narrowing\\n  - Osteophytes (bone spurs)\\n  - Subchondral sclerosis (increased bone density)\\n  - Subchondral cysts\\n- **Kellgren-Lawrence grading**:\\n  - Grade 0: Normal\\n  - Grade 1: Doubtful narrowing\\n  - Grade 2: Definite narrowing\\n  - Grade 3: Moderate narrowing + moderate osteophytes\\n  - Grade 4: Severe narrowing + severe osteophytes\\n\\n### MRI\\n- **Advantages**: Assesses cartilage, meniscus, ligaments\\n- **Cartilage-sensitive sequences**: T2-weighted, dGEMRIC\\n- **Use**: Assess for other pathology (meniscal tear, ACL injury)\\n\\n## Differential Diagnosis\\n- **RA**: Symmetrical, soft tissue swelling, inflammatory; serology positive\\n- **Gout**: Acute attacks, tophi, elevated uric acid\\n- **Pseudogout**: Acute attacks, calcium pyrophosphate crystals\\n- **Septic arthritis**: Fever, severe pain, elevated inflammatory markers,\\n        keyPoints: [\\n          \\\"OA pain worse with activity; morning stiffness <30 min\\\",\\n          \\\"X-ray findings: joint space narrowing + osteophytes + sclerosis\\\",\\n          \\\"Kellgren-Lawrence grading 0-4 (severity assessment)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Surgery\\\", edition: \\\"28th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"osteoarthritis-management\\\",\\n        title: \\\"Osteoarthritis - Management\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Conservative, pharmacotherapy, surgical options.\\\",\\n        contentMd: ``# Osteoarthritis - Management\\n\\n## Conservative Management (First-line)\\n- **Weight reduction**: Decreases joint stress (each 1 kg → 4 kg force reduction on knee)\\n- **Exercise**: Strengthening (quadriceps), stretching, low-impact (swimming, cycling)\\n- **Bracing**: Knee OA bracing reduces pain\\n- **Activity modification**: Avoid stairs, climbing, high-impact sports\\n- **Topical therapy**: Capsaicin cream, NSAIDs (Diclofenac gel)\\n\\n## Pharmacotherapy\\n\\n### Analgesics\\n- **Acetaminophen**: 500-1000mg TID (less effective than NSAIDs)\\n- **Tramadol**: 100-300mg/day (weak opioid)\\n- **Avoid strong opioids** (addiction risk, poor long-term efficacy)\\n\\n### NSAIDs\\n- **Oral**: Ibuprofen 400-800mg TID, Naproxen 250-500mg BID, Indomethacin 25mg TID\\n- **Topical**: Diclofenac 1% gel (lower systemic absorption)\\n- **Monitoring**: GI ulcer risk, renal function, cardiovascular risk\\n- **Gastroprotection**: Add PPI if high GI risk\\n\\n### Intra-articular Injections\\n\\n**Corticosteroid**:\\n- **Agent**: Triamcinolone, methylprednisolone\\n- **Efficacy**: 40-60% pain reduction; lasts 2-6 weeks\\n- **Frequency**: Up to 3-4 injections/year (higher risk cartilage damage)\\n\\n**Hyaluronic acid**:\\n- **Agent**: Gel-One, Hylaform\\n- **Efficacy**: Modest (similar to saline in some studies); lasts 6 months\\n- **Controversial**: Variable evidence; some benefit for early OA\\n\\n**Platelet-rich plasma (PRP)**:\\n- **Emerging therapy**: Growth factors from autologous platelets\\n- **Evidence**: Limited; some trials show benefit\\n- **Cost**: Expensive; not widely available\\n\\n## Surgical Management\\n\\n### Arthroscopic Debridement & Lavage\\n- **Indication**: Failed conservative therapy; mechanical symptoms (catching)\\n- **Efficacy**: Limited; Cochrane reviews suggest minimal benefit vs placebo\\n- **Currently**: Less commonly performed\\n\\n### Total Joint Replacement\\n\\n**Indications**:\\n- Severe OA (Kellgren-Lawrence 3-4)\\n- Failed conservative management (6+ months)\\n- Significant functional impairment\\n- Age typically >60 years (implant durability ~20 years)\\n\\n**Outcome**:\\n- **Pain relief**: 80-90% improvement\\n- **Functional improvement**: Most patients satisfied\\n- **Complication rates**: DVT/PE 1-2%, infection 1%, loosening 5-10% at 10 years\\n- **Revision surgery**: ~10% at 10-15 years\\n\\n### Knee Osteotomy\\n- **Indication**: Medial compartment OA with varus malalignment\\n- **Goal**: Realign limb to off-load affected compartment\\n- **Outcome**: Can delay TKA by 5-10 years in selected patients\\n\\n## Algorithm\\n\\n```\\nOsteoarthritis\\n↓\\nMild-moderate (KL 1-2)\\n├─Conservative: Exercise, weight loss, bracing, activity modification\\n├─If fails: Intra-articular steroid (±hyaluronic acid)\\n└─Pharmacotherapy: Topical/oral NSAIDs, acetaminophen\\n        ↓\\nSevere (KL 3-4) + failed conservative\\n└─Total joint replacement``\",\n        keyPoints: [\n          \"Conservative first: weight reduction, exercise, activity modification\",\n          \"NSAIDs effective; limit frequency of intra-articular steroids (<4/year)\",\n          \"TJA indicated if severe OA + failed conservative management\",\n          \"TJA success 80-90% pain relief; revision ~10% at 10 years\",\n        ],\n        textbookRefs: [\n          { book: \"Bailey & Love\", chapter: \"Orthopedic Surgery\", edition: \"28th\" },\n          { book: \"Sabiston Textbook of Surgery\", chapter: \"Orthopedic surgery\", edition: \"21st\" },\n        ],\n      },\n      {\n        layer: 4,\n        slug: \"osteoarthritis-exam\",\n        title: \"Osteoarthritis - Exam Preparation\",\n        estimatedMinutes: 20,\n        summary: \"Case analysis, management decisions.\",\n        contentMd: \"# Osteoarthritis - Exam Preparation\\n\\n## Case 1: Mild-moderate OA\\n**Scenario**: 65-year-old with knee OA KL-2, pain with stairs, BMI 32.\\n\\n**Management**:\\n- Weight reduction (10 kg target)\\n- Strengthening exercises (quadriceps), low-impact (swimming)\\n- Topical NSAIDs (Diclofenac 1% gel)\\n- Oral analgesics: Acetaminophen 1g TID or NSAID\\n- Activity modification, bracing\\n- Reassess in 3-6 months\\n\\n## Case 2: Severe OA Candidate for TJA\\n**Scenario**: 72-year-old, KL-4 knee OA, constant pain, failed conservative therapy x 1 year, high risk (COPD, overweight).\\n\\n**Management**:\\n- Optimize comorbidities (pulmonary function, weight)\\n- Patient counseling (expectations, rehabilitation)\\n- Total knee arthroplasty (surgery)\\n- Post-op PT/OT (critical for outcomes),\\n        keyPoints: [\\n          \\\"Mild OA: conservative management and intra-articular steroid if fails\\\",\\n          \\\"Severe OA: TJA indicated if failed conservative >6-12 months\\\",\\n          \\\"Patient selection critical for good outcomes (motivation, compliance)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Surgery\\\", edition: \\\"28th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"osteoarthritis-qa\\\",\\n        title: \\\"Osteoarthritis - Q&A\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"Key MCQs on diagnosis and management.\\\",\\n        contentMd: ``# Osteoarthritis - Q&A\\n\\n## Q1: X-ray of knee shows joint space narrowing and osteophytes. What Kellgren-Lawrence grade is this?\\n\\n**Answer**: Grade 2-3 depending on severity. Grade 2 = definite narrowing; Grade 3 = moderate narrowing + moderate osteophytes.\\n\\n## Q2: A patient with knee OA has pain worse with activity, improves with rest. Morning stiffness 20 minutes. Is this OA or RA?\\n\\n**Answer**: OA. Morning stiffness <30 min is typical for OA. RA has morning stiffness >1 hour plus symmetrical joint involvement.\\n\\n## Q3: What is the maximum frequency of intra-articular corticosteroid injections in OA management?\\n\\n**Answer**: 3-4 injections per year (with 3-month intervals). More frequent injections risk accelerated cartilage damage.\\n\\n## Q4: A 70-year-old with severe knee OA failed conservative management. What is the gold standard surgical treatment?\\n\\n**Answer**: Total knee arthroplasty (TKA). Pain relief 80-90%; 90% patients satisfied. Revision risk ~10% at 10-15 years.,\\n        keyPoints: [\\n          \\\"KL grades 0-4; higher = more severe OA\\\",\\n          \\\"OA: morning stiffness <30min; worse with activity\\\",\\n          \\\"Steroid injections max 3-4/year to prevent cartilage damage\\\",\\n          \\\"TKA gold standard for severe OA; excellent outcomes\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Surgery\\\", edition: \\\"28th\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n  // OR-MOD-05-TOP-02: Rheumatoid Arthritis (abbreviated)\\n  {\\n    topicCode: \\\"OR-MOD-05-TOP-02\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"ra-foundation\\\",\\n        title: \\\"Rheumatoid Arthritis - Foundation\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Pathophysiology, epidemiology, clinical features of RA.\\\",\\n        contentMd: ``# Rheumatoid Arthritis - Foundation\\n\\n## Epidemiology\\n- **Prevalence**: 0.5-1% of population\\n- **Female:Male**: 3:1\\n- **Age of onset**: 40-60 years\\n- **Genetic**: HLA-DR4 and HLA-DR1 (70-80%)\\n\\n## Pathophysiology\\n- **Autoimmune**: Antibodies against IgG Fc (rheumatoid factor), CCP (anti-CCP)\\n- **Immune complex**: Deposition in joints → T cell recruitment\\n- **Inflammatory cascade**: TNF-α, IL-1, IL-6 → synovial hyperplasia\\n- **Cartilage damage**: Pannus erosion; progression to bone destruction\\n\\n## Clinical Features\\n- **Symmetrical polyarthritis**: Hands (MCP, PIP), wrists, knees, ankles\\n- **Morning stiffness**: >1 hour (vs OA <30 min)\\n- **Swelling**: Soft tissue (periarticular) swelling\\n- **Systemic symptoms**: Fever, fatigue, malaise\\n- **Extra-articular**: Rheumatoid nodules (20%), vasculitis, pericarditis\\n\\n## Diagnostic Criteria (ACR/EULAR 2010)\\n\\n### Serology\\n- **RF (Rheumatoid Factor)**: 70-80% positive; IgM\\n- **Anti-CCP**: 70-80% positive; more specific than RF\\n- **Both negative**: \\\"Seronegative RA\\\" (10% of cases)\\n\\n### Inflammatory Markers\\n- **ESR**: Elevated (sensitive but not specific)\\n- **CRP**: Elevated (parallels disease activity),\\n        keyPoints: [\\n          \\\"RA: autoimmune, symmetrical polyarthritis, female > male 3:1\\\",\\n          \\\"Morning stiffness >1 hour (vs OA <30 min)\\\",\\n          \\\"RF or anti-CCP positive in 80%\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Surgery\\\", edition: \\\"28th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"ra-diagnosis-management\\\",\\n        title: \\\"RA - Diagnosis & Management\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"X-ray findings, DMARDs, biologic therapy, surgical management.\\\",\\n        contentMd: ``# RA - Diagnosis & Management\\n\\n## Imaging\\n\\n### X-ray Findings\\n- **Early**: Soft tissue swelling, periarticular osteoporosis\\n- **Progressive**: Joint space narrowing, erosions (hallmark)\\n- **Late**: Severe destruction, subluxation, ankylosis\\n\\n### MRI\\n- **Detects**: Early erosions, synovitis\\n- **Use**: Research, monitoring early disease\\n\\n## Pharmacotherapy\\n\\n### DMARDs (Disease-Modifying Antirheumatic Drugs)\\n- **Methotrexate**: First-line (75% response)\\n- **Sulfasalazine**, **Hydroxychloroquine**: Alternative monotherapies\\n- **Combination DMARD**: More effective than monotherapy\\n\\n### Biologic Therapy\\n- **TNF inhibitors**: Infliximab, etanercept, adalimumab (80% response)\\n- **IL-6 inhibitors**: Tocilizumab\\n- **Abatacept**: T cell co-stimulation inhibitor\\n- **Rituximab**: B cell depletion\\n- **Used if**: Failed conventional DMARD\\n\\n### NSAIDs/Corticosteroids\\n- **NSAIDs**: Symptom control (not DMARDs)\\n- **Low-dose prednisolone**: 5-10mg daily; added to DMARD for flare control\\n\\n## Surgical Management\\n\\n### Hand Deformities\\n\\n**Swan-neck deformity**: PIP hyperextension, DIP flexion\\n- **Cause**: Imbalance of intrinsic/extrinsic muscles\\n- **Treatment**: Splinting, intrinsic strengthening; rarely surgery\\n\\n**Boutonniere deformity**: PIP flexion, DIP hyperextension\\n- **Cause**: Central slip attenuation\\n- **Treatment**: Splinting x 6 weeks; surgery if chronic/fibrotic\\n\\n**Z-thumb deformity**: CMC flexion, IP hyperextension\\n- **Surgical**: Fusion of CMC joint if severe\\n\\n### Wrist Surgery\\n- **Indications**: Severe pain, instability, rupture of extensor tendons\\n- **Procedures**: Synovectomy, arthrodesis, arthroplasty\\n\\n### Knee Surgery\\n- **Synovectomy**: Reduces synovitis; pain relief\\n- **Arthroplasty**: For end-stage destruction (similar to OA TKA)\\n\\n### Hip & Ankle\\n- **Hip THA**: Indicated for severe destruction\\n- **Ankle arthroplasty/arthrodesis**: Reserved for advanced disease\\n\\n## Goals of Management\\n- **Early diagnosis**: Start DMARD within 3 months of symptom onset\\n- **Low disease activity**: Target remission or low activity (DAS28 <3.2)\\n- **Prevent disability**: Function preservation crucial\\n- **Manage extra-articular manifestations**: Cardiac, pulmonary involvement,\\n        keyPoints: [\\n          \\\"Start DMARD early (methotrexate first-line)\\\",\\n          \\\"Add biologic if fails conventional DMARD\\\",\\n          \\\"Surgical management for hand deformities, refractory joint destruction\\\",\\n          \\\"Goal: remission or low disease activity (DAS28 <3.2)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Surgery\\\", edition: \\\"28th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"ra-surgical-management\\\",\\n        title: \\\"RA - Surgical Management of Deformities\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Hand deformities, surgical options, outcomes.\\\",\\n        contentMd: ``# RA - Surgical Management of Deformities\\n\\n## Swan-Neck Deformity\\n\\n### Cause\\n- **Dorsal hood rupture** or **PIP joint destruction**\\n- **Intrinsic muscle pull** → PIP hyperextension\\n- **DIP flexion** due to extrinsic flexor dominance\\n\\n### Prevention & Treatment\\n- **Early**: Splinting (PIP extension splint), intrinsic muscle strengthening\\n- **Surgical** (if late/fibrotic):\\n  - **Dermodesis**: Skin tightening at DIP (limits DIP flexion)\\n  - **Capsulodesis**: Joint capsule shortening at PIP\\n  - **DIP arthroplasty/arthrodesis**: If severe DIP involvement\\n\\n## Boutonniere Deformity\\n\\n### Cause\\n- **Central slip rupture** → loss of PIP extension\\n- **Lateral bands slide volarward** → DIP hyperextension\\n- Progressive if untreated\\n\\n### Treatment\\n- **Early (< 6 weeks)**: Splint PIP in extension x 6-8 weeks\\n- **Chronic (> 6 weeks)**: Splinting less effective; consider surgery\\n- **Surgical**:\\n  - **Central slip repair**: If caught early\\n  - **Spiral oblique retinacular ligament (SORL) surgery**: Restores DIP control\\n  - **PIP arthroplasty/arthrodesis**: If arthritis present\\n\\n## Z-Thumb Deformity\\n\\n### Cause\\n- **CMC joint destruction** → thumb adduction, flexion\\n- **IP joint compensation** → hyperextension\\n\\n### Treatment\\n- **Conservative**: Splinting, activity modification\\n- **Surgical**:\\n  - **CMC arthrodesis**: Fusion; restricts motion but stable\\n  - **CMC arthroplasty**: Joint replacement (variable outcomes)\\n  - **Requires** careful patient selection\\n\\n## Wrist Involvement\\n\\n### Pathology\\n- **Dorsal wrist synovitis** → extensor tendon stretching/erosion\\n- **Radial carpal subluxation** → Z-deformity of wrist\\n- **Extensor tendon ruptures** (frequent): EIP rupture (ring finger extension loss)\\n\\n### Management\\n- **Synovectomy**: Early, before tendon rupture\\n- **Extensor tendon repair**: Reconstruction if rupture occurs (EIP to EPL transfer)\\n- **Wrist arthrodesis/arthroplasty**: Late disease\\n\\n## Surgical Outcome\\n- **Success**: 70-80% pain relief, 50-60% functional improvement\\n- **Timing**: Early intervention (before established fibrosis/arthritis) better outcomes\\n- **Motivation**: Patient compliance with post-op splinting/PT critical,\\n        keyPoints: [\\n          \\\"Swan-neck: PIP hyperextension, DIP flexion; prevent with splinting\\\",\\n          \\\"Boutonniere: PIP flexion, DIP hyperextension; splint if <6 weeks\\\",\\n          \\\"Z-thumb: CMC flexion; arthrodesis if severe\\\",\\n          \\\"Wrist synovectomy prevents extensor tendon rupture\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Surgery\\\", edition: \\\"28th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"ra-exam-prep\\\",\\n        title: \\\"RA - Exam Preparation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Case analysis, surgical decision-making.\\\",\\n        contentMd: ``# RA - Exam Preparation\\n\\n## Case 1: Early RA\\n**Scenario**: 45-year-old female, 2 months symmetrical hand/wrist pain, morning stiffness 2 hours, soft tissue swelling. RF positive, ESR elevated.\\n\\n**Management**:\\n- Start DMARD immediately (methotrexate 15-25mg weekly)\\n- Low-dose prednisolone 10mg daily (tapered over weeks)\\n- NSAIDs for symptom control\\n- Monitor CRP/ESR; escalate if not responding (add biologic by 3 months)\\n- Goal: remission (DAS28 <2.6)\\n\\n## Case 2: Swan-Neck Deformity\\n**Scenario**: 60-year-old with RA, established swan-neck deformity (chronic), functionally limited, failed splinting.\\n\\n**Management**:\\n- Surgical reconstruction (PIP capsulodesis or SORL surgery)\\n- Post-op splinting and PT for 8-12 weeks\\n- Expected outcome: improved hand function in 70% of cases,\\n        keyPoints: [\\n          \\\"Early RA: start DMARD within 3 months; target remission\\\",\\n          \\\"Swan-neck/boutonniere: splint early; surgery if chronic/fibrotic\\\",\\n          \\\"Surgical intervention when conservative fails and impacting function\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Surgery\\\", edition: \\\"28th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"ra-qa\\\",\\n        title: \\\"RA - Q&A\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"Key MCQs on RA diagnosis and management.\\\",\\n        contentMd: ``# RA - Q&A\\n\\n## Q1: A patient with symmetrical hand arthritis, positive RF, ESR 80. Is this RA? What is the next step?\\n\\n**Answer**: Likely RA. Check anti-CCP (more specific), CRP (assess activity), and obtain hand X-rays. Start DMARD immediately (methotrexate). Goal: achieve remission/low activity within 3-6 months.\\n\\n## Q2: What is the most common extensor tendon that ruptures in RA wrist disease?\\n\\n**Answer**: Extensor pollicis longus (EPL, thumb extension). Presents as sudden loss of thumb IP extension. Surgical reconstruction: EIP (Extensor Indicis Proprius) to EPL transfer.\\n\\n## Q3: A patient has established boutonniere deformity (PIP flexion, DIP hyperextension) for 2 months. Will splinting work?\\n\\n**Answer**: Partially. After 6 weeks of contracture, splinting less effective. Surgical intervention (central slip repair, SORL) may be needed. Early splinting (first 6 weeks) is most effective.\\n\\n## Q4: What DMARD is first-line and what is the typical starting dose?\\n\\n**Answer**: Methotrexate. Starting dose: 10-15 mg weekly (oral), increased to 25 mg weekly. Monitor CBC, LFTs monthly. Most effective DMARD with 75% response rate.,\\n        keyPoints: [\\n          \\\"RA: early DMARD crucial for remission\\\",\\n          \\\"EPL rupture most common in RA wrist; reconstruction with EIP transfer\\\",\\n          \\\"Boutonniere: splint if <6 weeks; surgery if chronic\\\",\\n          \\\"Methotrexate first-line (15-25mg weekly)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Orthopedic Surgery\\\", edition: \\\"28th\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n];\\n\""
-}
-}
-];
-];
+        summary: "Cellular and molecular mechanisms of cartilage degeneration and bone remodeling in osteoarthritis.",
+        contentMd: `# Osteoarthritis - Pathophysiological Mechanism
+
+## Cartilage Degeneration
+### Phases of Cartilage Loss
+1. **Phase 1: Swelling (early)**
+   - Increased water content in cartilage matrix
+   - Cartilage appears softer, less resilient
+   - No gross destruction yet
+
+2. **Phase 2: Fibrillation (progressing)**
+   - Disruption of collagen network
+   - Surface fibrillations develop (cracks in surface)
+   - Cartilage thickness decreases
+   - Collagen type II breakdown
+
+3. **Phase 3: Erosion (advanced)**
+   - Full-thickness cartilage loss
+   - Exposed subchondral bone
+   - Cracks extend to subchondral region
+
+### Biochemical Changes
+- **Protease release**: Cartilage proteases break down proteoglycans
+- **Reduced proteoglycan content**: Water-binding capacity decreases
+- **Collagen network disruption**: Type II collagen fractured and cross-linked abnormally
+- **Inflammatory mediators**: IL-1, TNF-alpha promote cartilage breakdown
+
+## Bone Remodeling Response
+### Subchondral Bone Changes
+- **Subchondral sclerosis**: Increased bone density (hardening)
+- **Osteoblast activation**: Bone formation response to cartilage loss
+- **Subchondral cysts**: Fluid-filled spaces in bone (juxta-articular cysts)
+- **Thickening**: Subchondral plate becomes thicker
+
+### Osteophyte Formation (Bone Spurs)
+- **Location**: Marginal (edge of joint, non-load-bearing initially)
+- **Mechanism**: Endochondral ossification at cartilage-bone junction
+- **Effect**: Increases surface area; attempts load distribution
+- **Clinical significance**: Osteophytes contribute to stiffness, deformity
+
+## Molecular Pathways
+### Cartilage Breakdown Cascade
+1. Injury or stress → Inflammatory response
+2. Release of IL-1, TNF-alpha
+3. Upregulation of matrix metalloproteinases (MMPs)
+4. Degradation of proteoglycans and collagen
+5. Loss of mechanical properties
+6. Vicious cycle of further breakdown
+
+### Role of Cytokines
+- **IL-1β**: Increases protease activity, decreases protease inhibitors
+- **TNF-α**: Promotes inflammation, inhibits cartilage synthesis
+- **IL-6**: Systemic inflammation
+- **PGE2**: Increased prostaglandin-mediated inflammation
+
+## Biomechanical Factors
+### Load Distribution Changes
+- Normal cartilage: Distributes load evenly
+- OA cartilage: Stiffness increases, elasticity decreases
+- Result: Focal loading increases → Further cartilage damage
+- Vicious cycle: Increased stress → More damage → More stress
+
+### Meniscal and Ligamentous Changes (Knee)
+- **Meniscal degeneration**: Tears, degeneration compromise load distribution
+- **ACL/MCL laxity**: If present, increases shear forces
+- **Ligamentous laxity**: Allows abnormal joint motion
+
+## Repair Mechanisms (Limited)
+- **Chondrocyte response**: Limited ability to repair cartilage
+- **Fibrocartilage formation**: At erosion margins; not true cartilage
+- **Ineffective repair**: Cannot restore normal cartilage structure`,
+        mnemonics: [
+          { text: "OA Cartilage Phases: SFEF", explanation: "Swelling, Fibrillation, Erosion, Fissuring" },
+          { text: "Inflammatory mediators: ITP", explanation: "IL-1, TNF-alpha, PGE2" }
+        ],
+        keyPoints: [
+          "Cartilage degeneration: swelling → fibrillation → erosion",
+          "Bone remodeling: subchondral sclerosis, osteophyte formation",
+          "IL-1 and TNF-α drive cartilage breakdown via MMP activation",
+          "Meniscal and ligament degenerations compound cartilage loss",
+          "Repair mechanisms limited; fibrocartilage cannot replicate hyaline cartilage"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Osteoarthritis", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Degenerative Disease", edition: "10th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "osteoarthritis-layer-3-clinical",
+        title: "Osteoarthritis - Clinical Features and Diagnosis",
+        estimatedMinutes: 25,
+        summary: "Presentation, clinical examination findings, and diagnostic imaging in osteoarthritis.",
+        contentMd: `# Osteoarthritis - Clinical Features and Diagnosis
+
+## Clinical Presentation
+### Symptoms
+- **Pain**: Activity-related (worse with use, improves with rest); later pain at rest
+- **Stiffness**: Morning stiffness <30 minutes (vs RA >1 hour); improves with activity
+- **Swelling**: Mild bony swelling (vs RA soft tissue swelling)
+- **Crepitus**: Audible/palpable grinding with movement
+- **Functional limitation**: Difficulty climbing stairs, walking, rising from chair
+- **Deformity**: Varus (bowleg) or valgus (knock-knee) with severe disease
+
+### Joint-Specific Features
+**Knee OA**:
+- Pain with prolonged walking, stair climbing
+- Swelling, crepitus
+- Varus/valgus deformity in advanced cases
+
+**Hip OA**:
+- Groin pain, referred to medial thigh or knee
+- Limited internal rotation, extension
+- Antalgic gait (limp)
+
+**Hand OA**:
+- Heberden's nodes (DIP), Bouchard's nodes (PIP)
+- Reduced grip strength
+- Stiffness worse in morning
+
+## Physical Examination
+### Inspection
+- Bony swelling, joint deformity
+- Muscle atrophy (disuse from pain)
+- Gait abnormality (antalgic, limp)
+- Malalignment (varus/valgus)
+
+### Palpation
+- Bony hard swelling (vs RA soft tissue)
+- Joint margin tenderness
+- Crepitus with movement
+- Warmth (mild, less than inflammatory arthritis)
+
+### Range of Motion
+- Restricted ROM (especially end-range)
+- Pain at extremes of motion
+- Crepitus during ROM testing
+
+## Investigations
+### X-ray (First-line)
+**Technique**: Weight-bearing views (standing knee AP, lateral, skyline for patellofemoral)
+
+**Findings**:
+- Joint space narrowing (central: medial/lateral compartment)
+- Osteophytes (marginal, bony spurs)
+- Subchondral sclerosis (increased bone density)
+- Subchondral cysts (juxta-articular lucencies)
+- Deformity (varus/valgus collapse in advanced)
+
+### Kellgren-Lawrence Grading Scale
+- **Grade 0**: Normal
+- **Grade 1**: Doubtful narrowing, possible osteophytes
+- **Grade 2**: Definite narrowing, definite osteophytes
+- **Grade 3**: Moderate narrowing, moderate osteophytes
+- **Grade 4**: Severe narrowing, severe osteophytes, bone deformity
+
+### MRI
+**Advantages**:
+- Early cartilage damage detection
+- T2 cartilage mapping (quantifies cartilage loss)
+- Meniscal pathology (tears, degeneration)
+- Ligamentous injuries
+- Subchondral bone changes
+
+## Differential Diagnosis
+| Feature | OA | RA | Gout |
+|---------|----|----|------|
+| **Onset** | Insidious | Insidious | Acute |
+| **Joints** | Asymmetric | Symmetric | First MTP, others |
+| **Morning stiffness** | <30 min | >1 hour | None |
+| **Serology** | Negative | Positive (RF, CCP) | Elevated uric acid |`,
+        mnemonics: [
+          { text: "OA vs RA: ABS vs ARS", explanation: "OA: Asymmetric, Bony hard, Short stiffness; RA: different pattern" },
+          { text: "KL grades: 0-4 Normal to Severe", explanation: "Grade 0 normal, 1 doubtful, 2 definite, 3 moderate, 4 severe" }
+        ],
+        keyPoints: [
+          "Pain worse with activity, improves with rest; morning stiffness <30 min",
+          "Examination: bony hard swelling, crepitus, restricted ROM",
+          "X-ray findings: joint space narrowing, osteophytes, sclerosis",
+          "Kellgren-Lawrence grading: 0-4 severity scale",
+          "Lab normal in primary OA (vs inflammatory arthritis)"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Osteoarthritis", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Degenerative Disease", edition: "10th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "osteoarthritis-layer-4-exam",
+        title: "Osteoarthritis - Exam Preparation",
+        estimatedMinutes: 20,
+        summary: "Management algorithms and case-based approach to osteoarthritis treatment decisions.",
+        contentMd: `# Osteoarthritis - Exam Preparation
+
+## Management Algorithm
+
+### Mild-Moderate OA (KL 1-2)
+**Conservative Management** (First-line):
+1. Weight reduction (target 5-10% body weight loss)
+2. Exercise program
+   - Strengthening: Quadriceps (for knee), hip abductors
+   - Stretching: ROM maintenance
+   - Low-impact: Swimming, cycling, walking
+3. Activity modification: Avoid high-impact sports, heavy lifting
+4. Topical therapy: Diclofenac 1% gel, capsaicin cream
+5. Assistive devices: Crutch, cane (reduces joint loading)
+
+**Pharmacotherapy**:
+- Acetaminophen: 500-1000 mg TID (first-line analgesic)
+- NSAIDs (oral): Ibuprofen, naproxen (if acetaminophen fails)
+- NSAIDs (topical): Diclofenac 1% gel (first-line topical)
+- Gastroprotection: Add PPI if GI risk factors
+
+**Intra-articular Injections** (if fails conservative):
+- Corticosteroid: Triamcinolone 40-80 mg, efficacy 40-60%, duration 2-6 weeks
+- Frequency: Max 3-4/year (risk of cartilage damage if more frequent)
+- Hyaluronic acid: Modest efficacy, variable evidence
+- PRP: Emerging therapy, limited evidence
+
+### Severe OA (KL 3-4) + Failed Conservative Management
+**Surgical Management**:
+- Total Joint Arthroplasty (TJA)
+
+**Indications for TJA**:
+1. Severe radiographic OA (KL 3-4)
+2. Failed conservative management ≥6-12 months
+3. Significant functional impairment affecting quality of life
+4. Patient age typically >60 years
+
+**Outcomes**:
+- Pain relief: 80-90%
+- Satisfaction: 85-90%
+- Complication rates: DVT/PE 1-2%, infection 1%, loosening 5-10% at 10 years
+- Implant life: 15-20 years
+- Revision: ~10% at 10-15 years
+
+## High-Yield Case Scenarios
+
+### Case 1: Mild-Moderate Knee OA
+**Patient**: 65-year-old female, BMI 32, knee OA KL-2, pain with stairs
+
+**Management**:
+1. Counseling: Weight reduction 10 kg target
+2. Exercise: Quadriceps strengthening, low-impact activities
+3. Topical: Diclofenac 1% gel TID
+4. Oral: Acetaminophen 1000 mg TID if needed
+5. Activity: Modify high-impact sports
+6. Follow-up: Reassess in 3-6 months
+
+### Case 2: Severe Knee OA Candidate for TKA
+**Patient**: 72-year-old female, KL-4 knee OA, constant pain, failed conservative therapy 1 year
+
+**Pre-operative**:
+1. Optimize comorbidities: Pulmonary function, cardiac clearance
+2. Counsel: TKA expectations, pain relief 80-90%, rehab 8-12 weeks
+3. Medical clearance: Cardiology, anesthesia clearance
+4. DVT prophylaxis plan: Chemical + mechanical prophylaxis post-op
+
+**Post-operative**:
+1. DVT prophylaxis: Enoxaparin or rivaroxaban
+2. PT/OT: Begin POD #1, aggressive ROM and strengthening
+3. Mobilization: Weight-bearing as tolerated
+4. Follow-up: Clinical assessment at 2, 6, 12 weeks`,
+        mnemonics: [
+          { text: "OA Management: WEEPIN", explanation: "Weight reduction, Exercise, Ergonomics, Pharmacotherapy, Injections, (then) Total joint if Necessary" },
+          { text: "TJA Indications: SSF", explanation: "Severe OA (KL 3-4), Severe functional impairment, Failed conservative management" }
+        ],
+        keyPoints: [
+          "Mild OA: Conservative (weight, exercise, NSAIDs), then steroid injections",
+          "Severe OA: TJA if failed conservative >6-12 months",
+          "TJA outcomes: 80-90% pain relief, 85-90% satisfaction, revision ~10% at 10 years",
+          "Post-op critical: DVT prophylaxis, early mobilization, PT",
+          "Patient selection: Age >60, motivation, compliance crucial for outcomes"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Osteoarthritis Management", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Degenerative Disease Treatment", edition: "10th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "osteoarthritis-layer-5-active-recall",
+        title: "Osteoarthritis - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Key questions and answers to reinforce osteoarthritis knowledge.",
+        contentMd: `# Active Recall - Osteoarthritis
+
+**Q1**: What is the pathophysiology of osteoarthritis? Describe the cascade from joint stress to cartilage loss.
+
+**A1**: OA pathophysiology: Joint stress → inflammatory response (IL-1, TNF-α released) → protease activation (MMPs) → cartilage degeneration (swelling → fibrillation → erosion) → bone remodeling (subchondral sclerosis, osteophyte formation) → vicious cycle of further stress and damage.
+
+**Q2**: A 70-year-old woman presents with knee pain worse with activity, improves with rest. Morning stiffness 20 minutes. How would you distinguish this from rheumatoid arthritis?
+
+**A2**: OA: Pain worse with activity (improves with rest), morning stiffness <30 min, bony hard swelling, normal labs. RA: Activity-independent pain, morning stiffness >1 hour, soft tissue swelling, positive RF/CCP, elevated inflammatory markers.
+
+**Q3**: Explain the Kellgren-Lawrence grading scale and its clinical significance.
+
+**A3**: KL Grade 0-4: (0) Normal, (1) Doubtful narrowing/osteophytes, (2) Definite changes (mild), (3) Moderate narrowing/osteophytes, (4) Severe changes. Guides treatment: KL 1-2 conservative; KL 3-4 consider TJA if symptomatic.
+
+**Q4**: When should total knee arthroplasty be considered? What are expected outcomes?
+
+**A4**: Indications: Severe OA (KL 3-4), failed conservative ≥6-12 months, significant functional impairment, age >60. Outcomes: Pain relief 80-90%, satisfaction 85-90%, revision ~10% at 10 years.
+
+**Q5**: How are intra-articular corticosteroid injections used? What are frequency limits and why?
+
+**A5**: Protocol: Triamcinolone 40-80 mg, efficacy 40-60%, duration 2-6 weeks. Max 3-4/year (at least 3-month intervals) to prevent accelerated cartilage damage (chondrotoxicity).
+
+**Q6**: Why are NSAIDs beneficial but also have risks in OA management?
+
+**A6**: Benefits: Reduce PGE2-mediated inflammation, modest pain reduction 20-30%. Risks: GI ulcers (add PPI), renal dysfunction, cardiovascular events. Do NOT address underlying pathophysiology.
+
+**Q7**: A patient on 4 intra-articular steroid injections per year develops progressive cartilage loss on MRI. What's the next step?
+
+**A7**: Reduce injection frequency (<3-4/year), reassess conservative management, ensure adequate weight reduction and exercise, consider alternatives (PRP), discuss TJA if disease rapidly progressive.
+
+**Q8**: Compare conservative management (mild OA) with surgical management (severe OA). What's the treatment threshold?
+
+**A8**: Mild (KL 1-2): Conservative (weight, exercise, NSAIDs, injections), review 3-6 months. Severe (KL 3-4): TJA if failed conservative ≥6-12 months. Threshold based on severity + symptoms + failed conservative duration.
+
+**Q9**: What pre-operative assessment is needed before TKA in elderly patients with comorbidities?
+
+**A9**: Cardiac (ECG, troponin, echo if indicated), Pulmonary (PFTs if indicated), Renal (creatinine, eGFR), Diabetes (HbA1c, glucose control), Anesthesia consult (ASA score), Medical optimization, DVT prophylaxis plan.
+
+**Q10**: A 62-year-old with medial compartment knee OA and varus malalignment considers knee osteotomy vs TKA. Discuss pros and cons.
+
+**A10**: Osteotomy: Preserves native joint, delays TKA 5-10 years, higher activity possible, but complex surgery, longer recovery. TKA: Immediate pain relief 80-90%, simpler, but limited implant lifespan (15-20 years). Choice: Young, motivated → osteotomy; significant symptoms → TKA.`,
+        mnemonics: [
+          { text: "OA Grading: 0-4 Normal to Severe", explanation: "0=normal, 1=doubtful, 2=definite, 3=moderate, 4=severe" },
+          { text: "NSAID Risks: GRB", explanation: "GI ulcer, Renal dysfunction, Bleeding/Cardiovascular" }
+        ],
+        keyPoints: [
+          "OA: Joint stress → inflammatory cascade → cartilage loss → bone remodeling",
+          "Pain worse with activity, morning stiffness <30 min, bony hard swelling",
+          "KL grades 0-4; guides treatment but symptoms equally important",
+          "Mild: Conservative; Severe + failed: TJA",
+          "TJA: 80-90% pain relief, 85-90% satisfaction; revision ~10% at 10-15 years"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Osteoarthritis", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Degenerative Disease", edition: "10th" }
+        ]
+      }
+    ]
+  }
 ];

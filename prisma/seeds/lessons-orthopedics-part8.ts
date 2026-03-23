@@ -1,15 +1,565 @@
-export const orthopedicsLessonsPartEight = [
+import type { TopicLessons } from "./content-loader";
+
+export const orthopedicsLessonsPartEight: TopicLessons[] = [
   {
     topicCode: "OR-MOD-02-TOP-04",
     layers: [
       {
         layer: 1,
-        slug: "hand-injuries-foundation",
-        title: "Hand Injuries (Scaphoid, Tendon) - Foundation",
+        slug: "hand-injuries-layer-1-foundation",
+        title: "Hand Injuries - Foundation",
         estimatedMinutes: 20,
-        summary: "Hand injuries including scaphoid fractures and tendon injuries are common and require prompt diagnosis to prevent complications like avascular necrosis and functional impairment. Early intervention optimizes outcomes.",
-        contentMd: "# Hand Injuries - Foundation\n\n## Scaphoid Fracture\n\n### Epidemiology\n- **Frequency**: Most common carpal bone fracture (60-70%)\n- **Age**: Young adults (15-30 years)\n- **Mechanism**: Fall on outstretched hand (FOOSH), direct trauma\n- **Gender**: More common in males\n\n### Anatomy\n- **Scaphoid**: Largest carpal bone, waist is narrowest portion\n- **Blood supply**: Primarily dorsal (waist and proximal pole relatively avascular)\n- **Location**: Radial side of wrist, crosses wrist joint\n\n### Classification\n**By location**:\n1. **Distal pole**: 20% of fractures, better blood supply, heal better\n2. **Waist**: 70% of fractures, critical zone (highest non-union risk)\n3. **Proximal pole**: 10% of fractures, poorest blood supply (avascular necrosis risk)\n\n**By displacement**: Undisplaced vs displaced (>2 mm)\n\n### Clinical Features\n- **Pain**: Radial-sided wrist pain\n- **Swelling**: Radial wrist swelling\n- **Limited motion**: Especially radial deviation, extension\n- **Physical exam**: Tenderness in anatomical snuffbox (space between extensor pollicis longus and brevis tendons)\n- **Scaphoid compression test**: Axial loading of thumb\n\n### Imaging\n- **X-ray**: AP, lateral, scaphoid views (best initial)\n  - Fracture line may not be visible initially in undisplaced fractures\n  - Serial radiographs (10-14 days) show fracture line from bone resorption\n- **CT or MRI**: If X-ray inconclusive, better detail for displacement\n- **Bone scan**: High sensitivity for occult fractures\n\n## Tendon Injuries\n\n### Hand Flexor Tendons\n- **FDP** (Flexor Digitorum Profundus): Inserts distal phalanx, flexes DIP joint\n- **FDS** (Flexor Digitorum Superficialis): Inserts middle phalanx, flexes PIP joint\n- **FPL** (Flexor Pollicis Longus): Flexes thumb IP joint\n- **Zones of injury** (Verdan classification): Zone I-V from fingertip to forearm\n\n### Hand Extensor Tendons\n- **EDC** (Extensor Digitorum Communis): Extends fingers at MCP, PIP, DIP\n- **EPL** (Extensor Pollicis Longus): Extends thumb IP and MCP\n- **EPB** (Extensor Pollicis Brevis): Extends thumb CMC and MCP\n- **EDM** (Extensor Digiti Minimi): Extends 5th finger\n\n### Clinical Features of Tendon Injury\n- **Loss of active motion**: Cannot move joint normally\n- **Preserved passive motion**: Gravity or examiner can move joint\n- **Deformity**: Claw hand (flexor injury), loss of extension (extensor injury)\n- **Mechanism**: Laceration, crush, ischemia, attrition (chronic friction),\n        mnemonics: [\n          {\n            text: \"Scaphoid Location: Distal>Waist>Proximal (Healing)\",\n            explanation: \"Distal best vascularity and healing; Waist worst for non-union; Proximal avascular risk\"\n          },\n          {\n            text: \"Scaphoid Diagnosis: SNB\",\n            explanation: \"Snuffbox tenderness, Normal X-ray initially, Bone scan/CT confirms\"\n          }\n        ],\n        keyPoints: [\n          \"Scaphoid most common carpal fracture; waist location highest non-union risk\",\n          \"Anatomical snuffbox tenderness suggests scaphoid fracture even if X-ray normal\",\n          \"Distal scaphoid heals well; proximal pole at risk for avascular necrosis\",\n          \"Flexor tendons: Zone I-V classification affects prognosis and repair\",\n          \"Tendon injury causes loss of active motion; passive motion preserved\"\n        ],\n        textbookRefs: [\n          { book: \"Maheshwari\", chapter: \"Ch 20\", edition: \"6th\" },\n          { book: \"Apley\", chapter: \"Ch 14\", edition: \"10th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"hand-injuries-mechanism\",\n        title: \"Hand Injuries - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiology of scaphoid non-union/AVN and tendon healing mechanisms. Understanding these processes guides prevention and management strategies.\",\n        contentMd: "# Hand Injuries - Mechanism\\n\\n## Scaphoid Fracture Healing and Complications\\n\\n### Normal Healing\\n1. **Fracture hematoma**: Forms at fracture site\\n2. **Inflammatory phase**: PMNs, macrophages, inflammatory mediators\\n3. **Soft callus**: Fibrocartilage formation, angiogenesis\\n4. **Hard callus**: Osteoblasts produce bone matrix, mineralization\\n5. **Remodeling**: Woven bone → Lamellar bone\\n\\n### Non-Union (5-10% of scaphoid fractures)\\n**Risk factors**:\\n- **Proximal/waist location**: Limited blood supply (dorsal branch only)\\n- **Displacement**: Interferes with healing\\n- **Delayed treatment**: Pseudarthrosis develops\\n- **Immobilization failure**: Inadequate period or non-compliance\\n\\n**Mechanism**:\\n1. Initial fracture disrupts blood supply to distal fragment\\n2. Avascular proximal fragment cannot heal\\n3. Gap formation if displaced or mobile\\n4. Pseudarthrosis (false joint) develops\\n\\n**Management**: Surgery (ORIF, bone grafting, internal fixation with screws)\\n\\n### Avascular Necrosis (Especially Proximal Pole)\\n**Mechanism**:\\n1. **Retrograde blood supply**: Proximal pole supplied entirely from distal\\n2. **Fracture disrupts vessels**: Proximal fragment becomes ischemic\\n3. **Osteonecrosis**: Bone cell death\\n4. **Collapse**: Fragment weakens, collapses under weight-bearing\\n5. **Post-traumatic OA**: Wrist joint degeneration, arthritis\\n\\n**Risk factors**:\\n- **Proximal pole fracture**: 10-30% AVN risk\\n- **Delayed diagnosis/treatment**: Allows ischemia to progress\\n- **Non-union**: Increased AVN risk\\n\\n**Prevention**: Early diagnosis, proper reduction, immobilization\\n\\n## Tendon Healing Mechanisms\\n\\n### Intrinsic Healing\\n- **Cells from tendon sheath and adjacent tissue**: Fibroblasts migrate\\n- **Process**: Collagen deposition, scar formation\\n- **Timing**: Begins immediately, progresses over months\\n- **Advantage**: Can occur without extrinsic inflammation\\n\\n### Extrinsic Healing\\n- **Inflammatory response**: Macrophages, neovascularization\\n- **Surrounding tissue**: Forms adhesions, bridging callus\\n- **Result**: Stronger healing but more stiff (adhesions limit motion)\\n- **Balance**: Enough inflammation for healing, not so much for stiffness\\n\\n### Timing of Tendon Healing\\n1. **0-3 days**: Inflammatory phase, fibrin formation\\n2. **3-7 days**: Early fibroblast recruitment, collagen deposition\\n3. **2-3 weeks**: Increased collagen, early tensile strength\\n4. **4-12 weeks**: Rapid collagen deposition, significant strength gain\\n5. **3-6 months**: Gradual maturation, scar remodeling\\n6. **6-12 months**: Maximum strength achieved\\n\\n### Critical Juncture: 3-6 Week \\\"Danger Zone\\\"\\n- **Mechanism**: Collagen breakdown phase overlaps synthesis\\n- **Result**: Tensile strength dips (lowest strength)\\n- **Clinical significance**: High re-rupture risk if stress applied\\n- **Management**: Protected motion during this period\\n\\n### Factors Affecting Healing\\n1. **Zone of injury**: Zone I (fingertip) vs Zone II (high-friction zone)\\n2. **Vascular supply**: Well-vascularized zones heal faster\\n3. **Contamination**: Infection impairs healing\\n4. **Immobilization**: Complete immobilization prevents adhesions but stiffens joint; early motion improves gliding\\n5. **Age and comorbidities**: Age, diabetes, smoking affect healing rate\\n\\n## Scaphoid Blood Supply\\n\\n### Proximal Pole Supply\\n- **Only dorsal branch** from radial artery\\n- **Retrograde supply**: No additional blood supply to proximal fragment\\n- **Consequence**: Proximal fragment becomes avascular if proximal pole fracture\\n\\n### Waist Supply\\n- **Mixed supply**: Dorsal (main), some from palmar\\n- **Fragile**: Fracture disrupts supply\\n- **Risk**: Non-union if displaced\\n\\n### Distal Pole Supply\\n- **Rich vascular supply**: Multiple dorsal and palmar branches\\n- **Robust healing**: Better prognosis\\n- **Lower complication rate**\\n\\n### Clinical Significance of Blood Supply\\n- **Proximal fractures**: High AVN risk (20-30%)\\n- **Waist fractures**: High non-union risk (most common location)\\n- **Distal fractures**: Best outcomes\\n- **Early diagnosis crucial**: Prevents pseudarthrosis, allows healing before ischemia develops,\\n        mnemonics: [\\n          {\\n            text: \\\"Scaphoid Healing Complications: AVN\\\",\\n            explanation: \\\"Avascular Necrosis (proximal pole), Nonunion (waist), plus post-traumatic OA\\\"\\n          },\\n          {\\n            text: \\\"Tendon Healing Phases: IEV\\\",\\n            explanation: \\\"Inflammatory (0-3d), Early fibroblast (3-7d), Vascular remodeling (weeks-months)\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Proximal scaphoid blood supply only dorsal; fracture causes ischemia/AVN risk\\\",\\n          \\\"Non-union occurs when fracture gap prevents bony bridging; pseudarthrosis develops\\\",\\n          \\\"Tendon healing: intrinsic (fibroblasts) vs extrinsic (inflammation + adhesions)\\\",\\n          \\\"3-6 week 'danger zone' tensile strength dip; re-rupture risk highest\\\",\\n          \\\"Early motion improves tendon gliding; complete immobilization causes stiffness\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari\\\", chapter: \\\"Ch 20\\\", edition: \\\"6th\\\" },\\n          { book: \\\"Apley\\\", chapter: \\\"Ch 14\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"hand-injuries-clinical\\\",\\n        title: \\\"Hand Injuries - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Management of scaphoid fractures (conservative vs operative) and tendon injuries (primary repair, zones, rehabilitation). Early diagnosis and appropriate treatment prevent complications.\\\",\\n        contentMd: ``# Hand Injuries - Clinical\\n\\n## Scaphoid Fracture Management\\n\\n### Initial Assessment\\n- **History**: Mechanism (FOOSH), timing of injury\\n- **Examination**: Anatomical snuffbox tenderness, pain with scaphoid compression\\n- **Imaging**: X-ray (AP, lateral, scaphoid views), CT/MRI if inconclusive\\n\\n### Undisplaced Scaphoid Fracture Management\\n1. **Immobilization**:\\n   - **Short arm cast or thermoplastic splint**: 6-12 weeks (distal pole heals faster)\\n   - **Long arm cast**: 4-6 weeks (if proximal/waist, some use long arm first)\\n   - **Non-weight-bearing**: Especially first 2-3 weeks\\n\\n2. **Follow-up imaging**:\\n   - **Repeat X-rays**: 10-14 days (fracture line becomes visible from resorption)\\n   - **Check for alignment**: Ensure fracture remains undisplaced\\n   - **Monitor healing**: Serial X-rays at 4, 8, 12 weeks\\n\\n3. **Criteria for healing**:\\n   - **Fracture line obliteration**: No visible fracture line on X-ray\\n   - **Bridging callus**: Bone bridging across fracture site\\n   - **Clinical union**: Pain-free, tender\\n\\n4. **Return to activity**:\\n   - **Light duty**: 6-8 weeks\\n   - **Sport/heavy activity**: 3-4 months (until X-ray confirms union)\\n\\n### Displaced Scaphoid Fracture Management\\n1. **Reduction attempt**: Closed reduction may be attempted\\n2. **Operative fixation**: If cannot reduce or stays reduced\\n   - **ORIF**: Open reduction, internal fixation\\n   - **Screw placement**: Percutaneous or open (distal pole screw preferred)\\n   - **Bone graft**: If non-union or significant gap\\n   - **Advantages**: Earlier mobilization, better alignment, lower non-union risk\\n\\n### Proximal Pole Fractures\\n- **Higher AVN risk**: Requires careful monitoring\\n- **Immobilization**: Often 12-16 weeks or surgery\\n- **ORIF indicated**: Especially if displaced or if AVN develops\\n\\n### Non-Union Management\\n1. **Established non-union** (>6 months without union):\\n   - **ORIF with bone graft**: Cancellous bone from iliac crest\\n   - **Screw fixation**: Ensure compression at fracture site\\n   - **Immobilization**: Post-operatively 6-8 weeks\\n   - **Success rate**: 90-95% with proper technique\\n\\n### AVN of Scaphoid\\n1. **Prevention**: Early diagnosis, proper treatment\\n2. **Early AVN** (>50% proximal pole involved):\\n   - **Vascularized bone graft**: Restore blood supply\\n   - **Complex procedure**: Good outcomes if done early\\n3. **Established AVN with post-traumatic OA**:\\n   - **Proximal row carpectomy**: Salvage procedure\\n   - **Wrist fusion**: If severe arthritis\\n   - **Outcomes**: Pain relief but reduced motion\\n\\n## Tendon Injury Management\\n\\n### Acute Flexor Tendon Injury\\n\\n**Primary Repair Criteria** (repairs done within 3-6 weeks):\\n- **Clean wound**: No significant contamination\\n- **Adequate vascularity**: Good blood supply to allow healing\\n- **Patient compliance**: Can follow rehabilitation protocol\\n- **Zone of injury**: Zone I-V affects feasibility\\n\\n**Surgical Technique**:\\n- **Exposure**: Open laceration or small extensile incision\\n- **Identification**: Find both tendon ends\\n- **Cleaning**: Remove devitalized tissue\\n- **Repair**: Core suture (4-6 strand Kessler or Tsuge)\\n  - **Multiple strands**: Stronger repair, earlier mobilization possible\\n  - **Locking sutures**: Increase holding power\\n- **Epitenon suture**: Running suture on surface for strength and gliding\\n- **Testing**: Check repair hold strength, no gapping\\n\\n**Rehabilitation**:\\n- **Protected motion protocol**: Begin 3-5 days post-op\\n  - Controlled passive motion (Duran protocol)\\n  - Low load, supervised motion\\n  - Prevents stiffness, reduces adhesions\\n- **Progression**: Gradual active motion by week 4-6\\n- **Return to function**: Weeks 8-12\\n\\n**Outcomes**:\\n- **Zone I (fingertip to insertion FDS)**: Difficult, outcomes moderate\\n- **Zone II (A1 pulley to origin FDS)**: Most difficult, highest adhesion risk\\n- **Zone III-V (proximal)**: Better outcomes, less adhesion risk\\n\\n### Acute Extensor Tendon Injury\\n\\n**Repair Timing**:\\n- **Primary**: Acute repair within 6-8 hours\\n- **Delayed primary**: 24-48 hours after wound care\\n- **Secondary**: After 3-4 weeks (if primary not feasible)\\n\\n**Surgical Technique**:\\n- **Identification**: Extensor tendons more superficial than flexors\\n- **Repair**: Simpler anatomy, less friction than flexors\\n- **Suturing**: Usually 3-4 core sutures, epitenon suture\\n- **Tension**: Must be exact (too tight → dysfunction, too loose → weakness)\\n\\n**Rehabilitation**:\\n- **Immobilization**: 3-4 weeks in extension position\\n- **Controlled mobilization**: Begins week 4-5\\n- **Return to function**: Slower than flexors (8-12 weeks)\\n\\n**Zones**:\\n- **Zone I-II (distal)**: Often treated non-operatively (button splint)\\n- **Zone III-IV**: Surgical repair routine\\n- **Zone V-VIII (proximal): Most amenable to surgery\\n\\n### Chronic Tendon Injuries\\n\\n**Attrition Rupture**:\\n- Occurs from chronic friction (e.g., sharp bone fragment)\\n- **Example**: Rheumatoid arthritis, post-fracture\\n- **Management**: Identify cause (fix bone), then repair (may use EIP or EIP transfer)\\n\\n**Reconstruction after Healing**:\\n- If primary repair failed or delayed repair required\\n- **Staged reconstruction**: Remove scar tissue, place spacer, then graft\\n- **Tendon transfer**: Use adjacent tendon if repair not possible\\n\\n### Complications of Tendon Injury\\n1. **Stiffness**: From adhesions (extrinsic healing)\\n2. **Re-rupture**: If stress applied during danger zone\\n3. **Functional deficit**: Weakness, loss of motion\\n4. **Infection**: Risk with contaminated wounds\\n\\n### Prevention and Management\\n- **Primary prevention**: Prompt, appropriate repair\\n- **Protected early motion**: Reduces adhesions\\n- **Compliance with rehabilitation**: Critical for outcome\\n- **Staged procedures if needed**: Remove adhesions, place spacer, graft later,\\n        mnemonics: [\\n          {\\n            text: \\\"Scaphoid Immobilization: 6-12 weeks\\\",\\n            explanation: \\\"Distal 6-8 weeks, Proximal/Waist 12+ weeks\\\"\\n          },\\n          {\\n            text: \\\"Tendon Healing Danger Zone: 3-6 weeks\\\",\\n            explanation: \\\"Lowest tensile strength; re-rupture risk highest\\\"\\n          },\\n          {\\n            text: \\\"Flexor Repair Zones: I hardest, II worst, III-V best\\\",\\n            explanation: \\\"Zone I small area, Zone II high friction/adhesions, Zones III-V proximal better\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Undisplaced scaphoid: immobilization 6-12 weeks; displaced: ORIF preferred\\\",\\n          \\\"Proximal scaphoid: high AVN risk; requires careful follow-up or ORIF\\\",\\n          \\\"Non-union after 6 months: ORIF with bone graft; 90-95% success\\\",\\n          \\\"Flexor tendon repair: 4-6 strand core suture, epitenon suture, protected early motion\\\",\\n          \\\"Tendon 3-6 week danger zone: lowest strength; mobilization must be controlled\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari\\\", chapter: \\\"Ch 20\\\", edition: \\\"6th\\\" },\\n          { book: \\\"Apley\\\", chapter: \\\"Ch 14\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"hand-injuries-exam\\\",\\n        title: \\\"Hand Injuries - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"High-yield: scaphoid non-union/AVN risk factors, immobilization protocols, tendon zones, primary repair indicators, and rehabilitation principles.\\\",\\n        contentMd: ``# Hand Injuries - Exam Prep\\n\\n## High-Yield Facts\\n\\n### 1. Scaphoid Fracture Epidemiology\\n- **Most common** carpal bone fracture (60-70%)\\n- **Age**: 15-30 years\\n- **Mechanism**: FOOSH injury\\n- **Location frequency**: Distal (20%), Waist (70%), Proximal (10%)\\n- **Complications**: Non-union (5-10%), AVN (10-25%), Post-traumatic OA\\n\\n### 2. Diagnosis of Scaphoid Fracture\\n- **Clinical**: Anatomical snuffbox tenderness, pain with scaphoid compression\\n- **X-ray**: Initial X-rays may be negative in undisplaced fractures\\n- **Serial X-rays**: 10-14 days show fracture line (from resorption)\\n- **CT/MRI**: If X-ray inconclusive, better detail, higher sensitivity\\n\\n**Exam point**: Snuffbox tenderness + normal initial X-ray = treat as scaphoid fracture\\n\\n### 3. Scaphoid Blood Supply and Complications\\n| Location | Blood Supply | Complications |\\n|----------|------|-----------|\\n| **Distal** | Rich dorsal/palmar | Best healing, 5% complications |\\n| **Waist** | Mixed dorsal/palmar | High non-union (70% of cases) |\\n| **Proximal** | Retrograde dorsal only | High AVN risk (20-30%) |\\n\\n### 4. Scaphoid Immobilization Protocols\\n- **Distal fracture**: Short arm cast 6-8 weeks\\n- **Waist fracture**: Long arm cast 4-6 weeks, then short arm\\n- **Proximal fracture**: Long arm cast 12-16 weeks (or ORIF)\\n- **Displaced**: ORIF with screw fixation preferred\\n\\n### 5. Criteria for Healing\\n- **Fracture line obliteration** on X-ray\\n- **Bridging callus** visible\\n- **Pain-free** with motion\\n\\n### 6. Non-Union Management\\n- **Definition**: >6 months without union\\n- **ORIF with bone graft**: Cancellous bone from iliac crest\\n- **Success rate**: 90-95% with proper technique\\n- **Immobilization post-op**: 6-8 weeks\\n\\n### 7. AVN of Scaphoid Pathophysiology\\n- **Proximal pole** most vulnerable (retrograde blood supply only)\\n- **Risk factors**: Proximal fracture, delayed diagnosis, non-union\\n- **Early AVN** (<50% involvement): Vascularized bone graft attempt\\n- **Established AVN**: Proximal row carpectomy or wrist fusion\\n\\n### 8. Tendon Zones (Verdan Classification)\\n| Zone | Location | Notes |\\n|------|----------|-------|\\n| **I** | Fingertip to FDS insertion | Difficult, moderate outcomes |\\n| **II** | A1 pulley to FDS origin | Most difficult, high adhesions |\\n| **III** | FDS origin to wrist | Better outcomes |\\n| **IV** | Wrist | Good outcomes |\\n| **V** | Forearm | Excellent outcomes |\\n\\n**Exam point**: Zone II (flexor sheath) worst for adhesions\\n\\n### 9. Primary Tendon Repair Criteria\\n- Clean, non-contaminated wound\\n- Good vascularity\\n- Patient compliance for rehab\\n- Ideally within 3-6 weeks of injury\\n\\n### 10. Flexor Tendon Repair Technique\\n- **Core suture**: 4-6 strands (more strands = stronger)\\n- **Suture type**: Kessler knot (locking), Tsuge technique\\n- **Epitenon suture**: Running suture for strength, gliding\\n- **Tension**: Exact to prevent stiffness or weakness\\n\\n### 11. Tendon Healing Phases\\n| Phase | Timeline | Events | Tension Strength |\\n|-------|----------|--------|-----------------|\\n| **Inflammatory** | 0-3 days | Fibrin formation, cell infiltration | Low |\\n| **Early fibroblast** | 3-7 days | Collagen deposition begins | Increasing |\\n| **Collagen phase** | 2-3 weeks | Rapid collagen synthesis | Improving |\\n| **Maturation** | 3-6 months | Collagen remodeling | Peak reached |\\n\\n### 12. Danger Zone (3-6 Weeks) and Protected Early Motion\\n- **Collagen breakdown** overlaps synthesis\\n- **Tensile strength at minimum**\\n- **Re-rupture risk**: Highest if stress applied\\n- **Protected motion protocol**: Low-load passive/active motion\\n- **Benefits**: Prevents stiffness, reduces adhesions, maintains healing\\n\\n### 13. Extensor vs Flexor Repair Outcomes\\n| Feature | Flexor | Extensor |\\n|---------|--------|----------|\\n| **Mechanism** | Zone II worst (friction) | Less problematic |\\n| **Immobilization** | 3-5 days, early motion | 3-4 weeks, later motion |\\n| **Outcomes** | More stiffness risk | Better motion, fewer adhesions |\\n| **Recovery** | 8-12 weeks | 8-12 weeks |\\n\\n### 14. Attrition Rupture vs Traumatic Rupture\\n- **Attrition**: Chronic friction on bone fragment (e.g., RA, post-fracture) → Gradual rupture\\n- **Traumatic**: Acute laceration → Immediate rupture\\n- **Management**: Attrition requires bony surgery first (fix cause), then repair\\n\\n### 15. Exam Scenarios\\n\\n**Scenario 1**: Patient with snuffbox tenderness, normal X-rays. Management?\\n- **Answer**: Treat as scaphoid fracture. Immobilize (short arm cast 6-8 weeks). Repeat X-rays in 10-14 days. CT/MRI if persistent doubt.\\n\\n**Scenario 2**: Acute flexor tendon laceration in Zone II. Primary repair or delayed?\\n- **Answer**: Primary repair if clean wound, adequate vascularity, within 3-6 weeks. Zone II worst for adhesions; meticulous technique essential. 4-6 strand core suture, epitenon suture, protected early motion.\\n\\n**Scenario 3**: Scaphoid non-union 8 months post-injury. Management?\\n- **Answer**: ORIF with bone graft (cancellous from iliac crest). Percutaneous or open screw fixation. Post-op immobilization 6-8 weeks. Success rate 90-95%.,\\n        mnemonics: [\\n          {\\n            text: \\\"Scaphoid Immobilization Rule: Distal 6-8, Proximal 12+ weeks\\\",\\n            explanation: \\\"Distal/easy heals 6-8 weeks; Proximal/hard needs 12-16 weeks or surgery\\\"\\n          },\\n          {\\n            text: \\\"Tendon Repair Core Stitches: 4-6\\\",\\n            explanation: \\\"4-6 strands of core suture for strength and early mobilization\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Scaphoid waist (70%) has high non-union risk; proximal (10%) high AVN risk\\\",\\n          \\\"Snuffbox tenderness + normal X-ray = treat as fracture, repeat X-rays in 10-14 days\\\",\\n          \\\"Non-union after 6 months: ORIF with cancellous bone graft; 90-95% success\\\",\\n          \\\"Flexor tendon Zone II: most difficult due to friction, requires expert repair\\\",\\n          \\\"Tendon danger zone 3-6 weeks: lowest strength; protected motion essential\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari\\\", chapter: \\\"Ch 20\\\", edition: \\\"6th\\\" },\\n          { book: \\\"Apley\\\", chapter: \\\"Ch 14\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"hand-injuries-recall\\\",\\n        title: \\\"Hand Injuries - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        contentMd: ``# Active Recall - Hand Injuries\\n\\n**Q1**: A 22-year-old falls on outstretched hand. Examination reveals anatomical snuffbox tenderness. X-rays (AP, lateral, scaphoid views) appear normal. What is the diagnosis and management?\\n> **A**: **Clinical diagnosis**: Scaphoid fracture (snuffbox tenderness is classic finding; initial X-rays often negative in undisplaced fractures due to lack of bone resorption). **Management**: (1) **Immobilize**: Short arm cast or splint (6-8 weeks for distal fracture presumed). (2) **Repeat X-rays**: 10-14 days (fracture line becomes visible from resorption). (3) **Imaging if persistent doubt**: CT or MRI for better visualization. (4) **Immobilization duration**: Depends on location once confirmed (distal 6-8 weeks, waist 10-12 weeks, proximal 12-16 weeks). (5) **Follow-up**: Serial X-rays at 4, 8, 12 weeks to confirm union. (6) **Return to activity**: Not before union confirmed on X-ray.\\n\\n**Q2**: Explain the difference in blood supply between distal, waist, and proximal scaphoid poles. How does this affect complications?\\n> **A**: **Distal pole**: Rich blood supply (multiple dorsal and palmar branches), best healing outcomes, <5% complication rate. **Waist**: Mixed blood supply (dorsal main, some palmar), moderate vascularity but fracture disrupts vessels → 70% of non-unions occur at waist (highest non-union risk). **Proximal pole**: Only retrograde blood supply (from distal pole via dorsal branch), fracture isolates proximal fragment → **ischemia** → 20-30% AVN risk + high non-union. **Clinical significance**: Distal fractures best prognosis; proximal worst. Proximal fractures often require ORIF to prevent complications.\\n\\n**Q3**: A patient has established scaphoid non-union (8 months post-fracture). Describe the surgical management and expected outcomes.\\n> **A**: **Diagnosis**: Non-union = >6 months without bony union, pseudarthrosis develops (false joint forms). **Surgical management**: (1) **ORIF** (Open Reduction, Internal Fixation): Access fracture site, remove scar tissue/pseudarthrosis debris. (2) **Bone graft**: Cancellous autograft from iliac crest, packed into gap to bridge fracture. (3) **Fixation**: Compression screw (percutaneous or open) to hold reduction while healing occurs. (4) **Immobilization**: Post-op cast 6-8 weeks. (5) **Follow-up**: X-rays at 4, 8, 12 weeks to confirm union. **Outcomes**: 90-95% union rate with proper technique. Success factors: compression fixation, bone graft quality, adequate immobilization.\\n\\n**Q4**: Compare primary vs delayed primary vs secondary tendon repair. When is each indicated?\\n> **A**: **Primary repair**: Performed within 6-8 hours of injury (or up to 24 hours if clean). **Indications**: Clean wound, good vascularity, patient commitment to rehab. **Advantages**: Better outcomes, earlier mobilization, prevents retraction. **Delayed primary**: 24-48 hours post-injury, after initial wound care/antibiotics. **Indications**: Initial contamination, needs cleaning but repair attempted before 3-4 weeks. **Secondary repair**: After 3-4 weeks (after fibrosis established). **Indications**: Primary not feasible, wound contaminated, delayed diagnosis. **Advantages**: Infection risk lower, wound healed. **Disadvantages**: More scarring, stiffer outcomes. **Zone impact**: Zone II (worst friction) often delayed to allow some healing; Zones III-V (proximal) better for primary repair. **Key**: Early repair (primary/delayed primary) within 3-6 weeks best outcomes.\\n\\n**Q5**: Explain the 3-6 week \\\"danger zone\\\" in tendon healing. What complications can occur? How is it managed?\\n> **A**: **Mechanism**: During 3-6 week period, collagen breakdown phase overlaps with synthesis phase. **Result**: Tensile strength of repair at lowest point (may be <50% of normal). **Clinical significance**: **Highest re-rupture risk** if stress/load applied. **What happens**: Patient becomes overconfident, overloads tendon, rupture occurs. **Management (Protected Motion Protocol)**: (1) **Immobilization not complete** (prevents stiffness), (2) **Controlled passive motion**: Flexion/extension within protected range (e.g., Duran protocol), (3) **Supervised**: PT guides motion, ensures loads stay safe. (4) **No active motion**: Patient cannot contract tendon actively. (5) **By week 6**: Strength improving, can transition to active motion. **Benefits**: Early motion prevents adhesions (extrinsic healing → stiffness), maintains gliding, yet controlled loads prevent rupture. **After week 6**: Progressive strengthening as tensile strength increases.\\n\\n**Q6**: A 25-year-old has acute laceration of flexor tendons in the hand at the level of the palm (Zone III-IV). How would you manage this?\\n> **A**: **Location**: Zone III-IV (proximal to flexor sheath), better outcomes than Zone II. **Management**: (1) **Assessment**: History of injury, timing, contamination status. (2) **Clean wound**: Can proceed with primary repair. (3) **Surgical repair**: Exposure through appropriate incision, identification of FDS and FDP tendons. (4) **Repair technique**: 4-6 strand core suture (Kessler knot), epitenon running suture. (5) **Tensioning**: Repair must allow full ROM without gapping or excessive slack. (6) **Testing**: Move repaired tendon, check for smooth gliding, no adhesions. (7) **Immobilization**: Cast 3-5 days, then start protected early motion (controlled passive motion protocol). (8) **Rehabilitation**: Gradual progression to active motion by week 4-6, strengthening by week 8-12. **Outcomes**: Zone III-IV better than Zone II (less friction), 70-80% good/excellent outcomes expected.\\n\\n**Q7**: Distinguish between attrition rupture of flexor tendons and traumatic rupture. How does management differ?\\n> **A**: **Traumatic rupture**: Acute laceration/trauma → Immediate rupture. Acute presentation, known injury time. **Attrition rupture**: Chronic friction on rough bone surface (post-fracture fragment, RA erosion) → Gradual rupture over time. Patient may not recall specific injury. **Presentation**: Gradual loss of flexion (vs acute loss). **Management difference**: (1) **Traumatic**: Primary repair possible if within 3-6 weeks, clean wound. (2) **Attrition**: FIRST must fix underlying bone problem (remove/reduce sharp fragment, fix fracture). THEN repair tendon. If tendon repair done before fixing bone, will re-rupture from continued friction. (3) **Tendon reconstruction**: After bone fixed, if tendon repair not possible, may use EIP (Extensor Indicis Proprius) transfer as alternative. **Key point**: Attrition requires two-stage management (fix cause, then repair).\\n\\n**Q8**: A patient 2 weeks post-flexor tendon repair is eager to use the hand. He wants to start \\\"exercising\\\" the tendon. Is this safe? Explain the rationale.\\n> **A**: **Timeline**: 2 weeks = middle of danger zone (weakest time), tensile strength still very low. **Patient desire**: Natural to want to regain function, but premature loading = rupture risk. **Management**: **NO unrestricted activity.** (1) **Protected early motion essential**: Controlled passive motion protocol (Duran, Washington). (2) **Passive only**: PT moves tendon gently through safe ROM, patient cannot actively contract. (3) **No load**: Zero resistance to motion. (4) **Supervision**: PT controls motion, prevents excessive stress. (5) **Timing**: By week 4-6, can begin active motion within protected ranges. (6) **Week 8-12**: Progressive strengthening as tensile strength increases. **Rationale**: Balancing act - early motion prevents adhesions (maintains gliding) but controlled loads prevent rupture during danger zone. **Key message**: Patience critical; rupture during danger zone means failure of repair, return to surgery.,\\n        mnemonics: [],\\n        keyPoints: [\\n          \\\"Scaphoid snuffbox tenderness + normal X-ray = treat as fracture, repeat in 10-14 days\\\",\\n          \\\"Proximal scaphoid highest AVN risk; waist highest non-union risk\\\",\\n          \\\"Non-union after 6 months: ORIF with bone graft, 90-95% success\\\",\\n          \\\"Flexor tendon Zone II worst (friction); primary repair in Zones III-V better outcomes\\\",\\n          \\\"Tendon danger zone 3-6 weeks: protected early motion prevents rupture and stiffness\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Maheshwari\\\", chapter: \\\"Ch 20\\\", edition: \\\"6th\\\" },\\n          { book: \\\"Apley\\\", chapter: \\\"Ch 14\\\", edition: \\\"10th\\\" }\\n        ]\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-];
+        summary: "Epidemiology, anatomy, and classification of scaphoid and tendon injuries.",
+        contentMd: `# Hand Injuries - Foundation
+
+## Scaphoid Fracture Epidemiology
+- **Frequency**: Most common carpal bone fracture (60-70% of carpal fractures)
+- **Age**: Young adults (15-30 years), occurs in all ages
+- **Mechanism**: Fall on outstretched hand (FOOSH), direct trauma
+- **Gender**: More common in males (sports, occupational injuries)
+- **Complications**: Non-union (5-10%), AVN (10-25%), Post-traumatic OA
+
+## Scaphoid Anatomy
+- **Scaphoid**: Largest carpal bone, boat-shaped
+- **Waist**: Narrowest portion (70% of fractures occur here)
+- **Blood supply**: Primarily dorsal (retrograde to proximal pole)
+- **Location**: Radial wrist, crosses wrist joint
+- **Articulation**: Radiocarpal, intercarpal joints
+
+## Classification of Scaphoid Fractures
+
+### By Location (Prognosis)
+1. **Distal pole**: 20% of fractures
+   - Best blood supply (multiple dorsal branches)
+   - Fastest healing (6-8 weeks)
+   - Lowest complication rate (<5%)
+
+2. **Waist**: 70% of fractures (most common)
+   - Critical zone with precarious blood supply
+   - Highest non-union risk (delayed healing)
+   - Healing time 10-12 weeks or longer
+   - Risk of pseudarthrosis if displaced
+
+3. **Proximal pole**: 10% of fractures
+   - Poorest blood supply (retrograde only)
+   - Highest AVN risk (20-30%)
+   - Slowest healing (12-16+ weeks)
+   - Often requires surgical intervention
+
+### By Displacement
+- **Undisplaced**: <2 mm displacement or angulation
+- **Displaced**: >2 mm displacement or >20° angulation
+
+## Clinical Features of Scaphoid Fracture
+- **Pain**: Radial-sided wrist pain, worse with activity
+- **Swelling**: Radial wrist swelling (may be subtle)
+- **Limited motion**: Especially radial deviation, wrist extension
+- **Physical exam**:
+  - **Anatomical snuffbox tenderness**: Classic finding (between EPL and EPB tendons)
+  - **Scaphoid compression test**: Axial loading of thumb
+  - **Crepitus**: May indicate non-union
+
+## Tendon Injuries Overview
+
+### Hand Flexor Tendons (Extrinsic)
+- **FDP** (Flexor Digitorum Profundus): Flexes DIP joint (distal phalanx insertion)
+- **FDS** (Flexor Digitorum Superficialis): Flexes PIP joint (middle phalanx insertion)
+- **FPL** (Flexor Pollicis Longus): Flexes thumb IP joint
+- **FCU** (Flexor Carpi Ulnaris): Wrist flexor
+
+### Hand Extensor Tendons (Extrinsic)
+- **EDC** (Extensor Digitorum Communis): Extends MCP, PIP, DIP joints
+- **EPL** (Extensor Pollicis Longus): Extends thumb IP and MCP joints
+- **EPB** (Extensor Pollicis Brevis): Extends thumb CMC and MCP joints
+- **EDM** (Extensor Digiti Minimi): Extends 5th finger
+
+### Verdan Zone Classification (Flexor Zones)
+- **Zone I**: Distal to FDS insertion (fingertip to A4 pulley)
+- **Zone II**: A1 pulley to origin of FDS (flexor sheath)
+- **Zone III**: FDS origin to wrist crease
+- **Zone IV**: Wrist (carpal tunnel region)
+- **Zone V**: Forearm proximal to wrist
+
+## Clinical Features of Tendon Injury
+- **Loss of active motion**: Cannot actively move joint (tendon function lost)
+- **Preserved passive motion**: Gravity or examiner can move joint passively
+- **Deformity**: Claw hand (loss of flexion), loss of extension
+- **Mechanism**: Laceration, crush injury, ischemia, attrition (chronic friction)
+- **Timing**: Acute (hours) vs chronic (months/years for attrition)`,
+        mnemonics: [
+          { text: "Scaphoid Location Healing: DWP", explanation: "Distal (best), Waist (worst non-union), Proximal (worst AVN)" },
+          { text: "Scaphoid Diagnosis: SNB", explanation: "Snuffbox tenderness, Normal X-ray initially, Bone scan/CT confirms" },
+          { text: "Flexor Zones: I-V Distal to Proximal", explanation: "Zone II worst (friction, adhesions)" }
+        ],
+        keyPoints: [
+          "Scaphoid most common carpal fracture; waist location highest non-union risk",
+          "Anatomical snuffbox tenderness suggests scaphoid fracture even if X-ray normal",
+          "Distal scaphoid heals best; proximal pole high AVN risk",
+          "Flexor tendon Zone II most difficult for repair",
+          "Loss of active motion indicates tendon injury; passive motion preserved"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Hand Injuries", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Hand Injuries", edition: "10th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "hand-injuries-layer-2-mechanism",
+        title: "Hand Injuries - Pathophysiological Mechanisms",
+        estimatedMinutes: 25,
+        summary: "Blood supply, healing, and complication mechanisms in scaphoid and tendon injuries.",
+        contentMd: `# Hand Injuries - Pathophysiological Mechanisms
+
+## Scaphoid Blood Supply and Complications
+
+### Arterial Supply Pattern
+- **Distal pole**: Rich supply (multiple branches from radial artery)
+- **Waist**: Mixed supply (dorsal main branch, some palmar contribution)
+- **Proximal pole**: Retrograde supply ONLY (from distal fragment via dorsal branch)
+
+### Mechanism of AVN in Proximal Pole
+1. **Retrograde supply**: Proximal pole entirely dependent on distal fragment blood supply
+2. **Fracture disrupts vessels**: Disrupts retrograde flow
+3. **Immediate ischemia**: Proximal fragment becomes avascular
+4. **Osteonecrosis timeline**: Develops over months (late radiographic finding 6-12 months)
+5. **Collapse phase**: Weakened bone collapses under weight-bearing
+6. **Post-traumatic OA**: Progressive degeneration of wrist joint
+
+### Mechanism of Non-union (Waist Fractures)
+1. **Initial fracture gap**: Displaced fracture creates space
+2. **Poor blood supply**: Waist has modest vascularity
+3. **Pseudarthrosis development**: False joint develops across gap
+4. **Loss of bridging**: No bony bridging across fracture site
+5. **Chronic instability**: Fracture gap moves; prevents healing
+6. **Result**: Chronic pain, weakness, wrist dysfunction
+
+## Tendon Healing Mechanisms
+
+### Intrinsic Healing
+- **Cell source**: Cells from tendon proper (fibroblasts)
+- **Process**: Minimal inflammatory response; collagen deposition
+- **Advantage**: Can heal without extrinsic inflammation
+- **Timing**: Occurs in parallel with extrinsic healing
+
+### Extrinsic Healing
+- **Cell source**: Surrounding tissues (paratenon, epitenon, synovial sheath)
+- **Inflammatory phase**: Macrophages, PMNs; neovascularization
+- **Result**: Stronger initial healing but more scar tissue
+- **Adhesions**: Excessive inflammation → adhesions → joint stiffness
+- **Balance needed**: Enough inflammation for healing strength, but controlled to minimize adhesions
+
+### Tendon Healing Phases
+| Phase | Timeline | Events | Strength |
+|-------|----------|--------|----------|
+| Inflammatory | 0-3 days | Fibrin formation, cell infiltration | Very low |
+| Early fibroblast | 3-7 days | Collagen deposition begins | Low |
+| Collagen phase | 2-3 weeks | Rapid collagen synthesis | Increasing |
+| Remodeling | 3-6 months | Collagen cross-linking, maturation | Approaching peak |
+| Maturation | 6-12 months | Final remodeling, maximum strength | Peak reached |
+
+### The Critical 3-6 Week "Danger Zone"
+- **Mechanism**: Collagen breakdown phase overlaps synthesis phase
+- **Result**: Tensile strength at LOWEST point (may be <50% of normal)
+- **Clinical significance**: HIGHEST RE-RUPTURE RISK if stress applied
+- **Management implications**: Protected motion protocol essential; patient must restrict load
+
+## Factors Affecting Tendon Healing
+
+### Vascular Supply
+- **Well-vascularized zones** (III-V proximal): Faster healing
+- **Poorly vascularized zones** (II within sheath): Slower, more complications
+- **Zone I**: Dependent on small vessels; tenuous
+
+### Zone of Injury (Verdan Zones)
+- **Zone I (distal)**: Small area, difficult; outcomes moderate
+- **Zone II (within sheath)**: HIGH FRICTION, high adhesion risk; most difficult
+- **Zones III-IV (wrist)**: Better outcomes, less friction
+- **Zone V (forearm)**: Best outcomes, most proximal
+
+### Infection Risk
+- **Contaminated wounds**: Delay repair or secondary repair
+- **Infection impairs healing**: Disrupts collagen deposition, increases inflammation
+- **Clean wounds**: Primary repair safer
+
+### Immobilization Effects
+- **Complete immobilization**: Prevents adhesions but causes stiffness, joint contracture
+- **Early motion**: Prevents adhesions, maintains gliding, but must be protected
+- **Optimal approach**: Protected early motion (controlled load, supervised)`,
+        mnemonics: [
+          { text: "Scaphoid Healing: Distal Fast, Waist Risk, Proximal AVN", explanation: "Distal best prognosis; Waist non-union; Proximal AVN" },
+          { text: "Tendon Danger Zone: 3-6 Weeks", explanation: "Lowest strength; highest re-rupture risk" },
+          { text: "Tendon Zones: I hardest, II worst, III-V best", explanation: "Zone I small area; Zone II high friction; Zones III-V proximal" }
+        ],
+        keyPoints: [
+          "Proximal scaphoid retrograde blood supply only; fracture causes ischemia/AVN",
+          "Non-union occurs when fracture gap prevents bony bridging; pseudarthrosis develops",
+          "Tendon healing: intrinsic (fibroblasts) vs extrinsic (inflammation + adhesions)",
+          "3-6 week danger zone: lowest strength; re-rupture risk highest with stress",
+          "Early motion improves tendon gliding; complete immobilization causes stiffness"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Hand Injuries", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Hand Injuries", edition: "10th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "hand-injuries-layer-3-clinical",
+        title: "Hand Injuries - Clinical Management",
+        estimatedMinutes: 25,
+        summary: "Diagnosis and management of scaphoid fractures and tendon injuries with outcome optimization.",
+        contentMd: `# Hand Injuries - Clinical Management
+
+## Scaphoid Fracture Management
+
+### Initial Assessment
+- **History**: Mechanism (FOOSH), timing, hand dominance
+- **Examination**: Snuffbox tenderness, pain with axial thumb loading
+- **Imaging**: X-ray (AP, lateral, scaphoid views), CT/MRI if inconclusive
+
+### Undisplaced Scaphoid Fracture
+
+**Conservative Treatment**:
+1. **Immobilization**:
+   - **Distal pole**: Short arm thumb spica cast/splint 6-8 weeks
+   - **Waist**: Long arm thumb spica 4-6 weeks, then short arm 6-8 weeks total
+   - **Proximal**: Long arm cast 12-16 weeks (or ORIF preferred)
+
+2. **Follow-up Imaging**:
+   - **Initial X-rays**: May be negative (undisplaced, no resorption yet)
+   - **Repeat X-rays**: 10-14 days (fracture line visible from resorption at fracture margins)
+   - **Serial X-rays**: 4, 8, 12 weeks to monitor healing
+
+3. **Criteria for Union**:
+   - Fracture line obliteration (no visible fracture line)
+   - Bridging callus (bone bridging across fracture site)
+   - Clinical union (painless, tender; pain-free movement)
+
+4. **Return to Activity**:
+   - **Light duty**: 6-8 weeks
+   - **Sport/heavy activities**: 3-4 months (confirm radiographic union first)
+   - **Imaging confirmation required**: X-ray shows union before resuming high-impact activities
+
+### Displaced Scaphoid Fracture
+
+**Surgical Management** (Preferred):
+1. **ORIF** (Open Reduction, Internal Fixation):
+   - **Approach**: Volar or dorsal depending on fracture location
+   - **Fixation**: Percutaneous screw (cannulated, headless screw preferred)
+   - **Positioning**: Screw placed from distal to proximal, or distal pole screw
+
+2. **Advantages of ORIF**:
+   - Early mobilization (days to weeks)
+   - Better alignment, lower non-union risk
+   - Shorter immobilization period
+
+3. **Post-operative**:
+   - Immobilization: 4-6 weeks
+   - ROM exercises: Begin by week 3-4
+   - Return to activity: 8-12 weeks
+
+### Non-union Management
+
+**Established Non-union** (>6 months without healing):
+1. **ORIF with bone graft**:
+   - **Bone graft source**: Cancellous bone from iliac crest
+   - **Technique**: Open approach, remove scar tissue, pack graft into gap
+   - **Compression screw**: Ensure compression at fracture site
+
+2. **Post-operative**:
+   - Immobilization: 6-8 weeks
+   - Follow-up X-rays: 4, 8, 12 weeks
+   - Success rate: 90-95% with proper technique
+
+### AVN Management
+
+**Early AVN** (<50% proximal pole involved):
+- **Vascularized bone graft**: Restore blood supply (complex surgery)
+- **Success**: Good if done early, before collapse
+
+**Established AVN** (>50% or with collapse):
+- **Proximal row carpectomy**: Salvage procedure (remove proximal row bones)
+- **Wrist fusion**: If severe arthritis develops
+- **Outcome**: Pain relief but reduced wrist motion
+
+## Tendon Injury Management
+
+### Primary Flexor Tendon Repair
+
+**Criteria for Primary Repair**:
+1. **Timing**: Within 3-6 weeks of injury
+2. **Wound condition**: Clean, non-contaminated
+3. **Vascularity**: Adequate blood supply to allow healing
+4. **Patient factors**: Compliance with rehabilitation protocol
+
+**Surgical Technique**:
+1. **Exposure**: Careful opening, preserve vital structures
+2. **Identification**: Find both tendon ends
+3. **Cleaning**: Remove devitalized tissue
+4. **Repair technique**:
+   - **Core suture**: 4-6 strand (Kessler knot, Tsuge, Pennington)
+   - **Epitenon suture**: Running suture on surface for strength/gliding
+   - **Tension critical**: Too tight → dysfunction; too loose → weakness
+
+**Rehabilitation Protocol**:
+1. **Protected early motion** (Start POD #3-5):
+   - **Duran protocol**: Controlled passive motion within safe ROM
+   - **Washington regimen**: Low-load passive motion
+   - **Load**: Minimal to prevent rupture
+   - **Supervision**: PT-guided motion
+
+2. **Progression**:
+   - **Weeks 3-4**: Protected passive motion
+   - **Weeks 4-6**: Active motion begins (within protected ROM)
+   - **Weeks 6+**: Progressive strengthening
+   - **Return to function**: 8-12 weeks
+
+**Outcomes by Zone**:
+| Zone | Difficulty | Outcome | Adhesion Risk |
+|------|-----------|---------|---------------
+| I | Difficult | Moderate | Moderate |
+| II | Most difficult | Guarded | HIGH |
+| III-IV | Moderate | Good | Low-moderate |
+| V | Easiest | Excellent | Low |
+
+### Primary Extensor Tendon Repair
+
+**Timing**:
+- **Primary**: Within 6-8 hours of injury
+- **Delayed primary**: 24-48 hours after wound care
+- **Secondary**: After 3-4 weeks (if primary not feasible)
+
+**Surgical Technique**:
+1. **Advantages**: Superficial, simpler anatomy than flexors
+2. **Repair**: 3-4 core sutures + epitenon suture
+3. **Tension**: Must be precise (critical for extensor)
+
+**Rehabilitation**:
+1. **Immobilization**: 3-4 weeks in extension position
+2. **Controlled mobilization**: Begins weeks 4-5
+3. **Return to function**: Slower than flexors (8-12 weeks)
+4. **Outcomes**: Better than flexors (fewer adhesions)
+
+### Chronic/Attrition Ruptures
+
+**Mechanism**:
+- Chronic friction on sharp bone fragment (post-fracture)
+- Example: Rheumatoid arthritis with erosions
+
+**Management**:
+1. **Two-stage approach**:
+   - **Stage 1**: Fix underlying cause (reduce bone fragment, stabilize fracture)
+   - **Stage 2**: Wait for tissue healing, then repair tendon
+
+2. **Reconstruction if repair not possible**:
+   - **Tendon transfer**: Use adjacent tendon (EIP for index FDP)
+   - **Staged procedures**: Remove adhesions, place spacer, graft later
+
+### Complications and Prevention
+
+**Common complications**:
+1. **Stiffness**: From adhesions (extrinsic healing)
+2. **Re-rupture**: If stress applied during danger zone
+3. **Functional deficit**: Weakness, loss of motion
+4. **Infection**: Contaminated wounds
+
+**Prevention**:
+- Prompt appropriate repair
+- Protected early motion (controlled)
+- Compliance with rehabilitation
+- Staged procedures if needed`,
+        mnemonics: [
+          { text: "Scaphoid Immobilization: 6-12 weeks", explanation: "Distal 6-8, Waist 10-12, Proximal 12-16 or surgery" },
+          { text: "Tendon Repair Sutures: 4-6 strands", explanation: "More strands = stronger repair, earlier motion possible" },
+          { text: "Flexor Repair Zones: I hard, II worst, III-V best", explanation: "Zone II (friction) most difficult" }
+        ],
+        keyPoints: [
+          "Undisplaced scaphoid: immobilization 6-12 weeks based on location; repeat X-ray in 10-14 days",
+          "Displaced scaphoid: ORIF preferred (earlier mobilization, lower non-union risk)",
+          "Non-union after 6 months: ORIF with cancellous bone graft; 90-95% success",
+          "Flexor tendon: 4-6 strand core suture, epitenon, protected early motion",
+          "Danger zone 3-6 weeks: lowest strength; mobilization must be protected/controlled"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Hand Injuries", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Hand Injuries", edition: "10th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "hand-injuries-layer-4-exam",
+        title: "Hand Injuries - Exam Preparation",
+        estimatedMinutes: 15,
+        summary: "High-yield exam scenarios and case-based decision making.",
+        contentMd: `# Hand Injuries - Exam Preparation
+
+## High-Yield Facts Summary
+
+### Scaphoid Fractures
+1. **Most common carpal bone fracture** (60-70%)
+2. **Location frequency**: Distal (20%), Waist (70%), Proximal (10%)
+3. **Clinical sign**: Anatomical snuffbox tenderness
+4. **Imaging**: Initial X-ray often negative; repeat 10-14 days
+5. **Complications**: Non-union (5-10%), AVN (10-25%)
+6. **Blood supply**: Distal rich, Waist moderate, Proximal retrograde only
+7. **Non-union**: Highest in waist (70% of cases)
+8. **AVN**: Highest in proximal pole (20-30% risk)
+9. **Treatment**: Distal/undisplaced conservative; waist/proximal ORIF often preferred
+
+### Tendon Injuries
+1. **Verdan zones I-V**: I smallest/distal to V largest/proximal
+2. **Zone II worst**: High friction, highest adhesion risk
+3. **Danger zone**: 3-6 weeks (lowest tensile strength)
+4. **Primary repair criteria**: <3-6 weeks, clean wound, good vascularity
+5. **Repair technique**: 4-6 strand core suture + epitenon suture
+6. **Protected early motion**: Begin POD #3-5 to prevent adhesions
+7. **Outcomes**: Zone I moderate, Zone II guarded, Zones III-V good-excellent
+
+## Case Scenarios
+
+### Case 1: Acute Scaphoid Fracture
+**Scenario**: 22-year-old falls on outstretched hand. Snuffbox tenderness. X-rays appear normal.
+
+**Diagnosis**: **Clinical scaphoid fracture** (snuffbox tenderness is classic; initial X-rays negative in undisplaced fractures)
+
+**Management**:
+1. **Immobilize**: Short arm thumb spica cast (6-8 weeks for presumed distal)
+2. **Repeat X-rays**: 10-14 days (fracture line becomes visible)
+3. **Confirm location**: Once visible, adjust immobilization duration based on location
+4. **Serial follow-up**: X-rays at 4, 8, 12 weeks
+5. **Return to activity**: Confirm radiographic union before high-impact activities
+
+**Key teaching point**: Never miss scaphoid fracture on snuffbox tenderness alone; always treat clinically even if X-ray negative initially.
+
+### Case 2: Non-union of Scaphoid
+**Scenario**: 8 months post-scaphoid fracture, pain persists, X-ray shows gap.
+
+**Diagnosis**: **Scaphoid non-union** (pseudarthrosis)
+
+**Management**:
+1. **ORIF with bone graft**:
+   - Open approach (volar or dorsal)
+   - Remove scar tissue/pseudarthrosis debris
+   - Pack cancellous bone graft into gap
+   - Compress with screw fixation
+
+2. **Post-operative**:
+   - Immobilize 6-8 weeks
+   - Follow-up X-rays at 4, 8, 12 weeks
+   - Expected success: 90-95%
+
+**Key teaching point**: Non-union requires surgical intervention; conservative management fails.
+
+### Case 3: Acute Flexor Tendon Laceration in Zone II
+**Scenario**: 25-year-old acute laceration of finger at palm level (flexor sheath). Clean wound.
+
+**Diagnosis**: **Acute flexor tendon injury, Zone II-III** (or Zone III depending on exact level)
+
+**Management**:
+1. **Assessment**: Confirm clean wound, adequate vascularity
+2. **Timing**: Primary repair feasible (within 3-6 weeks)
+3. **Surgical repair**:
+   - Careful exposure
+   - Identify both tendon ends
+   - 4-6 strand core suture (Kessler knot)
+   - Epitenon running suture
+   - Test repair for tension (no gapping, smooth gliding)
+
+4. **Immobilization**: Cast 3-5 days, then begin protected early motion
+
+5. **Rehabilitation**:
+   - **Duran protocol**: Controlled passive motion POD #3-5
+   - **Progressive**: Active motion weeks 4-6, strengthening weeks 6-12
+   - **Timeline**: Return to function 8-12 weeks
+
+6. **Expected outcome**: Zone III better than Zone II (less friction); 70-80% good-excellent
+
+### Case 4: Patient Over-exercises During Danger Zone
+**Scenario**: 2 weeks post-flexor tendon repair. Patient feels stronger, starts aggressive exercises.
+
+**Problem**: **Danger zone (3-6 weeks)**: Tensile strength at LOWEST point
+
+**Management**:
+1. **Explain danger zone**: Strength misleading; weakness is real
+2. **Restrict activities**: NO active loading during weeks 3-6
+3. **Continue protected motion**: Passive ROM only, supervised PT
+4. **Prevent rupture**: Strict compliance essential
+5. **Progression**: Only after week 6 can increase load
+6. **Counseling**: Patients often want to "exercise harder" when feeling better; must explain danger`,
+        mnemonics: [
+          { text: "Scaphoid Immobilization: Distal 6-8, Waist 10-12, Proximal 12-16", explanation: "Or ORIF for proximal/displaced" },
+          { text: "Tendon Repair: 4-6 strands + epitenon", explanation: "Core suture strength, epitenon for gliding" },
+          { text: "Danger Zone: 3-6 weeks, Lowest strength", explanation: "Must restrict loading; highest re-rupture risk" }
+        ],
+        keyPoints: [
+          "Snuffbox tenderness + normal X-ray = treat as scaphoid fracture; repeat in 10-14 days",
+          "Non-union after 6 months: ORIF with bone graft; 90-95% success",
+          "Flexor tendon Zone II: most difficult due to friction; expert repair needed",
+          "Primary repair: <3-6 weeks, clean wound, adequate vascularity",
+          "Danger zone 3-6 weeks: protected motion essential; patient education critical"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Hand Injuries", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Hand Injuries", edition: "10th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "hand-injuries-layer-5-active-recall",
+        title: "Hand Injuries - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Key Q&A for mastering hand injury diagnosis and management.",
+        contentMd: `# Active Recall - Hand Injuries
+
+**Q1**: A patient has anatomical snuffbox tenderness and normal initial X-rays. How would you diagnose and manage?
+
+**A1**: **Diagnosis**: Clinical scaphoid fracture. Snuffbox tenderness is classic sign; initial X-rays often negative in undisplaced fractures (no bone resorption yet). **Management**: (1) Immobilize with thumb spica cast (short arm, 6-8 weeks assuming distal). (2) Repeat X-rays 10-14 days (fracture line becomes visible from resorption at margins). (3) Once fracture confirmed and location identified, adjust immobilization duration (distal 6-8 weeks, waist 10-12 weeks, proximal 12-16 weeks). (4) Serial X-rays every 4 weeks to confirm healing. (5) Return to activity only after radiographic union confirmed.
+
+**Q2**: Explain the difference in blood supply between distal, waist, and proximal scaphoid poles. How does this affect outcomes?
+
+**A2**: **Distal pole**: Rich blood supply (multiple dorsal and palmar branches), fastest healing (6-8 weeks), lowest complication rate (<5%). **Waist**: Mixed blood supply (dorsal main, some palmar), moderate vascularity, 70% of non-unions occur here (highest non-union risk), healing 10-12 weeks. **Proximal pole**: RETROGRADE blood supply ONLY (from distal pole via dorsal branch), fracture isolates proximal fragment → ischemia → AVN risk 20-30%, highest complication rate. **Clinical significance**: Distal fractures best prognosis; proximal worst. Proximal fractures often require ORIF to prevent complications.
+
+**Q3**: A scaphoid non-union is diagnosed 8 months post-fracture. Describe the surgical management and expected outcomes.
+
+**A3**: **Problem**: Non-union = >6 months without bony union; pseudarthrosis (false joint) develops. **Surgical management**: (1) **ORIF**: Open Reduction, Internal Fixation approach (volar or dorsal). (2) **Remove scar tissue**: Clean out fracture gap, remove pseudarthrosis debris. (3) **Bone graft**: Cancellous autograft from iliac crest, packed into gap to bridge fracture. (4) **Compression fixation**: Cannulated screw across fracture to ensure compression while healing. (5) **Post-op immobilization**: Cast 6-8 weeks. (6) **Follow-up X-rays**: 4, 8, 12 weeks to confirm union. **Outcomes**: 90-95% union rate with proper technique. Success factors: compression fixation, bone graft quality, adequate immobilization, patient compliance.
+
+**Q4**: Compare primary vs delayed primary vs secondary tendon repair. When is each indicated?
+
+**A4**: **Primary repair**: Performed within 6-8 hours (up to 24 hours) of injury. **Indications**: Clean wound, good vascularity, patient commitment to rehabilitation. **Advantages**: Best outcomes, earlier mobilization, prevents retraction. **Delayed primary**: 24-48 hours after initial wound care. **Indications**: Wound needs cleaning, but repair attempted before fibrosis (within 3-4 weeks). **Secondary repair**: After 3-4 weeks. **Indications**: Primary not feasible, wound contaminated, delayed diagnosis. **Advantages**: Lower infection risk, wound healed. **Disadvantages**: More scarring, stiffer outcomes. **Zone impact**: Zone II (worst friction) often delayed; Zones III-V better for primary. **Key principle**: Early repair (primary/delayed primary) within 3-6 weeks best outcomes.
+
+**Q5**: Explain the 3-6 week "danger zone" in tendon healing. What happens and how is it managed?
+
+**A5**: **Mechanism**: During 3-6 weeks, collagen breakdown phase overlaps with synthesis phase. **Result**: Tensile strength at LOWEST point (may be <50% of normal). **Clinical significance**: HIGHEST RE-RUPTURE RISK if stress/load applied during this period. **What happens**: Patient becomes overconfident, overloads tendon thinking it's healed, rupture occurs → failure of repair, return to surgery. **Management (Protected Motion Protocol)**: (1) **Immobilization NOT complete** (prevents stiffness), (2) **Controlled passive motion**: Supervised PT-guided motion within protected ROM (e.g., Duran protocol), (3) **Patient cannot actively contract tendon** (supervised passive motion only), (4) **No load stress**: Zero external resistance, (5) **By week 6**: Strength improving, can transition to active motion. **Benefits**: Early motion prevents adhesions (maintains gliding), preserves joint mobility, yet controlled loads prevent rupture. **Patient education critical**: Many patients don't understand why they can't exercise more during "danger zone"; must explain pathophysiology.
+
+**Q6**: A 25-year-old has acute laceration of flexor tendons at the palm level (Zone III-IV). Discuss primary repair technique and rehabilitation.
+
+**A6**: **Assessment**: (1) Confirm clean wound, adequate vascularity, (2) Patient commitment to rehabilitation. **Surgical repair**: (1) **Exposure**: Careful opening via appropriate incision, preserve vital structures. (2) **Identification**: Locate both tendon ends (FDS and FDP). (3) **Cleaning**: Remove devitalized tissue. (4) **Repair technique**: 4-6 strand core suture (Kessler knot, Tsuge, or Pennington) for strength, epitenon running suture for gliding. (5) **Tensioning**: Critical - too tight causes dysfunction, too loose causes weakness; test for appropriate tension and no gapping. **Rehabilitation**: (1) **Protected early motion protocol** (Duran): Start POD #3-5 with controlled passive motion in safe ROM. (2) **Progression**: Active motion begins week 4-6, strengthening week 6-12. (3) **Danger zone**: Strictly protected motion weeks 3-6. (4) **Return to function**: Expected 8-12 weeks. **Outcomes**: Zone III-IV better than Zone II (less friction); 70-80% good/excellent expected.
+
+**Q7**: Distinguish between attrition rupture and traumatic tendon rupture. How does management differ?
+
+**A7**: **Traumatic rupture**: Acute laceration/trauma → immediate rupture. Acute presentation, known injury time. **Attrition rupture**: Chronic friction on rough bone surface (post-fracture bony prominence, rheumatoid erosions) → gradual rupture over months. Patient may not recall specific acute injury; progressive loss of flexion. **Management difference**: (1) **Traumatic**: Primary/delayed primary repair possible if <3-6 weeks, clean wound. (2) **Attrition**: FIRST must fix underlying bone problem (remove rough fragment, reduce fracture, stabilize), THEN repair tendon. If tendon repair done BEFORE fixing bone, will re-rupture from continued friction. (3) **Reconstruction if repair not possible**: May use EIP (Extensor Indicis Proprius) transfer or staged procedures. **Key point**: Attrition requires two-stage management (fix underlying cause first, then repair).
+
+**Q8**: A patient is 2 weeks post-flexor tendon repair and eager to use the hand aggressively. Is this safe?
+
+**A8**: **Timeline**: 2 weeks = middle of danger zone, tensile strength still VERY LOW (<50% normal). **Patient desire**: Natural to want function, but PREMATURE LOADING = RUPTURE RISK. **Management**: **NO unrestricted activity**. (1) **Protected early motion essential**: Only controlled passive motion, supervised PT. (2) **Passive only**: PT moves tendon gently, patient cannot actively contract. (3) **No load**: Zero resistance. (4) **Supervision required**: PT controls motion, prevents overload. (5) **Timing**: By week 4-6, can begin active motion within protected ROM. (6) **Week 8-12**: Progressive strengthening as tensile strength increases. **Explanation to patient**: "Patience critical. Rupture during danger zone means failure of repair and return to surgery. Your hand feels better but is still weak." **Key message**: Balancing act - early motion prevents stiffness but must be controlled.`,
+        mnemonics: [
+          { text: "Scaphoid Zones: Distal Fast, Waist Risk, Proximal AVN", explanation: "Distal best; Waist non-union; Proximal AVN" },
+          { text: "Tendon Zones: I hardest, II worst, III-V best", explanation: "Zone II friction worst; Zones III-V proximal" },
+          { text: "Danger Zone: 3-6 Weeks, Lowest Strength", explanation: "Must restrict loading; highest rupture risk" }
+        ],
+        keyPoints: [
+          "Snuffbox tenderness + normal X-ray = treat as scaphoid; repeat X-ray in 10-14 days",
+          "Scaphoid distal best healing; waist highest non-union risk; proximal highest AVN risk",
+          "Non-union after 6 months: ORIF with bone graft; 90-95% success",
+          "Flexor tendon Zone II: most difficult (friction); requires expert repair",
+          "Danger zone 3-6 weeks: protected motion only; patient education essential"
+        ],
+        textbookRefs: [
+          { book: "Maheshwari's Essential Orthopaedics", chapter: "Hand Injuries", edition: "6th" },
+          { book: "Apley's System of Orthopaedics and Fractures", chapter: "Hand Injuries", edition: "10th" }
+        ]
+      }
+    ]
+  }
 ];
