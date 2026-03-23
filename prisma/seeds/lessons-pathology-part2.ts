@@ -1,15 +1,1832 @@
-export const pathologyPart2Lessons = [
+import type { TopicLessons } from "./content-loader";
+
+/**
+ * 5-layer lessons for Pathology module PA-MOD-05.
+ * Covers GI & Hepatobiliary Pathology.
+ * Primary ref: Robbins Pathologic Basis of Disease 10th ed.
+ * Secondary ref: Harsh Mohan Textbook of Pathology 8th ed.
+ */
+export const pathologyPart2Lessons: TopicLessons[] = [
+  // ═══════════════════════════════════════════════════════════════
+  // PA-MOD-05: GI & HEPATOBILIARY PATHOLOGY
+  // ═══════════════════════════════════════════════════════════════
+
+  // ─── Topic 1: Oral & Esophageal Pathology ─────────────────────
   {
     topicCode: "PA-MOD-05-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "oral-esophageal-foundation",
+        slug: "oral-esophageal-pathology-foundation",
         title: "Oral & Esophageal Pathology - Foundation",
         estimatedMinutes: 20,
-        summary: "Oral cavity and esophageal diseases including OSF, SCC, Barrett's esophagus, and strictures.",
-        contentMd: "# Oral & Esophageal Pathology\n\n**Oral Submucous Fibrosis (OSF)**: Betel nut-induced pre-malignant fibrosis; progressive trismus; endemic India\n**Oral SCC**: 90% of oral cancers; tobacco, alcohol, betel nut risk factors\n**Barrett's Esophagus**: GERD-induced metaplasia; pre-malignant; intestinal-type columnar epithelium\n**Esophageal Strictures**: Caustic > peptic in severity; myofibroblast-mediated fibrosis,\n        mnemonics: [\n          { text: \"ABODE\", explanation: \"Aphthous, Bacterial, Oral lichen, Denture trauma, Erythema\" },\n          { text: \"OSF Grades\", explanation: \"I (<5mm), II (5-30mm), III (>30mm) interincisal distance\" }\n        ],\n        keyPoints: [\n          \"OSF from betel nut arecoline activates TGF-β → fibrosis; endemic in India\",\n          \"Oral SCC: 90% of oral cancers; field cancerization explains recurrence\",\n          \"Barrett's: GERD complication; metaplasia to columnar epithelium; dysplasia progression\",\n          \"Strictures: Caustic (alkali, full-thickness), Peptic (acid, mucosal), Radiation, Scleroderma\"\n        ],\n        textbookRefs: [\n          { book: \"Robbins and Cotran Pathologic Basis of Disease\", chapter: \"17: The Gastrointestinal Tract\", edition: \"10th\" },\n          { book: \"Harsh Mohan Textbook of Pathology\", chapter: \"Oral Cavity and Esophagus\", edition: \"8th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"oral-esophageal-mechanism\",\n        title: \"Oral & Esophageal Pathology - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathogenic mechanisms in OSF, carcinogenesis, Barrett's metaplasia, and stricture formation.\",\n        contentMd: "# Mechanisms\\n\\n**OSF Carcinogenesis**: Arecoline + piperine + nitrosamines → oxidative stress → p53 mutations → field cancerization\\n**Barrett's Metaplasia**: GERD → epithelial injury → IL-8/TNF-α → stem cell activation → intestinal metaplasia → p16↓ → p53↓ → dysplasia\\n**Stricture Formation**: Injury → inflammation → TGF-β → myofibroblast → collagen deposition → fibrosis + contraction,\\n        mnemonics: [\\n          { text: \\\"CAP\\\", explanation: \\\"Carcinogens, Accumulated damage, Progression dysplasia\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Betel nut arecoline: Oxidative stress, TGF-β activation, field cancerization\\\",\\n          \\\"Barrett's: Progressive molecular changes (p16 early, p53 late); aneuploidy indicates progression\\\",\\n          \\\"Field cancerization: Multiple independent mutations; one progresses; explains recurrence\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"oral-esophageal-clinical\\\",\\n        title: \\\"Oral & Esophageal Pathology - Clinical\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Clinical management of OSF, oral cancer, Barrett's, and esophageal strictures.\\\",\\n        contentMd: ``# Clinical Management\\n\\n**OSF**: Cessation (PRIMARY prevention), corticosteroids, curcumin; surgical reconstruction for severe trismus\\n**Oral SCC**: Biopsy diagnostic; TNM staging; surgery + chemo/radiation; 50-60% 5-year survival in India\\n**Barrett's**: Non-dysplastic: 3-yearly endoscopy; LGD: 6-monthly or ablation; HGD: ablation/esophagectomy\\n**Strictures**: PPI (peptic), endoscopic dilation (all), esophageal replacement (refractory caustic),\\n        mnemonics: [\\n          { text: \\\"BURN\\\", explanation: \\\"Burning sensation, Ulcer non-healing, Reduced mouth opening, Nodes\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"OSF: Betel nut cessation halts but doesn't reverse progression\\\",\\n          \\\"Oral SCC: 50-60% 5-year survival; late presentation in India (stage III-IV)\\\",\\n          \\\"Barrett's: HGD requires aggressive intervention; surveillance insufficient\\\",\\n          \\\"Strictures: Caustic requires dilation/replacement; peptic responds to PPI\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"oral-esophageal-exam\\\",\\n        title: \\\"Oral & Esophageal Pathology - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"High-yield exam concepts and NEXT-pattern questions.\\\",\\n        contentMd: ``# Exam Concepts\\n\\n1. OSF: Arecoline → TGF-β ↑; stages I/II/III based on interincisal distance\\n2. Oral SCC: 90% of cancers; tobacco + alcohol synergistic; field cancerization\\n3. Barrett's: GERD → metaplasia; dysplasia progression: LGD → HGD → adenocarcinoma\\n4. p16 loss (early), p53 loss (late) in Barrett's dysplasia\\n5. Strictures: Caustic (worst), peptic (PPI-responsive), radiation, scleroderma,\\n        mnemonics: [\\n          { text: \\\"SCC-BAT\\\", explanation: \\\"Smoking, Betel nut, Chronic irritation, Alcohol, Tobacco\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"OSF: TGF-β pathway; endemic India; cessation critical\\\",\\n          \\\"Oral SCC: Late India presentation; field cancerization recurrence\\\",\\n          \\\"Barrett's: HGD ablation/surgery; non-dysplastic surveillance\\\",\\n          \\\"Diagnosis: Biopsy essential for >2 week ulcers\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"oral-esophageal-recall\\\",\\n        title: \\\"Oral & Esophageal Pathology - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"Flashcard Q&A pairs for active recall.\\\",\\n        contentMd: ``# Active Recall Q&A\\n\\n**Q1**: Alkaloid in betel nut causing OSF? **A**: Arecoline; TGF-β activation → myofibroblast differentiation\\n**Q2**: Field cancerization definition? **A**: Multiple independent mutations; one progresses; explains recurrence\\n**Q3**: Barrett's esophagus significance? **A**: GERD complication; columnar metaplasia; 0.2-0.5% annual adenocarcinoma risk\\n**Q4**: Earliest molecular change in Barrett's? **A**: p16 loss; p53 loss indicates advanced dysplasia\\n**Q5**: Caustic vs. peptic strictures? **A**: Caustic: full-thickness, extensive fibrosis, worse prognosis; Peptic: mucosal, PPI-responsive\\n**Q6**: OSF grading system? **A**: Stage I (<5mm), II (5-30mm), III (>30mm) interincisal distance\\n**Q7**: High-grade dysplasia in Barrett's management? **A**: Ablation or esophagectomy; surveillance insufficient\\n**Q8**: Oral SCC: % and India presentation timing? **A**: 90% of oral cancers; 60% stage III-IV at diagnosis\\n**Q9**: Why GERD predisposes to adenocarcinoma? **A**: Repeated injury → Barrett's metaplasia → dysplasia via p16↓, p53↓, angiogenesis\\n**Q10**: OSF malignancy risk mechanism? **A**: Arecoline oxidative stress + chronic inflammation + field cancerization,\\n        mnemonics: [\\n          { text: \\\"ACID-DA\\\", explanation: \\\"Acid reflux, Continuous injury, Intestinal metaplasia, Dysplasia, angiogenesis\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Arecoline → TGF-β → OSF; progressive; cessation halts progression\\\",\\n          \\\"Oral SCC: 90% cases; field cancerization; alcohol + tobacco synergistic\\\",\\n          \\\"Barrett's: GERD complication; HGD annual adenocarcinoma ~3-5%; aggressive management\\\",\\n          \\\"p16 early, p53 late; aneuploidy progression indicator\\\",\\n          \\\"Strictures: Caustic > peptic > radiation severity\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      }\\n    ]\\n  },\\n  {\\n    topicCode: \\\"PA-MOD-05-TOP-02\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"gastric-pathology-foundation\\\",\\n        title: \\\"Gastric Pathology - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Gastritis, peptic ulcer disease, and gastric carcinoma with epidemiology and classification.\\\",\\n        contentMd: ``# Gastric Pathology - Foundation\\n\\n**Acute Gastritis**: Erosive (alcohol, NSAIDs, stress), hemorrhagic, non-erosive (H. pylori), stress-induced\\n**Chronic Gastritis (Sydney)**: Type A (autoimmune), Type B (H. pylori-antral, most common), Type C (bile reflux)\\n**H. pylori**: 50% India; urease, flagella, CagA; Correa cascade to cancer\\n**PUD**: 90% duodenal from H. pylori, 70% gastric; 10-15% NSAIDs; Zollinger-Ellison rare\\n**Gastric Cancer**: Intestinal type (better), Diffuse type (signet-ring, poor); Stage I-IV prognosis varies,\\n        mnemonics: [\\n          { text: \\\"GASP\\\", explanation: \\\"Gastritis-Acute, Alcohol/NSAIDs, Stress, Pylori\\\" },\\n          { text: \\\"CHA\\\", explanation: \\\"Chronic gastritis, H. pylori, Atrophy/Intestinal metaplasia\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"H. pylori: 50% India prevalence; urease allows survival; 4-6x cancer risk\\\",\\n          \\\"Chronic gastritis: Type A (fundal, autoimmune), Type B (antral, H. pylori), Type C (chemical)\\\",\\n          \\\"PUD: 90% duodenal H. pylori, 70% gastric H. pylori; NSAIDs 10-15%\\\",\\n          \\\"Correa cascade: H. pylori → chronic gastritis → intestinal metaplasia → dysplasia → cancer (10-60 yrs)\\\",\\n          \\\"Gastric cancer: Intestinal (APC/TP53/KRAS) vs. Diffuse (CDH1, FGFR2) subtypes\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"gastric-pathology-mechanism\\\",\\n        title: \\\"Gastric Pathology - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"H. pylori pathogenesis, PUD formation, and gastric carcinogenesis.\\\",\\n        contentMd: ``# Mechanisms\\n\\n**H. pylori Virulence**: Urease (acid neutralization), Motility (flagella), Adhesins (epithelial binding), VacA (apoptosis), CagA (NF-κB activation, IL-8)\\n**Correa Cascade**: H. pylori → chronic gastritis (Th1: IFN-γ, TNF-α) → intestinal metaplasia (cagA+ increases risk) → dysplasia → cancer\\n**PUD Formation**: Acid/pepsin imbalance; H. pylori (90% duodenal, 70% gastric); NSAIDs (COX inhibition → ↓ mucus, HCO3-); 4-zone chronic ulcer (fibrin, granulation, fibrosis, normal)\\n**Gastric Cancer**: Intestinal (APC → KRAS → TP53), Diffuse (CDH1 loss, FGFR2 amplification), MSI (MLH1 methylation),\\n        mnemonics: [\\n          { text: \\\"VACate\\\", explanation: \\\"VacA (toxin), Adhesins, CagA (NF-κB)\\\" },\\n          { text: \\\"APC-KRAS-TP53\\\", explanation: \\\"Intestinal type progression\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"H. pylori: Urease/CagA drive chronic gastritis; Th1 response; IL-8 recruitment\\\",\\n          \\\"Correa spans 10-60 years; early intervention critical during chronic gastritis\\\",\\n          \\\"PUD: H. pylori (90% duodenal, 70% gastric), NSAIDs (↓ COX-2 → ↓ prostaglandins)\\\",\\n          \\\"Intestinal gastric cancer: APC early, TP53 intermediate, KRAS late\\\",\\n          \\\"Diffuse gastric cancer: CDH1 loss causes signet-ring cells; worse prognosis\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"gastric-pathology-clinical\\\",\\n        title: \\\"Gastric Pathology - Clinical\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Clinical diagnosis and management of gastritis, PUD, and gastric cancer.\\\",\\n        contentMd: ``# Clinical Management\\n\\n**PUD - H. pylori**: Triple therapy (PPI 20mg BD, amoxicillin 1g BD, clarithromycin 500mg BD × 7-14d); verify eradication (urea breath test)\\n**PUD - NSAIDs**: Discontinue or switch to COX-2 selective inhibitor; PPI 4-8 weeks\\n**Complications**: Perforation (emergency), bleeding (endoscopic hemostasis), obstruction (endoscopic or surgical)\\n**Gastric Cancer - EGC**: <5cm, mucosa/submucosa; 90% 5-year survival if resected; endoscopic if <2cm, well-differentiated\\n**Gastric Cancer - Advanced**: 10-20% 5-year survival; neoadjuvant FLOT (5-FU, leucovorin, oxaliplatin, docetaxel) + D2 gastrectomy,\\n        mnemonics: [\\n          { text: \\\"GASP-Ulcer\\\", explanation: \\\"Gastrin (ZE), Alcohol, Smoking, Pylori causes\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"H. pylori eradication: Triple therapy reduces ulcer recurrence to <5%\\\",\\n          \\\"Duodenal vs. gastric ulcer: Pain timing, symptom relief, H. pylori association differ\\\",\\n          \\\"Gastric cancer: 50-60% stage III-IV in India; endoscopy + biopsy diagnostic\\\",\\n          \\\"EGC: 90% survival; Advanced: 10-20% survival; neoadjuvant chemotherapy critical\\\",\\n          \\\"H. pylori screening cost-effective in endemic areas\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"gastric-pathology-exam\\\",\\n        title: \\\"Gastric Pathology - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"High-yield one-liners and NEXT-pattern concepts.\\\",\\n        contentMd: ``# Exam Concepts\\n\\n1. H. pylori: 50% India; urease enzyme; 4-6x gastric cancer risk\\n2. Duodenal ulcer: 80% PUD; 90% H. pylori; pain 2-3h postprandial\\n3. Gastric ulcer: 20% PUD; biopsy essential; pain immediate postprandial\\n4. NSAID ulcers: COX inhibition → ↓ prostaglandins → ↓ mucus, HCO3-\\n5. Correa cascade: Chronic gastritis → intestinal metaplasia → dysplasia → cancer (10-60 years)\\n6. Intestinal gastric cancer: Better prognosis; glandular differentiation; APC/TP53/KRAS\\n7. Diffuse gastric cancer: Poor prognosis; signet-ring cells; CDH1 loss\\n8. EGC: <5cm, mucosa/submucosa; 90% 5-year survival if resected\\n9. Advanced gastric cancer: 10-20% 5-year survival; neoadjuvant chemotherapy improves\\n10. Triple therapy: PPI + amoxicillin + clarithromycin × 7-14d; verify eradication,\\n        mnemonics: [\\n          { text: \\\"HP-PUD\\\", explanation: \\\"H. pylori causes Peptic Ulcer Disease\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"H. pylori: 50% India; Correa cascade over decades\\\",\\n          \\\"PUD: Duodenal (80%, 90% HP) vs. Gastric (20%, 70% HP)\\\",\\n          \\\"Triple therapy: PPI + amoxicillin + clarithromycin; verify eradication critical\\\",\\n          \\\"Gastric cancer: Intestinal (better) vs. Diffuse (poor)\\\",\\n          \\\"EGC 90%, Advanced 10-20% 5-year survival\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"gastric-pathology-recall\\\",\\n        title: \\\"Gastric Pathology - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"Flashcard Q&A pairs.\\\",\\n        contentMd: ``# Active Recall Q&A\\n\\n**Q1**: H. pylori prevalence in India and virulence mechanism? **A**: 50%; urease neutralizes acid\\n**Q2**: 4-zone chronic peptic ulcer architecture? **A**: Fibrin, Granulation, Fibrous tissue, Normal mucosa\\n**Q3**: Correa cascade and timeline? **A**: H. pylori → chronic gastritis → intestinal metaplasia → dysplasia → cancer; 10-60 years\\n**Q4**: Duodenal vs. gastric ulcer presentations? **A**: Duodenal: postprandial pain, food-relieved; Gastric: immediate pain, not relieved\\n**Q5**: H. pylori eradication therapy? **A**: Triple: PPI (omeprazole 20mg BD) + amoxicillin (1g BD) + clarithromycin (500mg BD) × 7-14d\\n**Q6**: Lauren types of gastric cancer and molecular basis? **A**: Intestinal: APC/TP53/KRAS, better prognosis; Diffuse: CDH1 loss, signet-ring, poor\\n**Q7**: EGC definition and 5-year survival? **A**: Mucosa/submucosa-confined; 90% 5-year survival if resected\\n**Q8**: EGC endoscopic vs. surgical resection? **A**: Endoscopic: <2cm, mucosa, well-differentiated; Surgical: >2cm or submucosal\\n**Q9**: NSAID ulcer molecular mechanism? **A**: COX inhibition → ↓ PGE2 → ↓ mucus, HCO3-, angiogenesis\\n**Q10**: Neoadjuvant chemotherapy for gastric cancer? **A**: FLOT: 5-FU, leucovorin, oxaliplatin, docetaxel; improves survival,\\n        mnemonics: [\\n          { text: \\\"CHAMP\\\", explanation: \\\"Chemotherapy, Histology, Advanced staging, Management, Prognosis\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"H. pylori: 50% India; urease/CagA; Correa cascade over decades\\\",\\n          \\\"PUD: Duodenal (80%, 90% HP) vs. Gastric (20%, 70% HP); NSAIDs 10-15%\\\",\\n          \\\"Triple therapy: PPI + amoxicillin + clarithromycin; verify eradication\\\",\\n          \\\"Gastric cancer: Intestinal (better) vs. Diffuse (poor); EGC 90%, Advanced 10-20%\\\",\\n          \\\"Neoadjuvant chemotherapy critical for advanced gastric cancer\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      }\\n    ]\\n  },\\n  {\\n    topicCode: \\\"PA-MOD-05-TOP-03\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"intestinal-pathology-foundation\\\",\\n        title: \\\"Intestinal Pathology - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"IBD, malabsorption syndromes, and colorectal tumors.\\\",\\n        contentMd: ``# Intestinal Pathology - Foundation\\n\\n**Crohn's Disease**: Full-thickness transmural; skip lesions; terminal ileum (40%); fistulas, strictures, granulomas\\n**Ulcerative Colitis**: Mucosal/submucosal; continuous from rectum; pseudopolyps; no granulomas\\n**Celiac Disease**: Villous atrophy, crypt hyperplasia, ↑ IELs; gluten-triggered; HLA-DQ2/8 required; 1% India prevalence\\n**Tropical Sprue**: Endemic India; folate/B12 malabsorption; partial villous atrophy; responds to antibiotics\\n**Colorectal Cancer**: Adenoma→dysplasia→cancer; Stage I (90%), II (70%), III (50%), IV (10%) 5-year survival,\\n        mnemonics: [\\n          { text: \\\"CRIB\\\", explanation: \\\"Crohn's, Recurrent, Inflammatory transmural, Bowel complications\\\" },\\n          { text: \\\"UC-U\\\", explanation: \\\"Ulcerative, Continuous, Up to rectum\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Crohn's: Transmural, skip lesions, terminal ileum; UC: mucosal, continuous from rectum\\\",\\n          \\\"IBD complications: Toxic megacolon (both); fistulas/strictures (Crohn's); hemorrhage (UC)\\\",\\n          \\\"Celiac: Villous atrophy, crypt hyperplasia, tTG antibodies; gluten-free diet only therapy\\\",\\n          \\\"Tropical sprue endemic India: Folate/B12 malabsorption, responds to antibiotics\\\",\\n          \\\"CRC: Adenomatous polyp→dysplasia→cancer; stage-dependent prognosis\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"intestinal-pathology-mechanism\\\",\\n        title: \\\"Intestinal Pathology - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"IBD pathogenesis, celiac disease immunopathogenesis, and colorectal carcinogenesis.\\\",\\n        contentMd: ``# Mechanisms\\n\\n**Crohn's**: Barrier dysfunction → bacterial translocation → TLR/NF-κB → IL-6, TNF-α, IL-1β → Th1 (IFN-γ); TGF-β → fibrosis\\n**UC**: Epithelial barrier defect → Th2/Th17 (IL-13, IL-17) → neutrophil recruitment; dysbiosis (↓ Faecalibacterium)\\n**Celiac**: Gliadin deamidation → HLA-DQ2/8 presentation → CD4+/CD8+ T cell activation → IFN-γ → epithelial apoptosis → villous atrophy\\n**CRC Adenoma-Carcinoma**: APC (early) → KRAS (intermediate) → TP53 (late) → invasive cancer\\n**CRC MSI Pathway**: Mismatch repair mutations → Lynch syndrome (80% risk); MSI-high (better prognosis)\\n**Serrated Pathway**: BRAF V600E → sessile serrated adenoma (CIMP) → carcinoma; proximal, mucinous, worse prognosis,\\n        mnemonics: [\\n          { text: \\\"NOD-HLA\\\", explanation: \\\"Genetic (NOD2, HLA), Environmental (dysbiosis), Immune dysfunction\\\" },\\n          { text: \\\"APC-KRAS-TP53\\\", explanation: \\\"Colorectal cancer progression\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Crohn's: Barrier dysfunction → Th1/TGF-β; fibrosis via myofibroblasts\\\",\\n          \\\"UC: Epithelial barrier → Th2/Th17; IL-17 drives neutrophil response\\\",\\n          \\\"Celiac: HLA-DQ2/8 present deamidated gliadin → villous atrophy\\\",\\n          \\\"CRC: APC early, KRAS intermediate, TP53 late; alternative MSI and Serrated pathways\\\",\\n          \\\"IBD-associated cancer: Earlier p53 mutation, multifocal dysplasia, worse prognosis\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"intestinal-pathology-clinical\\\",\\n        title: \\\"Intestinal Pathology - Clinical\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Clinical diagnosis and management of IBD, celiac disease, and colorectal cancer.\\\",\\n        contentMd: ``# Clinical Management\\n\\n**Crohn's**: Corticosteroids (induction), mesalamine/azathioprine (maintenance), TNF-α inhibitors (infliximab); surgery for fistulas, strictures\\n**UC**: Mesalamine (mild-moderate), corticosteroids (moderate-severe), TNF-α inhibitors; total proctocolectomy for refractory/dysplasia\\n**Celiac**: tTG-IgA serology + duodenal biopsy (villous atrophy); gluten-free diet; nutritional supplementation (iron, folate, B12, calcium, vitamin D)\\n**CRC Screening**: Age 45-50 (average risk), 40 if family history; colonoscopy (preferred), FIT, flexible sigmoidoscopy\\n**CRC Treatment**: Stage I (90% survival, resection); II (70%, ± adjuvant chemotherapy); III (50%, FOLFOX); IV (10%, palliative),\\n        mnemonics: [\\n          { text: \\\"CRC-TNM\\\", explanation: \\\"Colon/Rectal cancer, TNM staging, Nodal status crucial\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Crohn's: Transmural, granulomas, TNF-α inhibitors effective\\\",\\n          \\\"UC: Mucosal, no granulomas, surgical option for refractory/dysplasia\\\",\\n          \\\"IBD surveillance: Annual after 8-15 years; chromoendoscopy; HGD/DALM → colectomy\\\",\\n          \\\"Celiac: tTG antibodies, villous atrophy, gluten-free diet only therapy\\\",\\n          \\\"CRC staging: TNM determines treatment and prognosis\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"intestinal-pathology-exam\\\",\\n        title: \\\"Intestinal Pathology - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"High-yield concepts and NEXT-pattern questions.\\\",\\n        contentMd: ``# Exam Concepts\\n\\n1. Crohn's: Full-thickness, skip lesions, granulomas, fistulas, strictures\\n2. UC: Mucosal, continuous from rectum, pseudopolyps, no granulomas\\n3. Celiac: Gluten → tTG-specific CD4+/CD8+ T cells; villous atrophy, crypt hyperplasia\\n4. Tropical sprue: India-endemic, folate/B12 malabsorption, responds to antibiotics, tTG negative\\n5. Adenoma-carcinoma: APC → KRAS → TP53 → invasive carcinoma\\n6. Lynch syndrome: Mismatch repair mutations, 80% CRC risk, MSI-high (better prognosis)\\n7. Serrated pathway: BRAF mutation, CIMP, proximal, mucinous, worse prognosis\\n8. IBD-associated cancer: Earlier p53 mutation, multifocal dysplasia, worse prognosis\\n9. CRC staging: I (90%), II (70%), III (50%), IV (10%) 5-year survival\\n10. IBD surveillance: Annual after 8-15 years; chromoendoscopy; HGD/DALM → colectomy,\\n        mnemonics: [\\n          { text: \\\"IBD-I-Cd\\\", explanation: \\\"Full-thickness in crohn's vs. mucosal in UC\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Crohn's vs. UC: Full-thickness vs. mucosal; skip lesions vs. continuous\\\",\\n          \\\"IBD pathogenesis: Genetic, environmental, immune dysregulation, barrier dysfunction\\\",\\n          \\\"Celiac: HLA-DQ2/8, tTG antibodies, gluten-free diet\\\",\\n          \\\"CRC pathways: Adenoma (APC→KRAS→TP53), Serrated (BRAF), MSI\\\",\\n          \\\"IBD surveillance: Chromoendoscopy, HGD/DALM → colectomy\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"intestinal-pathology-recall\\\",\\n        title: \\\"Intestinal Pathology - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"Flashcard Q&A pairs.\\\",\\n        contentMd: ``# Active Recall Q&A\\n\\n**Q1**: Skip lesions in Crohn's definition? **A**: Segments of inflamed separated by normal mucosa; patchy immune activation\\n**Q2**: 4 histologic features distinguishing Crohn's vs. UC? **A**: Crohn's (transmural, skip, granulomas, fistulas); UC (mucosal, continuous, pseudopolyps, no granulomas)\\n**Q3**: Genetic basis of celiac disease and serology? **A**: HLA-DQ2 (95%) or DQ8 (5%); tTG-IgA antibodies indicate active disease\\n**Q4**: Mechanism of villous atrophy in celiac? **A**: Deamidated gliadin activates CD4+/CD8+ → IFN-γ → epithelial apoptosis + crypt hyperplasia\\n**Q5**: Tropical sprue vs. celiac disease? **A**: Sprue: India-endemic, partial atrophy, responds to antibiotics, tTG negative\\n**Q6**: Adenoma-carcinoma sequence and mutations? **A**: APC (early) → KRAS (intermediate) → TP53 (late) → invasive carcinoma\\n**Q7**: Serrated pathway and why worse prognosis? **A**: BRAF V600E → CIMP → carcinoma; proximal, mucinous, worse outcomes\\n**Q8**: Lynch syndrome implications and management? **A**: Mismatch repair mutations, 80% CRC risk; colonoscopy every 1-2 years\\n**Q9**: High-grade dysplasia in UC management? **A**: Total proctocolectomy; surveillance insufficient (30-50% concurrent cancer)\\n**Q10**: Chemotherapy for stage III CRC? **A**: FOLFOX (5-FU, leucovorin, oxaliplatin); improves survival ~15%,\\n        mnemonics: [\\n          { text: \\\"CCD\\\", explanation: \\\"Colorectal, Continuous adenoma, Dysplasia progression\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Skip lesions: Crohn's feature; patchy transmural inflammation\\\",\\n          \\\"Celiac: HLA-DQ2/8, tTG antibodies, villous atrophy reversible\\\",\\n          \\\"Tropical sprue: India-endemic, folate/B12 responsive, tTG negative\\\",\\n          \\\"CRC pathways: Adenoma (APC→KRAS→TP53), Serrated (BRAF), MSI\\\",\\n          \\\"IBD surveillance: Annual after 8 years (UC pancolitis) or 15 years (Crohn's); HGD → colectomy\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"17: The Gastrointestinal Tract\\\", edition: \\\"10th\\\" }\\n        ]\\n      }\\n    ]\\n  },\\n  {\\n    topicCode: \\\"PA-MOD-05-TOP-04\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"liver-pathology-foundation\\\",\\n        title: \\\"Liver Pathology - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Hepatitis, cirrhosis, and liver tumors including HCC with risk factors and staging.\\\",\\n        contentMd: ``# Liver Pathology - Foundation\\n\\n**Viral Hepatitis**: HAV (acute), HBV/HCV (chronic → cirrhosis, HCC), HDV (requires HBV), HEV (acute; chronicity in immunocompromised)\\n**Alcoholic Liver Disease**: Fatty liver → alcoholic hepatitis → cirrhosis (Mallory bodies, neutrophil infiltration)\\n**Non-Alcoholic Fatty Liver Disease (NAFLD)**: Insulin resistance, obesity, metabolic syndrome; can progress to NASH and cirrhosis\\n**Cirrhosis**: Portal hypertension, ascites, encephalopathy, coagulopathy; regenerative nodules separated by fibrosis\\n**Hepatocellular Carcinoma (HCC)**: Risk: cirrhosis (HBV, HCV, alcohol, NAFLD); <5cm single or <3cm × 3 lesions; 5-year survival 15-20%,\\n        mnemonics: [\\n          { text: \\\"HAB-DEH\\\", explanation: \\\"Hepatitis A/B/C/D/E and their routes\\\" },\\n          { text: \\\"CHILD-Pugh\\\", explanation: \\\"Cirrhosis severity: Bilirubin, PT, Albumin, Ascites, Encephalopathy\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Viral hepatitis: HAV (fecal), HBV/HCV (bloodborne, sexual); HBV/HCV → chronic → cirrhosis/HCC\\\",\\n          \\\"Alcoholic liver disease: Fatty liver → alcoholic hepatitis (Mallory-Denk bodies) → cirrhosis\\\",\\n          \\\"NAFLD: Insulin resistance, obesity; can progress to NASH (steatohepatitis) and cirrhosis\\\",\\n          \\\"Cirrhosis: Portal hypertension, ascites, encephalopathy; reversible complications in early disease\\\",\\n          \\\"HCC: Risk factors (cirrhosis, HBV, HCV); <5cm Milan criteria; 15-20% 5-year survival\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"18: The Liver and Biliary System\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"liver-pathology-mechanism\\\",\\n        title: \\\"Liver Pathology - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Pathogenic mechanisms in hepatitis, cirrhosis, and hepatocarcinogenesis.\\\",\\n        contentMd: ``# Mechanisms\\n\\n**Viral Hepatitis**: HBV (HBsAg, HBeAg, HBcore), HCV (RNA, genotypes 1-6); chronic infection → persistent inflammation → fibrosis\\n**Cirrhosis Formation**: Chronic injury → hepatocyte necrosis → stellate cell activation (α-SMA) → myofibroblast → collagen deposition → regenerative nodules; portal hypertension from increased vascular resistance\\n**HCC Carcinogenesis**: Chronic inflammation (HBV, HCV) → cirrhosis → HCC via TP53, RB, CTNNB1 (β-catenin) mutations; HBV X protein (HBx) activates NF-κB, ERK; HCV core and NS3A promote oxidative stress\\n**Alcoholic Liver Disease**: Ethanol metabolism → acetaldehyde (toxic) → lipid accumulation, oxidative stress, mitochondrial damage; TNF-α and IL-8 drive inflammation,\\n        mnemonics: [\\n          { text: \\\"HBV-DNA\\\", explanation: \\\"HBsAg (surface), HBeAg (envelopment), HBc (core)\\\" },\\n          { text: \\\"Fibrosis-to-Cirrhosis\\\", explanation: \\\"Chronic injury → stellate cell activation → myofibroblast → collagen deposition\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"HBV/HCV: Chronic infection → persistent inflammation → fibrosis/cirrhosis\\\",\\n          \\\"Stellate cell activation: α-SMA expression, myofibroblast differentiation, TIMPs > MMPs\\\",\\n          \\\"Portal hypertension: Increased vascular resistance from cirrhosis; varices, ascites, splenomegaly\\\",\\n          \\\"HCC: TP53, RB, CTNNB1 mutations; HBx, HCV proteins promote carcinogenesis\\\",\\n          \\\"Alcohol: Acetaldehyde toxicity, oxidative stress, TNF-α-mediated inflammation\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"18: The Liver and Biliary System\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"liver-pathology-clinical\\\",\\n        title: \\\"Liver Pathology - Clinical\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Clinical diagnosis, staging, and management of liver diseases and HCC.\\\",\\n        contentMd: ``# Clinical Management\\n\\n**Viral Hepatitis**: HAV (supportive), HBV (antivirals: tenofovir, lamivudine), HCV (DAAs: sofosbuvir/velpatasvir/voxilaprevir cure >95%)\\n**Cirrhosis Screening**: FIB-4 index, APRI score, FibroScan (transient elastography); liver biopsy if intermediate scores\\n**Cirrhosis Management**: Diuretics (ascites), beta-blockers (varices), lactulose/rifaxomicin (encephalopathy), albumin (hypoproteinemia)\\n**HCC Surveillance**: Ultrasound ± AFP every 3-6 months in cirrhosis; CECT/MRI for diagnosis (arterial enhancement, washout)\\n**HCC Treatment**: Milan criteria (<5cm single or <3cm × 3); transplantation (best for small HCC), resection, TACE (transarterial chemoembolization), sorafenib (advanced),\\n        mnemonics: [\\n          { text: \\\"DAA-SVR\\\", explanation: \\\"Direct-acting antivirals achieve Sustained Viral Response >95%\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"HBV: Antivirals (tenofovir preferred); HCV: DAAs cure >95% if treated early\\\",\\n          \\\"Cirrhosis: FIB-4, APRI, FibroScan for non-invasive staging; portal hypertension management critical\\\",\\n          \\\"HCC surveillance: Ultra sound ± AFP every 3-6 months in cirrhotic patients\\\",\\n          \\\"HCC diagnosis: Arterial enhancement + washout on CECT/MRI; <20mm lesions may need contrast confirmation\\\",\\n          \\\"HCC treatment: Transplantation (Milan criteria), resection, TACE, sorafenib; 5-year survival 15-20%\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"18: The Liver and Biliary System\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"liver-pathology-exam\\\",\\n        title: \\\"Liver Pathology - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"High-yield concepts for liver pathology.\\\",\\n        contentMd: ``# Exam Concepts\\n\\n1. HAV: Acute via fecal-oral; HAB (B and C chronic via blood); HBV (sexual); HCV (IVDU, needlestick)\\n2. HBV markers: HBsAg (infection), Anti-HBs (immunity), HBeAg (high replication)\\n3. Alcoholic liver disease: Steatosis → alcoholic hepatitis (neutrophil infiltration, Mallory-Denk) → cirrhosis\\n4. NAFLD: Metabolic syndrome, insulin resistance; progresses to NASH and cirrhosis\\n5. Cirrhosis: Irreversible; portal hypertension; regenerative nodules separated by fibrosis\\n6. HCC risk: Cirrhosis (HBV, HCV, alcohol, NAFLD); TP53, RB, CTNNB1 mutations\\n7. HCC staging: Milan (<5cm single, <3cm × 3); BCLC (performance, tumor burden, liver function)\\n8. HCC imaging: CECT/MRI shows arterial enhancement with venous washout\\n9. HCC treatment: Transplantation (best Milan), resection (good liver function), TACE (intermediate), sorafenib (advanced)\\n10. HBV/HCV screening: All patients; DAAs cure >95%; prevent cirrhosis and HCC,\\n        mnemonics: [\\n          { text: \\\"HAB-DEH\\\", explanation: \\\"Hepatitis routes: A (fecal), B/C (blood), D (B-dependent), E (fecal)\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Viral hepatitis: HAV acute, HAB/HCV chronic; HBV/HCV → cirrhosis/HCC\\\",\\n          \\\"Cirrhosis: Portal hypertension, ascites, encephalopathy, coagulopathy\\\",\\n          \\\"HCC: Risk from cirrhosis; Milan criteria for transplantation; imaging diagnostic\\\",\\n          \\\"Treatment: DAAs for HCV, antivirals for HBV, transplantation for HCC if Milan-eligible\\\",\\n          \\\"Prevention: Vaccination (HAV, HBV), needle safety (HCV)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"18: The Liver and Biliary System\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"liver-pathology-recall\\\",\\n        title: \\\"Liver Pathology - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"Flashcard Q&A pairs.\\\",\\n        contentMd: ``# Active Recall Q&A\\n\\n**Q1**: HAV transmission route and outcome? **A**: Fecal-oral; acute self-limited hepatitis; no chronicity\\n**Q2**: HBV chronic infection definition and risk? **A**: HBsAg+ >6 months; 10% adults, 90% infants; cirrhosis/HCC risk\\n**Q3**: HCV genotypes and DAA efficacy? **A**: 6 genotypes; DAAs (sofosbuvir/velpatasvir/voxilaprevir) cure >95% of all genotypes\\n**Q4**: Alcoholic hepatitis histology features? **A**: Steatosis, neutrophil infiltration, Mallory-Denk bodies (cytokeratin/ubiquitin aggregates)\\n**Q5**: NAFLD definition and progression? **A**: Hepatic steatosis without significant alcohol use; 15-30% progress to NASH/cirrhosis\\n**Q6**: Cirrhosis definition and complications? **A**: Irreversible liver damage; regenerative nodules + fibrous septa; portal hypertension, ascites, encephalopathy\\n**Q7**: HCC risk factors and Milan criteria? **A**: Cirrhosis (HBV, HCV, alcohol, NAFLD); Milan: <5cm single or <3cm × 3 lesions\\n**Q8**: HCC imaging diagnosis? **A**: CECT/MRI: arterial enhancement + venous washout in nodules >1cm\\n**Q9**: HCC treatment strategy by stage? **A**: Milan/BCLC: transplantation (best), resection (good liver), TACE (intermediate), sorafenib (advanced)\\n**Q10**: HBV/HCV prevention and screening? **A**: Vaccination (HAV, HBV), needle safety; DAAs for all HCV+; antivirals for HBsAg+; prevent cirrhosis/HCC,\\n        mnemonics: [\\n          { text: \\\"HCC-Staging\\\", explanation: \\\"Milan for transplantation, BCLC for treatment selection\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"HAV: Acute, self-limited, fecal-oral; HBV/HCV: chronic, bloodborne, cirrhosis risk\\\",\\n          \\\"Cirrhosis: Portal hypertension, regenerative nodules, irreversible\\\",\\n          \\\"HCC: Risk from cirrhosis; Milan criteria (<5cm) for transplantation; 15-20% 5-year survival\\\",\\n          \\\"DAAs: >95% HCV cure; prevent cirrhosis and HCC\\\",\\n          \\\"Prevention: Vaccination, needle safety, antiviral therapy, hepatitis screening\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"18: The Liver and Biliary System\\\", edition: \\\"10th\\\" }\\n        ]\\n      }\\n    ]\\n  },\\n  {\\n    topicCode: \\\"PA-MOD-05-TOP-05\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"biliary-pancreas-foundation\\\",\\n        title: \\\"Gallbladder & Pancreas Pathology - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Cholelithiasis, cholecystitis, pancreatitis, and pancreatic tumors.\\\",\\n        contentMd: ``# Gallbladder & Pancreas Pathology - Foundation\\n\\n**Cholelithiasis**: Cholesterol stones (>80%, associated with obesity, female, fat-rich diet), Pigment stones (hemolysis, cirrhosis)\\n**Acute Cholecystitis**: Stone impaction in cystic duct; inflammation, suppuration; complications (perforation, gangrene, emphysema)\\n**Chronic Cholecystitis**: Recurrent inflammation; fibrosis; bile duct stricture; increased cancer risk\\n**Acute Pancreatitis**: Gallstones (most common in India), alcohol (west); digestive enzyme activation; interstitial inflammation\\n**Chronic Pancreatitis**: Alcohol (most common west), tropical (India, Africa); parenchymal atrophy, ductal dilatation, fibrosis\\n**Pancreatic Cancer**: Adenocarcinoma (85%); risk (age >60, smoking, alcohol, chronic pancreatitis, diabetes); median survival 12 months,\\n        mnemonics: [\\n          { text: \\\"4 F's\\\", explanation: \\\"Fat, Female, Forty, Fertile (cholelithiasis risk)\\\" },\\n          { text: \\\"SLUDGE\\\", explanation: \\\"Pancreatitis causes: Steroids, Lipids, Uremia, Drugs, Gallstones, Ethanol\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Cholesterol stones: Bile supersaturation, nucleation, stasis; risk factors (obesity, female, dietary)\\\",\\n          \\\"Acute pancreatitis: Gallstones (70% India), alcohol (west); trypsin activation → self-digestion\\\",\\n          \\\"Chronic pancreatitis: Alcohol (80% west), tropical type (India); alcohol → protein plugs → ductal obstruction → atrophy + fibrosis\\\",\\n          \\\"Pancreatic cancer: Adenocarcinoma; poor prognosis; median survival 12 months; CA 19-9 tumor marker\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"18: The Liver and Biliary System\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"biliary-pancreas-mechanism\\\",\\n        title: \\\"Gallbladder & Pancreas Pathology - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Pathogenic mechanisms in cholelithiasis, pancreatitis, and pancreatic carcinogenesis.\\\",\\n        contentMd: ``# Mechanisms\\n\\n**Cholelithiasis**: Bile supersaturation (cholesterol > phospholipid + bile salts) → nucleation → crystal growth → stone formation; biliary stasis from prolonged fasting\\n**Acute Pancreatitis**: Gallstone obstruction or direct pancreatic injury → premature enzyme activation (trypsinogen → trypsin) → zymogen granule rupture → intrapancreatic autodigestion → systemic inflammation\\n**Chronic Pancreatitis**: Alcohol → oxidative stress, free radicals → pancreatic stellate cell activation → myofibroblast → collagen deposition → parenchymal atrophy, ductal dilation, fibrosis\\n**Pancreatic Cancer**: KRAS mutations (90%); TP53, DPC4, BRCA1/2; Chronic inflammation → oxidative stress → PanIN → dysplasia → adenocarcinoma,\\n        mnemonics: [\\n          { text: \\\"Bile Chemistry\\\", explanation: \\\"Cholesterol, Phospholipid, Bile salts balance determines supersaturation\\\" },\\n          { text: \\\"KRAS-TP53-DPC4\\\", explanation: \\\"Pancreatic cancer progression\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Cholelithiasis: Bile supersaturation → nucleation → stone formation; biliary stasis accelerates\\\",\\n          \\\"Acute pancreatitis: Zymogen granule rupture → intrapancreatic enzyme activation → self-digestion\\\",\\n          \\\"Chronic pancreatitis: Alcohol → stellate cell activation → myofibroblast → fibrosis and atrophy\\\",\\n          \\\"Pancreatic cancer: KRAS (early), TP53 (intermediate), DPC4 (late); chronic inflammation cofactor\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"18: The Liver and Biliary System\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"biliary-pancreas-clinical\\\",\\n        title: \\\"Gallbladder & Pancreas Pathology - Clinical\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Clinical diagnosis and management of biliary and pancreatic diseases.\\\",\\n        contentMd: ``# Clinical Management\\n\\n**Acute Cholecystitis**: RUQ pain, Murphy's sign+; ultrasound diagnostic (stone + wall thickening); management: NPO, antibiotics, cholecystectomy\\n**Chronic Cholecystitis**: Recurrent RUQ pain; ultrasound shows stones, wall thickening; cholecystectomy when symptomatic\\n**Acute Pancreatitis**: Epigastric pain, elevated amylase/lipase; CT for severity; supportive care (fluids, NPO); identify and treat cause (gallstones, alcohol)\\n**Chronic Pancreatitis**: Chronic epigastric pain, steatorrhea, diabetes; CT shows ductal dilation, atrophy; pancreatic enzyme supplementation, pain management\\n**Pancreatic Cancer**: Painless jaundice, weight loss, elevated CA 19-9; CECT/EUS for diagnosis; Whipple procedure (resection) if resectable; 5-year survival <5%,\\n        mnemonics: [\\n          { text: \\\"Pancreatitis-Severity\\\", explanation: \\\"APACHE, Ranson, SOFA scores; CT grade (Balthazar) determines prognosis\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Acute cholecystitis: Ultrasound diagnostic; cholecystectomy is definitive treatment\\\",\\n          \\\"Acute pancreatitis: Fluid resuscitation critical; identify cause (gallstones, alcohol); complications (necrosis, pseudocyst)\\\",\\n          \\\"Chronic pancreatitis: Pain management, malabsorption treatment (pancreatic enzyme replacement, fat-soluble vitamin supplementation)\\\",\\n          \\\"Pancreatic cancer: Poor prognosis; Whipple procedure (resection) best option if resectable; 5-year survival <5%\\\",\\n          \\\"Pancreatitis severity: Ranson or APACHE scoring guides management intensity\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"18: The Liver and Biliary System\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"biliary-pancreas-exam\\\",\\n        title: \\\"Gallbladder & Pancreas Pathology - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"High-yield concepts for biliary and pancreatic pathology.\\\",\\n        contentMd: ``# Exam Concepts\\n\\n1. Cholelithiasis: Cholesterol >80%; obesity, female, age, fertility (4F's)\\n2. Acute cholecystitis: Stone impaction; RUQ pain, Murphy's sign+; ultrasound diagnostic\\n3. Acute pancreatitis: Gallstones (70% India), alcohol (west); amylase/lipase ↑; CT for severity\\n4. Chronic pancreatitis: Alcohol (80% west), tropical (India); atrophy, fibrosis, ductal dilation\\n5. Pancreatitis complications: Necrosis, pseudocyst (sterile or infected), abscess\\n6. Pancreatic cancer: Adenocarcinoma 85%; KRAS 90%, TP53, DPC4; poor prognosis\\n7. Pancreatic cancer presentation: Painless jaundice, weight loss, elevated CA 19-9\\n8. Pancreatic cancer treatment: Whipple procedure (resection) if resectable; 5-year survival <5%\\n9. Tropical pancreatitis: India endemic; etiology unclear (chronic protein deficiency?, cassava toxin?); early-onset pancreatitis\\n10. Pancreatic cystic lesions: IPMN (intraductal papillary), MCN (mucinous cystic), serous cystadenoma (benign),\\n        mnemonics: [\\n          { text: \\\"Pancreatitis-Causes\\\", explanation: \\\"SLUDGE, SMASHED: Steroids, Lipids, Uremia, Drugs, Gallstones, Ethanol (+ Scorpion, Mumps, Asparagine, Smoking, Hypercalcemia, ERCP, Drugs)\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Gallstones: Cholesterol stones from bile supersaturation; bile stasis accelerates\\\",\\n          \\\"Acute pancreatitis: Gallstones most common in India; identify and treat cause\\\",\\n          \\\"Chronic pancreatitis: Alcohol most common west; alcohol → stellate cell activation → fibrosis\\\",\\n          \\\"Pancreatic cancer: KRAS early mutation; poor prognosis; Whipple if resectable\\\",\\n          \\\"Tropical pancreatitis: India endemic; early-onset; etiology unclear\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"18: The Liver and Biliary System\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"biliary-pancreas-recall\\\",\\n        title: \\\"Gallbladder & Pancreas Pathology - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"Flashcard Q&A pairs.\\\",\\n        contentMd: ``# Active Recall Q&A\\n\\n**Q1**: Composition of cholesterol gallstones and risk factors? **A**: Cholesterol >80%, phospholipid, bile salts; risk: obesity, female, age, fertility (4F's), rapid weight loss\\n**Q2**: Acute cholecystitis pathophysiology? **A**: Stone impaction in cystic duct → bile stasis → bacterial overgrowth → inflammation, suppuration\\n**Q3**: Difference between acute and chronic pancreatitis? **A**: Acute: interstitial inflammation, reversible; Chronic: parenchymal atrophy, fibrosis, ductal dilation, irreversible\\n**Q4**: Etiology of acute pancreatitis: India vs. west? **A**: India: gallstones (70%), alcohol (10%); West: alcohol (40%), gallstones (40%)\\n**Q5**: Chronic pancreatitis mechanism in alcohol abuse? **A**: Ethanol → oxidative stress, free radicals → stellate cell activation → myofibroblast → collagen deposition\\n**Q6**: KRAS mutation prevalence and significance in pancreatic cancer? **A**: 90% of pancreatic adenocarcinomas; constitutive growth signaling; early event in PanIN progression\\n**Q7**: Pancreatic cancer presentation and why late diagnosis? **A**: Painless jaundice, weight loss; late diagnosis because early stages asymptomatic; pancreas location limits mass effect\\n**Q8**: Whipple procedure indications and prognosis? **A**: Resectable head of pancreas cancer; 5-year survival <5%; morbidity from biliary, gastric, vascular anastomoses\\n**Q9**: Tropical pancreatitis epidemiology and clinical features? **A**: India and Africa endemic; age <30, early-onset, idiopathic; etiology unclear (chronic protein deficiency?, cassava toxin?)\\n**Q10**: Pancreatic enzyme replacement indication and dose? **A**: Chronic pancreatitis with steatorrhea/malabsorption; lipase dose 25,000-40,000 IU/meal,\\n        mnemonics: [\\n          { text: \\\"SLUDGE\\\", explanation: \\\"Pancreatitis causes mnemonic\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Gallstones: Cholesterol stones from bile supersaturation; obesity, female, age, fertility risk\\\",\\n          \\\"Acute pancreatitis: Gallstones (India), alcohol (west); zymogen activation → self-digestion\\\",\\n          \\\"Chronic pancreatitis: Alcohol (west) most common; stellate cell activation → fibrosis\\\",\\n          \\\"Pancreatic cancer: KRAS 90%, TP53, DPC4; Whipple if resectable; <5% 5-year survival\\\",\\n          \\\"Tropical pancreatitis: India endemic; early-onset; etiology unclear\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"18: The Liver and Biliary System\\\", edition: \\\"10th\\\" }\\n        ]\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-];
+        summary:
+          "Diseases of the oral cavity include oral submucous fibrosis, leukoplakia, and squamous cell carcinoma. Esophageal pathology covers GERD, Barrett esophagus, varices, and esophageal carcinoma.",
+        contentMd: `# Oral & Esophageal Pathology
+
+## Oral Cavity Diseases
+
+### Pre-malignant Lesions
+| Lesion | Definition | Risk |
+|--------|-----------|------|
+| **Leukoplakia** | White patch that cannot be scraped off or classified as another disease | 5-25% malignant transformation |
+| **Erythroplakia** | Red velvety patch on mucosa | Higher malignant potential than leukoplakia |
+| **Oral Submucous Fibrosis (OSMF)** | Progressive fibrosis of submucosa with trismus | Strongly linked to areca nut/betel quid chewing |
+
+### Oral Squamous Cell Carcinoma (OSCC)
+- Most common malignancy of oral cavity
+- **Indian context**: India has one of the highest rates globally due to tobacco and betel nut use
+- Common sites: lateral border of tongue, floor of mouth, buccal mucosa
+- TNM staging determines prognosis
+
+## Esophageal Diseases
+
+### Structural Disorders
+| Condition | Key Feature |
+|-----------|------------|
+| Achalasia | Failure of LES relaxation, absent myenteric ganglia |
+| Hiatal hernia | Sliding (95%) vs Paraesophageal (5%) |
+| Esophageal webs | Plummer-Vinson syndrome (iron deficiency + dysphagia + web) |
+| Zenker diverticulum | Posterior pharyngeal outpouching |
+
+### Barrett Esophagus
+- Squamous epithelium replaced by intestinal-type columnar epithelium with goblet cells
+- Complication of chronic GERD
+- **Pre-malignant**: risk of esophageal adenocarcinoma
+- Requires surveillance endoscopy
+
+### Esophageal Carcinoma
+| Feature | Squamous Cell (SCC) | Adenocarcinoma |
+|---------|-------------------|----------------|
+| Location | Upper and middle third | Lower third |
+| Risk factors | Alcohol, tobacco, hot beverages, OSMF | Barrett esophagus, GERD, obesity |
+| Geography | Common in India, China, Iran | Western countries |
+| Histology | Keratin pearls, intercellular bridges | Glandular differentiation |
+
+> **Clinical Pearl**: In India, squamous cell carcinoma accounts for >90% of esophageal cancers, linked to tobacco chewing, hot tea consumption, and nutritional deficiencies.`,
+        mnemonics: [
+          {
+            text: "PLUMBER for Plummer-Vinson syndrome",
+            explanation:
+              "P-Post-cricoid web, L-Low iron, U-Upper esophageal dysphagia, M-Microcytic anemia, B-Brittle nails (koilonychia), E-Esophageal SCC risk, R-Rings/webs",
+          },
+          {
+            text: "ABCDE for Barrett esophagus",
+            explanation:
+              "A-Acid reflux (GERD), B-Barrett metaplasia, C-Columnar epithelium with goblet cells, D-Dysplasia risk, E-Esophageal adenocarcinoma",
+          },
+        ],
+        keyPoints: [
+          "Leukoplakia is a clinical diagnosis of exclusion - white patch not attributable to any other disease",
+          "Oral submucous fibrosis is almost exclusive to the Indian subcontinent due to betel quid use",
+          "Barrett esophagus is intestinal metaplasia with goblet cells in the esophagus",
+          "Squamous cell carcinoma is the most common esophageal cancer worldwide and in India",
+          "Plummer-Vinson syndrome triad: iron deficiency anemia + esophageal web + dysphagia",
+          "Achalasia results from loss of myenteric (Auerbach) plexus ganglion cells",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17: Oral Cavity and Esophagus",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 19: Oral Cavity and Esophagus",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "oral-esophageal-pathology-mechanism",
+        title: "Oral & Esophageal Pathology - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Molecular pathogenesis of oral cancers involving p53, Rb, and cyclin D1, mechanism of Barrett metaplasia through CDX2 transcription factor, and pathogenesis of achalasia and GERD.",
+        contentMd: `# Mechanisms of Oral & Esophageal Disease
+
+## Pathogenesis of Oral Squamous Cell Carcinoma
+1. **Tobacco carcinogens** (nitrosamines, polycyclic aromatic hydrocarbons) cause DNA damage
+2. **Betel nut alkaloids** (arecoline) -> fibroblast stimulation -> collagen deposition (OSMF)
+3. Molecular changes:
+   - p53 mutation (most common, ~50% cases)
+   - p16/INK4a inactivation
+   - Cyclin D1 amplification
+   - EGFR overexpression
+4. Progression: Normal -> Hyperplasia -> Dysplasia -> Carcinoma in situ -> Invasive SCC
+
+## Pathogenesis of OSMF
+- Arecoline stimulates fibroblasts via TGF-beta pathway
+- Increased collagen synthesis (Type I) and decreased collagenase activity
+- Progressive submucosal fibrosis -> restricted mouth opening (trismus)
+- Epithelial atrophy -> increased susceptibility to carcinogens
+
+## Mechanism of Barrett Esophagus
+1. Chronic GERD -> acid + bile reflux damages squamous epithelium
+2. Inflammatory cytokines (IL-1beta, IL-8) recruit immune cells
+3. **CDX2 transcription factor** activation -> intestinal differentiation
+4. Stem cells at squamocolumnar junction reprogram to columnar type
+5. Progression: Metaplasia -> Low-grade dysplasia -> High-grade dysplasia -> Adenocarcinoma
+6. Additional mutations: p53, p16, Her2/neu amplification
+
+## Pathogenesis of Achalasia
+- **Primary**: Autoimmune destruction of inhibitory neurons (VIP, NO-producing) in myenteric plexus
+- **Secondary**: Chagas disease (Trypanosoma cruzi destroys ganglion cells)
+- Loss of inhibitory innervation -> failure of LES relaxation -> functional obstruction
+- Bird-beak appearance on barium swallow
+
+## GERD Mechanism
+- Transient LES relaxation (most common mechanism)
+- Contributing factors: hiatal hernia, obesity, delayed gastric emptying
+- Acid + pepsin + bile -> epithelial damage -> inflammation -> erosion
+- Complications: stricture, Barrett esophagus, adenocarcinoma
+
+> **Clinical Pearl**: In India, chronic betel nut chewing activates the TGF-beta/collagen pathway causing OSMF, which has a 7-13% rate of malignant transformation to OSCC.`,
+        mnemonics: [
+          {
+            text: "CDX2 = Columnar Differentiation factor for neX2 (Barrett)",
+            explanation:
+              "CDX2 is the key transcription factor that drives intestinal-type columnar metaplasia in Barrett esophagus",
+          },
+          {
+            text: "CRAVE for GERD complications",
+            explanation:
+              "C-Chronic esophagitis, R-Ring formation (Schatzki), A-Adenocarcinoma, V-Varices (distinguish from), E-Erosion and stricture",
+          },
+        ],
+        keyPoints: [
+          "p53 mutation is the most common genetic alteration in oral SCC",
+          "CDX2 transcription factor drives intestinal metaplasia in Barrett esophagus",
+          "Arecoline from betel nut activates TGF-beta pathway causing submucosal fibrosis",
+          "Achalasia results from destruction of inhibitory VIP/NO neurons in myenteric plexus",
+          "Barrett progression: metaplasia -> low-grade dysplasia -> high-grade dysplasia -> adenocarcinoma",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17: Pathogenesis of Esophageal and Oral Diseases",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 19: Molecular Pathology of Oral Cancer",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "oral-esophageal-pathology-clinical",
+        title: "Oral & Esophageal Pathology - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "Clinical presentations, diagnosis, and management of oral and esophageal diseases in Indian healthcare settings.",
+        contentMd: `# Clinical Applications
+
+## Case 1: Oral Submucous Fibrosis
+- 35-year-old male from Bihar, chronic pan masala chewer for 15 years
+- Presents with progressive difficulty opening mouth (trismus), burning sensation on eating spicy food
+- Examination: blanched oral mucosa, palpable fibrous bands, restricted mouth opening (<2 cm)
+- Biopsy: submucosal fibrosis with collagen deposition, atrophic epithelium
+- **Management**: Cessation of habit, intralesional steroids + hyaluronidase, surgical release for severe trismus
+
+## Case 2: Esophageal Carcinoma
+- 60-year-old male from Kashmir, progressive dysphagia (solids then liquids) over 3 months, weight loss 10 kg
+- Barium swallow: irregular filling defect in middle third
+- Endoscopy + biopsy: moderately differentiated squamous cell carcinoma
+- CT staging for extent of disease
+- **Indian context**: Hot salt tea (noon chai) is a risk factor in Kashmir valley
+
+## Case 3: Barrett Esophagus with Dysplasia
+- 50-year-old obese male with 15-year history of heartburn
+- Endoscopy: salmon-pink mucosa extending above GEJ (tongues of columnar epithelium)
+- Biopsy: intestinal metaplasia with goblet cells + low-grade dysplasia
+- Management: High-dose PPI, surveillance endoscopy every 6-12 months
+- If high-grade dysplasia: endoscopic mucosal resection or radiofrequency ablation
+
+## Diagnostic Approach
+| Investigation | Finding | Diagnosis |
+|--------------|---------|-----------|
+| Barium swallow - bird beak | Smooth tapering of distal esophagus | Achalasia |
+| Barium swallow - rat tail | Irregular narrowing | Esophageal carcinoma |
+| Endoscopy - salmon pink mucosa | Columnar epithelium above GEJ | Barrett esophagus |
+| Endoscopy - white patch | Non-scrapable leukoplakia | Biopsy to rule out dysplasia |
+| Manometry - absent peristalsis | Failed LES relaxation | Achalasia (gold standard) |
+
+> **Clinical Pearl**: In India, any non-healing oral ulcer persisting for >3 weeks in a tobacco user warrants biopsy to rule out squamous cell carcinoma.`,
+        mnemonics: [
+          {
+            text: "BIRD BEAK = achalasia, RAT TAIL = carcinoma",
+            explanation:
+              "Barium swallow patterns: smooth bird-beak tapering in achalasia vs irregular rat-tail narrowing in esophageal carcinoma",
+          },
+        ],
+        keyPoints: [
+          "Progressive dysphagia from solids to liquids suggests mechanical obstruction (carcinoma)",
+          "OSMF presents with trismus, blanched mucosa, and palpable fibrous bands",
+          "Barrett esophagus appears as salmon-pink tongues of mucosa on endoscopy",
+          "Bird-beak sign on barium swallow is characteristic of achalasia",
+          "Any non-healing oral ulcer >3 weeks in a tobacco user requires biopsy",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17: Clinical Features of GI Diseases",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 19: Clinicopathologic Correlations",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "oral-esophageal-pathology-exam",
+        title: "Oral & Esophageal Pathology - Exam Prep",
+        estimatedMinutes: 15,
+        summary:
+          "High-yield points for NEXT/NEET PG on oral and esophageal pathology.",
+        contentMd: `# Exam Preparation - High Yield
+
+## One-Liners
+- Most common oral malignancy: **Squamous cell carcinoma**
+- Most common site of oral SCC: **Lateral border of tongue**
+- Pre-malignant with highest malignant potential: **Erythroplakia**
+- OSMF is caused by: **Arecoline from areca nut (betel quid)**
+- Barrett esophagus: **Intestinal metaplasia with GOBLET cells** (not just columnar)
+- Most common esophageal cancer worldwide: **Squamous cell carcinoma**
+- Most common esophageal cancer in West: **Adenocarcinoma**
+- Plummer-Vinson syndrome: **IDA + esophageal web + dysphagia** (increased SCC risk)
+- Chagas disease causes: **Secondary achalasia** (Trypanosoma cruzi)
+- Schatzki ring: **Mucosal ring at squamocolumnar junction**
+
+## Comparison Table
+| Feature | Achalasia | Esophageal SCC | Esophageal Adenocarcinoma |
+|---------|-----------|---------------|--------------------------|
+| Location | LES/distal | Upper/middle | Lower third |
+| Barium | Bird beak | Rat tail/irregular | Irregular mass |
+| Key association | Absent ganglia | Tobacco, alcohol, hot drinks | Barrett/GERD |
+| Histology | -- | Keratin pearls | Glands, mucin |
+
+## Previous Year Themes
+- Barrett esophagus definition and progression to adenocarcinoma
+- Differences between SCC and adenocarcinoma of esophagus
+- OSMF pathogenesis and its link to oral cancer
+- Plummer-Vinson syndrome triad
+- Achalasia pathogenesis and diagnosis
+
+## Pattern Recognition
+- Progressive dysphagia solids then liquids + weight loss = **Esophageal carcinoma**
+- Dysphagia for solids AND liquids simultaneously = **Achalasia** (motility disorder)
+- Heartburn + salmon-pink mucosa on endoscopy = **Barrett esophagus**
+- Trismus + blanched oral mucosa + betel nut history = **OSMF**
+- Iron deficiency anemia + dysphagia + web = **Plummer-Vinson syndrome**`,
+        mnemonics: [
+          {
+            text: "SCC Loves Upper, Adeno Loves Lower",
+            explanation:
+              "SCC of esophagus is in upper/middle third; Adenocarcinoma arises in the lower third from Barrett esophagus",
+          },
+        ],
+        keyPoints: [
+          "Erythroplakia has higher malignant potential than leukoplakia",
+          "Barrett esophagus requires goblet cells for diagnosis - simple columnar metaplasia is not enough",
+          "Simultaneous dysphagia to solids and liquids = motility disorder (achalasia)",
+          "Sequential dysphagia (solids then liquids) = mechanical obstruction (carcinoma/stricture)",
+          "OSMF is virtually pathognomonic of areca nut / betel quid chewing",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 19",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "oral-esophageal-pathology-recall",
+        title: "Oral & Esophageal Pathology - Active Recall",
+        estimatedMinutes: 10,
+        summary:
+          "Flashcard-style Q&A for self-testing on oral and esophageal pathology.",
+        contentMd: `# Active Recall
+
+**Q1:** What is the most common malignancy of the oral cavity?
+> Squamous cell carcinoma
+
+**Q2:** Name the triad of Plummer-Vinson syndrome.
+> Iron deficiency anemia + esophageal web + dysphagia
+
+**Q3:** What cell type defines Barrett esophagus histologically?
+> Goblet cells (intestinal-type columnar metaplasia)
+
+**Q4:** What is the barium swallow appearance of achalasia?
+> Bird-beak sign (smooth tapering of distal esophagus)
+
+**Q5:** Which substance in betel nut causes OSMF?
+> Arecoline
+
+**Q6:** Which transcription factor drives intestinal metaplasia in Barrett esophagus?
+> CDX2
+
+**Q7:** What is the most common type of esophageal cancer in India?
+> Squamous cell carcinoma
+
+**Q8:** Name the pre-malignant oral lesion with the highest malignant potential.
+> Erythroplakia
+
+**Q9:** What organism causes secondary achalasia in endemic areas?
+> Trypanosoma cruzi (Chagas disease)
+
+**Q10:** What is the sequence of progression in Barrett esophagus?
+> Metaplasia -> Low-grade dysplasia -> High-grade dysplasia -> Adenocarcinoma
+
+**Q11:** Differentiate dysphagia in achalasia vs carcinoma.
+> Achalasia: solids AND liquids simultaneously (motility disorder); Carcinoma: solids first, then liquids (mechanical obstruction)
+
+**Q12:** What is the most common site of oral SCC?
+> Lateral border of tongue`,
+        mnemonics: [],
+        keyPoints: [
+          "12 recall questions covering oral and esophageal pathology fundamentals and clinical correlations",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17",
+            edition: "10th",
+          },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 2: Gastric Pathology ───────────────────────────────
+  {
+    topicCode: "PA-MOD-05-TOP-02",
+    layers: [
+      {
+        layer: 1,
+        slug: "gastric-pathology-foundation",
+        title: "Gastric Pathology - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "Gastric diseases include acute and chronic gastritis, peptic ulcer disease, and gastric carcinoma. H. pylori is the most important etiologic agent in gastric pathology.",
+        contentMd: `# Gastric Pathology
+
+## Gastritis
+
+### Acute Gastritis
+- Transient mucosal inflammation, often erosive
+- Causes: NSAIDs, alcohol, stress (Curling ulcer in burns, Cushing ulcer in CNS injury), H. pylori
+- Pathology: superficial epithelial damage, neutrophilic infiltration, hemorrhage
+
+### Chronic Gastritis
+| Type | Type A (Autoimmune) | Type B (Bacterial) |
+|------|--------------------|--------------------|
+| Location | Fundus and body | Antrum |
+| Mechanism | Anti-parietal cell antibodies | H. pylori infection |
+| Acid secretion | Decreased (achlorhydria) | Variable (often increased) |
+| Complications | Pernicious anemia, carcinoid | Peptic ulcer, carcinoma, MALT lymphoma |
+| Prevalence | 10% of chronic gastritis | 90% of chronic gastritis |
+
+## Peptic Ulcer Disease (PUD)
+| Feature | Gastric Ulcer | Duodenal Ulcer |
+|---------|--------------|----------------|
+| Pain | Worsened by food | Relieved by food |
+| H. pylori association | 70% | 95% |
+| Acid levels | Normal/decreased | Increased |
+| Malignancy risk | Yes (must biopsy) | Rare |
+| Location | Lesser curvature | First part of duodenum (anterior wall) |
+
+## Gastric Carcinoma
+- **Intestinal type**: Well-differentiated, gland-forming, associated with H. pylori and intestinal metaplasia
+- **Diffuse type**: Poorly differentiated, signet ring cells, linitis plastica (leather bottle stomach)
+- Lauren classification: Intestinal vs Diffuse
+
+> **Clinical Pearl**: In India, gastric cancer is the 5th most common cancer. The intestinal type predominates, and H. pylori infection rates are very high (up to 80% in some populations).`,
+        mnemonics: [
+          {
+            text: "Type A = Autoimmune = body And fundus; Type B = Bacterial = antrum (Bottom)",
+            explanation:
+              "Autoimmune gastritis affects the body/fundus; H. pylori (bacterial) gastritis predominantly affects the antrum",
+          },
+          {
+            text: "DU = Decreased by food; GU = Gets worse with food",
+            explanation:
+              "Duodenal ulcer pain is relieved by food; Gastric ulcer pain worsens after eating",
+          },
+        ],
+        keyPoints: [
+          "H. pylori causes 90% of chronic gastritis (Type B) and is associated with peptic ulcers and gastric carcinoma",
+          "Autoimmune gastritis (Type A) targets parietal cells leading to achlorhydria and pernicious anemia",
+          "Gastric ulcers on lesser curvature must be biopsied to rule out malignancy",
+          "Duodenal ulcers are almost never malignant",
+          "Diffuse type gastric carcinoma has signet ring cells and causes linitis plastica",
+          "Curling ulcer = burns; Cushing ulcer = CNS injury",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17: Stomach",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 20: Stomach and Duodenum",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "gastric-pathology-mechanism",
+        title: "Gastric Pathology - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Mechanisms of H. pylori pathogenesis including CagA and VacA virulence factors, the Correa cascade of gastric carcinogenesis, and molecular pathways in diffuse gastric cancer.",
+        contentMd: `# Mechanisms of Gastric Disease
+
+## H. pylori Pathogenesis
+1. **Colonization**: Urease converts urea -> ammonia -> alkalinizes local pH -> survival in acid
+2. **Adhesion**: BabA (binds Lewis B antigen on epithelium)
+3. **Virulence factors**:
+   - **CagA** (cytotoxin-associated gene A): Injected via Type IV secretion system -> activates SHP-2 phosphatase -> cell proliferation, cytoskeletal rearrangement
+   - **VacA** (vacuolating cytotoxin A): Creates pores in epithelial membranes -> vacuolation, apoptosis
+4. **Immune evasion**: Modifies LPS -> avoids TLR4 recognition; alters T-cell response
+5. **Inflammation**: IL-8 recruitment of neutrophils -> chronic active gastritis
+
+## Peptic Ulcer Pathogenesis
+- Balance between **aggressive factors** (acid, pepsin, H. pylori, NSAIDs, bile salts) and **protective factors** (mucus, bicarbonate, prostaglandins, blood flow)
+- NSAIDs inhibit COX-1 -> decreased prostaglandin E2 -> reduced mucus/bicarbonate secretion and mucosal blood flow
+- Zollinger-Ellison syndrome: Gastrinoma -> massive acid hypersecretion -> multiple recurrent ulcers
+
+## Correa Cascade (Intestinal Type Gastric Cancer)
+Normal mucosa -> Chronic gastritis (H. pylori) -> Atrophic gastritis -> Intestinal metaplasia -> Dysplasia -> Adenocarcinoma
+
+**Key molecular events**:
+- p53 mutations (most common), APC mutations
+- Microsatellite instability (15-20%)
+- CDX2 activation drives intestinal metaplasia (similar to Barrett)
+- E-cadherin loss (CDH1 gene) in diffuse type
+
+## Diffuse Type Gastric Cancer
+- **CDH1 (E-cadherin) gene** mutation/methylation
+- Loss of cell adhesion -> individual cell infiltration -> signet ring morphology
+- **Hereditary Diffuse Gastric Cancer (HDGC)**: Autosomal dominant, CDH1 germline mutation
+- Krukenberg tumor: Metastasis to ovary (bilateral, signet ring cells)
+
+> **Clinical Pearl**: H. pylori CagA-positive strains are associated with higher risk of gastric cancer. In India, CagA positivity varies by region and correlates with cancer incidence patterns.`,
+        mnemonics: [
+          {
+            text: "CagA = Cancer-Associated gene A",
+            explanation:
+              "CagA-positive H. pylori strains have higher risk of gastric cancer; CagA activates SHP-2 oncogenic pathway",
+          },
+          {
+            text: "CORREA cascade: C-Chronic gastritis, O-Open atrophy, R-Replacement by intestinal metaplasia, R-Rising dysplasia, E-Evolves to, A-Adenocarcinoma",
+            explanation:
+              "Sequential progression from H. pylori gastritis to intestinal-type gastric adenocarcinoma",
+          },
+        ],
+        keyPoints: [
+          "H. pylori urease alkalinizes the local environment allowing bacterial survival in gastric acid",
+          "CagA is injected via Type IV secretion system and activates SHP-2 oncogenic signaling",
+          "NSAIDs cause peptic ulcers by inhibiting COX-1 and reducing mucosal prostaglandin E2",
+          "Correa cascade: chronic gastritis -> atrophy -> intestinal metaplasia -> dysplasia -> carcinoma",
+          "CDH1 (E-cadherin) mutation is the hallmark of diffuse gastric cancer and hereditary HDGC syndrome",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17: Pathogenesis of Gastric Disease",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 20: Mechanisms of Gastric Disease",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "gastric-pathology-clinical",
+        title: "Gastric Pathology - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "Clinical presentations of gastric diseases including peptic ulcer complications, gastric carcinoma staging, and H. pylori diagnosis and treatment in Indian clinical practice.",
+        contentMd: `# Clinical Applications
+
+## Case 1: Peptic Ulcer Complications
+- 45-year-old male presents with hematemesis (coffee ground vomit) and melena
+- History of chronic NSAID use for joint pain
+- Endoscopy: clean-based ulcer on lesser curvature of stomach
+- **Complications of PUD**:
+  - Hemorrhage (most common complication) - GDA erosion in posterior duodenal ulcer
+  - Perforation (anterior duodenal ulcer perforates into peritoneal cavity)
+  - Gastric outlet obstruction (chronic scarring of pyloric channel)
+  - Malignant transformation (gastric ulcers only)
+
+## Case 2: Gastric Carcinoma
+- 60-year-old male from Northeast India with weight loss, early satiety, and epigastric pain
+- Examination: palpable supraclavicular lymph node (Virchow node/Troisier sign)
+- Endoscopy: ulceroproliferative mass in antrum
+- Biopsy: intestinal type adenocarcinoma
+- **Metastatic patterns**:
+  - Virchow node (left supraclavicular) = Troisier sign
+  - Sister Mary Joseph nodule (periumbilical)
+  - Krukenberg tumor (bilateral ovarian metastasis - signet ring cells)
+  - Blumer shelf (pouch of Douglas deposit on rectal exam)
+
+## Case 3: H. pylori Diagnosis and Treatment
+- **Diagnostic tests**:
+  | Test | Type | Use |
+  |------|------|-----|
+  | Rapid urease test (CLO test) | Invasive | Gold standard for endoscopic diagnosis |
+  | Histology (Giemsa stain) | Invasive | Biopsy confirmation |
+  | Urea breath test (C13/C14) | Non-invasive | Best for confirming eradication |
+  | Stool antigen test | Non-invasive | Screening, eradication confirmation |
+  | Serology (IgG) | Non-invasive | Epidemiologic studies (cannot confirm eradication) |
+- **Indian triple therapy**: PPI + Amoxicillin + Clarithromycin (14 days)
+
+> **Clinical Pearl**: In India, the test-and-treat strategy for H. pylori is recommended for patients with dyspepsia under 45 years without alarm features.`,
+        mnemonics: [
+          {
+            text: "VSKB for gastric cancer metastases",
+            explanation:
+              "V-Virchow node (left supraclavicular), S-Sister Mary Joseph nodule (periumbilical), K-Krukenberg tumor (ovary), B-Blumer shelf (rectal pouch)",
+          },
+        ],
+        keyPoints: [
+          "Posterior duodenal ulcer erodes into gastroduodenal artery causing hemorrhage",
+          "Anterior duodenal ulcer perforates into peritoneal cavity causing pneumoperitoneum",
+          "Virchow node (left supraclavicular) is a classic sign of gastric cancer metastasis",
+          "Urea breath test is the best non-invasive test for H. pylori eradication confirmation",
+          "Krukenberg tumor is bilateral ovarian metastasis with signet ring cells from diffuse gastric cancer",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17: Clinical Features of Gastric Disease",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 20: Clinical Gastric Pathology",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "gastric-pathology-exam",
+        title: "Gastric Pathology - Exam Prep",
+        estimatedMinutes: 15,
+        summary:
+          "High-yield points on gastric diseases for NEXT/NEET PG exams.",
+        contentMd: `# Exam Preparation - High Yield
+
+## One-Liners
+- Most common cause of chronic gastritis: **H. pylori (Type B)**
+- Most common complication of peptic ulcer: **Hemorrhage**
+- Curling ulcer: **Burns** (stress ulcer in body/fundus)
+- Cushing ulcer: **CNS injury** (vagal stimulation -> increased acid, can perforate)
+- Leather bottle stomach (linitis plastica): **Diffuse type gastric carcinoma**
+- Signet ring cells: **Diffuse type** (mucin pushes nucleus to periphery)
+- Krukenberg tumor: **Ovarian metastasis** from gastric cancer (signet ring)
+- Virchow node: **Left supraclavicular** node (signal node)
+- Intestinal metaplasia driven by: **CDX2 transcription factor**
+- E-cadherin (CDH1) loss: **Diffuse gastric cancer and lobular breast cancer**
+- Zollinger-Ellison syndrome: **Gastrinoma** (pancreatic/duodenal) -> multiple recurrent ulcers
+- Best initial test for H. pylori: **Stool antigen** or **urea breath test** (non-invasive)
+
+## Comparison: Gastric Ulcer vs Duodenal Ulcer
+| Feature | Gastric Ulcer | Duodenal Ulcer |
+|---------|--------------|----------------|
+| H. pylori | 70% | 95% |
+| Acid | Normal/low | High |
+| Pain timing | Worse with food | Better with food |
+| Malignant risk | Yes | No |
+| Perforation | Less common | More common (anterior wall) |
+| Hemorrhage | From left gastric artery | From GDA (posterior wall) |
+
+## Previous Year Themes
+- Correa cascade sequence
+- Differences between intestinal and diffuse gastric carcinoma
+- H. pylori virulence factors (CagA, VacA)
+- Peptic ulcer complications and their anatomical basis
+- Zollinger-Ellison syndrome diagnosis (fasting gastrin >1000 pg/mL)
+
+## Pattern Recognition
+- Elderly + weight loss + early satiety + left supraclavicular node = **Gastric carcinoma**
+- Recurrent multiple ulcers + diarrhea + high gastrin = **Zollinger-Ellison syndrome**
+- Bilateral ovarian mass + signet ring cells = **Krukenberg tumor**
+- Leather bottle stomach on barium meal = **Linitis plastica (diffuse type)**`,
+        mnemonics: [
+          {
+            text: "Curling = Burns (C for Curling, C for Combustion); Cushing = Brain (C for Cushing, C for Cranium)",
+            explanation:
+              "Curling ulcers occur in burn patients (body/fundus); Cushing ulcers occur in CNS injury patients (can perforate due to vagal acid hypersecretion)",
+          },
+        ],
+        keyPoints: [
+          "H. pylori causes 95% of duodenal ulcers and 70% of gastric ulcers",
+          "Hemorrhage is the most common complication of peptic ulcer disease",
+          "Diffuse gastric cancer: signet ring cells, CDH1 mutation, linitis plastica, Krukenberg tumor",
+          "Zollinger-Ellison: gastrinoma -> gastrin >1000 -> multiple recurrent ulcers in unusual locations",
+          "Curling = burns, Cushing = brain injury for stress ulcers",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 20",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "gastric-pathology-recall",
+        title: "Gastric Pathology - Active Recall",
+        estimatedMinutes: 10,
+        summary:
+          "Flashcard-style Q&A for self-testing on gastric pathology.",
+        contentMd: `# Active Recall
+
+**Q1:** What percentage of chronic gastritis is caused by H. pylori?
+> 90% (Type B gastritis, affects the antrum)
+
+**Q2:** How does H. pylori survive in the acidic stomach?
+> Urease enzyme converts urea to ammonia, creating an alkaline microenvironment
+
+**Q3:** What is the Correa cascade?
+> Chronic gastritis -> Atrophic gastritis -> Intestinal metaplasia -> Dysplasia -> Adenocarcinoma (intestinal type)
+
+**Q4:** What gene is mutated in hereditary diffuse gastric cancer?
+> CDH1 (E-cadherin gene)
+
+**Q5:** Name the cell type in diffuse gastric carcinoma.
+> Signet ring cell (mucin-filled cell with eccentric nucleus)
+
+**Q6:** What is a Krukenberg tumor?
+> Bilateral ovarian metastasis from gastric cancer, characterized by signet ring cells
+
+**Q7:** Which artery is eroded in posterior duodenal ulcer hemorrhage?
+> Gastroduodenal artery (GDA)
+
+**Q8:** What are the H. pylori virulence factors associated with cancer risk?
+> CagA (activates SHP-2 via Type IV secretion) and VacA (causes epithelial vacuolation and apoptosis)
+
+**Q9:** Differentiate Curling and Cushing ulcers.
+> Curling = burn patients (reduced mucosal blood flow); Cushing = CNS injury (vagal stimulation -> acid hypersecretion, can perforate)
+
+**Q10:** What is Zollinger-Ellison syndrome?
+> Gastrinoma (usually pancreatic/duodenal) causing massive gastric acid secretion and multiple recurrent peptic ulcers
+
+**Q11:** What is the best non-invasive test to confirm H. pylori eradication?
+> Urea breath test (C13 or C14)
+
+**Q12:** What is linitis plastica?
+> Leather bottle stomach - diffuse infiltration of gastric wall by poorly differentiated (diffuse type) carcinoma causing rigidity`,
+        mnemonics: [],
+        keyPoints: [
+          "12 recall questions covering H. pylori, peptic ulcer, and gastric carcinoma",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17",
+            edition: "10th",
+          },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 3: Intestinal Pathology ────────────────────────────
+  {
+    topicCode: "PA-MOD-05-TOP-03",
+    layers: [
+      {
+        layer: 1,
+        slug: "intestinal-pathology-foundation",
+        title: "Intestinal Pathology - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "Intestinal diseases include inflammatory bowel disease (Crohn and UC), celiac disease, intestinal tuberculosis, and colorectal carcinoma. Each has distinct pathologic features.",
+        contentMd: `# Intestinal Pathology
+
+## Inflammatory Bowel Disease (IBD)
+| Feature | Crohn Disease | Ulcerative Colitis |
+|---------|--------------|-------------------|
+| Distribution | Mouth to anus (ileum most common) | Rectum -> extends proximally |
+| Pattern | Skip lesions | Continuous involvement |
+| Depth | Transmural | Mucosa and submucosa only |
+| Granulomas | Non-caseating granulomas (60%) | Absent |
+| Fistulae | Common | Rare |
+| Strictures | Common (string sign on barium) | Rare |
+| Cancer risk | Slight increase | Significantly increased |
+| Gross appearance | Cobblestone mucosa, creeping fat | Pseudopolyps, lead pipe colon |
+| Histology | Transmural inflammation, granulomas | Crypt abscesses, crypt distortion |
+
+## Celiac Disease (Gluten-Sensitive Enteropathy)
+- Immune reaction to gliadin (component of gluten) in genetically susceptible individuals
+- HLA-DQ2 (95%) or HLA-DQ8 association
+- Villous atrophy + crypt hyperplasia + intraepithelial lymphocytosis
+- Serology: Anti-tTG (tissue transglutaminase) IgA - best screening test
+
+## Intestinal Tuberculosis
+- Common in India, usually ileocecal region
+- Can mimic Crohn disease
+- Caseating granulomas (vs non-caseating in Crohn)
+- Transverse ulcers (vs longitudinal in Crohn)
+- Hypertrophic or ulcerative form
+
+## Colorectal Carcinoma
+- 3rd most common cancer worldwide
+- Two pathways: Adenoma-carcinoma sequence (APC -> KRAS -> p53) and Microsatellite instability (MSI) pathway
+- Risk factors: FAP, Lynch syndrome, IBD (UC > Crohn), high-fat low-fiber diet
+- Left-sided: annular/napkin ring constriction, obstruction
+- Right-sided: polypoid mass, iron deficiency anemia (occult bleeding)
+
+> **Clinical Pearl**: In India, intestinal TB must always be considered in the differential of Crohn disease, as both present with ileocecal involvement. Caseating granulomas and transverse ulcers favor TB.`,
+        mnemonics: [
+          {
+            text: "CHRISTMAS for Crohn features",
+            explanation:
+              "C-Cobblestone mucosa, H-High depth (transmural), R-Regional enteritis, I-Ileum most common, S-Skip lesions, T-Terminal ileum, M-Mouth to anus, A-Aphthous ulcers, S-Strictures and fistulae",
+          },
+          {
+            text: "UC = Ulcers are Continuous and Confined to Colon/mucosa",
+            explanation:
+              "UC starts at rectum and extends continuously proximally; inflammation is limited to mucosa and submucosa",
+          },
+        ],
+        keyPoints: [
+          "Crohn disease: transmural, skip lesions, granulomas, fistulae; UC: mucosal, continuous, crypt abscesses",
+          "Celiac disease is associated with HLA-DQ2 (95%) and diagnosed by anti-tTG IgA antibodies",
+          "Intestinal TB shows caseating granulomas and transverse ulcers at the ileocecal region",
+          "Colorectal cancer follows the adenoma-carcinoma sequence: APC -> KRAS -> SMAD4 -> p53",
+          "Left-sided colon cancer causes obstruction; right-sided causes iron deficiency anemia",
+          "UC carries a higher risk of colorectal cancer than Crohn disease",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17: Small and Large Intestine",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 21: Intestinal Pathology",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "intestinal-pathology-mechanism",
+        title: "Intestinal Pathology - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Molecular mechanisms of IBD, celiac disease pathogenesis involving tTG and HLA-DQ2, and the adenoma-carcinoma sequence with key genetic mutations.",
+        contentMd: `# Mechanisms of Intestinal Disease
+
+## IBD Pathogenesis
+1. **Genetic susceptibility**: NOD2/CARD15 mutations (Crohn disease - defective innate immunity to intestinal bacteria)
+2. **Mucosal barrier defect**: Increased permeability -> bacterial translocation
+3. **Dysregulated immune response**:
+   - Crohn: Th1/Th17 dominant -> TNF-alpha, IFN-gamma, IL-17
+   - UC: Th2/atypical -> IL-5, IL-13 (mucosal)
+4. **Microbiome dysbiosis**: Reduced diversity, decreased Firmicutes, increased Proteobacteria
+5. **Environmental triggers**: Smoking (worsens Crohn, protects in UC - paradoxical)
+
+## Celiac Disease Mechanism
+1. Dietary gluten -> gliadin peptides survive digestion
+2. **Tissue transglutaminase (tTG)** deamidates gliadin -> creates negative charge
+3. Deamidated gliadin binds **HLA-DQ2/DQ8** on APCs
+4. Presentation to CD4+ T cells -> Th1 response -> IFN-gamma
+5. Activated intraepithelial lymphocytes (CD8+ T cells) -> villous destruction
+6. Crypt hyperplasia (compensatory)
+7. Marsh classification: 0 (normal) -> I (IEL increase) -> II (crypt hyperplasia) -> IIIa-c (villous atrophy grades)
+
+## Adenoma-Carcinoma Sequence (Vogelstein Model)
+| Step | Mutation/Event | Result |
+|------|---------------|--------|
+| 1 | **APC** loss (5q21) | Increased WNT signaling -> adenoma initiation |
+| 2 | **KRAS** activation (12p12) | Increased growth signaling -> adenoma progression |
+| 3 | **SMAD4** loss (18q21) | Loss of TGF-beta growth inhibition |
+| 4 | **p53** loss (17p13) | Loss of tumor suppressor -> carcinoma |
+
+## Microsatellite Instability (MSI) Pathway
+- Defective DNA mismatch repair (MLH1, MSH2, MSH6, PMS2)
+- **Lynch syndrome (HNPCC)**: Germline mutation in MMR genes -> autosomal dominant
+- Sporadic MSI: MLH1 promoter hypermethylation
+- Right-sided, mucinous, better prognosis
+- **Bethesda criteria** for MSI testing
+
+## Familial Adenomatous Polyposis (FAP)
+- Germline APC mutation -> >100 polyps by teenage years
+- 100% cancer risk without colectomy
+- Gardner syndrome: FAP + osteomas + desmoid tumors + epidermal cysts
+- Turcot syndrome: FAP + CNS tumors (medulloblastoma)
+
+> **Clinical Pearl**: In Indian practice, NOD2 mutations have a lower frequency compared to Western populations, suggesting different genetic architecture in Indian Crohn disease patients.`,
+        mnemonics: [
+          {
+            text: "APC-KRAS-SMAD-p53 for adenoma-carcinoma sequence",
+            explanation:
+              "APC initiates adenoma (gatekeeper), KRAS promotes growth, SMAD4 loss removes TGF-beta inhibition, p53 loss allows malignant transformation",
+          },
+          {
+            text: "TTG-DQ2-Th1 for celiac mechanism",
+            explanation:
+              "Tissue Transglutaminase deamidates gliadin -> binds HLA-DQ2 -> activates Th1 response -> villous destruction",
+          },
+        ],
+        keyPoints: [
+          "NOD2/CARD15 is the most important susceptibility gene for Crohn disease",
+          "Tissue transglutaminase deamidates gliadin making it immunogenic in celiac disease",
+          "APC mutation is the initiating event in the adenoma-carcinoma sequence (gatekeeper)",
+          "Lynch syndrome: germline MMR gene mutations (MLH1/MSH2/MSH6/PMS2)",
+          "FAP has 100% cancer risk without prophylactic colectomy",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17: Molecular Pathology of Intestinal Diseases",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 21: Pathogenesis of IBD and Colorectal Cancer",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "intestinal-pathology-clinical",
+        title: "Intestinal Pathology - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "Clinical presentations of IBD, celiac disease, and colorectal cancer in Indian healthcare context, including differentiation from intestinal TB.",
+        contentMd: `# Clinical Applications
+
+## Case 1: Crohn Disease vs Intestinal TB
+- 25-year-old male with chronic abdominal pain, diarrhea, weight loss, and low-grade fever
+- Colonoscopy: ileocecal ulcers with cobblestone pattern
+- **Differentiating features**:
+  | Feature | Crohn Disease | Intestinal TB |
+  |---------|--------------|---------------|
+  | Ulcer orientation | Longitudinal | Transverse |
+  | Granulomas | Non-caseating (60%) | Caseating (100%) |
+  | AFB stain/culture | Negative | Positive |
+  | Fistulae | Common | Uncommon |
+  | TB PCR/Quantiferon | Negative | Positive |
+  | Response to ATT | No | Yes (trial of therapy) |
+- In India, a trial of ATT (anti-tubercular therapy) for 2-3 months is often used as diagnostic test
+
+## Case 2: Celiac Disease
+- 3-year-old child from Punjab with chronic diarrhea, abdominal distension, failure to thrive since weaning
+- Steatorrhea, irritability, iron and folate deficiency
+- Serology: Anti-tTG IgA strongly positive
+- Duodenal biopsy: Marsh IIIb (marked villous atrophy, crypt hyperplasia, IEL >40/100 epithelial cells)
+- Treatment: Lifelong gluten-free diet
+- Complication if untreated: Dermatitis herpetiformis, T-cell lymphoma (EATL), osteoporosis
+
+## Case 3: Colorectal Cancer
+- 55-year-old male with altered bowel habits, blood in stool for 3 months
+- Examination: palpable mass in right iliac fossa
+- Colonoscopy: polypoid mass in cecum, biopsy shows adenocarcinoma
+- CEA elevated (useful for follow-up, not screening)
+- Staging: Duke/Astler-Coller or TNM
+
+## Screening for Colorectal Cancer
+- Average risk: Colonoscopy every 10 years from age 45
+- FAP: Annual colonoscopy from teenage -> prophylactic colectomy
+- Lynch syndrome: Colonoscopy every 1-2 years from age 20-25 or 5 years before youngest case in family
+
+> **Clinical Pearl**: In India, always rule out intestinal TB before diagnosing Crohn disease. A trial of ATT with clinical and endoscopic reassessment at 2-3 months is standard practice.`,
+        mnemonics: [
+          {
+            text: "LENT for Crohn vs TB ulcers",
+            explanation:
+              "L-Longitudinal ulcers in Crohn, E-Entry of tubercle bacilli causes TB, N-Non-caseating granulomas in Crohn (caseating in TB), T-Transverse ulcers in TB",
+          },
+        ],
+        keyPoints: [
+          "Longitudinal ulcers = Crohn; Transverse ulcers = Intestinal TB",
+          "Anti-tTG IgA is the best screening test for celiac disease",
+          "Right-sided colon cancer presents with iron deficiency anemia; left-sided with obstruction",
+          "CEA is used for monitoring recurrence, not for screening",
+          "In India, trial of ATT is standard when TB vs Crohn is unclear",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17: Clinical Features of Intestinal Disease",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 21: Clinicopathologic Correlations",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "intestinal-pathology-exam",
+        title: "Intestinal Pathology - Exam Prep",
+        estimatedMinutes: 15,
+        summary:
+          "High-yield points on intestinal pathology for NEXT/NEET PG exams.",
+        contentMd: `# Exam Preparation - High Yield
+
+## One-Liners
+- Most common site of Crohn disease: **Terminal ileum**
+- UC always starts from: **Rectum** and extends proximally
+- Pathognomonic of Crohn: **Non-caseating granulomas + transmural inflammation**
+- Pathognomonic of UC: **Crypt abscesses**
+- Skip lesions: **Crohn disease**
+- Lead pipe colon: **Chronic UC** (loss of haustra)
+- Pseudopolyps: **UC** (regenerating mucosa between ulcers)
+- Best screening test for celiac: **Anti-tTG IgA**
+- HLA association of celiac: **HLA-DQ2 (95%), HLA-DQ8**
+- Gatekeeper gene in colorectal cancer: **APC**
+- Lynch syndrome gene: **MLH1, MSH2** (DNA mismatch repair)
+- Gardner syndrome: **FAP + osteomas + desmoid tumors**
+- Peutz-Jeghers syndrome: **Hamartomatous polyps + mucocutaneous pigmentation**
+- Most common polyp: **Hyperplastic polyp** (no malignant potential)
+- Most common neoplastic polyp: **Tubular adenoma**
+- Highest malignant risk polyp: **Villous adenoma** (40% malignant potential)
+
+## Comparison: Crohn vs UC vs TB
+| Feature | Crohn | UC | Intestinal TB |
+|---------|-------|-----|---------------|
+| Site | Ileum | Rectum -> colon | Ileocecal |
+| Ulcers | Longitudinal | Superficial | Transverse |
+| Depth | Transmural | Mucosal | Submucosal/transmural |
+| Granuloma | Non-caseating | None | Caseating |
+| Fistula | Yes | No | Rare |
+| Cancer risk | Slight | High | No |
+
+## Previous Year Themes
+- Crohn vs UC differentiation
+- Adenoma-carcinoma sequence mutations (APC -> KRAS -> SMAD4 -> p53)
+- Celiac disease pathogenesis and serology
+- Polyposis syndromes (FAP, Peutz-Jeghers, Juvenile)
+- Lynch syndrome criteria and genetics
+
+## Pattern Recognition
+- Young patient + ileocecal ulcers + India = Rule out **intestinal TB** first
+- Chronic bloody diarrhea + rectal involvement + continuous = **UC**
+- Skip lesions + fistulae + non-caseating granulomas = **Crohn disease**
+- Child with steatorrhea + failure to thrive + anti-tTG positive = **Celiac disease**
+- Elderly + altered bowel habits + iron deficiency anemia + right colon mass = **Colorectal cancer**`,
+        mnemonics: [
+          {
+            text: "Villous = Villainous (highest cancer risk polyp)",
+            explanation:
+              "Villous adenoma has the highest malignant potential (~40%), followed by tubulovillous, then tubular adenoma (~5%)",
+          },
+        ],
+        keyPoints: [
+          "Terminal ileum is the most common site for Crohn disease",
+          "UC always starts from the rectum and extends proximally in a continuous pattern",
+          "APC is the gatekeeper gene - its loss initiates the adenoma-carcinoma sequence",
+          "Villous adenoma has the highest malignant potential among colorectal polyps",
+          "In India, intestinal TB is the most important differential for Crohn disease",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 21",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "intestinal-pathology-recall",
+        title: "Intestinal Pathology - Active Recall",
+        estimatedMinutes: 10,
+        summary:
+          "Flashcard-style Q&A for self-testing on intestinal pathology.",
+        contentMd: `# Active Recall
+
+**Q1:** Name the most important susceptibility gene for Crohn disease.
+> NOD2/CARD15 (defective innate immune recognition of intracellular bacteria)
+
+**Q2:** What is the key histologic feature of UC?
+> Crypt abscesses (neutrophils within crypt lumens) with crypt distortion
+
+**Q3:** What are the 4 key mutations in the adenoma-carcinoma sequence?
+> APC (initiation) -> KRAS (promotion) -> SMAD4 (progression) -> p53 (malignant transformation)
+
+**Q4:** What is the HLA association of celiac disease?
+> HLA-DQ2 (95%) and HLA-DQ8
+
+**Q5:** What enzyme deamidates gliadin in celiac disease?
+> Tissue transglutaminase (tTG)
+
+**Q6:** How do you differentiate Crohn ulcers from TB ulcers?
+> Crohn: longitudinal ulcers, non-caseating granulomas; TB: transverse ulcers, caseating granulomas
+
+**Q7:** What is Gardner syndrome?
+> FAP (>100 adenomatous polyps) + osteomas + desmoid tumors + epidermal cysts
+
+**Q8:** Which polyp type has the highest malignant potential?
+> Villous adenoma (~40% malignant potential)
+
+**Q9:** What is the difference in presentation between right and left colon cancers?
+> Right: iron deficiency anemia (occult bleeding), polypoid mass; Left: obstruction (napkin ring), altered bowel habits
+
+**Q10:** What genes are mutated in Lynch syndrome?
+> DNA mismatch repair genes: MLH1, MSH2, MSH6, PMS2
+
+**Q11:** What is Peutz-Jeghers syndrome?
+> Autosomal dominant; hamartomatous polyps (entire GI tract) + mucocutaneous melanin pigmentation; STK11/LKB1 gene mutation
+
+**Q12:** Name the extraintestinal complication of celiac disease that presents with itchy vesicular rash.
+> Dermatitis herpetiformis (IgA deposits at dermal papillae)`,
+        mnemonics: [],
+        keyPoints: [
+          "12 recall questions covering IBD, celiac disease, colorectal cancer, and polyposis syndromes",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 17",
+            edition: "10th",
+          },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 4: Liver Pathology ─────────────────────────────────
+  {
+    topicCode: "PA-MOD-05-TOP-04",
+    layers: [
+      {
+        layer: 1,
+        slug: "liver-pathology-foundation",
+        title: "Liver Pathology - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "Liver diseases include viral hepatitis (A-E), alcoholic liver disease, cirrhosis, and hepatocellular carcinoma. Understanding the patterns of liver injury is fundamental to hepatopathology.",
+        contentMd: `# Liver Pathology
+
+## Patterns of Liver Injury
+| Pattern | Location | Examples |
+|---------|----------|----------|
+| Hepatocellular | Hepatocytes | Viral hepatitis, drug-induced, fatty change |
+| Cholestatic | Bile ducts/canaliculi | PBC, PSC, drug-induced cholestasis |
+| Mixed | Both | Drug reactions, chronic hepatitis |
+
+## Viral Hepatitis
+| Virus | Type | Transmission | Chronicity | Carrier state | Vaccine |
+|-------|------|-------------|------------|---------------|---------|
+| HAV | RNA | Feco-oral | No | No | Yes |
+| HBV | DNA (hepadna) | Blood, sexual, vertical | Yes (5-10% adults) | Yes | Yes |
+| HCV | RNA (flavivirus) | Blood, sexual | Yes (80%) | Yes | No |
+| HDV | RNA (defective) | Needs HBV | Yes | With HBV | HBV vaccine |
+| HEV | RNA | Feco-oral | No (except immunocompromised) | No | Yes (in India/China) |
+
+## Alcoholic Liver Disease
+Three patterns (can coexist):
+1. **Steatosis** (fatty liver) - reversible, most common
+2. **Alcoholic hepatitis** - Mallory-Denk bodies, neutrophilic infiltrate
+3. **Cirrhosis** - irreversible, micronodular
+
+## Cirrhosis
+- Irreversible diffuse fibrosis with regenerative nodules
+- Common causes in India: Alcohol, Hepatitis B, Hepatitis C, NAFLD
+- Complications: Portal hypertension, ascites, esophageal varices, hepatorenal syndrome, hepatic encephalopathy, HCC
+
+## Hepatocellular Carcinoma (HCC)
+- Most common primary liver malignancy
+- Strong association with HBV (India, Asia), HCV, cirrhosis, aflatoxin B1
+- Tumor marker: **Alpha-fetoprotein (AFP)**
+- Fibrolamellar variant: young patients, no cirrhosis, better prognosis
+
+> **Clinical Pearl**: India has intermediate endemicity for HBV (3-4% carrier rate). Hepatitis E is a major cause of epidemic jaundice and is particularly dangerous in pregnant women (20% mortality in third trimester).`,
+        mnemonics: [
+          {
+            text: "Vowels (A, E) = Enteric (feco-oral); Consonants (B, C, D) = Blood-borne",
+            explanation:
+              "HAV and HEV are transmitted via feco-oral route; HBV, HCV, and HDV are transmitted via blood/parenteral route",
+          },
+          {
+            text: "HBV = Has Been Vaccinated; HCV = Cannot Vaccinate",
+            explanation:
+              "HBV has an effective vaccine; HCV has no vaccine available yet",
+          },
+        ],
+        keyPoints: [
+          "HBV is a DNA virus (only DNA hepatitis virus); all others are RNA",
+          "HCV has 80% chronicity rate - highest among hepatitis viruses",
+          "HEV in pregnant women causes fulminant hepatitis with 20% mortality",
+          "Alcoholic liver disease: steatosis -> hepatitis (Mallory-Denk bodies) -> cirrhosis",
+          "Cirrhosis is defined by diffuse fibrosis with regenerative nodules",
+          "HCC is strongly associated with HBV in India and aflatoxin B1 in tropical regions",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 18: Liver and Gallbladder",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 22: The Liver, Biliary Tract and Pancreas",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "liver-pathology-mechanism",
+        title: "Liver Pathology - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Mechanisms of viral hepatitis replication, immune-mediated liver injury, pathogenesis of cirrhosis through stellate cell activation, and molecular basis of hepatocellular carcinoma.",
+        contentMd: `# Mechanisms of Liver Disease
+
+## HBV Molecular Biology
+- **Partially double-stranded DNA virus** (Hepadnaviridae)
+- Replication: DNA -> RNA (pregenomic) -> DNA (reverse transcriptase)
+- Viral antigens and their significance:
+  | Antigen/Antibody | Significance |
+  |-----------------|-------------|
+  | HBsAg | Active infection (surface antigen) |
+  | Anti-HBs | Immunity (vaccination or resolved infection) |
+  | HBeAg | Active replication, high infectivity |
+  | Anti-HBe | Low replication, seroconversion |
+  | HBcAg | Not in serum (core antigen) |
+  | Anti-HBc IgM | Acute infection |
+  | Anti-HBc IgG | Past or chronic infection |
+
+- **Window period**: HBsAg cleared but anti-HBs not yet formed -> only anti-HBc IgM positive
+- **HBV-induced liver damage**: Immune-mediated (CD8+ T cells kill infected hepatocytes), NOT direct viral cytopathicity
+
+## HCV Pathogenesis
+- RNA virus -> RNA-dependent RNA polymerase (no proofreading) -> high mutation rate -> immune evasion
+- Quasispecies: multiple viral variants in one host
+- Genotype 3: most common in India (associated with steatosis)
+- Direct antiviral agents (DAAs) target: NS3/4A protease, NS5A, NS5B polymerase
+
+## Pathogenesis of Cirrhosis
+1. Chronic liver injury (viral, alcohol, NAFLD) -> hepatocyte death
+2. **Hepatic stellate cell (Ito cell) activation** -> myofibroblast transformation
+3. TGF-beta is the key fibrogenic cytokine
+4. Excessive collagen deposition (Types I and III) in space of Disse
+5. Distortion of hepatic architecture -> regenerative nodules
+6. Increased intrahepatic vascular resistance -> **portal hypertension**
+
+## Pathogenesis of HCC
+- **HBV**: Integration of viral DNA into host genome -> insertional mutagenesis + HBx protein (transactivator, inactivates p53)
+- **HCV**: Chronic inflammation -> oxidative stress -> DNA damage -> no viral DNA integration
+- **Aflatoxin B1**: Produced by Aspergillus flavus -> p53 codon 249 mutation (AGG -> AGT, Arg -> Ser)
+- **NAFLD/NASH**: Insulin resistance -> lipotoxicity -> oxidative stress -> cirrhosis -> HCC
+
+## Portal Hypertension Mechanism
+- Increased resistance: intrahepatic (cirrhosis), prehepatic (portal vein thrombosis), posthepatic (Budd-Chiari)
+- Porto-systemic shunts: esophageal varices, caput medusae, hemorrhoids, retroperitoneal
+
+> **Clinical Pearl**: In India, aflatoxin exposure from contaminated groundnuts and grains synergizes with HBV to dramatically increase HCC risk, especially in tropical and subtropical regions.`,
+        mnemonics: [
+          {
+            text: "Window period = anti-HBc IgM is the WINDOW to diagnosis",
+            explanation:
+              "During the window period, HBsAg has cleared and anti-HBs has not appeared; anti-HBc IgM is the only marker of acute HBV infection",
+          },
+          {
+            text: "STELLATE = STAR cell becomes a SCAR cell",
+            explanation:
+              "Hepatic stellate (Ito) cells are activated by TGF-beta and transform into myofibroblasts that produce collagen, causing cirrhosis (scarring)",
+          },
+        ],
+        keyPoints: [
+          "HBV liver damage is immune-mediated via CD8+ T cells, not by direct cytopathicity",
+          "Window period: only anti-HBc IgM is positive (HBsAg cleared, anti-HBs not yet formed)",
+          "Hepatic stellate cell activation by TGF-beta is the central event in cirrhogenesis",
+          "HBV causes HCC via HBx protein (inactivates p53) and insertional mutagenesis",
+          "Aflatoxin B1 causes specific p53 codon 249 mutation in HCC",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 18: Pathogenesis of Liver Diseases",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 22: Mechanisms of Hepatic Disease",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "liver-pathology-clinical",
+        title: "Liver Pathology - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "Clinical presentations of hepatitis, cirrhosis, and HCC in Indian practice, including serological interpretation and management principles.",
+        contentMd: `# Clinical Applications
+
+## Case 1: Acute Viral Hepatitis B
+- 30-year-old male, history of dental extraction 3 months ago, presents with jaundice, dark urine, anorexia
+- LFT: ALT >1000, AST elevated, bilirubin elevated
+- Serology: HBsAg+, HBeAg+, anti-HBc IgM+, anti-HBs-
+- **Interpretation**: Acute HBV infection with active replication
+- Most patients (90-95% adults) clear the infection; 5-10% develop chronic hepatitis
+
+## Case 2: Cirrhosis with Portal Hypertension
+- 50-year-old chronic alcoholic from Kerala, presents with abdominal distension, pedal edema
+- Examination: jaundice, spider angiomas, palmar erythema, gynecomastia, ascites, splenomegaly, caput medusae
+- Labs: Low albumin, prolonged PT/INR, elevated bilirubin, thrombocytopenia
+- **Child-Pugh scoring**: Assesses severity (A = mild, B = moderate, C = severe)
+  | Parameter | 1 point | 2 points | 3 points |
+  |-----------|---------|----------|----------|
+  | Bilirubin | <2 | 2-3 | >3 |
+  | Albumin | >3.5 | 2.8-3.5 | <2.8 |
+  | PT (seconds prolonged) | <4 | 4-6 | >6 |
+  | Ascites | None | Mild | Moderate-severe |
+  | Encephalopathy | None | Grade 1-2 | Grade 3-4 |
+
+## Case 3: Hepatocellular Carcinoma
+- 55-year-old male, known HBsAg carrier for 20 years, presents with weight loss, right hypochondrial pain, hepatomegaly
+- AFP: 800 ng/mL (normal <10)
+- Triple-phase CT: arterial enhancement with portal venous washout (characteristic)
+- Diagnosis: HCC on background of cirrhosis
+
+## Serological Interpretation Table
+| HBsAg | Anti-HBs | Anti-HBc IgM | Anti-HBc IgG | HBeAg | Interpretation |
+|-------|----------|-------------|-------------|-------|---------------|
+| + | - | + | - | + | Acute HBV |
+| + | - | - | + | +/- | Chronic HBV |
+| - | + | - | +/- | - | Recovered/Immune |
+| - | + | - | - | - | Vaccinated |
+| - | - | + | - | - | Window period |
+
+> **Clinical Pearl**: In Indian blood banks, HBsAg screening is mandatory. Despite this, occult HBV (HBsAg-negative but HBV DNA-positive) remains a transfusion risk, especially with mutant strains.`,
+        mnemonics: [
+          {
+            text: "ABCDE for Child-Pugh scoring parameters",
+            explanation:
+              "A-Albumin, B-Bilirubin, C-Clotting (PT/INR), D-Degree of ascites, E-Encephalopathy grade",
+          },
+        ],
+        keyPoints: [
+          "Anti-HBc IgM is the sole marker during the window period of HBV",
+          "Child-Pugh score uses 5 parameters: Albumin, Bilirubin, Clotting, ascites Degree, Encephalopathy",
+          "HCC shows arterial enhancement with portal venous washout on triple-phase CT",
+          "AFP >400 ng/mL in a cirrhotic patient is highly suggestive of HCC",
+          "90-95% of adults clear acute HBV; only 5-10% develop chronic infection",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 18: Clinical Features of Liver Disease",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 22: Clinicopathologic Correlations",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "liver-pathology-exam",
+        title: "Liver Pathology - Exam Prep",
+        estimatedMinutes: 15,
+        summary:
+          "High-yield points on liver pathology for NEXT/NEET PG exams.",
+        contentMd: `# Exam Preparation - High Yield
+
+## One-Liners
+- Only DNA hepatitis virus: **HBV** (Hepadnaviridae)
+- Highest chronicity rate: **HCV (80%)**
+- Dangerous in pregnancy: **HEV** (20% mortality in 3rd trimester, fulminant hepatic failure)
+- Window period marker: **Anti-HBc IgM** (only marker positive)
+- Most sensitive marker of HBV replication: **HBV DNA**
+- Mallory-Denk bodies (Mallory hyaline): **Alcoholic hepatitis** (also in NASH, Wilson, HCC)
+- Councilman bodies: **Apoptotic hepatocytes** in viral hepatitis (especially Yellow fever)
+- Ground glass hepatocytes: **Chronic HBV** (smooth ER filled with HBsAg)
+- Key fibrogenic cell in liver: **Hepatic stellate cell (Ito cell)**
+- Key fibrogenic cytokine: **TGF-beta**
+- HCC tumor marker: **AFP (alpha-fetoprotein)**
+- Aflatoxin B1 target: **p53 codon 249** mutation
+- HBx protein action: **Inactivates p53** (transactivator)
+- Most common primary liver cancer: **HCC**
+- Liver angiosarcoma: **Vinyl chloride, thorotrast, arsenic**
+- Budd-Chiari syndrome: **Hepatic vein thrombosis** (polycythemia vera, OCP, pregnancy)
+- NAFLD progression: **Steatosis -> NASH -> Fibrosis -> Cirrhosis -> HCC**
+
+## Comparison: Alcoholic vs Non-alcoholic Fatty Liver
+| Feature | ALD | NAFLD/NASH |
+|---------|-----|-----------|
+| Cause | Alcohol >20-40 g/day | Metabolic syndrome, obesity |
+| AST:ALT ratio | >2:1 | <1 (usually) |
+| Mallory-Denk bodies | Present | Can be present |
+| Progression | Steatosis -> hepatitis -> cirrhosis | Steatosis -> NASH -> cirrhosis |
+
+## Previous Year Themes
+- HBV serology interpretation
+- Pathogenesis of cirrhosis (stellate cell activation)
+- HCC risk factors and molecular pathogenesis
+- Differences between HAV, HBV, HCV, HDV, HEV
+- Portal hypertension and its complications
+
+## Pattern Recognition
+- Jaundice + very high ALT (>1000) + recent exposure = **Acute viral hepatitis**
+- Chronic liver disease + AFP elevated + arterial enhancing lesion = **HCC**
+- Spider angiomas + ascites + splenomegaly + low albumin = **Cirrhosis**
+- Pregnant woman + jaundice + fulminant hepatitis = **HEV** (India)
+- AST:ALT >2:1 + Mallory bodies + neutrophils = **Alcoholic hepatitis**`,
+        mnemonics: [
+          {
+            text: "Fried LIVER for NAFLD risk factors",
+            explanation:
+              "F-Fat (obesity), R-Resistance (insulin), I-Inflammatory markers, E-Elevated lipids, D-Diabetes mellitus",
+          },
+        ],
+        keyPoints: [
+          "HBV is the only DNA hepatitis virus; all others are RNA",
+          "HCV has 80% chronicity - highest among hepatitis viruses",
+          "HEV is dangerous in pregnancy (fulminant hepatic failure, 20% mortality)",
+          "Hepatic stellate cell + TGF-beta = central mechanism of liver fibrosis",
+          "AST:ALT >2:1 is characteristic of alcoholic liver disease",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 18",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 22",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "liver-pathology-recall",
+        title: "Liver Pathology - Active Recall",
+        estimatedMinutes: 10,
+        summary:
+          "Flashcard-style Q&A for self-testing on liver pathology.",
+        contentMd: `# Active Recall
+
+**Q1:** Which is the only DNA hepatitis virus?
+> HBV (Hepadnaviridae family)
+
+**Q2:** Which hepatitis virus has the highest chronicity rate?
+> HCV (~80% progress to chronic infection)
+
+**Q3:** What marker is positive during the HBV window period?
+> Anti-HBc IgM (HBsAg cleared, anti-HBs not yet formed)
+
+**Q4:** What is the significance of ground glass hepatocytes?
+> Chronic HBV infection - smooth ER filled with HBsAg
+
+**Q5:** Name the key cell involved in liver fibrosis and cirrhosis.
+> Hepatic stellate cell (Ito cell) - activated by TGF-beta to become myofibroblast
+
+**Q6:** What is the significance of AST:ALT ratio >2:1?
+> Alcoholic liver disease (pyridoxal phosphate deficiency impairs ALT synthesis)
+
+**Q7:** What specific p53 mutation does aflatoxin B1 cause?
+> Codon 249 mutation (AGG -> AGT, Arg -> Ser)
+
+**Q8:** Why is HEV dangerous in pregnant women?
+> Causes fulminant hepatic failure with ~20% mortality in third trimester
+
+**Q9:** What are Mallory-Denk bodies?
+> Damaged cytokeratin intermediate filaments seen in alcoholic hepatitis, NASH, Wilson disease, and HCC
+
+**Q10:** Name the 5 parameters of the Child-Pugh score.
+> Albumin, Bilirubin, Clotting (PT/INR), Degree of ascites, Encephalopathy grade
+
+**Q11:** How does HBV cause HCC?
+> HBx protein inactivates p53; viral DNA integration causes insertional mutagenesis
+
+**Q12:** What is the characteristic imaging finding of HCC?
+> Arterial enhancement with portal venous washout on triple-phase CT/MRI`,
+        mnemonics: [],
+        keyPoints: [
+          "12 recall questions covering viral hepatitis, cirrhosis, and hepatocellular carcinoma",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 18",
+            edition: "10th",
+          },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 5: Gallbladder & Pancreas ──────────────────────────
+  {
+    topicCode: "PA-MOD-05-TOP-05",
+    layers: [
+      {
+        layer: 1,
+        slug: "gallbladder-pancreas-foundation",
+        title: "Gallbladder & Pancreas - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "Gallbladder diseases include cholelithiasis, cholecystitis, and gallbladder carcinoma. Pancreatic diseases include acute and chronic pancreatitis and pancreatic carcinoma.",
+        contentMd: `# Gallbladder & Pancreas Pathology
+
+## Cholelithiasis (Gallstones)
+| Type | Cholesterol stones (80%) | Pigment stones (20%) |
+|------|------------------------|---------------------|
+| Composition | Cholesterol monohydrate | Calcium bilirubinate |
+| Color | Yellow-green | Black or brown |
+| Risk factors | 5 F's (see mnemonic), obesity, OCP | Hemolytic anemias, cirrhosis, biliary infection |
+| Radiopaque | Only 10-20% | Usually radiopaque |
+| Geography | Western countries, urban India | Rural India, hemolytic belt |
+
+## Cholecystitis
+- **Acute**: 90% due to gallstone impaction in cystic duct -> distension, ischemia, bacterial superinfection
+- **Chronic**: Repeated bouts of acute cholecystitis -> fibrosis, Rokitansky-Aschoff sinuses (mucosal herniation)
+- **Porcelain gallbladder**: Dystrophic calcification of wall -> risk of gallbladder carcinoma
+
+## Gallbladder Carcinoma
+- Most common biliary tract malignancy
+- Strong association with gallstones (especially large >3 cm cholesterol stones)
+- Often discovered incidentally after cholecystectomy
+- Adenocarcinoma (most common histologic type)
+- Poor prognosis (usually diagnosed late)
+
+## Acute Pancreatitis
+- **Causes**: Gallstones (40%) and Alcohol (40%) account for 80% cases
+- Pathology: Fat necrosis (saponification), hemorrhagic necrosis, pseudocyst formation
+- Elevated amylase and lipase (lipase more specific)
+
+## Chronic Pancreatitis
+- Most common cause: **Alcohol** (India and worldwide)
+- Tropical (idiopathic) chronic pancreatitis common in South India
+- Irreversible destruction of parenchyma -> fibrosis
+- Complications: diabetes, steatorrhea, pseudocyst, pancreatic cancer risk
+
+## Pancreatic Carcinoma
+- Adenocarcinoma of head of pancreas (60-70% of cases)
+- Painless obstructive jaundice (Courvoisier sign: palpable gallbladder + jaundice)
+- KRAS mutation in >90% cases
+- Tumor marker: **CA 19-9**
+- Extremely poor prognosis (5-year survival <10%)
+
+> **Clinical Pearl**: In India, tropical chronic pancreatitis is a distinct entity seen in young patients from Kerala and Tamil Nadu, presenting with large pancreatic calculi and early-onset diabetes.`,
+        mnemonics: [
+          {
+            text: "5 F's for cholesterol gallstone risk",
+            explanation:
+              "Fat (obese), Female, Fertile (multiparity), Forty (age >40), Fair (not as applicable in India, but reflects estrogen-related risk)",
+          },
+          {
+            text: "GET SMASHED for causes of acute pancreatitis",
+            explanation:
+              "G-Gallstones, E-Ethanol, T-Trauma, S-Steroids, M-Mumps, A-Autoimmune, S-Scorpion sting, H-Hyperlipidemia/Hypercalcemia, E-ERCP, D-Drugs (azathioprine, valproate)",
+          },
+        ],
+        keyPoints: [
+          "Cholesterol stones (80%) are most common; pigment stones are associated with hemolytic anemias",
+          "Gallstones and alcohol account for 80% of acute pancreatitis cases",
+          "Lipase is more specific than amylase for acute pancreatitis diagnosis",
+          "Pancreatic head carcinoma presents with painless obstructive jaundice and Courvoisier sign",
+          "KRAS mutation is found in >90% of pancreatic adenocarcinomas",
+          "Porcelain gallbladder (calcified wall) is a risk factor for gallbladder carcinoma",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 19: Pancreas; Chapter 18: Gallbladder",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 22: Biliary Tract and Pancreas",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "gallbladder-pancreas-mechanism",
+        title: "Gallbladder & Pancreas - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Pathogenesis of gallstone formation, mechanisms of acute pancreatitis involving premature trypsin activation, and molecular genetics of pancreatic cancer.",
+        contentMd: `# Mechanisms of Gallbladder & Pancreatic Disease
+
+## Pathogenesis of Cholesterol Gallstones
+1. **Cholesterol supersaturation**: Excess cholesterol relative to bile salts and phospholipids
+2. **Nucleation**: Mucin glycoproteins act as pronucleating factors
+3. **Gallbladder hypomotility**: Stasis allows crystal aggregation
+- Factors increasing cholesterol: obesity, estrogen (OCP, pregnancy), fibrates
+- Factors decreasing bile salts: ileal disease/resection, cholestyramine
+
+## Pathogenesis of Acute Pancreatitis
+1. **Premature intrapancreatic activation of trypsinogen to trypsin**
+2. Trypsin activates other zymogens: elastase, phospholipase A2, complement
+3. **Autodigestion cascade**:
+   - Elastase -> vascular damage -> hemorrhage
+   - Phospholipase A2 -> fat necrosis (saponification with calcium)
+   - Trypsin -> further zymogen activation (amplification loop)
+4. Systemic release -> SIRS, ARDS, DIC, multiorgan failure
+
+### Specific Mechanisms by Cause
+| Cause | Mechanism |
+|-------|-----------|
+| Gallstones | Impaction at ampulla of Vater -> bile reflux into pancreatic duct |
+| Alcohol | Direct toxic effect + stimulates secretion against obstructed duct |
+| Hypertriglyceridemia | Lipase breaks down TGs in pancreatic capillaries -> toxic FFAs |
+| Hypercalcemia | Calcium activates trypsinogen within pancreatic duct |
+
+## Hereditary Pancreatitis
+- **PRSS1 gene mutation**: Gain-of-function in cationic trypsinogen -> cannot be inactivated
+- **SPINK1 mutation**: Loss of trypsin inhibitor function
+- Autosomal dominant, recurrent episodes from childhood
+
+## Molecular Pathogenesis of Pancreatic Cancer
+| Gene | Type | Frequency | Function |
+|------|------|-----------|----------|
+| **KRAS** | Oncogene | >90% | Constitutive RAS activation -> cell proliferation |
+| **p16/CDKN2A** | TSG | 95% | Loss of cell cycle inhibition |
+| **TP53** | TSG | 75% | Loss of apoptosis and DNA repair |
+| **SMAD4/DPC4** | TSG | 55% | Loss of TGF-beta growth inhibition |
+
+- Precursor lesion: **PanIN** (Pancreatic Intraepithelial Neoplasia)
+- PanIN-1 (KRAS) -> PanIN-2 (p16 loss) -> PanIN-3 (TP53, SMAD4 loss) -> Invasive carcinoma
+
+> **Clinical Pearl**: SPINK1 mutations are particularly prevalent in tropical chronic pancreatitis in South India, representing a unique genetic-environmental interaction.`,
+        mnemonics: [
+          {
+            text: "TAPE for trypsin-activated enzymes in pancreatitis",
+            explanation:
+              "T-Trypsin (self-amplification), A-Activated complement, P-Phospholipase A2 (fat necrosis), E-Elastase (vascular hemorrhage)",
+          },
+          {
+            text: "KRAS-p16-p53-SMAD4 for pancreatic cancer progression",
+            explanation:
+              "Sequential mutations: KRAS (>90%, earliest) -> p16 loss -> p53 loss -> SMAD4 loss -> invasive carcinoma",
+          },
+        ],
+        keyPoints: [
+          "Cholesterol gallstones form due to supersaturation, nucleation, and gallbladder stasis",
+          "Premature trypsin activation is the central event in acute pancreatitis pathogenesis",
+          "Elastase causes hemorrhage; phospholipase A2 causes fat necrosis in acute pancreatitis",
+          "KRAS mutation is present in >90% of pancreatic cancers and is the earliest genetic event",
+          "PanIN is the precursor lesion for pancreatic ductal adenocarcinoma",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 19: Pathogenesis of Pancreatic Disease",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 22: Mechanisms of Biliary and Pancreatic Disease",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "gallbladder-pancreas-clinical",
+        title: "Gallbladder & Pancreas - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "Clinical presentations of biliary and pancreatic diseases, including acute abdomen management, severity scoring, and pancreatic cancer diagnosis.",
+        contentMd: `# Clinical Applications
+
+## Case 1: Acute Pancreatitis
+- 40-year-old male, heavy drinker, presents with sudden severe epigastric pain radiating to back, vomiting
+- Examination: epigastric tenderness, guarding
+- Labs: Serum amylase 1500 U/L, lipase 2000 U/L, calcium low
+- CT abdomen: enlarged pancreas with peripancreatic fat stranding
+- **Severity assessment**:
+  | Scoring System | Parameters |
+  |---------------|-----------|
+  | Ranson criteria | At admission: Age >55, WBC >16000, glucose >200, LDH >350, AST >250; At 48h: Ca2+ <8, Hct drop >10%, BUN rise >5, base deficit >4, fluid sequestration >6L, PaO2 <60 |
+  | APACHE II | Multi-organ assessment (>8 = severe) |
+  | Modified CT severity index | Necrosis extent + peripancreatic collections |
+- **Cullen sign**: Periumbilical ecchymosis (retroperitoneal hemorrhage tracking to umbilicus)
+- **Grey Turner sign**: Flank ecchymosis
+
+## Case 2: Gallbladder Carcinoma
+- 65-year-old female from North India (Gangetic belt), known cholelithiasis for 20 years
+- Presents with right hypochondrial pain, weight loss, jaundice
+- USG: irregular gallbladder wall thickening, large gallstone
+- Histopathology post-cholecystectomy: well-differentiated adenocarcinoma infiltrating muscular layer
+- **Indian context**: North India (especially UP, Bihar) has highest gallbladder cancer incidence globally
+
+## Case 3: Pancreatic Head Carcinoma
+- 60-year-old male, painless progressive jaundice, pruritus, weight loss, new-onset diabetes
+- Examination: palpable non-tender gallbladder (**Courvoisier sign**)
+- Labs: Elevated bilirubin (conjugated), elevated ALP, CA 19-9 = 500 U/mL
+- CT: pancreatic head mass with double duct sign (dilated CBD + pancreatic duct)
+- Treatment: Whipple procedure (pancreaticoduodenectomy) if resectable
+
+## Important Clinical Signs
+| Sign | Finding | Condition |
+|------|---------|-----------|
+| Murphy sign | Arrest of inspiration during RUQ palpation | Acute cholecystitis |
+| Courvoisier sign | Palpable gallbladder + painless jaundice | Pancreatic head carcinoma |
+| Cullen sign | Periumbilical bruising | Severe acute pancreatitis |
+| Grey Turner sign | Flank bruising | Severe acute pancreatitis |
+| Trousseau sign | Migratory thrombophlebitis | Pancreatic cancer (paraneoplastic) |
+
+> **Clinical Pearl**: The Gangetic belt of India has one of the world's highest incidence rates of gallbladder carcinoma, attributed to chronic gallstone disease and possible environmental/dietary factors.`,
+        mnemonics: [
+          {
+            text: "Courvoisier = Cancer; Murphy = calculus (stones)",
+            explanation:
+              "Courvoisier sign (palpable GB + painless jaundice) = malignant obstruction (usually pancreatic head cancer); Murphy sign (inspiratory arrest with RUQ pressure) = acute cholecystitis from gallstones",
+          },
+        ],
+        keyPoints: [
+          "Lipase is more specific than amylase for diagnosing acute pancreatitis",
+          "Cullen sign (periumbilical) and Grey Turner sign (flank) indicate severe hemorrhagic pancreatitis",
+          "Courvoisier sign: palpable non-tender gallbladder with painless jaundice = periampullary carcinoma",
+          "Double duct sign on CT (dilated CBD + pancreatic duct) suggests pancreatic head mass",
+          "Gallbladder carcinoma has exceptionally high incidence in the Gangetic belt of India",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 19: Clinical Features",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 22: Clinical Biliopancreatic Pathology",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "gallbladder-pancreas-exam",
+        title: "Gallbladder & Pancreas - Exam Prep",
+        estimatedMinutes: 15,
+        summary:
+          "High-yield points on gallbladder and pancreatic diseases for NEXT/NEET PG exams.",
+        contentMd: `# Exam Preparation - High Yield
+
+## One-Liners
+- Most common gallstones worldwide: **Cholesterol stones (80%)**
+- Most common cause of acute pancreatitis: **Gallstones (40%)** and alcohol (40%)
+- Most specific enzyme for pancreatitis: **Lipase**
+- Rokitansky-Aschoff sinuses: **Chronic cholecystitis** (mucosal outpouchings through muscular wall)
+- Porcelain gallbladder: **Calcified wall -> risk of carcinoma**
+- Courvoisier law: Palpable GB + jaundice = **Malignancy (not stones)**
+- Most common gene mutated in pancreatic cancer: **KRAS (>90%)**
+- Pancreatic cancer tumor marker: **CA 19-9**
+- Trousseau syndrome (migratory thrombophlebitis): **Pancreatic cancer** (paraneoplastic)
+- Tropical chronic pancreatitis: **SPINK1 mutation**, South India, large ductal calculi
+- Pancreatic pseudocyst: Lacks epithelial lining, **walled off by granulation/fibrous tissue**
+- True cyst vs pseudocyst: True cyst has **epithelial lining**; pseudocyst does **not**
+- Whipple procedure: **Pancreaticoduodenectomy** for pancreatic head/periampullary tumors
+
+## Comparison: Acute vs Chronic Pancreatitis
+| Feature | Acute | Chronic |
+|---------|-------|---------|
+| Reversibility | Reversible (if mild) | Irreversible |
+| Pathology | Edema, fat necrosis, hemorrhage | Fibrosis, atrophy, calcification |
+| Enzymes | Elevated amylase/lipase | May be normal (burnt-out gland) |
+| Calcium | Low (saponification) | Calcifications seen |
+| Complications | Pseudocyst, SIRS, ARDS | Diabetes, steatorrhea, cancer |
+
+## Previous Year Themes
+- Pathogenesis of acute pancreatitis (premature trypsin activation)
+- Gallstone types and risk factors (5 F's)
+- Pancreatic cancer molecular genetics (KRAS, p16, p53, SMAD4)
+- Courvoisier law interpretation
+- Ranson criteria for severity assessment
+
+## Pattern Recognition
+- Sudden epigastric pain radiating to back + elevated lipase = **Acute pancreatitis**
+- Painless jaundice + palpable GB + weight loss = **Pancreatic head carcinoma**
+- RUQ colicky pain after fatty meal = **Biliary colic (gallstones)**
+- New-onset diabetes + weight loss in elderly = Think **pancreatic cancer**
+- Periumbilical and flank bruising = **Severe hemorrhagic pancreatitis**`,
+        mnemonics: [
+          {
+            text: "CulLen = Center (periumbilical); Grey Turner = To the side (flanks)",
+            explanation:
+              "Both are signs of retroperitoneal hemorrhage in severe pancreatitis: Cullen sign is periumbilical ecchymosis, Grey Turner sign is flank ecchymosis",
+          },
+        ],
+        keyPoints: [
+          "Gallstones and alcohol each account for 40% of acute pancreatitis cases",
+          "KRAS is mutated in >90% of pancreatic cancers - the highest frequency for any gene in any cancer",
+          "Courvoisier law: palpable gallbladder + jaundice indicates malignancy, not gallstones",
+          "Pancreatic pseudocyst lacks an epithelial lining - this distinguishes it from true cysts",
+          "Tropical chronic pancreatitis in South India is associated with SPINK1 mutations",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapter 19",
+            edition: "10th",
+          },
+          {
+            book: "Harsh Mohan Textbook of Pathology",
+            chapter: "Chapter 22",
+            edition: "8th",
+          },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "gallbladder-pancreas-recall",
+        title: "Gallbladder & Pancreas - Active Recall",
+        estimatedMinutes: 10,
+        summary:
+          "Flashcard-style Q&A for self-testing on gallbladder and pancreatic pathology.",
+        contentMd: `# Active Recall
+
+**Q1:** What are the 5 F's for cholesterol gallstone risk factors?
+> Fat, Female, Fertile (multiparity), Forty (>40), Fair (estrogen-related)
+
+**Q2:** What is the central event in acute pancreatitis pathogenesis?
+> Premature intrapancreatic activation of trypsinogen to trypsin
+
+**Q3:** Which enzyme causes fat necrosis in acute pancreatitis?
+> Phospholipase A2 (liberates fatty acids that combine with calcium -> saponification)
+
+**Q4:** What is Courvoisier law?
+> Palpable gallbladder with painless jaundice = malignant obstruction (not gallstones, because chronic stones cause fibrotic contracted GB)
+
+**Q5:** Name the 4 key mutations in pancreatic ductal adenocarcinoma.
+> KRAS (>90%), p16/CDKN2A (95%), TP53 (75%), SMAD4/DPC4 (55%)
+
+**Q6:** What is a pancreatic pseudocyst?
+> Encapsulated collection of pancreatic fluid walled off by fibrous/granulation tissue, WITHOUT epithelial lining
+
+**Q7:** What are Cullen and Grey Turner signs?
+> Cullen = periumbilical ecchymosis; Grey Turner = flank ecchymosis; both indicate severe hemorrhagic pancreatitis
+
+**Q8:** What is the tumor marker for pancreatic cancer?
+> CA 19-9
+
+**Q9:** What are Rokitansky-Aschoff sinuses?
+> Mucosal outpouchings (herniations) through the muscular wall of gallbladder in chronic cholecystitis
+
+**Q10:** What is Trousseau syndrome and which cancer is it most associated with?
+> Migratory superficial thrombophlebitis; most associated with pancreatic carcinoma (paraneoplastic)
+
+**Q11:** What is the precursor lesion of pancreatic ductal adenocarcinoma?
+> PanIN (Pancreatic Intraepithelial Neoplasia) - progresses through PanIN-1, 2, 3 to invasive carcinoma
+
+**Q12:** What is the double duct sign?
+> Simultaneous dilation of common bile duct and pancreatic duct on imaging, suggesting mass at pancreatic head/ampulla of Vater`,
+        mnemonics: [],
+        keyPoints: [
+          "12 recall questions covering gallstone disease, pancreatitis, and pancreatic cancer",
+        ],
+        textbookRefs: [
+          {
+            book: "Robbins Pathologic Basis of Disease",
+            chapter: "Chapters 18-19",
+            edition: "10th",
+          },
+        ],
+      },
+    ],
+  },
 ];

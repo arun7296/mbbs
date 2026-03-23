@@ -1,5 +1,11 @@
-export const pharmacologyPart2Lessons = [
-  // Module 5: Chemotherapy - Penicillins & Cephalosporins
+import type { TopicLessons } from "./content-loader";
+
+export const pharmacologyPart2Lessons: TopicLessons[] = [
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // MODULE 5 — CHEMOTHERAPY (Topics 1-4)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  // ─── Topic 1: Penicillins & Cephalosporins ─────────────────
   {
     topicCode: "PH-MOD-05-TOP-01",
     layers: [
@@ -8,13 +14,1535 @@ export const pharmacologyPart2Lessons = [
         slug: "penicillins-cephalosporins-foundation",
         title: "Penicillins & Cephalosporins - Foundation",
         estimatedMinutes: 20,
-        summary: "Beta-lactam antibiotics inhibit bacterial cell wall synthesis by binding penicillin-binding proteins (PBPs). Penicillins are bactericidal with narrow to broad spectrum; cephalosporins are classified into 4 generations with progressively broader gram-negative coverage.",
-        contentMd: "`# Beta-Lactam Antibiotics: Penicillins & Cephalosporins\n\n## Structure & Classification\n- **Penicillins**: Beta-lactam ring + thiazolidine ring + side chain variations\n  - Natural: Penicillin G, Penicillin V\n  - Semisynthetic: Methicillin, Ampicillin, Amoxicillin, Piperacillin\n- **Cephalosporins**: Beta-lactam ring + dihydrothiazine ring + diverse side chains\n  - 1st Gen: Cephalexin, Cefazolin (gram-positive focus)\n  - 2nd Gen: Cefuroxime, Cefaclor (improved gram-negative)\n  - 3rd Gen: Ceftriaxone, Cefotaxime (gram-negative dominant, CNS penetration)\n  - 4th Gen: Cefepime (pseudomonas coverage)\n\n## Mechanism of Action\n- Inhibit cross-linking of peptidoglycan in bacterial cell wall\n- Bind penicillin-binding proteins (PBPs)\n- Prevent transpeptidation and cross-bridge formation\n- Result: Cell wall lysis → bactericidal effect\n\n## Pharmacokinetics Basics\n- **Absorption**: Penicillin G poorly absorbed (IM/IV preferred); oral penicillins variable\n- **Distribution**: Penicillins distribute widely; CSF penetration poor (unless inflamed); cephalosporins better CNS penetration (especially 3rd gen)\n- **Metabolism**: Minimal hepatic metabolism; renal excretion predominant\n- **Elimination**: T1/2 30-60 min; renal adjustment needed in renal impairment,\n        mnemonics: [\n          {\n            text: \"CAMP = Cell wall, Amino acids, Murein (peptidoglycan), Penicillin-binding proteins\",\n            explanation: \"Remember how beta-lactams work: target cell wall components through PBP binding\"\n          },\n          {\n            text: \"Cephalosporin Generations: GNEGative = Gen 3, Pseudomonas = Gen 4\",\n            explanation: \"Higher generations = better gram-negative and pseudomonas coverage\"\n          }\n        ],\n        keyPoints: [\n          \"Beta-lactams are bactericidal, irreversibly inhibit cell wall synthesis\",\n          \"Penicillins have excellent activity against gram-positive cocci and anaerobes\",\n          \"Cephalosporins show progressive gram-negative expansion with each generation\",\n          \"Most beta-lactams excreted unchanged in urine; require renal dose adjustment\",\n          \"Cross-reactivity between penicillins and cephalosporins <2% for 3rd/4th gen\"\n        ],\n        textbookRefs: [\n          { book: \"KD Tripathi Pharmacology\", chapter: \"Penicillins & Cephalosporins\", edition: \"9th\" },\n          { book: \"Rang & Dale Pharmacology\", chapter: \"Antimicrobial drugs\", edition: \"9th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"penicillins-cephalosporins-mechanism\",\n        title: \"Penicillins & Cephalosporins - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Detailed molecular mechanisms of beta-lactam action, PBP binding affinities, spectrum variations by side chain modifications, and resistance mechanisms including beta-lactamase and altered PBPs.\",\n        contentMd: "# Detailed Mechanism & Pharmacodynamics\\n\\n## Molecular Mechanism\\n- **PBP Binding**: Different beta-lactams bind different PBPs with varying affinities\\n  - Penicillin G: High affinity for PBP 1 (gram-positive)\\n  - Cephalosporins: Better PBP 3 binding (gram-negative rod)\\n- **Inhibition of Transpeptidation**: Cross-links between peptide chains prevented\\n- **Autolytic Enzyme Activation**: Disrupts cell wall homeostasis\\n- **Time-Dependent Killing**: Efficacy depends on time above MIC, not peak level\\n\\n## Spectrum Determinants by Side Chain\\n- **Penicillin G**: Methyl group → excellent gram-positive, poor gram-negative\\n- **Ampicillin**: Amino group → increased gram-negative penetration\\n- **Piperacillin**: Extended side chain → pseudomonas + anaerobic coverage\\n- **Cephalosporin Progression**:\\n  - Gen 1 & 2: Strong gram-positive, improving gram-negative\\n  - Gen 3: Minimal gram-positive (except ceftazidime for pseudomonas)\\n  - Gen 4: Balanced gram-positive/negative + Pseudomonas\\n\\n## Bacterial Resistance Mechanisms\\n1. **Beta-Lactamase Production**: Enzymatic hydrolysis of beta-lactam ring\\n   - TEM, SHV, CTX-M (extended-spectrum beta-lactamases - ESBLs)\\n   - Solutions: Beta-lactamase inhibitors (clavulanic acid, sulbactam, tazobactam)\\n2. **Altered PBPs**: Reduced affinity or absent PBP (MRSA, PNSSP)\\n3. **Efflux Pumps**: Active drug extrusion (gram-negative)\\n4. **Reduced Permeability**: Porin loss in gram-negatives\\n\\n## PK/PD Parameters\\n- **Time-Dependent**: Target = 40-50% of dosing interval above MIC\\n- **Dosing Strategy**: Frequent dosing or continuous infusion preferred\\n- **Renal Clearance**: Active secretion via renal tubules; significant interaction with probenecid\\n- **Liver Metabolism**: Minimal; no significant drug interactions via CYP450,\\n        mnemonics: [\\n          {\\n            text: \\\"BLIc = Beta-Lactamase, Loss of PBPs, altered Influx/efflux\\\",\\n            explanation: \\\"Three main bacterial resistance pathways to beta-lactams\\\"\\n          },\\n          {\\n            text: \\\"PCG = Penicillin G coverage: Gram-positive, Cocci, Good anaerobes\\\",\\n            explanation: \\\"Remember penicillin G's natural spectrum\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Beta-lactams are time-dependent killers; frequent dosing > high dose\\\",\\n          \\\"PBP binding affinities vary: Gen 3 cephalosporins bind gram-negative PBPs best\\\",\\n          \\\"ESBLs produce cephalosporin resistance; test with clavulanic acid combination\\\",\\n          \\\"Renal excretion is active and major elimination pathway\\\",\\n          \\\"Cephalosporin cross-reactivity with penicillin allergy minimal in 3rd/4th gen\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi Pharmacology\\\", chapter: \\\"Beta-lactam resistance\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale Pharmacology\\\", chapter: \\\"Mechanisms of antibiotic resistance\\\", edition: \\\"9th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"penicillins-cephalosporins-clinical\\\",\\n        title: \\\"Penicillins & Cephalosporins - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Therapeutic uses including pneumonia, meningitis, endocarditis, and skin infections. Adverse effects: rash, anaphylaxis, C. difficile colitis. Contraindications and special populations in Indian context.\\\",\\n        contentMd: "# Clinical Use & Adverse Effects\\\\n\\\\n## Therapeutic Uses\\\\n\\\\n### Penicillin G (Parenteral only)\\\\n- **First-line**: Strep pyogenes pharyngitis (prophylaxis rheumatic fever), strep pneumoniae meningitis\\\\n- **Syphilis**: Preferred for all stages (congenital, primary, secondary, latent)\\\\n- **Anaerobic infections**: Lung abscess, aspiration pneumonia\\\\n- **Dosing in India**: 5-10 million units daily IM/IV in divided doses\\\\n\\\\n### Penicillin V (Oral)\\\\n- Streptococcal pharyngitis (mild-moderate)\\\\n- Rheumatic fever prophylaxis: 125-250 mg BD\\\\n\\\\n### Ampicillin & Amoxicillin\\\\n- **Ampicillin**: H. influenzae (meningitis, respiratory), enterococcus (in combo with gentamicin), leptospirosis\\\\n- **Amoxicillin**: Preferred oral agent; H. influenzae, strep infections, UTI, otitis media\\\\n- Common in Indian practice for community-acquired infections\\\\n- **Dosing**: Amoxicillin 250-500 mg TDS; Ampicillin 250-500 mg QID\\\\n\\\\n### Extended Spectrum (Piperacillin-Tazobactam)\\\\n- Nosocomial infections, pseudomonas aeruginosa, mixed infections\\\\n- Popular in Indian hospitals for empiric gram-negative coverage\\\\n- Typical dose: 4.5 g IV 6-8 hourly\\\\n\\\\n### Cephalosporins by Generation\\\\n\\\\n**1st Gen (Cephalexin, Cefazolin)**\\\\n- Streptococcal & Staphylococcal (non-MRSA) skin/soft tissue infections\\\\n- Surgical prophylaxis (cefazolin)\\\\n- Cephalexin: 250-500 mg QID oral\\\\n\\\\n**2nd Gen (Cefuroxime)**\\\\n- H. influenzae, Neisseria, Lyme disease (cefuroxime axetil)\\\\n- Respiratory infections (community-acquired)\\\\n\\\\n**3rd Gen (Ceftriaxone, Cefotaxime)**\\\\n- **Meningitis**: Ceftriaxone 2g IV 12-hourly (FIRST-LINE for bacterial meningitis in India)\\\\n- Gram-negative enterobacteria (UTI, biliary, intra-abdominal)\\\\n- Gonorrhea: Ceftriaxone 125 mg IM single dose (per latest Indian STI guidelines)\\\\n- **Dose**: 1-2g 12-hourly IV/IM\\\\n\\\\n**3rd Gen Pseudomonas (Ceftazidime)**\\\\n- Pseudomonas aeruginosa (CF lung, diabetic foot, nosocomial)\\\\n\\\\n**4th Gen (Cefepime)**\\\\n- Broad coverage; reserved for serious nosocomial infections\\\\n- Dosing: 1-2g IV 8-12 hourly\\\\n\\\\n## Adverse Effects\\\\n\\\\n### Common\\\\n- **Hypersensitivity Reactions**: Rash (5-10%), urticaria, angioedema\\\\n- **Penicillin Allergy**: Cross-reactivity 0.4-7% depending on generation\\\\n  - 1st gen: ~10% cross-reactivity with penicillin allergy\\\\n  - 3rd/4th gen: <2% cross-reactivity\\\\n- **GI**: Nausea, diarrhea, antibiotic-associated colitis\\\\n\\\\n### Serious\\\\n- **Anaphylaxis**: 0.004-0.04% (immediate hypersensitivity)\\\\n- **Stevens-Johnson Syndrome / TEN**: Rare\\\\n- **C. difficile colitis**: Risk higher with cephalosporins than penicillins\\\\n- **Interstitial Nephritis**: Rare but documented\\\\n\\\\n### Drug-Specific\\\\n- **Ampicillin rash**: Maculopapular (non-IgE mediated) in EBV/lymphoproliferative disorders\\\\n- **Piperacillin-Tazobactam**: Cholestasis, elevated LFTs\\\\n\\\\n## Contraindications & Precautions\\\\n- **Absolute**: Documented anaphylaxis/severe reaction to beta-lactams\\\\n- **Relative**:\\\\n  - History of penicillin allergy (risk-benefit for cephalosporins, especially 3rd gen)\\\\n  - Renal impairment (dose reduction needed)\\\\n  - Seizure history (high-dose IV β-lactams lower seizure threshold),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"PCG for Syphilis = Penicillin G Cures Syphilis (at all stages)\\\\\\\",\\\\n            explanation: \\\\\\\"Remember penicillin G is gold standard for syphilis, unlike other penicillins\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"CTX 3rd Gen = Ceftriaxone/Cefotaxime meningitis, Gonorrhea, Gram-negatives\\\\\\\",\\\\n            explanation: \\\\\\\"3rd gen cephalosporins first-line for serious gram-negative infections\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Penicillin G still first-line for streptococcal & syphilis infections\\\\\\\",\\\\n          \\\\\\\"Amoxicillin is preferred oral beta-lactam in India for community infections\\\\\\\",\\\\n          \\\\\\\"Ceftriaxone is meningitis drug of choice per NMC guidelines; use high-dose\\\\\\\",\\\\n          \\\\\\\"C. difficile risk higher with cephalosporins; monitor for diarrhea\\\\\\\",\\\\n          \\\\\\\"Cross-reactivity penicillin→3rd gen cephalosporin <2%; safer than older data suggested\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Clinical uses of beta-lactams\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Sanford Guide to Antimicrobial Therapy (India edition)\\\\\\\", chapter: \\\\\\\"Beta-lactams\\\\\\\", edition: \\\\\\\"2025\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"penicillins-cephalosporins-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Penicillins & Cephalosporins - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield one-liners, drug of choice comparisons, side effect memory aids, and NEET-style clinical vignettes.\\\\\\\",\\\\n        contentMd: ``# Exam Prep: High-Yield One-Liners & DOC Tables\\\\n\\\\n## Drug of Choice by Infection\\\\n\\\\n| Condition | Drug of Choice | Reason |\\\\n|-----------|----------------|--------|\\\\n| Strep pyogenes pharyngitis | Penicillin V or Amoxicillin | Excellent activity, good absorption |\\\\n| Acute bacterial meningitis | Ceftriaxone 2g IV 12h | CNS penetration, broad coverage |\\\\n| MRSA skin infection | NOT beta-lactam | Use vancomycin/doxycycline |\\\\n| Gonorrhea (uncomplicated) | Ceftriaxone 125mg IM | Single dose, high efficacy |\\\\n| Pseudomonas infection | Ceftazidime or Piperacillin-Tazo | Anti-pseudomonal coverage |\\\\n| Aspiration pneumonia | Ampicillin + Gentamicin (anaerobes) | Anaerobic coverage |\\\\n| Diabetic foot ulcer (empiric) | Amoxicillin-clavulanate | Covers Staph, Strep, anaerobes |\\\\n| Surgical prophylaxis (clean) | Cefazolin IV | Single preop dose sufficient |\\\\n| Enterococcus (serious) | Ampicillin + Gentamicin | Synergistic killing |\\\\n| Lyme disease (early) | Cefuroxime axetil oral | Good CNS penetration |\\\\n\\\\n## Critical One-Liners\\\\n\\\\n1. **\\\\\\\"Penicillin G = Gram-positive + Anaerobes, but poor GNR coverage\\\\\\\"**\\\\n2. **\\\\\\\"Ampicillin adds Enterobacteriaceae to Penicillin G's spectrum\\\\\\\"**\\\\n3. **\\\\\\\"Cephalosporin generations: ↑gram-negative with ↓gram-positive coverage\\\\\\\"**\\\\n4. **\\\\\\\"Cross-reactivity Pen→3rd gen Cepha <2%; 1st gen ~10%\\\\\\\"**\\\\n5. **\\\\\\\"Beta-lactams = Time-dependent; prolonged infusion better than bolus\\\\\\\"**\\\\n6. **\\\\\\\"ESBLs (TEM, SHV, CTX-M) produce resistance; test with clavulanate\\\\\\\"**\\\\n7. **\\\\\\\"Meningitis dosing: Ceftriaxone 2g IV 12h (NOT standard dose)\\\\\\\"**\\\\n8. **\\\\\\\"C. difficile risk: Cephalosporins > Penicillins > Fluoroquinolones\\\\\\\"**\\\\n9. **\\\\\\\"Allergy history: Ask about reaction type; rash ≠ anaphylaxis\\\\\\\"**\\\\n10. **\\\\\\\"Renal adjustment: Creatinine clearance <30 = reduce dose/frequency\\\\\\\"**\\\\n\\\\n## Side Effect Associations\\\\n\\\\n- **Ampicillin + EBV/Lymphoma** = Maculopapular rash (NOT true allergy)\\\\n- **High-dose IV Beta-lactam** = Seizures (esp. with renal failure)\\\\n- **Cephalosporin use** = Increased C. difficile risk\\\\n- **Penicillin allergy** = <5% cross-reactivity with 3rd gen cephalosporins\\\\n- **Piperacillin-Tazobactam** = Cholestasis, elevated transaminases\\\\n\\\\n## Resistance Pattern Recognition\\\\n\\\\n- **Ampicillin-resistant H. influenzae (BLNAR)**: Altered PBP, not beta-lactamase\\\\n- **ESBL E. coli**: Resistant to cephalosporins; use carbapenem\\\\n- **MRSA**: Altered PBP2a; resistant to ALL beta-lactams\\\\n- **Pseudomonas to Cephalosporins**: Efflux pump upregulation with exposure,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Pen-G = Pen Good for Gram-positive, Gonococci, Gait syphilis\\\\\\\",\\\\n            explanation: \\\\\\\"Quick recall of penicillin G's main uses\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"ACE-I → 1st Gen GPC, CTX → 3rd Gen GNR\\\\\\\",\\\\n            explanation: \\\\\\\"Cephalosporin coverage shifts from 1st to 3rd generation\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Meningitis = Ceftriaxone 2g IV 12h (NOT 1g); double standard dosing\\\\\\\",\\\\n          \\\\\\\"Gonorrhea = Ceftriaxone 125mg IM single dose per current India guidelines\\\\\\\",\\\\n          \\\\\\\"Ampicillin rash in EBV is NOT allergy; continue drug if clinically needed\\\\\\\",\\\\n          \\\\\\\"Always verify renal function before dosing; T1/2 increases significantly with renal failure\\\\\\\",\\\\n          \\\\\\\"Pseudomonas empirically needs Cepta/Piperacillin; not covered by standard 3rd gen\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Penicillins - exam prep\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"NEET PG Previous Year Questions\\\\\\\", chapter: \\\\\\\"Beta-lactam antibiotics\\\\\\\", edition: \\\\\\\"2024\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"penicillins-cephalosporins-recall\\\\\\\",\\\\n        title: \\\\\\\"Penicillins & Cephalosporins - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"7 Q&A flashcard pairs for self-testing and spaced repetition.\\\\\\\",\\\\n        contentMd: ``# Active Recall Flashcards\\\\n\\\\n## Q1: What is the fundamental difference in mechanism between penicillins and cephalosporins?\\\\n**A**: Both inhibit bacterial cell wall synthesis via PBP binding, but differ in binding affinity to specific PBPs. Penicillins have highest affinity for PBP 1 (gram-positive bacteria), while cephalosporins preferentially bind PBP 3 (gram-negative bacteria). This accounts for spectral differences.\\\\n\\\\n## Q2: A patient with documented penicillin anaphylaxis needs meningitis treatment. Can cephalosporins be used?\\\\n**A**: Yes, with caution. 3rd/4th generation cephalosporins have <2% cross-reactivity with penicillin. However, if anaphylaxis is documented, use carbapenem (meropenem 2g IV 8h) or fluoroquinolone as safer alternative. 1st generation cephalosporins should be avoided (10% cross-reactivity).\\\\n\\\\n## Q3: Why is ampicillin commonly given with gentamicin for enterococcal infections, not ampicillin alone?\\\\n**A**: Ampicillin is bacteriostatic against enterococcus (MIC often elevated). Gentamicin synergizes by entering the cell through penicillin-damaged wall, providing bactericidal activity. Neither drug alone achieves bactericidal killing.\\\\n\\\\n## Q4: A patient develops diarrhea while on ceftriaxone. Why is cephalosporin-associated diarrhea more common than with penicillins?\\\\n**A**: Cephalosporins disrupt colonic flora more extensively due to broader spectrum. This allows C. difficile overgrowth. Additionally, cephalosporins have greater enterobacterial coverage than penicillins, further disrupting normal flora. Risk: C. difficile colitis.\\\\n\\\\n## Q5: In bacterial meningitis, why is the ceftriaxone dose doubled (2g IV 12h) compared to other infections?\\\\n**A**: CNS penetration of cephalosporins is limited even with inflammation (only ~10-20% penetration). High CSF levels are essential for bactericidal effect. Doubled dosing ensures adequate CSF concentrations. Renal clearance is rapid, necessitating frequent dosing.\\\\n\\\\n## Q6: Which resistance mechanism explains ampicillin-resistant H. influenzae (BLNAR) vs. BLPACR?\\\\n**A**: BLNAR = Beta-Lactamase Negative Ampicillin Resistant = altered PBP (genetic ftsI mutation). BLPACR = Beta-Lactamase Producing Ampicillin Resistant = TEM/SHV enzyme. BLNAR is harder to detect (no beta-lactamase test); requires molecular testing or E-test.\\\\n\\\\n## Q7: A patient with renal failure (CrCl 15 mL/min) is on piperacillin-tazobactam. How should dosing be adjusted?\\\\n**A**: At CrCl <20, reduce piperacillin-tazobactam to 2.25g IV 8h (from standard 4.5g 6-8h). Monitor for drug accumulation and seizure risk (high-dose beta-lactams + renal failure = neurotoxicity). In severe renal failure requiring dialysis, redose after hemodialysis.,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"CAP = Cross-reactivity Allergy Penicillin (test 1st vs. 3rd gen differently)\\\\\\\",\\\\n            explanation: \\\\\\\"Remember to stratify cross-reactivity risk by cephalosporin generation\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Enterococcal synergy: Ampicillin alone is too slow; always add gentamicin for serious infections\\\\\\\",\\\\n          \\\\\\\"Meningitis dosing is special case; never use standard dosing for CNS infections\\\\\\\",\\\\n          \\\\\\\"BLNAR detection requires molecular or phenotypic testing; beta-lactamase test is negative\\\\\\\",\\\\n          \\\\\\\"Renal failure risk: seizures from high-dose beta-lactams cumulate; reduce aggressively\\\\\\\",\\\\n          \\\\\\\"C. difficile prevention: consider probiotics, minimize unnecessary cephalosporin duration\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Penicillins & Cephalosporins clinical Q&A\\\\\\\", edition: \\\\\\\"9th\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  },\\\\n\\\\n  // Module 5: Chemotherapy - Aminoglycosides, Macrolides & Quinolones\\\\n  {\\\\n    topicCode: \\\\\\\"PH-MOD-05-TOP-02\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"aminoglycosides-macrolides-quinolones-foundation\\\\\\\",\\\\n        title: \\\\\\\"Aminoglycosides, Macrolides & Quinolones - Foundation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Three distinct antibiotic classes with different mechanisms: aminoglycosides (30S ribosomal inhibitors), macrolides (50S inhibitors), fluoroquinolones (DNA gyrase inhibitors). Overview of spectrum, pharmacokinetics, and clinical role.\\\\\\\",\\\\n        contentMd: ``# Aminoglycosides, Macrolides & Quinolones Overview\\\\n\\\\n## Aminoglycosides\\\\n- **Class**: Streptomycin, Gentamicin, Amikacin, Tobramycin, Netilmicin\\\\n- **Mechanism**: Irreversible 30S ribosomal subunit inhibition → bactericidal\\\\n- **Spectrum**: Gram-negative aerobic bacteria, Staph, some gram-positives (synergy)\\\\n- **Poor Activity**: Anaerobes, streptococci alone, atypical bacteria\\\\n- **PK**: IV/IM only (destroyed in GI tract); rapid renal excretion; narrow therapeutic window\\\\n- **T1/2**: 2-3 hours (requires dose adjustment in renal failure)\\\\n\\\\n## Macrolides\\\\n- **Class**: Erythromycin, Azithromycin, Clarithromycin, Roxithromycin\\\\n- **Mechanism**: Reversible 50S ribosomal inhibition → bacteriostatic\\\\n- **Spectrum**: Gram-positive cocci, atypical bacteria (Mycoplasma, Legionella, Chlamydia), some gram-negatives\\\\n- **PK**: Good GI absorption (especially azithromycin); hepatic metabolism (significant drug interactions); long T1/2 (azithromycin ~40-68 hours)\\\\n- **Unique**: Azithromycin achieves high tissue levels; commonly used in India\\\\n\\\\n## Fluoroquinolones\\\\n- **Class**: Ciprofloxacin, Ofloxacin, Levofloxacin, Moxifloxacin, Gemifloxacin\\\\n- **Mechanism**: DNA gyrase (topoisomerase II) inhibition → bactericidal\\\\n- **Spectrum**: Broad gram-negative & gram-positive coverage; atypical bacteria; some anaerobes (especially newer agents)\\\\n- **PK**: Excellent oral bioavailability; wide tissue penetration (lung, prostate, bone); renal + hepatic metabolism\\\\n- **Indian Context**: Widely overused; fluoroquinolone resistance (FQCR) increasing\\\\n\\\\n## Comparative Advantages\\\\n| Feature | Aminoglycosides | Macrolides | Fluoroquinolones |\\\\n|---------|-----------------|-----------|-----------------|\\\\n| Spectrum | GNR aerobic | Atypical, GPCs | Broad GNR/GPC |\\\\n| Mechanism | Bactericidal | Bacteriostatic | Bactericidal |\\\\n| Route | IV/IM only | PO/IV | PO/IV both good |\\\\n| Renal Impairment | Significant | Minor | Moderate |\\\\n| Allergy Rate | ~1% | <1% | <2% |,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"AMG = Aminoglycosides, Macrolides, Gyrase-inhibitors (Fluoroquinolones)\\\\\\\",\\\\n            explanation: \\\\\\\"Group all three non-beta-lactam protein synthesis inhibitors\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"30S vs 50S ribosome: AG at 30S, Mac at 50S\\\\\\\",\\\\n            explanation: \\\\\\\"Quick differentiation between aminoglycosides and macrolides\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Aminoglycosides are bactericidal; require renal clearance; narrow therapeutic window\\\\\\\",\\\\n          \\\\\\\"Macrolides are bacteriostatic; hepatically metabolized; long macrolide T1/2 allows OD dosing\\\\\\\",\\\\n          \\\\\\\"Fluoroquinolones are bactericidal with broad spectrum; excellent oral absorption and tissue penetration\\\\\\\",\\\\n          \\\\\\\"Fluoroquinolone resistance rising in India; reserve for serious/resistant infections\\\\\\\",\\\\n          \\\\\\\"Aminoglycosides + beta-lactam = synergistic killing (gram-negative enterobacteria, enterococcus)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Protein synthesis inhibitors\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Rang & Dale Pharmacology\\\\\\\", chapter: \\\\\\\"Antimicrobial drugs\\\\\\\", edition: \\\\\\\"9th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"aminoglycosides-macrolides-quinolones-mechanism\\\\\\\",\\\\n        title: \\\\\\\"Aminoglycosides, Macrolides & Quinolones - Mechanism\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Detailed molecular mechanisms, ribosomal binding, DNA gyrase inhibition, spectrum determinants, resistance pathways (enzymatic inactivation, ribosomal mutation, efflux), and PK/PD relationships.\\\\\\\",\\\\n        contentMd: ``# Detailed Mechanisms & Resistance\\\\n\\\\n## Aminoglycosides - Molecular Details\\\\n- **30S Subunit Binding**: Irreversible inhibition of peptide chain initiation\\\\n- **Misreading**: Incorporation of wrong amino acids → non-functional proteins\\\\n- **Bactericidal Nature**: Requires active transport into cell (oxygen-dependent)\\\\n  - **Paradox**: Anaerobes = resistant due to lack of oxygen for transport\\\\n  - **Synergy**: Beta-lactams create wall damage → enhanced aminoglycoside uptake\\\\n- **Concentration-Dependent Killing**: Kill increases with peak level above MIC\\\\n- **Post-Antibiotic Effect**: Continued suppression after removal (use once-daily dosing)\\\\n\\\\n### Resistance Mechanisms\\\\n1. **Enzymatic Inactivation** (Most common in India):\\\\n   - AAC = Aminoglycoside acetyltransferase\\\\n   - ANT = Adenylyltransferase\\\\n   - APH = Phosphotransferase\\\\n   - Different enzymes confer different resistances (e.g., gentamicin-resistant but amikacin-susceptible)\\\\n2. **Ribosomal Mutation**: 16S rRNA methylation (rare)\\\\n3. **Reduced Uptake**: Loss of active transport (inherent in anaerobes, gram-positives)\\\\n\\\\n## Macrolides - Molecular Details\\\\n- **50S Subunit Binding**: Prevents translocation of tRNA\\\\n- **Bacteriostatic Effect**: Allows bacterial recovery when drug removed\\\\n- **Spectrum Determinant**: Ribosomal accessibility varies (gram-negatives have poor penetration due to outer membrane)\\\\n- **Resistance**:\\\\n  1. **Ribosomal Methylation** (erm genes): Most common in gram-positives\\\\n  2. **Efflux Pumps** (mef genes): Increases with use\\\\n  3. **Inactivation** (esterases): Less common in India\\\\n- **Target**: Mainly affects gram-positive & atypical bacteria due to cell wall permeability\\\\n\\\\n## Fluoroquinolones - Molecular Details\\\\n- **DNA Gyrase Target**: Topoisomerase II inhibits DNA replication/transcription\\\\n- **Dose-Dependent Killing**: Kill proportional to AUC/MIC ratio (area under curve)\\\\n- **Mechanism**:\\\\n  - Inhibits DNA unwinding during replication\\\\n  - Causes double-strand breaks\\\\n  - Results in bactericidal activity\\\\n- **Resistance Development**:\\\\n  1. **Chromosomal Mutations**: In gyrA, gyrB genes (most common in India; FQCR increasing)\\\\n  2. **Efflux Pumps**: OqxAB, AcrAB systems upregulated\\\\n  3. **Outer Membrane Changes**: Porin mutations reduce drug entry\\\\n  4. **Plasmid-Mediated**: qnr genes (quinolone resistance-determining regions)\\\\n\\\\n## Spectrum by Generation (Fluoroquinolones)\\\\n- **2nd Gen (Cipro, Ofloxacin)**: Gram-negative > gram-positive\\\\n- **3rd Gen (Levofloxacin)**: Better gram-positive coverage\\\\n- **4th Gen (Moxifloxacin)**: Improved gram-positive + anaerobic activity\\\\n\\\\n## PK/PD Relationships\\\\n- **Aminoglycosides**: Concentration-dependent → once-daily dosing optimal\\\\n- **Macrolides**: Time-dependent → frequent dosing less necessary (long T1/2)\\\\n- **Fluoroquinolones**: AUC/MIC-dependent → both concentration and duration matter,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"AAA = Aminoglycoside Acetyltransferase, Adenylyltransferase, Aphosphotransferase\\\\\\\",\\\\n            explanation: \\\\\\\"Three main enzymatic resistance pathways to aminoglycosides\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"FQCR = Fluoroquinolone Cross Resistance (gyrA/B mutations widely transferable)\\\\\\\",\\\\n            explanation: \\\\\\\"Remember resistance to one FQ often confers cross-resistance\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Aminoglycosides require oxygen-dependent active transport; anaerobes inherently resistant\\\\\\\",\\\\n          \\\\\\\"Aminoglycoside + beta-lactam synergy due to enhanced cell wall permeability\\\\\\\",\\\\n          \\\\\\\"Macrolide resistance via ribosomal methylation (erm) rising in India; common in MRSA\\\\\\\",\\\\n          \\\\\\\"Fluoroquinolone resistance (gyrA mutations) increasing; seen in E. coli, Salmonella, TB\\\\\\\",\\\\n          \\\\\\\"Once-daily aminoglycoside dosing exploits post-antibiotic effect; preferred in modern practice\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Bacterial resistance mechanisms\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Rang & Dale Pharmacology\\\\\\\", chapter: \\\\\\\"Mechanisms of antibiotic resistance\\\\\\\", edition: \\\\\\\"9th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"aminoglycosides-macrolides-quinolones-clinical\\\\\\\",\\\\n        title: \\\\\\\"Aminoglycosides, Macrolides & Quinolones - Clinical\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Therapeutic uses in bacterial infections, atypical pneumonia, UTI. Adverse effects: aminoglycoside nephrotoxicity/ototoxicity, macrolide QT prolongation, fluoroquinolone tendinopathy. Indian guidelines and practice patterns.\\\\\\\",\\\\n        contentMd: ``# Clinical Use & Adverse Effects\\\\n\\\\n## Aminoglycosides - Therapeutic Uses\\\\n\\\\n### Gentamicin (Most common in India)\\\\n- **Gram-Negative Enterobacteria** (E. coli, Klebsiella, Proteus): UTI, biliary infection, intra-abdominal sepsis\\\\n- **Synergy Partner**: Beta-lactam + Gentamicin for serious infections (sepsis, endocarditis)\\\\n- **Tuberculosis**: Streptomycin (first-line in TB) or Amikacin (MDR-TB)\\\\n- **Dosing**:\\\\n  - Conventional: 1 mg/kg IV/IM 8-hourly (monitor levels: trough <1, peak 5-8 μg/mL)\\\\n  - Once-daily: 7 mg/kg IV single dose (convenient, equally effective)\\\\n\\\\n### Amikacin\\\\n- **Aminoglycoside-Resistant GNR**: Used when gentamicin/tobramycin resistance likely\\\\n- **Pseudomonas**: Often used (synergy with beta-lactam)\\\\n- **ESBL E. coli**: Good coverage despite cephalosporin resistance\\\\n- **Dosing**: 15 mg/kg/day once-daily (monitor: trough <5, peak 15-30 μg/mL)\\\\n\\\\n### Tobramycin\\\\n- **Cystic Fibrosis**: Pseudomonas lung infection (preferred over gentamicin)\\\\n\\\\n## Macrolides - Therapeutic Uses\\\\n\\\\n### Azithromycin (Most popular in India)\\\\n- **Atypical Pneumonia**: Mycoplasma, Legionella (first-line per Indian chest guidelines)\\\\n- **Chlamydia trachomatis**: C. trachomatis cervicitis, PID, neonatal conjunctivitis\\\\n- **CAP (Community-Acquired Pneumonia)**: Often added to beta-lactam (covers atypicals)\\\\n- **Typhoid (Uncomplicated)**: Alternative to fluoroquinolone in susceptible strains\\\\n- **Dosing**: 500 mg on Day 1, then 250 mg OD (convenient 3-5 day course)\\\\n\\\\n### Clarithromycin\\\\n- **H. pylori Eradication**: Triple therapy (proton pump inhibitor + Amoxicillin + Clarithromycin)\\\\n- **MAC Prophylaxis**: CD4 <50 in HIV\\\\n\\\\n### Erythromycin (Less used now)\\\\n- **GI Prokinetic**: Stimulates motilin receptors; used off-label for post-op ileus\\\\n- **Chlamydia**: Alternative to azithromycin\\\\n\\\\n## Fluoroquinolones - Therapeutic Uses\\\\n\\\\n### Ciprofloxacin\\\\n- **Enteric Gram-Negatives**: E. coli UTI, Salmonella, Shigella, Campylobacter\\\\n- **Typhoid Fever**: Standard fluoroquinolone for uncomplicated typhoid (increasingly resistant in India)\\\\n- **Respiratory Tract**: Some CAP coverage (less preferred than newer agents)\\\\n- **Dosing**: 500-750 mg BD oral, or 400 mg IV BD\\\\n\\\\n### Ofloxacin\\\\n- **Similar to ciprofloxacin**; used interchangeably in India\\\\n- **TB**: Second-line agent for MDR-TB (now replaced by newer FQs)\\\\n\\\\n### Levofloxacin (3rd Gen)\\\\n- **CAP**: Better gram-positive coverage; often preferred for atypical + typical CAP\\\\n- **TB**: Preferred FQ for drug-resistant TB (second-line)\\\\n- **Dosing**: 500-750 mg OD\\\\n\\\\n### Moxifloxacin (4th Gen)\\\\n- **CAP with Anaerobes**: Best gram-positive + anaerobic coverage among FQs\\\\n- **TB**: Alternative to levofloxacin\\\\n- **GI Infections**: Good for intra-abdominal sepsis\\\\n- **Dosing**: 400 mg OD\\\\n\\\\n## Adverse Effects\\\\n\\\\n### Aminoglycosides\\\\n- **Nephrotoxicity**: 5-10% incidence\\\\n  - Risk factors: Renal disease, volume depletion, concurrent nephrotoxins (NSAIDs, ACE-I)\\\\n  - Mechanism: Proximal tubular accumulation → cell death\\\\n  - **Prevention**: Adequate hydration, once-daily dosing, monitor Cr daily\\\\n- **Ototoxicity**: 2-3% incidence (dose + duration dependent)\\\\n  - Irreversible; may be delayed (even after stopping drug)\\\\n  - Risk: Loop diuretics, cisplatin, age >60\\\\n- **Neuromuscular Blockade**: Rare; risk with myasthenia, Ca²⁺-channel blockers\\\\n\\\\n### Macrolides\\\\n- **QT Prolongation**: Esp. erythromycin > clarithromycin > azithromycin\\\\n  - Risk: Female, hypokalemia, bradycardia, cardiac disease\\\\n  - **Action**: ECG monitoring if risk factors\\\\n- **GI Upset**: Nausea, cramping (dose-related)\\\\n- **Hepatotoxicity**: Cholestasis risk (esp. erythromycin estolate)\\\\n- **Arrhythmias**: Torsades de pointes with QT prolongation\\\\n\\\\n### Fluoroquinolones\\\\n- **Tendinopathy**: Achilles tendon rupture (0.1-0.2% incidence)\\\\n  - Risk: Age >60, corticosteroid use, renal failure\\\\n  - **Action**: Counsel on activity restriction; discontinue if tendon pain\\\\n- **CNS Effects**: Dizziness, confusion, seizures (rare; risk with NSAIDs, low seizure threshold)\\\\n- **Photosensitivity**: Sun exposure → skin reactions (esp. older FQs)\\\\n- **Cartilage Toxicity**: Avoid in children (affects growing cartilage)\\\\n- **Peripheral Neuropathy**: Rare but documented (irreversible in some cases)\\\\n- **QT Prolongation**: Moxifloxacin > levofloxacin > ciprofloxacin\\\\n\\\\n## Drug Interactions\\\\n\\\\n### Aminoglycosides\\\\n- **Nephrotoxins**: ACE-I, NSAIDs, cisplatin (additive renal toxicity)\\\\n- **Ototoxins**: Loop diuretics, amphotericin B (additive ototoxicity)\\\\n\\\\n### Macrolides\\\\n- **CYP3A4 Inhibition**: Erythromycin/Clarithromycin inhibit CYP3A4\\\\n  - **Interactions**: Digoxin, statins, theophylline, immunosuppressants\\\\n  - **Action**: Monitor levels; reduce doses of interacting drugs\\\\n- **QT Drugs**: Avoid with other QT-prolonging agents (antiarrhythmics, antipsychotics)\\\\n\\\\n### Fluoroquinolones\\\\n- **Metal Chelation**: Divalent cations (Mg²⁺, Ca²⁺, Fe²⁺) reduce absorption\\\\n  - **Action**: Separate dosing by 2+ hours from antacids, iron, zinc supplements\\\\n- **Theophylline**: FQ inhibits metabolism; toxicity risk\\\\n- **NSAIDs + FQ**: Increased seizure risk; avoid combination,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"GATE = Gentamicin, Amikacin, Tobramycin, Enterobacteria (gram-neg)\\\\\\\",\\\\n            explanation: \\\\\\\"Aminoglycosides for gram-negative aerobic bacteria\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"MAC = Mycoplasma, Atypical, Chlamydia (Macrolide targets)\\\\\\\",\\\\n            explanation: \\\\\\\"Remember macrolides are best for atypical bacteria\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"FQ-TON = Fluoroquinolone-Tendon, Neuropathy, Ototoxicity, No kids\\\\\\\",\\\\n            explanation: \\\\\\\"Key adverse effects and contraindications of fluoroquinolones\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Gentamicin once-daily dosing (7 mg/kg) is standard now; monitor renal function daily in sepsis\\\\\\\",\\\\n          \\\\\\\"Azithromycin is first-line for atypical pneumonia (Mycoplasma, Legionella) in India\\\\\\\",\\\\n          \\\\\\\"Aminoglycoside + beta-lactam is synergistic for serious gram-negative infections (endocarditis, sepsis)\\\\\\\",\\\\n          \\\\\\\"Macrolide QT prolongation risk highest with erythromycin; use azithromycin if QT concerns\\\\\\\",\\\\n          \\\\\\\"Fluoroquinolone resistance rising in India; restrict to serious/resistant infections per stewardship\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Aminoglycosides, Macrolides, Quinolones clinical use\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Indian Council of Medical Research (ICMR) Guidelines\\\\\\\", chapter: \\\\\\\"Antibiotic stewardship\\\\\\\", edition: \\\\\\\"2023\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"aminoglycosides-macrolides-quinolones-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Aminoglycosides, Macrolides & Quinolones - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"Drug of choice tables, high-yield one-liners, resistance patterns, side effect pearls, and NEET-style clinical scenarios.\\\\\\\",\\\\n        contentMd: ``# Exam Prep: High-Yield Concepts\\\\n\\\\n## Drug of Choice by Organism/Infection\\\\n\\\\n| Infection | Drug of Choice | Reasoning |\\\\n|-----------|---|---|\\\\n| E. coli UTI (uncomplicated) | Ciprofloxacin or Nitrofurantoin | Oral, good urinary levels |\\\\n| Gentamicin-resistant GNR | Amikacin | Enzymatic resistance doesn't affect amikacin |\\\\n| Mycoplasma pneumonia | Azithromycin | Excellent atypical coverage |\\\\n| Legionella pneumonia | Azithromycin + Fluoroquinolone | Combination for serious Legionella |\\\\n| H. pylori eradication | Clarithromycin (in triple therapy) | PPI + Amoxicillin + Clarithromycin |\\\\n| CAP + atypical | Beta-lactam + Azithromycin | Covers both typical and atypical |\\\\n| Typhoid (susceptible) | Ciprofloxacin | Excellent for enteric fever |\\\\n| MDR-TB (second-line) | Levofloxacin or Moxifloxacin | Preferred FQ for resistant TB |\\\\n| Pseudomonas (serious) | Gentamicin + Piperacillin-Tazo | Synergistic; aminoglycoside + beta-lactam |\\\\n| Endocarditis (enterococcal) | Ampicillin + Gentamicin | Synergy; bactericidal combination |\\\\n\\\\n## Critical One-Liners\\\\n\\\\n1. **\\\\\\\"Aminoglycosides = Concentration-dependent killers; once-daily dosing optimal\\\\\\\"**\\\\n2. **\\\\\\\"Macrolides = Gram-positive + Atypical bacteria; erythromycin causes QT/GI effects\\\\\\\"**\\\\n3. **\\\\\\\"Fluoroquinolones = Broad spectrum but avoid in kids, tendons, QT-risk patients\\\\\\\"**\\\\n4. **\\\\\\\"Gentamicin-resistant GNR = Often resistant via AAC enzyme; try Amikacin\\\\\\\"**\\\\n5. **\\\\\\\"Macrolide-resistant MRSA = erm gene (ribosomal methylation); cross-resistance common\\\\\\\"**\\\\n6. **\\\\\\\"Fluoroquinolone-resistant E. coli = gyrA mutations; increasingly seen in India\\\\\\\"**\\\\n7. **\\\\\\\"Aminoglycoside nephrotoxicity = Monitor Cr daily; dehydration is major risk\\\\\\\"**\\\\n8. **\\\\\\\"Macrolide + QT-drug = Risk of torsades; esp. erythromycin; ECG if concerns\\\\\\\"**\\\\n9. **\\\\\\\"Fluoroquinolone + tendon history = Contraindicated; risk of rupture\\\\\\\"**\\\\n10. **\\\\\\\"Synergistic combo = AG + Beta-lactam for serious gram-negative/enterococcal infections\\\\\\\"**\\\\n\\\\n## Resistance Pattern Recognition\\\\n\\\\n- **Gentamicin-R but Amikacin-S**: AAC/ANT enzyme (doesn't affect amikacin)\\\\n- **All AG-R**: High-level resistance (efflux pump or ribosomal mutation)\\\\n- **Macrolide-R MRSA**: erm gene (methylation); common in India\\\\n- **FQ-R E. coli**: gyrA mutations; increasingly common; cross-resistance to other FQs\\\\n- **TB + FQ-R**: Often MDR with additional resistance; needs 4th line agents\\\\n\\\\n## Adverse Effect Pearls\\\\n\\\\n- **AG Nephrotoxicity**: Monitor Cr daily during therapy; reduce dose if Cr rises >0.5 mg/dL\\\\n- **AG Ototoxicity**: IRREVERSIBLE; counsel patient on hearing changes during therapy\\\\n- **Macrolide QT**: Erythromycin ~10-50 ms QT prolongation; azithromycin safer\\\\n- **FQ Tendon**: Risk increases age >60, with steroids; contraindicated in tendon history\\\\n- **FQ Peripheral Neuropathy**: Rare but irreversible; document baseline neuro status if using,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"CIG = Cipro, Levofloxacin for Infections, Gram-negatives\\\\\\\",\\\\n            explanation: \\\\\\\"Fluoroquinolones for enteric gram-negative infections\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"MACLID = Mycoplasma, Atypical, Chlamydia, Legionella = macrolid Indications\\\\\\\",\\\\n            explanation: \\\\\\\"Quick recall of macrolide's main uses\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Gentamicin-resistant organisms often susceptible to amikacin (different enzymatic target)\\\\\\\",\\\\n          \\\\\\\"Azithromycin 3-day course (500-250 mg dosing) is convenient; equivalent to 5-day courses\\\\\\\",\\\\n          \\\\\\\"High-dose aminoglycoside (7 mg/kg OD) achieves better PK/PD than traditional dosing\\\\\\\",\\\\n          \\\\\\\"Fluoroquinolone resistance in India rising; restrict to resistant organisms per stewardship\\\\\\\",\\\\n          \\\\\\\"Macrolide + statin interaction significant; monitor for myopathy; adjust statin dose if needed\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Aminoglycoside/Macrolide/FQ exam prep\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"NEET PG Previous Year Questions\\\\\\\", chapter: \\\\\\\"Protein synthesis inhibitors\\\\\\\", edition: \\\\\\\"2024\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"aminoglycosides-macrolides-quinolones-recall\\\\\\\",\\\\n        title: \\\\\\\"Aminoglycosides, Macrolides & Quinolones - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"7 Q&A flashcard pairs for spaced repetition learning.\\\\\\\",\\\\n        contentMd: ``# Active Recall Flashcards\\\\n\\\\n## Q1: A patient on gentamicin 80 mg IV for gram-negative sepsis develops a rise in creatinine from 0.9 to 1.5 mg/dL over 3 days. What is your management?\\\\n**A**: This suggests aminoglycoside-induced nephrotoxicity (acute tubular necrosis). STOP gentamicin immediately. Establish adequate hydration; monitor urine output and electrolytes. Recheck Cr in 48 hours. If Cr stabilizes, consider switching to beta-lactam alone (if susceptible) or use fluoroquinolone. Do NOT resume aminoglycoside without normalization of renal function. Note: Once-daily dosing (7 mg/kg) has lower nephrotoxicity than conventional dosing.\\\\n\\\\n## Q2: A patient with erythromycin develops severe nausea and vomiting. Additionally, ECG shows QT prolongation. Why might both occur with erythromycin but less commonly with azithromycin?\\\\n**A**: Erythromycin is a strong CYP3A4 inhibitor, causing elevated metabolite levels (EM-precursor). These metabolites are highly arrhythmogenic and prokinetic (increasing GI motility initially, then causing nausea paradoxically). Erythromycin also directly prolongs QT interval. Azithromycin has weaker CYP3A4 inhibition and minimal QT effect; thus, fewer GI and cardiac complications.\\\\n\\\\n## Q3: A patient with E. coli UTI is treated with ciprofloxacin 500 mg BD. After 48 hours, symptoms persist; culture shows fluoroquinolone-resistant E. coli. What resistance mechanism is likely, and how would you confirm?\\\\n**A**: gyrA gene mutations (DNA gyrase resistance) are most common for FQ resistance in E. coli. These confer resistance via altered gyrase structure. CONFIRM with: (1) E-test (FQ Etest MIC), (2) Molecular testing for gyrA/gyrB mutations, or (3) PCR-based resistance gene detection. Cross-resistance to other FQs is common (e.g., ciprofloxacin-R E. coli often levofloxacin-R). Consider alternative: nitrofurantoin or cephalosporin if susceptible.\\\\n\\\\n## Q4: In severe Pseudomonas aeruginosa sepsis, why is Gentamicin + Piperacillin-Tazobactam superior to either drug alone?\\\\n**A**: Synergistic killing occurs via two mechanisms: (1) Piperacillin-tazobactam creates cell wall damage, allowing enhanced aminoglycoside uptake (aminoglycosides require active transport via damaged wall), (2) The combination achieves bactericidal activity against Pseudomonas, while either alone may be suboptimal. This synergy is especially important in serious infections (endocarditis, sepsis) where monotherapy failures are high. Once-daily gentamicin dosing (7 mg/kg) is now standard even in combination therapy.\\\\n\\\\n## Q5: A patient on azithromycin for atypical pneumonia is also on atorvastatin 40 mg. Why is this combination concerning, and how would you manage it?\\\\n**A**: Azithromycin is a weak CYP3A4 inhibitor; atorvastatin is metabolized by CYP3A4. Concurrent use increases statin levels → myopathy/rhabdomyolysis risk. MANAGEMENT: (1) Reduce atorvastatin to 20 mg during azithromycin course, (2) Monitor CK if myalgia develops, (3) Clarithromycin is even more potent CYP3A4 inhibitor; avoid if possible. Azithromycin's short 5-day course minimizes risk vs. chronic macrolide use.\\\\n\\\\n## Q6: A 75-year-old with achilles tendon pain is prescribed levofloxacin for UTI. Why is this problematic, and what alternative would you suggest?\\\\n**A**: Fluoroquinolones cause tendinopathy (Achilles rupture risk). Patient has pre-existing achilles pain + age >60 (both risk factors). CONTRAINDICATED. ALTERNATIVES: (1) Nitrofurantoin (uncomplicated UTI, good urinary levels), (2) Fosfomycin single-dose, (3) Cephalexin if not beta-lactam allergic, (4) Amoxicillin if susceptible. Fluoroquinolones should be reserved for serious/resistant infections in high-risk patients.\\\\n\\\\n## Q7: In MDR-TB treatment, why is levofloxacin preferred over older fluoroquinolones like ofloxacin, and how does it compare to moxifloxacin?\\\\n**A**: Levofloxacin has SUPERIOR M. tuberculosis penetration into lung tissue compared to ofloxacin, achieving better CSF/pulmonary levels. Moxifloxacin has slightly better anaerobic coverage and gram-positive activity but no proven superiority over levofloxacin in TB. Both are acceptable second-line FQs for MDR-TB. Dosing: Levofloxacin 750 mg OD, Moxifloxacin 400 mg OD. Reserve for confirmed drug-resistant TB (resistance verified by DST) to prevent unnecessary fluoroquinolone exposure and resistance development.,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"AG-Neph-OTO = Aminoglycoside Nephrotoxicity + OTOtoxicity (watch Cr & hearing)\\\\\\\",\\\\n            explanation: \\\\\\\"Critical monitoring parameters for aminoglycoside therapy\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Aminoglycoside nephrotoxicity: STOP drug, hydrate, monitor Cr daily; may be reversible if caught early\\\\\\\",\\\\n          \\\\\\\"Erythromycin QT/GI effects related to strong CYP3A4 inhibition; azithromycin safer alternative\\\\\\\",\\\\n          \\\\\\\"FQ-resistant E. coli (gyrA mutations) increasingly common in India; cross-resistant to other FQs\\\\\\\",\\\\n          \\\\\\\"Aminoglycoside + beta-lactam synergy crucial for serious Pseudomonas infections\\\\\\\",\\\\n          \\\\\\\"Fluoroquinolone tendinopathy: contraindicated if achilles/tendon pain history; risk increases age >60\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Aminoglycoside/Macrolide/FQ clinical Q&A\\\\\\\", edition: \\\\\\\"9th\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  },\\\\n\\\\n  // Module 5: Chemotherapy - Antitubercular Drugs\\\\n  {\\\\n    topicCode: \\\\\\\"PH-MOD-05-TOP-03\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"antitubercular-drugs-foundation\\\\\\\",\\\\n        title: \\\\\\\"Antitubercular Drugs - Foundation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Classification of first-line and second-line antitubercular drugs. Isoniazid, rifampicin, pyrazinamide, ethambutol as backbone of standard TB therapy. Introduction to MDR-TB and newer agents.\\\\\\\",\\\\n        contentMd: ``# Antitubercular Drugs Overview\\\\n\\\\n## First-Line Drugs (WHO/India RNTCP)\\\\n\\\\n### Classic Backbone (HRZE)\\\\n- **Isoniazid (H)**: Mycobacterium tuberculosis specific; prodrug requiring KatG activation\\\\n- **Rifampicin (R)**: Broad spectrum; excellent tissue penetration\\\\n- **Pyrazinamide (Z)**: Sterilizes lesions; unique pH-dependent activity\\\\n- **Ethambutol (E)**: Bacteriostatic; prevents resistance development\\\\n\\\\n### Duration of Use\\\\n- **Intensive Phase (2 months)**: HRZE daily\\\\n- **Continuation Phase (4 months)**: HR daily or 2× weekly\\\\n\\\\n## Second-Line Drugs (For MDR-TB)\\\\n\\\\n### Fluoroquinolones (Group A)\\\\n- **Levofloxacin/Moxifloxacin**: Superior TB penetration\\\\n\\\\n### Aminoglycosides (Group B)\\\\n- **Streptomycin, Amikacin, Kanamycin**: Injectable; less used now (ototoxicity)\\\\n\\\\n### Thiophenones (Group B)\\\\n- **Ethionamide, Prothionamide**: Limited use (GI side effects, hepatotoxicity)\\\\n\\\\n### Other Group C\\\\n- **Linezolid, Para-aminosalicylic acid (PAS)**\\\\n\\\\n## Indian RNTCP Guidelines (2024)\\\\n- All TB patients screened for drug resistance (upfront DST)\\\\n- First-line drug dosing: Isoconazole, Rifampicin, Pyrazinamide, Ethambutol (HRZE)\\\\n- MDR-TB standard regimen: 20 months total (6-month intensive with injectables + 14-month fluoroquinolone-based)\\\\n- Drug-resistant TB (DR-TB) management: All India TB Notification mandatory,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"HRZE = Isoniazid, Rifampicin, pyraZinamide, Ethambutol (First-line TB drugs)\\\\\\\",\\\\n            explanation: \\\\\\\"Standard 4-drug regimen for tuberculosis\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"2-4-6 = 2-month intensive, 4-month continuation = 6-month total therapy\\\\\\\",\\\\n            explanation: \\\\\\\"Standard treatment duration for new TB patients\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Isoniazid is TB-specific; requires bacterial KatG for prodrug activation\\\\\\\",\\\\n          \\\\\\\"Rifampicin is potent broad-spectrum agent; excellent CNS penetration for TB meningitis\\\\\\\",\\\\n          \\\\\\\"Pyrazinamide is acid-activated; kills organisms in acidic caseous lesions\\\\\\\",\\\\n          \\\\\\\"Ethambutol prevents resistance; monitoring for color vision important\\\\\\\",\\\\n          \\\\\\\"MDR-TB requires prolonged therapy (20 months) with expensive second-line drugs\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Antitubercular drugs\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"India RNTCP (NIKSHAY) Guidelines\\\\\\\", chapter: \\\\\\\"TB drug regimens\\\\\\\", edition: \\\\\\\"2024\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"antitubercular-drugs-mechanism\\\\\\\",\\\\n        title: \\\\\\\"Antitubercular Drugs - Mechanism\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Molecular mechanisms of action for HRZE. Prodrug activation, mycolic acid disruption, ribosomal effects. Resistance mutations and pharmacokinetic considerations specific to TB infection.\\\\\\\",\\\\n        contentMd: ``# Mechanisms of Action & Resistance\\\\n\\\\n## Isoniazid (INH)\\\\n- **Prodrug Activation**: Requires mycobacterial KatG (catalase-peroxidase)\\\\n  - Activates to INH radical → inhibits mycolic acid synthesis\\\\n  - **Why TB-specific**: Only mycobacteria express KatG at high levels\\\\n- **Target**: InhA enzyme (enoyl-ACP reductase)\\\\n  - Disrupts mycolic acid synthesis → cell wall instability\\\\n- **Bactericidal**: Kills actively dividing bacilli; slower against dormant organisms\\\\n- **Resistance**:\\\\n  - **KatG mutations** (80-90% of INH resistance): Loss of prodrug activation\\\\n  - **InhA mutations** (10-20%): Altered INH binding; also causes ethionamide resistance\\\\n  - Detection: GenoType MTBDRplus assay\\\\n\\\\n## Rifampicin (RIF)\\\\n- **Mechanism**: Inhibits bacterial RNA polymerase β subunit\\\\n  - Prevents RNA chain initiation → stops mRNA synthesis\\\\n- **Broad-Spectrum**: Active against many bacteria (used in meningococcal prophylaxis, H. influenzae)\\\\n- **Bactericidal**: Kills both dividing and non-dividing bacilli\\\\n- **Tissue Penetration**: Excellent in lung, CSF, bone; lipophilic\\\\n- **Resistance**:\\\\n  - **RpoB mutations** (>95% of RIF resistance): Altered RNA polymerase binding\\\\n  - Easily detected by MGIT or molecular assays\\\\n  - **Cross-resistance**: RIF-resistant TB often MDR (>80%)\\\\n- **Drug Interactions**: Powerful CYP3A4/2C9 inducer; affects OCP, warfarin, protease inhibitors\\\\n\\\\n## Pyrazinamide (PZA)\\\\n- **Prodrug Activation**: Requires PncA (pyrazinamidase)\\\\n  - Pyrazinamide → Pyrazinoic acid (active form)\\\\n- **Mechanism**: Disrupts mycobacterial membrane potential; inhibits fatty acid synthesis\\\\n- **pH-Dependent**: Active in acidic environment (caseous lesions, macrophages pH 4.5-5.5)\\\\n  - **Unique**: Only PZA sterilizes lesions where pH is low\\\\n- **Bactericidal**: Primarily against semi-dormant bacilli in lesions\\\\n- **Resistance**:\\\\n  - **PncA mutations**: Loss of pyrazinamidase; most common (75-90% of PZA-R)\\\\n  - **RpsA mutations** (ribosomal protein): Altered target; rarer\\\\n- **Important**: ~5% of TB naturally PZA-resistant (pncA loss); not same as acquired resistance\\\\n\\\\n## Ethambutol (EMB)\\\\n- **Mechanism**: Inhibits arabinosyl transferase → blocks arabinogalactan synthesis\\\\n  - Arabinogalactan is essential mycobacterial cell wall component\\\\n- **Bacteriostatic**: Doesn't kill; prevents resistance development in regimen\\\\n- **Resistance**:\\\\n  - **EmbB mutations** (mutations in embB gene): Alterations in drug uptake/target\\\\n  - Detected by MGIT/molecular testing\\\\n- **Monitoring**: Visual acuity must be assessed before therapy; color discrimination (red-green) affected\\\\n- **Unique Role**: Prevents INH/RIF resistance emergence; essential in any TB regimen\\\\n\\\\n## TB Dormancy & Drug Targeting\\\\n- **Actively dividing bacilli** (cavity rims): Killed by INH, RIF\\\\n- **Semi-dormant bacilli** (caseous lesions, low pH): PZA effective\\\\n- **Non-replicating bacilli** (sterilized lesions): RIF continues effect\\\\n- **Clinical Implication**: All 4 drugs needed for 6 months to achieve cure; shorter therapy = relapse\\\\n\\\\n## Pharmacokinetics in TB\\\\n- **INH**: Acetylated hepatically; slow vs. fast acetylators (genetic polymorphism); T1/2 = 1.5-7 hours\\\\n- **RIF**: T1/2 = 2-4 hours; renal + hepatic excretion\\\\n- **PZA**: Converted to PABA by liver; T1/2 = 9-10 hours\\\\n- **EMB**: Renal excretion; T1/2 = 8-15 hours\\\\n- **Drug Interactions**: RIF induces all major CYP enzymes (worst offender),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"KatG-INH = KatG enzyme activates Isoniazid (TB-specific prodrug)\\\\\\\",\\\\n            explanation: \\\\\\\"Remember INH requires bacterial KatG for activation\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"RpoB = Rifampicin target (RNA polymerase B subunit) → rpoB mutations = resistance\\\\\\\",\\\\n            explanation: \\\\\\\"Standard resistance test target for rifampicin\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"PZA-pH = Pyrazinamide active in acidic lesions (4.5-5.5) where others fail\\\\\\\",\\\\n            explanation: \\\\\\\"PZA's unique niche in TB therapy\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"INH is TB-specific prodrug; KatG activation explains selectivity; ~10% spontaneous resistance rate\\\\\\\",\\\\n          \\\\\\\"RIF resistance almost always confers MDR phenotype; ~95% have rpoB mutations\\\\\\\",\\\\n          \\\\\\\"PZA is only agent active in acidic caseous lesions; sterilizes TB; critical for duration shortening\\\\\\\",\\\\n          \\\\\\\"Ethambutol's role is preventive (resistance suppression); not primary killer but essential\\\\\\\",\\\\n          \\\\\\\"RIF's CYP enzyme induction most problematic for drug interactions (affects OCPs, antiretrovirals)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Antitubercular drug mechanisms\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"World Health Organization (WHO) TB Treatment Guidelines\\\\\\\", chapter: \\\\\\\"Drug mechanisms\\\\\\\", edition: \\\\\\\"2023\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"antitubercular-drugs-clinical\\\\\\\",\\\\n        title: \\\\\\\"Antitubercular Drugs - Clinical\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Therapeutic regimens for TB (drug-susceptible and MDR-TB). Adverse effects: hepatotoxicity, neuropathy, drug interactions. Indian RNTCP guidelines, DOTS strategy, and special populations.\\\\\\\",\\\\n        contentMd: ``# Clinical Use & Adverse Effects\\\\n\\\\n## Treatment Regimens (India RNTCP)\\\\n\\\\n### Drug-Susceptible TB (6-Month Standard)\\\\n- **Intensive Phase (2 months)**: HRZE daily\\\\n  - Dosing: INH 5 mg/kg (300 mg), RIF 10 mg/kg (600 mg), PZA 25 mg/kg (1500-2000 mg), EMB 15 mg/kg (1200 mg)\\\\n- **Continuation Phase (4 months)**: HR daily\\\\n  - Dosing: INH 5 mg/kg (300 mg), RIF 10 mg/kg (600 mg)\\\\n- **Fixed-Dose Combination**: Available as FDC tablets (HRZE); simplifies adherence\\\\n- **Adherence Strategy**: DOTS (Directly Observed Therapy, Short-course)\\\\n  - Health worker observes patient swallowing drugs\\\\n  - Reduces failure and resistance rates\\\\n  - Standard in India\\\\n\\\\n### MDR-TB (Multidrug-Resistant TB) - 20 Months\\\\n- **Resistant to**: INH + RIF\\\\n- **Intensive Phase (6 months)**:\\\\n  - Levofloxacin 750 mg OD + Amikacin 15 mg/kg IM/IV + Ethionamide 15 mg/kg + Pyrazinamide (if susceptible) + Ethambutol\\\\n- **Continuation Phase (14 months)**:\\\\n  - Levofloxacin + Ethionamide + Ethambutol ± Pyrazinamide\\\\n- **Newer Regimen (Shorter, Conditional)**:\\\\n  - 20-month regimen now standard per WHO (was 20-month; newer data supports it as current standard)\\\\n- **Drug Resistance Testing (DST)**:\\\\n  - **First-line**: INH, RIF (mandatory upfront in India per RNTCP)\\\\n  - **Second-line**: FQ, injectable (for MDR-TB cases)\\\\n\\\\n### Extensively Drug-Resistant TB (XDR-TB)\\\\n- **Resistant to**: INH + RIF + FQ + Injectable\\\\n- **Regimen**: Beyond scope of standard NEET; includes new agents (Bedaquiline, Linezolid, Delamanid)\\\\n- **Duration**: 20+ months; managed at tertiary centers\\\\n\\\\n### TB Meningitis\\\\n- **Dosing**: Higher doses of INH & RIF for CNS penetration\\\\n  - INH: 15-20 mg/kg daily (high-dose)\\\\n  - RIF: 15-20 mg/kg daily\\\\n  - Add Pyrazinamide + Ethambutol\\\\n  - Add Dexamethasone (10 mg IV daily × 8 weeks) to reduce inflammation/mortality\\\\n- **Duration**: Same 6 months, but high-dose INH throughout\\\\n- **Monitoring**: LFTs, CSF parameters if repeat LP done\\\\n\\\\n## Adverse Effects\\\\n\\\\n### Isoniazid\\\\n- **Peripheral Neuropathy**: Dose-dependent (>5 mg/kg); slow/fast acetylators at equal risk\\\\n  - **Prevention**: Pyridoxine (Vitamin B6) 10 mg daily with INH\\\\n  - **Management**: Reduce dose or discontinue if severe\\\\n- **Hepatotoxicity**: 1-2% incidence; higher in fast acetylators, alcohol users, age >50\\\\n  - **Monitoring**: LFTs at baseline, 2 weeks, then monthly\\\\n  - **Management**: Stop if ALT >3× ULN without symptoms, or >5× with symptoms\\\\n- **Lupus-Like Syndrome**: Rare; hydralazine co-use increases risk\\\\n- **Hypersensitivity**: Fever, rash (may cross-react with other drugs)\\\\n- **Drug Interactions**: CYP inhibitor (weak); increases phenytoin, theophylline levels\\\\n\\\\n### Rifampicin\\\\n- **Hepatotoxicity**: 1-2% with INH co-use (additive); higher in pre-existing liver disease\\\\n  - **Monitoring**: LFTs monthly\\\\n- **Orange-Red Discoloration**: Urine, tears, sweat, CSF (cosmetic; counsel patient)\\\\n- **Drug Interactions** (MAJOR):\\\\n  - **CYP3A4/2C9/2C8/2D6 Inducer**: Reduces levels of warfarin, OCP, theophylline, corticosteroids, protease inhibitors\\\\n  - **OCP Users**: Increased contraceptive failure; counsel alternative contraception\\\\n  - **Antiretrovirals**: Induces protease inhibitor metabolism; requires dose adjustment or alternative\\\\n- **GI Upset**: Nausea common; take with food (ok with food, unlike INH)\\\\n- **Thrombocytopenia**: Rare; check baseline CBC\\\\n\\\\n### Pyrazinamide\\\\n- **Hyperuricemia**: ~40% of patients; asymptomatic usually\\\\n  - **Clinical Impact**: Gout attack rare unless pre-existing gout; not indication to stop\\\\n  - **Monitoring**: Baseline uric acid optional; no routine monitoring required\\\\n- **Hepatotoxicity**: 1-3%; higher with alcohol, pre-existing liver disease\\\\n  - **Monitoring**: LFTs at baseline, 2 weeks, then monthly\\\\n- **Photosensitivity**: Rare\\\\n- **GI**: Nausea, anorexia\\\\n\\\\n### Ethambutol\\\\n- **Optic Neuritis** (Red-Green Color Blindness): 1-5%; dose-dependent; rare at standard dose\\\\n  - **Risk Factors**: High dose (>25 mg/kg), renal failure (accumulation), pre-existing optic disease\\\\n  - **Screening**: Baseline color vision test (Ishihara chart)\\\\n  - **Monitoring**: Monthly color vision assessment; ask about blurred vision, colors changing\\\\n  - **Management**: STOP immediately if color vision changes; may be irreversible if not caught\\\\n- **Peripheral Neuropathy**: Rare; similar to INH\\\\n- **Hyperuricemia**: Like PZA; usually asymptomatic\\\\n- **Arthralgia**: Joint pain (usually first MTP joint) in 1-2%; self-limiting\\\\n\\\\n### Drug-Drug Interactions Summary\\\\n| Drug | Major Interactions | Management |\\\\n|------|---|---|\\\\n| INH | Phenytoin ↑, Theophylline ↑ | Monitor levels; reduce doses |\\\\n| RIF | OCP ↓, Warfarin ↓, PI ↓ (major) | Alternative contraception; INR monitoring; PI dose ↑ |\\\\n| PZA | Urate ↑ | Usually asymptomatic; avoid if severe gout |\\\\n| EMB | Vision (optic neuritis) | Monthly color vision testing |\\\\n\\\\n## Special Populations\\\\n\\\\n### Pregnancy\\\\n- **INH**: Safe (Category A)\\\\n- **RIF**: Safe (Category C but used routinely)\\\\n- **PZA**: Teratogenicity debated; commonly used in India; RNTCP recommends use\\\\n- **EMB**: Safe; no fetal toxicity reported\\\\n- **Streptomycin**: CONTRAINDICATED (Category D; ototoxicity → 8th nerve damage → deafness in fetus)\\\\n  - Note: Streptomycin largely replaced by amikacin in MDR-TB\\\\n\\\\n### Renal Failure\\\\n- **INH**: T1/2 prolonged in renal failure; no dose change needed (acetylation continues)\\\\n- **RIF**: Minimal renal excretion; no dose change\\\\n- **PZA**: Accumulates in renal failure; reduce dose by 50% if CrCl <30\\\\n- **EMB**: Renal excretion dominant; AVOID or reduce heavily if CrCl <30\\\\n- **Streptomycin/Amikacin**: REDUCE dose; use 15 mg/kg 2-3× weekly (not daily)\\\\n\\\\n### Liver Disease\\\\n- **Caution with INH, RIF, PZA**: All hepatotoxic; baseline LFTs essential\\\\n- **Pre-existing Cirrhosis**: Monthly LFT monitoring mandatory; lower drug doses may be needed\\\\n\\\\n## Indian TB Programme Targets\\\\n- **TB Elimination**: Target by 2035 (National Action Plan)\\\\n- **Upfront Drug Susceptibility Testing**: All TB patients tested for INH/RIF resistance\\\\n- **DOTS Strategy**: Strengthened in all states; reported via NIKSHAY (national TB registry)\\\\n- **NTM-TB Differentiation**: GeneXpert rapid test (RNTCP standard),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"RIF-OME = Rifampicin Orange discoloration, Monitor CYP interactions, Enzyme inducer\\\\\\\",\\\\n            explanation: \\\\\\\"Key RIF characteristics and monitoring\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"INH-PN = Isoniazid Peripheral Neuropathy prevented by Pyridoxine (B6)\\\\\\\",\\\\n            explanation: \\\\\\\"Critical adverse effect and prevention strategy\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"EMB-VISION = Ethambutol vision loss (optic neuritis); monthly color testing\\\\\\\",\\\\n            explanation: \\\\\\\"Essential monitoring for ethambutol safety\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"All TB patients in India require upfront DST for INH/RIF resistance per RNTCP\\\\\\\",\\\\n          \\\\\\\"Pyridoxine (B6) 10 mg daily MUST be given with INH to prevent neuropathy\\\\\\\",\\\\n          \\\\\\\"RIF is powerful CYP inducer; OCP failure risk high; counsel alternative contraception\\\\\\\",\\\\n          \\\\\\\"Ethambutol-induced color blindness is preventable with monthly color vision testing\\\\\\\",\\\\n          \\\\\\\"PZA hyperuricemia (40%) is usually asymptomatic; do NOT stop drug without gout attack\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Antitubercular drugs - clinical use\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"India RNTCP Treatment Guidelines\\\\\\\", chapter: \\\\\\\"DOTS & MDR-TB regimens\\\\\\\", edition: \\\\\\\"2024\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"antitubercular-drugs-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Antitubercular Drugs - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield one-liners, resistance patterns, adverse effect mnemonics, DOTS strategy, and NEET-style clinical vignettes.\\\\\\\",\\\\n        contentMd: ``# Exam Prep: High-Yield Concepts\\\\n\\\\n## Critical One-Liners\\\\n\\\\n1. **\\\\\\\"TB treatment = 6 months (2 HRZE + 4 HR); shorten regimen risks relapse\\\\\\\"**\\\\n2. **\\\\\\\"Isoniazid is TB-specific; requires KatG activation (slow acetylator paradox = less neuropathy)\\\\\\\"**\\\\n3. **\\\\\\\"Rifampicin = CYP3A4 powerhouse; OCP failure, warfarin resistance, PI failure\\\\\\\"**\\\\n4. **\\\\\\\"Pyrazinamide is unique: only active in acidic lesions; sterilizes TB\\\\\\\"**\\\\n5. **\\\\\\\"Ethambutol prevents resistance; resistance-preventing dose not killing dose\\\\\\\"**\\\\n6. **\\\\\\\"RIF resistance = 95% RpoB mutations = almost always MDR\\\\\\\"**\\\\n7. **\\\\\\\"INH resistance = 80% KatG loss, 10% InhA mutation = can have INH-R, RIF-S TB\\\\\\\"**\\\\n8. **\\\\\\\"PZA resistance = pncA mutations (75%) or RpsA (10%); ~5% TB naturally PZA-R\\\\\\\"**\\\\n9. **\\\\\\\"TB Meningitis = HIGH-dose INH/RIF × 6 months + Dexamethasone 10 mg × 8 weeks\\\\\\\"**\\\\n10. **\\\\\\\"MDR-TB = 20 months (6 intensive + 14 continuation); expensive; poor outcomes if adherence fails\\\\\\\"**\\\\n\\\\n## Drug Resistance Patterns\\\\n\\\\n| Resistance Pattern | Drug Mutations | Clinical Significance |\\\\n|---|---|---|\\\\n| INH-R, RIF-S | KatG or InhA | Can use short-course RIF-based therapy; NOT MDR |\\\\n| RIF-R (≈RIF mono-R) | rpoB (>95%) | Almost always MDR; need second-line drugs |\\\\n| MDR (INH-R, RIF-R) | KatG/InhA + rpoB | Requires 20-month therapy; worse prognosis |\\\\n| FQ-R (in MDR-TB) | gyrA/gyrB | Requires newer agents (bedaquiline, linezolid) |\\\\n| XDR (FQ-R + 2nd-line) | Multiple genes | XDR-TB; difficult to treat; high mortality |\\\\n\\\\n## Adverse Effect Mnemonics\\\\n\\\\n**INH**: Neuropathy (B6 prevention), Hepatotoxicity, Lupus-like\\\\n**RIF**: Orange discoloration, CYP ↑↑ (interactions), Hepatotoxicity\\\\n**PZA**: Hyperuricemia (usually asymptomatic), Hepatotoxicity\\\\n**EMB**: optic Neuritis (red-green color blindness), Urate ↑, Neuropathy\\\\n\\\\n## Special Dosing Scenarios\\\\n\\\\n### TB Meningitis\\\\n- INH: 15-20 mg/kg daily (HIGH-dose; not standard 5 mg/kg)\\\\n- RIF: 15-20 mg/kg daily (HIGH-dose; not standard 10 mg/kg)\\\\n- PZA: Standard dose\\\\n- EMB: Standard dose\\\\n- **Dexamethasone**: 10 mg IV daily × 8 weeks (reduces inflammation, edema, mortality)\\\\n\\\\n### Renal Failure (CrCl <30)\\\\n- INH: No change\\\\n- RIF: No change\\\\n- PZA: REDUCE by 50%; monitor for toxicity\\\\n- EMB: AVOID or reduce heavily (renal clearance dependent); may use 15 mg/kg 2-3× weekly\\\\n- **Streptomycin/Amikacin**: Use 15 mg/kg 2-3× weekly (NOT daily)\\\\n\\\\n### Drug-Susceptible vs. MDR-TB Timeline\\\\n- **Drug-Susceptible**: 2 months intensive → sputum conversion, clinical improvement expected\\\\n- **MDR-TB**: 6 months to sputum conversion; slower clinical improvement\\\\n\\\\n## NEET-Style Questions\\\\n\\\\n**Q: A 32-year-old female with newly diagnosed TB is started on HRZE. She becomes pregnant 3 months into therapy. What should be done?**\\\\n- A: Continue HRZE throughout pregnancy (all safe in India); AVOID streptomycin (only unsafe drug)\\\\n- RIF not teratogenic despite Category C classification; used routinely\\\\n- Complete 6-month course is essential for cure\\\\n\\\\n**Q: A TB patient on HRZE develops blurred vision and color changes (green seen as yellow). What is the likely drug, and what should be done?**\\\\n- A: Ethambutol causing optic neuritis (red-green color blindness); STOP immediately\\\\n- Assess with ophthalmology; may be irreversible if delayed\\\\n- Vision loss is rare at standard dose but critical to detect early\\\\n- Should have baseline color vision testing before starting (screen for pre-existing color blindness)\\\\n\\\\n**Q: A 68-year-old male with TB on RIF and warfarin for atrial fibrillation is at risk of bleeding. INR 1.8. What's happening?**\\\\n- A: RIF induces CYP2C9 → warfarin metabolism ↑ → INR ↓ → bleeding risk despite low INR\\\\n- Management: Either increase warfarin dose by 50-100% OR switch to LMWH OR stop RIF if possible\\\\n- Monitor INR weekly; higher target INR (2-3) during RIF use\\\\n- Critical interaction; must counsel patient,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"HRZE-6-2-4 = 6-month total, 2-month intensive HRZE, 4-month continuation HR\\\\\\\",\\\\n            explanation: \\\\\\\"Standard TB treatment timeline\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"TB-B6 = TB patient on INH gets Vitamin B6 (pyridoxine) to prevent neuropathy\\\\\\\",\\\\n            explanation: \\\\\\\"Essential prophylaxis with isoniazid\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Standard TB therapy is 6 months; no valid shorter regimen except in special circumstances\\\\\\\",\\\\n          \\\\\\\"RIF is most problematic for drug interactions; review all co-medications\\\\\\\",\\\\n          \\\\\\\"Color vision loss from ethambutol is early optic neuritis sign; monthly testing saves vision\\\\\\\",\\\\n          \\\\\\\"TB Meningitis requires HIGH-dose INH/RIF (double standard dosing) + dexamethasone 8 weeks\\\\\\\",\\\\n          \\\\\\\"MDR-TB is 20 months, expensive, with higher failure/relapse rates; adherence is critical\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Antitubercular exam prep\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"NEET PG Previous Year Questions\\\\\\\", chapter: \\\\\\\"TB drugs\\\\\\\", edition: \\\\\\\"2024\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"antitubercular-drugs-recall\\\\\\\",\\\\n        title: \\\\\\\"Antitubercular Drugs - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"7 Q&A flashcards for spaced repetition of critical TB pharmacology concepts.\\\\\\\",\\\\n        contentMd: ``# Active Recall Flashcards\\\\n\\\\n## Q1: Why is isoniazid (INH) considered TB-specific, and what explains the \\\\\\\"slow acetylator paradox\\\\\\\" in neuropathy risk?\\\\n**A**: INH is TB-specific because M. tuberculosis uniquely expresses KatG (catalase-peroxidase) at high levels, which activates INH prodrug to the active mycolic acid synthesis inhibitor. Other bacteria lack adequate KatG expression. The \\\\\\\"slow acetylator paradox\\\\\\\": Slow acetylators should have higher INH levels → more neuropathy, but they don't! This is because slow acetylators have slower activation of INH and its toxic metabolites (acetyl-INH). Fast acetylators convert more INH to toxic acetyl-INH → paradoxically MORE neuropathy. Prevention: Pyridoxine (Vitamin B6) 10 mg daily reduces neuropathy risk regardless of acetylator status.\\\\n\\\\n## Q2: A TB patient develops INH-resistance (KatG mutation). Why can they still be treated with a short-course RIF-based regimen, unlike RIF-resistance?\\\\n**A**: INH-R from KatG loss means isoniazid is ineffective, but the patient remains RIF-susceptible. RIF is a powerful solo agent for TB; a RIF-based regimen (e.g., 6-month standard therapy with RIF continuing without INH, or other modifications) can still cure INH-R, RIF-S TB. However, RIF-R (resistant bacilli) almost invariably are also INH-R (95% are MDR), requiring 20-month second-line therapy. Additionally, RIF-R confers cross-resistance to rifabutin and rifapentine. This is why RIF-R detection is so critical for rapid diagnosis of MDR-TB.\\\\n\\\\n## Q3: A 42-year-old female on TB therapy (HRZE) for 2 months is on OCP for contraception. She suddenly has breakthrough bleeding. What is happening pharmacologically, and how would you manage?\\\\n**A**: Rifampicin is a potent CYP3A4 inducer → increases hepatic metabolism of OCP (especially ethinyl estradiol) → reduced OCP bioavailability → breakthrough bleeding and contraceptive failure. MANAGEMENT: (1) Counsel that OCP is unreliable during RIF therapy; use barrier method (condoms) or LARC (IUD, implant, injection), (2) Can increase OCP dose (use formulation with 50 μg ethinyl estradiol, if available), but usually better to switch contraception, (3) RIF-induced CYP activity wanes 2 weeks after stopping RIF; resume OCP reliability then. This is a critical counseling point for all women of childbearing age on TB therapy.\\\\n\\\\n## Q4: In TB meningitis treatment, why are INH/RIF dosed at TWICE the standard dose, and why is dexamethasone given for 8 weeks?\\\\n**A**: **High-dose INH/RIF**: The blood-brain barrier limits CNS penetration of anti-TB drugs. Even with meningeal inflammation (BBB disruption), only 5-20% of serum INH/RIF achieves CSF levels. Doubling the dose (INH 15-20 mg/kg, RIF 15-20 mg/kg daily) is necessary to achieve CSF bactericidal concentrations. **Dexamethasone 10 mg IV daily × 8 weeks**: TB meningitis is characterized by granulomatous inflammation, vasculitis, and increased intracranial pressure. Dexamethasone reduces inflammation, cerebral edema, intracranial pressure, and improves CSF flow. Evidence shows dexamethasone reduces mortality by ~15% when given early (within first 2 weeks). Taper over 8 weeks; abrupt discontinuation can cause rebound inflammation.\\\\n\\\\n## Q5: Why does pyrazinamide show unique activity in caseous lesions, and why is its resistance rate naturally low compared to other TB drugs?\\\\n**A**: **Unique pH Activity**: PZA is a prodrug activated by PncA (pyrazinamidase) → pyrazinoic acid. This acid is only bactericidal in the acidic microenvironment of caseous TB lesions (pH 4.5-5.5) and macrophage phagolysosomes. In neutral pH (normal serum), pyrazinoic acid is inactive. This specificity is why PZA kills semi-dormant/non-replicating bacilli that INH/RIF cannot. **Low Resistance Rate**: ~5% of TB is naturally PZA-resistant (lacks functional pncA). Additionally, PZA resistance mutations (pncA loss) are often compensatory lethal (organism survival compromised); thus, resistant mutants are outcompeted by wild-type. This is why even after years of PZA use, resistance rates remain low globally. This also explains why PZA adds so much value to the 6-month short-course regimen.\\\\n\\\\n## Q6: A patient with drug-susceptible TB after 2 months of HRZE develops elevated transaminases (ALT 245 U/L). Which drug is most likely responsible, and how would you differentiate?\\\\n**A**: Multiple drugs could cause hepatotoxicity (INH, RIF, PZA all ~1-2% incidence). MANAGEMENT: (1) If ALT 3-5× ULN without jaundice/symptoms → STOP all drugs for 1 week, then reintroduce one at a time (usually safe to resume after transaminases normalize), (2) If ALT >5× with jaundice/symptoms → prolonged drug holiday required; rechallenge one drug at a time starting with least hepatotoxic (EMB > INH/RIF/PZA). (3) Which is \\\\\\\"most likely\\\\\\\": RIF + INH co-use is additive for hepatotoxicity; if differentiating, INH alone (~1-2%) vs. RIF alone (~0.2-1%); combination increases risk. (4) PZA is also hepatotoxic (~1-3%) but less common. (5) Pre-existing liver disease significantly increases risk. Must check baseline LFTs in all TB patients.\\\\n\\\\n## Q7: A patient with MDR-TB (INH-R, RIF-R) completes a 20-month second-line regimen (fluoroquinolone-based) and is declared cured. What is the risk of relapse, and why is MDR-TB cure harder to achieve?\\\\n**A**: **Relapse Risk**: MDR-TB cure rates vary: 45-70% in developed countries, 30-50% in high-burden countries like India. Relapse risk post-MDR-TB therapy is 10-15% (vs. <2% for drug-susceptible TB). **Why harder to cure**: (1) Second-line drugs are less potent/kill slower than first-line drugs, (2) Longer therapy (20 months) risks non-adherence; any missed doses = relapse risk, (3) Toxicity of second-line drugs (ethionamide hepatotoxicity, fluoroquinolone toxicity) causes drop-outs, (4) Patient may have resistance to multiple second-line drugs (poly-resistant TB), (5) Immune factors: delayed sputum conversion in MDR-TB suggests higher bacterial load/delayed immune response. (6) Post-TB sequelae (lung fibrosis, cavitary disease) worsen outcomes. Early detection via rapid DST (GeneXpert) is critical for reducing MDR-TB burden in India.,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"KatG-INH-Fast = KatG activates INH; Fast acetylators have more toxic metabolites → more neuropathy\\\\\\\",\\\\n            explanation: \\\\\\\"Remember the slow acetylator paradox explanation\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"INH is TB-specific due to KatG activation; slow acetylators actually have LESS neuropathy risk\\\\\\\",\\\\n          \\\\\\\"RIF is potent CYP3A4 inducer; causes OCP failure, warfarin resistance, PI failure; critical counseling\\\\\\\",\\\\n          \\\\\\\"PZA's unique pH-dependent activity in acidic lesions is why it sterilizes TB and shortens therapy\\\\\\\",\\\\n          \\\\\\\"TB Meningitis requires double-dose INH/RIF (high-dose, not standard) + dexamethasone 8 weeks\\\\\\\",\\\\n          \\\\\\\"MDR-TB relapse risk 10-15% (vs <2% drug-susceptible); adherence and toxicity major barriers to cure\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"KD Tripathi Pharmacology\\\\\\\", chapter: \\\\\\\"Antitubercular drugs Q&A\\\\\\\", edition: \\\\\\\"9th\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\",\\n        }\\n    ]\\n  },\\n\\n  // Module 5: Chemotherapy - Antimalarial Drugs\\n  {\\n    topicCode: \\\"PH-MOD-05-TOP-04\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"antimalarial-drugs-foundation\\\",\\n        title: \\\"Antimalarial Drugs - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Antimalarial drug classification: 4-aminoquinolines (chloroquine), artemisinin derivatives, antifolates. Overview of mechanism, pharmacokinetics, spectrum against Plasmodium species.\\\",\\n        contentMd: ``# Antimalarial Drugs Overview\\n\\n## Classification & Common Agents\\n\\n### 4-Aminoquinolines\\n- **Chloroquine**: Gram-negative bacilli; also used in rheumatoid arthritis, lupus\\n- **Amodiaquine**: Alternative to chloroquine; similar spectrum\\n\\n### Artemisinin Derivatives (ACT - Artemisinin Combination Therapy)\\n- **Artemether**: Intramuscular/intravenous; severe malaria\\n- **Artesunate**: IV/IM; WHO-recommended for severe malaria\\n- **Artemether/Lumefantrine**: Combined for P. falciparum\\n- **Artesunate/Amodiaquine**: Combined for P. falciparum (African malaria)\\n- **Artesunate/Mefloquine**: Alternative combination\\n\\n### Antifolates\\n- **Sulfadoxine-Pyrimethamine (SP)**: Folate pathway inhibition\\n- **Proguanil**: Dihydrofolate reductase inhibitor\\n\\n### Other Classes\\n- **Quinine**: Alkaloid; still used in severe malaria\\n- **Mefloquine**: AROMATASE inhibitor analogue; CNS side effects\\n- **Atovaquone-Proguanil**: Mitochondrial disruption\\n\\n## Spectrum Overview\\n- **P. falciparum** (most lethal): Chloroquine-resistant prevalent; ACT standard\\n- **P. vivax** (relapsing): Chloroquine-sensitive in most areas\\n- **P. malariae** (quartan fever): Chloroquine-sensitive\\n- **P. ovale** (tertian): Chloroquine-sensitive\\n\\n## Indian Malaria Context\\n- **National Program**: ACT is now standard for all malaria (artemether-lumefantrine combinations)\\n- **Chloroquine-Resistant P. falciparum**: Widespread in India\\n- **ACT Efficacy**: >95% cure with 3-day course\\n- **DOTS-F (TB and Malaria)**: Integrated delivery in high-burden states,\\n        mnemonics: [\\n          {\\n            text: \\\"ACT = Artemisinin Combination Therapy (2+ drugs = best efficacy)\\\",\\n            explanation: \\\"Remember artemisinin derivatives always used as combinations\\\"\\n          },\\n          {\\n            text: \\\"PF = Plasmodium falciparum (most lethal, most resistant, needs ACT)\\\",\\n            explanation: \\\"Quick recall of which parasite drives resistance\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Chloroquine is obsolete for P. falciparum in India; resistance widespread\\\",\\n          \\\"ACT (Artemether/Lumefantrine) is standard now; 3-day course; excellent efficacy\\\",\\n          \\\"Artemisinin derivatives are fastest-acting antimalarials; rapid parasite clearance\\\",\\n          \\\"Severe malaria requires IV artesunate (mortality reduction vs. quinine)\\\",\\n          \\\"Antifolate drugs (SP) used in specific combinations; resistance increasing\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi Pharmacology\\\", chapter: \\\"Antimalarial drugs\\\", edition: \\\"9th\\\" },\\n          { book: \\\"National Vector Borne Disease Control Program (NVBDCP) Guidelines\\\", chapter: \\\"Malaria treatment\\\", edition: \\\"2024\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"antimalarial-drugs-mechanism\\\",\\n        title: \\\"Antimalarial Drugs - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Molecular mechanisms of chloroquine, artemisinin, antifolates. Parasite life cycle targeting. Drug resistance mechanisms: point mutations, efflux pumps, target modification.\\\",\\n        contentMd: ``# Mechanisms of Action & Resistance\\n\\n## Chloroquine Mechanism\\n- **Target**: Plasmodium hemoglobin digestion in food vacuole\\n- **Mechanism**: Accumulates in parasite food vacuole (pH 4.7-5.2) → inhibits detoxification of heme → heme toxicity → parasite death\\n- **Basis for Selectivity**: Parasite concentrates chloroquine 1000× more than mammalian cells (pH-dependent uptake)\\n- **Bactericidal**: Kills all erythrocytic parasites; also active on gametocytes (transmission reduction)\\n- **Resistance**: Pfcrt (chloroquine resistance transporter) mutation → efflux pump upregulation → reduced drug accumulation\\n\\n## Artemisinin Derivatives Mechanism\\n- **Target**: Multiple parasite targets; disrupts mitochondrial function, protein synthesis\\n- **Prodrug Activation**: Requires heme or iron (Fe²⁺) cleavage → artemisinin radical\\n- **Rapid Action**: Kills parasites in <24 hours (fastest of all antimalarials)\\n- **Uniconazole Target**: Artemisinin-derived lactone ring cleaves heme iron\\n- **Activity**: All Plasmodium species; also gametocytocidal\\n- **Resistance Mechanism**: Parasite kelch13 gene mutations → altered protein folding → reduced artemisinin activation\\n  - Mutations: K13-propeller region mutations (increasing in Southeast Asia)\\n  - Phenotype: Delayed parasite clearance (parasites still cleared by 72 hours, but slower)\\n\\n## Antifolate Mechanism\\n- **Target**: Plasmodium dihydrofolate reductase (DHFR)\\n- **Mechanism**: Pyrimethamine/Proguanil competitively inhibit DHFR → blocks folate synthesis → impairs DNA synthesis\\n- **Slow-Acting**: Works over 24-48 hours; bacteriostatic\\n- **Resistance**: DHFR point mutations (A16V, N51I, S108N, I164L) → reduced drug binding\\n- **Sulfadoxine**: Inhibits dihydropteroate synthase (upstream of DHFR)\\n- **SP Combination**: Synergistic; both DHFR inhibition + folate pathway blockade\\n\\n## Parasite Life Cycle Targeting\\n- **Chloroquine**: Erythrocytic stage (primary); also affects gametocytes\\n- **Artemisinin**: All stages (fast erythrocytic effect)\\n- **Antifolates (SP)**: Slow erythrocytic; some tissue stage activity\\n- **Proguanil**: Tissue stage (pre-erythrocytic) activity; used in prophylaxis\\n\\n## Resistance Development\\n- **Point Mutations** (Chloroquine): Single nucleotide changes in pfcrt/pfmdr1\\n- **Kelch13 Mutations** (Artemisinin): k13-propeller region; partial resistance phenotype\\n- **DHFR Mutations** (Antifolates): Accumulation of point mutations; high-grade resistance\\n- **Cross-Resistance**: Limited (artemisinin-resistant parasites may remain ACT-sensitive if partner drug susceptible),\\n        mnemonics: [\\n          {\\n            text: \\\"CQ-FV = Chloroquine Food Vacuole heme toxicity\\\",\\n            explanation: \\\"Remember chloroquine's mechanism in parasite digestive compartment\\\"\\n          },\\n          {\\n            text: \\\"ART-Iron = Artemisinin-iron interaction → radical cleavage → rapid kill\\\",\\n            explanation: \\\"Artemisinin's unique heme-dependent activation\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Chloroquine works via food vacuole heme toxicity; parasite-selective due to 1000× concentration\\\",\\n          \\\"Artemisinin is fastest-acting antimalarial; requires heme iron for activation\\\",\\n          \\\"Pfcrt mutations cause chloroquine resistance; common in P. falciparum India\\\",\\n          \\\"K13 mutations cause artemisinin resistance (delayed clearance); emerging in Southeast Asia\\\",\\n          \\\"ACT combinations reduce resistance by preventing single-drug resistance selection\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi Pharmacology\\\", chapter: \\\"Antimalarial mechanisms & resistance\\\", edition: \\\"9th\\\" },\\n          { book: \\\"WHO World Malaria Report\\\", chapter: \\\"Drug-resistant malaria\\\", edition: \\\"2024\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"antimalarial-drugs-clinical\\\",\\n        title: \\\"Antimalarial Drugs - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Treatment regimens for uncomplicated and severe malaria. Adverse effects: chloroquine retinopathy, artemisinin neurotoxicity, antifolate megaloblastosis. Prophylaxis for travelers.\\\",\\n        contentMd: ``# Clinical Use & Adverse Effects\\n\\n## Treatment Regimens (India NVBDCP)\\n\\n### Uncomplicated P. falciparum (Standard)\\n- **ACT (Artemether-Lumefantrine)**:\\n  - Dose: 6 tablets over 3 days (day 1: dose at 0h, 8h; day 2-3: OD)\\n  - Efficacy: >95% clinical cure\\n  - Cost: Affordable under NVBDCP\\n  - Dosing: Weight-based (20-24 kg = lowest dose; >35 kg = adult dose)\\n\\n### Uncomplicated P. vivax (Sensitive in India)\\n- **Chloroquine** (if parasite-sensitive):\\n  - Loading: 10 mg/kg on day 1, then 5 mg/kg on days 2-3\\n  - **Primaquine** (MANDATORY to prevent relapse):\\n    - 0.25 mg/kg daily × 14 days (standard)\\n    - Dosing: 15 mg base daily for adults\\n    - **G6PD Testing**: BEFORE primaquine (hemolysis risk in G6PD deficiency)\\n- **ACT** (if CQ-resistant or ACT preferred):\\n  - Same as P. falciparum regimen\\n\\n### Severe Malaria\\n- **IV Artesunate** (FIRST-LINE per WHO):\\n  - Dose: 2.4 mg/kg at 0, 12, 24 hours, then daily\\n  - Mortality reduction: 35% vs. quinine\\n  - Switch to oral ACT after 3 IV doses if tolerated\\n- **Quinine** (if artesunate unavailable):\\n  - Loading: 20 mg/kg IV infusion over 4 hours\\n  - Maintenance: 10 mg/kg IV 8-hourly\\n  - Higher toxicity than artesunate; hypoglycemia, cinchonism common\\n\\n### Chloroquine-Resistant P. vivax (Emerging)\\n- Use ACT instead of CQ + Primaquine\\n- Increasing reports in India; needs surveillance\\n\\n## Adverse Effects\\n\\n### Chloroquine\\n- **Retinopathy** (1-2% with chronic use >5 years):\\n  - Corneal crystals, retinal damage, permanent vision loss if severe\\n  - **Screening**: Baseline & annual ophthalmology exam for users >3 years\\n  - Reversible early; irreversible if advanced\\n- **GI**: Nausea, abdominal pain (common; dose-related)\\n- **Hypersensitivity**: Photosensitivity, urticaria\\n- **CNS**: Dizziness, headache (rare)\\n- **Myopathy**: Proximal muscle weakness (chronic use)\\n\\n### Artemisinin Derivatives\\n- **Neurotoxicity** (Animal data; human data limited):\\n  - Selective toxicity to brainstem auditory nuclei in preclinical studies\\n  - Clinical significance debated; no clear human evidence at therapeutic doses\\n  - **WHO Position**: Safe at recommended doses; no dose adjustment required\\n- **GI Upset**: Nausea, vomiting (common)\\n- **Post-Artemisinin Delayed Neurological Toxicity (PADNT)**: Rare case reports; causality unclear\\n\\n### Antifolates (Sulfadoxine-Pyrimethamine)\\n- **Megaloblastic Anemia**: Folate depletion\\n- **Thrombocytopenia**: Bone marrow suppression\\n- **Stevens-Johnson Syndrome/TEN** (rare but SEVERE):\\n  - Incidence 1/5000-1/10,000\\n  - More common in HIV-positive patients\\n  - **Avoid** in sulfonamide allergy\\n- **Renal Failure** (sulfa component)\\n\\n### Antifolates (Proguanil alone)\\n- **Mouth Ulcers**: Common\\n- **GI Upset**: Nausea\\n- **Rarely**: Bone marrow suppression\\n\\n### Mefloquine (rarely used now)\\n- **Neuropsychiatric**: Nightmares, anxiety, depression, psychosis\\n- **Dizziness/Vertigo**: Balance disorder\\n- **Contraindicated**: Psychiatric history, seizure disorders\\n\\n## Prophylaxis (Travelers)\\n- **Low-Transmission Areas**: Chloroquine 300 mg weekly or Doxycycline 100 mg daily\\n- **Chloroquine-Resistant Areas**: Mefloquine, Doxycycline, Atovaquone-Proguanil\\n- **Start**: 1-2 weeks before travel; continue 4 weeks after leaving\\n- **Pregnancy**: Chloroquine preferred (safest); chloroquine-resistant areas = mefloquine acceptable\\n\\n## Special Populations\\n\\n### Pregnancy\\n- **Chloroquine**: Safe (Category A); no teratogenicity\\n- **Artemisinin**: Category B; safety reassuring but data limited; can use if benefits outweigh risks\\n- **Antifolates (SP)**: Avoid (folate antagonism; teratogenicity risk)\\n- **Primaquine**: CONTRAINDICATED in pregnancy (fetal hemolysis risk); also fetal toxicity\\n\\n### G6PD Deficiency\\n- **Primaquine**: Risk of severe hemolysis; requires G6PD testing beforehand\\n  - Normal: 15 mg base daily × 14 days (standard)\\n  - G6PD Variant A: 45 mg base weekly × 8 weeks (lower-dose strategy)\\n  - Severe G6PD: AVOID primaquine; relapse risk\\n- **Sulfadoxine**: Risk of hemolysis; use cautiously\\n\\n### Renal Failure\\n- **Chloroquine**: Accumulates; no dose adjustment (hepatic metabolism)\\n- **Artemisinin**: No significant renal excretion; safe\\n- **Antifolates**: Use cautiously; SP metabolites renally excreted\\n- **Proguanil**: Reduced dose if CrCl <10,\\n        mnemonics: [\\n          {\\n            text: \\\"CQ-ACT = Chloroquine old (CQ-resistant now); ACT is current standard\\\",\\n            explanation: \\\"Remember India shifted from CQ to ACT for malaria\\\"\\n          },\\n          {\\n            text: \\\"G6PD-Prim = G6PD testing BEFORE Primaquine (hemolysis prevention)\\\",\\n            explanation: \\\"Critical safety step before P. vivax treatment\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"ACT (Artemether-Lumefantrine) is now standard for P. falciparum in India; 3-day course\\\",\\n          \\\"IV Artesunate is first-line severe malaria (35% mortality reduction vs. quinine)\\\",\\n          \\\"Primaquine 14-day course is MANDATORY for P. vivax/ovale to prevent relapse\\\",\\n          \\\"G6PD testing MUST precede primaquine (hemolysis risk)\\\",\\n          \\\"Chloroquine retinopathy rare at therapeutic doses but screen with ophthalmology if chronic use\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi Pharmacology\\\", chapter: \\\"Antimalarial drugs - clinical use\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NVBDCP Treatment Guidelines\\\", chapter: \\\"Malaria case management\\\", edition: \\\"2024\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"antimalarial-drugs-exam-prep\\\",\\n        title: \\\"Antimalarial Drugs - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"Drug of choice tables, resistance patterns, adverse effect mnemonics, NEET-style vignettes.\\\",\\n        contentMd: ``# Exam Prep: High-Yield Concepts\\n\\n## Drug of Choice by Species & Resistance Pattern\\n\\n| Plasmodium Species | Drug Susceptibility | First-Line Drug | Alternative |\\n|---|---|---|---|\\n| P. falciparum (CQ-S) | Chloroquine-susceptible | Chloroquine or ACT | Artesunate monotherapy |\\n| P. falciparum (CQ-R) | Chloroquine-resistant | ACT (1st-line) | Quinine + doxycycline |\\n| P. vivax (CQ-S) | Chloroquine-sensitive | CQ + Primaquine | ACT + Primaquine |\\n| P. vivax (CQ-R) | Emerging in India | ACT + Primaquine | Quinine combination |\\n| P. malariae | Chloroquine-sensitive | Chloroquine | Quinine |\\n| Severe Malaria | Any species | IV Artesunate | Quinine (if unavailable) |\\n\\n## Critical One-Liners\\n1. **\\\"ACT = Standard malaria treatment (Artemether + partner drug); 3-day cure\\\"**\\n2. **\\\"IV Artesunate = Best for severe malaria; 35% mortality reduction vs. quinine\\\"**\\n3. **\\\"P. vivax = ALWAYS add Primaquine × 14 days to prevent relapse\\\"**\\n4. **\\\"G6PD-negative = AVOID primaquine (hemolysis); alternative: repeated CQ doses\\\"**\\n5. **\\\"Chloroquine resistance = pfcrt mutation; widespread in P. falciparum worldwide\\\"**\\n6. **\\\"Artemisinin resistance = K13 mutation; delayed parasite clearance; emerging in SE Asia\\\"**\\n7. **\\\"Chloroquine retinopathy = Baseline ophthalmology exam if using >3 years chronically\\\"**\\n\\n## Resistance Pattern Recognition\\n- **CQ-R P. falciparum** = Pfcrt point mutations; fixed in population; switch to ACT\\n- **ACT-resistant P. falciparum** = K13 mutations; delayed clearance (but curable in 72 hrs)\\n- **SP-resistant** = DHFR multi-mutations; cross-resistance common\\n\\n## Adverse Effect Pearls\\n- **Primaquine**: Hemolysis in G6PD (test first); black urine if hemolysis occurring\\n- **SP (antifolates)**: SJS/TEN risk (rare but severe); megaloblastic anemia\\n- **Mefloquine**: Neuropsych side effects (avoid in psychiatric history)\\n- **Chloroquine**: Retinopathy (chronic); GI upset (acute),\\n        mnemonics: [\\n          {\\n            text: \\\"ACT-3day = Artemether-Lumefantrine, 3-day cure, approved for all ages\\\",\\n            explanation: \\\"Quick recall of current Indian malaria standard\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"ACT is empiric first-line for malaria in India now (regardless of species suspicion)\\\",\\n          \\\"Severe malaria = IV Artesunate first (mortality advantage proven)\\\",\\n          \\\"Primaquine for ALL P. vivax/ovale (prevent relapse from liver stages)\\\",\\n          \\\"G6PD test before primaquine (hemolysis in deficiency)\\\",\\n          \\\"CQ resistance in falciparum global; use ACT instead\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi Pharmacology\\\", chapter: \\\"Antimalarial exam prep\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NEET PG Previous Year Questions\\\", chapter: \\\"Malaria drugs\\\", edition: \\\"2024\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"antimalarial-drugs-recall\\\",\\n        title: \\\"Antimalarial Drugs - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"7 Q&A flashcard pairs for spaced repetition.\\\",\\n        contentMd: ``# Active Recall Flashcards\\n\\n## Q1: Why is primaquine always added to chloroquine for P. vivax treatment, even if parasitemia clears after CQ alone?\\n**A**: P. vivax exists in two forms: erythrocytic parasites (killed by CQ in 48-72 hours) and hypnozoites (dormant liver stages). Chloroquine eliminates only erythrocytic parasites; hypnozoites persist in hepatocytes. Primaquine (8-aminoquinoline) is the only drug that kills hypnozoites, preventing relapses. Without primaquine, 70-80% of P. vivax patients relapse within months to years. Duration: 14-day primaquine course is standard to ensure all hypnozoites killed.\\n\\n## Q2: A G6PD-deficient patient develops severe hemolysis after primaquine 15 mg OD. Why does this occur, and what is the management?\\n**A**: Primaquine generates oxidative stress via its metabolites; G6PD-deficient RBCs lack sufficient antioxidant capacity → hemolysis. MANAGEMENT: (1) STOP primaquine immediately, (2) Supportive care (hydration, transfusion if needed), (3) Alternative: Repeat chloroquine doses (CQ 300 mg weekly × 8 weeks) to suppress parasites; hypnozoites eventually clear without drug. (4) If must treat: G6PD A variant can tolerate lower-dose primaquine (45 mg base weekly × 8 weeks). **Prevention**: Always test G6PD before primaquine in at-risk populations (African, Mediterranean, Asian ancestry).\\n\\n## Q3: A patient with severe P. falciparum malaria can receive either IV Artesunate or IV Quinine. What is the evidence for choosing artesunate, and what are the dosing differences?\\n**A**: **Evidence**: WHO SEAQUAMAT trial showed IV Artesunate reduces mortality by 35% vs. IV Quinine in severe malaria. Mechanism: Artesunate is faster-acting (parasite clearance in <24 hrs) vs. quinine (slower). Artesunate also has lower hypoglycemia risk. **Dosing Comparison**: Artesunate: 2.4 mg/kg at 0, 12, 24 hrs, then daily. Quinine: Loading 20 mg/kg IV over 4 hours, then 10 mg/kg 8-hourly. **Management**: Give 3 IV artesunate doses, then switch to oral ACT for completion of treatment.\\n\\n## Q4: Chloroquine is still used for P. vivax despite decades of CQ use. Why hasn't resistance to CQ been as prevalent in P. vivax as in P. falciparum?\\n**A**: **Biological Factors**: P. vivax naturally has lower CQ resistance prevalence due to (1) Lower transmission rates (hypnozoite reservoir reduces transmission), (2) Smaller parasite population (less mutation selection), (3) Chloroquine-resistant P. vivax appears to have fitness costs (slower replication), (4) P. falciparum has much larger population → faster resistance selection. **Geographic**: CQ-R P. vivax is emerging in some areas (PNG, Indonesia, India) but still focal. Monitoring ongoing via NVBDCP.\\n\\n## Q5: An elderly patient with chronic malaria prophylaxis (chloroquine 300 mg weekly × 3 years) has baseline vision 20/20. Should ophthalmology screening be recommended, and what is the risk of retinopathy?\\n**A**: **Screening**: YES, baseline and annual ophthalmology is recommended for patients on chronic CQ >3 years. **Retinopathy Risk**: Incidence ~1-2% at cumulative doses >300 g (which this patient has exceeded at 3 years × 300 mg/week). **Pathophysiology**: Chloroquine deposits in retina, causing corneal crystals initially (reversible), then retinal maculopathy (irreversible vision loss if advanced). **Screening includes**: Ophthalmoscopy, visual acuity, color vision, fundus photography. **Prevention**: Limit chronic CQ use duration; use alternatives when possible.\\n\\n## Q6: A patient with P. falciparum treated with artemether-lumefantrine completes 3-day course. On day 5, parasitemia is still detectable. What is the likely explanation, and would you switch drugs?\\n**A**: **Explanation**: This could represent K13-propeller mutation-mediated artemisinin resistance (slow parasite clearance phenotype). In resistant parasites, parasite clearance extends to 72 hours (day 3-4) instead of 24-48 hours. **Management**: Do NOT switch drugs immediately. Wait until day 7 assessment. If parasitemia persists at day 7 → switch to alternative (quinine + doxycycline combination). If cleared by day 7 → consider completing ACT course as parasites are still being killed, just slowly. **Context**: K13 mutations are emerging in Southeast Asia but not yet widespread in India; assess DST results if available.\\n\\n## Q7: A pregnant woman with P. vivax malaria asks about treatment safety. Can she receive primaquine for hypnozoites, or should you delay treatment?\\n**A**: **Answer**: AVOID primaquine in pregnancy (teratogenicity + fetal hemolysis risk). MANAGEMENT: (1) Treat acute parasitemia with chloroquine (safe in pregnancy, Category A), (2) Defer primaquine until AFTER delivery (safe to give while breastfeeding; minimal excretion into milk), (3) Counsel on relapse risk post-partum; close follow-up. (4) Artemisinin: Pregnancy Category B but increasingly recommended when CQ resistance; balance risks. **Note**: P. vivax in pregnancy increases miscarriage/preterm labor risk; treating the acute infection is priority.,\\n        mnemonics: [\\n          {\\n            text: \\\"Prim = Prevents relapses (hypnozoite killing, 14-day course)\\\",\\n            explanation: \\\"Remember primaquine's unique role in P. vivax/ovale\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Primaquine is ONLY drug against hypnozoites; essential for P. vivax cure\\\",\\n          \\\"G6PD testing MUST precede primaquine; hemolysis risk in deficiency\\\",\\n          \\\"IV Artesunate superior to quinine for severe malaria (35% mortality reduction)\\\",\\n          \\\"K13 mutations cause slow parasite clearance (not treatment failure); parasites still killed by day 7\\\",\\n          \\\"CQ-R P. vivax emerging in some areas; monitor for treatment failures; switch to ACT if needed\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi Pharmacology\\\", chapter: \\\"Antimalarial drugs Q&A\\\", edition: \\\"9th\\\" }\\n        ]\\n      }\\n    ]\\n  }\\n];`\""
-}
-}
-}
-}
-];
-];
-];
+        summary:
+          "Beta-lactam antibiotics share a common beta-lactam ring and act by inhibiting cell wall synthesis. Penicillins are classified into natural, aminopenicillins, antistaphylococcal, and antipseudomonal groups. Cephalosporins span five generations with progressively broader Gram-negative coverage.",
+        contentMd: `# Penicillins & Cephalosporins
+
+## Beta-Lactam Ring
+All beta-lactams contain a **four-membered beta-lactam ring** fused to a thiazolidine ring (penicillins) or dihydrothiazine ring (cephalosporins). This ring is essential for antibacterial activity.
+
+## Classification of Penicillins
+
+| Group | Drugs | Spectrum |
+|-------|-------|----------|
+| **Natural penicillins** | Penicillin G (benzyl), Penicillin V | Gram-positive cocci, spirochetes |
+| **Aminopenicillins** | Ampicillin, Amoxicillin | Extended Gram-negative (E. coli, H. influenzae) |
+| **Antistaphylococcal** | Cloxacillin, Methicillin, Nafcillin | Beta-lactamase producing Staphylococci |
+| **Antipseudomonal** | Piperacillin, Ticarcillin | Pseudomonas aeruginosa |
+| **Beta-lactamase inhibitor combos** | Amoxicillin + Clavulanate, Piperacillin + Tazobactam | Broadened by enzyme inhibition |
+
+## Mechanism Overview
+Beta-lactams bind to **Penicillin-Binding Proteins (PBPs)** on the bacterial cell membrane, inhibiting the transpeptidase that cross-links peptidoglycan chains during cell wall synthesis. Result: osmotically fragile cell that lyses.
+
+## Classification of Cephalosporins
+
+| Generation | Drugs | Spectrum | Clinical Use |
+|-----------|-------|----------|-------------|
+| **1st** | Cefazolin, Cefalexin | Gram-positive (best) | Surgical prophylaxis, UTI |
+| **2nd** | Cefuroxime, Cefaclor | Better Gram-negative | LRTI, sinusitis |
+| **3rd** | Ceftriaxone, Cefotaxime, Ceftazidime | Excellent Gram-negative, crosses BBB | Meningitis, typhoid, gonorrhoea |
+| **4th** | Cefepime | Gram-positive + Gram-negative + Pseudomonas | Febrile neutropenia |
+| **5th** | Ceftaroline | MRSA coverage | Skin infections, CAP with MRSA |
+
+## Carbapenems & Monobactams
+- **Carbapenems** (Imipenem, Meropenem): broadest spectrum beta-lactams; reserve drugs
+- **Monobactams** (Aztreonam): only Gram-negative activity; safe in penicillin allergy
+
+> **Clinical Pearl**: Ceftriaxone is the most commonly used injectable cephalosporin in India - used empirically for meningitis, pneumonia, typhoid, and gonorrhoea. Available in Jan Aushadhi stores.`,
+        mnemonics: [
+          {
+            text: "PEACE with Penicillins: PBP binding, Enzyme (transpeptidase) inhibition, Autolysis, Cell wall defect, E. coli killed (amino-penicillins)",
+            explanation:
+              "Summarizes the mechanism and spectrum of penicillins - they bind PBPs, inhibit transpeptidase, trigger autolysins, create cell wall defects, and aminopenicillins cover E. coli.",
+          },
+          {
+            text: "Ceph Generations: 1-Kiss Gram+, 2-Kiss both, 3-Kiss Gram-, 4-Kiss all, 5-Kiss MRSA",
+            explanation:
+              "1st gen best Gram-positive; 2nd gen improved Gram-negative; 3rd gen excellent Gram-negative and CNS penetration; 4th gen broadest; 5th gen adds MRSA.",
+          },
+        ],
+        keyPoints: [
+          "Beta-lactam ring is essential for antibacterial activity - binds PBPs",
+          "Penicillin G: natural penicillin, Gram-positive cocci and spirochetes",
+          "Aminopenicillins (ampicillin, amoxicillin): extended to cover Gram-negative rods",
+          "Cephalosporin generations: 1st best Gram+, 3rd best Gram-, 5th covers MRSA",
+          "Beta-lactamase inhibitors (clavulanate, sulbactam, tazobactam) have no intrinsic antibacterial activity",
+          "Carbapenems are the broadest-spectrum beta-lactams, reserved for MDR infections",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 51 - Beta-Lactam Antibiotics", page: "727-752", edition: "8th" },
+          { book: "Rang & Dale", chapter: "Ch 51 - Antibacterial Drugs", edition: "9th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "penicillins-cephalosporins-mechanism",
+        title: "Penicillins & Cephalosporins - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Detailed mechanism of beta-lactam action, resistance mechanisms (beta-lactamases, altered PBPs, efflux pumps), pharmacokinetics of individual drugs, and the role of beta-lactamase inhibitors.",
+        contentMd: `# Mechanism of Beta-Lactam Action
+
+## Step-by-Step Mechanism
+1. Drug enters periplasmic space through **porins** (OmpF, OmpC in Gram-negatives)
+2. Binds to **PBPs** (transpeptidases, carboxypeptidases, endopeptidases)
+3. Inhibits **transpeptidation** - the final cross-linking step of peptidoglycan synthesis
+4. Activates bacterial **autolysins** (murein hydrolases)
+5. Cell wall becomes osmotically unstable and the bacterium **lyses**
+
+> **Key Concept**: Beta-lactams are **bactericidal** and work best on actively dividing bacteria (time-dependent killing).
+
+## PBP Targets
+| PBP | Function | Drug Preference |
+|-----|----------|----------------|
+| PBP 1a, 1b | Transglycosylase + transpeptidase | Cell lysis when inhibited |
+| PBP 2 | Maintains rod shape | Mecillinam targets PBP2 |
+| PBP 3 | Septum formation | Cephalosporins prefer PBP3 |
+
+## Resistance Mechanisms
+
+### 1. Beta-Lactamase Production (Most Common)
+- **Penicillinases**: Staphylococcal, encoded by plasmid
+- **ESBLs** (Extended Spectrum Beta-Lactamases): Hydrolyze 3rd-gen cephalosporins (E. coli, Klebsiella)
+- **AmpC**: Chromosomal, inducible (Enterobacter, Citrobacter)
+- **Carbapenemases** (NDM-1, KPC): Hydrolyze carbapenems - major threat in Indian hospitals
+
+### 2. Altered PBPs
+- **MRSA**: Acquires mecA gene encoding PBP2a with low affinity for beta-lactams
+- **Penicillin-resistant Pneumococcus**: Altered PBP composition
+
+### 3. Reduced Permeability
+- Loss of porin channels (OprD in Pseudomonas - carbapenem resistance)
+
+### 4. Efflux Pumps
+- Active expulsion of drug from periplasmic space
+
+## Beta-Lactamase Inhibitors
+| Inhibitor | Combination | Clinical Use |
+|-----------|-------------|-------------|
+| **Clavulanic acid** | Amoxicillin-Clavulanate (Augmentin) | Community UTI, RTI |
+| **Sulbactam** | Ampicillin-Sulbactam | Intra-abdominal infections |
+| **Tazobactam** | Piperacillin-Tazobactam | Hospital-acquired infections |
+| **Avibactam** | Ceftazidime-Avibactam | CRE infections (not NDM) |
+
+## Pharmacokinetics
+| Parameter | Penicillin G | Amoxicillin | Ceftriaxone |
+|-----------|-------------|-------------|-------------|
+| Route | IM/IV | Oral | IM/IV |
+| Absorption | Acid-labile | Acid-stable (90% oral) | Not absorbed orally |
+| Protein binding | 60% | 20% | 90% |
+| Half-life | 30 min | 1 hr | 6-8 hr (longest cephalosporin) |
+| Excretion | Renal (tubular secretion) | Renal | Biliary + Renal |
+| CSF penetration | Poor (unless inflamed meninges) | Poor | Good |
+
+## Time-Dependent vs Concentration-Dependent Killing
+- **Beta-lactams**: Time-dependent - efficacy depends on **time above MIC** (fT > MIC)
+- Goal: maintain plasma levels above MIC for >50% of dosing interval
+- This is why beta-lactams are given in **frequent divided doses** or continuous infusion`,
+        mnemonics: [
+          {
+            text: "BLAME for Beta-lactam resistance: Beta-Lactamase, Loss of porins, Altered PBPs, Mutation in PBPs, Efflux pumps",
+            explanation:
+              "Five mechanisms by which bacteria resist beta-lactams: enzyme destruction, reduced entry, target modification, chromosomal mutations, and active drug expulsion.",
+          },
+        ],
+        keyPoints: [
+          "Beta-lactams inhibit transpeptidase (PBP) causing defective peptidoglycan cross-linking",
+          "Bactericidal, time-dependent killing - need time above MIC > 50%",
+          "Most common resistance: beta-lactamase production (plasmid-mediated)",
+          "MRSA has altered PBP2a encoded by mecA gene - resistant to all beta-lactams except ceftaroline",
+          "NDM-1 carbapenemase is a major concern in Indian hospitals - hydrolyzes all beta-lactams",
+          "Ceftriaxone has the longest half-life among cephalosporins (6-8 hours)",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 51 - Beta-Lactam Antibiotics", page: "730-745", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 57 - Penicillins, Cephalosporins", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "penicillins-cephalosporins-clinical",
+        title: "Penicillins & Cephalosporins - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "Clinical prescribing of beta-lactams: indication-based drug selection, dosing in Indian practice, penicillin allergy management, surgical prophylaxis, and ADRs including Jarisch-Herxheimer reaction.",
+        contentMd: `# Clinical Applications
+
+## Indication-Based Drug Selection
+
+| Infection | Drug of Choice | Dose |
+|-----------|---------------|------|
+| Streptococcal pharyngitis | Penicillin V (oral) or Benzathine Pen G (IM) | 1.2 MU IM single dose |
+| Syphilis (primary) | Benzathine Penicillin G | 2.4 MU IM single dose |
+| Neurosyphilis | Crystalline Penicillin G IV | 18-24 MU/day x 14 days |
+| Bacterial meningitis (empiric) | Ceftriaxone | 2g IV q12h |
+| Enteric fever (typhoid) | Ceftriaxone | 2g IV OD x 10-14 days |
+| Gonorrhoea | Ceftriaxone | 500 mg IM single dose |
+| Community UTI | Amoxicillin-Clavulanate | 625 mg TDS x 5 days |
+| Hospital-acquired pneumonia | Piperacillin-Tazobactam | 4.5g IV q6h |
+| Surgical prophylaxis | Cefazolin | 2g IV before incision |
+| Febrile neutropenia | Cefepime or Pip-Taz | IV empiric |
+
+> **Clinical Pearl**: In India, ceftriaxone is the workhorse injectable antibiotic. Always reconstitute with lidocaine for IM injection to reduce pain. Never mix with calcium-containing solutions (risk of precipitation, especially in neonates).
+
+## Penicillin Allergy
+- **Type I (immediate)**: Anaphylaxis, urticaria, bronchospasm (0.05% of patients)
+- **Type IV (delayed)**: Maculopapular rash (most common)
+- Cross-reactivity: Penicillins and cephalosporins share ~5-10% cross-reactivity
+- **Safe alternatives in true penicillin anaphylaxis**: Aztreonam (monobactam), fluoroquinolones
+
+## Jarisch-Herxheimer Reaction
+- Occurs after treating spirochetal infections (syphilis, leptospirosis) with penicillin
+- Caused by massive release of endotoxins from killed organisms
+- Features: fever, rigors, hypotension within 2-8 hours of first dose
+- Management: supportive, not an allergy (continue antibiotics)
+
+## Adverse Drug Reactions
+
+| ADR | Drug | Mechanism |
+|-----|------|-----------|
+| Anaphylaxis | All penicillins | Type I hypersensitivity |
+| Ampicillin rash | Ampicillin (with EBV/CLL) | Non-allergic, maculopapular |
+| Biliary sludge | Ceftriaxone | Calcium salt precipitation |
+| Disulfiram-like reaction | Cefoperazone | MTT side chain |
+| Hypoprothrombinemia | Cefoperazone, Moxalactam | MTT side chain, inhibits vitamin K |
+| Seizures | Imipenem (high dose) | CNS excitation |
+| C. difficile colitis | All broad-spectrum | Gut flora disruption |
+
+## Indian Prescribing Context
+- **NLEM (National List of Essential Medicines)**: Amoxicillin, amoxicillin-clavulanate, ceftriaxone, cefazolin included
+- **Jan Aushadhi**: Generic amoxicillin capsules at 1/10th branded price
+- **AMR concern**: Avoid empiric 3rd-gen cephalosporins for uncomplicated infections
+- **ICMR guidelines**: De-escalation strategy recommended`,
+        mnemonics: [
+          {
+            text: "CEFTRIAXONE cautions: Calcium (no co-infusion), Elderly (biliary sludge), Fat (biliary), Third-gen (resistance), Reconstitute with lidocaine, IM pain, Avoid in Neonates (calcium), ONE dose for gonorrhoea",
+            explanation:
+              "Key prescribing points for ceftriaxone: avoid calcium co-infusion, risk of biliary sludge, and neonatal precipitation. Single dose for gonorrhoea.",
+          },
+          {
+            text: "SAFE in penicillin allergy: carbapenems (cautious), aztreonam, fluoroquinolones",
+            explanation:
+              "Aztreonam has no cross-reactivity with penicillins. Carbapenems have <1% cross-reactivity. Cephalosporins have 5-10% cross-reactivity.",
+          },
+        ],
+        keyPoints: [
+          "Benzathine penicillin G: DOC for syphilis (2.4 MU IM single dose) and rheumatic fever prophylaxis",
+          "Ceftriaxone: DOC for meningitis, typhoid, and gonorrhoea in Indian practice",
+          "Never mix ceftriaxone with calcium - risk of fatal precipitation in neonates",
+          "Ampicillin rash with EBV (infectious mononucleosis) is non-allergic",
+          "Cefoperazone: disulfiram-like reaction with alcohol and hypoprothrombinemia",
+          "Imipenem combined with cilastatin to prevent renal dehydropeptidase metabolism",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 51 - Beta-Lactam Antibiotics", page: "745-752", edition: "8th" },
+          { book: "Harrison's", chapter: "Treatment of Bacterial Infections", edition: "21st" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "penicillins-cephalosporins-exam",
+        title: "Penicillins & Cephalosporins - Exam Prep",
+        estimatedMinutes: 15,
+        summary:
+          "High-yield one-liners, comparison tables, and frequently tested MCQ themes on beta-lactam antibiotics for NEXT and NEET PG.",
+        contentMd: `# Exam High Yield
+
+## One-Liners
+- DOC for syphilis: **Benzathine Penicillin G**
+- Only penicillin effective orally: **Penicillin V (acid-stable)**
+- Amoxicillin vs Ampicillin: amoxicillin has **better oral absorption (90% vs 40%)**
+- Penicillinase-resistant penicillin: **Cloxacillin, Methicillin, Nafcillin**
+- Broadest-spectrum beta-lactam: **Carbapenems (Meropenem)**
+- Only beta-lactam safe in penicillin anaphylaxis: **Aztreonam**
+- Cephalosporin that causes disulfiram-like reaction: **Cefoperazone**
+- Cephalosporin with longest half-life: **Ceftriaxone (6-8 hr)**
+- Cephalosporin for MRSA: **Ceftaroline (5th gen)**
+- Cilastatin inhibits: **Renal dehydropeptidase-I (protects imipenem)**
+- Cephalosporin causing biliary sludge: **Ceftriaxone**
+- Probenecid increases penicillin levels by: **Blocking tubular secretion**
+
+## Comparison: Penicillin Generations
+
+| Feature | Natural | Aminopenicillin | Antistaphylococcal | Antipseudomonal |
+|---------|---------|----------------|-------------------|----------------|
+| Example | Pen G | Amoxicillin | Cloxacillin | Piperacillin |
+| Gram+ | +++ | ++ | +++ (Staph) | + |
+| Gram- | - | ++ | - | +++ |
+| Pseudomonas | - | - | - | +++ |
+| Beta-lactamase stable | No | No | Yes | No |
+
+## Comparison: Cephalosporin Generations
+
+| Feature | 1st Gen | 2nd Gen | 3rd Gen | 4th Gen | 5th Gen |
+|---------|---------|---------|---------|---------|---------|
+| Gram+ | +++ | ++ | + | ++ | +++ (MRSA) |
+| Gram- | + | ++ | +++ | +++ | ++ |
+| CNS penetration | No | Variable | Yes | Yes | Variable |
+| Anti-Pseudomonas | No | No | Ceftazidime | Cefepime | No |
+
+## Previous Year Themes
+- Beta-lactamase inhibitor combinations
+- Cephalosporin generation and spectrum
+- MRSA treatment options
+- Penicillin allergy cross-reactivity percentages
+- Ceftriaxone contraindications in neonates
+- Mechanism of beta-lactam resistance (ESBL, NDM-1)
+- Surgical prophylaxis drug selection`,
+        mnemonics: [
+          {
+            text: "MTT side chain causes 3 problems: Methylthiotetrazole = Maalox (antacid needed), Thrombocytopenia (hypoprothrombinemia), Tipsy (disulfiram reaction)",
+            explanation:
+              "Cephalosporins with MTT side chain (cefoperazone, moxalactam, cefamandole) cause disulfiram-like reaction with alcohol and bleeding due to hypoprothrombinemia.",
+          },
+        ],
+        keyPoints: [
+          "Amoxicillin: 90% oral bioavailability vs ampicillin 40%",
+          "Ceftriaxone: longest half-life, biliary excretion, biliary sludge risk",
+          "Ceftaroline: only cephalosporin active against MRSA",
+          "Aztreonam: no cross-reactivity with penicillins - safe in anaphylaxis",
+          "MTT side chain drugs: disulfiram reaction + hypoprothrombinemia",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 51 - Beta-Lactam Antibiotics", edition: "8th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "penicillins-cephalosporins-recall",
+        title: "Penicillins & Cephalosporins - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for self-testing on beta-lactam antibiotics.",
+        contentMd: `# Active Recall
+
+**Q1:** What is the target of beta-lactam antibiotics?
+> PBPs (Penicillin-Binding Proteins) - specifically transpeptidase that cross-links peptidoglycan in the bacterial cell wall.
+
+**Q2:** What is the DOC for syphilis?
+> Benzathine Penicillin G (2.4 MU IM single dose for primary syphilis).
+
+**Q3:** Name the most common mechanism of beta-lactam resistance.
+> Beta-lactamase production (enzymatic hydrolysis of the beta-lactam ring).
+
+**Q4:** What is the mecA gene and what resistance does it confer?
+> mecA encodes PBP2a with low affinity for beta-lactams, causing MRSA (Methicillin-Resistant Staphylococcus aureus).
+
+**Q5:** Why is cilastatin given with imipenem?
+> Cilastatin inhibits renal dehydropeptidase-I, which otherwise degrades imipenem in the kidney.
+
+**Q6:** Which cephalosporin should not be co-infused with calcium?
+> Ceftriaxone - risk of calcium-ceftriaxone precipitation, especially dangerous in neonates.
+
+**Q7:** What is the Jarisch-Herxheimer reaction?
+> Fever, rigors, and hypotension occurring 2-8 hours after starting penicillin for syphilis, caused by endotoxin release from killed spirochetes. Not an allergy.
+
+**Q8:** Name the beta-lactamase inhibitors.
+> Clavulanic acid, Sulbactam, Tazobactam, Avibactam, Vaborbactam. They have no intrinsic antibacterial activity.
+
+**Q9:** Which beta-lactam is safe in true penicillin anaphylaxis?
+> Aztreonam (monobactam) - no cross-reactivity with penicillins.
+
+**Q10:** Which cephalosporin covers MRSA?
+> Ceftaroline (5th generation cephalosporin).
+
+**Q11:** What is the ampicillin rash in EBV?
+> Non-allergic maculopapular rash occurring in patients with infectious mononucleosis (EBV) given ampicillin. Not a true penicillin allergy.
+
+**Q12:** What is the difference in oral bioavailability between amoxicillin and ampicillin?
+> Amoxicillin 90% vs Ampicillin 40%. Amoxicillin is preferred for oral use.`,
+        mnemonics: [],
+        keyPoints: [
+          "12 recall questions covering mechanism, resistance, clinical use, ADRs, and pharmacokinetics of beta-lactams",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 51 - Beta-Lactam Antibiotics", edition: "8th" },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 2: Aminoglycosides, Macrolides & Quinolones ─────
+  {
+    topicCode: "PH-MOD-05-TOP-02",
+    layers: [
+      {
+        layer: 1,
+        slug: "aminoglycosides-macrolides-quinolones-foundation",
+        title: "Aminoglycosides, Macrolides & Quinolones - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "Three major antibiotic classes: aminoglycosides (bactericidal, 30S ribosomal inhibitors), macrolides (bacteriostatic, 50S inhibitors), and fluoroquinolones (bactericidal, DNA gyrase/topoisomerase IV inhibitors). Each has a distinct spectrum, mechanism, and toxicity profile.",
+        contentMd: `# Aminoglycosides, Macrolides & Quinolones
+
+## Aminoglycosides
+
+### Classification
+| Drug | Route | Primary Use |
+|------|-------|-------------|
+| **Gentamicin** | IV/IM | Serious Gram-negative infections, synergy with beta-lactams |
+| **Amikacin** | IV/IM | MDR Gram-negative, TB (2nd line) |
+| **Tobramycin** | IV/IM/Nebulized | Pseudomonas (CF patients) |
+| **Streptomycin** | IM | TB (2nd line), plague, brucellosis |
+| **Neomycin** | Topical/Oral | Topical skin, hepatic encephalopathy (oral) |
+
+### Mechanism
+- Bind **30S ribosomal subunit** (irreversibly)
+- Cause **misreading of mRNA** and block translocation
+- Concentration-dependent, bactericidal
+- Post-antibiotic effect (PAE): bacteria suppressed even after drug levels fall
+
+## Macrolides
+
+### Classification
+| Drug | Generation | Key Feature |
+|------|-----------|-------------|
+| **Erythromycin** | 1st | GI side effects, CYP3A4 inhibitor |
+| **Azithromycin** | 2nd | Long half-life (68 hr), tissue concentration high |
+| **Clarithromycin** | 2nd | Better H. pylori activity, CYP3A4 inhibitor |
+| **Roxithromycin** | 2nd | Better tolerated |
+
+### Mechanism
+- Bind **50S ribosomal subunit**
+- Block translocation step of protein synthesis
+- Primarily **bacteriostatic** (bactericidal at high concentrations)
+
+## Fluoroquinolones
+
+### Classification
+| Generation | Drugs | Spectrum |
+|-----------|-------|----------|
+| **1st** | Nalidixic acid | Urinary Gram-negative only |
+| **2nd** | Ciprofloxacin, Ofloxacin, Norfloxacin | Gram-negative, atypicals |
+| **3rd** | Levofloxacin, Sparfloxacin | Respiratory (pneumococcus) |
+| **4th** | Moxifloxacin, Gatifloxacin | Respiratory + anaerobes |
+
+### Mechanism
+- Inhibit **DNA gyrase** (topoisomerase II) in Gram-negatives
+- Inhibit **topoisomerase IV** in Gram-positives
+- Bactericidal, concentration-dependent killing
+
+> **Clinical Pearl**: Azithromycin is the most prescribed antibiotic in India for RTIs. Its long half-life allows 3-day or 5-day courses. Single 1g dose cures Chlamydia.`,
+        mnemonics: [
+          {
+            text: "AMiNO = A Mighty Nephro-Ototoxin: aminoglycosides cause nephrotoxicity and ototoxicity",
+            explanation:
+              "The two major dose-limiting toxicities of aminoglycosides are nephrotoxicity (reversible) and ototoxicity (often irreversible, both cochlear and vestibular).",
+          },
+          {
+            text: "BUY AT 30, SELL AT 50: aminoglycosides Buy (bind) at 30S, macrolides Sell (stall) at 50S",
+            explanation:
+              "Aminoglycosides bind the 30S ribosomal subunit, while macrolides bind the 50S subunit. A quick way to remember which subunit each targets.",
+          },
+        ],
+        keyPoints: [
+          "Aminoglycosides: 30S ribosomal subunit, bactericidal, concentration-dependent, nephro/ototoxic",
+          "Macrolides: 50S ribosomal subunit, primarily bacteriostatic, CYP3A4 inhibitors",
+          "Fluoroquinolones: DNA gyrase (Gram-) and topoisomerase IV (Gram+) inhibitors, bactericidal",
+          "Azithromycin: longest half-life (68 hr), tissue concentration >> plasma",
+          "Aminoglycosides have post-antibiotic effect (PAE) allowing once-daily dosing",
+          "All three classes are concentration-dependent killers (aminoglycosides and quinolones)",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 52-54 - Aminoglycosides, Macrolides, Quinolones", edition: "8th" },
+          { book: "Rang & Dale", chapter: "Ch 51 - Antibacterial Drugs", edition: "9th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "aminoglycosides-macrolides-quinolones-mechanism",
+        title: "Aminoglycosides, Macrolides & Quinolones - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Detailed mechanisms of action and resistance for aminoglycosides, macrolides, and quinolones. Pharmacokinetics including distribution, metabolism, and excretion. Drug interactions particularly CYP3A4 effects of macrolides.",
+        contentMd: `# Detailed Mechanisms
+
+## Aminoglycoside Mechanism (Detail)
+1. Drug enters bacterial cell via **oxygen-dependent transport** (ineffective against anaerobes)
+2. Irreversibly binds 16S rRNA of **30S ribosomal subunit**
+3. Causes **misreading of mRNA codons** (wrong amino acids inserted)
+4. Blocks **translocation** from A-site to P-site
+5. Abnormal proteins insert into cell membrane, increasing permeability
+6. More drug enters - **positive feedback loop** leading to cell death
+
+### Why Aminoglycosides Are Ineffective Against Anaerobes
+Transport into bacterial cell requires **electron transport chain** (oxygen-dependent active transport). Anaerobes lack this system.
+
+### Resistance Mechanisms
+- **Aminoglycoside-modifying enzymes** (AMEs): acetyltransferases, phosphotransferases, nucleotidyltransferases (most common)
+- **Ribosomal methylation**: 16S rRNA methylases (armA gene)
+- **Efflux pumps** and reduced permeability
+
+### Pharmacokinetics
+| Parameter | Value |
+|-----------|-------|
+| Absorption | Not absorbed orally (polycationic) |
+| Distribution | ECF only (Vd ~0.25 L/kg), poor CNS penetration |
+| Protein binding | <10% |
+| Metabolism | None (excreted unchanged) |
+| Excretion | Renal (glomerular filtration) |
+| Half-life | 2-3 hours |
+
+### Once-Daily Dosing (Extended Interval)
+- Exploits **concentration-dependent killing** and **PAE**
+- Higher peak = better efficacy; longer drug-free interval = less toxicity
+- Example: Gentamicin 5-7 mg/kg once daily instead of 1.5 mg/kg TDS
+
+## Macrolide Mechanism (Detail)
+1. Bind to **23S rRNA** of 50S subunit
+2. Block the peptidyl-tRNA translocation from A-site to P-site
+3. Prevent elongation of peptide chain
+4. Primarily bacteriostatic
+
+### Macrolide Resistance
+- **Ribosomal methylation** (erm genes): methylation of 23S rRNA causing cross-resistance to macrolides, lincosamides, streptogramin B (MLS_B resistance)
+- **Efflux pumps** (mef genes)
+- **Enzymatic modification** (rare)
+
+### Macrolide Drug Interactions (CYP3A4)
+| Macrolide | CYP3A4 Inhibition | Interactions |
+|-----------|-------------------|--------------|
+| Erythromycin | Strong | Theophylline, warfarin, carbamazepine, statins |
+| Clarithromycin | Strong | Same as erythromycin |
+| Azithromycin | Minimal | Safest macrolide for interactions |
+
+> **Important**: Erythromycin + statins (simvastatin) can cause rhabdomyolysis due to CYP3A4 inhibition.
+
+## Quinolone Mechanism (Detail)
+1. Enter cell via porins and diffusion
+2. Bind to **DNA gyrase-DNA complex** (Gram-negatives) or **topoisomerase IV-DNA complex** (Gram-positives)
+3. Stabilize the enzyme-DNA complex, preventing re-ligation of DNA strands
+4. Generate double-strand DNA breaks leading to cell death
+
+### Quinolone Resistance
+- **Mutations in gyrA/gyrB** (DNA gyrase) and **parC/parE** (topoisomerase IV)
+- **Efflux pumps** (norA in Staphylococci)
+- **Plasmid-mediated** (qnr genes): protect gyrase from quinolone binding
+
+### Quinolone Pharmacokinetics
+- Excellent oral bioavailability (>90%)
+- Wide tissue distribution including prostate, bone, respiratory secretions
+- **Chelation**: reduced absorption with antacids (Al, Mg, Ca), iron, zinc - give 2 hours apart
+- Moxifloxacin: hepatic metabolism (no dose adjustment in renal failure)
+- Ciprofloxacin: mixed renal + hepatic elimination`,
+        mnemonics: [
+          {
+            text: "Aminoglycosides need OXYGEN to enter: that is why they fail against ANAerobes",
+            explanation:
+              "Aminoglycoside uptake requires oxygen-dependent active transport. Anaerobic bacteria lack the electron transport chain needed for this uptake, making aminoglycosides ineffective.",
+          },
+        ],
+        keyPoints: [
+          "Aminoglycosides require oxygen-dependent transport - ineffective against anaerobes",
+          "Aminoglycoside resistance: modifying enzymes (AMEs) are most common",
+          "MLS-B resistance: erm gene methylates 23S rRNA, cross-resistance to macrolides-lincosamides-streptogramin B",
+          "Erythromycin and clarithromycin are strong CYP3A4 inhibitors; azithromycin is not",
+          "Quinolones chelated by divalent cations (antacids, iron) - separate dosing by 2 hours",
+          "Once-daily aminoglycoside dosing exploits concentration-dependent killing and PAE",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 52-54", page: "753-790", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 58-59", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "aminoglycosides-macrolides-quinolones-clinical",
+        title: "Aminoglycosides, Macrolides & Quinolones - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "Clinical use, adverse effects, contraindications, and Indian prescribing context for aminoglycosides, macrolides, and fluoroquinolones.",
+        contentMd: `# Clinical Applications
+
+## Aminoglycoside Clinical Use
+
+| Indication | Drug | Notes |
+|-----------|------|-------|
+| Gram-negative sepsis | Gentamicin + beta-lactam | Synergistic combination |
+| Infective endocarditis (Enterococcus) | Gentamicin + Ampicillin | Low-dose synergy |
+| MDR TB (2nd line) | Amikacin/Streptomycin | Inject IM |
+| Plague, tularemia | Streptomycin/Gentamicin | DOC |
+| Hepatic encephalopathy | Neomycin (oral) | Reduces ammonia-producing gut bacteria |
+| Pseudomonas (CF) | Tobramycin (nebulized) | Direct airway delivery |
+
+### Aminoglycoside Toxicity
+| Toxicity | Features | Monitoring |
+|----------|----------|------------|
+| **Nephrotoxicity** | Rising creatinine, non-oliguric renal failure | Trough levels, creatinine |
+| **Ototoxicity** | Cochlear (hearing loss) or Vestibular (vertigo) | Audiometry |
+| **Neuromuscular blockade** | Curare-like effect, respiratory paralysis | Avoid with NMJ blockers |
+
+> **Clinical Pearl**: Gentamicin is predominantly vestibulotoxic; amikacin and neomycin are predominantly cochleotoxic. Ototoxicity is usually irreversible.
+
+## Macrolide Clinical Use
+
+| Indication | Drug | Regimen |
+|-----------|------|---------|
+| Community-acquired pneumonia (atypical) | Azithromycin | 500 mg day 1, 250 mg day 2-5 |
+| Chlamydia trachomatis | Azithromycin | 1g single dose |
+| H. pylori (triple therapy) | Clarithromycin | 500 mg BD with PPI + amoxicillin |
+| Pertussis | Azithromycin | 5-day course |
+| Diphtheria | Erythromycin | With antitoxin |
+| Gastroparesis | Erythromycin | Prokinetic (motilin agonist) |
+| MAC prophylaxis (HIV) | Azithromycin | 1200 mg weekly |
+
+### Macrolide ADRs
+- **GI** (most common): nausea, vomiting, diarrhea (erythromycin worst - motilin agonist)
+- **QT prolongation**: erythromycin > clarithromycin > azithromycin
+- **Cholestatic jaundice**: erythromycin estolate (avoid in pregnancy)
+- **Drug interactions**: CYP3A4 inhibition (erythromycin, clarithromycin)
+
+## Quinolone Clinical Use
+
+| Indication | Drug | Notes |
+|-----------|------|-------|
+| UTI (uncomplicated) | Norfloxacin/Ciprofloxacin | Avoid empirically if resistance >20% |
+| Typhoid | Ofloxacin/Ciprofloxacin | Resistance increasing in India |
+| Traveler's diarrhea | Ciprofloxacin | 3-day course |
+| Chronic prostatitis | Ciprofloxacin/Levofloxacin | Good prostate penetration |
+| CAP (respiratory quinolone) | Levofloxacin/Moxifloxacin | Excellent pneumococcal coverage |
+| TB (MDR, 2nd line) | Levofloxacin/Moxifloxacin | Part of shorter MDR-TB regimen |
+| Anthrax | Ciprofloxacin | DOC |
+
+### Quinolone ADRs
+- **Tendon rupture** (Achilles): risk increased in elderly, steroids, renal failure
+- **QT prolongation**: sparfloxacin > moxifloxacin > others
+- **Cartilage damage**: contraindicated in children <18 years and pregnancy
+- **CNS**: headache, insomnia, seizures (lower seizure threshold)
+- **Dysglycemia**: hypoglycemia/hyperglycemia (gatifloxacin withdrawn in India)
+- **Peripheral neuropathy**: FDA black box warning
+
+> **Indian Context**: Gatifloxacin was withdrawn from the Indian market due to severe dysglycemia. Quinolone resistance in typhoid is increasing - ceftriaxone is now preferred empiric therapy.`,
+        mnemonics: [
+          {
+            text: "Quinolone TENT damage: Tendon rupture, Elderly risk, No children, Teratogenic",
+            explanation:
+              "Quinolones damage tendons (especially Achilles), are riskier in elderly patients, are contraindicated in children due to cartilage toxicity, and are teratogenic in pregnancy.",
+          },
+          {
+            text: "Genta-VEST, Amika-COCH: Gentamicin is Vestibulotoxic, Amikacin is Cochleotoxic",
+            explanation:
+              "Helps distinguish the pattern of ototoxicity: gentamicin preferentially damages vestibular apparatus (vertigo), while amikacin preferentially damages cochlea (hearing loss).",
+          },
+        ],
+        keyPoints: [
+          "Gentamicin: vestibulotoxic; Amikacin: cochleotoxic; ototoxicity is irreversible",
+          "Azithromycin: single 1g dose cures Chlamydia; 5-day course for pneumonia",
+          "Erythromycin: motilin agonist (prokinetic) but also causes GI side effects",
+          "Quinolones contraindicated in children (<18 yr) and pregnancy (cartilage damage)",
+          "Gatifloxacin withdrawn in India due to severe dysglycemia",
+          "Quinolone tendon rupture: Achilles most common, risk with steroids and elderly",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 52-54", edition: "8th" },
+          { book: "Harrison's", chapter: "Treatment of Bacterial Infections", edition: "21st" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "aminoglycosides-macrolides-quinolones-exam",
+        title: "Aminoglycosides, Macrolides & Quinolones - Exam Prep",
+        estimatedMinutes: 15,
+        summary:
+          "High-yield points, comparison tables, and previous year themes for aminoglycosides, macrolides, and fluoroquinolones.",
+        contentMd: `# Exam High Yield
+
+## One-Liners
+- Aminoglycoside that is NOT nephrotoxic: **Streptomycin (least nephrotoxic)**
+- Aminoglycoside used topically only: **Neomycin (too toxic for systemic use)**
+- Macrolide used as prokinetic: **Erythromycin (motilin agonist)**
+- Safest macrolide in pregnancy: **Azithromycin (Category B)**
+- Macrolide causing cholestatic jaundice: **Erythromycin estolate**
+- Quinolone with best anaerobic coverage: **Moxifloxacin**
+- Quinolone withdrawn in India for dysglycemia: **Gatifloxacin**
+- Quinolone with best anti-pseudomonal activity: **Ciprofloxacin**
+- Aminoglycoside not affected by aminoglycoside-modifying enzymes: **Amikacin (least susceptible)**
+- DOC for Legionella: **Azithromycin / Levofloxacin**
+- DOC for Chlamydia: **Azithromycin 1g single dose**
+- Antibiotic with longest half-life: **Azithromycin (68 hours)**
+
+## Comparison: Protein Synthesis Inhibitors
+
+| Feature | Aminoglycosides | Macrolides | Tetracyclines | Chloramphenicol |
+|---------|----------------|-----------|---------------|----------------|
+| Subunit | 30S | 50S | 30S | 50S |
+| Action | Bactericidal | Bacteriostatic | Bacteriostatic | Bacteriostatic |
+| Killing | Concentration-dep | Time-dep | Time-dep | Time-dep |
+| Oral absorption | None | Good | Good | Good |
+| Major toxicity | Nephro/Ototoxicity | GI, QT | Teeth/bone | Aplastic anemia |
+
+## Comparison: Quinolone Generations
+
+| Feature | 1st Gen | 2nd Gen | 3rd Gen | 4th Gen |
+|---------|---------|---------|---------|---------|
+| Drug | Nalidixic acid | Ciprofloxacin | Levofloxacin | Moxifloxacin |
+| Gram-negative | Urinary only | Systemic | Systemic | Systemic |
+| Gram-positive | - | + | ++ (pneumococcus) | +++ |
+| Anaerobes | - | - | - | ++ |
+| Atypicals | - | + | ++ | ++ |
+| Name | Urinary quinolone | Systemic | Respiratory | Respiratory + anaerobe |
+
+## Previous Year Themes
+- Aminoglycoside toxicity and monitoring
+- Once-daily dosing rationale (concentration-dependent killing + PAE)
+- CYP3A4 interactions of macrolides
+- Quinolone contraindications (children, pregnancy)
+- Drug of choice questions (Chlamydia, Legionella, H. pylori)
+- Chelation of quinolones with antacids`,
+        mnemonics: [
+          {
+            text: "30S killers: A-T (Aminoglycosides, Tetracyclines); 50S stallers: C-M-L (Chloramphenicol, Macrolides, Lincosamides)",
+            explanation:
+              "Quick way to remember ribosomal targets: 30S = aminoglycosides and tetracyclines; 50S = chloramphenicol, macrolides, and lincosamides (clindamycin).",
+          },
+        ],
+        keyPoints: [
+          "Aminoglycosides: 30S, bactericidal, concentration-dependent",
+          "Macrolides: 50S, bacteriostatic, erythromycin/clarithromycin are CYP3A4 inhibitors",
+          "Azithromycin: longest half-life (68 hr), minimal CYP interactions",
+          "Quinolones: DNA gyrase inhibitors, contraindicated in children and pregnancy",
+          "Moxifloxacin: best Gram-positive and anaerobic coverage among quinolones",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 52-54", edition: "8th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "aminoglycosides-macrolides-quinolones-recall",
+        title: "Aminoglycosides, Macrolides & Quinolones - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for aminoglycosides, macrolides, and quinolones.",
+        contentMd: `# Active Recall
+
+**Q1:** Which ribosomal subunit do aminoglycosides target?
+> 30S ribosomal subunit (irreversibly).
+
+**Q2:** Why are aminoglycosides ineffective against anaerobes?
+> Aminoglycoside uptake requires oxygen-dependent active transport, which anaerobes lack.
+
+**Q3:** What are the two major toxicities of aminoglycosides?
+> Nephrotoxicity (reversible) and ototoxicity (often irreversible).
+
+**Q4:** What is the difference in ototoxicity between gentamicin and amikacin?
+> Gentamicin is predominantly vestibulotoxic (vertigo); amikacin is cochleotoxic (hearing loss).
+
+**Q5:** Which macrolide is a motilin agonist?
+> Erythromycin - used as a prokinetic agent in gastroparesis.
+
+**Q6:** What is the single-dose treatment for Chlamydia trachomatis?
+> Azithromycin 1g oral single dose.
+
+**Q7:** Why should quinolones not be given with antacids?
+> Divalent/trivalent cations (Al, Mg, Ca, Fe) chelate quinolones, reducing absorption. Separate by 2 hours.
+
+**Q8:** Why are quinolones contraindicated in children?
+> Quinolones damage growing cartilage (shown in animal studies) - contraindicated in children <18 years.
+
+**Q9:** Which quinolone was withdrawn in India and why?
+> Gatifloxacin - withdrawn due to severe dysglycemia (both hypoglycemia and hyperglycemia).
+
+**Q10:** What is MLS-B resistance?
+> Methylation of 23S rRNA (erm genes) causing cross-resistance to Macrolides, Lincosamides, and Streptogramin B.
+
+**Q11:** Name the macrolide that is safest in terms of drug interactions.
+> Azithromycin - minimal CYP3A4 inhibition compared to erythromycin and clarithromycin.
+
+**Q12:** What is the rationale for once-daily aminoglycoside dosing?
+> Concentration-dependent killing (higher peak = better efficacy) + post-antibiotic effect (PAE) allows drug-free intervals reducing toxicity.`,
+        mnemonics: [],
+        keyPoints: [
+          "12 recall questions covering mechanisms, toxicity, clinical use, and resistance patterns",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 52-54", edition: "8th" },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 3: Antitubercular Drugs ─────────────────────────
+  {
+    topicCode: "PH-MOD-05-TOP-03",
+    layers: [
+      {
+        layer: 1,
+        slug: "antitubercular-drugs-foundation",
+        title: "Antitubercular Drugs - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "Antitubercular drugs are classified into first-line (RHZE + S) and second-line agents. Treatment requires multi-drug combinations for 6+ months to prevent resistance. India's RNTCP/NTEP uses standardized regimens under DOTS strategy.",
+        contentMd: `# Antitubercular Drugs
+
+## Why Combination Therapy?
+M. tuberculosis has a natural mutation rate of 1 in 10^6 for each drug. Using a single drug selects for resistant mutants. Combining 3-4 drugs reduces the probability of resistance to essentially zero.
+
+## Classification
+
+### First-Line Drugs (RHZE-S)
+| Drug | Abbreviation | Mechanism | Key Feature |
+|------|-------------|-----------|-------------|
+| **Rifampicin** | R | RNA polymerase inhibitor | Most potent sterilizing agent |
+| **Isoniazid (INH)** | H | Mycolic acid synthesis inhibitor | Most potent bactericidal |
+| **Pyrazinamide** | Z | Unknown (acidic pH dependent) | Kills intracellular bacilli |
+| **Ethambutol** | E | Arabinosyl transferase inhibitor | Prevents resistance |
+| **Streptomycin** | S | 30S ribosomal inhibitor | Active against extracellular bacilli |
+
+### Second-Line Drugs
+- **Fluoroquinolones**: Levofloxacin, Moxifloxacin
+- **Injectable agents**: Amikacin, Kanamycin, Capreomycin
+- **Others**: Ethionamide, Cycloserine, PAS, Linezolid, Bedaquiline, Delamanid
+
+## Bacterial Populations in TB
+| Population | Location | Drug Effective |
+|-----------|----------|----------------|
+| Rapidly multiplying | Cavity wall | Isoniazid (kills most bacilli) |
+| Slow/intermittent multiplying | Caseous lesion | Rifampicin (sterilizing) |
+| Semi-dormant (acidic pH) | Inside macrophages | Pyrazinamide |
+| Dormant persisters | Various | No drug fully effective |
+
+## Standard Regimen (NTEP India)
+**New TB (drug-sensitive)**: 2HRZE / 4HRE (total 6 months)
+- **Intensive phase**: 2 months of HRZE (daily)
+- **Continuation phase**: 4 months of HRE (daily)
+- Note: Daily regimen replaced intermittent thrice-weekly regimen in India since 2017
+
+> **Clinical Pearl**: Under NTEP (National TB Elimination Programme, formerly RNTCP), all TB drugs are provided free as Fixed-Dose Combinations (FDCs). India aims to eliminate TB by 2025 (WHO target: 2030).`,
+        mnemonics: [
+          {
+            text: "RHZE = Rifampicin Helps Zero-in (on) Elimination: the four first-line drugs",
+            explanation:
+              "R (Rifampicin), H (Isoniazid), Z (Pyrazinamide), E (Ethambutol) - the standard first-line combination for TB treatment.",
+          },
+          {
+            text: "INH is the HERO: H = most potent bactericidal, E = early rapid kill, R = resistance preventer (in combo), O = oral and well absorbed",
+            explanation:
+              "Isoniazid (INH/H) is the most potent bactericidal drug against actively multiplying M. tuberculosis.",
+          },
+        ],
+        keyPoints: [
+          "Combination therapy prevents resistance emergence (natural mutation rate ~10^-6 per drug)",
+          "First-line drugs: RHZE (Rifampicin, INH, Pyrazinamide, Ethambutol) + Streptomycin",
+          "INH: most bactericidal; Rifampicin: most sterilizing; PZA: kills intracellular bacilli at acidic pH",
+          "India uses daily DOTS regimen: 2HRZE/4HRE (6 months total)",
+          "NTEP provides free FDCs to all TB patients in India",
+          "Three bacterial populations targeted: rapidly multiplying (INH), slow (RIF), semi-dormant (PZA)",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 55 - Antitubercular Drugs", page: "791-810", edition: "8th" },
+          { book: "Rang & Dale", chapter: "Ch 52 - Antimycobacterial Drugs", edition: "9th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "antitubercular-drugs-mechanism",
+        title: "Antitubercular Drugs - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Detailed mechanisms of action, resistance mechanisms, pharmacokinetics, and drug interactions of first-line and key second-line antitubercular drugs.",
+        contentMd: `# Mechanisms of Antitubercular Drugs
+
+## Isoniazid (INH)
+### Mechanism
+- **Prodrug**: Activated by mycobacterial enzyme **KatG** (catalase-peroxidase)
+- Active metabolite inhibits **InhA** (enoyl-ACP reductase)
+- Blocks **mycolic acid synthesis** (essential for mycobacterial cell wall)
+- Bactericidal against actively growing bacilli
+
+### Metabolism
+- Hepatic **acetylation** (NAT2 enzyme)
+- **Fast acetylators**: Higher dose needed (common in Japanese, Eskimos)
+- **Slow acetylators**: More toxicity, lower dose sufficient (common in Indians, Egyptians)
+
+### Resistance
+- Mutations in **katG gene** (most common): drug cannot be activated
+- Mutations in **inhA gene**: target modification
+
+### Key ADRs
+- **Peripheral neuropathy**: Due to pyridoxine (B6) depletion (INH complexes with B6)
+  - Prevention: Co-prescribe pyridoxine 10 mg/day
+- **Hepatotoxicity**: Acetylhydrazine metabolite
+- **SLE-like syndrome**: In slow acetylators
+- **Pellagra**: INH competes with niacin metabolism
+
+## Rifampicin
+### Mechanism
+- Binds **beta-subunit of bacterial DNA-dependent RNA polymerase**
+- Blocks RNA synthesis at initiation step
+- Bactericidal and **sterilizing** (kills semi-dormant bacilli)
+
+### Key Features
+- **Potent CYP450 inducer** (CYP3A4, CYP2C9): reduces levels of OCP, warfarin, HIV drugs, cyclosporine
+- Colors secretions **orange-red** (urine, tears, sweat)
+- Resistance: mutations in **rpoB gene** (RNA polymerase beta subunit)
+
+### Drug Interactions (CYP450 Induction)
+| Drug Affected | Clinical Consequence |
+|--------------|---------------------|
+| Oral contraceptives | Contraceptive failure |
+| Warfarin | Reduced anticoagulation |
+| Cyclosporine | Transplant rejection |
+| Protease inhibitors (HIV) | Treatment failure |
+| Corticosteroids | Reduced efficacy |
+| Phenytoin | Subtherapeutic levels |
+
+## Pyrazinamide (PZA)
+### Mechanism
+- Prodrug activated by mycobacterial **pyrazinamidase** to **pyrazinoic acid**
+- Active at **acidic pH** (inside macrophages, caseous tissue)
+- Disrupts membrane potential and fatty acid synthesis
+- Uniquely effective against **semi-dormant intracellular bacilli**
+
+### Key ADRs
+- **Hyperuricemia** (inhibits uric acid excretion): may precipitate gout
+- **Hepatotoxicity** (dose-related)
+- **Non-gouty polyarthralgia**
+
+## Ethambutol
+### Mechanism
+- Inhibits **arabinosyl transferase** (EmbB)
+- Blocks synthesis of **arabinogalactan** (cell wall component)
+- Bacteriostatic at standard doses
+
+### Key ADRs
+- **Retrobulbar optic neuritis**: dose-related, initially loss of red-green color vision, then visual acuity
+- Requires visual acuity and color vision testing before and during treatment
+
+## Newer Drugs
+| Drug | Mechanism | Role |
+|------|-----------|------|
+| **Bedaquiline** | ATP synthase inhibitor | MDR-TB |
+| **Delamanid** | Mycolic acid synthesis inhibitor | MDR-TB |
+| **Pretomanid** | Cell wall + respiratory chain | XDR-TB (BPaL regimen) |
+| **Linezolid** | 50S ribosomal inhibitor | XDR-TB |`,
+        mnemonics: [
+          {
+            text: "Rifampicin makes everything RED and REDUCES drug levels: Red secretions + CYP inducer",
+            explanation:
+              "Rifampicin is a potent CYP450 enzyme inducer (reducing levels of many drugs) and colors all body secretions orange-red.",
+          },
+          {
+            text: "INH + B6 deficiency = PNP: Peripheral Neuropathy Prevention with Pyridoxine",
+            explanation:
+              "INH depletes pyridoxine (vitamin B6) causing peripheral neuropathy. Prevented by co-prescribing pyridoxine 10 mg/day.",
+          },
+        ],
+        keyPoints: [
+          "INH: prodrug activated by KatG, inhibits InhA (mycolic acid synthesis), katG mutation = most common resistance",
+          "Rifampicin: inhibits DNA-dependent RNA polymerase, potent CYP450 inducer, rpoB mutation = resistance",
+          "PZA: active only at acidic pH (inside macrophages), causes hyperuricemia",
+          "Ethambutol: inhibits arabinosyl transferase, causes retrobulbar optic neuritis",
+          "INH acetylation polymorphism: slow acetylators have more toxicity (neuropathy, SLE-like)",
+          "Rifampicin drug interactions: reduces efficacy of OCPs, warfarin, HIV drugs, cyclosporine",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 55 - Antitubercular Drugs", page: "793-805", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 60 - Antimycobacterial Agents", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "antitubercular-drugs-clinical",
+        title: "Antitubercular Drugs - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "NTEP treatment regimens, management of drug-resistant TB (MDR, XDR), adverse effect monitoring, TB in special populations (HIV, pregnancy, children), and Indian public health context.",
+        contentMd: `# Clinical Applications
+
+## NTEP (National TB Elimination Programme) Regimens
+
+### Drug-Sensitive TB
+**2HRZE / 4HRE** (daily regimen)
+- Intensive phase: 2 months of Isoniazid + Rifampicin + Pyrazinamide + Ethambutol (daily)
+- Continuation phase: 4 months of Isoniazid + Rifampicin + Ethambutol (daily)
+- All drugs given as **weight-band-based FDCs**
+
+| Weight Band | H (mg) | R (mg) | Z (mg) | E (mg) |
+|------------|--------|--------|--------|--------|
+| 25-39 kg | 150 | 300 | 750 | 550 |
+| 40-54 kg | 225 | 450 | 1000 | 800 |
+| 55-69 kg | 300 | 600 | 1500 | 1100 |
+| >70 kg | 375 | 750 | 2000 | 1375 |
+
+### MDR-TB (Resistant to at least INH + Rifampicin)
+- Shorter regimen (9-11 months): Bedaquiline + Levofloxacin + Ethionamide + Ethambutol + INH(high dose) + Pyrazinamide + Clofazimine
+- Longer regimen (18-20 months): Individualized based on DST
+- All MDR-TB patients must undergo **CBNAAT/Xpert MTB/RIF** or **LPA (Line Probe Assay)** for rapid resistance detection
+
+### XDR-TB
+- MDR + resistance to fluoroquinolone + one injectable
+- Treatment: BPaL regimen (Bedaquiline + Pretomanid + Linezolid) for 6-9 months
+- Newer regimen under NTEP
+
+## Adverse Effect Monitoring
+
+| Drug | ADR to Monitor | Test |
+|------|---------------|------|
+| INH | Peripheral neuropathy, hepatitis | LFTs monthly, clinical neuropathy |
+| Rifampicin | Hepatitis, thrombocytopenia, flu-like syndrome | LFTs, CBC |
+| PZA | Hepatitis, hyperuricemia | LFTs, serum uric acid |
+| Ethambutol | Optic neuritis | Visual acuity + color vision baseline and monthly |
+| Streptomycin | Ototoxicity, nephrotoxicity | Audiometry, creatinine |
+
+### Hepatotoxicity Management
+- If any ATT drug causes symptomatic hepatitis (jaundice or ALT >5x normal):
+  1. **Stop all hepatotoxic drugs** (H, R, Z)
+  2. Continue Ethambutol + Streptomycin (non-hepatotoxic)
+  3. Reintroduce one at a time: R first (least hepatotoxic among the three), then H, then Z (most hepatotoxic)
+
+## TB in Special Populations
+
+### HIV-TB Co-infection
+- Start ATT first, then ART within 2-8 weeks
+- Rifampicin interacts with protease inhibitors - use Rifabutin (less CYP induction) instead
+- Immune Reconstitution Inflammatory Syndrome (IRIS) may occur
+
+### Pregnancy
+- **Safe**: Rifampicin, INH, Ethambutol
+- **Avoid**: Streptomycin (fetal ototoxicity), PZA (limited safety data in some guidelines, but WHO recommends)
+- Always co-prescribe pyridoxine with INH
+
+### Children
+- Same drugs, weight-based dosing
+- Ethambutol can be used in children (previously avoided due to difficulty testing vision)
+
+> **Clinical Pearl**: Under Nikshay Poshan Yojana, NTEP provides Rs 500/month nutritional support to TB patients. All TB cases must be mandatorily notified on Nikshay portal.`,
+        mnemonics: [
+          {
+            text: "Reintroduce ATT after hepatitis: R-H-Z (R first = least hepatotoxic, Z last = most hepatotoxic)",
+            explanation:
+              "When reintroducing anti-TB drugs after drug-induced hepatitis, add Rifampicin first (least hepatotoxic), then Isoniazid, then Pyrazinamide (most hepatotoxic) last.",
+          },
+          {
+            text: "NTEP support: Nikshay Notification, TB free India 2025, Elimination Programme, Poshan Yojana Rs 500",
+            explanation:
+              "Key NTEP points: mandatory Nikshay notification, India's target to eliminate TB by 2025, nutritional support of Rs 500/month under Nikshay Poshan Yojana.",
+          },
+        ],
+        keyPoints: [
+          "Standard regimen: 2HRZE/4HRE daily (replaced thrice-weekly since 2017 in India)",
+          "MDR-TB: resistant to at least INH + Rifampicin, diagnosed by CBNAAT/Xpert MTB/RIF",
+          "Hepatotoxicity reintroduction order: R first (safest), then H, then Z (most hepatotoxic)",
+          "HIV-TB: use Rifabutin instead of Rifampicin with protease inhibitors",
+          "Streptomycin contraindicated in pregnancy (fetal ototoxicity)",
+          "Mandatory notification of all TB cases on Nikshay portal under NTEP",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 55 - Antitubercular Drugs", page: "805-810", edition: "8th" },
+          { book: "Park's Textbook", chapter: "Tuberculosis", edition: "26th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "antitubercular-drugs-exam",
+        title: "Antitubercular Drugs - Exam Prep",
+        estimatedMinutes: 15,
+        summary:
+          "High-yield one-liners, comparison tables, and previous year question patterns for antitubercular drugs.",
+        contentMd: `# Exam High Yield
+
+## One-Liners
+- Most potent bactericidal anti-TB drug: **Isoniazid**
+- Most potent sterilizing anti-TB drug: **Rifampicin**
+- Anti-TB drug active at acidic pH (intracellular): **Pyrazinamide**
+- Anti-TB drug causing optic neuritis: **Ethambutol (retrobulbar)**
+- Anti-TB drug causing peripheral neuropathy: **INH (pyridoxine depletion)**
+- Anti-TB drug causing orange-red secretions: **Rifampicin**
+- Anti-TB drug causing hyperuricemia: **Pyrazinamide**
+- Most hepatotoxic first-line ATT drug: **Pyrazinamide**
+- Anti-TB drug causing SLE-like syndrome: **INH (in slow acetylators)**
+- Most common mechanism of INH resistance: **katG gene mutation**
+- Most common mechanism of Rifampicin resistance: **rpoB gene mutation**
+- Anti-TB drug that is a CYP450 inducer: **Rifampicin (potent)**
+- Newer anti-TB drug inhibiting ATP synthase: **Bedaquiline**
+- INH metabolism shows: **Genetic polymorphism (acetylation)**
+- Enzyme activating INH: **KatG (catalase-peroxidase)**
+
+## Comparison: First-Line ATT
+
+| Feature | INH | Rifampicin | PZA | Ethambutol | Streptomycin |
+|---------|-----|-----------|-----|-----------|-------------|
+| Type | Bactericidal | Bactericidal + Sterilizing | Sterilizing | Bacteriostatic | Bactericidal |
+| Target | InhA (mycolic acid) | RNA polymerase | Membrane function | Arabinosyl transferase | 30S ribosome |
+| Key ADR | Neuropathy, hepatitis | Hepatitis, CYP induction | Hyperuricemia, hepatitis | Optic neuritis | Ototoxicity |
+| Resistance gene | katG | rpoB | pncA | embB | rrs |
+| Pregnancy | Safe (+ pyridoxine) | Safe | Caution | Safe | Contraindicated |
+| Special | Acetylation polymorphism | Orange secretions | Acidic pH only | Color vision testing | IM only |
+
+## Drug-Resistant TB Definitions
+
+| Type | Resistance Pattern |
+|------|-------------------|
+| **MDR-TB** | INH + Rifampicin (at least) |
+| **Pre-XDR** | MDR + Fluoroquinolone resistance |
+| **XDR-TB** | MDR + FQ + one Group A drug (bedaquiline/linezolid) |
+| **Rifampicin mono-resistant** | Only Rifampicin (treat as MDR) |
+
+## Previous Year Themes
+- Mechanism of each first-line drug
+- ATT drug toxicity identification (clinical vignette)
+- INH acetylation polymorphism
+- Rifampicin drug interactions
+- NTEP regimen questions
+- MDR-TB definition and treatment
+- Hepatotoxicity management and drug reintroduction order`,
+        mnemonics: [
+          {
+            text: "Resistance genes: KatG (INH), rpoB (Rif), pncA (PZA), embB (Ethamb): Kat-Rope-Peanut-Embalm",
+            explanation:
+              "Memory aid for resistance genes of first-line ATT: KatG for INH, rpoB for Rifampicin, pncA for Pyrazinamide, embB for Ethambutol.",
+          },
+        ],
+        keyPoints: [
+          "INH: most bactericidal; Rifampicin: most sterilizing",
+          "PZA: most hepatotoxic first-line drug, causes hyperuricemia",
+          "Ethambutol: retrobulbar optic neuritis (red-green color blindness first)",
+          "MDR-TB = resistance to at least INH + Rifampicin",
+          "CBNAAT/GeneXpert: rapid diagnosis of Rifampicin resistance (rpoB mutation)",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 55", edition: "8th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "antitubercular-drugs-recall",
+        title: "Antitubercular Drugs - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for self-testing on antitubercular drugs.",
+        contentMd: `# Active Recall
+
+**Q1:** Name the first-line anti-TB drugs.
+> RHZE-S: Rifampicin, Isoniazid (INH), Pyrazinamide, Ethambutol, Streptomycin.
+
+**Q2:** Which anti-TB drug is the most bactericidal?
+> Isoniazid (INH) - kills rapidly multiplying bacilli in the cavity wall.
+
+**Q3:** Which anti-TB drug is the most sterilizing?
+> Rifampicin - kills slow/intermittent multipliers, responsible for preventing relapse.
+
+**Q4:** What is the mechanism of INH?
+> Prodrug activated by KatG (catalase-peroxidase), inhibits InhA (enoyl-ACP reductase), blocking mycolic acid synthesis.
+
+**Q5:** What is the mechanism of Rifampicin?
+> Binds the beta-subunit of DNA-dependent RNA polymerase, blocking RNA synthesis.
+
+**Q6:** Why is pyrazinamide uniquely effective against intracellular TB bacilli?
+> PZA is activated to pyrazinoic acid by pyrazinamidase and works only at acidic pH, which exists inside macrophage phagolysosomes.
+
+**Q7:** What visual complication does ethambutol cause?
+> Retrobulbar optic neuritis - initially loss of red-green color discrimination, then decreased visual acuity. Dose-related and usually reversible.
+
+**Q8:** How do you prevent INH-induced peripheral neuropathy?
+> Co-prescribe pyridoxine (vitamin B6) 10 mg/day. INH depletes B6 by forming a complex with pyridoxal phosphate.
+
+**Q9:** What is the standard NTEP regimen for new drug-sensitive TB?
+> 2HRZE / 4HRE (2 months intensive phase with 4 drugs, 4 months continuation with 3 drugs, all daily).
+
+**Q10:** Define MDR-TB.
+> TB resistant to at least Isoniazid AND Rifampicin (the two most important first-line drugs).
+
+**Q11:** In ATT-induced hepatitis, which drug do you reintroduce first?
+> Rifampicin (least hepatotoxic among H, R, Z). Then INH. Then PZA (most hepatotoxic) last.
+
+**Q12:** Why is Rifampicin problematic in HIV-TB co-infection?
+> Rifampicin is a potent CYP450 inducer that drastically reduces levels of protease inhibitors and some NNRTIs. Rifabutin (weaker inducer) is used instead.
+
+**Q13:** What nutritional support does NTEP provide to TB patients?
+> Rs 500/month under Nikshay Poshan Yojana for nutritional support during treatment.`,
+        mnemonics: [],
+        keyPoints: [
+          "13 recall questions covering mechanisms, ADRs, regimens, resistance, and NTEP policies",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 55", edition: "8th" },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 4: Antimalarial Drugs ───────────────────────────
+  {
+    topicCode: "PH-MOD-05-TOP-04",
+    layers: [
+      {
+        layer: 1,
+        slug: "antimalarial-drugs-foundation",
+        title: "Antimalarial Drugs - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "Antimalarial drugs target different stages of the Plasmodium life cycle. Key drugs include chloroquine, ACT (artemisinin-based combination therapy), primaquine for radical cure of P. vivax, and chemoprophylaxis agents. India's NVBDCP guidelines govern malaria treatment.",
+        contentMd: `# Antimalarial Drugs
+
+## Plasmodium Life Cycle & Drug Targets
+Understanding the parasite life cycle is essential for rational antimalarial therapy.
+
+### Stages and Drug Targets
+| Stage | Location | Drug Target |
+|-------|----------|-------------|
+| **Sporozoites** | Blood (from mosquito) | No drug effective (too brief) |
+| **Hepatic schizogony (pre-erythrocytic)** | Liver | Primaquine, Atovaquone-proguanil |
+| **Erythrocytic schizogony** | RBCs | Chloroquine, ACT, Quinine, Mefloquine |
+| **Hypnozoites** | Liver (P. vivax, P. ovale) | Primaquine, Tafenoquine (radical cure) |
+| **Gametocytes** | Blood | Primaquine (kills gametocytes of all species) |
+
+## Classification by Stage of Action
+
+### Blood Schizonticides (treat acute attack)
+- **Chloroquine**: DOC for P. vivax and chloroquine-sensitive P. falciparum
+- **Artemisinin derivatives**: Artesunate, Artemether - fastest acting
+- **Quinine**: Reserve for severe malaria
+- **Mefloquine**: Prophylaxis and treatment
+
+### Tissue Schizonticides
+- **Primaquine**: Kills hypnozoites (radical cure P. vivax/ovale) + gametocytes
+
+### Sporontocides (block transmission)
+- **Primaquine**: Kills gametocytes, blocks transmission
+
+## Key Drugs
+
+### Chloroquine
+- Concentrates in parasite food vacuole, inhibits heme polymerase
+- Heme (toxic) accumulates and kills the parasite
+- Highly effective against P. vivax (India: most vivax is chloroquine-sensitive)
+
+### Artemisinin-Based Combination Therapy (ACT)
+- **Artesunate + Sulphadoxine-Pyrimethamine (AS+SP)**: First-line for P. falciparum in India
+- **Artemether-Lumefantrine**: WHO recommended
+- Artemisinins produce free radicals that damage parasite proteins
+
+### Primaquine
+- Only drug killing hypnozoites (radical cure for P. vivax relapse)
+- **Contraindicated in G6PD deficiency** (causes hemolytic anemia)
+- Also kills gametocytes of P. falciparum (blocks transmission)
+
+> **Clinical Pearl**: India's NVBDCP guidelines: P. vivax treated with Chloroquine + Primaquine (14 days). P. falciparum treated with ACT (AS+SP) + single dose Primaquine (gametocytocidal).`,
+        mnemonics: [
+          {
+            text: "PRIMAL cure: PRIMaquine for ALL hypnozoites (P. vivax radical cure) and ALL gametocytes",
+            explanation:
+              "Primaquine is the only drug that kills hypnozoites (preventing relapse of P. vivax/ovale) and gametocytes of all species (blocking transmission).",
+          },
+          {
+            text: "CQ in VACUOLE: Chloroquine concentrates in Vacuole, Accumulates heme, Causes Unchecked toxicity, Obliterates Lysosome function, Eliminates parasite",
+            explanation:
+              "Chloroquine's mechanism: concentrates in the parasite food vacuole, inhibits heme polymerase, and causes toxic heme (ferriprotoporphyrin IX) accumulation.",
+          },
+        ],
+        keyPoints: [
+          "Antimalarials target different stages: blood schizonticides (CQ, ACT), tissue schizonticides (primaquine), sporontocides (primaquine)",
+          "Chloroquine: DOC for P. vivax, inhibits heme polymerase in food vacuole",
+          "ACT (Artesunate + SP): first-line for P. falciparum in India",
+          "Primaquine: only drug killing hypnozoites (radical cure) and gametocytes (blocks transmission)",
+          "Primaquine contraindicated in G6PD deficiency (hemolytic anemia)",
+          "NVBDCP governs malaria treatment guidelines in India",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 56 - Antimalarial Drugs", page: "811-830", edition: "8th" },
+          { book: "Park's Textbook", chapter: "Malaria", edition: "26th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "antimalarial-drugs-mechanism",
+        title: "Antimalarial Drugs - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Detailed mechanisms of chloroquine, artemisinins, primaquine, quinine, and antifolate antimalarials. Resistance mechanisms including chloroquine-resistant P. falciparum and artemisinin resistance.",
+        contentMd: `# Mechanisms of Antimalarial Drugs
+
+## Chloroquine - Detailed Mechanism
+1. Chloroquine (a weak base) enters the acidic food vacuole of the parasite
+2. Gets protonated and **trapped** (ion trapping)
+3. Inhibits **heme polymerase** (hemozoin formation)
+4. Free heme (ferriprotoporphyrin IX) accumulates - highly toxic
+5. Membrane damage and parasite death
+
+### Pharmacokinetics
+- Excellent oral absorption, very large Vd (200+ L/kg due to tissue binding)
+- Half-life: 1-2 months (slow elimination from tissues)
+- Hepatic metabolism, renal excretion
+
+### Chloroquine Resistance (P. falciparum)
+- Mutation in **PfCRT gene** (Plasmodium falciparum Chloroquine Resistance Transporter)
+- Mutant transporter pumps chloroquine OUT of the food vacuole
+- Reversed by verapamil (calcium channel blocker) in vitro
+
+## Artemisinin Derivatives
+### Mechanism
+1. Contain an **endoperoxide bridge** (essential for activity)
+2. Fe2+ (from heme) cleaves the endoperoxide bridge
+3. Generates **free radicals** (carbon-centered radicals)
+4. Free radicals alkylate and damage parasite proteins and lipids
+5. Fastest parasite clearance of any antimalarial
+
+### Pharmacokinetics
+| Drug | Route | Half-life | Notes |
+|------|-------|-----------|-------|
+| **Artesunate** | IV/IM/Oral | 1 hr (active metabolite DHA) | DOC for severe malaria |
+| **Artemether** | IM/Oral | 3-4 hr | Oil-based IM |
+| **Dihydroartemisinin (DHA)** | Oral | 1 hr | Active metabolite |
+
+- Short half-life necessitates combination with longer-acting partner drug (ACT)
+
+### Artemisinin Resistance
+- Mutations in **Kelch13 gene** (K13 propeller domain)
+- Emerging in Southeast Asia (Cambodia, Myanmar)
+- Manifests as **delayed parasite clearance** (not complete treatment failure yet)
+
+## Primaquine
+### Mechanism
+- Generates **reactive oxygen species** inside parasite mitochondria
+- Disrupts electron transport chain
+- Effective against hypnozoites and gametocytes (both metabolically active in different ways)
+
+### G6PD Deficiency Risk
+- Primaquine metabolites cause oxidative stress in RBCs
+- Normal RBCs: G6PD maintains glutathione levels to neutralize oxidants
+- G6PD-deficient RBCs: cannot handle oxidative stress, leading to **hemolytic anemia**
+- **Must test G6PD before prescribing primaquine**
+
+## Antifolate Antimalarials
+| Drug | Target | Role |
+|------|--------|------|
+| **Pyrimethamine** | Dihydrofolate reductase (DHFR) | Blood schizonticide |
+| **Sulphadoxine** | Dihydropteroate synthase (DHPS) | Synergistic with pyrimethamine |
+| **Proguanil** | DHFR (via active metabolite cycloguanil) | Prophylaxis |
+
+- Sulphadoxine-Pyrimethamine (SP): used as partner drug in ACT for P. falciparum
+- Resistance: mutations in **dhfr** and **dhps** genes`,
+        mnemonics: [
+          {
+            text: "Artemisinin needs IRON to work: Fe2+ cleaves EndoPeroxide bridge generating free Radicals",
+            explanation:
+              "The endoperoxide bridge in artemisinins is activated by ferrous iron (Fe2+) from parasite heme, generating cytotoxic free radicals that kill the parasite.",
+          },
+          {
+            text: "PfCRT Pumps CQ out: the resistance transporter in P. falciparum",
+            explanation:
+              "Chloroquine resistance in P. falciparum is due to mutations in PfCRT gene that encodes a transporter pumping chloroquine out of the food vacuole, preventing heme accumulation.",
+          },
+        ],
+        keyPoints: [
+          "Chloroquine: ion trapping in food vacuole, inhibits heme polymerase, toxic heme accumulates",
+          "CQ resistance: PfCRT mutation pumps CQ out of food vacuole",
+          "Artemisinins: endoperoxide bridge activated by Fe2+, free radical generation, fastest acting",
+          "Artemisinin resistance: Kelch13 (K13) gene mutations, delayed parasite clearance",
+          "Primaquine: generates ROS, risk of hemolysis in G6PD deficiency - must test before use",
+          "SP (sulphadoxine-pyrimethamine): sequential folate pathway blockade, partner in ACT",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 56 - Antimalarial Drugs", page: "815-825", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 61 - Chemotherapy of Malaria", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "antimalarial-drugs-clinical",
+        title: "Antimalarial Drugs - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "Treatment of uncomplicated and severe malaria per NVBDCP guidelines, chemoprophylaxis, malaria in pregnancy, and the Indian public health context.",
+        contentMd: `# Clinical Applications
+
+## NVBDCP Treatment Guidelines (India)
+
+### P. vivax Malaria
+- **Chloroquine**: 25 mg/kg over 3 days (10 mg/kg day 1 & 2, 5 mg/kg day 3)
+- **Primaquine**: 0.25 mg/kg/day x 14 days (radical cure to eliminate hypnozoites)
+- Must test for **G6PD deficiency** before primaquine
+
+### P. falciparum Malaria (Uncomplicated)
+- **ACT**: Artesunate (4 mg/kg/day x 3 days) + Sulphadoxine-Pyrimethamine (single dose on day 1)
+- **Primaquine**: 0.75 mg/kg single dose on day 2 (gametocytocidal only, NOT radical cure)
+
+### Severe/Complicated Malaria (any species)
+- **IV Artesunate**: 2.4 mg/kg at 0, 12, 24 hours, then daily until oral tolerated
+- Switch to full oral ACT course when patient can take orally
+- Alternatives: IV Quinine (if artesunate unavailable)
+
+> **Clinical Pearl**: Quinine can cause "Cinchonism" - tinnitus, headache, nausea, visual disturbances. Also causes hypoglycemia by stimulating insulin secretion.
+
+## Chemoprophylaxis
+
+| Situation | Drug | Regimen |
+|-----------|------|---------|
+| Short-term travel (CQ-sensitive area) | Chloroquine | 500 mg weekly, start 1 week before |
+| CQ-resistant area | Mefloquine | 250 mg weekly, start 2 weeks before |
+| CQ-resistant area (alternative) | Doxycycline | 100 mg daily, start 2 days before |
+| CQ-resistant area (alternative) | Atovaquone-Proguanil | Start 2 days before, continue 7 days after |
+
+## Malaria in Pregnancy
+| Trimester | P. vivax | P. falciparum |
+|-----------|---------|--------------|
+| 1st trimester | Chloroquine (primaquine deferred to postpartum) | Quinine + Clindamycin (7 days) |
+| 2nd/3rd trimester | Chloroquine + defer primaquine | ACT (Artesunate + SP or AL) |
+| Severe malaria | IV Artesunate (all trimesters) | Same |
+
+- **Primaquine contraindicated in pregnancy** (hemolysis risk, fetal G6PD status unknown)
+- **Doxycycline and tetracycline contraindicated** in pregnancy
+
+## Adverse Effects Summary
+
+| Drug | Major ADRs |
+|------|-----------|
+| Chloroquine | Retinopathy (chronic use), pruritus (dark skin), QT prolongation |
+| Artemisinins | Generally well-tolerated, rare neurotoxicity (high dose) |
+| Primaquine | Hemolytic anemia (G6PD deficiency), methemoglobinemia |
+| Quinine | Cinchonism, hypoglycemia, blackwater fever, QT prolongation |
+| Mefloquine | Neuropsychiatric (vivid dreams, anxiety, psychosis), contraindicated in epilepsy |
+| SP | Stevens-Johnson syndrome, agranulocytosis (rare) |
+
+## Indian Public Health Context
+- India contributes ~3% of global malaria cases (declining trend)
+- P. vivax predominates in most states; P. falciparum dominates in NE India, Odisha, Jharkhand, Chhattisgarh
+- Rapid Diagnostic Tests (RDTs) deployed at all levels including ASHAs
+- Free ACT and chloroquine through NVBDCP
+- Vector control: ITNs (insecticide-treated nets), IRS (indoor residual spraying)`,
+        mnemonics: [
+          {
+            text: "Quinine CINCH: Cinchonism, Insulin release (hypoglycemia), Narrow therapeutic index, Cardiac (QT), Hemolysis (blackwater fever)",
+            explanation:
+              "Major adverse effects of quinine: cinchonism (tinnitus, visual/hearing disturbance), hypoglycemia from insulin release, narrow therapeutic window, cardiac arrhythmia, and blackwater fever (intravascular hemolysis).",
+          },
+          {
+            text: "G6PD before PQ: test Glucose-6-Phosphate Dehydrogenase before giving Primaquine",
+            explanation:
+              "Primaquine causes hemolytic anemia in G6PD-deficient patients. Must perform G6PD screening before prescribing primaquine for radical cure.",
+          },
+        ],
+        keyPoints: [
+          "P. vivax: Chloroquine + Primaquine 14 days (radical cure); P. falciparum: ACT + single-dose Primaquine",
+          "Severe malaria: IV Artesunate (DOC), not quinine as first-line",
+          "G6PD testing mandatory before primaquine administration",
+          "Quinine ADRs: cinchonism, hypoglycemia, blackwater fever, QT prolongation",
+          "Primaquine contraindicated in pregnancy and G6PD deficiency",
+          "Mefloquine: neuropsychiatric side effects, contraindicated in epilepsy",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 56 - Antimalarial Drugs", page: "825-830", edition: "8th" },
+          { book: "Park's Textbook", chapter: "Malaria - NVBDCP", edition: "26th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "antimalarial-drugs-exam",
+        title: "Antimalarial Drugs - Exam Prep",
+        estimatedMinutes: 15,
+        summary:
+          "High-yield one-liners, comparison tables, and commonly tested MCQ patterns on antimalarial pharmacology.",
+        contentMd: `# Exam High Yield
+
+## One-Liners
+- DOC for P. vivax: **Chloroquine** (blood schizonticide)
+- Drug for radical cure of P. vivax: **Primaquine** (kills hypnozoites)
+- DOC for severe malaria: **IV Artesunate**
+- Fastest-acting antimalarial: **Artesunate** (rapid parasite clearance)
+- Antimalarial causing cinchonism: **Quinine**
+- Antimalarial causing hypoglycemia: **Quinine** (stimulates insulin secretion)
+- Antimalarial contraindicated in G6PD deficiency: **Primaquine**
+- Antimalarial causing blackwater fever: **Quinine**
+- Antimalarial with neuropsychiatric effects: **Mefloquine**
+- Chloroquine resistance mechanism: **PfCRT gene mutation** (efflux from vacuole)
+- Artemisinin resistance gene: **Kelch13 (K13)**
+- Chloroquine concentrates in: **Parasite food vacuole (acidic)**
+- Artemisinin bridge essential for activity: **Endoperoxide bridge**
+- Antimalarial used as anti-inflammatory: **Chloroquine/Hydroxychloroquine** (SLE, RA)
+- Drug blocking malaria transmission: **Primaquine** (gametocytocidal)
+
+## Comparison: Key Antimalarials
+
+| Feature | Chloroquine | Artesunate | Primaquine | Quinine |
+|---------|------------|-----------|-----------|---------|
+| Mechanism | Heme polymerase inhibitor | Free radical generation | ROS in mitochondria | Multiple |
+| Stage | Blood schizonticide | Blood schizonticide | Tissue schizonticide + gametocytocide | Blood schizonticide |
+| Route | Oral/IM | IV/IM/Oral | Oral only | IV/Oral |
+| Key ADR | Retinopathy | Well-tolerated | Hemolysis (G6PD) | Cinchonism |
+| Resistance gene | PfCRT | K13 | Not significant | - |
+| Use in pregnancy | Safe | Safe (2nd/3rd) | Contraindicated | Safe but 2nd line |
+
+## Antifolate Combination Rationale
+$$\\text{PABA} \\xrightarrow{\\text{DHPS (blocked by Sulphadoxine)}} \\text{Dihydrofolate} \\xrightarrow{\\text{DHFR (blocked by Pyrimethamine)}} \\text{Tetrahydrofolate}$$
+
+Sequential blockade = synergistic effect.
+
+## Previous Year Themes
+- Life cycle stages and drug targets
+- Chloroquine mechanism and resistance (PfCRT)
+- G6PD deficiency and primaquine
+- Severe malaria treatment (IV artesunate)
+- Cinchonism and quinine toxicity
+- ACT rationale and components
+- Malaria in pregnancy treatment`,
+        mnemonics: [
+          {
+            text: "CLAMP the malaria life cycle: Chloroquine (blood), Lumefantrine (blood partner), Artesunate (blood, fast), Mefloquine (prophylaxis), Primaquine (liver + gametocytes)",
+            explanation:
+              "Key antimalarials and their primary stage of action: CQ and lumefantrine for blood stages, artesunate for rapid blood clearance, mefloquine for prophylaxis, primaquine for liver stages and gametocytes.",
+          },
+        ],
+        keyPoints: [
+          "CQ: blood schizonticide, heme polymerase inhibitor, PfCRT resistance",
+          "Artesunate: fastest acting, endoperoxide bridge + Fe2+ = free radicals",
+          "Primaquine: only drug for radical cure (hypnozoites) and gametocytes",
+          "Quinine: cinchonism, hypoglycemia, blackwater fever",
+          "K13 mutation: artemisinin resistance in SE Asia",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 56", edition: "8th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "antimalarial-drugs-recall",
+        title: "Antimalarial Drugs - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for self-testing on antimalarial drugs.",
+        contentMd: `# Active Recall
+
+**Q1:** What is the mechanism of chloroquine?
+> Chloroquine concentrates in the acidic food vacuole of Plasmodium, inhibits heme polymerase, causing toxic free heme (ferriprotoporphyrin IX) accumulation that kills the parasite.
+
+**Q2:** What is the DOC for severe malaria?
+> IV Artesunate (2.4 mg/kg at 0, 12, 24 hours, then daily).
+
+**Q3:** Why is primaquine essential for P. vivax treatment?
+> Primaquine is the only drug that kills hypnozoites in the liver, preventing relapse (radical cure). Without it, P. vivax can relapse from dormant liver stages.
+
+**Q4:** Why must G6PD be tested before primaquine?
+> Primaquine metabolites generate oxidative stress. G6PD-deficient RBCs cannot maintain glutathione levels, leading to hemolytic anemia.
+
+**Q5:** What is the mechanism of chloroquine resistance?
+> PfCRT (P. falciparum Chloroquine Resistance Transporter) gene mutation causes a transporter to pump chloroquine out of the food vacuole.
+
+**Q6:** How do artemisinins work?
+> The endoperoxide bridge is cleaved by Fe2+ (from parasite heme), generating carbon-centered free radicals that damage parasite proteins and membranes.
+
+**Q7:** What is cinchonism?
+> A syndrome caused by quinine: tinnitus, headache, nausea, blurred vision, and disturbed hearing. Occurs at therapeutic doses.
+
+**Q8:** What antimalarial blocks malaria transmission?
+> Primaquine - kills gametocytes in the blood, preventing mosquitoes from picking up the parasite.
+
+**Q9:** Name the ACT regimen used in India for P. falciparum.
+> Artesunate + Sulphadoxine-Pyrimethamine (AS + SP), plus single-dose primaquine for gametocytocidal action.
+
+**Q10:** Why are artemisinins always given as combination therapy?
+> Artemisinins have very short half-lives (~1 hour). A longer-acting partner drug (lumefantrine, SP, mefloquine) is needed to kill remaining parasites and prevent resistance.
+
+**Q11:** What antimalarial is safe in all trimesters for severe malaria?
+> IV Artesunate - recommended even in 1st trimester for severe/life-threatening malaria.
+
+**Q12:** What is the K13 (Kelch13) gene?
+> Gene whose mutations cause artemisinin resistance, manifesting as delayed parasite clearance. Emerging in Southeast Asia.`,
+        mnemonics: [],
+        keyPoints: [
+          "12 recall questions covering mechanisms, resistance, treatment guidelines, and clinical pharmacology of antimalarials",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 56", edition: "8th" },
+        ],
+      },
+    ],
+  },
 ];

@@ -2,7 +2,7 @@ import type { TopicLessons } from "./content-loader";
 
 export const pharmacologyPart3Lessons: TopicLessons[] = [
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  // MODULE 5 — CHEMOTHERAPY
+  // MODULE 5 — CHEMOTHERAPY (Topics 5-6)
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   // ─── Topic 5: Antifungal & Antiviral Drugs ─────────────────
@@ -15,15 +15,2359 @@ export const pharmacologyPart3Lessons: TopicLessons[] = [
         title: "Antifungal & Antiviral Drugs - Foundation",
         estimatedMinutes: 20,
         summary:
-          "Antifungal drugs target ergosterol in fungal cell membranes (azoles, polyenes, allylamines). Antivirals inhibit viral replication (nucleoside analogues, protease inhibitors, antiretrovirals). Classification, mechanism overview, and common agents used in India.",
-        contentMd: "`# Antifungal & Antiviral Drugs\n\n## Classification of Antifungals\n\n### 1. Polyenes\n- **Mechanism**: Bind ergosterol → pore formation → cell lysis\n- **Examples**: Amphotericin B, Nystatin\n- **Use**: Systemic fungal infections (AmB), oral candidiasis (Nystatin)\n- **India**: AmB used for invasive candidiasis, cryptococcal meningitis\n\n### 2. Azoles (Imidazoles & Triazoles)\n- **Mechanism**: Inhibit CYP450 → block ergosterol synthesis → membrane dysfunction\n- **Imidazoles**: Miconazole, Clotrimazole (topical)\n- **Triazoles**: Fluconazole, Itraconazole, Voriconazole (systemic)\n- **Use**: Candidiasis, aspergillosis, cryptococcosis\n- **India**: Fluconazole oral/IV widely used; itraconazole for serious infections\n\n### 3. Allylamines\n- **Mechanism**: Inhibit squalene epoxidase → ergosterol depletion\n- **Examples**: Terbinafine, Naftifine\n- **Use**: Dermatophyte infections (ringworm, tinea)\n- **India**: Terbinafine preferred for onychomycosis\n\n### 4. Others\n- **Flucytosine**: 5-fluorouracil analogue; used with AmB for cryptococcosis\n- **Griseofulvin**: Binds microtubules; used for tinea (now less common)\n- **Echinocandins**: Caspofungin, Anidulafungin (inhibit β-glucan synthesis)\n\n## Classification of Antivirals\n\n### 1. HIV/AIDS Antiretrovirals (ART)\n- **NRTIs**: Zidovudine (AZT), Lamivudine, Tenofovir\n- **NNRTIs**: Efavirenz, Rilpivirine\n- **PIs**: Ritonavir, Lopinavir\n- **INSTIs**: Raltegravir, Dolutegravir\n- **India**: Government ART programs use combinations; NACO guidelines\n\n### 2. Nucleoside/Nucleotide Analogues\n- **Acyclovir**: Herpes simplex, varicella-zoster\n- **Ganciclovir**: CMV (immunocompromised)\n- **Valacyclovir**: Oral form of acyclovir\n- **India**: Acyclovir common for viral infections\n\n### 3. Protease Inhibitors\n- **Ritonavir**: HIV protease inhibitor\n- **Boceprevir, Telaprevir**: Hepatitis C\n\n### 4. Others\n- **Amantadine, Rimantadine**: Influenza A (but resistance common)\n- **Neuraminidase Inhibitors**: Oseltamivir, Zanamivir (H1N1, seasonal flu)\n- **Interferon-alpha**: Hepatitis B & C\n- **Direct-acting Antivirals (DAAs)**: Sofosbuvir, Daclatasvir (HCV cure)\n\n## Selectivity & Toxicity\n\n| Drug | Target | Toxicity |\n|------|--------|----------|\n| Amphotericin B | Ergosterol | Nephrotoxicity, hypokalemia |\n| Azoles | Ergosterol synthesis | Hepatotoxicity, drug interactions |\n| Acyclovir | Viral DNA polymerase | Nephrotoxicity (IV), neuropathy (high dose) |\n| Zidovudine | Reverse transcriptase | Anemia, granulocytopenia |\n\n## Indian Clinical Context\n- **TB-HIV coinfection**: ART with TB drugs (drug interactions major issue)\n- **Cryptococcal meningitis**: Endemic in India; AmB + fluconazole standard\n- **Candidiasis**: Common in diabetics and immunocompromised; fluconazole first-line\n- **Dermatophytes**: High prevalence in hot, humid climate; terbinafine emerging choice\n- **HCV**: Direct-acting antivirals now accessible through government schemes,\n        mnemonics: [\n          {\n            text: \"ANTI-FUNGAL MNEMONIC: 'AmB Azoles Allylamines'\",\n            explanation:\n              \"Three main classes: AMphotericin B (polyenes), Azoles (CYP450 inhibitors), Allylamines (terbinafine). Remember: AmB is IV toxic, Azoles are oral, Allylamines for dermatophytes.\",\n          },\n          {\n            text: \"NRTI CLASS: 'NucleosiDe = D for DNA'\",\n            explanation:\n              \"NRTIs are nucleoside/nucleotide analogues that block reverse transcriptase DNA synthesis in HIV. AZT (Zidovudine), 3TC (Lamivudine), TDF (Tenofovir).\",\n          },\n          {\n            text: \"ANTI-VIRAL TARGETS: 'Entry → Reverse → Protease → Integrase'\",\n            explanation:\n              \"HIV lifecycle: Entry (CCR5/CD4 antagonists) → Reverse Transcription (NRTIs/NNRTIs) → Protease (PIs) → Integration (INSTIs). Each class hits different step.\",\n          },\n        ],\n        keyPoints: [\n          \"Azoles are most common oral antifungals; inhibit CYP450\",\n          \"Amphotericin B is gold standard IV antifungal but nephrotoxic; use lipid formulations in India\",\n          \"Fluconazole crosses BBB well; preferred for CNS candidiasis and cryptococcosis\",\n          \"Terbinafine preferred for dermatophyte/onychomycosis (fungicidal vs fungistatic azoles)\",\n          \"NRTIs cause mitochondrial toxicity; NNRTIs cause rash; PIs cause lipodystrophy\",\n          \"Antiretrovirals require high adherence; TB-HIV drug interactions critical in India\",\n        ],\n        textbookRefs: [\n          { book: \"KD Tripathi\", chapter: \"Ch 50 - Antifungal, Ch 51 - Antiretroviral & Antivirals\", edition: \"9th\" },\n          { book: \"Rang & Dale\", chapter: \"Ch 51 - Chemotherapy of Infections\", edition: \"9th\" },\n        ],\n      },\n      {\n        layer: 2,\n        slug: \"antifungal-antiviral-mechanism\",\n        title: \"Antifungal & Antiviral Drugs - Mechanism\",\n        estimatedMinutes: 30,\n        summary:\n          \"Detailed mechanisms: ergosterol disruption (polyenes/azoles), viral enzyme inhibition (NRTIs, PIs), reverse transcriptase blocking, integration inhibition. Resistance mechanisms and selectivity ratios.\",\n        contentMd: "# Mechanisms of Action\\n\\n## Antifungal Mechanisms\\n\\n### Polyenes (Amphotericin B)\\n- **Mechanism**: Binds ergosterol in fungal cell membrane\\n- **Result**: Creates pores → K+ and other solutes leak → osmotic lysis\\n- **Selectivity**: Mammalian cells have cholesterol (not ergosterol), but AmB still binds cholesterol weakly → toxicity\\n- **Fungicidal**: Yes\\n\\n### Azoles (Fluconazole, Itraconazole, Voriconazole)\\n- **Target**: Fungal CYP450 (lanosterol 14α-demethylase)\\n- **Mechanism**: Inhibition of this enzyme blocks ergosterol synthesis\\n- **Result**: Accumulation of toxic sterol precursors + loss of membrane integrity\\n- **Fungistatic**: Yes (static, not cidal)\\n- **Selectivity**: Fungi need ergosterol; mammals don't. But azoles inhibit human CYP450 too → drug interactions\\n\\n### Allylamines (Terbinafine)\\n- **Target**: Squalene epoxidase (early ergosterol synthesis step)\\n- **Mechanism**: Blocks squalene → squalene epoxide conversion\\n- **Result**: Rapid ergosterol depletion, accumulation of squalene (toxic)\\n- **Fungicidal**: Yes (more potent than azoles)\\n- **Use**: Dermatophytes (tinea, onychomycosis)\\n\\n### Echinocandins (Caspofungin)\\n- **Target**: β-1,3-D-glucan synthase\\n- **Mechanism**: Inhibits glucan synthesis → weakens fungal cell wall\\n- **Result**: Cell wall collapse\\n- **Fungicidal**: Yes\\n- **Spectrum**: Candida, Aspergillus (not Cryptococcus)\\n\\n## Antiviral Mechanisms\\n\\n### NRTIs (Nucleoside Reverse Transcriptase Inhibitors)\\n- **Target**: HIV reverse transcriptase enzyme\\n- **Mechanism**: Analogues of deoxynucleotides (lack 3'-OH group)\\n- **Process**:\\n  1. Reverse transcriptase incorporates NRTI instead of deoxynucleotide\\n  2. Causes chain termination (no 3'-OH for next bond)\\n  3. Viral DNA synthesis halts\\n- **Examples**: AZT (Zidovudine), 3TC (Lamivudine), TDF (Tenofovir)\\n- **Toxicity**: Mitochondrial toxicity (deplete mtDNA), anemia (AZT), lactic acidosis\\n\\n### NNRTIs (Non-Nucleoside Reverse Transcriptase Inhibitors)\\n- **Target**: HIV reverse transcriptase (allosteric site)\\n- **Mechanism**: Direct binding to RT pocket → conformational change → blocks RNA-dependent DNA synthesis\\n- **Examples**: Efavirenz, Rilpivirine\\n- **Advantage**: No chain termination needed; works alongside NRTIs\\n- **Toxicity**: CNS effects (efavirenz), rash, hepatotoxicity\\n\\n### Protease Inhibitors (PIs)\\n- **Target**: HIV protease enzyme\\n- **Mechanism**: Competitive inhibitors block protease-mediated cleavage of polyproteins (Gag, Pol, Gag-Pol)\\n- **Result**: Immature, non-infectious viral particles produced\\n- **Examples**: Ritonavir, Lopinavir\\n- **Toxicity**: Lipodystrophy, hyperglycemia, hyperlipidemia, drug interactions (potent CYP3A4 inhibitor)\\n\\n### Integrase Inhibitors (INSTIs)\\n- **Target**: HIV integrase enzyme\\n- **Mechanism**: Blocks integration of viral DNA into host chromosome\\n- **Examples**: Raltegravir, Dolutegravir\\n- **Advantage**: Well-tolerated, minimal toxicity\\n- **Emerging**: Preferred in modern ART regimens\\n\\n### Acyclovir (Herpes Antivirals)\\n- **Target**: Viral DNA polymerase\\n- **Mechanism**:\\n  1. Virus-encoded thymidine kinase phosphorylates acyclovir → acyclovir triphosphate\\n  2. Viral DNA polymerase incorporates → chain terminator (lacks 3'-OH)\\n  3. Selective for virus because viral TK is more efficient than human TK\\n- **Result**: Selective toxicity for infected cells\\n\\n## Resistance Mechanisms\\n\\n### Fungal Resistance\\n- **Azoles**: CYP450 mutations reduce drug binding; ergosterol depletion bypass\\n- **Polyenes**: Rare (ergosterol essential)\\n- **Echinocandins**: β-glucan synthase mutations (FKS gene)\\n\\n### Viral Resistance\\n- **NRTIs**: RT mutations reduce ddNTP incorporation; M184V (3TC), D67N (AZT)\\n- **NNRTIs**: RT mutations at binding site; K103N, Y181C (efavirenz)\\n- **PIs**: Multiple protease mutations; I84V, L90M\\n- **INSTIs**: Rarer; Q148 mutations emerging\\n- **Acyclovir**: TK-deficient mutants (virus loses TK enzyme)\\n\\n## Pharmacokinetics Summary\\n\\n| Drug | Route | Bioavailability | BBB Penetration | Elimination |\\n|------|-------|-----------------|-----------------|------------|\\n| Fluconazole | Oral/IV | >90% | Excellent (CNS use) | Renal (80%) |\\n| Itraconazole | Oral | 30% (food-dependent) | Poor (lipophilic) | Hepatic |\\n| Terbinafine | Oral | 70% | Accumulates in nails | Hepatic |\\n| AZT | Oral | 60% | Crosses BBB | Renal + CSF |\\n| Efavirenz | Oral | 45-50% | Excellent | Hepatic |\\n| Ritonavir | Oral | 75% | Minimal | Hepatic (CYP3A4) |,\\n        mnemonics: [\\n          {\\n            text: \\\"POLYENE: 'POre-LENE' (makes POres)\\\",\\n            explanation:\\n              \\\"Amphotericin B makes pores in fungal membrane via ergosterol binding. Remember: binds ERGOsterol → makes holes.\\\",\\n          },\\n          {\\n            text: \\\"AZOLES: 'AZO-les = A-ZOLE fungal proteins'\\\",\\n            explanation:\\n              \\\"Azoles inhibit fungal CYP450 enzymes. They bind to heme iron of CYP → block ergosterol synthesis. Multiple CYP450 hits = many drug interactions.\\\",\\n          },\\n          {\\n            text: \\\"NRTI = 'Missing 3-OH Baby' (chain terminator)\\\",\\n            explanation:\\n              \\\"NRTIs lack the 3'-OH group needed for DNA chain extension. When RT adds them, chain stops. 3TC, AZT, TDF all lacking 3-OH.\\\",\\n          },\\n          {\\n            text: \\\"NNRTI = 'NonNuc RT allosteric' (direct hit, not nucleotide)\\\",\\n            explanation:\\n              \\\"NNRTIs bind directly to RT pocket (not as nucleotide analogue). Efavirenz, rilpivirine cause conformational change.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Amphotericin B creates pores via ergosterol binding; nephrotoxic but necessary for serious fungal infections\\\",\\n          \\\"Azoles inhibit fungal CYP450; high interaction potential with human CYP3A4, CYP2C19\\\",\\n          \\\"Terbinafine is fungicidal; concentrates in skin/nails for 6+ months\\\",\\n          \\\"NRTIs are chain terminators; cause mitochondrial toxicity especially with prolonged use\\\",\\n          \\\"NNRTIs work synergistically with NRTIs; resistance rapid if monotherapy used\\\",\\n          \\\"Protease inhibitors are potent CYP3A4 inhibitors; ritonavir used as booster in combination ART\\\",\\n          \\\"Integrase inhibitors have minimal toxicity and good CSF penetration; emerging as preferred class\\\",\\n          \\\"Acyclovir is a viral DNA chain terminator; selective via viral thymidine kinase\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 50-51 - Antifungal & Antivirals (Detailed Mechanism)\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 51 - Molecular basis of drug action\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Goodman & Gilman\\\", chapter: \\\"Ch 57-58 - Antiretrovirals\\\", edition: \\\"13th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"antifungal-antiviral-clinical\\\",\\n        title: \\\"Antifungal & Antiviral Drugs - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Clinical use cases in India: cryptococcal meningitis (AmB + fluconazole), candidiasis in diabetics, onychomycosis management. ART initiation, TB-HIV coinfection, antiretroviral regimens per NACO guidelines.\\\",\\n        contentMd: ``# Clinical Applications in Indian Context\\n\\n## Antifungal Clinical Scenarios\\n\\n### Candidiasis\\n**Oropharyngeal (OPC)**\\n- **Presentation**: White plaques in mouth, difficulty swallowing; common in diabetes, CD4 <200\\n- **India prevalence**: Rising with diabetes epidemic and HIV\\n- **First-line**: Fluconazole 200 mg daily × 7-14 days (oral or IV)\\n- **Alternative**: Nystatin mouth rinse (less systemic absorption)\\n- **Refractory**: Voriconazole or echinocandins if fluconazole-resistant\\n\\n**Esophageal Candidiasis**\\n- **Presentation**: Odynophagia, dysphagia; indicates CD4 <50\\n- **Treatment**: IV Fluconazole 400 mg daily or Itraconazole capsule 200 mg BD\\n- **India**: Common in late-stage AIDS; prophylaxis with fluconazole once CD4 <100\\n\\n**Invasive Candidiasis / Candidemia**\\n- **Presentation**: Fever unresponsive to antibiotics; fungemia on blood culture\\n- **High-risk**: ICU patients, central lines, acute pancreatitis\\n- **First-line**: IV Amphotericin B (1 mg/kg/day) or Echinocandin (Caspofungin 70 mg load then 50 mg daily)\\n- **India**: AmB more affordable; lipid formulation preferred if renal compromise\\n\\n### Cryptococcal Meningitis\\n**Epidemiology**: Common in India (warm climate, immunocompromised)\\n- **Presentation**: Subacute meningitis, headache, low CSF glucose, yeast on India ink\\n- **CD4**: Usually <100 in HIV+\\n- **Diagnosis**: CSF cryptococcal antigen (CRAG), culture\\n\\n**Treatment (NACO Guidelines)**\\n1. **Induction (2 weeks)**: IV Amphotericin B 1 mg/kg/day + Oral Fluconazole 1200 mg/day\\n2. **Consolidation (8 weeks)**: Oral Fluconazole 800 mg/day\\n3. **Maintenance**: Fluconazole 200-400 mg/day lifelong or until CD4 >100 × 3 months\\n\\n**AmB Toxicity Management**:\\n- Electrolyte monitoring (K+, Mg2+, Ca2+)\\n- Premedication: Acetaminophen, diphenhydramine\\n- Lipid formulation if Cr >1.5 mg/dL\\n\\n### Aspergillosis\\n- **Invasive**: Mainly in severely immunocompromised (CD4 <50)\\n- **Pulmonary**: Cavitation, hemoptysis\\n- **CNS**: Voriconazole preferred (better penetration than itraconazole)\\n- **India**: Less common than candidiasis/cryptococcosis but emerging\\n\\n### Dermatophytes (Tinea)\\n**Incidence**: Very high in India (hot, humid climate)\\n- **Tinea pedis, cruris, corporis**:\\n  - **Topical**: Terbinafine 1% cream × 2 weeks\\n  - **Oral**: Not needed unless extensive or nail involvement\\n\\n- **Onychomycosis** (nail infection):\\n  - **Preferred**: Terbinafine 250 mg daily × 6-12 weeks (fungicidal, better cure rate)\\n  - **Alternative**: Itraconazole 200 mg BD × 1 week monthly × 3 months (pulse therapy)\\n  - **Efficacy**: Terbinafine ~70-80%, Itraconazole ~50-60%\\n\\n## Antiviral Clinical Scenarios\\n\\n### HIV/AIDS Management (NACO Guidelines)\\n\\n**Initiation Criteria**:\\n- All patients with CD4 <200 OR WHO Stage 3/4\\n- Start within 2 weeks of TB diagnosis (if TB-HIV coinfection)\\n- CD4 >200 but symptomatic: Consider initiating\\n\\n**Standard First-Line Regimen (India)**:\\n- **TDF + 3TC + EFV** (or DTG as NNRTI alternative)\\n  - TDF: Tenofovir 300 mg OD\\n  - 3TC: Lamivudine 300 mg OD\\n  - EFV: Efavirenz 600 mg nocte (or DTG 50 mg OD)\\n\\n**Alternative if EFV contraindicated**:\\n- **TDF + 3TC + LPV/r** (Lopinavir/Ritonavir 400/100 mg BD)\\n\\n**TB-HIV Coinfection** (Critical in India):\\n| TB Drug | ART Impact | Solution |\\n|---------|-----------|----------|\\n| Rifampicin | Induces CYP3A4 → ↓PI levels | Use PI-sparing regimen (NNRTI or INSTI) |\\n| Isoniazid | Minor CYP interaction | No change needed |\\n\\n**Recommended for TB-HIV**: TDF + 3TC + (EFV or DTG) — avoid PIs with rifampicin\\n\\n**CD4 Recovery Monitoring**:\\n- Expect rise of 50-100 cells/month initially\\n- CD4 >200 × 3 months: Stop OI prophylaxis\\n- Immune reconstitution inflammatory syndrome (IRIS) possible with rapid CD4 rise\\n\\n**OI Prophylaxis** (per CD4 count):\\n- **CD4 <200**: TMP-SMX (cotrimoxazole) prophylaxis\\n- **CD4 <100**: Add Fluconazole (candidiasis) + Azithromycin (MAC)\\n- **CD4 <50**: Add Fluconazole (cryptococcosis) + Valganciclovir (CMV) if CD4 <50\\n\\n### Genital Herpes (HSV)\\n- **Acute**: Acyclovir 400 mg 5 times/day × 10 days or IV if severe\\n- **Recurrent**: Valacyclovir 500 mg BD × 5 days (better bioavailability than acyclovir)\\n- **Prophylaxis** (frequent recurrences): Acyclovir 400 mg BD long-term\\n\\n### Varicella-Zoster Virus (VZV)\\n- **Chickenpox**: Acyclovir 20 mg/kg 4-5 times/day × 5 days (mainly supportive)\\n- **Shingles**: Acyclovir 800 mg 5 times/day × 7 days or Valacyclovir 1000 mg TDS × 7 days\\n- **Post-herpetic neuralgia**: Amitriptyline, gabapentin, pregabalin (antiviral + analgesic)\\n\\n### Hepatitis B & C\\n- **Hepatitis B**: Tenofovir (TDF) 300 mg OD or Entecavir 0.5 mg OD — may be used in ART if HBsAg+\\n- **Hepatitis C**:\\n  - **Genotype 3** (common in India): Sofosbuvir + Daclatasvir × 12 weeks (>95% cure)\\n  - **Genotype 1**: Sofosbuvir + Ledipasvir ± Ribavirin\\n  - Accessible through government programs; low cost\\n\\n### Influenza & COVID-19\\n- **Oseltamivir** (Tamiflu): 75 mg BD × 5 days — start within 48 hours of symptom onset\\n- **Zanamivir**: Inhaled alternative\\n- **COVID-19**: Remdesivir in hospitalized severe disease; Paxlovid (Nirmatrelvir/Ritonavir) in high-risk outpatients,\\n        mnemonics: [\\n          {\\n            text: \\\"NACO ART START: 'TLD' (TDF-3TC-DTG) or 'TLE' (TDF-3TC-EFV)\\\",\\n            explanation:\\n              \\\"NACO first-line (2024): TLD preferred (better tolerated). TLE alternative if DTG unavailable. Never monotherapy; always combination.\\\",\\n          },\\n          {\\n            text: \\\"TB-HIV: 'NNRTI + INSTI, avoid PI'\\\",\\n            explanation:\\n              \\\"Rifampicin potently induces CYP3A4, so avoid PIs. Use NNRTI-based (EFV) or INSTI-based (DTG) regimens with TB drugs.\\\",\\n          },\\n          {\\n            text: \\\"OI PROPHYLAXIS by CD4: '200 = TMP-SMX, 100 = Add Azithro, 50 = Add Valganciclovir'\\\",\\n            explanation:\\n              \\\"CD4 <200: Start TMP-SMX. <100: Add Azithromycin (MAC) + consider Fluconazole. <50: Add Valganciclovir (CMV).\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Cryptococcal meningitis in India requires AmB induction + fluconazole consolidation (NACO guidelines)\\\",\\n          \\\"Candidiasis prophylaxis with fluconazole reduces mortality in CD4 <100; cost-effective in India\\\",\\n          \\\"Terbinafine is preferred for onychomycosis due to fungicidal action and nail concentration\\\",\\n          \\\"TB-HIV coinfection requires NNRTI or INSTI-based ART; rifampicin + PI combination is contraindicated\\\",\\n          \\\"NACO-recommended ART: TDF + 3TC + (DTG or EFV); all generic and affordable\\\",\\n          \\\"Immune reconstitution inflammatory syndrome (IRIS) occurs with rapid CD4 rise; manage with continued ART ± NSAIDs\\\",\\n          \\\"Acyclovir selective for HSV/VZV via viral thymidine kinase; safe in pregnancy\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 50-51 - Clinical use and Indian guidelines\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NACO (National AIDS Control Organization)\\\", chapter: \\\"HIV ART Guidelines, Opportunistic Infection Management\\\", edition: \\\"2024\\\" },\\n          { book: \\\"Indian Journal of Dermatology\\\", chapter: \\\"Antifungal agents in tinea management\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"antifungal-antiviral-exam\\\",\\n        title: \\\"Antifungal & Antiviral Drugs - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary:\\n          \\\"High-yield exam points: antifungal drug selectivity, resistance patterns, ART regimen choice, TB-HIV drug interactions, OI prophylaxis thresholds, and common MCQ traps.\\\",\\n        contentMd: ``# Exam-Focused High-Yield Points\\n\\n## Key Comparisons for Exams\\n\\n### Azoles vs Polyenes\\n| Feature | Azoles (Fluconazole) | Polyenes (AmB) |\\n|---------|---------------------|----------------|\\n| **Mechanism** | CYP450 inhibition | Ergosterol binding → pores |\\n| **Route** | Oral/IV possible | IV only |\\n| **BBB Penetration** | Good (cryptococcal meningitis) | Poor |\\n| **Fungicidal/static** | Static | Cidal |\\n| **Toxicity** | CYP interactions, hepatotoxicity | Nephrotoxicity, K+ loss |\\n| **Resistance** | Emerging (CYP mutations) | Rare |\\n\\n### Terbinafine vs Itraconazole (Onychomycosis)\\n| Parameter | Terbinafine | Itraconazole |\\n|-----------|------------|-------------|\\n| **Mechanism** | Squalene epoxidase inhibitor (fungicidal) | CYP450 inhibitor (fungistatic) |\\n| **Duration** | 6-12 weeks continuous | 3 months pulse therapy |\\n| **Cure rate** | 70-80% | 50-60% |\\n| **Nail concentration** | Highest (accumulates) | Moderate |\\n| **Cost in India** | Affordable generic | Slightly more |\\n| **Exam favorite** | **YES** — preferred agent |\\n\\n### NRTI vs NNRTI vs PI\\n| Class | Mechanism | Example | Resistance | Toxicity |\\n|-------|-----------|---------|-----------|----------|\\n| **NRTI** | Chain terminator | AZT, 3TC, TDF | Common (M184V) | Anemia, lactic acidosis, mitochondrial |\\n| **NNRTI** | Allosteric RT inhibition | EFV, RPV | Rapid (K103N) | CNS (EFV), rash, hepato |\\n| **PI** | Protease inhibitor | LPV/r, RTV | Less common | Lipodystrophy, hyperglycemia, CYP3A4 ↑ |\\n\\n## Common Exam Traps\\n\\n**TRAP 1**: \\\"Which antifungal for CNS cryptococcal meningitis?\\\"\\n- **Wrong**: Itraconazole (lipophilic, poor BBB penetration)\\n- **Right**: Fluconazole induction + AmB (AmB for CSF penetration) or fluconazole alone if mild\\n\\n**TRAP 2**: \\\"Patient on rifampicin (TB) + Lopinavir/ritonavir (HIV)\\\"\\n- **Wrong**: Continue current regimen\\n- **Right**: STOP PI; switch to NNRTI or INSTI (rifampicin is potent CYP3A4 inducer)\\n\\n**TRAP 3**: \\\"CD4 150: Prophylaxis for what?\\\"\\n- **Wrong**: Start MAC prophylaxis only\\n- **Right**: TMP-SMX (mandatory <200), Fluconazole (optional but recommended <100)\\n\\n**TRAP 4**: \\\"Acyclovir resistance mechanism?\\\"\\n- **Wrong**: Viral DNA polymerase mutation\\n- **Right**: Thymidine kinase (TK)-deficient mutants (virus loses ability to phosphorylate acyclovir)\\n\\n**TRAP 5**: \\\"Echinocandin for Cryptococcus neoformans?\\\"\\n- **Wrong**: Yes\\n- **Right**: **NO** — echinocandins have poor activity against Cryptococcus; use AmB or azoles\\n\\n## High-Yield Mnemonics for Exams\\n\\n**LIMP (Lipophilic = weak BBB penetration)**\\n- Lipophilic antifungals (Itraconazole, Ketoconazole) = poor CNS penetration\\n- Hydrophilic agents (Fluconazole) = excellent BBB penetration\\n\\n**AmB TOXICITY = 'ANKLE'**\\n- **A**mino-aminoglycosides (nephrotoxicity combined)\\n- **N**ephrotoxicity\\n- **K**alemia loss (hypokalemia)\\n- **L**iver (rare hepatotoxicity)\\n- **E**lectrolyte wasting\\n\\n**NRTI RESISTANCE = 'M184V' (most common)**\\n- M184V = 3TC/FTC resistance marker (most frequent NRTI mutation)\\n- Associated with lower viral load but loss of 3TC activity\\n\\n**PI + RIFAMPICIN = NEVER**\\n- Rifampicin CYP3A4 inducer → ↓↓ PI levels\\n- Use NNRTI or INSTI instead\\n\\n## NMC Competency Focus\\n\\n**Pharmacology Competency**: \\\"Drugs used for common infections\\\"\\n- Know: AmB vs fluconazole choice based on site/severity\\n- Know: ART regimen initiation (NACO) and OI prophylaxis\\n- Know: TB-HIV drug interactions management\\n- Know: Dermatophyte treatment (terbinafine preferred for nails)\\n\\n**Expected Exam Question Types**:\\n1. **Case-based**: \\\"40-year-old with HIV CD4 150 + headache + CSF shows yeast\\\"\\n   - Answer: Cryptococcal meningitis; treat with IV AmB + oral fluconazole\\n\\n2. **Drug interaction**: \\\"TB patient on rifampicin starting HIV ART\\\"\\n   - Answer: Avoid PIs; use TDF + 3TC + EFV (NNRTI-based)\\n\\n3. **Drug comparison**: \\\"Best drug for onychomycosis in 6-week treatment window?\\\"\\n   - Answer: Terbinafine 250 mg daily × 6 weeks (fungicidal, best nail penetration)\\n\\n4. **Resistance**: \\\"Acyclovir-resistant HSV in immunocompromised patient\\\"\\n   - Answer: Foscarnet or Cidofovir (alternative viral DNA polymerase inhibitors),\\n        mnemonics: [\\n          {\\n            text: \\\"ANTIFUNGAL BBB: 'Fluconazole Flies (through BBB); Itraconazole Stays (out)'\\\",\\n            explanation:\\n              \\\"Fluconazole excellent CNS penetration (use for meningitis). Itraconazole poor penetration (lipophilic). Exam: cryptococcal meningitis = fluconazole.\\\",\\n          },\\n          {\\n            text: \\\"TB-HIV COMBO: 'TDF-3TC-NNRTI, NOT PI'\\\",\\n            explanation:\\n              \\\"Rifampicin (TB) destroys PIs via CYP3A4 induction. NACO rule: use NNRTI (EFV) or INSTI (DTG) with TDF + 3TC.\\\",\\n          },\\n          {\\n            text: \\\"ECHINOCANDINS: 'Can't do CRYPTO'\\\",\\n            explanation:\\n              \\\"Echinocandins (Caspofungin) have NO activity against Cryptococcus. Use AmB or azoles instead. Common exam trap.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Fluconazole = CNS penetration gold standard; use for cryptococcal meningitis\\\",\\n          \\\"Terbinafine = fungicidal agent of choice for dermatophytes and onychomycosis\\\",\\n          \\\"AmB nephrotoxicity is dose-limiting; requires K+, Mg2+, Ca2+ monitoring\\\",\\n          \\\"NACO ART first-line: TDF + 3TC + (DTG preferred over EFV for tolerability)\\\",\\n          \\\"Rifampicin + PI = contraindication; use NNRTI or INSTI instead\\\",\\n          \\\"CD4 <200: TMP-SMX prophylaxis is mandatory; CD4 <100: add more agents\\\",\\n          \\\"NRTIs cause chain termination via missing 3'-OH; M184V common resistance\\\",\\n          \\\"Acyclovir resistance = viral TK deficiency (not DNA polymerase mutation)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 50-51 (Antifungal & Antiviral summary)\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NMC CBME\\\", chapter: \\\"Pharmacology competencies\\\", edition: \\\"2024\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"antifungal-antiviral-recall\\\",\\n        title: \\\"Antifungal & Antiviral Drugs - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary:\\n          \\\"7-question active recall set covering antifungal drug selection, ART initiation, OI prophylaxis, TB-HIV interactions, and resistance mechanisms.\\\",\\n        contentMd: ``# Active Recall Questions\\n\\n**Q1: A 28-year-old man with HIV (CD4 70) presents with subacute meningitis. CSF shows yeast. What is the first-line induction therapy per NACO?**\\n> **Answer**: IV Amphotericin B 1 mg/kg/day + Fluconazole 1200 mg/day × 2 weeks (induction), then fluconazole 800 mg/day × 8 weeks (consolidation). AmB chosen for CNS penetration and fungicidal action; fluconazole added for synergy.\\n\\n**Q2: A TB patient starts rifampicin. He has CD4 <200 and needs ART. Why is a PI-based regimen contraindicated?**\\n> **Answer**: Rifampicin is a potent CYP3A4 inducer. It reduces PI (e.g., lopinavir/ritonavir) levels by 75%, rendering them subtherapeutic. Use NNRTI-based (TDF + 3TC + EFV) or INSTI-based (TDF + 3TC + DTG) instead.\\n\\n**Q3: What is the mechanism of terbinafine's fungicidal activity in dermatophytes, and why is it preferred over itraconazole for onychomycosis?**\\n> **Answer**: Terbinafine inhibits squalene epoxidase → blocks ergosterol synthesis → fungicidal (kills fungus). It accumulates in nails (70% cure in 6-12 weeks) vs itraconazole fungistatic action (50% cure in pulse therapy). Better nail penetration, higher efficacy.\\n\\n**Q4: A patient on acyclovir-resistant HSV develops severe genital herpes. What is the mechanism of resistance, and what is the alternative agent?**\\n> **Answer**: Mechanism = thymidine kinase (TK)-deficient mutants. Virus lacks viral TK enzyme needed to phosphorylate acyclovir. Alternative: Foscarnet (directly inhibits viral DNA polymerase, bypassing TK requirement).\\n\\n**Q5: In HIV-positive patient with CD4 150, what OI prophylaxis should be started? List all medications.**\\n> **Answer**:\\n> - Mandatory: TMP-SMX (cotrimoxazole) for PCP prophylaxis\\n> - Recommended: Fluconazole 200 mg daily (candidiasis) + Azithromycin 1200 mg weekly (MAC prophylaxis)\\n> - Optional if CD4 <50: Valganciclovir (CMV) if other risk factors\\n\\n**Q6: Explain the difference between NRTIs and NNRTIs in mechanism, and why combining them is synergistic in ART.**\\n> **Answer**:\\n> - **NRTIs**: Nucleotide analogues lacking 3'-OH → chain terminators (compete with dNTPs)\\n> - **NNRTIs**: Allosteric inhibitors of RT → non-competitive, bind directly to enzyme pocket\\n> - Synergy: Work via different mechanisms at different enzyme sites → additive suppression of reverse transcription. Example: AZT (NRTI) + EFV (NNRTI).\\n\\n**Q7: A 45-year-old with diabetes presents with onychomycosis involving 3 nails. Compare treatment options for rapid cure.**\\n> **Answer**:\\n> - **Best**: Terbinafine 250 mg OD × 6-12 weeks (fungicidal, nail accumulation, 70-80% cure)\\n> - **Alternative**: Itraconazole 200 mg BD × 1 week monthly × 3-4 months (pulse therapy, 50-60% cure, fewer drug interactions)\\n> - **Cost in India**: Both affordable generic; terbinafine preferred for efficacy and duration,\\n        mnemonics: [],\\n        keyPoints: [\\n          \\\"7 recall questions covering mechanisms, clinical decisions, and drug selection\\\",\\n          \\\"Focus on: AmB vs fluconazole, TB-HIV interactions, OI prophylaxis, resistance\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 50-51\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NACO Guidelines\\\", chapter: \\\"HIV and OI Management\\\", edition: \\\"2024\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n\\n  // ─── Topic 6: Anthelmintics & Antiprotozoals ─────────────────\\n  {\\n    topicCode: \\\"PH-MOD-05-TOP-06\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"anthelmintics-antiprotozoals-foundation\\\",\\n        title: \\\"Anthelmintics & Antiprotozoals - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Parasitic infections common in India: helminths (roundworms, tapeworms, hookworms) and protozoa (malaria, dysentery, giardiasis). Classification, common drugs, and epidemiology.\\\",\\n        contentMd: ``# Anthelmintics & Antiprotozoals\\n\\n## Helminth Classification & Common Drugs\\n\\n### 1. Roundworms (Nematodes)\\n- **Ascaris lumbricoides** (most common helminth in India)\\n  - **Drug**: Albendazole 400 mg single dose or Mebendazole 500 mg × 3 days\\n  - **Presentation**: Abdominal pain, malnutrition, intestinal obstruction\\n\\n- **Hookworms** (Ancylostoma, Necator)\\n  - **Drug**: Albendazole 400 mg × 3 days (or mebendazole)\\n  - **Presentation**: Anemia, protein malnutrition (chronic blood loss)\\n\\n- **Trichuris trichiura** (Whipworm)\\n  - **Drug**: Mebendazole 100 mg BD × 3 days\\n\\n- **Strongyloides stercoralis** (Threadworm)\\n  - **Drug**: Ivermectin 200 μg/kg × 2 doses (7-10 days apart)\\n  - **Risk**: Disseminated strongyloidiasis if immunocompromised\\n\\n### 2. Tapeworms (Cestodes)\\n- **Taenia saginata** (beef), **Taenia solium** (pork)\\n  - **Drug**: Niclosamide 2 g single dose (not absorbed, acts on gut tapeworm)\\n  - **Alternative**: Praziquantel 5-10 mg/kg single dose\\n  - **Prevention**: Cook meat properly\\n\\n- **Echinococcosis** (hydatid cyst)\\n  - **Drug**: Albendazole 400 mg BD × 28 days (cycles × 2-3)\\n  - **Presentation**: Cyst in liver/lungs; may need surgery\\n\\n### 3. Trematodes (Flukes)\\n- **Schistosomiasis** (Schistosoma haematobium, mansoni)\\n  - **Drug**: Praziquantel 40 mg/kg/day × 2-3 days\\n  - **India**: Not endemic (Africa, Middle East)\\n\\n- **Fasciolopsis** (intestinal fluke)\\n  - **Drug**: Praziquantel 75 mg/kg/day × 2 days\\n\\n## Protozoan Classification & Common Drugs\\n\\n### 1. Malaria (Plasmodium)\\n**Epidemiology**: 400 million cases/year globally; endemic in India (P. vivax, P. falciparum)\\n\\n| Plasmodium | Drug | Dosing |\\n|-----------|------|--------|\\n| **P. vivax** | Chloroquine (if sensitive) | 10 mg/kg then 5 mg/kg on days 2-3 |\\n| **P. falciparum** | Artemether (IV) + artemisinin derivatives | Artemether 3.2 mg/kg/day × 3 days |\\n| | OR ACT (Artemisinin + partner) | Artemether-lumefantrine, artesunate-amodiaquine |\\n| **P. vivax relapse** | Primaquine | 15 mg/day × 14 days (G6PD screening first!) |\\n\\n### 2. Amebic Dysentery (Entamoeba histolytica)\\n- **Intestinal**: Metronidazole 750 mg TDS × 10 days (luminal) + Diloxanide furoate 500 mg TDS × 10 days (cyst-killer)\\n- **Hepatic abscess**: Metronidazole IV 500 mg TDS × 7-10 days (reaches liver)\\n\\n### 3. Giardiasis (Giardia lamblia)\\n- **Drug**: Metronidazole 400-500 mg TDS × 7-10 days (or tinidazole single 2 g dose)\\n- **Presentation**: Malabsorption, fatty diarrhea, weakness\\n- **India**: Common in children; sanitation key to prevention\\n\\n### 4. Tuberculosis-like Parasites\\n- **Toxoplasmosis** (Toxoplasma gondii, CD4 <100)\\n  - **Drug**: TMP-SMX (trimethoprim-sulfamethoxazole)\\n  - **Alternative**: Pyrimethamine + Sulfadiazine\\n\\n### 5. Sleeping Sickness & Leishmaniasis\\n- **Leishmaniasis** (Leishmania donovani, endemic in India)\\n  - **Drug**: Sodium stibogluconate IV (pentavalent antimony) 20 mg/kg/day × 28 days\\n  - **Alternative**: Amphotericin B (liposomal) 3 mg/kg alternate days × 10-14 doses\\n  - **Presentation**: Fever, hepatosplenomegaly, pancytopenia\\n\\n## Major Drug Classes\\n\\n### Benzimidazoles (Albendazole, Mebendazole)\\n- **Mechanism**: Bind β-tubulin → microtubule disruption → parasite immobilization\\n- **Spectrum**: Broad (Ascaris, hookworm, Trichuris, echinococcosis)\\n- **Advantage**: Single dose, oral, cheap in India\\n- **Toxicity**: GI upset, rarely hepatotoxicity\\n\\n### Antiprotozoals\\n- **Metronidazole**: Anaerobic prodrug → free radical damage (used for amebas, giardia, anaerobes)\\n- **Artemisinin derivatives**: Sesquiterpene lactones → ROS generation (malaria)\\n- **Quinine/Chloroquine**: Heme-targeting (malaria parasite)\\n- **Antimonials**: Oxidative stress (leishmaniasis)\\n\\n## Epidemiology in India\\n- **Ascariasis**: ~40 million people infected (highest burden)\\n- **Hookworm**: ~20 million (causes anemia in children)\\n- **Malaria**: 2-3 million cases/year (declining with NMEP programs)\\n- **Amebic dysentery**: Common in poor sanitation areas\\n- **Kala-azar** (Leishmaniasis): Eliminated from Bangladesh/Nepal; controlled in India,\\n        mnemonics: [\\n          {\\n            text: \\\"BENZIMIDAZOLES: 'Alba-Meb' (Albendazole, Mebendazole)\\\",\\n            explanation:\\n              \\\"Both benzimidazoles inhibit microtubule formation via β-tubulin binding. Broad spectrum against roundworms, tapeworms. Alba = broader spectrum; Meb = narrower.\\\",\\n          },\\n          {\\n            text: \\\"ANTHELMINTIC DOSES: 'Albendazole 400, Meb 500'\\\",\\n            explanation:\\n              \\\"Albendazole 400 mg single dose (or × 3 days). Mebendazole 500 mg × 3 days. Easy to remember: Alba = 400, Meb = 500.\\\",\\n          },\\n          {\\n            text: \\\"METRONIDAZOLE BUGS: 'MANY Anaerobes' (Mnemonic for protozoan targets)\\\",\\n            explanation:\\n              \\\"Metronidazole targets: Entamoeba, Giardia, Anaerobic bacteria, Trichomonas. All anaerobic or microaerophilic organisms.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Ascaris lumbricoides most common helminth in India; albendazole first-line\\\",\\n          \\\"Hookworms cause anemia via blood loss; require prolonged albendazole therapy\\\",\\n          \\\"Praziquantel is broad-spectrum anthelmintic (trematodes, tapeworms); niclosamide for tapeworms only\\\",\\n          \\\"Malaria management: ACT (artemisinin + partner drug) for all Plasmodium species in India\\\",\\n          \\\"Primaquine essential for P. vivax eradication but requires G6PD screening (hemolysis risk)\\\",\\n          \\\"Metronidazole is go-to for amebic dysentery + giardiasis; always combine with luminal agent for amebas\\\",\\n          \\\"Leishmaniasis (kala-azar): Endemic in Bihar, West Bengal; treated with antimonials or amphotericin B\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 52 - Anthelmintics, Ch 53 - Antiprotozoals\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 51 - Chemotherapy of Infections\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"anthelmintics-antiprotozoals-mechanism\\\",\\n        title: \\\"Anthelmintics & Antiprotozoals - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary:\\n          \\\"Detailed mechanisms: microtubule inhibition (benzimidazoles), oxidative stress (artemisinin, antimonials), nucleic acid synthesis inhibition, selective toxicity ratios.\\\",\\n        contentMd: ``# Mechanisms of Action\\n\\n## Anthelmintic Mechanisms\\n\\n### Benzimidazoles (Albendazole, Mebendazole)\\n- **Target**: β-tubulin protein in parasite microtubules\\n- **Mechanism**:\\n  1. Bind to tubulin → prevent microtubule polymerization\\n  2. Disruption of mitotic spindle formation\\n  3. Immobilization of worm → impaired nutrient absorption\\n  4. Gradual starvation and death\\n- **Selectivity**: Parasitic tubulin has lower affinity for benzimidazoles than human tubulin (safe margin)\\n- **Parasite Effect**: Paralysis → expulsion in feces\\n\\n### Praziquantel (Trematodes, Tapeworms)\\n- **Target**: Schistosomes, Taenia spp.\\n- **Mechanism**:\\n  1. Increases calcium permeability in parasitic muscle\\n  2. Sustained muscle contraction → spasm\\n  3. Disrupts tegument (parasite skin)\\n  4. Exposed antigens → immune attack\\n  5. Paralysis and expulsion\\n- **Note**: Works via completely different mechanism than benzimidazoles\\n\\n### Ivermectin (Strongyloides, Filaria)\\n- **Target**: Glutamate-gated chloride channels in parasite muscle/nerve\\n- **Mechanism**:\\n  1. Opens chloride channels → hyperpolarization\\n  2. Muscle paralysis\\n  3. Expulsion of worms\\n- **Advantage**: Excellent for tissue-dwelling parasites (Strongyloides, Onchocerca)\\n\\n### Niclosamide (Tapeworms)\\n- **Target**: Mitochondria of tapeworm\\n- **Mechanism**:\\n  1. Uncouples oxidative phosphorylation → energy depletion\\n  2. Detachment of worm from mucosa\\n  3. Expulsion in feces\\n- **Note**: Acts locally in GI tract (not absorbed); doesn't need systemic absorption\\n\\n## Antiprotozoan Mechanisms\\n\\n### Metronidazole (Amebas, Giardia)\\n- **Target**: DNA of anaerobic organisms\\n- **Mechanism**:\\n  1. Nitroimidazole prodrug activated by parasitic nitroreductase\\n  2. Forms free radicals (NO•, free electrons)\\n  3. Damages parasite DNA → strand breaks\\n  4. Parasite death\\n- **Selectivity**: Parasitic nitroreductase more efficient than human enzymes\\n- **Effect**: Trophozoite death (amebas in intestine and liver); giardia trophozoites\\n\\n### Artemisinin Derivatives (Malaria)\\n- **Target**: Plasmodium parasites (all stages)\\n- **Mechanism**:\\n  1. Sesquiterpene lactone structure + parasitic heme (Fe2+)\\n  2. Formation of reactive oxygen species (ROS) → free radicals\\n  3. Protein oxidation, mitochondrial damage, parasite death\\n  4. Rapid action (parasite clearance in hours)\\n- **Advantage**: Fast-acting; effective against all Plasmodium species; gametocidal (prevents transmission)\\n- **Resistance**: Emerging (Southeast Asia); delays to parasite clearance observed\\n\\n### Chloroquine & Quinine (Malaria - older agents)\\n- **Target**: Plasmodium digestive vacuole\\n- **Mechanism**:\\n  1. Accumulation in parasitic food vacuole\\n  2. Inhibition of heme polymerization\\n  3. Toxic heme crystals accumulate → cell death\\n- **Resistance**: P. falciparum resistance widespread in India (due to mutations in PfMDR1 gene)\\n- **Current use**: Chloroquine ineffective; quinine reserved for severe cerebral malaria (IV)\\n\\n### Primaquine (P. vivax Relapse Prevention)\\n- **Target**: Hypnozoites (dormant liver stages of P. vivax, P. ovale)\\n- **Mechanism**:\\n  1. Metabolized to active metabolites (primaquine carbamoyl derivatives)\\n  2. Oxidative stress in hypnozoites → parasite death\\n  3. Prevents relapses (which occur months-years after initial infection)\\n- **Risk**: G6PD deficiency → hemolysis (primaquine is G6PD-dependent hemolytic)\\n- **India**: G6PD screening mandatory before primaquine use\\n\\n### Antimonials (Pentavalent Antimony - Leishmaniasis)\\n- **Target**: Leishmania oxidative metabolism\\n- **Mechanism**:\\n  1. Reduction to trivalent antimony (active form)\\n  2. Inhibition of parasite trypanothione reductase → oxidative stress\\n  3. Mitochondrial dysfunction\\n  4. Parasite death\\n- **Toxicity**: Cardiotoxicity (QT prolongation), pancreatitis, arthralgia\\n\\n### Amphotericin B (Visceral Leishmaniasis - alternative)\\n- Same mechanism as antifungal (ergosterol binding) but also active against Leishmania\\n- Preferred in resistant cases or cardiac contraindications to antimony\\n\\n## Pharmacokinetics Summary\\n\\n| Drug | Route | Absorption | Distribution | Elimination | BBB Penetration |\\n|------|-------|-----------|--------------|------------|-----------------|\\n| Albendazole | Oral | Enhanced by fat | Widespread, CNS | Hepatic (3-8 hr) | Poor |\\n| Metronidazole | Oral/IV | Good | Excellent | Hepatic | **Excellent** (CSF) |\\n| Chloroquine | Oral | Good | Adipose tissue, brain | Renal (40+ days) | Good |\\n| Primaquine | Oral | Good | RBCs | Hepatic (few hr) | Poor |\\n| Artemether | IM/IV | Rapid | Widespread | Hepatic (rapid) | Good (preferred for cerebral malaria) |,\\n        mnemonics: [\\n          {\\n            text: \\\"BENZIMIDAZOLES = 'Tubulin-TUBErs' (damage microtubules)\\\",\\n            explanation:\\n              \\\"Albendazole/mebendazole bind β-tubulin → block microtubule polymerization. Para-site loses structural support → paralysis.\\\",\\n          },\\n          {\\n            text: \\\"METRONIDAZOLE = 'METals + FREE Radicals' (nitroimidazole activation)\\\",\\n            explanation:\\n              \\\"Metronidazole is activated by parasite reductase → forms free radicals (NO•) → DNA damage. Selective for anaerobes/microaerobes (amebas, giardia).\\\",\\n          },\\n          {\\n            text: \\\"ARTEMISININ = 'ARTEM-ISIS + Heme = ROS' (reactive oxygen)\\\",\\n            explanation:\\n              \\\"Artemisinin sesquiterpene lactone + parasite Fe2+-heme → rapid ROS generation. Fastest malaria killer. Prevents transmission (gametocidal).\\\",\\n          },\\n          {\\n            text: \\\"PRIMAQUINE = 'PRI-MAQUE = Prevent relapses' (hypnozoite killer)\\\",\\n            explanation:\\n              \\\"Primaquine kills hypnozoites in liver (dormant P. vivax). BUT: G6PD screening mandatory (primaquine causes hemolysis in G6PD-deficient).\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Benzimidazoles work via tubulin inhibition; broad spectrum against helminths\\\",\\n          \\\"Praziquantel causes muscle contraction via increased Ca2+ permeability; different from benzimidazoles\\\",\\n          \\\"Niclosamide uncouples mitochondria; acts locally in GI tract (no systemic absorption)\\\",\\n          \\\"Metronidazole requires anaerobic activation; selective for parasites via nitroreductase\\\",\\n          \\\"Artemisinin generates ROS via heme interaction; fastest malaria drug available\\\",\\n          \\\"Chloroquine now ineffective (P. falciparum resistance); artemisinin combinations are standard\\\",\\n          \\\"Primaquine MUST be used for P. vivax (to prevent relapses) but requires G6PD screening\\\",\\n          \\\"Antimonials toxic (cardiotoxicity, pancreatitis); amphotericin B safer alternative for kala-azar\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 52-53 - Mechanisms of anthelmintics and antiprotozoals\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 51 - Detailed mechanisms\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"anthelmintics-antiprotozoals-clinical\\\",\\n        title: \\\"Anthelmintics & Antiprotozoals - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Clinical management in India: mass deworming programs (NIDDCP), malaria treatment per NMEP guidelines, amebic dysentery, kala-azar endemic zones, treatment algorithms.\\\",\\n        contentMd: ``# Clinical Applications in Indian Context\\n\\n## Anthelmintic Use\\n\\n### Mass Deworming Program (India)\\n**National Iron Deficiency Anemia Control Program (NIDDCP)**\\n- **Target**: Children 1-14 years (deworming every 6 months)\\n- **Drug**: Albendazole 400 mg or Mebendazole 500 mg (single dose)\\n- **Benefit**: Reduces anemia, improves nutrition, school attendance\\n- **Cost-effectiveness**: Very high; prevents hookworm anemia\\n\\n### Ascariasis Management\\n- **Presentation**: Abdominal pain, malnutrition, worm obstruction (emergency)\\n- **First-line**: Albendazole 400 mg single dose\\n- **Follow-up**: Stool exam at 2 weeks to confirm cure\\n- **Diet**: Light diet initially (avoid heavy foods); adequate nutrition during recovery\\n\\n### Hookworm (Ancylostoma) Anemia\\n- **Pathology**: Chronic intestinal blood loss (30-200 mL/day per worm pair)\\n- **Presentation**: Microcytic, hypochromic anemia; protein malnutrition\\n- **Treatment**:\\n  - Albendazole 400 mg × 3 days (more effective than single dose)\\n  - Iron supplementation (ferrous sulphate 300 mg BD × 3 months)\\n  - Dietary counseling (protein-rich diet)\\n- **Prevention**: Sanitation, wearing shoes, latrine access\\n\\n### Trichuriasis (Whipworm)\\n- **Presentation**: Abdominal pain, bloody diarrhea, anemia\\n- **Treatment**: Mebendazole 100 mg BD × 3 days (albendazole less effective here)\\n- **Note**: Common in children; can cause rectal prolapse if severe\\n\\n### Strongyloidiasis\\n- **Risk**: Disseminated strongyloidiasis in immunocompromised (CD4 <200)\\n- **Treatment**: Ivermectin 200 μg/kg on days 1 & 2, then repeat after 7-10 days\\n- **Note**: Single dose sometimes insufficient; two doses recommended\\n\\n### Tapeworm Infections\\n- **Taenia saginata/solium**:\\n  - Niclosamide 2 g single dose (first-line, doesn't require fasting)\\n  - OR Praziquantel 5-10 mg/kg single dose\\n  - **After treatment**: Examine stools for proglottids (segments) and scolex (head) to confirm cure\\n\\n- **Echinococcosis** (hydatid cyst):\\n  - **Albendazole 400 mg BD × 28 days** (repeat cycles × 2-3)\\n  - Often combined with **surgical drainage/aspiration** of cyst\\n  - **Precaution**: Risk of anaphylaxis if cyst ruptures; antihistamine cover during drainage\\n\\n## Antimalarial Management (NMEP Guidelines)\\n\\n### Malaria Epidemiology in India\\n- **Endemic zones**: Assam, Odisha, Maharashtra, West Bengal, Jharkhand\\n- **Burden**: ~2-3 million cases/year (declining due to NMEP)\\n- **Species**: P. vivax (>50%), P. falciparum, mixed infections\\n\\n### Treatment Algorithm (NMEP 2024)\\n\\n**Uncomplicated Malaria** (any Plasmodium species)\\n- **First-line**: Artemisinin-based combination therapy (ACT)\\n  - **Artemether-Lumefantrine** (Coartem): Day 1-3: artemether-LF 80/480 mg BD\\n  - **Artesunate-Amodiaquine**: Standard in many centers\\n  - Cost affordable in India; typically ~₹100-200 for course\\n\\n- **Dosing**: Weight-based (especially in children)\\n  - 5-15 kg: Different formulation available\\n  - >15 kg: Standard adult dosing\\n\\n**P. vivax Relapse Prevention**\\n- **Add**: Primaquine 15 mg/day × 14 days (start on day 1-2 of artemether)\\n- **Mandatory G6PD screening**:\\n  - **G6PD normal**: Full dose primaquine 15 mg × 14 days\\n  - **G6PD intermediate**: Consider low-dose primaquine 7.5 mg × 28 days\\n  - **G6PD deficient**: Primaquine contraindicated (offer monitoring only) OR high-dose primaquine 45 mg weekly × 8 weeks\\n\\n**Severe Malaria** (cerebral, severe anemia, renal failure, shock)\\n- **First-line**: IV Artesunate (WHO recommendation) — rapidly reduces parasite burden\\n  - 2.4 mg/kg on admission, then 24 hours later, then daily × 3 days\\n  - Then switch to oral ACT when patient can swallow\\n\\n- **Alternative** (if artesunate unavailable): IM/IV Artemether\\n  - Faster than quinine; prevents death and complications\\n\\n**Chloroquine-Resistant Zones**\\n- Avoid chloroquine monotherapy\\n- Use ACT universally in India\\n\\n### Malaria in Pregnancy\\n- **First/Second trimester**: ACT (artemether-LF safe per WHO)\\n- **Primaquine**: Contraindicated (teratogenic risk)\\n- **Post-partum**: Primaquine × 14 days for vivax relapse prevention (safe if not breastfeeding)\\n\\n## Protozoal Infections\\n\\n### Amebic Dysentery\\n**Acute Presentation**: Bloody diarrhea, tenesmus, fever\\n- **First-line Treatment**:\\n  1. **Metronidazole 750 mg TDS × 7-10 days** (systemic, reaches liver/amebic abscess)\\n  2. **Followed by: Diloxanide furoate 500 mg TDS × 10 days** (kills luminal cysts)\\n\\n**Hepatic Abscess**: Complication of amebic dysentery\\n- **Presentation**: RUQ pain, fever, hepatomegaly\\n- **Treatment**:\\n  1. **Metronidazole IV 500 mg TDS × 7-10 days** (excellent liver penetration)\\n  2. **Consider aspiration** if large abscess (>5 cm) or no response in 72 hours\\n  3. **Diloxanide** × 10 days post-systemic treatment\\n\\n### Giardiasis\\n- **Presentation**: Malabsorption, fatty/frothy diarrhea, weakness, flatulence\\n- **First-line**:\\n  - **Metronidazole 400-500 mg TDS × 7-10 days** (or single 2 g daily × 3 days)\\n  - **Alternative**: Tinidazole 2 g single dose (higher bioavailability, single dose advantage)\\n- **Prevention**: Boiling water, proper sanitation\\n\\n### Kala-azar (Visceral Leishmaniasis - Endemic in India)\\n**Endemic Zones**: Bihar, West Bengal, parts of Odisha (elimination program underway)\\n\\n- **Presentation**: Fever (weeks-months), hepatosplenomegaly, pancytopenia, wasting\\n- **Diagnosis**: Splenic/bone marrow aspiration (parasite visualization)\\n\\n**Treatment** (NVBDCP Guidelines):\\n- **First-line**: **Sodium stibogluconate (Pentostam) 20 mg Sb/kg/day IV × 28 days**\\n  - Expensive, requires hospitalization\\n  - Toxicity: Cardiotoxicity (monitor ECG), pancreatitis, hepatotoxicity\\n\\n- **Alternative**: **Amphotericin B (liposomal) 3 mg/kg alternate days × 10-14 doses**\\n  - Preferred in cardiac disease, antimony resistance\\n  - More expensive but safer\\n\\n- **Newer option**: **Miltefosine** (oral, emerging in India)\\n  - 100-150 mg/day × 28 days\\n  - Teratogenic (avoid pregnancy)\\n  - Good efficacy, oral route advantage\\n\\n**Monitoring**: LFTs, renal function, ECG during antimony therapy; clinical response at 4 weeks\\n\\n### Malaria in HIV (CD4 <200)\\n- **Treatment**: Standard ACT regimen\\n- **Additional**: Continue with ART (drug interactions minimal with ACT)\\n- **Prophylaxis**: Cotrimoxazole (TMP-SMX) provides some malaria protection\\n- **Note**: Higher treatment failure rates if CD4 <50,\\n        mnemonics: [\\n          {\\n            text: \\\"DEWORMING: 'Alba (400) monthly, Meb (500) monthly' — NIDDCP program\\\",\\n            explanation:\\n              \\\"National program: Albendazole 400 mg or Mebendazole 500 mg every 6 months for children 1-14 years. Cost-effective, reduces anemia.\\\",\\n          },\\n          {\\n            text: \\\"MALARIA ACT: 'All-ART-mether' (Artemether + partner drug for all)\\\",\\n            explanation:\\n              \\\"NMEP guideline: Use artemisinin-based combination therapy (ACT) for ALL malaria (P. vivax, falciparum, mixed). Add primaquine for vivax only.\\\",\\n          },\\n          {\\n            text: \\\"PRIMAQUINE G6PD: 'Screen FIRST, Prime SECOND'\\\",\\n            explanation:\\n              \\\"G6PD testing mandatory before primaquine (hemolysis risk). Normal = 15 mg × 14 days. Deficient = contraindicated.\\\",\\n          },\\n          {\\n            text: \\\"KALA-AZAR ZONES: 'Bihar, West Bengal, Odisha'\\\",\\n            explanation:\\n              \\\"Endemic in India; elimination program in place. Treat with antimonials or amphotericin B. Monitor cardiac function.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Albendazole 400 mg single dose for community deworming in NIDDCP program\\\",\\n          \\\"Hookworm requires prolonged therapy (× 3 days) due to high worm burden\\\",\\n          \\\"ACT (artemether-lumefantrine) is universal first-line for all malaria in India\\\",\\n          \\\"Primaquine essential for P. vivax but requires G6PD screening (hemolysis risk)\\\",\\n          \\\"Amebic dysentery requires both systemic (metronidazole) and luminal (diloxanide) therapy\\\",\\n          \\\"Amebic hepatic abscess: IV metronidazole with possible aspiration if large\\\",\\n          \\\"Giardiasis presents with malabsorption; metronidazole or tinidazole effective\\\",\\n          \\\"Kala-azar (leishmaniasis) endemic in Bihar/West Bengal; antimony or amphotericin B required\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 52-53 - Clinical management\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NMEP (National Malaria Eradication Program)\\\", chapter: \\\"Treatment guidelines India\\\", edition: \\\"2024\\\" },\\n          { book: \\\"NVBDCP\\\", chapter: \\\"Leishmaniasis management guidelines\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"anthelmintics-antiprotozoals-exam\\\",\\n        title: \\\"Anthelmintics & Antiprotozoals - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary:\\n          \\\"High-yield exam points: drug selection by helminth type, G6PD screening protocol, amebic dysentery vs giardiasis differentiation, malaria treatment algorithms, kala-azar endemic zones.\\\",\\n        contentMd: ``# Exam-Focused High-Yield Points\\n\\n## Drug Selection by Parasite Type\\n\\n### Helminths\\n| Parasite | First-line | Alternative | Key Point |\\n|----------|-----------|-------------|-----------|\\n| Ascaris | Albendazole 400 mg | Levamisole 150 mg | Single-dose convenience |\\n| Hookworm | Albendazole ×3 days | Mebendazole × 3 days | Requires longer course |\\n| Trichuris | Mebendazole | Albendazole | Meb preferred here |\\n| Strongyloides | Ivermectin | Thiabendazole | TWO-dose protocol |\\n| Tapeworms | Niclosamide | Praziquantel | Niclosamide first-line |\\n| Echinococcosis | Albendazole cycles | Surgery + medical | Often needs surgery |\\n\\n### Protozoa\\n| Parasite | First-line | Key Point |\\n|----------|-----------|-----------|\\n| P. vivax | ACT + Primaquine | Primaquine for hypnozoites |\\n| P. falciparum | ACT | No primaquine needed |\\n| E. histolytica | Metronidazole + Diloxanide | TWO drugs always |\\n| Giardia | Metronidazole | Single-drug OK |\\n| Leishmania (kala-azar) | Antimony or AmB | Antimony first-line |\\n\\n## Common Exam Traps\\n\\n**TRAP 1**: \\\"Amebic dysentery — just give metronidazole and send home\\\"\\n- **Wrong**: Incomplete treatment\\n- **Right**: **Always give metronidazole (systemic) + diloxanide (luminal)**. Metronidazole kills trophozoites; diloxanide kills cysts. Incomplete therapy causes relapse.\\n\\n**TRAP 2**: \\\"P. vivax malaria — give ACT alone\\\"\\n- **Wrong**: Will relapse weeks-months later\\n- **Right**: ACT + primaquine × 14 days (after G6PD screening)\\n\\n**TRAP 3**: \\\"G6PD-deficient patient with malaria — just avoid primaquine\\\"\\n- **Wrong**: Incomplete\\n- **Right**: Treat malaria with ACT (safe); monitor for hemolysis; DON'T give primaquine (or give high-dose weekly alternative)\\n\\n**TRAP 4**: \\\"Ascaris obstruction — just give anthelmintic\\\"\\n- **Wrong**: Dangerous; may worsen obstruction\\n- **Right**: Surgical emergency first; clear obstruction surgically/conservatively, then give anthelmintic after recovery\\n\\n**TRAP 5**: \\\"Echinococcosis — just give albendazole\\\"\\n- **Wrong**: Medical management alone often insufficient\\n- **Right**: Combination approach: albendazole pre-op, surgical drainage/resection, then albendazole post-op\\n\\n## High-Yield Comparisons\\n\\n### Benzimidazoles\\n| Feature | Albendazole | Mebendazole |\\n|---------|------------|-----------|\\n| **Spectrum** | Broad (excellent) | Broad (good) |\\n| **Ascaris** | 95%+ | 90%+ |\\n| **Trichuris** | 70% | >95% (better) |\\n| **Common dose** | 400 mg single | 500 mg × 3 days |\\n| **Cost in India** | Generic, cheap | Generic, cheap |\\n| **Exam preference** | Ascaris, hookworm | Trichuris |\\n\\n### Malaria Treatment Hierarchy\\n**Mild-Moderate Uncomplicated**:\\n1. Artemether-Lumefantrine (first-line, affordable)\\n2. Artesunate-Amodiaquine (alternative)\\n\\n**Severe/Cerebral Malaria**:\\n1. IV Artesunate (fastest parasite clearance, WHO standard)\\n2. IM Artemether (if artesunate unavailable)\\n3. IM Quinine (old standard, slower)\\n\\n### Amebic Dysentery vs Giardiasis\\n\\n| Feature | Amebic Dysentery | Giardiasis |\\n|---------|-----------------|-----------|\\n| **Organism** | E. histolytica (trophozoite) | G. lamblia (trophozoite) |\\n| **Stool appearance** | Bloody, dysentery | Fatty, pale, frothy |\\n| **Lab finding** | Trophozoite with RBCs | Trophozoite (pear-shaped) |\\n| **Drug** | Metronidazole + Diloxanide | Metronidazole alone |\\n| **Complication** | Hepatic abscess | Malabsorption, weight loss |\\n| **Treatment duration** | 7-10 + 10 days | 7-10 days single agent |\\n\\n## NMC Competency Focus\\n**Expected Questions**:\\n1. \\\"Drug selection for worm infection by species\\\"\\n2. \\\"Management of malaria with complications (cerebral, renal)\\\"\\n3. \\\"G6PD screening protocol for primaquine\\\"\\n4. \\\"Amebic vs bacillary dysentery differential\\\"\\n5. \\\"Kala-azar endemic zones and treatment\\\"\\n\\n## Exam Mnemonics for Rapid Recall\\n\\n**NICLO-PRAZI CHOICE for Tapeworms**:\\n- **NICLosamide** = first-line (local action, doesn't need absorption)\\n- **PRAZiquantel** = alternative (better for schistosomiasis though)\\n\\n**METRO + DILOX = \\\"Dynamic Duo\\\" for Amebas**:\\n- **METROni-dazole** = systemic (trophozoites)\\n- **DILOXanide** = luminal (cysts)\\n- **Both needed** for complete cure,\\n        mnemonics: [\\n          {\\n            text: \\\"HELMINTH QUICK PICK: 'Alba = Ascaris, Meb = Many, Iver = Strongy, Nico = Nematode tapeworm'\\\",\\n            explanation:\\n              \\\"Alba for ascaris. Meb for multiple (trichuris too). Ivermectin for strongyloides. Niclosamide for tapeworms. Praziquantel versatile.\\\",\\n          },\\n          {\\n            text: \\\"PRIMAQUINE PROTOCOL: 'G6PD First, Prime Second, Hemolysis Fear'\\\",\\n            explanation:\\n              \\\"Always screen G6PD before primaquine (P. vivax relapse drug). Normal = 15 mg × 14 days. Deficient = avoid or high-dose weekly.\\\",\\n          },\\n          {\\n            text: \\\"MALARIA ACT + VIVAX = 'Add Primary' (mnemonic for primaquine add-on)\\\",\\n            explanation:\\n              \\\"ACT treats all malaria. But P. vivax needs primaquine to kill hypnozoites (prevent relapse). P. falciparum = ACT alone.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Albendazole broad spectrum; single dose for ascaris (mass program)\\\",\\n          \\\"Mebendazole better for trichuris; multiple doses for hookworm\\\",\\n          \\\"Amebic dysentery = metronidazole + diloxanide (both required); giardia = metronidazole alone\\\",\\n          \\\"Primaquine mandatory for P. vivax but requires G6PD screening\\\",\\n          \\\"ACT (artemether-lumefantrine) universal first-line for all malaria in India\\\",\\n          \\\"G6PD-deficient: avoid primaquine or use high-dose weekly alternative\\\",\\n          \\\"Kala-azar endemic in Bihar, West Bengal; antimony or amphotericin B\\\",\\n          \\\"Strongyloidiasis requires 2-dose ivermectin protocol (days 1-2, repeat day 10)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 52-53 (Exam summary)\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NMC CBME\\\", chapter: \\\"Pharmacology competencies\\\", edition: \\\"2024\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"anthelmintics-antiprotozoals-recall\\\",\\n        title: \\\"Anthelmintics & Antiprotozoals - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary:\\n          \\\"7-question active recall on anthelmintic selection, malaria treatment, G6PD protocol, amebic dysentery management, and kala-azar therapy.\\\",\\n        contentMd: ``# Active Recall Questions\\n\\n**Q1: A 6-year-old child from rural Maharashtra presents with abdominal pain and passing worms in stool. What is the most likely diagnosis and treatment?**\\n> **Answer**: Ascaris lumbricoides infection. Treatment: Albendazole 400 mg single dose. Follow-up stool exam at 2 weeks. Encourage shoe-wearing and latrine access for prevention.\\n\\n**Q2: A 25-year-old woman with P. vivax malaria is treated with artemether-lumefantrine. What must you add, and what is the mandatory first step before adding it?**\\n> **Answer**: Add primaquine 15 mg/day × 14 days (to prevent relapses from hypnozoites). Mandatory first step: G6PD screening. If G6PD deficient, avoid primaquine or use alternative high-dose weekly regimen.\\n\\n**Q3: Differentiate the treatment of amebic dysentery from giardiasis in a patient with diarrhea.**\\n> **Answer**:\\n> - **Amebic dysentery**: Bloody stools + trophozoite → Metronidazole 750 mg TDS × 7-10 days PLUS Diloxanide 500 mg TDS × 10 days (both drugs required)\\n> - **Giardiasis**: Fatty, pale stools + trophozoite → Metronidazole 400-500 mg TDS × 7-10 days (single drug sufficient)\\n\\n**Q4: A patient has a large echinococcal (hydatid) cyst in the liver. Can medical therapy alone cure this? What is the comprehensive management approach?**\\n> **Answer**: Medical therapy alone is often insufficient. Comprehensive approach: (1) Preoperative albendazole 400 mg BD × 28 days to reduce cyst viability, (2) Surgical drainage or cystectomy, (3) Postoperative albendazole × 28 days × 2-3 cycles. Surgery is essential for large or symptomatic cysts.\\n\\n**Q5: Explain why hookworm anemia requires prolonged anthelmintic therapy, and what else must be given with the anthelmintic.**\\n> **Answer**: Hookworms cause chronic blood loss (30-200 mL/day), leading to severe iron-deficiency anemia. Albendazole 400 mg × 3 days (longer course for higher efficacy). Must add: Ferrous sulphate 300 mg BD × 3 months (iron replacement) + dietary counseling (protein-rich diet). Both parasite elimination and iron repletion needed.\\n\\n**Q6: A 40-year-old from Bihar presents with fever, hepatosplenomegaly, and pancytopenia. Blood smear shows no malaria parasite. Splenic tap reveals the causative organism. What is the diagnosis and treatment?**\\n> **Answer**: Visceral leishmaniasis (kala-azar) caused by Leishmania donovani. Treatment: (1) Sodium stibogluconate (antimony) 20 mg/kg/day IV × 28 days (first-line, but monitor ECG for QT prolongation, LFTs), OR (2) Amphotericin B (liposomal) 3 mg/kg alternate days × 10-14 doses (if antimony toxicity or resistance). Monitor for cure at 6 months (clinical response + spleen regression).\\n\\n**Q7: A child undergoes mass deworming at school per NIDDCP guidelines. Which anthelmintic and what dose, and what is the benefit of this program?**\\n> **Answer**: Albendazole 400 mg or Mebendazole 500 mg (single dose) every 6 months for children 1-14 years. Benefits: (1) Reduces hookworm anemia prevalence, (2) Improves nutritional status, (3) Increases school attendance, (4) Reduces transmission in community. Cost-effective public health intervention.,\\n        mnemonics: [],\\n        keyPoints: [\\n          \\\"7 recall questions on anthelmintic selection, malaria management, and parasitic disease diagnosis\\\",\\n          \\\"Focus on: G6PD screening, ameba vs giardia, kala-azar diagnosis and treatment\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 52-53\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NMEP & NVBDCP Guidelines\\\", chapter: \\\"Malaria and Leishmaniasis management\\\", edition: \\\"2024\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n  // MODULE 6 — ANTIHISTAMINES & ANALGESICS\\n  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n\\n  // ─── Topic 1: Histamine & Antihistamines ─────────────────\\n  {\\n    topicCode: \\\"PH-MOD-06-TOP-01\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"histamine-antihistamines-foundation\\\",\\n        title: \\\"Histamine & Antihistamines - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Histamine synthesis, storage in mast cells and basophils. H1 and H2 receptors; effects on different organs. First-generation (sedating) and second-generation (non-sedating) antihistamines. Clinical use in allergies, anaphylaxis, motion sickness.\\\",\\n        contentMd: ``# Histamine & Antihistamines\\n\\n## Histamine Physiology\\n\\n### Synthesis & Storage\\n- **Source**: Histamine produced from amino acid histidine via histidine decarboxylase (HDC)\\n- **Storage**: In mast cells (lungs, skin, GI tract), basophils (blood), and neurons (brain)\\n- **Release triggers**:\\n  - IgE-mediated allergic reactions (cross-linking of FcεRI)\\n  - Physical triggers: Heat, cold, pressure (dermatographism)\\n  - Anaphylactic reactions (drug allergy, food allergy)\\n  - C5a complement (anaphylotoxin)\\n\\n### Histamine Receptors\\n| Receptor | Location | Effect |\\n|----------|----------|--------|\\n| **H1** | Smooth muscle, endothelium, CNS | Bronchoconstriction, vasodilation, pruritus, emesis, sedation |\\n| **H2** | Gastric parietal cells, cardiac tissue | Gastric acid secretion, tachycardia |\\n| **H3** | Presynaptic neurons | Autoinhibition of histamine release |\\n| **H4** | Immune cells | Eosinophil/mast cell recruitment |\\n\\n### Histamine Effects by Organ\\n| Organ | H1-Mediated | H2-Mediated |\\n|-------|-----------|-----------|\\n| **Smooth muscle (respiratory)** | Bronchoconstriction (anaphylaxis) | — |\\n| **Blood vessels** | Vasodilation, increased permeability | Positive inotrope, tachycardia |\\n| **Stomach** | Nausea, vomiting, emesis | Acid secretion |\\n| **CNS** | Itching (pruritus), sedation | Wakefulness regulation |\\n| **Heart** | — | Tachycardia, arrhythmias |\\n\\n## Antihistamines Classification\\n\\n### First-Generation (H1-Antagonists) — Sedating\\n**Mechanism**: Lipophilic, cross BBB → sedation; also anticholinergic, antimuscarinic properties\\n\\n| Drug | Clinical Use | Toxicity |\\n|------|-------------|----------|\\n| **Diphenhydramine** | Acute allergy, anaphylaxis (parenteral), motion sickness | Sedation, anticholinergic |\\n| **Promethazine** | Allergies, antiemetic, premedication | Sedation, hypotension, extrapyramidal |\\n| **Chlorpheniramine** | Allergies, urticaria | Sedation, less than diphenhydramine |\\n| **Mepyramine (Piriton)** | OTC allergies | Sedation, anticholinergic |\\n\\n### Second-Generation (H1-Antagonists) — Non-Sedating\\n**Mechanism**: Hydrophilic (poor BBB penetration) → no sedation; selective H1; longer duration\\n\\n| Drug | Clinical Use | Duration | Advantage |\\n|------|-------------|----------|-----------|\\n| **Cetirizine** | Allergies, urticaria, rhinitis | 24 hours | Some CNS (10-20% sedation) |\\n| **Loratadine** | Allergies, chronic urticaria | 24 hours | Non-sedating, long-acting |\\n| **Fexofenadine** | Allergies, chronic urticaria | 24 hours | Non-sedating, safe |\\n| **Desloratadine** | Allergies, rhinitis | 24 hours | Extended duration |\\n\\n### H2-Antagonists (Gastric Acid Reduction)\\n- **Ranitidine** (now withdrawn — carcinogenic nitrosamine)\\n- **Famotidine**: 20-40 mg BD (peptic ulcer, GERD)\\n- **Cimetidine**: Older agent; multiple drug interactions (CYP450)\\n\\n## Clinical Context in India\\n- **Allergic rhinitis**: Very common in monsoon/spring; cetirizine preferred OTC\\n- **Urticaria**: Cetirizine or loratadine; avoid allergen identification crucial\\n- **Anaphylaxis**: Immediate epinephrine IM; antihistamines supportive (diphenhydramine IV/IM)\\n- **Drug reactions**: First-generation antihistamine for rash; second-generation for chronic use\\n- **Motion sickness**: Promethazine 12.5 mg pre-travel (sedation acceptable here),\\n        mnemonics: [\\n          {\\n            text: \\\"H1 EFFECTS: 'WASH' — Wheezing, Angioedema, Swelling, Histamine release\\\",\\n            explanation:\\n              \\\"H1 receptor mediated: Smooth muscle contraction (wheeze/bronchospasm), vasodilation (angioedema), itching (swelling). Classic anaphylaxis.\\\",\\n          },\\n          {\\n            text: \\\"ANTIHISTAMINE GENERATIONS: 'Old-Sedating, New-Non-Sedating'\\\",\\n            explanation:\\n              \\\"First-gen (diphenhydramine, promethazine) = lipophilic → BBB → sedation. Second-gen (cetirizine, loratadine) = hydrophilic → poor BBB → no sedation.\\\",\\n          },\\n          {\\n            text: \\\"H2 BLOCKERS: 'FAR-C' (Famotidine, Ranitidine [withdrawn], Cimetidine)\\\",\\n            explanation:\\n              \\\"H2 blockers reduce gastric acid. Famotidine preferred (fewer interactions). Ranitidine withdrawn (nitrosamine contaminant). Cimetidine old, many drug interactions.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Histamine released from mast cells in allergies; H1 mediates bronchoconstriction and vasodilation\\\",\\n          \\\"First-generation antihistamines cross BBB; cause sedation (useful for sleep, motion sickness)\\\",\\n          \\\"Second-generation antihistamines preferred for daytime use; minimal CNS penetration\\\",\\n          \\\"Anaphylaxis: epinephrine is first-line; antihistamines are adjunctive\\\",\\n          \\\"H2 blockers (famotidine) reduce gastric acid; separate from H1 receptor pathways\\\",\\n          \\\"Cetirizine has mild sedation (10-20%); loratadine and fexofenadine truly non-sedating\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 20 - Histamine & Antihistamines\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 26 - Autacoids\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"histamine-antihistamines-mechanism\\\",\\n        title: \\\"Histamine & Antihistamines - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary:\\n          \\\"Detailed mechanisms: H1/H2 receptor antagonism, competitive vs non-competitive blocking, selectivity ratios. First-generation anticholinergic and antimuscarinic effects. Pharmacokinetics and metabolism.\\\",\\n        contentMd: ``# Mechanisms of Action\\n\\n## H1-Receptor Antagonism\\n\\n### First-Generation Antagonists\\n- **Mechanism**: Competitive antagonism at H1 receptor (orthosteric site)\\n- **Additional effects**:\\n  - **Anticholinergic**: Block muscarinic receptors → dry mouth, urinary retention, tachycardia\\n  - **Alpha-adrenergic blocking**: Hypotension (promethazine)\\n  - **Local anesthetic**: Membrane stabilization (less relevant clinically)\\n- **Lipophilicity**: Highly lipophilic (pKa 3.5-5.5) → readily crosses BBB → sedation\\n- **CNS effect**: Gamma-aminobutyric acid (GABA) enhancement in brain → depression\\n\\n### Second-Generation Antagonists\\n- **Mechanism**: Competitive antagonism at H1 receptor (same site as first-generation)\\n- **Hydrophilicity**: More hydrophilic (charged, polar) → poor BBB penetration\\n- **Selectivity**: Minimal anticholinergic, alpha-adrenergic, local anesthetic effects\\n- **Receptor selectivity**: H1-specific (no H2, H3, H4 activity at therapeutic doses)\\n- **Some compounds**:\\n  - **Cetirizine**: Mild CNS effects (active metabolite; some BBB penetration, 10-20% sedation)\\n  - **Loratadine, Fexofenadine**: True non-sedating; longer duration (24 hours)\\n\\n## H2-Receptor Antagonism\\n\\n### Mechanism of Famotidine\\n- **Target**: H2 receptor on gastric parietal cells\\n- **Mechanism**: Competitive antagonism → blocks cAMP generation (G-protein coupled receptor)\\n- **Result**: ↓ Gastric acid secretion by ~80%\\n- **Selectivity**: H2-specific at therapeutic doses\\n\\n## Pharmacokinetics\\n\\n| Parameter | First-Gen | Second-Gen |\\n|-----------|-----------|-----------|\\n| **Absorption** | Rapid oral/IM/IV | Oral, slower absorption |\\n| **BBB penetration** | Excellent (lipophilic) | Poor (hydrophilic) |\\n| **Metabolism** | Hepatic (CYP450) | Hepatic ± renal |\\n| **Half-life** | 3-4 hours | 8-24 hours |\\n| **Duration** | 4-6 hours | 24 hours |\\n| **Protein binding** | 70-90% | 60-98% |\\n\\n## Selectivity Ratios (pKi values)\\n| Drug | H1 Affinity | Anticholinergic | Alpha-block |\\n|------|-----------|-----------------|-----------|\\n| Diphenhydramine | Very high | Strong | Moderate |\\n| Promethazine | Very high | Very strong | Strong |\\n| Cetirizine | Very high | None | None |\\n| Loratadine | Very high | None | None |,\\n        mnemonics: [\\n          {\\n            text: \\\"ANTIHISTAMINE GENERATIONS: 'ABDC' (Anticholinergic = old, BBB-crossing; non-selective = old)\\\",\\n            explanation:\\n              \\\"First-gen has Anticholinergic effects + BBB crossing + extra receptor blocking (alpha). Second-gen has selective H1 only + hydrophilic + no BBB.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"First-generation = competitive H1 antagonism + anticholinergic + alpha-blocking effects\\\",\\n          \\\"Second-generation = selective H1 antagonism; poor BBB penetration prevents sedation\\\",\\n          \\\"Cetirizine has mild CNS effects despite being 'second-generation'\\\",\\n          \\\"H2 blockers competitively antagonize H2 on gastric parietal cells\\\",\\n          \\\"Famotidine preferred over ranitidine (withdrawn) and cimetidine (CYP450 inhibitor)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 20 - Mechanisms\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 26 - Receptor mechanisms\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"histamine-antihistamines-clinical\\\",\\n        title: \\\"Histamine & Antihistamines - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Clinical use in allergic rhinitis, urticaria, anaphylaxis, anaphylactoid reactions, drug allergies. Dosing, Indian brand names, seasonal variation in India.\\\",\\n        contentMd: ``# Clinical Applications in Indian Context\\n\\n## Allergic Rhinitis\\n**Epidemiology**: Common in India, especially monsoon/spring due to pollen and dust\\n\\n**Symptoms**: Nasal congestion, rhinorrhea, sneezing, itching\\n- **Seasonal**: Monsoon (humidity), spring (pollen)\\n- **Perennial**: Dust mites, pet dander, pollution\\n\\n**Management**:\\n- **Mild**: Cetirizine 10 mg daily or Loratadine 10 mg daily\\n- **Moderate**: Add intranasal corticosteroid spray (fluticasone)\\n- **Severe**: Oral corticosteroid (short course) + antihistamine\\n- **Avoid**: First-generation antihistamines (sedation, driving risk in India)\\n\\n## Urticaria\\n**Classification**: Acute (< 6 weeks) vs Chronic (> 6 weeks)\\n\\n**Acute Urticaria**:\\n- **Trigger identification**: Foods (peanuts, shellfish), drugs (penicillin), insect bites\\n- **Treatment**:\\n  - Cetirizine 10 mg BD × 7-10 days\\n  - Avoid triggers\\n  - Corticosteroid only if extensive or facial involvement\\n\\n**Chronic Urticaria**:\\n- **Definition**: Daily or nearly daily symptoms for > 6 weeks\\n- **Cause**: Often idiopathic; food additives, infections, autoimmune\\n- **First-line**: Cetirizine 10 mg BD (or loratadine 10 mg BD)\\n- **Second-line**: Increase dose (cetirizine up to 20 mg daily) or add omalizumab (anti-IgE)\\n- **Topical**: Calamine lotion, cold compresses\\n\\n## Anaphylaxis\\n**Presentation**: Acute onset; angioedema, bronchospasm, hypotension, cardiovascular collapse\\n- **Triggers in India**: Peanuts, shellfish, insect venom (bees), drugs (penicillin), contrast media\\n\\n**Management** (IAAI & Indian guidelines):\\n1. **IM Epinephrine 0.3 mg** (IM thigh preferred, fastest absorption) — first and primary treatment\\n2. **Antihistamine**: Diphenhydramine IV/IM 50-100 mg (supportive only; not primary)\\n3. **Corticosteroid**: IV methylprednisolone 125 mg (prevent biphasic anaphylaxis)\\n4. **Airway management**: O₂, IV access, consider intubation\\n5. **Observe** 4-6 hours minimum (biphasic reaction possible)\\n\\n**Why antihistamine is secondary**:\\n- Antihistamine alone cannot reverse airway obstruction or hypotension\\n- Epinephrine provides immediate alpha-adrenergic (vasoconstriction) + beta-adrenergic (bronchodilation) effects\\n- Antihistamine blocks H1 effects only (pruritus, urticaria, some angioedema)\\n\\n## Anaphylactoid Reactions (Non-IgE Mediated)\\n- **Triggers**: Contrast media, NSAIDs, opioids, ACE inhibitors\\n- **Similar to anaphylaxis but no IgE involvement**\\n- **Treatment**: Same as anaphylaxis (epinephrine first)\\n- **Premedication** (contrast allergy): Prednisolone 50 mg + cetirizine 10 mg (12 & 2 hours before contrast)\\n\\n## Drug Allergies\\n**Penicillin Allergy in India** (common cause of drug reactions)\\n\\n**Manifestations**:\\n- **Immediate** (< 1 hour): Urticaria, angioedema, anaphylaxis\\n- **Delayed** (> 1 hour): Maculopapular rash, Stevens-Johnson syndrome (SJS)\\n\\n**Management**:\\n- **Immediate**: IM epinephrine + diphenhydramine IV\\n- **Delayed rash**: Cetirizine 10 mg daily; prednisolone if extensive (0.5 mg/kg × 7-10 days)\\n\\n## Specific Scenarios in India\\n\\n### Motion Sickness (Travel)\\n- **Drug**: Promethazine 12.5 mg 30 min before travel\\n- **Advantage**: Sedation helps with travel sleep\\n- **Alternative**: Ginger, acupressure wristbands (non-pharmacological)\\n\\n### Seasonal Allergies (Monsoon/Spring)\\n- **Management**: Start antihistamine prophylactically (1-2 weeks before season starts)\\n- **First-line**: Cetirizine 10 mg once daily\\n- **Community**: Dust control, air filtration, avoid exposure\\n\\n### Insect Bites (Mosquitoes, Fleas)\\n- **Local reaction**: Calamine lotion, scratching prevention\\n- **Systemic pruritus**: Cetirizine 10 mg daily\\n- **Severe**: Short course prednisolone (0.5 mg/kg/day × 3-5 days)\\n\\n### Infectious Diseases + Histamine Release\\n- **Tuberculosis**: Some anti-TB drugs (rifampicin) cause histamine-like reaction\\n- **Food-borne illness**: Histamine-rich foods (fermented, aged foods) in scombroid poisoning\\n  - **Management**: Antihistamine + avoid triggers,\\n        mnemonics: [\\n          {\\n            text: \\\"ANAPHYLAXIS ABC: 'Adrenaline (epinephrine) FIRST, (then) Benadryl (diphenhydramine), (then) Corticosteroid'\\\",\\n            explanation:\\n              \\\"Epinephrine IM 0.3 mg is life-saving (immediate alpha + beta effects). Antihistamine and corticosteroid are supportive only, come after epinephrine.\\\",\\n          },\\n          {\\n            text: \\\"ANTIHISTAMINE CHOICE: 'Day = Cetirizine/Loratadine (2nd gen), Night = Promethazine (1st gen + sleep benefit)'\\\",\\n            explanation:\\n              \\\"For daytime allergies: non-sedating (2nd gen). For bedtime/motion sickness: sedating (1st gen) acceptable.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Anaphylaxis: epinephrine IM thigh is first-line; antihistamines are secondary\\\",\\n          \\\"Cetirizine preferred for allergic rhinitis and urticaria in India (cost, availability)\\\",\\n          \\\"Promethazine acceptable for motion sickness (sedation intentional)\\\",\\n          \\\"Chronic urticaria often requires dose escalation or omalizumab addition\\\",\\n          \\\"Premedication for contrast allergy: prednisolone + cetirizine 12 & 2 hours pre-procedure\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 20 - Clinical uses\\\", edition: \\\"9th\\\" },\\n          { book: \\\"IAAI (Indian Academy of Allergy, Asthma & Immunology)\\\", chapter: \\\"Anaphylaxis guidelines\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"histamine-antihistamines-exam\\\",\\n        title: \\\"Histamine & Antihistamines - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary:\\n          \\\"High-yield exam points: antihistamine generation differences, anaphylaxis management priority, H1 vs H2 receptor distribution, anticholinergic side effects.\\\",\\n        contentMd: ``# Exam-Focused High-Yield Points\\n\\n## Common Exam Traps\\n\\n**TRAP 1**: \\\"Patient in anaphylaxis — give antihistamine quickly\\\"\\n- **Wrong**: Antihistamine is primary treatment\\n- **Right**: IM Epinephrine 0.3 mg first; antihistamine is secondary/supportive\\n\\n**TRAP 2**: \\\"Chronic urticaria — just give cetirizine once daily\\\"\\n- **Wrong**: Inadequate for many patients\\n- **Right**: Can increase cetirizine to 20 mg daily (double-dose protocol); if fails, add omalizumab or cyclosporine\\n\\n**TRAP 3**: \\\"Second-generation antihistamine = zero sedation\\\"\\n- **Wrong**: Cetirizine has 10-20% sedation\\n- **Right**: Cetirizine is \\\"less sedating\\\" not \\\"non-sedating\\\"; loratadine/fexofenadine truly non-sedating\\n\\n**TRAP 4**: \\\"H2 blocker for allergies\\\"\\n- **Wrong**: H2 blockers don't treat allergies significantly\\n- **Right**: H2 receptors mediate gastric acid secretion (not allergy symptoms); H1 is allergy mediator\\n\\n## Receptor Distribution & Effects\\n\\n| Receptor | Location | Effect | Drug blocked |\\n|----------|----------|--------|-------------|\\n| **H1** | Smooth muscle, endothelium, CNS | Bronchoconstriction, vasodilation, itching, nausea | Antihistamines (1st/2nd gen) |\\n| **H2** | Gastric parietal cells, heart | Gastric acid, tachycardia | H2 blockers (famotidine) |\\n| **H3** | Neuronal (brain) | Autoinhibition of histamine | Not clinically targeted |\\n\\n## Drug Comparisons\\n\\n### First-Generation vs Second-Generation\\n| Feature | First-Gen | Second-Gen |\\n|---------|-----------|-----------|\\n| **BBB penetration** | Excellent (lipophilic) | Poor (hydrophilic) |\\n| **Sedation** | Yes (30-50%) | Minimal-None (except cetirizine) |\\n| **Anticholinergic** | Yes (strong) | No |\\n| **Alpha-adrenergic blocking** | Yes (some) | No |\\n| **Duration** | 4-6 hours | 24 hours |\\n| **Best use** | Sleep aid, acute allergies, motion sickness | Daytime allergies, chronic use |\\n| **Exam favorite** | Motion sickness scenario | Chronic urticaria, rhinitis |\\n\\n## Anaphylaxis Management Priority\\n\\n**WRONG ORDER** (Exam trap):\\n1. Antihistamine\\n2. Corticosteroid\\n3. Epinephrine\\n\\n**CORRECT ORDER** (Life-saving):\\n1. **IM Epinephrine 0.3 mg** (IM thigh) ← Primary and immediate\\n2. **IV access**, oxygen, airway management\\n3. **IV Antihistamine** (diphenhydramine 50-100 mg) ← Secondary\\n4. **IV Corticosteroid** (methylprednisolone 125 mg) ← Prevent biphasic reaction\\n\\n**Key point for exams**: Antihistamine alone CANNOT reverse bronchospasm or hypotension. Epinephrine is non-negotiable first step.\\n\\n## NMC Competency Questions\\n\\n**Expected Exam Q1**: \\\"Drug for seasonal allergic rhinitis in a 30-year-old driver\\\"\\n- Answer: Cetirizine 10 mg daily (non-sedating, allowing safe driving)\\n\\n**Expected Exam Q2**: \\\"Anaphylaxis management priorities\\\"\\n- Answer: (1) IM epinephrine, (2) airway/O₂, (3) IV antihistamine, (4) corticosteroid\\n\\n**Expected Exam Q3**: \\\"Anticholinergic side effects of first-generation antihistamine\\\"\\n- Answer: Dry mouth, urinary retention, tachycardia, constipation (avoid in BPH, glaucoma),\\n        mnemonics: [\\n          {\\n            text: \\\"ANTIHISTAMINE GEN: 'First = old-Fashioned (sedating, anticholinergic); Second = new-Selective (non-sedating, H1-only)'\\\",\\n            explanation:\\n              \\\"First-gen: lipophilic + broad receptor activity. Second-gen: hydrophilic + selective H1. Exam rule: 1st gen for sleep/motion, 2nd gen for daytime.\\\",\\n          },\\n          {\\n            text: \\\"ANAPHYLAXIS PRIORITY: 'EAC' (Epinephrine first, Antihistamine second, Corticosteroid third)\\\",\\n            explanation:\\n              \\\"Epinephrine is life-saving; antihistamine is supportive. Never delay epinephrine for antihistamine.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"First-generation antihistamines cross BBB; sedation from GABA enhancement\\\",\\n          \\\"Second-generation antihistamines hydrophilic; poor BBB penetration avoids sedation\\\",\\n          \\\"Anaphylaxis = IM epinephrine FIRST (not antihistamine)\\\",\\n          \\\"H1 mediates allergic symptoms; H2 mediates gastric acid (separate pathways)\\\",\\n          \\\"Chronic urticaria: dose escalation of cetirizine before adding other agents\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 20 - Exam summary\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NMC CBME\\\", chapter: \\\"Pharmacology competencies\\\", edition: \\\"2024\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"histamine-antihistamines-recall\\\",\\n        title: \\\"Histamine & Antihistamines - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary:\\n          \\\"7-question active recall on antihistamine selection, anaphylaxis management, receptor specificity, and H1 vs H2 effects.\\\",\\n        contentMd: ``# Active Recall Questions\\n\\n**Q1: A 35-year-old accountant with seasonal allergic rhinitis comes for management. He drives daily. Which antihistamine would you recommend and why?**\\n> **Answer**: Cetirizine 10 mg once daily. Non-sedating (hydrophilic, poor BBB penetration) → safe for driving. Alternative: loratadine or fexofenadine (equally effective, truly non-sedating but slightly more expensive). Avoid first-generation (diphenhydramine) due to sedation impairment of driving ability.\\n\\n**Q2: Describe the correct management sequence for a patient presenting with acute anaphylaxis. What is given first and why?**\\n> **Answer**: (1) IM Epinephrine 0.3 mg into lateral thigh (IM preferred for fastest absorption) — this is first and most critical. (2) Lay patient flat, elevate legs. (3) IV access, 100% O₂, cardiac monitoring. (4) IV Diphenhydramine 50-100 mg (antihistamine secondary). (5) IV Methylprednisolone 125 mg (corticosteroid to prevent biphasic reaction). Epinephrine is non-negotiable first step because it's the only drug that reverses bronchoconstriction (beta₂-adrenergic) and hypotension (alpha-adrenergic).\\n\\n**Q3: Explain why first-generation antihistamines cause sedation while second-generation antihistamines do not.**\\n> **Answer**: First-generation antihistamines are highly lipophilic (log P > 1) and easily cross the blood-brain barrier. They reach CNS concentrations that enhance GABA-mediated inhibition → sedation. Second-generation antihistamines are hydrophilic (charged, polar), have poor BBB penetration, and reach minimal CNS concentrations → no sedation. Exception: Cetirizine (metabolite of loratadine) has mild BBB penetration (10-20% sedation).\\n\\n**Q4: A patient with chronic urticaria on cetirizine 10 mg daily still has daily hives. What is the next step in management?**\\n> **Answer**: Increase cetirizine dose to 20 mg daily (double-dose protocol, per IAAI guidelines). If still inadequate, consider: (1) Omalizumab (anti-IgE monoclonal antibody) if IgE-mediated, (2) Cyclosporine for severe cases, (3) Systemic corticosteroid (short-term only). Allergen avoidance and trigger identification also essential.\\n\\n**Q5: What is the functional difference between H1 and H2 receptors in terms of tissue effects, and which antihistamine targets which?**\\n> **Answer**:\\n> - **H1 receptors**: Smooth muscle (bronchospasm), blood vessels (vasodilation, angioedema), brain (sedation, itching). H1-antagonists (antihistamines) block allergic responses.\\n> - **H2 receptors**: Gastric parietal cells (acid secretion), cardiac tissue (tachycardia). H2-antagonists (famotidine, cimetidine) reduce gastric acid.\\n> - **Clinical note**: For allergies, use H1-antagonists; for GERD/peptic ulcer, use H2-antagonists.\\n\\n**Q6: A patient has severe allergic rhinitis. Why would promethazine be inappropriate as monotherapy, yet reasonable for nighttime use?**\\n> **Answer**: Promethazine is a first-generation antihistamine with strong sedation (first-gen crosses BBB). Inappropriate for daytime (impairs work, driving). Reasonable for nighttime because: (1) Sedation is beneficial for sleep, (2) Anticholinergic effects (dry mouth, tachycardia) less bothersome at night, (3) No driving. Better choice: promethazine at night + cetirizine (non-sedating) in morning if needed for day symptoms.\\n\\n**Q7: A patient develops urticaria after penicillin injection (true IgE-mediated drug allergy). What is the mechanism of histamine release, and which antihistamine generation would you use for acute vs chronic management?**\\n> **Answer**:\\n> - **Mechanism**: Penicillin acts as hapten, conjugates with serum/tissue proteins → cross-links FcεRI on mast cells → IgE-mediated degranulation → histamine release → urticaria, angioedema.\\n> - **Acute (immediate rash)**: IM/IV Diphenhydramine 50-100 mg (first-generation, faster onset for acute reactions) + epinephrine if anaphylaxis.\\n> - **Chronic (prevent recurrence)**: Cetirizine 10 mg daily (second-generation, non-sedating, longer acting) for 7-14 days. Avoid penicillin/cross-reactive beta-lactams.,\\n        mnemonics: [],\\n        keyPoints: [\\n          \\\"7 recall questions covering antihistamine selection, anaphylaxis priority, and H1/H2 receptor specificity\\\",\\n          \\\"Focus on: sedation mechanism, anaphylaxis management sequence, chronic urticaria escalation\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 20\\\", edition: \\\"9th\\\" },\\n          { book: \\\"IAAI Guidelines\\\", chapter: \\\"Chronic urticaria management\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n\\n  // ─── Topic 2: NSAIDs & Antipyretics ─────────────────\\n  {\\n    topicCode: \\\"PH-MOD-06-TOP-02\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"nsaid-antipyretics-foundation\\\",\\n        title: \\\"NSAIDs & Antipyretics - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"NSAIDs and antipyretics inhibit cyclooxygenase (COX) enzymes → reduce prostaglandin synthesis. COX-1 (constitutive) vs COX-2 (inducible). Classification: nonselective, COX-2 selective. Common agents in India with efficacy, toxicity, and contraindications.\\\",\\n        contentMd: ``# NSAIDs & Antipyretics\\n\\n## Cyclooxygenase (COX) Pathways\\n\\n### Physiological Role of Prostaglandins\\n\\n| Prostaglandin | Location | Function |\\n|---------------|----------|----------|\\n| **PGE1/PGE2** | Stomach, kidney | Protective mucus, renal blood flow |\\n| **PGI2** | Platelets, vessels | Inhibit platelet aggregation, vasodilation |\\n| **TXA2** | Platelets | Promote aggregation, vasoconstriction |\\n| **PGF2α** | Uterus, vessels | Uterine contraction, bronchoconstriction |\\n| **PGE2 (CNS)** | Hypothalamus | Fever regulation (set point elevation) |\\n\\n### COX-1 vs COX-2\\n| Feature | COX-1 | COX-2 |\\n|---------|-------|-------|\\n| **Expression** | Constitutive (all tissues) | Inducible (inflammatory stimulus) |\\n| **Function** | Homeostatic (protective PG) | Pathogenic (inflammation, fever) |\\n| **Location** | GI, kidney, platelets, kidney | Immune cells, CNS, joints, kidney |\\n| **Inhibition effect** | GI bleeding, renal toxicity | Anti-inflammatory, analgesia |\\n\\n## NSAID Classification\\n\\n### Nonselective COX Inhibitors\\n- **Ibuprofen** (Brufen): COX-1/COX-2 ~ 1:1 ratio; common in India\\n- **Naproxen**: Longer half-life (~17 hours); less frequent dosing\\n- **Indomethacin**: High potency; older agent\\n- **Diclofenac**: Common in India; potent COX inhibition\\n- **Meloxicam**: \\\"Preferential\\\" COX-2 (but not true selective); safer for GI\\n\\n### COX-2 Selective Inhibitors\\n- **Celecoxib** (Celebrex): 375-fold COX-2 selectivity; reduced GI bleeding\\n- **Rofecoxib** (Vioxx): Withdrawn from market (increased MI/stroke risk)\\n\\n### Acetaminophen (Paracetamol) — Weak NSAID\\n- **Mechanism**: Inhibits COX-1 & COX-2 (central > peripheral)\\n- **Properties**: Analgesic, antipyretic; weak anti-inflammatory\\n- **Advantage**: Safe in GI/renal disease; safe in pregnancy\\n- **Toxicity**: Hepatotoxicity at high doses; no antiplatelet effect\\n\\n## Common Agents in India\\n\\n| Drug | Potency | Half-life | Use | Cost |\\n|------|---------|-----------|-----|------|\\n| **Ibuprofen** | Moderate | 2 hours | Fever, mild pain, arthritis | Very cheap |\\n| **Naproxen** | High | 17 hours | Chronic arthritis, dysmenorrhea | Cheap |\\n| **Diclofenac** | High | 2-3 hours | Acute pain, arthritis | Cheap |\\n| **Meloxicam** | High | 15-20 hours | Arthritis (safer NSAID) | Moderate |\\n| **Celecoxib** | Very high (COX-2) | 11 hours | Osteoarthritis, RA (GI-safe) | Expensive |\\n| **Paracetamol** | Weak | 2-3 hours | Fever, mild-moderate pain | Very cheap |\\n\\n## Indian Clinical Context\\n- **High prevalence**: Arthritis (osteoarthritis, rheumatoid), dysmenorrhea, post-operative pain\\n- **GI burden**: NSAIDs responsible for 50% of peptic ulcer disease in elderly\\n- **Affordability**: Paracetamol and ibuprofen most accessible\\n- **OTC abuse**: Common self-medication for fever/headache; risk of toxicity,\\n        mnemonics: [\\n          {\\n            text: \\\"COX INHIBITION = 'COX blocks PG production → ↓ inflammation, ↓ fever, ↓ pain'\\\",\\n            explanation:\\n              \\\"NSAIDs inhibit COX-1/COX-2 → less PG synthesis → less inflammation (TXA2, PGE2, PGI2). Fever lowered by suppressing PGE2 at hypothalamus.\\\",\\n          },\\n          {\\n            text: \\\"COX-1 vs COX-2: 'COX-1 = homeostatic guardian (GI, kidney, platelets); COX-2 = bad inflammation'\\\",\\n            explanation:\\n              \\\"COX-1 inhibition → GI bleeding, renal damage, antiplatelet. COX-2 inhibition → reduce inflammation, pain, fever. COX-2 selective = fewer side effects.\\\",\\n          },\\n          {\\n            text: \\\"PARACETAMOL = 'PARa-beyond + aceTAMINOL = beyond NSAID (weak anti-inflammatory, but analgesic/antipyretic)'\\\",\\n            explanation:\\n              \\\"Paracetamol is weak COX inhibitor (especially peripheral); good analgesic + antipyretic; poor anti-inflammatory. Safe in GI disease, pregnancy.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"NSAIDs inhibit COX-1/COX-2 → reduce prostaglandins (inflammation, fever, pain mediators)\\\",\\n          \\\"COX-1 (constitutive) provides protective PGs in GI, kidney → NSAID-induced GI bleeding and renal dysfunction\\\",\\n          \\\"COX-2 selective (celecoxib) reduces GI toxicity; cardiovascular risk still present\\\",\\n          \\\"Paracetamol is analgesic + antipyretic but weak anti-inflammatory; safe in GI/renal disease\\\",\\n          \\\"Ibuprofen and paracetamol most affordable in India; high OTC availability\\\",\\n          \\\"Diclofenac potent but GI risk; meloxicam preferred for chronic arthritis\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 13 - NSAIDs & Analgesics\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 27 - NSAIDs\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"nsaid-antipyretics-mechanism\\\",\\n        title: \\\"NSAIDs & Antipyretics - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary:\\n          \\\"COX enzyme inhibition kinetics, reversible vs irreversible inhibition, peripheral vs central analgesic mechanisms, fever-lowering mechanism via hypothalamic PGE2.\\\",\\n        contentMd: ``# Mechanisms of Action\\n\\n## COX Inhibition\\n\\n### Nonselective NSAIDs (e.g., Ibuprofen, Diclofenac)\\n- **Target**: COX-1 and COX-2 with similar affinity\\n- **Mechanism**: Reversible, competitive inhibition of COX active site\\n- **Result**:\\n  1. ↓ Arachidonic acid → PG pathway (antiinflammatory, analgesic, antipyretic)\\n  2. Intact lipoxygenase pathway → production of leukotrienes (may worsen asthma)\\n- **Clinical effects**:\\n  - Anti-inflammatory (COX-2 effect)\\n  - Analgesic (peripheral + central)\\n  - Antipyretic (hypothalamic PGE2 suppression)\\n  - Antiplatelet (COX-1 inhibition in platelets)\\n\\n### COX-2 Selective Inhibitors (e.g., Celecoxib)\\n- **Selectivity**: ~375-fold selectivity for COX-2 over COX-1\\n- **Mechanism**: Reversible, selective binding to COX-2 active site pocket\\n- **Result**:\\n  1. ↓↓ PG synthesis via COX-2 pathway (anti-inflammatory dominant)\\n  2. Preserved COX-1 → protective PGs in GI, kidney, platelets\\n- **Advantage**: Better GI safety; no antiplatelet effect\\n- **Disadvantage**: Potential cardiovascular thrombotic risk (TXA2 ↓ but PGI2 also ↓ in vessels)\\n\\n### Aspirin (Special Case)\\n- **Mechanism**: Irreversible COX inhibition (acetylation of serine residue)\\n- **Duration**: Platelet effects last lifetime of platelet (7-10 days) due to lack of nucleus\\n- **Selectivity**: Preferential COX-1 inhibition (lower doses) → potent antiplatelet\\n- **Clinical use**: Antiplatelet for cardiovascular prevention (low-dose); analgesic at higher doses\\n\\n## Analgesic Mechanism\\n\\n### Peripheral Analgesics\\n- PG-mediated pain sensitization in tissues\\n- NSAID ↓ PGE2 at inflammatory site → ↓ sensitization of nociceptors\\n- Inhibit bradykinin-potentiated pain\\n\\n### Central Analgesics\\n- Hypothalamic and spinal cord mechanisms\\n- COX inhibition in CNS → ↓ pain transmission\\n- Possible GABA enhancement (some NSAIDs)\\n\\n## Antipyretic Mechanism\\n\\n### Normal Thermoregulation\\n- Hypothalamic set point: ~37°C\\n- Balance of heat production vs heat loss\\n- PGE2 raises set point in anterior hypothalamus\\n\\n### Fever (PGE2-mediated)\\n- **Trigger**: Endotoxin (LPS), TNF-α, IL-1 from infection\\n- **Mechanism**: IL-1 → COX-2 induction in hypothalamus → ↑ PGE2 → raised set point\\n- **NSAID action**: ↓ hypothalamic PGE2 → lowers set point → heat dissipation\\n\\n### Paracetamol (Acetaminophen)\\n- **Mechanism**: Weak peripheral COX inhibition; strong central CNS action\\n- **CNS target**: Inhibits COX-1/COX-2 in hypothalamus and spinal cord\\n- **Advantage**: Preferential central action → less GI/renal toxicity\\n\\n## Pharmacokinetics\\n\\n| Drug | Absorption | Peak | Half-life | Elimination |\\n|------|-----------|------|-----------|------------|\\n| Ibuprofen | Oral rapid | 1-2 hr | 2 hours | Hepatic |\\n| Naproxen | Oral | 2-4 hr | 17 hours | Hepatic |\\n| Paracetamol | Oral rapid | 0.5-1 hr | 2-3 hours | Hepatic (90%) + Renal (10%) |\\n| Celecoxib | Oral | 2-3 hr | 11 hours | Hepatic |,\\n        mnemonics: [\\n          {\\n            text: \\\"NSAID MECHANISM: 'COX blocks → ↓ PG → ↓ inflam, pain, fever'\\\",\\n            explanation:\\n              \\\"COX inhibition blocks prostaglandin synthesis. Less PG = less inflammation (locally), less pain (peripheral + central), less fever (hypothalamic).\\\",\\n          },\\n          {\\n            text: \\\"ASPIRIN = 'Irreversible + Antiplatelet (lasts platelet lifetime)'\\\",\\n            explanation:\\n              \\\"Aspirin acetylates COX → irreversible inhibition. Platelet doesn't regenerate → antiplatelet effect for 7-10 days. Other NSAIDs reversible (6-24 hours).\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"NSAIDs reversibly inhibit COX → reduce prostaglandin synthesis\\\",\\n          \\\"Nonselective NSAIDs block COX-1 and COX-2 equally → anti-inflammatory but GI/renal toxicity\\\",\\n          \\\"COX-2 selective inhibitors reduce GI bleeding; cardiovascular risk remains\\\",\\n          \\\"Paracetamol weak peripheral COX inhibitor; strong hypothalamic action (antipyretic)\\\",\\n          \\\"Aspirin irreversible; only agent for antiplatelet therapy (low dose)\\\",\\n          \\\"Fever = PGE2-mediated hypothalamic set point elevation; NSAIDs lower set point\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 13 - Mechanisms\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 27 - COX inhibition mechanisms\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"nsaid-antipyretics-clinical\\\",\\n        title: \\\"NSAIDs & Antipyretics - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Clinical use in fever, pain, arthritis, dysmenorrhea, post-operative analgesia. GI protection strategies, renal risk in elderly and hypertension. Paracetamol hepatotoxicity management.\\\",\\n        contentMd: ``# Clinical Applications in Indian Context\\n\\n## Fever Management\\n\\n### Acute Fever (Infection)\\n- **Common causes in India**: Dengue, malaria, tuberculosis, typhoid\\n- **Initial management**: Paracetamol 500 mg TDS or Ibuprofen 400 mg TDS\\n- **Dosing**: Child: 15 mg/kg per dose; Adult: 500-1000 mg per dose\\n- **Maximum**: Paracetamol 4 g/day (risk of hepatotoxicity above this)\\n- **Physical measures**: Tepid sponging, light clothing, fluid intake\\n\\n### Prolonged Fever\\n- **Diagnosis crucial**: Investigate cause (malaria, TB, infection)\\n- **Don't use antipyretics continuously** → masks underlying disease\\n- **Use intermittently** (as needed when fever >38.5°C)\\n\\n## Pain Management\\n\\n### Mild-Moderate Pain\\n- **Headache**: Ibuprofen 400 mg or Paracetamol 500 mg\\n- **Dysmenorrhea**: Ibuprofen 400 mg TDS × 2-3 days (very effective)\\n- **Toothache**: Ibuprofen 400 mg or Diclofenac 50 mg\\n- **Post-operative (minor)**: Ibuprofen 400 mg TDS × 3-5 days\\n\\n### Moderate Pain\\n- **Post-operative (major)**: Ibuprofen 400-600 mg + Opioid (e.g., codeine 30 mg)\\n- **Arthritis**: Naproxen 500 mg BD (twice-daily dosing advantage)\\n- **Renal/colicky pain**: Diclofenac 50-75 mg IM/IV (rapid onset)\\n\\n## Rheumatological Conditions\\n\\n### Osteoarthritis\\n- **First-line**: Meloxicam 7.5-15 mg daily (preferential COX-2, safer GI profile)\\n- **Alternative**: Ibuprofen 400 mg TDS + PPI prophylaxis (omeprazole 20 mg daily)\\n- **Non-pharmacological**: Physiotherapy, weight reduction, joint protection\\n\\n### Rheumatoid Arthritis (RA)\\n- **NSAIDs**: Naproxen 500 mg BD or Meloxicam 15 mg daily (bridge therapy until DMARDs work)\\n- **DMARDs**: Methotrexate, sulfasalazine, biologics (separate from NSAIDs; NSAIDs bridge symptomatic relief)\\n- **GI protection mandatory**: Omeprazole 20 mg daily with any NSAID\\n\\n## GI Protection Strategies\\n\\n### Risk Stratification\\n**High-risk patients for GI bleeding**:\\n- Age >65 years\\n- History of peptic ulcer disease (PUD)\\n- Concurrent use of corticosteroids or anticoagulants\\n- H. pylori positive\\n- Poor renal function\\n\\n**Management**:\\n- **PPI prophylaxis**: Omeprazole 20 mg daily or Pantoprazole 40 mg daily\\n- **COX-2 selective**: Use celecoxib instead of nonselective NSAID\\n- **H. pylori eradication**: If positive, triple/quadruple therapy before NSAID\\n\\n### Safe NSAID in GI Risk\\n- **Paracetamol**: No GI risk (but weak anti-inflammatory)\\n- **Meloxicam + PPI**: Preferential COX-2 + gastric protection\\n- **Celecoxib**: Lower GI bleeding rate vs nonselective NSAID\\n\\n## Renal Considerations\\n\\n### NSAID-Induced Renal Dysfunction\\n**Mechanism**: ↓ Renal blood flow via COX-inhibition → acute kidney injury, especially with:\\n- Elderly (>65 years)\\n- Hypertension (already on ACE-I/ARB → loss of PGI2-mediated compensation)\\n- Diabetes (already reduced GFR)\\n- Volume depletion (dehydration, diarrhea)\\n\\n**Contraindications**:\\n- CKD stage 4-5 (eGFR <30)\\n- Hyperkalemia\\n- Concurrent ACE-I + NSAID + diuretic (\\\"triple whammy\\\" = acute renal failure risk)\\n\\n**Safe choice**: Paracetamol (no renal effect) or stop NSAID, use alternative analgesic\\n\\n## Paracetamol Hepatotoxicity\\n\\n### Toxic Dose\\n- **Acute overdose**: >10-15 g (acute hepatotoxicity)\\n- **Chronic overuse**: >4 g/day consistently (cumulative hepatotoxicity)\\n- **Risk**: Alcohol abuse, pre-existing liver disease\\n\\n### Mechanism\\n- Hepatic metabolism: 90% conjugation, 10% CYP450 → NAPQI (toxic metabolite)\\n- Glutathione depletion → cellular damage\\n- Fulminant hepatic failure if severe\\n\\n### Management of Overdose\\n- **Activated charcoal**: <4 hours post-ingestion\\n- **N-acetylcysteine (NAC)**: Antidote within 10-24 hours (replenishes hepatic glutathione)\\n- **Monitoring**: Liver function tests, PT/INR, lactate\\n\\n## Specific Scenarios in India\\n\\n### Post-Vaccination Fever\\n- Paracetamol 500 mg TDS × 2-3 days acceptable\\n- Do NOT use NSAIDs (may impair immune response)\\n\\n### Dengue Fever\\n- **Avoid NSAIDs** (risk of hemorrhagic transformation, GI bleeding)\\n- **Use paracetamol** 500 mg TDS only\\n- **Avoid aspirin** (antiplatelet; increases bleeding risk)\\n\\n### Drug Interactions\\n- **NSAID + ACE-I/ARB**: Monitor renal function (K+ monitoring)\\n- **NSAID + Warfarin**: Increased bleeding risk\\n- **NSAID + Aspirin**: Avoid combination (no additional benefit; GI risk increases),\\n        mnemonics: [\\n          {\\n            text: \\\"NSAID GI RISK: 'Age >65, PUD history, on Steroids/Anticoagulants' = GIVE PPI\\\",\\n            explanation:\\n              \\\"High-risk patients for GI bleeding need omeprazole prophylaxis with NSAID, or use celecoxib.\\\",\\n          },\\n          {\\n            text: \\\"NSAID RENAL CONTRAINDICATION: 'Triple Whammy' (ACE-I + NSAID + Diuretic = AKI)\\\",\\n            explanation:\\n              \\\"ACE-I reduces efferent vasoconstriction. NSAID reduces afferent vasodilation. Diuretic reduces intravascular volume. Combined = acute renal failure.\\\",\\n          },\\n          {\\n            text: \\\"PARACETAMOL MAX: '4 grams per day' (exceeding = hepatotoxicity risk)\\\",\\n            explanation:\\n              \\\"Paracetamol safe at 500 mg TDS = 1500 mg/day. Never exceed 4 g/day. Chronic overuse or acute overdose → liver failure.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Ibuprofen and paracetamol affordable first-line for fever in India\\\",\\n          \\\"Paracetamol safer than NSAIDs in GI disease, renal disease, pregnancy\\\",\\n          \\\"NSAIDs contraindicated in CKD, elderly with hypertension, concurrent ACE-I use\\\",\\n          \\\"GI protection (PPI) mandatory for high-risk patients on chronic NSAIDs\\\",\\n          \\\"Avoid NSAIDs in dengue (hemorrhagic risk); paracetamol only\\\",\\n          \\\"Paracetamol max 4 g/day; acute overdose treated with N-acetylcysteine\\\",\\n          \\\"COX-2 selective (celecoxib) safer for GI but cardiovascular risk similar\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 13 - Clinical uses\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Indian Society of Rheumatology\\\", chapter: \\\"NSAID use in arthritis\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"nsaid-antipyretics-exam\\\",\\n        title: \\\"NSAIDs & Antipyretics - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary:\\n          \\\"High-yield points: COX-1 vs COX-2 selectivity, GI toxicity mechanisms, renal contraindications, paracetamol hepatotoxicity, NSAIDs in specific diseases.\\\",\\n        contentMd: ``# Exam-Focused High-Yield Points\\n\\n## COX-1 vs COX-2 Blocking Effects\\n\\n| System | COX-1 Inhibition | COX-2 Inhibition |\\n|--------|-----------------|-----------------|\\n| **GI tract** | ↓ PGE1/PGE2 → ↑ acid, ↓ mucus → bleeding | No direct GI effect |\\n| **Kidneys** | ↓ PGI2 → ↓ renal blood flow → AKI | ↓ PGI2 also → renal risk |\\n| **Platelets** | ↓ TXA2 → antiplatelet effect | No effect (TXA2 from COX-1) |\\n| **Vessels** | ↓ TXA2 (prothrombotic ↓) | ↓ PGI2 (antithrombotic ↓) → thrombotic risk |\\n\\n## Common Exam Traps\\n\\n**TRAP 1**: \\\"NSAIDs are safe in dengue fever\\\"\\n- **Wrong**: NSAIDs safe for routine fever\\n- **Right**: Avoid NSAIDs in dengue (risk of hemorrhagic fever); use paracetamol only\\n\\n**TRAP 2**: \\\"Paracetamol has strong anti-inflammatory action\\\"\\n- **Wrong**: Stronger than NSAIDs\\n- **Right**: Weak anti-inflammatory; good analgesic + antipyretic. Use for pain, not inflammation\\n\\n**TRAP 3**: \\\"COX-2 inhibitors have no cardiovascular risk\\\"\\n- **Wrong**: Safer GI, but CV risk similar\\n- **Right**: COX-2 selective reduces GI bleeding but may increase MI/stroke (↓ PGI2 in vessels)\\n\\n**TRAP 4**: \\\"Can combine NSAID + aspirin for better analgesia\\\"\\n- **Wrong**: Additive benefit with doubled toxicity\\n- **Right**: Never combine (no additional efficacy; increased GI bleeding)\\n\\n**TRAP 5**: \\\"Elderly patient with hypertension on ACE-I needs ibuprofen for arthritis\\\"\\n- **Wrong**: Standard dosing safe\\n- **Right**: High renal failure risk; check renal function first; use paracetamol or reduce NSAID dose ± PPI\\n\\n## Drug Comparisons\\n\\n### Nonselective NSAIDs\\n\\n| Drug | Potency | Duration | GI Risk | Cost |\\n|------|---------|----------|---------|------|\\n| Ibuprofen | Moderate | 2-4 hours | Moderate | Very cheap |\\n| Naproxen | High | 17-24 hours | Moderate-High | Cheap |\\n| Diclofenac | Very high | 2-3 hours | High | Cheap |\\n| Meloxicam | High | 15-20 hours | Lower (preferential COX-2) | Moderate |\\n\\n### COX-2 Selective\\n| Drug | Selectivity | GI Risk | CV Risk | Cost |\\n|------|------------|---------|---------|------|\\n| Celecoxib | 375-fold | Low | Moderate | Expensive |\\n\\n## NMC Competency Questions\\n\\n**Expected Q1**: \\\"55-year-old man with osteoarthritis and history of peptic ulcer. Which NSAID?\\\"\\n- Answer: Meloxicam 7.5 mg daily + omeprazole 20 mg daily OR celecoxib 100 mg BD. Avoid diclofenac (high GI risk).\\n\\n**Expected Q2**: \\\"Paracetamol maximum daily dose and what happens with overdose?\\\"\\n- Answer: 4 g/day maximum. Overdose → CYP450 → NAPQI → glutathione depletion → hepatotoxicity. Treat with N-acetylcysteine.\\n\\n**Expected Q3**: \\\"Why avoid NSAIDs in dengue fever?\\\"\\n- Answer: NSAIDs increase bleeding risk (inhibit platelet TXA2); dengue hemorrhagic fever already risk. Use paracetamol instead.,\\n        mnemonics: [\\n          {\\n            text: \\\"COX-1 = GUT guardian (inhibition → bleeding); COX-2 = INFLAMMATION foe (inhibition → less pain)\\\",\\n            explanation:\\n              \\\"Remember: COX-1 protects GI tract. Inhibit it → bleeding. COX-2 drives inflammation. Inhibit it → pain relief. Selective COX-2 = better GI safety.\\\",\\n          },\\n          {\\n            text: \\\"NSAID RENAL RULE: 'ACE-I + NSAID = Check renal function'\\\",\\n            explanation:\\n              \\\"Both drugs affect renal perfusion via PG pathways. Combined = acute kidney injury risk, especially in elderly/diabetic.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"COX-1 inhibition → GI bleeding risk; COX-2 inhibition → anti-inflammatory, analgesic\\\",\\n          \\\"Nonselective NSAIDs have equal COX-1/COX-2 inhibition → balanced efficacy but GI toxicity\\\",\\n          \\\"Paracetamol weak anti-inflammatory but safe in GI/renal disease; max 4 g/day\\\",\\n          \\\"Never combine NSAID + aspirin (no additive benefit, doubled toxicity)\\\",\\n          \\\"Avoid NSAIDs in dengue, CKD, elderly on ACE-I\\\",\\n          \\\"GI protection (PPI) mandatory for high-risk patients\\\",\\n          \\\"Paracetamol overdose: NAC is antidote (within 10-24 hours of ingestion)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 13 - Exam summary\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NMC CBME\\\", chapter: \\\"Pharmacology competencies\\\", edition: \\\"2024\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"nsaid-antipyretics-recall\\\",\\n        title: \\\"NSAIDs & Antipyretics - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary:\\n          \\\"7-question active recall on NSAID selection, GI/renal contraindications, paracetamol toxicity, and specific disease scenarios.\\\",\\n        contentMd: ``# Active Recall Questions\\n\\n**Q1: A 70-year-old patient with hypertension (on amlodipine and lisinopril), diabetes, and osteoarthritis needs analgesia. Can ibuprofen be used? Why or why not?**\\n> **Answer**: **Ibuprofen is contraindicated**. Reason: (1) Age >65 years, (2) On ACE-I (lisinopril) which reduces efferent arteriolar vasoconstriction, (3) NSAID reduces afferent arteriolar vasodilation via COX inhibition, (4) Combined = acute kidney injury risk. Better choices: Paracetamol 500 mg TDS (no renal effect) OR Meloxicam 7.5 mg + omeprazole 20 mg (if anti-inflammatory needed).\\n\\n**Q2: Maximum daily dose of paracetamol and what is the toxic metabolite responsible for hepatotoxicity?**\\n> **Answer**: Maximum daily dose = 4 grams (exceeding this increases hepatotoxicity risk). Toxic metabolite: N-acetyl-p-benzoquinoneimine (NAPQI). Mechanism: Liver metabolizes paracetamol via conjugation (90%) and CYP450 (10%) → NAPQI → depletes hepatic glutathione → hepatocellular necrosis. Treatment: N-acetylcysteine (NAC) within 10-24 hours replenishes glutathione.\\n\\n**Q3: Explain COX-1 vs COX-2 selectivity and how it relates to GI safety and antiplatelet effect.**\\n> **Answer**:\\n> - **COX-1 (constitutive)**: Present in GI mucosa, platelets, kidney. Produces protective PGE2 (mucus, bicarbonate secretion) in stomach; TXA2 (platelet aggregation). Inhibition → GI bleeding, antiplatelet effect.\\n> - **COX-2 (inducible)**: Present in inflammatory cells, brain, kidney. Produces pathogenic PGE2, PGI2. Inhibition → anti-inflammatory, analgesic.\\n> - **COX-2 selective** (celecoxib) → ↓ GI bleeding (preserves PGE2) but still has ↓ antiplatelet effect via ↓ PGI2.\\n\\n**Q4: Why are NSAIDs contraindicated in dengue fever? What is the alternative?**\\n> **Answer**: NSAIDs contraindicated because they inhibit COX-1 in platelets → ↓ TXA2 → antiplatelet effect → increased bleeding risk. Dengue already carries hemorrhagic fever risk. **Alternative: Paracetamol 500 mg TDS** (no antiplatelet effect, safe analgesic/antipyretic). Also avoid aspirin (antiplatelet) in dengue.\\n\\n**Q5: A patient on NSAIDs for arthritis has a history of peptic ulcer disease. How would you manage NSAID use safely?**\\n> **Answer**: (1) Add gastroprotection: Omeprazole 20 mg daily (PPI reduces acid secretion; protects ulcer mucosa), (2) Consider H. pylori status (eradication therapy if positive before NSAID), (3) Use meloxicam (preferential COX-2) instead of diclofenac (highest GI risk), OR (4) Switch to COX-2 selective: Celecoxib 100 mg BD (lower GI bleeding rate). Monitor symptoms; if epigastric pain develops, stop NSAID and investigate endoscopically.\\n\\n**Q6: Describe the mechanism of fever reduction by antipyretics at the level of the hypothalamus.**\\n> **Answer**: Normal hypothesis: PGE2 levels regulate hypothalamic set point at ~37°C. In infection, endotoxin (LPS) and cytokines (IL-1, TNF) trigger COX-2 induction in hypothalamic astrocytes → ↑ PGE2 → elevated set point (fever, typically to 38-39°C). Antipyretics (NSAIDs, paracetamol) → ↓ COX activity → ↓ hypothalamic PGE2 → lower set point → active heat dissipation (sweating, vasodilation). Not antipyretics don't lower body temperature if normal; they only reset elevated set point in fever.\\n\\n**Q7: Compare ibuprofen and aspirin in terms of mechanism, duration, and clinical use.**\\n> **Answer**:\\n> - **Ibuprofen**: Reversible COX inhibition; nonselective COX-1/COX-2; short duration (2-4 hours); effect worn off in 24 hours. Used for analgesia, anti-inflammatory. NOT for antiplatelet (reversible = ineffective for CV prevention).\\n> - **Aspirin**: Irreversible COX acetylation; preferential COX-1 inhibition; prolonged antiplatelet effect (7-10 days = platelet lifespan). Used for CV prevention (75-100 mg daily). Higher doses (500-1000 mg) = analgesic but not optimal.\\n> - **Clinical choice**: Aspirin for antiplatelet therapy; ibuprofen for pain/inflammation.,\\n        mnemonics: [],\\n        keyPoints: [\\n          \\\"7 recall questions on NSAID contraindications, paracetamol toxicity, COX selectivity, and dengue management\\\",\\n          \\\"Focus on: GI bleeding risk, renal impairment, hepatotoxicity, antiplatelet effects\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 13\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Indian Society of Hepatology\\\", chapter: \\\"Paracetamol-induced liver injury\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n\\n  // ─── Topic 3: Drugs for Gout ─────────────────\\n  {\\n    topicCode: \\\"PH-MOD-06-TOP-03\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"gout-drugs-foundation\\\",\\n        title: \\\"Drugs for Gout - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Gout pathophysiology: monosodium urate (MSU) crystal deposition in joints. Acute attack management (colchicine, NSAIDs, corticosteroids). Chronic management: urate-lowering therapy (allopurinol, febuxostat). Indian epidemiology and lifestyle factors.\\\",\\n        contentMd: ``# Drugs for Gout\\n\\n## Gout Pathophysiology\\n\\n### Uric Acid Metabolism\\n- **Source**: Purines (dietary + endogenous) → xanthine → uric acid (via xanthine oxidase)\\n- **Excretion**: 2/3 renal (tubular secretion), 1/3 biliary + GI\\n- **Hyperuricemia**: Serum urate >6.8 mg/dL (supersaturation point)\\n\\n### MSU Crystal Formation\\n- **Trigger**: Lowering of pH (acidosis), temperature drop, dehydration\\n- **MSU deposits**: Joint synovial fluid, tophi (chronic deposits)\\n- **Immune response**: MSU crystals → NLRP3 inflammasome activation → IL-1β release → acute inflammation\\n\\n## Acute Gout Attack Management\\n\\n### Colchicine (Microfibrule Inhibitor)\\n- **Mechanism**: Inhibits tubulin → blocks microtubule formation → neutrophil migration inhibited\\n- **Effect**: ↓ NLRP3 inflammasome activation, ↓ IL-1β\\n- **Dosing (Acute Attack)**:\\n  - Loading: 1 mg, then 0.5 mg hourly × 4-6 hours (until diarrhea or 6 mg total)\\n  - OR: 0.5-1 mg BD for 2-3 days\\n- **Efficacy**: Most effective within first 12-24 hours of attack\\n- **Toxicity**: GI (diarrhea, nausea), rare myopathy with chronic use\\n- **Use in India**: Older standard; now often replaced by NSAIDs/corticosteroids due to GI toxicity\\n\\n### NSAIDs (Acute Attack)\\n- **Choice**: Indomethacin 50 mg TDS or Naproxen 500 mg BD\\n- **Duration**: 7-10 days until symptoms resolve\\n- **Advantage**: Better tolerated than colchicine; rapid pain relief\\n- **Caution**: Check renal function (contraindicated if CKD)\\n- **Cost**: Affordable in India; preferred first-line\\n\\n### Corticosteroids (Acute Attack)\\n- **Use**: When NSAIDs/colchicine contraindicated\\n- **Route**:\\n  - **Intra-articular**: Triamcinolone 20-40 mg (gold standard for monoarticular)\\n  - **Oral**: Prednisolone 0.5 mg/kg/day × 7 days then taper\\n- **Advantage**: Steroid-sparing; single injection for monoarticular\\n- **Efficacy**: Similar to NSAIDs\\n\\n## Chronic Urate-Lowering Therapy (ULT)\\n\\n### Xanthine Oxidase Inhibitors (XOI)\\n\\n**Allopurinol** (First-line)\\n- **Mechanism**: Inhibits xanthine oxidase → ↓ urate production\\n- **Dosing**: Start 50 mg daily, titrate by 50 mg every 2-4 weeks; target serum urate <6 mg/dL\\n- **Max dose**: 800 mg daily (higher in frequent attacks/tophi)\\n- **Monitoring**: Renal function, LFTs\\n- **Toxicity**: Allopurinol hypersensitivity syndrome (rash, fever, hepatotoxicity; rare but serious)\\n- **Cost in India**: Very cheap; most prescribed\\n- **Advantage**: Decades of experience; HLA-B*5801 testing not routine in India\\n\\n**Febuxostat** (Non-purine XOI)\\n- **Mechanism**: Selective XOI (doesn't metabolize other purines)\\n- **Dosing**: 40-80 mg daily\\n- **Advantage**: No HLA-B*5801 interaction; safer in renal disease\\n- **Cost in India**: Expensive; not first-line\\n- **Use**: Allopurinol intolerant or CKD patients\\n\\n### Uricosuric Agents (Urate Excretion Enhancers)\\n\\n**Probenecid** (Urine-based)\\n- **Mechanism**: Inhibits renal tubular reabsorption of urate\\n- **Dosing**: 500 mg daily, increase to 2-3 g/day in divided doses\\n- **Caution**: Ensure high urine output (>2 L/day); can precipitate acute attack\\n- **Contraindicated**: Uric acid nephrolithiasis, CKD\\n- **Use in India**: Uncommon; probenecid not widely available\\n\\n### Uricase (Enzyme Therapy)\\n\\n**Pegloticase** (Recombinant urate oxidase)\\n- **Mechanism**: Converts urate → allantoin (easily excreted)\\n- **Use**: Severe refractory gout, tophaceous gout\\n- **Cost**: Extremely expensive; not available in India\\n- **Parenteral**: IV infusion; immunogenicity issue\\n\\n## Indian Clinical Context\\n- **Prevalence**: Increasing with urbanization, high purine diet (non-veg), alcohol\\n- **Risk factors**: Obesity, hypertension, metabolic syndrome, renal disease\\n- **Allopurinol**: Standard therapy; HLA-B*5801 testing not routine (cost issue)\\n- **Lifestyle**: Reduce red meat, seafood, alcohol; stay hydrated,\\n        mnemonics: [\\n          {\\n            text: \\\"GOUT DRUGS by PHASE: 'ACUTE = Colchicine/NSAIDs/Steroids; CHRONIC = Allo-febuxostat (ULT)'\\\",\\n            explanation:\\n              \\\"Acute attack: anti-inflammatory drugs stop inflammation (colchicine blocks neutrophils; NSAIDs reduce PGs). Chronic: urate-lowering therapy prevents recurrence.\\\",\\n          },\\n          {\\n            text: \\\"ALLOPURINOL = 'Allo-stops-urate-production' (xanthine oxidase inhibitor)\\\",\\n            explanation:\\n              \\\"Allopurinol inhibits xanthine oxidase → less uric acid production. Start low (50 mg), titrate up to target urate <6 mg/dL.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Colchicine inhibits microtubule formation; most effective if started early (<12-24 hours)\\\",\\n          \\\"NSAIDs (indomethacin) and corticosteroids equally effective for acute gout\\\",\\n          \\\"Allopurinol first-line ULT; start low and titrate (urate-lowering therapy paradoxically can precipitate acute attack initially)\\\",\\n          \\\"Febuxostat safer in renal disease; no HLA-B*5801 concern\\\",\\n          \\\"Probenecid enhances urine urate excretion; contraindicated in uric acid stones\\\",\\n          \\\"Urate target: <6 mg/dL to prevent crystal formation\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 14 - Drugs for Gout\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 27 - Gout treatment\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"gout-drugs-mechanism\\\",\\n        title: \\\"Drugs for Gout - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary:\\n          \\\"NLRP3 inflammasome activation by MSU, colchicine mechanism, xanthine oxidase inhibition kinetics, uricosuric transport mechanisms.\\\",\\n        contentMd: ``# Mechanisms of Action\\n\\n## Acute Attack (Anti-Inflammatory)\\n\\n### Colchicine\\n- **Target**: NLRP3 inflammasome + tubulin\\n- **Mechanism**:\\n  1. Binds β-tubulin in neutrophils/macrophages\\n  2. Prevents microtubule polymerization\\n  3. Blocks neutrophil migration into joint\\n  4. Inhibits NLRP3 inflammasome assembly\\n  5. ↓ IL-1β and TNF-α production\\n- **Timeline**: Effect within 12-24 hours if given early\\n- **Limitation**: GI toxicity (microtubule inhibition also in GI epithelial cells)\\n\\n### NSAIDs\\n- **Target**: COX-1 and COX-2\\n- **Mechanism**: ↓ PGE2, PGI2 → reduced vasodilation, platelet activation, neutrophil migration\\n- **In gout**: Reduce acute inflammatory response in joint\\n- **Advantage**: Faster onset than colchicine; safer GI profile than high-dose colchicine\\n\\n### Corticosteroids (Intra-articular)\\n- **Target**: Glucocorticoid receptors in synovial lining\\n- **Mechanism**: Suppress pro-inflammatory cytokine production (IL-1, IL-6, TNF)\\n- **Effect**: Direct steroid injection into joint → maximum local anti-inflammatory effect\\n- **Advantage**: Steroid-sparing; single injection for monoarticular gout\\n\\n## Chronic Management (Urate-Lowering)\\n\\n### Xanthine Oxidase Inhibitors\\n\\n**Allopurinol**\\n- **Target**: Xanthine oxidase (converts hypoxanthine → xanthine → uric acid)\\n- **Mechanism**:\\n  1. Competitive inhibition of xanthine oxidase\\n  2. ↓ Uric acid production\\n  3. Serum urate falls over 2-3 weeks\\n- **Secondary benefit**: Accumulates hypoxanthine/xanthine (more soluble) → less crystallization\\n- **Pharmacokinetics**: Metabolized to allopurinol ribonucleoside and oxypurinol (active metabolite)\\n\\n**Febuxostat**\\n- **Mechanism**: Selective, non-purine xanthine oxidase inhibitor\\n- **Advantage**: Doesn't inhibit other purine enzymes; safer selectivity\\n- **Efficacy**: Similar to allopurinol but more expensive\\n\\n### Uricosuric Agents\\n\\n**Probenecid**\\n- **Target**: URAT1 transporter (urate reabsorption in renal proximal tubule)\\n- **Mechanism**:\\n  1. Inhibits tubular reabsorption of urate\\n  2. ↑ Urinary urate excretion\\n  3. Serum urate falls via renal clearance (not production decrease)\\n- **Requirement**: High urine flow (risk of urate stone precipitation if dehydrated)\\n\\n## Pharmacokinetics\\n\\n| Drug | Onset | Peak | Metabolism | Half-life |\\n|------|-------|------|-----------|-----------|\\n| Colchicine (oral) | 12-24 hr | Variable | Hepatic | 9 hours |\\n| Indomethacin | 1-2 hr | 2 hours | Hepatic | 4-5 hours |\\n| Allopurinol | 2-3 days | 7-10 days | Hepatic → Oxypurinol | 1-3 hours (Oxy: 15 hours) |\\n| Febuxostat | 2-3 days | 7-10 days | Hepatic | 5-8 hours |,\\n        mnemonics: [\\n          {\\n            text: \\\"COLCHICINE = 'COL = blocks tubulin → stops neutrophil migration → ↓ inflammasome'\\\",\\n            explanation:\\n              \\\"Colchicine binds tubulin → prevents microtubule polymerization → neutrophils can't migrate into joint → NLRP3 inflammasome not activated.\\\",\\n          },\\n          {\\n            text: \\\"XANTHINE OXIDASE PATH: 'Hypoxanthine → Xanthine → URATE' (allopurinol blocks last 2 steps)\\\",\\n            explanation:\\n              \\\"Allopurinol inhibits enzyme that converts hypoxanthine→xanthine and xanthine→urate. Result: less urate production.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Colchicine inhibits microtubules; blocks neutrophil migration and NLRP3 inflammasome\\\",\\n          \\\"NSAIDs reduce PGs → anti-inflammatory (alternative to colchicine)\\\",\\n          \\\"Corticosteroids intra-articular best for monoarticular gout (steroid-sparing)\\\",\\n          \\\"Allopurinol decreases urate production via xanthine oxidase inhibition\\\",\\n          \\\"Febuxostat selective XOI; safer in renal disease than allopurinol\\\",\\n          \\\"Probenecid increases urine urate excretion (requires high urine output)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 14 - Mechanisms\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 27 - Detailed gout pathophysiology\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"gout-drugs-clinical\\\",\\n        title: \\\"Drugs for Gout - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Acute vs chronic management, timing of ULT initiation, tophaceous gout, gout in renal disease. Indian guideline-based management.\\\",\\n        contentMd: ``# Clinical Applications in Indian Context\\n\\n## Acute Gout Attack Management\\n\\n### First Episode (Acute Attack)\\n- **Presentation**: Sudden onset joint pain (usually big toe), erythema, swelling, warmth\\n- **Diagnosis**: Synovial fluid aspiration → MSU crystals (needle-shaped, negative birefringence)\\n\\n**Treatment Options** (Sequential or Combined):\\n1. **NSAIDs (First-line in India)**:\\n   - Indomethacin 50 mg TDS or Naproxen 500 mg BD\\n   - Duration: 7-10 days\\n   - Monitor renal function, K+\\n\\n2. **Colchicine (If NSAID contraindicated)**:\\n   - 1 mg, then 0.5 mg hourly (max 6 mg total)\\n   - Early use (first 12 hours) most effective\\n   - GI side effects common (diarrhea, nausea)\\n\\n3. **Corticosteroid (If NSAIDs/colchicine failed)**:\\n   - Intra-articular: Triamcinolone 20-40 mg (first choice for monoarticular)\\n   - Oral: Prednisolone 30-40 mg daily × 5-7 days then taper\\n\\n### Management of Recurrent Attacks\\n- **Frequency**: If >2 attacks/year → initiate ULT\\n- **Between attacks**: NSAIDs contraindicated (paradoxically can precipitate attack)\\n- **Low-dose colchicine**: 0.5 mg daily (prophylaxis while starting ULT) × 3-6 months\\n\\n## Chronic Urate-Lowering Therapy (ULT)\\n\\n### Initiation Criteria\\n- >2 attacks/year\\n- Single attack with renal insufficiency\\n- Single attack with tophaceous gout or uric acid stones\\n- Asymptomatic hyperuricemia + CKD or cardiac disease\\n\\n### Allopurinol Therapy (Standard in India)\\n\\n**Dosing Protocol**:\\n1. **Start**: 50 mg daily (titration reduces attack risk)\\n2. **Target serum urate**: <6 mg/dL (prevent crystal formation)\\n3. **Titration**: Increase 50 mg every 2-4 weeks\\n4. **Maintenance**: Usually 200-300 mg daily (max 800 mg/day for tophaceous)\\n5. **Monitoring**: Serum urate every 2-5 weeks until target, then every 6-12 months\\n\\n**Prophylaxis During Titration**:\\n- **Colchicine 0.5 mg daily** OR **NSAID (indomethacin 25 mg BD)** × 3-6 months\\n- Prevents paradoxical attack during urate-lowering phase\\n\\n**Allopurinol Hypersensitivity Syndrome** (Rare but serious):\\n- **Risk factors**: HLA-B*5801 (especially Asian populations; testing not routine in India)\\n- **Presentation**: Rash (maculopapular, Stevens-Johnson syndrome type), fever, hepatotoxicity, nephrotoxicity (1-2 weeks after starting)\\n- **Management**: Stop immediately; supportive care; consider prednisolone\\n\\n### Febuxostat (Alternative ULT)\\n- **Use**: Allopurinol intolerant or inadequate response\\n- **Dosing**: 40-80 mg daily (more potent than allopurinol)\\n- **Advantage**: Selective XOI; no HLA-B*5801 testing needed; safer in renal disease\\n- **Cost**: 5-10× more expensive than allopurinol in India; not first-line\\n\\n### Probenecid (Less common in India)\\n- **Use**: Underexcreting urate (24-hour urinary urate <600 mg)\\n- **Dosing**: 1-3 g/day in divided doses\\n- **Requirement**: Adequate hydration (>2 L/day urine output)\\n- **Contraindicated**: Uric acid stones, CKD stage 4-5\\n- **Availability**: Limited in India; primarily academic centers\\n\\n## Tophaceous Gout (Chronic Uncontrolled)\\n\\n### Features\\n- **Tophi**: Nodular deposits of MSU + surrounding inflammation\\n- **Location**: Ear helix, fingers, toes, Achilles tendon\\n- **Complications**: Joint destruction, functional impairment, fistulae (discharge of chalky material)\\n\\n### Management\\n- **Aggressive ULT**: High-dose allopurinol (400-800 mg/day) or febuxostat 80 mg\\n- **Target urate**: <5 mg/dL (very low, to mobilize tophaceous deposits)\\n- **Timeline**: Tophi dissolve over months-years on intensive ULT\\n- **Monitoring**: Serial imaging (X-rays) to assess resolution\\n\\n## Special Scenarios in India\\n\\n### Gout in Chronic Kidney Disease (CKD)\\n- **Risk**: Higher urate retention; lower serum urate threshold for attacks\\n- **First-line ULT**: Febuxostat (safer than allopurinol in renal disease)\\n- **Dosing**: Reduced allopurinol (50-100 mg daily if GFR <30)\\n- **Avoid**: Probenecid (ineffective if GFR <50)\\n\\n### Gout in Hypertension (on Diuretics)\\n- **Problem**: Thiazide/loop diuretics ↓ urate excretion → ↑ gout risk\\n- **Management**:\\n  - Change diuretic if possible (ACE-I/ARB preferred)\\n  - OR start ULT (allopurinol) while continuing diuretic\\n  - Manage target BP separately\\n\\n### Gout with Metabolic Syndrome\\n- **Common in India**: Obesity, DM, hypertension, dyslipidemia\\n- **Management**:\\n  - Weight loss (10-15% BW reduction)\\n  - Limit alcohol, high-fructose drinks, red meat\\n  - Allopurinol doesn't interfere with metabolic therapy\\n  - Monitor for interactions (e.g., some statins + allopurinol)\\n\\n### Post-Transplant Gout (Cyclosporine Users)\\n- **Risk**: Cyclosporine + diuretics + renal impairment → very high gout risk\\n- **Management**: Allopurinol (careful dosing in renal transplant), probenecid, febuxostat\\n- **Drug interaction**: Allopurinol may increase azathioprine toxicity (avoid if possible),\\n        mnemonics: [\\n          {\\n            text: \\\"ACUTE ATTACK MGMT: 'NSAIDs > Colchicine > Steroids' (preference order in India)\\\",\\n            explanation:\\n              \\\"NSAIDs first-line (affordable, effective, safe GI). Colchicine second (GI side effects). Steroids intra-articular third (for monoarticular or NSAID-failed).\\\",\\n          },\\n          {\\n            text: \\\"ALLOPURINOL TITRATION: 'Start LOW (50 mg), Go SLOW (every 2-4 weeks), Goal 6 mg/dL'\\\",\\n            explanation:\\n              \\\"Slow titration reduces attack risk during urate-lowering phase. Prophylaxis with colchicine/NSAID while titrating.\\\",\\n          },\\n          {\\n            text: \\\"TOPHACEOUS GOUT: 'Very LOW urate target (<5 mg/dL), Very HIGH allopurinol dose (400-800 mg)'\\\",\\n            explanation:\\n              \\\"Aggressive ULT dissolves tophi over months-years. Standard ULT <6 mg/dL; tophaceous needs <5 mg/dL.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Acute attack: NSAIDs first-line (affordable, effective); colchicine if NSAID contraindicated\\\",\\n          \\\"Start ULT only AFTER acute attack resolved; prophylaxis during titration essential\\\",\\n          \\\"Allopurinol standard; start 50 mg, titrate by 50 mg every 2-4 weeks\\\",\\n          \\\"Target serum urate <6 mg/dL (standard); <5 mg/dL for tophaceous gout\\\",\\n          \\\"Febuxostat alternative if allopurinol intolerant; safer in CKD\\\",\\n          \\\"Prophylaxis with colchicine 0.5 mg daily or NSAIDs during first 3-6 months of ULT\\\",\\n          \\\"Tophaceous gout requires prolonged therapy; radiographic monitoring helpful\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 14 - Clinical management\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Indian Society of Rheumatology\\\", chapter: \\\"Gout management guidelines\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"gout-drugs-exam\\\",\\n        title: \\\"Drugs for Gout - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary:\\n          \\\"High-yield points: acute vs chronic management distinction, ULT timing, allopurinol titration, target urate, special scenarios.\\\",\\n        contentMd: ``# Exam-Focused High-Yield Points\\n\\n## Acute vs Chronic Gout\\n\\n| Phase | Drugs | Goal | Duration |\\n|-------|-------|------|----------|\\n| **Acute Attack** | NSAIDs, Colchicine, Corticosteroids | End inflammation | 7-14 days |\\n| **Prophylaxis** | Low-dose colchicine, NSAIDs | Prevent attacks during ULT | 3-6 months |\\n| **Chronic (ULT)** | Allopurinol, Febuxostat, Probenecid | Lower urate < 6 mg/dL | Lifelong |\\n\\n## Common Exam Traps\\n\\n**TRAP 1**: \\\"Start allopurinol immediately during acute attack\\\"\\n- **Wrong**: Paradoxically precipitates more attacks\\n- **Right**: Wait until 2-4 weeks after acute attack resolves; start with prophylaxis\\n\\n**TRAP 2**: \\\"Allopurinol 300 mg daily for everyone\\\"\\n- **Wrong**: Inadequate titration; some need 400-800 mg\\n- **Right**: Start 50 mg, titrate up to target urate <6 mg/dL\\n\\n**TRAP 3**: \\\"Colchicine for chronic gout management\\\"\\n- **Wrong**: Only for acute attacks\\n- **Right**: Colchicine low-dose for prophylaxis during ULT initiation, not maintenance\\n\\n**TRAP 4**: \\\"Patient with CKD and gout — use allopurinol standard dose\\\"\\n- **Wrong**: Risk of toxicity\\n- **Right**: Reduce allopurinol dose (50-100 mg daily if GFR <30); consider febuxostat\\n\\n**TRAP 5**: \\\"Probenecid for all hyperuricemia\\\"\\n- **Wrong**: Ineffective in renal disease\\n- **Right**: Only for underexcreting urate with GFR >50; requires high urine output\\n\\n## Drug Comparisons\\n\\n### Acute Attack Therapies\\n\\n| Drug | Onset | Efficacy | Safety | Cost |\\n|------|-------|----------|--------|------|\\n| NSAID | 1-2 hr | Excellent | Caution renal/GI | Very cheap |\\n| Colchicine | 12-24 hr | Good if early | GI toxicity | Cheap |\\n| Corticosteroid (I.A.) | 12-24 hr | Excellent | Safe local | Moderate |\\n\\n### Chronic ULT\\n\\n| Drug | Mechanism | Start dose | Max dose | Cost | Best for |\\n|------|-----------|-----------|----------|------|----------|\\n| Allopurinol | XOI | 50 mg | 800 mg | Cheap | Standard therapy |\\n| Febuxostat | Selective XOI | 40 mg | 80 mg | Expensive | Allopurinol intolerant, CKD |\\n| Probenecid | Uricosuric | 500 mg | 3 g | Cheap | Underexcretors (GFR >50) |\\n\\n## NMC Competency Questions\\n\\n**Expected Q1**: \\\"How to initiate allopurinol safely in acute gout with hyperuricemia?\\\"\\n- Answer: (1) Resolve acute attack first (NSAIDs/colchicine) → wait 2-4 weeks, (2) Start prophylaxis (colchicine 0.5 mg BD) → then allopurinol 50 mg, (3) Titrate up every 2-4 weeks to target urate <6 mg/dL, (4) Continue prophylaxis × 3-6 months.\\n\\n**Expected Q2**: \\\"Difference between tophaceous and non-tophaceous gout management?\\\"\\n- Answer: Non-tophaceous: target urate <6 mg/dL, standard allopurinol 200-300 mg. Tophaceous: target urate <5 mg/dL, higher allopurinol dose 400-800 mg, longer treatment duration (months-years).,\\n        mnemonics: [\\n          {\\n            text: \\\"GOUT ATTACK DRUG CHOICE: 'N > C > S' (NSAIDs > Colchicine > Steroids) in India\\\",\\n            explanation:\\n              \\\"NSAIDs first (cheap, effective, safe). Colchicine second (GI issues). Steroids third (for monoarticular or NSAID-failed cases).\\\",\\n          },\\n          {\\n            text: \\\"ALLOPURINOL RULE: 'Wait 2-4 weeks, then Start Slow (50 mg), Prophylaxis Protective'\\\",\\n            explanation:\\n              \\\"Start after acute attack resolves, use prophylaxis (colchicine/NSAID) during titration, go slow (50 mg → titrate).\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Acute attack: NSAIDs/colchicine/corticosteroids (not ULT)\\\",\\n          \\\"Start ULT 2-4 weeks after acute attack resolves\\\",\\n          \\\"Allopurinol: start 50 mg, titrate by 50 mg every 2-4 weeks\\\",\\n          \\\"Target urate <6 mg/dL (standard), <5 mg/dL (tophaceous)\\\",\\n          \\\"Prophylaxis during ULT titration: colchicine 0.5 mg daily × 3-6 months\\\",\\n          \\\"Febuxostat safer in CKD; probenecid only for GFR >50\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 14 - Exam summary\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NMC CBME\\\", chapter: \\\"Pharmacology competencies\\\", edition: \\\"2024\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"gout-drugs-recall\\\",\\n        title: \\\"Drugs for Gout - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary:\\n          \\\"7-question active recall on acute vs chronic management, allopurinol titration, prophylaxis, and special scenarios.\\\",\\n        contentMd: ``# Active Recall Questions\\n\\n**Q1: A patient presents with acute gouty arthritis of the right big toe. When would you start allopurinol, and why not immediately?**\\n> **Answer**: Start allopurinol 2-4 weeks AFTER acute attack resolves (when pain/swelling improved). NOT immediately because rapid lowering of serum urate can paradoxically precipitate more acute attacks (mobilization of existing MSU deposits). First: treat acute attack with NSAIDs/colchicine/steroids. Then: wait, then: start prophylaxis (colchicine 0.5 mg BD) + allopurinol.\\n\\n**Q2: Describe the correct allopurinol titration protocol, including target dose, monitoring, and prophylaxis during titration.**\\n> **Answer**: (1) Start 50 mg daily, (2) Increase by 50 mg every 2-4 weeks, (3) Goal: serum urate <6 mg/dL (measure after 2-3 weeks of stable dose), (4) Typical maintenance: 200-300 mg daily (up to 800 mg for tophaceous), (5) During titration: provide prophylaxis—colchicine 0.5 mg BD or indomethacin 25 mg BD × 3-6 months to prevent attacks.\\n\\n**Q3: What is allopurinol hypersensitivity syndrome? What are the risk factors and how would you manage it?**\\n> **Answer**: Allopurinol hypersensitivity syndrome: rare but serious adverse reaction. Presentation: maculopapular rash (can progress to Stevens-Johnson), fever, hepatotoxicity (LFT elevation), nephrotoxicity. Risk factors: HLA-B*5801 (especially Asian, African ancestry; not routinely screened in India). Management: Stop allopurinol immediately, supportive care, consider short course prednisolone, monitor LFTs. Test for HLA-B*5801 if available for future reference.\\n\\n**Q4: Why is febuxostat preferred over allopurinol in a patient with CKD stage 4 (GFR 25), and what is the dosing?**\\n> **Answer**: Febuxostat safer in CKD because: (1) Doesn't require dose reduction (hepatic metabolism, not renal), (2) No HLA-B*5801 interaction, (3) More selective XOI. Dosing: Febuxostat 40-80 mg daily (vs allopurinol 50-100 mg in CKD). Allopurinol in CKD requires dose reduction and has HLA-B*5801 hypersensitivity risk (higher in CKD populations). Trade-off: febuxostat is 5-10× more expensive.\\n\\n**Q5: A patient on thiazide diuretic for hypertension develops gout. What is the mechanism and what is your management?**\\n> **Answer**: Mechanism: Thiazide diuretics reduce urinary urate excretion (compete for renal tubular secretion). Urate accumulation → hyperuricemia → gout. Management options: (1) Switch diuretic if possible (ACE-I/ARB preferred, loop diuretics acceptable), (2) OR continue diuretic + start allopurinol ULT (200-300 mg daily, target urate <6 mg/dL). If switching not possible, add allopurinol.\\n\\n**Q6: Compare colchicine and NSAIDs for acute gout. When would you choose each?**\\n> **Answer**:\\n> - **NSAIDs** (indomethacin 50 mg TDS): First-line in India (affordable, effective, faster onset). Choose if no renal disease, no peptic ulcer history, no bleeding risk.\\n> - **Colchicine** (1 mg + 0.5 mg hourly): Choose if NSAID contraindicated (renal disease, GI disease, bleeding risk). More effective if started <12 hours after onset. GI side effects (diarrhea) common.\\n> - **Corticosteroid** (intra-articular/oral): Choose if both NSAIDs and colchicine fail/contraindicated. Intra-articular best for monoarticular.\\n\\n**Q7: A patient with tophaceous gout has serum urate 8 mg/dL despite allopurinol 300 mg daily. What is the next step?**\\n> **Answer**: (1) Check adherence (ensure patient taking allopurinol daily). (2) If adherent, increase allopurinol dose: target <5 mg/dL for tophaceous (not 6 mg/dL standard). Can increase to 400-600 mg daily (or up to 800 mg for severe). (3) Recheck urate after 3-4 weeks of higher dose. (4) Consider switching/adding febuxostat if allopurinol inadequate. (5) Prophylaxis with colchicine 0.5 mg daily ongoing (tophi mobilization takes months).,\\n        mnemonics: [],\\n        keyPoints: [\\n          \\\"7 recall questions on acute vs chronic gout, allopurinol timing, hypersensitivity, and special scenarios\\\",\\n          \\\"Focus on: prophylaxis during ULT, correct titration, tophaceous management, CKD dosing\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 14\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Indian Society of Rheumatology\\\", chapter: \\\"Gout management\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n\\n  // ─── Topic 4: Immunosuppressants ─────────────────\\n  {\\n    topicCode: \\\"PH-MOD-06-TOP-04\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"immunosuppressants-foundation\\\",\\n        title: \\\"Immunosuppressants - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Immunosuppressants in organ transplantation and autoimmune diseases. Calcineurin inhibitors (tacrolimus, cyclosporine), antimetabolites (azathioprine, mycophenolate), mTOR inhibitors (sirolimus). Mechanisms and clinical applications in India.\\\",\\n        contentMd: ``# Immunosuppressants\\n\\n## Classes of Immunosuppressants\\n\\n### Calcineurin Inhibitors (CNI)\\n\\n**Cyclosporine**\\n- **Source**: Fungal metabolite (Tolypocladium inflatum)\\n- **Mechanism**: Inhibits calcineurin → blocks NFAT dephosphorylation → ↓ IL-2 transcription\\n- **Effect**: ↓ T-cell proliferation (selective, not B-cell)\\n- **Route**: Oral (poor absorption, variable bioavailability), IV\\n- **Toxicity**: Nephrotoxicity (dose-limiting), hypertension, hepatotoxicity, hyperglycemia, gingival hyperplasia\\n- **Drug interactions**: CYP3A4 substrate (many interactions)\\n- **Monitoring**: Trough cyclosporine levels (100-250 ng/mL target)\\n\\n**Tacrolimus**\\n- **Mechanism**: Similar to cyclosporine (binds FKBP12 → calcineurin inhibition)\\n- **Potency**: 10-100× more potent than cyclosporine\\n- **Route**: Oral, IV\\n- **Advantage**: No drug interactions (minimally CYP450 dependent); better GI absorption\\n- **Toxicity**: Similar to cyclosporine (nephrotoxicity, hypertension, hyperglycemia); also tremor, hyperkalemia\\n- **Use**: Preferred in many transplant centers; standard in India\\n\\n### Antimetabolites\\n\\n**Azathioprine (AZA)**\\n- **Mechanism**: Prodrug → 6-mercaptopurine (6-MP) → inhibits purine synthesis\\n- **Effect**: ↓ Lymphocyte proliferation (non-selective)\\n- **Route**: Oral, IV\\n- **Dosing**: 1-2 mg/kg/day\\n- **Toxicity**: Bone marrow suppression (leukopenia, thrombocytopenia), hepatotoxicity, nausea\\n- **Monitoring**: CBC (leukocyte count >3000/mm³ required)\\n- **Use**: Renal/cardiac transplant (with CNI), autoimmune diseases\\n\\n**Mycophenolate Mofetil (MMF)**\\n- **Mechanism**: Prodrug → mycophenolic acid (MPA) → selective IMPDH inhibitor → ↓ guanine nucleotide synthesis\\n- **Selectivity**: Preferential inhibition of lymphocyte proliferation (IMPDH type II isoenzyme in lymphocytes)\\n- **Dosing**: 1000 mg BD (2 g/day standard)\\n- **Advantage**: No drug level monitoring needed; better efficacy than AZA for graft survival\\n- **Toxicity**: GI (diarrhea, nausea), bone marrow suppression (less than AZA)\\n- **Use**: Renal transplant (preferred over AZA), autoimmune hepatitis, lupus nephritis\\n\\n### mTOR Inhibitors\\n\\n**Sirolimus (Rapamycin)**\\n- **Mechanism**: Binds FKBP12 → inhibits mTOR → blocks S6 kinase → ↓ cell proliferation\\n- **Effect**: Inhibits IL-2 dependent T and B cell proliferation\\n- **Unique**: Has vasculitis prophylaxis, graft vasculopathy prevention\\n- **Toxicity**: Hyperlipidemia, bone marrow suppression, rash, poor wound healing\\n- **Use**: Renal transplant (alternative to CNI); cardiac transplant; malignancy prevention\\n- **Monitoring**: Trough sirolimus levels (5-15 ng/mL)\\n\\n### Biologic Agents\\n\\n**Monoclonal Antibodies**\\n- **Basiliximab**: Anti-CD25 (IL-2 receptor) → blocks T-cell activation\\n- **Daclizumab**: Anti-CD25 (similar to basiliximab)\\n- **Rituximab**: Anti-CD20 (B-cell depleter) → used in lupus, ANCA vasculitis\\n- **Use**: Induction therapy in transplant; rescue therapy in rejection\\n\\n## Indian Clinical Context\\n- **Organ transplantation**: Renal > cardiac > liver (limited access, high cost)\\n- **Affordability**: Calcineurin inhibitors and AZA available generically; MMF, sirolimus expensive\\n- **Immunosuppression protocols**: Often triple therapy (CNI + antimetabolite + corticosteroid)\\n- **Adherence**: Critical challenge in India; poor adherence → graft rejection,\\n        mnemonics: [\\n          {\\n            text: \\\"CNI = 'Calcineurin inhibitors block IL-2' (Cyclosporine vs Tacrolimus)\\\",\\n            explanation:\\n              \\\"Both cyclosporine and tacrolimus inhibit calcineurin → stop IL-2 transcription. Tacrolimus more potent (10-100×) and fewer CYP interactions.\\\",\\n          },\\n          {\\n            text: \\\"IMMUNOSUPPRESSANTS by SITE: 'T-cell blockers (CNI, IMPDH inhibitors) >> B-cell (rituximab)'\\\",\\n            explanation:\\n              \\\"Most target T-cells (CD4+ helper cells). Rituximab targets B-cells (CD20). Basiliximab targets IL-2 receptor (T-cell activation).\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Cyclosporine and tacrolimus inhibit calcineurin → block IL-2 production → T-cell proliferation\\\",\\n          \\\"Azathioprine and mycophenolate inhibit nucleotide synthesis → ↓ lymphocyte proliferation\\\",\\n          \\\"Sirolimus inhibits mTOR → prevents IL-2 dependent proliferation\\\",\\n          \\\"Triple therapy (CNI + antimetabolite + corticosteroid) standard for transplantation\\\",\\n          \\\"Tacrolimus preferred over cyclosporine (potency, fewer drug interactions)\\\",\\n          \\\"Mycophenolate preferred over azathioprine (better efficacy, less toxicity)\\\",\\n          \\\"Monitoring critical: drug levels, renal function, CBC, lipid panel\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 74 - Immunosuppressants\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 26 - Immunological agents\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"immunosuppressants-mechanism\\\",\\n        title: \\\"Immunosuppressants - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary:\\n          \\\"Calcineurin pathway, NFAT dephosphorylation, IL-2 transcription inhibition. Purine synthesis inhibition. mTOR signaling. T-cell activation blockade.\\\",\\n        contentMd: ``# Mechanisms of Action\\n\\n## Calcineurin Inhibition (CNI Mechanism)\\n\\n### Normal T-Cell Activation (Immune Synapse)\\n1. **TCR binding to antigen + MHC** → signaling cascade\\n2. **IP3 production** → calcium release from ER\\n3. **↑ Intracellular Ca2+** → activates calcineurin (serine/threonine phosphatase)\\n4. **Calcineurin dephosphorylates NFAT** (nuclear factor of activated T cells)\\n5. **NFAT translocates to nucleus** → binds IL-2 promoter\\n6. **IL-2 transcription** → T-cell proliferation\\n\\n### CNI Inhibition\\n- **Cyclosporine**: Binds cyclophilin → complex inhibits calcineurin\\n- **Tacrolimus**: Binds FKBP12 → complex inhibits calcineurin\\n- **Result**: NFAT remains phosphorylated (inactive) → cannot translocate → ↓ IL-2 production\\n- **Specificity**: Selective for T cells (IL-2 dependent); B cells less affected (IL-4 can partially compensate)\\n\\n## Antimetabolite Mechanisms\\n\\n### Azathioprine (Purine Antimetabolite)\\n- **Activation**: AZA → 6-mercaptopurine (6-MP) → 6-TIMP → interferes with purine synthesis\\n- **Target**: IMP dehydrogenase (IMPDH)\\n- **Effect**: ↓ Guanine and adenine nucleotides → impaired DNA synthesis\\n- **Selectivity**: Non-selective (affects rapidly dividing cells, including lymphocytes)\\n- **Result**: ↓ Lymphocyte proliferation (both T and B cells)\\n\\n### Mycophenolate Mofetil (Type II IMPDH Inhibitor)\\n- **Activation**: MMF → mycophenolic acid (MPA) → inhibits IMPDH\\n- **Selectivity**: **Type II IMPDH** (lymphocyte-specific isoenzyme)\\n  - Lymphocytes require **Type II** (activated)\\n  - Other cells use **Type I** (constitutive)\\n- **Result**: Selective ↓ guanine nucleotides in lymphocytes without affecting other cells\\n- **Advantage**: Better selectivity than AZA; fewer effects on other rapidly dividing cells\\n\\n## mTOR Inhibitor Mechanism\\n\\n### Sirolimus (mTOR Pathway Inhibition)\\n1. **Normal**: IL-2 signaling → JAK/STAT activation → mTOR kinase activation\\n2. **mTOR effects**: Activates S6 kinase → protein synthesis → cell proliferation\\n3. **Sirolimus**: Binds FKBP12 (same as tacrolimus) → blocks mTOR\\n4. **Result**: ↓ S6 kinase → ↓ protein synthesis → ↓ cell cycle progression (G1 → S block)\\n5. **Difference from CNI**: Acts DOWNSTREAM of IL-2 (cell cycle level) vs CNI (upstream, IL-2 production)\\n\\n## Pharmacokinetics\\n\\n| Drug | Route | Bioavailability | Metabolism | Half-life | Monitoring |\\n|------|-------|-----------------|-----------|-----------|-----------|\\n| Cyclosporine | Oral/IV | 20-50% (variable) | Hepatic (CYP3A4) | 10-27 hours | Trough level 100-250 ng/mL |\\n| Tacrolimus | Oral/IV | 10-25% (better than cyclo) | Hepatic (CYP3A4) | 8-16 hours | Trough level 5-20 ng/mL |\\n| AZA | Oral/IV | Good | Hepatic → 6-MP | 1-3 hours | CBC monitoring |\\n| MMF | Oral | Good | Hepatic → MPA | 16-18 hours | No level monitoring |\\n| Sirolimus | Oral | 14-30% | Hepatic (CYP3A4) | 55-100 hours | Trough level 5-15 ng/mL |,\\n        mnemonics: [\\n          {\\n            text: \\\"CNI PATHWAY: 'Ca2+ → Calcineurin dephosphorylates NFAT → IL-2 transcription' (CNI blocks this)\\\",\\n            explanation:\\n              \\\"Cyclosporine/tacrolimus block calcineurin → NFAT stays phosphorylated → no IL-2 → T-cell proliferation blocked.\\\",\\n          },\\n          {\\n            text: \\\"MMF SELECTIVITY: 'Type II IMPDH = Lymphocyte-specific' (better than AZA)\\\",\\n            explanation:\\n              \\\"MMF selectively inhibits Type II IMPDH in lymphocytes (Type I in other cells) → better selectivity, fewer side effects.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"CNI inhibits calcineurin → blocks NFAT dephosphorylation → ↓ IL-2 (T-cell suppression)\\\",\\n          \\\"AZA non-selective purine inhibitor; affects rapidly dividing cells\\\",\\n          \\\"MMF selective Type II IMPDH inhibitor; lymphocyte-specific\\\",\\n          \\\"Sirolimus inhibits mTOR → blocks downstream cell cycle progression (G1→S)\\\",\\n          \\\"Cyclosporine and tacrolimus: different binding proteins (cyclophilin vs FKBP12) but same target\\\",\\n          \\\"Tacrolimus 10-100× more potent than cyclosporine\\\",\\n          \\\"mTOR inhibitors have metabolic side effects (hyperlipidemia); CNI have hypertension, nephrotoxicity\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 74 - Mechanisms\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 26 - Detailed pathways\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"immunosuppressants-clinical\\\",\\n        title: \\\"Immunosuppressants - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Transplant protocols, triple immunosuppression regimen, acute vs chronic rejection management, autoimmune disease use, toxicity monitoring in India.\\\",\\n        contentMd: ``# Clinical Applications in Indian Context\\n\\n## Renal Transplantation (Most common in India)\\n\\n### Standard Immunosuppression Protocol (TRIPLE THERAPY)\\n1. **Induction** (Day 0): Basiliximab (anti-CD25) 20 mg IV on day 0 and 4 (IL-2 receptor antagonist)\\n2. **Maintenance**:\\n   - **Calcineurin inhibitor**: Tacrolimus 0.1-0.15 mg/kg/day (divided BD) OR Cyclosporine 3-5 mg/kg/day\\n   - **Antimetabolite**: Mycophenolate 1000 mg BD (preferred) OR Azathioprine 1-2 mg/kg/day\\n   - **Corticosteroid**: Prednisolone 5-10 mg/day (taper from higher initial dose)\\n\\n### Drug Level Monitoring (Critical in India)\\n**Tacrolimus targets**:\\n- Immediate post-transplant: 15-20 ng/mL (trough)\\n- 1-3 months: 10-15 ng/mL\\n- >1 year: 5-10 ng/mL\\n\\n**Cyclosporine targets** (if used):\\n- Immediate post-transplant: 200-250 ng/mL\\n- Maintenance: 100-150 ng/mL\\n\\n**Sirolimus** (if used instead of antimetabolite):\\n- Target: 5-15 ng/mL (once daily dosing)\\n- Advantage: Metabolic monitoring instead of CNI nephrotoxicity\\n\\n### Management of Acute Rejection (BPAR)\\n\\n**Presentation**: Graft dysfunction (↑ creatinine), oliguria, fever\\n\\n**Treatment**:\\n- **Mild acute rejection**: High-dose IV methylprednisolone 500 mg × 3 days\\n- **Moderate-Severe**: Methylprednisolone + increase CNI level\\n- **Steroid-resistant**: Add basiliximab or anti-thymocyte globulin (ATG)\\n\\n### Long-Term Graft Survival Challenges (In India)\\n- **Poor adherence**: Complex regimens, cost, drug availability\\n- **Nephrotoxicity**: Chronic tacrolimus/cyclosporine damage → slow graft loss\\n- **Cardiovascular**: Hypertension, hyperlipidemia (MMF, sirolimus effects)\\n- **Malignancy**: Increased skin cancers, lymphomas (chronic immunosuppression)\\n- **Infections**: CMV, BK virus (especially if <GFR 30)\\n\\n## Autoimmune Disease Use\\n\\n### Systemic Lupus Erythematosus (SLE) with Nephritis\\n- **Induction**: Cyclophosphamide (12 monthly pulses) + corticosteroid (gold standard)\\n- **Maintenance**: Mycophenolate 1000 mg BD (or azathioprine 1-2 mg/kg/day)\\n- **Efficacy**: MMF > AZA for lupus nephritis remission\\n\\n### Autoimmune Hepatitis\\n- **First-line**: Prednisolone + Azathioprine (lower corticosteroid requirement)\\n- **Dose**: AZA 1-2 mg/kg/day\\n- **Monitoring**: LFTs, INR (PT), immunoglobulin levels\\n\\n### Bullous Pemphigoid & Pemphigus Vulgaris\\n- **First-line**: Corticosteroid (topical/systemic)\\n- **Steroid-sparing**: Azathioprine 1-2 mg/kg/day OR Mycophenolate\\n- **Goal**: Reduce prednisolone dose while maintaining disease control\\n\\n## Adverse Effects & Management\\n\\n### Nephrotoxicity (CNI-Induced)\\n- **Mechanism**: Vasoconstriction via decreased PGI2, direct tubular toxicity\\n- **Presentation**: Progressive Cr elevation despite stable trough level\\n- **Management**: Reduce CNI dose, switch to mTOR inhibitor (sirolimus), optimize other agents\\n\\n### Hypertension (CNI & Corticosteroid)\\n- **Mechanism**: Vasoconstriction (CNI), sodium retention (steroids)\\n- **Management**: ACE-I/ARB preferred (cardio-renal protection), add amlodipine if needed\\n\\n### Hyperglycemia (Tacrolimus, Corticosteroid)\\n- **Mechanism**: Impaired insulin secretion (tacrolimus), insulin resistance (steroids)\\n- **Management**: Metformin, consider switching to cyclosporine (less diabetogenic)\\n\\n### Hyperlipidemia (Sirolimus, Corticosteroid)\\n- **Management**: Statin (atorvastatin preferred)\\n\\n### Bone Marrow Suppression (AZA, MMF)\\n- **Monitoring**: Monthly CBC first 3 months, then every 3 months\\n- **Management**: Reduce dose if WBC <3000/mm³ or platelets <100,000\\n\\n### GI Distress (MMF)\\n- **Presentation**: Diarrhea, nausea (20-30% of patients)\\n- **Management**: Divide dose (500 mg TID instead of 1000 mg BD), take with food, reduce dose if severe\\n\\n## Drug Interactions (Critical in India)\\n\\n### Cyclosporine (CYP3A4 substrate)\\n**Increases cyclosporine level** (risk of toxicity):\\n- Fluconazole, itraconazole (antifungals)\\n- Erythromycin (macrolide)\\n- Diltiazem (calcium channel blocker)\\n\\n**Decreases cyclosporine level** (risk of rejection):\\n- Rifampicin (TB drugs)\\n- Phenytoin (anticonvulsants)\\n\\n### Tacrolimus (Similar CYP3A4 interactions)\\n- Similar to cyclosporine\\n- Additional: Nelfinavir, protease inhibitors ↑ tacrolimus level\\n\\n### Drug-Drug with Antimetabolites\\n- **AZA + Allopurinol**: ↓ 6-MP metabolism → ↑ AZA toxicity (dose reduction needed)\\n- **MMF + Antacids**: ↓ MMF absorption (give separately),\\n        mnemonics: [\\n          {\\n            text: \\\"TRIPLE TRANSPLANT THERAPY: 'CNI + AntiMet + Corticosteroid' (Tacrolimus + Mycophenolate + Prednisolone)\\\",\\n            explanation:\\n              \\\"Standard induction (basiliximab) + triple maintenance. Tacrolimus preferred over cyclosporine in India (potency, fewer interactions).\\\",\\n          },\\n          {\\n            text: \\\"CYCLOSPORINE INTERACTING DRUGS: 'Fluconazole, Erythromycin, Diltiazem = ↑ Cyclo; Rifampicin = ↓ Cyclo'\\\",\\n            explanation:\\n              \\\"CYP3A4 substrate. Remember: FED drugs increase level; Rifampicin (TB) decreases level.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Triple therapy: CNI + antimetabolite + corticosteroid standard for transplant\\\",\\n          \\\"Tacrolimus preferred over cyclosporine (more potent, fewer CYP interactions)\\\",\\n          \\\"Mycophenolate preferred over azathioprine (better efficacy, fewer toxicities)\\\",\\n          \\\"Drug level monitoring critical: trough levels guide dosing (variable absorption in India)\\\",\\n          \\\"Acute rejection: IV methylprednisolone pulse therapy first-line\\\",\\n          \\\"Chronic rejection (graft vasculopathy): CNI nephrotoxicity main long-term issue\\\",\\n          \\\"Adherence crucial in India: patient education, simplified regimens help\\\",\\n          \\\"Monitor for infections, malignancies, metabolic complications (hypertension, hyperglycemia, hyperlipidemia)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 74 - Clinical applications\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Indian Society of Nephrology\\\", chapter: \\\"Renal transplant immunosuppression\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"immunosuppressants-exam\\\",\\n        title: \\\"Immunosuppressants - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary:\\n          \\\"High-yield exam points: triple therapy components, tacrolimus vs cyclosporine, mycophenolate vs azathioprine, acute rejection management.\\\",\\n        contentMd: ``# Exam-Focused High-Yield Points\\n\\n## Triple Therapy Components\\n\\n| Component | Drug | Dose | Mechanism | Monitoring |\\n|-----------|------|------|-----------|-----------|\\n| **CNI** | Tacrolimus | 0.1-0.15 mg/kg BD | Calcineurin inhibitor | Trough 5-20 ng/mL |\\n| | Cyclosporine | 3-5 mg/kg BD | Calcineurin inhibitor | Trough 100-250 ng/mL |\\n| **AntiMet** | Mycophenolate | 1000 mg BD | Type II IMPDH inhibitor | No level monitoring |\\n| | Azathioprine | 1-2 mg/kg OD | Purine antagonist | CBC monthly |\\n| **Steroid** | Prednisolone | 5-10 mg OD | Anti-inflammatory | Clinical response |\\n\\n## Common Exam Traps\\n\\n**TRAP 1**: \\\"Cyclosporine better than tacrolimus (established drugs better)\\\"\\n- **Wrong**: Cyclosporine is older\\n- **Right**: Tacrolimus more potent (10-100×), better absorption, fewer CYP interactions\\n\\n**TRAP 2**: \\\"Azathioprine best antimetabolite\\\"\\n- **Wrong**: Older agent\\n- **Right**: Mycophenolate superior (selective Type II IMPDH, better graft outcomes)\\n\\n**TRAP 3**: \\\"Drug level monitoring not needed if patient asymptomatic\\\"\\n- **Wrong**: Variable absorption; asymptomatic doesn't mean adequate level\\n- **Right**: Regular trough level monitoring critical for rejection/toxicity prevention\\n\\n**TRAP 4**: \\\"Start high-dose corticosteroid immediately for acute rejection\\\"\\n- **Wrong**: Partial approach\\n- **Right**: IV methylprednisolone 500 mg × 3 days + increase CNI level + consider additional agents if steroid-resistant\\n\\n**TRAP 5**: \\\"Antacids OK with mycophenolate\\\"\\n- **Wrong**: Interaction\\n- **Right**: Antacids reduce MMF absorption; give separately (2+ hours apart)\\n\\n## Drug Comparisons\\n\\n### CNI Comparison\\n\\n| Feature | Cyclosporine | Tacrolimus |\\n|---------|-------------|-----------|\\n| **Potency** | Standard (1×) | Very high (10-100×) |\\n| **CYP3A4** | High substrate | High substrate |\\n| **Binding** | Cyclophilin | FKBP12 |\\n| **Route** | Oral/IV | Oral/IV |\\n| **Absorption** | Variable, food-dependent | Better than cyclo |\\n| **Half-life** | 10-27 hr | 8-16 hr |\\n| **Nephrotoxicity** | High | Similar |\\n| **Hypertension** | Yes | Less than cyclo |\\n| **HLA-B*5801** | No interaction | No interaction |\\n| **Cost in India** | Cheap (generic) | Moderate |\\n\\n### Antimetabolite Comparison\\n\\n| Feature | Azathioprine | Mycophenolate |\\n|---------|------------|--------------|\\n| **Mechanism** | Purine antagonist | IMPDH inhibitor |\\n| **Selectivity** | Non-selective | Lymphocyte-selective |\\n| **Monitoring** | CBC monthly | No level monitoring |\\n| **GI toxicity** | Less | More (diarrhea) |\\n| **Bone marrow** | More suppression | Less |\\n| **Efficacy** | Good | Better |\\n| **Cost** | Cheap | Expensive |\\n\\n## NMC Competency Questions\\n\\n**Expected Q1**: \\\"Triple immunosuppression regimen for renal transplant?\\\"\\n- Answer: (1) Calcineurin inhibitor (tacrolimus preferred or cyclosporine), (2) Antimetabolite (mycophenolate preferred or azathioprine), (3) Corticosteroid (prednisolone). Plus induction with basiliximab (anti-CD25).\\n\\n**Expected Q2**: \\\"Why is mycophenolate preferred over azathioprine in transplantation?\\\"\\n- Answer: MMF selective Type II IMPDH inhibition (lymphocyte-specific) vs AZA non-selective. MMF better graft survival rates, fewer bone marrow side effects. AZA can be used if cost-limiting.\\n\\n**Expected Q3**: \\\"Management of acute rejection (Banff-proven acute cellular rejection) post-transplant?\\\"\\n- Answer: IV Methylprednisolone 500 mg daily × 3 days (pulse therapy). Increase CNI level. If steroid-resistant: add basiliximab or ATG.,\\n        mnemonics: [\\n          {\\n            text: \\\"TRIPLE THERAPY: 'T-CNI + A-Met + S-teroid' (mnemonic: TAS)\\\",\\n            explanation:\\n              \\\"Tacrolimus (or cyclosporine) + Azathioprine/MMF + Steroids. Often with induction (basiliximab anti-CD25).\\\",\\n          },\\n          {\\n            text: \\\"CYCLOSPORINE INTERACTIONS: 'FED (Fluconazole, Erythromycin, Diltiazem = ↑); Rif (↓ level)'\\\",\\n            explanation:\\n              \\\"CYP3A4 substrate. Remember FDA mnemonic for increases. Rifampicin (TB drug) decreases level.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Tacrolimus preferred over cyclosporine (more potent, better absorption)\\\",\\n          \\\"Mycophenolate preferred over azathioprine (better selectivity, graft outcomes)\\\",\\n          \\\"Triple therapy standard for renal transplant (CNI + antimetabolite + steroids)\\\",\\n          \\\"Induction with basiliximab (anti-CD25) reduces acute rejection risk\\\",\\n          \\\"Regular drug level monitoring essential (variable absorption in India)\\\",\\n          \\\"Acute rejection: IV methylprednisolone pulse therapy first-line\\\",\\n          \\\"Long-term: monitor for nephrotoxicity, hypertension, malignancy, infections\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 74 - Exam summary\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NMC CBME\\\", chapter: \\\"Pharmacology competencies\\\", edition: \\\"2024\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"immunosuppressants-recall\\\",\\n        title: \\\"Immunosuppressants - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary:\\n          \\\"7-question active recall on triple therapy, calcineurin inhibition, antimetabolites, and transplant-specific scenarios.\\\",\\n        contentMd: ``# Active Recall Questions\\n\\n**Q1: Describe the standard triple immunosuppression regimen for a renal transplant recipient and the role of each drug.**\\n> **Answer**:\\n> 1. **Calcineurin Inhibitor** (Tacrolimus or Cyclosporine): Inhibits IL-2 production by T cells. Tacrolimus preferred (more potent, better absorption). Target trough: 15 ng/mL initially, decrease to 5-10 ng/mL long-term.\\n> 2. **Antimetabolite** (Mycophenolate or Azathioprine): Inhibits lymphocyte proliferation. Mycophenolate preferred (selective, fewer side effects). Dose: 1000 mg BD.\\n> 3. **Corticosteroid** (Prednisolone): Anti-inflammatory. Starting dose 30-60 mg, taper to 5-10 mg/day. Steroid-sparing goal over time.\\n> Plus: Induction with basiliximab (anti-CD25 antibody) on day 0 and 4 reduces acute rejection risk.\\n\\n**Q2: What is the mechanism by which calcineurin inhibitors (tacrolimus and cyclosporine) suppress T-cell activation?**\\n> **Answer**: Both inhibit calcineurin phosphatase (via different binding proteins: FKBP12 for tacrolimus, cyclophilin for cyclosporine). This prevents dephosphorylation of NFAT (Nuclear Factor of Activated T cells). Phosphorylated NFAT cannot translocate into nucleus → cannot bind IL-2 promoter → ↓ IL-2 transcription → T-cell proliferation blocked. Selective for T cells because IL-2 is T-cell specific.\\n\\n**Q3: Why is mycophenolate preferred over azathioprine in renal transplantation? Compare their mechanisms.**\\n> **Answer**:\\n> - **Azathioprine**: Non-selective purine antagonist. Inhibits both purine synthesis steps → affects all rapidly dividing cells (WBC, platelets, GI epithelium). Side effects: bone marrow suppression, GI toxicity.\\n> - **Mycophenolate**: Type II IMPDH selective inhibitor. Lymphocytes specifically use Type II IMPDH (activated state); other cells use Type I (constitutive). Result: selective lymphocyte inhibition with fewer side effects.\\n> - **Outcome**: MMF better graft survival, less bone marrow suppression, but causes diarrhea in 20-30% of patients.\\n\\n**Q4: A renal transplant patient on cyclosporine is started on fluconazole for fungal infection. What is the risk and why? How would you manage it?**\\n> **Answer**: Risk: Fluconazole inhibits CYP3A4 → ↓ cyclosporine metabolism → ↑ cyclosporine level → risk of nephrotoxicity, hyperkalemia, neurotoxicity. Management: (1) Monitor cyclosporine trough level (may increase significantly), (2) Reduce cyclosporine dose pre-emptively (typically 25-50%), (3) Recheck level in 2-3 days, (4) Continue fluconazole only if necessary; switch to alternative antifungal if possible (e.g., terbinafine, which doesn't interact), (5) Monitor renal function closely.\\n\\n**Q5: Describe the presentation and management of acute cellular rejection (ACR) proven on biopsy in a renal transplant recipient.**\\n> **Answer**:\\n> **Presentation**: Rising serum creatinine (graft dysfunction), oliguria, graft tenderness, fever (sometimes).\\n> **Diagnosis**: Kidney biopsy shows Banff-defined acute cellular rejection (tubulitis, interstitial inflammation).\\n> **Treatment**:\\n> 1. IV methylprednisolone 500 mg daily × 3 days (pulse therapy)\\n> 2. Increase CNI level (increase tacrolimus/cyclosporine dose)\\n> 3. Ensure MMF compliance\\n> 4. If steroid-resistant (Cr not improving after 3 days): add basiliximab or rabbit ATG\\n> 5. Monitor for complete response (Cr stabilize/decline) over 1-2 weeks\\n\\n**Q6: A transplant patient on azathioprine reports significant leukopenia (WBC 2000/mm³). What is the mechanism and how would you manage it?**\\n> **Answer**: Mechanism: Azathioprine (non-selective purine antagonist) inhibits DNA synthesis in rapidly dividing cells including bone marrow → bone marrow suppression. WBC <3000/mm³ is concerning (infection risk). Management: (1) Reduce or stop azathioprine dose temporarily, (2) Recheck CBC in 1-2 weeks, (3) Consider switching to mycophenolate (fewer bone marrow effects), (4) Monitor for infection signs, (5) G-CSF if severe/symptomatic.\\n\\n**Q7: Why is tacrolimus generally preferred over cyclosporine in renal transplantation in India, despite cyclosporine being cheaper?**\\n> **Answer**:\\n> 1. **Potency**: Tacrolimus 10-100× more potent → lower dosing possible, reducing cost difference\\n> 2. **Absorption**: Better oral bioavailability (cyclosporine highly variable, food-dependent)\\n> 3. **CYP interactions**: Both CYP3A4 substrates, but tacrolimus has fewer clinically significant interactions\\n> 4. **Graft outcomes**: Better acute rejection prevention with tacrolimus\\n> 5. **Dosing**: Tacrolimus BD (twice daily) vs cyclosporine often TID/QID (more complex)\\n> 6. **Side effects**: Tacrolimus causes less gingival hyperplasia than cyclosporine\\n> Cost-benefit analysis often favors tacrolimus despite higher unit cost due to fewer episodes of rejection and better bioavailability.,\\n        mnemonics: [],\\n        keyPoints: [\\n          \\\"7 recall questions on triple therapy, CNI mechanism, antimetabolite selectivity, drug interactions, and acute rejection management\\\",\\n          \\\"Focus on: NFAT dephosphorylation, Type II IMPDH selectivity, CYP3A4 interactions, immunosuppression titration\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 74\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Indian Society of Nephrology\\\", chapter: \\\"Renal transplantation guidelines\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n\\n  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n  // MODULE 7 — ENDOCRINE PHARMACOLOGY\\n  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n\\n  // ─── Topic 1: Insulin & Oral Hypoglycemics ─────────────────\\n  {\\n    topicCode: \\\"PH-MOD-07-TOP-01\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"insulin-oral-hypoglycemics-foundation\\\",\\n        title: \\\"Insulin & Oral Hypoglycemics - Foundation\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Diabetes classification: Type 1 (absolute insulin deficiency) vs Type 2 (insulin resistance + progressive β-cell failure). Insulin types (rapid, regular, NPH, long-acting). Oral agents: sulfonylureas, biguanides, thiazolidinediones, DPP-4 inhibitors, SGLT-2 inhibitors. India-specific epidemiology and treatment goals.\\\",\\n        contentMd: ``# Insulin & Oral Hypoglycemics\\n\\n## Diabetes Pathophysiology\\n\\n### Type 1 Diabetes Mellitus (T1DM)\\n- **Cause**: Autoimmune destruction of pancreatic β-cells\\n- **Pathology**: 90% loss of β-cell mass → severe insulin deficiency\\n- **Presentation**: Acute onset, polyuria, polydipsia, weight loss\\n- **Treatment**: Insulin mandatory (replacement therapy)\\n- **India prevalence**: 5-10% of all diabetes cases (low)\\n\\n### Type 2 Diabetes Mellitus (T2DM)\\n- **Cause**: Insulin resistance (genetic + environmental) + progressive β-cell dysfunction\\n- **Pathology**: Impaired glucose sensing, insulin secretion defect, hepatic insulin resistance\\n- **Progression**: Early (insulin resistance), Middle (β-cell exhaustion, insulin deficiency develops)\\n- **Treatment**: Lifestyle first; oral agents; insulin if needed\\n- **India prevalence**: 85-90% of all diabetes; rapidly increasing due to urbanization\\n\\n## Insulin Types & Kinetics\\n\\n| Insulin Type | Onset | Peak | Duration | Use |\\n|--------------|-------|------|----------|-----|\\n| **Rapid-acting (Lispro, Aspart)** | <15 min | 30-60 min | 3-4 hr | Mealtime bolus |\\n| **Regular (Soluble)** | 30-60 min | 2-3 hr | 6-8 hr | Basal (pre-meals) |\\n| **NPH (Isophane)** | 1-2 hr | 4-10 hr | 18-24 hr | Basal (once/twice daily) |\\n| **Long-acting (Glargine, Detemir, Degludec)** | 1-2 hr | Peakless | 24-42 hr | Basal (once daily) |\\n\\n### Insulin Regimens in India\\n- **Basal-bolus**: Long-acting basal + rapid-acting before meals (most physiologic, complex)\\n- **Premixed**: Fixed ratio of rapid + NPH (Novomix 30/70) (easier, less flexibility)\\n- **Basal (NPH)**: Once/twice daily NPH (simple, cheapest)\\n- **Cost in India**: Generic insulin widely available; government programs cover T1DM\\n\\n## Oral Antidiabetic Agents\\n\\n### Sulfonylureas (Insulin Secretagogues)\\n- **Mechanism**: Close KATP channels on β-cells → ↑ Ca2+ → ↑ insulin secretion\\n- **Examples**: Glibenclamide (Glyburide), Gliclazide, Glipizide\\n- **Effect**: ↓ Fasting glucose, ↓ postprandial glucose\\n- **Efficacy**: 1.5-2% HbA1c reduction\\n- **Toxicity**: Hypoglycemia (major risk), weight gain\\n- **Use**: Second-line if metformin + lifestyle fails\\n\\n### Biguanides\\n- **Mechanism**: ↓ Hepatic gluconeogenesis; ↑ insulin sensitivity\\n- **Examples**: Metformin\\n- **Effect**: ↓ Fasting glucose primarily; no direct insulin secretion\\n- **Efficacy**: 1.5-2% HbA1c reduction\\n- **Advantage**: No hypoglycemia, weight neutral/loss, cardioprotective\\n- **Toxicity**: GI (diarrhea), rare lactic acidosis (contraindicated in renal failure)\\n- **Use**: **FIRST-LINE** for T2DM in India and worldwide\\n\\n### Thiazolidinediones (Insulin Sensitizers)\\n- **Mechanism**: PPAR-γ activation → ↑ insulin sensitivity (adipose, muscle, liver)\\n- **Examples**: Pioglitazone (Avandia, Actoplus withdrawn)\\n- **Effect**: Improves insulin resistance; slow onset (weeks-months)\\n- **Efficacy**: 1-1.5% HbA1c reduction\\n- **Toxicity**: Fluid retention, weight gain, heart failure risk, bone loss\\n- **Use**: Uncommon now in India; cardiac safety concerns\\n\\n### DPP-4 Inhibitors\\n- **Mechanism**: Inhibit dipeptidyl peptidase-4 → ↑ GLP-1 (↑ insulin, ↓ glucagon)\\n- **Examples**: Sitagliptin, Vildagliptin, Saxagliptin\\n- **Effect**: ↓ Postprandial and fasting glucose\\n- **Efficacy**: 0.5-1.5% HbA1c reduction\\n- **Advantage**: No hypoglycemia, weight neutral, GI well-tolerated\\n- **Toxicity**: Pancreatitis risk (rare), joint pain (rare)\\n- **Cost in India**: Moderate; increasingly used\\n\\n### GLP-1 Receptor Agonists\\n- **Mechanism**: GLP-1 analog → ↑ insulin, ↓ glucagon, slowed gastric emptying\\n- **Examples**: Liraglutide (Saxenda, Victoza), Dulaglutide, Semaglutide\\n- **Effect**: ↓ Blood glucose; also ↓ weight (appetite suppression), cardioprotective\\n- **Efficacy**: 1-1.5% HbA1c reduction; 2-4 kg weight loss\\n- **Route**: Subcutaneous injection\\n- **Toxicity**: GI (nausea, vomiting), pancreatitis risk (rare)\\n- **Cost in India**: Expensive; emerging\\n\\n### SGLT-2 Inhibitors\\n- **Mechanism**: Block sodium-glucose co-transporter 2 → ↑ urinary glucose excretion\\n- **Examples**: Empagliflozin, Dapagliflozin, Canagliflozin\\n- **Effect**: ↓ Fasting, postprandial glucose; osmotic diuresis\\n- **Efficacy**: 0.5-1.5% HbA1c reduction\\n- **Bonus**: ↓ Weight (2-3 kg), ↓ BP (5-10 mmHg), cardio/renal protective\\n- **Toxicity**: Genitourinary infections, DKA risk (rare), amputation risk (canagliflozin)\\n- **Cost in India**: Expensive; limited availability\\n\\n## Indian Diabetes Landscape\\n- **Prevalence**: ~77 million diabetics (2023); 30% unaware of diagnosis\\n- **Risk factors**: Urbanization, sedentary lifestyle, obesity\\n- **HbA1c target**: <7% (aggressive); <8% (elderly, comorbidities)\\n- **Monotherapy → Combination**: If A1c not at target after 3 months of monotherapy, add second agent\\n- **Affordable agents**: Metformin, sulfonylureas (generic); DPP-4, SGLT-2 expensive,\\n        mnemonics: [\\n          {\\n            text: \\\"INSULIN TYPES: 'RANA' (Rapid, A-regular, N-NPH, A-long-acting)\\\",\\n            explanation:\\n              \\\"Rapid-acting (bolus), regular (prandial), NPH (basal, intermediate), long-acting (basal, peakless). Remember: Peak times differ (rapid <1 hr, NPH 4-10 hr, long none).\\\",\\n          },\\n          {\\n            text: \\\"ORAL AGENTS MECHANISM: 'Sulf-SECRETES, Metf-lowers glucose, Thiazo-sensitizes, DPP/GLP = incretins'\\\",\\n            explanation:\\n              \\\"Sulfonylureas ↑ insulin secretion. Metformin ↓ hepatic glucose output. Thiazolidinediones ↑ insulin sensitivity. DPP-4/GLP-1 enhance incretin effect.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Type 1 diabetes: insulin absolute requirement (replacement therapy)\\\",\\n          \\\"Type 2 diabetes: oral agents first-line; insulin if oral monotherapy/combination fails\\\",\\n          \\\"Insulin types: rapid-acting (mealtime), regular (pre-meal), NPH (basal intermediate), long-acting (basal peakless)\\\",\\n          \\\"Metformin first-line for T2DM (no hypoglycemia, weight neutral, cardioprotective)\\\",\\n          \\\"Sulfonylureas second-line; high hypoglycemia risk, weight gain\\\",\\n          \\\"DPP-4, GLP-1, SGLT-2 inhibitors: newer agents with fewer side effects and cardio-renal benefits\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 59 - Insulin & Antidiabetics\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 35 - Insulin & Antidiabetic Drugs\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"insulin-oral-hypoglycemics-mechanism\\\",\\n        title: \\\"Insulin & Oral Hypoglycemics - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary:\\n          \\\"Insulin receptor signaling, glucose transporter activation, β-cell KATP channel physiology, incretin hormones (GLP-1, GIP), hepatic glucose suppression mechanisms.\\\",\\n        contentMd: ``# Mechanisms of Action\\n\\n## Insulin Mechanism\\n\\n### Insulin Receptor Signaling\\n1. **Insulin binds IR** (tyrosine kinase receptor on cell surface)\\n2. **Autophosphorylation** of IR → recruits IRS-1/2\\n3. **PI3K pathway activation** → GLUT4 translocation to membrane (glucose uptake in muscle, adipose)\\n4. **MAPK pathway activation** → gene transcription (↑ glycogen synthesis, lipogenesis)\\n5. **Result**: ↓ Blood glucose (increased utilization) + anabolism (glycogen storage, protein synthesis)\\n\\n### Insulin Effects\\n- **Muscle**: ↑ GLUT4 translocation, ↑ glycogen synthesis, ↑ amino acid uptake\\n- **Adipose**: ↑ glucose uptake, ↑ lipogenesis, ↓ lipolysis\\n- **Liver**: ↑ glycogen synthesis, ↓ gluconeogenesis, ↑ lipogenesis\\n\\n## Sulfonylurea Mechanism\\n\\n### KATP Channel Inhibition\\n1. **Sulfonylureas bind SUR1** (sulfonylurea receptor, regulatory subunit of KATP channel)\\n2. **KATP channel closure** → K+ cannot exit β-cell\\n3. **Membrane depolarization** → voltage-gated Ca2+ channels open\\n4. **↑ Intracellular Ca2+** → triggers SNARE complex-mediated insulin exocytosis\\n5. **Result**: ↑↑ Insulin secretion (glucose-independent) → hypoglycemia risk\\n\\n## Biguanide (Metformin) Mechanism\\n\\n### Hepatic Glucose Suppression\\n1. **AMPK activation** (AMP-activated protein kinase) → blocks mTOR pathway\\n2. **Inhibition of gluconeogenesis**: ↓ PEPCK, G6Pase gene expression → ↓ glucose production\\n3. **Glycogenolysis inhibition**: ↓ hepatic glucose release\\n4. **Result**: ↓ Fasting glucose (especially effective on high baseline glucose)\\n\\n### Insulin Sensitivity Enhancement\\n- **Muscle**: ↑ GLUT4 translocation, ↑ glycogen synthesis\\n- **Adipose**: ↓ Lipotoxicity-induced insulin resistance\\n- **Liver**: ↓ Hepatic steatosis\\n\\n## DPP-4 Inhibitor Mechanism\\n\\n### Incretin Pathway Enhancement\\n1. **Normal**: GLP-1 and GIP (glucose-dependent insulinotropic peptide) released from intestinal cells post-meal\\n2. **DPP-4 inactivates GLP-1/GIP** (normally; half-life 1-2 minutes)\\n3. **DPP-4 inhibition**: ↓ Degradation → ↑ GLP-1/GIP half-life (active for 8-10 minutes)\\n4. **Result**: ↑ Insulin secretion (glucose-dependent, so ↓ hypoglycemia risk), ↓ glucagon\\n\\n## GLP-1 Receptor Agonist Mechanism\\n\\n### GLP-1 Mimetic Action\\n1. **Binds GLP-1 receptor** (GPCR on β-cells, intestine, brain)\\n2. **↑ cAMP** → stimulates insulin secretion (glucose-dependent)\\n3. **↓ Glucagon secretion** (glucose-dependent)\\n4. **Slowed gastric emptying** → blunted postprandial glucose spike\\n5. **Appetite suppression** → weight loss (CNS effect)\\n6. **Result**: Improved glycemic control + weight loss\\n\\n## SGLT-2 Inhibitor Mechanism\\n\\n### Urinary Glucose Excretion\\n1. **SGLT-2 cotransporter** in renal proximal tubule normally reabsorbs filtered glucose\\n2. **SGLT-2 inhibition**: Filtered glucose cannot be reabsorbed → excreted in urine\\n3. **Osmotic diuresis**: Glucose in urine → water follows → mild fluid loss\\n4. **Result**: ↓ Blood glucose (via loss) + osmotic diuresis (↓ BP)\\n5. **Bonus**: Ketone body utilization (cardiac energy source), renal hemodynamic benefits (↓ intraglomerular pressure)\\n\\n## Pharmacokinetics\\n\\n| Agent | Route | Onset | Duration | Metabolism |\\n|-------|-------|-------|----------|-----------|\\n| Insulin (rapid) | SC | <15 min | 3-4 hr | Enzymatic |\\n| Metformin | Oral | 1-2 hr | 6-8 hr | Renal (90%) |\\n| Sulfonylurea | Oral | 30-60 min | 12-24 hr | Hepatic |\\n| DPP-4 | Oral | 1-2 hr | 12-24 hr | Renal/Hepatic |\\n| GLP-1 | SC | 1-2 hr | Varies (once-weekly options) | Enzymatic |\\n| SGLT-2 | Oral | 1-2 hr | 24 hr | Hepatic |,\\n        mnemonics: [\\n          {\\n            text: \\\"INSULIN RECEPTOR: 'IRS → PI3K = GLUT4 to membrane' (↑ glucose uptake)\\\",\\n            explanation:\\n              \\\"Insulin binds receptor → IRS-1/2 activation → PI3K → GLUT4 translocation → glucose uptake. PI3K = metabolic; MAPK = gene effects.\\\",\\n          },\\n          {\\n            text: \\\"SULFONYLUREA = 'Sulf-Shuts KATP → Ca2+ ↑ → insulin explosion' (hypoglycemia risk)\\\",\\n            explanation:\\n              \\\"Close KATP channels → depolarization → Ca2+ influx → explosive insulin release (risky if no glucose).\\\",\\n          },\\n          {\\n            text: \\\"METFORMIN = 'MET-abolizes Gluconeogenesis' (AMPK → ↓ glucose production)\\\",\\n            explanation:\\n              \\\"Metformin activates AMPK → blocks mTOR/gluconeogenesis. Primary effect: ↓ hepatic glucose output.\\\",\\n          },\\n          {\\n            text: \\\"DPP-4 = 'DIPEP-tide-tide = INHIBITS GLP-1 degradation' (↑ incretin, ↓ hypoglycemia)\\\",\\n            explanation:\\n              \\\"DPP-4 normally chops GLP-1. Inhibiting DPP-4 → GLP-1 lasts longer → more insulin (glucose-dependent).\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Insulin receptor: tyrosine kinase → IRS → PI3K (GLUT4) and MAPK (gene expression)\\\",\\n          \\\"Sulfonylureas: KATP closure → Ca2+ influx → insulin release (glucose-independent, hypoglycemia risk)\\\",\\n          \\\"Metformin: AMPK activation → ↓ gluconeogenesis (hepatic glucose suppression)\\\",\\n          \\\"DPP-4: prolongs GLP-1 action → glucose-dependent insulin stimulation\\\",\\n          \\\"GLP-1 agonists: mimic GLP-1 → insulin (glucose-dependent), ↓ glucagon, slower gastric emptying\\\",\\n          \\\"SGLT-2: blocks renal glucose reabsorption → urinary loss + osmotic diuresis\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 59 - Mechanisms\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Rang & Dale\\\", chapter: \\\"Ch 35 - Detailed pathways\\\", edition: \\\"9th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"insulin-oral-hypoglycemics-clinical\\\",\\n        title: \\\"Insulin & Oral Hypoglycemics - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary:\\n          \\\"Diabetes management algorithm, insulin initiation criteria, hypoglycemia management, Indian prescribing patterns, prevention of complications. HbA1c targets, lifestyle modifications.\\\",\\n        contentMd: ``# Clinical Applications in Indian Context\\n\\n## Type 2 Diabetes Management Algorithm\\n\\n### Step 1: Diagnosis & Baseline Assessment\\n- **HbA1c >6.5%** or fasting glucose >126 mg/dL or random >200 mg/dL + symptoms\\n- **Baseline tests**: Lipid profile, renal function (eGFR), urine ACR, ECG (if >40 years)\\n- **Identify complications**: Retinopathy, nephropathy, neuropathy, cardiovascular disease\\n\\n### Step 2: Lifestyle Modification (Essential, First Always)\\n- **Weight loss**: 5-10% BW reduction improves insulin sensitivity\\n- **Exercise**: 150 min/week moderate activity\\n- **Diet**: Low glycemic index, high fiber, reduce refined carbs\\n- **Expected A1c drop**: 0.5-2% with lifestyle alone\\n\\n### Step 3: Pharmacological Management\\n\\n**If HbA1c <7% or <8% (target)**:\\n- Continue current therapy + lifestyle\\n\\n**If HbA1c not at target after 3 months**:\\n\\n**Monotherapy (If A1c 7-10%)**:\\n- **First-line**: Metformin 500 mg BD → titrate to 1000 mg BD (if renal function normal)\\n- **If metformin intolerant** (GI side effects):\\n  - DPP-4 inhibitor (sitagliptin 100 mg daily)\\n  - OR Sulfonylurea (gliclazide 40 mg daily) — but hypoglycemia risk\\n\\n**Combination Therapy (If A1c >8% or monotherapy failure)**:\\n- **Preferred combinations**:\\n  - Metformin + DPP-4 (sitagliptin)\\n  - Metformin + Sulfonylurea (gliclazide) — cheaper but hypoglycemia risk\\n  - Metformin + SGLT-2 inhibitor (if available; expensive)\\n  - Metformin + GLP-1 agonist (expensive; weight loss benefit)\\n\\n**Triple Therapy** (If A1c >9% after dual therapy):\\n- Metformin + DPP-4 + Sulfonylurea\\n- OR Metformin + DPP-4 + SGLT-2i\\n- Consider insulin initiation if C-peptide low or failure to respond\\n\\n### Step 4: Insulin Initiation\\n\\n**Indications for Insulin**:\\n- **T1DM**: Absolute (all patients)\\n- **T2DM**:\\n  - HbA1c >9-10% despite triple therapy\\n  - Symptomatic hyperglycemia (polyuria, polydipsia, weight loss)\\n  - Acute decompensation (DKA, HHS)\\n  - Renal failure (eGFR <15, can't use oral agents)\\n  - Pregnancy (if glycemic control inadequate on oral)\\n\\n**Insulin Regimen Choice** (In India):\\n1. **Basal (NPH once/twice daily)**: Simplest, cheapest; typically 10-15 units\\n2. **Premixed (30/70 or 50/50)**: Mix of rapid + basal; ease of use\\n3. **Basal-bolus**: Most physiologic; complex; requires carb counting\\n   - **Basal**: Long-acting glargine (once) or NPH (twice daily)\\n   - **Bolus**: Rapid-acting aspart/lispro before meals\\n\\n**Titration**:\\n- Start low (NPH 10 units at night or BD)\\n- Increase by 2-4 units every 3 days based on fasting glucose target 100-130 mg/dL\\n- Monitor post-lunch/post-dinner glucose (adjust bolus if needed)\\n\\n### Step 5: Monitoring & Adjustment\\n\\n**Frequency**:\\n- **First 3 months**: Weekly or bi-weekly (fasting, pre-lunch, pre-dinner, bedtime glucose)\\n- **After stabilization**: Monthly or every 3 months (HbA1c)\\n\\n**HbA1c Targets**:\\n- **General population**: <7% (130-160 mg/dL average)\\n- **Elderly, comorbidities**: <8% (170-180 mg/dL average)\\n- **High hypoglycemia risk**: <8% (avoid tight control)\\n\\n## Hypoglycemia Management\\n\\n### Recognition & Acute Treatment\\n**Symptoms** (glucose <70 mg/dL):\\n- Autonomic: Tremor, sweating, palpitations, anxiety\\n- Neuroglycopenic: Confusion, dizziness, headache, weakness\\n\\n**Acute treatment (Rule of 15)**:\\n1. Check glucose (fingerstick)\\n2. Consume 15 g fast carbs (3 glucose tablets, 1/2 cup juice, 1 tbsp honey)\\n3. Wait 15 minutes\\n4. Recheck glucose\\n5. If still low, repeat step 2-4\\n\\n**Severe hypoglycemia** (unable to self-treat):\\n- IM/SC Glucagon 1 mg (if available, by family member)\\n- IV glucose 25-50 mL of 50% dextrose (hospital only)\\n\\n### Hypoglycemia Unawareness (Severe T1DM)\\n- Loss of autonomic warning signs despite low glucose\\n- **Management**: Avoid intensive glucose control, relax targets to <8%\\n\\n## Indian-Specific Management Challenges\\n\\n### Cost & Affordability\\n- **Metformin generic**: ₹50-100/month (very affordable)\\n- **Sulfonylurea generic**: ₹100-200/month (affordable)\\n- **DPP-4 inhibitors**: ₹1000-2000/month (expensive)\\n- **GLP-1 agonists**: ₹4000-8000/month (very expensive)\\n- **SGLT-2 inhibitors**: ₹2000-4000/month (expensive)\\n- **Insulin NPH/regular**: ₹200-400/month (affordable; government supplies)\\n\\n### Adherence Issues\\n- Complex regimens (multiple tablets, frequent doses)\\n- Side effects (GI from metformin, hypoglycemia from insulin)\\n- Cost burden in lower-income populations\\n- **Solution**: Simplify regimen, use combination pills, patient education\\n\\n### Complications Prevention\\n- **Microalbuminuria**: Start ACE-I/ARB (renal protection)\\n- **Retinopathy**: Ophthalmology screening annually; tight glucose control in early stages\\n- **Neuropathy**: Foot care education, pain management (pregabalin)\\n- **Cardiovascular**: Statin for dyslipidemia, aspirin if CAD risk, tight BP control\\n\\n## Special Populations\\n\\n### Diabetes in Pregnancy\\n- **T1DM**: Continue insulin (increased doses needed due to placental lactogen, cortisol)\\n- **T2DM**: Switch to insulin if oral agents (metformin safe; sulfonylurea, DPP-4 avoid)\\n- **GDM**: Lifestyle first; if A1c >6.5%, add insulin (safest in pregnancy)\\n\\n### Diabetes in Renal Disease\\n- **CKD stage 1-2** (eGFR >60): Any agent safe\\n- **CKD stage 3a** (eGFR 45-59): Avoid high-dose metformin; sulfonylurea OK\\n- **CKD stage 3b** (eGFR 30-44): Reduce metformin dose; prefer DPP-4\\n- **CKD stage 4-5** (eGFR <30): Insulin only (avoid oral agents except sitagliptin); monitor glucose closely\\n\\n### Diabetes in Infection/Illness\\n- **Increase glucose monitoring** (hyperglycemia common in stress)\\n- **Maintain insulin/metformin** (don't skip doses)\\n- **Increase fluids** (prevent DKA)\\n- **Seek medical help** if glucose >300 mg/dL or symptomatic,\\n        mnemonics: [\\n          {\\n            text: \\\"T2DM MANAGEMENT: 'LMD' (Lifestyle first, then Metformin, then Dual/triple add-ons or insulin)\\\",\\n            explanation:\\n              \\\"Always lifestyle first (5-10% BW loss). Metformin monotherapy if A1c 7-8%. Combination if A1c 8-9%. Insulin if A1c >9-10%.\\\",\\n          },\\n          {\\n            text: \\\"INSULIN INITIATION: 'High HbA1c >9%, Symptoms of hyperglycemia, Serum C-peptide LOW'\\\",\\n            explanation:\\n              \\\"Start insulin when HbA1c not controlled on triples, or if acute symptoms, or if C-peptide <0.5 (suggesting β-cell failure).\\\",\\n          },\\n          {\\n            text: \\\"HYPOGLYCEMIA RULE OF 15: '15 g carbs, wait 15 min, recheck, repeat if needed'\\\",\\n            explanation:\\n              \\\"Fast glucose tablets, juice, honey. Not chocolate (complex carbs take longer). Recheck to confirm glucose rising.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Lifestyle modification first-line; can reduce A1c by 0.5-2%\\\",\\n          \\\"Metformin first-line pharmacological agent (no hypoglycemia, cardioprotective)\\\",\\n          \\\"Sulfonylureas effective but hypoglycemia risk; use if metformin intolerant\\\",\\n          \\\"DPP-4, GLP-1, SGLT-2i newer agents; good safety but expensive\\\",\\n          \\\"Insulin initiation if A1c >9-10% on oral combination or acute symptoms\\\",\\n          \\\"HbA1c targets: <7% general, <8% elderly/high-risk hypoglycemia\\\",\\n          \\\"Hypoglycemia management: 15 g fast carbs, wait 15 min, recheck\\\",\\n          \\\"Renal/hepatic disease: adjust agent selection and doses\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 59 - Clinical management\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Indian Diabetes Association\\\", chapter: \\\"Diabetes management guidelines\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"insulin-oral-hypoglycemics-exam\\\",\\n        title: \\\"Insulin & Oral Hypoglycemics - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary:\\n          \\\"High-yield exam points: diabetes management algorithm, insulin types and kinetics, oral agent mechanisms, hypoglycemia management, contraindications by renal function.\\\",\\n        contentMd: ``# Exam-Focused High-Yield Points\\n\\n## Management Algorithm by HbA1c Level\\n\\n| HbA1c | Action |\\n|-------|--------|\\n| **<7%** | Continue current therapy; reinforce lifestyle |\\n| **7-8%** | Optimize current dose; if not at goal, add second agent |\\n| **8-9%** | Add second agent; OR switch to more potent single agent |\\n| **>9%** | Triple therapy; OR initiate insulin |\\n\\n## Insulin Types (Kinetics Critical for Exams)\\n\\n| Type | Onset | Peak | Duration | Clinical Use |\\n|------|-------|------|----------|-------------|\\n| **Rapid (Lispro, Aspart)** | <15 min | 30-60 min | 3-4 hr | Mealtime bolus (post-meal glucose) |\\n| **Regular (Soluble)** | 30-60 min | 2-3 hr | 6-8 hr | Pre-meal bolus (covers meal) |\\n| **NPH (Isophane)** | 1-2 hr | 4-10 hr | 18-24 hr | Basal (covers overnight/between meals) |\\n| **Long-acting (Glargine, Detemir)** | 1-2 hr | Peakless | 24-42 hr | Once-daily basal |\\n\\n**Exam logic**: Rapid = quick on, quick off (meals). NPH = slower, longer (basal). Long = stable (all day).\\n\\n## Common Exam Traps\\n\\n**TRAP 1**: \\\"Patient on sulfonylurea got hypoglycemic; give more insulin\\\"\\n- **Wrong**: Sulfonylurea causes hypoglycemia\\n- **Right**: Sulfonylurea IS causing problem; reduce or stop it; treat hypoglycemia with glucose\\n\\n**TRAP 2**: \\\"Metformin safe in renal failure\\\"\\n- **Wrong**: Safe\\n- **Right**: Contraindicated if GFR <30 (risk of lactic acidosis)\\n\\n**TRAP 3**: \\\"DPP-4 causes hypoglycemia\\\"\\n- **Wrong**: Glucose-dependent\\n- **Right**: Minimal hypoglycemia risk (only enhances insulin if glucose high)\\n\\n**TRAP 4**: \\\"SGLT-2 inhibitors reduce glucose by ↑ insulin\\\"\\n- **Wrong**: Insulin-mediated\\n- **Right**: Glucose lost in urine (osmotic mechanism); insulin-independent\\n\\n**TRAP 5**: \\\"Start insulin immediately if HbA1c >8%\\\"\\n- **Wrong**: Too aggressive\\n- **Right**: Optimize oral therapy first; add second agent; insulin if HbA1c >9% or acute symptoms\\n\\n## Drug-Disease Interactions\\n\\n### Agent Safety by Renal Function\\n\\n| Agent | GFR >60 | GFR 45-60 | GFR 30-45 | GFR <30 |\\n|-------|---------|----------|----------|---------|\\n| **Metformin** | Safe | Safe | Reduce dose | **Contraindicated** |\\n| **Sulfonylurea** | Safe | Safe | Reduce dose | Reduce dose (↓ clearance) |\\n| **DPP-4** | Safe | Safe | Safe | Reduce dose (sitagliptin) |\\n| **SGLT-2i** | Safe | Safe | Reduce efficacy | Ineffective |\\n| **Insulin** | Safe | Safe | Safe | Safe (but adjust dose) |\\n\\n### Agent Safety in Liver Disease\\n- **Metformin**: Safe (renal metabolism)\\n- **Sulfonylurea**: Caution (hepatic metabolism; risk accumulation)\\n- **Insulin**: Safe (doesn't depend on liver metabolism)\\n\\n## NMC Competency Questions\\n\\n**Expected Q1**: \\\"45-year-old man with A1c 8.2% on lifestyle + metformin 1000 mg BD. What next?\\\"\\n- Answer: Add second agent. Options: (1) DPP-4 (sitagliptin 100 mg daily), (2) Sulfonylurea (gliclazide 40 mg daily), (3) SGLT-2i if budget allows.\\n\\n**Expected Q2**: \\\"Patient on NPH insulin reports fasting glucose 80 mg/dL but midnight glucose 40 mg/dL. How to adjust?\\\"\\n- Answer: NPH hypoglycemia at midnight → nocturnal hypoglycemia. Reduce NPH dose by 2-4 units OR switch to longer-acting insulin (glargine).\\n\\n**Expected Q3**: \\\"Why metformin first-line for T2DM?\\\"\\n- Answer: (1) No hypoglycemia, (2) Weight neutral/loss, (3) Cardioprotective, (4) Cheap, (5) No organ toxicity (except GI, lactic acidosis in renal failure).,\\n        mnemonics: [\\n          {\\n            text: \\\"INSULIN TYPES: 'Rapid = Meals, Regular = Before meals, NPH = Night, Long = all day'\\\",\\n            explanation:\\n              \\\"Rapid bolus at meals (short-acting). Regular pre-meal. NPH basal (covers overnight). Long-acting basal (steady all day).\\\",\\n          },\\n          {\\n            text: \\\"ORAL AGENTS FIRST-LINE in India: 'MEDS' (Metformin, DPP-4/Dapagliflozin, Sulfonylureas) — Metformin first\\\",\\n            explanation:\\n              \\\"Metformin is gold standard. If intolerant: DPP-4 or SGLT-2i (newer, safe). Sulfonylureas second-line (hypoglycemia risk).\\\",\\n          },\\n          {\\n            text: \\\"METFORMIN CONTRAINDICATION: 'CKD stage 4-5' (GFR <30 = lactic acidosis risk)\\\",\\n            explanation:\\n              \\\"Metformin renally excreted. GFR <30 → accumulation → increased lactate → fatal lactic acidosis possible.\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"T2DM algorithm: Lifestyle → Metformin → Add DPP-4/SGLT-2i/Sulfonylurea → Insulin if A1c >9%\\\",\\n          \\\"Rapid-acting insulin for mealtime bolus (post-meal glucose control)\\\",\\n          \\\"NPH/long-acting insulin for basal coverage (overnight, between meals)\\\",\\n          \\\"Sulfonylureas cause KATP closure → hypoglycemia glucose-independent\\\",\\n          \\\"Metformin safe in normal renal function; contraindicated GFR <30\\\",\\n          \\\"DPP-4/GLP-1/SGLT-2i: glucose-dependent (lower hypoglycemia risk)\\\",\\n          \\\"HbA1c target <7% (general), <8% (elderly/high-risk)\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 59 - Exam summary\\\", edition: \\\"9th\\\" },\\n          { book: \\\"NMC CBME\\\", chapter: \\\"Pharmacology competencies\\\", edition: \\\"2024\\\" },\\n        ],\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"insulin-oral-hypoglycemics-recall\\\",\\n        title: \\\"Insulin & Oral Hypoglycemics - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary:\\n          \\\"7-question active recall on diabetes management algorithm, insulin dosing, hypoglycemia treatment, oral agent selection, and renal function considerations.\\\",\\n        contentMd: ``# Active Recall Questions\\n\\n**Q1: Describe the stepwise management of a 50-year-old patient with newly diagnosed T2DM and HbA1c 9.5%.**\\n> **Answer**: (1) **Lifestyle first**: Emphasize weight loss (5-10%), exercise (150 min/week), diet modification (low GI, high fiber). Expected A1c drop: 0.5-2%. (2) **Start Metformin**: 500 mg daily × 1 week, then 500 mg BD × 1 week, then 1000 mg BD (target dose). Recheck A1c in 3 months. (3) **If A1c still >8% on metformin alone**: Add second agent (DPP-4 sitagliptin 100 mg daily OR sulfonylurea gliclazide 40 mg daily). (4) **If A1c still >8% on dual therapy**: Add third agent OR initiate insulin (basal NPH 10 units at night, titrate by 2-4 units every 3 days to target fasting glucose 100-130 mg/dL).\\n\\n**Q2: Explain the pharmacokinetics of NPH and regular insulin. Why would you choose each for different clinical scenarios?**\\n> **Answer**:\\n> - **Regular (soluble) insulin**: Onset 30-60 min, peak 2-3 hr, duration 6-8 hr. Use before meals to cover meal carbohydrate intake.\\n> - **NPH (isophane)**: Onset 1-2 hr, peak 4-10 hr, duration 18-24 hr. Use once/twice daily for basal coverage (overnight, between meals).\\n> - **Scenario 1** (cover meals): Regular insulin pre-meal.\\n> - **Scenario 2** (steady coverage): NPH at night (or BD if needed).\\n> - **Combination** (basal-bolus): NPH at night + regular before meals.\\n\\n**Q3: A 40-year-old with T2DM (A1c 7.2%) on metformin 1000 mg BD reports glucose 45 mg/dL at 3 AM. Which agent is causing hypoglycemia, and how would you manage it?**\\n> **Answer**: **Metformin does NOT cause hypoglycemia** (doesn't enhance insulin). Likely other agent: (1) If on sulfonylurea (gliclazide) → **sulfonylurea causing hypoglycemia** (KATP closure → uncontrolled insulin release). Management: **Reduce or stop gliclazide**; check metformin tolerance. (2) If only on metformin → possible endogenous insulin excess (early T2DM) or poor nutrition. Recheck diet, meal timing. Add dextrose tablet at bedtime if recurrent.\\n\\n**Q4: Why is metformin contraindicated in renal failure (GFR <30)? What is the mechanism of toxicity?**\\n> **Answer**: Mechanism: Metformin renally excreted (90%). If GFR <30, metformin accumulates → increased blood levels → increased lactate production (shifts metabolism) → **lactic acidosis** (rare but fatal). Additional risk: Renal hypoxia from contrast dye (if imaging) or sepsis can precipitate. **Alternative**: Insulin or DPP-4 (sitagliptin, reduced dose). Rule: Check renal function before starting metformin; contraindicate if GFR <30 (or <45 if elderly).\\n\\n**Q5: Compare sulfonylureas (e.g., gliclazide) and DPP-4 inhibitors (e.g., sitagliptin) in terms of mechanism and hypoglycemia risk.**\\n> **Answer**:\\n> - **Sulfonylurea**: Closes KATP channels → insulin release **glucose-independent** → hypoglycemia if patient skips meals or exercises. Effect: 1.5-2% A1c reduction.\\n> - **DPP-4**: Enhances GLP-1 action → insulin release **glucose-dependent** (only if glucose high) → minimal hypoglycemia risk. Effect: 0.5-1.5% A1c reduction.\\n> - **Clinical choice**: DPP-4 preferred if hypoglycemia risk (elderly, driving, missed meals). Sulfonylurea cheaper; use if cost-limiting.\\n\\n**Q6: Describe the \\\"Rule of 15\\\" for acute hypoglycemia management. Why is this protocol important?**\\n> **Answer**: **Rule of 15**:\\n> 1. Give 15 g fast carbohydrate (3 glucose tablets, ½ cup juice, 1 tbsp honey; NOT chocolate or complex carbs)\\n> 2. Wait 15 minutes\\n> 3. Recheck blood glucose\\n> 4. If still <70 mg/dL, repeat steps 1-3\\n> Importance: Prevents overcorrection (eating too much once symptoms resolve) → hypoglycemia swing. Fast carbs raise glucose quickly; 15 min allows time for absorption/action before reassessing.\\n\\n**Q7: A patient with CKD stage 3b (eGFR 38 mL/min) and T2DM requires antidiabetic agent. What agent(s) would you recommend and why? What agents are contraindicated?**\\n> **Answer**:\\n> **Recommended**:\\n> - Metformin at reduced dose (500 mg daily or BD; some advise avoiding if GFR <45)\\n> - DPP-4 inhibitor (sitagliptin at reduced dose, e.g., 50 mg daily if GFR 30-50)\\n> - Insulin (safe at any renal function; adjust dose based on glucose response)\\n> **Avoid/Caution**:\\n> - Sulfonylurea (risk of accumulation, hypoglycemia; use reduced dose if necessary)\\n> - SGLT-2 inhibitors (less effective when GFR 30-45; contraindicated <30)\\n> - GLP-1 agonists (safe but expensive; monitor glucose closely in CKD)\\n> Rationale: Preserve renal function (insulin resistance worsens with CKD); use agents not dependent on renal clearance.,\\n        mnemonics: [],\\n        keyPoints: [\\n          \\\"7 recall questions on T2DM management algorithm, insulin kinetics, hypoglycemia causes, and renal dosing\\\",\\n          \\\"Focus on: metformin first-line, sulfonylurea hypoglycemia risk, DPP-4 glucose-dependent, renal safety\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"KD Tripathi\\\", chapter: \\\"Ch 59\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Indian Diabetes Association\\\", chapter: \\\"Management guidelines\\\", edition: \\\"2023\\\" },\\n        ],\\n      },\\n    ],\\n  },\\n];\\n\",\n",
-`,
-`,
-`,
-`,
-}
-}
-}
-];
-];
+          "Antifungal drugs target ergosterol in fungal membranes or cell wall glucan. Antiviral drugs interfere with specific steps in viral replication. Antiretroviral therapy (ART) for HIV uses combination of drugs targeting reverse transcriptase, protease, and integrase.",
+        contentMd: `# Antifungal & Antiviral Drugs
+
+## Antifungal Drugs
+
+### Classification by Mechanism
+
+| Class | Drugs | Target |
+|-------|-------|--------|
+| **Polyenes** | Amphotericin B, Nystatin | Ergosterol binding (pore formation) |
+| **Azoles** | Fluconazole, Itraconazole, Voriconazole, Ketoconazole | Ergosterol synthesis (CYP14-demethylase) |
+| **Echinocandins** | Caspofungin, Micafungin, Anidulafungin | Beta-1,3-glucan synthase (cell wall) |
+| **Allylamines** | Terbinafine | Squalene epoxidase (ergosterol synthesis) |
+| **Antimetabolite** | Flucytosine (5-FC) | DNA/RNA synthesis |
+| **Griseofulvin** | Griseofulvin | Microtubule disruption |
+
+### Key Drugs
+- **Amphotericin B**: DOC for severe systemic fungal infections (cryptococcal meningitis, mucormycosis)
+- **Fluconazole**: DOC for cryptococcal meningitis (maintenance), oral/esophageal candidiasis
+- **Itraconazole**: Aspergillosis, histoplasmosis, dermatophytes
+- **Terbinafine**: DOC for dermatophytosis (onychomycosis)
+
+## Antiviral Drugs
+
+### Classification by Virus
+
+| Virus | Drugs | Mechanism |
+|-------|-------|-----------|
+| **HSV/VZV** | Acyclovir, Valacyclovir | Thymidine kinase-dependent DNA polymerase inhibition |
+| **CMV** | Ganciclovir, Foscarnet | DNA polymerase inhibition |
+| **Influenza** | Oseltamivir, Zanamivir | Neuraminidase inhibitors |
+| **HBV** | Tenofovir, Entecavir | Reverse transcriptase inhibition |
+| **HCV** | Sofosbuvir, Daclatasvir | NS5B polymerase, NS5A inhibitors |
+
+### Antiretroviral Therapy (ART) for HIV
+
+| Class | Drugs | Mechanism |
+|-------|-------|-----------|
+| **NRTIs** | Tenofovir (TDF), Lamivudine (3TC), Zidovudine (AZT) | Nucleoside/tide RT inhibitors |
+| **NNRTIs** | Efavirenz, Nevirapine, Dolutegravir | Non-nucleoside RT inhibitors |
+| **PIs** | Lopinavir/ritonavir, Atazanavir | Protease inhibitors |
+| **INSTIs** | Dolutegravir (DTG), Raltegravir | Integrase strand transfer inhibitors |
+
+**India's NACO First-Line ART**: TDF + 3TC + DTG (Tenofovir + Lamivudine + Dolutegravir)
+
+> **Clinical Pearl**: India is the "pharmacy of the world" for generic ART. Indian companies produce >80% of global generic antiretrovirals, making treatment affordable in low-income countries.`,
+        mnemonics: [
+          {
+            text: "Ampho-TERRIBLE: Amphotericin B is terribly toxic (nephrotoxicity, hypokalemia, fever/chills) but terribly effective",
+            explanation:
+              "Amphotericin B is the most effective systemic antifungal but has severe dose-limiting nephrotoxicity. Liposomal formulation reduces toxicity.",
+          },
+          {
+            text: "ART = TLD in India: Tenofovir + Lamivudine + Dolutegravir (first-line)",
+            explanation:
+              "India's NACO-recommended first-line ART regimen is TLD: Tenofovir (NRTI) + Lamivudine (NRTI) + Dolutegravir (INSTI).",
+          },
+        ],
+        keyPoints: [
+          "Amphotericin B: binds ergosterol, creates pores, DOC for severe systemic mycoses",
+          "Azoles: inhibit CYP14-demethylase (ergosterol synthesis), fluconazole most commonly used",
+          "Echinocandins: inhibit beta-1,3-glucan synthase (cell wall), used for invasive candidiasis",
+          "Acyclovir: activated by viral thymidine kinase, selective for HSV/VZV-infected cells",
+          "India NACO first-line ART: TDF + 3TC + DTG",
+          "Oseltamivir: neuraminidase inhibitor for influenza, given within 48 hours of symptoms",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 57-58 - Antifungal & Antiviral Drugs", page: "831-870", edition: "8th" },
+          { book: "Rang & Dale", chapter: "Ch 53 - Antifungal Drugs, Ch 54 - Antiviral Drugs", edition: "9th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "antifungal-antiviral-mechanism",
+        title: "Antifungal & Antiviral Drugs - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Detailed mechanisms of antifungal drug action on ergosterol pathway and cell wall, and antiviral mechanisms including nucleoside analogue activation, neuraminidase inhibition, and the HIV replication cycle targets.",
+        contentMd: `# Detailed Mechanisms
+
+## Amphotericin B
+1. Binds **ergosterol** in fungal cell membrane (selective - human cells have cholesterol)
+2. Forms **barrel-like pores** (aqueous channels) across the membrane
+3. Leakage of K+, Mg2+, and other ions
+4. Cell death by osmotic lysis
+
+### Toxicity
+- **Nephrotoxicity** (dose-limiting): renal vasoconstriction + direct tubular damage
+  - Presents as: rising creatinine, hypokalemia, hypomagnesemia, renal tubular acidosis
+  - Prevention: adequate hydration, normal saline loading before infusion
+- **Infusion-related reactions**: fever, chills, rigors (premedicate with paracetamol + diphenhydramine)
+- **Liposomal amphotericin B**: reduced nephrotoxicity, DOC for visceral leishmaniasis (kala-azar) in India
+
+## Azole Antifungals
+1. Inhibit **lanosterol 14-alpha-demethylase** (CYP51 / CYP14-DM)
+2. Block conversion of lanosterol to ergosterol
+3. Ergosterol depletion + toxic methylated sterol accumulation
+4. Membrane dysfunction and growth arrest (fungistatic, mostly)
+
+### Drug Interactions
+- Azoles are **CYP3A4 inhibitors** (ketoconazole > itraconazole > fluconazole)
+- Ketoconazole: also inhibits CYP17 (steroid synthesis) causing gynecomastia, decreased libido
+
+## Echinocandins
+- Inhibit **beta-1,3-D-glucan synthase**
+- Glucan is essential for fungal cell wall (absent in mammalian cells - selective toxicity)
+- Fungicidal against Candida, fungistatic against Aspergillus
+- IV only, no oral absorption
+
+## Acyclovir - Antiviral Mechanism
+1. Selectively taken up by HSV/VZV-infected cells
+2. First phosphorylation by **viral thymidine kinase** (absent in uninfected cells - selectivity)
+3. Second and third phosphorylation by host kinases
+4. Acyclovir triphosphate inhibits **viral DNA polymerase**
+5. Incorporates into viral DNA, causes **chain termination** (lacks 3'-OH)
+
+### Resistance: mutation in thymidine kinase (TK) gene or DNA polymerase gene
+
+## HIV Drug Mechanisms
+
+### NRTIs (e.g., Tenofovir, Lamivudine, Zidovudine)
+- Nucleoside/nucleotide analogues
+- Phosphorylated intracellularly to active triphosphate form
+- Competitive inhibitors of **reverse transcriptase**
+- Incorporate into DNA chain causing **chain termination**
+
+### NNRTIs (e.g., Efavirenz, Nevirapine)
+- Bind to **allosteric site** on reverse transcriptase
+- Non-competitive inhibition
+- Do not require phosphorylation (active as parent drug)
+- Low barrier to resistance (single mutation)
+
+### Integrase Inhibitors (e.g., Dolutegravir)
+- Block **integrase strand transfer** step
+- Prevent integration of viral DNA into host chromosome
+- DTG has high barrier to resistance (preferred first-line)
+
+### Protease Inhibitors (e.g., Lopinavir/ritonavir)
+- Block HIV protease that cleaves Gag-Pol polyprotein
+- Prevent maturation of viral particles
+- Ritonavir used as **pharmacokinetic booster** (CYP3A4 inhibitor)`,
+        mnemonics: [
+          {
+            text: "Acyclovir needs TK to TRICK the virus: viral Thymidine Kinase activates acyclovir selectively in infected cells",
+            explanation:
+              "Acyclovir's selectivity comes from requiring viral thymidine kinase for initial phosphorylation. Only HSV/VZV-infected cells activate the drug, sparing normal cells.",
+          },
+        ],
+        keyPoints: [
+          "Amphotericin B: binds ergosterol, forms pores, nephrotoxicity is dose-limiting",
+          "Azoles: inhibit CYP14-demethylase (lanosterol to ergosterol), CYP3A4 inhibitors themselves",
+          "Acyclovir: activated by viral thymidine kinase, causes DNA chain termination",
+          "NRTIs: chain terminators of reverse transcriptase, require intracellular phosphorylation",
+          "Dolutegravir (INSTI): high barrier to resistance, preferred first-line in India",
+          "Ritonavir: used as CYP3A4 inhibitor (booster) to increase levels of other PIs",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 57-58", page: "835-865", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 62-63", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "antifungal-antiviral-clinical",
+        title: "Antifungal & Antiviral Drugs - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "Clinical use of antifungals in common Indian infections (mucormycosis, cryptococcal meningitis, dermatophytosis) and antivirals including ART initiation, PEP, and hepatitis C treatment in India.",
+        contentMd: `# Clinical Applications
+
+## Antifungal Drug Selection
+
+| Infection | Drug of Choice | Notes |
+|-----------|---------------|-------|
+| Oral candidiasis (thrush) | Fluconazole 150 mg/Nystatin | Topical nystatin for mild |
+| Esophageal candidiasis | Fluconazole 200 mg/day x 14 days | HIV-associated |
+| Invasive candidiasis | Echinocandin (Caspofungin) | Step-down to fluconazole |
+| Cryptococcal meningitis | Amphotericin B + Flucytosine (induction) then Fluconazole (maintenance) | Common in AIDS |
+| Aspergillosis | Voriconazole | DOC for invasive aspergillosis |
+| Mucormycosis | Liposomal Amphotericin B | Seen in uncontrolled DM, post-COVID in India |
+| Dermatophytosis | Terbinafine (oral for nails) | Griseofulvin alternative |
+| Tinea versicolor | Topical azoles / Oral fluconazole | Malassezia furfur |
+| Visceral leishmaniasis | Liposomal Amphotericin B | DOC in India (NLEM) |
+
+> **Clinical Pearl**: Mucormycosis cases surged during COVID-19 in India (2021), especially in patients with uncontrolled diabetes on steroids. Liposomal amphotericin B was the DOC, with posaconazole for step-down.
+
+## Antiviral Clinical Use
+
+| Infection | Drug | Regimen |
+|-----------|------|---------|
+| Herpes simplex (genital) | Acyclovir | 400 mg TDS x 7-10 days |
+| Herpes zoster | Valacyclovir | 1g TDS x 7 days (within 72 hrs) |
+| CMV retinitis (HIV) | Ganciclovir IV then Valganciclovir | Maintenance therapy |
+| Influenza | Oseltamivir | 75 mg BD x 5 days (start within 48 hrs) |
+| Hepatitis B (chronic) | Tenofovir or Entecavir | Indefinite until HBsAg loss |
+| Hepatitis C | Sofosbuvir + Daclatasvir | 12 weeks (cure rate >95%) |
+
+## ART in India (NACO Guidelines)
+### First-Line: TLD (TDF + 3TC + DTG)
+- Tenofovir 300 mg + Lamivudine 300 mg + Dolutegravir 50 mg
+- Single pill, once daily
+- DTG preferred over Efavirenz (better efficacy, fewer side effects, high resistance barrier)
+
+### When to Start ART
+- **Test and Treat**: All HIV-positive patients start ART regardless of CD4 count
+- Start within 7 days of diagnosis (same-day start if ready)
+
+### Post-Exposure Prophylaxis (PEP)
+- Start within **72 hours** of exposure (earlier is better)
+- Regimen: TDF + 3TC + DTG x 28 days
+- Indications: needlestick injury, sexual assault, unprotected exposure
+
+### Key ART ADRs
+| Drug | ADR |
+|------|-----|
+| Zidovudine (AZT) | Bone marrow suppression (anemia, neutropenia) |
+| Tenofovir (TDF) | Renal tubular dysfunction, decreased BMD |
+| Efavirenz (EFV) | CNS effects (vivid dreams, dizziness), teratogenic |
+| Nevirapine (NVP) | Hepatotoxicity, Stevens-Johnson syndrome |
+| Lopinavir/r | Metabolic syndrome (dyslipidemia, insulin resistance) |
+| Dolutegravir | Weight gain, insomnia (generally well-tolerated) |`,
+        mnemonics: [
+          {
+            text: "PEP within 72: Post-Exposure Prophylaxis within 72 hours, TLD for 28 days",
+            explanation:
+              "HIV post-exposure prophylaxis must be started within 72 hours and continued for 28 days. Regimen: TDF + 3TC + DTG.",
+          },
+          {
+            text: "ZAP the marrow: Zidovudine causes Anemia and Pancytopenia (bone marrow suppression)",
+            explanation:
+              "Zidovudine (AZT) is the NRTI most associated with bone marrow suppression, causing macrocytic anemia and neutropenia.",
+          },
+        ],
+        keyPoints: [
+          "Mucormycosis: liposomal amphotericin B is DOC (major concern during COVID-19 in India)",
+          "Voriconazole: DOC for invasive aspergillosis",
+          "HCV: sofosbuvir + daclatasvir (12 weeks, >95% cure rate) - available generically in India",
+          "India NACO: Test and Treat policy - ART for all HIV+ regardless of CD4",
+          "PEP: TLD within 72 hours for 28 days",
+          "Zidovudine: bone marrow suppression; Efavirenz: CNS effects and teratogenicity",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 57-58", edition: "8th" },
+          { book: "Harrison's", chapter: "HIV/AIDS Treatment", edition: "21st" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "antifungal-antiviral-exam",
+        title: "Antifungal & Antiviral Drugs - Exam Prep",
+        estimatedMinutes: 15,
+        summary:
+          "High-yield one-liners and comparison tables for antifungal and antiviral drugs.",
+        contentMd: `# Exam High Yield
+
+## One-Liners - Antifungals
+- DOC for severe systemic fungal infections: **Amphotericin B**
+- Antifungal targeting cell wall: **Echinocandins (beta-1,3-glucan synthase)**
+- Azole causing gynecomastia: **Ketoconazole (inhibits CYP17)**
+- DOC for dermatophyte nail infections: **Terbinafine (oral)**
+- Antifungal used only topically: **Nystatin (too toxic for systemic use)**
+- DOC for invasive aspergillosis: **Voriconazole**
+- DOC for mucormycosis: **Liposomal Amphotericin B**
+- Antifungal acting on microtubules: **Griseofulvin**
+- DOC for visceral leishmaniasis in India: **Liposomal Amphotericin B**
+
+## One-Liners - Antivirals
+- Antiviral activated by viral thymidine kinase: **Acyclovir**
+- Neuraminidase inhibitor for influenza: **Oseltamivir**
+- ART drug causing bone marrow suppression: **Zidovudine**
+- Teratogenic ART drug: **Efavirenz**
+- NNRTI causing SJS: **Nevirapine**
+- ART drug used as pharmacokinetic booster: **Ritonavir (CYP3A4 inhibitor)**
+- DOC for chronic Hepatitis B: **Tenofovir / Entecavir**
+- Cure for Hepatitis C: **Sofosbuvir + Daclatasvir (12 weeks)**
+- PEP timeline: **Within 72 hours, for 28 days**
+
+## Comparison: Antifungal Mechanisms
+
+| Class | Target | Action | Key Drug |
+|-------|--------|--------|----------|
+| Polyenes | Ergosterol (binding) | Fungicidal | Amphotericin B |
+| Azoles | CYP14-demethylase | Fungistatic | Fluconazole |
+| Echinocandins | Glucan synthase | Fungicidal (Candida) | Caspofungin |
+| Allylamines | Squalene epoxidase | Fungicidal | Terbinafine |
+| Griseofulvin | Microtubules | Fungistatic | Griseofulvin |
+
+## Comparison: ART Drug Classes
+
+| Class | Target | Activation | Resistance Barrier |
+|-------|--------|------------|-------------------|
+| NRTIs | Reverse transcriptase | Requires phosphorylation | Moderate |
+| NNRTIs | RT allosteric site | Active as parent drug | Low (single mutation) |
+| PIs | HIV protease | Active as parent drug | Moderate |
+| INSTIs | Integrase | Active as parent drug | High (DTG) |
+
+## Previous Year Themes
+- Amphotericin B toxicity and lipid formulations
+- Acyclovir mechanism (thymidine kinase selectivity)
+- ART drug classes and mechanisms
+- PEP regimen and timing
+- DOC for specific fungal infections`,
+        mnemonics: [
+          {
+            text: "Ergosterol pathway: Squalene --(Terbinafine blocks)--> Lanosterol --(Azoles block)--> Ergosterol <--(AmB binds)",
+            explanation:
+              "Three drug targets in ergosterol pathway: terbinafine blocks squalene epoxidase, azoles block 14-alpha-demethylase, amphotericin B binds the final product ergosterol.",
+          },
+        ],
+        keyPoints: [
+          "Amphotericin B: binds ergosterol (fungicidal), nephrotoxicity is dose-limiting",
+          "Azoles: CYP14-demethylase inhibitors, ketoconazole also inhibits CYP17",
+          "Acyclovir: selective activation by viral thymidine kinase",
+          "DTG: preferred INSTI with high resistance barrier for first-line ART",
+          "PEP: TLD within 72 hours for 28 days",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 57-58", edition: "8th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "antifungal-antiviral-recall",
+        title: "Antifungal & Antiviral Drugs - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for antifungal and antiviral drugs.",
+        contentMd: `# Active Recall
+
+**Q1:** How does amphotericin B work?
+> Binds ergosterol in the fungal cell membrane, forming barrel-like pores that cause leakage of intracellular ions (K+, Mg2+) and cell death.
+
+**Q2:** What is the dose-limiting toxicity of amphotericin B?
+> Nephrotoxicity (renal vasoconstriction + direct tubular damage). Prevention: saline loading before infusion.
+
+**Q3:** How do azoles work?
+> Inhibit lanosterol 14-alpha-demethylase (CYP51), blocking ergosterol synthesis.
+
+**Q4:** Why does ketoconazole cause gynecomastia?
+> Ketoconazole also inhibits CYP17 (involved in steroid hormone synthesis), reducing androgen production.
+
+**Q5:** How is acyclovir selectively activated in virus-infected cells?
+> First phosphorylation by viral thymidine kinase (present only in HSV/VZV-infected cells). Host kinases complete further phosphorylation.
+
+**Q6:** What is the mechanism of oseltamivir?
+> Inhibits neuraminidase, preventing release of new viral particles from infected cells. Must be given within 48 hours of symptom onset.
+
+**Q7:** What is India's first-line ART regimen?
+> TLD: Tenofovir + Lamivudine + Dolutegravir (single tablet, once daily).
+
+**Q8:** What is the PEP regimen for HIV exposure?
+> TDF + 3TC + DTG within 72 hours, continued for 28 days.
+
+**Q9:** Which ART drug causes bone marrow suppression?
+> Zidovudine (AZT) - macrocytic anemia, neutropenia.
+
+**Q10:** What is the DOC for mucormycosis?
+> Liposomal Amphotericin B (surged during COVID-19 in India, especially in diabetic patients on steroids).
+
+**Q11:** How does sofosbuvir cure Hepatitis C?
+> NS5B RNA polymerase inhibitor. Combined with daclatasvir (NS5A inhibitor) for 12 weeks, achieving >95% sustained virological response.
+
+**Q12:** What is the role of ritonavir in ART?
+> Pharmacokinetic booster - inhibits CYP3A4, increasing plasma levels of co-administered protease inhibitors (e.g., lopinavir/ritonavir).`,
+        mnemonics: [],
+        keyPoints: [
+          "12 recall questions covering antifungal mechanisms, antiviral selectivity, ART regimens, and clinical applications",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 57-58", edition: "8th" },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 6: Anthelmintics & Antiprotozoals ───────────────
+  {
+    topicCode: "PH-MOD-05-TOP-06",
+    layers: [
+      {
+        layer: 1,
+        slug: "anthelmintics-antiprotozoals-foundation",
+        title: "Anthelmintics & Antiprotozoals - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "Anthelmintics treat worm infestations (nematodes, cestodes, trematodes). Antiprotozoals target amoeba, Giardia, Trichomonas, and Leishmania. Albendazole and metronidazole are the workhorses in Indian practice.",
+        contentMd: `# Anthelmintics & Antiprotozoals
+
+## Anthelmintics (Anti-Worm Drugs)
+
+### Classification by Worm Type
+
+| Worm Type | Common Infections | Drugs |
+|-----------|------------------|-------|
+| **Nematodes (roundworms)** | Ascaris, hookworm, pinworm, Wuchereria | Albendazole, Mebendazole, Ivermectin, DEC |
+| **Cestodes (tapeworms)** | Taenia, Echinococcus, Cysticercosis | Praziquantel, Albendazole, Niclosamide |
+| **Trematodes (flukes)** | Schistosoma, liver flukes | Praziquantel, Triclabendazole |
+
+### Key Drugs
+
+| Drug | Mechanism | Spectrum |
+|------|-----------|----------|
+| **Albendazole** | Inhibits beta-tubulin polymerization | Broad-spectrum nematodes + cestodes |
+| **Mebendazole** | Inhibits beta-tubulin polymerization | Similar to albendazole, less systemic absorption |
+| **Ivermectin** | Glutamate-gated Cl- channel agonist (paralysis) | Strongyloides, Onchocerciasis, Scabies |
+| **Praziquantel** | Ca2+ influx causing spastic paralysis | All trematodes + cestodes |
+| **DEC (Diethylcarbamazine)** | Microfilaricidal (mechanism unclear) | Lymphatic filariasis |
+| **Niclosamide** | Uncouples oxidative phosphorylation | Tapeworms (not cysticercosis) |
+
+## Antiprotozoal Drugs
+
+| Infection | Drug of Choice |
+|-----------|---------------|
+| **Amoebiasis (intestinal)** | Metronidazole + Diloxanide furoate (luminal) |
+| **Amoebic liver abscess** | Metronidazole |
+| **Giardiasis** | Metronidazole / Tinidazole |
+| **Trichomoniasis** | Metronidazole |
+| **Visceral Leishmaniasis** | Liposomal Amphotericin B / Miltefosine |
+| **Toxoplasmosis** | Pyrimethamine + Sulfadiazine |
+
+### Metronidazole
+- **Most important antiprotozoal drug**
+- Also effective against anaerobic bacteria
+- Mechanism: reduced by anaerobic metabolism to cytotoxic free radicals that damage DNA
+
+> **Clinical Pearl**: India's National Deworming Day (NDD) uses single-dose albendazole (400 mg) for all children aged 1-19 years biannually. This is one of the world's largest public health deworming programs.`,
+        mnemonics: [
+          {
+            text: "ALBENdazole = ALL BENds tubulin: inhibits beta-tubulin polymerization in worms",
+            explanation:
+              "Albendazole and mebendazole inhibit beta-tubulin polymerization, disrupting microtubule-dependent glucose uptake in helminths, leading to energy depletion and death.",
+          },
+          {
+            text: "Metro for AMOEBA, GIARDIA, TRICH, and ANAerobes: Metronidazole covers the M-A-G-T-A spectrum",
+            explanation:
+              "Metronidazole is the DOC for amoebiasis, giardiasis, trichomoniasis, and anaerobic bacterial infections. It generates cytotoxic free radicals under anaerobic conditions.",
+          },
+        ],
+        keyPoints: [
+          "Albendazole: inhibits beta-tubulin, broad-spectrum anthelmintic, used in NDD",
+          "Praziquantel: causes Ca2+ influx and spastic paralysis, DOC for schistosomiasis and tapeworms",
+          "Ivermectin: glutamate-gated Cl- channel agonist, DOC for strongyloides and onchocerciasis",
+          "Metronidazole: reduced anaerobically to free radicals, DOC for amoebiasis and giardiasis",
+          "DEC: microfilaricidal, used for lymphatic filariasis (also in MDA programs)",
+          "National Deworming Day: albendazole 400 mg single dose for children 1-19 years",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 59-60 - Anthelmintics, Antiprotozoals", page: "871-900", edition: "8th" },
+          { book: "Park's Textbook", chapter: "Helminthic Infections", edition: "26th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "anthelmintics-antiprotozoals-mechanism",
+        title: "Anthelmintics & Antiprotozoals - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Detailed mechanisms, pharmacokinetics, and resistance patterns for anthelmintic and antiprotozoal drugs.",
+        contentMd: `# Detailed Mechanisms
+
+## Albendazole/Mebendazole (Benzimidazoles)
+1. Bind selectively to **parasite beta-tubulin** (low affinity for mammalian tubulin)
+2. Inhibit **microtubule polymerization**
+3. Disrupt **glucose uptake** (microtubule-dependent)
+4. Energy depletion and worm immobilization
+5. Worm expelled by peristalsis
+
+### Pharmacokinetics
+| Parameter | Albendazole | Mebendazole |
+|-----------|------------|-------------|
+| Absorption | Moderate (enhanced by fatty food) | Poor (<10%) |
+| Active metabolite | Albendazole sulfoxide (systemic) | Minimal |
+| Systemic use | Yes (neurocysticercosis, hydatid) | No (mainly GI worms) |
+| Half-life | 8-12 hours | 2-6 hours |
+
+## Ivermectin
+- Binds **glutamate-gated chloride channels** (unique to invertebrates)
+- Increased Cl- permeability causes **hyperpolarization and flaccid paralysis**
+- Does NOT cross BBB in humans (P-glycoprotein efflux at BBB)
+- Safe because mammalian CNS protected by BBB
+
+## Praziquantel
+1. Increases **permeability of cell membrane to Ca2+**
+2. Massive Ca2+ influx causes **spastic paralysis** and tegumental disruption
+3. Exposed antigens trigger host immune attack
+4. Effective against all trematodes and most cestodes
+
+## Metronidazole - Detailed Mechanism
+1. Enters anaerobic/microaerophilic cells
+2. Nitro group is **reduced by ferredoxin** (in anaerobes) or equivalent system
+3. Reduced intermediates generate **cytotoxic free radicals**
+4. Free radicals cause **DNA strand breakage** and cell death
+5. Only works in organisms with anaerobic electron transport (selectivity)
+
+### Key Pharmacokinetics
+- Excellent oral absorption (>90%)
+- Good CNS penetration (crosses BBB - useful for brain abscess)
+- Hepatic metabolism, renal excretion
+- **Disulfiram-like reaction** with alcohol (avoid alcohol during and 48 hrs after)
+- Metallic taste, dark urine
+
+### Metronidazole Limitations
+- Kills tissue amoebae (trophozoites) but NOT cysts
+- Must add **luminal amoebicide** (diloxanide furoate or paromomycin) to eliminate cyst carriers
+
+## DEC (Diethylcarbamazine)
+- Mechanism not fully understood
+- Sensitizes microfilariae to **phagocytosis** by host immune cells
+- May alter surface membrane of microfilariae
+- Causes rapid killing of microfilariae - risk of **Mazzotti reaction** in onchocerciasis (severe inflammatory response)`,
+        mnemonics: [
+          {
+            text: "PraziQUAKE: Praziquantel causes calcium QUAKE (Ca2+ influx) leading to spastic paralysis of worms",
+            explanation:
+              "Praziquantel increases membrane permeability to calcium ions, causing massive Ca2+ influx, spastic paralysis, and tegumental disruption of trematodes and cestodes.",
+          },
+        ],
+        keyPoints: [
+          "Benzimidazoles: selective for parasite beta-tubulin, disrupt glucose uptake",
+          "Ivermectin: glutamate-gated Cl- channels (unique to invertebrates), does not cross BBB",
+          "Praziquantel: Ca2+ influx causing spastic paralysis, effective against all flukes",
+          "Metronidazole: reduced by ferredoxin to cytotoxic free radicals, causes DNA damage",
+          "Metronidazole kills trophozoites but NOT cysts - must add luminal amoebicide",
+          "DEC: sensitizes microfilariae to phagocytosis, Mazzotti reaction risk",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 59-60", page: "875-895", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 64-65", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "anthelmintics-antiprotozoals-clinical",
+        title: "Anthelmintics & Antiprotozoals - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "Clinical treatment protocols for helminth and protozoal infections in Indian context, including mass drug administration, neurocysticercosis management, and kala-azar treatment.",
+        contentMd: `# Clinical Applications
+
+## Helminth Treatment Protocols
+
+| Infection | Drug | Regimen |
+|-----------|------|---------|
+| Ascariasis | Albendazole | 400 mg single dose |
+| Hookworm | Albendazole | 400 mg single dose (or 3 days if heavy) |
+| Pinworm (Enterobius) | Mebendazole/Albendazole | Single dose, repeat at 2 weeks |
+| Strongyloides | Ivermectin | 200 mcg/kg/day x 2 days |
+| Lymphatic filariasis | DEC + Albendazole | MDA annually (DEC 6 mg/kg + ALB 400 mg) |
+| Neurocysticercosis | Albendazole + Steroids | 15 mg/kg/day x 28 days + dexamethasone |
+| Hydatid cyst | Albendazole (pre/post surgery) | 400 mg BD x 1-6 months |
+| Tapeworm (intestinal) | Praziquantel | 5-10 mg/kg single dose |
+| Schistosomiasis | Praziquantel | 40 mg/kg single dose |
+
+> **Clinical Pearl**: In neurocysticercosis, steroids (dexamethasone) MUST be given with albendazole to prevent worsening edema from dying cysts. Anti-epileptics also needed.
+
+## Amoebiasis Treatment
+### Amoebic Dysentery
+- **Metronidazole** 800 mg TDS x 5-7 days (tissue amoebicide)
+- FOLLOWED BY **Diloxanide furoate** 500 mg TDS x 10 days (luminal amoebicide)
+- Metronidazole alone does NOT eliminate cysts - relapse if luminal agent omitted
+
+### Amoebic Liver Abscess
+- **Metronidazole** 800 mg TDS x 10 days (preferred)
+- Large abscess: ultrasound-guided aspiration + metronidazole
+- Follow with diloxanide furoate
+
+## Leishmaniasis (Kala-Azar) in India
+- Endemic in Bihar, Jharkhand, West Bengal, UP
+- **DOC**: Liposomal Amphotericin B (10 mg/kg single infusion - NLEM)
+- **Alternative**: Miltefosine (oral, first oral drug for VL)
+- Elimination target under Kala-Azar Elimination Programme
+
+## Mass Drug Administration (MDA) Programs in India
+| Programme | Target | Drugs |
+|-----------|--------|-------|
+| **National Deworming Day** | Children 1-19 yrs | Albendazole 400 mg single dose |
+| **Lymphatic Filariasis MDA** | Endemic districts | DEC + Albendazole (annual) |
+| **Triple Drug Therapy (IDA)** | Filariasis accelerated | Ivermectin + DEC + Albendazole |
+
+## Adverse Effects
+
+| Drug | Key ADRs |
+|------|----------|
+| Albendazole | Hepatotoxicity (high dose), bone marrow suppression (prolonged use), teratogenic |
+| Metronidazole | Metallic taste, disulfiram-like reaction, peripheral neuropathy (prolonged) |
+| Praziquantel | Headache, dizziness, abdominal pain (from dying worms) |
+| DEC | Mazzotti reaction (onchocerciasis), fever, headache |
+| Ivermectin | Generally well-tolerated, Mazzotti-like in onchocerciasis |`,
+        mnemonics: [
+          {
+            text: "Amoeba treatment = METRO + DILO: Metronidazole (kills trophozoites) then Diloxanide (kills cysts)",
+            explanation:
+              "Two-step amoebiasis treatment: metronidazole as tissue amoebicide (kills invasive trophozoites), followed by diloxanide furoate as luminal amoebicide (eliminates cysts and prevents relapse).",
+          },
+        ],
+        keyPoints: [
+          "Neurocysticercosis: albendazole + steroids + anti-epileptics",
+          "Amoebiasis: metronidazole (trophozoites) THEN diloxanide (cysts) - both needed",
+          "Kala-azar DOC in India: liposomal amphotericin B (single infusion)",
+          "National Deworming Day: albendazole 400 mg for children 1-19 years",
+          "Metronidazole: disulfiram-like reaction with alcohol - strictly avoid",
+          "Albendazole is teratogenic - contraindicated in pregnancy",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 59-60", edition: "8th" },
+          { book: "Park's Textbook", chapter: "Helminthic Infections, Leishmaniasis", edition: "26th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "anthelmintics-antiprotozoals-exam",
+        title: "Anthelmintics & Antiprotozoals - Exam Prep",
+        estimatedMinutes: 15,
+        summary:
+          "High-yield facts, comparison tables, and frequently tested themes for anthelmintics and antiprotozoals.",
+        contentMd: `# Exam High Yield
+
+## One-Liners
+- DOC for all roundworms (nematodes): **Albendazole**
+- DOC for all flukes (trematodes): **Praziquantel**
+- DOC for Strongyloides: **Ivermectin**
+- DOC for lymphatic filariasis (acute): **DEC (Diethylcarbamazine)**
+- DOC for neurocysticercosis: **Albendazole + Steroids**
+- DOC for intestinal amoebiasis: **Metronidazole + Diloxanide furoate**
+- DOC for Giardiasis: **Metronidazole (or Tinidazole)**
+- DOC for Trichomoniasis: **Metronidazole**
+- DOC for visceral Leishmaniasis (India): **Liposomal Amphotericin B**
+- First oral drug for Leishmaniasis: **Miltefosine**
+- Luminal amoebicide: **Diloxanide furoate**
+- Anthelmintic contraindicated in pregnancy: **Albendazole (teratogenic)**
+- Drug causing Mazzotti reaction: **DEC (in onchocerciasis)**
+- Drug with disulfiram-like reaction: **Metronidazole (with alcohol)**
+- Mechanism of ivermectin: **Glutamate-gated Cl- channel agonist**
+
+## Comparison: Anthelmintic Mechanisms
+
+| Drug | Mechanism | Worm Selectivity |
+|------|-----------|-----------------|
+| Albendazole | Beta-tubulin polymerization inhibition | Nematodes, Cestodes |
+| Ivermectin | Glutamate-gated Cl- channel agonist | Nematodes (not cestodes/trematodes) |
+| Praziquantel | Ca2+ influx, spastic paralysis | Cestodes, Trematodes |
+| DEC | Sensitizes to phagocytosis | Microfilariae |
+| Niclosamide | Uncouples oxidative phosphorylation | Cestodes (intestinal only) |
+
+## Previous Year Themes
+- DOC for specific helminth infections
+- Metronidazole mechanism (anaerobic reduction)
+- Luminal vs tissue amoebicide concept
+- Mass drug administration programs
+- Neurocysticercosis management
+- Mazzotti reaction`,
+        mnemonics: [
+          {
+            text: "PRAZIQUANTEL = PRAZI-CALCIUM: PraziQUANTEL causes massive calcium influx",
+            explanation:
+              "Praziquantel's key mechanism is increasing Ca2+ permeability in trematode and cestode cell membranes, causing spastic paralysis.",
+          },
+        ],
+        keyPoints: [
+          "Albendazole: beta-tubulin inhibitor, broad-spectrum nematocide, teratogenic",
+          "Praziquantel: Ca2+ influx, DOC for all flukes and tapeworms",
+          "Ivermectin: Cl- channel agonist, safe because does not cross human BBB",
+          "Metronidazole: tissue amoebicide only, must add luminal agent",
+          "DEC: Mazzotti reaction in onchocerciasis (not used for Onchocerca)",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 59-60", edition: "8th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "anthelmintics-antiprotozoals-recall",
+        title: "Anthelmintics & Antiprotozoals - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for anthelmintics and antiprotozoals.",
+        contentMd: `# Active Recall
+
+**Q1:** What is the mechanism of albendazole?
+> Inhibits parasite beta-tubulin polymerization, disrupting microtubule-dependent glucose uptake, causing energy depletion and worm death.
+
+**Q2:** Why is ivermectin safe for humans despite being neurotoxic in worms?
+> Ivermectin acts on glutamate-gated Cl- channels (invertebrate-specific). It does not cross the human BBB due to P-glycoprotein efflux, protecting the mammalian CNS.
+
+**Q3:** How does praziquantel kill flukes and tapeworms?
+> Increases Ca2+ membrane permeability causing massive calcium influx, spastic paralysis, and tegumental disruption exposing parasite antigens to host immune attack.
+
+**Q4:** Why must metronidazole be followed by diloxanide furoate in amoebiasis?
+> Metronidazole kills only trophozoites (tissue amoebicide) but NOT cysts. Diloxanide furoate (luminal amoebicide) eliminates cysts to prevent relapse and transmission.
+
+**Q5:** What is the Mazzotti reaction?
+> Severe inflammatory reaction caused by DEC in onchocerciasis - due to massive killing of microfilariae releasing antigens. Features: fever, pruritus, edema, hypotension.
+
+**Q6:** What drug is used for National Deworming Day in India?
+> Albendazole 400 mg single dose for all children aged 1-19 years (biannual program).
+
+**Q7:** How does metronidazole work?
+> In anaerobic conditions, the nitro group is reduced by ferredoxin, generating cytotoxic free radicals that cause DNA strand breakage and cell death.
+
+**Q8:** What is the DOC for neurocysticercosis?
+> Albendazole (15 mg/kg/day x 28 days) with dexamethasone (to reduce inflammation from dying cysts) and anti-epileptics.
+
+**Q9:** What is the DOC for visceral leishmaniasis in India?
+> Liposomal Amphotericin B (10 mg/kg single dose infusion) under the Kala-Azar Elimination Programme.
+
+**Q10:** Why is albendazole contraindicated in pregnancy?
+> Albendazole is teratogenic (embryotoxic in animal studies). Contraindicated in pregnancy.
+
+**Q11:** What is the disulfiram-like reaction with metronidazole?
+> Metronidazole inhibits aldehyde dehydrogenase. Alcohol consumption during treatment causes accumulation of acetaldehyde - nausea, vomiting, flushing, headache.`,
+        mnemonics: [],
+        keyPoints: [
+          "11 recall questions on anthelmintic mechanisms, clinical protocols, and Indian public health programs",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 59-60", edition: "8th" },
+        ],
+      },
+    ],
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // MODULE 6 — AUTACOIDS, NSAIDs & IMMUNOPHARMACOLOGY
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  // ─── Topic 1: Histamine & Antihistamines ───────────────────
+  {
+    topicCode: "PH-MOD-06-TOP-01",
+    layers: [
+      {
+        layer: 1,
+        slug: "histamine-antihistamines-foundation",
+        title: "Histamine & Antihistamines - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "Histamine is an autacoid stored in mast cells and basophils, acting on H1-H4 receptors. H1 antihistamines (1st gen: sedating; 2nd gen: non-sedating) are used for allergies, while H2 blockers are used for peptic ulcer disease.",
+        contentMd: `# Histamine & Antihistamines
+
+## Histamine
+- Synthesized from **histidine** by histidine decarboxylase
+- Stored in **mast cell granules** (with heparin and proteases)
+- Released by: IgE-mediated degranulation (allergy), drugs (morphine, d-tubocurarine), complement (C3a, C5a)
+
+## Histamine Receptors
+
+| Receptor | Location | Effects | Blockers |
+|----------|----------|---------|----------|
+| **H1** | Smooth muscle, endothelium, CNS | Bronchoconstriction, vasodilation, pruritus, wakefulness | Cetirizine, Chlorpheniramine |
+| **H2** | Gastric parietal cells, heart | Gastric acid secretion, positive chronotropy | Ranitidine, Famotidine |
+| **H3** | CNS (presynaptic) | Autoreceptor - inhibits histamine release | Pitolisant (narcolepsy) |
+| **H4** | Eosinophils, mast cells | Chemotaxis, inflammation | Under investigation |
+
+## H1 Antihistamines
+
+### First Generation (Sedating)
+| Drug | Key Feature |
+|------|-------------|
+| **Chlorpheniramine** | Sedating, anti-pruritic, widely available in India |
+| **Diphenhydramine** | Sedating, antiemetic, available as Benadryl |
+| **Promethazine** | Antiemetic, sedative, anticholinergic |
+| **Hydroxyzine** | Anxiolytic, anti-pruritic |
+| **Cyproheptadine** | Appetite stimulant (anti-serotonin), used in children |
+
+### Second Generation (Non-Sedating)
+| Drug | Key Feature |
+|------|-------------|
+| **Cetirizine** | Minimal sedation, most commonly prescribed in India |
+| **Loratadine** | Non-sedating, OTC in India |
+| **Fexofenadine** | Truly non-sedating, no CYP metabolism |
+| **Levocetirizine** | Active enantiomer of cetirizine |
+| **Desloratadine** | Active metabolite of loratadine |
+
+> **Clinical Pearl**: Cetirizine is the most prescribed antihistamine in India. First-gen antihistamines cross BBB causing sedation and anticholinergic effects. Second-gen are preferred for allergic rhinitis due to non-sedating profile.`,
+        mnemonics: [
+          {
+            text: "H1 = Histamine-1 = Hives, Hay fever, Horrible itch: allergic symptoms blocked by H1 antihistamines",
+            explanation:
+              "H1 receptors mediate allergic symptoms: urticaria (hives), allergic rhinitis (hay fever), and pruritus (itch). H1 antihistamines block these effects.",
+          },
+          {
+            text: "1st gen SEDATES, 2nd gen SEPARATES (from BBB): 1st gen crosses BBB causing sedation, 2nd gen does not",
+            explanation:
+              "First-generation H1 antihistamines are lipophilic and cross the BBB causing sedation. Second-generation are less lipophilic and are P-gp substrates, so they do not cross significantly.",
+          },
+        ],
+        keyPoints: [
+          "Histamine: from mast cells, acts on H1-H4 receptors",
+          "H1: allergic symptoms (bronchoconstriction, pruritus, vasodilation); H2: gastric acid secretion",
+          "1st gen H1 blockers: sedating, cross BBB, anticholinergic effects",
+          "2nd gen H1 blockers: non-sedating, do not cross BBB, preferred for allergies",
+          "Cetirizine: most prescribed antihistamine in India",
+          "Cyproheptadine: anti-serotonin + antihistamine, used as appetite stimulant in children",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 11 - Histamine and Antihistamines", page: "155-170", edition: "8th" },
+          { book: "Rang & Dale", chapter: "Ch 27 - Histamine", edition: "9th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "histamine-antihistamines-mechanism",
+        title: "Histamine & Antihistamines - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Detailed pharmacology of histamine receptor signaling, mechanism of H1 blockers as inverse agonists, pharmacokinetics of 1st vs 2nd generation, and the role of H2 blockers in acid suppression.",
+        contentMd: `# Detailed Mechanisms
+
+## Histamine Receptor Signaling
+
+| Receptor | G-protein | Second Messenger | Effects |
+|----------|-----------|-----------------|---------|
+| **H1** | Gq | IP3/DAG -> Ca2+ release | Smooth muscle contraction, vasodilation (via NO), pruritus |
+| **H2** | Gs | cAMP increase | Gastric acid secretion, positive inotropy/chronotropy |
+| **H3** | Gi/o | cAMP decrease | Presynaptic autoinhibition of histamine release |
+| **H4** | Gi/o | cAMP decrease | Eosinophil chemotaxis |
+
+## H1 Antihistamines as Inverse Agonists
+- H1 antihistamines are NOT simple competitive antagonists
+- They are **inverse agonists**: stabilize the inactive conformation of H1 receptor
+- This reduces constitutive (basal) receptor activity even without histamine
+
+## 1st vs 2nd Generation Pharmacokinetics
+
+| Feature | 1st Generation | 2nd Generation |
+|---------|---------------|----------------|
+| BBB penetration | Yes (lipophilic) | No (P-gp substrates) |
+| Sedation | Marked | Minimal |
+| Anticholinergic | Yes (dry mouth, urinary retention) | No |
+| Duration | 4-6 hours | 12-24 hours |
+| Cardiotoxicity | Rare | Terfenadine, astemizole (withdrawn - QT prolongation) |
+| Metabolism | Hepatic (CYP) | Variable (fexofenadine: not metabolized) |
+
+## H2 Blockers in Acid Suppression
+- Block histamine stimulation of **H2 receptors on parietal cells**
+- Reduce basal and stimulated acid secretion (about 70% reduction)
+- Less potent than PPIs (which block the final common pathway - H+/K+ ATPase)
+
+| H2 Blocker | Relative Potency | Notes |
+|-----------|------------------|-------|
+| Cimetidine | 1x | CYP inhibitor, anti-androgen effects |
+| Ranitidine | 5-10x | Withdrawn in many countries (NDMA contamination) |
+| Famotidine | 20-50x | Most potent H2 blocker, preferred currently |
+| Nizatidine | 5-10x | Also prokinetic |
+
+### Cimetidine - Special Toxicity
+- **CYP450 inhibitor**: increases levels of warfarin, phenytoin, theophylline
+- **Anti-androgen**: gynecomastia, impotence, decreased libido (blocks androgen receptors)
+- These effects NOT seen with famotidine (preferred H2 blocker)`,
+        mnemonics: [
+          {
+            text: "CIMEtidine = CYP Inhibitor, Male hormone Effects (anti-androgen): the two unique problems of cimetidine",
+            explanation:
+              "Cimetidine is unique among H2 blockers for being a CYP450 inhibitor (drug interactions) and having anti-androgen effects (gynecomastia, impotence). Other H2 blockers lack these effects.",
+          },
+        ],
+        keyPoints: [
+          "H1: Gq-coupled (IP3/DAG/Ca2+); H2: Gs-coupled (cAMP); H3/H4: Gi-coupled",
+          "H1 antihistamines are inverse agonists, not just antagonists",
+          "2nd gen H1 blockers: non-sedating because they are P-gp substrates and do not cross BBB",
+          "Cimetidine: CYP450 inhibitor + anti-androgen (gynecomastia)",
+          "Famotidine: most potent H2 blocker, preferred (no CYP or androgen effects)",
+          "H2 blockers reduce acid ~70%; PPIs reduce ~90% (more potent)",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 11 - Histamine", page: "158-168", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 39 - Histamine", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "histamine-antihistamines-clinical",
+        title: "Histamine & Antihistamines - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "Clinical use of antihistamines for allergic rhinitis, urticaria, motion sickness, and as premedication. Drug interactions and contraindications.",
+        contentMd: `# Clinical Applications
+
+## Indications for H1 Antihistamines
+
+| Condition | Preferred Drug | Notes |
+|-----------|---------------|-------|
+| Allergic rhinitis | Cetirizine/Fexofenadine (2nd gen) | First-line, daily use |
+| Acute urticaria | Cetirizine/Levocetirizine | Up-dosing (2-4x) if standard dose fails |
+| Chronic urticaria | Fexofenadine/Desloratadine | Long-term, non-sedating preferred |
+| Anaphylaxis (adjunct) | Chlorpheniramine IV + Adrenaline IM | Antihistamine is ADJUNCT, not primary |
+| Motion sickness | Promethazine/Diphenhydramine | 1st gen preferred (anticholinergic CNS effect) |
+| Pre-anesthetic | Promethazine | Sedation + antiemetic |
+| Pruritus (dermatoses) | Hydroxyzine | Sedating, anxiolytic |
+| Appetite stimulation | Cyproheptadine | Children with poor appetite |
+
+> **Clinical Pearl**: In anaphylaxis, adrenaline IM is the FIRST and most important drug. H1 antihistamine is only adjunctive therapy - never rely on antihistamine alone for anaphylaxis.
+
+## H2 Blocker Clinical Use
+- **Peptic ulcer disease**: famotidine 20 mg BD (less effective than PPIs)
+- **GERD**: mild cases, on-demand use
+- **Stress ulcer prophylaxis**: IV famotidine in ICU patients
+- **Zollinger-Ellison syndrome**: PPIs preferred, H2 blockers inadequate
+
+## Drug Interactions & Contraindications
+
+### 1st Gen Antihistamines
+- Potentiate CNS depressants (alcohol, benzodiazepines, opioids)
+- Anticholinergic effects: urinary retention (avoid in BPH), angle-closure glaucoma risk
+- Avoid in elderly (Beers criteria): increased fall risk, confusion
+
+### Terfenadine & Astemizole (Withdrawn)
+- Caused fatal **QT prolongation and torsades de pointes**
+- Metabolized by CYP3A4: co-administration with ketoconazole/erythromycin increased levels
+- Led to development of safer alternatives (fexofenadine = active metabolite of terfenadine)
+
+## Indian Market Context
+- OTC availability of cetirizine, loratadine, chlorpheniramine
+- Fixed-dose combos common: cetirizine + ambroxol, cetirizine + pseudoephedrine
+- Ranitidine largely withdrawn (NDMA issue); famotidine replacing it
+- Cough syrups containing 1st gen antihistamines widely used`,
+        mnemonics: [
+          {
+            text: "Anaphylaxis = ADRENALINE first, Antihistamine adjunct: A before A",
+            explanation:
+              "In anaphylaxis, adrenaline (epinephrine) IM is the first-line life-saving drug. H1 antihistamine is only an adjunct. Never delay adrenaline for antihistamine.",
+          },
+        ],
+        keyPoints: [
+          "Allergic rhinitis: 2nd gen H1 blockers first-line (cetirizine, fexofenadine)",
+          "Anaphylaxis: adrenaline IM first, antihistamine only adjunct",
+          "Motion sickness: 1st gen preferred (promethazine, diphenhydramine)",
+          "1st gen: avoid in elderly (Beers criteria) - falls, confusion, anticholinergic burden",
+          "Terfenadine/astemizole withdrawn for fatal QT prolongation",
+          "Ranitidine largely withdrawn due to NDMA contamination; famotidine preferred H2 blocker",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 11", edition: "8th" },
+          { book: "Harrison's", chapter: "Allergic Diseases", edition: "21st" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "histamine-antihistamines-exam",
+        title: "Histamine & Antihistamines - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield one-liners and comparisons for histamine pharmacology.",
+        contentMd: `# Exam High Yield
+
+## One-Liners
+- H1 receptor second messenger: **Gq -> IP3/DAG -> Ca2+**
+- H2 receptor second messenger: **Gs -> cAMP**
+- H1 antihistamine that is an appetite stimulant: **Cyproheptadine**
+- H2 blocker with anti-androgen effects: **Cimetidine**
+- Most potent H2 blocker: **Famotidine**
+- H1 antihistamine for motion sickness: **Promethazine**
+- Non-sedating antihistamine not metabolized by CYP: **Fexofenadine**
+- Withdrawn antihistamines (QT prolongation): **Terfenadine, Astemizole**
+- Active metabolite of terfenadine: **Fexofenadine**
+- H1 blockers are: **Inverse agonists (not simple antagonists)**
+- Histamine is released from: **Mast cells and basophils**
+- Triple response of Lewis: **Red spot (direct vasodilation) -> Flare (axon reflex) -> Wheal (edema)**
+
+## Comparison: 1st vs 2nd Gen H1 Blockers
+
+| Feature | 1st Generation | 2nd Generation |
+|---------|---------------|----------------|
+| Sedation | +++ | +/- |
+| Anticholinergic | +++ | - |
+| Duration | Short (4-6 hr) | Long (12-24 hr) |
+| BBB penetration | Yes | No |
+| Uses | Motion sickness, premed, pruritus | Allergic rhinitis, urticaria |
+
+## Previous Year Themes
+- H1 vs H2 receptor signaling
+- 1st vs 2nd gen antihistamine comparison
+- Cimetidine toxicity (CYP inhibition, anti-androgen)
+- Triple response of Lewis
+- Terfenadine withdrawal reason`,
+        mnemonics: [
+          {
+            text: "Triple response of Lewis: RSF-W: Red Spot (vasodilation), Surrounding Flare (axon reflex), Wheal (edema from capillary leak)",
+            explanation:
+              "Intradermal histamine injection causes the classic triple response: local red spot from direct vasodilation, surrounding flare from axon reflex, and central wheal from increased capillary permeability.",
+          },
+        ],
+        keyPoints: [
+          "H1: Gq, IP3/Ca2+; H2: Gs, cAMP",
+          "H1 antihistamines are inverse agonists",
+          "Cimetidine: CYP inhibitor + anti-androgen",
+          "Fexofenadine: non-sedating, not CYP-metabolized, safest",
+          "Triple response: red spot, flare, wheal",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 11", edition: "8th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "histamine-antihistamines-recall",
+        title: "Histamine & Antihistamines - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for histamine and antihistamines.",
+        contentMd: `# Active Recall
+
+**Q1:** What are the four histamine receptors and their primary functions?
+> H1: allergic responses (bronchoconstriction, pruritus); H2: gastric acid secretion; H3: presynaptic autoinhibition in CNS; H4: eosinophil chemotaxis.
+
+**Q2:** Why are 1st gen antihistamines sedating but 2nd gen are not?
+> 1st gen are lipophilic and cross the BBB. 2nd gen are P-glycoprotein substrates and less lipophilic, so they do not penetrate the BBB significantly.
+
+**Q3:** What is the triple response of Lewis?
+> Intradermal histamine injection causes: (1) Red spot from direct vasodilation, (2) Surrounding flare from axon reflex, (3) Central wheal from increased capillary permeability and edema.
+
+**Q4:** Why is cimetidine problematic compared to famotidine?
+> Cimetidine is a CYP450 inhibitor (drug interactions with warfarin, phenytoin) and has anti-androgen effects (gynecomastia, impotence). Famotidine lacks both.
+
+**Q5:** What is the role of antihistamines in anaphylaxis?
+> Only adjunctive. Adrenaline IM is the first-line life-saving treatment. H1 antihistamine (chlorpheniramine IV) is given as adjunct.
+
+**Q6:** Why was terfenadine withdrawn?
+> Terfenadine caused fatal QT prolongation (torsades de pointes), especially when CYP3A4 was inhibited by ketoconazole or erythromycin.
+
+**Q7:** Name the antihistamine used as an appetite stimulant.
+> Cyproheptadine - has anti-serotonin activity in addition to antihistamine effect, stimulating appetite.
+
+**Q8:** What is the preferred H1 antihistamine for allergic rhinitis?
+> 2nd generation: cetirizine, fexofenadine, or loratadine (non-sedating, once daily).
+
+**Q9:** Which antihistamine is preferred for motion sickness?
+> 1st generation: promethazine or diphenhydramine (anticholinergic CNS effect helps in motion sickness).
+
+**Q10:** Are H1 antihistamines competitive antagonists or inverse agonists?
+> Inverse agonists - they stabilize the inactive conformation of the H1 receptor, reducing constitutive activity.`,
+        mnemonics: [],
+        keyPoints: [
+          "10 recall questions on histamine receptors, antihistamine generations, and clinical applications",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 11", edition: "8th" },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 2: NSAIDs & Antipyretics ────────────────────────
+  {
+    topicCode: "PH-MOD-06-TOP-02",
+    layers: [
+      {
+        layer: 1,
+        slug: "nsaids-antipyretics-foundation",
+        title: "NSAIDs & Antipyretics - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "NSAIDs inhibit cyclooxygenase (COX) enzymes, reducing prostaglandin synthesis. They have analgesic, anti-inflammatory, and antipyretic effects. COX-1 is constitutive (GI protection, platelets); COX-2 is inducible (inflammation). Paracetamol is an analgesic-antipyretic without significant anti-inflammatory action.",
+        contentMd: `# NSAIDs & Antipyretics
+
+## Prostaglandin Synthesis Pathway
+$$\\text{Membrane phospholipids} \\xrightarrow{\\text{Phospholipase A2}} \\text{Arachidonic acid} \\xrightarrow{\\text{COX-1/COX-2}} \\text{Prostaglandins, Thromboxane}$$
+
+## COX-1 vs COX-2
+
+| Feature | COX-1 | COX-2 |
+|---------|-------|-------|
+| Type | Constitutive | Inducible |
+| Location | Stomach, platelets, kidney | Inflammatory sites, kidney, brain |
+| Function | GI mucosal protection, platelet TXA2 | Inflammation, pain, fever |
+| Inhibition effect | GI ulcers, bleeding | Anti-inflammatory, analgesic |
+
+## Classification of NSAIDs
+
+| Category | Drugs | COX Selectivity |
+|----------|-------|----------------|
+| **Non-selective COX inhibitors** | Aspirin, Ibuprofen, Diclofenac, Indomethacin, Piroxicam | Both COX-1 and COX-2 |
+| **Preferential COX-2** | Nimesulide, Meloxicam, Nabumetone | More COX-2 |
+| **Selective COX-2 (Coxibs)** | Celecoxib, Etoricoxib | COX-2 only |
+| **Analgesic-antipyretic** | Paracetamol (Acetaminophen) | Weak COX inhibitor, central action |
+
+## Key Drugs
+
+### Aspirin (Acetylsalicylic Acid)
+- **Irreversible** COX inhibitor (acetylates serine residue)
+- Low dose (75-150 mg): antiplatelet (TXA2 inhibition)
+- Analgesic dose (300-600 mg): pain relief
+- Anti-inflammatory dose (3-6 g/day): rheumatic fever
+
+### Paracetamol (Acetaminophen)
+- Analgesic and antipyretic but NOT anti-inflammatory
+- Acts centrally (possibly on COX-3 or peroxidase pathway)
+- Safest analgesic-antipyretic in therapeutic doses
+- **Hepatotoxic in overdose** (N-acetyl-p-benzoquinoneimine - NAPQI)
+
+> **Clinical Pearl**: Paracetamol is the most widely used analgesic in India. Available OTC at Jan Aushadhi stores. Maximum dose: 4g/day for adults. N-acetylcysteine (NAC) is the antidote for overdose.`,
+        mnemonics: [
+          {
+            text: "COX-1 = COX-ONE = protects your STOMACH (constitutive); COX-2 = COX-TWO = inflammation brew (inducible)",
+            explanation:
+              "COX-1 is constitutive and protects gastric mucosa. COX-2 is induced at sites of inflammation. Non-selective NSAIDs block both, causing GI ulcers.",
+          },
+          {
+            text: "Aspirin is IRREVERSIBLE: it permanently acetylates COX (unlike other NSAIDs which are reversible)",
+            explanation:
+              "Aspirin covalently acetylates a serine residue on COX, making it the only NSAID with irreversible inhibition. This is why low-dose aspirin has sustained antiplatelet effect for the entire platelet lifespan (7-10 days).",
+          },
+        ],
+        keyPoints: [
+          "NSAIDs inhibit COX enzymes, reducing prostaglandin synthesis",
+          "COX-1: constitutive (GI protection, platelets); COX-2: inducible (inflammation)",
+          "Aspirin: only irreversible COX inhibitor; low dose = antiplatelet",
+          "Paracetamol: analgesic-antipyretic but NOT anti-inflammatory; hepatotoxic in overdose",
+          "NAPQI is the toxic metabolite of paracetamol; antidote is N-acetylcysteine (NAC)",
+          "Coxibs (celecoxib): selective COX-2, reduced GI toxicity but increased CV risk",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 14-15 - NSAIDs", page: "192-220", edition: "8th" },
+          { book: "Rang & Dale", chapter: "Ch 26 - Anti-inflammatory Drugs", edition: "9th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "nsaids-antipyretics-mechanism",
+        title: "NSAIDs & Antipyretics - Mechanism",
+        estimatedMinutes: 30,
+        summary:
+          "Detailed COX inhibition mechanisms, aspirin's irreversible acetylation, paracetamol toxicity pathway, and COX-2 selective inhibitor cardiovascular risk.",
+        contentMd: `# Detailed Mechanisms
+
+## Aspirin - Irreversible COX Inhibition
+1. Aspirin **acetylates serine-530** of COX-1 (serine-516 of COX-2)
+2. Covalent modification permanently inactivates the enzyme
+3. Platelets (no nucleus) cannot synthesize new COX - antiplatelet effect lasts **7-10 days** (platelet lifespan)
+4. Other cells regenerate COX - anti-inflammatory effect requires repeated dosing
+
+### Dose-Dependent Effects
+| Dose | Effect | Mechanism |
+|------|--------|-----------|
+| 75-150 mg | Antiplatelet | TXA2 inhibition (COX-1 in platelets) |
+| 300-600 mg | Analgesic | Peripheral + central prostaglandin inhibition |
+| 3-6 g/day | Anti-inflammatory | Full COX-1/2 inhibition |
+| >6 g/day | Uricosuric | Blocks tubular reabsorption of uric acid |
+
+### Aspirin and Reye's Syndrome
+- **Reye's syndrome**: acute hepatic encephalopathy in children with viral infections (influenza, varicella)
+- Aspirin is CONTRAINDICATED in children <16 years with fever
+- Use paracetamol or ibuprofen instead
+
+## Paracetamol Toxicity
+### Therapeutic Dose
+- Metabolized by glucuronidation (60%) and sulfation (35%)
+- Small amount (<5%) oxidized by CYP2E1 to **NAPQI** (toxic metabolite)
+- NAPQI conjugated with **glutathione** and safely excreted
+
+### Overdose (>150 mg/kg or >7.5 g in adults)
+1. Glucuronidation/sulfation pathways saturated
+2. More NAPQI formed by CYP2E1
+3. **Glutathione stores depleted** (<30% of normal)
+4. NAPQI binds to hepatocyte proteins causing **centrilobular hepatic necrosis**
+5. Liver failure, coagulopathy, death
+
+### Treatment: N-Acetylcysteine (NAC)
+- Replenishes glutathione stores
+- Most effective if given within **8 hours** of overdose
+- Rumack-Matthew nomogram guides treatment decision
+
+## COX-2 Selectivity and CV Risk
+- COX-2 in vascular endothelium produces **PGI2 (prostacyclin)**: vasodilator, antiplatelet
+- COX-1 in platelets produces **TXA2**: vasoconstrictor, pro-aggregatory
+- Selective COX-2 inhibitors block PGI2 but NOT TXA2
+- Results in **prothrombotic imbalance**: increased MI and stroke risk
+- **Rofecoxib (Vioxx)** withdrawn in 2004 due to increased CV events
+- Celecoxib: lower CV risk than rofecoxib, still used with caution`,
+        mnemonics: [
+          {
+            text: "NAPQI needs NAC: N-Acetyl-p-benzoquinoneimine (toxic) needs N-AcetylCysteine (antidote)",
+            explanation:
+              "In paracetamol overdose, NAPQI depletes glutathione and causes liver necrosis. N-acetylcysteine replenishes glutathione to detoxify NAPQI. Most effective within 8 hours.",
+          },
+        ],
+        keyPoints: [
+          "Aspirin: irreversible COX acetylation; antiplatelet effect lasts 7-10 days (platelet lifespan)",
+          "Low-dose aspirin: antiplatelet (TXA2 inhibition); high dose: anti-inflammatory",
+          "Aspirin contraindicated in children <16 (Reye's syndrome with viral infections)",
+          "Paracetamol overdose: NAPQI depletes glutathione causing centrilobular hepatic necrosis",
+          "NAC (N-acetylcysteine): antidote for paracetamol, most effective within 8 hours",
+          "COX-2 inhibitors: reduced GI toxicity but increased CV risk (prothrombotic imbalance)",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 14-15 - NSAIDs", page: "195-215", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 38 - NSAIDs", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "nsaids-antipyretics-clinical",
+        title: "NSAIDs & Antipyretics - Clinical Application",
+        estimatedMinutes: 20,
+        summary:
+          "Clinical use of NSAIDs for pain, fever, and inflammation. Adverse effects including GI ulceration, renal toxicity, and aspirin-exacerbated respiratory disease. Indian prescribing context.",
+        contentMd: `# Clinical Applications
+
+## NSAID Selection by Indication
+
+| Indication | Preferred Drug | Notes |
+|-----------|---------------|-------|
+| Fever (general) | Paracetamol | Safest, first-line |
+| Fever in children | Paracetamol / Ibuprofen | NEVER aspirin (Reye's) |
+| Mild-moderate pain | Ibuprofen / Diclofenac | Short course |
+| Migraine (acute) | Ibuprofen / Naproxen | With antiemetic |
+| Rheumatoid arthritis | Naproxen / Celecoxib | Long-term use |
+| Osteoarthritis | Paracetamol first, then topical NSAIDs | Avoid systemic if possible |
+| Dysmenorrhoea | Mefenamic acid / Ibuprofen | Start at onset of menses |
+| Closure of PDA | Indomethacin / Ibuprofen IV | Neonatal |
+| Antiplatelet | Aspirin 75-150 mg | Post-MI, stroke prevention |
+| Acute gout | Indomethacin / Naproxen / Colchicine | NOT aspirin (alters uric acid handling) |
+
+## NSAID Adverse Effects
+
+### GI Toxicity
+- **Peptic ulcer and bleeding**: due to COX-1 inhibition reducing PGE2 (cytoprotective)
+- Risk factors: elderly, H. pylori, concurrent steroids/anticoagulants
+- Prevention: co-prescribe PPI (omeprazole) or use COX-2 selective drug
+- **Diclofenac and aspirin** have highest GI risk among non-selective NSAIDs
+
+### Renal Toxicity
+- Prostaglandins maintain renal blood flow (especially in CKD, HF, dehydration)
+- NSAIDs can cause: acute kidney injury, sodium/water retention, hyperkalemia
+- **Avoid NSAIDs in CKD** and dehydrated patients
+
+### Cardiovascular Risk
+- All NSAIDs (except aspirin) increase CV risk to varying degrees
+- **Naproxen**: lowest CV risk among non-selective NSAIDs
+- **Diclofenac**: highest CV risk among non-selective NSAIDs (comparable to coxibs)
+
+### Aspirin-Exacerbated Respiratory Disease (AERD)
+- Triad: asthma + nasal polyps + aspirin sensitivity
+- Due to shunting of arachidonic acid to **leukotriene pathway** when COX is blocked
+- Cross-reactive with all NSAIDs (not paracetamol at low doses)
+
+## Indian Prescribing Context
+- **Nimesulide**: banned in children <12 years in India (hepatotoxicity reports)
+- **Fixed-dose combos**: paracetamol + ibuprofen, paracetamol + tramadol widely available
+- **Diclofenac IM**: overused in India, associated with injection-site complications
+- **NLEM includes**: aspirin, paracetamol, ibuprofen, diclofenac
+- **Diclofenac banned for veterinary use** (vulture conservation - renal failure in vultures)
+
+> **Clinical Pearl**: Diclofenac injection caused near-extinction of Indian vultures (who consumed carcasses of cattle treated with diclofenac). Now banned for veterinary use under Wildlife Protection Act.`,
+        mnemonics: [
+          {
+            text: "NSAID GI protection = PPI: always co-prescribe a PPI (omeprazole) for high-risk patients on chronic NSAIDs",
+            explanation:
+              "Patients at high GI risk (elderly, H. pylori positive, on steroids/anticoagulants) should receive a PPI when taking chronic NSAIDs to prevent peptic ulceration.",
+          },
+          {
+            text: "Samter's Triad = AAA: Asthma + Aspirin sensitivity + nasal polyps (Aspirin-Exacerbated Respiratory Disease)",
+            explanation:
+              "AERD (formerly Samter's triad): bronchial asthma + nasal polyposis + aspirin/NSAID hypersensitivity. Due to leukotriene overproduction when COX is blocked.",
+          },
+        ],
+        keyPoints: [
+          "Paracetamol: first-line antipyretic, safest NSAID alternative",
+          "Aspirin contraindicated in children with viral fever (Reye's syndrome)",
+          "NSAID GI toxicity: co-prescribe PPI for high-risk patients",
+          "Naproxen: lowest CV risk; Diclofenac: highest CV risk among traditional NSAIDs",
+          "Nimesulide banned in children <12 years in India",
+          "Diclofenac banned for veterinary use (vulture conservation)",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 14-15", edition: "8th" },
+          { book: "Harrison's", chapter: "Pain Management", edition: "21st" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "nsaids-antipyretics-exam",
+        title: "NSAIDs & Antipyretics - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield facts and comparison tables for NSAIDs.",
+        contentMd: `# Exam High Yield
+
+## One-Liners
+- Only irreversible COX inhibitor: **Aspirin**
+- NSAID for PDA closure: **Indomethacin / Ibuprofen (IV)**
+- NSAID for dysmenorrhoea: **Mefenamic acid**
+- Safest NSAID in pregnancy (1st/2nd trimester): **Paracetamol**
+- NSAID contraindicated in children: **Aspirin (Reye's syndrome)**
+- Paracetamol antidote: **N-acetylcysteine (NAC)**
+- Paracetamol toxic metabolite: **NAPQI**
+- COX-2 inhibitor withdrawn for CV events: **Rofecoxib (Vioxx)**
+- NSAID with lowest CV risk: **Naproxen**
+- NSAID causing vulture deaths: **Diclofenac (veterinary)**
+- Aspirin-exacerbated respiratory disease triad: **Asthma + Nasal polyps + Aspirin sensitivity**
+- Low-dose aspirin duration of antiplatelet effect: **7-10 days (platelet lifespan)**
+
+## Comparison: Key NSAIDs
+
+| Feature | Aspirin | Ibuprofen | Diclofenac | Celecoxib | Paracetamol |
+|---------|---------|-----------|-----------|-----------|-------------|
+| COX selectivity | Non-selective (irreversible) | Non-selective | Non-selective | COX-2 selective | Weak/central |
+| Anti-inflammatory | +++ (high dose) | ++ | +++ | +++ | - |
+| Antiplatelet | +++ (low dose) | + | + | - | - |
+| GI risk | High | Moderate | High | Low | Very low |
+| CV risk | Protective (low dose) | Moderate | High | Moderate | None |
+
+## Previous Year Themes
+- Aspirin dose-dependent effects
+- Paracetamol overdose management (NAC, NAPQI)
+- COX-1 vs COX-2 functions
+- COX-2 inhibitor CV risk mechanism
+- NSAID selection in specific clinical scenarios
+- Reye's syndrome`,
+        mnemonics: [
+          {
+            text: "Aspirin doses: 75 Plate, 300 Pain, 3000 Plus (anti-inflammatory), 6000 Pee (uricosuric)",
+            explanation:
+              "Aspirin dose-effect: 75 mg = antiplatelet, 300 mg = analgesic, 3 g = anti-inflammatory, >6 g = uricosuric. A classic exam question on dose-dependent pharmacology.",
+          },
+        ],
+        keyPoints: [
+          "Aspirin: irreversible COX, dose-dependent effects (75 mg antiplatelet to 6g uricosuric)",
+          "Paracetamol: NAPQI causes liver necrosis, NAC antidote within 8 hours",
+          "Rofecoxib withdrawn for CV events; celecoxib still available",
+          "Naproxen: lowest CV risk; diclofenac: highest among non-selective",
+          "Aspirin contraindicated in children <16 with fever (Reye's)",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 14-15", edition: "8th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "nsaids-antipyretics-recall",
+        title: "NSAIDs & Antipyretics - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for NSAIDs and antipyretics.",
+        contentMd: `# Active Recall
+
+**Q1:** What is the difference between COX-1 and COX-2?
+> COX-1 is constitutive (always present) - protects gastric mucosa, regulates platelet TXA2, maintains renal blood flow. COX-2 is inducible - expressed at sites of inflammation, producing prostaglandins that mediate pain, fever, and inflammation.
+
+**Q2:** Why does aspirin have a prolonged antiplatelet effect?
+> Aspirin irreversibly acetylates COX in platelets. Since platelets have no nucleus and cannot synthesize new COX, the antiplatelet effect lasts the entire platelet lifespan (7-10 days).
+
+**Q3:** What is Reye's syndrome?
+> Acute hepatic encephalopathy in children given aspirin during viral infections (influenza, varicella). Characterized by hepatic failure and cerebral edema. Aspirin is contraindicated in children <16 with fever.
+
+**Q4:** Describe the paracetamol overdose mechanism.
+> Normal metabolism (glucuronidation/sulfation) is saturated. CYP2E1 produces excess NAPQI. Glutathione stores deplete below 30%. NAPQI binds hepatocyte proteins, causing centrilobular necrosis.
+
+**Q5:** What is the antidote for paracetamol overdose?
+> N-acetylcysteine (NAC) - replenishes glutathione stores. Most effective within 8 hours of overdose. Rumack-Matthew nomogram guides treatment.
+
+**Q6:** Why do COX-2 inhibitors increase cardiovascular risk?
+> COX-2 in endothelium produces PGI2 (vasodilator, antiaggregatory). COX-2 inhibitors block PGI2 without affecting platelet TXA2 (COX-1), creating a prothrombotic imbalance.
+
+**Q7:** What is aspirin-exacerbated respiratory disease?
+> Triad of asthma + nasal polyps + aspirin/NSAID sensitivity. COX blockade shunts arachidonic acid to the leukotriene pathway, causing bronchospasm.
+
+**Q8:** Which NSAID is used to close a patent ductus arteriosus?
+> Indomethacin or ibuprofen (IV). PDA is kept open by PGE2; NSAIDs inhibit PGE2 synthesis to close the ductus.
+
+**Q9:** What NSAID has the lowest cardiovascular risk?
+> Naproxen has the lowest CV risk among non-selective NSAIDs.
+
+**Q10:** Why was nimesulide banned in children in India?
+> Reports of hepatotoxicity (fulminant hepatic failure) in children. Banned for use in children <12 years by CDSCO.`,
+        mnemonics: [],
+        keyPoints: [
+          "10 recall questions covering COX enzymes, aspirin pharmacology, paracetamol toxicity, and clinical applications",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 14-15", edition: "8th" },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 3: Drugs for Gout ───────────────────────────────
+  {
+    topicCode: "PH-MOD-06-TOP-03",
+    layers: [
+      {
+        layer: 1,
+        slug: "drugs-gout-foundation",
+        title: "Drugs for Gout - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "Gout results from hyperuricemia causing monosodium urate crystal deposition. Treatment targets acute inflammation (colchicine, NSAIDs, corticosteroids) and chronic urate lowering (allopurinol, febuxostat, uricosurics). Understanding purine metabolism is key to drug action.",
+        contentMd: `# Drugs for Gout
+
+## Pathophysiology
+- Hyperuricemia (serum urate >6.8 mg/dL) leads to monosodium urate (MSU) crystal deposition in joints
+- Crystals activate NLRP3 inflammasome -> IL-1beta release -> acute inflammation
+- Acute gout: excruciating pain, swelling, redness (most commonly 1st MTP joint - podagra)
+
+## Drug Classification
+
+### Acute Gout Treatment
+| Drug | Mechanism | Notes |
+|------|-----------|-------|
+| **Colchicine** | Microtubule depolymerization, inhibits neutrophil migration | Most specific for gout |
+| **NSAIDs** | COX inhibition (anti-inflammatory) | Indomethacin/Naproxen preferred |
+| **Corticosteroids** | Anti-inflammatory | When NSAIDs/colchicine contraindicated |
+| **IL-1 inhibitors** | Anakinra, Canakinumab | Refractory cases |
+
+### Chronic Urate-Lowering Therapy
+| Drug | Mechanism | Notes |
+|------|-----------|-------|
+| **Allopurinol** | Xanthine oxidase inhibitor (competitive) | Most commonly used |
+| **Febuxostat** | Xanthine oxidase inhibitor (non-purine) | More selective |
+| **Probenecid** | Uricosuric (blocks URAT1 transporter) | Promotes urate excretion |
+| **Benzbromarone** | Uricosuric | More potent |
+| **Rasburicase** | Recombinant uricase (converts urate to allantoin) | Tumor lysis syndrome |
+| **Pegloticase** | PEGylated uricase | Refractory chronic gout |
+
+## Purine Metabolism
+$$\\text{Hypoxanthine} \\xrightarrow{\\text{Xanthine oxidase}} \\text{Xanthine} \\xrightarrow{\\text{Xanthine oxidase}} \\text{Uric acid}$$
+
+Allopurinol/Febuxostat block xanthine oxidase, reducing uric acid production.
+
+> **Clinical Pearl**: Never start allopurinol during an acute gout attack - it can worsen the flare. Start with colchicine/NSAIDs first, then initiate allopurinol after the acute attack resolves (with colchicine cover for 3-6 months).`,
+        mnemonics: [
+          {
+            text: "ALLO-PURINOL blocks xanthine oxidase: ALLOws less PURINE conversion to uric acid",
+            explanation:
+              "Allopurinol is a purine analogue that inhibits xanthine oxidase, reducing conversion of hypoxanthine and xanthine to uric acid.",
+          },
+          {
+            text: "Colchicine = COLlapses microtubules: inhibits microtubule polymerization, preventing neutrophil migration to the joint",
+            explanation:
+              "Colchicine binds tubulin, preventing microtubule assembly. This inhibits neutrophil chemotaxis and phagocytosis of urate crystals, reducing inflammation in acute gout.",
+          },
+        ],
+        keyPoints: [
+          "Acute gout: colchicine, NSAIDs (indomethacin/naproxen), or corticosteroids",
+          "Chronic gout: allopurinol (xanthine oxidase inhibitor) is first-line urate-lowering therapy",
+          "Colchicine: binds tubulin, inhibits microtubule assembly and neutrophil migration",
+          "Never start allopurinol during acute attack (worsens flare)",
+          "Uricosurics (probenecid): increase renal urate excretion via URAT1 blockade",
+          "Rasburicase: recombinant uricase for tumor lysis syndrome",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 16 - Drugs for Gout", page: "221-230", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 40 - Pharmacotherapy of Gout", edition: "13th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "drugs-gout-mechanism",
+        title: "Drugs for Gout - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Detailed mechanisms, pharmacokinetics, and drug interactions for gout medications.",
+        contentMd: `# Detailed Mechanisms
+
+## Colchicine
+1. Binds **tubulin** monomers, preventing polymerization into microtubules
+2. Inhibits **neutrophil chemotaxis** and phagocytosis
+3. Reduces **NLRP3 inflammasome** activation (IL-1beta suppression)
+4. Highly specific for gout (no analgesic/anti-inflammatory effect otherwise)
+
+### Pharmacokinetics
+- Oral absorption: rapid, peak at 1-2 hours
+- Enterohepatic recycling (causes GI toxicity)
+- Narrow therapeutic index
+- **Dose**: 0.5 mg BD-TDS (low-dose regimen preferred - fewer GI side effects)
+
+### Toxicity (Overdose)
+- **GI**: diarrhea, nausea, vomiting (most common, dose-limiting)
+- **Severe**: bone marrow suppression, multiorgan failure (rare with low-dose regimen)
+
+## Allopurinol
+1. Structural analogue of **hypoxanthine**
+2. Competitively inhibits **xanthine oxidase**
+3. Metabolized to **oxypurinol** (active metabolite, also inhibits XO)
+4. Both allopurinol and oxypurinol reduce uric acid production
+5. Xanthine and hypoxanthine are excreted instead (more soluble than uric acid)
+
+### Important Drug Interaction
+- **Azathioprine/6-Mercaptopurine**: metabolized by xanthine oxidase
+- Allopurinol blocks their metabolism -> **toxic accumulation** (bone marrow suppression)
+- **Reduce azathioprine dose by 75%** if co-administered with allopurinol
+
+### Allopurinol Hypersensitivity Syndrome (AHS)
+- Severe reaction: skin rash (SJS/TEN), fever, eosinophilia, hepatitis, renal failure
+- Associated with **HLA-B*5801** allele (common in Southeast Asians, African Americans)
+- Screen HLA-B*5801 before starting allopurinol in high-risk populations
+
+## Febuxostat
+- **Non-purine** selective xanthine oxidase inhibitor
+- More potent than allopurinol
+- Does NOT require dose adjustment in mild-moderate renal impairment
+- May increase CV events (CARES trial) - use with caution in CVD patients
+
+## Uricosurics (Probenecid)
+1. Block **URAT1 transporter** in proximal tubule
+2. Prevent reabsorption of uric acid from tubular fluid
+3. Increase urinary uric acid excretion
+4. **Contraindicated**: renal stones, CKD, overproducers of uric acid
+5. Require adequate hydration and alkalinized urine to prevent urate stone formation`,
+        mnemonics: [
+          {
+            text: "AZA + ALLO = DANGER: Azathioprine + Allopurinol causes toxic accumulation (reduce AZA dose by 75%)",
+            explanation:
+              "Azathioprine is metabolized by xanthine oxidase. Allopurinol blocks this enzyme, causing dangerous accumulation of 6-MP (active metabolite) leading to severe bone marrow suppression.",
+          },
+        ],
+        keyPoints: [
+          "Colchicine: tubulin binding, neutrophil migration inhibition, NLRP3 inflammasome suppression",
+          "Allopurinol: hypoxanthine analogue, competitive XO inhibition, oxypurinol is active metabolite",
+          "Allopurinol + azathioprine: reduce azathioprine dose by 75% (XO metabolizes AZA)",
+          "AHS (allopurinol hypersensitivity): screen HLA-B*5801 in high-risk populations",
+          "Febuxostat: non-purine XO inhibitor, no renal dose adjustment needed",
+          "Probenecid: blocks URAT1, increases urate excretion, contraindicated in renal stones",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 16 - Drugs for Gout", page: "223-228", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 40", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "drugs-gout-clinical",
+        title: "Drugs for Gout - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Clinical management of acute and chronic gout, tumor lysis syndrome, and prescribing in Indian context.",
+        contentMd: `# Clinical Applications
+
+## Acute Gout Management
+1. **First-line**: NSAIDs (indomethacin 50 mg TDS or naproxen 500 mg BD)
+2. **Alternative**: Colchicine 0.5 mg TDS (low-dose preferred)
+3. **If NSAIDs/colchicine contraindicated**: Prednisolone 30 mg/day tapering over 7-10 days
+4. **Refractory**: IL-1 inhibitors (anakinra)
+
+### Important: Do NOT use aspirin in acute gout
+- Low-dose aspirin reduces urate excretion (worsens hyperuricemia)
+- High-dose aspirin is uricosuric but unpredictable
+
+## Chronic Urate-Lowering Therapy
+- **Start when**: recurrent gout (>2 attacks/year), tophi, urate stones, CKD
+- **Target**: serum urate <6 mg/dL (or <5 mg/dL with tophi)
+- **First-line**: Allopurinol 100 mg/day, titrate up (max 800 mg/day)
+- Always start with **colchicine prophylaxis** (0.5 mg OD-BD) for 3-6 months when initiating ULT
+
+## Tumor Lysis Syndrome
+- Massive uric acid release from dying cancer cells during chemotherapy
+- Prevention: **Rasburicase** (recombinant uricase) - converts uric acid to allantoin (soluble)
+- Alternative prevention: Allopurinol + hydration + urinary alkalinization
+
+## Drug Interactions and Contraindications
+
+| Drug | Contraindication | Key Interaction |
+|------|-----------------|----------------|
+| Colchicine | Hepatic/renal impairment (dose reduce) | CYP3A4 inhibitors increase toxicity |
+| Allopurinol | Acute gout attack | Azathioprine (reduce dose 75%) |
+| Probenecid | Renal stones, CKD | Reduces penicillin excretion (historically used to boost) |
+| Febuxostat | Severe CVD (CARES trial) | Azathioprine (same as allopurinol) |
+
+> **Clinical Pearl**: Probenecid was historically used to increase penicillin levels by blocking its tubular secretion. During WWII, this was critical due to limited penicillin supply.`,
+        mnemonics: [
+          {
+            text: "Start LOW, go SLOW with allopurinol: Low dose initially (100 mg), Slowly titrate, add cOlchicine cover for 3-6 months, Watch for HLA-B*5801",
+            explanation:
+              "Allopurinol should be initiated at low dose (100 mg/day), gradually titrated, with colchicine prophylaxis to prevent gout flares during ULT initiation.",
+          },
+        ],
+        keyPoints: [
+          "Acute gout: NSAIDs (indomethacin) > colchicine > steroids; never aspirin",
+          "Never start allopurinol during acute attack",
+          "Allopurinol: start low (100 mg), titrate with colchicine cover for 3-6 months",
+          "Screen HLA-B*5801 before allopurinol in high-risk populations",
+          "Rasburicase: DOC for tumor lysis syndrome prevention",
+          "Probenecid: contraindicated in renal stones and overproducers",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 16", edition: "8th" },
+          { book: "Harrison's", chapter: "Gout", edition: "21st" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "drugs-gout-exam",
+        title: "Drugs for Gout - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield facts for gout pharmacology.",
+        contentMd: `# Exam High Yield
+
+## One-Liners
+- Most specific drug for acute gout: **Colchicine**
+- Colchicine mechanism: **Tubulin binding, microtubule depolymerization**
+- First-line chronic urate-lowering: **Allopurinol**
+- Allopurinol mechanism: **Xanthine oxidase inhibition (competitive)**
+- Active metabolite of allopurinol: **Oxypurinol**
+- Allopurinol + azathioprine interaction: **Reduce AZA dose by 75%**
+- HLA associated with allopurinol hypersensitivity: **HLA-B*5801**
+- Drug for tumor lysis syndrome: **Rasburicase (recombinant uricase)**
+- Uricosuric drug: **Probenecid (blocks URAT1)**
+- NSAID NOT used in acute gout: **Aspirin (alters urate handling)**
+- Non-purine XO inhibitor: **Febuxostat**
+- Target serum urate in gout: **<6 mg/dL**
+- Colchicine dose-limiting toxicity: **Diarrhea (GI)**
+
+## Comparison: Acute vs Chronic Gout Treatment
+
+| Feature | Acute | Chronic |
+|---------|-------|---------|
+| Goal | Reduce inflammation | Lower serum urate |
+| Drugs | Colchicine, NSAIDs, steroids | Allopurinol, febuxostat, uricosurics |
+| Timing | Immediate | After acute attack resolves |
+| Duration | Days | Lifelong |
+
+## Previous Year Themes
+- Colchicine mechanism of action
+- Allopurinol-azathioprine interaction
+- Tumor lysis syndrome management
+- HLA-B*5801 screening
+- Aspirin dose-dependent urate effects`,
+        mnemonics: [
+          {
+            text: "Gout treatment timeline: FIRE then PREVENT: First Indomethacin/Colchicine (acute), then PREvent with allopurinol (chronic)",
+            explanation:
+              "Treat the acute gout fire with anti-inflammatory drugs (NSAIDs, colchicine), then prevent future attacks with urate-lowering therapy (allopurinol) after the acute episode resolves.",
+          },
+        ],
+        keyPoints: [
+          "Colchicine: tubulin binder, most specific for gout",
+          "Allopurinol: purine analogue XO inhibitor, AZA interaction critical",
+          "HLA-B*5801: screen before allopurinol in at-risk populations",
+          "Rasburicase: converts urate to allantoin (tumor lysis)",
+          "Aspirin: not used in gout (alters urate handling unpredictably)",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 16", edition: "8th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "drugs-gout-recall",
+        title: "Drugs for Gout - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for gout pharmacology.",
+        contentMd: `# Active Recall
+
+**Q1:** How does colchicine work in acute gout?
+> Binds tubulin, prevents microtubule assembly, inhibits neutrophil chemotaxis and phagocytosis of urate crystals. Also suppresses NLRP3 inflammasome activation.
+
+**Q2:** Why should allopurinol NOT be started during an acute gout attack?
+> Changing urate levels during an acute attack can mobilize urate crystals from deposits, paradoxically worsening inflammation and prolonging the attack.
+
+**Q3:** What is the mechanism of allopurinol?
+> Structural analogue of hypoxanthine that competitively inhibits xanthine oxidase, reducing conversion of hypoxanthine/xanthine to uric acid. Active metabolite: oxypurinol.
+
+**Q4:** Why must azathioprine dose be reduced with allopurinol?
+> Azathioprine is metabolized to 6-MP, which is further metabolized by xanthine oxidase. Allopurinol blocks this pathway, causing toxic accumulation of 6-MP (bone marrow suppression). Reduce AZA dose by 75%.
+
+**Q5:** What is allopurinol hypersensitivity syndrome?
+> Severe reaction: SJS/TEN, fever, eosinophilia, hepatitis, renal failure. Associated with HLA-B*5801 allele. Screen before prescribing in high-risk populations.
+
+**Q6:** How do uricosurics (probenecid) work?
+> Block URAT1 transporter in the proximal tubule, preventing reabsorption of uric acid and increasing urinary excretion.
+
+**Q7:** Why is aspirin avoided in acute gout?
+> Low-dose aspirin reduces uric acid excretion (worsens hyperuricemia). Dose-dependent effects on urate handling make it unpredictable and contraindicated.
+
+**Q8:** What is rasburicase used for?
+> Recombinant uricase enzyme that converts uric acid to allantoin (highly soluble). Used for prevention and treatment of tumor lysis syndrome.
+
+**Q9:** What is the recommended colchicine prophylaxis when starting allopurinol?
+> Colchicine 0.5 mg once or twice daily for 3-6 months when initiating urate-lowering therapy, to prevent gout flares.
+
+**Q10:** What is the target serum urate level in chronic gout management?
+> <6 mg/dL (or <5 mg/dL in patients with tophi).`,
+        mnemonics: [],
+        keyPoints: [
+          "10 recall questions covering acute and chronic gout management, drug mechanisms, and interactions",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 16", edition: "8th" },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 4: Immunosuppressants ───────────────────────────
+  {
+    topicCode: "PH-MOD-06-TOP-04",
+    layers: [
+      {
+        layer: 1,
+        slug: "immunosuppressants-foundation",
+        title: "Immunosuppressants - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "Immunosuppressants reduce immune system activity for organ transplant rejection prevention, autoimmune diseases, and inflammatory conditions. Key drugs include calcineurin inhibitors (cyclosporine, tacrolimus), antimetabolites (azathioprine, mycophenolate), mTOR inhibitors, and biologics.",
+        contentMd: `# Immunosuppressants
+
+## Classification
+
+| Class | Drugs | Mechanism |
+|-------|-------|-----------|
+| **Calcineurin inhibitors** | Cyclosporine, Tacrolimus | Block T-cell IL-2 production |
+| **Antimetabolites** | Azathioprine, Mycophenolate mofetil (MMF) | Inhibit purine synthesis |
+| **mTOR inhibitors** | Sirolimus (Rapamycin), Everolimus | Block IL-2 signal transduction |
+| **Corticosteroids** | Prednisolone, Methylprednisolone | Multiple anti-inflammatory mechanisms |
+| **Alkylating agents** | Cyclophosphamide | Cross-links DNA |
+| **Biologics** | Basiliximab, Rituximab, Infliximab, Adalimumab | Target specific immune molecules |
+
+## Calcineurin Inhibitors
+
+### Cyclosporine
+- Binds **cyclophilin** (intracellular immunophilin)
+- Cyclosporine-cyclophilin complex inhibits **calcineurin** (phosphatase)
+- Calcineurin normally activates NFAT (transcription factor for IL-2)
+- Result: reduced **IL-2 production** by T-helper cells
+- Selective for T cells; does NOT affect neutrophils
+
+### Tacrolimus (FK506)
+- Binds **FKBP-12** (FK-binding protein)
+- Tacrolimus-FKBP complex also inhibits **calcineurin**
+- Same final pathway as cyclosporine but **10-100x more potent**
+- Currently preferred over cyclosporine in most transplant centers
+
+## Key Biologics
+
+| Drug | Target | Use |
+|------|--------|-----|
+| **Basiliximab** | IL-2 receptor (CD25) | Transplant induction |
+| **Rituximab** | CD20 (B cells) | NHL, RA, AIHA |
+| **Infliximab** | TNF-alpha | RA, IBD, psoriasis |
+| **Adalimumab** | TNF-alpha | RA, IBD, psoriasis |
+| **Etanercept** | TNF receptor fusion | RA |
+| **Trastuzumab** | HER2 | Breast cancer |
+
+> **Clinical Pearl**: Tacrolimus has largely replaced cyclosporine as the preferred calcineurin inhibitor in transplantation due to better efficacy. Both require therapeutic drug monitoring (TDM) due to narrow therapeutic index.`,
+        mnemonics: [
+          {
+            text: "CyClo-CyClo-CalCI-NFAT-IL2: CYClosporine binds CYClophilin, inhibits CalCINeurin, blocks NFAT, reduces IL-2",
+            explanation:
+              "The cyclosporine pathway: drug binds cyclophilin, the complex inhibits calcineurin phosphatase, preventing NFAT activation, which reduces IL-2 gene transcription in T cells.",
+          },
+          {
+            text: "Tacrolimus binds FKBP, same CalcI-NFAT path but 10x more potent than CsA",
+            explanation:
+              "Tacrolimus (FK506) binds FKBP-12 (not cyclophilin), but the complex also inhibits calcineurin, blocking the same NFAT-IL-2 pathway. It is 10-100x more potent than cyclosporine.",
+          },
+        ],
+        keyPoints: [
+          "Cyclosporine: binds cyclophilin, inhibits calcineurin, blocks IL-2 production",
+          "Tacrolimus: binds FKBP-12, same calcineurin pathway, 10-100x more potent",
+          "Azathioprine: purine antimetabolite, metabolized to 6-MP by xanthine oxidase",
+          "Mycophenolate: IMPDH inhibitor, blocks de novo purine synthesis in lymphocytes",
+          "Sirolimus: mTOR inhibitor, blocks IL-2 signaling downstream",
+          "Biologics target specific immune molecules: anti-TNF (infliximab), anti-CD20 (rituximab)",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 65 - Immunosuppressants", page: "929-945", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 35 - Immunosuppressants", edition: "13th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "immunosuppressants-mechanism",
+        title: "Immunosuppressants - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Detailed mechanisms, pharmacokinetics, and adverse effect profiles for immunosuppressants.",
+        contentMd: `# Detailed Mechanisms
+
+## Calcineurin Pathway (Cyclosporine/Tacrolimus)
+1. T-cell receptor activation increases intracellular Ca2+
+2. Ca2+ activates **calcineurin** (serine-threonine phosphatase)
+3. Calcineurin dephosphorylates **NFAT** (Nuclear Factor of Activated T-cells)
+4. Dephosphorylated NFAT enters nucleus, promotes **IL-2 gene transcription**
+5. IL-2 drives T-cell proliferation
+6. **Cyclosporine-cyclophilin** or **Tacrolimus-FKBP** complex blocks calcineurin at step 2-3
+
+### Adverse Effects Comparison
+| ADR | Cyclosporine | Tacrolimus |
+|-----|-------------|-----------|
+| Nephrotoxicity | +++ (dose-limiting) | +++ |
+| Neurotoxicity | + (tremor) | ++ (more common) |
+| Diabetes (NODAT) | + | +++ |
+| Hypertension | +++ | + |
+| Gingival hyperplasia | +++ | - |
+| Hirsutism | +++ | - |
+| Hyperlipidemia | +++ | + |
+| Alopecia | - | ++ |
+
+## Antimetabolites
+
+### Azathioprine
+1. Prodrug converted to **6-mercaptopurine (6-MP)** in the liver
+2. 6-MP metabolized to thiopurine nucleotides
+3. Inhibits **purine synthesis** (de novo pathway)
+4. Blocks DNA/RNA synthesis in rapidly dividing lymphocytes
+5. Metabolized by **xanthine oxidase** and **TPMT**
+- **TPMT polymorphism**: poor metabolizers accumulate 6-MP (severe myelosuppression)
+- **Allopurinol interaction**: blocks XO metabolism, requiring 75% dose reduction
+
+### Mycophenolate Mofetil (MMF)
+1. Active metabolite: **mycophenolic acid (MPA)**
+2. Inhibits **IMPDH** (inosine monophosphate dehydrogenase)
+3. Blocks **de novo purine synthesis** in lymphocytes
+4. Lymphocytes lack salvage pathway (unlike other cells) - selective for lymphocytes
+5. More selective and better tolerated than azathioprine
+- **Main ADR**: GI disturbances (diarrhea, nausea), myelosuppression
+
+## mTOR Inhibitors (Sirolimus/Everolimus)
+1. Sirolimus (Rapamycin) binds **FKBP-12** (same protein as tacrolimus!)
+2. BUT the sirolimus-FKBP complex does NOT inhibit calcineurin
+3. Instead, it inhibits **mTOR** (mechanistic Target of Rapamycin)
+4. Blocks **IL-2-driven T-cell proliferation** (G1 to S phase transition)
+5. Antiproliferative rather than calcineurin-inhibiting
+
+### Key Differences from Calcineurin Inhibitors
+- NOT nephrotoxic (advantage in transplant)
+- Anti-proliferative: impairs wound healing
+- Causes **hyperlipidemia** and **thrombocytopenia**
+- Used in drug-eluting stents (prevents restenosis)`,
+        mnemonics: [
+          {
+            text: "CsA side effects = CHANGE: Cosmetic (hirsutism, gingival hyperplasia), Hypertension, Azotemia (nephrotoxicity), Nephrotoxicity, Gout (hyperuricemia), Elevated lipids",
+            explanation:
+              "Major cyclosporine adverse effects: cosmetic changes (hirsutism, gingival hyperplasia), hypertension, nephrotoxicity (dose-limiting), and metabolic effects (hyperlipidemia, hyperuricemia).",
+          },
+        ],
+        keyPoints: [
+          "Calcineurin inhibitors: block NFAT activation, reduce IL-2 production in T cells",
+          "Cyclosporine ADRs: nephrotoxicity, hypertension, hirsutism, gingival hyperplasia",
+          "Tacrolimus ADRs: nephrotoxicity, neurotoxicity, diabetes (NODAT), alopecia",
+          "Azathioprine: prodrug to 6-MP, TPMT polymorphism affects toxicity, XO interaction with allopurinol",
+          "MMF: IMPDH inhibitor, selective for lymphocytes (lack purine salvage pathway)",
+          "Sirolimus: mTOR inhibitor, NOT nephrotoxic, but impairs wound healing",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 65", page: "932-942", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 35", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "immunosuppressants-clinical",
+        title: "Immunosuppressants - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Clinical use in transplantation, autoimmune diseases, and biologics in Indian practice.",
+        contentMd: `# Clinical Applications
+
+## Transplant Immunosuppression Phases
+
+### 1. Induction (perioperative)
+- **Basiliximab** (anti-IL-2R) or **Antithymocyte globulin (ATG)**
+- High-dose corticosteroids
+
+### 2. Maintenance (lifelong)
+- **Triple therapy**: Tacrolimus + Mycophenolate + Prednisolone
+- Tacrolimus requires **therapeutic drug monitoring** (trough levels 5-10 ng/mL)
+
+### 3. Rejection Treatment
+- Acute: High-dose IV methylprednisolone (pulse therapy)
+- Steroid-resistant: ATG or OKT3
+
+## Autoimmune Disease Applications
+
+| Disease | Drugs Used |
+|---------|-----------|
+| Rheumatoid arthritis | Methotrexate, Leflunomide, anti-TNF biologics |
+| SLE | Hydroxychloroquine, MMF, Cyclophosphamide |
+| Psoriasis | Methotrexate, Cyclosporine, Biologics (anti-TNF, anti-IL-17) |
+| IBD (Crohn's, UC) | Azathioprine, Infliximab, Adalimumab |
+| Multiple sclerosis | Interferon-beta, Fingolimod, Natalizumab |
+| Nephrotic syndrome | Cyclophosphamide, Cyclosporine, Rituximab |
+
+## Biologics in Indian Practice
+- **Biosimilars** widely available and affordable in India
+- Indian companies produce biosimilar rituximab, infliximab, adalimumab, trastuzumab
+- Cost: 1/10th to 1/5th of originator biologics
+- **TB screening** mandatory before starting anti-TNF therapy (reactivation risk)
+
+> **Clinical Pearl**: Before starting any anti-TNF biologic (infliximab, adalimumab), screen for latent TB with Mantoux test/IGRA. Reactivation of latent TB is a serious risk. Treat latent TB with INH before biologic initiation.
+
+## Monitoring Requirements
+| Drug | Monitor |
+|------|---------|
+| Cyclosporine/Tacrolimus | Trough drug levels, renal function, BP, glucose |
+| Azathioprine | CBC (myelosuppression), LFTs |
+| MMF | CBC, GI symptoms |
+| Sirolimus | Lipid profile, wound healing, CBC |
+| Anti-TNF biologics | TB screening, hepatitis B, infections |`,
+        mnemonics: [
+          {
+            text: "Transplant TRIPLE: Tacrolimus + MMF + Prednisolone = standard maintenance immunosuppression",
+            explanation:
+              "Standard maintenance immunosuppression after organ transplant uses three drugs targeting different immune pathways: calcineurin inhibitor (tacrolimus) + antimetabolite (MMF) + steroid (prednisolone).",
+          },
+        ],
+        keyPoints: [
+          "Transplant maintenance: triple therapy (tacrolimus + MMF + prednisolone)",
+          "Tacrolimus requires TDM (trough 5-10 ng/mL)",
+          "Anti-TNF biologics: screen for latent TB before starting",
+          "Indian biosimilars: affordable biologics for RA, IBD, cancer",
+          "Azathioprine: monitor CBC for myelosuppression",
+          "Cyclophosphamide: hemorrhagic cystitis (prevent with mesna)",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 65", edition: "8th" },
+          { book: "Harrison's", chapter: "Transplantation Immunology", edition: "21st" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "immunosuppressants-exam",
+        title: "Immunosuppressants - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield facts for immunosuppressant pharmacology.",
+        contentMd: `# Exam High Yield
+
+## One-Liners
+- Cyclosporine binds: **Cyclophilin**
+- Tacrolimus binds: **FKBP-12**
+- Both inhibit: **Calcineurin (blocks NFAT -> IL-2)**
+- More potent calcineurin inhibitor: **Tacrolimus (10-100x)**
+- Immunosuppressant causing gingival hyperplasia + hirsutism: **Cyclosporine**
+- Immunosuppressant causing diabetes (NODAT): **Tacrolimus (most common)**
+- mTOR inhibitor: **Sirolimus (Rapamycin)**
+- Sirolimus binds: **FKBP-12 (but does NOT inhibit calcineurin)**
+- IMPDH inhibitor: **Mycophenolate mofetil (MMF)**
+- Anti-CD20 monoclonal antibody: **Rituximab**
+- Anti-TNF biologics: **Infliximab, Adalimumab, Etanercept**
+- Must screen for TB before: **Anti-TNF therapy**
+- Cyclophosphamide side effect prevented by mesna: **Hemorrhagic cystitis**
+- TPMT deficiency increases toxicity of: **Azathioprine (6-MP accumulation)**
+
+## Comparison: Calcineurin vs mTOR Inhibitors
+
+| Feature | Cyclosporine/Tacrolimus | Sirolimus |
+|---------|------------------------|-----------|
+| Binding protein | Cyclophilin / FKBP-12 | FKBP-12 |
+| Target | Calcineurin | mTOR |
+| Mechanism | Blocks IL-2 production | Blocks IL-2 response |
+| Nephrotoxicity | +++ | - |
+| Wound healing | Normal | Impaired |
+| Hyperlipidemia | + | +++ |
+| Use in stents | No | Yes (drug-eluting) |
+
+## Previous Year Themes
+- Calcineurin pathway and drug targets
+- Cyclosporine vs tacrolimus ADRs
+- Transplant immunosuppression protocols
+- Biologic targets (anti-CD20, anti-TNF)
+- TB screening before biologics`,
+        mnemonics: [
+          {
+            text: "SirOlimus = Sir NO Nephrotoxicity: sirolimus (mTOR inhibitor) does NOT cause nephrotoxicity unlike calcineurin inhibitors",
+            explanation:
+              "A key advantage of sirolimus over cyclosporine/tacrolimus is the absence of nephrotoxicity. However, sirolimus impairs wound healing and causes hyperlipidemia.",
+          },
+        ],
+        keyPoints: [
+          "CsA: cyclophilin; Tacrolimus: FKBP-12; both inhibit calcineurin",
+          "Sirolimus: FKBP-12 but inhibits mTOR (not calcineurin), NOT nephrotoxic",
+          "Tacrolimus causes more diabetes; CsA causes more hirsutism/gingival hyperplasia",
+          "Screen TB before anti-TNF; screen TPMT before azathioprine",
+          "Cyclophosphamide: mesna prevents hemorrhagic cystitis",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 65", edition: "8th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "immunosuppressants-recall",
+        title: "Immunosuppressants - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for immunosuppressants.",
+        contentMd: `# Active Recall
+
+**Q1:** What is the mechanism of cyclosporine?
+> Binds cyclophilin; the complex inhibits calcineurin (phosphatase), preventing NFAT dephosphorylation, blocking IL-2 gene transcription in T cells.
+
+**Q2:** How does tacrolimus differ from cyclosporine?
+> Tacrolimus binds FKBP-12 (not cyclophilin) but inhibits the same calcineurin-NFAT pathway. It is 10-100x more potent and is the preferred calcineurin inhibitor.
+
+**Q3:** What cosmetic side effects are unique to cyclosporine?
+> Gingival hyperplasia and hirsutism. Tacrolimus actually causes alopecia instead.
+
+**Q4:** How does sirolimus differ from tacrolimus despite binding the same protein?
+> Both bind FKBP-12, but sirolimus-FKBP inhibits mTOR (not calcineurin). Sirolimus blocks IL-2-driven proliferation rather than IL-2 production. It is NOT nephrotoxic.
+
+**Q5:** Why is mycophenolate more selective for lymphocytes than azathioprine?
+> Lymphocytes depend exclusively on de novo purine synthesis (lack salvage pathway). MMF inhibits IMPDH (key de novo enzyme), so lymphocytes are preferentially affected.
+
+**Q6:** What is the standard maintenance immunosuppression after organ transplant?
+> Triple therapy: Tacrolimus + Mycophenolate Mofetil + Prednisolone.
+
+**Q7:** Why must TB be screened before anti-TNF therapy?
+> TNF-alpha is critical for granuloma maintenance that contains latent TB bacilli. Anti-TNF therapy disrupts granulomas, causing reactivation of latent tuberculosis.
+
+**Q8:** What is the TPMT enzyme's relevance to azathioprine therapy?
+> TPMT (thiopurine methyltransferase) metabolizes 6-MP. Patients with TPMT deficiency accumulate toxic thiopurine metabolites, leading to severe myelosuppression.
+
+**Q9:** What prevents cyclophosphamide-induced hemorrhagic cystitis?
+> Mesna (2-mercaptoethane sulfonate) - inactivates acrolein, the toxic metabolite that damages bladder urothelium.
+
+**Q10:** Name three anti-TNF biologics.
+> Infliximab (chimeric mAb), Adalimumab (fully human mAb), Etanercept (TNF receptor fusion protein).`,
+        mnemonics: [],
+        keyPoints: [
+          "10 recall questions covering calcineurin/mTOR pathways, transplant protocols, and biologic safety",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 65", edition: "8th" },
+        ],
+      },
+    ],
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // MODULE 7 — ENDOCRINE PHARMACOLOGY (Topic 1 only)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  // ─── Topic 1: Insulin & Oral Hypoglycemics ─────────────────
+  {
+    topicCode: "PH-MOD-07-TOP-01",
+    layers: [
+      {
+        layer: 1,
+        slug: "insulin-oral-hypoglycemics-foundation",
+        title: "Insulin & Oral Hypoglycemics - Foundation",
+        estimatedMinutes: 20,
+        summary:
+          "Insulin is essential for Type 1 DM and advanced Type 2 DM. Oral hypoglycemics (metformin, sulfonylureas, DPP-4 inhibitors, SGLT2 inhibitors) are used for Type 2 DM. Metformin is the first-line drug worldwide. Understanding insulin types and oral agent mechanisms is critical.",
+        contentMd: `# Insulin & Oral Hypoglycemics
+
+## Insulin Preparations
+
+| Type | Examples | Onset | Peak | Duration |
+|------|---------|-------|------|----------|
+| **Rapid-acting** | Lispro, Aspart, Glulisine | 15 min | 1 hr | 3-4 hr |
+| **Short-acting** | Regular insulin (soluble) | 30 min | 2-3 hr | 6-8 hr |
+| **Intermediate** | NPH (Isophane) | 2 hr | 6-8 hr | 12-18 hr |
+| **Long-acting** | Glargine, Detemir | 2-4 hr | No peak | 20-24 hr |
+| **Ultra-long** | Degludec | 1-2 hr | No peak | >42 hr |
+| **Premixed** | 70/30 (NPH/Regular) | 30 min | Dual | 12-18 hr |
+
+## Oral Hypoglycemic Classification
+
+| Class | Drug | Mechanism |
+|-------|------|-----------|
+| **Biguanides** | Metformin | Activates AMPK, reduces hepatic glucose output |
+| **Sulfonylureas** | Glimepiride, Gliclazide, Glipizide | Close K-ATP channels, stimulate insulin secretion |
+| **Meglitinides** | Repaglinide, Nateglinide | Short-acting insulin secretagogues |
+| **DPP-4 inhibitors (Gliptins)** | Sitagliptin, Vildagliptin | Prolong incretin (GLP-1) action |
+| **SGLT2 inhibitors (Gliflozins)** | Dapagliflozin, Empagliflozin | Block renal glucose reabsorption |
+| **GLP-1 receptor agonists** | Liraglutide, Semaglutide | Incretin mimetics |
+| **Thiazolidinediones (Glitazones)** | Pioglitazone | PPAR-gamma agonist, insulin sensitizer |
+| **Alpha-glucosidase inhibitors** | Acarbose, Voglibose | Delay carbohydrate digestion |
+
+## Metformin - First-Line for Type 2 DM
+- **Mechanism**: Activates AMP-activated protein kinase (AMPK)
+- Reduces hepatic gluconeogenesis (primary)
+- Increases peripheral glucose uptake
+- Does NOT cause hypoglycemia (euglycemic agent)
+- Additional benefits: weight neutral/loss, improved lipids, CV protection
+
+> **Clinical Pearl**: Metformin is the most prescribed antidiabetic drug in India and globally. It is first-line for all Type 2 DM patients unless contraindicated. Available at Rs 1-2 per tablet in Jan Aushadhi stores.`,
+        mnemonics: [
+          {
+            text: "Insulin types RINS: Rapid (Lispro, 15 min), Intermediate (NPH, 2 hr), Normal/Regular (30 min), Slow/Long (Glargine, no peak)",
+            explanation:
+              "Quick memory aid for insulin onset: Rapid acting starts in 15 min, Regular in 30 min, Intermediate (NPH) in 2 hours, and Long-acting (Glargine) provides peakless basal coverage.",
+          },
+          {
+            text: "MET-for-MIN glucose: METformin MINimizes glucose output from liver (AMPK activation)",
+            explanation:
+              "Metformin's primary mechanism is reducing hepatic glucose production via AMPK activation. It does not cause hypoglycemia and is weight-neutral.",
+          },
+        ],
+        keyPoints: [
+          "Insulin: essential for T1DM; rapid-acting for meals, long-acting for basal coverage",
+          "Glargine: peakless long-acting insulin (24-hour basal), given once daily",
+          "Metformin: first-line T2DM, AMPK activator, does NOT cause hypoglycemia",
+          "Sulfonylureas: close K-ATP channels, stimulate insulin release, risk of hypoglycemia",
+          "SGLT2 inhibitors: block renal glucose reabsorption, CV and renal benefits",
+          "DPP-4 inhibitors: prolong GLP-1 action, weight-neutral, well-tolerated",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 19 - Insulin & Oral Hypoglycemics", page: "258-285", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 47 - Pancreatic Hormones", edition: "13th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "insulin-oral-hypoglycemics-mechanism",
+        title: "Insulin & Oral Hypoglycemics - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Detailed mechanisms of insulin signaling, sulfonylurea K-ATP channel physiology, incretin axis, and SGLT2 inhibitor renal pharmacology.",
+        contentMd: `# Detailed Mechanisms
+
+## Insulin Signaling
+1. Insulin binds **insulin receptor** (receptor tyrosine kinase)
+2. Autophosphorylation activates **IRS-1** (Insulin Receptor Substrate)
+3. Activates **PI3K -> Akt/PKB** pathway
+4. **GLUT4 translocation** to cell membrane (muscle, adipose)
+5. Increased glucose uptake, glycogen synthesis, lipogenesis, protein synthesis
+
+## Sulfonylurea Mechanism
+1. Bind **SUR1 subunit** of K-ATP channels on beta-cell membrane
+2. Close K-ATP channels -> membrane **depolarization**
+3. Voltage-gated **Ca2+ channels** open
+4. Ca2+ influx triggers **insulin exocytosis**
+5. Work only if functional beta cells exist (ineffective in T1DM)
+
+### Generations
+| Generation | Drugs | Duration | Notes |
+|-----------|-------|----------|-------|
+| 1st | Tolbutamide, Chlorpropamide | Long | Chlorpropamide: SIADH, disulfiram reaction |
+| 2nd | Glibenclamide (Glyburide), Gliclazide, Glipizide, Glimepiride | Moderate-Long | Glimepiride safest (less hypoglycemia) |
+
+## Incretin Axis
+- **GLP-1** (Glucagon-Like Peptide-1): released from L-cells of intestine after meals
+- Effects: stimulates insulin, suppresses glucagon, delays gastric emptying, satiety
+- Rapidly degraded by **DPP-4** (half-life ~2 min)
+
+### DPP-4 Inhibitors (Gliptins)
+- Inhibit DPP-4 enzyme, prolonging endogenous GLP-1 action
+- Weight-neutral, low hypoglycemia risk
+- Oral, once daily
+
+### GLP-1 Receptor Agonists
+- Synthetic GLP-1 analogues resistant to DPP-4 degradation
+- **Liraglutide**: daily SC injection
+- **Semaglutide**: weekly SC or oral (first oral GLP-1 RA)
+- Cause **weight loss** (appetite suppression) and **CV benefit**
+
+## SGLT2 Inhibitors (Gliflozins)
+1. Block **SGLT2** (Sodium-Glucose Co-Transporter 2) in proximal tubule
+2. SGLT2 normally reabsorbs ~90% of filtered glucose
+3. Blocking SGLT2 causes **glycosuria** (glucose excreted in urine)
+4. Insulin-independent mechanism (works regardless of beta-cell function)
+
+### Additional Benefits
+- **Weight loss** (calorie loss via glycosuria)
+- **BP reduction** (osmotic diuresis, natriuresis)
+- **CV protection**: reduced HF hospitalization, CV death (EMPA-REG, DAPA-HF)
+- **Renal protection**: slows CKD progression (CREDENCE, DAPA-CKD)
+
+### Risks
+- **Genital mycotic infections** (candidiasis due to glycosuria)
+- **Euglycemic DKA** (rare but serious, especially in T1DM)
+- **Fournier's gangrene** (very rare, FDA warning)`,
+        mnemonics: [
+          {
+            text: "SULFonylureas CLOSE K-ATP, OPEN Ca2+, SECRETE insulin: the channel cascade",
+            explanation:
+              "Sulfonylureas close K-ATP channels on beta cells, causing depolarization, opening voltage-gated calcium channels, and triggering insulin granule exocytosis.",
+          },
+          {
+            text: "SGLT2i = Sugar Goes to Lavatory Too: glucose excreted in urine by blocking renal reabsorption",
+            explanation:
+              "SGLT2 inhibitors block glucose reabsorption in the kidney, causing glycosuria. This insulin-independent mechanism also provides weight loss, CV, and renal benefits.",
+          },
+        ],
+        keyPoints: [
+          "Insulin receptor: tyrosine kinase, PI3K-Akt pathway, GLUT4 translocation",
+          "Sulfonylureas: close K-ATP channels (SUR1), Ca2+ influx triggers insulin release",
+          "GLP-1: incretin hormone, stimulates insulin and suppresses glucagon; degraded by DPP-4",
+          "SGLT2 inhibitors: cause glycosuria, weight loss, CV and renal protection",
+          "Semaglutide: first oral GLP-1 RA, significant weight loss and CV benefit",
+          "SGLT2i risks: genital infections, euglycemic DKA, Fournier's gangrene",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 19", page: "262-280", edition: "8th" },
+          { book: "Goodman & Gilman", chapter: "Ch 47", edition: "13th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "insulin-oral-hypoglycemics-clinical",
+        title: "Insulin & Oral Hypoglycemics - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Clinical management of Type 1 and Type 2 diabetes, insulin regimens, oral drug selection algorithm, and Indian diabetic care context.",
+        contentMd: `# Clinical Applications
+
+## Type 1 DM Management
+- **Mandatory insulin** (no oral drug effective alone)
+- **Basal-Bolus Regimen**: Long-acting (Glargine OD) + Rapid-acting (Lispro/Aspart before meals)
+- Alternative: Premixed insulin (70/30 NPH/Regular) twice daily
+- **Insulin pump**: continuous SC insulin infusion (CSII) for intensive control
+
+## Type 2 DM - Stepwise Approach
+
+### Step 1: Lifestyle + Metformin
+- First-line for ALL T2DM patients (unless contraindicated)
+- Start 500 mg OD, titrate to 2g/day in divided doses
+- Contraindicated: eGFR <30, acute illness, liver failure, alcoholism (lactic acidosis risk)
+
+### Step 2: Add Second Agent
+- **If ASCVD/HF/CKD**: SGLT2 inhibitor (empagliflozin/dapagliflozin) or GLP-1 RA
+- **If cost-concern**: Sulfonylurea (glimepiride cheapest)
+- **If weight concern**: GLP-1 RA (weight loss) or SGLT2i
+- **If hypoglycemia concern**: DPP-4 inhibitor (sitagliptin)
+
+### Step 3: Triple Therapy or Insulin
+- Add third oral agent or initiate basal insulin (Glargine at bedtime)
+
+## Insulin in Indian Practice
+- **Human insulin** (biosynthetic): widely available, affordable
+- **Insulin analogues**: costlier but better pharmacokinetics
+- **NPH + Regular premixed (70/30)**: most commonly prescribed in India
+- **Pen devices**: improving compliance (NovoPen, FlexPen)
+- **Storage**: insulin must be refrigerated (2-8 degrees C); in-use vial stable at room temp for 28 days
+
+## Diabetic Emergencies
+
+### Diabetic Ketoacidosis (DKA)
+- **Regular insulin IV infusion**: 0.1 U/kg/hr
+- Fluid resuscitation (normal saline)
+- Potassium replacement (insulin drives K+ intracellularly)
+- Monitor blood glucose hourly
+
+### Hypoglycemia (Drug-Induced)
+- Sulfonylureas (especially glibenclamide) and insulin are common causes
+- Mild: oral glucose (15-20g) + recheck in 15 min
+- Severe: IV dextrose (25-50 mL of 50% dextrose) or IM glucagon
+
+> **Clinical Pearl**: India is the "diabetes capital of the world" with >77 million diabetics. RSSDI (Research Society for Study of Diabetes in India) guidelines recommend metformin first-line, with SGLT2i/GLP-1 RA preferred add-on for CV/renal benefit.`,
+        mnemonics: [
+          {
+            text: "Metformin contraindications = LACE: Lactic acidosis risk, Alcoholism, CKD (eGFR <30), Extreme illness (acute)",
+            explanation:
+              "Metformin is contraindicated in conditions predisposing to lactic acidosis: severe renal impairment, alcoholism, acute illness with hypoxia/dehydration, and hepatic failure.",
+          },
+          {
+            text: "DKA treatment = FIG-K: Fluids (NS), Insulin (regular IV), Glucose monitoring, K+ replacement",
+            explanation:
+              "Four pillars of DKA management: aggressive IV fluids (normal saline), regular insulin infusion, hourly glucose monitoring, and potassium replacement (insulin shifts K+ into cells).",
+          },
+        ],
+        keyPoints: [
+          "T1DM: basal-bolus insulin (glargine + rapid-acting before meals)",
+          "T2DM: metformin first-line, add SGLT2i/GLP-1 RA if ASCVD/HF/CKD",
+          "Metformin contraindicated: eGFR <30, lactic acidosis risk",
+          "DKA: regular insulin IV + fluids + K+ replacement",
+          "Sulfonylureas: cheapest add-on but risk hypoglycemia and weight gain",
+          "India: 77 million diabetics, RSSDI guidelines for management",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 19", edition: "8th" },
+          { book: "Harrison's", chapter: "Diabetes Mellitus", edition: "21st" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "insulin-oral-hypoglycemics-exam",
+        title: "Insulin & Oral Hypoglycemics - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield facts and comparisons for diabetes pharmacology.",
+        contentMd: `# Exam High Yield
+
+## One-Liners
+- First-line drug for T2DM: **Metformin (AMPK activator)**
+- Metformin does NOT cause: **Hypoglycemia (euglycemic)**
+- Metformin feared ADR: **Lactic acidosis (rare but fatal)**
+- Sulfonylurea mechanism: **Close K-ATP channels on beta cells**
+- Longest-acting sulfonylurea: **Chlorpropamide (also causes SIADH)**
+- Safest sulfonylurea in elderly: **Glipizide (short acting) or Gliclazide**
+- DPP-4 inhibitor prolongs: **GLP-1 (incretin)**
+- Oral GLP-1 RA: **Semaglutide (first oral)**
+- SGLT2 inhibitor with CV benefit: **Empagliflozin (EMPA-REG trial)**
+- Insulin for DKA: **Regular insulin IV infusion**
+- Peakless long-acting insulin: **Glargine**
+- Fastest-onset insulin: **Lispro/Aspart (15 min)**
+- Insulin causing most weight gain: **NPH (intermediate)**
+- Thiazolidinedione ADR: **Weight gain, edema, fractures, CHF**
+- Alpha-glucosidase inhibitor: **Acarbose (delays carb absorption, flatulence)**
+
+## Comparison: Oral Hypoglycemic Classes
+
+| Feature | Metformin | Sulfonylurea | DPP-4i | SGLT2i | GLP-1 RA |
+|---------|----------|-------------|--------|--------|----------|
+| Mechanism | AMPK activator | K-ATP closure | Prolong GLP-1 | Block renal glucose reabs | Incretin mimetic |
+| Hypoglycemia | No | Yes (+++) | No | No | No |
+| Weight effect | Neutral/loss | Gain | Neutral | Loss | Loss |
+| CV benefit | + | Neutral | Neutral | +++ | +++ |
+| Renal benefit | - | - | - | +++ | + |
+| Cost (India) | Very cheap | Cheap | Moderate | Expensive | Expensive |
+
+## Previous Year Themes
+- Insulin types and onset/duration comparison
+- Metformin mechanism and contraindications
+- Sulfonylurea mechanism (K-ATP channels)
+- SGLT2 inhibitor CV/renal trials
+- DKA management
+- Incretin physiology (GLP-1, GIP)`,
+        mnemonics: [
+          {
+            text: "SGLT2i benefits = WCRB: Weight loss, Cardioprotection, Renal protection, BP reduction",
+            explanation:
+              "SGLT2 inhibitors provide four key benefits beyond glucose lowering: weight loss from glycosuria-related calorie loss, cardiovascular protection, renal protection, and blood pressure reduction.",
+          },
+        ],
+        keyPoints: [
+          "Metformin: AMPK, no hypoglycemia, lactic acidosis risk, CI in eGFR <30",
+          "Sulfonylureas: K-ATP channel closure, hypoglycemia and weight gain risks",
+          "SGLT2i: glycosuria, CV + renal benefits, genital infections risk",
+          "GLP-1 RA: weight loss + CV benefit, injectable (semaglutide also oral)",
+          "DKA: regular insulin IV, fluids, K+ replacement",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 19", edition: "8th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "insulin-oral-hypoglycemics-recall",
+        title: "Insulin & Oral Hypoglycemics - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for insulin and oral hypoglycemics.",
+        contentMd: `# Active Recall
+
+**Q1:** What is the first-line drug for Type 2 DM?
+> Metformin - activates AMPK, reduces hepatic gluconeogenesis, does not cause hypoglycemia, weight-neutral/loss.
+
+**Q2:** How do sulfonylureas stimulate insulin release?
+> Bind SUR1 subunit of K-ATP channels on beta cells, closing the channel, causing membrane depolarization, Ca2+ influx via voltage-gated channels, and insulin exocytosis.
+
+**Q3:** What is the difference between rapid-acting and long-acting insulin?
+> Rapid (lispro/aspart): onset 15 min, duration 3-4 hr, used for prandial coverage. Long (glargine): onset 2-4 hr, peakless, duration 20-24 hr, used for basal coverage.
+
+**Q4:** What are the extra-glycemic benefits of SGLT2 inhibitors?
+> Weight loss, blood pressure reduction, cardiovascular protection (reduced HF hospitalization, CV death), and renal protection (slowed CKD progression).
+
+**Q5:** What is the incretin effect?
+> Oral glucose produces a greater insulin response than IV glucose (same plasma glucose). This is due to gut hormones GLP-1 and GIP that enhance insulin secretion. DPP-4 degrades these incretins.
+
+**Q6:** Why is metformin contraindicated in severe renal impairment?
+> Metformin is renally excreted unchanged. In severe CKD (eGFR <30), it accumulates, increasing risk of lactic acidosis.
+
+**Q7:** What insulin is used for DKA management?
+> Regular (soluble) insulin by continuous IV infusion at 0.1 U/kg/hr, with hourly blood glucose monitoring.
+
+**Q8:** What is the feared complication of SGLT2 inhibitors?
+> Euglycemic DKA (diabetic ketoacidosis with normal blood glucose). Also genital mycotic infections and rarely Fournier's gangrene.
+
+**Q9:** Name the oral GLP-1 receptor agonist.
+> Semaglutide (oral formulation). Most GLP-1 RAs are injectable (liraglutide, exenatide, dulaglutide).
+
+**Q10:** Why are sulfonylureas risky in elderly patients?
+> Risk of prolonged hypoglycemia (especially with long-acting agents like glibenclamide). Elderly have impaired counter-regulatory mechanisms. Prefer short-acting agents (glipizide, gliclazide).
+
+**Q11:** What is pioglitazone's mechanism?
+> PPAR-gamma agonist (nuclear receptor) that improves insulin sensitivity in adipose tissue and muscle. ADRs: weight gain, edema, fractures, bladder cancer concern.
+
+**Q12:** What are the landmark trials for SGLT2 inhibitors?
+> EMPA-REG OUTCOME (empagliflozin - CV death reduction), DAPA-HF (dapagliflozin - HF benefit), CREDENCE/DAPA-CKD (renal protection).`,
+        mnemonics: [],
+        keyPoints: [
+          "12 recall questions covering insulin types, oral hypoglycemic mechanisms, SGLT2i trials, and clinical management",
+        ],
+        textbookRefs: [
+          { book: "KD Tripathi", chapter: "Ch 19", edition: "8th" },
+        ],
+      },
+    ],
+  },
 ];

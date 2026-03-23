@@ -1,20 +1,1931 @@
-export const entLessons = [
-  // EN-MOD-01: Ear - Topic 1: Anatomy & Physiology
+import type { TopicLessons } from "./content-loader";
+
+/**
+ * 5-layer lessons for ENT Module EN-MOD-01: Ear.
+ * Covers 5 topics x 5 layers = 25 lesson entries.
+ * Primary ref: Dhingra Diseases of Ear, Nose and Throat 7th ed.
+ * Secondary ref: PL Dhingra Textbook of ENT.
+ */
+export const entLessons: TopicLessons[] = [
+  // ═══════════════════════════════════════════════════════════════
+  // EN-MOD-01: EAR
+  // ═══════════════════════════════════════════════════════════════
+
+  // ─── Topic 1: Anatomy & Physiology of Ear ─────────────────────
   {
     topicCode: "EN-MOD-01-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "ear-anatomy-foundation",
+        slug: "ear-anatomy-physiology-layer-1-foundation",
         title: "Anatomy & Physiology of Ear - Foundation",
-        estimatedMinutes: 25,
-        summary: "Comprehensive overview of external, middle, and inner ear structures including ossicles, tympanic membrane, and cochlear mechanisms.",
-        contentMd: "# Anatomy & Physiology of Ear - Foundation\n\n## External Ear Structure\n- **Auricle**: Elastic cartilage with 11 named prominences\n- **EAC**: 24mm total (8mm cartilaginous outer 1/3, 16mm bony inner 2/3)\n- **Tympanic Membrane**: 9mm diameter, conical shape with umbo at apex\n\n## Middle Ear Components\n- **Ossicles**: Malleus (attached to TM) → Incus (central) → Stapes (oval window)\n- **Ossicular amplification**: 25-30 dB from mechanical advantage (1.3:1) + area ratio (17:1)\n- **Eustachian Tube**: Maintains pressure, drains secretions, opens during swallowing\n\n## Inner Ear Organization\n- **Cochlea**: ~35mm spiral with tonotopic organization (20 kHz base → 20 Hz apex)\n- **Organ of Corti**: Contains ~3,500 inner hair cells (primary sensory) and ~12,000 outer hair cells (amplification)\n- **Hair cell transduction**: Stereocilia deflection → ion channel opening → neuronal firing,\n        mnemonics: [\n          { text: \"MIS = Malleus, Incus, Stapes\", explanation: \"Three ossicles\" },\n          { text: \"24mm EAC: 1/3 cart, 2/3 bone\", explanation: \"External auditory canal structure\" },\n          { text: \"IHC (3.5K) vs OHC (12K)\", explanation: \"Hair cell distribution\" }\n        ],\n        keyPoints: [\n          \"EAC resonates at 2-5 kHz\",\n          \"Ossicles provide 25-30 dB amplification\",\n          \"Stapes footplate: 3.2mm² in oval window\",\n          \"~20,000 total hair cells\",\n          \"CN VIII: 95% innervation from IHCs\"\n        ],\n        textbookRefs: [\n          { book: \"Dhingra\", chapter: \"Anatomy and Physiology of Ear\", edition: \"8th\" },\n          { book: \"Hazarika\", chapter: \"Anatomy of Ear\", edition: \"1st\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"ear-physiology-mechanism\",\n        title: \"Anatomy & Physiology of Ear - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Ossicular mechanics, hair cell transduction, basilar membrane tonotopy, auditory pathway.\",\n        contentMd: "# Anatomy & Physiology of Ear - Mechanism\\n\\n## Sound Conduction Pathway\\n1. **EAC**: Resonance boost at 2-3 kHz (10-15 dB)\\n2. **TM vibration**: Malleus attachment transmits vibrations\\n3. **Ossicular lever arm**: Malleus-incus system provides 1.3:1 mechanical advantage\\n4. **Stapes piston action**: Oval window displacement stimulates cochlea\\n\\n## Middle Ear Amplification\\n- **Impedance matching principle**: Air-to-fluid transition normally causes 99% energy loss\\n- **Middle ear recovery**: 25-30 dB regained through:\\n  - Mechanical advantage: 1.3:1 lever\\n  - Area ratio: TM 55mm² to stapes 3.2mm² = 17:1\\n- **Total gain**: Combined effect = 25-30 dB at frequencies 1-4 kHz\\n\\n## Hair Cell Physiology\\n### Inner Hair Cells (Primary Sensory)\\n- **Count**: ~3,500 in single row\\n- **Innervation**: 95% of CN VIII afferent fibers (~30,000 per IHC)\\n- **Function**: Primary transduction of mechanical motion to electrical signal\\n\\n### Outer Hair Cells (Amplifiers)\\n- **Count**: ~12,000 in three rows\\n- **Mechanism**: Electromotile proteins allow cell contraction/elongation\\n- **Amplification**: Provides ~40 dB cochlear gain\\n- **Efferent control**: Olivocochlear bundle modulates OHC function\\n\\n## Basilar Membrane Mechanics\\n- **Traveling wave**: Progressive displacement from base toward apex\\n- **Frequency selectivity**: Stiffness gradient (base stiff/high-freq, apex loose/low-freq)\\n- **Peak displacement location**: Each frequency has specific \\\"place\\\" on basilar membrane\\n- **Place theory**: Frequency encoded by location of maximum deflection\\n\\n## Auditory Nerve Pathway\\nCN VIII → Cochlear nucleus → Superior olivary complex (binaural cues) → Inferior colliculus → Medial geniculate → Auditory cortex (Heschl's gyrus),\\n        mnemonics: [\\n          { text: \\\"IHC 95% = primary sensory\\\", explanation: \\\"Inner hair cells main receptors\\\" },\\n          { text: \\\"OHC = 40dB amplifier\\\", explanation: \\\"Outer hair cell cochlear gain\\\" },\\n          { text: \\\"17:1 area ratio\\\", explanation: \\\"TM to stapes footplate\\\" },\\n          { text: \\\"Base 20kHz, Apex 20Hz\\\", explanation: \\\"Tonotopic organization\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Ossicular lever: 1.3:1\\\",\\n          \\\"Area ratio: 17:1 provides impedance matching\\\",\\n          \\\"Middle ear gains 25-30 dB\\\",\\n          \\\"IHCs: primary sensory, 95% innervation\\\",\\n          \\\"OHCs: mechanical amplification\\\",\\n          \\\"Traveling wave encodes frequency by location\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Dhingra\\\", chapter: \\\"Physiology of Hearing\\\", edition: \\\"8th\\\" },\\n          { book: \\\"Guyton\\\", chapter: \\\"Hearing\\\", edition: \\\"12th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"ear-anatomy-clinical\\\",\\n        title: \\\"Anatomy & Physiology of Ear - Clinical\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Clinical examination, Weber and Rinne tests, hearing loss classification, ossicular pathology.\\\",\\n        contentMd: "# Anatomy & Physiology of Ear - Clinical\\\\n\\\\n## Otoscopic Landmarks\\\\n- **Umbo**: Malleus attachment (central depression)\\\\n- **Light reflex**: Anteroinferior quadrant cone (normal finding)\\\\n- **Anterior/posterior folds**: Outline pars tensa\\\\n- **Pars flaccida**: Superior region, retraction pocket site\\\\n\\\\n## Perforation Risk Assessment\\\\n- **Anterior**: Malleus involvement, ossicular chain risk\\\\n- **Marginal**: Unsafe, cholesteatoma risk\\\\n- **Central**: Safe, lower complication risk\\\\n- **Pars flaccida**: Retraction pocket, attic involvement\\\\n\\\\n## Clinical Hearing Tests\\\\n### Weber Test\\\\n- **Normal**: Central perception\\\\n- **Conductive loss**: Lateralizes to affected ear\\\\n- **SNHL**: Lateralizes to normal ear\\\\n\\\\n### Rinne Test\\\\n- **Normal**: AC > BC (air conduction better)\\\\n- **Conductive**: BC > AC (bone conduction better)\\\\n- **SNHL**: AC > BC with both reduced\\\\n\\\\n## Hearing Loss Degrees\\\\n| Level | dB | Impact |\\\\n|-------|-----|--------|\\\\n| Mild | 20-40 | Quiet conversation difficulty |\\\\n| Moderate | 40-70 | Normal conversation difficulty |\\\\n| Severe | 70-90 | Raised voice difficulty |\\\\n| Profound | >90 | No speech understanding |\\\\n\\\\n## Ossicular Chain Clinical Correlations\\\\n- **Stapes fixation**: Otosclerosis (progressive, female predominance)\\\\n- **Discontinuity**: Post-traumatic, ossicular erosion\\\\n- **Malleus fixation**: Rare, severe loss\\\\n- **Maximum conductive loss**: ~60-70 dB if complete dysfunction\\\\n\\\\n## CN VIII at Cerebellopontine Angle\\\\n- **Surgical significance**: Retrosigmoid approach preserves hearing; translabyrinthine sacrifices it\\\\n- **Tumor risk**: Acoustic neuroma compresses CN VIII before CN VII\\\\n- **Vascular relationships**: Labyrinthine artery supplies inner ear,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Weber: Conductive → affected, SNHL → normal ear\\\\\\\", explanation: \\\\\\\"Lateralization pattern\\\\\\\" },\\\\n          { text: \\\\\\\"AC > BC = normal & SNHL; BC > AC = conductive\\\\\\\", explanation: \\\\\\\"Rinne interpretation\\\\\\\" },\\\\n          { text: \\\\\\\"Air-bone gap = conductive component\\\\\\\", explanation: \\\\\\\"Audiometric sign\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"EAC anatomy: warm, moist, supports bacterial growth\\\\\\\",\\\\n          \\\\\\\"TM thickness 0.1mm: delicate structure\\\\\\\",\\\\n          \\\\\\\"Stapes fixation causes air-bone gap ~30-50 dB\\\\\\\",\\\\n          \\\\\\\"Weber/Rinne distinguish conductive from SNHL\\\\\\\",\\\\n          \\\\\\\"Labyrinthine artery sole blood supply - occlusion = sudden SNHL\\\\\\\",\\\\n          \\\\\\\"CN VIII vulnerability at CPA important for surgery planning\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Dhingra\\\\\\\", chapter: \\\\\\\"Clinical Examination of Ear\\\\\\\", edition: \\\\\\\"8th\\\\\\\" },\\\\n          { book: \\\\\\\"Hazarika\\\\\\\", chapter: \\\\\\\"Examination Methods\\\\\\\", edition: \\\\\\\"1st\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"ear-anatomy-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Anatomy & Physiology of Ear - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"High-yield facts, MCQ patterns, clinicopathological correlations.\\\\\\\",\\\\n        contentMd: "# Anatomy & Physiology of Ear - Exam Prep\\\\\\\\n\\\\\\\\n## Critical Facts\\\\\\\\n1. Ossicles ossify by 5 weeks gestation (earliest bone ossification)\\\\\\\\n2. TM thickness: 0.1mm (thinnest connective tissue)\\\\\\\\n3. Oval window: 2.8 × 3.4mm\\\\\\\\n4. Round window: Fenestra cochleae\\\\\\\\n5. Cochlear length: ~35mm (2.5 turns)\\\\\\\\n6. Hair cells: 3,500 IHC + 12,000 OHC + 4,500 supporting\\\\\\\\n7. CN VIII: ~30,000 fibers total (95% afferent from IHC)\\\\\\\\n8. Hearing range: 20 Hz - 20,000 Hz (20 Hz-20 kHz)\\\\\\\\n\\\\\\\\n## Commonly Tested Relationships\\\\\\\\n- Conductive loss: TM rupture, ossicular fixation/discontinuity, middle ear fluid\\\\\\\\n- SNHL high-freq notch: Noise, ototoxicity, presbycusis\\\\\\\\n- SNHL flat pattern: CN VIII damage\\\\\\\\n- Mixed loss: Chronic otitis + SNHL\\\\\\\\n\\\\\\\\n## Exam Questions\\\\\\\\n**Q: Maximum conductive loss?** A: 60-70 dB (complete ossicular dysfunction)\\\\\\\\n\\\\\\\\n**Q: Why is otosclerosis progressive?** A: Active bone remodeling continues, increasing stapes fixation\\\\\\\\n\\\\\\\\n**Q: Which hair cells = 95% CN VIII?** A: Inner hair cells (despite being only 25% of total)\\\\\\\\n\\\\\\\\n**Q: What does bone conduction test?** A: Inner ear function (bypasses TM and ossicles),\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"5 weeks = ossicular ossification complete\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Earliest bone formation\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"0.1mm TM thickness\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Thinnest connective tissue in body\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"25-30 dB = ossicular gain\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Middle ear amplification\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"95:5 IHC:efferent\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Innervation distribution\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Ossicles complete ossification by 5 weeks gestation\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"TM only 0.1mm thick\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"17:1 area ratio recovers 25-30 dB\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"IHC heavily innervated despite minority count\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Hair cell loss: base (high-freq) → apex (low-freq) progression\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Maximum conductive loss ~60-70 dB\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Quick Reference\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Hazarika\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Essential Facts\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"1st\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"ear-anatomy-active-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Anatomy & Physiology of Ear - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"7-10 clinical questions testing deep understanding.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Anatomy & Physiology of Ear - Active Recall\\\\\\\\n\\\\\\\\n## Q1: Stapes Fixation Hearing Loss Magnitude\\\\\\\\n**Q: 45-year-old presents with 35dB air-bone gap. Otoscopy normal. Why does stapes fixation cause ~35dB loss and not 60dB?**\\\\\\\\n\\\\\\\\nA: Early otosclerosis affects only stapes footplate, not complete ossicular dysfunction. The 35dB represents loss of the middle ear's mechanical advantage (1.3:1) and partial area ratio effect. Complete discontinuity would cause 60-70dB loss.\\\\\\\\n\\\\\\\\n## Q2: Basilar Membrane Frequency Loss\\\\\\\\n**Q: Construction worker with sudden 4kHz hearing loss on both sides. Why this specific frequency?**\\\\\\\\n\\\\\\\\nA: 4kHz region (~1/3 from oval window) experiences maximum displacement amplitude during loud noise. This location is mechanically most vulnerable to hair cell damage, creating the characteristic \\\\\\\\\\\\\\\"noise notch.\\\\\\\\\\\\\\\"\\\\\\\\n\\\\\\\\n## Q3: IHC vs OHC Loss Differences\\\\\\\\n**Q: Why does selective IHC loss cause severe hearing loss but selective OHC loss causes recruitment?**\\\\\\\\n\\\\\\\\nA: IHCs receive 95% of CN VIII fibers and are primary sensory cells. Loss = loss of transduction. OHC loss removes amplification (~40dB gain) and frequency selectivity, causing recruitment (rapid loudness growth) rather than simple loss.\\\\\\\\n\\\\\\\\n## Q4: Eustachian Tube in Adenoid Hypertrophy\\\\\\\\n**Q: 5-year-old with adenoid hypertrophy develops conductive loss and retraction pockets. Explain the cascade.**\\\\\\\\n\\\\\\\\nA: Adenoid obstruction blocks ET orifice → tensor veli palatini cannot open it → negative pressure develops → TM retracts inward → serous fluid accumulates → ossicular stiffening → conductive loss develops.\\\\\\\\n\\\\\\\\n## Q5: CN VIII Preservation in Acoustic Neuroma\\\\\\\\n**Q: Why does retrosigmoid approach preserve hearing while translabyrinthine does not?**\\\\\\\\n\\\\\\\\nA: Retrosigmoid accesses tumor from behind, sparing inner ear structures. Translabyrinthine removes temporal bone including cochlea, sacrificing all hearing. Retrosigmoid allows careful CN VIII dissection away from tumor.\\\\\\\\n\\\\\\\\n## Q6: Weber Lateralization\\\\\\\\n**Q: Weber test sound lateralizes to left ear. Patient has left SNHL. Explain the apparent contradiction.**\\\\\\\\n\\\\\\\\nA: This indicates conductive loss in left ear (or SNHL in right ear). In conductive loss, bone conduction is better-preserved, so sound appears louder in affected ear.\\\\\\\\n\\\\\\\\n## Q7: Presbycusis Pattern\\\\\\\\n**Q: 72-year-old has high-frequency loss, bilaterally symmetric, normal otoscopy. Explain pattern.**\\\\\\\\n\\\\\\\\nA: Hair cell loss progresses from cochlear base (high-freq) toward apex (low-freq) with age. Bilateral symmetry from symmetric aging and vascular degeneration. Loss of stria vascularis reduces endolymphatic K+ gradient.\\\\\\\\n\\\\\\\\n## Q8: Stapedotomy Success\\\\\\\\n**Q: Stapedotomy restores hearing despite ongoing otosclerosis. Why does mechanical coupling restoration work?**\\\\\\\\n\\\\\\\\nA: Ossicular chain still functional. Piston bridges oval window, allowing incus to drive perilymph directly, restoring mechanical transduction despite stapes fixation.\\\\\\\\n\\\\\\\\n## Q9: Cochlear Implant Placement\\\\\\\\n**Q: Why is electrode placement along cochlear spiral important?**\\\\\\\\n\\\\\\\\nA: Tonotopic organization: each cochlear location tuned to specific frequency. Electrode position matched to desired frequency output allows patterned frequency representation to auditory nerve.\\\\\\\\n\\\\\\\\n## Q10: Sudden SNHL Differential\\\\\\\\n**Q: Sudden unilateral SNHL with disproportionate speech discrimination loss. Cochlea or CN VIII?**\\\\\\\\n\\\\\\\\nA: CN VIII pathology. Cochlear loss: discrimination proportional to thresholds. CN VIII loss: discrimination much worse due to timing jitter and loss of neural synchrony needed for consonant discrimination.,\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Stapes fixation: air-bone gap ~35dB in early otosclerosis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"4kHz notch: maximal basilar membrane displacement at this frequency\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"IHC loss severe (95% innervation); OHC loss causes recruitment\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"ET obstruction → negative pressure → retraction → serous otitis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Retrosigmoid spares hearing; translabyrinthine sacrifices it\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Presbycusis: base hair cell loss first → downsloping audiogram\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Stapedotomy works by restoring mechanical coupling\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Tonotopic organization: basis for cochlear implant electrode mapping\\\\\\\\\\\\\\\"\\\\\\\\n        ]\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  },\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"EN-MOD-01-TOP-02\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      {\\\\\\\\n        layer: 1,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"otitis-media-foundation\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Otitis Media: Acute & Chronic - Foundation\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 25,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"ASOM and CSOM: definitions, pathogenesis, stages, classification, bacteria, predisposing factors.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Otitis Media: Acute & Chronic - Foundation\\\\\\\\n\\\\\\\\n## Definitions\\\\\\\\n- **ASOM**: Acute suppuration, sudden onset, severe symptoms, <3 weeks duration\\\\\\\\n- **CSOM**: Persistent discharge >3 weeks OR recurrent episodes with TM perforation\\\\\\\\n\\\\\\\\n## Pathogenesis - Central Role of ET Dysfunction\\\\\\\\n1. Eustachian tube obstruction (most common cause)\\\\\\\\n2. Negative middle ear pressure develops\\\\\\\\n3. Transudative fluid accumulates\\\\\\\\n4. Bacteria seeded from nasopharynx\\\\\\\\n5. Infection progresses through 5 stages\\\\\\\\n\\\\\\\\n## Bacteria\\\\\\\\n- **S. pneumoniae**: 25-30%\\\\\\\\n- **H. influenzae**: 25-30%\\\\\\\\n- **M. catarrhalis**: 10-15%\\\\\\\\n- Viral URI precedes 50-70% of cases\\\\\\\\n\\\\\\\\n## ASOM Five Stages\\\\\\\\n1. **Hyperemia** (6-12h): Congestion, serous effusion\\\\\\\\n2. **Pre-suppuration** (24-48h): Increased fluid, pressure buildup\\\\\\\\n3. **Suppuration** (48-72h): Pus formation, maximal pain, fever\\\\\\\\n4. **Perforation/Resolution**: Spontaneous perforation OR immune clearance\\\\\\\\n5. **Resolution**: Healing, fluid reabsorption\\\\\\\\n\\\\\\\\n## CSOM Classification\\\\\\\\n- **Tubotympanic (safe)**: Anterior, low complication risk\\\\\\\\n- **Atticoantral (unsafe)**: Posterosuperior, marginal perforation, cholesteatoma risk\\\\\\\\n\\\\\\\\n## Clinical Features - ASOM\\\\\\\\n- **Otalgia**: Severe, throbbing, peak in stage 3\\\\\\\\n- **Hearing loss**: Conductive (middle ear fluid)\\\\\\\\n- **Fever**: 38-40°C\\\\\\\\n- **Otoscopy**: Erythematous, bulging TM, lost landmarks\\\\\\\\n\\\\\\\\n## Clinical Features - CSOM\\\\\\\\n- **Inactive**: Painless perforation, conductive loss, no discharge\\\\\\\\n- **Active**: Purulent discharge, otalgia (if ET obstructed), hearing loss\\\\\\\\n\\\\\\\\n## Predisposing Factors\\\\\\\\n- Age <2 years\\\\\\\\n- Adenoid hypertrophy (common in India)\\\\\\\\n- Allergic rhinitis\\\\\\\\n- Cleft palate\\\\\\\\n- Immunosuppression (HIV, malnutrition)\\\\\\\\n- Smoking exposure,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"SHM = S.pneumoniae, H.influenzae, Moraxella\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Top 3 ASOM bacteria\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"5 ASOM stages\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Hyperemia → Pre-supp → Suppuration → Perforation/Res → Resolution\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Tubotympanic safe, Atticoantral unsafe\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"CSOM classification\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"ET dysfunction central to ASOM pathogenesis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Pneumococcus and H.influenzae: 50-60% of cases\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"5 distinct stages with predictable timeline\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Conductive hearing loss present in both acute and chronic\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Adenoid hypertrophy most common cause in children\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Otitis Media\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Hazarika\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Acute and Chronic Otitis Media\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"1st\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 2,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"otitis-media-pathophysiology\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Otitis Media: Acute & Chronic - Mechanism\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 35,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Pressure dynamics, immune response, stage progression, ossicular damage, cholesteatoma development.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Otitis Media: Acute & Chronic - Mechanism\\\\\\\\n\\\\\\\\n## Pressure Dynamics\\\\\\\\n- **Normal**: -60 to +60 daPa\\\\\\\\n- **Negative pressure phase**: -400 daPa develops from ET obstruction\\\\\\\\n- **Positive pressure phase**: +600 daPa from suppuration\\\\\\\\n- **Negative pressure effects**: Tissue edema, transudation, TM retraction\\\\\\\\n- **Positive pressure effects**: Pain from TM tension, perforation risk\\\\\\\\n\\\\\\\\n## Stage Progression Pathophysiology\\\\\\\\n1. **Hyperemia**: Viral URI → ET edema → obstruction → negative pressure → passive transudation\\\\\\\\n2. **Pre-suppuration**: Bacteria seeded → early inflammation → PMN infiltration\\\\\\\\n3. **Suppuration**: Bacterial proliferation → pus formation → intratympanic pressure rises\\\\\\\\n4. **Critical point**: Pressure relief by perforation OR resolution by immune control\\\\\\\\n5. **Resolution**: ET function restoration → mucociliary clearance → fluid reabsorption\\\\\\\\n\\\\\\\\n## Immune Response\\\\\\\\n- **Innate**: Mucociliary clearance, IgA, IgG, lysozyme, PMN response\\\\\\\\n- **Adaptive**: TH1/TH2 balance, specific antibody, memory B cells\\\\\\\\n- **Failure**: Immature immunity (age <2), virulent organisms, immune suppression\\\\\\\\n\\\\\\\\n## Transition to Chronicity\\\\\\\\n### Factors\\\\\\\\n- Persistent TM perforation\\\\\\\\n- Recurrent infection episodes\\\\\\\\n- Chronic ET dysfunction\\\\\\\\n- Inadequate antibiotic therapy\\\\\\\\n- Marginal perforation (epithelial ingrowth)\\\\\\\\n\\\\\\\\n### Ossicular Damage\\\\\\\\n- Chronic inflammation activates osteoclasts\\\\\\\\n- Pus under pressure erodes bone\\\\\\\\n- **Most affected**: Stapes superstructure, incus long process\\\\\\\\n- Progressive conductive loss\\\\\\\\n\\\\\\\\n### Cholesteatoma Development\\\\\\\\n- Pars flaccida retraction or marginal perforation epithelial ingrowth\\\\\\\\n- Self-cleaning mechanism lost\\\\\\\\n- Protease-mediated bone erosion\\\\\\\\n- Self-propagating disease\\\\\\\\n\\\\\\\\n## Serous Otitis Media (OME)\\\\\\\\n- Non-purulent fluid from persistent negative pressure\\\\\\\\n- Often follows ASOM or with adenoid hypertrophy\\\\\\\\n- Usually self-limiting\\\\\\\\n- May persist weeks to months,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Negative pressure → transudation\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"ET obstruction mechanism\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Positive pressure → pain & perforation risk\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Suppuration effects\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Marginal perf → epithelial ingrowth → cholesteatoma\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Unsafe CSOM progression\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"ET obstruction → negative pressure (-400 daPa)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Suppuration → positive pressure (+600 daPa)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Pressure relief critical: spontaneous perforation or immune control\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Recurrent ASOM and inadequate treatment → CSOM\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Ossicular erosion permanent, not reversible\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Marginal perforation associated with cholesteatoma\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Pathophysiology of Otitis Media\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Harrison's\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Infections of Ear\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"21st\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 3,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"otitis-media-clinical-management\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Otitis Media: Acute & Chronic - Clinical\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 40,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Diagnosis, examination, investigations, complications, management, Indian context.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Otitis Media: Acute & Chronic - Clinical\\\\\\\\n\\\\\\\\n## ASOM Diagnosis\\\\\\\\n- **Clinical**: Sudden otalgia + fever + bulging erythematous TM\\\\\\\\n- **Otoscopy**: Loss of landmarks, erythema, fluid level (\\\\\\\\\\\\\\\"amber fluid level\\\\\\\\\\\\\\\"), bulging, no light reflex\\\\\\\\n- **Mastoid involvement**: Postauricular swelling/erythema, ear displacement\\\\\\\\n\\\\\\\\n## CSOM Diagnosis\\\\\\\\n- **Inactive**: Central perforation, no discharge, conductive hearing loss\\\\\\\\n- **Active**: Discharge present, possible foul smell (atticoantral)\\\\\\\\n- **Imaging**: CT shows ossicular erosion, mastoid changes\\\\\\\\n\\\\\\\\n## Management - ASOM\\\\\\\\n### Medical\\\\\\\\n- Oral/IV antibiotics (amoxicillin-clavulanate, cephalosporins)\\\\\\\\n- Analgesia (paracetamol, NSAIDs)\\\\\\\\n- Decongestants (nasal xylometazoline)\\\\\\\\n- Address underlying URI\\\\\\\\n\\\\\\\\n### Surgical - Myringotomy\\\\\\\\n- **Indications**: Severe pain despite antibiotics, non-resolving after 48-72h, mastoiditis, immunocompromised\\\\\\\\n- **Purpose**: Relieve intratympanic pressure, allow drainage, reduce pain\\\\\\\\n\\\\\\\\n## Management - CSOM\\\\\\\\n### Medical (Inactive)\\\\\\\\n- Observation, water precautions, aural toileting if drainage starts\\\\\\\\n\\\\\\\\n### Medical (Active)\\\\\\\\n- Aural toileting (gentle suction)\\\\\\\\n- Topical antibiotics (ciprofloxacin safe for perforation)\\\\\\\\n- Systemic antibiotics for exacerbation\\\\\\\\n- Decongestants, ET support\\\\\\\\n\\\\\\\\n### Surgical\\\\\\\\n- **Myringoplasty**: Close central perforation\\\\\\\\n- **Ossiculoplasty**: Restore hearing with prosthesis\\\\\\\\n- **Mastoidectomy**: For unsafe CSOM, cholesteatoma\\\\\\\\n\\\\\\\\n## Complications\\\\\\\\n- **Ossicular erosion**: Leads to hearing loss\\\\\\\\n- **Cholesteatoma**: Erosive, intracranial risk\\\\\\\\n- **Facial nerve palsy**: CN VII erosion\\\\\\\\n- **Labyrinthitis/Fistula**: Inner ear involvement\\\\\\\\n- **Meningitis**: Intracranial extension\\\\\\\\n- **Mastoiditis**: Postauricular abscess\\\\\\\\n\\\\\\\\n## Hearing Loss Management\\\\\\\\n- **Conductive loss**: Amplification with hearing aids OR ossiculoplasty\\\\\\\\n- **Audiometry**: AC > BC with air-bone gap typical\\\\\\\\n- **Speech discrimination**: Usually normal in ossicular loss\\\\\\\\n\\\\\\\\n## Indian Healthcare Context\\\\\\\\n- **High prevalence**: Malnutrition, adenoid hypertrophy, limited access to care\\\\\\\\n- **Mastoiditis more common**: From delayed diagnosis/treatment\\\\\\\\n- **Prevention important**: Address malnutrition, early antibiotic therapy, adenoidectomy,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"ASOM: Sudden pain + fever + bulging TM\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Classic triad\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Myringotomy for pressure relief\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Indication: severe pain, non-resolving, mastoiditis\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Foul smell + white debris = cholesteatoma\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Unsafe CSOM signs\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"ASOM diagnosis clinical: otalgia + fever + TM findings\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Myringotomy urgent if severe pain or mastoiditis signs\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"CSOM tubotympanic (safe) vs atticoantral (unsafe) affects prognosis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Ossicular erosion determines degree of hearing loss\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Myringoplasty + ossiculoplasty surgical options\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Cholesteatoma requires urgent canal wall down mastoidectomy\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Management of Otitis Media\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Hazarika\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Clinical Management\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"1st\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 4,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"otitis-media-exam-prep\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Otitis Media: Acute & Chronic - Exam Prep\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 25,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"High-yield facts and MCQ patterns.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Otitis Media: Acute & Chronic - Exam Prep\\\\\\\\n\\\\\\\\n## Key Facts\\\\\\\\n1. Most common bacteria: S.pneumoniae and H.influenzae (50-60%)\\\\\\\\n2. Peak ASOM age: 6-24 months\\\\\\\\n3. Duration threshold: <3 weeks acute; >3 weeks chronic\\\\\\\\n4. Ossicles most eroded: Stapes superstructure, then incus long process\\\\\\\\n5. Cholesteatoma risk: Marginal/epitympanic perforation\\\\\\\\n6. Hearing loss type: Conductive (air-bone gap)\\\\\\\\n7. Pain relief in ASOM: From pressure release\\\\\\\\n\\\\\\\\n## ASOM Timeline\\\\\\\\n- 0-6h: Hyperemia (mild pain)\\\\\\\\n- 6-24h: Pre-suppuration (increasing pain)\\\\\\\\n- 24-72h: Suppuration (severe pain, fever)\\\\\\\\n- 72h+: Perforation or resolution\\\\\\\\n\\\\\\\\n## Exam Questions\\\\\\\\n**Q: Most common ASOM bacteria?** A: S.pneumoniae and H.influenzae (~25-30% each)\\\\\\\\n\\\\\\\\n**Q: Why does myringotomy relieve pain?** A: Releases intratympanic pressure (primary pain source in stage 3)\\\\\\\\n\\\\\\\\n**Q: Most important ASOM factor?** A: ET dysfunction (allows negative pressure and bacterial seeding)\\\\\\\\n\\\\\\\\n**Q: Cholesteatoma risk location?** A: Marginal/epitympanic perforation (unsafe CSOM)\\\\\\\\n\\\\\\\\n**Q: Ossicular erosion reversible?** A: No, requires ossiculoplasty for hearing restoration,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"SHM bacteria\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Streptococcus, Haemophilus, Moraxella\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Peak 6-24 months\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Maximum ASOM incidence\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"5 stages ASOM\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Hyperemia through Resolution\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"S.pneumoniae and H.influenzae: 50-60% combined\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"ET obstruction central to ASOM\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Myringotomy for severe pain/mastoiditis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Ossicular damage permanent\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Marginal perforation → cholesteatoma risk\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"CSOM safe vs unsafe classification\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Quick Reference\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Hazarika\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Essential Facts\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"1st\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"otitis-media-active-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Otitis Media: Acute & Chronic - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"8 clinical cases testing integrated understanding.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Otitis Media: Acute & Chronic - Active Recall\\\\\\\\n\\\\\\\\n## Q1: ASOM Pathophysiology in Infant\\\\\\\\n**Q: 15-month-old with viral URI develops ASOM with severe pain but no spontaneous perforation at 48 hours. Why is this age at risk and why hasn't perforation occurred yet?**\\\\\\\\n\\\\\\\\nA: **Age factors**: ET more horizontal (poor drainage), narrower diameter (easily obstructed), immature immunity. **Timing**: At 48 hours, in pre-suppuration stage (24-48h boundary). Progression to stage 3 (suppuration, 48-72h) causes positive pressure leading to perforation risk at 72+ hours. Antibiotic therapy now prevents spontaneous perforation.\\\\\\\\n\\\\\\\\n## Q2: Myringotomy Timing\\\\\\\\n**Q: When is myringotomy indicated in ASOM, and why is it effective for pain relief?**\\\\\\\\n\\\\\\\\nA: **Indications**: (1) Severe pain despite antibiotics, (2) Non-resolving after 48-72h antibiotics, (3) Mastoiditis signs, (4) Immunocompromised. **Why effective**: Stage 3 suppuration creates +300-600 daPa pressure on TM. Myringotomy releases this pressure immediately (ischemic pain from TM stretch relieved within minutes). Allows pus drainage and antibiotic access.\\\\\\\\n\\\\\\\\n## Q3: Permanent Ossicular Erosion\\\\\\\\n**Q: CSOM patient with 45dB hearing loss from ossicular erosion. Why can't antibiotics heal the bone damage, and what restoration is needed?**\\\\\\\\n\\\\\\\\nA: **Bone damage is permanent**: Chronic pus and cytokines activate osteoclasts (bone-resorbing cells). Bone matrix proteolysis from inflammatory mediators is irreversible. New bone formation cannot replicate complex ossicular geometry. **Restoration**: Ossiculoplasty (prosthesis placement) mechanically restores coupling, recovering ~15-25dB, allowing many to avoid hearing aids.\\\\\\\\n\\\\\\\\n## Q4: Recurrent ASOM Management\\\\\\\\n**Q: Child with 6 ASOM episodes in 12 months, all treated with antibiotics. Audiometry shows persistent conductive loss between episodes. What's happening and what intervention helps?**\\\\\\\\n\\\\\\\\nA: **Persistent ET dysfunction**: Adenoid obstruction (very common in India) remains after ASOM treatment. Between attacks, serous otitis media (fluid) persists. Recurrent infections with ongoing negative pressure → adhesions, early ossicular damage. **Intervention**: Adenoidectomy (indication: ≥4 episodes/6 months or ≥6/12 months). Success rate 70-80% reduction in ASOM frequency by removing anatomical obstruction.\\\\\\\\n\\\\\\\\n## Q5: Cholesteatoma vs Simple CSOM\\\\\\\\n**Q: Two CSOM patients: one with foul discharge and white debris (marginal perforation), another with scanty discharge and central perforation. Why are their prognoses different?**\\\\\\\\n\\\\\\\\nA: **Patient 1 (Unsafe/Atticoantral)**: Marginal perforation → epithelial ingrowth → cholesteatoma. Self-propagating: enzymes erode bone relentlessly. High risk: ossicular erosion, labyrinthine fistula, CN VII erosion, meningitis. **Patient 2 (Safe/Tubotympanic)**: Central perforation → simple suppuration, controlled by antibiotics. Low complication risk, limited to middle ear. **Treatment**: Patient 1 needs urgent surgery; Patient 2 can often manage medically.\\\\\\\\n\\\\\\\\n## Q6: Labyrinthine Fistula Development\\\\\\\\n**Q: CSOM patient suddenly develops severe SNHL and vertigo. Audiometry shows new mixed loss. What complication and mechanism?**\\\\\\\\n\\\\\\\\nA: **Labyrinthine fistula** (usually stapes footplate erosion). **Mechanism**: Chronic cholesteatoma erodes stapes footplate → perilymph leaks into middle ear. **Hearing loss**: SNHL component from cochlear pressure disruption (hair cell dysfunction). **Vertigo**: Perilymph movement stimulates vestibular system abnormally. **Urgency**: Requires surgery to prevent further SNHL and intracranial spread.\\\\\\\\n\\\\\\\\n## Q7: Mastoiditis Recognition\\\\\\\\n**Q: Child with 4-day ASOM develops postauricular swelling, ear displacement (downward/outward), fever 39.5°C despite antibiotics. What's happened pathophysiologically?**\\\\\\\\n\\\\\\\\nA: **Acute mastoiditis with subperiosteal abscess**. **Progression**: Infection spreads posteriorly through aditus to mastoid air cells → osteitis → osteomyelitis with coalescence → periosteal rupture → pus accumulates between bone and lifted periosteum. **Clinical signs**: Edema/erythema from pus, ear displacement from mass effect. **Pathophysiology of antibiotic failure**: Loculated pus not reached by systemic antibiotics, biofilm formation. **Treatment**: IV antibiotics + **mastoidectomy** (surgical drainage required).\\\\\\\\n\\\\\\\\n## Q8: Water Precautions in CSOM\\\\\\\\n**Q: CSOM patient on topical antibiotics asks why earplugs needed for swimming if antibiotics are present. Explain the infection risk mechanism.**\\\\\\\\n\\\\\\\\nA: **Perforation as bacterial entry point**: Central perforation creates direct communication to middle ear. **Water flora**: Pseudomonas, Staph aureus, fungi multiply in contaminated water. **Why antibiotics insufficient**: (1) Topical penetration limited to surface, (2) Deep middle ear not reliably reached, (3) Water flora may be resistant, (4) Infection onset before antibiotics effective. **Best prevention**: Earplugs prevent water entry entirely (better than relying on antibiotics). **Indian context**: Unhygienic water sources increase risk of dangerous pathogens.\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\\n// EN-MOD-01-TOP-03 through EN-MOD-05-TOP-03 (remaining topics - abbreviated but complete 5-layer structure)\\\\\\\\n// Due to space constraints, these are streamlined but maintain clinical completeness\\\\\\\\n\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"EN-MOD-01-TOP-03\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      { layer: 1, slug: \\\\\\\\\\\\\\\"deafness-hearing-tests-foundation\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Deafness & Hearing Tests - Foundation\\\\\\\\\\\\\\\", estimatedMinutes: 25, summary: \\\\\\\\\\\\\\\"Types of deafness classification, audiometry basics, conductive vs sensorineural loss.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Deafness & Hearing Tests\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Hearing Loss Classification\\\\\\\\\\\\\\\\n- **Conductive**: Middle ear/ossicular pathology, air-bone gap\\\\\\\\\\\\\\\\n- **Sensorineural**: Inner ear/CN VIII pathology, AC=BC both reduced\\\\\\\\\\\\\\\\n- **Mixed**: Combination of above\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Audiometry\\\\\\\\\\\\\\\\n- **Pure tone**: Tests threshold at frequencies 250Hz-8kHz\\\\\\\\\\\\\\\\n- **Speech audiometry**: Word discrimination, speech reception\\\\\\\\\\\\\\\\n- **Tympanometry**: Middle ear compliance\\\\\\\\\\\\\\\\n- **Acoustic reflex**: Stapes muscle reflex (absent in stapes fixation)\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Degrees of Hearing Loss\\\\\\\\\\\\\\\\n- Normal: -10 to 20 dB\\\\\\\\\\\\\\\\n- Mild: 20-40 dB\\\\\\\\\\\\\\\\n- Moderate: 40-70 dB  \\\\\\\\\\\\\\\\n- Severe: 70-90 dB\\\\\\\\\\\\\\\\n- Profound: >90 dB\\\\\\\\\\\\\\\", mnemonics: [{ text: \\\\\\\\\\\\\\\"AC > BC with gap = Conductive\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Air-bone gap signature\\\\\\\\\\\\\\\" }, { text: \\\\\\\\\\\\\\\"SNHL AC=BC both reduced\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"No gap pattern\\\\\\\\\\\\\\\" }], keyPoints: [\\\\\\\\\\\\\\\"Audiometry standard for hearing assessment\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Air-bone gap diagnostic of conductive component\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Speech discrimination important for prognosis\\\\\\\\\\\\\\\"], textbookRefs: [{ book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Audiometry\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }] },\\\\\\\\n      { layer: 2, slug: \\\\\\\\\\\\\\\"deafness-mechanisms\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Deafness & Hearing Tests - Mechanism\\\\\\\\\\\\\\\", estimatedMinutes: 30, summary: \\\\\\\\\\\\\\\"Pathophysiology of conductive and SNHL, frequency-specific patterns.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Conductive vs Sensorineural Mechanisms\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Conductive Loss Pathophysiology\\\\\\\\\\\\\\\\n- Disruption in ossicular chain transmission\\\\\\\\\\\\\\\\n- TM perforation → loss of impedance matching\\\\\\\\\\\\\\\\n- Stapes fixation → oval window cannot move\\\\\\\\\\\\\\\\n- Middle ear fluid → oscillator stiffening\\\\\\\\\\\\\\\\n- Result: AC reduced, BC intact, air-bone gap\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## SNHL Pathophysiology  \\\\\\\\\\\\\\\\n- Cochlear hair cell death → hair cells don't respond\\\\\\\\\\\\\\\\n- CN VIII damage → nerve transmission disrupted\\\\\\\\\\\\\\\\n- Pattern depends on cause:\\\\\\\\\\\\\\\\n  - **High-freq notch**: Noise, ototoxicity, presbycusis\\\\\\\\\\\\\\\\n  - **Flat loss**: CN VIII damage\\\\\\\\\\\\\\\\n  - **Low-freq emphasis**: Endolymphatic hydrops\\\\\\\\\\\\\\\\n- Result: AC=BC both reduced\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Speech Discrimination\\\\\\\\\\\\\\\\n- Conductive: Preserved (inner ear normal)\\\\\\\\\\\\\\\\n- Cochlear SNHL: Recruitment present\\\\\\\\\\\\\\\\n- CN VIII/retrocochlear: Disproportionately poor\\\\\\\\\\\\\\\", mnemonics: [{ text: \\\\\\\\\\\\\\\"Gap = conductive pathway issue\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Ossicular mechanism disruption\\\\\\\\\\\\\\\" }], keyPoints: [\\\\\\\\\\\\\\\"Conductive loss reversible with ossiculoplasty\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"SNHL from hair cell damage irreversible\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Speech discrimination helps differentiate location\\\\\\\\\\\\\\\"], textbookRefs: [{ book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Physiology of Deafness\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }] },\\\\\\\\n      { layer: 3, slug: \\\\\\\\\\\\\\\"deafness-clinical-diagnosis\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Deafness & Hearing Tests - Clinical\\\\\\\\\\\\\\\", estimatedMinutes: 35, summary: \\\\\\\\\\\\\\\"Clinical assessment, audiometric patterns, etiologies, rehabilitation.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Clinical Assessment of Deafness\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## History and Examination\\\\\\\\\\\\\\\\n- Duration of loss (congenital vs acquired)\\\\\\\\\\\\\\\\n- Progression pattern (sudden vs gradual)\\\\\\\\\\\\\\\\n- Associated symptoms (tinnitus, vertigo)\\\\\\\\\\\\\\\\n- Family history (genetic deafness)\\\\\\\\\\\\\\\\n- Ototoxic exposures (drugs, noise)\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Audiometric Patterns\\\\\\\\\\\\\\\\n- **Conductive pattern**: Elevated BC, AC below, gap 20-60 dB\\\\\\\\\\\\\\\\n- **SNHL downsloping**: High-freq worse (noise, presbycusis)\\\\\\\\\\\\\\\\n- **SNHL flat**: CN VIII pathology, acoustic neuroma\\\\\\\\\\\\\\\\n- **Retrocochlear**: Poor discrimination > PTA suggests\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Common Causes\\\\\\\\\\\\\\\\n- **Conductive**: OME, ossicular erosion, stapes fixation\\\\\\\\\\\\\\\\n- **SNHL**: Noise, aging, ototoxicity, sudden idiopathic\\\\\\\\\\\\\\\\n- **Mixed**: Chronic otitis media with SNHL\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Rehabilitation\\\\\\\\\\\\\\\\n- Hearing aids: For conductive/moderate SNHL\\\\\\\\\\\\\\\\n- Bone conduction aids: If TM perforation\\\\\\\\\\\\\\\\n- Cochlear implants: Severe-profound bilateral SNHL\\\\\\\\\\\\\\\", mnemonics: [{ text: \\\\\\\\\\\\\\\"Elevated BC + air-bone gap = Conductive\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Audiometric signature\\\\\\\\\\\\\\\" }], keyPoints: [\\\\\\\\\\\\\\\"Audiometry identifies loss type and location\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Speech discrimination reveals etiology location\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Rehabbing options depend on type and degree\\\\\\\\\\\\\\\"], textbookRefs: [{ book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Hearing Loss Assessment\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }] },\\\\\\\\n      { layer: 4, slug: \\\\\\\\\\\\\\\"deafness-exam-prep\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Deafness & Hearing Tests - Exam Prep\\\\\\\\\\\\\\\", estimatedMinutes: 25, summary: \\\\\\\\\\\\\\\"High-yield facts and MCQ patterns.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Deafness & Hearing Tests - Exam Prep\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Key Facts\\\\\\\\\\\\\\\\n- Audiometry gold standard for assessment\\\\\\\\\\\\\\\\n- Air-bone gap diagnostic of conductive component  \\\\\\\\\\\\\\\\n- Speech discrimination preserved in conductive loss\\\\\\\\\\\\\\\\n- Recruitment present in cochlear (OHC) loss\\\\\\\\\\\\\\\\n- Sudden SNHL: Labyrinthitis, viral, vascular, CN VIII pathology\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Audiometric Patterns\\\\\\\\\\\\\\\\n| Loss Type | AC | BC | Gap | Pattern |\\\\\\\\\\\\\\\\n|-----------|-----|-----|-----|----------|\\\\\\\\\\\\\\\\n| Normal | -10-20 | -10-20 | None | Normal |\\\\\\\\\\\\\\\\n| Conductive | ↓ | → | Yes | Gap |\\\\\\\\\\\\\\\\n| SNHL | ↓ | ↓ | No | Matching |\\\\\\\\\\\\\\\\n| Mixed | ↓↓ | ↓ | Yes | Both reduced |\\\\\\\\\\\\\\\", mnemonics: [{ text: \\\\\\\\\\\\\\\"Gap = conductive\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Air-bone gap indicates middle ear pathology\\\\\\\\\\\\\\\" }, { text: \\\\\\\\\\\\\\\"No gap = SNHL\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Matching AC and BC in sensorineural\\\\\\\\\\\\\\\" }], keyPoints: [\\\\\\\\\\\\\\\"Audiometry determines loss location\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Degree of loss determines rehabilitation options\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Speech discrimination aids etiology determination\\\\\\\\\\\\\\\"], textbookRefs: [{ book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Quick Reference\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }] },\\\\\\\\n      { layer: 5, slug: \\\\\\\\\\\\\\\"deafness-active-recall\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Deafness & Hearing Tests - Active Recall\\\\\\\\\\\\\\\", estimatedMinutes: 20, summary: \\\\\\\\\\\\\\\"7 clinical questions on assessment and diagnosis.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Active Recall: Deafness & Hearing Tests\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q1: Audiometric Interpretation\\\\\\\\\\\\\\\\n**Q: Audiometry shows AC 50dB, BC 30dB at speech frequencies. Identify loss type and calculate air-bone gap.**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: Conductive loss. Air-bone gap = 50-30 = **20dB**. BC preserved indicates inner ear intact; AC reduced suggests middle ear problem (ossicular, TM, or fluid).\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q2: Speech Discrimination Pattern  \\\\\\\\\\\\\\\\n**Q: Patient with 50dB SNHL has excellent speech discrimination (92%). What is likely location of loss?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: Likely cochlear (outer hair cell) loss with recruitment. OHC loss causes mild-moderate hearing loss but preserved discrimination due to functioning IHCs and intact neural transmission. Retrocochlear (CN VIII) would have disproportionately poor discrimination.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q3: Sudden SNHL Differential\\\\\\\\\\\\\\\\n**Q: Sudden unilateral 40dB SNHL, downsloping pattern, normal speech discrimination. Central or peripheral?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: Likely peripheral (labyrinthitis, viral). Central lesions (brainstem, cortex) don't typically cause sudden loss or audiometric patterns. Pattern suggests cochlear involvement (high-freq prominent). Normal discrimination rules out significant CN VIII involvement.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q4: Conductive vs SNHL Rehabilitation\\\\\\\\\\\\\\\\n**Q: When would bone conduction hearing aids be preferable to conventional aids?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: Severe conductive loss with TM perforation. Conventional aid requires functional TM for earmold seal. Bone conduction aid bypasses TM entirely, vibrating mastoid bone directly, stimulating inner ear.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q5: Presbycusis Recognition\\\\\\\\\\\\\\\\n**Q: 68-year-old with high-frequency downsloping loss, bilaterally symmetric, normal speech discrimination for degree of loss. What diagnosis?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Presbycusis**. Age-related SNHL from hair cell loss (base to apex progression with age). High-freq loss typical (affects consonants). Symmetric from symmetric aging. Good discrimination indicates pure cochlear loss, not CN VIII pathology.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q6: Acoustic Reflex in Diagnosis\\\\\\\\\\\\\\\\n**Q: Absent acoustic reflex with normal BC but elevated AC. What ossicular problem likely?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Stapes fixation** (otosclerosis). Acoustic reflex requires stapes mobilization (stapedius muscle contraction). Fixation prevents stapes movement, abolishing reflex. Normal BC with elevated AC suggests conductive loss (stapes is likely site).\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q7: Tympanometry in Fluid\\\\\\\\\\\\\\\\n**Q: Tympanogram shows Type B (flat) pattern. What does this indicate?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Middle ear effusion** (serous otitis media) or TM perforation. Type B indicates low/absent compliance (fluid or perforation). Acoustic pressure cannot create normal tympanic movement. Indicates need for imaging or otoscopy to differentiate (and treat if OME).\\\\\\\\\\\\\\\" }\\\\\\\\n    ]\\\\\\\\n  },\\\\\\\\n  { topicCode: \\\\\\\\\\\\\\\"EN-MOD-01-TOP-04\\\\\\\\\\\\\\\", layers: [{ layer: 1, slug: \\\\\\\\\\\\\\\"vertigo-menieres-foundation\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Vertigo & Meniere's Disease - Foundation\\\\\\\\\\\\\\\", estimatedMinutes: 25, summary: \\\\\\\\\\\\\\\"Vertigo types, peripheral vs central, Meniere's pathophysiology and presentation.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Vertigo & Meniere's Disease\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Vertigo Classification\\\\\\\\\\\\\\\\n- **Peripheral**: Inner ear/CN VIII dysfunction, BPPV, labyrinthitis, Meniere's\\\\\\\\\\\\\\\\n- **Central**: Brainstem/cerebellar, stroke, MS, tumor\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## BPPV\\\\\\\\\\\\\\\\n- Benign paroxysmal positional vertigo\\\\\\\\\\\\\\\\n- Otolith displacement in semicircular canals\\\\\\\\\\\\\\\\n- Dix-Hallpike maneuver reproduces symptoms\\\\\\\\\\\\\\\\n- Brief episodes with head position changes\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Meniere's Disease\\\\\\\\\\\\\\\\n- Endolymphatic hydrops\\\\\\\\\\\\\\\\n- Triad: Vertigo, hearing loss, tinnitus\\\\\\\\\\\\\\\\n- Fluctuant symptoms\\\\\\\\\\\\\\\\n- Recurrent episodes\\\\\\\\\\\\\\\\n- Low-frequency hearing loss characteristic\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Peripheral vs Central\\\\\\\\\\\\\\\\n| Feature | Peripheral | Central |\\\\\\\\\\\\\\\\n|---------|-----------|----------|\\\\\\\\\\\\\\\\n| Onset | Sudden | Variable |\\\\\\\\\\\\\\\\n| Nystagmus | Fixed direction | Variable |\\\\\\\\\\\\\\\\n| Hearing loss | Often | Rare |\\\\\\\\\\\\\\\\n| Vomiting | Severe | Mild |\\\\\\\\\\\\\\\\n| Walking | Unsteady | Ataxic |\\\\\\\\\\\\\\\", mnemonics: [{ text: \\\\\\\\\\\\\\\"Meniere = Vertigo + Hearing loss + Tinnitus\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Classic triad\\\\\\\\\\\\\\\" }, { text: \\\\\\\\\\\\\\\"BPPV = brief, positional\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Brief paroxysmal episodes with head movement\\\\\\\\\\\\\\\" }], keyPoints: [\\\\\\\\\\\\\\\"Peripheral vertigo: inner ear or CN VIII\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Central vertigo: brainstem or cerebellum\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Meniere's: recurrent episodes with hearing fluctuation\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"BPPV: position-triggered, brief duration\\\\\\\\\\\\\\\"], textbookRefs: [{ book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Vertigo\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }] },\\\\\\\\n      { layer: 2, slug: \\\\\\\\\\\\\\\"vertigo-pathophysiology\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Vertigo & Meniere's - Mechanism\\\\\\\\\\\\\\\", estimatedMinutes: 35, summary: \\\\\\\\\\\\\\\"Endolymphatic hydrops mechanics, hair cell disturbance, central compensation.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Vertigo Pathophysiology\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Semicircular Canal Mechanics\\\\\\\\\\\\\\\\n- Hair cells in crista ampullaris sense fluid movement\\\\\\\\\\\\\\\\n- Cupula deflection from endolymph flow generates signals\\\\\\\\\\\\\\\\n- Bilateral symmetric input normally cancels\\\\\\\\\\\\\\\\n- Asymmetric input = perceived rotation\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Meniere's Pathophysiology  \\\\\\\\\\\\\\\\n1. Endolymphatic hydrops: Excessive endolymph accumulation\\\\\\\\\\\\\\\\n2. Increased pressure distends Reissner's membrane\\\\\\\\\\\\\\\\n3. Hair cell disturbance: Abnormal vestibular signaling\\\\\\\\\\\\\\\\n4. Hearing loss: Basilar membrane mechanics disrupted (low-freq first)\\\\\\\\\\\\\\\\n5. Tinnitus: Altered fluid pressure affects organ of Corti\\\\\\\\\\\\\\\\n6. Vertigo attacks: Acute pressure spikes cause severe symptoms\\\\\\\\\\\\\\\\n7. Hydrops leak: Perilymph-endolymph mixing causes labyrinthitis\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## BPPV Mechanism\\\\\\\\\\\\\\\\n- Otolith (calcium carbonate crystal) displaces\\\\\\\\\\\\\\\\n- Settles in posterior semicircular canal (most common)\\\\\\\\\\\\\\\\n- Head movement → crystal displacement → cupula deflection\\\\\\\\\\\\\\\\n- Brief symptoms from brief displacement\\\\\\\\\\\\\\\\n- Habituation: CNS adapts to persistent signal\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Central Compensation\\\\\\\\\\\\\\\\n- Brainstem and cerebellum compensate for peripheral loss\\\\\\\\\\\\\\\\n- Naustagmus diminishes over days-weeks\\\\\\\\\\\\\\\\n- Symptoms improve as central adaptation occurs\\\\\\\\\\\\\\\\n- Vestibular rehabilitation aids process\\\\\\\\\\\\\\\", mnemonics: [{ text: \\\\\\\\\\\\\\\"Meniere hydrops → pressure → hearing loss, vertigo, tinnitus\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Pathophysiologic sequence\\\\\\\\\\\\\\\" }], keyPoints: [\\\\\\\\\\\\\\\"Hydrops: increased endolymphatic pressure\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Hair cell disturbance from pressure\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Hearing loss: low-freq first in hydrops\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"BPPV: brief because crystal settles\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Central compensation helps symptom resolution\\\\\\\\\\\\\\\"], textbookRefs: [{ book: \\\\\\\\\\\\\\\"Guyton\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Vestibular System\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"12th\\\\\\\\\\\\\\\" }] },\\\\\\\\n      { layer: 3, slug: \\\\\\\\\\\\\\\"vertigo-clinical-management\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Vertigo & Meniere's - Clinical\\\\\\\\\\\\\\\", estimatedMinutes: 40, summary: \\\\\\\\\\\\\\\"Diagnosis, examination findings, management, complications.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Clinical Vertigo Assessment\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## History\\\\\\\\\\\\\\\\n- Onset (sudden vs gradual)\\\\\\\\\\\\\\\\n- Character (room spinning vs imbalance)\\\\\\\\\\\\\\\\n- Duration (seconds vs hours vs days)\\\\\\\\\\\\\\\\n- Associated symptoms (hearing loss, tinnitus, nausea)\\\\\\\\\\\\\\\\n- Triggers (head position, auditory stimulus, allergens)\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Examination\\\\\\\\\\\\\\\\n- **Romberg**: Falls to side of lesion\\\\\\\\\\\\\\\\n- **Dix-Hallpike**: For BPPV diagnosis\\\\\\\\\\\\\\\\n- **Fukuda stepping**: Rotation indicates vestibular asymmetry  \\\\\\\\\\\\\\\\n- **Nystagmus**: Character (horizontal, vertical, rotatory)\\\\\\\\\\\\\\\\n- **Hearing**: May be reduced in Meniere's\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Meniere's Management\\\\\\\\\\\\\\\\n### Medical\\\\\\\\\\\\\\\\n- Diuretics (hydrochlorothiazide) \\\\\\\\\\\\\\\\n- Salt restriction\\\\\\\\\\\\\\\\n- Vestibular suppressants (betahistine, meclizine)\\\\\\\\\\\\\\\\n- Avoid triggers (stress, alcohol, caffeine)\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n### Surgical (Refractory)\\\\\\\\\\\\\\\\n- Endolymphatic sac decompression\\\\\\\\\\\\\\\\n- Gentamicin ablation (selective hair cell destruction)\\\\\\\\\\\\\\\\n- Labyrinthectomy (last resort)\\\\\\\\\\\\\\\\n- Vestibular nerve section\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## BPPV Treatment\\\\\\\\\\\\\\\\n- **Canalith repositioning**: Dix-Hallpike modified (Epley maneuver)\\\\\\\\\\\\\\\\n- Success rate: >90% with proper technique\\\\\\\\\\\\\\\\n- Home maneuvers for self-treatment\\\\\\\\\\\\\\\\n- Vestibular rehabilitation for balance\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Peripheral vs Central Recognition\\\\\\\\\\\\\\\\n- Peripheral: Hearing loss common, CN V-XII usually normal\\\\\\\\\\\\\\\\n- Central: CN deficits, ataxia, hyperreflexia\\\\\\\\\\\\\\\\n- MRI indicated if central features suspected\\\\\\\\\\\\\\\", mnemonics: [{ text: \\\\\\\\\\\\\\\"BPPV = Epley maneuver cure\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Canalith repositioning >90% effective\\\\\\\\\\\\\\\" }, { text: \\\\\\\\\\\\\\\"Meniere = medical then surgical options\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Conservative management first line\\\\\\\\\\\\\\\" }], keyPoints: [\\\\\\\\\\\\\\\"Dix-Hallpike diagnostic for BPPV\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Meniere's: diuretics + vestibular suppressants first\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"BPPV: position-change maneuvers curative\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Central features: brainstem signs, need MRI\\\\\\\\\\\\\\\"], textbookRefs: [{ book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Vertigo Management\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }] },\\\\\\\\n      { layer: 4, slug: \\\\\\\\\\\\\\\"vertigo-exam-prep\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Vertigo & Meniere's - Exam Prep\\\\\\\\\\\\\\\", estimatedMinutes: 25, summary: \\\\\\\\\\\\\\\"High-yield facts and differential diagnosis.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Vertigo & Meniere's - Exam Prep\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Key Distinguishing Features\\\\\\\\\\\\\\\\n| Feature | BPPV | Meniere's | Labyrinthitis | Vestibulopathy |\\\\\\\\\\\\\\\\n|---------|------|-----------|---------------|----------------|\\\\\\\\\\\\\\\\n| Duration | Seconds | Hours-days | Days-weeks | Gradual |\\\\\\\\\\\\\\\\n| Hearing loss | No | Yes | Possible | No |\\\\\\\\\\\\\\\\n| Trigger | Position | Stress/food | Infection | Viral |\\\\\\\\\\\\\\\\n| Nystagmus | Rotatory | Horizontal | Variable | Slow |\\\\\\\\\\\\\\\\n| Treatment | Maneuver | Diuretics | Antibiotics | Steroids/observation |\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Meniere's Diagnostic Criteria\\\\\\\\\\\\\\\\n- Recurrent spontaneous vertigo episodes (≥20 min)\\\\\\\\\\\\\\\\n- Audiometric SNHL (low-freq emphasis)\\\\\\\\\\\\\\\\n- Tinnitus or fullness sensation\\\\\\\\\\\\\\\\n- Clear episodes separated by asymptomatic periods\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Epley Maneuver\\\\\\\\\\\\\\\\n- Dix-Hallpike first (diagnose)\\\\\\\\\\\\\\\\n- Serial head movement positioning\\\\\\\\\\\\\\\\n- Moves otolith from canal back to utricle\\\\\\\\\\\\\\\\n- >90% success rate\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Medications\\\\\\\\\\\\\\\\n- Betahistine: Histamine analog, improves microcirculation\\\\\\\\\\\\\\\\n- Meclizine: Antihistamine, vestibular suppressant\\\\\\\\\\\\\\\\n- Diuretics: Reduce endolymphe fluid volume\\\\\\\\\\\\\\\", mnemonics: [{ text: \\\\\\\\\\\\\\\"BPPV seconds; Meniere hours; Labs days\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Duration helps differentiate\\\\\\\\\\\\\\\" }, { text: \\\\\\\\\\\\\\\"Meniere low-freq hearing loss\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Characteristic pattern\\\\\\\\\\\\\\\" }], keyPoints: [\\\\\\\\\\\\\\\"BPPV: positional, benign, maneuver-responsive\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Meniere's: triad + fluctuation + low-freq loss\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Epley maneuver: >90% BPPV cure rate\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Betahistine: medical management first line for Meniere's\\\\\\\\\\\\\\\"], textbookRefs: [{ book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Quick Reference\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }] },\\\\\\\\n      { layer: 5, slug: \\\\\\\\\\\\\\\"vertigo-active-recall\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Vertigo & Meniere's - Active Recall\\\\\\\\\\\\\\\", estimatedMinutes: 20, summary: \\\\\\\\\\\\\\\"7 cases testing diagnostic and management skills.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Active Recall: Vertigo & Meniere's\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q1: BPPV Diagnosis\\\\\\\\\\\\\\\\n**Q: 62-year-old with brief (5-10 sec) intense vertigo triggered by rolling over in bed. Dix-Hallpike positive. Diagnosis and treatment?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **BPPV, posterior canal** (most common). Positive Dix-Hallpike confirms. **Treatment**: Epley maneuver with >90% success rate. Mechanism: Otolith repositioning from canal back to utricle eliminates cupula deflection.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q2: Meniere's Typical Presentation  \\\\\\\\\\\\\\\\n**Q: 45-year-old with recurrent episodes of intense vertigo (4-6 hours), fluctuant hearing loss, and tinnitus. Between episodes asymptomatic. Diagnosis and mechanism?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Meniere's disease**. **Mechanism**: Endolymphatic hydrops → pressure fluctuations → intermittent hair cell disturbance → variable symptoms. Low-frequency hearing loss typical (hydrops affects basilar membrane mechanics). **Treatment**: Diuretics + salt restriction + betahistine. Recurrent episodes distinguish from labyrinthitis (which is single episode).\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q3: BPPV vs Meniere's\\\\\\\\\\\\\\\\n**Q: Two vertigo patients: Patient A has 8-second episodes with head position changes; Patient B has 2-hour episodes spontaneously. How do durations help differentiate?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Patient A = BPPV**. Brief duration (seconds to minutes) because otolith settling is quick. Position-triggered. **Patient B = Meniere's** or labyrinthitis. Longer duration indicates sustained fluid/pressure disturbance. Meniere's would have hearing loss; labyrinthitis may have infection signs.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q4: Central vs Peripheral Vertigo\\\\\\\\\\\\\\\\n**Q: 58-year-old with acute vertigo, facial weakness, and dysarthria. On exam: horizontal nystagmus, ataxic gait, normal hearing, CN VII palsy. Central or peripheral?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **CENTRAL** (brainstem involvement, probably stroke). Key findings: CN VII palsy (peripheral vertigo doesn't cause CN involvement), dysarthria (brainstem), ataxia (cerebellar). Normal hearing rules out labyrinthitis. **MRI urgent** to rule out stroke.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q5: Meniere's Low-Frequency Loss\\\\\\\\\\\\\\\\n**Q: Why does Meniere's characteristically cause low-frequency hearing loss initially, while noise-induced is high-frequency?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Hydrops mechanism**: Increased endolymphatic pressure distorts basilar membrane mechanics. **Apex region** (low-frequency) more compliant, more affected by pressure. **High-frequency base** stiffer, less displaced initially. **Noise mechanism**: 4 kHz region maximum displacement (maximal stress) from traveling wave peak. Different pathophysiology → different loss patterns.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q6: Epley Maneuver Mechanism\\\\\\\\\\\\\\\\n**Q: How does Epley maneuver cure BPPV? What's the anatomical basis?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Goal**: Reposition displaced otolith from posterior semicircular canal back to utricle. **Steps**: Serial positional changes move crystal gradually out of canal. **Success rate**: >90% because it addresses the physical problem (crystal location). **Mechanism**: Gravity combined with sequenced positioning moves crystal through canal, returning it to ampulla/utricle where it doesn't cause cupula deflection.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q7: Hydrops Leak and Hearing\\\\\\\\\\\\\\\\n**Q: During acute Meniere's attack, perilymph-endolymph mixing occurs. Why does this cause additional hearing loss?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Mechanism**: K+ gradient normally maintained between endolymph (150 mM) and perilymph (5 mM). Mixing disturbs gradient → hair cell depolarization → temporary loss of transduction capability. **Hearing loss character**: Initially low-frequency (hydrops pressure effect), but mixing can cause broader loss. **Recovery**: Gradient restoration during remission allows hearing recovery (temporary hearing loss).\\\\\\\\\\\\\\\" }\\\\\\\\n    ]\\\\\\\\n  },\\\\\\\\n  { topicCode: \\\\\\\\\\\\\\\"EN-MOD-01-TOP-05\\\\\\\\\\\\\\\", layers: [{ layer: 1, slug: \\\\\\\\\\\\\\\"otosclerosis-ear-tumors-foundation\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Otosclerosis & Ear Tumors - Foundation\\\\\\\\\\\\\\\", estimatedMinutes: 25, summary: \\\\\\\\\\\\\\\"Otosclerosis pathophysiology, presentation, and ear tumor types.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Otosclerosis & Ear Tumors\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Otosclerosis Overview\\\\\\\\\\\\\\\\n- Abnormal bone remodeling in otic capsule\\\\\\\\\\\\\\\\n- Most common: Stapes footplate fixation\\\\\\\\\\\\\\\\n- Autosomal dominant with incomplete penetrance\\\\\\\\\\\\\\\\n- Female predominance (2:1)\\\\\\\\\\\\\\\\n- Hearing loss progressive and bilateral (25%)\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Otosclerosis Pathology\\\\\\\\\\\\\\\\n- **Active phase**: Bone resorption and new bone formation (osteospongiosis)\\\\\\\\\\\\\\\\n- **Stapes footplate**: Progressive fixation in oval window\\\\\\\\\\\\\\\\n- **Result**: Conductive hearing loss from immobile stapes\\\\\\\\\\\\\\\\n- **Progression**: 50% develop contralateral disease\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Ear Tumors\\\\\\\\\\\\\\\\n- **Benign**: Acoustic neuroma, hemangioma, osteoma\\\\\\\\\\\\\\\\n- **Malignant**: Squamous cell carcinoma, basal cell carcinoma\\\\\\\\\\\\\\\\n- **Location**: EAC, middle ear, mastoid\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Clinical Presentation\\\\\\\\\\\\\\\\n- **Otosclerosis**: Progressive SNHL or mixed loss, tinnitus, vertigo possible\\\\\\\\\\\\\\\\n- **Acoustic neuroma**: Unilateral SNHL, imbalance, CPA mass\\\\\\\\\\\\\\\\n- **EAC tumors**: Conductive loss, drainage, bleeding\\\\\\\\\\\\\\\", mnemonics: [{ text: \\\\\\\\\\\\\\\"Otosclerosis = stapes fixation\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Progressive hearing loss from bone fixation\\\\\\\\\\\\\\\" }, { text: \\\\\\\\\\\\\\\"Acoustic neuroma = CPA tumor\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"CN VIII compression syndrome\\\\\\\\\\\\\\\" }], keyPoints: [\\\\\\\\\\\\\\\"Otosclerosis: progressive stapes fixation\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Female:male 2:1 ratio\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Stapedotomy effective surgical treatment\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Acoustic neuroma: 8th nerve tumor at CPA\\\\\\\\\\\\\\\"], textbookRefs: [{ book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Otosclerosis and Ear Tumors\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }] },\\\\\\\\n      { layer: 2, slug: \\\\\\\\\\\\\\\"otosclerosis-pathophysiology\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Otosclerosis & Ear Tumors - Mechanism\\\\\\\\\\\\\\\", estimatedMinutes: 35, summary: \\\\\\\\\\\\\\\"Otosclerotic bone remodeling, stapes footplate mechanics, acoustic neuroma growth.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Otosclerosis Pathophysiology\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Bone Remodeling Process\\\\\\\\\\\\\\\\n1. **Activation**: Osteoclasts resorb normal otic capsule bone\\\\\\\\\\\\\\\\n2. **Resorption phase**: Bone loss at stapes footplate\\\\\\\\\\\\\\\\n3. **Formation phase**: Disorganized new bone formation (spongiosis)\\\\\\\\\\\\\\\\n4. **Fixation**: New bone bridges oval window niche\\\\\\\\\\\\\\\\n5. **Immobilization**: Stapes footplate becomes fixed, cannot move\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Hearing Loss Mechanism\\\\\\\\\\\\\\\\n- **Early (stage 1)**: High-frequency SNHL from cochlear involvement\\\\\\\\\\\\\\\\n- **Progressive (stages 2-3)**: Conductive loss from stapes fixation develops\\\\\\\\\\\\\\\\n- **Mixed loss**: Both components present\\\\\\\\\\\\\\\\n- **Reason for mixed**: Otosclerotic bone can extend to cochlea (cochlear otosclerosis)\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Acoustic Neuroma Growth\\\\\\\\\\\\\\\\n- Schwann cell tumor of CN VIII vestibular division\\\\\\\\\\\\\\\\n- Slow-growing (mm/year typical)\\\\\\\\\\\\\\\\n- Compressive symptoms: CN VIII distortion → asymmetric SNHL\\\\\\\\\\\\\\\\n- Large tumors compress CN VII (facial palsy)\\\\\\\\\\\\\\\\n- Very large tumors: Brainstem compression, hydrocephalus\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Tumor Effects on Hearing\\\\\\\\\\\\\\\\n- Asymmetric SNHL (unilateral vs normal ear)\\\\\\\\\\\\\\\\n- Disproportionate speech discrimination loss\\\\\\\\\\\\\\\\n- CN VIII compression disrupts timing synchrony\\\\\\\\\\\\\\\\n- Retrocochlear signs on testing\\\\\\\\\\\\\\\", mnemonics: [{ text: \\\\\\\\\\\\\\\"Otosclerosis = osteoclast → osteoblast → fixation\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Bone remodeling process\\\\\\\\\\\\\\\" }, { text: \\\\\\\\\\\\\\\"Acoustic neuroma = CN VIII schwannoma\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Vestibular division most common\\\\\\\\\\\\\\\" }], keyPoints: [\\\\\\\\\\\\\\\"Stapes footplate fixation mechanism\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Mixed loss from cochlear + conductive components\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Acoustic neuroma: slow growth, progressive hearing loss\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Tumor compression explains retrocochlear hearing loss pattern\\\\\\\\\\\\\\\"], textbookRefs: [{ book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Pathophysiology\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }] },\\\\\\\\n      { layer: 3, slug: \\\\\\\\\\\\\\\"otosclerosis-clinical-management\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Otosclerosis & Ear Tumors - Clinical\\\\\\\\\\\\\\\", estimatedMinutes: 40, summary: \\\\\\\\\\\\\\\"Diagnosis, imaging, management, surgical indications.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Clinical Otosclerosis & Ear Tumors\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Otosclerosis Diagnosis\\\\\\\\\\\\\\\\n- **History**: Progressive hearing loss, family history, female, 20-40 age\\\\\\\\\\\\\\\\n- **Audiometry**: Carhart notch at 2 kHz (characteristic finding)\\\\\\\\\\\\\\\\n- **Absent acoustic reflex**: Stapes fixation\\\\\\\\\\\\\\\\n- **CT**: Demineralization around stapes footplate\\\\\\\\\\\\\\\\n- **Tympanometry**: Type A normal or type As (reduced compliance)\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Otosclerosis Management\\\\\\\\\\\\\\\\n### Medical\\\\\\\\\\\\\\\\n- Observation if mild hearing loss\\\\\\\\\\\\\\\\n- Hearing aids for progressive loss\\\\\\\\\\\\\\\\n- Sodium fluoride (experimental, limited efficacy)\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n### Surgical - Stapedotomy\\\\\\\\\\\\\\\\n- **Indications**: Progressive conductive loss, hearing aid failure, bilateral disease risk\\\\\\\\\\\\\\\\n- **Success**: 85-90% achieve air-bone gap closure\\\\\\\\\\\\\\\\n- **Revision**: 5-10% require re-staping\\\\\\\\\\\\\\\\n- **Complications**: Sensorineural loss (1-2%), vertigo, perforation\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Acoustic Neuroma Diagnosis  \\\\\\\\\\\\\\\\n- **History**: Unilateral SNHL, imbalance, tinnitus\\\\\\\\\\\\\\\\n- **Asymmetric audiometry**: Distinguishes from presbycusis\\\\\\\\\\\\\\\\n- **Speech discrimination**: Disproportionately poor (retrocochlear sign)\\\\\\\\\\\\\\\\n- **MRI**: Gold standard (schwannoma appears on gadolinium imaging)\\\\\\\\\\\\\\\\n- **ABR**: Asymmetry on wave V, increased I-V interval\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Acoustic Neuroma Management\\\\\\\\\\\\\\\\n### Observation\\\\\\\\\\\\\\\\n- Small tumors (<2 cm) often watched\\\\\\\\\\\\\\\\n- Serial imaging/audiometry\\\\\\\\\\\\\\\\n- Growth rate varies\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n### Surgery\\\\\\\\\\\\\\\\n- Retrosigmoid: Hearing preservation attempt\\\\\\\\\\\\\\\\n- Translabyrinthine: Complete removal, hearing sacrifice\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n### Stereotactic Radiosurgery\\\\\\\\\\\\\\\\n- Gamma Knife alternative for small-medium tumors\\\\\\\\\\\\\\\\n- Control of growth without hearing sacrifice\\\\\\\\\\\\\\\\n- Role increasingly common\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## EAC Tumors\\\\\\\\\\\\\\\\n- **Benign (osteoma)**: Asymptomatic often, canal obstruction\\\\\\\\\\\\\\\\n- **Malignant (SCC)**: Erosive, drainage, pain\\\\\\\\\\\\\\\\n- **Management**: Imaging, biopsy if malignant suspected, surgical excision\\\\\\\\\\\\\\\", mnemonics: [{ text: \\\\\\\\\\\\\\\"Carhart notch = 2 kHz dip\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Characteristic otosclerosis finding\\\\\\\\\\\\\\\" }, { text: \\\\\\\\\\\\\\\"Acoustic neuroma = retrosigmoid preserves hearing\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Surgical approach choice\\\\\\\\\\\\\\\" }], keyPoints: [\\\\\\\\\\\\\\\"Otosclerosis: Carhart notch, absent reflex, CT shows demineralization\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Stapedotomy: 85-90% success rate, hearing improvement\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Acoustic neuroma: asymmetric SNHL, poor discrimination, MRI diagnostic\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Retrosigmoid approach preserves inner ear hearing\\\\\\\\\\\\\\\"], textbookRefs: [{ book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Clinical Management\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }] },\\\\\\\\n      { layer: 4, slug: \\\\\\\\\\\\\\\"otosclerosis-exam-prep\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Otosclerosis & Ear Tumors - Exam Prep\\\\\\\\\\\\\\\", estimatedMinutes: 25, summary: \\\\\\\\\\\\\\\"High-yield diagnostic findings and management facts.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Exam Prep: Otosclerosis & Acoustic Neuroma\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Otosclerosis Key Facts\\\\\\\\\\\\\\\\n1. Female:male 2:1 ratio\\\\\\\\\\\\\\\\n2. Age of onset: 20-40 years\\\\\\\\\\\\\\\\n3. Hearing loss: Progressive, may be rapid\\\\\\\\\\\\\\\\n4. Carhart notch: 2 kHz dip (characteristic)\\\\\\\\\\\\\\\\n5. Acoustic reflex: Absent (stapes fixation)\\\\\\\\\\\\\\\\n6. CT findings: Demineralization around oval window\\\\\\\\\\\\\\\\n7. Stapedotomy success: 85-90%\\\\\\\\\\\\\\\\n8. Bilateral: 25% develop contralateral disease\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Acoustic Neuroma Key Facts\\\\\\\\\\\\\\\\n1. CN VIII schwannoma (vestibular division)\\\\\\\\\\\\\\\\n2. Unilateral SNHL in 90%\\\\\\\\\\\\\\\\n3. Speech discrimination disproportionately poor\\\\\\\\\\\\\\\\n4. MRI: Gold standard diagnostic\\\\\\\\\\\\\\\\n5. Growth rate: Variable (average 1-2mm/year)\\\\\\\\\\\\\\\\n6. Retrosigmoid hearing-preserving approach\\\\\\\\\\\\\\\\n7. Small tumors: Often observed\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Differential: Otosclerosis vs Acoustic Neuroma\\\\\\\\\\\\\\\\n| Feature | Otosclerosis | Acoustic Neuroma |\\\\\\\\\\\\\\\\n|---------|-----------|------------------|\\\\\\\\\\\\\\\\n| Bilateral | 25-50% | <5% |\\\\\\\\\\\\\\\\n| Acoustic reflex | Absent | May be normal |\\\\\\\\\\\\\\\\n| Speech discrimination | Proportional | Disproportionately poor |\\\\\\\\\\\\\\\\n| Imaging | CT | MRI |\\\\\\\\\\\\\\\\n| Treatment | Stapedotomy | Observation/surgery |\\\\\\\\\\\\\\\\n| Hearing loss | Conductive→mixed | SNHL |\\\\\\\\\\\\\\\", mnemonics: [{ text: \\\\\\\\\\\\\\\"Carhart notch 2kHz\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Otosclerosis signature\\\\\\\\\\\\\\\" }, { text: \\\\\\\\\\\\\\\"Asymmetric SNHL + poor discrim = retrocochlear\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Acoustic neuroma red flags\\\\\\\\\\\\\\\" }], keyPoints: [\\\\\\\\\\\\\\\"Carhart notch and absent reflex = otosclerosis\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Stapedotomy: 85-90% close air-bone gap\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Asymmetric SNHL with poor discrimination = acoustic neuroma\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"MRI essential for acoustic neuroma diagnosis\\\\\\\\\\\\\\\"], textbookRefs: [{ book: \\\\\\\\\\\\\\\"Dhingra\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Quick Facts\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"8th\\\\\\\\\\\\\\\" }] },\\\\\\\\n      { layer: 5, slug: \\\\\\\\\\\\\\\"otosclerosis-active-recall\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Otosclerosis & Ear Tumors - Active Recall\\\\\\\\\\\\\\\", estimatedMinutes: 20, summary: \\\\\\\\\\\\\\\"7 clinical cases with diagnostic and management applications.\\\\\\\\\\\\\\\", contentMd: \\\\\\\\\\\\\\\"# Active Recall: Otosclerosis & Ear Tumors\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q1: Carhart Notch Recognition\\\\\\\\\\\\\\\\n**Q: 32-year-old woman with progressive conductive hearing loss. Audiometry shows 2kHz dip with air-bone gap. Acoustic reflex absent. CT shows demineralization. Diagnosis?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Otosclerosis**. **Key findings**: (1) Carhart notch at 2 kHz - characteristic; (2) Air-bone gap - conductive component; (3) Absent reflex - stapes fixation; (4) CT demineralization - confirms otic capsule disease. **Age/gender**: Typical (female 20-40).\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q2: Stapedotomy Mechanism\\\\\\\\\\\\\\\\n**Q: Patient undergoes stapedotomy for otosclerosis. How does replacing fixed stapes with prosthesis restore hearing despite ongoing bone disease?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Stapes function**: Acts as piston transmitting ossicular vibrations to oval window. When fixed by otosclerosis, no piston action → no cochlear stimulation. **Stapedotomy**: Small piston (PORP) bridges oval window, restoring mechanical coupling. Incus can now drive piston despite fixed native stapes bone. **Success**: 85-90% achieve air-bone gap closure. **Disease persistence**: Otosclerotic remodeling continues but mechanical pathway restored.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q3: Acoustic Neuroma Presentation\\\\\\\\\\\\\\\\n**Q: 48-year-old presents with unilateral hearing loss (40dB), word discrimination very poor (32%), and imbalance. Audiogram symmetric beyond 4kHz. Likely diagnosis and why is discrimination disproportionate?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Acoustic neuroma** (CN VIII tumor). **Why disproportionate discrimination**: CN VIII compression distorts nerve fiber synchrony → timing information lost → consonant discrimination impaired despite preserved threshold detection. Fibers can still fire but with jitter. **Key feature**: Pure SNHL would have discrimination proportional to thresholds; retrocochlear (tumor) has worse discrimination.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q4: MRI Indication in SNHL\\\\\\\\\\\\\\\\n**Q: When is MRI indicated in newly diagnosed asymmetric SNHL?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: Always indicated until acoustic neuroma ruled out. **Reasons**: (1) Acoustic neuroma in 1-3% of asymmetric SNHL, (2) Early detection important (smaller tumors easier to manage), (3) MRI highly sensitive (>95%). **Exceptions**: Obvious cause (noise exposure, ototoxicity, infection) may defer MRI, but asymmetric still warrants imaging.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q5: Acoustic Neuroma Watch Policy\\\\\\\\\\\\\\\\n**Q: Small (1 cm) acoustic neuroma found incidentally on MRI. Patient has serviceable hearing on affected side. Management strategy?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Observation protocol** (common for small, asymptomatic). **Rationale**: Slow growth rate (1-2 mm/year typical), no symptoms, hearing preserved. **Monitoring**: Serial MRI (every 6 months initially, then annually), audiometry to detect changes. **Intervention**: If growth accelerates, hearing deteriorates, or symptoms develop. **Advantages**: Avoids surgery risks while monitoring conservatively.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q6: Bilateral Otosclerosis\\\\\\\\\\\\\\\\n**Q: After successful stapedotomy for otosclerosis on left ear, contralateral ear develops similar hearing loss 18 months later. Counseling for second surgery?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Bilateral otosclerosis** (occurs in 25-50%). **Counseling**: Second stapedotomy usually recommended if similar symptoms/hearing loss. **Timing**: Can be staged to evaluate first ear healing before second procedure. **Success rates**: Similar to first ear (~85-90%). **Consideration**: Some delay if first ear result satisfactory (assess outcome).\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\n## Q7: Retrocochlear vs Conductive Loss\\\\\\\\\\\\\\\\n**Q: Patient A: 45 dB conductive loss, excellent speech discrimination; Patient B: 45 dB SNHL, poor discrimination (28%). Site of lesion in each?**\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nA: **Patient A**: Ossicular (conductive). **Reason**: Normal speech discrimination because inner ear intact. Hearing aid amplification sufficient for communication. **Patient B**: Retrocochlear (CN VIII pathology like acoustic neuroma). **Reason**: Disproportionate discrimination loss from nerve desynchronization. Hearing aids less effective because of poor discrimination. **Clinical implication**: Patient B needs imaging and may need different management approach.\\\\\\\\\\\\\\\" }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-}
-}
-];
-];
-];
+        estimatedMinutes: 20,
+        summary: "The ear is divided into external, middle, and inner ear. Each part plays a specific role in hearing and balance. Understanding the anatomy is fundamental to diagnosing otological disorders.",
+        contentMd: `# Anatomy & Physiology of Ear
+
+## External Ear
+
+### Auricle (Pinna)
+- Made of **elastic cartilage** covered by skin
+- Parts: Helix, antihelix, tragus, antitragus, concha, lobule
+- **Lobule** is the only part without cartilage (fibrofatty tissue)
+- Blood supply: Superficial temporal artery, posterior auricular artery
+- Nerve supply: Great auricular nerve (C2, C3), auriculotemporal nerve (V3)
+- **Hitselberger sign**: Loss of sensation in concha (CN VII involvement in CPA tumors)
+
+### External Auditory Canal (EAC)
+- Total length: **24 mm** in adults
+- **Outer 1/3 (8 mm)**: Cartilaginous, contains hair follicles, ceruminous glands, sebaceous glands
+- **Inner 2/3 (16 mm)**: Bony, thin skin firmly adherent to periosteum
+- **Isthmus**: Narrowest part at bony-cartilaginous junction
+- Nerve supply: CN V3 (anterior wall), CN VII, CN X (Arnold nerve - posterior wall)
+
+> **Clinical Pearl**: Stimulation of Arnold nerve (auricular branch of vagus) during ear syringing can cause cough or even vasovagal syncope (Arnold cough reflex).
+
+## Middle Ear (Tympanic Cavity)
+
+### Tympanic Membrane
+- Size: **9 x 8 mm**, thickness 0.1 mm
+- Layers: Outer squamous, middle fibrous, inner mucosal
+- **Pars tensa** (lower 4/5): All 3 layers, attached to annulus
+- **Pars flaccida** (Shrapnell membrane, upper 1/5): Lacks fibrous layer
+- Landmarks: Handle of malleus, umbo, cone of light (antero-inferior)
+
+### Ossicular Chain
+| Ossicle | Attachment | Key Feature |
+|---------|-----------|-------------|
+| **Malleus** | Handle embedded in TM | Largest ossicle |
+| **Incus** | Body articulates with malleus | Most commonly necrosed |
+| **Stapes** | Footplate in oval window | Smallest bone in body |
+
+### Middle Ear Boundaries
+| Wall | Key Structure |
+|------|--------------|
+| Roof (Tegmen) | Tegmen tympani (thin bone separating from middle cranial fossa) |
+| Floor (Jugular) | Jugular bulb |
+| Anterior (Carotid) | Internal carotid artery, Eustachian tube opening |
+| Posterior (Mastoid) | Aditus ad antrum, facial nerve (vertical segment) |
+| Medial (Labyrinthine) | Promontory, oval window, round window |
+| Lateral (Membranous) | Tympanic membrane |
+
+### Eustachian Tube
+- Length: **36 mm** (2/3 cartilaginous, 1/3 bony)
+- Opens during swallowing, yawning (tensor veli palatini muscle)
+- Functions: Ventilation, drainage, protection
+
+## Inner Ear (Labyrinth)
+
+### Bony Labyrinth
+- **Cochlea**: 2.5 turns, contains perilymph
+- **Vestibule**: Contains utricle and saccule
+- **Semicircular canals**: 3 (lateral, superior, posterior)
+
+### Membranous Labyrinth
+- Contains **endolymph** (high K+, low Na+ - similar to intracellular fluid)
+- **Organ of Corti**: Sensory organ of hearing on basilar membrane
+  - Inner hair cells (IHC): ~3,500 (primary sensory transducers)
+  - Outer hair cells (OHC): ~12,000 (cochlear amplifiers)
+
+### Tonotopic Organization
+- **Base of cochlea**: High frequency (20,000 Hz)
+- **Apex of cochlea**: Low frequency (20 Hz)
+
+> **Clinical Pearl**: Noise-induced hearing loss first affects 4000 Hz because the basal turn of cochlea is most exposed to acoustic trauma. Audiogram shows a characteristic 4 kHz dip.`,
+        mnemonics: [
+          { text: "MIS for ossicles (lateral to medial)", explanation: "Malleus (lateral, attached to TM) -> Incus (middle) -> Stapes (medial, in oval window). Stapes is the smallest bone in the body." },
+          { text: "EAC 24: 8 Cart, 16 Bone", explanation: "External auditory canal is 24mm total. Outer 1/3 (8mm) is cartilaginous with glands, inner 2/3 (16mm) is bony." },
+          { text: "PFTE for Eustachian tube", explanation: "Pressure equalization, Fluid drainage, Tensor veli palatini opens it, Eustachian tube is 36mm long." },
+        ],
+        keyPoints: [
+          "External auditory canal: 24mm total; outer 1/3 cartilaginous, inner 2/3 bony",
+          "Pars flaccida (Shrapnell membrane) lacks fibrous middle layer - site of attic cholesteatoma",
+          "Arnold cough reflex: vagal stimulation during ear syringing causes cough/syncope",
+          "Inner hair cells (3500) are primary sensory transducers; outer hair cells (12000) are amplifiers",
+          "Tonotopic: base = high frequency, apex = low frequency",
+          "Incus is the most commonly necrosed ossicle in chronic otitis media",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 1: Anatomy of Ear", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Anatomy and Physiology of Ear", edition: "7th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "ear-anatomy-physiology-layer-2-mechanism",
+        title: "Anatomy & Physiology of Ear - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Hearing involves sound conduction through the external and middle ear, transduction in the cochlea, and neural processing. Balance is maintained by the vestibular apparatus working with visual and proprioceptive inputs.",
+        contentMd: `# Physiology of Hearing and Balance
+
+## Sound Conduction Pathway
+\`\`\`
+Sound waves -> Pinna (collection) -> EAC (resonance 2-5 kHz)
+  -> TM vibration -> Ossicular chain amplification
+  -> Oval window -> Perilymph wave -> Basilar membrane
+  -> Hair cell transduction -> CN VIII -> Auditory cortex
+\`\`\`
+
+## Transformer Mechanism of Middle Ear
+The middle ear overcomes the impedance mismatch between air and fluid:
+
+| Mechanism | Amplification |
+|-----------|--------------|
+| **Area ratio** (TM:Stapes footplate = 17:1) | ~25 dB |
+| **Lever ratio** (Malleus:Incus = 1.3:1) | ~2.5 dB |
+| **Total gain** | ~27-28 dB |
+
+- Without this mechanism, **99.9% of sound energy** would be reflected at the air-fluid interface (30 dB loss)
+
+## Cochlear Mechanics
+
+### Travelling Wave Theory (von Bekesy)
+- Sound enters via oval window -> creates travelling wave along basilar membrane
+- Wave amplitude peaks at a specific location depending on frequency
+- **Basilar membrane properties**: Narrow and stiff at base (high freq), wide and flexible at apex (low freq)
+
+### Hair Cell Transduction
+1. Basilar membrane vibration -> stereocilia deflection
+2. Tip links open mechanically gated K+ channels
+3. K+ influx from endolymph (high K+) -> depolarization
+4. Ca2+ entry -> neurotransmitter release (glutamate)
+5. CN VIII afferent firing
+
+### Endocochlear Potential
+- **Stria vascularis** generates +80 mV endocochlear potential
+- Endolymph: High K+ (150 mEq/L), Low Na+ (1 mEq/L)
+- Perilymph: Similar to ECF (High Na+, Low K+)
+- Potential difference drives K+ into hair cells
+
+## Auditory Pathway
+\`\`\`
+Organ of Corti -> Spiral ganglion -> CN VIII
+  -> Cochlear nuclei (dorsal and ventral)
+  -> Superior olivary complex (first binaural processing)
+  -> Lateral lemniscus -> Inferior colliculus
+  -> Medial geniculate body -> Auditory cortex (Heschl gyrus, area 41-42)
+\`\`\`
+- **Bilateral representation** after cochlear nuclei (explains why unilateral cortical lesions rarely cause deafness)
+
+## Vestibular Physiology
+
+### Semicircular Canals
+- Detect **angular acceleration** (rotational movement)
+- Arranged in 3 mutually perpendicular planes
+- **Lateral canal**: 30 degrees from horizontal (head tilted forward)
+- Cupula deflection -> hair cell stimulation in crista ampullaris
+- **Ewald's first law**: Endolymph flow toward ampulla in lateral canal = excitatory
+
+### Otolith Organs
+- **Utricle**: Detects linear acceleration in horizontal plane
+- **Saccule**: Detects linear acceleration in vertical plane (gravity)
+- Otoconia (calcium carbonate crystals) on macula stimulate hair cells
+
+### Vestibulo-Ocular Reflex (VOR)
+- Stabilizes gaze during head movement
+- 3-neuron arc: Vestibular nerve -> vestibular nuclei -> oculomotor nuclei
+- **Nystagmus**: Rhythmic eye movements; fast component names the direction
+
+> **Clinical Pearl**: Caloric testing uses the VOR principle. Cold water in the ear canal causes convection currents in the lateral SCC endolymph, producing nystagmus away from the stimulated ear (COWS - Cold Opposite, Warm Same).`,
+        mnemonics: [
+          { text: "COWS for caloric testing", explanation: "Cold = Opposite (nystagmus fast component away from cold ear), Warm = Same (fast component toward warm ear). Used to test vestibular function." },
+          { text: "17:1 and 1.3:1 for middle ear amplification", explanation: "TM:Stapes area ratio = 17:1 (25 dB), Malleus:Incus lever ratio = 1.3:1 (2.5 dB), Total = ~28 dB gain." },
+          { text: "BASe = High, APex = Low", explanation: "Base of cochlea processes high frequency sounds, apex processes low frequency. Remember: BASs guitar plays high notes fast." },
+        ],
+        keyPoints: [
+          "Middle ear transformer mechanism provides ~28 dB gain (area ratio 17:1 + lever ratio 1.3:1)",
+          "Stria vascularis maintains endocochlear potential (+80 mV) and endolymph composition",
+          "Endolymph is high K+/low Na+ (like intracellular fluid); perilymph is high Na+/low K+",
+          "Superior olivary complex is the first site of binaural processing (sound localization)",
+          "Caloric testing: COWS - Cold Opposite, Warm Same (direction of fast nystagmus component)",
+          "Semicircular canals detect angular acceleration; otolith organs detect linear acceleration and gravity",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 2: Physiology of Ear", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Physiology of Hearing and Balance", edition: "7th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "ear-anatomy-physiology-layer-3-clinical",
+        title: "Anatomy & Physiology of Ear - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Clinical applications of ear anatomy and physiology include understanding examination techniques, identifying anatomical landmarks during otoscopy, and correlating structural abnormalities with clinical presentations.",
+        contentMd: `# Clinical Applications of Ear Anatomy & Physiology
+
+## Otoscopic Examination
+- **Normal TM appearance**: Pearly grey, translucent, cone of light at 5 o'clock (right ear)
+- Identify: Handle of malleus, umbo, lateral process, pars flaccida, pars tensa
+
+### Abnormal Otoscopic Findings
+| Finding | Clinical Significance |
+|---------|---------------------|
+| Retracted TM | Eustachian tube dysfunction, negative middle ear pressure |
+| Bulging TM | Acute otitis media (pus collection) |
+| Blue TM | Hemotympanum (temporal bone fracture), glomus tumor |
+| Amber colored | Serous otitis media (glue ear) |
+| Perforation | CSOM, trauma, previous myringotomy |
+| Attic crust | Cholesteatoma (attic region = pars flaccida) |
+
+## Case 1: Eustachian Tube Dysfunction
+- 25-year-old patient with ear fullness after an upper respiratory infection
+- Reduced hearing, sensation of fluid in the ear
+- Otoscopy: Retracted TM with absent cone of light, fluid level visible
+- **Mechanism**: Mucosal edema blocks ET -> negative middle ear pressure -> fluid transudation
+- **Treatment**: Nasal decongestants, autoinflation (Valsalva), myringotomy with grommet if persistent
+
+## Case 2: Acoustic Trauma
+- 30-year-old factory worker with bilateral hearing loss, worse at 4 kHz
+- Tinnitus prominent
+- Audiogram: Bilateral notch at 4000 Hz (Carhart notch of NIHL)
+- **Mechanism**: Excessive noise damages outer hair cells at basal turn (4 kHz region)
+- Indian context: Common in textile mills, construction, firecracker exposure during Diwali
+
+## Case 3: Congenital Ear Anomalies
+- **Microtia**: Underdeveloped pinna (grade I to IV/anotia)
+- **Aural atresia**: Absent EAC, associated with middle ear malformations
+- **Preauricular sinus**: Common congenital anomaly in Indian population, remnant of first branchial arch
+- Treacher Collins syndrome: Bilateral microtia with mandibulofacial dysostosis
+
+## Clinical Significance of Anatomical Relations
+
+### Tegmen Tympani Complications
+- Thin bone separating middle ear from middle cranial fossa
+- Erosion leads to: Meningitis, brain abscess, CSF otorrhea
+
+### Facial Nerve in Temporal Bone
+- Most commonly injured nerve during ear surgery
+- Course: IAC -> labyrinthine segment -> geniculate ganglion -> tympanic segment -> mastoid segment
+- **Tympanic segment**: Most exposed (may be dehiscent in 50% of temporal bones)
+
+### Jugular Bulb
+- High jugular bulb: Risk during myringotomy (inferior quadrant)
+- May present as vascular middle ear mass
+
+> **Clinical Pearl**: During myringotomy, the incision is made in the antero-inferior quadrant of the TM to avoid the ossicular chain (superiorly), chorda tympani nerve (posteriorly), and high jugular bulb (inferiorly).`,
+        mnemonics: [
+          { text: "AI for myringotomy site", explanation: "Antero-Inferior quadrant of TM is the safe site for myringotomy. Avoids ossicles (superior), chorda tympani (posterior), jugular bulb (inferior)." },
+          { text: "4K dip for NIHL", explanation: "Noise-Induced Hearing Loss characteristically shows a dip at 4 kHz on audiogram (4K = 4000 Hz). Basal turn outer hair cells are first affected." },
+        ],
+        keyPoints: [
+          "Normal TM: pearly grey, translucent, cone of light at 5 o'clock (right ear)",
+          "Myringotomy is performed in the antero-inferior quadrant (safest site)",
+          "Facial nerve tympanic segment is dehiscent in up to 50% of temporal bones",
+          "Noise-induced hearing loss shows a characteristic 4 kHz dip on audiogram",
+          "Preauricular sinus is a common congenital anomaly in Indian population",
+          "Tegmen tympani erosion can lead to intracranial complications (meningitis, abscess)",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 3: Clinical Examination of Ear", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Diseases of External Ear", edition: "7th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "ear-anatomy-physiology-layer-4-exam",
+        title: "Anatomy & Physiology of Ear - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield points on ear anatomy and physiology for NEXT and NEET PG examinations covering commonly tested facts, comparison tables, and pattern recognition for MCQs.",
+        contentMd: `# Exam Preparation - High Yield
+
+## One-Liners
+- Smallest bone in body: **Stapes**
+- Most commonly necrosed ossicle in CSOM: **Incus (long process)**
+- Nerve supply to pars flaccida: **Chorda tympani (CN VII)**
+- Sensory nerve of external ear causing cough reflex: **Arnold nerve (auricular branch of CN X)**
+- Endolymph is produced by: **Stria vascularis**
+- Endocochlear potential: **+80 mV**
+- Most common congenital ear anomaly: **Preauricular sinus**
+- Tonotopy: Base of cochlea = **high frequency**, Apex = **low frequency**
+- Eustachian tube opened by: **Tensor veli palatini (CN V3)**
+- First site of binaural processing: **Superior olivary complex**
+- Auditory cortex location: **Heschl gyrus (area 41-42), temporal lobe**
+- Middle ear amplification: **~28 dB** (area ratio + lever ratio)
+- Hair cells for hearing: **IHC ~3500** (sensory), **OHC ~12000** (amplifier)
+
+## Comparison Tables
+
+### External Auditory Canal
+| Feature | Cartilaginous (Outer 1/3) | Bony (Inner 2/3) |
+|---------|--------------------------|-------------------|
+| Length | 8 mm | 16 mm |
+| Glands | Ceruminous + sebaceous | None |
+| Hair | Present | Absent |
+| Skin | Thick, mobile | Thin, adherent |
+| Infections | Furunculosis | Osteitis |
+
+### Endolymph vs Perilymph
+| Feature | Endolymph | Perilymph |
+|---------|-----------|-----------|
+| K+ | High (150 mEq/L) | Low (5 mEq/L) |
+| Na+ | Low (1 mEq/L) | High (140 mEq/L) |
+| Location | Membranous labyrinth | Between bony and membranous |
+| Similar to | ICF | ECF |
+| Produced by | Stria vascularis | Ultrafiltrate of CSF/blood |
+
+## Previous Year Themes
+- Ossicular chain and middle ear transformer mechanism
+- Endolymph vs perilymph composition
+- Boundaries of middle ear (especially medial wall structures)
+- Facial nerve course in temporal bone
+- Arnold nerve and cough reflex
+- Tonotopic organization of cochlea
+
+## Pattern Recognition
+- Question about ear cough during wax removal -> **Arnold nerve (CN X)**
+- Question about smallest bone -> **Stapes**
+- Question about +80 mV potential -> **Endocochlear potential (stria vascularis)**
+- Question about first binaural processing -> **Superior olivary complex**
+- Question about ossicle necrosis in CSOM -> **Long process of incus**
+- Blue tympanic membrane -> **Hemotympanum or glomus jugulare**`,
+        mnemonics: [
+          { text: "SIS for stapes facts", explanation: "Smallest bone, In oval window, Stapedius muscle (CN VII) attaches to it. Stapedial reflex protects against loud sounds." },
+          { text: "Endo = Intra, Peri = Extra", explanation: "Endolymph resembles intracellular fluid (high K+), Perilymph resembles extracellular fluid (high Na+). Easy way to remember ionic composition." },
+        ],
+        keyPoints: [
+          "Stapes is the smallest bone in the body; footplate sits in the oval window",
+          "Arnold nerve (auricular branch of CN X) causes cough reflex during ear examination",
+          "Endolymph: high K+/low Na+ (like ICF); Perilymph: high Na+/low K+ (like ECF)",
+          "Incus long process is the most commonly necrosed ossicle in CSOM",
+          "Middle ear transformer provides ~28 dB gain through area ratio and lever ratio",
+          "Tensor veli palatini (CN V3) is the only muscle that opens the Eustachian tube",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapters 1-3: Ear Anatomy & Physiology", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Anatomy and Physiology of Ear", edition: "7th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "ear-anatomy-physiology-layer-5-active-recall",
+        title: "Anatomy & Physiology of Ear - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A and self-test questions on ear anatomy and physiology for spaced repetition review.",
+        contentMd: `# Active Recall - Ear Anatomy & Physiology
+
+## Flashcard Q&A
+
+**Q1**: What is the total length of the external auditory canal and its divisions?
+**A1**: 24 mm total. Outer 1/3 (8 mm) is cartilaginous; inner 2/3 (16 mm) is bony.
+
+**Q2**: Which part of the tympanic membrane lacks the fibrous middle layer?
+**A2**: Pars flaccida (Shrapnell membrane) - upper 1/5 of TM.
+
+**Q3**: What is the Arnold nerve and its clinical significance?
+**A3**: Auricular branch of vagus (CN X). Stimulation during ear syringing causes cough reflex (Arnold cough reflex) or vasovagal syncope.
+
+**Q4**: Name the three ossicles from lateral to medial.
+**A4**: Malleus -> Incus -> Stapes. Stapes is the smallest bone in the body.
+
+**Q5**: What is the endocochlear potential and which structure produces it?
+**A5**: +80 mV, produced by the stria vascularis. It drives K+ ions into hair cells from endolymph.
+
+**Q6**: Describe the ionic composition of endolymph vs perilymph.
+**A6**: Endolymph: high K+ (150 mEq/L), low Na+ (like ICF). Perilymph: high Na+ (140 mEq/L), low K+ (like ECF).
+
+**Q7**: What is the safe site for myringotomy and why?
+**A7**: Antero-inferior quadrant. Avoids ossicles (superior), chorda tympani (posterior), and high jugular bulb (inferior).
+
+**Q8**: Which ossicle is most commonly necrosed in CSOM?
+**A8**: Long process of incus (poorest blood supply, exposed to chronic infection).
+
+**Q9**: What is the COWS mnemonic in caloric testing?
+**A9**: Cold = Opposite (nystagmus fast phase away from stimulated ear), Warm = Same (fast phase toward stimulated ear).
+
+**Q10**: What is the function of outer hair cells?
+**A10**: Cochlear amplification. They actively change length (electromotility) to enhance basilar membrane vibration and improve frequency selectivity.
+
+**Q11**: Which muscle opens the Eustachian tube?
+**A11**: Tensor veli palatini (supplied by CN V3 - mandibular division of trigeminal).
+
+**Q12**: What does a 4 kHz dip on audiogram suggest?
+**A12**: Noise-induced hearing loss (NIHL). Basal turn outer hair cells at 4 kHz region are most vulnerable to acoustic trauma.
+
+## Quick Revision Bullets
+- EAC: 24 mm (8 cart + 16 bone)
+- TM: 9 x 8 mm, pars tensa (4/5) + pars flaccida (1/5)
+- Ossicles: Malleus > Incus > Stapes
+- Middle ear gain: ~28 dB
+- Eustachian tube: 36 mm, opened by tensor veli palatini
+- Cochlea: 2.5 turns, base = high freq, apex = low freq
+- IHC: 3500 (sensory), OHC: 12000 (amplifier)
+- Endolymph: high K+, Perilymph: high Na+
+- Auditory cortex: Heschl gyrus (area 41-42)`,
+        mnemonics: [
+          { text: "MIS-SIN for ear anatomy", explanation: "M-Malleus, I-Incus, S-Stapes (ossicles) and S-Semicircular canals, I-utricle (I shape), N-saccule (N shape) for vestibular organs." },
+          { text: "COWS for caloric nystagmus", explanation: "Cold-Opposite, Warm-Same direction of fast component of nystagmus." },
+        ],
+        keyPoints: [
+          "External ear: pinna (elastic cartilage), EAC (24mm), lobule (no cartilage)",
+          "Middle ear: 6 walls, 3 ossicles, 2 muscles (tensor tympani, stapedius)",
+          "Inner ear: cochlea (hearing), vestibule + SCC (balance)",
+          "Endolymph = intracellular-like fluid; perilymph = extracellular-like fluid",
+          "Tonotopy: base = high frequency, apex = low frequency",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapters 1-3", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Anatomy and Physiology of Ear", edition: "7th" },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 2: Otitis Media: Acute & Chronic ──────────────────
+  {
+    topicCode: "EN-MOD-01-TOP-02",
+    layers: [
+      {
+        layer: 1,
+        slug: "otitis-media-layer-1-foundation",
+        title: "Otitis Media: Acute & Chronic - Foundation",
+        estimatedMinutes: 20,
+        summary: "Otitis media is inflammation of the middle ear cleft. It ranges from acute suppurative otitis media (ASOM) to chronic suppurative otitis media (CSOM) classified into tubotympanic (safe) and atticoantral (unsafe/dangerous) types.",
+        contentMd: `# Otitis Media: Acute & Chronic
+
+## Definition
+Otitis media = inflammation of the middle ear cleft (includes tympanic cavity, Eustachian tube, mastoid antrum, and air cells)
+
+## Classification
+| Type | Subtypes |
+|------|----------|
+| **Acute Otitis Media (AOM)** | Acute suppurative OM (ASOM), Acute necrotizing OM |
+| **Secretory OM (SOM)** | Serous OM, Mucoid OM (glue ear) |
+| **Chronic Suppurative OM (CSOM)** | Tubotympanic (safe), Atticoantral (unsafe) |
+
+## Acute Suppurative Otitis Media (ASOM)
+
+### Etiology
+- Most common in children (peak: 6 months to 2 years)
+- **Organisms**: Streptococcus pneumoniae (MC), H. influenzae, Moraxella catarrhalis, Group A Streptococcus
+- Predisposing: URI, short/horizontal ET in children, adenoid hypertrophy, cleft palate
+
+### Stages (5 stages)
+1. **Stage of tubal occlusion**: Retracted TM, negative pressure
+2. **Stage of pre-suppuration**: Hyperemia, congestion of TM
+3. **Stage of suppuration**: Bulging TM, pus formation, severe pain
+4. **Stage of resolution**: Spontaneous or after treatment
+5. **Stage of complication**: If infection spreads (mastoiditis, intracranial)
+
+### Clinical Features
+- Severe ear pain (otalgia), fever, hearing loss
+- In children: pulling at ear, irritability, fever, feeding difficulty
+- Otoscopy: Red, bulging TM with loss of landmarks
+
+## Chronic Suppurative Otitis Media (CSOM)
+
+### Definition
+Persistent ear discharge through a perforated TM for **>6-12 weeks**
+
+### Types
+| Feature | Tubotympanic (Safe) | Atticoantral (Unsafe) |
+|---------|--------------------|-----------------------|
+| **Site** | Pars tensa (central perforation) | Pars flaccida / posterosuperior marginal |
+| **Discharge** | Mucoid, non-foul | Scanty, foul-smelling |
+| **Cholesteatoma** | Absent | Present |
+| **Complications** | Less common | Common (intracranial) |
+| **Treatment** | Conservative first | Mastoid surgery needed |
+| **Other name** | Mucosal disease | Squamous disease |
+
+## Secretory Otitis Media (Glue Ear)
+- Accumulation of fluid in middle ear without acute infection
+- Common in children with adenoid hypertrophy
+- Flat tympanogram (Type B)
+- Treatment: Adenoidectomy, grommet insertion
+
+> **Clinical Pearl**: In Indian clinical practice, CSOM is extremely common due to poor hygiene, overcrowding, malnutrition, and lack of access to early antibiotic treatment. It remains one of the most common causes of hearing disability in India.`,
+        mnemonics: [
+          { text: "SAFE = Central, UNSAFE = Marginal/Attic", explanation: "Tubotympanic (safe) type has central pars tensa perforation. Atticoantral (unsafe) has marginal or attic perforation with cholesteatoma risk." },
+          { text: "SHiMM for ASOM organisms", explanation: "Streptococcus pneumoniae (MC), H. influenzae, Moraxella catarrhalis, Mixed organisms. S. pneumoniae is the most common." },
+          { text: "5 Stages of ASOM: TPSRC", explanation: "Tubal occlusion, Pre-suppuration, Suppuration, Resolution, Complication - the 5 stages of acute otitis media." },
+        ],
+        keyPoints: [
+          "ASOM: most common organism is Streptococcus pneumoniae; peak age 6 months to 2 years",
+          "CSOM tubotympanic (safe): central perforation, mucoid discharge, no cholesteatoma",
+          "CSOM atticoantral (unsafe): marginal/attic perforation, foul discharge, cholesteatoma",
+          "Secretory OM (glue ear): Type B tympanogram, common in children with adenoid hypertrophy",
+          "CSOM defined as ear discharge through perforated TM lasting more than 6-12 weeks",
+          "India has high prevalence of CSOM due to socioeconomic factors and delayed treatment",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 9: Acute Suppurative Otitis Media", edition: "7th" },
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 10: Chronic Suppurative Otitis Media", edition: "7th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "otitis-media-layer-2-mechanism",
+        title: "Otitis Media: Acute & Chronic - Mechanism",
+        estimatedMinutes: 30,
+        summary: "The pathogenesis of otitis media involves Eustachian tube dysfunction leading to negative pressure and fluid accumulation. Cholesteatoma in unsafe CSOM involves keratinizing squamous epithelium with bone erosion through osteoclastic activity.",
+        contentMd: `# Mechanisms of Otitis Media
+
+## Pathogenesis of ASOM
+
+### Route of Infection
+1. **Via Eustachian tube** (most common): URI -> mucosal edema -> tubal blockage -> negative pressure -> transudation -> bacterial contamination
+2. **Via perforated TM**: External contamination through pre-existing perforation
+3. **Hematogenous**: Rare (measles, TB)
+
+### Sequence of Events
+\`\`\`
+URI / Nasopharyngeal infection
+  -> ET mucosal edema and obstruction
+  -> Negative middle ear pressure (tubal occlusion stage)
+  -> Transudation of fluid into middle ear
+  -> Bacterial colonization of sterile transudate
+  -> Acute suppurative inflammation
+  -> Pus formation, TM bulging (suppuration stage)
+  -> Spontaneous perforation OR resolution
+\`\`\`
+
+## Pathogenesis of CSOM
+
+### Tubotympanic Type (Safe)
+- Persistent infection through central perforation
+- Mucosa thickens (granulation tissue, polyps)
+- Middle ear mucosa undergoes **goblet cell metaplasia** -> mucoid discharge
+- Tympanosclerosis may develop (hyalinization and calcification)
+
+### Atticoantral Type (Unsafe) - Cholesteatoma
+
+#### What is Cholesteatoma?
+- **Not a tumor** - it is a cyst lined by keratinizing stratified squamous epithelium
+- Contains desquamated keratin debris with a surrounding matrix of squamous epithelium
+- Perimatrix: Chronic inflammatory tissue with osteoclasts
+
+#### Theories of Origin
+| Theory | Mechanism |
+|--------|-----------|
+| **Invagination (Wittmaack)** | Retraction pocket in pars flaccida due to negative pressure |
+| **Immigration (Habermann)** | Squamous epithelium migrates through marginal perforation |
+| **Squamous metaplasia (Wendt)** | Middle ear cuboidal epithelium transforms to squamous |
+| **Basal cell hyperplasia (Ruedi)** | Basal cells of pars flaccida proliferate into middle ear |
+
+#### Bone Erosion Mechanism
+1. Pressure necrosis from expanding mass
+2. **Osteoclastic resorption** mediated by:
+   - Collagenase produced by cholesteatoma matrix
+   - Prostaglandins (PGE2) and cytokines (IL-1, TNF-alpha)
+   - Acid phosphatase from inflammatory cells
+3. Enzymatic destruction of bone by proteolytic enzymes
+
+## Complications of CSOM
+
+### Intratemporal (Extracranial)
+- **Mastoiditis** (MC complication)
+- Petrositis (Gradenigo syndrome: CN VI palsy + retroorbital pain + otorrhea)
+- Facial nerve paralysis
+- Labyrinthitis (serous or suppurative)
+
+### Intracranial
+- **Extradural abscess** (MC intracranial complication)
+- Subdural abscess
+- Brain abscess (temporal lobe MC, then cerebellar)
+- Meningitis (MC cause of death from CSOM complications)
+- Lateral sinus thrombosis (sigmoid sinus)
+- Otitic hydrocephalus
+
+> **Clinical Pearl**: In India, intracranial complications of CSOM are still encountered frequently due to delayed presentation. Temporal lobe abscess presents with nominal aphasia (if dominant hemisphere) while cerebellar abscess presents with ataxia and dysdiadochokinesia.`,
+        mnemonics: [
+          { text: "WIBS for cholesteatoma theories", explanation: "Wittmaack (invagination), Immigration (Habermann), Basal cell hyperplasia (Ruedi), Squamous metaplasia (Wendt) - 4 theories of cholesteatoma origin." },
+          { text: "FLIMPS for intracranial complications", explanation: "F-Facial palsy (extracranial), L-Lateral sinus thrombosis, I-Intracranial abscess, M-Meningitis, P-Petrositis, S-Subdural/extradural abscess." },
+        ],
+        keyPoints: [
+          "ASOM pathogenesis: ET dysfunction -> negative middle ear pressure -> bacterial infection",
+          "Cholesteatoma is keratinizing squamous epithelium, not a true tumor",
+          "Invagination theory (Wittmaack): retraction pocket in pars flaccida is most accepted theory",
+          "Bone erosion by cholesteatoma: osteoclastic resorption + enzymatic destruction (collagenase, PGE2)",
+          "MC intracranial complication of CSOM: extradural abscess; MC cause of death: meningitis",
+          "Temporal lobe abscess: MC intracranial abscess from otogenic source; cerebellar abscess: second MC",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 10: CSOM and Cholesteatoma", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Complications of CSOM", edition: "7th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "otitis-media-layer-3-clinical",
+        title: "Otitis Media: Acute & Chronic - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Clinical management of otitis media includes diagnosis through otoscopy and audiometry, medical management with antibiotics and ear toilet, and surgical options like myringoplasty, tympanoplasty, and mastoidectomy.",
+        contentMd: `# Clinical Application - Otitis Media
+
+## Case 1: ASOM in a Child
+- 3-year-old with fever, ear pain, pulling at right ear after 5 days of cold
+- Otoscopy: Red, bulging TM with loss of light reflex
+- **Management**:
+  - First-line antibiotic: **Amoxicillin** (80-90 mg/kg/day x 10 days)
+  - Second-line: Amoxicillin-clavulanate
+  - Analgesics: Paracetamol
+  - Nasal decongestants
+  - If TM bulging with severe pain: **Myringotomy** (incision at antero-inferior quadrant)
+
+## Case 2: CSOM Tubotympanic
+- 20-year-old with intermittent foul-smelling ear discharge for 2 years
+- Hearing loss in affected ear
+- Otoscopy: Central perforation in pars tensa, mucoid discharge
+- Hearing test: Conductive hearing loss, 25-30 dB gap
+- **Management**:
+  - Dry ear precautions (keep water out)
+  - Aural toilet (suction clearance)
+  - Topical antibiotics: Ciprofloxacin ear drops
+  - Once dry: **Myringoplasty / Tympanoplasty** (graft to close perforation)
+  - Graft materials: Temporalis fascia (MC used), tragal perichondrium, cartilage
+
+## Case 3: CSOM Atticoantral (Cholesteatoma)
+- 35-year-old with scanty foul-smelling discharge, progressive hearing loss, dizziness
+- Otoscopy: Attic perforation with whitish flaky debris, granulations
+- CT temporal bone: Soft tissue in attic/antrum with bony erosion
+- **Management**: SURGERY IS MANDATORY
+  - **Modified radical mastoidectomy** (canal wall down)
+  - **Atticotomy** for limited disease
+  - Never treat with ear drops alone
+
+### Surgical Procedures
+| Surgery | Indication |
+|---------|-----------|
+| Myringoplasty | Close perforation (no ossicular involvement) |
+| Tympanoplasty | Repair TM + reconstruct ossicular chain |
+| Cortical mastoidectomy | Acute mastoiditis, intact canal wall |
+| Modified radical mastoidectomy | Cholesteatoma, preserve hearing |
+| Radical mastoidectomy | Extensive cholesteatoma, sacrifice hearing |
+
+## Complications Requiring Emergency Intervention
+- **Acute mastoiditis**: Post-auricular swelling, pushing pinna forward/outward; needs cortical mastoidectomy
+- **Facial nerve palsy**: Urgent surgical decompression
+- **Meningitis/brain abscess**: Neurosurgical + otological surgery
+- **Lateral sinus thrombosis**: Presents with picket fence fever, Griesinger sign, Tobey-Ayer test positive
+
+> **Clinical Pearl**: In Indian government hospitals, CSOM is the single most common reason for ENT outpatient visits. Community screening programs in rural India have shown CSOM prevalence of 5-8%, significantly higher than the WHO threshold of 4% for a country to take urgent action.`,
+        mnemonics: [
+          { text: "Amox for ASOM", explanation: "Amoxicillin 80-90 mg/kg/day is the first-line antibiotic for acute otitis media in children." },
+          { text: "TF graft for myringoplasty", explanation: "Temporalis Fascia is the most commonly used graft material for tympanic membrane repair." },
+        ],
+        keyPoints: [
+          "ASOM first-line treatment: Amoxicillin 80-90 mg/kg/day for 10 days",
+          "Tubotympanic CSOM: conservative first (aural toilet, drops), then myringoplasty when dry",
+          "Atticoantral CSOM (cholesteatoma): surgery mandatory - modified radical mastoidectomy",
+          "Temporalis fascia is the MC graft material for myringoplasty",
+          "Acute mastoiditis: post-auricular swelling pushing pinna forward; needs cortical mastoidectomy",
+          "CSOM prevalence in India exceeds 4% WHO threshold for urgent public health action",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 10: Treatment of CSOM", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Surgical Treatment of CSOM", edition: "7th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "otitis-media-layer-4-exam",
+        title: "Otitis Media: Acute & Chronic - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield exam points covering differential diagnosis of safe vs unsafe CSOM, cholesteatoma theories, complications, and surgical procedures commonly asked in NEXT and NEET PG.",
+        contentMd: `# Exam Preparation - Otitis Media
+
+## One-Liners
+- MC organism in ASOM: **Streptococcus pneumoniae**
+- MC organism in CSOM: **Pseudomonas aeruginosa**
+- MC complication of CSOM: **Mastoiditis**
+- MC intracranial complication of CSOM: **Extradural abscess**
+- MC cause of death in CSOM complications: **Meningitis**
+- MC intracranial abscess from ear: **Temporal lobe abscess**
+- MC graft for myringoplasty: **Temporalis fascia**
+- Cholesteatoma is NOT a: **Neoplasm** (it is keratinizing squamous epithelium)
+- Most accepted theory for cholesteatoma: **Invagination theory (Wittmaack)**
+- Gradenigo syndrome triad: **CN VI palsy + retroorbital pain + otorrhea** (petrositis)
+- Bezold abscess: **Pus tracks through mastoid tip into sternocleidomastoid (digastric) sheath**
+- Citelli abscess: **Pus tracks through Trautmann triangle into posterior cranial fossa**
+- Safe type CSOM perforation: **Central (pars tensa)**
+- Unsafe type CSOM perforation: **Marginal or attic (pars flaccida)**
+
+## Comparison: Safe vs Unsafe CSOM
+| Feature | Tubotympanic (Safe) | Atticoantral (Unsafe) |
+|---------|--------------------|-----------------------|
+| Synonym | Mucosal disease | Squamous disease |
+| Perforation | Central | Marginal / Attic |
+| Discharge | Mucoid, non-foul | Scanty, foul-smelling |
+| Cholesteatoma | Absent | Present |
+| Polyp | Mucous polyp (pale) | Aural polyp (red, bleeds) |
+| Granulations | Absent | Present |
+| Complications | Uncommon | Common |
+| X-ray finding | Sclerotic mastoid | Sclerotic with bone erosion |
+| Treatment | Conservative -> surgery | Surgery mandatory |
+
+## Previous Year Themes
+- Differentiate safe vs unsafe CSOM
+- Theories of cholesteatoma formation
+- Complications of CSOM (intracranial vs extracranial)
+- Indications for different mastoid surgeries
+- ASOM stages and management
+- Gradenigo syndrome components
+
+## Pattern Recognition
+- Foul discharge + attic perforation -> **Cholesteatoma (unsafe CSOM)**
+- Post-auricular swelling pushing pinna -> **Acute mastoiditis**
+- CN VI palsy + otorrhea + retroorbital pain -> **Gradenigo syndrome**
+- Picket fence fever + ear discharge -> **Lateral sinus thrombosis**
+- Child with bilateral ear fullness + flat tympanogram -> **Secretory OM (glue ear)**`,
+        mnemonics: [
+          { text: "Pneumo for Acute, Pseudo for Chronic", explanation: "S. pneumoniae is MC in ASOM; Pseudomonas aeruginosa is MC in CSOM. Remember: Acute = Pneumo, Chronic = Pseudo." },
+          { text: "BEAM for mastoiditis complications", explanation: "Bezold (SCM), Extradural abscess, Acute mastoiditis, Meningitis - common complications asked in exams." },
+        ],
+        keyPoints: [
+          "ASOM: S. pneumoniae; CSOM: Pseudomonas aeruginosa",
+          "Cholesteatoma: not a tumor, keratinizing squamous epithelium with bone erosion",
+          "Gradenigo syndrome: CN VI palsy + retroorbital pain + otorrhea (petrous apex)",
+          "Bezold abscess: pus tracks through mastoid tip into neck via SCM sheath",
+          "MC intracranial complication of CSOM: extradural abscess; MC cause of death: meningitis",
+          "Safe CSOM: central perforation, mucoid discharge; Unsafe: marginal/attic, foul discharge, cholesteatoma",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapters 9-11: Otitis Media", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Otitis Media and Complications", edition: "7th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "otitis-media-layer-5-active-recall",
+        title: "Otitis Media: Acute & Chronic - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for rapid revision of otitis media concepts for exam preparation.",
+        contentMd: `# Active Recall - Otitis Media
+
+## Flashcard Q&A
+
+**Q1**: What is the most common organism causing ASOM?
+**A1**: Streptococcus pneumoniae.
+
+**Q2**: What is the most common organism in CSOM?
+**A2**: Pseudomonas aeruginosa.
+
+**Q3**: Differentiate safe and unsafe CSOM by perforation site.
+**A3**: Safe (tubotympanic): central perforation in pars tensa. Unsafe (atticoantral): marginal or attic perforation in pars flaccida.
+
+**Q4**: What is cholesteatoma?
+**A4**: A cyst lined by keratinizing stratified squamous epithelium filled with keratin debris. It is NOT a neoplasm. It erodes bone through enzymatic and pressure-mediated osteoclastic resorption.
+
+**Q5**: Name the 5 stages of ASOM.
+**A5**: Tubal occlusion -> Pre-suppuration -> Suppuration -> Resolution -> Complication.
+
+**Q6**: What is Gradenigo syndrome?
+**A6**: Triad of CN VI palsy (lateral rectus paralysis) + retroorbital pain (CN V involvement) + otorrhea, caused by petrous apicitis.
+
+**Q7**: What is the first-line antibiotic for ASOM in children?
+**A7**: Amoxicillin 80-90 mg/kg/day for 10 days.
+
+**Q8**: What is Bezold abscess?
+**A8**: Pus from mastoid tracks through the mastoid tip into the sheath of sternocleidomastoid muscle, presenting as a neck swelling.
+
+**Q9**: What graft is most commonly used for myringoplasty?
+**A9**: Temporalis fascia.
+
+**Q10**: What is the most common intracranial complication of CSOM?
+**A10**: Extradural abscess. But the most common cause of death is meningitis.
+
+**Q11**: What tympanogram pattern is seen in secretory otitis media?
+**A11**: Type B (flat curve) - indicating fluid in the middle ear.
+
+**Q12**: When is surgery mandatory in CSOM?
+**A12**: In atticoantral (unsafe) type with cholesteatoma. Modified radical mastoidectomy is the procedure of choice.
+
+## Quick Revision Bullets
+- ASOM: S. pneumoniae, amoxicillin, myringotomy if needed
+- CSOM safe: central perforation, mucoid discharge, myringoplasty
+- CSOM unsafe: attic/marginal perforation, cholesteatoma, mastoidectomy mandatory
+- Cholesteatoma: keratinizing squamous epithelium, NOT a tumor
+- MC complication: mastoiditis; MC intracranial: extradural abscess
+- Gradenigo = CN VI + retroorbital pain + otorrhea`,
+        mnemonics: [
+          { text: "SAFE = Central, UNSAFE = Marginal", explanation: "Quick way to remember the perforation types in CSOM classification." },
+          { text: "TPSRC for ASOM stages", explanation: "Tubal occlusion, Pre-suppuration, Suppuration, Resolution, Complication." },
+        ],
+        keyPoints: [
+          "ASOM: S. pneumoniae; CSOM: Pseudomonas",
+          "Safe CSOM: central perforation; Unsafe: marginal/attic perforation",
+          "Cholesteatoma = keratinizing squamous epithelium, not a neoplasm",
+          "Surgery mandatory in unsafe CSOM with cholesteatoma",
+          "Gradenigo syndrome: petrous apicitis triad",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapters 9-11", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Otitis Media", edition: "7th" },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 3: Deafness & Hearing Tests ────────────────────────
+  {
+    topicCode: "EN-MOD-01-TOP-03",
+    layers: [
+      {
+        layer: 1,
+        slug: "deafness-hearing-tests-layer-1-foundation",
+        title: "Deafness & Hearing Tests - Foundation",
+        estimatedMinutes: 20,
+        summary: "Deafness is classified into conductive, sensorineural, and mixed types. Tuning fork tests (Rinne, Weber, ABC) are bedside clinical tools that help differentiate the type. Audiometry provides objective measurement of hearing loss.",
+        contentMd: `# Deafness & Hearing Tests
+
+## Classification of Hearing Loss
+
+### By Type
+| Type | Site of Lesion | Examples |
+|------|---------------|----------|
+| **Conductive (CHL)** | External ear / Middle ear | Wax, CSOM, otosclerosis, TM perforation |
+| **Sensorineural (SNHL)** | Cochlea / CN VIII / Central | Presbycusis, NIHL, ototoxicity, acoustic neuroma |
+| **Mixed** | Both conductive + sensorineural | Advanced otosclerosis, CSOM with labyrinthitis |
+
+### By Severity (WHO Classification)
+| Grade | Hearing Level (dB) | Description |
+|-------|-------------------|-------------|
+| Normal | 0-25 dB | Normal hearing |
+| Mild | 26-40 dB | Difficulty with soft speech |
+| Moderate | 41-60 dB | Difficulty with normal speech |
+| Severe | 61-80 dB | Difficulty with loud speech |
+| Profound | >80 dB | Cannot hear even shouting |
+
+## Tuning Fork Tests
+
+### Rinne Test (512 Hz fork)
+- Compares **air conduction (AC)** vs **bone conduction (BC)** in SAME ear
+- **Rinne Positive**: AC > BC (Normal OR sensorineural loss)
+- **Rinne Negative**: BC > AC (Conductive loss of >15-20 dB)
+- **False Negative Rinne**: In severe unilateral SNHL, bone conduction heard by opposite ear
+
+### Weber Test (512 Hz fork)
+- Fork placed on **vertex** (forehead center)
+- **Lateralizes to affected ear**: Conductive hearing loss
+- **Lateralizes to better ear**: Sensorineural hearing loss
+
+### Absolute Bone Conduction (ABC) Test
+- Compares patient's BC with examiner's BC (assuming examiner has normal hearing)
+- **Reduced**: Sensorineural component present
+- **Normal**: Pure conductive loss
+
+### Schwabach Test
+- Compares duration of BC hearing between patient and examiner
+- Prolonged Schwabach: Conductive loss
+- Shortened Schwabach: Sensorineural loss
+
+## Pure Tone Audiometry (PTA)
+- Gold standard for hearing assessment
+- Tests AC (250-8000 Hz) and BC (250-4000 Hz)
+- **Air-bone gap**: Difference between AC and BC thresholds
+  - Present in CHL (AC worse than BC)
+  - Absent in SNHL (both equally affected)
+
+## Tympanometry
+| Type | Curve | Interpretation |
+|------|-------|---------------|
+| Type A | Normal peak at 0 daPa | Normal middle ear |
+| Type As | Low amplitude peak | Otosclerosis, tympanosclerosis |
+| Type Ad | High amplitude peak | Ossicular discontinuity |
+| Type B | Flat curve | Middle ear effusion, TM perforation |
+| Type C | Peak shifted to negative | Eustachian tube dysfunction |
+
+> **Clinical Pearl**: In Indian primary health centers, tuning fork tests remain the most important bedside tool for hearing assessment, as audiometry may not be available. A 512 Hz fork is preferred because it tests the speech frequency range.`,
+        mnemonics: [
+          { text: "Rinne: AC > BC = Positive = Normal/SNHL", explanation: "Rinne positive means air conduction is better than bone conduction. This is normal or indicates sensorineural loss. Rinne negative (BC > AC) = conductive loss." },
+          { text: "Weber lateralizes to Conductive side, away from Sensorineural side", explanation: "In Weber test, sound goes to the ear with conductive loss (bone conduction enhanced in blocked ear) and away from sensorineural loss (damaged cochlea cannot hear)." },
+          { text: "ABCD for tympanometry", explanation: "A = normal, As = stiff (otosclerosis), Ad = discontinuity, B = blocked (effusion), C = negative pressure (ET dysfunction)." },
+        ],
+        keyPoints: [
+          "Conductive loss: external/middle ear pathology; SNHL: cochlea/CN VIII/central pathology",
+          "Rinne positive = AC > BC (normal or SNHL); Rinne negative = BC > AC (CHL >15 dB)",
+          "Weber lateralizes to affected ear in CHL, to better ear in SNHL",
+          "False negative Rinne occurs in dead ear (severe unilateral SNHL)",
+          "Type B tympanogram = flat curve = middle ear effusion",
+          "512 Hz tuning fork preferred for clinical testing (speech frequency range)",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 6: Hearing Tests", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Assessment of Hearing", edition: "7th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "deafness-hearing-tests-layer-2-mechanism",
+        title: "Deafness & Hearing Tests - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Understanding the mechanism behind different types of deafness involves comprehending the physiology of sound conduction and transduction. Advanced audiological tests including BERA, OAE, and speech audiometry help localize the site of lesion.",
+        contentMd: `# Mechanisms of Hearing Loss & Advanced Tests
+
+## Mechanism of Conductive Hearing Loss
+- Any obstruction between sound source and oval window
+- **External ear**: Wax impaction, foreign body, atresia, otitis externa
+- **TM**: Perforation (reduces effective vibrating area), retraction
+- **Ossicular chain**: Fixation (otosclerosis), discontinuity (trauma, necrosis)
+- **Middle ear**: Fluid (SOM), mass (cholesteatoma), negative pressure
+- Maximum conductive loss: **60 dB** (ossicular chain completely disrupted)
+
+## Mechanism of Sensorineural Hearing Loss
+
+### Cochlear (Sensory)
+- Damage to hair cells (outer > inner)
+- Causes: Noise, ototoxic drugs, presbycusis, Meniere disease
+- Characteristics: **Recruitment** present (abnormal growth of loudness)
+- OAE: Absent
+
+### Retrocochlear (Neural)
+- Damage to CN VIII or central pathways
+- Causes: Acoustic neuroma (vestibular schwannoma), CPA tumors
+- Characteristics: **Tone decay** present, poor speech discrimination
+- ABR: Prolonged wave I-V interpeak latency
+
+### Differentiating Cochlear vs Retrocochlear
+| Test | Cochlear | Retrocochlear |
+|------|----------|--------------|
+| Recruitment (SISI) | Present (>70%) | Absent |
+| Tone decay | Absent or mild | Significant (>30 dB) |
+| Speech discrimination | Proportionate to PTA | Disproportionately poor |
+| ABR | Normal latencies | Prolonged I-V latency |
+| OAE | Absent | May be present |
+
+## Advanced Audiological Tests
+
+### Brainstem Evoked Response Audiometry (BERA/ABR)
+- Objective hearing test (no patient cooperation needed)
+- Records electrical activity from cochlea to brainstem
+- **5 waves** (I-V): Generated from CN VIII to inferior colliculus
+- Uses: Neonatal screening, threshold estimation, retrocochlear pathology
+- Wave V: Most robust, last to disappear, used for threshold estimation
+
+### Otoacoustic Emissions (OAE)
+- Sound generated by **outer hair cells** (OHC electromotility)
+- Types: Spontaneous (SOAE), Transient evoked (TEOAE), Distortion product (DPOAE)
+- Present = OHC functioning = hearing likely normal (up to 30-40 dB)
+- Used for: Neonatal hearing screening, monitoring ototoxicity
+
+### Speech Audiometry
+- Speech Reception Threshold (SRT): Intensity at which 50% of spondee words understood
+- Speech Discrimination Score (SDS): % of phonetically balanced words correctly identified at comfortable level
+- Rollover phenomenon: SDS decreases at higher intensities -> retrocochlear pathology
+
+### Impedance Audiometry (Tympanometry + Stapedial Reflex)
+- Stapedial reflex: Bilateral stapedius contraction at 70-100 dB above threshold
+- Absent in: Otosclerosis, facial nerve palsy, severe SNHL, middle ear pathology
+
+> **Clinical Pearl**: Under India's national neonatal hearing screening program, OAE is used as the first-tier screening test. Infants failing OAE are referred for BERA for diagnostic confirmation. Early detection before 6 months and intervention before 12 months is the goal.`,
+        mnemonics: [
+          { text: "BERA 5 waves: ECOLI", explanation: "I = CN VIII (distal), II = Cochlear nucleus, III = Superior Olivary complex, IV = Lateral Lemniscus, V = Inferior Colliculus. Wave V is most important clinically." },
+          { text: "OAE = Outer hair cell Activity Emission", explanation: "OAE tests outer hair cell function. Present OAE = functioning OHC = hearing up to 30-40 dB likely normal. Used for neonatal screening." },
+        ],
+        keyPoints: [
+          "Maximum conductive hearing loss possible is 60 dB (complete ossicular disruption)",
+          "Recruitment = cochlear pathology (abnormal loudness growth); Tone decay = retrocochlear",
+          "BERA: 5 waves (I-V), wave V most robust, used for threshold and retrocochlear diagnosis",
+          "OAE tests outer hair cell function; used for neonatal hearing screening",
+          "Rollover in speech audiometry suggests retrocochlear pathology (acoustic neuroma)",
+          "India's neonatal screening: OAE first, then BERA for confirmation",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 7: Audiometry", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Special Tests of Hearing", edition: "7th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "deafness-hearing-tests-layer-3-clinical",
+        title: "Deafness & Hearing Tests - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Clinical approach to a patient with hearing loss involves history, examination, tuning fork tests, audiometry, and imaging to establish the type, degree, and cause of deafness.",
+        contentMd: `# Clinical Application - Deafness
+
+## Systematic Approach to Hearing Loss
+
+### Step 1: History
+- Duration: Sudden vs gradual vs progressive
+- Unilateral vs bilateral
+- Associated symptoms: Tinnitus, vertigo, discharge, otalgia
+- Noise exposure, ototoxic drugs, family history
+- Birth history (in children): Prematurity, jaundice, NICU stay
+
+### Step 2: Examination
+- Otoscopy: TM status, discharge, wax, masses
+- Tuning fork tests: Rinne, Weber, ABC
+- Cranial nerve examination (especially CN V, VII, VIII)
+
+### Step 3: Investigations
+- Pure tone audiometry + tympanometry
+- BERA/OAE (if objective testing needed)
+- CT/MRI temporal bone (if retrocochlear pathology suspected)
+
+## Case 1: Presbycusis
+- 65-year-old with progressive bilateral hearing loss, difficulty understanding speech in noisy environments
+- Audiogram: Bilateral symmetric high-frequency SNHL (sloping pattern)
+- **Mechanism**: Age-related degeneration of hair cells (sensory presbycusis), stria vascularis (metabolic), spiral ganglion neurons (neural)
+- **Management**: Hearing aids (behind-the-ear type most common)
+
+## Case 2: Sudden Sensorineural Hearing Loss
+- 40-year-old with sudden unilateral hearing loss on waking, tinnitus
+- ENT emergency - needs urgent treatment
+- Audiogram: Unilateral SNHL >30 dB across 3 frequencies
+- **Management**:
+  - High-dose systemic steroids (prednisolone 1 mg/kg)
+  - Intratympanic steroids if no improvement
+  - Rule out: Acoustic neuroma (MRI with gadolinium)
+  - Prognosis: ~50% recover spontaneously
+
+## Case 3: Congenital Hearing Loss
+- Infant fails neonatal hearing screening (OAE absent bilaterally)
+- BERA confirms bilateral severe SNHL (>70 dB)
+- Risk factors: Consanguineous marriage (common in India), TORCH infections, neonatal jaundice
+- **Management pathway**:
+  - Hearing aids trial by 6 months
+  - If no benefit from hearing aids: **Cochlear implant** (ideally before 2-3 years)
+  - Speech therapy essential post-implant
+
+## Case 4: Drug-Induced Ototoxicity
+- Patient on aminoglycosides (streptomycin/gentamicin) or cisplatin
+- Bilateral high-frequency SNHL, tinnitus
+- **At-risk drugs**: Aminoglycosides, loop diuretics, cisplatin, quinine, aspirin (high dose)
+- Monitor with serial audiometry and OAE
+
+> **Clinical Pearl**: India has one of the world's highest burdens of hearing disability. Consanguineous marriages, prevalent in many communities, contribute significantly to congenital SNHL. The government's RBSK (Rashtriya Bal Swasthya Karyakram) program includes screening for hearing disability in children aged 0-18 years.`,
+        mnemonics: [
+          { text: "ACE for ototoxic drugs", explanation: "Aminoglycosides (streptomycin, gentamicin), Cisplatin, and others (loop diuretics, quinine). These are the major ototoxic drug categories." },
+          { text: "6-12 rule for congenital SNHL", explanation: "Detect by 6 months, intervene by 12 months for best speech and language outcomes in congenital hearing loss." },
+        ],
+        keyPoints: [
+          "Presbycusis: bilateral symmetric high-frequency SNHL in elderly; hearing aids are mainstay",
+          "Sudden SNHL is an ENT emergency: high-dose steroids within 72 hours",
+          "Congenital SNHL: detect by 6 months, hearing aid trial, cochlear implant if severe bilateral",
+          "Ototoxic drugs: aminoglycosides, cisplatin, loop diuretics, aspirin (high dose)",
+          "Consanguineous marriage is a significant risk factor for congenital SNHL in India",
+          "RBSK program screens for hearing disability in Indian children aged 0-18 years",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 8: Deafness", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Management of Hearing Loss", edition: "7th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "deafness-hearing-tests-layer-4-exam",
+        title: "Deafness & Hearing Tests - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield facts on deafness classification, tuning fork tests interpretation, audiometric patterns, and clinical scenarios frequently tested in NEXT and NEET PG.",
+        contentMd: `# Exam Preparation - Deafness & Hearing Tests
+
+## One-Liners
+- MC type of hearing loss worldwide: **Sensorineural**
+- MC cause of CHL in adults: **Otosclerosis**
+- MC cause of CHL in children: **Secretory otitis media**
+- MC cause of SNHL in elderly: **Presbycusis**
+- MC cause of bilateral SNHL in young adults: **Noise-induced**
+- Tuning fork used for clinical testing: **512 Hz**
+- Maximum CHL possible: **60 dB**
+- Rinne negative = **CHL of at least 15-20 dB**
+- False negative Rinne seen in: **Dead ear** (severe unilateral SNHL)
+- Carhart notch: **Dip at 2 kHz on BC audiogram in otosclerosis**
+- OAE tests function of: **Outer hair cells**
+- BERA wave V generator: **Inferior colliculus (lateral lemniscus)**
+- Recruitment indicates: **Cochlear pathology**
+- Tone decay indicates: **Retrocochlear pathology**
+- Rollover in speech audiometry: **Retrocochlear (acoustic neuroma)**
+
+## Comparison: CHL vs SNHL
+| Feature | CHL | SNHL |
+|---------|-----|------|
+| Rinne test | Negative | Positive |
+| Weber | Lateralizes to affected ear | Lateralizes to better ear |
+| ABC test | Normal | Reduced |
+| Air-bone gap | Present | Absent |
+| Recruitment | Absent | Present (cochlear) |
+| Maximum loss | 60 dB | Any degree |
+
+## Audiogram Patterns
+| Pattern | Condition |
+|---------|-----------|
+| Low frequency CHL + Carhart notch | Otosclerosis |
+| 4 kHz notch (SNHL) | Noise-induced hearing loss |
+| High frequency sloping SNHL | Presbycusis |
+| Flat SNHL | Meniere disease (early) |
+| Cookie-bite (mid-frequency) | Genetic hearing loss |
+| Rising (low frequency SNHL) | Meniere disease |
+
+## Previous Year Themes
+- Interpretation of Rinne and Weber tests
+- Differentiating CHL from SNHL
+- Audiogram pattern recognition
+- BERA waves and their generators
+- Tympanometry curve types
+- False negative Rinne test
+
+## Pattern Recognition
+- Elderly + bilateral high frequency loss -> **Presbycusis**
+- Factory worker + 4 kHz dip -> **NIHL**
+- Young adult + progressive CHL + family history -> **Otosclerosis**
+- Infant fails OAE bilateral -> **Congenital SNHL, do BERA**
+- Sudden unilateral SNHL + tinnitus -> **ENT emergency, rule out acoustic neuroma**`,
+        mnemonics: [
+          { text: "Carhart's notch = 2 kHz in Otosclerosis", explanation: "BC audiogram shows a characteristic dip at 2 kHz in otosclerosis. This is an artifact of stapes fixation, not true sensorineural loss." },
+          { text: "Rinne: Positive = Plus = Normal/SNHL", explanation: "Positive Rinne means AC is greater (plus) than BC. This is normal or SNHL. Negative Rinne = CHL." },
+        ],
+        keyPoints: [
+          "512 Hz tuning fork preferred for clinical hearing tests",
+          "Rinne negative = CHL of at least 15-20 dB; false negative in dead ear",
+          "Carhart notch: 2 kHz dip on BC in otosclerosis (artifact of stapes fixation)",
+          "BERA wave V: most robust wave, generated near inferior colliculus",
+          "OAE: present = OHC working = hearing up to 30-40 dB normal",
+          "Maximum possible conductive hearing loss: 60 dB",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapters 6-8", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Hearing Tests and Deafness", edition: "7th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "deafness-hearing-tests-layer-5-active-recall",
+        title: "Deafness & Hearing Tests - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for rapid revision of hearing loss types, tuning fork tests, audiometry interpretation, and management approaches.",
+        contentMd: `# Active Recall - Deafness & Hearing Tests
+
+## Flashcard Q&A
+
+**Q1**: What does Rinne negative indicate?
+**A1**: Conductive hearing loss of at least 15-20 dB (bone conduction > air conduction in the same ear).
+
+**Q2**: In Weber test, which ear does sound lateralize to in CHL?
+**A2**: The affected (diseased) ear with conductive loss. In SNHL, it lateralizes to the better ear.
+
+**Q3**: What is false negative Rinne?
+**A3**: Occurs in severe unilateral SNHL (dead ear). BC appears better than AC because the opposite normal ear hears the BC stimulus via transcranial transmission.
+
+**Q4**: What is the Carhart notch?
+**A4**: A dip at 2 kHz on bone conduction audiogram in otosclerosis. It is an artifact of stapes fixation, not true SNHL. Disappears after successful stapedectomy.
+
+**Q5**: What does OAE test?
+**A5**: Outer hair cell function. Present OAE = OHC working = hearing likely normal up to 30-40 dB. Used for neonatal hearing screening.
+
+**Q6**: Name the 5 BERA waves and their approximate generators.
+**A6**: I = Distal CN VIII, II = Proximal CN VIII/cochlear nucleus, III = Superior olivary complex, IV = Lateral lemniscus, V = Inferior colliculus.
+
+**Q7**: What is recruitment and what does it indicate?
+**A7**: Abnormal growth of loudness. Small increase in stimulus intensity causes disproportionately large increase in perceived loudness. Indicates cochlear pathology (hair cell loss).
+
+**Q8**: What is the maximum conductive hearing loss possible?
+**A8**: 60 dB. Complete ossicular chain disruption. Greater loss suggests mixed or sensorineural component.
+
+**Q9**: What type of tympanogram is seen in otosclerosis?
+**A9**: Type As (low amplitude, stiff peak) - stapes fixation increases middle ear stiffness.
+
+**Q10**: What audiogram pattern is seen in presbycusis?
+**A10**: Bilateral symmetric high-frequency sloping SNHL. Both AC and BC equally affected with no air-bone gap.
+
+**Q11**: What is the preferred tuning fork frequency for clinical tests and why?
+**A11**: 512 Hz. It is in the speech frequency range and has an ideal balance between vibration time and tactile sensation.
+
+**Q12**: How do you differentiate cochlear from retrocochlear SNHL?
+**A12**: Cochlear: recruitment present, OAE absent, normal BERA latencies. Retrocochlear: tone decay present, rollover in speech audiometry, prolonged BERA I-V interpeak latency.
+
+## Quick Revision Bullets
+- CHL: external/middle ear; SNHL: cochlea/nerve; Mixed: both
+- Rinne positive = AC > BC = Normal or SNHL
+- Rinne negative = BC > AC = CHL (>15 dB)
+- Weber: CHL -> lateralizes to affected; SNHL -> lateralizes to better
+- Carhart notch: 2 kHz dip on BC in otosclerosis
+- OAE: outer hair cell test; BERA: objective threshold + retrocochlear
+- Type B tympanogram = effusion; Type As = otosclerosis
+- Maximum CHL = 60 dB`,
+        mnemonics: [
+          { text: "AC > BC = Positive = Normal/SNHL", explanation: "Rinne positive test interpretation. If Weber also lateralizes away, confirms SNHL on the tested side." },
+          { text: "5 BERA waves = ECOLI", explanation: "E-eighth nerve (I), C-cochlear nucleus (II), O-olivary complex (III), L-lateral lemniscus (IV), I-inferior colliculus (V)." },
+        ],
+        keyPoints: [
+          "Rinne: AC vs BC same ear; Weber: which ear hears louder; ABC: BC vs examiner",
+          "False negative Rinne: dead ear; Carhart notch: otosclerosis at 2 kHz",
+          "BERA wave V: most important clinically; OAE: outer hair cell screening",
+          "Recruitment = cochlear; Tone decay = retrocochlear",
+          "Type As = stiff (otosclerosis); Type B = flat (effusion); Type C = negative pressure",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapters 6-8", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Hearing Assessment", edition: "7th" },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 4: Vertigo & Meniere's Disease ─────────────────────
+  {
+    topicCode: "EN-MOD-01-TOP-04",
+    layers: [
+      {
+        layer: 1,
+        slug: "vertigo-menieres-layer-1-foundation",
+        title: "Vertigo & Meniere's Disease - Foundation",
+        estimatedMinutes: 20,
+        summary: "Vertigo is an illusion of movement resulting from vestibular dysfunction. Meniere disease is characterized by episodic vertigo, fluctuating hearing loss, tinnitus, and aural fullness caused by endolymphatic hydrops.",
+        contentMd: `# Vertigo & Meniere's Disease
+
+## Definition
+- **Vertigo**: Illusion of rotatory movement (patient or surroundings spinning)
+- **Dizziness**: Non-specific term including lightheadedness, unsteadiness
+- **Nystagmus**: Involuntary rhythmic eye movements; named by direction of fast component
+
+## Classification of Vertigo
+| Feature | Peripheral | Central |
+|---------|-----------|---------|
+| **Site** | Inner ear / CN VIII | Brainstem / Cerebellum |
+| **Onset** | Sudden | Gradual |
+| **Severity** | Severe, incapacitating | Mild to moderate |
+| **Duration** | Seconds to hours | Days to weeks |
+| **Hearing loss** | May be present | Usually absent |
+| **Tinnitus** | Often present | Usually absent |
+| **Nystagmus** | Horizontal/rotatory, fatigable | Vertical, non-fatigable |
+| **Nausea/vomiting** | Severe | Mild |
+
+## Common Causes
+
+### Peripheral
+1. **BPPV** (most common cause of vertigo overall)
+2. **Meniere disease**
+3. **Vestibular neuronitis** (acute viral)
+4. **Labyrinthitis** (bacterial or viral)
+5. **Acoustic neuroma**
+
+### Central
+1. Vertebrobasilar insufficiency
+2. Brainstem stroke
+3. Multiple sclerosis
+4. Cerebellar tumors
+
+## Benign Paroxysmal Positional Vertigo (BPPV)
+- **MC cause of vertigo** in all age groups
+- **Cause**: Displaced otoconia (calcium carbonate crystals) from utricle into semicircular canal (usually posterior)
+- **Trigger**: Changes in head position
+- **Duration**: Brief episodes (<1 minute)
+- **Diagnosis**: Dix-Hallpike test (positive = vertigo + nystagmus with latency)
+- **Treatment**: Epley maneuver (canalith repositioning)
+
+## Meniere Disease
+
+### Tetrad (Classic)
+1. **Episodic vertigo** (lasting 20 min to several hours)
+2. **Fluctuating sensorineural hearing loss** (low frequency initially)
+3. **Tinnitus** (roaring/buzzing)
+4. **Aural fullness** (sensation of pressure in ear)
+
+### Pathology
+- **Endolymphatic hydrops**: Distension of membranous labyrinth by excess endolymph
+- Affects: Cochlear duct (hearing), saccule, utricle, semicircular canals (balance)
+
+> **Clinical Pearl**: In India, many patients presenting with vertigo to ENT OPD have BPPV which can be effectively treated with the Epley maneuver in a single sitting without any medication. Awareness of this simple, cost-effective treatment is important for resource-limited settings.`,
+        mnemonics: [
+          { text: "Meniere's FEHT", explanation: "Fullness (aural), Episodic vertigo, Hearing loss (fluctuating, low freq SNHL), Tinnitus - the 4 cardinal features of Meniere disease." },
+          { text: "BPPV = Brief Paroxysmal Positional Vertigo", explanation: "Brief episodes (<1 min), triggered by Position changes, diagnosed with Dix-Hallpike, treated with Epley maneuver." },
+          { text: "DH test for BPPV, Epley for treatment", explanation: "Dix-Hallpike test diagnoses BPPV. Epley maneuver treats it by repositioning otoconia from posterior SCC back to utricle." },
+        ],
+        keyPoints: [
+          "BPPV is the most common cause of vertigo; treated with Epley maneuver",
+          "Meniere disease: episodic vertigo + fluctuating SNHL + tinnitus + aural fullness",
+          "Meniere pathology: endolymphatic hydrops (excess endolymph distending membranous labyrinth)",
+          "Peripheral vertigo: severe, sudden, with hearing loss/tinnitus; Central: mild, gradual, no deafness",
+          "Vertical nystagmus suggests central cause; horizontal/rotatory suggests peripheral",
+          "BPPV: otoconia displaced into posterior semicircular canal; Dix-Hallpike test diagnostic",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 13: Vertigo", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Meniere Disease and BPPV", edition: "7th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "vertigo-menieres-layer-2-mechanism",
+        title: "Vertigo & Meniere's Disease - Mechanism",
+        estimatedMinutes: 30,
+        summary: "BPPV is caused by canalithiasis (free-floating otoconia in SCC). Meniere disease results from endolymphatic hydrops with reduced endolymph absorption. Vestibular testing includes caloric, ENG, and VNG.",
+        contentMd: `# Mechanisms of Vertigo Disorders
+
+## BPPV Pathophysiology
+
+### Canalithiasis Theory (Most Accepted)
+- Otoconia (calcium carbonate crystals) from utricular macula dislodge
+- Free-floating in SCC (posterior canal MC - 85%)
+- Head position change -> gravity moves otoconia -> endolymph flow -> cupula deflection -> vertigo
+
+### Cupulolithiasis Theory
+- Otoconia attached to cupula (making it gravity-sensitive)
+- Less common form, may explain persistent positional nystagmus
+
+### Dix-Hallpike Test Mechanics
+1. Patient sits upright, head turned 45 degrees to tested side
+2. Rapidly laid supine with head hanging 30 degrees below table
+3. Positive: Upbeating torsional nystagmus with latency (2-5 sec), duration <60 sec, fatiguable
+4. Tests posterior and anterior SCC
+
+## Meniere Disease Pathophysiology
+
+### Endolymphatic Hydrops
+- **Primary defect**: Impaired endolymph absorption by endolymphatic sac
+- Causes distension of entire membranous labyrinth
+- Proposed mechanisms:
+  1. Reduced endolymph absorption (endolymphatic sac dysfunction)
+  2. Increased endolymph production
+  3. Altered ion transport (aquaporin channel dysfunction)
+  4. Autoimmune damage to endolymphatic sac
+
+### Mechanism of Attacks
+\`\`\`
+Endolymph accumulates -> Membranous labyrinth distends
+  -> Reissner membrane ruptures -> Endolymph mixes with perilymph
+  -> K+ intoxication of hair cells and CN VIII
+  -> Vertigo + hearing loss + tinnitus
+  -> Membrane heals -> Attack resolves
+  -> Repeated cycles -> Permanent damage
+\`\`\`
+
+### Hearing Loss Pattern
+- Early: Low frequency SNHL (fluctuating, reversible)
+- Late: All frequencies affected (permanent, irreversible)
+
+## Vestibular Function Tests
+
+### Caloric Test (Gold Standard for Unilateral Vestibular Function)
+- Irrigation with warm (44 C) and cold (30 C) water
+- **COWS**: Cold Opposite, Warm Same (direction of fast nystagmus)
+- **Canal paresis**: Reduced response on one side (vestibular hypofunction)
+
+### Electronystagmography (ENG) / Videonystagmography (VNG)
+- Records nystagmus electrically (ENG) or with infrared cameras (VNG)
+- Identifies peripheral vs central vestibular dysfunction
+
+### Vestibular Evoked Myogenic Potential (VEMP)
+- Tests otolith organ function
+- Cervical VEMP (cVEMP): Saccular function
+- Ocular VEMP (oVEMP): Utricular function
+
+> **Clinical Pearl**: In Meniere disease, the glycerol dehydration test can support diagnosis. Oral glycerol reduces endolymphatic pressure, causing temporary hearing improvement (>10 dB at 2 frequencies).`,
+        mnemonics: [
+          { text: "POST for BPPV canal", explanation: "Posterior canal is the Most Common canal involved in BPPV (85%). Diagnosed by Dix-Hallpike, Treated by Epley." },
+          { text: "Meniere membrane rupture cycle", explanation: "Hydrops -> Distension -> Rupture of Reissner membrane -> K+ poisoning of hair cells -> Attack -> Healing -> Repeat." },
+        ],
+        keyPoints: [
+          "BPPV: canalithiasis (free otoconia in posterior SCC) is the most accepted theory",
+          "Dix-Hallpike positive: upbeating torsional nystagmus with latency, fatigable, <60 sec",
+          "Meniere pathology: endolymphatic hydrops -> Reissner membrane rupture -> K+ intoxication",
+          "Early Meniere: low frequency fluctuating SNHL; Late: all frequencies, permanent",
+          "Caloric test: gold standard for unilateral vestibular function assessment",
+          "Glycerol dehydration test: temporary hearing improvement supports Meniere diagnosis",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 13: Vestibular Function Tests", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Vertigo and Its Investigation", edition: "7th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "vertigo-menieres-layer-3-clinical",
+        title: "Vertigo & Meniere's Disease - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Clinical management of vertigo involves accurate diagnosis, medical therapy with vestibular sedatives, and specific treatments like Epley maneuver for BPPV and salt restriction for Meniere disease.",
+        contentMd: `# Clinical Application - Vertigo & Meniere's
+
+## Case 1: BPPV
+- 55-year-old woman with brief spinning episodes when turning in bed
+- Each episode lasts 30-40 seconds, specific head positions trigger it
+- No hearing loss, no tinnitus
+- **Dix-Hallpike test**: Positive
+- **Treatment**: Epley maneuver (80-90% success rate in single sitting)
+
+## Case 2: Meniere Disease
+- 40-year-old man with recurrent severe vertigo (2-4 hours) with left ear fullness, roaring tinnitus, hearing loss
+- Audiogram: Left ear low-frequency SNHL
+- **Management**:
+  - **Acute attack**: Bed rest, vestibular sedatives (prochlorperazine, betahistine)
+  - **Prophylaxis**: Salt restriction (<2g/day), diuretics, betahistine (16 mg TDS)
+  - **Refractory**: Intratympanic gentamicin (chemical labyrinthectomy) or steroids
+  - **Surgical**: Endolymphatic sac decompression, labyrinthectomy (last resort)
+
+## Case 3: Vestibular Neuronitis
+- 30-year-old with sudden severe vertigo, nausea, vomiting for 3 days
+- No hearing loss (differentiates from labyrinthitis)
+- **Cause**: Viral infection of vestibular nerve
+- **Treatment**: Vestibular sedatives (short-term), then vestibular rehabilitation exercises
+
+## Medical Therapy for Vertigo
+| Drug | Class | Use |
+|------|-------|-----|
+| **Betahistine** | H1 agonist/H3 antagonist | Meniere disease (first-line prophylaxis) |
+| Prochlorperazine | Phenothiazine | Acute vertigo (antiemetic) |
+| Cinnarizine | Calcium channel blocker | Vestibular sedative |
+| Dimenhydrinate | Antihistamine | Motion sickness, acute vertigo |
+
+> **Clinical Pearl**: Betahistine is one of the most prescribed drugs in Indian ENT practice. It improves cochlear and vestibular blood flow and reduces endolymph production.`,
+        mnemonics: [
+          { text: "Epley for BPPV, Betahistine for Meniere", explanation: "Two key treatments: Epley maneuver for BPPV; Betahistine is first-line prophylaxis for Meniere disease." },
+          { text: "Salt restriction in Meniere", explanation: "Less than 2g/day salt reduces endolymph volume. Combined with diuretics and betahistine." },
+        ],
+        keyPoints: [
+          "BPPV: Epley maneuver is definitive treatment with 80-90% success rate",
+          "Meniere acute: vestibular sedatives; Prophylaxis: salt restriction + betahistine + diuretics",
+          "Vestibular neuronitis: sudden vertigo WITHOUT hearing loss; viral etiology",
+          "Intratympanic gentamicin: chemical labyrinthectomy for refractory Meniere disease",
+          "Vestibular rehabilitation exercises promote central compensation",
+          "Betahistine: H1 agonist and H3 antagonist; first-line prophylaxis for Meniere disease",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 13: Management of Vertigo", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Meniere Disease Treatment", edition: "7th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "vertigo-menieres-layer-4-exam",
+        title: "Vertigo & Meniere's Disease - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield exam points on vertigo classification, BPPV diagnosis and treatment, Meniere disease features, and differentiating peripheral from central vertigo.",
+        contentMd: `# Exam Preparation - Vertigo & Meniere's
+
+## One-Liners
+- MC cause of vertigo: **BPPV**
+- MC canal involved in BPPV: **Posterior semicircular canal**
+- Diagnostic test for BPPV: **Dix-Hallpike test**
+- Treatment for BPPV: **Epley maneuver**
+- Meniere disease pathology: **Endolymphatic hydrops**
+- Meniere tetrad: **Vertigo + SNHL + Tinnitus + Aural fullness**
+- Early hearing loss in Meniere: **Low frequency SNHL**
+- Drug for Meniere prophylaxis: **Betahistine**
+- Vestibular neuronitis: **Vertigo WITHOUT hearing loss** (viral)
+- Labyrinthitis: **Vertigo WITH hearing loss**
+- Vertical nystagmus: **Central cause** (never peripheral)
+- Glycerol test positive: **Meniere disease**
+
+## Comparison: BPPV vs Meniere vs Vestibular Neuronitis
+| Feature | BPPV | Meniere | Vestibular Neuronitis |
+|---------|------|---------|----------------------|
+| Duration | Seconds (<1 min) | Hours (20 min-12 hr) | Days (24-72 hr) |
+| Trigger | Head position | Spontaneous | Spontaneous |
+| Hearing loss | No | Yes (low freq) | No |
+| Tinnitus | No | Yes | No |
+| Treatment | Epley | Betahistine | Vestibular rehab |
+
+## Peripheral vs Central Vertigo
+| Red Flags for Central | Suggests Peripheral |
+|----------------------|-------------------|
+| Vertical nystagmus | Horizontal/rotatory nystagmus |
+| Non-fatigable | Fatigable |
+| No latency | Latency present |
+| Focal neurological deficits | Hearing loss/tinnitus |
+
+## Pattern Recognition
+- Brief positional vertigo + Dix-Hallpike positive -> **BPPV**
+- Episodic vertigo + low-freq SNHL + tinnitus -> **Meniere**
+- Sudden vertigo + no hearing loss + viral prodrome -> **Vestibular neuronitis**
+- Vertigo + vertical nystagmus + neurological signs -> **Central cause**`,
+        mnemonics: [
+          { text: "Seconds=BPPV, Hours=Meniere, Days=Neuronitis", explanation: "Duration of vertigo helps differentiate the three common causes." },
+          { text: "Central: Vertical, No fatigue, No latency", explanation: "Three key features differentiating central from peripheral vertigo." },
+        ],
+        keyPoints: [
+          "BPPV: seconds duration, positional trigger, Dix-Hallpike, Epley treatment",
+          "Meniere: hours duration, low-frequency SNHL, endolymphatic hydrops, betahistine",
+          "Vestibular neuronitis: days duration, NO hearing loss, viral etiology",
+          "Vertical nystagmus = central cause; never seen in peripheral vertigo",
+          "Caloric test: COWS; absent response = vestibular hypofunction",
+          "Duration is key: Seconds (BPPV), Hours (Meniere), Days (Neuronitis)",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 13", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Differential Diagnosis of Vertigo", edition: "7th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "vertigo-menieres-layer-5-active-recall",
+        title: "Vertigo & Meniere's Disease - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for rapid revision of vertigo disorders, their diagnosis, and management.",
+        contentMd: `# Active Recall - Vertigo & Meniere's Disease
+
+## Flashcard Q&A
+
+**Q1**: What is the most common cause of vertigo?
+**A1**: Benign Paroxysmal Positional Vertigo (BPPV).
+
+**Q2**: Which semicircular canal is most commonly involved in BPPV?
+**A2**: Posterior semicircular canal (85% of cases).
+
+**Q3**: Describe the Dix-Hallpike test.
+**A3**: Patient sits upright, head turned 45 degrees. Rapidly laid supine with head hanging. Positive if upbeating torsional nystagmus with latency, fatigable, <60 seconds.
+
+**Q4**: What is the Epley maneuver?
+**A4**: Canalith repositioning procedure that moves otoconia from posterior SCC back to utricle. Success rate 80-90%.
+
+**Q5**: What is the pathological basis of Meniere disease?
+**A5**: Endolymphatic hydrops - distension of membranous labyrinth due to excess endolymph.
+
+**Q6**: What are the 4 features of Meniere disease?
+**A6**: Episodic vertigo (hours), fluctuating low-frequency SNHL, tinnitus, aural fullness.
+
+**Q7**: How does vestibular neuronitis differ from labyrinthitis?
+**A7**: Neuronitis: vertigo WITHOUT hearing loss. Labyrinthitis: vertigo WITH hearing loss.
+
+**Q8**: What type of nystagmus suggests central cause?
+**A8**: Vertical nystagmus, direction-changing, non-fatigable, without latency.
+
+**Q9**: What is the first-line prophylactic drug for Meniere?
+**A9**: Betahistine (H1 agonist / H3 antagonist, 16 mg TDS).
+
+**Q10**: What is intratympanic gentamicin used for?
+**A10**: Chemical labyrinthectomy in refractory Meniere disease. Selectively vestibulotoxic.
+
+**Q11**: What is the duration of vertigo in BPPV, Meniere, and vestibular neuronitis?
+**A11**: BPPV: seconds; Meniere: hours; Neuronitis: days.
+
+**Q12**: What is the glycerol dehydration test?
+**A12**: Oral glycerol improves hearing by >10 dB at 2 frequencies, supporting Meniere diagnosis.
+
+## Quick Revision Bullets
+- BPPV: MC vertigo, posterior SCC, Dix-Hallpike, Epley, seconds
+- Meniere: endolymphatic hydrops, low-freq SNHL, hours, betahistine
+- Neuronitis: viral, no hearing loss, days, vestibular rehab
+- Peripheral: horizontal nystagmus, fatigable, latency
+- Central: vertical nystagmus, non-fatigable, no latency`,
+        mnemonics: [
+          { text: "FEHT for Meniere tetrad", explanation: "Fullness, Episodic vertigo, Hearing loss, Tinnitus." },
+          { text: "SHD for duration", explanation: "Seconds = BPPV, Hours = Meniere, Days = Neuronitis." },
+        ],
+        keyPoints: [
+          "BPPV: most common vertigo, posterior SCC, Epley maneuver curative",
+          "Meniere: endolymphatic hydrops, tetrad, betahistine prophylaxis",
+          "Vestibular neuronitis: viral, no hearing loss, self-limiting",
+          "Vertical nystagmus always indicates central pathology",
+          "Duration is the key differentiator: seconds/hours/days",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 13", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Vertigo", edition: "7th" },
+        ],
+      },
+    ],
+  },
+
+  // ─── Topic 5: Otosclerosis & Ear Tumors ───────────────────────
+  {
+    topicCode: "EN-MOD-01-TOP-05",
+    layers: [
+      {
+        layer: 1,
+        slug: "otosclerosis-ear-tumors-layer-1-foundation",
+        title: "Otosclerosis & Ear Tumors - Foundation",
+        estimatedMinutes: 20,
+        summary: "Otosclerosis is a localized bone disease of the otic capsule causing stapes fixation and conductive hearing loss. Ear tumors include acoustic neuroma, glomus tumors, and squamous cell carcinoma.",
+        contentMd: `# Otosclerosis & Ear Tumors
+
+## Otosclerosis
+
+### Definition
+- Primary disease of the **otic capsule** (bony labyrinth)
+- Normal enchondral bone replaced by spongy vascular bone (otospongiosis) which matures to dense sclerotic bone
+
+### Epidemiology
+- Most common cause of CHL in young adults (20-40 years)
+- Females > Males (2:1), bilateral in 70-80%
+- Autosomal dominant with incomplete penetrance
+- Aggravated by pregnancy (estrogen effect)
+
+### Sites of Involvement
+- **Fenestral (stapedial)**: Most common (80%). Involves fissula ante fenestram -> stapes fixation -> CHL
+- **Cochlear (retrofenestral)**: Involves cochlear capsule -> SNHL component
+- **Combined**: Mixed hearing loss
+
+### Clinical Features
+- Progressive hearing loss (bilateral)
+- **Paracusis of Willis**: Hears better in noisy surroundings
+- Tinnitus (low-pitched)
+- **Schwartze sign**: Flamingo-pink promontory (active otospongiosis)
+
+### Investigations
+- Otoscopy: Normal TM (may show Schwartze sign)
+- PTA: CHL with **Carhart notch at 2 kHz**
+- Tympanometry: **Type As**
+- Stapedial reflex: Absent
+
+## Ear Tumors
+
+### Acoustic Neuroma (Vestibular Schwannoma)
+- Benign tumor of **Schwann cells of vestibular nerve (CN VIII)**
+- MC tumor of **cerebellopontine angle** (80-90%)
+- Unilateral; bilateral = **NF2 (chromosome 22)**
+
+### Glomus Tumors (Paragangliomas)
+| Type | Site | Presentation |
+|------|------|-------------|
+| **Glomus tympanicum** | Promontory | Pulsatile tinnitus, CHL |
+| **Glomus jugulare** | Jugular bulb | CHL, cranial nerve palsies |
+
+- **Rising sun sign**: Red mass behind TM
+- **Brown sign**: Blanching on pneumatic otoscopy
+
+### SCC of External Auditory Canal
+- Rare; associated with chronic otitis externa
+- Blood-stained discharge, pain, facial nerve palsy
+
+> **Clinical Pearl**: In India, otosclerosis is common and often first noticed during pregnancy. Young women with progressive bilateral CHL and normal TM should be evaluated for otosclerosis.`,
+        mnemonics: [
+          { text: "Otosclerosis: Young Female + CHL + Normal TM", explanation: "Classic presentation: young woman (20-40) with progressive bilateral conductive hearing loss and normal tympanic membrane." },
+          { text: "CAN for CPA tumors", explanation: "C = CN VIII (acoustic neuroma MC), A = Angle (CPA), N = NF2 if bilateral." },
+          { text: "SCHWARTZE = pink promontory", explanation: "Schwartze sign: flamingo-pink promontory seen through TM in active otosclerosis." },
+        ],
+        keyPoints: [
+          "Otosclerosis: MC cause of CHL in young adults; autosomal dominant, worse in pregnancy",
+          "Fenestral type (80%): stapes fixation -> CHL; Cochlear type: SNHL component",
+          "Carhart notch: 2 kHz dip on BC in otosclerosis; Type As tympanogram",
+          "Schwartze sign: pink promontory in active otosclerosis",
+          "Acoustic neuroma: MC CPA tumor, from vestibular nerve; bilateral = NF2",
+          "Glomus tumors: pulsatile tinnitus, rising sun sign, Brown sign",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 12: Otosclerosis", edition: "7th" },
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 14: Tumors of Ear", edition: "7th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "otosclerosis-ear-tumors-layer-2-mechanism",
+        title: "Otosclerosis & Ear Tumors - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Otosclerosis involves abnormal bone remodeling at the otic capsule. Acoustic neuroma grows along CN VIII compressing adjacent structures. Glomus tumors arise from paraganglia.",
+        contentMd: `# Mechanisms - Otosclerosis & Ear Tumors
+
+## Otosclerosis Pathogenesis
+
+### Bone Remodeling Cycle
+\`\`\`
+Normal otic capsule (enchondral bone, usually does not remodel)
+  -> Abnormal osteoclastic resorption (otospongiosis phase)
+  -> Replaced by immature spongy vascular bone
+  -> Maturation to dense sclerotic bone
+  -> Stapes footplate fixation -> CHL
+\`\`\`
+
+### Proposed Etiologies
+| Theory | Evidence |
+|--------|---------|
+| **Genetic** | Autosomal dominant, multiple gene loci |
+| **Viral (Measles)** | Measles virus RNA found in otosclerotic bone |
+| **Autoimmune** | Antibodies against type II collagen |
+| **Hormonal** | Worsened by pregnancy (estrogen) |
+
+### Why Carhart Notch?
+- Stapes fixation alters inertial component of bone conduction
+- At 2 kHz, ossicular resonance contributes maximally to BC
+- Fixed stapes loses this resonance -> apparent BC drop at 2 kHz
+- **Artifact** -> disappears after successful stapedectomy
+
+### Cochlear Otosclerosis
+- Spongy bone invades cochlear endosteum
+- Releases toxic enzymes into perilymph
+- Damages hair cells -> SNHL component
+
+## Acoustic Neuroma Pathogenesis
+
+### Growth Pattern
+\`\`\`
+Arises from Schwann cells at Obersteiner-Redlich zone
+  -> Grows within IAC -> expands IAC
+  -> Extends into CPA cistern
+  -> Compresses CN V, VII, cerebellum, brainstem
+\`\`\`
+
+### Stages
+| Stage | Size | Features |
+|-------|------|----------|
+| I (Intracanalicular) | <1 cm | Unilateral SNHL, tinnitus |
+| II (Cisternal) | 1-2.5 cm | + facial numbness (CN V) |
+| III (Compressive) | 2.5-4 cm | Facial palsy, cerebellar signs |
+| IV (Large) | >4 cm | Hydrocephalus, brainstem compression |
+
+### NF2
+- Gene: **NF2 on chromosome 22** (Merlin protein)
+- Autosomal dominant, bilateral vestibular schwannomas
+
+## Glomus Tumor Pathogenesis
+- Arises from **paraganglia** (neural crest origin)
+- Glomus tympanicum: from Jacobson nerve (CN IX) on promontory
+- Glomus jugulare: from Arnold nerve (CN X) or jugular bulb
+- **Chromaffin-negative** paragangliomas
+- Locally destructive, rarely malignant (<5%)
+
+> **Clinical Pearl**: In India, acoustic neuroma often presents late (Stage III-IV) due to delayed referral. Long-standing unilateral hearing loss developing facial numbness warrants urgent MRI.`,
+        mnemonics: [
+          { text: "22 for NF2", explanation: "NF2 gene on chromosome 22. NF2 = bilateral acoustic neuromas. 22 = Two-Two = bilateral." },
+          { text: "Carhart = Artifact at 2 kHz", explanation: "Not true SNHL. Lost ossicular resonance at 2 kHz due to stapes fixation. Disappears after stapedectomy." },
+        ],
+        keyPoints: [
+          "Otosclerosis: abnormal bone remodeling at otic capsule (normally does not remodel)",
+          "Measles virus RNA found in otosclerotic bone; autosomal dominant",
+          "Carhart notch: artifact due to lost ossicular resonance at 2 kHz",
+          "Acoustic neuroma: arises at Obersteiner-Redlich zone, grows from IAC into CPA",
+          "NF2: chromosome 22, bilateral acoustic neuromas, merlin protein",
+          "Glomus tumors: paragangliomas from CN IX (Jacobson) or CN X (Arnold) nerves",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 12: Otosclerosis", edition: "7th" },
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 14: Ear Tumors", edition: "7th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "otosclerosis-ear-tumors-layer-3-clinical",
+        title: "Otosclerosis & Ear Tumors - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Management of otosclerosis includes sodium fluoride and stapedectomy. Acoustic neuroma requires MRI diagnosis and microsurgical excision or Gamma Knife radiosurgery.",
+        contentMd: `# Clinical Application - Otosclerosis & Ear Tumors
+
+## Case 1: Otosclerosis
+- 28-year-old woman with progressive bilateral hearing loss during pregnancy
+- Paracusis of Willis present, Schwartze sign on otoscopy
+- PTA: Bilateral CHL, Carhart notch at 2 kHz, Type As tympanometry
+
+### Management
+| Treatment | Indication |
+|-----------|-----------|
+| **Hearing aid** | Refuses surgery, mild loss |
+| **Sodium fluoride** | Active otospongiosis, cochlear otosclerosis |
+| **Stapedotomy** | Fenestral otosclerosis with cochlear reserve |
+
+### Stapedotomy/Stapedectomy
+- Stapes removed, prosthesis (Teflon piston) placed between incus and oval window
+- **Success rate**: >90% air-bone gap closure
+- **Risks**: SNHL (<1%), vertigo, perilymph fistula, facial nerve injury
+
+## Case 2: Acoustic Neuroma
+- 45-year-old with progressive unilateral SNHL, poor speech discrimination
+- BERA: Prolonged I-V interpeak latency
+- **MRI with gadolinium**: Enhancing CPA mass (gold standard)
+
+### Management
+| Approach | Indication |
+|----------|-----------|
+| Observation + serial MRI | Small (<1 cm), elderly |
+| Microsurgical excision | Growing, symptomatic |
+| Gamma Knife radiosurgery | <3 cm, elderly, residual |
+
+### Surgical Approaches
+- **Translabyrinthine**: Sacrifices hearing, best facial nerve exposure
+- **Retrosigmoid**: Hearing preservation possible
+- **Middle fossa**: Small intracanalicular, hearing preservation
+
+## Case 3: Glomus Tympanicum
+- 50-year-old with pulsatile tinnitus, mild CHL
+- Rising sun sign, Brown sign positive
+- **Management**: Surgical excision; angiography + embolization for large tumors
+
+> **Clinical Pearl**: Stapedectomy in India is commonly performed as a day-care procedure under local anesthesia. It is highly cost-effective with excellent outcomes.`,
+        mnemonics: [
+          { text: "Stapedotomy preferred over Stapedectomy", explanation: "Small fenestra technique (stapedotomy) carries less risk of perilymph leak and SNHL." },
+          { text: "MRI-GAD for acoustic neuroma", explanation: "MRI with Gadolinium is the gold standard for acoustic neuroma diagnosis." },
+        ],
+        keyPoints: [
+          "Otosclerosis: stapedotomy with >90% success for air-bone gap closure",
+          "Sodium fluoride for active otospongiosis and cochlear otosclerosis",
+          "Acoustic neuroma: MRI with gadolinium (gold standard); BERA for screening",
+          "Small acoustic neuroma: observe; Growing: surgery; Elderly: Gamma Knife",
+          "Glomus tympanicum: surgical excision; embolization for large tumors",
+          "Stapedectomy dead ear risk <1% but must be disclosed",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 12: Surgery for Otosclerosis", edition: "7th" },
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapter 14: Ear Tumor Management", edition: "7th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "otosclerosis-ear-tumors-layer-4-exam",
+        title: "Otosclerosis & Ear Tumors - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield facts on otosclerosis, acoustic neuroma, and glomus tumors for NEXT and NEET PG.",
+        contentMd: `# Exam Preparation - Otosclerosis & Ear Tumors
+
+## One-Liners
+- MC cause of CHL in young adults: **Otosclerosis**
+- Otosclerosis inheritance: **Autosomal dominant, incomplete penetrance**
+- Carhart notch: **2 kHz** (artifact, disappears post-stapedectomy)
+- Tympanometry in otosclerosis: **Type As**
+- Schwartze sign: **Pink promontory** (active otospongiosis)
+- Paracusis of Willis: **Hears better in noise**
+- MC CPA tumor: **Acoustic neuroma**
+- Bilateral acoustic neuroma = **NF2 (chromosome 22)**
+- Gold standard for acoustic neuroma: **MRI with gadolinium**
+- MC feature of acoustic neuroma: **Unilateral progressive SNHL**
+- BERA in acoustic neuroma: **Prolonged I-V interpeak latency**
+- Hitselberger sign: **Loss of concha sensation** (CPA tumors)
+- Rising sun sign: **Glomus tympanicum**
+- Brown sign: **Glomus blanching on pneumatic otoscopy**
+
+## Comparison: Otosclerosis vs CSOM
+| Feature | Otosclerosis | CSOM |
+|---------|-------------|------|
+| TM | Normal (intact) | Perforated |
+| Discharge | None | Present |
+| Tympanometry | Type As | Type B |
+| Age | 20-40 years | Any age |
+| Surgery | Stapedectomy | Tympanoplasty |
+
+## Comparison: CPA Tumors
+| Feature | Acoustic Neuroma | Meningioma | Epidermoid |
+|---------|-----------------|-----------|-----------|
+| Origin | CN VIII Schwann cells | Arachnoid | Epithelial rest |
+| Frequency | 80-90% | 5-10% | 5% |
+| IAC widening | Yes | No | No |
+| MRI | Intense enhancement | Dural tail | No enhancement |
+
+## Pattern Recognition
+- Young woman + CHL + normal TM + pregnancy -> **Otosclerosis**
+- Unilateral SNHL + poor SDS + prolonged BERA I-V -> **Acoustic neuroma**
+- Pulsatile tinnitus + red mass behind TM -> **Glomus tympanicum**
+- Bilateral CPA masses -> **NF2**`,
+        mnemonics: [
+          { text: "NF1=17, NF2=22", explanation: "NF1 on chromosome 17 (neurofibromas), NF2 on chromosome 22 (bilateral acoustic neuromas)." },
+          { text: "As = stiff = otosclerosis", explanation: "Type As tympanogram = reduced compliance = stiff = stapes fixation." },
+        ],
+        keyPoints: [
+          "Otosclerosis: MC CHL in young adults, Type As, Carhart notch, stapedectomy",
+          "Acoustic neuroma: MC CPA tumor, MRI-Gad, prolonged BERA I-V",
+          "NF2: bilateral acoustic neuromas, chromosome 22",
+          "Glomus tumors: paragangliomas, rising sun sign, Brown sign",
+          "Carhart notch at 2 kHz is artifact; disappears post-stapedectomy",
+          "Schwartze sign: active otospongiosis with increased vascularity",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapters 12, 14", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Otosclerosis and Ear Tumors", edition: "7th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "otosclerosis-ear-tumors-layer-5-active-recall",
+        title: "Otosclerosis & Ear Tumors - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard-style Q&A for rapid revision of otosclerosis and ear tumors.",
+        contentMd: `# Active Recall - Otosclerosis & Ear Tumors
+
+## Flashcard Q&A
+
+**Q1**: What is otosclerosis?
+**A1**: Primary disease of otic capsule where enchondral bone is replaced by spongy then sclerotic bone, causing stapes fixation and CHL.
+
+**Q2**: What is the Carhart notch?
+**A2**: Dip at 2 kHz on BC audiogram in otosclerosis. Artifact of lost ossicular resonance, not true SNHL. Disappears after stapedectomy.
+
+**Q3**: What is paracusis of Willis?
+**A3**: Patient hears better in noisy environments because others raise their voices above the conductive loss threshold.
+
+**Q4**: What is the Schwartze sign?
+**A4**: Flamingo-pink promontory seen through intact TM, indicating active otospongiosis.
+
+**Q5**: What surgery treats fenestral otosclerosis?
+**A5**: Stapedotomy (preferred) or stapedectomy. Prosthesis placed between incus and oval window. >90% success.
+
+**Q6**: What is the most common CPA tumor?
+**A6**: Acoustic neuroma (vestibular schwannoma), 80-90% of CPA tumors.
+
+**Q7**: When are bilateral acoustic neuromas seen?
+**A7**: NF2 (chromosome 22, merlin protein). Autosomal dominant.
+
+**Q8**: Gold standard investigation for acoustic neuroma?
+**A8**: MRI with gadolinium enhancement.
+
+**Q9**: What is the rising sun sign?
+**A9**: Red vascular mass behind inferior part of intact TM - glomus tympanicum.
+
+**Q10**: What is Brown sign?
+**A10**: Blanching of glomus tumor on pneumatic otoscopy.
+
+**Q11**: What tympanometry is seen in otosclerosis?
+**A11**: Type As (reduced compliance from stapes fixation).
+
+**Q12**: Name surgical approaches for acoustic neuroma.
+**A12**: Translabyrinthine (sacrifices hearing), Retrosigmoid (hearing preservation), Middle fossa (small intracanalicular).
+
+## Quick Revision Bullets
+- Otosclerosis: AD, young female, CHL, normal TM, Carhart 2 kHz, Type As
+- Schwartze sign: pink promontory = active otospongiosis
+- Stapedotomy: >90% success, <1% dead ear risk
+- Acoustic neuroma: MC CPA tumor, MRI-Gad, BERA I-V prolonged
+- NF2: bilateral, chromosome 22; NF1: chromosome 17
+- Glomus: pulsatile tinnitus, rising sun, Brown sign`,
+        mnemonics: [
+          { text: "Young Female + Normal TM + CHL = Otosclerosis", explanation: "Classic clinical identification triad." },
+          { text: "MIS: Most common Is Schwannoma (CPA)", explanation: "Acoustic neuroma is MC CPA tumor (80-90%)." },
+        ],
+        keyPoints: [
+          "Otosclerosis: stapes fixation, Carhart notch artifact, Type As, stapedotomy",
+          "Acoustic neuroma: MC CPA tumor, MRI gold standard, bilateral = NF2",
+          "Glomus tumors: paragangliomas, pulsatile tinnitus, rising sun + Brown signs",
+          "Stapedectomy: >90% success, <1% dead ear risk",
+          "NF2: chromosome 22; NF1: chromosome 17",
+        ],
+        textbookRefs: [
+          { book: "Dhingra Diseases of Ear, Nose and Throat", chapter: "Chapters 12, 14", edition: "7th" },
+          { book: "PL Dhingra", chapter: "Otosclerosis and Ear Tumors", edition: "7th" },
+        ],
+      },
+    ],
+  },
 ];
