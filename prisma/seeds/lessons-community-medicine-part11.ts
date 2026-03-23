@@ -1,21 +1,264 @@
-export const communityMedicineLessonsPartXI = [
+import type { TopicLessons } from "./content-loader";
+
+export const communityMedicineLessonsPartXI: TopicLessons[] = [
   {
     topicCode: "CM-MOD-04-TOP-02",
     layers: [
       {
         layer: 1,
-        slug: "child-health-imr-foundation",
-        title: "Child Health & IMR (IMNCI, under-5 mortality) - Foundation",
+        slug: "child-health-imr-layer-1-foundation",
+        title: "Child Health & IMR - Foundation",
         estimatedMinutes: 20,
-        summary: "Overview of Indian child health programs, Infant Mortality Rate (IMR) definition, national statistics, IMNCI strategy, and major causes of child and under-5 mortality in India.",
-        contentMd: "# Child Health & IMR - Foundation\n\n## IMR Definition & National Statistics\n\n**Infant Mortality Rate (IMR):**\n- Deaths of infants <1 year per 1000 live births\n- India's IMR (2023): ~28 per 1000 live births (target 2030: <20)\n- Rural-urban divide: Rural ~35, Urban ~20\n\n**Under-5 Mortality Rate (U5MR):**\n- Deaths <5 years per 1000 live births\n- India's U5MR (2023): ~34 per 1000 live births\n- Accounts for ~0.7 million deaths annually\n\n**Neonatal Mortality Rate (NMR):**\n- Deaths first 28 days of life per 1000 live births\n- India's NMR: ~18 per 1000 live births\n- Accounts for ~50% of infant mortality\n\n## Major Causes of Child Mortality\n\n**Neonatal Causes (0-28 days): 50% of under-5 deaths**\n- Preterm birth complications (~35%)\n- Birth asphyxia (~24%)\n- Infections (sepsis, pneumonia, tetanus) (~15%)\n- Congenital anomalies (~8%)\n- Other (~18%)\n\n**Post-neonatal (1-12 months): 20%**\n- Pneumonia (~20%)\n- Diarrhea (~20%)\n- Malaria (~10%)\n- Accidents/injuries\n\n**1-5 Years: 30%**\n- Pneumonia (~25%)\n- Diarrhea (~20%)\n- Malaria (~10%)\n- Accidents (~15%)\n- Measles (~5%)\n\n## IMNCI (Integrated Management of Neonatal & Childhood Illness)\n\n**Launched:** 2005 by Ministry of Health\n\n**Components:**\n- **IMCI Plus:** Facility-based management of severe illness\n- **IMNCI:** Community-based assessment and care of sick children\n- **A-IMNCI:** Adaptation for adolescents\n\n**IMNCI Strategy:**\n- Community health worker identification of danger signs\n- Simple classification and first-line treatment\n- Referral for severe illness\n- Supportive care and follow-up\n\n## Major Risk Factors for Child Mortality\n\n**Maternal Factors:**\n- Adolescent pregnancy (<19 years)\n- Maternal malnutrition\n- Maternal infections (anemia, syphilis)\n- Lack of antenatal care\n\n**Birth-Related:**\n- Low birth weight (<2500g)\n- Prematurity (<37 weeks)\n- Birth asphyxia\n- Birth defects\n\n**Infant/Child Factors:**\n- Malnutrition (stunting, wasting)\n- Vitamin A deficiency\n- Lack of breastfeeding\n- No immunization\n\n**Environmental:**\n- Poor sanitation\n- Contaminated water\n- Overcrowding\n- Air pollution\n\n## National Child Health Programs\n\n- **RMNCH+A:** Reproductive, Maternal, Neonatal, Child Health + Adolescent\n- **IMNCI:** Community-based childhood illness management\n- **National Health Mission (NHM):** Strengthening delivery systems\n- **Janani Suraksha Yojana (JSY):** Free institutional delivery\n- **MDDS:** Maternal Death Surveillance & Response\n,\n        mnemonics: [\n          {\n            text: \"CHILD MORTALITY SPLIT\",\n            explanation: \"Neonatal 50%, Post-neonatal 20%, 1-5 years 30%\",\n          },\n          {\n            text: \"MAJOR CAUSES\",\n            explanation: \"Preterm, Birth asphyxia, Infections, Pneumonia, Diarrhea, Malaria\",\n          },\n        ],\n        keyPoints: [\n          \"IMR 28 per 1000 LB; NMR ~18 (50% of IMR); U5MR ~34 per 1000 LB\",\n          \"Neonatal causes (preterm, asphyxia, infections) account for 50% of under-5 deaths\",\n          \"IMNCI launched 2005 emphasizes community health worker role in sick child assessment\",\n          \"Pneumonia and diarrhea leading causes in post-neonatal and 1-5 age groups\",\n          \"Major risk factors: malnutrition, lack of breastfeeding, inadequate immunization\",\n        ],\n        textbookRefs: [\n          { book: \"Park's Textbook of Preventive & Social Medicine\", chapter: \"Ch 6\", edition: \"26th\" },\n          { book: \"IMNCI Guidelines\", chapter: \"Community management\", edition: \"2022\" },\n        ],\n      },\n      {\n        layer: 2,\n        slug: \"child-health-imr-mechanism\",\n        title: \"Child Health & IMR (IMNCI, under-5 mortality) - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiology of major causes of neonatal and child mortality (preterm birth, birth asphyxia, infections, malnutrition), mechanisms of organ dysfunction, and vulnerability factors.\",\n        contentMd: "# Child Health & IMR - Mechanism\\n\\n## Preterm Birth Complications\\n\\n**Definition:** Birth before 37 weeks gestation\\n\\n**Pathophysiology:**\\n- Immature organ systems unable to function independently\\n- Respiratory distress syndrome (RDS): Surfactant deficiency\\n- Intraventricular hemorrhage (IVH): Fragile germinal matrix vessels\\n- Necrotizing enterocolitis (NEC): Immature gut barrier\\n- Patent ductus arteriosus (PDA): Fetal circulation persistence\\n- Sepsis: Immature immune system\\n\\n**Complications by System:**\\n- **Respiratory:** RDS, bronchopulmonary dysplasia, apnea\\n- **Neurological:** IVH, periventricular leukomalacia, seizures\\n- **Gastrointestinal:** NEC, feeding intolerance\\n- **Metabolic:** Hypoglycemia, hypocalcemia, temperature instability\\n- **Infectious:** Sepsis (gram-negative), meningitis\\n\\n**Risk Factors:**\\n- Intrauterine infection\\n- Placental insufficiency\\n- Preeclampsia/hypertension\\n- Antepartum hemorrhage\\n- Multiple gestation\\n\\n## Birth Asphyxia Mechanism\\n\\n**Definition:** Inadequate oxygenation/perfusion at birth\\n\\n**Causes:**\\n1. **Antenatal:** Placental insufficiency, maternal hypoxia\\n2. **Intrapartum:** Cord prolapse, abruption, obstructed labor\\n3. **Postnatal:** Failure to initiate breathing, airway obstruction\\n\\n**Pathophysiology - Fetal Hypoxia Cascade:**\\n1. **Initial phase:** Hypoxia triggers gasping, bradycardia, BP ↑\\n2. **Hypoxic-ischemic injury:**\\n   - Energy depletion: ATP ↓ → Na/K-ATPase failure\\n   - Lactic acidosis: Anaerobic metabolism\\n   - Cellular edema: Water accumulation\\n   - Free radical production: Oxidative stress\\n   - Calcium influx: Excitotoxicity\\n3. **Reperfusion injury (if resuscitated):**\\n   - Reactive oxygen species (ROS) formation\\n   - Mitochondrial dysfunction\\n   - Delayed neuronal death (apoptosis)\\n\\n**Organ-Specific Effects:**\\n- **Brain:** Seizures, encephalopathy, cerebral palsy\\n- **Heart:** Myocardial dysfunction, arrhythmias\\n- **Kidneys:** Acute tubular necrosis, renal failure\\n- **Liver:** Transaminase elevation, synthesis failure\\n- **GI:** Bowel perforation, NEC\\n\\n## Infections in Neonates/Infants\\n\\n**Neonatal Sepsis Pathophysiology:**\\n- Early-onset (<72 hours): Maternal organisms (GBS, E. coli)\\n- Late-onset (>72 hours): Nosocomial/environmental organisms\\n- Immature immune system: ↓ Complement, ↓ Opsonins, ↓ Phagocytes\\n\\n**Cascade:**\\n- Infection → Lipopolysaccharide (LPS) release\\n- TLR4 activation → Inflammatory cytokines (TNF, IL-1, IL-6)\\n- Systemic inflammatory response: Fever, tachycardia, poor perfusion\\n- Shock, DIC, multi-organ failure\\n\\n**Common Organisms:**\\n- GBS (Group B Streptococcus): Meningitis risk\\n- E. coli K1: Gram-negative sepsis, meningitis\\n- Listeria: Vertical transmission, meningitis\\n- Candida: Preterm, indwelling catheters\\n\\n**Pneumonia Mechanism:**\\n- Aspiration, inhalation, hematogenous spread\\n- Inflammation → consolidation → V/Q mismatch\\n- Hypoxemia, respiratory failure\\n\\n## Malnutrition in Children\\n\\n**Protein-Energy Malnutrition (PEM):**\\n- Inadequate caloric/protein intake\\n- Malabsorption, infections, diarrhea\\n- Stunting: Chronic malnutrition (height deficit)\\n- Wasting: Acute malnutrition (weight deficit)\\n- Underweight: Both chronic and acute\\n\\n**Pathophysiology:**\\n- Reduced protein synthesis → muscle wasting\\n- Decreased antibody production → ↑ Infections\\n- Impaired neutrophil function → ↑ Infection risk\\n- Reduced complement components\\n- Intestinal mucosal atrophy → ↓ Absorption\\n\\n**Micronutrient Deficiencies:**\\n- **Vitamin A:** Night blindness, corneal ulceration, infections\\n- **Iron:** Anemia, reduced oxygen transport\\n- **Iodine:** Cretinism, intellectual disability\\n- **Zinc:** Poor wound healing, ↑ Diarrheal disease\\n\\n**Consequences:**\\n- Growth retardation\\n- ↑ Infection susceptibility\\n- ↓ Cognitive development\\n- ↑ Mortality and morbidity\\n\\n## Diarrheal Disease Mechanism\\n\\n**Infectious Agents:**\\n- Bacterial: Vibrio cholerae, ETEC, Salmonella\\n- Viral: Rotavirus, Norovirus, Adenovirus\\n- Parasitic: Giardia, Entamoeba\\n\\n**Pathophysiology:**\\n1. **Bacterial toxins:** Stimulate adenylyl cyclase → ↑ cAMP → secretory diarrhea\\n2. **Viral invasion:** Villous atrophy → malabsorption, osmotic diarrhea\\n3. **Inflammatory response:** IL-1, TNF activation → mucosal damage\\n4. **Fluid loss:** Isotonic dehydration (most common)\\n\\n**Complications:**\\n- Dehydration: Hypovolemic shock\\n- Electrolyte losses: Hyponatremia, hypokalemia\\n- Metabolic acidosis: From bicarbonate loss\\n- Secondary malnutrition\\n- Death if untreated\\n\\n## Pneumonia in Children\\n\\n**Pathophysiology:**\\n- Viral bronchiolitis → small airway inflammation/edema\\n- Bacterial pneumonia → lobar consolidation, pleural effusion\\n- Hypoxemia from V/Q mismatch and diffusion impairment\\n- Systemic inflammation → fever, tachypnea, tachycardia\\n- Respiratory failure if severe,\\n        mnemonics: [\\n          {\\n            text: \\\"PRETERM COMPLICATIONS\\\",\\n            explanation: \\\"RDS, IVH, NEC, PDA, Sepsis (RINS)\\\",\\n          },\\n          {\\n            text: \\\"ASPHYXIA HYPOXIC CASCADE\\\",\\n            explanation: \\\"Gasping → bradycardia → acidosis → cellular edema → free radicals → apoptosis\\\",\\n          },\\n          {\\n            text: \\\"NEONATAL SEPSIS ORGANISMS\\\",\\n            explanation: \\\"GBS (meningitis risk), E. coli K1 (gram-neg), Listeria (vertical), Candida (preterm)\\\",\\n          },\\n        ],\\n        keyPoints: [\\n          \\\"Preterm birth: immature organs (RDS, IVH, NEC, sepsis) with ~50% of neonatal deaths\\\",\\n          \\\"Birth asphyxia: hypoxia-ischemia cascade causes ATP depletion, acidosis, cellular edema, oxidative stress\\\",\\n          \\\"Neonatal sepsis: immature immunity + GBS/E. coli organisms lead to shock and multi-organ failure\\\",\\n          \\\"Malnutrition: reduced protein synthesis, ↓ antibody production, ↑ infection susceptibility\\\",\\n          \\\"Diarrhea: bacterial toxins/viral invasion cause secretory/osmotic losses leading to dehydration and shock\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Park's Textbook of Preventive & Social Medicine\\\", chapter: \\\"Ch 6\\\", edition: \\\"26th\\\" },\\n          { book: \\\"Neonatology: Pathophysiology & Management\\\", chapter: \\\"Common neonatal disorders\\\", edition: \\\"8th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"child-health-imr-clinical\\\",\\n        title: \\\"Child Health & IMR (IMNCI, under-5 mortality) - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical presentation of major causes of child mortality, IMNCI danger signs and classification, management at community and facility level, and prevention strategies.\\\",\\n        contentMd: "# Child Health & IMR - Clinical\\\\n\\\\n## IMNCI Danger Signs & Classification\\\\n\\\\n**General Danger Signs (Refer immediately):**\\\\n- Lethargy/unconsciousness\\\\n- Severe dehydration\\\\n- Severe malnutrition\\\\n- Convulsions\\\\n- Stridor in calm child\\\\n- Inability to drink/breastfeed\\\\n- Persistent vomiting\\\\n- Cyanosis\\\\n- Severe jaundice\\\\n- Abdominal distension/tenderness\\\\n\\\\n**Fast Breathing (Pneumonia Classification):**\\\\n- <2 months: ≥50 breaths/min\\\\n- 2-12 months: ≥40 breaths/min\\\\n- 1-5 years: ≥40 breaths/min\\\\n\\\\n**Dehydration Assessment:**\\\\n- **Some dehydration:** Two or more signs\\\\n  - Sunken eyes\\\\n  - Skin turgor slow to go back\\\\n  - Drinks eagerly/normal\\\\n- **Severe dehydration:** Two or more signs\\\\n  - Lethargy/unconsciousness\\\\n  - Sunken eyes (very deep)\\\\n  - Unable to drink/drinks poorly\\\\n  - Skin turgor goes back very slowly (>2 sec)\\\\n\\\\n## Clinical Management by Condition\\\\n\\\\n### Preterm Neonate\\\\n**Clinical Signs:**\\\\n- Low birth weight, small size\\\\n- Weak cry, poor suck\\\\n- Temperature instability\\\\n- Respiratory distress (tachypnea, grunting, retractions)\\\\n- Apnea episodes\\\\n\\\\n**Management:**\\\\n- Thermoregulation: Kangaroo mother care, warm environment\\\\n- Feeding: Breast milk (if available), expressed breastmilk, formula\\\\n- Infection prevention: Hand hygiene, avoid unnecessary antibiotics\\\\n- Monitoring: Vital signs, feeding tolerance, jaundice\\\\n- Referral for complications (RDS, sepsis, NEC)\\\\n\\\\n### Birth Asphyxia\\\\n**Clinical Features:**\\\\n- Low Apgar score (<7 at 5 min)\\\\n- Limpness, poor respiratory effort\\\\n- Seizures, encephalopathy\\\\n- Multi-organ dysfunction\\\\n\\\\n**Immediate Management:**\\\\n- Airway clearance: Suction mouth/nose\\\\n- Stimulation: Gentle rubbing\\\\n- PPV with room air (if breathing <30/min): 21% O2 for term, supplemental if preterm\\\\n- Chest compressions: If HR <60 after 10 sec PPV\\\\n- Medications: Epinephrine, sodium bicarbonate if prolonged arrest\\\\n\\\\n**Post-resuscitation Care:**\\\\n- Monitoring for hypoxic-ischemic encephalopathy (HIE)\\\\n- Supportive care: Temperature, glucose, fluids\\\\n- Therapeutic hypothermia: Core temp 33.5°C for 72 hours (reduces death/disability)\\\\n\\\\n### Neonatal Sepsis\\\\n**Clinical Presentation:**\\\\n- **Early signs:** Lethargy, poor feeding, fever/hypothermia, irritability\\\\n- **Severe:** Shock, cyanosis, convulsions, DIC\\\\n\\\\n**Diagnosis:**\\\\n- Blood culture (gold standard)\\\\n- CBC: WBC abnormalities (↑ or ↓)\\\\n- CSF analysis if meningitis suspected\\\\n- CRP, procalcitonin\\\\n\\\\n**Management:**\\\\n- Empiric antibiotics: Ampicillin + gentamicin (or cephalosporin)\\\\n- Fluid resuscitation: 10-20 mL/kg bolus if shock\\\\n- Supportive care: Temperature control, glucose monitoring\\\\n- Source control: Remove umbilical catheter if infected\\\\n\\\\n### Pneumonia in Infants/Children\\\\n**Clinical Classification (IMNCI):**\\\\n- **No pneumonia:** Normal breathing, no chest indrawing\\\\n- **Pneumonia:** Fast breathing with/without chest indrawing\\\\n- **Severe pneumonia:** Stridor at rest, severe respiratory distress, cyanosis\\\\n\\\\n**Management:**\\\\n- **No pneumonia:** Supportive care, follow-up\\\\n- **Pneumonia:** Amoxicillin 45 mg/kg/day (or cephalexin), oxygen if SpO2 <90%\\\\n- **Severe pneumonia:** Referral for inpatient care, oxygen therapy, antibiotics, monitoring\\\\n\\\\n### Diarrheal Disease\\\\n**Dehydration Management:**\\\\n- **No/minimal:** Continue breastfeeding, ORS 50 mL/kg over 4 hours\\\\n- **Some:** ORS 75 mL/kg over 4 hours, reassess\\\\n- **Severe:** IV fluids (normal saline 30 mL/kg in first hour), then reassess\\\\n\\\\n**Nutritional Management:**\\\\n- Continue breastfeeding throughout\\\\n- Start feeding after hydration: Age-appropriate semi-solid foods\\\\n- Zinc supplementation: 10 mg/day (2-5 years), 20 mg/day (>5 years) for 10-14 days\\\\n\\\\n**Antimicrobials:**\\\\n- Usually viral, self-limited\\\\n- Antibiotics if: Bloody diarrhea, cholera-like, severe dehydration, sepsis signs\\\\n\\\\n### Severe Acute Malnutrition (SAM)\\\\n**Definition:** Weight-for-height <-3 SD (severe wasting)\\\\n\\\\n**Clinical Features:**\\\\n- Visible severe wasting\\\\n- Edematous SAM: Bilateral pitting edema (kwashiorkor features)\\\\n- Skin changes: Peeling, hyperpigmentation\\\\n- Hair changes: Hair loss, color change (red/yellow)\\\\n- Hepatomegaly\\\\n\\\\n**Management - Phases:**\\\\n1. **Stabilization (first 1-2 weeks):** Treat infections, electrolyte imbalances, hypoglycemia\\\\n   - Broad-spectrum antibiotics\\\\n   - Micronutrients: Vitamin A, folic acid, iron\\\\n   - Feeding: Small frequent feeds (100 kcal/kg initially)\\\\n   - Careful fluid management\\\\n2. **Rehabilitation:** Gradual caloric increase to 150-200 kcal/kg\\\\n3. **Follow-up:** Prevent relapse, monitor growth\\\\n\\\\n## Prevention Strategies\\\\n\\\\n**Antenatal:**\\\\n- ANC: Detect and manage complications\\\\n- Nutrition: Balanced diet, supplementation\\\\n- Infection prevention: Tetanus toxoid, syphilis screening\\\\n\\\\n**Perinatal:**\\\\n- Clean delivery: Skilled attendance at birth\\\\n- Early identification of complications\\\\n- Newborn screening for congenital conditions\\\\n\\\\n**Postnatal (0-5 years):**\\\\n- Exclusive breastfeeding: 0-6 months\\\\n- Appropriate complementary feeding: 6-24 months\\\\n- Immunization: UIP schedule\\\\n- Vitamin A supplementation: >6 months\\\\n- Clean water, sanitation, hygiene\\\\n- Nutrition monitoring: Growth charts\\\\n- Early care-seeking: Recognition of danger signs,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"IMNCI DANGER SIGNS\\\\\\\",\\\\n            explanation: \\\\\\\"Lethargy, Convulsions, Unable to drink, Stridor (calm), Severe dehydration, Vomiting all\\\\\\\",\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"FAST BREATHING THRESHOLDS\\\\\\\",\\\\n            explanation: \\\\\\\"<2mo ≥50, 2-12mo ≥40, 1-5y ≥40 breaths/min\\\\\\\",\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"DIARRHEA ORS\\\\\\\",\\\\n            explanation: \\\\\\\"No/minimal 50 mL/kg/4h, Some 75/4h, Severe IV 30/1h\\\\\\\",\\\\n          },\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"IMNCI identifies danger signs requiring immediate referral (lethargy, convulsions, inability to drink)\\\\\\\",\\\\n          \\\\\\\"Preterm management: Thermoregulation (kangaroo care), feeding support, infection prevention\\\\\\\",\\\\n          \\\\\\\"Birth asphyxia: Immediate resuscitation, therapeutic hypothermia for HIE reduces death/disability\\\\\\\",\\\\n          \\\\\\\"Neonatal sepsis: Early empiric antibiotics (ampicillin + gentamicin), fluid resuscitation if shock\\\\\\\",\\\\n          \\\\\\\"Pneumonia: Fast breathing ≥40/min; IMNCI classification guides outpatient vs inpatient care\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\", chapter: \\\\\\\"Ch 6\\\\\\\", edition: \\\\\\\"26th\\\\\\\" },\\\\n          { book: \\\\\\\"IMNCI Guidelines\\\\\\\", chapter: \\\\\\\"Classification and management\\\\\\\", edition: \\\\\\\"2022\\\\\\\" },\\\\n        ],\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"child-health-imr-exam\\\\\\\",\\\\n        title: \\\\\\\"Child Health & IMR (IMNCI, under-5 mortality) - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"NEXT-pattern MCQ preparation on IMR statistics, IMNCI components, danger signs, and management protocols for neonatal and childhood conditions.\\\\\\\",\\\\n        contentMd: "# Child Health & IMR - Exam Preparation\\\\\\\\n\\\\\\\\n## High-Yield Facts\\\\\\\\n\\\\\\\\n**IMR & Mortality Rates:**\\\\\\\\n- IMR India 2023: 28 per 1000 LB\\\\\\\\n- NMR: ~18 per 1000 LB (50% of IMR)\\\\\\\\n- U5MR: ~34 per 1000 LB\\\\\\\\n- Neonatal mortality: 50% of under-5 deaths\\\\\\\\n\\\\\\\\n**Major Causes:**\\\\\\\\n- Neonatal 50%: Preterm (35%), asphyxia (24%), infections (15%)\\\\\\\\n- Post-neonatal 20%: Pneumonia, diarrhea, malaria\\\\\\\\n- 1-5 years 30%: Pneumonia, diarrhea, accidents\\\\\\\\n\\\\\\\\n**IMNCI Components:**\\\\\\\\n- Launched 2005\\\\\\\\n- Community-based assessment by health workers\\\\\\\\n- Classification and first-line treatment\\\\\\\\n- Referral for severe/emergency conditions\\\\\\\\n\\\\\\\\n**Danger Signs (Refer immediately):**\\\\\\\\n- Lethargy/unconsciousness\\\\\\\\n- Convulsions, stridor (calm)\\\\\\\\n- Severe dehydration\\\\\\\\n- Inability to drink/breastfeed\\\\\\\\n- Persistent vomiting\\\\\\\\n\\\\\\\\n**Fast Breathing Thresholds:**\\\\\\\\n- <2 months: ≥50 breaths/min\\\\\\\\n- 2-12 months: ≥40 breaths/min\\\\\\\\n- 1-5 years: ≥40 breaths/min\\\\\\\\n\\\\\\\\n**Management Principles:**\\\\\\\\n- ORS for dehydration: 50/75 mL/kg based on severity\\\\\\\\n- Amoxicillin for pneumonia outpatient\\\\\\\\n- Zinc supplementation for diarrhea\\\\\\\\n- Therapeutic hypothermia for birth asphyxia (HIE)\\\\\\\\n\\\\\\\\n## Problem-Solving Cases\\\\\\\\n\\\\\\\\n**Case 1: Preterm Neonate (30 weeks)**\\\\\\\\n- Poor temperature control\\\\\\\\n- Weak suck, difficulty feeding\\\\\\\\n- Management: Kangaroo care, expressed breastmilk, close monitoring for complications\\\\\\\\n\\\\\\\\n**Case 2: Birth Asphyxia with Encephalopathy**\\\\\\\\n- Low Apgar, convulsions, lethargy\\\\\\\\n- Management: Therapeutic hypothermia, monitoring for multi-organ dysfunction\\\\\\\\n\\\\\\\\n**Case 3: Child with Diarrhea and Dehydration**\\\\\\\\n- Sunken eyes, slow skin turgor\\\\\\\\n- Unable to drink\\\\\\\\n- Management: IV fluids, reassess hydration, ORS once improved\\\\\\\\n\\\\\\\\n**Case 4: Pneumonia with Fast Breathing**\\\\\\\\n- Breathing 50/min, no chest indrawing\\\\\\\\n- Management: Outpatient with amoxicillin, oxygen if SpO2 <90%\\\\\\\\n\\\\\\\\n## Analysis Topics\\\\\\\\n\\\\\\\\n- IMNCI strategy in resource-limited settings\\\\\\\\n- Why is early recognition of danger signs critical?\\\\\\\\n- Pathophysiology of birth asphyxia and hypothermia benefits\\\\\\\\n- Zinc supplementation in diarrhea\\\\\\\\n,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"IMR STATISTICS\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"28/1000 LB, NMR 18 (50%), U5MR 34/1000\\\\\\\\\\\\\\\",\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"MORTALITY DISTRIBUTION\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Neonatal 50%, Post-neonatal 20%, 1-5y 30%\\\\\\\\\\\\\\\",\\\\\\\\n          },\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"IMR 28, NMR ~18 (50% of IMR), with neonatal causes most important\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"IMNCI identifies danger signs for immediate referral\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Fast breathing ≥40/min (≥50 <2mo) defines pneumonia in IMNCI\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"ORS volumes based on dehydration severity; severe requires IV fluids\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Therapeutic hypothermia improves outcomes in birth asphyxia with HIE\\\\\\\\\\\\\\\",\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 6\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IMNCI Guidelines\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Classification and management\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2022\\\\\\\\\\\\\\\" },\\\\\\\\n        ],\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"child-health-imr-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Child Health & IMR (IMNCI, under-5 mortality) - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Quick recall of IMR statistics, IMNCI danger signs, classification, and management protocols for neonatal and childhood conditions.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Active Recall - Child Health & IMR\\\\\\\\n\\\\\\\\n**Q1:** What is the current IMR in India and how is it distributed between neonatal and post-neonatal periods?\\\\\\\\n> IMR 28 per 1000 live births. NMR ~18 per 1000 (50% of IMR), post-neonatal ~10. Accounts for deaths in first year of life.\\\\\\\\n\\\\\\\\n**Q2:** Name the 3 major causes of neonatal mortality with their percentages.\\\\\\\\n> Preterm birth complications (35%), Birth asphyxia (24%), Infections/sepsis (15%); together account for ~75% of NMR.\\\\\\\\n\\\\\\\\n**Q3:** When was IMNCI launched and what are its key components?\\\\\\\\n> Launched 2005. Key components: Community health worker identification of danger signs, classification using simple algorithms, first-line treatment, supportive care, and referral for severe/emergency conditions.\\\\\\\\n\\\\\\\\n**Q4:** List 5 general danger signs that require immediate referral to facility per IMNCI.\\\\\\\\n> Lethargy/unconsciousness, Convulsions, Stridor in calm child, Severe dehydration, Inability to drink/breastfeed, Persistent vomiting, Severe jaundice.\\\\\\\\n\\\\\\\\n**Q5:** What are the fast breathing thresholds for pneumonia classification in different age groups?\\\\\\\\n> <2 months: ≥50 breaths/min, 2-12 months: ≥40 breaths/min, 1-5 years: ≥40 breaths/min.\\\\\\\\n\\\\\\\\n**Q6:** Describe the dehydration assessment and ORS management approach in IMNCI for diarrhea.\\\\\\\\n> No/minimal: Normal oral intake + ORS 50 mL/kg over 4 hours. Some: ORS 75 mL/kg over 4 hours + reassess. Severe: IV fluids (NS 30 mL/kg in first hour) then reassess. Continue breastfeeding throughout.\\\\\\\\n\\\\\\\\n**Q7:** What is therapeutic hypothermia and how does it benefit birth asphyxia with encephalopathy?\\\\\\\\n> Core temperature maintained at 33.5°C for 72 hours. Reduces metabolic rate, free radical formation, and apoptosis. Reduces death and disability in infants with HIE; must start <6 hours of life.\\\\\\\\n\\\\\\\\n**Q8:** How are antibiotics chosen for neonatal sepsis in community settings?\\\\\\\\n> Empiric: Ampicillin 50 mg/kg/dose 12-hourly + Gentamicin 7.5 mg/kg/dose daily. Alternative: Cephalosporins. Dosing based on age/weight; guided by culture if available.\\\\\\\\n\\\\\\\\n**Q9:** What is the role of zinc supplementation in childhood diarrhea?\\\\\\\\n> Reduces diarrhea duration by 25%, reduces severity. Dose: 10 mg/day (children 2-5y), 20 mg/day (>5y) for 10-14 days. Improves immune function; reduces subsequent diarrheal episodes.\\\\\\\\n\\\\\\\\n**Q10:** Describe the management phases for Severe Acute Malnutrition (SAM) in children.\\\\\\\\n> Stabilization phase (1-2 weeks): Treat infections, electrolyte imbalances, hypoglycemia with frequent small feeds. Rehabilitation phase: Gradual increase to 150-200 kcal/kg daily. Follow-up: Prevent relapse, monitor growth recovery.,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"IMR BREAKDOWN\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Total 28, NMR 18 (50%), Post-neonatal 10 (36%), P-NMR unknown\\\\\\\\\\\\\\\",\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"DANGER SIGNS\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Lethargy, Convulsions, Stridor, Severe dehydration, Unable to drink\\\\\\\\\\\\\\\",\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"FAST BREATHING\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"<2mo ≥50, 2-12mo ≥40, 1-5y ≥40 breaths/min\\\\\\\\\\\\\\\",\\\\\\\\n          },\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"IMR 28, NMR 18 (50%); preterm/asphyxia/sepsis account for 75% neonatal deaths\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"IMNCI (2005): Community-based danger sign identification and classification guides care\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Danger signs: lethargy, convulsions, stridor, severe dehydration, unable to drink\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"ORS 50 mL/kg (no dehydration), 75 mL/kg (some), IV fluids (severe); therapeutic hypothermia for asphyxia\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Zinc supplementation reduces diarrhea duration and improves immune function\\\\\\\\\\\\\\\",\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 6\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"IMNCI Program Guidelines\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Classification, assessment, management\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2022\\\\\\\\\\\\\\\" },\\\\\\\\n        ],\\\\\\\\n      },\\\\\\\\n    ],\\\\\\\\n  },\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-}
-}
-}
-];
-];
-];
-];
+        summary: "Overview of child health indicators including IMR, NMR, U5MR, and their determinants in India.",
+        contentMd: `# Child Health & IMR - Foundation
+
+## Key Indicators
+- **Infant Mortality Rate (IMR)**: Deaths <1 year per 1000 live births. India IMR: ~28 (SRS 2020)
+- **Neonatal Mortality Rate (NMR)**: Deaths <28 days per 1000 live births
+- **Under-5 Mortality Rate (U5MR)**: Deaths <5 years per 1000 live births
+- **Perinatal Mortality Rate**: Stillbirths + early neonatal deaths per 1000 total births
+
+## Causes of Infant Mortality in India
+- Prematurity and low birth weight (35%)
+- Neonatal infections/sepsis (20%)
+- Birth asphyxia (15%)
+- Pneumonia (15%)
+- Diarrheal diseases (10%)
+
+## IMNCI Strategy
+Integrated Management of Neonatal and Childhood Illness covers children 0-5 years with assessment, classification, and treatment protocols for common illnesses.
+
+## National Programs
+- **ICDS**: Integrated Child Development Services (Anganwadi)
+- **RBSK**: Rashtriya Bal Swasthya Karyakram (child health screening)
+- **MAA**: Mothers Absolute Affection (breastfeeding promotion)
+- **HBNC**: Home Based Newborn Care by ASHAs`,
+        mnemonics: [
+          { text: "IMR components: NMR + PNMR", explanation: "Infant Mortality = Neonatal (0-28d) + Post-neonatal (28d-1yr) mortality" },
+          { text: "IMNCI age groups: 0-2m, 2m-5y", explanation: "Young infant (0-2 months) assessed separately from child (2 months-5 years)" },
+        ],
+        keyPoints: [
+          "IMR is the most sensitive indicator of health status of a country",
+          "India's IMR ~28/1000 live births (SRS 2020), target SDG: <12 by 2030",
+          "Neonatal mortality contributes >60% of infant mortality in India",
+          "Leading cause of neonatal death: prematurity and LBW",
+          "IMNCI integrates management of pneumonia, diarrhea, malaria, measles, malnutrition",
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Chapter 10: Preventive Medicine in Obstetrics, Paediatrics & Geriatrics", edition: "26th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "child-health-imr-layer-2-mechanism",
+        title: "Child Health & IMR - Mechanism",
+        estimatedMinutes: 25,
+        summary: "Determinants of child mortality, epidemiological transition, and biological basis of childhood vulnerability.",
+        contentMd: `# Child Health & IMR - Mechanism
+
+## Determinants of Child Mortality
+### Proximate Determinants (Mosley-Chen Framework)
+- Maternal factors: Age, parity, birth interval
+- Environmental contamination: Water, food, air, vectors
+- Nutrient deficiency: Protein-energy, micronutrients
+- Injury: Accidental, intentional
+- Personal illness control: Preventive, curative measures
+
+## Biological Vulnerability
+- Immature immune system at birth (passive immunity from mother wanes by 6 months)
+- Rapid growth demands high nutritional intake
+- High surface area to volume ratio increases fluid and heat losses
+- Developmental milestones create injury risk windows
+
+## Epidemiological Transition in India
+- Shift from communicable to non-communicable causes
+- Persistent malnutrition as underlying cause in 45% of under-5 deaths
+- Urban-rural disparity: Rural IMR 1.5-2x urban
+- Gender disparity: Female child mortality higher in several states
+
+## Risk Factors for Neonatal Death
+| Factor | Mechanism |
+|--------|-----------|
+| LBW (<2500g) | Hypothermia, hypoglycemia, infection susceptibility |
+| Prematurity | Surfactant deficiency, intraventricular hemorrhage |
+| Birth asphyxia | Hypoxic ischemic encephalopathy |
+| Sepsis | Poor innate immunity, nosocomial infections |`,
+        mnemonics: [
+          { text: "MOSLEY for determinants", explanation: "Maternal, Obstetric, Sanitation, Lactation, Environment, Youth (child factors)" },
+          { text: "LBW complications: HHI", explanation: "Hypothermia, Hypoglycemia, Infection" },
+        ],
+        keyPoints: [
+          "Mosley-Chen framework classifies proximate determinants of child mortality",
+          "Malnutrition underlies ~45% of all under-5 deaths globally",
+          "Neonatal period (first 28 days) carries highest mortality risk",
+          "Birth interval <24 months doubles risk of infant death",
+          "Low birth weight is single strongest predictor of neonatal mortality",
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Chapter 10", edition: "26th" },
+          { book: "Mahajan & Gupta Textbook of Preventive & Social Medicine", chapter: "Chapter 14", edition: "5th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "child-health-imr-layer-3-clinical",
+        title: "Child Health & IMR - Clinical Application",
+        estimatedMinutes: 25,
+        summary: "IMNCI protocol, growth monitoring, childhood immunization, and integrated child health interventions in India.",
+        contentMd: `# Child Health & IMR - Clinical Application
+
+## IMNCI Protocol
+### Assessment of Sick Young Infant (0-2 months)
+- Check for possible serious bacterial infection
+- Assess for jaundice, diarrhea, feeding problems
+- Classify: Pink (refer urgently), Yellow (treat), Green (home care)
+
+### Assessment of Sick Child (2 months - 5 years)
+- Check for danger signs: unable to drink, vomiting, convulsions, lethargy
+- Assess: Cough/breathing, diarrhea, fever, ear problems, malnutrition, anemia
+- Color-coded classification and treatment
+
+## Growth Monitoring (WHO Growth Charts)
+- Weight-for-age: Underweight detection
+- Height-for-age: Stunting (chronic malnutrition)
+- Weight-for-height: Wasting (acute malnutrition)
+- MUAC: <11.5 cm = SAM in 6-59 months
+
+## Key Interventions
+| Intervention | Impact on Mortality |
+|-------------|-------------------|
+| Exclusive breastfeeding 6m | 13% reduction in U5MR |
+| Complementary feeding | 6% reduction |
+| Vitamin A supplementation | 23% reduction in measles mortality |
+| Zinc for diarrhea | 23% reduction in diarrhea deaths |
+| ORS for diarrhea | Major reduction in dehydration deaths |
+| Immunization | Prevents 2-3 million deaths/year globally |
+
+## RBSK (Rashtriya Bal Swasthya Karyakram)
+- Screening at birth, 6w, 6m, 9m, 1y, then annually up to 18 years
+- 4 Ds: Defects at birth, Diseases, Deficiencies, Developmental delays`,
+        mnemonics: [
+          { text: "IMNCI colors: PYG", explanation: "Pink = refer urgently, Yellow = treat at facility, Green = home care" },
+          { text: "4D of RBSK", explanation: "Defects at birth, Diseases, Deficiencies, Developmental delays" },
+        ],
+        keyPoints: [
+          "IMNCI uses color-coded classification: Pink (urgent), Yellow (treat), Green (home care)",
+          "MUAC <11.5 cm in 6-59 month child = Severe Acute Malnutrition",
+          "Exclusive breastfeeding for 6 months can reduce U5MR by 13%",
+          "RBSK screens for 4Ds: Defects, Diseases, Deficiencies, Developmental delays",
+          "WHO growth charts replaced NCHS charts; use Z-scores for classification",
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Chapter 10", edition: "26th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "child-health-imr-layer-4-exam",
+        title: "Child Health & IMR - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "High-yield facts on child health indicators, IMNCI, growth monitoring, and national programs for NEXT exam.",
+        contentMd: `# Child Health & IMR - Exam Prep
+
+## High-Yield Quick Facts
+- IMR India (SRS 2020): ~28/1000 live births
+- NMR India: ~20/1000 live births
+- U5MR India: ~36/1000 live births
+- SDG target for NMR: <12 by 2030
+- SDG target for U5MR: <25 by 2030
+- Kerala has lowest IMR (~6), MP/UP have highest (~40+)
+
+## IMNCI Exam Pearls
+- Developed by WHO/UNICEF, adapted for India (added neonatal component = IMNCI)
+- Danger signs in child: Cannot drink, persistent vomiting, convulsions, lethargic/unconscious
+- Fast breathing cut-offs: <2m: ≥60/min; 2-12m: ≥50/min; 1-5y: ≥40/min
+- Chest indrawing = severe pneumonia in IMNCI
+
+## Growth Monitoring Exam Tips
+- Z-score <-2 SD = Moderate malnutrition
+- Z-score <-3 SD = Severe malnutrition
+- MUAC 11.5-12.5 cm = MAM; <11.5 cm = SAM
+- Bilateral pitting edema = Kwashiorkor regardless of weight
+
+## Common MCQ Topics
+- Most sensitive health indicator = IMR
+- Best indicator of protein status in community = prevalence of LBW
+- Most common cause of neonatal death in India = prematurity/LBW
+- Vaccine preventable disease with highest case fatality = measles`,
+        mnemonics: [
+          { text: "Fast breathing: 60-50-40 rule", explanation: "<2m: ≥60, 2-12m: ≥50, 1-5y: ≥40 breaths/min" },
+          { text: "SAM criteria: MUAC-WH-Edema", explanation: "MUAC <11.5, W/H <-3SD, bilateral pitting edema (any one = SAM)" },
+        ],
+        keyPoints: [
+          "IMR is the most frequently asked indicator in community medicine exams",
+          "Fast breathing thresholds: 60/50/40 by age group is a must-know",
+          "SAM diagnosis: MUAC <11.5 OR W/H <-3 SD OR bilateral pitting edema",
+          "IMNCI danger signs: cannot drink, persistent vomiting, convulsions, lethargy",
+          "Kerala lowest IMR, Madhya Pradesh among highest - state-wise comparison is high-yield",
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Chapter 10", edition: "26th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "child-health-imr-layer-5-active-recall",
+        title: "Child Health & IMR - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Flashcard-style Q&A covering child health indicators, IMNCI, growth monitoring, and national programs.",
+        contentMd: `# Child Health & IMR - Active Recall
+
+**Q1:** What is the most sensitive indicator of the health status of a community?
+**A1:** Infant Mortality Rate (IMR) - deaths under 1 year per 1000 live births.
+
+**Q2:** What percentage of infant mortality in India is contributed by neonatal mortality?
+**A2:** >60% of infant deaths occur in the neonatal period (first 28 days).
+
+**Q3:** What is the fast breathing threshold for a 4-month-old in IMNCI?
+**A3:** ≥50 breaths/min (age 2-12 months threshold).
+
+**Q4:** What MUAC cut-off defines SAM in a 2-year-old?
+**A4:** MUAC <11.5 cm = Severe Acute Malnutrition in children 6-59 months.
+
+**Q5:** Name the 4 Ds screened under RBSK.
+**A5:** Defects at birth, Diseases, Deficiencies, Developmental delays.
+
+**Q6:** What is the leading cause of neonatal death in India?
+**A6:** Prematurity and low birth weight (~35% of neonatal deaths).
+
+**Q7:** What color classification in IMNCI requires urgent referral?
+**A7:** Pink classification = urgent referral to higher facility.
+
+**Q8:** What is the Z-score cut-off for severe wasting?
+**A8:** Weight-for-height Z-score < -3 SD.
+
+**Q9:** Name 3 key child health programs under NHM in India.
+**A9:** ICDS (Anganwadi services), RBSK (child screening), MAA (breastfeeding promotion).
+
+**Q10:** What is the SDG 2030 target for neonatal mortality rate?
+**A10:** NMR should be reduced to less than 12 per 1000 live births by 2030.
+
+**Q11:** In IMNCI, what are the danger signs in a sick child?
+**A11:** Cannot drink/breastfeed, persistent vomiting, convulsions, lethargic or unconscious.
+
+**Q12:** How does exclusive breastfeeding impact child mortality?
+**A12:** Exclusive breastfeeding for 6 months reduces under-5 mortality by approximately 13%.`,
+        mnemonics: [
+          { text: "IMR = NMR + PNMR", explanation: "Infant Mortality = Neonatal Mortality (0-28d) + Post-Neonatal Mortality (28d-1yr)" },
+          { text: "IMNCI danger signs: CVLD", explanation: "Cannot drink, Vomiting everything, Lethargic, (history of) convulsions" },
+        ],
+        keyPoints: [
+          "IMR is the gold standard indicator for community health assessment",
+          "Neonatal mortality contributes the majority of infant deaths in India",
+          "IMNCI uses age-specific respiratory rate thresholds: 60/50/40",
+          "SAM can be diagnosed by any ONE of: MUAC <11.5, W/H <-3SD, bilateral edema",
+          "RBSK provides screening from birth to 18 years for 4 categories of conditions",
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Chapter 10", edition: "26th" },
+          { book: "Mahajan & Gupta Textbook of Preventive & Social Medicine", chapter: "Chapter 14", edition: "5th" },
+        ],
+      },
+    ],
+  },
 ];

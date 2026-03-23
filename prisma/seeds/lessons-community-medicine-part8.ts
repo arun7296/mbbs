@@ -1,20 +1,626 @@
-// Community Medicine Part 8 - Remaining Topics from CM-MOD-02, CM-MOD-05, CM-MOD-06, CM-MOD-07
-// Topics: Hepatitis/Typhoid, Vitamin Deficiencies, Housing/Sanitation, Health Education
+import type { TopicLessons } from "./content-loader";
 
-export const communityMedicinePart8Lessons = [
+export const communityMedicinePart8Lessons: TopicLessons[] = [
   {
     topicCode: "CM-MOD-02-TOP-05",
     layers: [
       {
         layer: 1,
-        slug: "hepatitis-typhoid-polio-foundation",
+        slug: "cm-hep-typhoid-polio-layer-1-foundation",
         title: "Hepatitis, Typhoid & Polio - Foundation",
         estimatedMinutes: 25,
         summary: "Overview of hepatitis prevention, typhoid epidemiology, and polio eradication programs in India.",
-        contentMd: "# Hepatitis, Typhoid & Polio - Foundation\n\n## Hepatitis - Overview\n\n### Viral Hepatitis Types\n**Hepatitis A (HAV)**:\n- Fecal-oral transmission\n- Acute illness, self-limiting, no chronic form\n- Mortality: <1% (higher in elderly, pregnant women)\n- Prevention: Sanitation, safe water, HAV vaccine (Inactivated)\n- Vaccination: Part of routine immunization in high-risk areas\n\n**Hepatitis B (HBV)**:\n- Bloodborne infection: unsterile instruments, unsafe sexual contact\n- Can cause chronic hepatitis → cirrhosis → hepatocellular carcinoma\n- HBsAg positive = infectious\n- Prevention: Universal HBV vaccination (starting at birth)\n- India: Integrated into Universal Immunization Program (UIP)\n\n**Hepatitis C (HCV)**:\n- Bloodborne transmission: transfusions, injecting drug use\n- High risk of chronicity (80%)\n- No vaccine available\n- WHO targets: Screen and treat within health systems\n\n**Hepatitis D (HDV)**:\n- Requires HBV co-infection\n- Worsens HBV disease prognosis\n\n**Hepatitis E (HEV)**:\n- Fecal-oral, waterborne outbreaks common\n- Acute illness, self-limiting in most\n- High mortality in pregnant women (15-25%)\n- Prevention: Safe water, sanitation\n- HEV vaccine available in India (HEPCOVAX)\n\n### National Hepatitis Prevention Strategy\n- Safe water and sanitation\n- Promote hand hygiene, food safety\n- Universal HBV vaccination for all children\n- Screening of blood donations for all agents\n- Safe needle practices in healthcare\n- Treatment access for chronic HBV/HCV\n\n## Typhoid (Enteric Fever)\n\n### Epidemiology\n- Caused by **Salmonella typhi** (typhoid) and **S. paratyphi** (paratyphoid)\n- Transmission: Fecal-oral route, contaminated water/food\n- Endemic in India; 1-5 cases per 100,000 per year (varies by region)\n- Risk factors: Poor sanitation, inadequate water supply, malnutrition\n- Age: Any age, peak 5-40 years in endemic areas\n\n### Clinical Features (Classic 4-week illness)\n**Week 1** (Incubation period 7-14 days):\n- Fever gradually rising (step-ladder pattern), headache, myalgia\n- Few GI symptoms initially\n\n**Week 2**:\n- High continuous fever, rose spots (faint rash), bradycardia\n- \"Rose spots\" = faint macular rash on chest, 2-3mm, appears in 30% only\n- Abdominal distension, constipation more common than diarrhea (opposite of paratyphoid)\n- Hepatosplenomegaly\n- \"Typhoid state\" = severe illness, prostration, delirium\n\n**Week 3**:\n- Complications: Intestinal perforation (most common), encephalopathy, myocarditis\n- \"Diarrhea phase\" or constipation-to-diarrhea progression\n\n**Week 4**:\n- Recovery phase if untreated and uncomplicated\n\n### Diagnosis\n- Blood culture: Gold standard (positive in 1st-2nd week, 50-80% sensitivity)\n- Widal test: Agglutinating antibodies (O antigen early, H antigen late)\n  - Limited specificity due to endemic infection, previous vaccination\n  - Cannot differentiate acute from past infection\n- Urine/stool culture: Helpful later in disease course\n\n### Treatment\n- First-line: Ceftriaxone (1-2g IV/IM daily) or Fluoroquinolones (varies by sensitivity)\n- Resistance: Multidrug-resistant (MDR) and Extensively drug-resistant (XDR) S. typhi increasingly common in India\n- Duration: 7-14 days depending on severity\n- Supportive care, attention to hydration and nutrition\n\n### Prevention\n- Improved sanitation and water supply (most important)\n- Hand hygiene, food safety\n- **Typhoid Vaccines**:\n  - **Oral live attenuated** (Ty21a): Single dose, booster every 3 years\n  - **Inactivated injectable**: IM injection, booster every 3 years\n  - Efficacy: 50-80% depending on vaccine type\n- Vaccination recommended for travelers to endemic areas, healthcare workers\n\n## Polio\n\n### Global & Indian Status\n- India: **WHO-certified polio-free since March 2014**\n- Last wild poliovirus case: October 1999 (Uttar Pradesh, 2-year-old girl)\n- India represents one of WHO's greatest public health achievements\n\n### Transmission\n- Fecal-oral route, highly contagious\n- Transmission can occur before/after symptom onset\n- Immunocompromised individuals: prolonged viral shedding\n\n### Clinical Manifestations\n- 70-75%: Asymptomatic infection (silent circulation concern)\n- 24-25%: Minor illness (abortive polio) = fever, sore throat, GI symptoms\n- 1-5%: Non-paralytic aseptic meningitis\n- <1%: Paralytic poliomyelitis = acute flaccid paralysis (AFP)\n\n### India's Polio Eradication Strategy (Lessons)\n\n**1. Universal Immunization Program (UIP)**:\n- **IPV** (Inactivated Polio Vaccine): IM injection, 4 doses\n  - Schedule: 6 weeks, 10 weeks, 14 weeks, 18-24 months\n  - Only vaccine now used in India (since 2016)\n  - Safe for immunocompromised persons\n\n**2. Pulse Polio Immunization (PPI)**:\n- Mass immunization campaigns targeting all children <5 years\n- Administered twice yearly (January and December)\n- Reached >99% coverage during eradication phase\n- Now continued as maintenance activity\n\n**3. High-Risk Strategies**:\n- Focus on high-population-density areas with poor sanitation\n- Mobile vaccination teams in urban slums\n- Transit point vaccinations (railway stations, highways)\n\n**4. Surveillance**:\n- **AFP (Acute Flaccid Paralysis)** surveillance: Every case of AFP in <15 years is investigated\n- Non-polio AFP rate monitored: >2 per 100,000 children <15 years indicates adequate surveillance\n\n### Maintenance Phase Challenges\n- Continued global transmission in Afghanistan, Pakistan\n- Risk of re-importation into polio-free countries\n- Maintaining high immunization coverage (>95%)\n- Surveillance and rapid response readiness,\n        mnemonics: [\n          {\n            text: \"Hepatitis Route: A (feces) B (blood) C (blood) D (depends on B) E (enteric)\",\n            explanation: \"Quick way to remember transmission routes for different hepatitis types\"\n          },\n          {\n            text: \"Typhoid Week Progression: Rising fever → High fever with rose spots → Complications → Recovery\",\n            explanation: \"The classic 4-week illness pattern helps with diagnosis timing\"\n          },\n          {\n            text: \"Polio Statistics: 70% silent, 25% minor illness, <5% paralytic\",\n            explanation: \"Most polio infections are asymptomatic, which is why vaccination coverage is critical\"\n          }\n        ],\n        keyPoints: [\n          \"HAV is fecal-oral; HBV is bloodborne. HAV vaccine protects; HBV vaccine prevents chronic infection.\",\n          \"Typhoid presents with gradual fever, rose spots, relative bradycardia, and constipation (not diarrhea initially)\",\n          \"Widal test has limited specificity in endemic areas; blood culture is gold standard\",\n          \"India achieved polio eradication through IPV vaccination, Pulse Polio campaigns, and rigorous AFP surveillance\",\n          \"Maintenance of >95% polio immunization coverage essential to prevent re-introduction\",\n          \"Typhoid vaccines available: oral Ty21a and inactivated injectable with 50-80% efficacy\"\n        ],\n        textbookRefs: [\n          { book: \"Park's Textbook of Preventive and Social Medicine\", chapter: \"Communicable Diseases - Hepatitis and Typhoid\", edition: \"27th\" },\n          { book: \"Gupta & Marya - Community Medicine\", chapter: \"Disease Surveillance and Control Programs\", edition: \"4th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"hepatitis-typhoid-polio-mechanism\",\n        title: \"Hepatitis, Typhoid & Polio - Mechanism\",\n        estimatedMinutes: 25,\n        summary: \"Pathophysiology, complications, and management protocols.\",\n        contentMd: "# Hepatitis, Typhoid & Polio - Mechanism\\n\\n## Hepatitis B Pathophysiology\\n\\n### Natural History of HBV Infection\\n1. **Acute Infection**: HBV DNA, HBsAg appear first → ALT elevation\\n2. **Recovery** (95% adults): HBsAg clearance, anti-HBs appearance\\n3. **Chronic Infection** (5-10% adults, 90% infants):\\n   - Persistent HBsAg >6 months\\n   - Risk of cirrhosis (5% annually) → hepatocellular carcinoma\\n\\n### HBV Markers Interpretation\\n| Marker | Acute | Recovery | Chronic | Immune (Vaccinated) |\\n|--------|-------|----------|---------|-------------------|\\n| HBsAg | + | - | + | - |\\n| Anti-HBc | + | + | + | - |\\n| Anti-HBs | - | + | - | + |\\n| HBeAg | + | - | + (high replicator) | - |\\n| Anti-HBe | - | + | ± | - |\\n| HBV DNA | High | - | Present (varies) | - |\\n\\n### Vaccine Response\\n- 95% develop protective anti-HBs after complete 3-dose series\\n- Respond better to vaccine if anti-HBc negative\\n- Booster needed if anti-HBs <10 mIU/mL after 5 years (or check every 10 years)\\n\\n## Typhoid Complications\\n\\n### Intestinal Perforation\\n- Most common serious complication (1-3%)\\n- Occurs in 3rd week typically\\n- Presents with: Sudden severe abdominal pain, peritonitis signs\\n- Mortality: 20-30% even with treatment\\n- Management: Emergency surgery (resection of perforated segment)\\n\\n### Encephalopathy (\\\"Typhoid Encephalitis\\\")\\n- Presents with: Delirium, confusion, seizures, altered sensorium\\n- NOT typical meningitis (CSF usually normal)\\n- Mechanism: Cerebral edema, metabolic disturbance, not direct invasion\\n- Management: Aggressive fever management, supportive care\\n\\n### Myocarditis\\n- Direct myocardial invasion or toxin effect\\n- Presents with: Cardiomegaly, arrhythmias, congestive heart failure\\n- Risk of sudden death\\n- Management: Bed rest, cardiac monitoring, supportive care\\n\\n### Hemolysis\\n- Salmonella induces microangiopathic hemolytic anemia (MAHA)\\n- Risk of acute renal failure in severe cases\\n\\n## Polio Pathophysiology & Paralysis\\n\\n### Mechanism of Paralysis\\n1. **Viral Entry**: Poliovirus enters via oral mucosa → replicates in GI tract\\n2. **Viremia**: Spreads to CNS (blood-brain barrier passage)\\n3. **Motor Neuron Destruction**: Selective destruction of anterior horn cells (motor neurons)\\n4. **Result**: Acute flaccid paralysis (lower motor neuron signs)\\n\\n### Characteristics of Polio Paralysis\\n- **Acute onset**: Over hours to days\\n- **Flaccid paralysis**: Loss of tone, weak/absent reflexes\\n- **Lower extremities**: More commonly affected than upper\\n- **Bulbar involvement** (20-30%): Affects CN IX, X, XII → difficulty swallowing, respiratory distress\\n- **Respiratory muscles**: Can cause respiratory paralysis → need for mechanical ventilation\\n\\n### Post-Polio Syndrome\\n- Occurs in 25-50% of polio survivors (years to decades later)\\n- Presents with: Progressive weakness, atrophy, fatigue\\n- Mechanism: Unknown (may relate to motor unit dysfunction, reactivation)\\n\\n## National Immunization Program - Polio Component\\n\\n### Current IPV Schedule in UIP\\n- **Dose 1**: 6 weeks\\n- **Dose 2**: 10 weeks\\n- **Dose 3**: 14 weeks\\n- **Dose 4**: 18-24 months (before 5 years)\\n\\n### Special Considerations\\n- IPV is inactivated vaccine (safe for immunocompromised)\\n- OPV phased out in India (last used as booster in 2014)\\n- Stock of OPV maintained for emergency response if re-introduction occurs\\n- Healthcare workers, family contacts of polio patients: IPV booster recommended\\n\\n## Prevention & Control Measures\\n\\n### Water & Sanitation for Typhoid Control\\n- Universal access to safe drinking water (piped to homes)\\n- Sanitary latrines (80-95% coverage needed)\\n- Waste management systems\\n- Food handlers' hygiene training\\n\\n### Hepatitis B Prevention in Healthcare Settings\\n- Universal precautions: Gloves, mask, eye protection for potential blood/body fluid exposure\\n- Safe injection practices: New syringe/needle for each injection\\n- Needle-stick protocol: Immediate washing, post-exposure prophylaxis if needed\\n- Vaccination of all healthcare workers\\n\\n### Hepatitis A Prevention\\n- Hand hygiene (critical measure)\\n- Safe water supply (chlorination, boiling)\\n- Sanitation and sewage disposal\\n- Food safety (cook thoroughly, avoid contaminated raw foods)\\n      }\\n    ]\\n  },\\n\\n  {\\n    topicCode: \\\"CM-MOD-05-TOP-03\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"vitamin-deficiency-diseases-foundation\\\",\\n        title: \\\"Vitamin Deficiency Diseases - Foundation\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Overview of vitamin A, D, B-complex deficiencies and their national control programs.\\\",\\n        contentMd: "# Vitamin Deficiency Diseases - Foundation\\\\n\\\\n## Vitamin A Deficiency\\\\n\\\\n### Epidemiology\\\\n- Leading preventable cause of childhood blindness in developing countries\\\\n- India: Affects 1-3 million children <5 years\\\\n- Mortality: Increases risk of death by 23-34% in affected children\\\\n- Primarily affects low-income populations with poor diet\\\\n\\\\n### Clinical Manifestations\\\\n\\\\n**Ocular Manifestations** (Cornea becomes dry - Xerophthalmia):\\\\n- **Night blindness**: First sign, reversible with supplementation\\\\n- **Conjunctival xerosis**: Loss of normal moisture, appear rough\\\\n- **Bitot's spots**: Foamy, triangular patches on temporal conjunctiva\\\\n- **Corneal xerosis**: Hazy, dull cornea\\\\n- **Corneal scarring/ulceration**: Irreversible blindness if not treated\\\\n- **Keratomalacia**: Corneal melting, corneal perforation → permanent blindness\\\\n\\\\n**Systemic Manifestations**:\\\\n- Impaired immunity → increased respiratory/diarrheal infections\\\\n- Growth retardation\\\\n- Impaired spermatogenesis (infertility in males)\\\\n- Follicular hyperkeratosis (\\\\\\\"phrynoderma\\\\\\\" - toad-skin)\\\\n\\\\n### Biochemistry\\\\n- Vitamin A functions: Vision (rhodopsin synthesis), immunity (mucosal epithelial integrity), reproduction\\\\n- Retinol: Preformed vitamin A (animal sources)\\\\n- Carotenoids: Provitamin A (plant sources) - β-carotene converted to retinol\\\\n- **Bioavailability**: Only 10% of dietary carotene → retinol (variable)\\\\n\\\\n### Requirements & Dietary Sources\\\\n- **RDA**: 600 μg/day for children 6-59 months\\\\n- **Pre-formed sources**: Liver, egg yolk, butter, milk, fish liver oil\\\\n- **Carotenoid sources**: Green leafy vegetables, orange/yellow vegetables (carrot, papaya, mango)\\\\n\\\\n## Vitamin D Deficiency\\\\n\\\\n### Epidemiology\\\\n- Emerging problem: 50-80% of Indian population deficient (Vit D <20 ng/mL)\\\\n- Risk groups: Infants (exclusive breastfeeding), elderly, dark-skinned in low-sun areas\\\\n\\\\n### Clinical Manifestations\\\\n\\\\n**In Children (Rickets)**:\\\\n- **Skeletal deformities**: Bow legs (varus/valgus), frontal bossing, dental problems\\\\n- **Delayed milestones**: Delayed walking, rolling over\\\\n- **Respiratory infections**: Hypocalcemia → laryngospasm risk, IDA common\\\\n- **Growth retardation**\\\\n- **Rachitic rosary**: Enlargement of costochondral junctions\\\\n- **Harrison's groove**: Horizontal indentation on chest from accessory muscle use\\\\n\\\\n**In Adults (Osteomalacia)**:\\\\n- Bone pain, muscle weakness\\\\n- Increased fracture risk\\\\n- Risk of falls\\\\n\\\\n**Biochemical Manifestations**:\\\\n- Hypocalcemia → secondary hyperparathyroidism\\\\n- Hyperphosphatemia\\\\n- Elevated alkaline phosphatase\\\\n\\\\n### Requirements & Sources\\\\n- **RDA**: 400 IU/day (infants), 600 IU/day (children), 600-800 IU/day (adults)\\\\n- **Sources**: Fatty fish, fortified milk, egg yolk, sunlight exposure\\\\n- **Fortification in India**: Fortified milk, ghee, oil (fortified at 25,000 IU/500mL milk)\\\\n\\\\n## Vitamin B-Complex Deficiencies\\\\n\\\\n### Thiamine (Vitamin B1) Deficiency\\\\n\\\\n**Beriberi**:\\\\n- **Dry beriberi**: Peripheral neuropathy, sensory loss, muscle wasting\\\\n- **Wet beriberi**: Cardiac involvement, congestive heart failure, pulmonary edema\\\\n- **Wernicke-Korsakoff**: Ophthalmoplegia, confusion, ataxia (in thiamine-deficient populations)\\\\n\\\\n**Epidemiology**: Endemic in polished rice-eating populations; cases declining in India with food fortification\\\\n\\\\n### Riboflavin (Vitamin B2) Deficiency\\\\n\\\\n**Ariboflavinosis**:\\\\n- Cheilosis: Cracked, fissured lips\\\\n- Angular cheilitis: Ulceration at corners of mouth\\\\n- Glossitis: Magenta-colored, swollen tongue\\\\n- Dermatitis: Seborrheic dermatitis around nose, ears\\\\n- Corneal vascularization, photophobia\\\\n\\\\n### Niacin Deficiency\\\\n\\\\n**Pellagra** (4 Ds: Dermatitis, Diarrhea, Dementia, Death):\\\\n- **Dermatitis**: Symmetrical, exposed areas (sun-exposed skin)\\\\n- **Diarrhea**: Secondary to gut mucosal damage\\\\n- **Dementia**: Personality changes, psychosis, memory loss\\\\n- **Death**: If untreated in advanced cases\\\\n- **Casal's necklace**: Characteristic demarcation of dermatitis around neck\\\\n\\\\n### Pyridoxine (Vitamin B6) Deficiency\\\\n\\\\n- Seizures (especially in infants)\\\\n- Dermatitis, glossitis, angular cheilitis\\\\n- Anemia, neuropathy\\\\n\\\\n### Cobalamin (Vitamin B12) Deficiency\\\\n\\\\n- Megaloblastic anemia\\\\n- Pernicious anemia (autoimmune in developed countries; dietary in India)\\\\n- Subacute combined degeneration: Spasticity, ataxia, paresthesias\\\\n- Neuropsychiatric: Mood changes, psychosis\\\\n\\\\n### Folate Deficiency\\\\n\\\\n- Megaloblastic anemia\\\\n- Increased homocysteine → thrombosis risk\\\\n- Neural tube defects in pregnancy\\\\n- Glossitis, diarrhea\\\\n\\\\n## National Vitamin Deficiency Control Programs\\\\n\\\\n### Vitamin A Program\\\\n- **Target**: All children 6-59 months\\\\n- **Dosage**:\\\\n  - 100,000 IU (30 μg) for 6-11 months children\\\\n  - 200,000 IU (60 μg) for 12-59 months children\\\\n- **Frequency**: Twice yearly (Jan-Feb, July-Aug) as per NRHM\\\\n- **School-based program**: Annual supplementation in schools\\\\n- **Results**: Significant reduction in blindness, improved survival\\\\n\\\\n### Vitamin D Supplementation\\\\n- **Vitamin D fortified food programs**: Fortified milk, oil, ghee production\\\\n- **Supplementation for high-risk groups**: Infants, pregnant/lactating women\\\\n- **Sunlight exposure**: Public health message (15-30 minutes daily)\\\\n- **Monitoring**: Vitamin D levels in vulnerable groups\\\\n\\\\n### Food Fortification (National Program)\\\\n- **Fortified wheat flour**: Iron, folic acid, B vitamins\\\\n- **Fortified rice**: Iron, folic acid\\\\n- **Fortified milk**: Vitamin A, D\\\\n- **Fortified oil**: Vitamin A, D, E\\\\n- Targets: Reduce nutritional deficiencies at scale,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Vitamin A Ocular Signs: Night blindness → Xerosis → Ulceration → Keratomalacia (permanent)\\\\\\\",\\\\n            explanation: \\\\\\\"Progressive from reversible to irreversible blindness\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Rickets Findings: Bowing, Beads (rachitic rosary), Bossing (frontal), Breathing (delayed/weak)\\\\\\\",\\\\n            explanation: \\\\\\\"4 Bs of rickets to remember skeletal and respiratory manifestations\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Pellagra = 4 Ds: Dermatitis, Diarrhea, Dementia, Death\\\\\\\",\\\\n            explanation: \\\\\\\"Classic mnemonic for niacin deficiency presentation\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Vitamin B12: Mega (anemia) + Myelopathy (cord) + Mind (psychiatric)\\\\\\\",\\\\n            explanation: \\\\\\\"Three-system involvement in B12 deficiency\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Vitamin A deficiency: Leading preventable cause of childhood blindness; corneal changes are irreversible\\\\\\\",\\\\n          \\\\\\\"Night blindness is first manifestation and is reversible with early supplementation\\\\\\\",\\\\n          \\\\\\\"Vitamin D deficiency causes rickets in children (skeletal deformities) and osteomalacia in adults\\\\\\\",\\\\n          \\\\\\\"Vitamin B-complex deficiencies rare due to fortification but important in specialized populations\\\\\\\",\\\\n          \\\\\\\"Pellagra (niacin deficiency) shows symmetrical dermatitis with Casal's necklace pattern\\\\\\\",\\\\n          \\\\\\\"National programs use food fortification for widespread coverage of vitamin deficiency prevention\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Park's Textbook of Preventive and Social Medicine\\\\\\\", chapter: \\\\\\\"Nutrition and Public Health\\\\\\\", edition: \\\\\\\"27th\\\\\\\" },\\\\n          { book: \\\\\\\"Srilakshmi - Nutrition Science\\\\\\\", chapter: \\\\\\\"Fat-Soluble and Water-Soluble Vitamins\\\\\\\", edition: \\\\\\\"6th\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  },\\\\n\\\\n  {\\\\n    topicCode: \\\\\\\"CM-MOD-06-TOP-03\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"housing-ventilation-standards-foundation\\\\\\\",\\\\n        title: \\\\\\\"Housing & Ventilation Standards - Foundation\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Health aspects of housing, ventilation requirements, and standards for healthy living.\\\\\\\",\\\\n        contentMd: "# Housing & Ventilation Standards - Foundation\\\\\\\\n\\\\\\\\n## Concept of Healthy Housing\\\\\\\\n\\\\\\\\n### Definition\\\\\\\\nHousing that provides shelter with adequate space, light, ventilation, water, sanitation, and safety from environmental hazards.\\\\\\\\n\\\\\\\\n### Health Aspects of Housing\\\\\\\\n1. **Protection from infection**: Proper sanitation, drainage, waste disposal\\\\\\\\n2. **Indoor air quality**: Ventilation, prevention of pollution\\\\\\\\n3. **Safety**: Structural integrity, fire safety, prevention of injuries\\\\\\\\n4. **Psychological well-being**: Adequate space, natural light, privacy\\\\\\\\n5. **Prevention of accidents**: Non-slip floors, adequate stairs, handrails\\\\\\\\n\\\\\\\\n## Space Standards\\\\\\\\n\\\\\\\\n### Room Dimensions\\\\\\\\n- **Minimum floor area per person**: 9 m² or 96 sq. ft.\\\\\\\\n- **Minimum room dimensions**: Length 3m × Width 2.5m minimum\\\\\\\\n- **Ceiling height**: Minimum 2.5 meters (8-9 feet) in living areas\\\\\\\\n- **Number of rooms**: Minimum 1 room per 2 persons (overcrowding definition: >3 persons per room)\\\\\\\\n\\\\\\\\n### Kitchen & Sanitation\\\\\\\\n- **Kitchen size**: Minimum 6-8 m² (convenient for cooking)\\\\\\\\n- **Toilet location**: At least 15m away from water source and dwelling\\\\\\\\n- **Toilet design**: Pit depth >1.2m, should not cause groundwater contamination\\\\\\\\n\\\\\\\\n## Ventilation Standards\\\\\\\\n\\\\\\\\n### Purpose of Ventilation\\\\\\\\n1. Supply fresh air for respiration\\\\\\\\n2. Remove stale air and pollutants (CO, CO₂, smoke)\\\\\\\\n3. Control temperature and humidity\\\\\\\\n4. Reduce indoor pollution (indoor biomass burning, cooking fumes)\\\\\\\\n\\\\\\\\n### Ventilation Requirements\\\\\\\\n\\\\\\\\n**Air Changes per Hour (ACH)**:\\\\\\\\n- **Living rooms, bedrooms**: Minimum 2-3 air changes per hour\\\\\\\\n- **Kitchens**: Minimum 4-5 air changes per hour\\\\\\\\n- **Bathrooms**: Minimum 3-4 air changes per hour\\\\\\\\n\\\\\\\\n**Ventilation Area**:\\\\\\\\n- **Windows/openings**: Minimum 1/10th of floor area\\\\\\\\n  - Bedroom: If floor area 30 m², window area ≥ 3 m²\\\\\\\\n  - Living areas, kitchens: Slightly higher (1/8th of floor area)\\\\\\\\n- **Single-sided ventilation** acceptable for bedrooms\\\\\\\\n- **Cross-ventilation**: Preferred in hot climates\\\\\\\\n\\\\\\\\n### Types of Ventilation\\\\\\\\n\\\\\\\\n**Natural Ventilation**:\\\\\\\\n- Through windows, doors, openings\\\\\\\\n- Depends on wind, temperature differences\\\\\\\\n- Effective in tropical climates with adequate cross-ventilation\\\\\\\\n- Most common in India\\\\\\\\n\\\\\\\\n**Mechanical Ventilation**:\\\\\\\\n- Fans, exhaust systems\\\\\\\\n- Necessary in enclosed kitchens, bathrooms\\\\\\\\n- In modern buildings with sealed structures\\\\\\\\n\\\\\\\\n**Stack ventilation**:\\\\\\\\n- Height difference creates air movement\\\\\\\\n- Tall chimneys/openings near ceiling promote outflow\\\\\\\\n\\\\\\\\n## Lighting Standards\\\\\\\\n\\\\\\\\n### Natural Light Requirements\\\\\\\\n- **Daylight factor**: Minimum 2-3% (ratio of light inside to outside)\\\\\\\\n- **Window area**: Minimum 1/10th to 1/12th of floor area (light, not ventilation)\\\\\\\\n- **Orientation**: Preferably East or North (avoid excess heat from West sun)\\\\\\\\n\\\\\\\\n### Artificial Lighting\\\\\\\\n- **Illumination**: Minimum 50 lux for living areas\\\\\\\\n- **Lux levels**: 100 lux for work areas, 150-200 lux for kitchens\\\\\\\\n- **Color temperature**: Warm light (3000K) preferred for comfort\\\\\\\\n\\\\\\\\n## Moisture & Humidity Control\\\\\\\\n\\\\\\\\n### Relative Humidity Standards\\\\\\\\n- **Optimal range**: 40-60% RH\\\\\\\\n- **Health effects of high humidity** (>70%):\\\\\\\\n  - Promotes mold growth → respiratory issues, allergies\\\\\\\\n  - Dust mite proliferation\\\\\\\\n  - Comfort reduction, heat stress\\\\\\\\n\\\\\\\\n- **Effects of low humidity** (<30%):\\\\\\\\n  - Respiratory tract irritation\\\\\\\\n  - Increased infection susceptibility\\\\\\\\n\\\\\\\\n### Dampness Prevention\\\\\\\\n- **Moisture sources**: Cooking, bathing, poor drainage, rising damp\\\\\\\\n- **Prevention**: Ventilation, waterproofing, drainage, dehumidification\\\\\\\\n- **Rising damp**: Occurs in ground-floor structures\\\\\\\\n  - Control: Damp-proof course, elevated plinth, proper foundation\\\\\\\\n\\\\\\\\n## Housing Quality & Health Inequities\\\\\\\\n\\\\\\\\n### Slum Housing Issues\\\\\\\\n- **Overcrowding**: >4 persons per room\\\\\\\\n- **Poor ventilation**: Single room used for cooking and sleeping\\\\\\\\n- **No sanitation**: Shared toilets (40+ persons per toilet is common)\\\\\\\\n- **Water contamination**: Shared handpumps, contaminated sources\\\\\\\\n- **Fire hazard**: Dense wood structures, blocked exits\\\\\\\\n\\\\\\\\n### Health Consequences\\\\\\\\n- **Respiratory infections**: TB, pneumonia, asthma (from smoke, poor air quality)\\\\\\\\n- **Diarrheal diseases**: From contaminated water, poor sanitation\\\\\\\\n- **Injuries**: Falls, burns, electrocution from poor construction\\\\\\\\n- **Vector-borne diseases**: Malaria, dengue (standing water breeding grounds)\\\\\\\\n- **Communicable disease transmission**: High density facilitates rapid spread\\\\\\\\n\\\\\\\\n## Standards & Guidelines in India\\\\\\\\n\\\\\\\\n### National Building Code\\\\\\\\n- Prescribes space, ventilation, light standards\\\\\\\\n- Mandatory for registered buildings\\\\\\\\n- Often not complied in low-income housing\\\\\\\\n\\\\\\\\n### Building Bylaws (Municipal)\\\\\\\\n- Vary by city/municipality\\\\\\\\n- FSI (Floor Space Index), setbacks, parking requirements\\\\\\\\n- Not universally enforced in informal settlements,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Healthy Housing = Space + Light + Ventilation + Water + Sanitation + Safety\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Six pillars of healthy housing\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Window Size = 1/10th floor area (ventilation), 1/12th floor area (light)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Basic proportions for adequate natural ventilation and light\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Humidity Sweet Spot = 40-60% RH (avoid mold >70%, avoid dryness <30%)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Optimal humidity prevents both fungal growth and respiratory irritation\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Minimum floor area: 9 m² per person; overcrowding is >3 persons per room\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Ventilation: 2-3 air changes/hour for living areas, 4-5 for kitchens\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Window area: Minimum 1/10th of floor area for ventilation and light\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Relative humidity: 40-60% is optimal; >70% promotes mold, <30% irritates airways\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Slum housing: Multiple health hazards from overcrowding, poor ventilation, contaminated water\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Rising damp: Ground-floor moisture problem requiring damp-proof course and drainage\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive and Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Housing and Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"27th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"National Building Code of India\\\\\\\\\\\\\\\", section: \\\\\\\\\\\\\\\"Chapter 1 - Building Design\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  },\\\\\\\\n\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"CM-MOD-07-TOP-03\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      {\\\\\\\\n        layer: 1,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"health-education-behavior-change-foundation\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Health Education & Behavior Change - Foundation\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 25,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Principles of health education, communication strategies, and behavior change models.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Health Education & Behavior Change - Foundation\\\\\\\\n\\\\\\\\n## Definitions\\\\\\\\n\\\\\\\\n### Health Education\\\\\\\\n**Definition**: Process of informing, educating, and motivating individuals and communities about health issues, enabling them to adopt healthy behaviors and make informed health decisions.\\\\\\\\n\\\\\\\\n**Goal**: Improve health status and reduce disease burden through knowledge, attitude, and practice changes.\\\\\\\\n\\\\\\\\n### Behavior Change\\\\\\\\nThe process of modifying health-related behaviors and practices through planned interventions, education, and environmental changes.\\\\\\\\n\\\\\\\\n## Principles of Health Education\\\\\\\\n\\\\\\\\n### 1. **Participation & Community Involvement**\\\\\\\\n- Community should be active participants, not passive recipients\\\\\\\\n- Identify community leaders and opinion makers\\\\\\\\n- Include local knowledge and beliefs\\\\\\\\n- Build on existing practices\\\\\\\\n\\\\\\\\n### 2. **Sustainability**\\\\\\\\n- Programs should be sustainable with local resources\\\\\\\\n- Build local capacity for continued implementation\\\\\\\\n- Avoid dependency on external support\\\\\\\\n\\\\\\\\n### 3. **Cultural Sensitivity**\\\\\\\\n- Respect cultural beliefs, traditions, values\\\\\\\\n- Use locally appropriate language and examples\\\\\\\\n- Avoid imposing external values\\\\\\\\n- Work with cultural brokers\\\\\\\\n\\\\\\\\n### 4. **Evidence-Based**\\\\\\\\n- Use best available evidence for health information\\\\\\\\n- Tailor messages based on local health priorities\\\\\\\\n- Monitor and evaluate effectiveness\\\\\\\\n\\\\\\\\n### 5. **Equity & Inclusion**\\\\\\\\n- Ensure vulnerable groups benefit\\\\\\\\n- Address barriers (literacy, language, access)\\\\\\\\n- Use inclusive communication methods\\\\\\\\n\\\\\\\\n### 6. **Intersectoral Collaboration**\\\\\\\\n- Coordinate with education, water, sanitation sectors\\\\\\\\n- Work with healthcare, NGOs, government agencies\\\\\\\\n- Link individual health to environmental/social factors\\\\\\\\n\\\\\\\\n## Health Communication Strategies\\\\\\\\n\\\\\\\\n### Mass Communication\\\\\\\\n**Target**: General population through media\\\\\\\\n\\\\\\\\n**Methods**:\\\\\\\\n- **Television & Radio**: Reach large audiences, cost-effective\\\\\\\\n- **Print Media**: Posters, brochures, newspapers (requires literacy)\\\\\\\\n- **Social Media**: Digital campaigns, WhatsApp, Facebook, YouTube\\\\\\\\n- **Billboards & Signs**: High visibility, simple messages\\\\\\\\n\\\\\\\\n**Advantages**: Rapid dissemination, large reach, high awareness\\\\\\\\n**Limitations**: Expensive, limited two-way communication, may not change behavior alone\\\\\\\\n\\\\\\\\n**Examples**:\\\\\\\\n- Polio vaccination campaigns: \\\\\\\\\\\\\\\"Har Baccha Surakshit\\\\\\\\\\\\\\\" (Every Child Protected)\\\\\\\\n- TB-MUKT Bharat: \\\\\\\\\\\\\\\"One India, One TB- Free India\\\\\\\\\\\\\\\" campaign\\\\\\\\n- NRLM (nutrition) campaigns in slums\\\\\\\\n\\\\\\\\n### Interpersonal Communication\\\\\\\\n**Target**: Individual or small group interaction\\\\\\\\n\\\\\\\\n**Methods**:\\\\\\\\n- **Face-to-face counseling**: Health workers with individuals/families\\\\\\\\n- **Group discussions**: Community meetings, anganwadi centers\\\\\\\\n- **Demonstrations**: Nutrition, sanitation, first aid training\\\\\\\\n- **Role-plays**: Interactive learning\\\\\\\\n\\\\\\\\n**Advantages**: Two-way dialogue, customized, builds trust, clarifies misconceptions\\\\\\\\n**Limitations**: Time-consuming, requires trained personnel\\\\\\\\n\\\\\\\\n**Examples**:\\\\\\\\n- ASHA/ANM counseling on maternal health, immunization\\\\\\\\n- Village health guide training on water purification, sanitation\\\\\\\\n- Cooking demonstrations for nutritional supplementation\\\\\\\\n\\\\\\\\n### Community-Based Communication\\\\\\\\n**Target**: Community-level interventions for behavior change\\\\\\\\n\\\\\\\\n**Methods**:\\\\\\\\n- **Community mobilization**: Identify champions, create action groups\\\\\\\\n- **Participatory rural appraisal (PRA)**: Community-led problem identification\\\\\\\\n- **Social networks**: Use peer-to-peer influence\\\\\\\\n- **Community events**: Health melas, annual health talks\\\\\\\\n\\\\\\\\n**Examples**:\\\\\\\\n- Open defecation elimination campaigns through village mobilization\\\\\\\\n- Nutrition improvement through mother groups in rural areas\\\\\\\\n- Water quality monitoring by trained community members\\\\\\\\n\\\\\\\\n## Behavior Change Models\\\\\\\\n\\\\\\\\n### Health Belief Model (HBM)\\\\\\\\n**Components**:\\\\\\\\n1. **Perceived Susceptibility**: Belief in personal risk of disease\\\\\\\\n2. **Perceived Severity**: Belief about consequences if disease occurs\\\\\\\\n3. **Perceived Benefits**: Belief that recommended action reduces risk\\\\\\\\n4. **Perceived Barriers**: Beliefs about obstacles to taking action (cost, time, side effects)\\\\\\\\n5. **Cues to Action**: Events/reminders that trigger behavior\\\\\\\\n6. **Self-efficacy**: Confidence in ability to perform the action\\\\\\\\n\\\\\\\\n**Application**:\\\\\\\\n- TB counseling: Emphasize susceptibility, benefits of treatment, reduce barriers (provide free medicines)\\\\\\\\n- Immunization: Address vaccine safety concerns (barriers), emphasize severity of diseases\\\\\\\\n\\\\\\\\n### Social Cognitive Theory (SCT)\\\\\\\\n**Components**:\\\\\\\\n1. **Self-efficacy**: Confidence to perform behavior\\\\\\\\n2. **Outcome expectations**: Beliefs about results of behavior\\\\\\\\n3. **Goals**: Personal targets for change\\\\\\\\n4. **Social influences**: Family, peers, community norms\\\\\\\\n\\\\\\\\n**Application**:\\\\\\\\n- Nutrition: Build confidence through cooking demonstrations, show successful examples (peer influence)\\\\\\\\n- Quit smoking: Identify supportive social networks, celebrate successes\\\\\\\\n\\\\\\\\n### Transtheoretical Model (Stages of Change)\\\\\\\\n**Stages**:\\\\\\\\n1. **Precontemplation**: Not thinking about change\\\\\\\\n2. **Contemplation**: Considering change (weighing pros/cons)\\\\\\\\n3. **Preparation**: Planning action\\\\\\\\n4. **Action**: Implementing behavior change\\\\\\\\n5. **Maintenance**: Sustaining change\\\\\\\\n6. **Relapse**: Return to old behavior (common, part of process)\\\\\\\\n\\\\\\\\n**Application**:\\\\\\\\n- **Smoking cessation**: Stage 1 (not ready) → provide education about benefits\\\\\\\\n- Stage 2 (considering) → help weigh pros/cons\\\\\\\\n- Stage 3 (planning) → set quit date, coping strategies\\\\\\\\n- Stage 4 (active quitting) → pharmacotherapy, counseling\\\\\\\\n- Stage 5 (maintaining) → relapse prevention, peer support\\\\\\\\n\\\\\\\\n## Components of Successful Health Education\\\\\\\\n\\\\\\\\n### IEC Strategy (Information, Education, Communication)\\\\\\\\n\\\\\\\\n**Information**:\\\\\\\\n- What people need to know\\\\\\\\n- Factually accurate, evidence-based\\\\\\\\n- Culturally appropriate framing\\\\\\\\n\\\\\\\\n**Education**:\\\\\\\\n- Building knowledge and understanding\\\\\\\\n- Developing skills and competencies\\\\\\\\n- Interactive learning methods\\\\\\\\n\\\\\\\\n**Communication**:\\\\\\\\n- Multiple channels and methods\\\\\\\\n- Clear, understandable messages\\\\\\\\n- Two-way dialogue and feedback\\\\\\\\n\\\\\\\\n### BCC Strategy (Behavior Change Communication)\\\\\\\\n\\\\\\\\n**Focus**: Moving people through stages of behavior change\\\\\\\\n\\\\\\\\n**Elements**:\\\\\\\\n- Understand barriers and motivators\\\\\\\\n- Design messages addressing specific barriers\\\\\\\\n- Use role models and social norms\\\\\\\\n- Provide support and incentives for change\\\\\\\\n\\\\\\\\n**Examples**:\\\\\\\\n- **Hand hygiene**: Visual reminders + peer monitoring + incentives for schools\\\\\\\\n- **ORS use**: Demonstrations + testimonials from mothers + supply availability\\\\\\\\n- **Toilet use**: Community mobilization + removing social barriers + supply of materials\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\"\\\"\""
-}
-}
-}
-];
-];
+        contentMd: `# Hepatitis, Typhoid & Polio - Foundation
+
+## Hepatitis - Overview
+
+### Viral Hepatitis Types
+**Hepatitis A (HAV)**:
+- Fecal-oral transmission
+- Acute illness, self-limiting, no chronic form
+- Mortality: <1% (higher in elderly, pregnant women)
+- Prevention: Sanitation, safe water, HAV vaccine (Inactivated)
+- Vaccination: Part of routine immunization in high-risk areas
+
+**Hepatitis B (HBV)**:
+- Bloodborne infection: unsterile instruments, unsafe sexual contact
+- Can cause chronic hepatitis → cirrhosis → hepatocellular carcinoma
+- HBsAg positive = infectious
+- Prevention: Universal HBV vaccination (starting at birth)
+- India: Integrated into Universal Immunization Program (UIP)
+
+**Hepatitis C (HCV)**:
+- Bloodborne transmission: transfusions, injecting drug use
+- High risk of chronicity (80%)
+- No vaccine available
+- WHO targets: Screen and treat within health systems
+
+**Hepatitis D (HDV)**:
+- Requires HBV co-infection
+- Worsens HBV disease prognosis
+
+**Hepatitis E (HEV)**:
+- Fecal-oral, waterborne outbreaks common
+- Acute illness, self-limiting in most
+- High mortality in pregnant women (15-25%)
+- Prevention: Safe water, sanitation
+- HEV vaccine available in India (HEPCOVAX)
+
+### National Hepatitis Prevention Strategy
+- Safe water and sanitation
+- Promote hand hygiene, food safety
+- Universal HBV vaccination for all children
+- Screening of blood donations for all agents
+- Safe needle practices in healthcare
+- Treatment access for chronic HBV/HCV
+
+## Typhoid (Enteric Fever)
+
+### Epidemiology
+- Caused by **Salmonella typhi** (typhoid) and **S. paratyphi** (paratyphoid)
+- Transmission: Fecal-oral route, contaminated water/food
+- Endemic in India; 1-5 cases per 100,000 per year (varies by region)
+- Risk factors: Poor sanitation, inadequate water supply, malnutrition
+- Age: Any age, peak 5-40 years in endemic areas
+
+### Clinical Features (Classic 4-week illness)
+**Week 1** (Incubation period 7-14 days):
+- Fever gradually rising (step-ladder pattern), headache, myalgia
+- Few GI symptoms initially
+
+**Week 2**:
+- High continuous fever, rose spots (faint rash), bradycardia
+- "Rose spots" = faint macular rash on chest, 2-3mm, appears in 30% only
+- Abdominal distension, constipation more common than diarrhea
+- Hepatosplenomegaly
+- "Typhoid state" = severe illness, prostration, delirium
+
+**Week 3**:
+- Complications: Intestinal perforation (most common), encephalopathy, myocarditis
+- "Diarrhea phase" or constipation-to-diarrhea progression
+
+**Week 4**:
+- Recovery phase if untreated and uncomplicated
+
+### Diagnosis
+- Blood culture: Gold standard (positive in 1st-2nd week, 50-80% sensitivity)
+- Widal test: Agglutinating antibodies (O antigen early, H antigen late)
+  - Limited specificity due to endemic infection, previous vaccination
+  - Cannot differentiate acute from past infection
+- Urine/stool culture: Helpful later in disease course
+
+### Treatment
+- First-line: Ceftriaxone (1-2g IV/IM daily) or Fluoroquinolones
+- Resistance: Multidrug-resistant (MDR) and XDR S. typhi increasingly common
+- Duration: 7-14 days depending on severity
+- Supportive care, attention to hydration and nutrition
+
+### Prevention
+- Improved sanitation and water supply (most important)
+- Hand hygiene, food safety
+- **Typhoid Vaccines**:
+  - **Oral live attenuated** (Ty21a): Single dose, booster every 3 years
+  - **Inactivated injectable**: IM injection, booster every 3 years
+  - Efficacy: 50-80% depending on vaccine type
+- Vaccination recommended for travelers to endemic areas, healthcare workers
+
+## Polio
+
+### Global & Indian Status
+- India: **WHO-certified polio-free since March 2014**
+- Last wild poliovirus case: October 1999 (Uttar Pradesh)
+- India represents one of WHO's greatest public health achievements
+
+### Transmission
+- Fecal-oral route, highly contagious
+- Transmission can occur before/after symptom onset
+- Immunocompromised individuals: prolonged viral shedding
+
+### Clinical Manifestations
+- 70-75%: Asymptomatic infection (silent circulation concern)
+- 24-25%: Minor illness (abortive polio) = fever, sore throat, GI symptoms
+- 1-5%: Non-paralytic aseptic meningitis
+- <1%: Paralytic poliomyelitis = acute flaccid paralysis (AFP)
+
+### India's Polio Eradication Strategy
+
+**1. Universal Immunization Program (UIP)**:
+- **IPV** (Inactivated Polio Vaccine): IM injection, 4 doses
+  - Schedule: 6 weeks, 10 weeks, 14 weeks, 18-24 months
+  - Only vaccine now used in India (since 2016)
+  - Safe for immunocompromised persons
+
+**2. Pulse Polio Immunization (PPI)**:
+- Mass immunization campaigns targeting all children <5 years
+- Administered twice yearly (January and December)
+- Reached >99% coverage during eradication phase
+- Now continued as maintenance activity
+
+**3. High-Risk Strategies**:
+- Focus on high-population-density areas with poor sanitation
+- Mobile vaccination teams in urban slums
+- Transit point vaccinations
+
+**4. Surveillance**:
+- **AFP (Acute Flaccid Paralysis)** surveillance: Every case of AFP in <15 years investigated
+- Non-polio AFP rate >2 per 100,000 children <15 years indicates adequate surveillance
+
+### Maintenance Phase Challenges
+- Continued global transmission in Afghanistan, Pakistan
+- Risk of re-importation into polio-free countries
+- Maintaining >95% immunization coverage
+- Surveillance and rapid response readiness`,
+        mnemonics: [
+          {
+            text: "Hepatitis Route: A (feces) B (blood) C (blood) D (depends on B) E (enteric)",
+            explanation: "Quick way to remember transmission routes for different hepatitis types"
+          },
+          {
+            text: "Typhoid Week Progression: Rising fever → High fever with rose spots → Complications → Recovery",
+            explanation: "The classic 4-week illness pattern helps with diagnosis timing"
+          },
+          {
+            text: "Polio Statistics: 70% silent, 25% minor illness, <5% paralytic",
+            explanation: "Most polio infections are asymptomatic, which is why vaccination coverage is critical"
+          }
+        ],
+        keyPoints: [
+          "HAV is fecal-oral; HBV is bloodborne. HAV vaccine protects; HBV vaccine prevents chronic infection.",
+          "Typhoid presents with gradual fever, rose spots, relative bradycardia, and constipation (not diarrhea initially)",
+          "Widal test has limited specificity in endemic areas; blood culture is gold standard",
+          "India achieved polio eradication through IPV vaccination, Pulse Polio campaigns, and rigorous AFP surveillance",
+          "Maintenance of >95% polio immunization coverage essential to prevent re-introduction",
+          "Typhoid vaccines available: oral Ty21a and inactivated injectable with 50-80% efficacy"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive and Social Medicine", chapter: "Communicable Diseases - Hepatitis and Typhoid", edition: "26th" },
+          { book: "Mahajan & Gupta - Community Medicine", chapter: "Disease Surveillance and Control Programs", edition: "5th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "cm-hep-typhoid-polio-layer-2-mechanism",
+        title: "Hepatitis, Typhoid & Polio - Mechanism",
+        estimatedMinutes: 25,
+        summary: "Pathophysiology, complications, and management protocols.",
+        contentMd: `# Hepatitis, Typhoid & Polio - Mechanism
+
+## Hepatitis B Pathophysiology
+
+### Natural History of HBV Infection
+1. **Acute Infection**: HBV DNA, HBsAg appear first → ALT elevation
+2. **Recovery** (95% adults): HBsAg clearance, anti-HBs appearance
+3. **Chronic Infection** (5-10% adults, 90% infants):
+   - Persistent HBsAg >6 months
+   - Risk of cirrhosis (5% annually) → hepatocellular carcinoma
+
+### HBV Markers Interpretation
+| Marker | Acute | Recovery | Chronic | Immune (Vaccinated) |
+|--------|-------|----------|---------|-------------------|
+| HBsAg | + | - | + | - |
+| Anti-HBc | + | + | + | - |
+| Anti-HBs | - | + | - | + |
+| HBeAg | + | - | + (high replicator) | - |
+| Anti-HBe | - | + | ± | - |
+| HBV DNA | High | - | Present (varies) | - |
+
+### Vaccine Response
+- 95% develop protective anti-HBs after complete 3-dose series
+- Respond better if anti-HBc negative
+- Booster needed if anti-HBs <10 mIU/mL after 5 years
+
+## Typhoid Complications
+
+### Intestinal Perforation
+- Most common serious complication (1-3%)
+- Occurs in 3rd week typically
+- Presents with: Sudden severe abdominal pain, peritonitis signs
+- Mortality: 20-30% even with treatment
+- Management: Emergency surgery (resection of perforated segment)
+
+### Encephalopathy ("Typhoid Encephalitis")
+- Presents with: Delirium, confusion, seizures, altered sensorium
+- NOT typical meningitis (CSF usually normal)
+- Mechanism: Cerebral edema, metabolic disturbance, not direct invasion
+- Management: Aggressive fever management, supportive care
+
+### Myocarditis
+- Direct myocardial invasion or toxin effect
+- Presents with: Cardiomegaly, arrhythmias, congestive heart failure
+- Risk of sudden death
+- Management: Bed rest, cardiac monitoring, supportive care
+
+### Hemolysis
+- Salmonella induces microangiopathic hemolytic anemia (MAHA)
+- Risk of acute renal failure in severe cases
+
+## Polio Pathophysiology & Paralysis
+
+### Mechanism of Paralysis
+1. **Viral Entry**: Poliovirus enters via oral mucosa → replicates in GI tract
+2. **Viremia**: Spreads to CNS (blood-brain barrier passage)
+3. **Motor Neuron Destruction**: Selective destruction of anterior horn cells (motor neurons)
+4. **Result**: Acute flaccid paralysis (lower motor neuron signs)
+
+### Characteristics of Polio Paralysis
+- **Acute onset**: Over hours to days
+- **Flaccid paralysis**: Loss of tone, weak/absent reflexes
+- **Lower extremities**: More commonly affected than upper
+- **Bulbar involvement** (20-30%): Affects CN IX, X, XII → difficulty swallowing, respiratory distress
+- **Respiratory muscles**: Can cause respiratory paralysis → need for mechanical ventilation
+
+### Post-Polio Syndrome
+- Occurs in 25-50% of polio survivors (years to decades later)
+- Presents with: Progressive weakness, atrophy, fatigue
+- Mechanism: Unknown (may relate to motor unit dysfunction, reactivation)
+
+## National Immunization Program - Polio Component
+
+### Current IPV Schedule in UIP
+- **Dose 1**: 6 weeks
+- **Dose 2**: 10 weeks
+- **Dose 3**: 14 weeks
+- **Dose 4**: 18-24 months (before 5 years)
+
+### Special Considerations
+- IPV is inactivated vaccine (safe for immunocompromised)
+- OPV phased out in India (last used as booster in 2014)
+- Stock of OPV maintained for emergency response if re-introduction occurs
+- Healthcare workers, family contacts of polio patients: IPV booster recommended
+
+## Prevention & Control Measures
+
+### Water & Sanitation for Typhoid Control
+- Universal access to safe drinking water (piped to homes)
+- Sanitary latrines (80-95% coverage needed)
+- Waste management systems
+- Food handlers' hygiene training
+
+### Hepatitis B Prevention in Healthcare Settings
+- Universal precautions: Gloves, mask, eye protection for potential blood/body fluid exposure
+- Safe injection practices: New syringe/needle for each injection
+- Needle-stick protocol: Immediate washing, post-exposure prophylaxis if needed
+- Vaccination of all healthcare workers
+
+### Hepatitis A Prevention
+- Hand hygiene (critical measure)
+- Safe water supply (chlorination, boiling)
+- Sanitation and sewage disposal
+- Food safety (cook thoroughly, avoid contaminated raw foods)`,
+        mnemonics: [
+          {
+            text: "HBV Markers: Acute (HBsAg+, Anti-HBc+), Recovery (Anti-HBs+), Chronic (HBsAg+, HBV DNA present)",
+            explanation: "Simple pattern recognition for HBV serological interpretation"
+          },
+          {
+            text: "Typhoid Complications: Perforation (3rd week), Encephalopathy (delirium), Myocarditis (shock)",
+            explanation: "Major complications and timing in typhoid illness"
+          },
+          {
+            text: "Polio Paralysis: LMN signs, Lower limbs > upper, Bulbar can affect breathing",
+            explanation: "Characteristic features of poliomyelitis paralysis pattern"
+          }
+        ],
+        keyPoints: [
+          "HBV natural history: 95% adults clear (anti-HBs+); 5-10% develop chronic infection with cirrhosis risk",
+          "Typhoid perforation: 1-3% incidence, 3rd week, 20-30% mortality even with surgery",
+          "Hepatitis B vaccination: 95% response, protective anti-HBs >10 mIU/mL",
+          "Polio destroys anterior horn cells → flaccid paralysis with LMN signs",
+          "IPV safe in immunocompromised; switched from OPV due to VAPP risk in immunosuppressed",
+          "Hepatitis B prevention in healthcare: Universal precautions, safe injections, staff vaccination"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive and Social Medicine", chapter: "Communicable Diseases - Pathophysiology", edition: "26th" },
+          { book: "Harrison's Principles of Internal Medicine", chapter: "Viral Hepatitis", edition: "21st" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "cm-hep-typhoid-polio-layer-3-clinical",
+        title: "Hepatitis, Typhoid & Polio - Clinical",
+        estimatedMinutes: 20,
+        summary: "Clinical presentation, diagnosis, and management of hepatitis, typhoid, and polio.",
+        contentMd: `# Hepatitis, Typhoid & Polio - Clinical
+
+## Hepatitis Clinical Presentation
+
+### Acute Viral Hepatitis Presentation
+- **Prodromal phase**: Malaise, anorexia, fever, headache
+- **Icteric phase**: Jaundice, dark urine, pale stools, pruritus
+- **Hepatitis B vs A**: HBV gradual onset, HAV sudden, same management
+
+### Hepatitis B Screening & Diagnosis
+- **Serology**: HBsAg (acute/chronic), Anti-HBc (ever infected), Anti-HBs (immune)
+- **Viral markers**: HBV DNA (active replication), HBeAg (infectivity marker)
+- **Liver function**: ALT >1000 IU/L typical in acute hepatitis
+- **Liver biopsy**: Assess cirrhosis in chronic cases
+
+### Management of Hepatitis
+- **Acute HAV/HBV**: Supportive care, rest, nutrition, monitor for complications
+- **Fulminant hepatitis**: ICU admission, plasma exchange, transplant evaluation
+- **Chronic HBV**: Antiviral therapy (tenofovir, entecavir) if HBV DNA positive, fibrosis evident
+- **Hepatitis E in pregnancy**: Monitor for complications (DIC, hepatic failure)
+
+## Typhoid Clinical Presentation & Management
+
+### Clinical Diagnosis
+- **Classic presentation**: Fever + rose spots + relative bradycardia + hepatosplenomegaly
+- **Differential**: Malaria, dengue, TB, other enteric fevers
+- **Complications indicator**: Abdominal tenderness/rigidity (perforation), altered mental status (encephalopathy)
+
+### Diagnostic Approach
+1. **Blood culture**: If available (gold standard, >70% if collected early)
+2. **Widal test**: Positive O & H antibodies but low specificity in endemic areas
+3. **Stool culture**: Later in disease (3rd-4th week)
+4. **PCR/molecular**: If available (most specific)
+
+### Typhoid Management
+- **Empiric antibiotics pending culture**:
+  - First-line: Ceftriaxone 1-2g IV/IM daily (7-14 days)
+  - Alternative: Fluoroquinolone (ofloxacin 800mg daily) if susceptible
+  - Resistance: Consider carbapenems if XDR
+- **Supportive care**:
+  - IV fluids for dehydration
+  - Antipyretics (paracetamol, avoid NSAIDs if bleeding risk)
+  - Nutritional support
+  - Monitoring for complications
+- **Complications management**:
+  - Perforation: Emergency surgery
+  - Encephalopathy: Seizure prophylaxis, ICU monitoring
+  - Myocarditis: Cardiac monitoring, inotropes if needed
+
+## Polio Clinical Presentation
+
+### Clinical Forms
+**Asymptomatic (70-75%)**:
+- Infected but no symptoms
+- Can transmit virus
+- Surveillance challenge in endemic areas
+
+**Minor Illness (24-25%)**:
+- Fever, headache, sore throat, GI upset
+- Self-limited, 3-5 days
+- Resembles viral syndrome
+
+**Non-Paralytic Polio (1-5%)**:
+- Aseptic meningitis features
+- CSF pleocytosis (lymphocytic)
+- Fever, headache, stiff neck, back pain
+- Recovery in 2-3 weeks
+
+**Paralytic Poliomyelitis**:
+- **Prodrome**: Fever, malaise, myalgia 2-10 days before paralysis
+- **Paralytic phase**: Acute flaccid paralysis
+  - Lower limbs > upper limbs (70% cases)
+  - Asymmetric distribution (variable)
+  - Loss of reflexes, hypotonia
+  - Respiratory involvement: Bulbar or respiratory muscle paralysis (10-30%)
+- **Recovery phase**: Weeks to months (variable)
+
+### Diagnosis
+- **Clinical**: AFP in <15 years suggestive
+- **CSF**: Pleocytosis (50-500 lymphocytes), elevated protein, normal glucose
+- **Stool culture**: Poliovirus isolation (gold standard)
+- **Serology**: Rise in neutralizing antibodies (paired sera)
+
+### Management of Polio
+- **Acute phase**:
+  - Supportive care, bedrest, pain management
+  - Monitor respiratory status (vital capacity, signs of respiratory compromise)
+  - ICU admission if respiratory involvement
+  - Mechanical ventilation if needed (iron lung historically, ventilators now)
+- **Recovery phase**:
+  - Physiotherapy, occupational therapy
+  - Orthotic devices, mobility aids as needed
+  - Psychological support
+
+## Prevention in India
+
+### Hepatitis Prevention
+- Hepatitis B vaccination: Part of UIP (birth, 6 weeks, 10 weeks, 14 weeks)
+- Hepatitis A: Improved sanitation, safe water
+- Hepatitis E: Same as HAV + HEV vaccine where available
+
+### Typhoid Control
+- Typhoid vaccination: Not routine in UIP (high-risk groups: travelers, health workers)
+- Water supply improvement: Critical for endemic areas
+- Sanitation: Goal of open defecation elimination
+
+### Polio Surveillance
+- **AFP surveillance**: Every case <15 years investigated
+- **Stool samples**: Collected and tested for poliovirus
+- **Rapid response**: If wild poliovirus detected
+- **High-risk areas**: Mobile vaccination teams, catch-up campaigns`,
+        mnemonics: [
+          {
+            text: "Typhoid Diagnosis: BCG (Blood Culture Gold standard), Widal (limited in endemic), Stool (later)",
+            explanation: "Diagnostic modalities and timing in typhoid"
+          },
+          {
+            text: "Polio Presentation: 70% silent, 25% minor, 5% paralytic",
+            explanation: "Distribution of clinical forms"
+          },
+          {
+            text: "Hepatitis: Jaundice + Dark urine + Pale stools = Icterus",
+            explanation: "Classic icteric phase findings"
+          }
+        ],
+        keyPoints: [
+          "Typhoid: Fever + rose spots + relative bradycardia + hepatosplenomegaly; blood culture gold standard",
+          "Ceftriaxone first-line for typhoid; consider resistance patterns; manage complications emergently",
+          "Polio mostly asymptomatic (70%); paralytic <1% but devastating when occurs",
+          "Hepatitis B requires serology (HBsAg, anti-HBc, anti-HBs) for interpretation",
+          "Polio paralysis: LMN signs, lower limbs affected, respiratory involvement in 10-30%",
+          "AFP surveillance critical in polio-free India for early detection of re-introduction"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive and Social Medicine", chapter: "Clinical Management - Communicable Diseases", edition: "26th" },
+          { book: "CDC Guidelines on Poliomyelitis Surveillance and Response", chapter: "Acute Flaccid Paralysis Investigation" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "cm-hep-typhoid-polio-layer-4-exam",
+        title: "Hepatitis, Typhoid & Polio - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "NEXT-pattern MCQ preparation on hepatitis transmission, typhoid complications, polio eradication.",
+        contentMd: `# Hepatitis, Typhoid & Polio - Exam Preparation
+
+## High-Yield Facts
+
+**Hepatitis Transmission**:
+- HAV: Fecal-oral, waterborne outbreaks, no chronic form
+- HBV: Bloodborne, mother-to-child, sexual, no vaccine (chronic risk)
+- HCV: Bloodborne (transfusion, IVDU), 80% chronicity
+- HEV: Fecal-oral, pregnancy mortality 15-25%
+
+**Typhoid Epidemiology**:
+- Incidence: 1-5 per 100,000 per year in India
+- Peak age: 5-40 years
+- Transmission: Fecal-oral, water/food contamination
+- Complications: Perforation (1-3%), encephalopathy, myocarditis
+
+**Polio in India**:
+- Last case: October 1999
+- Polio-free since March 2014
+- Strategy: IPV vaccination, AFP surveillance
+- IPV dose schedule: 6w, 10w, 14w, 18-24m
+
+**Typhoid Management**:
+- Blood culture: Gold standard (50-80% sensitivity)
+- Antibiotic: Ceftriaxone 1-2g IV/IM daily
+- Resistance: MDR and XDR increasing
+- Complications: Surgery for perforation, ICU for encephalopathy
+
+**Polio Paralysis**:
+- LMN signs (flaccidity, hyporeflexia)
+- Lower limbs > upper limbs
+- Respiratory involvement: 10-30%
+- Post-polio syndrome: 25-50% of survivors (years later)
+
+## Problem-Solving Cases
+
+**Case 1: Acute Jaundice**
+- 35-year-old with fever, malaise, jaundice
+- History of multiple sexual partners
+- HBsAg+ on serology
+- Diagnosis: Acute hepatitis B
+- Management: Supportive care, monitor for fulminant hepatitis
+
+**Case 2: Enteric Fever Diagnosis**
+- 28-year-old with 2 weeks fever, abdominal distension, relative bradycardia
+- Rose spots on chest
+- Blood culture positive for Salmonella typhi
+- Diagnosis: Enteric fever (typhoid)
+- Management: Ceftriaxone, monitor for perforation
+
+**Case 3: AFP in Child**
+- 3-year-old with sudden paralysis of lower limbs
+- Stool culture: Poliovirus
+- Diagnosis: Paralytic poliomyelitis
+- Public health: Contacts vaccinated, surveillance initiated
+
+## Analysis Topics
+
+- Why is HAV vaccine less prioritized than HBV in India's program?
+- Mechanisms of typhoid complications (perforation, encephalopathy)
+- Polio surveillance strategy post-eradication
+- Hepatitis B vaccine efficacy and booster strategies`,
+        mnemonics: [
+          {
+            text: "HEPATITIS TRANSMISSION: A (feces), B (blood), C (blood), D (B co-inf), E (water)",
+            explanation: "Epidemiological difference drives prevention strategy"
+          },
+          {
+            text: "TYPHOID COMPLICATIONS: Perforation 1-3%, Encephalopathy (delirium), Myocarditis (shock)",
+            explanation: "Most common and dangerous complications"
+          },
+          {
+            text: "POLIO ERADICATION: IPV vaccination + AFP surveillance + Pulse campaigns = India polio-free",
+            explanation: "Three pillars of successful eradication"
+          }
+        ],
+        keyPoints: [
+          "HAV fecal-oral, no chronic; HBV bloodborne, 5-10% chronic; HCV 80% chronic",
+          "Typhoid: Blood culture gold standard; ceftriaxone first-line; perforation emergent surgical",
+          "India polio-free since 2014 through IPV vaccination and AFP surveillance",
+          "Widal test limited in endemic areas; blood culture preferred in typhoid",
+          "HBV vaccine: 95% response; booster if anti-HBs <10 mIU/mL",
+          "Polio paralysis: LMN, lower limbs, respiratory involvement 10-30% (critical)"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive and Social Medicine", chapter: "Communicable Diseases", edition: "26th" },
+          { book: "NACO Guidelines", chapter: "Hepatitis B Prevention & Control" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "cm-hep-typhoid-polio-layer-5-active-recall",
+        title: "Hepatitis, Typhoid & Polio - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Quick recall of hepatitis types, typhoid presentation, and polio eradication.",
+        contentMd: `# Active Recall - Hepatitis, Typhoid & Polio
+
+**Q1:** What is the primary transmission route for hepatitis A and how does it differ from hepatitis B?
+> HAV: Fecal-oral (contaminated water/food). HBV: Bloodborne (unsterile needles, sexual contact, mother-to-child). Prevention: HAV (sanitation, safe water), HBV (vaccination, safe practices).
+
+**Q2:** Describe the classic 4-week progression of untreated typhoid.
+> Week 1: Gradual rising fever, headache, few GI symptoms. Week 2: High continuous fever, rose spots, bradycardia, abdominal distension, hepatosplenomegaly. Week 3: Complications (perforation, encephalopathy). Week 4: Recovery if uncomplicated.
+
+**Q3:** What is the gold standard for diagnosing typhoid and why is Widal test unreliable in India?
+> Blood culture is gold standard (50-80% sensitivity in first 2 weeks). Widal test: Limited specificity in endemic India due to baseline seropositivity from previous infection/vaccination; cannot differentiate acute from past infection.
+
+**Q4:** List the three major complications of typhoid and their clinical presentations.
+> 1) Intestinal perforation (1-3%, sudden severe abdominal pain, peritonitis, 20-30% mortality). 2) Encephalopathy (delirium, seizures, altered sensorium, CSF normal). 3) Myocarditis (cardiomegaly, arrhythmias, shock).
+
+**Q5:** What was India's last confirmed case of wild poliovirus and when did India achieve polio-free status?
+> Last case: October 1999 (Uttar Pradesh, 2-year-old girl). Polio-free status: March 2014 (WHO-certified). Maintained through high IPV coverage (>95%) and AFP surveillance.
+
+**Q6:** Describe the clinical forms of polio infection and their approximate percentages.
+> Asymptomatic 70-75% (silent circulation risk), Minor illness 24-25% (fever, sore throat, GI symptoms, self-limited), Non-paralytic <1% (meningitis-like), Paralytic <1% (flaccid paralysis, LMN signs, lower limbs, respiratory involvement 10-30%).
+
+**Q7:** What are the characteristics of polio-induced paralysis and how does it differ from other causes?
+> Acute flaccid paralysis (LMN signs: hypotonia, hyporeflexia, muscle weakness). Lower limbs > upper limbs. Asymmetric distribution. Bulbar involvement 10-30% (affects swallowing, respiration). Non-sensory. Differs from UMN (spasticity) and sensory preservation in other causes.
+
+**Q8:** What is the current polio immunization schedule in India's UIP?
+> IPV (Inactivated Polio Vaccine) schedule: Dose 1 at 6 weeks, Dose 2 at 10 weeks, Dose 3 at 14 weeks, Dose 4 at 18-24 months. IPV is inactivated (safe for immunocompromised); OPV phased out (VAPP risk in immunosuppressed).
+
+**Q9:** Explain India's hepatitis prevention strategy and role of vaccination.
+> Hepatitis B: Universal vaccination in UIP (birth, 6w, 10w, 14w); 95% response; booster if anti-HBs <10 mIU/mL. Hepatitis A: Sanitation, safe water, hand hygiene (vaccine not routine in UIP). Hepatitis E: Safe water + HEV vaccine where available.
+
+**Q10:** What is the role of AFP surveillance in India's polio eradication maintenance strategy?
+> AFP (Acute Flaccid Paralysis) surveillance: Every case <15 years investigated. Stool samples tested for poliovirus. Non-polio AFP rate >2 per 100,000 children <15 years indicates adequate surveillance. Rapid response if wild poliovirus detected. Mobile vaccination teams deployed to high-risk areas.`,
+        mnemonics: [
+          {
+            text: "HEPATITIS ABC: A (feces), B (blood), no chronic; B (chronic risk 5-10%); C (chronic 80%)",
+            explanation: "Transmission and chronicity pattern"
+          },
+          {
+            text: "TYPHOID GOLD: Blood culture best (50-80% early), Widal limited (endemic baseline)",
+            explanation: "Diagnostic approach in India"
+          },
+          {
+            text: "POLIO INDIA: Last case 1999 (UP), Polio-free 2014, IPV 4-dose schedule, AFP surveillance",
+            explanation: "Key milestones of eradication program"
+          },
+          {
+            text: "POLIO PARALYSIS: Acute flaccid, LMN signs, Lower limbs, Respiratory 10-30%",
+            explanation: "Clinical features of paralytic polio"
+          }
+        ],
+        keyPoints: [
+          "HAV fecal-oral, self-limited; HBV bloodborne, 5-10% chronic; HCV bloodborne, 80% chronic",
+          "Typhoid: 4-week illness, rose spots, bradycardia, complications (perforation, encephalopathy, myocarditis)",
+          "Blood culture gold standard (50-80%); Widal unreliable in endemic India (baseline positivity)",
+          "Polio: 70% asymptomatic, <1% paralytic; LMN signs, lower limbs, respiratory involvement 10-30%",
+          "India polio-free since 2014; IPV 4-dose schedule; AFP surveillance maintains eradication",
+          "HBV vaccine: 95% response; booster if anti-HBs <10 mIU/mL"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive and Social Medicine", chapter: "Communicable Diseases - Hepatitis, Typhoid, Polio", edition: "26th" },
+          { book: "WHO Polio Eradication Initiative", chapter: "Surveillance and Response Strategies" }
+        ]
+      }
+    ]
+  }
 ];

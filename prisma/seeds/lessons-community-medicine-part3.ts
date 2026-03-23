@@ -1,16 +1,524 @@
-export const communityMedicinePart3Lessons = [
-  // CM-MOD-02: Remaining Communicable Diseases
+import type { TopicLessons } from "./content-loader";
+
+export const communityMedicinePart3Lessons: TopicLessons[] = [
   {
     topicCode: "CM-MOD-02-TOP-05",
     layers: [
       {
         layer: 1,
-        slug: "hepatitis-typhoid-polio-foundation",
+        slug: "hepatitis-typhoid-polio-layer-1-foundation",
         title: "Hepatitis, Typhoid & Polio - Foundation",
         estimatedMinutes: 20,
-        summary: "Epidemiology and transmission of hepatitis, typhoid, and polio.",
-        contentMd: "# Hepatitis, Typhoid & Polio - Foundation\n\n## Hepatitis Overview\n### Viral Hepatitis Types\n- **Hepatitis A (HAV)**: Fecal-oral; acute only; endemic in India\n- **Hepatitis B (HBV)**: Blood-borne; chronic risk; vaccine-preventable\n- **Hepatitis C (HCV)**: Blood-borne; chronic common; India: 6.3% seroprevalence\n- **Hepatitis E (HEV)**: Fecal-oral; endemic in India; pregnant women at risk\n- **Hepatitis D (HDV)**: Requires HBV; blood-borne\n\n### India-Specific Burden\n- **HAV**: Endemic; 100-200 million infected adults (lifelong immunity)\n- **HBV**: 4% population seropositive; 40 million chronic HBsAg carriers\n- **HEV**: 30-40% adult seroprevalence; outbreaks common\n- **HCV**: 10-12 million infected; mostly asymptomatic\n\n## Typhoid Fever\n### Epidemiology\n- **Incidence**: 150,000 deaths globally/year\n- **India burden**: Leading cause of febrile illness in many regions\n- **Causative agent**: Salmonella typhi (human-restricted pathogen)\n- **Transmission**: Fecal-oral via contaminated water/food\n- **Reservoir**: Humans; chronic carriers (5-10%)\n- **Risk**: Malnutrition, immunosuppression, delayed antibiotics\n\n### Clinical Burden\n- **Attack rate**: 1:1000 exposed in high-burden areas\n- **Mortality**: 1-4% (untreated: 20-30%)\n- **Complications**: Intestinal perforation, encephalitis, myocarditis\n\n## Polio Overview\n### Global Eradication Progress\n- **Cases 1988**: 125,000/year globally\n- **Cases 2024**: 0 (endemic eradication achieved)\n- **Status**: Only 2 endemic countries (Afghanistan, Pakistan)\n- **India**: Polio-free since 2011 (last case: West Bengal, 2011)\n\n### Vaccine Types\n- **OPV** (Oral Polio Vaccine): Live attenuated; given orally\n- **IPV** (Inactivated Polio Vaccine): Inactivated; injected\n- **India strategy**: OPV (IPV in post-elimination phase)\n\n### Natural History\n- **Poliovirus**: Enterovirus; RNA genome\n- **Replication**: GI tract → bloodstream → neurological invasion\n- **Paralytic polio**: 1:200 infections (lower in vaccinated)\n- **Non-paralytic**: Minor illness (90% cases),\n        mnemonics: [\n          {\n            text: \"Hepatitis Transmission - ABCDE\",\n            explanation: \"A (fecal-oral), B (blood), C (blood), D (requires B), E (fecal-oral, water)\"\n          }\n        ],\n        keyPoints: [\n          \"HAV endemic; causes acute hepatitis; vaccine available\",\n          \"HBV 4% India seroprevalence; vaccine-preventable\",\n          \"HEV 30-40% adult seroprevalence; pregnant women at risk\",\n          \"Typhoid: Fecal-oral; human reservoir; 1-4% mortality\",\n          \"Polio: India polio-free since 2011; OPV strategy effective\"\n        ],\n        textbookRefs: [\n          { book: \"Park Textbook of PSM\", chapter: \"Hepatitis, Typhoid, Polio\", edition: \"26th\" },\n          { book: \"IAAP Immunization Manual\", chapter: \"Vaccine-Preventable Diseases\", edition: \"Latest\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"hepatitis-typhoid-polio-mechanism\",\n        title: \"Hepatitis, Typhoid & Polio - Mechanism\",\n        estimatedMinutes: 25,\n        summary: \"Pathophysiology of hepatitis, typhoid, and polio infections.\",\n        contentMd: "# Hepatitis, Typhoid & Polio - Pathophysiology\\n\\n## Hepatitis Pathophysiology\\n### HAV Pathogenesis\\n- **GI replication**: Small intestine lamina propria\\n- **Viremia**: Peaks before symptoms\\n- **Liver invasion**: Hepatocyte replication → inflammation\\n- **Immune response**: CD8+ cytotoxic T cells attack infected hepatocytes → necrosis\\n- **Resolution**: Complete viral clearance (no chronic infection)\\n- **Immunity**: Lifelong anti-HAV antibodies\\n\\n### HBV Chronicity Mechanism\\n- **Age-dependent**: Neonates (90%) → Adults (5%) chronic infection\\n- **Immune tolerance**: Viral replication in hepatocytes\\n- **HBeAg persistence**: Indicates ongoing replication\\n- **Immune clearance failure**: Weak CD8+ response → persistence\\n- **Cirrhosis risk**: 20% chronic HBV → cirrhosis/HCC\\n\\n### HEV in Pregnancy\\n- **Unusual severity**: 3rd trimester highest risk\\n- **Vertical transmission**: Mother-to-fetus possible (teratogenic)\\n- **Fulminant hepatic failure**: 5-25% pregnant women (vs 1-2% general)\\n- **Fetal loss**: 15-30% (miscarriage, stillbirth, preterm)\\n- **Mechanism unclear**: Possible hormonal immunosuppression, altered TH1/TH2 balance\\n\\n## Typhoid Pathophysiology\\n### Invasion Mechanism\\n- **Intestinal penetration**: M cells in Peyer's patches\\n- **Intracellular survival**: Salmonella survives in macrophages\\n- **Systemic dissemination**: Bloodstream → reticuloendothelial system\\n- **Bile duct colonization**: Chronic carrier state established\\n\\n### Clinical Stages\\n1. **Week 1**: Bacteremia → fever, headache (non-specific)\\n2. **Week 2-3**: Rose spots (1-2mm; upper trunk); delirium, hepatosplenomegaly\\n3. **Week 3-4**: \\\"Typhoid state\\\": Prolonged high fever, ileal perforation risk\\n4. **Week 4+**: Resolution or complications\\n\\n### Chronic Carrier State\\n- **Asymptomatic shedding**: Bacteria in feces (months-years)\\n- **Biliary colonization**: Gallbladder most common site\\n- **Risk transmission**: High-risk if food handler\\n- **Elimination**: Rare; may require cholecystectomy (if gallstones)\\n\\n## Poliovirus Pathophysiology\\n### Replication Cycle\\n1. **Oral ingestion**: Virus survives stomach acid\\n2. **Small intestine replication**: Fecal shedding (weeks; highly contagious)\\n3. **Gut-associated lymphoid tissue (GALT)**: Minor viremia\\n4. **Bloodstream dissemination**: Viremia peaks\\n5. **CNS invasion**: Crosses blood-brain barrier (poliovirus neurovirulence)\\n6. **Motor neuron destruction**: Anterior horn cells (lower motor neurons)\\n\\n### Paralytic Polio Mechanism\\n- **LMN damage**: Destruction of motor neurons → flaccid paralysis\\n- **Distribution**: Lower limbs > upper limbs; asymmetric\\n- **Asymmetry reason**: Random motor neuron attack\\n- **Respiratory paralysis**: Bulbar involvement (cranial nerves, breathing muscles)\\n- **Recovery**: Incomplete (destroyed neurons cannot regenerate)\\n\\n### Post-Polio Syndrome\\n- **Timing**: 10-40 years post-infection\\n- **Mechanism**: Progressive weakness (motor unit re-organization failure)\\n- **Symptoms**: New weakness, muscle pain, fatigue\\n- **Risk**: Severe initial paralysis, older age at infection\\n- **Prevalence**: 25-75% of polio survivors,\\n        mnemonics: [\\n          {\\n            text: \\\"Hepatitis A vs B - ACUTE vs CHRONIC\\\",\\n            explanation: \\\"HAV: Acute only; HBV: chronicity possible (neonates 90%)\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"HAV: Complete viral clearance; lifelong immunity\\\",\\n          \\\"HBV chronic risk: Neonates 90% → Adults 5%\\\",\\n          \\\"HEV pregnancy: Fulminant hepatitis 5-25%; 15-30% fetal loss\\\",\\n          \\\"Typhoid carrier: Biliary shedding (5-10%); food handler risk\\\",\\n          \\\"Polio paralysis: LMN disease; asymmetric; permanent\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Park Textbook of PSM\\\", chapter: \\\"Viral Hepatitis Pathophysiology\\\", edition: \\\"26th\\\" },\\n          { book: \\\"Robbins Pathologic Basis\\\", chapter: \\\"Viral Infections\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"hepatitis-typhoid-polio-clinical\\\",\\n        title: \\\"Hepatitis, Typhoid & Polio - Clinical\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Clinical diagnosis, management, and national programs.\\\",\\n        contentMd: "# Hepatitis, Typhoid & Polio - Clinical Management\\\\n\\\\n## Hepatitis A\\\\n### Clinical Presentation\\\\n- **Incubation**: 15-50 days\\\\n- **Acute phase**: Abdominal pain, nausea, fever, dark urine, jaundice\\\\n- **Fulminant**: <1% (high-risk: pre-existing cirrhosis)\\\\n- **Duration**: 6-12 weeks (complete recovery expected)\\\\n- **No chronic sequelae**: Unlike HBV, HCV\\\\n\\\\n### Diagnosis\\\\n- **IgM anti-HAV**: Diagnostic during acute infection\\\\n- **IgG anti-HAV**: Past infection/immunity (lifelong)\\\\n- **ALT elevation**: Often >1000 IU/L (very high transaminitis)\\\\n\\\\n### Management\\\\n- **Supportive care**: Rest, fluids, diet as tolerated\\\\n- **Monitor**: Liver function, INR (prothrombin time)\\\\n- **Fulminant support**: ICU, N-acetylcysteine, possible transplant\\\\n- **No antivirals**: Immune response sufficient\\\\n\\\\n### Vaccine\\\\n- **2 doses** (0 & 6-12 months); >95% efficacy\\\\n- **India strategy**: Not in UIP (endemic; natural immunity common)\\\\n- **Use**: High-risk (travelers abroad, pre-existing liver disease)\\\\n\\\\n## Hepatitis B\\\\n### Chronic Infection Risk\\\\n- **Neonates**: 90% → chronic infection\\\\n- **Children 1-5yr**: 30-50% chronic\\\\n- **Adults**: 5% chronic (immune system clear virus)\\\\n\\\\n### Diagnosis\\\\n- **HBsAg**: Marker of active infection (first test)\\\\n- **Anti-HBc**: Past/current infection\\\\n- **HBeAg**: Active viral replication\\\\n- **Anti-HBe**: Lower replication\\\\n- **HBV DNA**: Gold standard (viral load)\\\\n\\\\n### Clinical Management\\\\n#### Acute HBV\\\\n- **Usually asymptomatic** (70%)\\\\n- **Symptomatic**: Similar to HAV (jaundice, RUQ pain)\\\\n- **Fulminant**: 1-2% (immunocompromised, HCV/HDV coinfection)\\\\n- **Management**: Supportive (antivirals rarely needed)\\\\n\\\\n#### Chronic HBV\\\\n- **Treatment indications**:\\\\n  - HBV DNA >2000 IU/mL + ALT elevated (2× ULN) OR\\\\n  - HBV DNA >2000 IU/mL + cirrhosis (any DNA level)\\\\n- **Antiviral drugs**:\\\\n  - **Tenofovir 300mg daily** (first-line; renal monitoring)\\\\n  - **Entecavir 0.5mg daily** (alternative)\\\\n  - **Duration**: Indefinite or until HBsAg seroconversion (rare)\\\\n- **Monitoring**: Viral load, ALT, elastography (fibrosis)\\\\n\\\\n### Vaccination\\\\n- **3 doses** (0, 1, 6 months); >95% efficacy\\\\n- **India strategy**: Part of UIP (universal vaccination)\\\\n- **Response**: >95% develop anti-HBs (>10 IU/L)\\\\n- **Booster**: Not needed if primary series given\\\\n\\\\n## Hepatitis E\\\\n### Clinical Features\\\\n- **Acute infection**: Jaundice, abdominal pain, fever (similar HAV)\\\\n- **Incubation**: 15-60 days\\\\n- **Duration**: 4-6 weeks (usually self-limited)\\\\n- **In pregnancy**: Fulminant hepatic failure (5-25%); vertical transmission\\\\n\\\\n### Diagnosis\\\\n- **Anti-HEV IgM**: Acute infection\\\\n- **Anti-HEV IgG**: Past infection/immunity\\\\n- **HEV RNA PCR**: Gold standard (research/reference)\\\\n\\\\n### Management\\\\n- **Supportive care**: Like HAV\\\\n- **Pregnancy monitoring**: Close fetal monitoring; delivery planning\\\\n- **Antivirals**: Ribavirin (limited data; considered in fulminant)\\\\n- **Vertical transmission prevention**: Not established; ART not available\\\\n\\\\n### Vaccine Status\\\\n- **Hepatitis E vaccine**: WHO-approved; not in India's UIP\\\\n- **Effectiveness**: 95% if complete series\\\\n- **Use**: Pregnant women (off-label consideration; trials ongoing)\\\\n\\\\n## Typhoid Fever\\\\n### Clinical Diagnosis\\\\n- **Week 1**: Fever, headache, myalgia, rose spots (faint maculopapular rash on chest)\\\\n- **Week 2-3**: Hepatosplenomegaly, \\\\\\\"rose spots\\\\\\\", abdominal pain\\\\n- **Week 3+**: \\\\\\\"Typhoid state\\\\\\\" (prolonged fever, delirium, ileal ulceration risk)\\\\n- **Complications**: Intestinal perforation, pneumonia, myocarditis, encephalitis\\\\n\\\\n### Laboratory Diagnosis\\\\n- **Blood culture** (gold standard; sensitivity 80-90% first week)\\\\n- **Widal test** (rapid agglutination; low specificity; not reliable in endemic areas)\\\\n- **Molecular**: PCR (rapid; limited availability)\\\\n\\\\n### Treatment\\\\n### Drug-Susceptible Typhoid\\\\n- **First-line**: Ceftriaxone 2g IV/IM BID × 7-10 days OR Cefixime 400mg oral BID\\\\n- **Alternative**: Fluoroquinolone (ciprofloxacin 500mg BID × 5-7 days)\\\\n- **Adjunctive**: Acetaminophen for fever; avoid NSAIDs (perforation risk)\\\\n\\\\n### MDR-Typhoid (Resistance to Ampicillin, Chloramphenicol, TMP-SMX)\\\\n- **Treatment**: Third-generation cephalosporins (ceftriaxone, ceftazidime)\\\\n- **Duration**: 7-10 days\\\\n- **Mortality**: Increases with delayed treatment, perforation, age >60\\\\n\\\\n### XDR-Typhoid (Resistance to fluoroquinolones also; emerging in Pakistan/India)\\\\n- **Treatment**: Carbapenems (meropenem 1g × 3/day) OR azithromycin 500mg BID\\\\n- **Challenge**: Limited options; resistance rising\\\\n\\\\n### Chronic Carrier Management\\\\n- **Identification**: Positive stool culture >1 month post-illness\\\\n- **Occupational screening**: High-risk (food handlers, healthcare workers)\\\\n- **Prophylaxis**: Fluoroquinolone × 4 weeks (50% cure rate)\\\\n- **Cholecystectomy**: If gallstones present + carrier status (removes reservoir)\\\\n\\\\n## Polio Eradication Strategies\\\\n### India's Success\\\\n- **1995**: 50,000+ polio cases → Last case 2011\\\\n- **Strategy components**:\\\\n  - **Mass immunization campaigns**: Twice/year (JE + OPV)\\\\n  - **OPV coverage**: >95% target\\\\n  - **Acute flaccid paralysis (AFP) surveillance**: Identify cases\\\\n  - **IVRS**: Immunization verification + tracking\\\\n  - **High-risk areas**: Targeted campaigns (slums, tribal regions)\\\\n\\\\n### Post-Certification Phase (India 2023+)\\\\n- **OPV→IPV transition**: IPV introduced gradually (IPV reduces transmission)\\\\n- **Surveillance**: Continued AFP monitoring (global threat of reintroduction)\\\\n- **Booster campaigns**: Periodic IPV boosters (maintain population immunity)\\\\n- **Laboratory capacity**: Maintain virology labs (global emergency response),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Typhoid Stages - HARM\\\\\\\",\\\\n            explanation: \\\\\\\"Headache, Abdominal pain (week 1), Rose spots, Myalgia (week 2), Hepatosplenomegaly\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Hepatitis Chronic Risk - HBV>HEV>HAV\\\\\\\",\\\\n            explanation: \\\\\\\"HBV: 5% adult chronic; HEV: Acute only (except rare); HAV: Acute only\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"HAV: Acute only; complete recovery; IgM diagnostic\\\\\\\",\\\\n          \\\\\\\"HBV: 5% adults chronic; HBsAg screening; tenofovir first-line\\\\\\\",\\\\n          \\\\\\\"HEV: Fecal-oral; 30-40% India seroprevalence; pregnancy high-risk\\\\\\\",\\\\n          \\\\\\\"Typhoid: Blood culture gold standard; cephalosporins first-line\\\\\\\",\\\\n          \\\\\\\"Polio: India polio-free; OPV >95% coverage; AFP surveillance\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Park Textbook of PSM\\\\\\\", chapter: \\\\\\\"Hepatitis & Typhoid Management\\\\\\\", edition: \\\\\\\"26th\\\\\\\" },\\\\n          { book: \\\\\\\"WHO Polio Eradication\\\\\\\", chapter: \\\\\\\"Post-Certification Strategy\\\\\\\", edition: \\\\\\\"Latest\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"hepatitis-typhoid-polio-exam\\\\\\\",\\\\n        title: \\\\\\\"Hepatitis, Typhoid & Polio - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"High-yield exam questions and key differentials.\\\\\\\",\\\\n        contentMd: "# Hepatitis, Typhoid & Polio - Exam Preparation\\\\\\\\n\\\\\\\\n## High-Yield Facts\\\\\\\\n- **HAV**: Fecal-oral; endemic; lifelong immunity; no chronic infection\\\\\\\\n- **HBV**: 4% India seroprevalence; 90% neonatal chronicity; vaccine-preventable\\\\\\\\n- **HEV**: 30-40% India seroprevalence; pregnant women at risk (fulminant 5-25%)\\\\\\\\n- **Typhoid**: Fecal-oral; rose spots (week 2); cephalosporins; 5-10% chronic carriers\\\\\\\\n- **Polio**: India polio-free since 2011; OPV >95% coverage; AFP surveillance\\\\\\\\n\\\\\\\\n## NEXT-Pattern Questions\\\\\\\\n\\\\\\\\n### Problem-Solving (60%)\\\\\\\\n1. **Hepatitis Case**: 25-year-old with jaundice, dark urine, RUQ pain. Anti-HAV IgM positive.\\\\\\\\n   - Diagnosis? **Acute Hepatitis A**\\\\\\\\n   - Management? **Supportive care; monitor liver function, INR**\\\\\\\\n   - Prognosis? **Complete recovery expected (no chronic sequelae)**\\\\\\\\n\\\\\\\\n2. **HBV Screening**: Pregnant woman, HBsAg positive, HBeAg negative, ALT normal.\\\\\\\\n   - Chronic HBV? **Yes (HBsAg+ indicates active infection)**\\\\\\\\n   - Treatment indication? **No (ALT normal; HBV DNA likely <2000)**\\\\\\\\n   - Perinatal transmission risk? **10-20% (lower risk, HBeAg-)**\\\\\\\\n   - Infant management? **HBV vaccine + HBIG; follow anti-HBs**\\\\\\\\n\\\\\\\\n3. **Typhoid Diagnosis**: 18-year-old with 7-day fever, headache, rose spots, hepatosplenomegaly. Blood culture pending.\\\\\\\\n   - Most likely diagnosis? **Typhoid fever (rose spots + organ enlargement week 2)**\\\\\\\\n   - Empiric treatment? **Ceftriaxone 2g BID pending culture**\\\\\\\\n   - Complication risk? **Intestinal perforation (week 3-4)**\\\\\\\\n\\\\\\\\n### Analysis (30%)\\\\\\\\n1. Why is **HBV chronic infection risk highest in neonates** but **HAV never becomes chronic**?\\\\\\\\n   - **HBV neonate (90% chronic)**: Immune tolerance; HBsAg recognized as \\\\\\\\\\\\\\\"self\\\\\\\\\\\\\\\"\\\\\\\\n   - **HAV (never chronic)**: Strong CTL response; complete viral clearance\\\\\\\\n   - **Maternal-neonatal HBV**: Transplacental transmission; fetal immune system develops with virus present\\\\\\\\n   - **Age-related immunity**: Adults have mature immune system → clear HBV\\\\\\\\n\\\\\\\\n2. Why **HEV so severe in pregnant women** (fulminant 5-25%) vs non-pregnant (1-2%)?\\\\\\\\n   - **Pregnancy immunosuppression**: Shift to TH2 (protective for fetus)\\\\\\\\n   - **Impaired TH1 response**: Needed to clear HEV → persistent viremia\\\\\\\\n   - **Viral load**: Higher in pregnant women (viral replication unchecked)\\\\\\\\n   - **Placental invasion**: Direct fetal infection → vertical transmission\\\\\\\\n   - **Fulminant hepatitis**: Severe inflammatory response\\\\\\\\n\\\\\\\\n3. Why **polio eradication possible** but **malaria/dengue not**?\\\\\\\\n   - **Polio**: Human-only reservoir; vaccine prevents transmission (IPV)\\\\\\\\n   - **Malaria/dengue**: Animal reservoirs (primates, birds); multiple virus types\\\\\\\\n   - **Polio epidemiology**: Focal outbreaks; trackable through AFP surveillance\\\\\\\\n   - **Vector control vs vaccine**: Polio vaccinated → no transmission; vectors persist\\\\\\\\n\\\\\\\\n### Recall (10%)\\\\\\\\n- **HAV incubation**: 15-50 days\\\\\\\\n- **HBV chronic risk**: Neonates 90%, adults 5%\\\\\\\\n- **HEV pregnancy fulminant**: 5-25% (vs 1-2% general)\\\\\\\\n- **Typhoid rose spots**: Week 2; upper trunk\\\\\\\\n- **Polio last case India**: 2011 (West Bengal)\\\\\\\\n\\\\\\\\n## Important Differentials\\\\\\\\n| Feature | HAV | HBV | HEV | Typhoid |\\\\\\\\n|---------|-----|-----|-----|---------|\\\\\\\\n| **Transmission** | Fecal-oral | Blood, sexual | Fecal-oral (water) | Fecal-oral (water, food) |\\\\\\\\n| **Chronic** | No | Yes (5% adult) | No | Carrier: 5-10% |\\\\\\\\n| **Vaccine** | Yes | Yes (UIP) | Yes (not UIP) | Yes (Typhoid vaccine) |\\\\\\\\n| **Diagnosis** | Anti-HAV IgM | HBsAg, HBV DNA | Anti-HEV IgM | Blood culture, Widal |\\\\\\\\n| **Treatment** | Supportive | Tenofovir (if chronic) | Supportive | Cephalosporins |\\\\\\\\n\\\\\\\\n## India-Specific IAAP Focus\\\\\\\\n- **HBV**: Universal vaccination from birth (UIP)\\\\\\\\n- **Typhoid**: Vaccine recommended for travelers\\\\\\\\n- **Polio**: Continued surveillance (global threat)\\\\\\\\n- **HAV/HEV**: Endemic; vaccination for select groups,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Hepatitis Diagnosis - HAV IgM, HBV HBsAg, HEV IgM\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"IgM for acute (HAV, HEV); HBsAg for HBV detection; HBV DNA quantifies\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"HAV: IgM diagnostic; complete recovery\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"HBV: HBsAg+ defines infection; 5% chronic (adults)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"HEV: Pregnant women high-risk; fulminant 5-25%\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Typhoid: Rose spots week 2; cephalosporins effective\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Polio: India polio-free; post-certification surveillance critical\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Park Textbook of PSM\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Viral Hepatitis & Typhoid\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"hepatitis-typhoid-polio-active-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Hepatitis, Typhoid & Polio - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 40,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Deep-dive Q&A on chronicity, pregnancy complications, and eradication.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Hepatitis, Typhoid & Polio - Active Recall Q&A\\\\\\\\n\\\\\\\\n## Q1: Explain why HBV chronicity depends on age of infection and what immune mechanisms prevent chronic infection in adults.\\\\\\\\n**A:** **Age-Dependent Chronicity Mechanism:**\\\\\\\\n\\\\\\\\n### Neonatal Infection (90% Chronicity)\\\\\\\\n- **Immune naivety**: Developing immune system; no previous antigen exposure\\\\\\\\n- **Immune tolerance induction**: HBsAg recognized as self (similar to fetal/maternal antigens)\\\\\\\\n- **Weak CTL response**: Immature T-cell repertoire; ineffective antigen recognition\\\\\\\\n- **Low IFN-γ**: Minimal interferon-gamma (critical for macrophage activation)\\\\\\\\n- **Result**: Virus persists; immune system \\\\\\\\\\\\\\\"tolerates\\\\\\\\\\\\\\\" it\\\\\\\\n- **HBsAg becomes \\\\\\\\\\\\\\\"self\\\\\\\\\\\\\\\"**: Continues lifelong (chronic HBV)\\\\\\\\n\\\\\\\\n### Childhood Infection (30-50% Chronicity)\\\\\\\\n- **Developing immunity**: Some immune response, but variable\\\\\\\\n- **Partial clearance**: Some children clear virus; others develop persistence\\\\\\\\n- **Risk factors**: Lower nutritional status, immunosuppression\\\\\\\\n- **Outcome**: Variable; depends on viral factors & immune maturation\\\\\\\\n\\\\\\\\n### Adult Infection (5% Chronicity)\\\\\\\\n- **Mature immune system**: Fully developed T-cell repertoire\\\\\\\\n- **Rapid CTL response**: Recognize HBsAg as foreign; attack infected hepatocytes\\\\\\\\n- **High IFN-γ production**: Activates macrophages → antiviral state\\\\\\\\n- **Th1 dominance**: Type 1 interferon production (antiviral)\\\\\\\\n- **Viral clearance**: 95% eliminate HBV within 6 months\\\\\\\\n- **Immunity**: Anti-HBs develops; lifelong protection\\\\\\\\n\\\\\\\\n---\\\\\\\\n\\\\\\\\n**Why Adults Rarely Become Chronic:**\\\\\\\\n1. **HLA presentation**: Adult HLA diversity better presents HBV peptides\\\\\\\\n2. **Memory cells**: Previous vaccines/exposures provide T-cell memory\\\\\\\\n3. **Thymic function**: Intact thymus produces effective T-cells (vs infant thymic involution)\\\\\\\\n4. **Antigen processing**: Mature dendritic cells → better antigen presentation\\\\\\\\n5. **Cytokine response**: IL-12, IL-18 drive TH1 response (antiviral)\\\\\\\\n\\\\\\\\n---\\\\\\\\n\\\\\\\\n## Q2: Discuss HEV pathogenesis in pregnancy and explain why pregnant women are at such high risk for fulminant hepatic failure.\\\\\\\\n**A:** **HEV Pregnancy Pathophysiology:**\\\\\\\\n\\\\\\\\n### Normal Pregnancy Immune Changes\\\\\\\\n- **Shift to TH2**: Protective for fetus (prevents rejection)\\\\\\\\n- **Impaired TH1 response**: IL-2, IFN-γ production decreased\\\\\\\\n- **Rationale**: Fetus is genetically 50% foreign; TH2 tolerance necessary\\\\\\\\n\\\\\\\\n### HEV Replication in Pregnancy\\\\\\\\n- **Higher viral replication**: TH1 cytokines low → viral replication unchecked\\\\\\\\n- **Viral load**: 1000× higher than non-pregnant (quantitative PCR data)\\\\\\\\n- **Prolonged viremia**: Weeks vs days (clearance delayed)\\\\\\\\n- **Systemic dissemination**: Spread to multiple organs (placenta, fetus, brain)\\\\\\\\n\\\\\\\\n### Fulminant Hepatic Failure Mechanism\\\\\\\\n1. **Direct viral cytopathicity**: HEV replicates in hepatocytes; direct cell death\\\\\\\\n2. **Immunopathology**: When immune response finally mounts (severe TH1 activation)\\\\\\\\n3. **Inflammatory cascade**: TNF-α, IL-6, IL-8 surge\\\\\\\\n4. **Hepatocyte apoptosis**: Massive cell death > regeneration capacity\\\\\\\\n5. **Coagulopathy**: PT/INR prolongation (loss of synthetic function)\\\\\\\\n6. **Encephalopathy**: Ammonia elevation; altered consciousness\\\\\\\\n7. **Hemodynamic collapse**: Cirrhotic physiology; shock\\\\\\\\n\\\\\\\\n### Timeline of Fulminant HEV\\\\\\\\n- **Week 1**: High viral replication; minimal liver injury\\\\\\\\n- **Week 2-3**: Immune system engagement; inflammatory response peaks\\\\\\\\n- **Week 3-4 (3rd trimester)**: Fulminant hepatitis develops\\\\\\\\n- **Risk peak**: Third trimester (maximum immune suppression)\\\\\\\\n\\\\\\\\n---\\\\\\\\n\\\\\\\\n**Why Fulminant Risk 5-25% (vs 1-2% non-pregnant):**\\\\\\\\n- Non-pregnant: Strong TH1 response → controlled infection → full recovery\\\\\\\\n- Pregnant: Weak TH1 initially; then exaggerated response → excessive hepatocyte death\\\\\\\\n- **Timing**: 3rd trimester worst (immune suppression maximum; viral load peak)\\\\\\\\n- **Viral inoculum**: Likely larger exposures (water-borne; endemic areas)\\\\\\\\n\\\\\\\\n---\\\\\\\\n\\\\\\\\n## Q3: Design a public health strategy for typhoid fever in a district with endemic transmission and emerging MDR-strains.\\\\\\\\n**A:** **Typhoid Control Strategy:**\\\\\\\\n\\\\\\\\n### Phase 1: Surveillance & Diagnosis\\\\\\\\n1. **Case Detection**:\\\\\\\\n   - Fever clinics: Identify suspected cases (fever >3 days)\\\\\\\\n   - Blood cultures: Gold standard; establish microbiology capacity\\\\\\\\n   - ALERT laboratories: Create rapid diagnosis network\\\\\\\\n\\\\\\\\n2. **Confirmation & Drug Susceptibility Testing**:\\\\\\\\n   - **Culture on XLD media** (Xylose-Lysine-Deoxycholate): Salmonella isolation\\\\\\\\n   - **AST**: Ampicillin, chloramphenicol, TMP-SMX (MDR), fluoroquinolones (XDR)\\\\\\\\n   - **Reporting**: Weekly surveillance data to district health officer\\\\\\\\n\\\\\\\\n3. **Surveillance System**:\\\\\\\\n   - Track: Case numbers, geographic distribution, resistance patterns\\\\\\\\n   - Alert: If >10% resistant cases → change treatment guidelines\\\\\\\\n\\\\\\\\n### Phase 2: Case Management\\\\\\\\n#### Drug-Susceptible Typhoid\\\\\\\\n- **First-line**: Ceftriaxone 2g IV/IM BID × 7 days (3rd generation preferred)\\\\\\\\n- **Oral alternative**: Cefixime 400mg BID × 7 days\\\\\\\\n- **Adjunctive**: Acetaminophen for fever (avoid NSAIDs; perforation risk)\\\\\\\\n- **Supportive**: IV hydration; monitor for complications\\\\\\\\n\\\\\\\\n#### MDR-Typhoid\\\\\\\\n- **Confirmed MDR** (resistant to ampicillin, chloramphenicol, TMP-SMX):\\\\\\\\n  - Continue: Cephalosporins (still effective)\\\\\\\\n  - Duration: 7-10 days\\\\\\\\n  - Monitor: Clinical response by day 3-5\\\\\\\\n\\\\\\\\n#### XDR-Typhoid (Emerging; Pakistan/India endemic)\\\\\\\\n- **Fluoroquinolone-resistant + 3rd gen cephalosporin resistant**:\\\\\\\\n  - **First-line**: Carbapenems (meropenem 1g TID) OR azithromycin 500mg BID × 7 days\\\\\\\\n  - **Availability challenge**: Limited access in rural areas\\\\\\\\n  - **Cost**: Higher; advocacy for government subsidy\\\\\\\\n\\\\\\\\n### Phase 3: Carrier Identification & Management\\\\\\\\n1. **Risk Screening**:\\\\\\\\n   - **Food handlers**: Stool culture post-treatment\\\\\\\\n   - **Healthcare workers**: Particularly in endemic areas\\\\\\\\n   - **Chronic diarrhea patients**: Screen if history of typhoid\\\\\\\\n\\\\\\\\n2. **Chronic Carrier Detection**:\\\\\\\\n   - **Stool culture**: >1 month post-illness\\\\\\\\n   - **Prevalence**: 5-10% of treated cases\\\\\\\\n   - **Infectivity**: Fecal shedding; high transmission risk in foodborne settings\\\\\\\\n\\\\\\\\n3. **Carrier Management**:\\\\\\\\n   - **Prophylaxis**: Fluoroquinolone (ciprofloxacin 500mg BID × 4 weeks)\\\\\\\\n     - Efficacy: ~50% microbiological cure\\\\\\\\n     - Limitation: Antibiotic resistance; variable absorption\\\\\\\\n   - **Cholecystectomy**: Consider if:\\\\\\\\n     - Gallstones present + persistently positive stool\\\\\\\\n     - High-risk occupation (food handler)\\\\\\\\n     - Recurrent typhoid episodes\\\\\\\\n   - **Monitoring**: Repeat stool cultures every 3 months × 1 year\\\\\\\\n\\\\\\\\n### Phase 4: Water & Sanitation\\\\\\\\n1. **Water Safety**:\\\\\\\\n   - Test municipal supply: Regular sampling (weekly)\\\\\\\\n   - Boil water advisory: If contamination detected\\\\\\\\n   - Chlorination: Public wells (apply 0.5-1.0 ppm free chlorine)\\\\\\\\n   - Water treatment plant upgrade: If non-functional\\\\\\\\n\\\\\\\\n2. **Sanitation Improvements**:\\\\\\\\n   - Toilet construction: Ensure 100% coverage\\\\\\\\n   - Sewage treatment: Upgrade if inadequate\\\\\\\\n   - Hand-washing stations: Public facilities, markets, schools\\\\\\\\n   - Waste disposal: Proper management (prevent groundwater contamination)\\\\\\\\n\\\\\\\\n### Phase 5: Vaccine Strategy\\\\\\\\n1. **Typhoid Vaccine Recommendations**:\\\\\\\\n   - **Oral typhoid vaccine (OTV)**: Ty21a strain\\\\\\\\n     - 3 or 4 doses (alternate day schedule)\\\\\\\\n     - Efficacy: 50-80%\\\\\\\\n     - Target: High-risk groups, endemic areas\\\\\\\\n   - **Injectable typhoid-conjugate vaccine (TCV)**: Newer; better efficacy\\\\\\\\n     - Single dose; 70-90% efficacy\\\\\\\\n     - Limited availability in India currently\\\\\\\\n\\\\\\\\n2. **Vaccination Coverage**:\\\\\\\\n   - **Risk populations**: Endemic district residents\\\\\\\\n   - **Timing**: Before monsoon/high-transmission season\\\\\\\\n   - **Education**: Community engagement on vaccine benefits\\\\\\\\n\\\\\\\\n### Phase 6: Public Health Education\\\\\\\\n- **ACSM**: Hand hygiene, safe water handling\\\\\\\\n- **Food hygiene**: Training for food handlers\\\\\\\\n- **Community mobilization**: Sanitation importance\\\\\\\\n- **Healthcare provider training**: Early diagnosis, appropriate antibiotics\\\\\\\\n\\\\\\\\n### Phase 7: Monitoring & Evaluation\\\\\\\\n**Key Indicators:**\\\\\\\\n- **Incidence**: Cases/100,000/year (target: <5)\\\\\\\\n- **Mortality**: Case fatality rate (target: <1%)\\\\\\\\n- **Treatment coverage**: % cases receiving appropriate antibiotics\\\\\\\\n- **Resistance prevalence**: % MDR, XDR cases\\\\\\\\n- **Water quality**: % safe supply\\\\\\\\n\\\\\\\\n---\\\\\\\\n\\\\\\\\n## Q4: Compare wild poliovirus vs vaccine-derived poliovirus (VDPV) and explain post-certification surveillance needs.\\\\\\\\n**A:** **Wild Poliovirus (WPV):**\\\\\\\\n- **Natural transmission**: Fecal-oral; no genetic modification\\\\\\\\n- **Virulence**: Paralytic polio ~1:200 infections\\\\\\\\n- **Vaccine susceptibility**: Susceptible to all poliovirus vaccines\\\\\\\\n- **Eradication status**: Eliminated globally (last case 2013; WPV1 eradicated 2015; WPV2 eradicated 2018)\\\\\\\\n- **Remaining**: Only WPV3 in Pakistan/Afghanistan (as of 2023)\\\\\\\\n\\\\\\\\n---\\\\\\\\n\\\\\\\\n**Vaccine-Derived Poliovirus (VDPV):**\\\\\\\\n- **Source**: Live OPV vaccine; genetic mutations during replication\\\\\\\\n- **Mechanism**: OPV reverts in immunocompromised (rare; <1 in 2-3 million vaccinated)\\\\\\\\n- **Transmission**: Fecal-oral from vaccine recipient to contacts\\\\\\\\n- **Risk populations**: Unvaccinated or immunocompromised contacts\\\\\\\\n- **Virulence**: Can cause paralytic polio (outbreak risk)\\\\\\\\n- **Differentiation**: Genetic sequencing confirms origin (wild vs VDPV)\\\\\\\\n\\\\\\\\n---\\\\\\\\n\\\\\\\\n**Post-Certification Surveillance (India, 2023+):**\\\\\\\\n\\\\\\\\n### Need for Continued Surveillance\\\\\\\\n- **Global threat**: Pakistan/Afghanistan still endemic\\\\\\\\n- **Reintroduction risk**: International travel (refugee camps, conflicts)\\\\\\\\n- **VDPV risk**: OPV campaigns in neighboring countries\\\\\\\\n- **Vulnerable population**: Unvaccinated children in India\\\\\\\\n\\\\\\\\n### AFP Surveillance System\\\\\\\\n- **Acute Flaccid Paralysis (AFP) case detection**:\\\\\\\\n  - PHC-level reporting: Any child <15 years with sudden onset flaccid paralysis\\\\\\\\n  - Target: Report 1 AFP case per 100,000 children <15 years/year\\\\\\\\n  - **India rate**: 2.5-3 per 100,000 (good surveillance)\\\\\\\\n\\\\\\\\n- **Stool sample collection**:\\\\\\\\n  - From every AFP case (within 2 weeks onset)\\\\\\\\n  - Ship to accredited virology lab (cold chain maintenance)\\\\\\\\n  - PCR testing: Identify polio vs other causes (enterovirus, GBS)\\\\\\\\n\\\\\\\\n### Laboratory Network\\\\\\\\n- **National Polio Surveillance Lab** (NPSL): Delhi\\\\\\\\n- **Regional labs**: Southern, Western, Eastern India\\\\\\\\n- **Capacity**: Real-time PCR, full genome sequencing\\\\\\\\n- **Training**: Technician competency every 6 months\\\\\\\\n\\\\\\\\n### Response to Polio-Positive AFP Case\\\\\\\\n1. **Immediate actions**:\\\\\\\\n   - **Notify**: WHO, Ministry of Health, neighboring states\\\\\\\\n   - **Case isolation**: Prevent fecal-oral transmission (4 weeks)\\\\\\\\n   - **Contact identification**: Trace contacts; stool samples\\\\\\\\n   - **Vaccination**: Emergency immunization campaigns\\\\\\\\n\\\\\\\\n2. **Outbreak response**:\\\\\\\\n   - **OPV campaigns**: Rapid deployment (within 1 week)\\\\\\\\n   - **High-risk areas**: Slums, tribal regions, refugee camps\\\\\\\\n   - **Target**: Achieve >95% OPV coverage\\\\\\\\n\\\\\\\\n### Transition from OPV to IPV\\\\\\\\n- **IPV advantages**: Inactivated vaccine; can't revert to VDPV\\\\\\\\n- **Challenge**: Higher cost (~₹800 vs ₹20 OPV dose)\\\\\\\\n- **Strategy**: Gradual introduction (IPV in routine schedule + OPV campaigns)\\\\\\\\n- **Timeline**: Phase-wise transition over 5 years (if resources available)\\\\\\\\n\\\\\\\\n### Global Coordination\\\\\\\\n- **Polio Eradication & Endgame Strategic Plan** (PEESP):\\\\\\\\n  - WHO-coordinated surveillance globally\\\\\\\\n  - Rapid response to any polio case\\\\\\\\n  - India participates: Lab confirmation, outbreak response\\\\\\\\n- **Certification protection**: Surveillance ensures post-certification success\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"CM-MOD-02-TOP-06\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      {\\\\\\\\n        layer: 1,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"leprosy-rabies-foundation\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Leprosy & Rabies - Foundation\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Epidemiology and transmission of leprosy and rabies.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Leprosy & Rabies - Foundation\\\\\\\\n\\\\\\\\n## Leprosy (Hansen's Disease)\\\\\\\\n### Global & Indian Burden\\\\\\\\n- **Global**: 150,000-200,000 cases (mostly India, Brazil, Indonesia)\\\\\\\\n- **India**: ~100,000 registered cases; 0.32% prevalence per 100,000\\\\\\\\n- **Target**: Elimination <1 case per 10,000 population (achieved 1995; endemic areas lag)\\\\\\\\n- **Disability rate**: 5-10% develop Grade 2 disability without early treatment\\\\\\\\n\\\\\\\\n### Leprosy Bacillus\\\\\\\\n- **Mycobacterium leprae**: Obligate intracellular; slow-growing\\\\\\\\n- **Doubling time**: 12-14 days (vs M. tuberculosis 18 hours)\\\\\\\\n- **Viability**: Survives only in humans (no animal reservoir)\\\\\\\\n- **Transmission**: Respiratory droplets (prolonged contact; 95% natural immunity)\\\\\\\\n\\\\\\\\n### Transmission\\\\\\\\n- **Respiratory droplets**: Nose/mouth of untreated cases\\\\\\\\n- **Risk**: Close, prolonged household contact\\\\\\\\n- **Incubation**: 3-10 years (long; variable)\\\\\\\\n- **Secondary infection rate**: 5-10% of household contacts\\\\\\\\n\\\\\\\\n## Rabies (Rabies Virus)\\\\\\\\n### Epidemiology\\\\\\\\n- **Global**: 59,000 deaths/year (99% in Asia, Africa)\\\\\\\\n- **India burden**: 20,000+ deaths annually (highest globally)\\\\\\\\n- **Mortality rate**: 99.9% if clinical symptoms develop (rabies almost always fatal)\\\\\\\\n- **Case fatality**: Pre-exposure prophylaxis (PrEP) 100%; post-exposure (PEP) >90% if started early\\\\\\\\n\\\\\\\\n### Animal Reservoir & Transmission\\\\\\\\n- **Animals**: Dogs (>90% transmission), bats, raccoons, skunks, monkeys\\\\\\\\n- **Route**: Saliva → bite/scratch wounds or mucous membranes\\\\\\\\n- **Incubation**: 2-8 weeks typically (range 10 days - 1 year)\\\\\\\\n- **Infectivity**: From symptom onset until death\\\\\\\\n\\\\\\\\n### India Context\\\\\\\\n- **Street dogs**: Majority of exposures (unvaccinated)\\\\\\\\n- **Bites**: 1 million dog bites annually; <5% receive PEP\\\\\\\\n- **Urban vs rural**: Both endemic; rural vaccination coverage poor,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Leprosy Classification - TBL\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Tuberculoid, Borderline, Lepromatous (spectrum)\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Rabies Risk - BRM\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Bats, Raccoons, Monkeys (plus dogs > 90%)\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Leprosy incubation 3-10 years; MDT curative\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"India 100,000 leprosy cases; elimination goal 1/10,000\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Rabies 99% fatal if untreated; PEP >90% effective if early\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"India 20,000 rabies deaths; dog bites most common\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Both treatable if detected early; prevention crucial\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Park Textbook of PSM\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Leprosy & Rabies\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"NLEP Manual India\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Leprosy Epidemiology\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"Latest\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 2,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"leprosy-rabies-mechanism\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Leprosy & Rabies - Mechanism\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 25,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Pathophysiology of leprosy and rabies infections.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Leprosy & Rabies - Pathophysiology\\\\\\\\n\\\\\\\\n## Leprosy Pathophysiology\\\\\\\\n### M. leprae Characteristics\\\\\\\\n- **Host specificity**: Humans only (attempts in armadillos as animal model)\\\\\\\\n- **Temperature**: Prefers skin/peripheral nerves (cooler than core body)\\\\\\\\n- **Acid-fastness**: Similar to TB; Ziehl-Neelsen staining positive\\\\\\\\n- **Multiplication**: Very slow; 2-week doubling time\\\\\\\\n\\\\\\\\n### Immune Response Spectrum\\\\\\\\n- **Strong Th1** → **Tuberculoid leprosy**: Few bacilli, localized lesions\\\\\\\\n- **Weak Th1, Strong Th2** → **Lepromatous leprosy**: Many bacilli, disseminated\\\\\\\\n- **Borderline forms**: Intermediate Th1/Th2 balance\\\\\\\\n\\\\\\\\n### Tuberculoid Leprosy\\\\\\\\n- **Pathology**: Epithelioid cell granulomas (similar TB)\\\\\\\\n- **Bacillary load**: Few (<10 bacilli per lesion)\\\\\\\\n- **Infectivity**: Low (paucibacillary)\\\\\\\\n- **Immune response**: Good (explains localization)\\\\\\\\n- **Skin lesions**: Well-demarcated, hypopigmented, anesthetic\\\\\\\\n- **Nerve damage**: Early, often severe (nerve alone involved)\\\\\\\\n\\\\\\\\n### Lepromatous Leprosy\\\\\\\\n- **Pathology**: Macrophage infiltration (foamy cells)\\\\\\\\n- **Bacillary load**: Numerous (1000+ per lesion; bacilli in blood)\\\\\\\\n- **Infectivity**: High (multibacillary)\\\\\\\\n- **Immune response**: Poor (widespread dissemination)\\\\\\\\n- **Skin lesions**: ill-demarcated, papules, nodules, erythema\\\\\\\\n- **Systemic**: Liver, spleen, lymph nodes involved\\\\\\\\n\\\\\\\\n### Lepra Reactions\\\\\\\\n- **Type 1 (Reversal reaction)**: Th1-mediated; upgrading/downgrading borderline forms\\\\\\\\n- **Type 2 (ENL - Erythema Nodosum Leprosum)**: Immune complex; lepromatous cases\\\\\\\\n\\\\\\\\n## Rabies Pathophysiology\\\\\\\\n### Viral Replication & CNS Invasion\\\\\\\\n1. **Local replication**: Virus replicates at bite site (muscle)\\\\\\\\n2. **Retrograde transport**: Travels along nerve axons (motor & sensory)\\\\\\\\n3. **CNS invasion**: Crosses blood-brain barrier via transcytosis\\\\\\\\n4. **Brain infection**: Primarily medulla (respiratory center); also cortex\\\\\\\\n5. **Saliva glands**: Re-enters via autonomic innervation (infectious saliva)\\\\\\\\n\\\\\\\\n### Neuroinflammation Mechanism\\\\\\\\n- **Microglial activation**: Releases pro-inflammatory cytokines (TNF-α, IL-6)\\\\\\\\n- **Neuronal dysfunction**: Neurotransmitter imbalance\\\\\\\\n- **Apoptosis**: Neuronal programmed cell death\\\\\\\\n- **Edema**: Brain swelling; increased ICP\\\\\\\\n- **Coma & death**: Brainstem involvement → respiratory failure\\\\\\\\n\\\\\\\\n### Immune Response Inadequacy\\\\\\\\n- **CNS immune privilege**: Blood-brain barrier limits immune cells\\\\\\\\n- **Viral evasion**: Rabies evades innate immunity (no interferon production)\\\\\\\\n- **Late antibody response**: Takes >10 days; symptoms appear within 7-10 days\\\\\\\\n- **Vaccines work only pre-symptom**: Cannot overcome established CNS infection\\\\\\\\n\\\\\\\\n### Incubation Period\\\\\\\\n- **Distance**: Virus travels ~1 mm/hour (centripetal)\\\\\\\\n- **Bite site distance**: Head bites (shorter distance) → faster onset\\\\\\\\n- **Viral load**: Higher inoculum → faster progression\\\\\\\\n- **Natural immunity**: 95% of exposures don't lead to infection (immune control)\\\\\\\\n\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 3,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"leprosy-rabies-clinical\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Leprosy & Rabies - Clinical\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 30,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Diagnosis, classification, and management protocols.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: `# Leprosy & Rabies - Clinical Management\\\\\\\\n\\\\\\\\n## Leprosy Classification & Diagnosis\\\\\\\\n### Clinical Classification (Ridley-Jopling)\\\\\\\\n- **TT (Tuberculoid)**: Few lesions, strong immunity, paucibacillary\\\\\\\\n- **BT (Borderline Tuberculoid)**: 1-5 lesions, good immunity\\\\\\\\n- **BB (Mid-borderline)**: 5-10 lesions, intermediate\\\\\\\\n- **BL (Borderline Lepromatous)**: 10-20+ lesions, weak immunity\\\\\\\\n- **LL (Lepromatous)**: Innumerable lesions, poor immunity, multibacillary\\\\\\\\n\\\\\\\\n### WHO Operational Classification\\\\\\\\n- **Paucibacillary (PB)**: TT, BT (1-5 lesions, BI <2)\\\\\\\\n- **Multibacillary (MB)**: BB, BL, LL (>5 lesions, BI ≥2)\\\\\\\\n\\\\\\\\n### Clinical Diagnosis\\\\\\\\n- **Skin lesions**: Hypopigmented/erythematous, loss of sensation\\\\\\\\n- **Nerve thickening**: Palpable nerves (especially ulnar, lateral popliteal)\\\\\\\\n- **Nerve damage signs**: Weakness, contractures, claw hand, foot drop\\\\\\\\n- **Slit-skin smear**: Gold standard (Ziehl-Neelsen; bacilli count)\\\\\\\\n\\\\\\\\n## Leprosy Treatment (MDT - Multidrug Therapy)\\\\\\\\n### PB Leprosy (6-month course)\\\\\\\\n- Rifampicin 600mg monthly\\\\\\\\n- Dapsone 100mg daily\\\\\\\\n- Ofloxacin 400mg monthly\\\\\\\\n\\\\\\\\n### MB Leprosy (12-month course)\\\\\\\\n- Rifampicin 600mg monthly\\\\\\\\n- Dapsone 100mg daily\\\\\\\\n- Clofazimine 50mg daily + 300mg monthly\\\\\\\\n\\\\\\\\n### MDT Efficacy\\\\\\\\n- **Bacilli elimination**: 99% killed within weeks\\\\\\\\n- **Infectivity loss**: Non-infectious after first dose\\\\\\\\n- **Cure rate**: >95% if completed\\\\\\\\n- **Relapse**: <1% (multidrug prevents resistance)\\\\\\\\n\\\\\\\\n## Rabies Diagnosis & PEP\\\\\\\\n### Exposure Assessment\\\\\\\\n- **Category I**: Touching, feeding; no bite = no PEP needed\\\\\\\\n- **Category II**: Minor bite/scratch = PEP (vaccine only)\\\\\\\\n- **Category III**: Major bite/scratch, contamination of mucosa = PEP + HBIG\\\\\\\\n\\\\\\\\n### Post-Exposure Prophylaxis (PEP)\\\\\\\\n- **Timing**: Within 72 hours (up to 14 days acceptable)\\\\\\\\n- **Local treatment**: Wound washing, rabies immunoglobulin (RIG/HBIG)\\\\\\\\n- **Vaccine regimen**:\\\\\\\\n  - **Essen regimen**: Vaccines on days 0, 3, 7, 14, 28 (5 doses)\\\\\\\\n  - **2-1-1 schedule**: Newer; 2 doses day 0, then 1 dose day 7 & 21\\\\\\\\n- **HBIG**: 20 IU/kg (infiltrate around wound if possible; rest IM)\\\\\\\\n- **Effectiveness**: >90% if started early\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 4,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"leprosy-rabies-exam\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Leprosy & Rabies - Exam Prep\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 25,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"High-yield exam questions on leprosy and rabies.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Leprosy & Rabies - Exam Preparation\\\\\\\\n\\\\\\\\n## High-Yield Facts\\\\\\\\n- **Leprosy incubation**: 3-10 years (long period)\\\\\\\\n- **Tuberculoid leprosy**: Few lesions, paucibacillary, good immunity\\\\\\\\n- **Lepromatous leprosy**: Many lesions, multibacillary, poor immunity\\\\\\\\n- **MDT efficacy**: >95% cure if completed; <1% relapse\\\\\\\\n- **Rabies**: 99% fatal if untreated; PEP >90% if early\\\\\\\\n- **PEP timing**: Within 72 hours ideally; up to 14 days acceptable\\\\\\\\n- **Wound washing**: Critical first step in rabies exposure\\\\\\\\n\\\\\\\\n## NEXT-Pattern Questions\\\\\\\\n\\\\\\\\n### Problem-Solving (60%)\\\\\\\\n1. **Leprosy Case**: 28-year-old with 3 well-demarcated hypopigmented lesions, anesthesia, thickened ulnar nerve.\\\\\\\\n   - Classification? **Borderline Tuberculoid (BT)**\\\\\\\\n   - Infectious? **Low (paucibacillary); 6-month MDT indicated**\\\\\\\\n   - Prognosis? **Good if MDT completed; prevent disability**\\\\\\\\n\\\\\\\\n2. **Dog Bite**: 15-year-old with deep dog bite on calf (2 hours ago).\\\\\\\\n   - Category? **Category III (major bite)**\\\\\\\\n   - PEP needed? **Yes; vaccine + HBIG**\\\\\\\\n   - Timing? **Start immediately; within 72 hours crucial**\\\\\\\\n\\\\\\\\n### Analysis (30%)\\\\\\\\n1. Why **tuberculoid leprosy has few bacilli** but **severe nerve damage** vs **lepromatous with many bacilli but minimal nerve damage**?\\\\\\\\n   - Tuberculoid: Strong Th1 → immune granulomas → localizes infection BUT tissue-damaging response\\\\\\\\n   - Lepromatous: Weak Th1 → bacilli disseminate but low inflammation locally\\\\\\\\n\\\\\\\\n2. Why **rabies PEP works pre-symptom** but **fails after symptoms appear**?\\\\\\\\n   - PEP: Vaccine stimulates immune response before CNS infection\\\\\\\\n   - Post-symptom: Virus in CNS; immune-privileged site; response too late\\\\\\\\n\\\\\\\\n### Recall (10%)\\\\\\\\n- Leprosy: 100,000 cases in India\\\\\\\\n- Rabies: 20,000 deaths annually in India\\\\\\\\n- MDT courses: 6 months (PB), 12 months (MB)\\\\\\\\n- Essen PEP: Days 0, 3, 7, 14, 28 (5 doses)\\\\\\\\n\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"leprosy-rabies-active-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Leprosy & Rabies - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 40,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Deep-dive Q&A on pathophysiology and prevention.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Leprosy & Rabies - Active Recall Q&A\\\\\\\\n\\\\\\\\n## Q1: Explain the immune spectrum in leprosy and why tuberculoid cases have severe nerve damage despite few bacilli.\\\\\\\\n\\\\\\\\n**A:** **Immune Spectrum Basis:**\\\\\\\\n- **Strong Th1 response** (good cell-mediated immunity):\\\\\\\\n  - CD4+ T cells recognize M. leprae antigens\\\\\\\\n  - IFN-γ production activates macrophages\\\\\\\\n  - **Result**: Epithelioid granulomas; few bacilli survive\\\\\\\\n  - **Tuberculoid leprosy**: Paucibacillary form\\\\\\\\n\\\\\\\\n- **Weak Th1 response** (poor cell-mediated immunity):\\\\\\\\n  - Low CD4+ T cell activation\\\\\\\\n  - Impaired macrophage function\\\\\\\\n  - **Result**: Bacilli multiply freely; disseminate\\\\\\\\n  - **Lepromatous leprosy**: Multibacillary form\\\\\\\\n\\\\\\\\n**Why Tuberculoid Has Severe Nerve Damage:**\\\\\\\\n1. **Granuloma inflammation** is tissue-damaging\\\\\\\\n2. **Th1 cytokines** (TNF-α, IFN-γ) cause inflammation in nerves\\\\\\\\n3. **Granulomatous inflammation** erodes nerve roots\\\\\\\\n4. **Few lesions** but **high inflammatory burden per lesion**\\\\\\\\n5. **Paradox**: Good immunity → severe inflammation → nerve destruction\\\\\\\\n\\\\\\\\n**Why Lepromatous Has Minimal Nerve Damage:**\\\\\\\\n1. **Weak immune response** → minimal inflammation\\\\\\\\n2. **Th2 dominance** → anti-inflammatory environment\\\\\\\\n3. **Bacilli disseminate** but slowly damage nerves\\\\\\\\n4. **Late presentation**: By time diagnosed, extensive bacillary burden\\\\\\\\n\\\\\\\\n---\\\\\\\\n\\\\\\\\n## Q2: Design a post-exposure prophylaxis strategy for a healthcare worker exposed to rabies via needlestick.\\\\\\\\n\\\\\\\\n**A:** **Rabies PEP Protocol:**\\\\\\\\n\\\\\\\\n### Immediate Actions (Within 1 hour)\\\\\\\\n1. **Wound Management**:\\\\\\\\n   - **Immediate washing**: With soap/water for 15 minutes\\\\\\\\n   - **Flushing**: With povidone-iodine or chlorhexidine\\\\\\\\n   - **Scrubbing**: Especially around puncture site\\\\\\\\n   - **Rationale**: Physical removal of virus; chemical disinfection\\\\\\\\n\\\\\\\\n2. **Risk Assessment**:\\\\\\\\n   - **Exposure source**: Was it a potentially rabid animal?\\\\\\\\n   - **If human**: Very rare; check if human has rabies diagnosis\\\\\\\\n   - **Animal status**: Availability for observation/testing\\\\\\\\n\\\\\\\\n### Rabies Immunoglobulin (RIG) Administration\\\\\\\\n- **Dose**: 20 IU/kg body weight\\\\\\\\n- **HCW weight**: Assume 60kg → **1200 IU total**\\\\\\\\n- **Administration**:\\\\\\\\n  - Infiltrate around/in wound: 100-200 IU (50% dose)\\\\\\\\n  - Remaining IM in deltoid: 1000 IU in contralateral arm\\\\\\\\n  - **Timing**: Ideally within 24 hours; can give up to 7 days\\\\\\\\n  - **Cannot give after vaccine series started** (antibody interference)\\\\\\\\n\\\\\\\\n### Vaccine Regimen\\\\\\\\n**Essen Schedule** (standard):\\\\\\\\n- **Day 0**: 0.5mL IM in deltoid (both arms if needed)\\\\\\\\n- **Day 3**: 0.5mL IM\\\\\\\\n- **Day 7**: 0.5mL IM\\\\\\\\n- **Day 14**: 0.5mL IM\\\\\\\\n- **Day 28**: 0.5mL IM\\\\\\\\n- **Total**: 5 doses over 28 days\\\\\\\\n\\\\\\\\n**Alternative: 2-1-1 Schedule** (newer; fewer visits):\\\\\\\\n- **Day 0**: Two 0.5mL IM injections (deltoid bilaterally)\\\\\\\\n- **Day 7**: 0.5mL IM\\\\\\\\n- **Day 21**: 0.5mL IM\\\\\\\\n- **Total**: 4 doses over 21 days (time-efficient)\\\\\\\\n\\\\\\\\n### Monitoring & Follow-up\\\\\\\\n1. **Post-vaccination titers**:\\\\\\\\n   - Check anti-rabies antibody levels at day 0 (pre) & day 28-35 (post)\\\\\\\\n   - If titer <0.5 IU/mL: Booster vaccination recommended\\\\\\\\n   - If HCW immunocompromised: Earlier testing (day 14)\\\\\\\\n\\\\\\\\n2. **Observation of exposure source**:\\\\\\\\n   - If animal: 10-day observation period\\\\\\\\n   - If remains well → likely not rabid\\\\\\\\n   - If animal dies/symptoms develop: Submit for testing (immunofluorescence)\\\\\\\\n\\\\\\\\n3. **Clinical monitoring**:\\\\\\\\n   - Watch for prodromal symptoms: Fever, paresthesias, anxiety\\\\\\\\n   - If symptoms develop: Rabies likely present; supportive care only (nearly always fatal)\\\\\\\\n\\\\\\\\n---\\\\\\\\n\\\\\\\\n## Q3: Explain why MDT (multidrug therapy) is critical in leprosy and how it prevents drug resistance.\\\\\\\\n\\\\\\\\n**A:** **MDT Advantages:**\\\\\\\\n\\\\\\\\n### Bacillary Killing\\\\\\\\n- **Rifampicin**: Most potent; kills 99% bacilli in first month\\\\\\\\n- **Dapsone**: Slower; sustains suppression\\\\\\\\n- **Ofloxacin/Clofazimine**: Additional coverage; prevents resistance\\\\\\\\n\\\\\\\\n### Resistance Prevention\\\\\\\\n- **Single drug risk**: Rare resistant mutants exist naturally (~1 in 10^6 bacilli)\\\\\\\\n- **Monotherapy**: Selects resistant strain within months\\\\\\\\n- **Multidrug**: Different mechanisms:\\\\\\\\n  - Rifampicin: Inhibits RNA polymerase\\\\\\\\n  - Dapsone: Inhibits folate synthesis (PABA antagonist)\\\\\\\\n  - Ofloxacin: DNA gyrase inhibitor\\\\\\\\n  - Clofazimine: Generation of reactive oxygen species\\\\\\\\n- **Combined**: Highly unlikely bacillus has simultaneous resistance to all\\\\\\\\n\\\\\\\\n### Treatment Duration\\\\\\\\n- **PB (Paucibacillary)**: 6 months (short course possible due to good immunity)\\\\\\\\n- **MB (Multibacillary)**: 12 months (higher bacillary burden; needs longer)\\\\\\\\n\\\\\\\\n### Cure Definition\\\\\\\\n- **Microbiological cure**: Negative slit-skin smear (BI = 0)\\\\\\\\n- **Bacteriological cure**: Achievement usually month 3-6 with MDT\\\\\\\\n- **Clinical cure**: Lesion resolution over months-years (inflammation resolves slower)\\\\\\\\n- **Definition of cured**: MDT completed + clinically stable (WHO definition)\\\\\\\\n\\\\\\\\n---\\\\\\\\n\\\\\\\\n## Q4: Compare tuberculoid vs lepromatous leprosy across clinical, immunological, and epidemiological dimensions.\\\\\\\\n\\\\\\\\n**A:**\\\\\\\\n\\\\\\\\n| Feature | Tuberculoid | Lepromatous |\\\\\\\\n|---------|------------|------------|\\\\\\\\n| **Number of lesions** | 1-5 | >10 (often innumerable) |\\\\\\\\n| **Distribution** | Localized (unilateral) | Bilateral, disseminated |\\\\\\\\n| **Sensory loss** | Early, severe | Late, minimal |\\\\\\\\n| **Nerves involved** | Few; can be severely enlarged | Many; mildly enlarged |\\\\\\\\n| **Bacillary load** | Few (<10 per lesion) | Many (>1000 per lesion) |\\\\\\\\n| **Infectivity** | Low | High |\\\\\\\\n| **Immune response** | Strong Th1 | Weak Th1, Th2-dominant |\\\\\\\\n| **Lepromin test** | Positive | Negative |\\\\\\\\n| **MDT duration** | 6 months | 12 months |\\\\\\\\n| **Relapse** | <1% | 2-3% (higher risk) |\\\\\\\\n| **Complications** | Type 1 reactions (reversal) | Type 2 (ENL) |\\\\\\\\n| **Disability** | Common (despite few lesions) | Late onset |\\\\\\\\n\\\\\\\\n**Pathophysiological Basis:**\\\\\\\\n- Tuberculoid: Immune-competent host → granulomas control infection locally\\\\\\\\n- Lepromatous: Immune-incompetent host → bacilli overwhelm defenses, spread freely\\\\\\\\n\\\\\\\\n---\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\\nexport default communityMedicinePart3Lessons;\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-];
+        summary: "Epidemiology and transmission of hepatitis, typhoid, and polio in India.",
+        contentMd: `# Hepatitis, Typhoid & Polio - Foundation
+
+## Hepatitis Overview
+### Viral Hepatitis Types
+- **Hepatitis A (HAV)**: Fecal-oral; acute only; endemic in India
+- **Hepatitis B (HBV)**: Blood-borne; chronic risk; vaccine-preventable
+- **Hepatitis C (HCV)**: Blood-borne; chronic common; India: 6.3% seroprevalence
+- **Hepatitis E (HEV)**: Fecal-oral; endemic in India; pregnant women at risk
+- **Hepatitis D (HDV)**: Requires HBV; blood-borne
+
+### India-Specific Burden
+- **HAV**: Endemic; 100-200 million infected adults (lifelong immunity)
+- **HBV**: 4% population seropositive; 40 million chronic HBsAg carriers
+- **HEV**: 30-40% adult seroprevalence; outbreaks common
+- **HCV**: 10-12 million infected; mostly asymptomatic
+
+## Typhoid Fever
+### Epidemiology
+- **Incidence**: 150,000 deaths globally/year
+- **India burden**: Leading cause of febrile illness in many regions
+- **Causative agent**: Salmonella typhi (human-restricted pathogen)
+- **Transmission**: Fecal-oral via contaminated water/food
+- **Reservoir**: Humans; chronic carriers (5-10%)
+- **Risk**: Malnutrition, immunosuppression, delayed antibiotics
+
+### Clinical Burden
+- **Attack rate**: 1:1000 exposed in high-burden areas
+- **Mortality**: 1-4% (untreated: 20-30%)
+- **Complications**: Intestinal perforation, encephalitis, myocarditis
+
+## Polio Overview
+### Global Eradication Progress
+- **Cases 1988**: 125,000/year globally
+- **Cases 2024**: 0 (endemic eradication achieved)
+- **Status**: Only endemic in few countries; India polio-free since 2011
+- **Vaccine**: Oral polio vaccine (OPV) + Inactivated polio vaccine (IPV)
+
+### Disease Burden (Pre-vaccine era)
+- **Infantile paralysis**: Age <5 years primarily affected
+- **Mortality**: 5-10% of paralytic cases
+- **Disability**: Lifelong paralysis from spinal cord involvement
+`,
+        mnemonics: [
+          {
+            text: "Hepatitis transmission = HAV/HEV (fecal-oral), HBV/HCV/HDV (blood-borne)",
+            explanation: "Key transmission routes for different hepatitis viruses"
+          },
+          {
+            text: "Typhoid = Salmonella typhi, fecal-oral, 5-10% chronic carriers",
+            explanation: "Key epidemiological features of typhoid"
+          },
+          {
+            text: "Polio = Poliovirus, vaccine-preventable, India polio-free since 2011",
+            explanation: "Current status of polio in India"
+          }
+        ],
+        keyPoints: [
+          "Hepatitis A & E: Fecal-oral transmission; endemic in India",
+          "Hepatitis B & C: Blood-borne; chronic infection risk",
+          "HBV: 40 million chronic carriers in India",
+          "Typhoid: Salmonella typhi; human reservoir with carriers",
+          "Typhoid mortality: 1-4% treated, 20-30% untreated",
+          "Polio: Vaccine-preventable; India polio-free since 2011"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Viral Hepatitis and Enteric Infections", edition: "26th" },
+          { book: "Mahajan & Gupta Textbook of Preventive & Social Medicine", chapter: "Communicable Diseases", edition: "5th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "hepatitis-typhoid-polio-layer-2-mechanism",
+        title: "Hepatitis, Typhoid & Polio - Mechanism",
+        estimatedMinutes: 25,
+        summary: "Pathophysiology and immune mechanisms of these diseases.",
+        contentMd: `# Hepatitis, Typhoid & Polio - Mechanism
+
+## Hepatitis Pathophysiology
+
+### HAV Infection
+- **Replication**: Small intestine epithelium first, then liver
+- **Immune response**: IgM antibodies (acute phase), IgG (lifelong immunity)
+- **Outcome**: Acute hepatitis; self-limited; no chronic infection
+- **Duration**: Symptoms 1-2 weeks; recovery within 4 weeks
+
+### HBV Infection
+- **Replication**: Hepatocytes; immune attack causes inflammation
+- **Acute HBV**: 90% recover completely (adults)
+- **Chronic HBV**: 10% (adult infection) to 90% (neonatal infection)
+- **Progression**: Chronic → active hepatitis → cirrhosis → HCC
+
+### HEV Infection
+- **High mortality in pregnancy**: 15-25% (especially third trimester)
+- **Immune response**: Similar to HAV; lifelong immunity
+- **Fecal-oral transmission**: Common in poor sanitation
+- **Outbreak pattern**: Waterborne epidemics in contaminated water
+
+## Typhoid Pathophysiology
+
+### Infection Process
+1. **Ingestion**: Via contaminated water/food
+2. **Invasion**: Penetration through Peyer's patches (small intestine)
+3. **Bacteremia**: 1st week (clinical symptoms appear)
+4. **Rose spots**: Maculopapular rash on trunk (salmonellae in endothelium)
+5. **Complications**: Intestinal ulceration → perforation (week 3-4)
+
+### Host Response
+- **Immune suppression**: Relative lymphopenia during illness
+- **Delayed cellular immunity**: Impairs antityphoid response
+- **Carrier state**: Chronic biliary colonization (5-10% cases)
+
+## Polio Pathophysiology
+
+### Poliovirus Infection
+1. **Primary replication**: Oropharynx and intestinal epithelium
+2. **Viremia**: Spread to blood, lymphoid tissue
+3. **Neural invasion**: Retrograde via motor nerve endings → anterior horn motor neurons
+4. **Neuronal destruction**: Acute motor neuron necrosis
+5. **Paralysis**: Flaccid paralysis from denervation atrophy
+
+### Clinical Manifestations
+- **Minor illness (90%)**: Fever, sore throat, myalgia; recovery in 1-2 weeks
+- **Non-paralytic poliomyelitis (1%)**: Aseptic meningitis
+- **Paralytic poliomyelitis (1%)**: Spinal cord motor neuron involvement
+- **Bulbar polio**: Cranial nerve dysfunction; respiratory paralysis risk
+
+## Immune Mechanisms
+
+### HAV/HEV Immunity
+- **IgM response**: Early, acute phase indicator
+- **IgG response**: Long-term immunity (lifelong)
+- **Vaccination**: Inactivated vaccine; induces IgG
+
+### HBV Immunity
+- **HBsAg**: Viral surface antigen; indicates active infection/carrier
+- **Anti-HBs**: Protective antibody; indicates immunity
+- **HBeAg**: Marker of high infectivity
+- **Vaccination**: Recombinant vaccine; prevents 95% of infections
+
+### Polio Immunity
+- **OPV (Oral Polio Vaccine)**: Live attenuated; induces mucosal + systemic immunity
+- **IPV (Inactivated Polio Vaccine)**: Inactivated virus; induces serum antibodies
+- **Herd immunity threshold**: 95% population vaccination
+- **Post-vaccination immunity**: Lifelong with boosters
+`,
+        mnemonics: [
+          {
+            text: "HAV/HEV = Fecal-oral, Acute only, Lifelong immunity (IgG)",
+            explanation: "Similar characteristics of hepatitis A and E"
+          },
+          {
+            text: "HBV progression = Chronic (10% adults) → Active hepatitis → Cirrhosis → HCC",
+            explanation: "Natural history of chronic HBV"
+          },
+          {
+            text: "Polio paralysis = Motor neuron destruction → Flaccid paralysis (anterior horn)",
+            explanation: "Mechanism of polio-induced paralysis"
+          }
+        ],
+        keyPoints: [
+          "HAV: Acute hepatitis; self-limited; no chronic infection",
+          "HBV: 10% adults develop chronic infection; risk of cirrhosis/HCC",
+          "HEV: Similar to HAV but high maternal mortality in pregnancy",
+          "Typhoid: Intestinal invasion → bacteremia → rose spots → complications",
+          "Carrier state: 5-10% develop chronic colonization (biliary)",
+          "Polio: Flaccid paralysis from anterior horn motor neuron destruction",
+          "Polio immunity: OPV better for gut immunity; IPV safer for immunocompromised"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Pathophysiology of Viral Hepatitis", edition: "26th" },
+          { book: "Mahajan & Gupta Textbook of Preventive & Social Medicine", chapter: "Mechanism of Communicable Diseases", edition: "5th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "hepatitis-typhoid-polio-layer-3-clinical",
+        title: "Hepatitis, Typhoid & Polio - Clinical Application",
+        estimatedMinutes: 25,
+        summary: "Diagnosis, treatment, and control programs in India.",
+        contentMd: `# Hepatitis, Typhoid & Polio - Clinical Application
+
+## Hepatitis Diagnosis and Management
+
+### Serological Diagnosis
+**HAV:**
+- **Acute HAV**: IgM anti-HAV positive
+- **Recovered**: IgG anti-HAV positive
+- **Vaccination**: Anti-HAV IgG (post-vaccine)
+
+**HBV:**
+- **HBsAg positive**: Active infection or carrier
+- **HBeAg positive**: High infectivity (active replication)
+- **Anti-HBs**: Immunity (post-vaccine or recovered)
+- **Anti-HBc**: Past/present infection
+
+**HCV:**
+- **Anti-HCV**: Present in 80% by week 8
+- **HCV RNA**: Indicates active infection (quantitative PCR)
+- **Genotype**: Guides treatment selection
+
+### Treatment
+- **HAV**: Supportive (fluid, electrolytes, rest)
+- **HBV**: Antiviral (tenofovir, entecavir) if active hepatitis or cirrhosis
+- **HCV**: Direct-acting antivirals (DAAs) - >95% cure
+
+## Typhoid Diagnosis and Management
+
+### Clinical Diagnosis
+**Week 1-2:** Fever, headache, myalgia, relative bradycardia, rose spots
+**Week 2-3:** Abdominal pain, diarrhea/constipation, hepatosplenomegaly, delirium
+**Week 3-4:** Complications (perforation, encephalitis, myocarditis)
+
+### Laboratory Diagnosis
+- **Blood culture**: Gold standard; positive 80% first week
+- **Urine/stool culture**: Positive in weeks 2-3
+- **Widal test**: Limited sensitivity/specificity
+- **Rapid antigen detection**: PCR-based tests
+
+### Treatment
+- **Antibiotics**: Ceftriaxone (1st-line), fluoroquinolone (resistance increasing)
+- **Duration**: 7-14 days based on severity
+- **Supportive care**: Fluids, nutrition, antipyretics
+- **Carrier treatment**: Prolonged antibiotics + cholecystectomy (if carrier state)
+
+## Polio Control in India
+
+### Vaccination Strategy (UIP)
+**OPV (Oral Polio Vaccine):**
+- **IPV series**: 3 doses at 6, 10, 14 weeks
+- **Booster doses**: 18-24 months and 4-6 years
+- **Pulse Polio campaigns**: Catch-up immunization
+
+**Current approach (India 2-1-2):**
+- 2 IPV doses at 6, 10 weeks
+- 1 OPV dose at 14 weeks
+- 2 IPV boosters at 18-24 months and 4-6 years
+
+### Surveillance
+- **AFP (Acute Flaccid Paralysis) surveillance**: Case investigations
+- **Environmental surveillance**: Wastewater monitoring
+- **Immunization verification**: Coverage surveys
+
+### India's Success
+- **Last case**: 2011 (West Bengal)
+- **Polio-free status**: Since 2014 (WHO certified)
+- **Vaccination coverage**: >95% with routine immunization
+- **Key success factors**: ASHA mobilization, mass campaigns, surveillance
+
+## Prevention and Control Programs
+
+### Hepatitis Prevention
+- **HAV vaccine**: Recommended for travelers, high-risk groups
+- **HBV vaccine**: Universal immunization (birth dose + 3 doses; UIP coverage >90%)
+- **HEV vaccine**: Available but not in routine immunization yet
+- **Water safety**: Boiling, chlorination reduces transmission
+
+### Typhoid Prevention
+- **Sanitation**: Improved water supply, sewage disposal
+- **Food safety**: Proper cooking, storage, handling
+- **Typhoid vaccine**: Vi polysaccharide; 70-80% efficacy; recommended for travelers
+- **Carrier management**: Identification, treatment, dietary restrictions
+
+### Polio Prevention
+- **OPV/IPV**: Universal immunization program
+- **Mass campaigns**: Pulse Polio campaigns (catch-up + regular immunization)
+- **Surveillance**: AFP cases monitored; environmental surveillance done
+- **Global eradication**: India certified polio-free; maintained through immunization
+`,
+        mnemonics: [
+          {
+            text: "HAV diagnosis = IgM (acute), IgG (immunity); HBV = HBsAg (active), Anti-HBs (immunity)",
+            explanation: "Key serological markers"
+          },
+          {
+            text: "Typhoid progression = Week 1-2 (fever), Week 2-3 (GI), Week 3-4 (complications)",
+            explanation: "Clinical progression by week"
+          },
+          {
+            text: "Polio vaccination = IPV (6,10w) + OPV (14w) + IPV boosters (18m, 4-6y)",
+            explanation: "Current India 2-1-2 strategy"
+          }
+        ],
+        keyPoints: [
+          "HAV serology: IgM acute, IgG immunity; lifelong protection after infection",
+          "HBV: HBsAg indicates active infection; Anti-HBs indicates immunity",
+          "HEV: High maternal mortality; outbreaks common from contaminated water",
+          "Typhoid diagnosis: Blood culture (gold standard) in early weeks",
+          "Typhoid treatment: Antibiotics 7-14 days; 1-4% mortality with treatment",
+          "Polio: OPV preferred in high-endemic areas; IPV for immunocompromised",
+          "India polio-free since 2011; maintained through >95% immunization coverage",
+          "Surveillance critical: AFP monitoring and environmental wastewater testing",
+          "Hepatitis B vaccination: Universal; >90% coverage in India",
+          "Typhoid vaccination: Recommended for travelers (70-80% efficacy)"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Viral Hepatitis and Typhoid Control", edition: "26th" },
+          { book: "Mahajan & Gupta Textbook of Preventive & Social Medicine", chapter: "Management of Communicable Diseases", edition: "5th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "hepatitis-typhoid-polio-layer-4-exam",
+        title: "Hepatitis, Typhoid & Polio - Exam Preparation",
+        estimatedMinutes: 20,
+        summary: "Quick reference and commonly tested concepts.",
+        contentMd: `# Hepatitis, Typhoid & Polio - Exam Preparation
+
+## Quick Reference: Hepatitis Viruses
+
+| Virus | Transmission | Incubation | Acute | Chronic | Vaccine |
+|-------|-------------|-----------|-------|---------|---------|
+| HAV | Fecal-oral | 15-50 days | Yes | No | Inactivated |
+| HBV | Blood/Sexual | 45-180 days | Yes | 10% adults | Recombinant |
+| HCV | Blood | 14-180 days | Mild | 80% | None yet |
+| HEV | Fecal-oral | 15-64 days | Yes | No (except immunocompromised) | Available |
+| HDV | Blood (needs HBV) | Variable | Yes | Possible | HBV vaccine |
+
+## Hepatitis Serology Interpretation
+
+| Marker | Meaning |
+|--------|---------|
+| IgM anti-HAV | Acute HAV infection |
+| IgG anti-HAV | HAV immunity (past or vaccine) |
+| HBsAg positive | Active HBV infection or carrier |
+| Anti-HBs positive | HBV immunity |
+| HBeAg positive | High HBV infectivity |
+| Anti-HCV positive | HCV infection (80% by week 8) |
+
+## Typhoid Quick Facts
+
+| Parameter | Details |
+|-----------|---------|
+| Causative agent | Salmonella typhi (gram-negative) |
+| Transmission | Fecal-oral (contaminated water/food) |
+| Incubation period | 6-30 days (average 10-14 days) |
+| Attack rate | 1:1000 exposed (high burden areas) |
+| Mortality | 1-4% (treated); 20-30% (untreated) |
+| Carrier state | 5-10% of cases |
+| Diagnosis | Blood culture (gold standard) |
+| Treatment | Antibiotics (7-14 days) |
+
+## Polio Control in India
+
+| Aspect | Details |
+|--------|---------|
+| Last case | 2011 (West Bengal) |
+| Polio-free status | Since 2014 (WHO certified) |
+| Current vaccines | IPV (inactivated) + OPV (oral) |
+| Strategy | 2-1-2 (2 IPV, 1 OPV, 2 IPV boosters) |
+| Coverage target | >95% for herd immunity |
+| Surveillance | AFP monitoring + environmental testing |
+
+## Common Exam Questions
+
+**Q1: Differences between HAV and HBV transmission and outcomes.**
+A: HAV - fecal-oral, acute only, 100% recover, lifelong immunity. HBV - blood/sexual contact, 10% chronic in adults, risk of cirrhosis/HCC.
+
+**Q2: What does HBsAg positive indicate?**
+A: Active HBV infection or chronic carrier state. Anti-HBs positive indicates immunity (from infection recovery or vaccination).
+
+**Q3: India's polio vaccination strategy and achievements.**
+A: 2-1-2 strategy (2 IPV at 6,10w; 1 OPV at 14w; 2 IPV boosters). India polio-free since 2011, certified in 2014. Maintained through >95% coverage.
+
+**Q4: How is typhoid diagnosed and what is the mortality rate?**
+A: Blood culture (gold standard, 80% positive first week). Mortality 1-4% with antibiotics; 20-30% untreated.
+
+**Q5: Explain hepatitis B chronic infection and complications.**
+A: 10% of adults develop chronic HBV. Progression: Chronic carrier → active hepatitis → cirrhosis → hepatocellular carcinoma (HCC).
+
+**Q6: What is the clinical progression of typhoid by week?**
+A: Week 1-2 (fever, headache, myalgia); Week 2-3 (abdominal symptoms, rose spots); Week 3-4 (complications: perforation, encephalitis).
+
+**Q7: Compare OPV and IPV in polio vaccination.**
+A: OPV - live oral, better mucosal immunity, preferred in endemic areas. IPV - inactivated, safer, preferred for immunocompromised.
+
+**Q8: What is HAV serology in acute infection vs immunity?**
+A: Acute - IgM anti-HAV positive. Immunity - IgG anti-HAV positive (lifelong after infection or vaccination).
+
+**Q9: Carrier state in typhoid - incidence and management.**
+A: 5-10% develop chronic carrier state (biliary colonization). Identified by prolonged bacterial shedding. Treatment: Prolonged antibiotics ± cholecystectomy.
+
+**Q10: Describe India's polio surveillance system.**
+A: AFP (Acute Flaccid Paralysis) surveillance tracks paralytic cases. Environmental surveillance monitors wastewater. Ensures early detection of any poliovirus circulation.
+`,
+        mnemonics: [
+          {
+            text: "Hepatitis transmission = HAV/HEV (fecal-oral), HBV/HCV/HDV (blood-borne)",
+            explanation: "Key transmission routes"
+          },
+          {
+            text: "HBV progression = Active → Cirrhosis → HCC (10% chronic in adults)",
+            explanation: "Natural history of chronic HBV"
+          },
+          {
+            text: "India polio = Polio-free 2011, certified 2014, maintained through >95% vaccination",
+            explanation: "Status and surveillance success"
+          }
+        ],
+        keyPoints: [
+          "HAV: Fecal-oral, acute only, lifelong immunity post-infection",
+          "HBV: 10% chronic in adults; risk of cirrhosis/HCC",
+          "HCV: 80% chronic; DAAs cure >95%",
+          "HEV: Similar to HAV but high maternal mortality",
+          "Typhoid: Blood culture gold standard; 1-4% mortality with antibiotics",
+          "Typhoid carrier: 5-10% develop chronic state; require prolonged treatment",
+          "Polio: India polio-free since 2011; maintained with 2-1-2 vaccination strategy",
+          "AFP surveillance: Monitors paralytic cases for early detection",
+          "HBV vaccine: Universal immunization; >90% coverage in India",
+          "Typhoid vaccine: Recommended for travelers (70-80% efficacy)"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Communicable Diseases", edition: "26th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "hepatitis-typhoid-polio-layer-5-active-recall",
+        title: "Hepatitis, Typhoid & Polio - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Self-assessment on hepatitis, typhoid, and polio.",
+        contentMd: `# Hepatitis, Typhoid & Polio - Active Recall
+
+## Q&A for Self-Assessment
+
+**Q1: Compare HAV and HEV - transmission, incubation, outcomes, vaccine status.**
+A: Both fecal-oral transmission. HAV incubation 15-50 days, HEV 15-64 days. Both acute only with lifelong immunity. Both endemic in India. HAV vaccine part of routine (private); HEV vaccine available but not routine. HEV has high maternal mortality.
+
+**Q2: Explain HBV chronic infection - percentage of adults, progression, complications.**
+A: 10% of adults develop chronic HBV (higher in children). Progression: Chronic carrier (asymptomatic) → chronic active hepatitis → cirrhosis → hepatocellular carcinoma. Complications: liver failure, variceal bleeding, HCC.
+
+**Q3: What is difference between HBsAg and Anti-HBs?**
+A: HBsAg = hepatitis B surface antigen; present in active infection/chronic carrier; indicates infectivity. Anti-HBs = antibody to surface antigen; indicates immunity (from prior infection or vaccination).
+
+**Q4: Describe clinical progression of typhoid by week.**
+A: Week 1-2: Fever, headache, myalgia, relative bradycardia, rose spots begin. Week 2-3: Peak symptoms, abdominal pain, diarrhea/constipation, hepatosplenomegaly, abdominal distension. Week 3-4: Complications (intestinal perforation), encephalitis, myocarditis if untreated.
+
+**Q5: How is typhoid diagnosed and what is sensitivity of each test?**
+A: Blood culture = gold standard (80% positive week 1, 50% week 2, 20% week 3). Widal test = low sensitivity/specificity (not recommended alone). Rapid PCR = high sensitivity/specificity. Urine/stool culture = positive weeks 2-3.
+
+**Q6: Explain carrier state in typhoid - development, management, public health significance.**
+A: 5-10% of typhoid cases develop chronic carrier state (Salmonella in biliary tract). Chronic shedding in stool. Treatment: Prolonged antibiotics (4-12 weeks) or cholecystectomy. Public health significance: source of transmission in community.
+
+**Q7: What are the UIP vaccinations for polio and current strategy?**
+A: IPV at 6 weeks, 10 weeks; OPV at 14 weeks; IPV booster at 18-24 months and 4-6 years. Strategy called 2-1-2. Additional Pulse Polio campaigns provide OPV doses. >95% coverage achieves herd immunity.
+
+**Q8: Explain why India declared polio-free status and how it was maintained.**
+A: Last case 2011 (West Bengal). Certified polio-free by WHO in 2014. Maintained through: robust immunization program (>95% coverage), comprehensive AFP surveillance (detects paralytic cases), environmental surveillance (wastewater monitoring), mass vaccination campaigns.
+
+**Q9: Discuss OPV vs IPV - advantages, disadvantages, current strategy.**
+A: OPV (oral): Live attenuated, good mucosal immunity, mass immunization easy, cheaper, but rare VAPP risk (vaccine-associated paralysis). IPV (inactivated): Safer (no VAPP), systemic immunity only, requires injections, more expensive. Current India strategy combines both (2-1-2).
+
+**Q10: Describe HAV serology interpretation in different scenarios.**
+A: Acute HAV infection = IgM anti-HAV positive (disappears in 3-6 months). Recovered or vaccinated = IgG anti-HAV positive (lifelong). Never infected/vaccinated = both negative. IgM + IgG = acute infection with developing immunity.
+
+**Q11: Explain HCV diagnosis and treatment advances.**
+A: Anti-HCV positive in 80% by week 8. HCV RNA confirms active infection. Genotype testing guides treatment. Direct-acting antivirals (DAAs) cure >95% of cases (vs only 50% with interferon). Treatment duration 8-12 weeks.
+
+**Q12: What is the role of water and sanitation in typhoid and hepatitis control?**
+A: Fecal-oral transmission requires contaminated water. Improved water supply (treatment, storage), sewage disposal (sanitation), and hygiene reduce incidence dramatically. Both typhoid and hepatitis E (and hepatitis A) prevention depend on sanitation infrastructure.
+
+**Q13: Discuss hepatitis B vaccination - coverage, effectiveness, schedule, significance.**
+A: Birth dose (protects against vertical transmission), plus 3 doses at 6, 10, 14 weeks. 95% efficacy in preventing HBV infection. India UIP coverage >90%. Significant reduction in chronic HBV in vaccinated cohorts.
+
+**Q14: Explain complications of typhoid and their public health impact.**
+A: Intestinal perforation (week 3-4) = most common serious complication. Other complications: encephalitis (delirium, confusion), myocarditis (shock), hepatitis, thrombocytopenia. Early antibiotics reduce complications by 80%.
+
+**Q15: What is the public health significance of HAV and HEV epidemiology in India?**
+A: Both endemic (universal exposure in childhood in low-income communities). Adults have immunity. Paradox: Improved sanitation delays HAV/HEV exposure → more adults unimmune → risk of epidemic when exposed. Vaccination strategy needed for vulnerable populations.
+
+**Q16: Explain triple serology (IgM, IgG, HBsAg) interpretation in hepatitis diagnosis.**
+A: IgM anti-HAV alone = acute HAV. IgG anti-HAV + negative IgM = recovered HAV. HBsAg + IgM = acute HBV. HBsAg + IgG = chronic HBV. Use these patterns to distinguish acute vs chronic hepatitis.
+
+**Q17: Discuss environmental surveillance for polio and its importance.**
+A: Wastewater testing detects poliovirus before paralytic cases appear. Provides early warning of viral circulation. Critical in endemic/near-endemic areas. India's environmental surveillance network monitors major cities and airports.
+
+**Q18: Describe India's polio eradication and maintenance strategy - what were key success factors?**
+A: Success factors: (1) High vaccination coverage (>95%), (2) Supplementary immunization campaigns (Pulse Polio), (3) Comprehensive AFP surveillance (paralytic case detection), (4) Environmental surveillance (wastewater monitoring), (5) ASHA mobilization for community engagement, (6) Targeted immunization of vulnerable populations.
+`,
+        mnemonics: [
+          {
+            text: "Hepatitis = HAV/HEV (fecal-oral, acute), HBV (blood, chronic 10%), HCV (chronic 80%), HDV (needs HBV)",
+            explanation: "Classification by transmission and outcome"
+          },
+          {
+            text: "Typhoid weeks = 1-2 (fever), 2-3 (GI/rose spots), 3-4 (complications/perforation)",
+            explanation: "Clinical progression"
+          },
+          {
+            text: "Polio India = Last 2011, Certified 2014, 2-1-2 vaccination, >95% coverage",
+            explanation: "India polio eradication timeline and strategy"
+          }
+        ],
+        keyPoints: [
+          "HAV: Fecal-oral, acute only, lifelong immunity, endemic in India",
+          "HBV: Blood/sexual, 10% chronic in adults, 40 million carriers in India",
+          "HCV: Blood, 80% chronic, 10-12 million infected in India, DAAs cure >95%",
+          "HEV: Fecal-oral, similar to HAV but high maternal mortality (15-25%)",
+          "Typhoid: Salmonella typhi, 1-4% mortality with antibiotics, 5-10% become carriers",
+          "Typhoid complications: Perforation (common), encephalitis, myocarditis",
+          "Polio: India polio-free since 2011, maintained with 2-1-2 vaccination strategy",
+          "Serology interpretation: IgM (acute), IgG (immunity), HBsAg (active infection)",
+          "HAV/HEV prevention: Improved sanitation, water treatment, hygiene",
+          "Typhoid vaccination: 70-80% efficacy; recommended for travelers"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Viral Hepatitis, Typhoid, and Polio Control", edition: "26th" },
+          { book: "Mahajan & Gupta Textbook of Preventive & Social Medicine", chapter: "Communicable Diseases Management", edition: "5th" }
+        ]
+      }
+    ]
+  }
 ];
