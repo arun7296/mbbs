@@ -1,16 +1,532 @@
-export const psychiatryPart3Lessons = [
-  // PS-MOD-01-TOP-01: Psychiatric Assessment & MSE
+import type { TopicLessons } from "./content-loader";
+
+export const psychiatryPart3Lessons: TopicLessons[] = [
   {
     topicCode: "PS-MOD-01-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "psychiatric-assessment-foundation",
+        slug: "psychiatric-assessment-mse-layer-1-foundation",
         title: "Psychiatric Assessment & MSE - Foundation",
         estimatedMinutes: 25,
-        summary: "Components of psychiatric history, mental status examination elements, documentation format, and assessment in emergency vs routine settings.",
-        contentMd: "# Psychiatric Assessment & MSE - Foundation\n\n## Psychiatric History Taking\n**Bio-psycho-social model**:\n- Biological: Family history, medical history, substance use\n- Psychological: Personality, coping mechanisms, past experiences\n- Social: Family dynamics, work, relationships, cultural context\n\n## Detailed History Components\n\n**1. Chief Complaint & HPI** (chief complaint in patient's words):\n- Duration: When did symptoms start?\n- Timeline: Acute vs insidious onset?\n- Precipitants: Life stressors, losses, changes?\n- Progress: Better, worse, or static?\n\n**2. Past Psychiatric History**:\n- Previous episodes: When, duration, treatment, outcome?\n- Hospitalizations: How long, voluntary vs involuntary?\n- Medication history: What worked, what failed, side effects?\n- Suicide/self-harm attempts: Method, intent, current suicidality?\n- ECT (electroconvulsive therapy) history: Response?\n\n**3. Past Medical History**:\n- Chronic conditions: Diabetes, hypertension, seizures (↑ psychiatric symptoms)\n- Neurological: Epilepsy, head injury, dementia (organic causes)\n- Endocrine: Hypothyroidism, Cushing's (mood/anxiety causes)\n- Medications: Steroids (mania), antipsychotics (movement disorders)\n\n**4. Family History**:\n- Psychiatric illness in relatives (genetic loading for schizophrenia, bipolar, depression, anxiety)\n- Suicide in family (genetic component, modeling)\n- Substance abuse history\n\n**5. Personal History** (developmental):\n- Childhood milestones: Speech, motor, social\n- Adverse childhood events: Abuse, neglect, loss, trauma\n- Schooling: Academic performance, behavioral issues\n- Occupational history: Stable vs job-hopping, conflicts\n- Sexual history: Age of menarche, sexual orientation, satisfactionwith partner\n\n**6. Substance Use History**:\n- Alcohol: Quantity/frequency, age of onset, blackouts, dependence features\n- Tobacco: Current use, pack-years\n- Cannabis/other drugs: Type, frequency, age of first use, withdrawal symptoms\n- Prescription drugs: Benzodiazepines, painkillers, stimulants (misuse?)\n\n**7. Social Support**:\n- Family relationships: Supportive or conflictual?\n- Social network: Friends, isolation?\n- Occupational status: Employed or disabled?\n- Housing: Stable or precarious?\n- Financial stress?\n\n**8. Forensic History** (if relevant):\n- Legal issues: Crime, custody, restraining orders?\n- Violence history: Aggression, victimization?\n- Compliance with law?\n\n## Mental Status Examination (MSE)\n\n**10 Key Components** (mnemonic: ASEPTIC MOB):\n1. **Appearance & Behavior**\n2. **Speech**\n3. **Emotion/Mood**\n4. **Perception**\n5. **Thought process** (form)\n6. **Thought content** (ideas)\n7. **Insight**\n8. **Cognition** (memory, orientation, attention)\n9. **Motor/Psychomotor**\n10. **Judgment** + **Orientation** (add-ons)\n\n## Detailed MSE Components\n\n**1. Appearance & General Behavior**:\n- Grooming: Neat, disheveled, unkempt (depression, psychosis)\n- Clothing: Appropriate, bizarre, provocative (mania, psychosis)\n- Hygiene: Clean or poor hygiene (self-neglect → depression, psychosis)\n- Build: Normal, obese, cachectic (chronic illness)\n- Attitude: Cooperative, hostile, defensive, evasive\n- Psychomotor activity: Normal, agitation (anxiety, mania), retardation (depression)\n- Eye contact: Maintained, avoidance\n- Facial expression: Appropriate, flat (depression, negative symptoms schizophrenia), incongruent (psychosis)\n\n**2. Speech**:\n- Rate: Normal, rapid (pressure of speech → mania), slow (depression)\n- Volume: Normal, loud (aggression), soft (withdrawal)\n- Tone: Monotonous (depression, blunted affect), varied (normal)\n- Articulation: Clear or slurred (substance use, motor disorders)\n- Rhythm: Fluent, stuttering, hesitant\n- Special patterns:\n  - **Flight of ideas**: Rapid shifts, hard to follow (mania)\n  - **Tangentiality**: Strays off topic, loses main point\n  - **Circumstantiality**: Over-detailed, long-winded, eventually reaches point\n  - **Poverty of speech**: Brief, minimal content\n  - **Mutism**: No speech (severe depression, catatonia, selective mutism)\n  - **Neologisms**: Made-up words (psychosis)\n  - **Echolalia**: Repeating what's said (autism, catatonia)\n  - **Logorrhea**: Excessive talking (mania, anxiety)\n\n**3. Emotion/Mood & Affect**:\n- **Mood** (sustained emotional state, hours to days):\n  - Euthymic (normal)\n  - Depressed, elevated/euphoric, irritable, anxious, labile\n  - Duration & stability\n\n- **Affect** (observable emotional expression, moment-to-moment):\n  - **Congruent**: Matches content (appropriate)\n  - **Incongruent**: Doesn't match (e.g., laughing while describing death → psychosis)\n  - **Blunted**: Reduced but present\n  - **Flat**: No visible emotion\n  - **Inappropriate**: Wrong emotion for situation\n  - **Labile**: Rapid, uncontrolled shifts\n\n**4. Perception**:\n- **Hallucinations**: False sensory perceptions without external stimulus\n  - Auditory (most common in psychosis, voices)\n  - Visual (less common, more organic causes)\n  - Olfactory, gustatory (organic, temporal lobe)\n  - Tactile (alcohol withdrawal, cocaine, formication)\n  - Proprioceptive (body hallucinations, rare)\n\n- **Illusions**: Misinterpretation of real stimulus (any psychiatric condition, organic)\n- **Depersonalization**: Feeling of detachment from self (anxiety, trauma, dissociation)\n- **Derealization**: Feeling world is unreal (anxiety, trauma, psychosis)\n\n**5. Thought Process** (FORM of thinking):\n- **Normal**: Goal-directed, logical, coherent\n- **Flight of ideas**: Rapid, tangential, hard to follow (mania)\n- **Circumstantial**: Over-detailed, long-winded, reaches point eventually (OCD, anxiety)\n- **Tangential**: Goes off track, doesn't return to point (ADD, psychosis)\n- **Loosened associations**: Ideas connect by sounds not meaning (schizophrenia)\n- **Word salad**: Incomprehensible jumble (severe psychosis)\n- **Clang associations**: Words rhyme/sound alike, not meaningful (mania, psychosis)\n- **Blocking**: Sudden interruption of thought (schizophrenia, trauma)\n\n**6. Thought Content** (IDEAS being thought):\n- **Delusions**: Fixed false beliefs despite evidence\n  - **Persecutory**: Being targeted, spied on (most common)\n  - **Grandiose**: Inflated self-importance, special powers\n  - **Somatic**: False belief about body (disease, infestation)\n  - **Reference**: Events/media directed at self\n  - **Jealousy**: Infidelity delusion\n  - **Love**: Erotomania (false belief of being loved)\n\n- **Obsessions**: Unwanted, intrusive thoughts (OCD, PTSD, psychosis)\n- **Ruminations**: Repetitive thoughts (depression, anxiety)\n- **Suicidal ideation**: Thoughts of death/self-harm (depression, bipolar, borderline)\n  - **Passive**: Wish to be dead, but no plan\n  - **Active**: Plan, intent, means (high risk)\n\n- **Homicidal ideation**: Thoughts of harming others (psychosis, anger, personality disorder)\n\n**7. Insight & Judgment**:\n- **Insight** (understanding of illness):\n  - Full: Recognizes symptoms, agrees with diagnosis\n  - Partial: Admits something wrong but attributes to external causes\n  - Absent: Denies any illness (anosognosia)\n\n- **Judgment** (decision-making):\n  - Good: Appropriate decisions, weighs consequences\n  - Fair: Some impairment\n  - Poor: Impulsive, risky decisions (mania, personality disorder, substance use)\n\n**8. Cognition**:\n- **Orientation**:\n  - Person: Know own name\n  - Place: Know current location\n  - Time: Know current date, day, season\n  - Situation: Understand why in hospital/clinic\n\n- **Memory**:\n  - **Immediate**: Repeat 3 words (tests attention)\n  - **Short-term**: Recall those words after 5 minutes (encoding, storage)\n  - **Long-term**: Recall remote events (childhood, historical facts)\n\n- **Attention & Concentration**:\n  - Serial 7s: Count backward from 100 by 7s (100, 93, 86...)\n  - Months backward: December, November, October...\n  - Digit span: Repeat series of numbers forward and backward\n\n- **Abstraction**:\n  - Similarities: How are apple and orange similar? (both fruits, round, red)\n  - Proverbs: What does \"rolling stone gathers no moss\" mean? (change prevents stability)\n\n- **Language**:\n  - Naming: Show objects, ask to name\n  - Repetition: Repeat phrases\n  - Comprehension: Follow commands\n\n**9. Motor/Psychomotor**:\n- Tremor: Resting, intention, fine/coarse\n- Tics: Involuntary movements (Tourette's, ADHD)\n- Catatonia: Waxy flexibility, posturing, negativism, mutism\n- Coordination: Finger-to-nose test (cerebellar)\n- Gait: Normal, ataxic, shuffling (Parkinson's from antipsychotics)\n\n**10. Cognition-Related Additions**:\n- **Judgment**: Can they make safe decisions?\n- **Reliability of historian**: Are they truthful, exaggerating, minimizing?\n\n## Documentation Format\n- Objective findings (observable): \"Patient disheveled, poor eye contact, speech pressured\"\n- Not interpretations: Not \"depressed-appearing\" but \"sad mood, blunt affect, slowed movements\"\n- Quote patient when relevant: \"Voices telling me to hurt myself\"\n- Complete MSE → diagnostic impression → risk assessment → plan,\n        mnemonics: [\n          { text: \"MSE: Appearance, Speech, Emotion, Perception, Thought (form), Ideas, Insight, Cognition, Motor, Judgment\", explanation: \"10 MSE components\" },\n          { text: \"Delusions: Persecution, Grandiosity, Somatic, Reference, Jealousy, Love\", explanation: \"6 types\" },\n          { text: \"Thought form disorders: Flight (mania), Circumstantial (OCD), Tangential (psychosis), Loosening (schizophrenia)\", explanation: \"Process abnormalities\" },\n          { text: \"Affect: Congruent (appropriate), Blunt (reduced), Flat (absent), Labile (rapid shifts), Inappropriate\", explanation: \"Abnormalities\" }\n        ],\n        keyPoints: [\n          \"MSE is objective snapshot of mental status AT time of examination\",\n          \"Appearance often reflects mood and self-care (disheveled → depression/psychosis)\",\n          \"Pressured speech (rapid) typical of mania; slow speech of depression\",\n          \"Flat affect (no emotion) suggests negative symptoms of schizophrenia or severe depression\",\n          \"Hallucinations (false perceptions) vs illusions (misinterpretations) - different causes\",\n          \"Delusions (fixed false beliefs) require assessment of systematization, mood-congruence\",\n          \"Insight reflects disease awareness; absent in psychosis (anosognosia)\",\n          \"Serial 7s impaired in delirium, dementia, severe depression\"\n        ],\n        textbookRefs: [\n          { book: \"Kaplan & Sadock's Synopsis of Psychiatry\", chapter: \"Psychiatric Assessment and History\", edition: \"12th\" },\n          { book: \"NIMHANS Manual of Psychiatry\", chapter: \"Clinical Assessment\", edition: \"2nd\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"psychiatric-assessment-mechanism\",\n        title: \"Psychiatric Assessment & MSE - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Neurobiological basis of MSE findings, neurotransmitter dysfunction underlying symptoms, and correlation with brain regions.\",\n        contentMd: "# Psychiatric Assessment & MSE - Mechanism\\n\\n## Neurotransmitter Systems & MSE Findings\\n\\n**1. Dopamine System**:\\n- **Pathway**: Ventral tegmental area (VTA) → nucleus accumbens, prefrontal cortex\\n- **Function**: Reward, motivation, motor control, attention\\n- **↓ Dopamine**: Depression (reduced motivation), Parkinson's (tremor, bradykinesia)\\n- **↑ Dopamine**: Mania (elevated mood, grandiosity), psychosis (hallucinations, delusions), ADHD (hyperfocus)\\n- **Motor effects**: Dopamine blockade (antipsychotics) → tremor, rigidity, tardive dyskinesia\\n\\n**2. Serotonin System**:\\n- **Pathway**: Dorsal raphe nucleus → widespread cortex, limbic system\\n- **Function**: Mood regulation, impulse control, sleep, appetite\\n- **↓ Serotonin**: Depression (sad mood, guilt, anhedonia), anxiety (rumination, worry), OCD (obsessions)\\n- **Treatment**: SSRIs increase available serotonin → mood improvement in 2-4 weeks\\n\\n**3. GABA System** (inhibitory):\\n- **Function**: Anxiety reduction, seizure threshold, muscle tone\\n- **↓ GABA**: Anxiety (worry, panic), seizures, insomnia\\n- **↑ GABA**: Benzodiazepines (anxiolysis, sedation), alcohol withdrawal (prevents seizures)\\n\\n**4. Glutamate System** (excitatory):\\n- **Function**: Memory, learning, neuroplasticity\\n- **Dysregulation**: Schizophrenia (NMDA dysfunction), depression, anxiety\\n- **Ketamine**: NMDA antagonist → rapid antidepressant effect (glutamate theory)\\n\\n**5. Norepinephrine System**:\\n- **Function**: Arousal, attention, fear response\\n- **↓ Norepinephrine**: Depression (fatigue, poor concentration), ADHD (inattention)\\n- **↑ Norepinephrine**: Anxiety, panic (hypervigilance), mania (high energy)\\n\\n## Brain Regions & MSE Correlations\\n\\n**Prefrontal Cortex (Executive Function, Judgment)**:\\n- **Function**: Decision-making, impulse control, planning, emotional regulation\\n- **Dysfunction**: Poor judgment (poor decisions), impulsive behavior (aggression, risk-taking)\\n- **Conditions**: ADHD, substance abuse, borderline personality, bipolar mania\\n- **Clinical finding**: Patient makes risky decisions, poor insight\\n\\n**Amygdala (Emotion, Fear)**:\\n- **Function**: Emotional processing, fear conditioning, threat detection\\n- **Hyperactive**: Anxiety disorders (oversensitivity to threats), PTSD (exaggerated fear)\\n- **Underactive**: Psychopathy, antisocial personality (lack of fear/empathy)\\n- **Clinical finding**: Anxious mood, startle response, hypervigilance\\n\\n**Hippocampus (Memory)**:\\n- **Function**: Short-term memory encoding, spatial memory\\n- **Dysfunction**: Memory impairment, difficulty with new learning\\n- **Conditions**: PTSD (memory fragmentation), Alzheimer's (memory loss), depression (cognitive impairment)\\n- **Clinical finding**: Impaired recall, difficulty with digit span\\n\\n**Anterior Cingulate (Attention, Error Detection)**:\\n- **Function**: Conflict monitoring, attention shifting, emotional regulation\\n- **Dysfunction**: OCD (hyperactive, excessive error detection), depression (negative focusing)\\n- **Clinical finding**: Rumination, worry, obsessions\\n\\n**Insula (Interoception, Self-Awareness)**:\\n- **Function**: Body awareness, emotional awareness, decision-making\\n- **Dysfunction**: Depersonalization (feeling detached from body), autism (poor self-awareness)\\n- **Clinical finding**: Feeling of unreality, reduced awareness of emotions\\n\\n## Neurotransmitter Correlations with MSE\\n\\n| MSE Finding | Neurotransmitter | Condition |\\n|------------|------------------|-----------|\\n| Elevated mood, grandiosity | ↑ Dopamine | Mania, psychosis |\\n| Depressed mood, anhedonia | ↓ Serotonin, dopamine | Major depression |\\n| Hallucinations, delusions | ↑ Dopamine, ↓ Glutamate | Schizophrenia, psychosis |\\n| Anxiety, worry, obsessions | ↓ GABA, ↓ Serotonin | Anxiety, OCD, GAD |\\n| Tremor, rigidity | ↓ Dopamine, blocked receptors | Parkinson's, antipsychotic side effects |\\n| Flat affect, avolition | ↓ Dopamine (especially mesolimbic) | Schizophrenia negative symptoms |\\n| Poor concentration | ↓ Norepinephrine, ↓ Dopamine | ADHD, depression |\\n| Insomnia, agitation | ↓ Serotonin, ↑ Norepinephrine | Anxiety, mania, insomnia |\\n\\n## Age-Related CNS Changes & Assessment\\n\\n**Childhood/Adolescence**:\\n- Prefrontal cortex still developing (poor judgment, impulsivity)\\n- Higher neuroplasticity (better treatment response)\\n- MSE: Assess developmental appropriateness\\n\\n**Elderly**:\\n- Brain atrophy, reduced dopamine/acetylcholine\\n- Cognitive slowing (longer response times expected)\\n- Medical comorbidities more common (affect mental status)\\n- MSE must assess for delirium, dementia (not just primary psychiatric illness),\\n        mnemonics: [\\n          { text: \\\"Dopamine ↑ = mania/psychosis; ↓ = depression/Parkinson's\\\", explanation: \\\"Dopamine effects\\\" },\\n          { text: \\\"Serotonin ↓ = depression, anxiety, OCD; SSRIs ↑ available serotonin\\\", explanation: \\\"Serotonin and treatment\\\" },\\n          { text: \\\"GABA ↓ = anxiety/seizures; Benzos/alcohol ↑ GABA\\\", explanation: \\\"GABA regulation\\\" },\\n          { text: \\\"Prefrontal dysfunction = poor judgment/impulsivity; Amygdala dysfunction = anxiety/fear abnormality\\\", explanation: \\\"Regional functions\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Dopamine excess in mesolimbic pathway → positive symptoms (hallucinations, delusions)\\\",\\n          \\\"Dopamine deficiency in mesocortical pathway → negative symptoms (flat affect, avolition)\\\",\\n          \\\"Serotonin deficiency hypothesis explains depression and anxiety disorders\\\",\\n          \\\"GABA deficiency contributes to anxiety and seizure susceptibility\\\",\\n          \\\"MSE findings often correlate with specific neurotransmitter abnormalities\\\",\\n          \\\"Antipsychotics block dopamine → improve hallucinations but cause motor side effects\\\",\\n          \\\"SSRIs increase serotonin availability → mood/anxiety improvement in 2-4 weeks\\\",\\n          \\\"Brain regions work in networks; isolated lesions don't fully explain psychiatric symptoms\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Neurobiology of Mental Illness\\\", chapter: \\\"Neurochemistry of Psychiatric Disorders\\\", edition: \\\"5th\\\" },\\n          { book: \\\"Kaplan & Sadock's Synopsis of Psychiatry\\\", chapter: \\\"Neural Basis of Behavior\\\", edition: \\\"12th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"psychiatric-assessment-clinical\\\",\\n        title: \\\"Psychiatric Assessment & MSE - Clinical\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Conducting interviews in various settings (emergency, outpatient, inpatient), safety assessment, use of rating scales, and documentation.\\\",\\n        contentMd: ``# Psychiatric Assessment & MSE - Clinical\\n\\n## Interview Techniques & Settings\\n\\n**General Principles**:\\n- Privacy: Conduct interview in private, confidential setting\\n- Rapport: Warm, non-judgmental approach\\n- Open-ended questions initially: \\\"Tell me about what brought you in today\\\"\\n- Listen more than speak: Use silence strategically\\n- Reflect feelings: \\\"It sounds like you're feeling overwhelmed\\\"\\n- Clarify: Ask for examples, dates, frequency\\n\\n**Emergency Setting Interview**:\\n- **Time-limited**: 20-30 minutes usually\\n- **Risk-focused**: Assess imminent danger (suicidality, homicidality, psychosis)\\n- **Collateral**: Use family/friends for history (patient may be acute, unreliable)\\n- **Observations**: Intoxication signs, withdrawal symptoms, bizarre behavior\\n- **Involuntary hold assessment**: Meet criteria for detention?\\n\\n**Outpatient Setting Interview**:\\n- **Comprehensive**: 45-90 minutes for first visit\\n- **Complete history**: Full biopsychosocial\\n- **Baseline assessment**: Mood, function, symptoms at baseline\\n- **Medication/treatment review**: What's worked in past?\\n\\n**Inpatient Interview**:\\n- **Serial assessments**: Daily or more frequent\\n- **Changes tracked**: Symptom progression, response to treatment\\n- **Capacity assessment**: Can patient consent to treatment?\\n- **Discharge planning**: What's needed for community re-integration?\\n\\n## Safety Assessment\\n\\n**Suicidality Assessment** (critical element):\\n1. **Ideation**: \\\"Are you having thoughts of hurting yourself?\\\" or \\\"Do you ever wish you were dead?\\\"\\n   - Yes → ask about frequency (constant vs occasional), duration\\n\\n2. **Intent**: \\\"Do you want to act on these thoughts?\\\"\\n   - Yes → assess seriousness (will truly do it?)\\n\\n3. **Plan**: \\\"Do you have a plan for how you would do it?\\\"\\n   - Specific plan + access to means = high risk\\n   - Example: \\\"I have a gun at home, was thinking tonight\\\"\\n\\n4. **Means**: \\\"Do you have access to [method]?\\\"\\n   - Guns, medications, location (high bridge, apartment height)\\n\\n5. **Barriers**: \\\"What keeps you from acting?\\\" (protective factors)\\n   - Family, religion, future plans, fear of death\\n\\n6. **Recent attempts**: \\\"Have you tried before?\\\"\\n   - Lethality, intent, when, outcome\\n\\n**Risk Assessment Summary**:\\n- **High risk**: Definite plan, access to means, intent, no barriers, recent attempt\\n- **Moderate risk**: Some planning, possible means, ambivalent intent\\n- **Low risk**: Passive ideation, no plan, access to means limited, strong barriers\\n\\n**Homicidality Assessment**:\\n- \\\"Are you having thoughts of harming others?\\\"\\n- If yes: Specific person? Plan? Access? Intent?\\n- Duty to warn (Tarasoff rule in many jurisdictions)\\n\\n**Psychosis-Related Safety**:\\n- Command hallucinations: \\\"Voices telling you to hurt yourself or others?\\\"\\n- Paranoid delusions: \\\"Do you believe people are trying to harm you? Are you in danger?\\\"\\n\\n## Use of Rating Scales\\n\\n**Mood Assessment**:\\n- **PHQ-9** (Patient Health Questionnaire): 9-item depression screening\\n  - Scores: 0-4 (normal), 5-9 (mild), 10-14 (moderate), 15-19 (moderately severe), 20+ (severe)\\n  - Used in primary care, baseline, and symptom tracking\\n\\n- **GAD-7** (Generalized Anxiety Disorder): 7-item anxiety screening\\n  - Scores: 0-4 (normal), 5-9 (mild), 10-14 (moderate), 15+ (severe)\\n\\n- **MADRS** (Montgomery-Åsberg Depression Rating Scale): Clinician-administered, more detailed\\n\\n**Psychosis Assessment**:\\n- **PANSS** (Positive and Negative Symptom Scale): Comprehensive psychosis assessment\\n  - Positive symptoms (hallucinations, delusions, disorganization)\\n  - Negative symptoms (flat affect, avolition, alogia)\\n  - General psychopathology (anxiety, guilt, depression)\\n\\n- **SAPS** (Scale for Assessment of Positive Symptoms): Detailed positive symptom assessment\\n\\n**Cognitive Assessment**:\\n- **MMSE** (Mini-Mental State Exam): Quick cognitive screening (30 items, 30 min)\\n  - <24 suggests cognitive impairment\\n\\n- **MoCA** (Montreal Cognitive Assessment): More sensitive for mild impairment\\n  - Assesses executive function, memory, attention, language, visuospatial\\n\\n- **WAIS** (Wechsler Adult Intelligence Scale): Comprehensive IQ testing (specialized setting)\\n\\n## Documentation Standards\\n\\n**Psychiatric Note Format** (SOAP):\\n1. **Subjective**:\\n   - Chief complaint in quotes\\n   - HPI: Duration, symptoms, precipitants, past episodes\\n   - Past psychiatric, medical, substance use history\\n   - Social, family history\\n\\n2. **Objective**:\\n   - Vitals (heart rate, BP important in psychiatric assessment)\\n   - Appearance, behavior observations\\n   - MSE findings (concrete, observable)\\n   - Lab results, imaging findings\\n\\n3. **Assessment**:\\n   - DSM-5 diagnoses (primary and comorbidities)\\n   - Differential diagnosis if uncertain\\n   - Risk assessment summary\\n   - Strengths and assets\\n\\n4. **Plan**:\\n   - Medications: Name, dose, frequency, indication\\n   - Psychotherapy: Type, frequency\\n   - Hospitalization, safety precautions\\n   - Follow-up appointments\\n   - Patient education provided\\n\\n**Critical Elements in Documentation**:\\n- Direct quotes: \\\"Hears voices at night telling him to hurt himself\\\"\\n- Objective findings: NOT \\\"depressed-appearing\\\" but \\\"reports sad mood, minimal eye contact, slow speech\\\"\\n- Risk stratification: Clearly state risk level and reasoning\\n- Rationale for treatment choices\\n- Informed consent documented\\n\\n## Capacity & Competency Assessment\\n\\n**Capacity** (current mental status):\\n- Understand medical condition?\\n- Understand treatment options?\\n- Appreciate consequences of refusing treatment?\\n- Rationally manipulate information to reach decision?\\n\\nIf yes to all 4 → has capacity; if no to any → lacks capacity (can be involuntarily treated in most jurisdictions)\\n\\n**Competency** (legal determination):\\n- Court decision about ability to manage affairs\\n- Different from clinical capacity\\n- Applies to finances, medical decisions, testamentary capacity, criminal responsibility,\\n        mnemonics: [\\n          { text: \\\"Suicide risk: Ideation → Intent → Plan → Means → Barriers\\\", explanation: \\\"Assessment sequence\\\" },\\n          { text: \\\"Safety assessment: Suicidality, homicidality, psychosis-related danger\\\", explanation: \\\"Three areas\\\" },\\n          { text: \\\"Capacity: Understand condition, options, consequences, rationally decide\\\", explanation: \\\"4 criteria\\\" },\\n          { text: \\\"Rating scales: PHQ-9 (depression), GAD-7 (anxiety), MMSE (cognition), PANSS (psychosis)\\\", explanation: \\\"Common scales\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Always assess suicidality in psychiatric interview (don't assume asking increases risk)\\\",\\n          \\\"Specific plan + access to means + intent = high suicide risk → hospitalization likely needed\\\",\\n          \\\"Homicidality assessment: Must assess dangerousness, duty to warn if specific target identified\\\",\\n          \\\"Psychosis requires assessment of command hallucinations, paranoid content (safety implications)\\\",\\n          \\\"Rating scales quantify severity, track treatment response, used in research\\\",\\n          \\\"Documentation must be objective (what was observed), not interpretive\\\",\\n          \\\"Capacity assessment required before involuntary treatment in many settings\\\",\\n          \\\"Collateral information critical in acute settings (patient may be unreliable due to acute illness)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kaplan & Sadock's Synopsis of Psychiatry\\\", chapter: \\\"Psychiatric Interview and Assessment\\\", edition: \\\"12th\\\" },\\n          { book: \\\"First & Gibbon, Structured Clinical Interview for DSM-5\\\", chapter: \\\"Administration and Scoring\\\", edition: \\\"2022\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"psychiatric-assessment-exam\\\",\\n        title: \\\"Psychiatric Assessment & MSE - Exam Prep\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"NEET/NMC exam patterns: MSE components, differential diagnosis based on MSE, safety assessment, and common presentation scenarios.\\\",\\n        contentMd: ``# Psychiatric Assessment & MSE - Exam Prep\\n\\n## MSE Components Quick Reference\\n| Component | Normal | Abnormal Examples |\\n|-----------|--------|-------------------|\\n| Appearance | Neat, appropriate | Disheveled, bizarre, provocative |\\n| Speech | Normal rate/volume | Pressured (mania), slowed (depression) |\\n| Mood | Euthymic, stable | Depressed, elevated, irritable, labile |\\n| Affect | Congruent, appropriate range | Flat, blunted, incongruent, inappropriate |\\n| Perception | No hallucinations | Auditory (schizophrenia), visual (organic), tactile (withdrawal) |\\n| Thought form | Goal-directed, coherent | Flight of ideas, tangential, loose associations, word salad |\\n| Thought content | No delusions/obsessions | Paranoid delusions (psychosis), obsessions (OCD), suicidality |\\n| Insight | Good (aware of illness) | Poor/absent (anosognosia in schizophrenia) |\\n| Cognition | Alert, oriented 4/4, memory intact | Disorientation (delirium, dementia), memory impairment |\\n| Judgment | Good decision-making | Poor (impulsive, risky decisions) |\\n\\n## Differential Diagnosis by MSE Pattern\\n\\n**Elevated Mood + Grandiosity + Flight of Ideas + Pressured Speech**:\\n- Diagnosis: Bipolar Mania\\n- Why: Classic triad (elevated mood, decreased need for sleep, flight of ideas)\\n\\n**Depressed Mood + Flat Affect + Slowed Speech + Guilt**:\\n- Diagnosis: Major Depression\\n- Why: Neurovegetative signs + cognitive content (guilt)\\n\\n**Auditory Hallucinations + Paranoid Delusions + Disorganized Speech + Poor Insight**:\\n- Diagnosis: Schizophrenia\\n- Why: Positive symptoms + disorganization + lack of insight\\n\\n**Anxiety + Worry + Racing Thoughts + Hypervigilance**:\\n- Diagnosis: Generalized Anxiety Disorder (GAD)\\n- Why: Excessive worry, physical symptoms (elevated BP, tremor), difficulty concentrating\\n\\n**Depersonalization + Derealization + Anxiety + Flashbacks**:\\n- Diagnosis: Post-Traumatic Stress Disorder (PTSD)\\n- Why: Dissociative symptoms + trauma history + hyperarousal\\n\\n**Intrusive Thoughts + Compulsive Behaviors + Insight (present)**:\\n- Diagnosis: Obsessive-Compulsive Disorder (OCD)\\n- Why: Obsessions (intrusive, unwanted) + compulsions (neutralizing rituals) + good insight (knows irrational)\\n\\n**Disorientation 1-2/4 + Fluctuating Attention + Autonomic Instability**:\\n- Diagnosis: Delirium\\n- Why: Acute onset, fluctuating course, medical cause (fever, drugs, infection)\\n\\n**Global Cognitive Decline + Memory Loss + Maintained Consciousness**:\\n- Diagnosis: Dementia\\n- Why: Chronic, progressive, specific patterns (Alzheimer's → memory first; frontotemporal → behavior first)\\n\\n## Exam-Style Questions\\n\\n**Q: A 35-year-old with 3-day history of decreased need for sleep (4 hrs/night), talking rapidly (flight of ideas), spending money excessively. MSE shows elevated mood, grandiosity, psychomotor agitation. Most likely diagnosis?**\\nA: Bipolar Mania (or Manic Episode). Classic triad: (1) Elevated/expansive mood; (2) Markedly decreased need for sleep (not insomnia, but truly feels rested); (3) Flight of ideas/racing thoughts (manifested as pressured speech). Associated features: Grandiosity, impulsive spending, increased goal-directed activity. Treatment: Mood stabilizer (lithium, anticonvulsant) + antipsychotic if psychotic features; benzodiazepine for agitation.\\n\\n**Q: A patient reports wanting to hurt herself. She has a specific plan (overdose with medications at home) and has access (pills in bathroom). What is the risk level and recommended disposition?**\\nA: HIGH RISK for suicide. Factors: (1) Definite intent; (2) Specific plan; (3) Access to means; (4) No mention of protective factors. Management: (1) Involuntary hospitalization (meet criteria for imminent danger to self); (2) Remove access to means (medications secured); (3) 1:1 observation initially; (4) Psychiatric evaluation, medication, psychotherapy; (5) Suicidality reassessment daily.\\n\\n**Q: MSE shows disorientation to time (thinks it's 1990), fluctuating attention, visual hallucinations (sees insects crawling), and autonomic instability (sweating, tremor). Age 72. What is this?**\\nA: **Delirium** (likely alcohol withdrawal or infection, common in elderly). Why: Acute disorientation + fluctuating attention + hallucinations (visual more common in delirium than schizophrenia) + autonomic signs. Contrast: **Dementia** would show stable disorientation, slow progressive decline, maintained attention initially. Investigation: Blood cultures, urinalysis, metabolic panel, medication review. Treatment: Benzodiazepines (if alcohol withdrawal); treat underlying cause.\\n\\n**Q: A woman reports hearing multiple voices arguing with each other, denies depression/elevated mood, and beliefs that her husband is poisoning her. She minimizes symptoms (\\\"just stress\\\"). What is her insight level?**\\nA: **Poor/Absent insight** (anosognosia). Findings: Hallucinations (voices) + delusion (poisoning) + denial of illness severity. Insight scale: (1) Full insight (recognizes symptoms, agrees with diagnosis); (2) Partial insight (admits something wrong); (3) Absent (denies illness). This patient = 3 (absent). Implies schizophrenia (psychotic disorder with poor insight typical). Poor insight predicts: Poor treatment compliance, higher relapse risk, need for involuntary treatment.\\n\\n## Risk Assessment Patterns (Exam)\\n\\n**High Suicide Risk Indicators**:\\n- ✓ Specific plan + access to means + intent\\n- ✓ Recent attempt (especially if high lethality)\\n- ✓ Male, older age, divorced/isolated\\n- ✓ Command hallucinations (\\\"voices telling me to kill myself\\\")\\n- ✓ Depressed mood with agitation (not just sadness alone)\\n- ✓ Hopelessness (\\\"things will never get better\\\")\\n\\n**High Homicide Risk Indicators**:\\n- ✓ Command hallucinations (\\\"voices telling me to hurt my wife\\\")\\n- ✓ Paranoid delusions with specific target (\\\"neighbor is poisoning me\\\")\\n- ✓ History of violence\\n- ✓ Substance intoxication\\n- ✓ Recent stressor (job loss, relationship break-up)\\n\\n**Low-Risk Suicidality** (passive ideation):\\n- \\\"Sometimes I wish I was dead, but I wouldn't actually do it\\\"\\n- No plan, no intent, multiple protective factors (family, job, religion)\\n- Outpatient management acceptable if engaged in treatment,\\n        mnemonics: [\\n          { text: \\\"Elevated mood + Flight of ideas + ↓ Need for sleep = Mania\\\", explanation: \\\"Classic triad\\\" },\\n          { text: \\\"Disorientation + Fluctuating attention + Visual hallucinations = Delirium\\\", explanation: \\\"Acute vs chronic\\\" },\\n          { text: \\\"Auditory hallucinations + Paranoid delusions + ↓ Insight = Schizophrenia\\\", explanation: \\\"Psychotic disorder\\\" },\\n          { text: \\\"Specific plan + Access + Intent = High suicide risk → Hospitalization\\\", explanation: \\\"Risk assessment\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Flight of ideas (rapid shifts) differs from circumstantiality (over-detailed but on point)\\\",\\n          \\\"Flat affect (no emotion) suggests schizophrenia negative symptoms; depressed mood is subjective feeling\\\",\\n          \\\"Anosognosia (lack of insight) common in psychosis; impacts treatment adherence\\\",\\n          \\\"Delirium: acute, fluctuating, reversible; Dementia: chronic, progressive, irreversible\\\",\\n          \\\"Specific suicide plan + access to means + intent = criterion for involuntary hospitalization\\\",\\n          \\\"Homicidality: Must assess intent, specific target, access, and duty to warn if applicable\\\",\\n          \\\"Command hallucinations increase risk (suicide and homicide) regardless of other factors\\\",\\n          \\\"Poor insight predicts worse prognosis and need for more intensive (possibly involuntary) treatment\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"NMC Standard Textbook\\\", chapter: \\\"Psychiatric Assessment and MSE\\\", edition: \\\"2024\\\" },\\n          { book: \\\"Kaplan & Sadock's Synopsis of Psychiatry\\\", chapter: \\\"Exam Preparation: Psychiatric Assessment\\\", edition: \\\"12th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"psychiatric-assessment-recall\\\",\\n        title: \\\"Psychiatric Assessment & MSE - Active Recall\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"8 targeted Q&A on MSE components, diagnostic reasoning, safety assessment, and clinical scenarios.\\\",\\n        contentMd: ``# Psychiatric Assessment & MSE - Active Recall\\n\\n## Questions & Answers\\n\\n**Q1: Define the difference between hallucinations and delusions. Give one example of each from schizophrenia.**\\nA: **Hallucination**: False sensory perception WITHOUT external stimulus (perception problem). Example from schizophrenia: Hearing voices (auditory hallucination) saying \\\"you are evil\\\" when no one is speaking. **Delusion**: Fixed false belief DESPITE evidence (thought content problem). Example: Believing government is monitoring through TV despite lack of evidence. Both occur in psychosis; hallucinations respond to antipsychotics (dopamine blockade reduces false perceptions), delusions take longer to respond.\\n\\n**Q2: A patient presents with elevated mood, talking rapidly (words rhyming based on sound, not meaning), grandiose ideas (\\\"I am God's messenger\\\"), decreased need for sleep (4 hrs/night, feeling great), and impulsive spending. What is the clinical syndrome and its distinguishing feature?**\\nA: **Bipolar Mania**. Distinguishing features: (1) **Decreased NEED for sleep** (not insomnia—patient feels rested despite sleeping only 4 hours); (2) **Flight of ideas** manifested as **clang associations** (words rhyming); (3) **Grandiosity** (inflated self-image); (4) **Increased goal-directed activity** (excessive spending). Contrast with depression: Insomnia (can't sleep despite wanting to), psychomotor retardation (slow), depressed mood, guilt. Treatment: Mood stabilizer (lithium, valproate), antipsychotic if psychotic features; benzodiazepine for agitation.\\n\\n**Q3: What is \\\"flat affect\\\" and what psychiatric condition is it most associated with? How does it differ from depressed mood?**\\nA: **Flat affect**: Observable lack of emotional expression (therapist-observed); face shows minimal emotion regardless of topic. **Most associated**: Schizophrenia (negative symptom). Distinguishing features: (1) **Flat affect** is objective (visible lack of expression); (2) **Depressed mood** is subjective (patient reports feeling sad, but may or may not show it facially—incongruence = psychiatric sign). Example: Patient with schizophrenia describing death of parent with blank face (flat affect, no apparent emotion). Patient with depression describing same with tearful, sad appearance (congruent affect). Flat affect in schizophrenia reflects dopamine deficiency in mesocortical pathway.\\n\\n**Q4: A patient reports hearing voices, denies depression or mania, and believes neighbors are monitoring her through the walls. She states \\\"I know this is real, I see the cameras.\\\" What is her insight level and why is this important for treatment?**\\nA: **Absent insight** (anosognosia). Why: She acknowledges symptoms (voices, beliefs) but does not recognize them as abnormal. This predicts: (1) **Poor medication compliance** (why take medication if nothing is wrong?); (2) **Higher relapse risk**; (3) **Need for involuntary treatment** (more likely to require hospitalization, may not consent to antipsychotics); (4) **Worse prognosis**. Management: Long-acting antipsychotics (IM injections bypass compliance issue), psychoeducation, assertive outreach. Contrast: Patient with depression has good insight (\\\"I feel sad and it's abnormal, I need help\\\").\\n\\n**Q5: A 28-year-old reports suicidal thoughts, stating \\\"I have my father's gun at home, I'm planning to do it tonight.\\\" Rate the suicide risk and what is the disposition?**\\nA: **HIGH RISK**. Factors: (1) **Suicidal ideation** = present; (2) **Intent** = \\\"planning to do it\\\"; (3) **Specific plan** = gun use; (4) **Access to means** = has gun at home; (5) **Timeline** = \\\"tonight\\\" (imminent). This meets criteria for **involuntary hospitalization** on most jurisdictions. Management: (1) Admit involuntarily; (2) Remove access to means (secure firearms); (3) 1:1 observation (constant supervision); (4) Psychiatric evaluation, medication (antidepressant, mood stabilizer depending on diagnosis); (5) Psychotherapy (CBT, DBT); (6) Reassess suicidality daily; (7) Once stabilized, discharge with outpatient follow-up, safety plan.\\n\\n**Q6: What is the difference between \\\"loosened associations\\\" and \\\"tangentiality\\\"? Which is more specific to schizophrenia?**\\nA: **Loosened associations**: Ideas connect by superficial, non-logical links (sound, casual meaning). Example: \\\"The wall is blue, blueberries are sweet, sweets cause cavities, cavities are holes...\\\" (each connects in a jump, hard to follow). **Most specific to schizophrenia**. **Tangentiality**: Response starts on topic but veers off, doesn't return. Example: Asked \\\"Do you like your job?\\\" answers \\\"Yes, my job is at the bank, my father worked in finance, he was a good man who died...\\\" (goes off track, doesn't return to job question). Seen in ADD, anxiety, schizophrenia. **Loosening** is more pathognomonic for schizophrenia (positive symptom, dopamine excess); tangentiality is less specific.\\n\\n**Q7: A 75-year-old admitted with \\\"confusion.\\\" MSE shows: disoriented to time (thinks year is 2010), fluctuating attention (alert one minute, drowsy next), visual hallucinations (sees deceased husband), autonomic instability (sweating, elevated HR 110). What is the diagnosis and why is this an emergency?**\\nA: **Delirium** (acute confusional state). Why this diagnosis: (1) **Acute onset** (was fine yesterday); (2) **Disorientation** to time (cardinal feature); (3) **Fluctuating attention** (key feature—varies minute-to-minute); (4) **Visual hallucinations** (more common in delirium than schizophrenia); (5) **Autonomic instability** (fever, tachycardia, diaphoresis suggest medical cause). **Why emergency**: Delirium indicates serious underlying medical condition (infection, metabolic abnormality, medication toxicity, hypoxia). Management: (1) Urgent medical workup (CBC, metabolic panel, urinalysis, blood cultures, imaging); (2) Identify and treat cause; (3) Environmental support (reorientation, familiar objects, 1:1 if unsafe); (4) Antipsychotic (haloperidol, risperidone) if agitated; (5) Benzodiazepines if alcohol/benzodiazepine withdrawal. Prognosis: If cause treated, usually resolves.\\n\\n**Q8: A patient presents with excessive worry about health, finances, and family relationships; reports difficulty concentrating at work; and has tremor, muscle tension, and insomnia. MSE shows anxious mood, normal thought process/content, and intact cognition. What is this disorder and how does it differ from OCD?**\\nA: **Generalized Anxiety Disorder (GAD)**. Why: (1) **Excessive worry** (>6 months) about multiple domains; (2) **Physical symptoms** (tremor, tension, insomnia); (3) **Difficulty concentrating**; (4) **Normal insight** (knows worry is excessive). Treatment: SSRI (sertraline, paroxetine), CBT, relaxation. **Difference from OCD**: (1) **GAD**: Worry is the content (health, finances); patient wants the worry to stop. (2) **OCD**: Obsessions (intrusive thoughts, \\\"contamination bad\\\") + compulsions (hand-washing rituals to neutralize anxiety). OCD patient recognizes obsessions as irrational but feels driven to do compulsions. OCD more severe, specific, ritualistic; GAD more generalized, pervasive.\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-];
+        summary: "Mental Status Examination components, history taking, psychiatric interview techniques.",
+        contentMd: `# Psychiatric Assessment & Mental Status Examination - Foundation
+
+## Psychiatric Interview Principles
+- **Empathy & rapport**: Essential for patient comfort and disclosure
+- **Open-ended questions**: Allows patient to express concerns fully
+- **Active listening**: Paraphrasing, summarizing shows understanding
+- **Non-judgmental**: Acceptance of patient's experience without criticism
+- **Confidentiality**: Reassure patient unless safety concern
+
+## History Taking Framework
+### Chief Complaint & Presenting Illness
+- Onset: acute vs insidious, date
+- Duration: weeks, months, years
+- Progression: improving, static, worsening
+- Precipitating factors: stressful events, substance use, medical illness
+- Associated symptoms: full symptom timeline
+
+### Personal History
+- **Birth & development**: Pregnancy complications, birth weight, developmental milestones
+- **Childhood**: Family atmosphere, schooling, bullying, trauma
+- **Adolescence**: Peer relationships, substance use onset, behavioral changes
+- **Adulthood**: Education, occupation, relationships, major life events
+
+### Psychiatric History
+- Prior episodes: When, duration, severity, hospitalization, treatment response
+- Suicidal/homicidal ideation/attempts: When, method, intent, current risk
+- Treatment: Medications tried, psychotherapy, outcomes
+
+### Family History
+- First-degree relatives: Depression, schizophrenia, bipolar, substance use, suicide
+- Pattern: Early-onset illness suggests genetic vulnerability
+
+### Medical History
+- Chronic conditions: Diabetes, hypertension, asthma (psychiatric comorbidity)
+- Medications: SSRIs, antipsychotics, steroids (psychiatric side effects)
+- Surgeries: Complications, recovery issues
+- Allergies: Drug reactions, adverse events
+
+### Substance Use History
+- Alcohol: Quantity, frequency, consequences (liver disease, accident risk)
+- Illicit drugs: Type, frequency, route, addiction history
+- Tobacco: Quantity, duration, withdrawal history
+- Caffeine: Cups/day (can worsen anxiety)
+
+## Mental Status Examination (MSE)
+### Appearance & General
+- **Grooming**: Well-groomed, neglected, disheveled (self-care indicator)
+- **Hygiene**: Clean vs dirty clothing (negative symptoms, depression)
+- **Dress**: Inappropriate (mania, disinhibition), unusual (thought disorder)
+- **Eye contact**: Appropriate vs avoiding (anxiety, paranoia) vs excessive (mania)
+- **Facial expression**: Animated vs flat affect (depression, schizophrenia)
+
+### Behavior & Psychomotor Activity
+- **Cooperation**: Friendly, irritable, suspicious, hostile
+- **Psychomotor**: Normal vs retarded (depression, catatonia) vs agitated (mania, anxiety)
+- **Mannerisms**: Stereotypies, grimacing (antipsychotic side effects or catatonia)
+- **Violence risk**: Threatening gestures, aggressive tone, content about harming
+
+### Speech
+- **Rate**: Normal, tachyphonic (mania), bradyphonic (depression)
+- **Volume**: Normal, loud (mania), quiet (depression)
+- **Rhythm**: Smooth vs halting, stuttering
+- **Tone**: Monotone (depression, schizophrenia), expressive (normal)
+- **Coherence**: Clear vs disorganized, word salad (psychosis)
+
+### Mood & Affect
+- **Mood**: Subjective emotional state (dysphoric, euthymic, elevated, anxious)
+- **Affect**: Objective emotional expression (restricted, blunted, flat, appropriate)
+- **Congruence**: Does affect match content? (incongruent = psychosis risk)
+
+### Thought Process
+- **Organization**: Logical vs disorganized
+- **Tangential**: Answers go off-topic, never return
+- **Circumstantial**: Excessive detail, eventually gets to point
+- **Flight of ideas**: Rapid jumping between topics, rhyming, associations
+- **Word salad**: Incomprehensible mixing of words
+
+### Thought Content
+- **Delusions**: Fixed false beliefs (persecutory, grandiose, referential, somatic, nihilistic)
+- **Hallucinations**: Perceptual experiences without stimulus (auditory, visual, tactile)
+- **Obsessions**: Intrusive thoughts, ego-dystonic, cause distress
+- **Suicidal ideation**: Current thoughts, plans, intent, access to means
+- **Homicidal ideation**: Similarly assess intention and planning
+
+### Cognition
+- **Orientation**: Person, place, time, situation (abnormal in delirium)
+- **Memory**: Immediate (digit span), short-term (recent events), long-term (name)
+- **Attention/Concentration**: Digit span backward, serial 7s
+- **Calculation**: Simple arithmetic (impaired in dementia, delirium)
+- **Abstraction**: Proverb interpretation (impaired in psychosis, cognitive impairment)
+
+### Insight & Judgment
+- **Insight**: Awareness of illness ("Do you think you're ill?")
+- **Judgment**: Decision-making, understanding consequences of actions
+- **Reality testing**: Ability to distinguish reality from unreality`,
+        mnemonics: [
+          { text: "MSE domains: Appearance, Behavior, Speech, Mood/Affect, Thought (Process & Content), Cognition, Insight, Judgment", explanation: "8 domains" },
+          { text: "Mood = subjective (what patient says), Affect = objective (what clinician observes)", explanation: "Mood vs Affect" },
+          { text: "MMSE = 30-point score (≥23 normal, <23 possible cognitive impairment)", explanation: "Quick cognitive screen" },
+          { text: "Suicide assessment: Intent, Plan, Means, Buffers (protective factors)", explanation: "Risk assessment" }
+        ],
+        keyPoints: [
+          "Psychiatric interview requires empathy, active listening, non-judgmental stance, confidentiality",
+          "History taking systematic: chief complaint, personal/family/medical/substance history, psychiatric history",
+          "MSE objective, reproducible assessment of mental state; critical for diagnosis",
+          "Mood (subjective) vs Affect (objective) distinction important; congruence critical",
+          "Suicidal/homicidal ideation must be directly asked; assess intent, plan, access to means"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Clinical Psychiatric Assessment", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "The Psychiatric Interview and Mental Status Examination", edition: "12th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "psychiatric-assessment-mse-layer-2-mechanism",
+        title: "Psychiatric Assessment & MSE - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Neurocognitive basis, formal cognitive testing, correlation with brain regions.",
+        contentMd: `# Psychiatric Assessment & MSE - Mechanism
+
+## Neurocognitive Basis of MSE Components
+### Mood/Affect Regulation (Limbic System)
+- **Amygdala**: Fear, anxiety, emotional processing
+- **Orbitofrontal cortex**: Emotional decision-making, reward processing
+- **Anterior cingulate**: Conflict monitoring, emotion regulation
+- **Dysfunction**: Depression (amygdala hyperactivity), anxiety (amygdala hyperactivity), affect dysregulation (prefrontal hypoactivity)
+
+### Thought Process (Prefrontal Cortex)
+- **DLPFC (Dorsolateral Prefrontal Cortex)**: Organizing thoughts, working memory
+- **Anterior cingulate**: Cognitive control, monitoring
+- **Superior temporal gyrus**: Language comprehension, semantic processing
+- **Dysfunction**: Disorganized speech (temporal lobe), tangential thinking (prefrontal), flight of ideas (mania/hypofrontality)
+
+### Cognition (Distributed Networks)
+- **Prefrontal cortex**: Executive function, working memory, planning
+- **Parietal cortex**: Attention, spatial processing
+- **Temporal lobes**: Memory consolidation
+- **Subcortical**: Thalamus (relay), basal ganglia (motor control)
+
+### Psychomotor Activity (Basal Ganglia & Motor Cortex)
+- **Basal ganglia**: Motor planning, movement initiation
+- **Substantia nigra**: Dopamine production (motor control)
+- **Subthalamic nucleus**: Motor inhibition
+- **Dysfunction**: Retardation (dopamine ↓, depression), agitation (dopamine ↑, mania)
+
+## Formal Cognitive Assessment Tools
+
+### Mini-Mental State Examination (MMSE)
+- **Domains**: Orientation (10), memory (3), attention (3), calculation (1), language (8), visual-spatial (1)
+- **Score**: 30 points; ≥23 normal, 18-22 mild cognitive impairment, <18 moderate-severe
+- **Limitations**: Language-dependent, education-biased, insensitive to frontal lobe dysfunction
+
+### Montreal Cognitive Assessment (MoCA)
+- **Domains**: Visuospatial, executive, memory, attention, language, orientation
+- **Score**: 30 points; ≥26 normal, age-adjusted cutoffs
+- **Advantage**: More sensitive to mild cognitive impairment than MMSE, includes executive function
+
+### Mini-Cog
+- **Brief**: 3-minute clock drawing test + 3-word recall
+- **Purpose**: Screening for dementia in primary care
+- **Advantage**: Quick, no equipment needed
+
+### Wisconsin Card Sorting Test (WCST)
+- **Measures**: Executive function, abstract reasoning, learning from feedback
+- **Abnormal**: Perseveration (inability to switch sets), seen in frontal lobe dysfunction (schizophrenia, dementia)
+
+## Psychometric Properties of MSE
+### Reliability
+- **Inter-rater reliability**: Varies by component (speech, affect most reliable; insight least)
+- **Kappa coefficients**: 0.6-0.8 for most components (moderate-good agreement)
+- **Training improves**: Standardized assessment tools improve reliability
+
+### Validity
+- **Construct validity**: MSE components predict underlying brain pathology
+- **Criterion validity**: MSE findings correlate with imaging (SPECT, fMRI)
+- **Discriminant validity**: MSE distinguishes psychosis from nonpsychotic disorders`,
+        mnemonics: [
+          { text: "MMSE 30 points: Orientation 10, Memory 3, Attention 3, Calculation 1, Language 8, Visuospatial 1", explanation: "Domain breakdown" },
+          { text: "Affective symptoms = limbic (amygdala, ACC, OFC); Cognitive = prefrontal (DLPFC), parietal (attention), temporal (memory)", explanation: "Brain regions" },
+          { text: "Psychomotor retardation = dopamine ↓; Agitation = dopamine ↑ (or anxiety/mania)", explanation: "Neurochemistry of activity" },
+          { text: "Frontal lobe = executive, motor, personality; Temporal = memory, emotion; Parietal = attention; Occipital = vision", explanation: "Lobe-specific functions" }
+        ],
+        keyPoints: [
+          "MMSE quick screening; MoCA more sensitive to mild cognitive impairment",
+          "Mood/affect regulated by limbic system (amygdala, OFC, ACC); dysfunction in depression, anxiety, bipolar",
+          "Thought process depends on prefrontal cortex organization; disorganized speech indicates cortical/temporal dysfunction",
+          "Psychomotor activity correlates with dopamine levels: retardation in depression, agitation in mania",
+          "Cognitive impairment indicates subcortical/cortical pathology; location determines specific deficits"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Cognitive Assessment", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Neuropsychological and Neuroimaging Assessments", edition: "12th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "psychiatric-assessment-mse-layer-3-clinical",
+        title: "Psychiatric Assessment & MSE - Clinical",
+        estimatedMinutes: 35,
+        summary: "Clinical application of MSE, interpretation, differential diagnosis based on findings.",
+        contentMd: `# Psychiatric Assessment & MSE - Clinical
+
+## Structured Diagnostic Interview Tools
+### SCID-5 (Structured Clinical Interview for DSM-5)
+- **Purpose**: Systematic assessment of DSM-5 diagnostic criteria
+- **Domains**: Psychotic, mood, anxiety, substance use, neurodevelopmental, personality
+- **Advantage**: High reliability, comprehensive; time-consuming
+
+### Mini International Neuropsychiatric Interview (MINI)
+- **Duration**: 15 minutes
+- **Coverage**: Psychotic disorders, mood, anxiety, substance use, ADHD, personality
+- **Use**: Rapid psychiatric screening in primary care
+
+### PSYCH-K
+- **Screening questionnaire**: Identifies likely psychiatric diagnoses
+- **Brief**: 10-minute self-report
+
+## Interpreting MSE Findings by Diagnosis
+
+### Major Depression
+- **Appearance**: Neglected grooming/hygiene, poor eye contact
+- **Behavior**: Psychomotor retardation (slow movements, slow speech)
+- **Speech**: Soft, slow, monotone
+- **Mood/Affect**: Dysphoric mood, blunted/restricted affect, congruent
+- **Thought process**: Organized but slowed
+- **Thought content**: Guilt, hopelessness, suicidal ideation
+- **Cognition**: Impaired attention/concentration (pseudo-dementia in older adults)
+- **Insight/Judgment**: Intact
+
+### Mania
+- **Appearance**: Bright clothing, excessive makeup/jewelry, poor hygiene (grandiosity)
+- **Behavior**: Psychomotor agitation, aggressive, irritable, distractible
+- **Speech**: Fast (tachyphonia), loud, pressured, flight of ideas
+- **Mood/Affect**: Elevated/expansive mood, incongruent affect (laughing inappropriately)
+- **Thought process**: Tangential, flight of ideas, easily distracted
+- **Thought content**: Grandiose delusions, decreased need for sleep (but feeling rested)
+- **Cognition**: Racing thoughts, poor concentration due to distractibility
+- **Insight/Judgment**: Poor (denies illness, poor judgment about risky behavior)
+
+### Schizophrenia
+- **Appearance**: Variable; may be disheveled, bizarre dress
+- **Behavior**: Variable; may be withdrawn or agitated, violence risk
+- **Speech**: Disorganized, incoherent, neologisms
+- **Mood/Affect**: Flat/blunted affect, incongruent (laughing at sad content)
+- **Thought process**: Loose associations, flight of ideas, thought blocking
+- **Thought content**: Persecutory/grandiose delusions, hallucinations (usually auditory)
+- **Cognition**: Disorganized, poor concentration
+- **Insight/Judgment**: Very poor (denies psychosis)
+
+### Anxiety Disorder
+- **Appearance**: Normal grooming
+- **Behavior**: May appear restless (akathisia), hypervigilant
+- **Speech**: Normal rate but may stutter or stammer
+- **Mood/Affect**: Anxious mood, appropriate affect
+- **Thought process**: Logical but preoccupied with worry
+- **Thought content**: Excessive worry, catastrophic thinking, but no delusions
+- **Cognition**: Impaired concentration due to worry
+- **Insight/Judgment**: Intact (recognizes anxiety is excessive)
+
+### Delirium
+- **Appearance**: May appear confused, disoriented
+- **Behavior**: Agitated or withdrawn, variable throughout day (fluctuating)
+- **Speech**: Disorganized, incoherent
+- **Mood/Affect**: Variable, often frightened
+- **Thought process**: Disorganized, incoherent
+- **Thought content**: Hallucinations (often visual, tactile), delusions
+- **Cognition**: DISORIENTED (critical finding), impaired memory, attention severely impaired
+- **Key difference**: ACUTE onset, FLUCTUATING consciousness (unlike schizophrenia)
+
+### Dementia
+- **Appearance**: May be disheveled in advanced stages
+- **Behavior**: Apathetic, may wander, personality changes
+- **Speech**: Anomia (word-finding difficulty), repetitive
+- **Mood/Affect**: Apathetic or irritable
+- **Thought process**: Concrete, cannot abstract
+- **Thought content**: May have delusions/hallucinations (later stages)
+- **Cognition**: INSIDIOUS onset, PROGRESSIVE memory loss, disorientation (late), intact consciousness (unlike delirium)
+- **Key difference**: CHRONIC/PROGRESSIVE, not acute fluctuating
+
+## Risk Assessment
+
+### Suicidal Risk
+**Assessment components**:
+- **Ideation**: Passive (wishing dead) vs active (wanting to die)
+- **Plan**: Specificity, feasibility
+- **Intent**: Determined to act vs ambivalent
+- **Means**: Access to lethal methods (firearms, medications, pesticides)
+- **Protective factors**: Family support, religious beliefs, future plans
+
+**High-risk profile**: Male, age >40, depression, substance use, previous attempts, access to means, social isolation, medical illness
+
+### Homicidal Risk
+**Assessment components**:
+- **Ideation**: Thoughts of harming others
+- **Plan**: Specificity (who, when, how)
+- **Intent**: Determined vs passive fantasy
+- **Target**: Identified victim, specific relationship
+- **Means**: Access to weapons
+- **Motive**: Revenge, paranoia, command hallucinations
+
+**Clinical judgment**: Duty to warn/protect if imminent risk (varies by jurisdiction)
+
+## Special Populations
+
+### Pediatric Assessment
+- **Age-appropriate language**: Use simpler vocabulary, play-based assessment
+- **Developmental stage**: Consider normal developmental behaviors (imaginary friends, magical thinking)
+- **Parent/caregiver history**: Essential (children unreliable historians)
+- **School functioning**: Academic, behavioral observations important
+
+### Geriatric Assessment
+- **Sensory impairment**: Hearing/vision loss may mimic cognitive impairment
+- **Medical comorbidity**: Medications affecting mental state
+- **Dementia screening**: Memory impairment, functional decline
+- **Depression common**: Often underdiagnosed, presents atypically (somatic complaints)
+
+### Substance Intoxication/Withdrawal
+- **Intoxication**: Slurred speech, impaired cognition, emotional lability
+- **Withdrawal**: Anxiety, tremor, hallucinations (alcohol), depression (stimulants)
+- **Temporal relationship**: Crucial for distinguishing substance-induced from primary psychiatric`,
+        mnemonics: [
+          { text: "Depression MSE: Retarded, blunt affect, guilt/hopelessness, suicidal, poor grooming", explanation: "Classic presentation" },
+          { text: "Mania MSE: Agitation, pressured speech, grandiose, incongruent affect, poor judgment", explanation: "Classic presentation" },
+          { text: "Schizophrenia MSE: Disorganized, flat affect, hallucinations, paranoia, poor insight", explanation: "Classic presentation" },
+          { text: "Delirium = ACUTE + FLUCTUATING + DISORIENTED (consciousness abnormal); Dementia = CHRONIC + PROGRESSIVE", explanation: "Key distinction" }
+        ],
+        keyPoints: [
+          "MSE findings highly specific to diagnoses; patterns help narrow differential",
+          "Affect congruence critical: incongruent suggests psychosis, congruent depression/anxiety",
+          "Delirium acute with fluctuating consciousness, disorientation; dementia insidious, progressive, consciousness intact",
+          "Suicide/homicide risk assessment essential; directly ask about intent, plan, means, protective factors",
+          "Special populations (pediatric, geriatric) require age-adapted assessment and interpretation"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Clinical Application of MSE", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Psychiatric Examination in Different Settings", edition: "12th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "psychiatric-assessment-mse-layer-4-exam-prep",
+        title: "Psychiatric Assessment & MSE - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "High-yield MSE findings, diagnostic patterns, common exam questions.",
+        contentMd: `# Psychiatric Assessment & MSE - Exam Prep
+
+## High-Yield MSE Patterns by Diagnosis
+
+| Diagnosis | Key MSE Finding | Classic Presentation |
+|-----------|-----------------|---------------------|
+| Major Depression | Psychomotor retardation, blunted affect, guilt | Slowed speech, sad mood, guilt/hopelessness |
+| Mania | Pressured speech, inflated affect, risky behavior | Tachyphonia, elevated mood, grandiose delusions |
+| Schizophrenia | Flat affect, disorganized thinking, hallucinations | Incoherent, paranoid delusions, poor insight |
+| Anxiety | Anxious mood, hypervigilance, intact insight | Worried appearance, tremor, acknowledges worry excessive |
+| Delirium | ACUTE disorientation, FLUCTUATING consciousness | Confused, disoriented, variable attention |
+| Dementia | PROGRESSIVE memory loss, insidious onset | Forgetfulness, difficulty with words, chronic course |
+
+## MSE Components - High-Yield Facts
+- **Blunted affect**: Loss of emotional range; speech low volume (depression, schizophrenia)
+- **Restricted affect**: Narrower range but appropriate (anxiety, catatonia)
+- **Flat affect**: Absence of emotional expression; monotone speech (schizophrenia, Parkinson's)
+- **Inappropriate affect**: Laughing at sad content (psychosis, dementia)
+- **Labile affect**: Rapid emotional shifts (organic brain syndrome, emotional dyscontrol)
+
+## MSE Components - Thought Process
+- **Tangential**: Answers never return to original question (schizophrenia)
+- **Circumstantial**: Gets to point but via excessive detail (mania, anxiety)
+- **Flight of ideas**: Rapid jumping between loosely connected ideas (mania)
+- **Loose associations**: Ideas lack logical connections (schizophrenia)
+- **Thought blocking**: Sudden interruption of thoughts; patient loses track (schizophrenia)
+- **Perseveration**: Repetition of previous response despite new question (brain damage, catatonia)
+
+## MSE Components - Thought Content
+- **Delusions**: Fixed false beliefs; types by content (persecutory, grandiose, referential, somatic, nihilistic)
+- **Hallucinations**: Perceptions without stimulus; auditory most common in schizophrenia; visual in delirium/dementia
+- **Obsessions**: Intrusive thoughts, ego-dystonic, cause anxiety (OCD)
+- **Compulsions**: Repetitive behaviors to reduce anxiety (OCD)
+- **Magical thinking**: Belief that thoughts can affect external events (schizotypal, psychosis)
+- **Ideas of reference**: Belief that external events have special meaning directed at self (paranoia, schizotypal)
+
+## MMSE Quick Reference
+- **30 points total**: Orientation 10, Memory 3, Attention 3, Calculation 1, Language 8, Visuospatial 1
+- **≥23 normal**: <23 suggests cognitive impairment
+- **Limitations**: Education-dependent, language-dependent, insensitive to frontal dysfunction
+- **Clock drawing test**: Good screening for visuospatial, executive dysfunction
+
+## Cognitive Screening Tools Comparison
+| Tool | Time | Domains | Sensitivity | Use |
+|------|------|---------|-------------|-----|
+| MMSE | 5-10m | Global | Moderate | Quick screen |
+| MoCA | 10m | Global + executive | High | Better than MMSE |
+| Mini-Cog | 3m | Memory, executive | Moderate | Primary care screening |
+| FAB | 8m | Executive only | High | Frontal lobe assessment |
+
+## Common Exam Questions
+**Q1: Patient with slowed speech, psychomotor retardation, blunted affect, guilt. Most likely diagnosis?**
+A: Major Depression - classic presentation
+
+**Q2: Pressured speech, flight of ideas, grandiose delusions, increased energy. Diagnosis?**
+A: Mania (Bipolar I current manic episode)
+
+**Q3: Disorganized incoherent speech, flat affect, auditory hallucinations, poor insight. Diagnosis?**
+A: Schizophrenia (positive and negative symptoms)
+
+**Q4: ACUTE confusion, disorientation, FLUCTUATING consciousness. What's different from dementia?**
+A: This is DELIRIUM (acute onset, fluctuation); dementia is insidious, progressive, consciousness intact
+
+**Q5: MMSE score 18. What does this indicate?**
+A: Mild-moderate cognitive impairment (score <23 abnormal)
+
+**Q6: Patient laughing while talking about death of family member. What's this?**
+A: Inappropriate affect (incongruent) - suggests psychosis, dementia, or organic brain syndrome
+
+**Q7: Patient keeps repeating first answer even though question changed. What's this?**
+A: Perseveration (impaired cognitive flexibility; brain pathology, catatonia)
+
+**Q8: Patient states "The TV is sending me messages." What's this?**
+A: Ideas of reference (paranoid thinking; schizophrenia, paranoid personality)
+
+**Q9: How differentiate restricted vs flat affect?**
+A: Restricted = narrower emotional range but still present; Flat = absent emotional expression`,
+        mnemonics: [
+          { text: "Depression: Retard (psychomotor), Blunt affect, Guilt, Hopelessness, Suicide", explanation: "Classic MSE" },
+          { text: "Mania: Pressured speech, Flight of ideas, Grandiose, Risky, Irritable", explanation: "Classic MSE" },
+          { text: "Schizophrenia: Disorganized, Flat affect, Hallucinations, Paranoia, Poor insight", explanation: "Classic MSE" },
+          { text: "Delirium vs Dementia: Delirium = ACUTE+FLUCTUATING; Dementia = CHRONIC+PROGRESSIVE", explanation: "Key distinction" }
+        ],
+        keyPoints: [
+          "MSE patterns highly specific; Depression (retarded, blunt), Mania (pressured, grandiose), Schizophrenia (disorganized, paranoid)",
+          "Affect congruence critical: incongruent affect (laughing at sad) suggests psychosis; congruent with mood normal",
+          "Delirium acute with fluctuating consciousness and disorientation; dementia insidious with progressive memory loss",
+          "MMSE score <23 indicates cognitive impairment; MoCA more sensitive than MMSE for mild impairment",
+          "Suicide/homicide risk must be directly assessed: intent, plan, means, protective factors"
+        ],
+        textbookRefs: [
+          { book: "ICD-10 Clinical Descriptions", chapter: "MSE and Diagnostic Assessment", edition: "10th" },
+          { book: "DSM-5 Manual", chapter: "Psychiatric Interview and Mental Status Examination", edition: "5th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "psychiatric-assessment-mse-layer-5-active-recall",
+        title: "Psychiatric Assessment & MSE - Active Recall",
+        estimatedMinutes: 20,
+        summary: "10 case scenarios testing MSE interpretation and differential diagnosis.",
+        contentMd: `# Psychiatric Assessment & MSE - Active Recall
+
+## Q1: Depression with Pseudo-Dementia
+**Case**: 72-year-old woman with 3-month gradual memory loss, difficulty concentrating, slow speech. Daughter concerned about dementia.
+**Q**: How differentiate depression-induced cognitive impairment from dementia via MSE?
+A: **Depression key findings**: Recent onset (3 months vs years), blunted affect, depressed mood prominent, guilt/hopelessness present. **MSE detail**: Psychomotor retardation (slow responses), "Don't know" answers (vs factually wrong in dementia), complains of memory loss, depressed affect. **Dementia**: Insidious onset over years, unaware of memory loss (anosognosia), factually incorrect answers. **MMSE**: May score <23 in both; but depression pattern = mood-driven cognition. **Management**: Treat depression; cognitive improvement expected with antidepressants. **Test response**: Depressed cognition reversible; dementia progressive.
+
+## Q2: Mania vs ADHD - Differentiation
+**Case**: 19-year-old college student with 2-week pressured speech, racing thoughts, goal-directed activity (started 3 new projects), risky sex, decreased need for sleep (3 hrs, feeling rested). Also reports lifelong ADHD diagnosis, impulsivity since childhood.
+**Q**: How differentiate first manic episode from ADHD exacerbation?
+A: **Manic episode key**: ACUTE onset (2 weeks), distinct change from baseline (previously not this extreme), decreased need for sleep (rested despite little sleep - unique to mania), pressured speech, flight of ideas, grandiose thinking likely. **ADHD**: Lifelong pattern, not episodic, no distinct mood episodes, normal sleep needs (just difficulty settling). **Differentiation**: Temporal pattern critical - mania = ACUTE episodic change; ADHD = chronic baseline. **MSE findings**: Mania = flight of ideas, grandiosity, incongruent affect; ADHD = attention problems, impulsivity but organized thinking. **Management**: First manic episode = mood stabilizer (lithium, valproate); ADHD = stimulant. **Critical learning**: 20% ADHD patients have comorbid bipolar disorder; temporal onset distinguishes.
+
+## Q3: Psychotic Disorder vs Autism Spectrum
+**Case**: 24-year-old man with lifelong social withdrawal, difficulty with eye contact, takes words literally, restricted interests (trains - extensive knowledge). Now reports hearing voice say his name occasionally, believes others talking about him.
+**Q**: Distinguish autism spectrum from emerging psychotic disorder?
+A: **Autism spectrum key**: Lifelong onset (not acute), social reciprocity difficulty, repetitive behaviors, literal language interpretation, restricted interests (this patient's train obsession). **Psychosis key**: Acute/recent hallucinations and delusions, no lifelong pattern. **This case**: Autism spectrum with possible psychotic symptoms (hallucinations, ideas of reference new). **Differentiation**: Autism = developmental disorder (lifelong); Psychosis = illness (episodic acute). **MSE**: Autism = normal affect (may be socially inappropriate but not emotionally blunted), organized thinking, no hallucinations. Psychosis = may have blunted affect, disorganized thinking, clear hallucinations/delusions. **Management**: Autism needs social support, structured environment. If psychotic symptoms confirmed, low-dose antipsychotic appropriate (autism-comorbid psychosis possible). **Learning**: Autism spectrum and psychosis can coexist; separate assessment needed.
+
+## Q4: Delirium Superimposed on Dementia
+**Case**: 80-year-old man with baseline dementia (forgets recent events, difficulty with words). Admitted to hospital for pneumonia. Now acutely confused, disoriented to place/time (was oriented yesterday), talking to people not present (hallucinating), agitated, FLUCTUATING attention (periods of clarity then confusion).
+**Q**: What's happening and why critical to identify?
+A: **Delirium superimposed on dementia**. Key findings: **Acute onset** (admission day), **fluctuating consciousness** (hour-to-hour changes), **visual hallucinations** (common in delirium), **disorientation** (new or worsened). **Baseline dementia**: Baseline memory loss, difficulty with words (chronic). **Critical**: Delirium is REVERSIBLE if underlying cause treated (infection, medication, metabolic imbalance). **Management**: (1) Identify cause - check CXR (pneumonia), CBC (infection), electrolytes, urinalysis, medications (anticholinergics worsen delirium); (2) Treat underlying condition (antibiotics for pneumonia); (3) Support care (reorientation, safe environment, avoid sedation if possible); (4) Low-dose antipsychotic if severely agitated. **Why critical**: Delirium = medical emergency; high mortality if untreated. Families often think dementia worsened (not true - delirium temporary).
+
+## Q5: Affect Incongruence - Red Flag for Psychosis
+**Case**: 32-year-old woman describes dead cat on doorstep (sad topic) but laughs while describing. Reports neighbor poisoning her. No depressed mood, no elation.
+**Q**: Why is affect incongruence significant?
+A: **Incongruence = big red flag for psychosis**. Normal: Affect matches mood/content (sad topic = sad expression). This patient: Laughing about sad content + paranoid delusions (neighbor poisoning). **Significance**: Suggests thought disorder, psychosis. **Other causes**: Dementia, traumatic brain injury, organic brain syndrome. **MSE finding**: Document exactly - "Flat affect while describing poisoning delusions" or "Inappropriate laughter when discussing persecutory beliefs." **Differential**: (1) Schizophrenia (most common with affect incongruence), (2) Bipolar with psychosis, (3) Organic brain syndrome. **Management**: Antipsychotic needed; rule out organic causes first (imaging, labs).
+
+## Q6: Flight of Ideas vs Loose Associations
+**Case-A**: Manic patient: "I'm going to Vegas to gamble, the cards are in my favor, favors remind me of Italian food, I love Italy, Rome is eternal, eternal means forever, forever young..." (rhyming, connected loosely by association). **Case-B**: Schizophrenic patient: "The government is watching me through the TV. Breakfast is the most important meal. My mother likes purple." (no connection between ideas).
+**Q**: Differentiate these thought disorders?
+A: **Flight of ideas (Case-A)**: Ideas ARE connected but by loose associations (words rhyme, semantic link); thought pattern visible. Typical of mania/hypomania. **Loose associations (Case-B)**: Ideas UNCONNECTED, no logical or semantic link; thought pattern disorganized. Typical of schizophrenia. **Clinical distinction**: Flight of ideas = mania (can follow associative chains even if loose); Loose associations = schizophrenia (completely unrelated ideas). **MSE documentation**: Flight = "Patient jumping between topics with loose connections (Vegas→cards→Italian→Rome)" vs Loose = "Patient expressing unrelated ideas without connecting theme (government→breakfast→mother)." **Prognosis**: Flight of ideas reversible with mood stabilization. Loose associations chronic in schizophrenia.
+
+## Q7: Suicide Risk Assessment - Intent vs Ideation
+**Case**: 42-year-old depressed man reports "I've been thinking it would be better if I wasn't around, maybe I could take pills." When asked about plan: "I don't have a real plan, just thoughts. I have my 10-year-old daughter who needs me."
+**Q**: Assess suicide risk - high vs low?
+A: **Suicidal ideation present**: Yes (thoughts of not being around, passive ideation). **Plan**: Vague (mentions pills but no specifics - obtain? timing?). **Intent**: Key question: "Are you planning to hurt yourself?" Answer: Implies NO intent, reluctance. **Protective factors**: Daughter (strong protective factor). **Risk level**: MODERATE - ideation + vague plan, but ambivalent, has protective factors. **Management**: (1) Directly ask: "Are you planning to take action on these thoughts?" (2) Assess access to means (pills at home?); (3) Increase monitoring (follow-up in 1-2 days); (4) Optimize antidepressant; (5) Psychotherapy. **Not hospitalization-level** (intent low, protective factors strong) unless intent escalates. **Learning**: Ideation ≠ Intent. Passive ideation + protective factors = lower risk than active plan + intent + access to means.
+
+## Q8: MMSE vs MoCA - When to Use Which
+**Case-A**: 78-year-old with memory complaints, otherwise functioning well. Primary care needs quick screen.
+**Case-B**: 65-year-old with subtle cognitive decline, history of transient ischemic attack (TIA). Concerned about mild cognitive impairment.
+**Q**: Which tool for which case?
+A: **Case-A (MMSE)**: Quick primary care screening, 5 minutes, detects moderate-severe impairment. **Score interpretation**: ≥23 normal, 18-22 mild, <18 moderate-severe. Limitation: May miss mild impairment. **Case-B (MoCA)**: Better for detecting mild cognitive impairment, includes executive function (sensitive to vascular dementia risk post-TIA), 10 minutes. **Score interpretation**: ≥26 normal, 18-25 mild, <18 moderate. **Advantage**: MoCA superior sensitivity to mild impairment, includes visuospatial (clock drawing). **Clinical use**: MoCA becoming standard for early detection; MMSE still widely used for quick screening. **Learning**: Choose based on clinical context - MMSE for quick screen, MoCA when mild impairment suspected.
+
+## Q9: Tangential vs Circumstantial Thinking
+**Case-A**: Asked "What brought you to the hospital?" Answers: "Well, I woke up with chest pain, which reminds me, my grandmother had a heart attack, she lived in New York, have you been to New York..." (never returns to original question).
+**Case-B**: Asked "What brought you to the hospital?" Answers: "I woke up, checked the time, was 6 AM, had breakfast, felt ill, dressed myself, drove here, took the highway, hospital is on the east side..." (eventually gets to point but with excessive detail).
+**Q**: Differentiate tangential from circumstantial?
+A: **Tangential (Case-A)**: Loses track of original topic; goes on tangent (New York). **Never returns** to answer question. Typical of schizophrenia, ADHD. **Circumstantial (Case-B)**: Gets to point but takes scenic route with excessive detail. **Eventually returns** to original question. Typical of mania (flight of ideas variant), anxiety (rumination). **MSE documentation**: Tangential = "Unable to return to topic, goes on tangents"; Circumstantial = "Indirect, with excessive detail, but eventually reaches point." **Clinical significance**: Tangential more disorganized (schizophrenia risk), circumstantial more verbose (mania, anxiety). **Prognosis**: Tangential harder to treat; circumstantial may improve with treatment.
+
+## Q10: Catatonia Examination
+**Case**: 35-year-old woman unresponsive to commands. Stands in peculiar posture (arms outstretched), does not blink, shows waxy flexibility (examiner can move her arm, it stays in new position), mutism.
+**Q**: What's this? How assess for catatonia?
+A: **Catatonia**: Psychomotor disorder with mutism, immobility/rigidity, waxy flexibility, posturing, negativism. **Key signs**: (1) Waxy flexibility = passive resistance to passive movement (arm moves, holds position - characteristic), (2) Mutism = no speech, (3) Negativism = resistance to commands, (4) Posturing = assumption of unusual body positions, (5) Stupor = reduced responsiveness. **Bush-Francis Catatonia Rating Scale**: Standardized assessment (14 items). **Causes**: Schizophrenia, mood disorders (depression with catatonic features, bipolar), medical (encephalitis, metabolic, neuroleptic malignant syndrome). **Management**: (1) Rule out organic causes (CT brain, labs, infection screen); (2) Benzodiazepine trial (lorazepam) - if responds = confirms catatonia; (3) If severe → electroconvulsive therapy (ECT); (4) Antipsychotic if psychotic component. **Learning**: Catatonia rare but serious; benzodiazepine challenge diagnostic and therapeutic.`,
+        mnemonics: [
+          { text: "Depression = Retarded, Blunt affect, Guilt, Hopelessness", explanation: "MSE pattern" },
+          { text: "Mania = Pressured speech, Flight of ideas, Grandiose, Risky", explanation: "MSE pattern" },
+          { text: "Schizophrenia = Disorganized, Flat affect, Hallucinations, Paranoia", explanation: "MSE pattern" },
+          { text: "Delirium = ACUTE + FLUCTUATING + DISORIENTED; Dementia = CHRONIC + PROGRESSIVE", explanation: "Key distinction" }
+        ],
+        keyPoints: [
+          "MSE findings highly specific to diagnoses; Depression (retarded, blunt), Mania (pressured, grandiose), Schizophrenia (disorganized)",
+          "Affect incongruence (laughing at sad) is red flag for psychosis; distinguish from appropriate congruent affects",
+          "Delirium acute with fluctuating consciousness and disorientation; dementia insidious with progressive memory loss",
+          "Tangential thought (never returns to topic) suggests schizophrenia; circumstantial (verbose but returns) suggests mania",
+          "Suicide assessment: Ideation ≠ Intent. Assess intent, plan, means, protective factors; passive ideation + protective factors = lower risk"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "MSE Clinical Case Scenarios", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Clinical Assessment and Diagnostic Formulation", edition: "12th" }
+        ]
+      }
+    ]
+  }
 ];

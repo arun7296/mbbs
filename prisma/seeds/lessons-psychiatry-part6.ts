@@ -1,14 +1,331 @@
-// Psychiatry Part 6: Depressive Disorders, Suicide Risk, OCD, PTSD
+import type { TopicLessons } from "./content-loader";
 
-export const psychiatryPart6Lessons = [
-  // Topic codes will be mapped to actual values - PS-MOD-02-TOP-03, PS-MOD-02-TOP-04, PS-MOD-03-TOP-02
+export const psychiatryPart6Lessons: TopicLessons[] = [
   {
     topicCode: "PS-MOD-02-TOP-03",
     layers: [
-      { layer: 1, slug: "depressive-disorders-foundation", title: "Depressive Disorders - Foundation", estimatedMinutes: 25,
-        summary: "Major Depressive Disorder, Dysthymia, and depression spectrum. DSM-5 criteria, types, and epidemiology.",
-        contentMd: "# Depressive Disorders - Foundation\n\n## Major Depressive Disorder (MDD)\n\n### DSM-5 Diagnostic Criteria\n- **Duration**: ≥2 weeks, nearly every day\n- **5+ symptoms** (must include depressed mood OR anhedonia):\n  1. Depressed mood (subjective or observed)\n  2. Loss of interest/pleasure (anhedonia)\n  3. Sleep disturbance (insomnia or hypersomnia)\n  4. Appetite changes (increase or decrease, weight change)\n  5. Fatigue/low energy\n  6. Psychomotor agitation or retardation (observable)\n  7. Feelings of worthlessness or guilt\n  8. Difficulty concentrating, making decisions\n  9. Suicidal ideation or behavior\n\n- **Functional impairment**: Causes distress or dysfunction in social/occupational areas\n\n### Severity Rating\n- **Mild**: Few symptoms beyond required 5; mild distress\n- **Moderate**: Symptoms between mild and severe\n- **Severe**: Nearly all symptoms present; severe distress/impairment\n\n### Subtypes & Specifiers\n\n#### Melancholic Features\n- Loss of pleasure in all activities (anhedonia)\n- Distinct quality to mood (not just sadness)\n- Early morning awakening (2+ hours earlier than normal)\n- Marked psychomotor retardation\n- Significant appetite loss\n- Excessive guilt\n\n#### Psychotic Features\n- Mood-congruent: Delusions match depressed mood (poverty, worthlessness, illness)\n- Mood-incongruent: Delusions unrelated to mood (less common)\n\n#### Atypical Features\n- **Mood reactivity**: Mood brightens with positive events\n- **Hyperphagia**: Increased appetite (vs. loss in typical depression)\n- **Hypersomnia**: Sleeping >9 hours daily\n- **Leaden paralysis**: Heavy feeling in limbs\n- **Interpersonal rejection sensitivity**\n\n#### Anxious Distress Specifier\n- ≥2 anxiety symptoms (worry, tension, fear, difficulty concentrating from anxiety)\n\n#### Mixed Features\n- ≥3 manic/hypomanic symptoms during MDD episode\n\n## Dysthymia (Persistent Depressive Disorder - PDD)\n\n### Diagnostic Criteria\n- **Duration**: ≥2 years in adults (≥1 year in children)\n- **Depressed mood**: More days than not\n- **Minimal symptoms**: At least 2 of the MDD symptoms\n  - Appetite change, sleep disturbance, fatigue\n  - Low self-esteem\n  - Concentration difficulty\n  - Hopelessness\n- **Never symptom-free**: >2 months without symptoms\n- **Functional impairment**: Social, occupational, or personal domains\n\n### Key Distinctions from MDD\n- **Chronic course**: Longer duration (years vs. weeks)\n- **Fewer symptoms**: Only 2-3 vs. 5+ in MDD\n- **Lower intensity**: Less severe than MDD typically\n- **Double depression**: MDD episodes superimposed on dysthymia (common)\n\n## Epidemiology\n\n### Prevalence\n- **MDD**: 7% lifetime; 3-5% annual prevalence\n- **Dysthymia**: 3% lifetime; 1-2% annual prevalence\n- **Gender**: Women 2x more common than men (biological + social factors)\n- **Age**: Peak onset 20-30 years; can occur any age\n- **India**: 5-6% prevalence of depression (WHO estimate)\n\n### Risk Factors\n- **Genetic**: Family history (40-50% heritability)\n- **Environmental**: Stress, trauma, losses\n- **Psychological**: Perfectionism, neuroticism, negative cognitive style\n- **Medical**: Chronic illness, pain, hormonal factors\n- **Substance use**: Alcohol, drug withdrawal\n\n## Secondary/Medical Causes of Depression\n\n### Endocrine\n- Hypothyroidism, hyperthyroidism\n- Adrenal insufficiency (Addison's disease)\n- Cushing's syndrome\n- Diabetes mellitus\n\n### Neurologic\n- Parkinson's disease\n- Stroke (particularly left frontal)\n- Multiple sclerosis\n- Dementia\n- Epilepsy\n- Traumatic brain injury\n\n### Infectious\n- HIV/AIDS\n- Hepatitis C\n- Tuberculosis\n- Syphilis\n\n### Medications\n- Beta-blockers, reserpine\n- Corticosteroids\n- Benzodiazepines (withdrawal)\n- Isotretinoin (acne)\n- Interferons\n- Antiretrovirals\n\n### Other\n- Malignancy, anemia, chronic pain\n- Vitamin B12, folate deficiency\n- Seasonal affective disorder (winter depression)\n\n,\n        mnemonics: [\n          { text: \"MDD 5+ symptoms × 2 weeks; Dysthymia ≥2 years with ≥2 symptoms\", explanation: \"Diagnostic time and symptom count differences\" },\n          { text: \"SIGECAPS mnemonic for MDD: Sleep, Interest (anhedonia), Guilt, Energy, Concentration, Appetite, Psychomotor, Suicidality\", explanation: \"9-symptom criteria for major depression\" },\n          { text: \"Women 2x > Men depression\", explanation: \"Gender difference in depression prevalence\" }\n        ],\n        keyPoints: [\n          \"MDD: 5+ symptoms (including mood/anhedonia) × 2 weeks; functional impairment required\",\n          \"Dysthymia: Chronic (≥2 years) with ≥2 symptoms; less severe than MDD\",\n          \"Subtypes: Melancholic, psychotic, atypical, anxious distress, mixed features\",\n          \"Women 2x more common; onset typically 20-30 years\",\n          \"Rule out medical causes: Thyroid, adrenal, neurologic, infectious, medications\"\n        ],\n        textbookRefs: [\n          { book: \"Kaplan & Sadock Psychiatry\", chapter: \"Depressive Disorders, Ch 7\", edition: \"11th\" },\n          { book: \"Ahuja DSM-5 Handbook\", chapter: \"Depression, Ch 3\", edition: \"2nd\" }\n        ]\n      },\n      { layer: 2, slug: \"depressive-disorders-mechanism\", title: \"Depressive Disorders - Neurobiochemistry\", estimatedMinutes: 28,\n        summary: \"Monoamine hypothesis, genetic factors, neuroplasticity changes, HPA axis dysfunction, and neuroinflammation.\",\n        contentMd: "# Neurobiochemistry & Pathophysiology\\n\\n## Monoamine Hypothesis (Classical)\\n\\n### Serotonin Dysfunction\\n- **Role**: Mood regulation, sleep, appetite, sexual function\\n- **In depression**: Low serotonin activity (underactivity in limbic regions)\\n- **Evidence**: SSRIs effective by increasing serotonin availability\\n- **Hypothesis limitations**: Not all depressed patients have low serotonin; some with normal levels become depressed\\n\\n### Norepinephrine Dysfunction\\n- **Role**: Arousal, attention, energy, motivation\\n- **In depression**: Reduced activity in locus coeruleus\\n- **Evidence**: SNRIs effective for depression and anxiety\\n- **Interaction**: Works with serotonin in antidepressant effect\\n\\n### Dopamine Dysfunction\\n- **Role**: Motivation, reward, pleasure (mesolimbic pathway)\\n- **In depression**: Reduced activity in ventral striatum\\n- **Anhedonia link**: Loss of motivation and pleasure from dopamine deficit\\n- **Evidence**: Bupropion (dopamine reuptake inhibitor) effective\\n\\n## Genetic Factors\\n\\n### Heritability\\n- **Depression heritability**: 40-50% (monozygotic > dizygotic twins)\\n- **Environmental factors**: 50-60% contribute to risk\\n- **Gene-environment interaction**: Genetic predisposition + life stress\\n\\n### Candidate Genes\\n- **Serotonin transporter (5-HTTLPR)**: Short allele associated with depression\\n- **BDNF**: Brain-derived neurotrophic factor (reduced in depression)\\n- **CRH receptor genes**: HPA axis dysregulation\\n- **Multiple loci**: Complex inheritance (no single depression gene)\\n\\n## Neurobiological Changes\\n\\n### Brain Structure\\n- **Hippocampus**: Reduced volume (stress-induced neuronal loss)\\n- **Prefrontal cortex**: Decreased gray matter volume (cognitive control deficit)\\n- **Amygdala**: Hyperactivity to negative stimuli\\n- **Anterior cingulate**: Dysfunction in emotion regulation\\n\\n### Neuroplasticity & BDNF\\n- **BDNF reduced**: In depression and major stress\\n- **Neurogenesis impaired**: Reduced new neuron formation in hippocampus\\n- **Antidepressants**: Increase BDNF, restore neurogenesis\\n- **Stress**: Chronic stress suppresses BDNF\\n\\n### Neurotransmitter Receptor Changes\\n- **Serotonin receptors**: Downregulation (reduced sensitivity)\\n- **Normalization**: Occurs with antidepressant therapy (lag explains delayed effect)\\n\\n## HPA Axis Dysfunction\\n\\n### Hyperactivity Pattern\\n- **CRH overproduction**: Hypothalamus produces excess corticotropin-releasing hormone\\n- **ACTH elevation**: Anterior pituitary responds excessively\\n- **Cortisol hypersecretion**: Elevated baseline and blunted circadian rhythm\\n- **Dexamethasone non-suppression**: Test shows inability to suppress cortisol (DST)\\n\\n### Consequences\\n- **Neuronal toxicity**: Chronic cortisol damages hippocampus\\n- **Immune suppression**: Increases infection risk\\n- **Metabolic effects**: Weight gain, metabolic syndrome\\n- **Sleep disruption**: Early morning awakening\\n\\n## Neuroinflammation\\n\\n### Cytokine Elevation\\n- **IL-6, TNF-alpha, CRP elevated**: In depression\\n- **Microglial activation**: Sustained inflammatory response\\n- **Blood-brain barrier**: Increased permeability allows immune entry\\n\\n### Mechanism\\n- **Stress triggers**: Release of inflammatory mediators\\n- **Perpetuates depression**: Inflammation sustains depressive symptoms\\n- **Treatment target**: Anti-inflammatory agents under investigation\\n\\n## Cognitive Theories\\n\\n### Negative Cognitive Triad (Beck)\\n- **Self**: \\\"I'm worthless, incompetent\\\"\\n- **World**: \\\"Everything is hopeless, nothing will change\\\"\\n- **Future**: \\\"It will always be this way\\\"\\n\\n### Learned Helplessness\\n- **Repeated stress**: Without escape leads to passivity\\n- **Loss of agency**: Belief that actions won't affect outcomes\\n- **Generalization**: Affects other domains not just stress source\\n\\n## Stress-Diathesis Model\\n\\n### Integration\\n- **Diathesis**: Genetic predisposition, early trauma, personality\\n- **Stress**: Life events, chronic stress, losses\\n- **Onset**: Depression occurs when stress exceeds vulnerability threshold\\n- **Variability**: Different people have different thresholds\\n,\\n        mnemonics: [\\n          { text: \\\"SND = Serotonin-Norepinephrine-Dopamine dysfunction in depression\\\", explanation: \\\"Three main monoamine systems affected\\\" },\\n          { text: \\\"HPA axis: CRH ↑ → ACTH ↑ → Cortisol ↑\\\", explanation: \\\"Hyperactivity pattern in depression\\\" },\\n          { text: \\\"BDNF reduced in depression; increased by antidepressants\\\", explanation: \\\"Neuroplasticity marker\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Monoamine hypothesis: Serotonin, norepinephrine, dopamine all reduced in depression\\\",\\n          \\\"HPA axis hyperactivity: Elevated cortisol, blunted circadian rhythm, DST non-suppression\\\",\\n          \\\"Neuroplasticity: BDNF reduced, neurogenesis impaired; restored by antidepressants\\\",\\n          \\\"Neuroinflammation: Elevated IL-6, TNF-alpha, CRP; microglial activation\\\",\\n          \\\"Stress-diathesis: Genetic predisposition + environmental stress = depression\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kaplan & Sadock Psychiatry\\\", chapter: \\\"Depressive disorders neurobiology, Ch 7\\\", edition: \\\"11th\\\" },\\n          { book: \\\"Ahuja DSM-5 Handbook\\\", chapter: \\\"Depression pathophysiology, Ch 3\\\", edition: \\\"2nd\\\" }\\n        ]\\n      },\\n      { layer: 3, slug: \\\"depressive-disorders-management\\\", title: \\\"Depressive Disorders - Treatment\\\", estimatedMinutes: 25,\\n        summary: \\\"Pharmacologic management, psychotherapy, lifestyle interventions, and Indian context treatment.\\\",\\n        contentMd: ``# Management & Treatment\\n\\n## First-Episode Major Depression\\n\\n### Initial Assessment\\n- **Severity**: Mild, moderate, severe (guides treatment intensity)\\n- **Suicide risk**: Essential assessment\\n- **Medical causes**: Rule out thyroid, B12, medical conditions\\n- **Substance use**: Alcohol or drug contribution?\\n- **Psychosis**: Any mood-congruent delusions?\\n\\n### Treatment Selection (Mild-Moderate)\\n\\n#### Psychotherapy First-Line (If Mild)\\n- **CBT**: 16-20 sessions, evidence-based\\n- **Interpersonal Therapy (IPT)**: Effective for interpersonal issues\\n- **Behavioral Activation**: For activation of withdrawn patients\\n- **Duration**: 8-12 weeks to assess response\\n\\n#### Combined (Mild-Moderate Often)\\n- **Psychotherapy + Medication**: Superior to either alone\\n- **Psychotherapy alone**: Can be effective for mild depression\\n- **Medication alone**: Faster onset if moderate-severe\\n\\n#### Pharmacotherapy (Moderate-Severe)\\n\\n**First-Line Antidepressants:**\\n1. **SSRIs** (selective serotonin reuptake inhibitors):\\n   - Fluoxetine, sertraline, paroxetine, citalopram, escitalopram\\n   - Standard: 4-6 weeks to response\\n   - Efficacy: 60-70% response rate\\n   - Side effects: GI upset, sexual dysfunction, sleep issues (initial)\\n\\n2. **SNRIs** (serotonin-norepinephrine reuptake inhibitors):\\n   - Venlafaxine, duloxetine, desvenlafaxine\\n   - Similar efficacy to SSRIs\\n   - Better for comorbid anxiety, pain\\n\\n3. **Bupropion** (dopamine-norepinephrine reuptake inhibitor):\\n   - Unique mechanism (dopamine focus)\\n   - No sexual dysfunction (actually may improve)\\n   - Activating (good for psychomotor retardation)\\n   - Lower seizure risk than tricyclics\\n   - Contraindicated if seizure history, eating disorders\\n\\n4. **Mirtazapine** (noradrenergic-specific serotonergic):\\n   - Helpful if insomnia, poor appetite (increases appetite)\\n   - Sedating (take at night)\\n   - Weight gain risk\\n   - No sexual dysfunction\\n\\n**Second-Line/Alternative:**\\n- **Tricyclic antidepressants**: Amitriptyline, nortriptyline\\n  - Older agents; anticholinergic side effects, overdose risk\\n  - Used if SSRIs fail; good for pain\\n  - Requires ECG (cardiac effects)\\n  \\n- **Lithium**: Augmentation for resistant depression\\n  - Add to antidepressant (lithium augmentation)\\n  - Effective for treatment-resistant\\n  - Requires monitoring (levels, kidney, thyroid)\\n\\n### Dosing & Timeline\\n- **Start low**: 50% of target dose\\n- **Titrate**: Increase every 3-5 days to reach therapeutic dose\\n- **Trial duration**: 6-8 weeks at therapeutic dose before assessing response\\n- **Response**: 50% improvement in symptoms\\n\\n### Maintenance Treatment\\n- **Duration**: Continue ≥12 months minimum\\n- **Prevention of relapse**: Continued treatment reduces relapse 50%\\n- **Discontinuation**: Slow taper if discontinuing (avoid withdrawal)\\n\\n## Psychotherapy\\n\\n### Cognitive Behavioral Therapy (CBT)\\n- **Model**: Thoughts → Emotions → Behaviors (interconnected)\\n- **Techniques**: \\n  - Thought challenging (identify distortions)\\n  - Behavioral activation (schedule pleasant activities)\\n  - Problem-solving skills\\n- **Duration**: 16-20 sessions\\n- **Efficacy**: 60-70% response; comparable to medication\\n\\n### Interpersonal Therapy (IPT)\\n- **Model**: Focuses on relationships and life events\\n- **Targets**: Grief, role disputes, role transitions, interpersonal deficits\\n- **Duration**: 16-20 sessions\\n- **Good for**: Complicated grief, role changes\\n\\n### Behavioral Activation\\n- **Simple**: Schedule pleasant activities daily\\n- **Helps**: Motivation, energy, mood\\n- **Effective for**: Severe retardation, hopelessness\\n\\n### Psychodynamic Therapy\\n- **Insight-oriented**: Explore unconscious conflicts\\n- **Duration**: Longer-term (months to years)\\n- **Less evidence**: Than CBT/IPT for acute depression\\n\\n## Treatment of Specific Subtypes\\n\\n### Melancholic Depression\\n- **Medication first**: Usually requires pharmacotherapy\\n- **Electro-convulsive therapy (ECT)**: Most effective for severe melancholic\\n- **ECT**: Especially if suicide risk, psychotic, catatonia, or medication failure\\n\\n### Atypical Depression\\n- **MAOIs**: Traditional first-line (phenelzine, tranylcypromine)\\n- **SSRIs/SNRIs**: Often effective\\n- **Bupropion**: Good choice (activating)\\n\\n### Psychotic Depression\\n- **Antipsychotic + antidepressant**: Required\\n- **Or ECT**: Highly effective (especially if severe)\\n- **Monotherapy insufficient**: Either drug alone ineffective\\n\\n### Treatment-Resistant Depression\\n- **Definition**: Failure of 2+ adequate antidepressant trials\\n- **Options**:\\n  1. **Switch**: To different antidepressant class\\n  2. **Augmentation**: Add lithium, T3, atypical antipsychotic, buspiron\\n  3. **ECT**: Most effective for severe resistance\\n  4. **Psychotherapy**: Add if not already included\\n  5. **TMS**: Transcranial magnetic stimulation (emerging)\\n\\n## Lifestyle Interventions\\n\\n### Sleep Hygiene\\n- **Critical**: Normalize sleep-wake cycle\\n- **Early morning awakening**: Indication for medication\\n\\n### Exercise\\n- **Moderate**: 30 minutes, 5x/week\\n- **Efficacy**: 40-50% response with exercise alone\\n- **Mechanism**: Increases monoamines, BDNF\\n\\n### Social Connection\\n- **Isolation worsens**: Increase engagement\\n- **Support groups**: Helpful for stigma reduction\\n- **Family involvement**: Important in Indian context\\n\\n### Dietary Factors\\n- **Omega-3 fatty acids**: Some evidence for benefit\\n- **Reduce alcohol**: Alcohol worsens depression\\n\\n## Indian Context Management\\n\\n### Treatment Access\\n- **Antidepressants**: Available at all levels (generic SSRIs cheap)\\n- **Psychotherapy**: Limited availability (few trained therapists)\\n- **Cost**: Medication affordable; therapy expensive\\n- **Stigma**: Significant barrier to treatment-seeking\\n\\n### Common Challenges\\n- **Somatization**: Depression presents as physical complaints (80%)\\n- **Substance abuse**: Alcohol common comorbidity\\n- **Family dynamics**: Often consulted before seeking professional help\\n- **Compliance**: Premature discontinuation common\\n\\n### Practical Approach\\n- **Screen systematically**: Look for depression in medical clinic attendees\\n- **Start antidepressants**: Accessible, cost-effective\\n- **Self-help materials**: Provide for behavioral activation, thought records\\n- **Refer for psychotherapy**: If available and patient motivated\\n\\n## Monitoring Treatment Response\\n\\n### At 2 Weeks\\n- **Side effects**: Most common reason for discontinuation\\n- **Reassure**: Improvement takes 4-6 weeks\\n- **Tolerance**: Many side effects improve\\n\\n### At 4-6 Weeks\\n- **Assess response**: 50% improvement in symptoms\\n- **Non-response**: Consider medication change\\n\\n### At 8-12 Weeks\\n- **Full assessment**: Full response expected\\n- **Non-response**: Consider different class, augmentation, or ECT\\n\\n### Maintenance (12+ Months)\\n- **Continue medication**: Reduces relapse risk\\n- **Monitor**: Every 3-6 months for side effects, mood\\n- **Discontinuation**: Plan slow taper if appropriate\\n,\\n        mnemonics: [\\n          { text: \\\"SSNB = SSRIs, SNRIs, Bupropion (first-line agents)\\\", explanation: \\\"Three main first-line antidepressant classes\\\" },\\n          { text: \\\"CBT = Thought challenging + Behavioral activation\\\", explanation: \\\"Two main CBT techniques\\\" },\\n          { text: \\\"6-8 weeks minimum trial at therapeutic dose\\\", explanation: \\\"Timeline for assessing antidepressant response\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Mild depression: Psychotherapy alone can be first-line\\\",\\n          \\\"Moderate-severe: Combined therapy (psychotherapy + medication) superior\\\",\\n          \\\"First-line meds: SSRIs, SNRIs, bupropion (6-8 week trial required)\\\",\\n          \\\"Psychotherapy: CBT, IPT 16-20 sessions; 60-70% response\\\",\\n          \\\"Maintenance: ≥12 months after first episode; prevents relapse\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kaplan & Sadock Psychiatry\\\", chapter: \\\"Depressive disorders treatment, Ch 7\\\", edition: \\\"11th\\\" },\\n          { book: \\\"Ahuja DSM-5 Handbook\\\", chapter: \\\"Depression treatment, Ch 3\\\", edition: \\\"2nd\\\" }\\n        ]\\n      },\\n      { layer: 4, slug: \\\"depressive-disorders-exam\\\", title: \\\"Depressive Disorders - Exam Prep\\\", estimatedMinutes: 18,\\n        summary: \\\"High-yield exam facts on depressive disorders for NEXT/NEET PG.\\\",\\n        contentMd: ``# Exam High Yield\\n\\n| Topic | High-Yield Fact |\\n|-------|-----------------|\\n| MDD duration | ≥2 weeks |\\n| MDD symptoms | 5+ including mood or anhedonia |\\n| Dysthymia duration | ≥2 years |\\n| Dysthymia symptoms | ≥2 symptoms (minimal compared to MDD) |\\n| Prevalence MDD | 7% lifetime; 3-5% annual |\\n| Women:Men ratio | 2:1 |\\n| Age of onset | Peak 20-30 years |\\n| Heritability | 40-50% |\\n| Genetic test | No genetic test available (polygenic) |\\n| SIGECAPS mnemonic | Sleep, Interest, Guilt, Energy, Concentration, Appetite, Psychomotor, Suicidality |\\n| Melancholic features | Anhedonia all activities, distinct mood quality, early AM awakening, psychomotor retardation |\\n| Atypical features | Mood reactivity, hyperphagia, hypersomnia, leaden paralysis |\\n| Psychotic depression | Requires antipsychotic + antidepressant (or ECT) |\\n| Medical causes | Hypothyroidism, adrenal insufficiency, stroke, HIV, hepatitis C, vitamin B12 deficiency |\\n| Monoamine hypothesis | Serotonin, norepinephrine, dopamine all reduced |\\n| HPA axis | Elevated cortisol, blunted circadian rhythm, DST non-suppression |\\n| BDNF | Reduced in depression; increased by antidepressants |\\n| Neurogenesis | Impaired in depression; restored by treatment |\\n| Prefrontal cortex | Reduced gray matter volume |\\n| Hippocampus | Reduced volume (stress-induced) |\\n| Amygdala | Hyperactive to negative stimuli |\\n| First-line drugs | SSRIs, SNRIs, bupropion |\\n| SSRI efficacy | 60-70% response rate |\\n| Time to response | 4-6 weeks; full response by 8-12 weeks |\\n| SSRI side effects | GI upset, sexual dysfunction, sleep issues |\\n| Bupropion advantage | No sexual dysfunction; activating (dopamine) |\\n| Bupropion contraindication | Seizure history, eating disorders |\\n| Tricyclic advantages | Good for pain; effective for resistant |\\n| Lithium use | Augmentation; adds to antidepressant |\\n| Psychotherapy | CBT, IPT 16-20 sessions; 60-70% response |\\n| Behavioral activation | Simple effective technique; schedule activities |\\n| Combined approach | Psychotherapy + medication superior |\\n| Maintenance duration | ≥12 months (reduces relapse 50%) |\\n| Treatment-resistant | 2+ adequate trials failed; try switch, augment, or ECT |\\n| Melancholic severe | ECT most effective |\\n| ECT indication | Severe psychotic/melancholic, catatonia, suicide, medication failure |\\n\\n,\\n        mnemonics: [\\n          { text: \\\"MDD 5+/2 wks; Dysthymia ≥2 yrs\\\", explanation: \\\"Diagnostic time/symptom count\\\" },\\n          { text: \\\"SIGECAPS = 9 MDD symptoms (only need 5+)\\\", explanation: \\\"Mnemonic for MDD symptoms\\\" },\\n          { text: \\\"4-6 weeks to response; 8-12 weeks to full response\\\", explanation: \\\"Antidepressant timeline\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"MDD: 5+ symptoms (mood/anhedonia) × 2 weeks; functional impairment\\\",\\n          \\\"Dysthymia: Chronic (≥2 yrs), minimal symptoms (2-3), low intensity\\\",\\n          \\\"Women 2x > Men; peak onset 20-30 yrs\\\",\\n          \\\"First-line: SSRIs, SNRIs, bupropion (6-8 week trial)\\\",\\n          \\\"Mild: Psychotherapy alone; Moderate-severe: Combined therapy\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kaplan & Sadock Psychiatry\\\", chapter: \\\"Depressive Disorders, Ch 7\\\", edition: \\\"11th\\\" },\\n          { book: \\\"Ahuja DSM-5 Handbook\\\", chapter: \\\"Depression, Ch 3\\\", edition: \\\"2nd\\\" }\\n        ]\\n      },\\n      { layer: 5, slug: \\\"depressive-disorders-recall\\\", title: \\\"Depressive Disorders - Active Recall\\\", estimatedMinutes: 12,\\n        summary: \\\"Self-test questions on depressive disorders.\\\",\\n        contentMd: ``# Active Recall\\n\\n**Q1:** What are the DSM-5 diagnostic criteria for Major Depressive Disorder?\\n> 5+ symptoms (including depressed mood OR anhedonia) present nearly every day for ≥2 weeks; must cause functional impairment; symptoms: depressed mood, anhedonia, sleep changes, appetite changes, fatigue, psychomotor changes, worthlessness/guilt, concentration difficulty, suicidal ideation\\n\\n**Q2:** Distinguish between Major Depressive Disorder and Dysthymia.\\n> MDD: 5+ symptoms × 2 weeks, moderate-severe. Dysthymia: ≥2 symptoms × ≥2 years, chronic but less severe; never completely symptom-free >2 months\\n\\n**Q3:** What is double depression?\\n> Major Depressive Disorder episodes superimposed on chronic Dysthymia; the more depressive episodes occur during dysthymic baseline\\n\\n**Q4:** Describe melancholic features in depression.\\n> Anhedonia affecting all activities, distinct quality to depressed mood, early morning awakening (2+ hours earlier), marked psychomotor retardation, significant appetite loss, severe guilt\\n\\n**Q5:** What is the monoamine hypothesis of depression?\\n> Depression results from deficiency of serotonin, norepinephrine, and dopamine in brain; antidepressants work by increasing availability of these neurotransmitters\\n\\n**Q6:** Explain HPA axis dysfunction in depression.\\n> Hyperactivity of hypothalamic-pituitary-adrenal axis: excessive CRH production → ACTH elevation → cortisol hypersecretion; blunted circadian rhythm; DST (dexamethasone) non-suppression\\n\\n**Q7:** What is BDNF and how does it relate to depression?\\n> Brain-Derived Neurotrophic Factor; reduced in depression, leading to impaired neurogenesis and neuroplasticity; antidepressants increase BDNF, restoring neuroplasticity\\n\\n**Q8:** What are the first-line antidepressant medication classes?\\n> SSRIs (fluoxetine, sertraline, citalopram), SNRIs (venlafaxine, duloxetine), bupropion; 60-70% response rate; require 6-8 weeks at therapeutic dose for full assessment\\n\\n**Q9:** What is the difference between melancholic and psychotic depression in terms of treatment?\\n> Melancholic: Medication alone or ECT effective. Psychotic: Requires combination of antidepressant + antipsychotic (or ECT); monotherapy insufficient\\n\\n**Q10:** What is treatment-resistant depression and what are the management options?\\n> Failure to respond to 2+ adequate antidepressant trials; options: switch to different class, augment (lithium, T3, atypical antipsychotic), psychotherapy, ECT (most effective)\\n,\\n        mnemonics: [],\\n        keyPoints: [\\\"10 recall questions on MDD/dysthymia criteria, pathophysiology, and treatment\\\"],\\n        textbookRefs: [\\n          { book: \\\"Kaplan & Sadock Psychiatry\\\", chapter: \\\"Depressive Disorders, Ch 7\\\", edition: \\\"11th\\\" },\\n          { book: \\\"Ahuja DSM-5 Handbook\\\", chapter: \\\"Depression, Ch 3\\\", edition: \\\"2nd\\\" }\\n        ]\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-];
+      {
+        layer: 1,
+        slug: "depressive-disorders-layer-1-foundation",
+        title: "Depressive Disorders - Foundation",
+        estimatedMinutes: 25,
+        summary: "Definition, epidemiology, DSM-5/ICD-10 criteria, major depression vs dysthymia.",
+        contentMd: `# Depressive Disorders - Foundation
+
+## Definition & Epidemiology
+- **Depression**: Persistent depressed mood or anhedonia with associated neurovegetative symptoms
+- **Prevalence**: 5-10% lifetime risk (women 2:1 men); higher in developing countries
+- **Age of onset**: Bimodal (early 20s, mid-50s); can start any age
+- **Course**: 50% relapsing, 20% chronic, 30% single episode
+- **Disability**: Second leading cause of disability worldwide (WHO)
+
+## Major Depressive Disorder (MDD) - DSM-5
+**Diagnostic Criteria**: ≥5 symptoms × ≥2 weeks (one must be mood/anhedonia)
+1. Depressed mood (nearly every day)
+2. Anhedonia (loss of pleasure)
+3. Appetite/weight change (↓ or ↑)
+4. Sleep disturbance (insomnia or hypersomnia)
+5. Psychomotor retardation/agitation
+6. Fatigue/low energy
+7. Guilt/worthlessness
+8. Concentration difficulty
+9. Suicidal ideation/intent/plan
+
+## Persistent Depressive Disorder (Dysthymia) - DSM-5
+- **Depressed mood ≥2 years** (1 year children/adolescents)
+- **≥2 symptoms** during mood disturbance
+- **Never symptom-free >2 months**
+- **More chronic, less severe than MDD**
+
+## ICD-10 Depressive Episode Categories
+- **Mild**: 2-3 symptoms + functional impairment mild
+- **Moderate**: 4+ symptoms + functional impairment moderate
+- **Severe without psychosis**: 4-5 symptoms + severe impairment
+- **Severe with psychosis**: Psychotic features (mood-congruent delusions/hallucinations)
+
+## Depressive Subtypes
+- **Melancholic**: Early morning awakening, guilt, appetite/weight loss
+- **Atypical**: Hypersomnia, hyperphagia, mood reactivity, fatigue
+- **Catatonic**: Psychomotor retardation/excitement, mutism, waxy flexibility
+- **Peripartum**: Onset pregnancy or 4 weeks postpartum
+- **Seasonal**: Pattern with season change`,
+        mnemonics: [
+          { text: "MDD = ≥5 symptoms × ≥2 weeks (one: mood/anhedonia); Dysthymia = ≥2 symptoms × ≥2 years", explanation: "Diagnostic distinction" },
+          { text: "Depression most common psychiatric disorder; women 2:1; second leading disability cause", explanation: "Epidemiology" },
+          { text: "Melancholic = morning awakening + guilt; Atypical = hypersomnia + hyperphagia; Seasonal = pattern", explanation: "Subtypes" },
+          { text: "Depression with psychosis = mood-congruent delusions (worthlessness, poverty, guilt)", explanation: "Psychotic features" }
+        ],
+        keyPoints: [
+          "MDD requires ≥5 symptoms (one mood/anhedonia) for ≥2 weeks; psychotic features possible",
+          "Dysthymia chronic low-grade depression ≥2 years; less severe than MDD but longer duration",
+          "Female predominance 2:1; higher rates in developing countries",
+          "Suicidality critical assessment: ideation, intent, plan, means, protective factors",
+          "Subtypes guide treatment: melancholic (antidepressant), atypical (SSRI), seasonal (light therapy)"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Depressive Disorders", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Depressive Disorders", edition: "12th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "depressive-disorders-layer-2-mechanism",
+        title: "Depressive Disorders - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Neurotransmitter dysfunction, neuroplasticity, genetic factors, stress-diathesis model.",
+        contentMd: `# Depressive Disorders - Mechanism
+
+## Monoamine Hypothesis
+- **Serotonin (5-HT)**: Reduced activity in mood regulation circuits
+- **Norepinephrine (NE)**: Deficiency in attention, arousal, motivation
+- **Dopamine (DA)**: Reduced in reward, motivation, psychomotor activity
+- **Mechanism**: Antidepressants increase monoamine availability (reuptake inhibition)
+
+## Brain Circuit Dysfunction
+### Ventral Striatum (Reward) Hypoactivity
+- **Reduced reward responsiveness** - anhedonia
+- **Motivation/energy deficits** - avolition, fatigue
+- **Treatment**: SSRIs, dopaminergic agents
+
+### Prefrontal Cortex (Cognition) Dysfunction
+- **Executive dysfunction**: Planning, decision-making impaired
+- **Rumination**: Repetitive negative thoughts (overactive in depression)
+- **Hyperactivity of subgenual cingulate** linked to rumination
+
+### Amygdala (Emotion) Hyperactivity
+- **Negative emotion processing**: Overactive to sad/threat stimuli
+- **Hypervigilance**: Increased attention to negative information
+- **Consequence**: Rumination, negative bias
+
+## Genetic Factors
+- **Heritability**: 30-40% (less than schizophrenia/bipolar)
+- **Gene-environment interaction**: Genetic vulnerability + stressors → depression
+- **5-HTTLPR polymorphism**: Serotonin transporter gene; risk allele increases depression risk with stress
+
+## Stress-Diathesis Model
+- **Diathesis** (predisposition): Genetic vulnerability, early trauma, personality
+- **Stress** (trigger): Life stressors (loss, trauma, medical illness, job loss)
+- **Depression results** when stress exceeds coping capacity in vulnerable individual
+
+## HPA Axis Dysfunction
+- **Cortisol elevation**: Chronic stress → hyperactive HPA axis
+- **Negative feedback loss**: Normal cortisol suppression impaired
+- **Consequence**: Sleep disruption, immune suppression, metabolic dysfunction`,
+        mnemonics: [
+          { text: "5-HT ↓ = mood; NE ↓ = attention/energy; DA ↓ = reward/motivation", explanation: "Monoamine roles" },
+          { text: "Ventral striatum ↓ = anhedonia; Prefrontal cortex rumination; Amygdala ↑ = negative bias", explanation: "Circuit dysfunction" },
+          { text: "Heritability 30-40%; Gene-environment interaction critical", explanation: "Genetic contribution" },
+          { text: "HPA axis hyperactivity → cortisol ↑ → sleep ↓, immune ↓", explanation: "Stress response" }
+        ],
+        keyPoints: [
+          "Monoamine hypothesis: 5-HT, NE, DA deficiency explain symptoms; antidepressants restore balance",
+          "Brain circuits: Hypoactive reward (anhedonia), prefrontal (rumination), hyperactive amygdala (negative bias)",
+          "Genetic vulnerability moderate (30-40%); stress-diathesis model explains onset",
+          "HPA axis hyperactivation chronic; cortisol elevation disrupts sleep, immune, metabolism",
+          "Neuroplasticity changes with chronicity; early treatment prevents structural brain changes"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Neurobiology of Mood Disorders", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Neurobiological Basis of Depression", edition: "12th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "depressive-disorders-layer-3-clinical",
+        title: "Depressive Disorders - Clinical",
+        estimatedMinutes: 35,
+        summary: "Clinical presentation, assessment, differential diagnosis, management strategies.",
+        contentMd: `# Depressive Disorders - Clinical
+
+## Clinical Presentation by Symptom Domain
+
+### Mood & Affect
+- **Depressed mood**: "Empty, hopeless, worst I've felt"
+- **Affect**: Blunted, restricted, congruent with mood
+- **Diurnal variation**: Often worse mornings (melancholic)
+
+### Neurovegetative Symptoms
+- **Sleep**: Insomnia (early morning worst) vs hypersomnia (atypical)
+- **Appetite/weight**: Decreased (melancholic) or increased (atypical)
+- **Energy**: Fatigue, psychomotor retardation
+- **Sexual function**: Decreased libido
+
+### Cognitive Symptoms
+- **Negative thoughts**: Guilt, worthlessness, hopelessness
+- **Concentration**: Poor focus, memory impairment
+- **Cognitive style**: Negative bias, rumination, hopelessness
+
+### Suicidality Assessment
+- **Ideation**: Passive (wishing dead) vs active (planning harm)
+- **Intent**: Determined vs ambivalent
+- **Plan**: Specificity, feasibility, access to means
+- **High-risk features**: Male, age >40, prior attempts, access to means, social isolation
+
+## Assessment Tools
+- **PHQ-9** (Patient Health Questionnaire): 9-item self-report; score ≥10 indicates depression
+- **HAM-D** (Hamilton Depression Rating Scale): 17-item clinician-rated
+- **Beck Depression Inventory**: 21-item self-report
+
+## Differential Diagnosis
+
+| Diagnosis | Distinguishing Feature | Duration |
+|-----------|------------------------|----------|
+| MDD | ≥5 symptoms (one mood/anhedonia) | ≥2 weeks |
+| Dysthymia | ≥2 symptoms | ≥2 years |
+| Adjustment disorder | Stressor-related, limited symptoms | <3 months after stressor |
+| Bipolar depression | Prior manic/hypomanic episodes | Variable |
+| Substance-induced | Temporal relation to drug use | During use |
+| Medical (hypothyroidism) | Physical findings, labs abnormal | Depends on condition |
+
+## Management - Integrated Approach
+
+### First-Line Pharmacotherapy
+- **SSRIs**: Sertraline, paroxetine, fluoxetine (60-70% response)
+- **SNRIs**: Venlafaxine, duloxetine
+- **Others**: Bupropion (NDRI; good for fatigue, sexual dysfunction)
+- **Onset**: 2-4 weeks, full response 8-12 weeks
+
+### Psychotherapy
+- **CBT**: Gold standard; cognitive restructuring, behavioral activation
+- **IPT**: Interpersonal therapy; addresses relationships, grief
+- **Efficacy**: 60-70% remission, comparable to medication
+
+### Behavioral Interventions
+- **Exercise**: Regular aerobic exercise depression-reducing (30 min 3x/week)
+- **Sleep hygiene**: Critical for mood regulation
+- **Social activation**: Behavioral activation combats anhedonia/isolation
+- **Routine establishment**: Structured daily schedule improves mood
+
+### Hospitalization Indications
+- **Imminent suicide risk** (intent + plan + means)
+- **Psychotic depression** (suicidal risk very high)
+- **Severe functional impairment** (unable to self-care)
+- **Medical comorbidity** affecting safety`,
+        mnemonics: [
+          { text: "Depression assessment: PHQ-9 ≥10 (mild-moderate), ≥20 (severe)", explanation: "Screening tool" },
+          { text: "MDD ≥5 × ≥2w; Dysthymia ≥2 × ≥2y; Adjustment <3m after stressor", explanation: "Diagnostic distinctions" },
+          { text: "SSRI 2-4w onset, 60-70% response; CBT 60-70% efficacy", explanation: "Treatment response" },
+          { text: "Suicide risk: Assess Ideation, Intent, Plan, Means, Protective factors", explanation: "Risk assessment" }
+        ],
+        keyPoints: [
+          "MDD diagnosis requires ≥5 symptoms (one mood/anhedonia) for ≥2 weeks; assess functional impairment",
+          "SSRI + psychotherapy most effective combination; either alone achieves 60-70% remission",
+          "Suicidal risk assessment critical: 10-15% lifetime suicide rate in untreated MDD",
+          "Early intervention prevents chronicity, suicide, disability; first episode critical for prognosis",
+          "Behavioral interventions (exercise, activation, sleep) as important as medication/therapy"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Clinical Management of Depression", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Depressive Disorders: Assessment and Treatment", edition: "12th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "depressive-disorders-layer-4-exam-prep",
+        title: "Depressive Disorders - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "High-yield diagnostic criteria, treatment algorithms, exam questions.",
+        contentMd: `# Depressive Disorders - Exam Prep
+
+## Diagnostic Criteria Quick Reference
+- **MDD**: ≥5 symptoms × ≥2 weeks (one: mood/anhedonia)
+- **Dysthymia**: ≥2 symptoms × ≥2 years, never >2m symptom-free
+- **PHQ-9 scoring**: ≥10 (mild-moderate), ≥20 (severe)
+- **Suicide screening**: ALWAYS assess ideation, intent, plan, means
+- **Response timeline**: Week 2-4 physical improvement, 8-12 weeks mood improvement`,
+        mnemonics: [
+          { text: "MDD ≥5 × 2w, Dysthymia ≥2 × 2y, Adjustment <3m post-stressor", explanation: "Criteria" },
+          { text: "SSRI 60-70%, CBT 60-70%, Combination best", explanation: "Treatment efficacy" },
+          { text: "Suicidal risk: high if Intent + Plan + Means + No protective factors", explanation: "Risk assessment" },
+          { text: "Psychotic depression = mood-congruent delusions; suicide risk very high", explanation: "Emergency features" }
+        ],
+        keyPoints: [
+          "MDD vs Dysthymia: Duration (2w vs 2y), severity (≥5 vs ≥2 symptoms)",
+          "Non-response: <20% improvement 8-12 weeks; try augmentation or switch",
+          "Postpartum depression: SSRI safe with breastfeeding; suicide/infanticide risk assessment critical",
+          "Seasonal depression: Light therapy 10,000 lux mornings first-line",
+          "Treatment-resistant depression: ECT gold standard (80% response)"
+        ],
+        textbookRefs: [
+          { book: "ICD-10 Clinical Descriptions", chapter: "Depressive Disorders", edition: "10th" },
+          { book: "DSM-5 Manual", chapter: "Depressive Disorders", edition: "5th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "depressive-disorders-layer-5-active-recall",
+        title: "Depressive Disorders - Active Recall",
+        estimatedMinutes: 20,
+        summary: "10+ clinical scenarios testing diagnosis and management.",
+        contentMd: `# Depressive Disorders - Active Recall
+
+## Q1: MDD with Psychosis + Suicidality
+**Case**: 55-year-old with 1-month depressed mood, guilt, worthlessness, insomnia, hearing voice saying "kill yourself," believes he caused wife's illness.
+**Q**: Diagnosis and urgency?
+A: **MDD with psychotic features + active suicidal ideation** = EMERGENCY. Suicide risk 30-40%. **Management**: Immediate hospitalization, antipsychotic + antidepressant, daily risk assessment, consider ECT.
+
+## Q2: Dysthymia with Superimposed MDD
+**Case**: 42-year-old with 8-year low mood (2-3 symptoms), now 3-week acute worsening (5 symptoms).
+**Q**: Diagnosis?
+A: **Dysthymia (baseline) + superimposed MDD (acute episode)**. Requires antidepressant; longer to treat than MDD alone.
+
+## Q3: Melancholic vs Atypical
+**Case-A**: Early morning awakening, weight loss, guilt, psychomotor retardation. **Case-B**: Hypersomnia, weight gain, hyperphagia, fatigue.
+**Q**: Subtypes and treatment?
+A: **Case-A: Melancholic** - responds to TCA or bupropion. **Case-B: Atypical** - responds to SSRI/MAOI.
+
+## Q4: SSRI Non-Response
+**Case**: 48-year-old on sertraline 100mg × 8 weeks, <10% improvement.
+**Q**: Next step?
+A: Increase dose OR add augmentation (bupropion, buspirone) OR switch antidepressant. 30-50% respond to second agent.
+
+## Q5: Postpartum Depression
+**Case**: 28-year-old, 3 weeks postpartum, severe depression with thought "baby would be better without me."
+**Q**: Management?
+A: **Psychiatric emergency**. SSRI safe with breastfeeding; assess suicide/infanticide risk; hospitalization if severe.
+
+## Q6: Suicidality Risk Stratification
+**Case-A**: Passive ideation, vague method, strong protective factor (children), no access. **Case-B**: Clear intent, plan, means available, timeline.
+**Q**: Hospitalization decision?
+A: **Case-A**: Outpatient with close follow-up, optimize antidepressant. **Case-B**: IMMEDIATE HOSPITALIZATION.
+
+## Q7: Medical Comorbidity
+**Case**: 60-year-old with depression, fatigue, weight gain, elevated TSH.
+**Q**: What's the differential?
+A: **Both hypothyroidism AND depression**. Treat thyroid first, add antidepressant if depression persists.
+
+## Q8: Treatment-Resistant Depression
+**Case**: 52-year-old, 6 antidepressants tried, <20% improvement.
+**Q**: Next?
+A: **TRD diagnosis** (≥2 adequate trials failed). **First-line**: ECT (80% response). Also consider: TMS, ketamine, augmentation strategies.
+
+## Q9: Seasonal Affective Disorder
+**Case**: 35-year-old winter depression Nov-March (hypersomnia, hyperphagia, fatigue), full recovery spring.
+**Q**: Management?
+A: **SAD diagnosis**. Light therapy 10,000 lux 30m mornings first-line (60-80% response). Prophylactic SSRI if severe.
+
+## Q10: SSRI Discontinuation Syndrome
+**Case**: 42-year-old on paroxetine × 2 years, stopped abruptly. Day 2: severe anxiety, dizziness, electric shock, diarrhea.
+**Q**: Management?
+A: **Serotonin discontinuation syndrome**. Restart paroxetine, then slow taper 10%/week. Always taper SSRI, never abrupt.`,
+        mnemonics: [
+          { text: "Psychotic depression = suicide risk very high; requires hospitalization, antipsychotic + antidepressant", explanation: "Emergency" },
+          { text: "PHQ-9 screening: ≥10 mild-moderate, ≥20 severe; useful for primary care", explanation: "Assessment" },
+          { text: "TRD = ≥2 adequate trials failed; ECT gold standard 80% response rate", explanation: "Resistant depression" },
+          { text: "Peripartum depression: SSRI safe, suicide/infanticide risk HIGH, hospitalization consideration", explanation: "Special population" }
+        ],
+        keyPoints: [
+          "MDD ≥5 symptoms (one mood/anhedonia) × ≥2 weeks; 10-15% suicide lifetime risk",
+          "SSRI + CBT most effective; either alone 60-70% response; augmentation/switch if non-response",
+          "Melancholic vs Atypical subtypes guide treatment choice (TCA vs SSRI)",
+          "Postpartum depression serious; SSRI safe; suicide/infanticide assessment essential",
+          "Seasonal depression light therapy first-line; TRD ECT gold standard"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Depressive Disorders: Advanced Cases", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Depressive Disorders: Comprehensive Management", edition: "12th" }
+        ]
+      }
+    ]
+  }
 ];

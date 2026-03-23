@@ -1,19 +1,425 @@
-// Psychiatry Part 4: Remaining topics from modules 3, 4, 5
+import type { TopicLessons } from "./content-loader";
 
-export const psychiatryPart4Lessons = [
-  // PS-MOD-03-TOP-01: Anxiety Disorders
+export const psychiatryPart4Lessons: TopicLessons[] = [
   {
     topicCode: "PS-MOD-03-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "anxiety-disorders-foundation",
+        slug: "anxiety-disorders-layer-1-foundation",
         title: "Anxiety Disorders - Foundation",
         estimatedMinutes: 25,
-        summary: "Classification, epidemiology, neurobiology of anxiety disorders.",
-        contentMd: "# Anxiety Disorders - Foundation\n\n## Definition\n- **Anxiety**: Adaptive response to threat; becomes pathological when excessive, persistent, interferes with functioning\n- **Anxiety disorder**: Persistent, excessive anxiety not attributable to substance, medical condition, or better explained by another disorder\n\n## Classification of Anxiety Disorders (ICD-10/DSM-5)\n- **Generalized Anxiety Disorder (GAD)**: Persistent worry\n- **Panic Disorder**: Recurrent panic attacks\n- **Agoraphobia**: Fear of open/crowded spaces\n- **Social Anxiety Disorder**: Fear of social situations\n- **Specific Phobias**: Fear of specific object/situation\n\n## Epidemiology\n- **Prevalence**: 10-15% lifetime prevalence globally\n- **Gender**: Females > Males (2:1)\n- **Age of onset**: 15-35 years typically\n- **India**: Prevalence 4-5% (estimated)\n- **Chronicity**: Often recurrent, chronic course if untreated\n- **Comorbidity**: 60-70% have comorbid depression\n\n## Neurobiology of Anxiety\n\n### Neurotransmitters\n- **GABA**: Inhibitory; low levels → anxiety\n- **Glutamate**: Excitatory; imbalance contributes to anxiety\n- **Serotonin (5-HT)**: Low levels → anxiety\n- **Norepinephrine**: Hyperactivity → anxiety\n- **CRH (Corticotropin-releasing hormone)**: Stress hormone; elevation in anxiety\n\n### Brain Structures\n- **Amygdala**: Fear processing; hyperactive in anxiety\n- **Prefrontal cortex**: Emotional regulation; underactive\n- **Hippocampus**: Memory; reduced volume in PTSD\n- **HPA axis**: Stress response; dysregulated in anxiety disorders\n\n## Genetic & Environmental Factors\n- **Heritability**: 30-40% genetic component\n- **Environmental**: Stress, trauma, life events\n- **Early adversity**: Childhood abuse increases risk\n- **Temperament**: Behavioral inhibition predisposes,\n        mnemonics: [\n          { text: \"Anxiety neurotransmitters: GGNS\", explanation: \"GABA low, Glutamate high, No serotonin, Norepinephrine high\" },\n          { text: \"Brain regions: Amygdala (Fear), Prefrontal (Control)\", explanation: \"Amygdala hyperactive; PFC hypoactive in anxiety\" }\n        ],\n        keyPoints: [\n          \"Anxiety 10-15% lifetime prevalence; female > male 2:1\",\n          \"Multiple anxiety disorders with overlapping features; GAD most common\",\n          \"GABA/serotonin deficiency; amygdala hyperactivity in pathophysiology\",\n          \"Genetic 30-40%; environmental stressors important\",\n          \"60-70% comorbid depression; chronic course without treatment\"\n        ],\n        textbookRefs: [\n          { book: \"Textbook of Psychiatry by Kaplan & Sadock\", chapter: \"Anxiety Disorders\", edition: \"21st\" },\n          { book: \"IADVL - Indian Psychiatry\", chapter: \"Anxiety and Phobic Disorders\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"anxiety-gad-panic\",\n        title: \"Generalized Anxiety Disorder & Panic Disorder\",\n        estimatedMinutes: 30,\n        summary: \"Clinical features, diagnosis, differential diagnosis.\",\n        contentMd: "# GAD & Panic Disorder - Clinical Features & Diagnosis\\n\\n## Generalized Anxiety Disorder (GAD)\\n\\n### Diagnostic Criteria (DSM-5)\\n- **Worry**: About multiple domains (work, finances, health, family)\\n- **Duration**: ≥6 months\\n- **Frequency**: More days than not\\n- **Uncontrollability**: Difficult to control worry\\n- **Physical symptoms**: ≥3 of: restlessness, fatigue, concentration difficulty, irritability, muscle tension, sleep disturbance\\n- **Distress**: Causes significant distress or impairment\\n- **Not attributable**: To substance, medical condition, better explained by other disorder\\n\\n### Prevalence\\n- **GAD**: 2-3% lifetime; 1-2% one-year prevalence\\n- **Female > Male**: 2:1\\n- **Onset**: Average 30 years\\n\\n### Course\\n- **Chronic**: Often persistent (70% if untreated)\\n- **Fluctuating**: Worsens with stress\\n- **Comorbidity**: 70% depression, 50% other anxiety\\n\\n## Panic Disorder\\n\\n### Definition\\n- **Panic attack**: Sudden onset intense fear/distress with ≥4 physical symptoms\\n- **Panic disorder**: Recurrent unexpected panic attacks + fear of future attacks\\n\\n### Panic Attack Symptoms\\n- **Physical**: Palpitations, sweating, trembling, dyspnea, chest pain, GI symptoms\\n- **Cognitive**: Fear of death, losing control, going crazy\\n- **Peak**: 10 minutes typical\\n- **Duration**: Minutes to hours\\n\\n### Diagnostic Criteria\\n- **Panic attacks**: Recurrent, unexpected\\n- **Worry**: About future attacks or behavioral change\\n- **Duration**: ≥1 month\\n- **Not attributable**: To substance, medical condition, other disorder\\n\\n### Associated Features\\n- **Agoraphobia**: 50-70% of panic disorder patients\\n- **Anticipatory anxiety**: Between attacks\\n- **Avoidance**: Of triggers (crowds, travel)\\n- **Disability**: Often severe if untreated\\n\\n## Differential Diagnosis\\n\\n| Disorder | Features |\\n|----------|----------|\\n| **Panic Disorder** | Sudden attacks, worry about attacks, avoidance |\\n| **GAD** | Persistent worry, not episodic |\\n| **Social Anxiety** | Fear of scrutiny, embarrassment |\\n| **Specific Phobia** | Fear of specific trigger |\\n| **Medical**: Thyroid, cardiac | Investigations abnormal |\\n| **Substance**: Caffeine, stimulants | History of use |\\n\\n### Medical Differential\\n- **Thyroid disorders**: TSH, free T4\\n- **Cardiac**: ECG, troponin, echocardiography\\n- **Respiratory**: PFTs, chest X-ray\\n- **Neurological**: EEG, brain imaging (if seizures suspected),\\n        keyPoints: [\\n          \\\"GAD: persistent worry ≥6 months, difficult to control, multiple domains\\\",\\n          \\\"Panic disorder: recurrent unexpected attacks with fear of future attacks\\\",\\n          \\\"GAD female > male 2:1; lifetime prevalence 2-3%\\\",\\n          \\\"Panic peak 10 minutes; autonomic + cognitive symptoms\\\",\\n          \\\"Agoraphobia in 50-70% of panic disorder; avoidance common\\\",\\n          \\\"Medical causes must be excluded (cardiac, thyroid, respiratory)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Anxiety Disorders\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Indian Psychiatry Manual\\\", chapter: \\\"Anxiety Disorders\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"anxiety-disorders-management\\\",\\n        title: \\\"Anxiety Disorders - Management\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Psychotherapy, pharmacotherapy, cognitive-behavioral therapy.\\\",\\n        contentMd: ``# Anxiety Disorders - Management\\n\\n## Psychotherapy (First-line for Mild-Moderate)\\n\\n### Cognitive-Behavioral Therapy (CBT)\\n- **Efficacy**: 60-70% response rate; comparable to medication\\n- **Components**: Cognitive restructuring, exposure, behavioral activation\\n- **Duration**: 12-16 sessions typically\\n- **Maintenance**: Skills used lifelong\\n\\n### Exposure Therapy\\n- **Panic Disorder/Agoraphobia**: Interoceptive + situational exposure\\n- **Specific Phobias**: Systematic desensitization\\n- **Social Anxiety**: In vivo exposure to social situations\\n\\n### Applied Relaxation\\n- **Progressive muscle relaxation**: Reduce muscle tension\\n- **Deep breathing**: 4-7-8 technique\\n- **Mindfulness**: Acceptance-based approach\\n\\n## Pharmacotherapy\\n\\n### First-Line: SSRIs\\n- **Agents**: Sertraline 50-200 mg, Paroxetine 40-60 mg, Escitalopram 10-20 mg\\n- **Efficacy**: 60-70% response; 50% remission\\n- **Onset**: 2-4 weeks for anxiety; full effect 8-12 weeks\\n- **Advantages**: Safe, well-tolerated, prevent relapse\\n- **Disadvantages**: Sexual side effects, weight gain\\n\\n### First-Line: SNRIs\\n- **Venlafaxine**: 150-225 mg daily (extended-release)\\n- **Efficacy**: 70% response rate for GAD\\n- **Mechanism**: Serotonin + norepinephrine\\n\\n### Second-Line: Benzodiazepines\\n- **Agents**: Lorazepam 1-4 mg daily, Alprazolam 0.5-3 mg daily\\n- **Use**: Short-term only (weeks, not months)\\n- **Advantage**: Rapid onset (relief in hours)\\n- **Disadvantage**: Dependence, tolerance, cognitive effects\\n- **Indication**: Acute panic attacks; bridge until SSRI effect\\n- **Duration**: Maximum 2-4 weeks\\n\\n### Other Agents\\n- **Buspirone**: 15-60 mg daily (azapirone; safer but slower)\\n- **Tricyclic antidepressants**: Imipramine, amitriptyline (older agents)\\n- **Propranolol**: For physical symptoms (not primary anxiety)\\n\\n## Treatment Algorithm\\n\\n### GAD\\n```\\nMild → CBT alone\\nMild-Moderate → CBT + SSRI\\nModerate-Severe → SSRI + benzos (short-term) + CBT\\nNon-response → Switch SSRI or add/switch to SNRI\\nMaintenance → Continue SSRI 6-12 months; taper slowly\\n```\\n\\n### Panic Disorder\\n```\\nAcute attack → Benzodiazepine (lorazepam 1-2 mg)\\nMaintenance → SSRI (sertraline, paroxetine)\\nPsychotherapy → Exposure therapy, cognitive restructuring\\nAdjunct → Short-term benzos (weeks only)\\n```\\n\\n## Duration of Treatment\\n- **Acute phase**: 4-6 weeks improvement\\n- **Continuation**: 12-24 months (prevent relapse)\\n- **Maintenance**: 1-2 years minimum; taper slowly (2-4 months)\\n- **Relapse risk**: 30-50% after stopping medication\\n\\n## Lifestyle Interventions\\n- **Exercise**: 30 minutes most days\\n- **Sleep**: 7-9 hours; sleep hygiene\\n- **Caffeine/Alcohol**: Reduce or eliminate\\n- **Stress management**: Identify triggers; develop coping\\n- **Social support**: Family involvement, support groups,\\n        keyPoints: [\\n          \\\"CBT first-line for mild-moderate; 60-70% efficacy\\\",\\n          \\\"SSRIs first-line pharmacotherapy; 60-70% response\\\",\\n          \\\"Benzodiazepines short-term only (2-4 weeks) for acute anxiety\\\",\\n          \\\"Combination (SSRI + CBT) superior to either alone\\\",\\n          \\\"Treatment duration minimum 12-24 months; relapse risk 30-50% after stopping\\\",\\n          \\\"Lifestyle modifications essential (exercise, sleep, stress management)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Treatment of Anxiety Disorders\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Clinical Psychiatry\\\", chapter: \\\"Management of Anxiety\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"anxiety-exam\\\",\\n        title: \\\"Anxiety Disorders - Exam Preparation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Case analysis and management decisions.\\\",\\n        contentMd: ``# Anxiety Disorders - Exam Preparation\\n\\n## Case 1: Generalized Anxiety Disorder\\n**Scenario**: 32-year-old female, 8-month history of persistent worry about work, finances, health. Restlessness, fatigue, concentration difficulty, irritability. Functional impairment.\\n\\n**Diagnosis**: GAD (meets DSM-5 criteria).\\n\\n**Investigations**:\\n- TSH, free T4 (rule out thyroid)\\n- ECG (rule out cardiac)\\n\\n**Management**:\\n- **First-line**: CBT (12-16 sessions)\\n- **If moderate-severe**: SSRI (sertraline 50-100 mg daily) + CBT\\n- **Benzodiazepine**: Not indicated unless acute distress\\n- **Follow-up**: 4 weeks to assess; adjust dose if needed\\n- **Duration**: Continue SSRI 12-24 months; slow taper\\n- **Prognosis**: 60-70% response with CBT + SSRI\\n\\n## Case 2: Panic Disorder with Agoraphobia\\n**Scenario**: 38-year-old male, recurrent panic attacks (palpitations, dyspnea, chest pain). Fear of attacks; avoids crowds, public transport.\\n\\n**Diagnosis**: Panic disorder with agoraphobia.\\n\\n**Acute Management**:\\n- Lorazepam 2 mg IM for acute attack\\n\\n**Maintenance**:\\n- Sertraline 50-150 mg daily (SSRI)\\n- Lorazepam 0.5-1 mg BID for 2-4 weeks (short-term)\\n- Exposure therapy: Gradually face avoided situations\\n- **Expected**: Reduction in panic frequency; improved agoraphobia tolerance in 4-8 weeks\\n\\n## Case 3: Social Anxiety Disorder\\n**Scenario**: 25-year-old student, fear of presentations, eating in public, social gatherings. Avoids these situations.\\n\\n**Management**:\\n- **CBT with exposure**: In vivo exposure to feared situations\\n- **SSRI**: Paroxetine 40-60 mg daily\\n- **Beta-blocker**: Propranolol 20-40 mg for performance anxiety if needed\\n- **Duration**: 12 months treatment; reassess,\\n        keyPoints: [\\n          \\\"GAD: persistent worry ≥6 months; CBT first-line\\\",\\n          \\\"Panic disorder: sudden attacks; SSRI + exposure therapy\\\",\\n          \\\"Benzodiazepines: only 2-4 weeks acute; prevent dependence\\\",\\n          \\\"Combination (SSRI + CBT) superior to monotherapy\\\",\\n          \\\"Follow-up essential; medication adjustment, psychotherapy compliance\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Anxiety Disorders\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Clinical Psychiatry Manual\\\", chapter: \\\"Anxiety Management\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"anxiety-qa\\\",\\n        title: \\\"Anxiety Disorders - Q&A\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"Key MCQs on anxiety disorders.\\\",\\n        contentMd: ``# Anxiety Disorders - Q&A\\n\\n## Q1: What is the diagnostic criterion for duration of worry in GAD?\\n\\n**Answer**: ≥6 months of persistent worry present more days than not. Worry is difficult to control and occurs across multiple life domains.\\n\\n## Q2: In panic disorder, what is the typical duration of a panic attack?\\n\\n**Answer**: Peak symptoms occur within 10 minutes; most attacks last 20-30 minutes. Some linger for hours due to anticipatory anxiety.\\n\\n## Q3: Why are benzodiazepines not recommended for long-term anxiety management?\\n\\n**Answer**: Risk of dependence (develops within 2-4 weeks), tolerance, cognitive effects, and rebound anxiety on discontinuation. Recommended only for acute anxiety; maximum 2-4 weeks.\\n\\n## Q4: What is the first-line pharmacotherapy for GAD?\\n\\n**Answer**: SSRIs (sertraline, paroxetine, escitalopram). 60-70% efficacy with onset 2-4 weeks for anxiety; full effect 8-12 weeks.\\n\\n## Q5: How does CBT for panic disorder work?\\n\\n**Answer**: Combination of cognitive restructuring (challenging catastrophic thoughts), interoceptive exposure (triggering bodily sensations to habituate), and situational exposure (facing avoided situations).,\\n        keyPoints: [\\n          \\\"GAD: ≥6 months persistent worry; multiple domains\\\",\\n          \\\"Panic attack: 10-minute peak; autonomic + cognitive symptoms\\\",\\n          \\\"Benzodiazepines: 2-4 weeks maximum; risk of dependence\\\",\\n          \\\"SSRIs: first-line; 60-70% efficacy; 8-12 weeks full effect\\\",\\n          \\\"CBT: cognitive restructuring + exposure; 60-70% efficacy\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Anxiety Disorders\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Indian Psychiatry Manual\\\", chapter: \\\"Anxiety Management\\\" }\\n        ]\\n      }\\n    ]\\n  },\\n  // PS-MOD-04-TOP-03: Delirium & Dementia\\n  {\\n    topicCode: \\\"PS-MOD-04-TOP-03\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"delirium-dementia-foundation\\\",\\n        title: \\\"Delirium & Dementia - Foundation\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Definitions, epidemiology, key differences, pathophysiology.\\\",\\n        contentMd: ``# Delirium & Dementia - Foundation\\n\\n## Definitions\\n\\n### Delirium\\n- **Acute confusional state**: Disturbance of consciousness and attention\\n- **Onset**: Acute (hours to days)\\n- **Duration**: Hours to weeks; reversible if treated\\n- **Reversibility**: Often reversible if cause identified and treated\\n- **Prognosis**: Depends on underlying cause and age\\n\\n### Dementia\\n- **Neurodegenerative disease**: Progressive cognitive decline\\n- **Onset**: Insidious (months to years)\\n- **Duration**: Chronic, progressive, irreversible\\n- **Reversibility**: Largely irreversible\\n- **Prognosis**: Progressive decline; fatal if untreated\\n\\n## Key Differences\\n\\n| Feature | Delirium | Dementia |\\n|---------|----------|----------|\\n| **Onset** | Acute (hours-days) | Insidious (months-years) |\\n| **Consciousness** | Altered | Normal (early-mid stages) |\\n| **Attention** | Severely impaired | Relatively preserved (early) |\\n| **Fluctuation** | Marked; worse evening | Gradual, progressive |\\n| **Psychomotor** | Hyperactive, hypoactive, mixed | Normal initially |\\n| **Reversibility** | Often reversible | Irreversible |\\n| **Mortality** | High (10-35%) if untreated | Depends on type/stage |\\n\\n## Epidemiology\\n\\n### Delirium\\n- **Prevalence**: 10-15% elderly hospitalized; 50-80% ICU patients\\n- **Mortality**: 10-35% if untreated; associated with complications\\n- **Risk factors**: Age >65, comorbidities, medications, infections\\n\\n### Dementia\\n- **Prevalence**: 5% age 65, 30% age 85+ worldwide\\n- **India**: Estimated 4 million (increasing)\\n- **Types**: Alzheimer's (50-60%), Vascular (20%), Lewy body (10%), Frontotemporal (5%), Others (10%)\\n\\n## Pathophysiology\\n\\n### Delirium\\n- **Neurotransmitter imbalance**: Dopamine ↓, Acetylcholine ↓, Glutamate ↑\\n- **Inflammation**: Cytokine elevation\\n- **Hypoxia/Metabolic**: Decreased oxygenation, metabolic derangement\\n- **Medication-related**: Anticholinergics, benzodiazepines\\n\\n### Dementia (Alzheimer's)\\n- **Amyloid-beta accumulation**: Extracellular plaques\\n- **Neurofibrillary tangles**: Tau protein; intracellular\\n- **Neuroinflammation**: Microglial activation\\n- **Synaptic loss**: Progressive neuronal death\\n- **Genetic**: APOE4 allele increases risk,\\n        mnemonics: [\\n          { text: \\\"Delirium: Acute, fluctuating, reversible\\\", explanation: \\\"Delirium = Immediate danger; usually treatable\\\" },\\n          { text: \\\"Dementia: Insidious, progressive, irreversible\\\", explanation: \\\"Dementia = Degenerative; inevitably worsens\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Delirium acute (hours); dementia insidious (months-years)\\\",\\n          \\\"Delirium reversible if cause found; dementia irreversible\\\",\\n          \\\"Delirium: altered consciousness, poor attention; dementia: normal early consciousness\\\",\\n          \\\"10-35% mortality delirium if untreated; 5% age 65 dementia prevalence\\\",\\n          \\\"Delirium dopamine/acetylcholine deficiency; Alzheimer's amyloid-beta + tau\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Delirium and Dementia\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Indian Psychiatry Manual\\\", chapter: \\\"Cognitive Disorders\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"delirium-clinical\\\",\\n        title: \\\"Delirium - Clinical Features & Diagnosis\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Subtypes, clinical presentation, investigation.\\\",\\n        contentMd: ``# Delirium - Clinical Features & Diagnosis\\n\\n## DSM-5 Diagnostic Criteria\\n1. **Disturbance of attention and awareness**: Reduced ability to focus or sustain attention\\n2. **Change in cognition**: Memory deficit, disorientation, language disturbance\\n3. **Acute onset**: Hours to days\\n4. **Fluctuating course**: Symptoms wax and wane\\n5. **Underlying cause**: Medical condition, substance, withdrawal, medication, combination\\n6. **Distress**: Causes distress or functional impairment\\n\\n## Subtypes\\n\\n### Hyperactive Delirium\\n- **Presentation**: Agitation, increased speech, restlessness\\n- **Behavior**: Combative, pulling out lines\\n- **Recognition**: Often recognized as abnormal\\n- **Prevalence**: 25-30% of delirium\\n\\n### Hypoactive Delirium\\n- **Presentation**: Drowsiness, lethargy, slow speech\\n- **Behavior**: Withdrawn, apathetic\\n- **Recognition**: Often missed/attributed to depression or medication\\n- **Prevalence**: 50-60% of delirium\\n- **Prognosis**: Worse outcomes than hyperactive (more complications)\\n\\n### Mixed Delirium\\n- **Fluctuating between hyperactive and hypoactive**\\n- **Prevalence**: 10-15% of delirium\\n\\n## Clinical Features\\n- **Disorientation**: Person, place, time (worse for time/place)\\n- **Memory impairment**: Difficulty encoding new information\\n- **Hallucinations**: Visual common (shadows, animals); tactile, auditory\\n- **Delusions**: Paranoid, persecutory\\n- **Sleep-wake cycle**: Reversed; sundowning (worse evening)\\n- **Emotional**: Lability, fear, anxiety, anger\\n\\n## Investigation for Causes\\n\\n### Laboratory\\n- **CBC**: Infection, anemia\\n- **Metabolic panel**: Electrolytes, glucose, liver, kidney function\\n- **TSH**: Thyroid dysfunction\\n- **B12, folate**: Deficiency\\n- **Syphilis serology**: Neurosyphilis\\n- **Toxicology**: Drugs of abuse\\n\\n### Imaging\\n- **CT head**: Rule out intracranial pathology (if focal findings)\\n- **MRI**: Stroke, subdural hematoma\\n- **EEG**: Encephalopathy pattern; seizure activity\\n\\n### Other\\n- **Urinalysis**: UTI\\n- **Chest X-ray**: Pneumonia\\n- **Lumbar puncture**: If meningitis/encephalitis suspected (after imaging)\\n\\n## Common Causes (DELIRIUM Mnemonic)\\n\\n| D | Drugs, Dehydration, Dementia |\\n| E | Electrolytes, Encephalitis/Endocarditis |\\n| L | Low oxygen/Liver disease |\\n| I | Infection |\\n| R | Renal failure |\\n| I | Intracranial/Ischemia |\\n| U | Uremia/UTI |\\n| M | Metabolism, Medications |,\\n        keyPoints: [\\n          \\\"Delirium: acute onset, fluctuating, altered attention/consciousness\\\",\\n          \\\"Hyperactive: agitated (25-30%); hypoactive: withdrawn (50-60%)\\\",\\n          \\\"Hypoactive delirium often missed; worse prognosis\\\",\\n          \\\"Causes varied: infection, medication, metabolic, intracranial\\\",\\n          \\\"Diagnosis clinical; investigations identify underlying cause\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Delirium\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Clinical Psychiatry\\\", chapter: \\\"Acute Confusional States\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"dementia-types\\\",\\n        title: \\\"Dementia - Types & Clinical Features\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Alzheimer's, vascular, Lewy body, frontotemporal dementia.\\\",\\n        contentMd: ``# Dementia - Types & Clinical Features\\n\\n## Alzheimer's Disease (50-60% of dementia)\\n\\n### Pathology\\n- **Amyloid-beta plaques**: Extracellular; neurotoxic\\n- **Neurofibrillary tangles**: Tau protein; intracellular\\n- **Neuroinflammation**: Microglia activation\\n- **Neurodegeneration**: Hippocampus → cortex\\n\\n### Clinical Features\\n- **Early**: Memory loss (recent > remote); mild cognitive impairment\\n- **Middle**: Apraxia, agnosia, aphasia; behavioral changes\\n- **Late**: Severe memory loss, vegetative state\\n- **Duration**: 8-10 years average\\n\\n### Investigations\\n- **MRI**: Hippocampal atrophy (early sign)\\n- **PET**: Hypometabolism in parietal/temporal lobes\\n- **CSF biomarkers**: Decreased amyloid-beta, increased phosphorylated tau\\n- **Diagnosis**: Clinical + imaging; confirmed at autopsy\\n\\n## Vascular Dementia (20% of dementia)\\n\\n### Mechanism\\n- **Cerebral infarcts**: Multiple small strokes (lacunar infarcts)\\n- **White matter disease**: Subcortical ischemic changes\\n- **Large vessel disease**: Single stroke (rare for dementia)\\n\\n### Clinical Features\\n- **Stepwise decline**: Sudden worsening after stroke\\n- **Patchy deficits**: Depends on stroke location\\n- **Emotional lability**: Pseudobulbar affect common\\n- **Focal neurological signs**: Weakness, spasticity\\n- **Risk factors**: HTN, DM, CAD, atrial fibrillation\\n\\n### Investigation\\n- **MRI**: Multiple infarcts, white matter hyperintensities\\n- **CT**: Lacunar infarcts\\n\\n## Lewy Body Dementia (10% of dementia)\\n\\n### Pathology\\n- **Lewy bodies**: Intracytoplasmic inclusions; alpha-synuclein\\n- **Similar to Parkinson's**: Brain pathology similar; clinical variation\\n\\n### Clinical Features\\n- **Parkinsonism**: Bradykinesia, rigidity, tremor\\n- **Visual hallucinations**: Early (vs Alzheimer's late)\\n- **Cognitive fluctuation**: Short-term variability\\n- **REM sleep behavior disorder**: Vivid, acting-out dreams\\n- **Sensitivity to antipsychotics**: Risk of neuroleptic malignant syndrome\\n\\n### Investigation\\n- **MRI**: Less atrophy than Alzheimer's\\n- **SPECT**: Reduced occipital perfusion (characteristic)\\n\\n## Frontotemporal Dementia (5% of dementia)\\n\\n### Subtypes\\n- **Behavioral variant**: Personality change, disinhibition, apathy\\n- **Language variant**: Speech difficulty, word-finding\\n- **Movement disorder variant**: Parkinsonism, ALS features\\n\\n### Clinical Features\\n- **Personality change**: Loss of social awareness, disinhibition\\n- **Early**: Behavioral before memory (vs Alzheimer's memory first)\\n- **Language**: Speech problems, word-finding difficulty\\n- **Age**: Younger onset (40-60 years) than Alzheimer's\\n\\n### Investigation\\n- **MRI**: Anterior temporal/frontal atrophy\\n- **PET**: Frontotemporal hypometabolism,\\n        keyPoints: [\\n          \\\"Alzheimer's: hippocampal atrophy, amyloid-beta + tau pathology\\\",\\n          \\\"Vascular: stepwise decline, multiple infarcts, HTN risk\\\",\\n          \\\"Lewy body: visual hallucinations early, parkinsonism, REM sleep disorder\\\",\\n          \\\"Frontotemporal: personality change, behavioral symptoms early (younger age)\\\",\\n          \\\"Diagnosis clinical + imaging; definitive diagnosis at autopsy\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Dementia\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Clinical Psychiatry Manual\\\", chapter: \\\"Dementia Types\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"delirium-dementia-management\\\",\\n        title: \\\"Delirium & Dementia - Management\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Treatment strategies, supportive care, pharmacotherapy.\\\",\\n        contentMd: ``# Delirium & Dementia - Management\\n\\n## Delirium: Management\\n\\n### Identify & Treat Underlying Cause\\n- **Infection**: Antibiotics (UTI, pneumonia)\\n- **Metabolic**: Correct electrolytes, glucose, renal function\\n- **Medications**: Review; discontinue offenders (benzodiazepines, anticholinergics)\\n- **Hypoxia**: Oxygen therapy if needed\\n- **Dehydration**: IV fluids\\n\\n### Non-Pharmacological\\n- **Orientation**: Clocks, calendars, family presence\\n- **Sleep-wake cycle**: Bright light during day, dark at night\\n- **Mobilization**: Early ambulation if possible\\n- **Nutrition/Hydration**: Maintain adequate intake\\n- **Remove restraints**: Only if safety mandates\\n- **ICU delirium prevention**: Music, sleep protocol, early mobility\\n\\n### Pharmacotherapy (Short-term)\\n- **First-line**: Haloperidol 0.5-2 mg IM/IV Q4-6h (for agitation)\\n- **Alternative**: Risperidone 0.5-2 mg BID (atypical)\\n- **Benzodiazepines**: Only if withdrawal (alcohol, benzodiazepines)\\n- **Note**: Medications temporary; address cause is essential\\n- **Monitoring**: QTc prolongation with haloperidol; avoid polypharmacy\\n\\n## Dementia: Management\\n\\n### Cognitive Enhancement\\n- **Cholinesterase inhibitors**: Donepezil 5-10 mg daily, rivastigmine, galantamine\\n  - **Efficacy**: Slows decline by 6-12 months\\n  - **Stage**: Mild to moderate dementia\\n  - **Side effects**: GI upset, bradycardia\\n- **NMDA antagonist**: Memantine 20 mg daily (moderate to severe)\\n- **Combination**: Donepezil + memantine may benefit\\n\\n### Behavioral Management\\n- **Antipsychotics**: Risperidone, olanzapine (short-term only for aggression/psychosis)\\n- **SSRIs**: Depression (fluoxetine, sertraline)\\n- **Mood stabilizers**: Valproate for aggression (limited evidence)\\n- **Avoid**: Benzodiazepines (increase fall risk, cognitive decline)\\n\\n### Supportive Care\\n- **Caregiver support**: Education, respite care, support groups\\n- **Structured environment**: Routines, familiar places\\n- **Cognitive stimulation**: Reminiscence therapy, activities\\n- **Safety**: Fall prevention, medication management\\n\\n### Vascular Dementia: Prevention\\n- **Blood pressure control**: Target <130/80\\n- **Antiplatelet**: Aspirin if history of stroke\\n- **Statin**: For dyslipidemia\\n- **Diabetes management**: Tight glycemic control\\n\\n### Lewy Body Dementia: Special Considerations\\n- **Avoid antipsychotics**: Risk of neuroleptic malignant syndrome\\n- **Carbidopa-levodopa**: For parkinsonism\\n- **Cholinesterase inhibitors**: Often effective\\n\\n### End-of-Life Care\\n- **Advance planning**: Discussions with family\\n- **Goals of care**: Palliative vs aggressive\\n- **Nutrition**: Consider PEG tube (limited evidence for benefit)\\n- **Comfort care**: Adequate analgesia, sedation if needed,\\n        keyPoints: [\\n          \\\"Delirium: treat underlying cause; non-pharmacological first-line\\\",\\n          \\\"Haloperidol short-term for agitation if needed\\\",\\n          \\\"Dementia: cholinesterase inhibitors slow decline 6-12 months\\\",\\n          \\\"Avoid antipsychotics in Lewy body (neuroleptic malignant syndrome)\\\",\\n          \\\"Caregiver support and structured environment essential\\\",\\n          \\\"Vascular dementia: aggressive blood pressure control, antiplatelet agents\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Treatment of Delirium and Dementia\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Clinical Psychiatry Manual\\\", chapter: \\\"Cognitive Disorder Management\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"delirium-dementia-qa\\\",\\n        title: \\\"Delirium & Dementia - Q&A\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"Key MCQs on delirium and dementia.\\\",\\n        contentMd: ``# Delirium & Dementia - Q&A\\n\\n## Q1: What is the key difference in onset between delirium and dementia?\\n\\n**Answer**: Delirium: acute onset (hours to days), fluctuating course. Dementia: insidious onset (months to years), gradual progressive decline.\\n\\n## Q2: A 70-year-old with dementia becomes acutely confused, agitated. What is the most likely diagnosis?\\n\\n**Answer**: Delirium superimposed on dementia. UTI, infection, medication side effect, or metabolic derangement common in elderly. Treat underlying cause.\\n\\n## Q3: What is the prevalence of hypoactive vs hyperactive delirium?\\n\\n**Answer**: Hypoactive 50-60% (often missed); hyperactive 25-30% (recognized easily); mixed 10-15%. Hypoactive has worse prognosis.\\n\\n## Q4: In Alzheimer's disease, what is the earliest structural change on MRI?\\n\\n**Answer**: Hippocampal atrophy. Hippocampus critical for memory; early atrophy correlates with memory loss.\\n\\n## Q5: Why should antipsychotics be avoided in Lewy body dementia?\\n\\n**Answer**: Risk of neuroleptic malignant syndrome (fever, rigidity, altered consciousness); sensitivity to antipsychotics 10-100x higher than Alzheimer's. Use carbidopa-levodopa for motor symptoms instead.,\\n        keyPoints: [\\n          \\\"Delirium: acute, fluctuating, often reversible; treat underlying cause\\\",\\n          \\\"Dementia: insidious, progressive, irreversible\\\",\\n          \\\"Hypoactive delirium often missed; worse outcomes than hyperactive\\\",\\n          \\\"Alzheimer's: hippocampal atrophy, amyloid-beta + tau\\\",\\n          \\\"Lewy body: avoid antipsychotics; use carbidopa-levodopa\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Delirium and Dementia\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Indian Psychiatry Manual\\\", chapter: \\\"Cognitive Disorders\\\" }\\n        ]\\n      }\\n    ]\\n  },\\n  // PS-MOD-05-TOP-02: Mental Healthcare Act & Forensic Psychiatry\\n  {\\n    topicCode: \\\"PS-MOD-05-TOP-02\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"mha-forensic-foundation\\\",\\n        title: \\\"Mental Healthcare Act & Forensic Psychiatry - Foundation\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Indian Mental Healthcare Act 2017, key provisions, forensic concepts.\\\",\\n        contentMd: ``# Mental Healthcare Act 2017 & Forensic Psychiatry\\n\\n## Mental Healthcare Act 2017 (India)\\n\\n### Key Objectives\\n- **Rights-based approach**: Focus on human rights of persons with mental illness\\n- **De-institutionalization**: Community-based care\\n- **Voluntary admission**: Encouraged (vs involuntary in older act)\\n- **Abolish violence**: Reduce physical restraints, seclusion\\n\\n### Types of Admission\\n\\n**Voluntary Admission**:\\n- Patient voluntarily seeks treatment\\n- Most common (70% of psychiatric admissions)\\n- Can discharge after 72 hours notice\\n\\n**Involuntary Admission** (for mental health treatment):\\n- Medical practitioner certifies danger to self/others or neglect\\n- Notification to district magistrate required\\n- Maximum 30 days initial; can be extended\\n- Person can apply for review/discharge\\n\\n### Right to Confidentiality & Privacy\\n- **Confidential treatment records**: Protected by law\\n- **Disclosure only**: With consent or court order\\n- **Exception**: Danger to self/others; child abuse\\n\\n### Right to Treatment & Care\\n- **Free treatment**: Government facilities\\n- **Quality of care**: Minimum standards prescribed\\n- **Dignity**: Non-violent, non-restrictive methods\\n\\n## Mental Health Review Board\\n- **Composition**: Medical officer, district magistrate representative, social worker\\n- **Function**: Review involuntary admissions\\n- **Frequency**: At least 1 review per month\\n- **Authority**: Can order discharge if detention unjustified\\n\\n## Key Changes from Previous Act\\n- **De-stigmatization**: Changed terminology (mental patient → person with mental illness)\\n- **Community care emphasis**: Community-based services\\n- **Right to refuse treatment**: Unless danger (competency important)\\n- **Advance directives**: Person can specify future treatment wishes\\n- **Restriction on EMS**: Only if necessary; minimal use\\n\\n## Forensic Psychiatry: Definitions\\n\\n### Criminal Responsibility\\n- **Definition**: Legal/moral accountability for criminal act\\n- **Key criterion**: Mental state at time of offense (mens rea)\\n- **Standard**: Competency to know nature/wrongfulness of act\\n\\n### Insanity/Legal Automatism (IPC Section 84)\\n- **Definition**: Person acting under disease of mind; doesn't know nature/quality of act OR doesn't know it's wrong\\n- **Examples**: Psychosis, delirium, somnambulism\\n- **Outcome**: Not guilty by reason of insanity (acquittal); sent for treatment, not imprisonment\\n\\n### Fitness to Stand Trial (Competency)\\n- **Assessment**: Can person defend self; understand charges; cooperate with counsel?\\n- **Standard**: Requires basic cognitive ability, understanding of legal process\\n- **If unfit**: Treatment offered until fitness achieved or case dropped,\\n        mnemonics: [\\n          { text: \\\"MHA 2017: VIT\\\", explanation: \\\"Voluntary admission encouraged; Involuntary only if danger; Treatment based on consent/rights\\\" },\\n          { text: \\\"Section 84 IPC: Disease of mind → doesn't know nature/wrongfulness\\\", explanation: \\\"Criminal responsibility negated if insane at time of offense\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"MHA 2017: rights-based approach; voluntary admission encouraged\\\",\\n          \\\"Involuntary admission: medical certification + magistrate notification required\\\",\\n          \\\"Mental Health Review Board monitors involuntary admissions\\\",\\n          \\\"Section 84 IPC: insanity if doesn't know nature/wrongfulness of act\\\",\\n          \\\"Forensic assessment: criminal responsibility, fitness to stand trial, risk assessment\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Forensic Psychiatry\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Indian Psychiatry Manual\\\", chapter: \\\"Legal & Ethical Issues\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"forensic-assessment\\\",\\n        title: \\\"Forensic Psychiatry - Criminal Assessment\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Criminal responsibility, fitness to stand trial, evaluation.\\\",\\n        contentMd: ``# Forensic Psychiatry - Criminal Assessment\\n\\n## Assessment of Criminal Responsibility\\n\\n### Relevant Questions\\n- Was defendant suffering from mental illness at time of offense?\\n- Did mental illness affect capacity to know nature/quality of act?\\n- Did mental illness affect capacity to know wrongfulness of act?\\n- Was action involuntary (e.g., automatism, reflex)?\\n- Was person suffering from diminished responsibility?\\n\\n### Mental Disorders & Criminal Responsibility\\n\\n**Psychosis at time of offense**:\\n- Delusion directing act (e.g., believed victim was demon)\\n- Hallucinations commanding violence\\n- Assessment: Did psychosis prevent knowing wrongfulness?\\n\\n**Severe Depression/Suicide Risk**:\\n- Diminished impulse control\\n- Reduced ability to appreciate consequences\\n- May reduce but not eliminate responsibility\\n\\n**Personality Disorder**:\\n- Generally does NOT negate responsibility\\n- Affects judgment, impulse control\\n- Exception: Extreme disinhibition/loss of control\\n\\n**Substance Intoxication**:\\n- Voluntary intoxication generally does NOT excuse (in most jurisdictions)\\n- Exception: Drug-induced psychosis\\n\\n### Forensic Interview\\n- **Rapport**: Establish trust; explain role (evaluator, not treatment provider)\\n- **History**: Detailed account of offense, mental state at time\\n- **Symptoms**: Current and at time of offense; timeline\\n- **Assessment**: Psychiatric diagnosis; risk factors\\n- **Opinion**: Regarding criminal responsibility (answering specific legal questions)\\n\\n## Fitness to Stand Trial (Competency)\\n\\n### Criteria (Must Have):\\n1. **Understanding of charges**: Comprehend nature of charges, penalties\\n2. **Understanding legal process**: Trials, role of judge, jury, attorney\\n3. **Ability to communicate with counsel**: Discuss case, strategy\\n4. **Rational understanding**: Can rationally apply knowledge to case\\n\\n### Evaluation\\n- **Cognitive**: MMSE, brief cognitive screening\\n- **Understanding of legal system**: Lawyer interview\\n- **Ability to participate**: Can they discuss case coherently?\\n\\n### if Unfit\\n- **Treatment**: Hospitalization/outpatient; goal to restore fitness\\n- **Duration**: Usually 6-12 months\\n- **Reassessment**: Periodic competency re-evaluations\\n- **If not restored**: Case may be dismissed after reasonable time (varies by law)\\n\\n## Risk Assessment\\n\\n### Static Risk Factors (unchangeable)\\n- **Age at first offense**: Younger = higher risk\\n- **History of violence**: Past violent behavior predicts future risk\\n- **Substance abuse**: Strong predictor\\n- **Psychopathy traits**: Callousness, impulsivity\\n\\n### Dynamic Risk Factors (changeable)\\n- **Substance use**: Active use increases risk\\n- **Social support**: Presence decreases risk\\n- **Housing**: Stability important\\n- **Compliance**: With treatment, medication\\n\\n### Risk Assessment Tools\\n- **PCL-5 (Psychopathy Checklist-Revised)**: Assesses psychopathy\\n- **HCR-20**: Violence risk (historical, clinical, risk management)\\n- **Structured clinical judgment**: Best validated approach\\n\\n## Opinion Writing\\n\\n### Structure\\n1. **Introduction**: Purpose, method, source of information\\n2. **Relevant history**: Offense, mental illness, substance history\\n3. **Clinical findings**: Psychiatric assessment, mental state\\n4. **Legal question addressed**: Criminal responsibility, fitness, risk\\n5. **Opinion**: Based on clinical and legal standard\\n6. **Conclusion**: Clear answer to specific question(s),\\n        keyPoints: [\\n          \\\"Criminal responsibility depends on mental state AT TIME of offense\\\",\\n          \\\"Psychosis, severe depression may negate responsibility if knew not wrongfulness\\\",\\n          \\\"Fitness to stand trial: understanding charges, legal process, ability to assist counsel\\\",\\n          \\\"Risk assessment: static (unchangeable) + dynamic (changeable) factors\\\",\\n          \\\"Structured clinical judgment best for violence risk prediction\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Forensic Psychiatry\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Clinical Psychiatry Manual\\\", chapter: \\\"Forensic Assessment\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"forensic-special-issues\\\",\\n        title: \\\"Forensic Psychiatry - Special Issues\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Child abuse, sexual offending, disability in criminal law.\\\",\\n        contentMd: ``# Forensic Psychiatry - Special Issues\\n\\n## Child Abuse & Maltreatment\\n\\n### Types\\n- **Physical abuse**: Deliberate injury\\n- **Sexual abuse**: Sexual contact with child\\n- **Neglect**: Failure to provide basic needs\\n- **Emotional abuse**: Psychological harm\\n\\n### Psychiatrist's Role\\n- **Detection**: Identify signs; trauma symptoms\\n- **Documentation**: Detailed history, examination findings, photographs\\n- **Reporting**: Legal obligation to report to authorities (child protection laws)\\n- **Treatment**: Trauma-focused therapy; PTSD management\\n- **Expert testimony**: Child's capacity to testify; trauma impact\\n\\n### Indian Law\\n- **IPC Section 375-376**: Rape; sexual abuse of children\\n- **POCSO Act 2012**: Protection of Children from Sexual Offences\\n- **Mandatory reporting**: Teachers, healthcare providers must report\\n\\n## Sexual Offending & Paraphilias\\n\\n### Assessment\\n- **Paraphilic interests**: Deviant sexual interests (pedophilia, exhibitionism, voyeurism)\\n- **Risk factors**: Childhood trauma, poor impulse control, deviant sexual arousal\\n- **Personality**: Often narcissistic, antisocial traits\\n\\n### Management\\n- **Chemical castration**: Antiandrogens (medroxyprogesterone, cyproterone acetate)\\n  - **Reduces testosterone**: Decreases deviant arousal\\n  - **Efficacy**: 50-70% reduction in reoffense\\n  - **Ethical issues**: Autonomy, consent\\n- **Psychological treatment**: CBT, relapse prevention\\n- **Supervision**: Probation, monitoring\\n\\n## Insanity Verdict & Disposition\\n\\n### After Acquittal by Insanity\\n- **Hospitalization**: Observation to determine dangerousness\\n- **Duration**: May be indefinite until deemed non-dangerous\\n- **Release**: Conditional or absolute discharge by court/review board\\n- **Rights**: Person has right to appeal; challenge detention\\n\\n### In India (Section 84, IPC)\\n- **Verdict**: \\\"Not guilty\\\" if insane at time of offense\\n- **Disposition**: Court may direct detention in hospital or in care of guardian\\n- **Review**: Mental Health Review Board reviews periodically\\n- **Discharge**: When recovery established and no danger\\n\\n## Testamentary Capacity (Will-Making)\\n\\n### Standard\\n- **Understand nature of making will**: Know what a will is\\n- **Know extent of property**: Understanding assets\\n- **Know natural heirs**: Who would inherit if no will\\n- **Understand disposition being made**: Know what you're doing with property\\n- **No mental disorder affecting judgment**: Especially regarding property/heirs\\n\\n### Assessment\\n- **Cognitive**: MMSE, Montreal Cognitive Assessment\\n- **Awareness**: Of property, family relationships\\n- **Rationality**: Reasons for distribution; coherent\\n- **Time of assessment**: At time of will creation (not current state)\\n\\n### Common Issues\\n- **Dementia**: Often lack testamentary capacity\\n- **Undue influence**: Family members exerting pressure (legal, not psychiatric issue)\\n- **Delusional thinking**: About property, family (affects capacity)\\n\\n## Medical Neglect & End-of-Life Issues\\n\\n### Medical Decision-Making Capacity\\n- **Understand diagnosis**: Know what illness they have\\n- **Understand treatment options**: Know choices available\\n- **Appreciate consequences**: Can apply understanding to self\\n- **Communicate choice**: Can express decision clearly\\n\\n### DNR Orders & Advance Directives\\n- **Assessment**: Capacity to make decision about life-sustaining treatment\\n- **Mental illness**: Doesn't automatically negate capacity\\n- **Depression, suicidality**: May require assessment of true preferences vs. suicidal ideation\\n\\n### Psychiatric Role\\n- **Capacity evaluation**: Can person make informed decision?\\n- **Document wishes**: Advance directive, living will\\n- **Consultation**: For complex cases,\\n        keyPoints: [\\n          \\\"Child abuse: mandatory reporting obligation in India (POCSO Act)\\\",\\n          \\\"Sexual offending: risk assessment; chemical castration controversial (efficacy 50-70%)\\\",\\n          \\\"Section 84 insanity: acquittal; detention in hospital/guardianship as per court\\\",\\n          \\\"Testamentary capacity: understand nature/extent/heirs and disposition\\\",\\n          \\\"Medical decision-making capacity: understand, appreciate, communicate choice\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Forensic Psychiatry\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Clinical Psychiatry Manual\\\", chapter: \\\"Legal & Forensic Issues\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"forensic-exam\\\",\\n        title: \\\"Forensic Psychiatry - Exam Preparation\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Case analysis and expert assessment.\\\",\\n        contentMd: ``# Forensic Psychiatry - Exam Preparation\\n\\n## Case 1: Criminal Responsibility\\n**Scenario**: 32-year-old male charged with assault. History of schizophrenia; medication non-compliant. At time of offense: command hallucinations ordering him to \\\"strike the demon.\\\" Victim was neighbor he believed was possessed.\\n\\n**Forensic Assessment**:\\n- **Psychiatric diagnosis**: Schizophrenia, currently in psychotic relapse\\n- **Mental state at time of offense**: Hearing voices commanding violence; delusion that victim was demon\\n- **Criminal responsibility**: Likely negated (Section 84 IPC) because psychosis prevented knowing wrongfulness of act\\n- **Opinion**: Act likely involuntary response to command hallucinations; insane at time of offense\\n\\n## Case 2: Fitness to Stand Trial\\n**Scenario**: 28-year-old male charged with theft. Severe depression; current SI ideation. Cannot recall details of alleged offense; unable to discuss case with lawyer.\\n\\n**Assessment**:\\n- **Cognitive capacity**: Appears adequate (MMSE 28/30)\\n- **Understanding of charges**: Can articulate charges after explanation\\n- **Understanding of legal process**: Understands role of judge, jury\\n- **Ability to assist counsel**: Currently unable; depression/SI interfering with concentration, memory\\n- **Conclusion**: UNFIT to stand trial currently\\n- **Recommendation**: Treat depression (antidepressants, psychotherapy); reassess in 3-6 months\\n\\n## Case 3: Risk Assessment\\n**Scenario**: Convicted sex offender; assessment for parole eligibility.\\n\\n**Risk Assessment**:\\n- **Static factors**: History of sexual offense (1); first offense age 35 (lower risk); no childhood abuse reported\\n- **Dynamic factors**: Currently in denial about offense; no victim empathy; minimal treatment engagement; planned poor social support\\n- **Psychosexual assessment**: Moderate deviant sexual interests; some response to medroxyprogesterone\\n- **Overall risk**: MODERATE-HIGH for reoffense\\n- **Recommendation**: Conditional parole with strict supervision, continued chemical castration, mandatory counseling,\\n        keyPoints: [\\n          \\\"Criminal responsibility: mental state at time of offense; psychosis may negate\\\",\\n          \\\"Fitness to stand trial: assesses current capacity (different from responsibility)\\\",\\n          \\\"Risk assessment: static (past) + dynamic (current) factors\\\",\\n          \\\"Sexual offending: risk assessment; treatment (psychology + chemical castration)\\\",\\n          \\\"Expert opinion: clear, specific to legal question; based on clinical + legal standard\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Forensic Psychiatry\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Clinical Psychiatry Manual\\\", chapter: \\\"Forensic Assessment\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"forensic-qa\\\",\\n        title: \\\"Forensic Psychiatry & MHA - Q&A\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"Key MCQs on legal and forensic psychiatry.\\\",\\n        contentMd: ``# Forensic Psychiatry & MHA - Q&A\\n\\n## Q1: Under Section 84 IPC, what is the legal standard for insanity?\\n\\n**Answer**: Person must be suffering from disease of mind such that they didn't know the nature/quality of the act OR didn't know it was wrong. \\\"Disease of mind\\\" includes psychosis, severe delirium, automatism; NOT personality disorder or voluntary intoxication.\\n\\n## Q2: What is the difference between criminal responsibility and fitness to stand trial?\\n\\n**Answer**: Criminal responsibility: mental state at time of offense (past). Fitness to stand trial: current mental state; can person understand charges and assist counsel? Both must be assessed but answer different questions.\\n\\n## Q3: Under MHA 2017, when can an involuntary admission be made?\\n\\n**Answer**: Medical practitioner certifies person is suffering from mental illness and requires treatment; danger to self/others/property OR grave disability from self-neglect. Notification to district magistrate required. Maximum 30 days initially; can be extended.\\n\\n## Q4: What is testamentary capacity?\\n\\n**Answer**: Ability to understand (1) nature of making a will, (2) extent of property, (3) natural heirs, (4) disposition being made, and (5) no mental disorder affecting judgment about property/heirs.\\n\\n## Q5: In assessing pedophilia risk, what percentage reoffense reduction is achieved with chemical castration?\\n\\n**Answer**: 50-70% reduction in reoffense with antiandrogens (medroxyprogesterone, cyproterone acetate). Must be combined with psychological treatment for best results. Ethical concerns about consent and autonomy remain.,\\n        keyPoints: [\\n          \\\"Section 84 IPC: insanity if doesn't know nature/wrongfulness of act\\\",\\n          \\\"Criminal responsibility vs. fitness: different concepts, different timing\\\",\\n          \\\"MHA 2017: rights-based; voluntary admission preferred; involuntary with certification\\\",\\n          \\\"Testamentary capacity: understand nature, extent, heirs, disposition\\\",\\n          \\\"Chemical castration: 50-70% reoffense reduction; ethical concerns\\\",\\n          \\\"Mental Health Review Board: monitors involuntary admissions monthly\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Textbook of Psychiatry by Kaplan & Sadock\\\", chapter: \\\"Forensic Psychiatry\\\", edition: \\\"21st\\\" },\\n          { book: \\\"IADVL - Indian Psychiatry Manual\\\", chapter: \\\"Legal & Forensic Psychiatry\\\" }\\n        ]\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-];
-];
+        summary: "Definition, epidemiology, DSM-5/ICD-10 criteria, types of anxiety disorders.",
+        contentMd: `# Anxiety Disorders - Foundation
+
+## Definition & Epidemiology
+- **Anxiety**: Anticipatory fear response to perceived threat; physiological arousal, cognitive worry
+- **Anxiety disorders**: Excessive, persistent anxiety disproportionate to actual danger
+- **Prevalence**: 15-20% lifetime risk (most common psychiatric disorder); higher in women (2:1 ratio)
+- **Age of onset**: Typically late teens to mid-20s (earlier than depression, schizophrenia)
+- **Course**: Often chronic if untreated; relapsing-remitting
+
+## Neurobiology of Anxiety
+- **Amygdala**: Fear center; hyperactive in anxiety disorders
+- **Prefrontal cortex**: Cognitive control, fear extinction; hypoactive in anxiety
+- **Anterior cingulate**: Error monitoring, conflict detection
+- **Locus coeruleus**: Norepinephrine release; arousal
+
+## Major Anxiety Disorder Types
+
+### Generalized Anxiety Disorder (GAD)
+- **Criteria**: Excessive worry ≥6 months about multiple domains (work, family, health, finances)
+- **Prevalence**: 3% population; female 2:1
+- **Associated symptoms**: ≥3 of: restlessness, fatigue, concentration impairment, irritability, muscle tension, sleep disturbance
+- **Course**: Chronic if untreated
+
+### Panic Disorder
+- **Diagnostic feature**: Recurrent unexpected panic attacks + anticipatory anxiety about future attacks
+- **Panic attack**: Sudden intense fear ≥4 physical symptoms (palpitations, sweating, tremor, chest pain, dizziness, dyspnea)
+- **Duration**: Attack peaks in 5-10 minutes
+- **Agoraphobia**: Often develops secondarily (fear of being trapped, avoiding situations)
+
+### Social Anxiety Disorder
+- **Core feature**: Marked fear of social situations where embarrassment possible
+- **Prevalence**: 7% population; often starts in adolescence
+- **Avoidance**: Avoids situations, leading to occupational/social impairment
+- **Types**: Performance (public speaking), interactional (casual conversation)
+
+### Specific Phobias
+- **Definition**: Irrational fear of specific object/situation
+- **Common types**: Heights, animals, blood, flying, enclosed spaces
+- **Prevalence**: 10% population (most common anxiety disorder by prevalence)
+- **Avoidance behavior**: Central feature
+
+### Agoraphobia
+- **Definition**: Fear of open/crowded spaces, fear of escape difficult if panic occurs
+- **Often secondary**: Develops after panic disorder onset
+- **Severe form**: Complete homebound; cannot leave house unaccompanied
+
+## ICD-10 Anxiety Disorder Codes
+- **F40**: Phobic anxiety disorders (agoraphobia F40.0, social F40.1, specific F40.2)
+- **F41**: Other anxiety disorders (panic F41.0, GAD F41.1)
+- **F42**: OCD (F42.0 obsessions, F42.1 compulsions, F42.2 mixed)`,
+        mnemonics: [
+          { text: "Anxiety disorders most common psychiatric illness (15-20% lifetime); 2:1 female predominance", explanation: "Epidemiology" },
+          { text: "Panic attack: ≥4 symptoms (Palpitations, Perspiration, Pounding, Pain, Pacing...PPPP+)", explanation: "Panic criteria" },
+          { text: "GAD = Worry ≥6 months + ≥3 symptoms (Restlessness, Fatigue, Concentration, Irritability, Muscle tension, Sleep)", explanation: "GAD criteria" },
+          { text: "Phobias most common (10%), Agoraphobia often secondary to panic, Social anxiety early onset adolescence", explanation: "Disorder patterns" }
+        ],
+        keyPoints: [
+          "Anxiety disorders cluster of excessive fear/worry causing distress and impairment",
+          "Female predominance 2:1 across all anxiety disorders",
+          "Panic attacks sudden, peak 5-10 minutes, can feel like heart attack",
+          "GAD chronic worry across multiple life domains ≥6 months",
+          "Specific phobias most common anxiety disorder by prevalence (10%); avoidance reinforces fear"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Anxiety Disorders", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Anxiety Disorders", edition: "12th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "anxiety-disorders-layer-2-mechanism",
+        title: "Anxiety Disorders - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Neurotransmitter dysfunction, fear conditioning, genetic factors, fear circuit dysfunction.",
+        contentMd: `# Anxiety Disorders - Mechanism
+
+## Neurotransmitter Abnormalities
+### GABA Hypofunction
+- **GABA**: Primary inhibitory neurotransmitter
+- **Dysfunction**: Insufficient GABAergic inhibition → heightened arousal
+- **Treatment**: Benzodiazepines (GABA-A enhancers) - rapid but tolerance develops
+
+### Serotonin Dysregulation
+- **5-HT dysfunction**: Reduced serotonergic activity in cingulate, prefrontal cortex
+- **Pathways affected**: Dorsal raphe nucleus connects to limbic structures, modulates fear
+- **Treatment**: SSRIs increase 5-HT availability; first-line treatment
+
+### Norepinephrine Hyperactivity
+- **Locus coeruleus**: NE production; hyperactive in anxiety
+- **Effects**: Increased arousal, vigilance, physical symptoms (tachycardia, sweating)
+- **Treatment**: SNRIs, alpha-2 agonists
+
+### Glutamate Excess
+- **Glutamate**: Excitatory neurotransmitter
+- **Dysfunction**: Excessive glutamatergic activity (opposite of schizophrenia hypofunction)
+- **Mechanism**: NMDA receptor dysregulation
+- **Target**: Compounds modulating NMDA signaling (experimental)
+
+## Fear Conditioning & Extinction
+### Classical Fear Conditioning
+- **Process**: Neural pairing of neutral stimulus (CS) with fear-inducing stimulus (US) → learned fear
+- **Circuitry**: Lateral amygdala → central amygdala → behavioral/autonomic fear responses
+- **Key role**: Sensory cortex → thalamus → amygdala (direct pathway, fast; also cortical pathway, slower)
+
+### Fear Extinction
+- **Process**: Repeated exposure to CS without US → inhibition of fear response
+- **Mechanism**: Prefrontal cortex (IL-PFC, infralimbic) → inhibits central amygdala
+- **Dysfunction in anxiety**: Impaired extinction learning (overactive amygdala, weak prefrontal control)
+
+## Brain Circuitry
+### Fear Circuit (Amygdala-Based)
+- **Amygdala hyperactivity**: Exaggerated threat detection
+- **Prefrontal cortex hypoactivity**: Weak top-down control of fear
+- **Anterior cingulate**: Error monitoring; hyperactive (excessive threat vigilance)
+- **Insula**: Interoceptive awareness; hyperactive (bodily sensation overinterpretation)
+
+### Salience Network Dysfunction
+- **Ventral striatum, insula, anterior cingulate**: Hyperactive to threat cues
+- **Consequence**: Attribution of threat significance to minor cues (hypervigilance)
+
+## Genetic Factors
+- **Heritability**: 30-50% (less heritable than schizophrenia but significant)
+- **Shared genetic risk**: Anxiety and depression overlap genetically (comorbidity)
+- **Gene-environment interaction**: Genetic vulnerability + environmental stress → anxiety disorder
+
+## Behavioral Factors
+### Avoidance Behavior
+- **Negative reinforcement**: Avoidance reduces anxiety → behavior reinforced
+- **Maintenance**: Avoidance prevents extinction learning (never learns threat is safe)
+- **Consequence**: Progressive life restriction`,
+        mnemonics: [
+          { text: "GABA ↓ = anxiety (benzodiazepine target); 5-HT ↓ = anxiety (SSRI target); NE ↑ = anxiety (SNRI target)", explanation: "Neurotransmitter dysregulation" },
+          { text: "Fear conditioning = pairing CS with US; Fear extinction = repeated CS without US (impaired in anxiety)", explanation: "Learning mechanisms" },
+          { text: "Amygdala hyperactivity + Prefrontal cortex hypoactivity = imbalance causing anxiety", explanation: "Circuit dysfunction" },
+          { text: "Avoidance negatively reinforced (reduces anxiety) but prevents extinction learning", explanation: "Behavioral maintenance" }
+        ],
+        keyPoints: [
+          "GABA, 5-HT, NE dysregulation explain medication targets (benzodiazepines, SSRIs, SNRIs)",
+          "Fear circuit dysfunction: hyperactive amygdala + hypoactive prefrontal cortex",
+          "Fear extinction impaired in anxiety disorders; impaired ability to learn threat is safe",
+          "Avoidance behavior negatively reinforced but maintains anxiety by preventing extinction",
+          "Genetic vulnerability (30-50% heritability) + environmental stress trigger anxiety onset"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Neurobiology of Anxiety", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Neurobiological Basis of Anxiety Disorders", edition: "12th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "anxiety-disorders-layer-3-clinical",
+        title: "Anxiety Disorders - Clinical",
+        estimatedMinutes: 35,
+        summary: "Clinical presentation, assessment tools, differential diagnosis, management approaches.",
+        contentMd: `# Anxiety Disorders - Clinical
+
+## Clinical Assessment
+
+### Symptom Evaluation
+- **Physical symptoms**: Palpitations, sweating, tremor, chest pain, dyspnea, dizziness, GI distress
+- **Cognitive symptoms**: Worry, catastrophic thinking, difficulty concentrating, sense of doom
+- **Behavioral**: Avoidance, restlessness, difficulty relaxing
+- **Duration/frequency**: Episodic (panic) vs continuous (GAD)
+
+### Assessment Tools
+- **GAD-7**: 7-item self-report for generalized anxiety (each item 0-3, total 0-21; ≥10 suggests disorder)
+- **Panic Disorder Severity Scale (PDSS)**: Assesses panic attack frequency, severity, anticipatory anxiety
+- **Social Phobia Scale**: Assesses fear and avoidance in social situations
+- **Hamilton Anxiety Rating Scale (HAM-A)**: 14-item clinician-rated (gold standard for severity)
+
+## Diagnostic Patterns by Anxiety Disorder
+
+### Generalized Anxiety Disorder
+- **MSE findings**: Anxious appearance, restlessness, difficulty concentrating
+- **History**: Worry about multiple domains (work, family, health, finances, relationships)
+- **Physical symptoms**: Muscle tension, headaches, GI symptoms
+- **Course**: Chronic, waxing/waning
+- **Medical differential**: Thyroid disease (hyperthyroidism), cardiac arrhythmia, caffeine excess
+
+### Panic Disorder
+- **Panic attack**: Sudden fear ≥4 symptoms (palpitations, sweating, tremor, chest pain, dyspnea, dizziness, derealization, fear of dying)
+- **Timing**: Attacks last 5-20 minutes, peak 10 minutes
+- **Triggers**: Often spontaneous (not situation-specific like phobias)
+- **Agoraphobia development**: Fear of having attack in inescapable situation
+- **Disability**: Significant restriction of activities
+
+### Social Anxiety Disorder
+- **Fear focus**: Performance (public speaking, eating in front of others) or interactional (conversation, being observed)
+- **MSE**: Avoidant, blushing, stammering, sweating
+- **Onset**: Often adolescence
+- **Avoidance**: Progressive (avoids situations, worsens over time)
+
+### Specific Phobias
+- **Irrational fear**: Object/situation not actually dangerous
+- **Avoidance**: Central feature; can be severe (arachnophobia limiting outdoor activities)
+- **Insight**: Patients know fear excessive (unlike psychotic delusions)
+- **Subtypes**: Animal (spiders, snakes), natural environment (heights, water), blood-injection-injury, situational (flying, elevators), other
+
+## Differential Diagnosis
+
+| Diagnosis | Distinguishing Feature | Duration |
+|-----------|------------------------|----------|
+| Panic Disorder | Recurrent panic attacks, anticipatory anxiety | Attacks 5-20 min; disorder chronic |
+| GAD | Excessive worry across domains | Continuous ≥6 months |
+| Social Anxiety | Fear specific to social situations | Persistent, situation-dependent |
+| Specific Phobia | Irrational fear specific object/situation | Persistent |
+| Agoraphobia | Fear of situations difficult to escape from | Chronic, often secondary to panic |
+| PTSD | Trauma-related, avoidance of reminders | ≥1 month after trauma |
+| OCD | Intrusive obsessions + compulsions | Compulsions attempt to reduce obsessive anxiety |
+| Medical causes | Hypothyroidism, hyperthyroidism, cardiac arrhythmia | Temporal relationship to medical condition |
+
+## Management Strategies
+
+### First-Line Pharmacotherapy
+- **SSRIs**: Paroxetine, sertraline (standard first-line); onset 2-4 weeks; efficacy 60-70%
+- **SNRIs**: Venlafaxine, duloxetine (similar efficacy to SSRIs)
+- **Second-line**: Buspirone (partial 5-HT1A agonist; less effective, slower onset)
+- **Benzodiazepines**: Rapid onset but tolerance, dependence risk; use short-term only with SSRI
+
+### Psychotherapy
+- **CBT (Cognitive-Behavioral Therapy)**: Gold standard; exposure therapy + cognitive restructuring
+- **Exposure**: Repeated exposure to feared stimulus without avoidance; extinction learning
+- **Cognitive restructuring**: Challenge catastrophic thoughts
+- **Efficacy**: 60-70% remission with CBT, comparable to medication
+
+### Lifestyle Interventions
+- **Exercise**: Regular aerobic exercise anxiety-reducing
+- **Sleep hygiene**: Anxiety worsens with poor sleep
+- **Caffeine/alcohol avoidance**: Both worsen anxiety
+- **Relaxation techniques**: Progressive muscle relaxation, diaphragmatic breathing`,
+        mnemonics: [
+          { text: "GAD-7 score ≥10 suggests disorder; Panic attack ≥4 symptoms × 5-20 min", explanation: "Diagnostic thresholds" },
+          { text: "SSRI first-line (paroxetine, sertraline); Benzodiazepine short-term only", explanation: "Pharmacotherapy" },
+          { text: "Exposure + Cognitive restructuring = CBT efficacy 60-70%", explanation: "Psychotherapy core" },
+          { text: "Agoraphobia often secondary to panic disorder; fear develops from fear of panic in public", explanation: "Comorbidity pattern" }
+        ],
+        keyPoints: [
+          "Anxiety disorders highly treatable; combination SSRI + CBT most effective",
+          "Panic attacks sudden, peak 10 minutes, feel like heart attack; distinguish from cardiac causes",
+          "GAD chronic worry ≥6 months; generalized across life domains",
+          "Avoidance maintains anxiety; exposure therapy targets avoidance by preventing extinction",
+          "Benzodiazepines rapid but tolerance develops; use adjunctively with SSRI, not monotherapy"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Clinical Management of Anxiety Disorders", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Anxiety Disorders: Clinical Assessment and Treatment", edition: "12th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "anxiety-disorders-layer-4-exam-prep",
+        title: "Anxiety Disorders - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "High-yield diagnostic criteria, treatment algorithms, exam questions.",
+        contentMd: `# Anxiety Disorders - Exam Prep
+
+## Anxiety Disorder Diagnostic Criteria Summary
+
+| Disorder | Key Feature | Duration | Predominant Symptom |
+|----------|-------------|----------|---------------------|
+| GAD | Worry ≥6 months | ≥6 months | Excessive worry multiple domains |
+| Panic Disorder | Recurrent unexpected panic attacks | Attacks 5-20m; disorder chronic | Panic + anticipatory anxiety |
+| Social Anxiety | Fear of social situations | Chronic if untreated | Performance or interactional anxiety |
+| Specific Phobia | Irrational fear specific object | Persistent | Avoidance of trigger |
+| Agoraphobia | Fear of escape-difficult situations | Often secondary | Avoidance of public places |
+
+## GAD-7 Quick Reference
+- **Scoring**: 7 items × 4 points = 28 total
+- **≥10**: Suggests GAD diagnosis
+- **≥15**: Moderate-severe anxiety
+- **<5**: Minimal anxiety
+
+## High-Yield Clinical Facts
+- **Panic attack**: ≥4 symptoms, sudden onset, peak 5-10 minutes (NOT hours)
+- **Agoraphobia**: Often develops after panic (fear of having panic in public)
+- **Social anxiety**: Often starts adolescence; impacts dating, career
+- **Specific phobias**: Most common anxiety disorder (10% prevalence)
+- **Female predominance**: 2:1 across all anxiety disorders
+
+## SSRI Treatment Response
+- **Onset**: 2-4 weeks minimum for noticeable improvement
+- **Full response**: 8-12 weeks
+- **Efficacy**: 60-70% remission with adequate dose/duration
+- **First-line SSRIs**: Paroxetine (especially panic), sertraline
+
+## Benzodiazepine Use
+- **Onset**: Minutes to hours (rapid)
+- **Mechanism**: GABA-A enhancement
+- **Duration**: Short-acting (lorazepam) vs long-acting (clonazepam)
+- **Issues**: Tolerance (weeks-months), dependence, abuse potential
+- **Role**: Adjunctive with SSRI for acute distress, NOT monotherapy
+
+## Common Exam Questions
+
+**Q1: 35-year-old with ≥6-month worry about work, family, health, finances + muscle tension, insomnia. Diagnosis?**
+A: GAD - worry ≥6 months across multiple domains
+
+**Q2: 28-year-old with sudden palpitations, sweating, chest pain, dizziness, lasts 10 minutes, resolves. Recurrent. Diagnosis?**
+A: Panic Disorder - recurrent panic attacks (≥4 symptoms, 5-10 min duration)
+
+**Q3: 24-year-old avoids public speaking, eating in restaurants (fear of embarrassment). Diagnosis?**
+A: Social Anxiety Disorder - fear in social situations
+
+**Q4: Which SSRI most effective for panic disorder?**
+A: Paroxetine - specifically FDA-approved for panic
+
+**Q5: Patient on benzodiazepine 3 months. Now needs increasing dose for same effect. What's this?**
+A: Tolerance - develops in weeks to months; reason benzodiazepines not long-term monotherapy
+
+**Q6: Fear of spiders, avoids outdoor activities. Diagnosis?**
+A: Specific Phobia - irrational fear specific object
+
+**Q7: How differentiate panic disorder from cardiac condition?**
+A: Cardiac workup (EKG, troponin, echo); panic is functional (normal cardiac studies); timing (panic 5-10m vs sustained); reassurance helps panic but not cardiac
+
+**Q8: Which is second-line anxiety treatment if SSRI fails?**
+A: SNRI (venlafaxine, duloxetine) or buspirone; trial another SSRI also option`,
+        mnemonics: [
+          { text: "Panic = Sudden + ≥4 symptoms + Peak 10 min + Recurrent + Anticipatory anxiety", explanation: "Diagnostic criteria" },
+          { text: "GAD = Worry ≥6 months + Multiple domains + ≥3 associated symptoms", explanation: "Criteria" },
+          { text: "SSRI first-line (2-4 week onset, 60-70% response); Benzodiazepine adjunctive only", explanation: "Treatment" },
+          { text: "Female 2:1, Specific phobia most common (10%), GAD 3%, Panic 2-3%", explanation: "Epidemiology" }
+        ],
+        keyPoints: [
+          "Panic attacks sudden, peak 10 minutes, can mimic cardiac emergencies; cardiac workup normal",
+          "GAD chronic worry ≥6 months across multiple life domains (work, family, health, finances)",
+          "SSRI first-line; benzodiazepines only adjunctive (tolerance, dependence risk)",
+          "CBT (exposure + cognitive restructuring) as effective as medication (60-70% remission)",
+          "Female predominance 2:1; specific phobias most common anxiety disorder by prevalence"
+        ],
+        textbookRefs: [
+          { book: "ICD-10 Clinical Descriptions", chapter: "Anxiety Disorders", edition: "10th" },
+          { book: "DSM-5 Manual", chapter: "Anxiety Disorders", edition: "5th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "anxiety-disorders-layer-5-active-recall",
+        title: "Anxiety Disorders - Active Recall",
+        estimatedMinutes: 20,
+        summary: "10 case scenarios testing differential diagnosis and treatment decisions.",
+        contentMd: `# Anxiety Disorders - Active Recall
+
+## Q1: Panic Disorder vs Cardiac Arrhythmia
+**Case**: 32-year-old woman with sudden onset palpitations, chest pain, shortness of breath, lasting 20 minutes. Happens unpredictably 2-3 times/month. EKG normal, troponin negative, echo normal.
+**Q**: Panic disorder or cardiac cause?
+A: **Panic disorder** - key features: (1) Normal cardiac workup (rules out cardiac cause), (2) Sudden unpredictable onset (panic characteristic), (3) Associated symptoms anxiety/fear (cardiac would have more persistent findings), (4) Duration 20 min (cardiac events more prolonged). **Management**: SSRI (sertraline, paroxetine), CBT with exposure to bodily sensations (interoceptive exposure), reassurance about cardiac safety.
+
+## Q2: GAD vs Normal Worry
+**Case**: 40-year-old businessman worries about work deadlines, finances, health. Has muscle tension, insomnia, difficulty concentrating. Wife says "This is how you've been for 8 years - stress of job."
+**Q**: Is this GAD or normal worry?
+A: **GAD** - key features distinguishing from normal worry: (1) Duration ≥6 months (8 years), (2) Excessive (disproportionate to actual threat), (3) Difficult to control, (4) Associated symptoms (muscle tension, insomnia, concentration), (5) Functional impairment (difficulty working). **Normal worry**: Situation-specific (upcoming deadline), brief, stops when situation resolves. **Management**: SSRI (sertraline, venlafaxine), CBT (worry time, cognitive restructuring, relaxation).
+
+## Q3: Agoraphobia Secondary to Panic
+**Case**: 28-year-old man with 2-year history panic attacks (sweating, palpitations, fear, 10 min duration). Now increasingly avoiding public places, supermarkets, crowds. "I'm afraid I'll have attack in public and be trapped."
+**Q**: What's the relationship between panic and agoraphobia?
+A: **Agoraphobia secondary to panic disorder** - fear of HAVING panic attack in inescapable situation. **Vicious cycle**: Panic attack → fear of next attack → avoidance → avoidance reinforced (doesn't have attack) → wider avoidance (supermarkets, crowds, driving). **Consequence**: Progressively restricted life. **Management**: (1) SSRI essential (reduces panic frequency), (2) CBT - exposure to feared situations while staying (prevents avoidance), (3) May need benzodiazepine short-term for crisis (but not monotherapy). **Prognosis**: Good with adequate treatment (60-70% remission).
+
+## Q4: Social Anxiety vs Shyness
+**Case**: 19-year-old college freshman avoids classroom participation (anxiety about being judged), avoids group projects (fear others will notice nervous), declining grades from avoidance. "I've been shy since childhood."
+**Q**: Social anxiety disorder or normal shyness?
+A: **Social Anxiety Disorder** - key distinction from shyness: (1) Shyness = mild discomfort in social situations, manageable; Social anxiety = marked fear, intense distress, (2) Shyness = present but doesn't prevent functioning; Social anxiety = avoidance causing functional impairment (grades declining), (3) Shyness = over time improves; Social anxiety = often worsens if untreated (avoidance reinforces), (4) Early adolescent onset suggests social anxiety. **Management**: SSRI (paroxetine FDA-approved), CBT with in vivo exposure (practice public speaking, group interactions), social skills training.
+
+## Q5: Specific Phobia - When to Treat
+**Case**: 35-year-old woman fearful of spiders. Avoids basements, outdoor areas. Distressed when spiders encountered. Otherwise functioning well (career OK, relationships intact, no major avoidance affecting life).
+**Q**: Does she need treatment?
+A: **Mild phobia without significant functional impairment** - treatment optional. **Consider treatment if**: (1) Significant functional impairment (limiting activities, career, relationships), (2) Marked distress. **This patient**: Functional limitation (avoids basements, outdoors) + distress = suggest treatment. **First-line treatment**: Exposure therapy (graduated exposure to spiders: pictures → video → rubber spider → live spider). **Efficacy**: 60-80% with exposure. **Medication**: Not first-line for specific phobia (exposure alone sufficient for most).
+
+## Q6: Drug-Induced Anxiety
+**Case**: 42-year-old started on methylphenidate (ADHD treatment) 2 weeks ago. Now reports increased anxiety, palpitations, insomnia, jitteriness. "This is new - didn't have anxiety before medication."
+**Q**: What's happening?
+A: **Stimulant-induced anxiety** (methylphenidate side effect). **Distinguishing**: Temporal relationship (anxiety started with medication), no prior anxiety history, dose-dependent (typically 2-4 weeks post-initiation). **Management**: (1) Reduce methylphenidate dose (most effective), (2) Switch to longer-acting formulation (reduces fluctuations), (3) Add SSRI if necessary (slower onset), (4) Avoid benzodiazepines (addiction potential, worsens ADHD). **Learning**: Stimulants can cause anxiety in susceptible individuals; titrate carefully.
+
+## Q7: SSRI Initiation - Anxiety Worsening
+**Case**: 29-year-old with GAD started on sertraline 50mg. After 1 week, reports increased anxiety, jitteriness, insomnia. "The medication is making it worse!"
+**Q**: Continue or switch?
+A: **Expected SSRI initial worsening** - 10-20% experience anxiety increase in first 1-2 weeks due to serotonergic activation, increased alertness. **Management**: (1) Reassure this is temporary (improves week 3-4), (2) Add low-dose benzodiazepine briefly (lorazepam 0.5mg BID) for first 2-4 weeks, (3) Continue sertraline - DO NOT STOP, (4) Educate patient about timeline (full response 8-12 weeks). **Alternative**: Start lower dose (25mg) if intolerant. **Learning**: Inform patients at baseline about possible initial worsening; prevents discontinuation.
+
+## Q8: Benzodiazepine Dependence Risk
+**Case**: 38-year-old on lorazepam 1mg TID for 6 months for anxiety. Now "I can't function without it. Feels like I need more to work." Tried to reduce but gets anxious, shaky.
+**Q**: What's happening and management?
+A: **Benzodiazepine dependence/tolerance** - lorazepam lost efficacy (tolerance) and patient dependent. **Management**: (1) Switch to SSRI if not already on one (treat underlying anxiety), (2) Taper lorazepam slowly (10% reduction/week to avoid withdrawal), (3) Use longer-acting benzodiazepine (clonazepam) during taper to smooth withdrawal, (4) Support with CBT. **Timeline**: 4-8 week taper. **Why slow taper**: Sudden discontinuation causes withdrawal (seizures, delirium in severe cases). **Learning**: Benzodiazepines NOT long-term anxiety treatment; use 2-4 weeks only while starting SSRI.
+
+## Q9: Medication-Induced Anxiety - Stimulants
+**Case**: 45-year-old with 10-year caffeine consumption (6-8 cups coffee daily). Reports persistent anxiety, palpitations, insomnia. Started seeing psychiatrist, thinking psychiatric illness.
+**Q**: Psychiatric diagnosis or substance-induced?
+A: **Caffeine-induced anxiety** (not psychiatric disorder). **Distinguishing**: Temporal relationship (anxiety correlates with caffeine consumption), excessive caffeine intake, physical symptoms consistent (palpitations, insomnia, tremor = caffeine effects), improvement with caffeine reduction. **Management**: (1) Reduce caffeine gradually (avoid withdrawal headache) to <200mg/day, (2) Caffeine already has withdrawal syndrome (headache, fatigue), (3) Psychiatric medication NOT needed if purely caffeine-related. **Alternative cause**: Other stimulants (pseudoephedrine, amphetamines, thyroid hormone excess).
+
+## Q10: Comorbid GAD & Depression
+**Case**: 38-year-old with 1-year persistent worry (GAD) and for 3 months also depressed mood, anhedonia, suicidal ideation. On no medication.
+**Q**: Treatment approach?
+A: **GAD + Major Depression comorbidity** (50% of anxious patients also depressed). **Management**: SSRI first-line for BOTH conditions (equally effective for anxiety + depression). **Paroxetine optimal** (FDA-approved for both GAD and panic). **Benzodiazepine adjunctive** if severe anxiety. **Suicide risk**: HIGH with comorbid depression + anxiety; evaluate closely (suicidal ideation present). **Hospitalization**: If suicide risk imminent. **Timeline**: 8-12 weeks for full response. **Prognosis**: Both conditions improve with adequate SSRI + CBT; combination superior to either alone.`,
+        mnemonics: [
+          { text: "Panic = Sudden, ≥4 symptoms, Peak 10min, Recurrent, Anticipatory; Worry = Gradual, Situation-specific, Persistent", explanation: "Panic vs worry" },
+          { text: "GAD = Worry ≥6 months + ≥3 symptoms; Social anxiety = Fear social situations; Phobia = Fear specific object", explanation: "Diagnoses" },
+          { text: "SSRI first-line (2-4w onset, 60-70% response); Benzodiazepine adjunctive <4 weeks; CBT 60-70% efficacy", explanation: "Treatment" },
+          { text: "Medication-induced anxiety = Stimulants (caffeine, ADHD meds, pseudoephedrine), Hyperthyroidism, Steroids", explanation: "Differential diagnosis" }
+        ],
+        keyPoints: [
+          "Panic attacks sudden, 5-10 min, mimic cardiac emergencies; cardiac workup reassures",
+          "GAD chronic worry ≥6 months across multiple domains; worsens with stress",
+          "Agoraphobia often secondary to panic; vicious cycle of avoidance reinforcement",
+          "SSRI first-line (paroxetine for panic/GAD); benzodiazepine adjunctive only (2-4 weeks)",
+          "CBT efficacy 60-70%; exposure therapy (panic, phobias), cognitive restructuring (worry), social skills (social anxiety)"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Anxiety Disorders: Case-Based Learning", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Anxiety Disorders: Clinical Management", edition: "12th" }
+        ]
+      }
+    ]
+  }
 ];

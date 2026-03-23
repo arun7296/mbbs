@@ -1,13 +1,407 @@
-// Psychiatry Part 5: Mood Disorders - Bipolar Disorder
+import type { TopicLessons } from "./content-loader";
 
-export const psychiatryPart5Lessons = [
+export const psychiatryPart5Lessons: TopicLessons[] = [
   {
     topicCode: "PS-MOD-01-TOP-03",
     layers: [
-      { layer: 1, slug: "bipolar-disorder-foundation", title: "Bipolar Disorder - Foundation", estimatedMinutes: 25,
-        summary: "Types, diagnostic criteria, manic and depressive episodes, DSM-5 classification.",
-        contentMd: "# Bipolar Disorder - Foundation\n\n## Classification\n\n### Bipolar I Disorder\n- **Manic episode required**: At least one manic episode (defining feature)\n- **Duration**: Manic episode ≥7 days (or hospitalization if severe)\n- **Depressive episodes**: May occur but NOT required for diagnosis\n- **Severity**: Most severe form (can have psychotic features)\n- **Prevalence**: 0.6% (roughly equal prevalence in men/women)\n\n### Bipolar II Disorder\n- **Hypomanic + Depressive episodes**: Both required (never manic)\n- **Hypomanic episode**: 4 days duration (shorter than manic)\n- **Depressive episodes**: Often more prominent than manic\n- **Severity**: Functional impairment usually from depression, not mania\n- **Prevalence**: ~1.1% (slightly more common in women)\n\n### Cyclothymic Disorder\n- **Chronic mood dysregulation**: Multiple hypomanic AND depressed episodes\n- **Duration**: ≥2 years (adults), ≥1 year (children/adolescents)\n- **Episodes**: Do NOT meet criteria for mania/hypomania/depression\n- **Subtreshold**: Between bipolar II and normal mood variation\n- **Symptoms**: Chronic unstable mood, functional impairment\n\n## Manic Episode (DSM-5 Criteria)\n\n### Duration & Severity\n- **Duration**: ≥7 consecutive days (most of the day, nearly every day)\n- **Severity**: Causes marked functional impairment OR hospitalization\n- **Distinct period**: Clearly different from usual non-depressed mood\n- **Requires 3+ symptoms** (or 4 if only irritability mood):\n\n### Symptom Cluster (DIGFAST mnemonic)\n1. **D**istractibility (decreased attention span)\n2. **I**mpulsivity (risky behavior, shopping sprees, sexual indiscretions)\n3. **G**randiosity (inflated self-esteem, may be delusional)\n4. **F**light of ideas (racing thoughts, rapid speech)\n5. **A**ctivity increase (goal-directed OR aimless agitation)\n6. **S**peech pressured (rapid, loud, hard to interrupt)\n7. **T**alkativeness (markedly increased, excessive talking)\n\n### Associated Features\n- **Decreased need for sleep** (feels rested after 3 hrs)\n- **Psychotic features**: Delusions (grandiose, persecutory), hallucinations\n- **Poor insight**: Doesn't recognize illness (often won't accept treatment)\n- **Suicidality**: Risk especially during mixed states (dysphoria + activation)\n\n## Hypomanic Episode (Bipolar II)\n\n### Diagnostic Criteria (Different from Manic)\n- **Duration**: ≥4 consecutive days (vs. 7 for manic)\n- **Severity**: Does NOT cause marked impairment (people function; may be more productive)\n- **NOT hospitalized**: By definition, not severe enough\n- **Same symptoms**: As manic episode but less severe/shorter\n\n### Key Distinction from Manic\n- **Hypomania**: Increased productivity, elevated mood, functional (may not seek help)\n- **Mania**: Severe impairment, often requires hospitalization, may have psychotic features\n- **Clinical consequence**: Many Bipolar II patients undiagnosed (hypomania feels good!)\n\n## Depressive Episode\n\n### Criteria (Same as Major Depressive Disorder)\n- **Duration**: ≥2 weeks (nearly every day)\n- **Severity**: Causes functional impairment\n- **5+ symptoms** (must include depressed mood OR anhedonia):\n  1. Depressed mood\n  2. Anhedonia (loss of interest/pleasure)\n  3. Insomnia OR hypersomnia\n  4. Appetite/weight changes\n  5. Fatigue/low energy\n  6. Psychomotor agitation OR retardation\n  7. Feelings of worthlessness\n  8. Guilt (concentration difficulty)\n  9. Suicidal ideation\n\n### Bipolar Depression Features\n- **Often severe**: More depressed than major depression alone\n- **Psychotic features**: Common (depressive delusions, hallucinations)\n- **Suicidality**: Higher risk than unipolar depression\n- **Treatment**: Different from unipolar (antidepressants risky without mood stabilizer)\n\n## Mixed Features Specifier\n\n### Definition\n- **Simultaneous symptoms**: Manic/hypomanic + depressive during same episode\n- **Examples**: Depressed mood with racing thoughts, suicidal ideation with increased activity\n- **Significance**: Higher suicide risk, more severe, treatment-resistant\n- **Prevalence**: 40% of bipolar episodes have mixed features\n\n## Rapid Cycling Specifier\n\n### Definition\n- **≥4 mood episodes per year**: Within 12-month period\n- **Can be ≥4 per month** (ultra-rapid cycling)\n- **Associated with worse prognosis**: More frequent hospitalizations\n- **Anticonvulsants sometimes help**: (Valproate, lamotrigine)\n- **Antidepressants may worsen**: (Can trigger rapid cycling)\n      },\n      { layer: 2, slug: \"bipolar-pathophysiology\", title: \"Bipolar Disorder - Pathophysiology & Neurobiology\", estimatedMinutes: 30,\n        summary: \"Neurochemistry, neurotrophic factors, genetic factors, circadian rhythm dysregulation.\",\n        contentMd: "# Bipolar Disorder - Pathophysiology\\n\\n## Monoamine Hypothesis\\n\\n### Dopamine Dysfunction\\n- **Manic phase**: Excess dopamine (hyperactivity, grandiosity, reward-seeking)\\n- **Depressive phase**: Low dopamine (anhedonia, low motivation)\\n- **Mechanism**: Dysregulation of mesolimbic/mesocortical pathways\\n- **Antipsychotics**: Block dopamine (help mania, but can worsen depression)\\n\\n### Norepinephrine Dysregulation\\n- **Manic phase**: Increased activity (arousal, agitation)\\n- **Depressive phase**: Decreased activity (fatigue, low energy)\\n- **α-2 receptors**: Dysfunction in locus coeruleus system\\n\\n### Serotonin Dysfunction\\n- **Both phases**: Abnormalities (different from unipolar depression)\\n- **Dysregulation**: Not just \\\"low\\\" serotonin\\n- **SSRIs effectiveness**: Limited in bipolar (may worsen cycling if not combined with mood stabilizer)\\n\\n## Neurobiological Models\\n\\n### Kindling Hypothesis\\n- **Early episodes**: External stressors required to trigger mood episodes\\n- **Later episodes**: Become spontaneous (sensitization of neural circuits)\\n- **Clinical implication**: Longer duration untreated = worse long-term prognosis\\n- **Treatment**: Earlier intervention may prevent kindling\\n\\n### Neuroinflammation\\n- **Inflammatory markers elevated**: IL-6, TNF-α in bipolar disorder\\n- **Microglial activation**: Chronic brain inflammation\\n- **Cytokines**: May drive mood dysregulation\\n- **Therapeutic target**: Anti-inflammatory agents under investigation\\n\\n### Circadian Rhythm Dysregulation\\n- **Sleep/wake cycle disrupted**: Leads to mood instability\\n- **Photoperiod sensitivity**: Seasonal patterns in some\\n- **Social rhythm disruption**: Jet lag, shift work, pregnancy/postpartum worsens\\n- **Treatment**: Sleep regulation critical (sleep deprivation can trigger mania)\\n\\n## Neurotrophic Factors\\n\\n### Brain-Derived Neurotrophic Factor (BDNF)\\n- **Low levels**: In depression and mania (different from unipolar)\\n- **Antidepressants/mood stabilizers**: May increase BDNF\\n- **Hippocampal volume**: Reduced in bipolar (correlates with BDNF)\\n- **Neuroplasticity**: Mood stabilizers enhance neuroplasticity\\n\\n## Genetic Factors\\n\\n### Heritability\\n- **Family history**: Strong (first-degree relatives 5-10× risk)\\n- **Twin studies**: 60-80% heritability (environment also important)\\n- **Polygenic**: Multiple genes involved (no single \\\"bipolar gene\\\")\\n- **Environmental triggers**: Stress, substance abuse, sleep disruption\\n\\n### Candidate Genes\\n- **CACNA1C**: Calcium channel gene (mood regulation)\\n- **ANK3**: Ankyrin-3 (neuronal excitability)\\n- **Multiple others**: Identified in genome-wide association studies\\n\\n## Structural Brain Changes\\n\\n### Amygdala\\n- **Enlarged**: More reactive to emotional stimuli\\n- **Hyperactivity**: During mood episodes\\n- **Clinical**: Explains emotional reactivity/sensitivity\\n\\n### Prefrontal Cortex\\n- **Reduced volume/activity**: Executive function, impulse control\\n- **Gray matter loss**: Correlates with illness duration\\n- **Consequence**: Impaired decision-making during episodes\\n\\n### Hippocampus\\n- **Smaller volume**: Especially if early-onset bipolar\\n- **Memory dysfunction**: Often reported\\n- **Stress-related**: Glucocorticoid toxicity theory\\n      },\\n      { layer: 3, slug: \\\"bipolar-clinical-management\\\", title: \\\"Bipolar Disorder - Clinical Management\\\", estimatedMinutes: 35,\\n        summary: \\\"Acute management, mood stabilizers, psychosocial interventions, Indian context considerations.\\\",\\n        contentMd: `# Bipolar Disorder - Clinical Management\\n\\n## Acute Manic Episode Management\\n\\n### Hospitalization Indications\\n- **Safety risk**: Suicidality, dangerous impulsivity\\n- **Severe functional impairment**: Psychosis, bizarre behavior\\n- **Medication required**: IV/IM medications often needed\\n- **Medical monitoring**: Assess for medical causes (hyperthyroidism, steroid-induced)\\n\\n### Immediate Pharmacologic Management\\n1. **Antipsychotics** (first-line for acute mania):\\n   - Haloperidol (fast-acting, IM for severe agitation)\\n   - Risperidone (blocks dopamine/serotonin)\\n   - Olanzapine (good efficacy, metabolic concerns)\\n   - Quetiapine (lower dopamine blockade, sedating)\\n\\n2. **Benzodiazepines** (for agitation/insomnia):\\n   - Lorazepam 2-4 mg IM/IV q4-6h PRN\\n   - Alprazolam 0.5-2 mg TID\\n\\n3. **Mood stabilizers** (AFTER acute phase controlled):\\n   - Lithium carbonate 900-1200 mg/day (therapeutic 0.6-1.0 mEq/L)\\n   - Valproate 1000-3000 mg/day\\n   - Lamotrigine (slower onset, better for depression)\\n\\n### Timeline\\n- **First 24-48 hrs**: Antipsychotic + benzodiazepine (control acute symptoms)\\n- **Days 3-7**: Add mood stabilizer (takes weeks to full effect)\\n- **Week 2+**: Optimize mood stabilizer dose, taper benzodiazepines\\n\\n## Maintenance Treatment\\n\\n### Lithium Carbonate (Gold Standard)\\n- **Mechanism**: Unknown (multiple effects on neurotransmission)\\n- **Efficacy**: Best evidence for preventing relapse (30-50% reduction in recurrence)\\n- **Dosing**: 900-1200 mg/day in divided doses (therapeutic level 0.6-1.0 mEq/L)\\n- **Monitoring**:\\n  - Baseline renal function, thyroid function\\n  - Serum levels (5 days after starting, then every 6-12 months)\\n  - Renal function annually (chronic renal disease risk)\\n  - Thyroid function annually (hypothyroidism 20-30%)\\n- **Advantages**: Least weight gain, best evidence\\n- **Disadvantages**: Narrow therapeutic window, requires monitoring, tremor, polyuria\\n- **Overdose risk**: Lithium toxicity (>1.5 mEq/L = toxicity; >2.5 = seizures/death)\\n\\n### Valproate (Divalproex)\\n- **Efficacy**: Effective for acute mania and maintenance\\n- **Dosing**: 1000-3000 mg/day (therapeutic 50-100 mcg/mL)\\n- **Advantages**: Rapid onset, can use IM for acute mania\\n- **Disadvantages**: Weight gain, hepatotoxicity, teratogenic\\n- **Monitoring**: LFTs, CBC (baseline and ongoing)\\n- **Use**: Especially for rapid cycling, mixed episodes\\n\\n### Lamotrigine\\n- **Efficacy**: Best for depressive pole (prevents bipolar depression)\\n- **Dosing**: 50-200 mg/day (slow titration required)\\n- **Advantages**: Minimal weight gain, can use with SSRIs\\n- **Disadvantages**: Slow onset (weeks), Stevens-Johnson syndrome risk (rare, 0.1%)\\n- **Use**: Bipolar II (more depressive), bipolar depression\\n\\n### Atypical Antipsychotics (Maintenance)\\n- **Quetiapine**: Sedating, good for insomnia\\n- **Risperidone**: Good efficacy, metabolic risk\\n- **Aripiprazole**: Lower metabolic risk, activating\\n- **Often used**: Combined with mood stabilizer\\n\\n## Psychosocial Interventions\\n\\n### Psychoeducation\\n- **Critical**: Understanding bipolar disorder, triggers, early warning signs\\n- **Substance abuse**: Alcohol/drugs worsens course dramatically\\n- **Sleep hygiene**: Sleep disruption major trigger\\n- **Stress management**: Triggers mood episodes\\n- **Adherence**: Importance of continuing treatment even when well\\n\\n### Cognitive-Behavioral Therapy (CBT)\\n- **Targets**: Thoughts, behaviors, lifestyle patterns\\n- **Techniques**: Behavioral activation, thought challenging\\n- **Timing**: After acute phase (not during mania)\\n\\n### Family-Focused Therapy (FFT)\\n- **Includes family**: Education, communication patterns, problem-solving\\n- **Evidence**: Reduces relapse rates\\n- **Especially for**: Adolescents, family conflict, dependent living situation\\n\\n### Interpersonal & Social Rhythm Therapy (IPSRT)\\n- **Focus**: Regularizing sleep/wake cycles, social routines\\n- **Evidence**: Prevents depressive relapse\\n- **Practical**: Schedule regularity, consistent sleep times\\n\\n## Management of Depressive Episodes\\n\\n### Challenge\\n- **Antidepressants risky**: Can trigger mood switching, rapid cycling\\n- **Monotherapy avoidance**: Always with mood stabilizer if depression emerges\\n\\n### Strategies\\n1. **Optimize mood stabilizer**: First, maximize therapeutic benefit\\n2. **Add cautiously**: If antidepressant needed, use with mood stabilizer\\n   - SSRIs + lithium/valproate preferred (lower switch risk)\\n   - Tricyclics avoided (higher switch risk)\\n3. **Lamotrigine**: Preferred for bipolar depression (mood stabilizer + antidepressant properties)\\n4. **Psychotherapy**: CBT, IPSRT effective\\n5. **Lifestyle**: Exercise (physical activity mood-lifting), sleep, stress management\\n\\n## Long-Term Management\\n\\n### Adherence Issues\\n- **Hypomania feels good**: Patients may stop medications (\\\"miss\\\" hypomanic state)\\n- **Side effects**: Weight gain, sexual dysfunction, tremor → non-adherence\\n- **Psychoeducation**: Critical to explain risks of untreated illness\\n- **Monitoring**: Regular appointments, pill counts, levels\\n\\n### Monitoring Recommendations\\n- **Lithium**: Serum levels q 5 days initially, then q 3 months\\n- **Renal function**: Creatinine, BUN annually\\n- **Thyroid**: TSH annually\\n- **Metabolic**: Weight, fasting glucose, lipids (especially on antipsychotics)\\n- **Psychiatric**: Monthly initially, then q 3 months when stable\\n\\n### Crisis Planning\\n- **Safety plan**: Identified early warning signs, crisis contacts\\n- **Family involvement**: Communication about triggers, relapse signs\\n- **Emergency services**: Know when to hospitalize (safety, severe symptoms)\\n\\n## Indian Context Considerations\\n\\n### Cultural Factors\\n- **Stigma**: Severe (mental illness taboo in many communities)\\n- **Belief systems**: May attribute to spiritual causes\\n- **Family dynamics**: Extended family involvement (good and bad)\\n- **Marriage prospects**: Significantly impaired (stigma)\\n\\n### Treatment Access\\n- **Cost**: Mood stabilizers expensive; lithium monitoring requires labs\\n- **Medication availability**: Antipsychotics available; specialty agents less so\\n- **Psychotherapy**: Limited availability; most services in urban centers\\n- **Hospitalization**: Public mental hospitals crowded, conditions poor\\n\\n### Practical Approach\\n- **Psychoeducation critical**: Family understanding essential\\n- **Lithium accessible**: Relatively cheap, effective\\n- **Adherence strategies**: Simplify regimen, pill reminders, family support\\n- **Safety**: Violence risk higher in manic Indian patients (cultural factors)\\n}\\n}\\n];\\n];\\n\""
-}
-}
-];
+      {
+        layer: 1,
+        slug: "psychopharmacology-basics-layer-1-foundation",
+        title: "Psychopharmacology Basics - Foundation",
+        estimatedMinutes: 25,
+        summary: "Drug classes, mechanisms, neurotransmitters, basic pharmacokinetics, receptor types.",
+        contentMd: `# Psychopharmacology Basics - Foundation
+
+## Major Psychiatric Drug Classes
+
+### Antidepressants
+- **SSRIs** (Selective Serotonin Reuptake Inhibitors): Paroxetine, sertraline, fluoxetine
+- **SNRIs** (Serotonin-Norepinephrine Reuptake Inhibitors): Venlafaxine, duloxetine
+- **Tricyclic antidepressants (TCAs)**: Amitriptyline, nortriptyline (older, more side effects)
+- **Monoamine oxidase inhibitors (MAOIs)**: Phenelzine, tranylcypromine (food interactions)
+
+### Antipsychotics
+- **First-generation (Typical)**: Haloperidol, chlorpromazine (high EPS risk)
+- **Second-generation (Atypical)**: Risperidone, olanzapine, aripiprazole (lower EPS, metabolic risks)
+
+### Anxiolytics/Hypnotics
+- **Benzodiazepines**: Lorazepam, alprazolam, diazepam (GABA enhancers)
+- **Non-benzodiazepine hypnotics**: Zolpidem, zaleplon (Z-drugs)
+- **Buspirone**: 5-HT1A partial agonist (non-benzodiazepine)
+
+### Mood Stabilizers
+- **Lithium**: Gold standard for bipolar (requires monitoring)
+- **Anticonvulsants**: Valproate, carbamazepine, lamotrigine
+- **Atypical antipsychotics**: Effective for mood stabilization
+
+## Neurotransmitter Targets
+
+### Serotonin (5-HT)
+- **Depression**: Decreased 5-HT activity
+- **Anxiety**: 5-HT dysregulation
+- **Drug targets**: SSRIs/SNRIs increase 5-HT
+
+### Norepinephrine (NE)
+- **Depression**: Decreased NE activity
+- **Attention**: NE deficiency in ADHD
+- **Drug targets**: SNRIs, TCAs, stimulants increase NE
+
+### Dopamine (DA)
+- **Psychosis**: Excess DA (mesolimbic), deficiency (mesocortical)
+- **Motivation**: DA-dependent (avolition in depression, schizophrenia)
+- **Drug targets**: Antipsychotics block D2 receptors
+
+### GABA
+- **Anxiety/seizures**: GABA hypofunction
+- **Drug targets**: Benzodiazepines enhance GABA-A
+
+## Receptor Types & Functions
+- **D2 dopamine**: Antipsychotic target; motor, reward
+- **5-HT1A**: Anxiety regulation; buspirone target
+- **5-HT2A**: Mood regulation
+- **H1 histamine**: Sedation (antihistamines cause drowsiness)
+- **M1 muscarinic**: Memory, cognition (anticholinergics impair)
+
+## Basic Pharmacokinetics
+- **Absorption**: Varies by drug, food effects
+- **Distribution**: CNS penetration depends on lipophilicity, blood-brain barrier
+- **Metabolism**: Hepatic (CYP450 enzymes); interactions common
+- **Elimination**: Renal; renal impairment increases drug levels
+- **Half-life**: Time to 50% elimination; determines dosing frequency`,
+        mnemonics: [
+          { text: "SSRI = Serotonin; SNRI = Serotonin + Norepinephrine; TCA = Tricyclic (older)", explanation: "Antidepressant classes" },
+          { text: "DA excess mesolimbic = psychosis; DA deficiency mesocortical = negative symptoms", explanation: "Dopamine hypothesis" },
+          { text: "GABA ↓ = anxiety, seizures; Benzodiazepines enhance GABA-A", explanation: "Anxiolytic mechanism" },
+          { text: "Lithium requires monitoring (level 0.6-1.2 mEq/L); renal/thyroid toxicity risk", explanation: "Mood stabilizer" }
+        ],
+        keyPoints: [
+          "Neurotransmitter dysregulation drives psychiatric symptoms; drugs target specific transmitters",
+          "SSRIs/SNRIs first-line antidepressants (depression, anxiety); TCAs less used due to side effects",
+          "Antipsychotics: FGA cheap but high EPS; SGA better tolerability but metabolic risk",
+          "Benzodiazepines rapid anxiolytic but tolerance develops; use short-term only",
+          "Lithium gold standard bipolar but requires monitoring (levels, renal, thyroid function)"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Psychopharmacology: Basics", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Biological Therapies", edition: "12th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "psychopharmacology-basics-layer-2-mechanism",
+        title: "Psychopharmacology Basics - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Drug mechanisms at molecular level, receptor binding, synaptic effects, neuroplasticity.",
+        contentMd: `# Psychopharmacology Basics - Mechanism
+
+## Drug Mechanisms of Action
+
+### SSRI Mechanism
+- **Action**: Inhibit reuptake of serotonin at presynaptic terminal
+- **Effect**: Increased synaptic 5-HT concentration
+- **Timeline**: Immediate reuptake block, but behavioral effects delayed 2-4 weeks (adaptive changes)
+- **Selectivity**: Variable selectivity for SERT (serotonin transporter)
+
+### Antipsychotic Mechanism
+- **D2 blockade**: Main antipsychotic mechanism (blocks dopamine D2 receptors)
+- **Positive symptoms**: Mesolimbic D2 blockade reduces delusions/hallucinations (70-80% responsive)
+- **Negative symptoms**: Mesocortical D2 blockade may worsen (dopamine hypofunction)
+- **SGA advantage**: 5-HT2A blockade modulates mesocortical effects
+
+### Benzodiazepine Mechanism
+- **GABA-A enhancement**: Positive allosteric modulation increases Cl- influx
+- **Effect**: Neuronal hyperpolarization, reduced firing
+- **CNS effects**: Anxiolytic, sedative, anticonvulsant, muscle relaxant
+
+## Adaptive Changes (Neuroplasticity)
+### Serotonin System Adaptation
+- **Autoreceptor desensitization**: 5-HT1A receptors on raphe neurons become less sensitive
+- **Gene expression**: Transcription factors (CREB) activated; long-term changes
+- **Timeline**: 2-4 weeks for behavioral effects despite immediate reuptake inhibition
+- **Consequence**: Explains lag between drug initiation and symptom improvement
+
+### Dopamine System Changes
+- **D2 supersensitivity**: Chronic dopamine antagonism → increased D2 receptors
+- **Tardive dyskinesia**: Long-term consequence of dopamine blockade
+- **Withdrawal dysphoria**: Dopamine system adjustment after drug discontinuation
+
+## Receptor Binding Properties
+- **Affinity**: Strength of drug-receptor binding; higher = more potent
+- **Selectivity**: Specificity for target receptor; higher = fewer side effects
+- **Occupancy**: Percentage of receptors occupied (relates to efficacy, side effects)
+- **Off-target effects**: Binding to unintended receptors causes side effects`,
+        mnemonics: [
+          { text: "SSRI blocks 5-HT reuptake immediately, but behavior changes take 2-4 weeks (autoreceptor desensitization)", explanation: "Mechanism vs timeline" },
+          { text: "Antipsychotic blocks D2: mesolimbic ↓ psychosis, mesocortical worsens negative; SGA adds 5-HT2A blockade", explanation: "Dopamine hypothesis" },
+          { text: "Benzodiazepine enhances GABA-A → Cl- influx → neuronal hyperpolarization → anxiolytic", explanation: "GABA mechanism" },
+          { text: "Tardive dyskinesia = consequence of D2 supersensitivity from chronic blockade", explanation: "Long-term effect" }
+        ],
+        keyPoints: [
+          "SSRI mechanism immediate (reuptake inhibition) but behavioral effects delayed 2-4 weeks (adaptive changes)",
+          "Antipsychotic blocks D2; positive symptoms respond but negative symptoms may worsen",
+          "Benzodiazepines enhance GABA; tolerance develops, limiting long-term use",
+          "Off-target receptor binding causes side effects (antihistamine = sedation, antimuscarinic = memory impairment)",
+          "Chronic drug use causes neuroplastic changes; discontinuation causes withdrawal/rebound symptoms"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Drug Mechanisms", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Molecular and Cellular Biology of Drugs", edition: "12th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "psychopharmacology-basics-layer-3-clinical",
+        title: "Psychopharmacology Basics - Clinical",
+        estimatedMinutes: 35,
+        summary: "Clinical application, side effect management, drug interactions, special populations.",
+        contentMd: `# Psychopharmacology Basics - Clinical
+
+## SSRI Clinical Use & Efficacy
+
+### Indication-Specific Dosing
+- **Depression**: 20-40mg/day (fluoxetine 20mg, sertraline 50-100mg, paroxetine 20mg)
+- **Panic/GAD**: May need higher doses (paroxetine 40-60mg for panic)
+- **Onset**: 2-4 weeks noticeable, 8-12 weeks full response
+
+### Side Effects & Management
+- **Sexual dysfunction**: 30-50% incidence; management options: dose reduction, drug holiday, switch antidepressant
+- **SIADH**: Hyponatremia (especially elderly); monitor sodium, restrict fluids
+- **GI upset**: Take with food; transient, resolves in 1-2 weeks
+- **Activation/anxiety**: First 1-2 weeks; add benzodiazepine temporarily
+
+### Drug Interactions (CYP450)
+- **Paroxetine & fluoxetine**: Strong CYP2D6 inhibitors (multiple interactions)
+- **Sertraline**: Moderate inhibitor (fewer interactions, preferred)
+- **Important interaction**: SSRI + MAOI = serotonin syndrome (rare but serious)
+
+## Antipsychotic Selection
+
+### First-Generation (FGA)
+- **Examples**: Haloperidol, chlorpromazine
+- **Efficacy**: Good for positive symptoms
+- **Side effects**: HIGH EPS risk, tardive dyskinesia, neuroleptic malignant syndrome
+- **Cost**: Cheap (important in India)
+- **Use**: Limited to resource-settings or refractory cases
+
+### Second-Generation (SGA)
+- **Examples**: Risperidone, olanzapine, aripiprazole, quetiapine
+- **Efficacy**: Better for negative symptoms/cognition
+- **Side effects**: Lower EPS, but metabolic (weight, diabetes, dyslipidemia)
+- **Metabolic risk ranking**: Olanzapine ≥ clozapine > risperidone > quetiapine > aripiprazole
+- **Cost**: Higher than FGA
+
+## Managing Antipsychotic Side Effects
+
+### Extrapyramidal Side Effects (EPS)
+- **Acute dystonia**: Muscle spasm; treat with benztropine (anticholinergic)
+- **Akathisia**: Restlessness; treat with propranolol (beta-blocker) or reduce dose
+- **Parkinsonism**: Tremor, rigidity; treat with benztropine or amantadine
+- **Tardive dyskinesia**: Involuntary movements (late-onset, potentially irreversible); prevent with lowest effective dose
+
+### Metabolic Monitoring
+- **Baseline**: Weight, glucose (fasting), lipid panel, metabolic syndrome parameters
+- **Follow-up**: Weight check at weeks 4, 8, 12; labs at 3, 6 months
+- **Management**: Diet/exercise counseling, switch to lower-metabolic SGA, add metformin
+
+## Special Populations
+
+### Pregnancy
+- **SSRI (especially 2nd/3rd trimester)**: Generally safe; paroxetine slight risk (category C)
+- **Antipsychotics**: Essential if psychotic; metabolic monitoring critical
+- **Benzodiazepines**: Avoid if possible (3rd trimester risk cleft)
+- **Lithium**: Teratogenic (1st trimester cardiac risk); requires careful monitoring
+
+### Elderly
+- **Pharmacokinetics**: Reduced metabolism, increased drug levels; start low, go slow
+- **Sensitivity**: Enhanced antipsychotic effects (neuroleptic sensitivity syndrome risk)
+- **Drug interactions**: Polypharmacy common; check CYP450
+- **Falls**: Antipsychotics, benzodiazepines increase fall risk
+
+### Renal Impairment
+- **Lithium**: 50-75% reduction in dose (renal clearance impaired)
+- **Other drugs**: Adjust based on renal function (some metabolites accumulate)
+- **Monitoring**: Drug levels, renal function periodically
+
+## Drug Interactions
+
+### Major Interactions
+- **SSRI + MAOI**: Serotonin syndrome (rare but serious; avoid combination)
+- **SSRI + Warfarin**: Increased bleeding risk (inhibit platelet aggregation)
+- **Antipsychotic + Anticholinergic**: Additive anticholinergic effects (urinary retention, confusion)
+- **Benzodiazepine + Opioid**: Respiratory depression risk (combined CNS depression)`,
+        mnemonics: [
+          { text: "SSRI onset 2-4 weeks; full response 8-12 weeks. Sexual dysfunction 30-50%, SIADH/hyponatremia risk", explanation: "Clinical timeline & side effects" },
+          { text: "FGA cheap, high EPS; SGA better negative symptoms/cognition, metabolic risk (olanzapine worst, aripiprazole best)", explanation: "Antipsychotic comparison" },
+          { text: "Akathisia = restlessness (propranolol/reduce dose); Dystonia = spasm (benztropine); Parkinsonism = tremor/rigidity (benztropine)", explanation: "EPS management" },
+          { text: "Lithium requires monitoring (level 0.6-1.2, renal function, thyroid function); reduce dose in renal impairment", explanation: "Mood stabilizer" }
+        ],
+        keyPoints: [
+          "SSRI onset 2-4 weeks noticeable, 8-12 weeks full; sexual dysfunction common (30-50%)",
+          "Antipsychotic selection: FGA cheap but high EPS; SGA better tolerability but metabolic cost",
+          "Extrapyramidal side effects: acute dystonia (benztropine), akathisia (propranolol), tardive dyskinesia (prevention critical)",
+          "Metabolic monitoring essential for antipsychotics: weight, glucose, lipids at baseline, 3/6 months",
+          "Special populations: Pregnancy (SSRIs safer than antipsychotics, but antipsychotics essential if psychotic), Elderly (start low, drug interactions), Renal (lithium requires dose reduction)"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Clinical Psychopharmacology", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Psychopharmacology and Drug Interactions", edition: "12th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "psychopharmacology-basics-layer-4-exam-prep",
+        title: "Psychopharmacology Basics - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "High-yield drug facts, dosing, side effects, common exam questions.",
+        contentMd: `# Psychopharmacology Basics - Exam Prep
+
+## High-Yield Drug Information
+
+| Drug Class | Example | Dose Range | Onset | Common SE |
+|-----------|---------|-----------|-------|-----------|
+| SSRI | Sertraline | 50-200mg | 2-4w | Sexual dysfunction, SIADH |
+| SNRI | Venlafaxine | 75-375mg | 2-4w | Hypertension, sexual dysfunction |
+| Antipsychotic-FGA | Haloperidol | 5-20mg | Days | EPS, tardive dyskinesia |
+| Antipsychotic-SGA | Risperidone | 4-16mg | 1-2w | Metabolic, prolactin ↑ |
+| Mood stabilizer | Lithium | 0.6-1.2 mEq/L | Days-weeks | Tremor, polyuria, nephrotoxicity |
+| Anxiolytic | Lorazepam | 0.5-2mg TID | Minutes | Tolerance, dependence |
+
+## SSRI Selection by Indication
+- **Depression, anxiety**: Sertraline, paroxetine
+- **Panic disorder**: Paroxetine (FDA-approved specifically)
+- **OCD**: Fluoxetine, sertraline (higher doses needed)
+- **PTSD**: Sertraline, paroxetine
+- **Least interactions**: Sertraline (moderate CYP2D6 inhibitor)
+- **Most interactions**: Paroxetine, fluoxetine (strong CYP2D6)
+
+## Antipsychotic Side Effect Ranking
+- **EPS risk**: Haloperidol >> Risperidone > Olanzapine ≈ Quetiapine > Aripiprazole
+- **Metabolic risk**: Olanzapine ≥ Clozapine >> Risperidone > Quetiapine >> Aripiprazole
+- **Prolactin elevation**: Risperidone ≥ Haloperidol > Olanzapine > Quetiapine > Aripiprazole
+
+## Lithium Monitoring
+- **Therapeutic level**: 0.6-1.2 mEq/L (get level 5 days post-initiation)
+- **Monitoring**: Thyroid (TSH), renal (creatinine) every 6-12 months
+- **Toxicity signs**: Tremor, confusion, vomiting, diarrhea, ataxia (at >1.5 mEq/L)
+- **Drug interactions**: NSAIDs, thiazide diuretics (increase levels)
+- **Renal impairment**: Reduce dose 50-75%
+
+## Common Exam Questions
+
+**Q1: 35-year-old on sertraline 50mg × 2 weeks reports increased anxiety, insomnia. Patient wants to stop.**
+A: Continue - SSRI initial activation (1-2w) is expected; anxiety improves week 3-4; add benzodiazepine temporarily if severe
+
+**Q2: 28-year-old on haloperidol develops acute muscle spasm, jaw clenching. Management?**
+A: Acute dystonia - give benztropine (anticholinergic) IM/IV; rapid relief
+
+**Q3: 40-year-old on olanzapine 10mg × 6 months gained 12 kg, glucose 150 (elevated). Management?**
+A: Metabolic side effects from olanzapine; options: (1) Switch to aripiprazole (lower metabolic risk), (2) Add metformin, (3) Diet/exercise, (4) Reduce dose if possible
+
+**Q4: Which antidepressant most likely to cause hyponatremia?**
+A: All SSRIs can (SIADH), but paroxetine and fluoxetine have higher risk
+
+**Q5: Lithium level 1.8 mEq/L. Patient has tremor, confusion, ataxia. Management?**
+A: Lithium toxicity - STOP lithium, supportive care, IV fluids (enhance renal clearance), consider dialysis if severe
+
+**Q6: Patient on SSRI + MAOI develops agitation, muscle rigidity, fever. Diagnosis?**
+A: Serotonin syndrome - STOP both drugs, supportive care, benzodiazepines for agitation
+
+**Q7: Which benzodiazepine has LONGEST half-life?**
+A: Diazepam (long-acting, 30-100h) - best for alcohol withdrawal; lorazepam short-acting (8-15h)
+
+**Q8: Elderly patient on antipsychotic. Main safety concern?**
+A: Falls/hip fracture risk (antipsychotics impair balance, cognition)`,
+        mnemonics: [
+          { text: "SSRI 2-4 week onset, sexual dysfunction 30-50%, SIADH/hyponatremia", explanation: "Clinical profile" },
+          { text: "EPS: Acute dystonia (benztropine), Akathisia (propranolol), Tardive dyskinesia (prevention)", explanation: "Treatment" },
+          { text: "Haloperidol cheap but high EPS; Aripiprazole low EPS, low metabolic risk", explanation: "Choice factors" },
+          { text: "Lithium level 0.6-1.2, monitor TSH/creatinine, reduce in renal failure", explanation: "Monitoring" }
+        ],
+        keyPoints: [
+          "SSRI: Sertraline (fewest interactions), Paroxetine (best for panic), Fluoxetine (longer half-life)",
+          "Antipsychotic: FGA cheap but EPS; SGA better negative symptoms but metabolic risks (monitor weight, glucose)",
+          "EPS management: Acute dystonia (benztropine), Akathisia (propranolol), Tardive dyskinesia (prevention critical)",
+          "Lithium: Therapeutic level 0.6-1.2; monitor TSH/renal function; reduce dose in renal impairment",
+          "Benzodiazepines: Fast-acting but tolerance develops; use <4 weeks with SSRI, not monotherapy"
+        ],
+        textbookRefs: [
+          { book: "ICD-10 Clinical Descriptions", chapter: "Psychopharmacology Quick Reference", edition: "10th" },
+          { book: "DSM-5 Manual Supplement", chapter: "Psychotropic Medications", edition: "5th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "psychopharmacology-basics-layer-5-active-recall",
+        title: "Psychopharmacology Basics - Active Recall",
+        estimatedMinutes: 20,
+        summary: "12 clinical scenarios testing drug selection, dosing, side effect management.",
+        contentMd: `# Psychopharmacology Basics - Active Recall
+
+## Q1: SSRI Selection with Drug Interactions
+**Case**: 42-year-old taking warfarin (anticoagulation). Started on SSRI for depression. Which SSRI safest?
+A: **Sertraline** - moderate CYP2D6/3A4 inhibitor; less interaction than paroxetine/fluoxetine. **Caution**: SSRI inhibits platelet aggregation → increased bleeding risk with warfarin. **Management**: Monitor INR closely, check at 1-2 weeks post-initiation. **Alternative**: Paroxetine if warfarin interaction tolerable (stronger interaction but manageable with monitoring).
+
+## Q2: Antipsychotic Choice - Cost vs Efficacy
+**Case**: 28-year-old first-episode schizophrenia in rural India. Cost-limiting. Options: haloperidol (FGA, cheap) vs risperidone (SGA, expensive).
+A: **Haloperidol cost-effective** - 50-70% respond to first antipsychotic. **Trade-off**: High EPS risk (dystonia, akathisia, parkinsonism). **Management**: (1) Start low (5mg/day), (2) Add benztropine prophylactically (reduces dystonia/parkinsonism risk), (3) Monitor closely for akathisia. **When to switch**: If severe EPS or poor response at 6 weeks. **Learning**: FGA acceptable first-line in resource-limited settings with EPS monitoring.
+
+## Q3: SSRI Initiation - Anxiety Worsening
+**Case**: 29-year-old with GAD started sertraline 50mg. Week 1: increased anxiety, insomnia, jitteriness. "Medicine making it worse!"
+A: **Expected SSRI activation** (10-20% initially worsen anxiety). **Management**: (1) Reassure temporary (improves week 3-4), (2) Add benzodiazepine (lorazepam 0.5mg BID) for first 2-4 weeks, (3) CONTINUE sertraline (do NOT stop), (4) Education critical. **Alternative**: Start lower (25mg). **Timeline**: Full response 8-12 weeks. **Learning**: Many patients discontinue prematurely; anticipatory guidance prevents premature dropout.
+
+## Q4: Drug Interaction - Serotonin Syndrome Risk
+**Case**: 35-year-old on sertraline (100mg) for depression. Psychiatrist unaware patient also taking tranylcypromine (MAOI) prescribed by another doctor.
+A: **SSRI + MAOI = serotonin syndrome** (rare but serious). **Signs**: Agitation, muscle rigidity, hyperthermia (>38.5C), tremor, hyperreflexia, myoclonus. **Management**: (1) STOP both drugs, (2) Supportive care (cooling, fluids), (3) Benzodiazepines for agitation, (4) Hospitalization if severe. **Prevention**: Detailed drug history, coordinate care with other providers. **Safe interval**: 2-week washout between SSRI and MAOI.
+
+## Q5: Antipsychotic Dosing - First Episode
+**Case**: 26-year-old first psychotic episode. Psychiatrist started risperidone 2mg at night. Patient sleeping 14 hours, still hallucinating.
+A: **Underdosed** - standard range 4-8mg/day (2mg too low). **Management**: Increase gradually (0.5-1mg increments) to therapeutic dose (risperidone 4-6mg), assess response at weeks 2, 4, 6. **If inadequate at 6 weeks**: Increase further to max 16mg or switch antipsychotic. **Excessive sedation despite adequate dose**: Switch antipsychotic (quetiapine very sedating, aripiprazole less so).
+
+## Q6: Lithium Toxicity - Emergency
+**Case**: 52-year-old on lithium (level 1.5) presents with tremor, confusion, vomiting, ataxia. Admitted for dehydration (diarrhea, fever).
+A: **Lithium toxicity** - dehydration increased lithium reabsorption/level. **Management**: (1) STOP lithium, (2) IV saline (hydrate, enhance renal clearance), (3) Supportive care, (4) Check lithium level (if >2.0 or neurological signs severe → consider hemodialysis), (5) Monitor renal function. **Prevention**: Patient education (maintain hydration, salt intake; don't restrict salt/fluid); NSAIDs, thiazides increase lithium level.
+
+## Q7: Extrapyramidal Side Effect - Acute Dystonia
+**Case**: 30-year-old on haloperidol 10mg for psychosis. Day 2: develops acute jaw clenching, eye deviation upward, muscle spasm.
+A: **Acute dystonia** - anticholinergic crisis from dopamine blockade. **Immediate treatment**: Benztropine 1-2mg IM/IV - relief within 5-15 minutes. **Prevention**: Prophylactic benztropine (1-2mg daily) for FGA use. **Why acute**: Individual predisposition (younger age, male, high-potency antipsychotic). **Long-term**: Switch to SGA or maintain benztropine.
+
+## Q8: Metabolic Monitoring - Olanzapine
+**Case**: 38-year-old started olanzapine 10mg for bipolar mania. At 3 months: weight +8kg, fasting glucose 128 (elevated), triglycerides 200.
+A: **Metabolic syndrome developing** - olanzapine highest metabolic risk among SGAs. **Management**: (1) Diet/exercise counseling, (2) Consider switch to aripiprazole (minimal metabolic risk), (3) Add metformin (helps weight/glucose), (4) Repeat labs in 3 months. **If continued**: Baseline weight/glucose/lipids, then monitor at weeks 4, 8, 12, then quarterly. **Timeline**: Metabolic changes develop early (weeks 1-4); weight gain progressive.
+
+## Q9: Benzodiazepine Dependence
+**Case**: 45-year-old on lorazepam 2mg TID × 8 months for anxiety. Now anxious despite medication, wants increase. Tried to stop, withdrew with anxiety, tremor.
+A: **Benzodiazepine dependence** - tolerance developed, now ineffective; withdrawal on cessation. **Management**: (1) Add SSRI (if not already on one; takes 2-4 weeks), (2) Slow taper of lorazepam (10%/week to avoid seizures), (3) Switch to longer-acting (clonazepam) if withdrawal severe, (4) Support with CBT. **Timeline**: 8-10 week taper. **Why slow taper**: Abrupt discontinuation causes withdrawal (seizures, delirium, death in severe). **Prevention**: Use benzodiazepines <4 weeks; always pair with SSRI.
+
+## Q10: SSRI Sexual Dysfunction - Management
+**Case**: 35-year-old on paroxetine 20mg for depression (4 months, well-controlled). Now reports erectile dysfunction, anorgasmia. Affecting relationship.
+A: **SSRI-induced sexual dysfunction** (30-50% incidence, highest with paroxetine). **Options**: (1) **Dose reduction** (paroxetine 10-15mg if effective), (2) **Drug holiday** (skip dose 24-48h before intercourse; works for some), (3) **Adjunctive** - sildenafil, bupropion (add-on), (4) **Switch antidepressant** (bupropion, mirtazapine, duloxetine less sexual dysfunction). **Discuss**: Avoid abrupt changes; weigh efficacy against sexual side effects. **Learning**: Sexual dysfunction major cause SSRI discontinuation; address proactively.
+
+## Q11: Antipsychotic Choice - Negative Symptoms
+**Case**: 32-year-old with schizophrenia, well-controlled positive symptoms on haloperidol, but severe negative symptoms (alogia, avolition). Functional decline.
+A: **Negative symptoms poorly responsive to FGA** (haloperidol) - D2 blockade in mesocortical cortex may worsen. **Management**: Switch to SGA (risperidone, olanzapine) - better for negative symptoms/cognition. **Why better**: SGA 5-HT2A + D2 blockade provides prefrontal facilitation. **Monitor**: Metabolic effects (weight, glucose, lipids). **Timeline**: 6-8 weeks for full response. **Learning**: Negative symptoms major disability; require SGA consideration.
+
+## Q12: Prophylactic Benztropine - Risk-Benefit
+**Case**: 25-year-old starting haloperidol for first psychotic episode. Psychiatrist recommends prophylactic benztropine (1mg daily).
+A: **Prophylactic benztropine reduces EPS** (particularly dystonia, parkinsonism) without worsening efficacy. **Benefit**: Lower EPS incidence (25-30% vs 50-60% without). **Risk**: Anticholinergic side effects (dry mouth, urinary retention, memory impairment, glaucoma). **Alternative**: Start haloperidol without benztropine, add only if EPS develops (avoid unnecessary anticholinergic). **Age factor**: Younger patients more EPS risk (may warrant prophylaxis). **Modern approach**: Use SGA (lower EPS risk) first-line rather than FGA + benztropine.`,
+        mnemonics: [
+          { text: "SSRI + MAOI = serotonin syndrome; SSRI + warfarin = bleeding; Sertraline safest interactions", explanation: "Drug interactions" },
+          { text: "Haloperidol cheap but high EPS; use benztropine; switch to SGA if inadequate", explanation: "FGA approach" },
+          { text: "Olanzapine weight/glucose risk highest; aripiprazole safest metabolic; monitor all at baseline/3-6 months", explanation: "Metabolic monitoring" },
+          { text: "Lithium level 0.6-1.2; toxicity >1.5 (tremor, confusion); dehydration increases level", explanation: "Safety margins" }
+        ],
+        keyPoints: [
+          "SSRI initial activation (anxiety/insomnia) expected 1-2 weeks; reassure, add benzodiazepine temporarily, continue SSRI",
+          "SSRI + MAOI = serotonin syndrome (rare); sertraline has fewer interactions than paroxetine/fluoxetine",
+          "Antipsychotic choice: FGA cheap+high EPS, SGA better negative symptoms+metabolic risk; SGA preferred if cost allows",
+          "Extrapyramidal side effects: acute dystonia (benztropine rapid relief), akathisia (propranolol), tardive dyskinesia (prevention)",
+          "Benzodiazepines dependence develops; use ≤4 weeks with SSRI; slow taper if discontinuing (10%/week, seizure risk)"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Psychopharmacology: Clinical Cases", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Psychopharmacology: Clinical Management", edition: "12th" }
+        ]
+      }
+    ]
+  }
 ];

@@ -1,16 +1,542 @@
-export const psychiatryLessons = [
+import type { TopicLessons } from "./content-loader";
+
+export const psychiatryLessons: TopicLessons[] = [
   // PS-MOD-02-TOP-01: Schizophrenia
   {
     topicCode: "PS-MOD-02-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "schizophrenia-foundation",
+        slug: "schizophrenia-layer-1-foundation",
         title: "Schizophrenia - Foundation",
         estimatedMinutes: 25,
         summary: "Definition, epidemiology, diagnostic criteria, positive and negative symptoms.",
-        contentMd: "# Schizophrenia - Foundation\n\n## Definition & Epidemiology\n- **Schizophrenia**: Chronic psychotic disorder characterized by delusions, hallucinations, disorganized behavior\n- **Prevalence**: 1% lifetime risk across populations, 5-10/10,000 in India\n- **Age of onset**: Typically 15-40 years (peak 20-25 years males, 25-30 females)\n- **Gender ratio**: Equal prevalence, but earlier onset in males\n- **Course**: Often chronic/relapsing, with progressive social/occupational decline if untreated\n\n## DSM-5 Diagnostic Criteria\nRequires ≥2 of the following for ≥1 month (1 must be delusions, hallucinations, or disorganized speech):\n1. **Delusions**: Fixed false beliefs not corrected by evidence\n2. **Hallucinations**: Perceptions without external stimulus (most commonly auditory)\n3. **Disorganized speech**: Tangential, circumstantial, or incoherent\n4. **Disorganized or catatonic behavior**: Unpredictable agitation, mutism, waxy flexibility\n5. **Negative symptoms**: Diminished emotional expression, avolition, alogia\n\n## Positive vs Negative Symptoms\n### Positive Symptoms (Additive, \"Adding on\" abnormal content)\n- **Delusions**: Persecutory (most common), grandiose, referential, somatic, nihilistic\n- **Hallucinations**: Auditory (70-80%, often voices giving commands), visual, olfactory, gustatory\n- **Formal thought disorder**: Loose associations, flight of ideas, word salad\n- **Behavioral disturbance**: Agitation, unpredictability\n\n### Negative Symptoms (Subtractive, \"Loss of\" normal functions)\n- **Affective flattening**: Reduced emotional expression\n- **Alogia**: Poverty of speech, lack of content\n- **Avolition**: Lack of motivation, inability to initiate goal-directed activity\n- **Anhedonia**: Loss of pleasure in activities\n\n## Subtypes (DSM-IV, older classification)\n- **Paranoid**: Predominant delusions/hallucinations, better prognosis\n- **Disorganized**: Disorganized speech/behavior, flat affect, worse prognosis\n- **Catatonic**: Prominent motor abnormalities (waxy flexibility, mutism)\n- **Undifferentiated**: Mixed features\n- **Residual**: Prominent negative symptoms, reduced positive symptoms\n\n## Early Warning Signs\n- Social withdrawal, decline in functioning\n- Odd beliefs or magical thinking\n- Unusual perceptual experiences\n- Speech oddities\n- Family history (positive in 50% of cases),\n        mnemonics: [\n          { text: \"First-rank symptoms = Delusions, Hallucinations, Thought disorders\", explanation: \"Schneiderian first-rank symptoms\" },\n          { text: \"Positive = ADD, Negative = LOSS\", explanation: \"Feature distinction\" },\n          { text: \"1% lifetime risk, 5-10/10K in India\", explanation: \"Epidemiology\" },\n          { text: \"Males earlier (20-25), Females later (25-30)\", explanation: \"Age of onset difference\" }\n        ],\n        keyPoints: [\n          \"Requires ≥2 symptoms (any 2 if one is delusions/hallucinations/disorg speech)\",\n          \"Duration ≥1 month active phase, ≥6 months total (prodrome+active+residual)\",\n          \"Auditory hallucinations most common (70-80%)\",\n          \"Persecutory delusions most common type\",\n          \"Negative symptoms predict long-term functional outcome\"\n        ],\n        textbookRefs: [\n          { book: \"Kaplan & Sadock\", chapter: \"Schizophrenia Spectrum Disorders\", edition: \"12th\" },\n          { book: \"DSM-5\", chapter: \"Schizophrenia Spectrum and Other Psychotic Disorders\", edition: \"5th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"schizophrenia-mechanism\",\n        title: \"Schizophrenia - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Neurobiological basis, dopamine hypothesis, structural/functional abnormalities.\",\n        contentMd: "# Schizophrenia - Mechanism\\n\\n## Dopamine Hypothesis (Classical)\\n### Hyperactivity in Mesolimbic Pathway\\n- **Pathway**: Ventral tegmental area (VTA) → nucleus accumbens → limbic regions\\n- **Role in symptoms**: Positive symptoms (delusions, hallucinations)\\n- **Mechanism**: Excess dopamine → aberrant salience assignment\\n  - Normal: Dopamine responds to rewarding stimuli\\n  - Schizophrenia: Dopamine released to non-rewarding stimuli → misattribution of meaning\\n  - Result: Neutral stimulus becomes significant → delusions (\\\"they're following me\\\")\\n\\n### Hypoactivity in Mesocortical Pathway\\n- **Pathway**: VTA → prefrontal cortex (PFC)\\n- **Role in symptoms**: Negative symptoms and cognitive dysfunction\\n- **Mechanism**: Reduced dopamine in PFC → impaired executive function, motivation\\n  - Affects dorsolateral PFC (working memory, planning)\\n  - Affects anterior cingulate (error detection)\\n  - Result: Avolition, alogia, poor initiation\\n\\n### Antipsychotic Mechanism\\n- **Dopamine antagonists**: Block D2 receptors in mesolimbic (reduce positive) and mesocortical (worsen negative)\\n- **Trade-off**: Better positive symptom control, but may worsen negative symptoms\\n\\n## Glutamate Hypothesis (NMDA Hypofunction)\\n- **Observation**: Phencyclidine (PCP) antagonizes NMDA receptors → psychosis mimicking schizophrenia\\n- **NMDA receptor dysfunction**: Hypofunctional glutamate transmission in prefrontal cortex\\n- **Consequence**: Loss of GABAergic inhibition → disinhibition of dopamine neurons\\n- **Result**: Excessive dopamine release → positive symptoms\\n- **Therapeutic target**: Glycine agonists (D-cycloserine), AMPA modulators under investigation\\n\\n## Structural Brain Abnormalities\\n- **Ventricular enlargement**: Lateral and third ventricles enlarged (50-70% of patients)\\n- **Gray matter reduction**: Prefrontal cortex, anterior cingulate, temporal lobe\\n- **White matter changes**: Reduced integrity of fascicles (arcuate fasciculus, superior longitudinal)\\n- **Thalamic changes**: Reduced volume, altered connectivity (sensory gating dysfunction)\\n- **Progressive changes**: First-episode typically stable, but chronic patients show progressive atrophy\\n\\n## Neurochemical Systems Beyond Dopamine\\n### Serotonin System\\n- **5HT dysfunction**: Implicated in affective symptoms, negative symptoms\\n- **Atypical antipsychotics**: 5HT2A antagonism helps mood regulation\\n- **Role**: Serotonin-dopamine interaction in reward processing\\n\\n### Glutamate-GABA Balance\\n- **Excitatory-inhibitory imbalance**: NMDA hypofunction → loss of GABAergic tone\\n- **Result**: Network instability, aberrant connectivity\\n- **GABA**: Interneuron dysfunction → reduced inhibition of pyramidal cells\\n\\n## Neurodevelopmental Model\\n- **Prenatal factors**: Maternal infection (influenza in 2nd trimester), obstetric complications\\n- **Critical period**: Adolescent brain development (pruning, myelination)\\n- **Vulnerable systems**: PFC development (continues to ~25 years)\\n- **Convergence**: Early insults + adolescent stress + genetic susceptibility = psychosis\\n- **Implication**: Prevention targets: stress reduction, early intervention in prodrome,\\n        mnemonics: [\\n          { text: \\\"Mesolimbic = positive, Mesocortical = negative\\\", explanation: \\\"Dopamine pathway distinction\\\" },\\n          { text: \\\"PCP mimics schizophrenia = NMDA hypothesis\\\", explanation: \\\"Glutamate system involvement\\\" },\\n          { text: \\\"D2 blockade helps positive, worsens negative\\\", explanation: \\\"Dopamine antagonist trade-off\\\" },\\n          { text: \\\"Prenatal + adolescent development = critical periods\\\", explanation: \\\"Neurodevelopmental timing\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Dopamine hypothesis explains positive but not all symptoms\\\",\\n          \\\"Glutamate hypofunction provides newer therapeutic targets\\\",\\n          \\\"Structural changes visible on MRI but not diagnostic\\\",\\n          \\\"Gray matter loss progressive in untreated patients\\\",\\n          \\\"Adolescent brain development critical vulnerability window\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kaplan & Sadock\\\", chapter: \\\"Neurobiological Aspects of Schizophrenia\\\", edition: \\\"12th\\\" },\\n          { book: \\\"Guyton\\\", chapter: \\\"Neurotransmitters and CNS Disorders\\\", edition: \\\"12th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"schizophrenia-clinical\\\",\\n        title: \\\"Schizophrenia - Clinical\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Clinical presentation, assessment, differential diagnosis, Indian context considerations.\\\",\\n        contentMd: ``# Schizophrenia - Clinical\\n\\n## Clinical Presentation Spectrum\\n### First Episode Psychosis (FEP)\\n- **Presentation**: Acute onset over days-weeks of delusions/hallucinations\\n- **Prodromal phase**: Often 1-3 years of subtle changes (social withdrawal, odd beliefs)\\n- **Stressor role**: Often identifiable psychosocial stress preceding onset\\n- **Comorbidity**: Substance use, depression, anxiety common at presentation\\n\\n### Chronic Schizophrenia\\n- **Settled course**: Positive symptoms may plateau after 5-10 years\\n- **Negative symptoms**: Progress and become more prominent with duration\\n- **Deficit state**: Profound apathy, poverty of speech, social withdrawal\\n- **Cognitive decline**: Working memory, executive function, processing speed affected\\n\\n## Symptom Phenomenology in Indian Patients\\n### Cultural Considerations\\n- **Religious/spiritual context**: Delusions may incorporate religious content (common in India)\\n  - Examples: Possessed by deity, evil eye, cosmic powers\\n  - Assessment: Distinguish delusion from religious belief (delusion = fixed despite disconfirmation)\\n- **Family/collectivist orientation**: Social withdrawal more stigmatizing\\n- **Symptom expression**: May emphasize somatic complaints, \\\"weakness\\\" rather than psychological\\n- **Stigma**: High family shame, leading to delayed presentation\\n\\n### Common Presentation in India\\n- **Voice hearing**: Interpreted as ancestors, gods, or evil spirits\\n- **Ideas of reference**: Belief that TV, news specifically directed at patient\\n- **Persecutory content**: Family members conspiring, neighbors using magic\\n- **Occupational impact**: Job loss common, affecting family income → stress\\n\\n## Assessment Tools\\n### Mental Status Examination\\n- **Appearance/behavior**: Grooming, psychomotor activity, eye contact\\n- **Speech**: Rate (poverty vs pressured), organization (tangential, circumstantial)\\n- **Mood/affect**: Appropriateness, range (flat, blunted, congruent)\\n- **Thought content**: Delusions (form and content), suicidal/homicidal ideation\\n- **Perception**: Hallucinations (all senses), their content, response to voices\\n- **Cognition**: Orientation, attention, memory, concentration\\n- **Insight**: Degree of awareness of illness\\n- **Judgment**: Decision-making ability given current mental state\\n\\n### Structured Instruments\\n- **PANSS** (Positive and Negative Syndrome Scale): 30 items, measures positive, negative, general symptoms\\n- **Scale for Assessment of Positive Symptoms (SAPS)**: Focuses on delusions, hallucinations\\n- **Scale for Assessment of Negative Symptoms (SANS)**: Assesses affective flattening, alogia, avolition\\n- **Calgary Depression Scale**: Detect depression (common in schizophrenia)\\n\\n## Differential Diagnosis\\n| Disorder | Hallucinations | Delusions | Mood | Course |\\n|----------|-----------------|-----------|------|--------|\\n| Schizophrenia | Yes, often auditory | Yes | Blunted/flat | Chronic, declining |\\n| Mood disorder with psychosis | May occur | May occur | Prominent | Related to mood episodes |\\n| Substance-induced psychosis | Yes | Yes | Variable | Improves after cessation |\\n| Delirium | Yes (visual common) | Yes | Fluctuating | Hours to days |\\n| Medical condition (seizure, encephalitis) | Possible | Possible | Variable | Depends on cause |\\n\\n## First-Episode Management Principles\\n1. **Comprehensive assessment**: Rule out medical/substance causes\\n2. **Establish therapeutic alliance**: Critical for compliance, outcome\\n3. **Antipsychotic initiation**: Start low, go slow (reduce side effects, improve tolerability)\\n4. **Psychoeducation**: Explain illness, prognosis, importance of medication\\n5. **Family involvement**: Engage family in treatment (high relapse if poor family support in India)\\n6. **Vocational support**: Early intervention improves functional outcomes,\\n        mnemonics: [\\n          { text: \\\"FEP = first episode, Prodrome = 1-3 years before\\\", explanation: \\\"Timeline before diagnosis\\\" },\\n          { text: \\\"Positive symptoms improve with antipsychotics, Negative persist\\\", explanation: \\\"Treatment response pattern\\\" },\\n          { text: \\\"Insight assessment = awareness of illness\\\", explanation: \\\"Poor insight common at presentation\\\" },\\n          { text: \\\"India context = religious content, family shame, delayed care\\\", explanation: \\\"Cultural considerations\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"First episode psychosis peak age 20-25 in males, 25-30 in females\\\",\\n          \\\"Prodrome can last 1-3 years, often unrecognized\\\",\\n          \\\"Delayed treatment initiation worsens prognosis\\\",\\n          \\\"Differential diagnosis critical: not all psychosis is schizophrenia\\\",\\n          \\\"Family burden high in Indian context (joint families, stigma)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kaplan & Sadock\\\", chapter: \\\"Clinical Presentation of Schizophrenia\\\", edition: \\\"12th\\\" },\\n          { book: \\\"NAMI Guide\\\", chapter: \\\"First Episode Psychosis Assessment\\\", edition: \\\"2024\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"schizophrenia-exam-prep\\\",\\n        title: \\\"Schizophrenia - Exam Prep\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Diagnostic criteria review, antipsychotic selection, prognostic factors.\\\",\\n        contentMd: ``# Schizophrenia - Exam Prep\\n\\n## Diagnostic Pearls\\n### Required for Diagnosis (DSM-5)\\n- ≥2 symptoms from: Delusions, Hallucinations, Disorganized speech, Disorganized behavior, Negative symptoms\\n- If only 1 symptom present: Must be bizarre delusions OR hallucinations of running commentary/conversation between voices\\n- Duration: ≥1 month of active phase symptoms, ≥6 months total (including prodrome/residual)\\n- Functional decline: Work, relationships, or self-care worse than baseline\\n\\n### What Rules Out Schizophrenia\\n- Symptoms better explained by substance use (need to reassess after sobriety period)\\n- Symptoms during mood episodes only (indicates bipolar/depression with psychosis)\\n- Schizoaffective disorder features (schizophrenia + prominent mood disorder)\\n- Medical conditions (epilepsy, encephalitis, syphilis, metabolic causes)\\n- Developmental disorder mistaken for psychosis (autism, intellectual disability)\\n\\n## Antipsychotic Selection\\n### First-Generation (Typical)\\n- **Mechanism**: D2 dopamine antagonists\\n- **Examples**: Haloperidol, chlorpromazine, fluphenazine\\n- **Efficacy**: Good for positive symptoms, poor for negative symptoms\\n- **Side effects**: Extrapyramidal symptoms (EPS), tardive dyskinesia, metabolic effects\\n- **Use in India**: Cost-effective, widely available\\n\\n### Second-Generation (Atypical)\\n- **Mechanism**: D2 antagonism + 5HT2A antagonism\\n- **Examples**: Risperidone, olanzapine, quetiapine, aripiprazole\\n- **Efficacy**: Better for positive and negative symptoms, mood symptoms\\n- **Side effects**: Metabolic (weight gain, diabetes), hyperprolactinemia, EPS (lower than typical)\\n- **Advantages**: Better tolerability, improved long-term outcomes\\n- **Cost**: Higher in India, limiting access in resource-poor settings\\n\\n### Selection Criteria\\n```\\nFirst Episode:\\n  → Prefer atypical (better long-term outcome, fewer side effects)\\n  → If not available/affordable: Low-dose typical acceptable\\n  → Start: Risperidone 2-4 mg/day OR Olanzapine 5-10 mg/day\\n\\nSubsequent Episodes/Chronic:\\n  → Continue previous effective agent if tolerated\\n  → Change if inadequate response after 4-6 weeks at therapeutic dose\\n  → Consider long-acting injectables if compliance issue\\n```\\n\\n## Prognostic Factors\\n### Good Prognosis\\n- Female gender\\n- Late age of onset (>25 years)\\n- Acute onset (vs insidious)\\n- Good premorbid functioning\\n- Married/stable relationship\\n- Good social support (especially family in India)\\n- Paranoid type\\n- Adherence to treatment\\n- Early intervention\\n\\n### Poor Prognosis\\n- Male gender\\n- Early age of onset (<20 years)\\n- Insidious onset\\n- Poor premorbid functioning\\n- Social isolation\\n- Substance abuse\\n- Severe negative symptoms\\n- Nonadherence\\n- Undifferentiated type\\n- Delayed treatment initiation\\n\\n## High-Yield Exam Facts\\n- **\\\"First-rank symptoms\\\"** (Schneiderian): Diagnostic but not required for DSM-5\\n- **Waxy flexibility** = catatonic subtype (rare)\\n- **Alogia** = poverty of speech (negative symptom)\\n- **Avolition** = lack of motivation (most disabling negative symptom)\\n- **Tardive dyskinesia** = late-onset EPS (after months-years), independent jaw movements, tongue protrusion\\n- **Neuroleptic malignant syndrome** = medical emergency (fever, rigidity, altered mental status, elevated CK),\\n        mnemonics: [\\n          { text: \\\"DSM-5 = 2+ symptoms, 1mo active, 6mo total\\\", explanation: \\\"Diagnostic duration requirements\\\" },\\n          { text: \\\"First-rank = Schneiderian (older classification)\\\", explanation: \\\"Historical importance for exams\\\" },\\n          { text: \\\"Typical = cheap/EPS, Atypical = metabolic/better outcome\\\", explanation: \\\"Trade-offs\\\" },\\n          { text: \\\"Female/late/acute/good support = better prognosis\\\", explanation: \\\"Prognostic factors\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Delusions must be fixed, not corrected by reasoning\\\",\\n          \\\"Disorganized speech is tangential/circumstantial speech\\\",\\n          \\\"Negative symptoms are stronger predictors of long-term function than positive\\\",\\n          \\\"Antipsychotics take 2-4 weeks for noticeable effect\\\",\\n          \\\"Relapse rate high without medication (up to 80% in 5 years)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kaplan & Sadock\\\", chapter: \\\"Schizophrenia Diagnosis and Treatment\\\", edition: \\\"12th\\\" },\\n          { book: \\\"DSM-5\\\", chapter: \\\"Diagnostic Criteria Review\\\", edition: \\\"5th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"schizophrenia-active-recall\\\",\\n        title: \\\"Schizophrenia - Active Recall\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"8 clinical cases testing diagnosis, differential diagnosis, and management.\\\",\\n        contentMd: ``# Schizophrenia - Active Recall\\n\\n## Q1: First-Rank Symptoms vs Delusion Severity\\n**Q: 24-year-old with delusion that \\\"thoughts are broadcasted to others\\\" and \\\"external force inserting thoughts into mind.\\\" Why are these considered first-rank symptoms and is this schizophrenia definitional?**\\n\\nA: **First-rank symptoms** (Schneiderian): Thought broadcasting (others hear his thoughts), thought insertion (external force putting thoughts in), thought withdrawal (thoughts removed), made actions/impulses. Considered highly specific for schizophrenia. **Important caveat**: DSM-5 does NOT require first-rank symptoms for diagnosis; they're highly suggestive but not definitional. **Clinical significance**: If bizarre delusions present (content completely implausible, e.g., mind-reading device implanted by aliens), only need 1 bizarre delusion + other criterion met = schizophrenia. This patient with first-rank symptoms + non-bizarre delusion = likely schizophrenia but must meet duration criteria (1mo active, 6mo total).\\n\\n## Q2: Prodromal Phase Recognition and Prognosis\\n**Q: 20-year-old engineering student's mother reports 15 months of social withdrawal, poor grades, odd beliefs in astrology/numerology, brief perceptual oddities. No frank delusions/hallucinations yet. Is this schizophrenia and what's the management?**\\n\\nA: **Not yet schizophrenia** (lacks active phase ≥1 month). This is **prodromal phase**. Recognition importance: Studies show 30-40% of prodromal individuals develop psychosis within 2 years. **Risk factors escalating risk**: Substance use (amphetamines, cannabis common in this age group), stress, family history. **Management approach**: (1) Comprehensive psychiatric interview for subtle hallucinations/delusions (probe carefully), (2) Screen for substance use (common in young males in India), (3) Family psychoeducation, (4) Stress management, sleep hygiene, exercise, (5) Monitor closely for emergence of frank psychotic symptoms, (6) Consider low-dose antipsychotic only if symptom progression or significant functional decline (evidence mixed for preventive treatment). Early identification improves long-term outcome.\\n\\n## Q3: Negative vs Depressive Symptoms Distinction\\n**Q: 35-year-old with 3-year history schizophrenia on antipsychotic shows marked apathy, poverty of speech, no pleasure in activities. Why is this concerning as \\\"negative symptom syndrome\\\" and what's different from depression?**\\n\\nA: **Negative symptom syndrome**: Avolition (apathy despite motivation capacity), alogia (poverty of speech), anhedonia with flat affect = \\\"primary\\\" negative symptoms, primary to schizophrenia. Different from depression which has sad mood, guilt, worthlessness. **Why concerning**: (1) Poorest predictor of long-term functional outcome (determines ability to work, maintain relationships), (2) Antipsychotics minimally effective for primary negative symptoms (dopamine replacement in PFC still not effective), (3) Most disabling symptoms long-term. **Management**: (1) Atypical antipsychotic (slightly better than typical), (2) Screen for depression (secondary negative symptoms from depression respond to antidepressants), (3) Screen for medical causes (hypothyroidism, nutritional deficiency), (4) Psychosocial interventions (supported employment, day programs) to maintain function despite symptoms.\\n\\n## Q4: Antipsychotic Response and Dose Escalation\\n**Q: 26-year-old, first episode schizophrenia started on risperidone 2 mg daily. After 2 weeks: some improvement in hallucinations but still present. Doctor increased to 4 mg. By week 3: voices resolved but marked weight gain. How to interpret response and optimize?**\\n\\nA: **Response timeline**: Antipsychotics typically show: Week 1-2: Behavioral calming; Week 2-4: Reduced hallucinations/delusions; Week 4-8: Maximum improvement. At 2 weeks, seeing expected early response. **Dose escalation**: Doubling dose at 2 weeks premature (full response takes 4-6 weeks). Better approach: Wait until week 4-6 at target dose before escalating. **Weight gain at 4mg risperidone**: Common (average 2-3 kg in first month), especially risperidone/olanzapine. **Optimization**: (1) Consider switching to aripiprazole (weight-neutral), ziprasidone, or lurasidone if weight concern, (2) Dietary counseling, exercise, (3) Continue current dose another 2-4 weeks to assess full response before changing. Changing agents too early disrupts response pattern.\\n\\n## Q5: Schizoaffective Disorder vs Schizophrenia\\n**Q: 28-year-old presents with 8-week history of delusions, hallucinations, AND 6-week history of elevated mood, decreased need for sleep, pressured speech. Does this patient have schizophrenia?**\\n\\nA: **Not schizophrenia: Schizoaffective disorder, bipolar type**. Distinguishing features: (1) Duration requirement: Psychotic symptoms must persist ≥2 weeks WITHOUT prominent mood symptoms = schizophrenia. Here, mood symptoms overlapped 6 weeks with psychosis. (2) In schizoaffective, mood symptoms are prominent (\\\"major\\\" episode duration) during psychosis. (3) Prognosis: Schizoaffective better than schizophrenia. **Management difference**: (1) Mood stabilizer essential (lithium, lamotrigine, divalproex), antipsychotic alone insufficient, (2) Antipsychotic choice: Quetiapine, aripiprazole better for mood; avoid haloperidol (mood worsening). This distinction is critical for treatment selection.\\n\\n## Q6: Substance-Induced vs Primary Psychosis\\n**Q: 23-year-old presents with 2-month history of paranoid delusions, auditory hallucinations. Urine drug screen positive for cannabis. How to determine if this is cannabis-induced or primary schizophrenia?**\\n\\nA: **Key assessment**: (1) Temporal relationship: Did psychosis begin during intoxication OR continued/worsened despite abstinence? (2) Cannabis can cause acute psychosis (CIP) during intoxication/heavy use (THC lowers psychosis threshold). (3) Natural history: True CIP resolves within days-weeks of cessation; if persists beyond 1 month after stopping cannabis = likely primary psychosis. **Management approach**: (1) Obtain detailed substance use history (frequency, age of onset, quantity), (2) Request abstinence period (4 weeks minimum) under supervision if possible, (3) Reassess symptoms after abstinence, (4) Family history of schizophrenia? (increases risk of underlying schizophrenia), (5) If doubt remains at 1 month abstinence: Start low-dose antipsychotic, reassess in 4 weeks. Most guidelines recommend antipsychotic regardless (risk of progression outweighs harm of brief treatment).\\n\\n## Q7: Nonadherence and Relapse Prevention\\n**Q: 35-year-old, 6 years stable on paliperidone. Abruptly stops medication (\\\"I'm cured, don't need it\\\"). By week 3 off meds: Hearing voices again, paranoid. Can he recover if restarted now?**\\n\\nA: **Relapse risk without medication**: 70-80% within 1-2 years off antipsychotics. This patient is high-risk during discontinuation window. **Recovery potential**: If restarted quickly (within weeks), full re-response likely; extended relapse (months) may require higher doses/longer recovery. **Critical issue**: Why stopped? Assess: (1) Side effects (weight gain, sexual dysfunction = major adherence killers), (2) Lack of insight (\\\"I'm cured\\\" = common in schizophrenia), (3) Substance use relapse, (4) Family pressuring to stop. **Prevention**: (1) Long-acting injectable (paliperidone palmitate IM monthly) eliminates daily adherence barrier; very effective in India context, (2) Family psychoeducation (India: family controls compliance more than in Western settings), (3) Address side effects proactively. This patient should restart immediately, consider switching to long-acting injectable.\\n\\n## Q8: Medical Workup and Organic Causes\\n**Q: 32-year-old presents with acute psychosis, but also fevers, headache, stiff neck, confusion. Why this presentation changes diagnosis and initial workup?**\\n\\nA: **Red flags for organic cause**: Fever, headache, meningismus = encephalitis until proven otherwise. Organic causes of psychosis: (1) Infectious (meningitis, encephalitis, neurosyphilis), (2) Metabolic (hypercalcemia, uremia, hepatic encephalopathy), (3) Autoimmune (NMDA receptor encephalitis, lupus), (4) Neurologic (seizures, tumors). **Essential workup**: (1) Lumbar puncture (CSF analysis for WBC, protein, glucose, culture, viral PCR), (2) Brain MRI (look for inflammation, mass), (3) Blood cultures, serology (syphilis VDRL/RPR = essential in India), (4) Laboratory: CBC, metabolic panel, liver/renal function, (5) EEG if seizure concern. **Management**: Do NOT start antipsychotic as monotherapy until organic cause excluded. Treat underlying condition (antibiotics for meningitis, etc.). This distinction is critical: organic psychosis has different prognosis and treatment.\\n\\n      }\\n    ]\\n  },\\n  // PS-MOD-02-TOP-02: Bipolar Affective Disorder\\n  {\\n    topicCode: \\\"PS-MOD-02-TOP-02\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"bipolar-foundation\\\",\\n        title: \\\"Bipolar Affective Disorder - Foundation\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Types, diagnostic criteria, manic and depressive episodes, prevalence and onset.\\\",\\n        contentMd: ``# Bipolar Affective Disorder - Foundation\\n\\n## Classification & Epidemiology\\n- **Bipolar I Disorder**: ≥1 manic episode (depressive episodes common but not required)\\n- **Bipolar II Disorder**: ≥1 hypomanic episode + ≥1 depressive episode (no full mania)\\n- **Cyclothymia**: ≥2 years hypomania + mild depression alternating (not meeting episode criteria)\\n- **Prevalence**: 1-2% population; equal gender prevalence\\n- **Onset**: Typically 15-30 years; bipolar I earlier than II\\n- **Course**: Episodic, with varying intervals between episodes (weeks to years)\\n\\n## Manic Episode Criteria (DSM-5)\\n- **Duration**: ≥7 days (or hospitalization) of elevated/expansive/irritable mood\\n- **≥3 symptoms** (4 if irritable mood):\\n  1. Grandiosity/inflated self-esteem\\n  2. Decreased need for sleep (not just insomnia, but genuine decrease)\\n  3. Racing thoughts/flight of ideas\\n  4. Distractibility/poor focus\\n  5. Increased goal-directed activity (agitation visible)\\n  6. Excessive involvement in high-risk activities\\n  7. More talkative than usual / pressured speech\\n- **Functional impairment**: Marked impact on work/relationships\\n- **Psychotic features**: May have delusions/hallucinations congruent with mood (grandiose, persecutory)\\n\\n## Hypomanic Episode Criteria\\n- **Duration**: ≥4 days of elevated/expansive/irritable mood\\n- **Same ≥3 symptoms as mania**\\n- **Key difference from mania**: NO psychotic features, NO severe functional impairment\\n- **Observable by others**: Changes noticeable to observers\\n- **Diagnostic significance**: Required for Bipolar II (but no mania history)\\n\\n## Depressive Episode\\n- **Minimal difference from Major Depressive Disorder**: 5+ symptoms for ≥2 weeks\\n- **Symptoms**: Depressed mood, anhedonia, sleep changes, guilt, concentration problems, fatigue, psychomotor changes, death thoughts\\n- **Severity**: Can be as severe as mania (psychotic features possible)\\n\\n## Clinical Subtypes & Patterns\\n| Type | Pattern | Course |\\n|------|---------|--------|\\n| Bipolar I | Mania (or mixed) + depression | Often severe |\\n| Bipolar II | Hypomania + depression | Often depressed |\\n| Rapid cycling | ≥4 mood episodes/year | More difficult to treat |\\n| Cycling pattern | Mixed mood features | Variable |\\n| Seasonal | Episodes linked to seasons | Often fall/winter depression |,\\n        mnemonics: [\\n          { text: \\\"Manic = 7 days, Hypomanic = 4 days\\\", explanation: \\\"Duration distinction\\\" },\\n          { text: \\\"Mania has psychosis/severe impairment, Hypomania doesn't\\\", explanation: \\\"Key difference\\\" },\\n          { text: \\\"Bipolar I = mania, Bipolar II = hypomania only\\\", explanation: \\\"Definitional feature\\\" },\\n          { text: \\\"DIG-FAST: Distractibility, Impulsivity, Grandiosity, Flight, Activity, Sleep, Talk\\\", explanation: \\\"Mnemonic for 7 symptoms\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Decreased sleep in mania is specific (vs insomnia in depression)\\\",\\n          \\\"Bipolar II more common than bipolar I, often misdiagnosed as depression\\\",\\n          \\\"Mixed episodes (mania + depression simultaneously) very difficult\\\",\\n          \\\"Rapid cycling (≥4 episodes/year) has worse prognosis, harder to treat\\\",\\n          \\\"Bipolar disorder is leading cause of disability in young adults (DALYs)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kaplan & Sadock\\\", chapter: \\\"Bipolar Affective Disorder\\\", edition: \\\"12th\\\" },\\n          { book: \\\"DSM-5\\\", chapter: \\\"Bipolar and Related Disorders\\\", edition: \\\"5th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"bipolar-mechanism\\\",\\n        title: \\\"Bipolar Affective Disorder - Mechanism\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Neurobiological basis, kindling hypothesis, circadian rhythm dysfunction, genetic factors.\\\",\\n        contentMd: ``# Bipolar Affective Disorder - Mechanism\\n\\n## Monoamine Hypothesis\\n- **Mania**: Excess catecholamine activity (dopamine, norepinephrine) + reduced serotonin inhibition\\n- **Depression**: Deficiency of monoamines (dopamine, norepinephrine, serotonin)\\n- **Mechanism**: Different direction (excess vs deficit) explains opposite mood states\\n- **Therapeutic target**: Mood stabilizers may normalize oscillating monoamine levels\\n\\n## Kindling Hypothesis (Post)\\n- **Initial episodes**: Often triggered by psychosocial stress\\n- **Progressive sensitization**: With each episode, CNS becomes more sensitive to triggers\\n- **Later episodes**: Triggered by minor stressors or no identifiable stress\\n- **Implication**: Earlier treatment prevents episode progression and sensitization\\n- **Cellular mechanism**: Repeated depolarization → permanent threshold lowering\\n- **Clinical relevance**: Explains why untreated bipolar I has worse long-term course\\n\\n## Circadian Rhythm Dysregulation\\n- **Sleep abnormalities**: Core feature of bipolar (especially manic episodes)\\n- **Decreased sleep need**: Not insomnia but genuine reduced need (feels rested after 3-4 hours)\\n- **Circadian phase dysfunction**: Sleep-wake cycle misaligned with internal clock\\n- **Triggers**: Light exposure, travel across time zones, seasonal changes\\n- **Mechanism**: Suprachiasmatic nucleus (SCN) → pineal gland → melatonin dysregulation\\n- **Therapeutic target**: Sleep regularity, light therapy, melatonin timing\\n\\n## Intracellular Signaling Dysregulation\\n- **Second messengers**: cAMP, protein kinase C (PKC), phosphoinositide cascade dysfunction\\n- **Calcium signaling**: Abnormal intracellular calcium homeostasis\\n- **Gene expression**: Altered BDNF (brain-derived neurotrophic factor) expression\\n- **Neuroprotection**: Lithium and anticonvulsants stabilize intracellular cascades\\n- **Mechanism**: Lithium inhibits inositol monophosphatase → depletion of free inositol → reduced PIP2 signaling\\n\\n## Structural and Functional Brain Abnormalities\\n- **Amygdala**: Enlarged, hyperactive to emotional stimuli (fear/threat detection)\\n- **Prefrontal cortex**: Reduced gray matter, impaired emotional regulation\\n- **Ventral striatum**: Increased reward sensitivity (explains increased-goal activity in mania)\\n- **White matter**: Reduced integrity, especially in tracts connecting emotion and cognition\\n- **Circuitry dysfunction**: Imbalanced limbic activation (amygdala) vs regulation (PFC)\\n\\n## Genetic Factors\\n- **Heritability**: 70-90% in twins (highest of psychiatric disorders)\\n- **Multiple gene involvement**: Not single-gene disorder (complex inheritance)\\n- **Candidate genes**: Clock genes (CLOCK, PER), serotonin transporter (5HTT), brain-derived neurotrophic factor (BDNF)\\n- **Gene-environment interaction**: Genetic risk + environmental stress = symptom emergence\\n- **Biological markers**: Potentially useful for early identification and family screening,\\n        mnemonics: [\\n          { text: \\\"Kindling = each episode sensitizes brain\\\", explanation: \\\"Progressive worsening over time\\\" },\\n          { text: \\\"Decreased sleep NEED (not insomnia) = bipolar mania hallmark\\\", explanation: \\\"Diagnostic feature\\\" },\\n          { text: \\\"Circadian misalignment = sleep-wake cycle off\\\", explanation: \\\"Mechanism of sleep symptoms\\\" },\\n          { text: \\\"Lithium blocks inositol phosphate metabolism\\\", explanation: \\\"Molecular mechanism of mood stabilization\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Bipolar disorder is highly heritable (70-90% in twins)\\\",\\n          \\\"Kindling explains progressive worsening without treatment\\\",\\n          \\\"Amygdala hyperactivity = core brain abnormality in bipolar\\\",\\n          \\\"Circadian rhythm stabilization key to preventing episodes\\\",\\n          \\\"Early intervention breaks kindling cycle → better prognosis\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kaplan & Sadock\\\", chapter: \\\"Neurobiological Mechanisms of Bipolar Disorder\\\", edition: \\\"12th\\\" },\\n          { book: \\\"Guyton\\\", chapter: \\\"Limbic System and Mood Regulation\\\", edition: \\\"12th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"bipolar-clinical\\\",\\n        title: \\\"Bipolar Affective Disorder - Clinical\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Clinical presentation, assessment, differential diagnosis from depression and ADHD.\\\",\\n        contentMd: ``# Bipolar Affective Disorder - Clinical\\n\\n## Manic Episode Presentation\\n### Behavioral Manifestations\\n- **Speech**: Pressured, rapid, hard to interrupt, flight of ideas (jumping topics)\\n- **Activity level**: Hyperactive, restless, excessive engagement in projects\\n- **Social behavior**: Increased sociability, overfamiliarity, reduced social boundaries\\n- **Risk-taking**: Reckless driving, excessive spending, sexual promiscuity, substance abuse\\n- **Sleep**: May sleep only 3-4 hours but feel rested (\\\"sleep reduced not insomnia\\\")\\n\\n### Mood and Ideation\\n- **Mood**: Euphoric OR irritable (especially if demands not met)\\n- **Self-esteem**: Grandiose beliefs (can reach psychotic proportions - \\\"I am God,\\\" \\\"I have special powers\\\")\\n- **Ideas**: Racing thoughts, subjective experience of mind \\\"going too fast\\\"\\n- **Goals**: Expansion of goals (starts multiple projects, abandons others)\\n- **Judgment**: Markedly impaired (financial, sexual, social consequences)\\n\\n### Indian Context Presentation\\n- **Excessive spending**: Without income → financial crisis (family conflict)\\n- **Sexual behavior**: Extramarital affairs, inappropriate advances (major stigma)\\n- **Grandiosity**: May claim divine communication, religious devotion\\n- **Occupational**: Abandon stable job for unrealistic ventures\\n- **Family impact**: Severe (shame/reputation in community)\\n\\n## Hypomanic Episode Presentation\\n- **Difference from mania**: Shorter duration (4 days vs 7 days), NO psychotic features\\n- **Functional impact**: May enhance productivity (often called \\\"high-functioning\\\")\\n- **Danger**: Individuals often enjoy hypomania, resist treatment\\n- **Diagnostic challenge**: Often retrospectively identified (patient doesn't see it as problem)\\n\\n## Depressive Episode in Bipolar\\n- **Phenomenology**: Same as Major Depressive Disorder\\n- **Difference**: History of mania/hypomania distinguishes bipolar depression from unipolar\\n- **Severity**: Often more severe and longer than manic episodes (bipolar II spends more time depressed)\\n- **Anhedonia**: Prominent loss of interest and pleasure\\n- **Suicide risk**: VERY HIGH in bipolar depression (risk 10-15 times higher than general population)\\n\\n## Mixed Episode / Mixed Features\\n- **Definition**: Simultaneous manic AND depressive symptoms\\n- **Presentation**: Agitated depression (anxious, irritable, racing thoughts, dark mood simultaneously)\\n- **Severity**: Very dangerous (impulsivity of mania + hopelessness of depression = high suicide risk)\\n- **Challenge**: Treatment complex (antidepressants may worsen agitation)\\n\\n## Diagnostic Challenges\\n### Bipolar II Misdiagnosed as Unipolar Depression\\n- **Why**: Hypomanic episodes often not reported or minimized\\n- **Consequence**: Antidepressant monotherapy → mood destabilization, rapid cycling\\n- **Solution**: Detailed history of mood elevations (ask directly about periods of high energy, decreased sleep need, increased productivity)\\n\\n### Bipolar vs ADHD Confusion\\n| Feature | Bipolar Disorder | ADHD |\\n|---------|-----------------|------|\\n| Onset | Adolescent-young adult | Childhood |\\n| Duration | Episodes (days-weeks) | Chronic |\\n| Mood stability | Episodic mood change | Mood relatively stable |\\n| Sleep | Decreased need in mania | Usually normal |\\n| Attention | Poor during mood episodes | Chronically impaired |\\n| Impulsivity | Episodic increased | Consistent trait |\\n| Response to stimulants | Worsens mania | Helpful for ADHD |\\n\\n### Bipolar vs Unipolar Depression\\n- **Bipolar depression**: History of mania/hypomania is distinguishing feature\\n- **Age of onset**: Bipolar typically earlier (teens-20s)\\n- **Family history**: Bipolar has stronger family loading of bipolar/mood disorders\\n- **Treatment response**: Antidepressants alone often insufficient/harmful in bipolar\\n- **Course**: Bipolar typically episodic; unipolar may be single episode or multiple depressions\\n\\n## Assessment and Management Approach\\n### Initial Assessment\\n1. **Detailed mood history**: Specifically probe for manic/hypomanic episodes\\n   - \\\"Ever felt unusually happy/energetic for days?\\\"\\n   - \\\"Times decreased sleep but still felt rested?\\\"\\n   - \\\"Periods of increased spending/risky behavior?\\\"\\n2. **Family history**: Bipolar disorder, suicide, psychiatric hospitalization\\n3. **Age of onset**: Earlier onset suggests bipolar\\n4. **Course pattern**: Episodic vs chronic\\n5. **Substance use**: Can mimic/trigger mood episodes\\n\\n### Initial Management\\n- **Acute mania**: Antipsychotic (haloperidol IM, risperidone, olanzapine) + benzodiazepine\\n- **Acute depression**: Mood stabilizer ± cautious antidepressant (with mood stabilizer to prevent mania)\\n- **Maintenance**: Mood stabilizer monotherapy (lithium, lamotrigine, divalproex) or combination,\\n        mnemonics: [\\n          { text: \\\"Bipolar = 70% time in depression despite high-profile mania\\\", explanation: \\\"Actual time distribution\\\" },\\n          { text: \\\"Hypomania often feels good, patients resist treatment\\\", explanation: \\\"Treatment adherence challenge\\\" },\\n          { text: \\\"Mixed episode = highest suicide risk in bipolar\\\", explanation: \\\"Crisis situation\\\" },\\n          { text: \\\"Bipolar II misdiagnosed as depression = antidepressant monotherapy = worsening\\\", explanation: \\\"Common error\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Ask DIRECTLY about decreased sleep need (distinguish from insomnia)\\\",\\n          \\\"Bipolar II more common than type I, often undiagnosed\\\",\\n          \\\"Antidepressant monotherapy contraindicated in bipolar\\\",\\n          \\\"Suicide risk highest during mixed episodes and bipolar depression\\\",\\n          \\\"Family burden high (financial consequences of mania, caregiving for depression)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kaplan & Sadock\\\", chapter: \\\"Bipolar Disorder: Clinical Management\\\", edition: \\\"12th\\\" },\\n          { book: \\\"NICE Guidelines\\\", chapter: \\\"Bipolar Disorder Management\\\", edition: \\\"2024\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"bipolar-exam-prep\\\",\\n        title: \\\"Bipolar Affective Disorder - Exam Prep\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Diagnostic criteria review, mood stabilizer selection, prognosis and suicide risk.\\\",\\n        contentMd: ``# Bipolar Affective Disorder - Exam Prep\\n\\n## Diagnostic Criteria Quick Review\\n### Bipolar I (Must Have)\\n- ≥1 manic episode (≥7 days) with ≥3 symptoms\\n- History of depressive episodes common but NOT required for diagnosis\\n- Manic episodes cause marked functional impairment\\n\\n### Bipolar II (Must Have)\\n- ≥1 hypomanic episode (≥4 days) with ≥3 symptoms\\n- ≥1 major depressive episode (≥2 weeks, ≥5 symptoms)\\n- NO manic episodes (if has mania → reclassify as Bipolar I)\\n\\n### Rapid Cycling\\n- ≥4 distinct mood episodes per year\\n- More common in women\\n- Associated with worse prognosis\\n- May be induced by antidepressants\\n\\n## Mood Stabilizers\\n### Lithium (Gold Standard)\\n- **Efficacy**: Best evidence for mania prevention; moderate for depression\\n- **Mechanism**: Inhibits inositol monophosphatase, affects protein kinase C\\n- **Monitoring**: Narrow therapeutic window (0.6-1.2 mEq/L)\\n  - Baseline: TSH, creatinine, EKG, pregnancy test\\n  - Regular: Lithium levels at 5 days, then every 3 months\\n- **Adverse effects**: Tremor, polyuria, nephrogenic DI, hypothyroidism, weight gain\\n- **Advantages**: Reduces suicide risk (antisuicidal effect unique)\\n- **Disadvantages**: Teratogenic (Ebstein's anomaly risk 1:500), requires monitoring\\n\\n### Lamotrigine\\n- **Efficacy**: Better for bipolar depression than mania\\n- **Mechanism**: Sodium channel blockade, glutamate inhibition\\n- **Titration**: SLOW (rash risk if rapid, Stevens-Johnson syndrome rare but serious)\\n- **Monitoring**: Less intensive than lithium\\n- **Safety**: Pregnancy safer than lithium, no teratogenicity\\n- **Use**: Often combined with antipsychotic for mania + lamotrigine for depression\\n\\n### Divalproex (Valproate)\\n- **Efficacy**: Good for acute mania, maintenance\\n- **Mechanism**: GABA enhancement, histone deacetylase inhibition\\n- **Monitoring**: Liver function, platelets (thrombocytopenia risk)\\n- **Safety**: Teratogenic (neural tube defects, developmental disorder)\\n- **Use**: Particularly effective for rapid cycling, mixed episodes\\n\\n### Antipsychotics\\n- **Role**: First-line for acute mania; many approved maintenance\\n- **Examples**: Risperidone, olanzapine, quetiapine, lurasidone, aripiprazole\\n- **Advantage**: Faster onset than lithium\\n- **Limitation**: Weight gain, metabolic effects\\n\\n## Treatment Algorithm\\n```\\nAcute Mania:\\n  → Antipsychotic monotherapy (risperidone 2-4mg or olanzapine 10-15mg)\\n  → ± Benzodiazepine for agitation/sleep (lorazepam)\\n  → Response: 3-5 days for behavioral control, weeks for mood stabilization\\n\\nMaintenance (Prevent Episodes):\\n  → Lithium (gold standard) OR atypical antipsychotic OR mood stabilizer\\n  → Monitor adherence (reason for non-adherence: weight gain, side effects, lack of insight)\\n  → Long-acting injectables helpful for non-adherence\\n\\nBipolar Depression:\\n  → Mood stabilizer ± antidepressant (caution: antidepressant alone may induce mania)\\n  → Lamotrigine effective\\n  → Antidepressants: SSRIs or bupropion (less risk of mania than TCAs)\\n  → Avoid tricyclic antidepressants and stimulants (high mania risk)\\n```\\n\\n## Suicide Risk Factors in Bipolar\\n- **Baseline risk**: 10-15× higher than general population\\n- **Highest risk period**: Transition from mania to depression, mixed episodes\\n- **Risk factors**: Male gender, earlier age of onset, rapid cycling, substance abuse, comorbid anxiety\\n- **Protective factors**: Lithium (unique antisuicidal effect), treatment adherence, family support\\n- **Assessment**: Ask directly about suicidal ideation, especially during mood episodes\\n\\n## High-Yield Exam Facts\\n- **Bipolar II more common** (70%) than Bipolar I (30%)\\n- **Bipolar depression = most time spent** (patients often complain depression more than mania)\\n- **Antidepressant monotherapy contraindicated** (risk of mania/rapid cycling)\\n- **Lithium levels**: Therapeutic 0.6-1.2 mEq/L; monitoring essential\\n- **First-generation antipsychotics**: Avoid (more EPS); prefer atypicals\\n- **Pregnancy**: Lithium risks (Ebstein's 1/500); lamotrigine safer; counsel carefully,\\n        mnemonics: [\\n          { text: \\\"Manic 7+, Hypomanic 4+, Depressed 14+\\\", explanation: \\\"Minimum duration days required\\\" },\\n          { text: \\\"Lithium = Gold but needs monitoring\\\", explanation: \\\"Benefits vs burden balance\\\" },\\n          { text: \\\"Lamotrigine = Depression specialist\\\", explanation: \\\"Best for depressive pole\\\" },\\n          { text: \\\"DIG-FAST + psychosis + impairment = Mania (Bipolar I)\\\", explanation: \\\"Diagnostic constellation\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Antidepressant + mood stabilizer only for bipolar depression (never alone)\\\",\\n          \\\"Lithium has antisuicidal effect (unique advantage)\\\",\\n          \\\"Rapid cycling defined as ≥4 episodes/year\\\",\\n          \\\"Sleep regularity crucial (sleep deprivation triggers mania)\\\",\\n          \\\"Antipsychotics often necessary even in maintenance (not just for acute)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kaplan & Sadock\\\", chapter: \\\"Bipolar Treatment Guidelines\\\", edition: \\\"12th\\\" },\\n          { book: \\\"NICE Guidelines\\\", chapter: \\\"Mood Stabilizers and Antipsychotics\\\", edition: \\\"2024\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"bipolar-active-recall\\\",\\n        title: \\\"Bipolar Affective Disorder - Active Recall\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"9 clinical cases testing diagnostic distinction, management decisions, and suicide risk.\\\",\\n        contentMd: ``# Bipolar Affective Disorder - Active Recall\\n\\n## Q1: Hypomania vs Depression Distinction in Bipolar II\\n**Q: 34-year-old woman reports 4-day period of \\\"good mood,\\\" slept 5 hours (vs usual 8), started 3 new hobbies, spent aggressively but \\\"was in control.\\\" Then 6-week depression. Why is the 4-day period crucial for diagnosis?**\\n\\nA: **4-day hypomanic period = minimal duration for hypomania**. Key diagnostic feature for Bipolar II: ≥4 consecutive days (not hours) elevated/expansive mood + ≥3 symptoms. This patient meets criteria (4 days, 3 symptoms: decreased sleep need, goal-directed activity, excessive spending). Period was observable to others and distinct from baseline. Bipolar II defined as hypomania + depression (NOT mania). This distinguishes from Unipolar depression (depression alone). **Clinical significance**: Patients often downplay hypomanic periods (feel good, productive), so detailed history essential. Missing hypomania → misdiagnosis as Unipolar → antidepressant monotherapy → potential destabilization.\\n\\n## Q2: Antidepressant-Induced Mania and Rapid Cycling\\n**Q: 28-year-old woman with first depression started on sertraline 100 mg. After 6 weeks: mood improved BUT 2 weeks later developed elevated mood, decreased sleep, 6-day duration. Never had prior mood elevation. Does she have bipolar disorder now?**\\n\\nA: **Bipolar I disorder newly diagnosed**. Key point: Sertraline induced/unmasked underlying bipolar disorder. Mechanism: SSRI increased serotonergic activity in brain regions controlling reward/arousal → manic switch. **Pre-existing substrate**: Likely had bipolar vulnerability (strong family history? early onset depression?). SSRI exposed underlying condition. **Management**: (1) Discontinue SSRI (may take weeks to washout), (2) Start mood stabilizer immediately (lithium or atypical), (3) May need antipsychotic for acute mania control. **Going forward**: Treat as Bipolar I, never use antidepressants as monotherapy. This is common presentation: Patient presents with depression, discovered to have bipolar during treatment.\\n\\n## Q3: Mixed Episode Suicide Risk Escalation\\n**Q: 32-year-old bipolar I on lithium appears with simultaneous agitation, racing thoughts, dark mood, hopelessness, \\\"life's not worth living.\\\" 2 weeks prior was manic. Why is this a psychiatric emergency?**\\n\\nA: **Mixed episode = HIGHEST suicide risk in bipolar**. Combination: Impulsivity/agitation of mania + hopelessness/suicidality of depression = lethal. Patient has goal-directed energy to ACT on suicidal ideation (unlike pure depression where might have plans but little energy). **This presentation requires**: (1) Immediate hospitalization (safety concern), (2) Assess for active plan/intent/means, (3) Increase monitoring frequency, (4) May need antipsychotic added (risperidone, olanzapine) for acute agitation, (5) Ensure lithium levels therapeutic (safety). (6) Consider divalproex addition (effective for mixed features). (7) Avoid antidepressants (may worsen agitation). **Prevention**: Recognize early mixed features, aggressive treatment escalation.\\n\\n## Q4: Lithium Monitoring and Toxicity\\n**Q: 45-year-old on lithium 900 mg/day (1.0 mEq/L level) for 5 years develops tremor, polyuria, thirst, and later confusion. What's happening and how to manage?**\\n\\nA: **Lithium toxicity presentation**: Tremor (fine → coarse), polyuria/polydipsia (nephrogenic DI), fatigue, confusion/ataxia (central nervous system effects). **Severity grading**: (1) Mild: tremor, nausea, diarrhea; (2) Moderate: coarse tremor, confusion, ataxia, N/V; (3) Severe: seizures, coma, arrhythmias, death. This patient shows moderate toxicity. **Causes**: (1) Reduced renal clearance (dehydration, NSAIDs, ACE-inhibitors), (2) Drug interactions, (3) Overestimation of dose. **Management**: (1) STOP lithium immediately, (2) Evaluate renal function, electrolytes, (3) Hydration (normal saline IV if severe), (4) EKG (cardiac effects), (5) Hemodialysis if severe toxicity, (6) Monitor lithium level (half-life 20-40 hours), (7) Restart at lower dose once cleared if still benefits. **Prevention**: Regular monitoring of lithium levels (baseline, 5 days, then every 3-6 months), patient education on hydration, NSAIDs/other drug interactions.\\n\\n## Q5: Bipolar II Rapid Cycling Induction\\n**Q: 32-year-old bipolar II on sertraline reports: \\\"I cycled from depression to hypomania to depression again, 4 times in last year.\\\" Why did cycling worsen and what intervention helps?**\\n\\nA: **Rapid cycling (≥4 episodes/year)**: SSRI (sertraline) likely exacerbating. Mechanism: Antidepressants can destabilize mood in bipolar, inducing rapid oscillations (especially in bipolar II). **Epidemiology**: Rapid cycling occurs in 10-20% bipolar patients; more common in women; worse prognosis, harder to treat. **This patient needs**: (1) DISCONTINUE sertraline (main culprit), (2) Add/optimize mood stabilizer (lithium, lamotrigine, divalproex), (3) Consider divalproex specifically (particularly effective for rapid cycling), (4) Avoid antidepressants (would continue cycling). (5) Sleep regularity (sleep deprivation triggers cycling). (6) Address substance use, stress, other destabilizing factors. **Expected outcome**: With proper mood stabilization (no antidepressants), cycling frequency typically reduces significantly.\\n\\n## Q6: Decreased Sleep Need vs Insomnia Distinction\\n**Q: 48-year-old reports \\\"I haven't slept more than 4 hours/night for 3 weeks, but I feel energized, don't feel tired.\\\" During same period: started 5 business ventures, excessive spending, talking 10% more. Is this mania?**\\n\\nA: **YES, likely manic episode**. Critical distinction: **Decreased sleep NEED (feels rested after 4h) ≠ Insomnia (can't sleep despite trying)**. In mania, patient GENUINELY doesn't need sleep (vs insomnia where frustrated by sleeplessness). This patient has ≥3 manic symptoms: (1) Decreased sleep need, (2) Goal-directed activity (business ventures), (3) Excessive spending, (4) Pressured speech (talking more). **Duration**: 3 weeks meets mania threshold (need ≥7 consecutive days). **Clinical pearl**: Asking \\\"Do you feel rested?\\\" helps distinguish. Manic patient answers YES (decreased need); depressed patient with insomnia answers NO (frustrated, exhausted). **Management**: Antipsychotic + benzodiazepine for sleep/agitation, monitor for escalation.\\n\\n## Q7: Family History and Genetic Risk Counseling\\n**Q: 26-year-old, just diagnosed bipolar I, wants to know: \\\"My father had bipolar, my siblings OK. What's risk to my children?\\\" How to counsel?**\\n\\nA: **Heritability of bipolar**: 70-90% in twins (highest psychiatric disorder). **Risk to offspring**: If one parent bipolar = 15-25% risk. If both parents bipolar = 50-70% risk. Father's bipolar history increases risk. **Key counseling points**: (1) Genetic predisposition not destiny (gene-environment interaction), (2) Early identification of symptoms improves outcomes, (3) Avoid triggers (stress, sleep deprivation, substance use, antidepressant monotherapy), (4) If children develop mood symptoms, seek early psychiatric evaluation, (5) Encourage healthy lifestyle (sleep, exercise, stress management). **Pregnancy planning**: If planning children, discuss: (1) Medication safety (lithium vs lamotrigine risks), (2) Peripartum mood destabilization risk (postpartum mania/depression common after 1st episode), (3) Benefits of continuing mood stabilizer (relapse risk high without), (4) Timing of pregnancy when stable.\\n\\n## Q8: Antipsychotic Selection for Bipolar Mania\\n**Q: 35-year-old male in acute mania, severely agitated, not sleeping at all. Haloperidol IM offered but patient reports \\\"I got really stiff on that drug before.\\\" Why should this influence choice and what alternative?**\\n\\nA: **Prior extrapyramidal symptoms (EPS) history**: Akathisia, dystonia, parkinsonism with haloperidol. Haloperidol = first-generation antipsychotic, high EPS risk (~50%). **Better alternative**: Olanzapine IM 10 mg OR Risperidone IM 6 mg (second-generation, lower EPS, better efficacy for mania). **Why the switch matters**: (1) Better symptom control with atypicals, (2) Lower dystonia/akathisia risk, (3) Faster response, (4) Better long-term outcomes. **Acute management**: Antipsychotic + benzodiazepine (lorazepam 2-4 mg IM) combination standard. **Subsequent mania episodes**: Continue atypical antipsychotic (shows efficacy), avoid haloperidol re-challenge.\\n\\n## Q9: Lithium Teratogenicity and Reproductive Planning\\n**Q: 28-year-old woman on lithium for bipolar I wants to get pregnant. Doctor recommends discontinuing. Is this right? What's evidence?**\\n\\nA: **Teratogenicity risk**: Lithium increases Ebstein's anomaly (cardiac defect) risk from 1/20,000 baseline to 1/500 during first trimester exposure. **Risk-benefit decision complex**: (1) **Risks of continuing**: Fetal heart defect (but overall risk still low), (2) **Risks of stopping**: Relapse during pregnancy (postpartum mania/depression after pregnancy very common, 20-50% relapse rate). **Current evidence**: (1) First trimester: Highest risk (switch to lamotrigine if possible), (2) Second/third trimester: Risk lower, may consider continuing, (3) Postpartum: Highest relapse risk (mood destabilization common). **Modern approach**: NOT automatic discontinuation. Instead: (1) Switch to lamotrigine (pregnancy safer, no teratogenicity), (2) If on lithium and pregnant: Inform OB, consider fetal echocardiography (~3 weeks), (3) Plan close monitoring during pregnancy and especially postpartum (highest risk for severe mood episodes), (4) If severely ill on lithium, may continue with informed consent + monitoring. **Bottom line**: Individualized decision balancing maternal illness severity vs fetal risk.\\n\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-];
+        contentMd: `# Schizophrenia - Foundation
+
+## Definition & Epidemiology
+- **Schizophrenia**: Chronic psychotic disorder characterized by delusions, hallucinations, disorganized behavior
+- **Prevalence**: 1% lifetime risk across populations, 5-10/10,000 in India
+- **Age of onset**: Typically 15-40 years (peak 20-25 years males, 25-30 females)
+- **Gender ratio**: Equal prevalence, but earlier onset in males
+- **Course**: Often chronic/relapsing, with progressive social/occupational decline if untreated
+
+## DSM-5 Diagnostic Criteria
+Requires ≥2 of the following for ≥1 month (1 must be delusions, hallucinations, or disorganized speech):
+1. **Delusions**: Fixed false beliefs not corrected by evidence
+2. **Hallucinations**: Perceptions without external stimulus (most commonly auditory)
+3. **Disorganized speech**: Tangential, circumstantial, or incoherent
+4. **Disorganized or catatonic behavior**: Unpredictable agitation, mutism, waxy flexibility
+5. **Negative symptoms**: Diminished emotional expression, avolition, alogia
+
+## Positive vs Negative Symptoms
+### Positive Symptoms (Additive, "Adding on" abnormal content)
+- **Delusions**: Persecutory (most common), grandiose, referential, somatic, nihilistic
+- **Hallucinations**: Auditory (70-80%, often voices giving commands), visual, olfactory, gustatory
+- **Formal thought disorder**: Loose associations, flight of ideas, word salad
+- **Behavioral disturbance**: Agitation, unpredictability
+
+### Negative Symptoms (Subtractive, "Loss of" normal functioning)
+- **Alogia**: Poverty of speech/thought
+- **Avolition**: Loss of motivation, apathy
+- **Anhedonia**: Inability to feel pleasure
+- **Affective flattening**: Restricted emotional range
+- **Alogic**: Inability to organize thoughts logically
+
+## ICD-11 Diagnostic Criteria (Indian Standard)
+- Prominent psychotic symptoms (delusions, hallucinations, perceptual disturbances)
+- Functional decline
+- Duration ≥1 month (or ≥2 weeks if symptoms extremely severe)
+- Other causes excluded
+
+## Clinical Subtypes (ICD-10 Context)
+- **Paranoid**: Delusions/hallucinations prominent; relatively good prognosis
+- **Disorganized (Hebephrenic)**: Disorganized behavior/speech; poor prognosis
+- **Catatonic**: Psychomotor disturbance; rare in modern era
+- **Undifferentiated**: Meets criteria but no predominant subtype`,
+        mnemonics: [
+          { text: "DDHDN = Delusions, Disorganized speech, Hallucinations, Disorganized behavior, Negative symptoms (need ≥2)", explanation: "Diagnostic criteria mnemonic" },
+          { text: "Positive symptoms = abnormal additions (delusions, hallucinations), Negative = abnormal subtractions (alogia, avolition, anhedonia, affective flattening)", explanation: "Symptom classification" },
+          { text: "1% lifetime risk, 5-10/10,000 India, peak onset 20-25M/25-30F", explanation: "Epidemiology" },
+          { text: "Paranoid (best prognosis) > Undifferentiated > Disorganized (worst), Catatonic (rare)", explanation: "Subtype prognosis" }
+        ],
+        keyPoints: [
+          "Schizophrenia requires ≥2 psychotic symptoms for ≥1 month; 1 must be specific (delusions/hallucinations/disorganized speech)",
+          "Positive symptoms (delusions, hallucinations, disorganized behavior) respond better to antipsychotics than negative symptoms",
+          "Negative symptoms (alogia, avolition, anhedonia) associated with poor functional outcome and treatment resistance",
+          "Equal gender prevalence but earlier onset in males; relapsing-remitting course common",
+          "Premorbid decline in functioning (school/work performance) often precedes first psychotic episode"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Schizophrenia and Related Disorders", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Schizophrenia Spectrum and Other Psychotic Disorders", edition: "12th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "schizophrenia-layer-2-mechanism",
+        title: "Schizophrenia - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Neurobiological basis, neurotransmitter hypothesis, neuroimaging findings, genetic factors.",
+        contentMd: `# Schizophrenia - Mechanism
+
+## Neurotransmitter Hypothesis
+### Dopamine Hypothesis (Primary)
+- **Mesolimbic pathway**: Elevated dopamine → positive symptoms (delusions, hallucinations)
+  - Explains therapeutic effect of dopamine antagonists (antipsychotics)
+  - Reward dysregulation leads to aberrant salience (attributing significance to irrelevant stimuli)
+- **Mesocortical pathway**: Reduced dopamine in prefrontal cortex → negative symptoms (alogia, avolition)
+  - Explains cognitive deficits, poor executive function
+  - Resistant to typical antipsychotics (dopamine blockade worsens prefrontal hypoactivity)
+- **Nigrostriatal pathway**: Dopamine blockade by antipsychotics → extrapyramidal side effects
+
+### Glutamate Hypothesis (NMDA Receptor)
+- **Glutamatergic hypofunction**: Reduced NMDA receptor signaling
+- **Evidence**: Phencyclidine (PCP), ketamine (NMDA antagonists) produce schizophrenia-like psychosis
+- **Relevance**: Explains cognitive deficits, negative symptoms (not responsive to dopamine antagonists)
+- **Therapeutic target**: Glycine, D-serine (NMDA co-agonists) enhance glutamate signaling
+
+### Other Neurotransmitter Abnormalities
+- **GABA hypofunction**: Reduced inhibitory control; parvalbumin-positive interneurons affected
+- **Serotonin**: 5-HT dysfunction may contribute to cognitive/mood symptoms
+- **Acetylcholine**: Nicotinic receptor dysfunction (explains high smoking rates)
+
+## Brain Structural Abnormalities
+### Gray Matter Changes
+- **Lateral ventricular enlargement**: Non-specific but consistent finding
+- **Reduced prefrontal cortex volume**: Particularly dorsolateral prefrontal cortex (DLPFC)
+- **Hippocampal changes**: Reduced volume; memory/emotion dysfunction
+- **Temporal lobe abnormalities**: Superior temporal gyrus (language processing), amygdala
+- **Thalamus**: Reduced volume; relay station for sensory information
+- **Progressive changes**: Some gray matter loss progressive during illness course
+
+### White Matter Changes
+- **Reduced integrity**: Decreased white matter in frontal-temporal connections
+- **Tractography findings**: Disrupted fiber tracts (superior longitudinal fasciculus, uncinate fasciculus)
+- **Consequence**: Poor communication between brain regions (integration deficit theory)
+
+## Functional Brain Abnormalities
+### Neuroimaging Findings
+- **Hypofrontality**: Reduced prefrontal cortex activation during cognitive tasks
+- **Hyperactivity in limbic regions**: Excessive amygdala/striatum activation
+- **Disrupted connectivity**: Poor integration between prefrontal cortex and limbic system (salience network dysfunction)
+- **Default mode network (DMN) dysfunction**: Abnormal at-rest brain activity patterns
+
+## Genetic Factors
+### Heritability
+- **Concordance**: Monozygotic 45-50%, dizygotic 15-20%
+- **Heritability estimate**: 60-80% (highly heritable; environmental factors also important)
+- **Inheritance pattern**: Polygenic (multiple genes, not single Mendelian inheritance)
+
+### High-Risk Genes
+- **DISC1** (Disrupted in Schizophrenia 1): Synaptic plasticity, neurogenesis
+- **NRG1** (Neuregulin-1): NMDA receptor modulation
+- **COMT** (Catechol-O-methyltransferase): Dopamine metabolism; Val158Met polymorphism
+- **Neuregulin-ErbB signaling**: Glutamate neurotransmission
+- **Copy number variations (CNVs)**: 22q11 deletion, 1q21 duplication increase risk
+
+### Gene-Environment Interaction
+- **Genetic vulnerability** + **environmental stress** = schizophrenia onset
+- **Environmental risk factors**: Prenatal (maternal infection, nutritional deficiency), perinatal (birth complications, hypoxia), postnatal (cannabis use adolescence, urban living, migration, childhood trauma)
+
+## Neuropathology
+### Cytoarchitectural Abnormalities
+- **Reduced dendritic spine density**: Particularly in prefrontal cortex (synaptic loss)
+- **Altered pyramidal neuron organization**: Disorganized cortical lamination
+- **Reduced soma size**: Cortical neurons appear smaller
+- **Glial abnormalities**: Reduced oligodendrocytes, astrocytes (myelin dysfunction)
+
+### Developmental Neurobiology
+- **Neurodevelopmental hypothesis**: Schizophrenia reflects disrupted brain development
+- **Abnormal synaptic pruning**: Excessive adolescent pruning of synapses (normally occurs ages 12-25)
+- **Excessive dopamine release**: Mesolimbic system hypersensitivity to stress
+- **Prefrontal maturation lag**: Prefrontal cortex (executive function) slower to mature
+
+## Integrative Models
+### Salience Network Dysfunction
+- **Aberrant salience**: Brain attributes excessive significance to irrelevant stimuli
+- **Mechanism**: Hyperactive anterior insula/ventral striatum + hypoactive prefrontal cortex
+- **Explains**: Delusions (misattribution of meaning), negative symptoms (devaluation of reward)
+
+### Cognitive Dysmetria
+- **Integration deficit**: Poor cerebellar-cerebral coordination
+- **Consequence**: Failure to integrate sensory input, memory, emotion
+- **Clinical result**: Disorganized thinking, hallucinations`,
+        mnemonics: [
+          { text: "Dopamine dysregulation: Mesolimbic UP (positive symptoms), Mesocortical DOWN (negative symptoms), Nigrostriatal blocked (EPS)", explanation: "Pathway-specific effects" },
+          { text: "Gray matter: Ventricles enlarged, Prefrontal reduced, Hippocampus small, Temporal abnormal", explanation: "Structural changes" },
+          { text: "Heritability 60-80%, Monozygotic 45-50%, Dizygotic 15-20% concordance", explanation: "Genetic contribution" },
+          { text: "Developmental hypothesis: Excessive adolescent pruning + prefrontal lag = psychosis", explanation: "Developmental model" }
+        ],
+        keyPoints: [
+          "Dopamine hyperactivity in mesolimbic system causes positive symptoms; hypofunctioning in mesocortical system causes negative symptoms",
+          "Glutamate hypofunction at NMDA receptors contributes to cognitive deficits and treatment-resistant negative symptoms",
+          "Brain imaging shows reduced prefrontal volume, enlarged ventricles, hippocampal abnormalities, disrupted connectivity",
+          "Highly heritable (60-80%) but polygenic; multiple genes + environmental stress required for illness onset",
+          "Neurodevelopmental model: excessive adolescent synaptic pruning + prefrontal maturation lag + stress = psychosis"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Neurobiology of Schizophrenia", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Neurobiological Basis of Psychotic Disorders", edition: "12th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "schizophrenia-layer-3-clinical",
+        title: "Schizophrenia - Clinical",
+        estimatedMinutes: 35,
+        summary: "Clinical presentation, prodromal phase, diagnostic assessment, differential diagnosis, management.",
+        contentMd: `# Schizophrenia - Clinical
+
+## Clinical Presentation Phases
+
+### Premorbid Phase
+- **Subtle personality changes**: Social withdrawal, poor hygiene, academic decline
+- **Duration**: Months to years before first psychotic episode
+- **Not diagnostic**: Gradual onset; changes only noticed retrospectively
+
+### Prodromal Phase (At-Risk Mental State)
+- **Attenuated psychotic symptoms**: Vague ideas of reference, illusions (not full delusions/hallucinations)
+- **Cognitive decline**: Poor concentration, memory problems
+- **Social/occupational decline**: Withdrawal from activities
+- **Duration**: Weeks to months
+- **Significance**: 20-40% convert to psychosis within 2 years
+- **Clinical pearl**: Early intervention during prodrome improves outcome
+
+### First Episode Psychosis (FEP)
+- **Acute presentation**: Rapid onset delusions, hallucinations, disorganized behavior
+- **Duration of untreated psychosis (DUP)**: Time from symptom onset to treatment (median 1-2 years in India; longer delays worsen prognosis)
+- **Stressors often present**: May be precipitated by cannabis use, sleep deprivation, interpersonal conflict
+- **Treatment response**: 60-70% respond to first antipsychotic trial
+
+### Maintenance Phase
+- **Chronic course**: Relapsing-remitting (70%), continuous (20%), or single episode remission (10%)
+- **Residual symptoms**: Even on medication, negative symptoms, cognitive deficits persist
+- **Progressive decline**: Social/occupational functioning gradually worsens (social drift)
+
+## Clinical Features by Symptom Type
+
+### Positive Symptoms (Presentation)
+#### Delusions
+- **Persecutory** (most common, ~50%): Beliefs of being spied on, plotted against
+- **Referential**: Neutral events have special meaning directed at patient (TV program speaking to them)
+- **Grandiose**: Inflated self-worth, special powers, famous identity
+- **Somatic**: Fixed beliefs about body (organs rotting, insects in skin)
+- **Nihilistic**: Denial of reality (limb doesn't exist, organs nonfunctional)
+
+#### Hallucinations
+- **Auditory** (70-80%): Most common; often voices commenting, criticizing, giving commands
+  - Second/third person voices (referential)
+  - Running commentary (narrative)
+  - Command hallucinations (dangerous if violent commands)
+- **Visual**: Less common; rarely purely visual (usually with auditory)
+- **Olfactory/gustatory**: Rare; often unpleasant
+- **Tactile**: Formication (feeling of insects on skin)
+
+#### Formal Thought Disorder (Disorganized Speech)
+- **Loose associations**: Thoughts jump from one idea to unrelated idea
+- **Tangential thinking**: Answers question but goes off-topic, never returns
+- **Circumstantial**: Excessive detail; eventually gets to point
+- **Flight of ideas**: Rapid speech, rhyming, clang associations
+- **Word salad**: Incomprehensible mixture of words
+- **Neologisms**: Made-up words
+
+### Negative Symptoms (Consequence)
+- **Alogia**: Poverty of speech; minimal spontaneous speech, brief responses
+- **Avolition**: Loss of motivation; inability to initiate goal-directed activity
+- **Anhedonia**: Inability to experience pleasure; loss of interest in activities
+- **Affective flattening**: Restricted emotional range; monotone voice, blank face
+- **Social withdrawal**: Avoidance of social contact
+
+### Cognitive Symptoms
+- **Executive dysfunction**: Poor planning, decision-making, organizing
+- **Working memory deficits**: Difficulty holding information temporarily
+- **Processing speed**: Slowed thinking, slow responses
+- **Verbal fluency**: Difficulty generating words
+- **Attention/concentration**: Distractibility, difficulty sustaining focus
+
+## Diagnostic Assessment
+
+### Mental Status Examination Findings
+- **Appearance/behavior**: May be disheveled, unmotivated, psychomotor retardation or agitation
+- **Speech**: Disorganized, coherence impaired, rate variable
+- **Mood/affect**: Affect flattened or incongruent; mood may be dysphoric
+- **Thought process**: Loose associations, tangential, circumstantial
+- **Thought content**: Delusions, hallucinations, ideas of reference
+- **Cognition**: Alert but poor attention/concentration; disorientation rare (differentiates from delirium)
+- **Insight**: Typically absent ("I'm not ill, they're out to get me")
+- **Judgment**: Impaired; poor reality testing
+
+### Diagnostic Criteria (ICD-10 & DSM-5)
+**ICD-10**: Characteristic psychotic symptoms + social/occupational decline + duration ≥1 month + exclusion of organic causes, substance, mood disorders
+
+**DSM-5**: ≥2 symptoms for ≥1 month (1 must be delusions/hallucinations/disorganized speech) + ≥6 months total (including prodromal) + functional impairment + exclusion of other causes
+
+## Differential Diagnosis
+
+| Diagnosis | Distinguishing Feature |
+|-----------|------------------------|
+| Brief Psychotic Disorder | Psychosis <1 month |
+| Schizophreniform | Psychosis 1-6 months |
+| Delusional Disorder | Delusions only; no hallucinations, other psychotic symptoms |
+| Mood Disorder with Psychosis | Psychosis only during mood episodes (mania/depression) |
+| Substance-Induced Psychosis | Temporal relationship to drug use; resolves with abstinence |
+| Psychosis due to Medical Condition | Clear medical cause (infection, seizure, tumor) |
+| Autism Spectrum Disorder | Onset childhood; social deficits lifelong; no psychosis |
+| Delirium | Acute onset, fluctuating consciousness, disorientation, inattention |
+
+## Management
+
+### First-Episode Psychosis (FEP) Approach
+1. **Comprehensive assessment**: Medical/neurological exam, labs (CBC, electrolytes, thyroid, prolactin), neuroimaging (MRI brain to rule out organic causes)
+2. **Antipsychotic initiation**: Start low-dose first-generation (FGA) or second-generation antipsychotic (SGA)
+   - **SGAs preferred**: Lower EPS risk; risperidone, olanzapine, aripiprazole common choices
+   - **FGAs alternative**: Haloperidol if cost-limiting (common in India)
+   - **Response**: 60-70% respond to first trial; partial responders at 6 weeks → increase dose or switch
+3. **Psychosocial interventions**: Family psychoeducation, cognitive therapy, occupational rehabilitation
+4. **Coordinated specialty care (CSC)**: Team approach (psychiatrist, psychologist, social worker, peer specialist)
+
+### Maintenance Phase
+- **Antipsychotic**: Long-acting injectables (LAIs) improve adherence
+- **Psychosocial**: Cognitive remediation, social skills training, occupational therapy
+- **Relapse prevention**: Family intervention, stress management, substance avoidance
+- **Comorbidity management**: Depression, anxiety, substance use common
+
+### Special Considerations
+- **Cannabis**: Associated with earlier onset, worse prognosis; cessation critical
+- **Substance use**: Dual diagnosis common; integrated treatment needed
+- **Suicidal ideation**: 10% lifetime suicide rate; screen at every visit
+- **Metabolic monitoring**: Antipsychotics cause weight gain, hyperglycemia, dyslipidemia; regular monitoring essential`,
+        mnemonics: [
+          { text: "Premorbid → Prodromal → First Episode → Maintenance (4 phases of illness)", explanation: "Disease course" },
+          { text: "Positive: Delusions (Persecutory, Referential, Grandiose, Somatic, Nihilistic), Hallucinations, Disorganized speech", explanation: "Positive symptom types" },
+          { text: "Negative: Alogia, Avolition, Anhedonia, Affective flattening (AAAA), plus social withdrawal", explanation: "Negative symptom mnemonic" },
+          { text: "DUP (Duration of Untreated Psychosis): Longer DUP = worse prognosis; early intervention critical", explanation: "Clinical pearl" }
+        ],
+        keyPoints: [
+          "Prodromal phase identifies at-risk individuals; early intervention during this phase improves long-term outcome",
+          "First-episode psychosis optimal treatment window; rapid antipsychotic initiation essential (60-70% respond)",
+          "Negative symptoms and cognitive deficits persist despite antipsychotics; drive long-term disability",
+          "Duration of untreated psychosis (DUP) major predictor of outcome; reduce DUP through early detection programs",
+          "Second-generation antipsychotics preferred for first-episode (lower EPS risk); LAIs improve adherence in maintenance"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Clinical Management of Schizophrenia", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Schizophrenia: Clinical Presentation and Diagnostic Evaluation", edition: "12th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "schizophrenia-layer-4-exam-prep",
+        title: "Schizophrenia - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "High-yield facts, diagnostic criteria, treatment algorithms, common exam questions.",
+        contentMd: `# Schizophrenia - Exam Prep
+
+## High-Yield Quick Facts
+- **Prevalence**: 1% lifetime risk globally; 5-10/10,000 in India
+- **Onset**: Peak 20-25M, 25-30F (males earlier)
+- **Gender ratio**: Equal
+- **Course**: 70% relapsing-remitting, 20% continuous, 10% single episode remission
+- **Suicide rate**: 10% lifetime (screen every visit)
+- **Treatment response**: 60-70% first antipsychotic; 20-30% treatment-resistant
+
+## Diagnostic Criteria Quick Reference
+
+### ICD-10 (Used in India)
+- **Code**: F20 (paranoid F20.0, disorganized F20.1, catatonic F20.2, undifferentiated F20.3)
+- **Duration**: ≥1 month characteristic symptoms + social/occupational decline
+- **Exclusions**: Organic brain disease, substance use, mood disorder
+
+### DSM-5
+- **≥2 of 5 symptoms** (1 must be delusions/hallucinations/disorganized speech):
+  1. Delusions
+  2. Hallucinations
+  3. Disorganized speech
+  4. Disorganized/catatonic behavior
+  5. Negative symptoms
+- **Duration**: ≥1 month (≥6 months total including prodrome)
+- **Functional impairment required**
+
+## Key Diagnostic Distinctions
+
+| Diagnosis | Duration | Key Features | Prognosis |
+|-----------|----------|-------------|-----------|
+| Brief Psychotic | <1 month | Acute psychosis, often stressor-related | Excellent |
+| Schizophreniform | 1-6 months | Meets schizophrenia criteria but shorter duration | Good (50% convert) |
+| Schizophrenia | ≥6 months | Meets criteria + functional decline | Guarded (chronic) |
+| Delusional Disorder | ≥1 month | ONLY delusions; no hallucinations/disorganization | Better than schizophrenia |
+
+## Neurotransmitter Abnormalities (Exam Focus)
+
+### Dopamine Dysregulation (Most Important)
+- **Mesolimbic**: ↑ dopamine → positive symptoms (responds to dopamine antagonists)
+- **Mesocortical**: ↓ dopamine → negative symptoms, cognitive deficits (worsens with dopamine blockade)
+- **Nigrostriatal**: dopamine ↓ by antipsychotics → EPS
+
+### Other Mechanisms
+- **Glutamate hypofunction**: NMDA antagonist model; explains cognitive deficits (non-dopamine responsive)
+- **GABA dysfunction**: Reduced inhibitory control
+
+## Antipsychotic Treatment
+
+### First-Generation (Typical) Antipsychotics
+- **Examples**: Haloperidol, chlorpromazine, fluphenazine
+- **Mechanism**: D2 dopamine antagonism
+- **Efficacy**: Good for positive symptoms; poor for negative symptoms/cognitive
+- **Side effects**: High EPS risk, tardive dyskinesia, neuroleptic malignant syndrome (NMS)
+- **Cost**: Cheap (preferred in resource-limited India settings)
+
+### Second-Generation (Atypical) Antipsychotics
+- **Examples**: Risperidone, olanzapine, quetiapine, aripiprazole
+- **Mechanism**: D2 antagonism + 5-HT2A antagonism
+- **Efficacy**: Better for negative symptoms/cognitive; improved EPS profile
+- **Side effects**: Weight gain, metabolic syndrome, prolactin elevation (risperidone > olanzapine > aripiprazole)
+- **Aripiprazole**: Partial D2 agonist; least metabolic side effects
+
+### Treatment-Resistant Schizophrenia (TRS)
+- **Definition**: <20% symptom reduction after 2 adequate antipsychotic trials (6-8 weeks at therapeutic doses)
+- **Prevalence**: 20-30% of patients
+- **Management**: Clozapine (superior for TRS; require blood monitoring WBC)
+
+### Long-Acting Injectables (LAIs)
+- **Indications**: Poor adherence, relapse prevention, maintenance
+- **Examples**: Paliperidone palmitate (monthly), fluphenazine decanoate (3-weekly)
+- **Advantage**: Improved adherence, fewer relapses
+
+## Common Exam Questions & Answers
+
+**Q1: 25-year-old man with 2-month history of hearing voices commanding him to hurt himself, fixed belief that neighbors plotting against him, disorganized speech. No prior psychiatric illness. Diagnosis?**
+A: **Schizophreniform disorder** (not schizophrenia yet; <6 months duration). Meets psychotic symptom criteria ≥1 month. Prognosis depends on conversion likelihood.
+
+**Q2: Which finding best differentiates schizophrenia from delusional disorder?**
+A: **Hallucinations absent in delusional disorder** (delusions only). Schizophrenia requires ≥2 symptoms (can include hallucinations).
+
+**Q3: Negative symptom example that responds LEAST to dopamine antagonists?**
+A: **All negative symptoms** relatively resistant to typical antipsychotics (dopamine blockade worsens prefrontal hypofunction). SGAs slightly better; psychosocial interventions primary.
+
+**Q4: Which antipsychotic has LOWEST metabolic side effects?**
+A: **Aripiprazole** (partial D2 agonist; minimal weight/glucose effects) > quetiapine > risperidone > olanzapine (highest metabolic risk).
+
+**Q5: 28-year-old with schizophrenia on haloperidol develops fever, rigidity, confusion. Most likely diagnosis?**
+A: **Neuroleptic Malignant Syndrome (NMS)** - medical emergency. STAT: stop haloperidol, supportive care, dantrolene/bromocriptine, ICU monitoring.
+
+**Q6: What is Duration of Untreated Psychosis (DUP)?**
+A: **Time from symptom onset to antipsychotic initiation**. Longer DUP = worse prognosis (progressive brain changes). India median DUP 1-2 years (high due to stigma, access barriers).
+
+**Q7: 30-year-old man on risperidone for 2 years reports amenorrhea, sexual dysfunction. Most likely cause?**
+A: **Hyperprolactinemia** - risperidone highest EPS/prolactin risk among SGAs. Options: switch to aripiprazole, add dopamine agonist, reduce dose.
+
+**Q8: Which phase has best treatment response?**
+A: **First-episode psychosis** - 60-70% respond to first antipsychotic; never-treated psychosis better prognosis than chronic cases.
+
+## Clinical Pearl Mnemonics
+- **Dopamine hypothesis**: Meso-Limbic UP = Psychosis; Meso-Cortical DOWN = Negative
+- **FGA vs SGA**: FGA = cheap, high EPS; SGA = better negative symptom/cognitive response, more metabolic side effects
+- **Duration matters**: <1m = brief, 1-6m = schizophreniform, >6m = schizophrenia
+- **Treatment targets**: Positive (dopamine antagonists) vs Negative (psychosocial, low-dose dopamine) ≠ same treatment
+- **Relapse prevention**: Antipsychotic adherence critical; LAIs useful; family intervention improves outcomes`,
+        mnemonics: [
+          { text: "Diagnostic timeline: <1m = Brief, 1-6m = Schizophreniform, ≥6m = Schizophrenia", explanation: "Duration-based classification" },
+          { text: "Mesolimbic ↑ DA = positive symptoms; Mesocortical ↓ DA = negative symptoms; Nigrostriatal = EPS", explanation: "Pathway-specific effects" },
+          { text: "FGA cheap+high EPS; SGA better negative/cognitive but metabolic risk; Aripiprazole least metabolic", explanation: "Treatment comparison" },
+          { text: "DUP = Duration of Untreated Psychosis; longer = worse outcome; reduce through early detection", explanation: "Clinical importance" }
+        ],
+        keyPoints: [
+          "Schizophrenia requires ≥2 psychotic symptoms (one specific) for ≥1 month; distinguish from schizophreniform (<6m) and brief psychotic (<1m)",
+          "Dopamine hypothesis: hyperactivity mesolimbic (positive), hypoactivity mesocortical (negative); explains treatment response heterogeneity",
+          "Second-generation antipsychotics preferred first-line (lower EPS, better negative symptom/cognitive response); cost may limit in India",
+          "Treatment-resistant schizophrenia (20-30% prevalence): defined as <20% improvement after 2 adequate trials; clozapine gold standard",
+          "Duration of untreated psychosis (DUP) critical prognostic factor; median 1-2 years India; early intervention improves long-term outcome"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Schizophrenia: Diagnosis and Treatment", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Treatment of Schizophrenia", edition: "12th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "schizophrenia-layer-5-active-recall",
+        title: "Schizophrenia - Active Recall",
+        estimatedMinutes: 20,
+        summary: "12 diagnostic cases, differential diagnosis scenarios, treatment decisions.",
+        contentMd: `# Schizophrenia - Active Recall
+
+## Q1: First-Episode Psychosis vs Medical Cause
+**Case**: 19-year-old man with 1-week sudden onset delusions of persecution, hearing voices. Temperature 38.2C, neck stiffness, photophobia.
+**Q**: What's your immediate action before diagnosing schizophrenia?
+A: **Lumbar puncture** to rule out meningitis/encephalitis. Fever + meningeal signs = medical emergency. Psychosis due to medical condition must be excluded. **Learning**: Always perform medical/neurological exam in first psychotic episode; fever, focal neurological signs, sudden onset suggest organic cause.
+
+## Q2: Prodromal Phase Recognition
+**Case**: 21-year-old student with 6-month subtle withdrawal from friends, declining grades, vague ideas that people looking at him strangely (not fully convinced). No hallucinations. Still functions.
+**Q**: Diagnosis and management?
+A: **At-risk mental state (Prodromal Phase)**. Not yet schizophrenia (no clear psychotic symptoms). **Management**: Regular psychiatric follow-up (convert risk 20-40% over 2 years), psychoeducation, cognitive therapy, consider ultra-low antipsychotics if high-risk features. **Learning**: Early intervention in prodromal phase improves outcome; don't wait for full psychosis.
+
+## Q3: Disorganized vs Paranoid Schizophrenia
+**Case-A**: 28-year-old with 6-month bizarre delusions (organs rotting), incoherent speech, giggling inappropriately, poor hygiene. **Case-B**: 32-year-old with 6-month persecutory delusions (boss poisoning food), guarded behavior but speech organized, maintains employment.
+**Q**: Prognosis comparison?
+A: **Case-A (Disorganized): Poor prognosis** - negative symptoms, cognitive decline, social withdrawal, poor treatment response. **Case-B (Paranoid): Better prognosis** - fewer negative symptoms, better insight, maintained functioning, good treatment response. **Learning**: Paranoid subtype relatively good prognosis; disorganized worst.
+
+## Q4: Negative Symptoms vs Depression
+**Case**: 26-year-old with schizophrenia on antipsychotic complains of "not enjoying anything, no motivation to do anything, feels empty." No sleep loss, no guilt/hopelessness.
+**Q**: How differentiate anhedonia (negative symptom) from depression?
+A: **Anhedonia** = loss of pleasure capacity; depressed mood ABSENT. **Depression** = depressed mood + guilt/hopelessness + neurovegetative (sleep, appetite). This patient: anhedonia without mood depression = negative symptom (primary). **Management**: Psychosocial (behavioral activation), not antidepressants primary. **Learning**: Negative symptoms primary burden in schizophrenia; require different interventions than mood disorders.
+
+## Q5: Antipsychotic-Induced Akathisia
+**Case**: 27-year-old started on haloperidol 3 days ago. Now complaining of restlessness, "need to move," inner tension, difficulty sitting still. No tremor or rigidity on exam.
+**Q**: What is this? How manage?
+A: **Akathisia** (subjective restlessness + objective motor restlessness). Early EPS side effect (days to weeks). **Management**: (1) Reduce dose, (2) Add beta-blocker (propranolol) or benzodiazepine (lorazepam), (3) Consider switch to SGA. **Learning**: Akathisia often missed (patient uncomfortable, may worsen agitation/suicide risk); distinguish from psychotic agitation.
+
+## Q6: Treatment-Resistant Schizophrenia
+**Case**: 35-year-old with 15-year schizophrenia. Tried 5 different antipsychotics (risperidone, olanzapine, haloperidol, quetiapine, aripiprazole) at adequate doses for 6-8 weeks each. <20% symptom improvement with each.
+**Q**: Next step?
+A: **Clozapine** - gold standard for treatment-resistant schizophrenia (TRS). Superior efficacy vs all others; 30-50% respond when others fail. **Requirement**: Baseline WBC/differential (AGRANULOCYTOSIS risk), then weekly monitoring 6 months, then biweekly. **Special monitoring**: Seizure risk (dose-dependent), myocarditis (rare, early), metabolic syndrome (highest among antipsychotics). **Learning**: Clozapine underused due to monitoring burden; essential for TRS.
+
+## Q7: Substance-Induced vs Primary Psychosis
+**Case-A**: 22-year-old after first cannabis joint develops paranoid delusions, resolves when substance wears off (next day). **Case-B**: 22-year-old smoker of cannabis weekly × 2 years; gradually developed persecutory delusions persistent even when not high.
+**Q**: Differentiate.
+A: **Case-A: Substance-induced psychotic disorder** - temporal link (during/shortly after intoxication), resolves with abstinence. **Case-B: Schizophrenia in cannabis-using patient** - persistent psychosis beyond intoxication period; genetic vulnerability likely (gene-environment interaction). **Management-A**: Supportive care, reassurance, avoid repeated use. **Management-B**: Antipsychotic + cannabis cessation critical. **Learning**: Cannabis risk factor for schizophrenia (earlier onset, worse prognosis); ask all at-risk patients about use.
+
+## Q8: Adherence & Relapse Prevention
+**Case**: 33-year-old man, diagnosed schizophrenia 5 years ago, stable on oral antipsychotic. Psychiatrist recommends switch to long-acting injectable (LAI). Patient refuses, says "I'll take pills, don't want injections."
+**Q**: Persuasion points?
+A: **LAI advantages**: (1) Better adherence (injected monthly vs pills daily), (2) Fewer relapses (30-40% reduction vs oral), (3) Simpler regimen, (4) No need to remember daily. **Disadvantages**: Can't stop immediately if side effects (vs pills). **Approach**: Shared decision-making; offer trial. **Data**: Meta-analyses show LAI superior for relapse prevention. **Learning**: Poor adherence major cause of relapse (50% non-adherent at 1 year); LAIs practical solution.
+
+## Q9: Cognitive Deficits Resistant to Antipsychotics
+**Case**: 28-year-old on antipsychotic for 3 years, positive symptoms well-controlled. But working memory, processing speed, attention all severely impaired; lost job, living with parents.
+**Q**: Why not improving with antipsychotic? How manage?
+A: **Cognitive deficits driven by glutamate hypofunction + structural brain changes**, NOT dopamine. Dopamine antagonists DON'T improve cognition. **Management**: (1) Psychosocial - cognitive remediation (computerized training), (2) Low-dose stimulants (methylphenidate) may help some, (3) Ensure antipsychotic adequate (some better: risperidone > haloperidol for cognition), (4) Occupational rehabilitation, (5) Supported employment. **Learning**: Cognitive deficits major functional limitation; require non-pharmacological approaches; antipsychotics can't fix glutamatergic problems.
+
+## Q10: Suicidal Risk in Schizophrenia
+**Case**: 26-year-old with schizophrenia, well-managed positive symptoms on antipsychotic, but tells psychiatrist "I have no future, might as well be dead." No prior suicide attempts. What's his risk?
+A: **10% lifetime suicide rate in schizophrenia** (one of highest psychiatric conditions). **Risk factors**: Male, young age, depression comorbidity, substance use, poor insight (paradoxically, better insight = higher risk with awareness of chronicity), command hallucinations telling to harm self. **Assessment**: Ask about access to means, specific plan, previous attempts. **Management**: (1) Hospitalization if imminent risk, (2) Psychosocial support, (3) Screen for/treat depression (mood stabilizers, antidepressants), (4) Family involvement, (5) Substance cessation. **Learning**: Suicide screening essential at every visit; often overlooked in schizophrenia.
+
+## Q11: Family Intervention Impact
+**Case**: 30-year-old with schizophrenia. Family extremely critical ("lazy, makes no effort"), blaming. Prior 2 relapses when on medication. Psychiatrist recommends family therapy.
+**Q**: Why? Evidence?
+A: **Expressed Emotion (EE) - High EE families** (critical, hostile comments) associated with higher relapse rates (60% in 9 months vs 15% low-EE families). **Family intervention**: Psychoeducation (what is schizophrenia), communication skills, reducing criticism. **Evidence**: Meta-analyses show family therapy + antipsychotic reduces relapse 20-30% vs antipsychotic alone. **Learning**: Schizophrenia not just individual illness; family factors critical for outcome. Coordinated specialty care includes family work.
+
+## Q12: Cannabis & Schizophrenia Risk
+**Case**: 18-year-old son of schizophrenia parent asks psychiatrist if he can use cannabis recreationally. Worried about schizophrenia risk given family history.
+**Q**: What's the evidence-based answer?
+A: **Cannabis increases schizophrenia risk through multiple pathways**: (1) Genetic susceptibility gene-environment interaction (cannabinoid receptor gene × THC exposure), (2) Early use (adolescence) when brain developing = higher risk, (3) THC-potent strains higher risk than historically lower-THC cannabis. **Relative risk**: Cannabis users have 1.4-2× lifetime schizophrenia risk vs non-users; effect stronger with early/heavy use. **Recommendation**: Given family history (already 10% risk from genetics), cannabis use substantially increases risk. **Avoidance advised**. **Learning**: Cannabis preventable risk factor for schizophrenia; counsel all at-risk individuals (family history, prodromal symptoms).`,
+        mnemonics: [
+          { text: "Prodromal features: Subtle social withdrawal, grades declining, vague ideas of reference, NOT full psychosis yet", explanation: "Early detection window" },
+          { text: "Paranoid (best prognosis) > Undifferentiated > Disorganized (worst); Catatonic rare", explanation: "Subtype outcomes" },
+          { text: "Negative symptoms NOT dopamine-responsive; cognitive deficits glutamate-related; psychosocial interventions primary", explanation: "Treatment mismatch" },
+          { text: "Expressed Emotion (EE) high = relapse risk 60%; Family therapy reduces relapse 20-30%", explanation: "Family influence" }
+        ],
+        keyPoints: [
+          "Prodromal phase (at-risk mental state) identifies high-converters; early intervention improves long-term outcome",
+          "Negative symptoms and cognitive deficits most disabling aspects; resistant to dopamine antagonists, require psychosocial approaches",
+          "Treatment-resistant schizophrenia (20-30%): clozapine gold standard but requires strict monitoring (agranulocytosis, myocarditis, seizures)",
+          "Substance-induced psychosis (especially cannabis) must be distinguished from primary schizophrenia; temporal relationship key",
+          "Family expressed emotion (high EE) predicts relapse; family intervention essential component of comprehensive treatment; 10% suicide risk requires vigilance"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Schizophrenia: Clinical Case Scenarios", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Schizophrenia: Long-term Outcome and Management", edition: "12th" }
+        ]
+      }
+    ]
+  }
 ];
