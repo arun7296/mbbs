@@ -1,20 +1,581 @@
-export const medicinePart5Lessons = [
-  // IM-MOD-01: Cardiology - Infective Endocarditis
+import type { TopicLessons } from "./content-loader";
+
+export const medicinePart5Lessons: TopicLessons[] = [
   {
     topicCode: "IM-MOD-01-TOP-06",
     layers: [
       {
         layer: 1,
-        slug: "ie-foundation",
+        slug: "infective-endocarditis-layer-1-foundation",
         title: "Infective Endocarditis - Foundation",
         estimatedMinutes: 20,
-        summary: "Definition, epidemiology, pathogen classification, risk factors, and natural history of infective endocarditis.",
-        contentMd: "# Infective Endocarditis - Foundation\n\n## Definition\nInfective endocarditis (IE): Infection of endocardium (usually valves) by bacteria, fungi, or rare organisms causing inflammation, valve destruction, and systemic complications.\n\n## Epidemiology\n- Incidence: 3-10 per 100,000 person-years globally\n- Male predominance (2-3:1)\n- Two peaks: Rheumatic heart disease (young), degenerative disease + prosthetic valves (elderly)\n- Indian context: Rheumatic heart disease (40-60% of IE cases) vs degenerative in West\n\n## Risk Factors - Predisposing Conditions\n**Highest risk (native valve):**\n- Rheumatic heart disease (mitral stenosis, aortic regurgitation)\n- Ventricular septal defect (high velocity jets)\n- Patent ductus arteriosus\n- Endocarditis on endocarditis (recurrence)\n\n**Moderate risk:**\n- Mitral valve prolapse (with murmur)\n- Degenerative valve disease, bicuspid aortic valve\n\n**Prosthetic valves:**\n- Early prosthetic IE (within 12 months): Usually Staph aureus, nosocomial\n- Late prosthetic IE (>12 months): Viridans streptococci, community-acquired\n\n## Common Causative Organisms\n**Native valve IE:**\n- Streptococcus viridans (oral commensal) - 50-60%\n- Staphylococcus aureus (skin pathogen, IV drug use) - 20-30%\n- Enterococci - 10-15%\n\n**Prosthetic valve IE:**\n- Staphylococcus aureus and epidermidis - 30-40%\n- Streptococci - 20-30%\n- Gram-negative rods, fungi\n\n**Atypical organisms:**\n- Coxiella burnetii (Q fever), Bartonella (cats), Legionella,\n        mnemonics: [\n          { text: \"IE Risk - RVP: Rheumatic, Valve prolapse, Prior endocarditis\", explanation: \"Native valve risk factors in India\" },\n          { text: \"Common bugs: Strep, Staph, Enter (SSE)\", explanation: \"Streptococcus viridans, Staph aureus, Enterococcus\" }\n        ],\n        keyPoints: [\n          \"Rheumatic heart disease = major risk in India (unlike West)\",\n          \"Viridans Strep is most common in native valve disease\",\n          \"Staph aureus aggressive, rapid progression, high mortality\",\n          \"Prosthetic valve IE is hospital-acquired in 50% (early onset)\"\n        ],\n        textbookRefs: [\n          { book: \"Harrison's Principles of Internal Medicine\", chapter: \"98: Infective Endocarditis\", edition: \"21st\" },\n          { book: \"Davidson's Principles and Practice of Medicine\", chapter: \"29: Infective Endocarditis\", edition: \"24th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"ie-mechanism\",\n        title: \"Infective Endocarditis - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathogenesis of endocarditis, vegetations, hemodynamic consequences, and pathological features of valve damage.\",\n        contentMd: "# Infective Endocarditis Pathophysiology\\n\\n## Pathogenesis - Three Steps to IE\\n1. **Bacteremia source:** Dental procedures (extraction, prophylaxis failure), IV drug use, poor hygiene, GI procedures, UTI catheterization\\n2. **Seeding of abnormal valves:** Circulating bacteria lodge on damaged/turbulent endocardium\\n3. **Vegetation formation:** Platelets + fibrin + bacteria (may be protected from antibiotics)\\n\\n## Vegetation Composition\\n- Bacterial microcolonies embedded in fibrin-platelet matrix\\n- Minimal inflammatory response initially (subacute course possible)\\n- Can embolize to distant organs (septic emboli)\\n\\n## Hemodynamic Consequences\\n**Valve incompetence:**\\n- Destruction of valve leaflets → regurgitation (aortic > mitral)\\n- Acute severe regurgitation (aortic) → acute pulmonary edema, cardiogenic shock\\n\\n**Valve obstruction:**\\n- Large vegetations (esp. fungal) → obstruction-like physiology\\n\\n## Immune-Mediated Complications\\n- Circulating immune complexes (Type III hypersensitivity) → vasculitis, glomerulonephritis\\n- Immune activation → splenomegaly, anemia\\n\\n## Embolic Phenomena\\n- Septic emboli from vegetations lodge in:\\n  - Brain (mycotic aneurysm, abscess, infarction) - most common\\n  - Spleen (splenic infarction, rupture)\\n  - Kidney (hematuria, infarction)\\n  - Coronary artery (MI)\\n\\n## Culture-Negative IE\\n- 5-10% of IE cases have negative blood cultures\\n- Causes: Prior antibiotics, fastidious organisms (HACEK - Haemophilus, Aggregatibacter, Cardiobacterium, Eikenella, Kingella), fungi, Coxiella, Bartonella,\\n        mnemonics: [\\n          { text: \\\"Vegetation = Bacteria + Fibrin + Platelets\\\", explanation: \\\"Protected nidus for persistent infection\\\" },\\n          { text: \\\"HACEK bugs = Culture-negative IE\\\", explanation: \\\"Fastidious gram-negatives requiring special media\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Vegetations can be small (<5mm) initially, grow to >10mm\\\",\\n          \\\"Embolic phenomena occur in 30-40% of IE cases\\\",\\n          \\\"Aortic valve more prone to destruction than mitral\\\",\\n          \\\"Staph aureus causes rapid, destructive disease\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Harrison's Principles of Internal Medicine\\\", chapter: \\\"98: Infective Endocarditis\\\", edition: \\\"21st\\\" },\\n          { book: \\\"Robbins Basic Pathology\\\", chapter: \\\"12: The Heart\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"ie-clinical\\\",\\n        title: \\\"Infective Endocarditis - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical presentation, Duke criteria for diagnosis, echocardiographic findings, and blood culture management.\\\",\\n        contentMd: "# Infective Endocarditis: Clinical & Diagnosis\\\\n\\\\n## Presentation Timeline\\\\n**Acute IE (Staph aureus):**\\\\n- Sudden fever, chills, septic appearance\\\\n- Days to weeks course, rapid valvular destruction\\\\n- Higher mortality (30-50%)\\\\n\\\\n**Subacute IE (Viridans Strep):**\\\\n- Insidious fever, malaise, night sweats\\\\n- Weeks to months, progressive damage\\\\n- Lower mortality (10-20%)\\\\n\\\\n## Classic Clinical Features (Not Always Present)\\\\n- **Fever:** 90% of cases, non-specific pattern\\\\n- **New cardiac murmur:** Aortic regurgitation (diastolic) most common, may develop during course\\\\n- **Splenomegaly:** From immune activation\\\\n- **Vascular phenomena:** Osler nodes (painful, fingertips), Janeway lesions (painless, palms), splinter hemorrhages\\\\n- **Neurological:** Headache (immune complex), stroke (septic emboli), mycotic aneurysm\\\\n\\\\n## Laboratory Findings\\\\n- **Blood cultures (Before antibiotics!):** 2-3 sets, 10-15mL per bottle, aerobic+anaerobic\\\\n- **Negative cultures:** 5-10%, especially if prior antibiotics\\\\n- **CBC:** Anemia (chronic infection), leukocytosis (acute)\\\\n- **ESR/CRP:** Elevated\\\\n- **Rheumatoid factor, ANA:** Can be positive (immune complex)\\\\n\\\\n## Duke Criteria for Diagnosis (Modified 2000)\\\\n**Major criteria (2 points each):**\\\\n1. **Blood cultures:** Two separate positive cultures for viridans Strep/Staph aureus/Enterococcus, or any organism from blood\\\\n2. **Endocardial involvement:**\\\\n   - Echo positive (oscillating vegetation, prosthetic dehiscence, new regurgitation) = definite IE\\\\n   - New valve regurgitation on echo\\\\n\\\\n**Minor criteria (1 point each):**\\\\n- Predisposing condition (RHD, IV drug use)\\\\n- Fever ≥38.5°C\\\\n- Vascular phenomena (septic emboli, mycotic aneurysm)\\\\n- Immunologic phenomena (glomerulonephritis, Osler nodes, Roth spots, RF)\\\\n- Microbiological: Positive culture not meeting major criteria\\\\n\\\\n**Diagnosis:** Definite (2 major or 1 major + 3 minor or 5 minor), Possible (1 major + 1 minor or 3 minor), Rejected,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"NEW MURMUR = IE until proven otherwise\\\\\\\", explanation: \\\\\\\"Development of regurgitation murmur suggests vegetation\\\\\\\" },\\\\n          { text: \\\\\\\"OSLER = Painful nodes, JANEWAY = Painless lesions\\\\\\\", explanation: \\\\\\\"Clinical stigmata of IE\\\\\\\" },\\\\n          { text: \\\\\\\"BLOOD CULTURES BEFORE ANTIBIOTICS\\\\\\\", explanation: \\\\\\\"Critical - only way to identify organism for specific therapy\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Duke criteria: 2 major OR 1 major+3 minor OR 5 minor = definite IE\\\\\\\",\\\\n          \\\\\\\"Echocardiography is part of major criteria (oscillating vegetations)\\\\\\\",\\\\n          \\\\\\\"Blood cultures are diagnostic - must be done before antibiotics started\\\\\\\",\\\\n          \\\\\\\"Fever may be absent in elderly, heart failure, or end-stage disease\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"98: Infective Endocarditis\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"29: Infective Endocarditis\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"ie-exam\\\\\\\",\\\\n        title: \\\\\\\"Infective Endocarditis - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"Antibiotic therapy based on organisms, surgical indications, complications management, and antibiotic prophylaxis guidelines.\\\\\\\",\\\\n        contentMd: ``# Infective Endocarditis Management - Exam Focus\\\\n\\\\n## Empiric Antibiotic Therapy (Before Culture Results)\\\\n**Native valve - acute presentation (Staph aureus likely):**\\\\n- Vancomycin 15-20 mg/kg IV Q8H + Ceftriaxone 2g IV Q12H\\\\n- +/- Gentamicin 3 mg/kg IV Q8H (for synergy)\\\\n\\\\n**Native valve - subacute (Viridans Strep likely):**\\\\n- Penicillin G 4 million units IV Q4H (or Ceftriaxone)\\\\n- +/- Gentamicin 3 mg/kg IV Q8H\\\\n\\\\n**Switch to organism-specific therapy once culture results available:**\\\\n- Viridans Strep: PCN G monotherapy 4 weeks (or PCN+Gentamicin 2 weeks)\\\\n- Staph aureus: Nafcillin/oxacillin 2g IV Q4H x 6 weeks (or Vancomycin if MRSA)\\\\n- Enterococcus: Ampicillin + Gentamicin (synergistic effect required)\\\\n\\\\n## Duration\\\\n- Native valve: 4-6 weeks\\\\n- Prosthetic valve: 6-8 weeks (early IE) or 6 weeks (late IE)\\\\n\\\\n## Surgical Indications (Emergency or Urgent)\\\\n- **Large vegetations (>10mm)** with high embolic risk\\\\n- **Severe valve regurgitation** causing hemodynamic compromise (cardiogenic shock, pulmonary edema)\\\\n- **Prosthetic valve dysfunction** (dehiscence, obstruction)\\\\n- **Paravalvular abscess** with heart block\\\\n- **Recurrent septic emboli** despite appropriate antibiotics\\\\n- **Culture-negative IE** after 1 week or fastidious organisms\\\\n- **Fungal IE** (almost always requires surgery)\\\\n- **Staph aureus prosthetic IE** (early onset = worse prognosis)\\\\n\\\\n## Complications Management\\\\n**Heart failure:** Diuretics, vasodilators, inotropes, surgical repair if refractory\\\\n**Arrhythmias:** Especially AV block from abscess → pacing/surgery\\\\n**Mycotic aneurysm:** Neurosurgical evaluation, anticoagulation generally avoided\\\\n**Stroke from septic emboli:** Limited anticoagulation benefit, surgery if cardiac source\\\\n\\\\n## Antibiotic Prophylaxis (Indications in India)\\\\n**High-risk patients requiring prophylaxis for procedures:**\\\\n- Prosthetic valve\\\\n- Prior endocarditis\\\\n- Complex cyanotic heart disease\\\\n- Patent ductus arteriosus, VSD, coarctation\\\\n\\\\n**Procedures requiring prophylaxis:**\\\\n- Dental (extraction, scaling), GI/GU procedures in high-risk\\\\n\\\\n**Prophylaxis regimen (Dental):**\\\\n- Amoxicillin 2g PO 1 hour pre-procedure (or Clindamycin 600mg if PCN allergy)\\\\n- NOT for simple fillings, orthodontics, teeth cleaning in low-risk\\\\n\\\\n**Note:** RHD alone (without features) may not need prophylaxis for all procedures,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Staph = 6 weeks IV; Strep = 4 weeks IV\\\\\\\", explanation: \\\\\\\"Native valve antibiotic duration differs by organism\\\\\\\" },\\\\n          { text: \\\\\\\"SURGICAL IE: Large vegetation, Valve failure, Abscess\\\\\\\", explanation: \\\\\\\"Indications for operative intervention\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Vancomycin empiric if beta-lactam allergy or MRSA risk\\\\\\\",\\\\n          \\\\\\\"Gentamicin added for synergy in Strep IE (shortens course)\\\\\\\",\\\\n          \\\\\\\"Prosthetic valve IE needs longer therapy (6-8 weeks)\\\\\\\",\\\\n          \\\\\\\"Antibiotic prophylaxis only for high-risk cardiac conditions\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"98: Infective Endocarditis\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"ESC Guidelines on Endocarditis\\\\\\\", chapter: \\\\\\\"Management\\\\\\\", edition: \\\\\\\"2015\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"ie-recall\\\\\\\",\\\\n        title: \\\\\\\"Infective Endocarditis - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"7 recall questions on Duke criteria application, organism-specific management, surgical decisions, and prophylaxis guidelines.\\\\\\\",\\\\n        contentMd: ``# Infective Endocarditis Active Recall\\\\n\\\\n**Q1: A 35-year-old IV drug user presents with fever, new aortic regurgitation murmur, and 2 blood cultures positive for Staphylococcus aureus. Apply Duke criteria: is this definite IE?**\\\\n> **Answer:** Yes, definite IE. Criteria met: 1 major (blood cultures - Staph aureus), 1 major (echocardiographic evidence - new aortic regurgitation = endocardial involvement). 2 major criteria = definite IE. Source: IV drug use (predisposing condition = minor).\\\\n\\\\n**Q2: A 50-year-old with rheumatic mitral stenosis develops fever, but blood cultures after 48 hours remain negative. What is the next step in antibiotics?**\\\\n> **Answer:** Continue empiric antibiotics (don't change yet at 48 hrs). If cultures remain negative after 1 week, consider fastidious organisms (HACEK group, fungi, Coxiella) and add special tests (serology for Q fever, Bartonella). Consult for possible surgical exploration if no organism identified. Viridans Strep from prior streptococcal infection could also be cause.\\\\n\\\\n**Q3: A 40-year-old with Viridans Strep native valve IE is treated with Penicillin G monotherapy for 6 weeks. Why is this acceptable (vs adding Gentamicin)?**\\\\n> **Answer:** Viridans Strep is penicillin-susceptible (MIC <0.1 mcg/mL). Monotherapy with 4 weeks high-dose penicillin cures 95% of cases. Gentamicin can be added for only 2 weeks if shortening therapy desired (for prosthetic) or renal safety concerns. The key is choosing based on organism susceptibility.\\\\n\\\\n**Q4: A 55-year-old develops IE on mechanical aortic valve (prosthetic, placed 6 months ago) with large vegetation (15mm) on echo. Discuss surgical vs medical management.**\\\\n> **Answer:** HIGH surgical priority. This is prosthetic IE (intermediate timeframe), large vegetation (>10mm = embolic risk), aortic valve (high hemodynamic risk if regurgitation). Without surgery: high mortality (>60%). With surgery: remove infected prosthesis + vegetation, allow resolution of infection, then consider re-replacement. Surgical referral URGENT.\\\\n\\\\n**Q5: A 28-year-old with VSD (uncorrected, high-velocity shunt) needs dental extraction. Should antibiotic prophylaxis be given?**\\\\n> **Answer:** Yes. VSD is high-risk condition for IE (endothelial damage from turbulent flow). Dental extraction requires prophylaxis: Amoxicillin 2g PO 1 hour before procedure. Or Clindamycin 600mg if penicillin-allergy.\\\\n\\\\n**Q6: Differentiate the clinical course of Viridans Strep vs Staph aureus IE.**\\\\n> **Answer:** Viridans = SUBACUTE: Insidious fever, malaise, weeks-to-months course, lower mortality (10-20%), may have remote dental source. Staph aureus = ACUTE: Sudden fever, septic picture, days-to-weeks rapid valve destruction, mortality 30-50%, often from IV drug use or healthcare-associated source.\\\\n\\\\n**Q7: A patient with prior endocarditis due to Staph aureus is cured. What screening is recommended before declaring cure, and why?**\\\\n> **Answer:** Repeat echocardiography 4-6 weeks after completing antibiotics to document vegetation resolution and assess for complications (abscess, new regurgitation). Also ensure no septic foci elsewhere (MRI brain for mycotic aneurysm if neurological symptoms). Relapse risk is ~5-10% despite appropriate therapy.,\\\\n        mnemonics: [],\\\\n        keyPoints: [\\\\n          \\\\\\\"7 questions covering diagnosis, treatment, surgical decision-making\\\\\\\",\\\\n          \\\\\\\"Duke criteria application is critical for exam\\\\\\\",\\\\n          \\\\\\\"Organism identification drives antibiotic choice\\\\\\\",\\\\n          \\\\\\\"Surgical IE indications: size, obstruction, abscess\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"98: Infective Endocarditis\\\\\\\", edition: \\\\\\\"21st\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  },\\\\n  // IM-MOD-05: Endocrinology - Thyroid Disorders\\\\n  {\\\\n    topicCode: \\\\\\\"IM-MOD-05-TOP-02\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"thyroid-foundation\\\\\\\",\\\\n        title: \\\\\\\"Thyroid Disorders - Foundation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Thyroid anatomy, physiology of thyroid hormone synthesis, regulation by HPT axis, and classification of thyroid disorders.\\\\\\\",\\\\n        contentMd: ``# Thyroid Disorders - Foundation\\\\n\\\\n## Thyroid Anatomy & Physiology\\\\n**Thyroid gland:**\\\\n- Two lobes connected by isthmus, located at level of C4-T1\\\\n- Blood supply: Superior thyroid artery (external carotid), Inferior thyroid artery (thyrocervical trunk)\\\\n- Innervation: Vagus nerve (CN X)\\\\n\\\\n**Thyroid follicles:**\\\\n- Lined with thyroid epithelial cells (thyrocytes)\\\\n- Produce colloid containing thyroglobulin\\\\n- Storage: thyroid hormone-rich protein precursor\\\\n\\\\n## Thyroid Hormone Synthesis\\\\n1. **Iodide uptake:** Thyrocyte sodium-iodide symporter (NIS) pumps I⁻ against gradient\\\\n2. **Oxidation:** Thyroid peroxidase (TPO) oxidizes I⁻ to I₂\\\\n3. **Organification:** Iodine incorporated into tyrosine residues (DIT = di-iodotyrosine, MIT = mono-iodotyrosine)\\\\n4. **Coupling:** TPO catalyzes DIT+DIT → T4 (thyroxine), DIT+MIT → T3 (triiodothyronine)\\\\n5. **Storage:** Thyroglobulin in colloid\\\\n6. **Release:** TSH stimulates endocytosis of colloid, proteolytic release of T3/T4 into bloodstream\\\\n\\\\n## Thyroid Hormones - Forms & Transport\\\\n- **T4 (thyroxine):** Main secretory product (80%), prodrug, long half-life (7 days)\\\\n- **T3 (triiodothyronine):** More active form, shorter half-life (1.5 days), 70% from peripheral conversion\\\\n- **Reverse T3 (rT3):** Inactive metabolite\\\\n- **Transport:** 99.5% protein-bound (TBPA, albumin, TBG), <0.5% free (biologically active)\\\\n\\\\n## HPT Axis Regulation\\\\n1. **Hypothalamus:** Produces TRH (thyrotropin-releasing hormone)\\\\n2. **Anterior pituitary:** TRH stimulates TSH secretion\\\\n3. **Thyroid:** TSH stimulates T3/T4 production\\\\n4. **Negative feedback:** T3/T4 inhibit TRH and TSH\\\\n\\\\n## Classification of Thyroid Disorders\\\\n**By function:**\\\\n- Hyperthyroidism (excess thyroid hormone)\\\\n- Hypothyroidism (deficiency thyroid hormone)\\\\n- Euthyroid (normal function but structural abnormality)\\\\n\\\\n**By pathophysiology:**\\\\n- Primary (thyroid disease) - TSH abnormal opposite to hormone\\\\n- Secondary (pituitary disease) - TSH low with low hormones\\\\n- Tertiary (hypothalamic disease) - TRH/TSH deficiency,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"T4 = Pro-drug (inactive), T3 = Active form\\\\\\\", explanation: \\\\\\\"Peripheral conversion of T4 to T3 generates active hormone\\\\\\\" },\\\\n          { text: \\\\\\\"TPO = Thyroid peroxidase (organification enzyme)\\\\\\\", explanation: \\\\\\\"Target of autoimmune thyroiditis (anti-TPO antibodies)\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"TSH is most sensitive indicator of thyroid status (primary disorder)\\\\\\\",\\\\n          \\\\\\\"T4 stored in thyroid as thyroglobulin (large storage pool)\\\\\\\",\\\\n          \\\\\\\"Free T3/T4 are biologically active forms (<0.5% total)\\\\\\\",\\\\n          \\\\\\\"India: Iodine deficiency historically common - better post-iodization\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"389: Disorders of the Thyroid Gland\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"21: Endocrinology\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"thyroid-mechanism\\\\\\\",\\\\n        title: \\\\\\\"Thyroid Disorders - Mechanism\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Pathophysiology of hyperthyroidism vs hypothyroidism, Hashimoto's thyroiditis, Graves disease, and thyroid autoimmunity.\\\\\\\",\\\\n        contentMd: ``# Thyroid Pathophysiology\\\\n\\\\n## Hyperthyroidism - Excess Thyroid Hormone\\\\n**Main mechanisms:**\\\\n1. **Increased hormone production** (Graves, thyroiditis)\\\\n2. **Hormone release from gland** (thyroiditis, iodine excess)\\\\n3. **Peripheral conversion** (rare)\\\\n4. **Exogenous thyroid hormone** (over-replacement, intentional)\\\\n\\\\n**Common causes:**\\\\n- **Graves disease (60-70%):** Autoimmune, TSI antibodies activate TSH receptor\\\\n- **Thyroiditis (10-20%):** Viral, autoimmune, subacute, postpartum\\\\n- **Toxic nodule/multinodular goiter:** Autonomous hormone production\\\\n- **Iodine excess:** Iodine tablets, contrast agents, amiodarone\\\\n\\\\n## Hypothyroidism - Insufficient Thyroid Hormone\\\\n**Mechanism:**\\\\n- Destruction of thyroid tissue (autoimmune > surgical/radiation)\\\\n- Impaired hormone synthesis (iodine deficiency, TPO inhibitors)\\\\n- Secondary (TSH deficiency from pituitary/hypothalamic disease)\\\\n\\\\n**Common causes:**\\\\n- **Hashimoto thyroiditis (95% in iodine-sufficient regions):** Autoimmune, anti-TPO + anti-thyroglobulin\\\\n- **Iodine deficiency:** Still leading cause globally, rare in India post-iodization\\\\n- **Thyroid atrophy:** Post-thyroiditis, post-radioiodine\\\\n- **Medications:** Beta-blockers, amiodarone, lithium, interferons, checkpoint inhibitors\\\\n- **Secondary hypothyroidism:** Pituitary/hypothalamic disease (low TSH + low T4)\\\\n\\\\n## Graves Disease Pathophysiology\\\\n- **Autoimmune etiology:** Environmental trigger (infection, stress) + genetic predisposition\\\\n- **IgG autoantibodies (TSI):** Bind TSH receptor on thyroid follicles\\\\n- **TSI activates:** Mimics TSH → increased cAMP → hormone production + cell growth (goiter)\\\\n- **Results:** Diffuse goiter, exophthalmos (CD8+ T cells infiltrate retrobulbar fat), thyroid acropachy\\\\n- **Natural history:** Hyperthyroid → Euthyroid → Hypothyroid phase (long-term with treatment)\\\\n\\\\n## Hashimoto Thyroiditis Pathophysiology\\\\n- **Type IV hypersensitivity:** CD8+ T cell infiltration of thyroid + B cell activation\\\\n- **Autoantibodies:** Anti-TPO (90%), anti-thyroglobulin (60-70%)\\\\n- **Gradually progressive:** Destruction of thyroid tissue → lymphoid infiltration → fibrosis\\\\n- **Result:** Progressive hypothyroidism, firm goiter (can be small), associated autoimmune conditions\\\\n- **Increased risk:** Female, family history, other autoimmune disease (SLE, RA, celiac), Down syndrome, Turner syndrome\\\\n\\\\n## Thyroiditis Types\\\\n- **Viral/Subacute:** Viral prodrome → inflammatory pain → release of stored hormone (hyperthyroid phase) → depletion → hypothyroid phase → recovery (rare permanent)\\\\n- **Postpartum:** Immune rebound after pregnancy immunosuppression, temporary dysfunction\\\\n- **Autoimmune (silent):** No pain, abrupt hormone release,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Graves = TSI (stimulating antibodies)\\\\\\\", explanation: \\\\\\\"TSH receptor antibodies activate thyroid → hyperthyroidism\\\\\\\" },\\\\n          { text: \\\\\\\"Hashimoto = Anti-TPO + Anti-Thyroglobulin\\\\\\\", explanation: \\\\\\\"Autoimmune destruction of thyroid tissue\\\\\\\" },\\\\n          { text: \\\\\\\"HASHIMOTO = Hypo + Autoimmune + Slow progression\\\\\\\", explanation: \\\\\\\"Progressive hypothyroidism from autoimmune destruction\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Graves TSI can cross placenta → neonatal hyperthyroidism (transient)\\\\\\\",\\\\n          \\\\\\\"Hashimoto associated with other autoimmune conditions\\\\\\\",\\\\n          \\\\\\\"Thyroiditis causes transient hyperthyroidism (not destructive) - recovers\\\\\\\",\\\\n          \\\\\\\"Amiodarone iodine content can cause hypo or hyper\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"389: Disorders of the Thyroid Gland\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Robbins Basic Pathology\\\\\\\", chapter: \\\\\\\"24: Endocrine System\\\\\\\", edition: \\\\\\\"10th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"thyroid-clinical\\\\\\\",\\\\n        title: \\\\\\\"Thyroid Disorders - Clinical\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Clinical presentation of hyper/hypothyroidism, diagnostic evaluation with TSH/free T4, thyroid antibodies, and imaging.\\\\\\\",\\\\n        contentMd: ``# Thyroid Disorders: Clinical & Diagnosis\\\\n\\\\n## Hyperthyroidism - Symptoms & Signs\\\\n**Constitutional:** Fatigue (paradoxical despite high metabolism), weight loss despite good appetite, heat intolerance, excessive sweating, insomnia, anxiety, tremor\\\\n\\\\n**Cardiovascular:** Palpitations, tachycardia (even at rest, during sleep), systolic hypertension, widened pulse pressure, AF risk\\\\n\\\\n**Neuromuscular:** Fine tremor, proximal muscle weakness, hyperactive reflexes\\\\n\\\\n**Ocular (Graves-specific):** Exophthalmos (lid retraction = stare appearance), diplopia from extraocular muscle involvement, periorbital edema\\\\n\\\\n**Skin:** Warm, moist skin, pretibial myxedema (Graves - infiltrative dermopathy), alopecia\\\\n\\\\n**Thyroid:** Smooth goiter, bruit on auscultation (increased blood flow)\\\\n\\\\n## Hypothyroidism - Symptoms & Signs\\\\n**Constitutional:** Fatigue, weight gain (despite poor appetite), cold intolerance, constipation, dry skin, hair loss\\\\n\\\\n**Cardiovascular:** Bradycardia, decreased cardiac contractility, diastolic hypertension, cardiomegaly (reversible)\\\\n\\\\n**Neuromuscular:** Delayed reflexes (prolonged relaxation phase - \\\\\\\"hung-up reflexes\\\\\\\"), weakness, myalgia\\\\n\\\\n**Mental:** Cognitive slowing, depression, memory impairment, myxedema coma (severe, rare)\\\\n\\\\n**Myxedema:** Puffy face, periorbital edema, macroglossia, slow speech - from hyaluronic acid deposition\\\\n\\\\n**Thyroid:** Firm goiter (Hashimoto), or small/atrophic (post-thyroiditis)\\\\n\\\\n## Laboratory Diagnosis\\\\n**Primary hypothyroidism (most common):**\\\\n- TSH elevated (>4-5 mIU/L)\\\\n- Free T4 normal (subclinical) or low (overt)\\\\n- Antibodies: Anti-TPO, anti-thyroglobulin positive in autoimmune\\\\n\\\\n**Primary hyperthyroidism:**\\\\n- TSH low (<0.1 mIU/L, often undetectable)\\\\n- Free T4 elevated (overt) or normal (subclinical T3 toxicosis)\\\\n- Free T3 elevated (especially if T3 toxicosis)\\\\n- TSI positive in Graves (if available), radioactive iodine uptake high\\\\n\\\\n**Secondary/Tertiary hypothyroidism:**\\\\n- TSH low or normal + Free T4 low\\\\n- History of pituitary disease, head trauma, radiation\\\\n\\\\n## Diagnostic Algorithm\\\\n1. **Measure TSH first** (most sensitive)\\\\n2. **If TSH abnormal → measure free T4**\\\\n3. **If hyperthyroidism suspected → measure free T3** (catches T3 toxicosis)\\\\n4. **If autoimmune suspected → anti-TPO, anti-thyroglobulin, TSI**\\\\n5. **Imaging:** Ultrasound (nodules, echotexture), Technetium scan (thyroiditis, toxic nodule), Radioiodine uptake (high in Graves, low in thyroiditis),\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"HYPERTHYROID = HOT, HEART, HYPER (fast)\\\\\\\", explanation: \\\\\\\"Heat intolerance, palpitations, hyperactivity, tremor\\\\\\\" },\\\\n          { text: \\\\\\\"HYPOTHYROID = COLD, CONSTIPATED, COGNITIVE\\\\\\\", explanation: \\\\\\\"Cold intolerance, constipation, cognitive slowing\\\\\\\" },\\\\n          { text: \\\\\\\"TSH IS FIRST TEST (most sensitive)\\\\\\\", explanation: \\\\\\\"Primary thyroid disorders change TSH earliest\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Free T4 more specific than total T4 (less affected by binding proteins)\\\\\\\",\\\\n          \\\\\\\"Subclinical disease: abnormal TSH, normal free T4 (treat if symptoms or risk factors)\\\\\\\",\\\\n          \\\\\\\"Graves has TSI antibodies; Hashimoto has anti-TPO/thyroglobulin\\\\\\\",\\\\n          \\\\\\\"Thyroid nodule evaluation separate from functional assessment\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"389: Disorders of the Thyroid Gland\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"21: Endocrinology\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"thyroid-exam\\\\\\\",\\\\n        title: \\\\\\\"Thyroid Disorders - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"Management of hyperthyroidism (ATDs, beta-blockers, I131, surgery) and hypothyroidism (levothyroxine replacement, monitoring).\\\\\\\",\\\\n        contentMd: ``# Thyroid Disorders Management - Exam Focus\\\\n\\\\n## Hyperthyroidism Treatment\\\\n\\\\n**Antithyroid drugs (PTU, Methimazole) - Block hormone synthesis:**\\\\n- **Mechanism:** PTU inhibits TPO + peripheral T4→T3 conversion; Methimazole inhibits TPO only\\\\n- **PTU:** First-line in pregnancy (crosses placenta less), higher adverse event risk (hepatotoxicity 1:10,000)\\\\n- **Methimazole:** Preferred in non-pregnant (less frequent dosing), avoid in first trimester (embryopathy)\\\\n- **Dosing:** Methimazole 10-40mg daily, PTU 100-600mg divided\\\\n- **Time to effect:** 1-2 weeks for symptomatic relief, 6-8 weeks for euthyroid state\\\\n- **Monitoring:** CBC (agranulocytosis <0.5%, stop immediately), LFTs (PTU hepatotoxicity)\\\\n\\\\n**Beta-blockers (Propranolol) - Symptom control:**\\\\n- Reduce tachycardia, tremor, anxiety within hours\\\\n- Propranolol also blocks peripheral T4→T3 conversion\\\\n- Continue until TSH normalizes, then taper\\\\n\\\\n**Iodine (Lugol/SSKI) - Used pre-operatively:**\\\\n- Blocks hormone release (inhibits proteolysis of thyroglobulin)\\\\n- Effect within 24-48 hours\\\\n- Start AFTER PTU/Methimazole (prevent excess hormone synthesis)\\\\n- Transient effect (1-2 weeks)\\\\n\\\\n**Radioactive Iodine (I-131) - Definitive:**\\\\n- Ablates thyroid tissue → permanent cure\\\\n- Contraindicated in pregnancy, breastfeeding\\\\n- High dose (10-30 mCi) → ablation, unavoidable post-treatment hypothyroidism\\\\n- Low dose → attempt to preserve function (variable success)\\\\n- Exophthalmos may worsen (especially if untreated pre-treatment)\\\\n\\\\n**Surgery (Thyroidectomy) - Definitive:**\\\\n- Indications: Pregnancy (not responding to ATD), large goiter, failed ATD, patient preference\\\\n- Prepare with beta-blocker + iodine (reduce gland vascularity, hormone release)\\\\n- Risks: RLN palsy (1-2%), hypoparathyroidism (post-op hypocalcemia)\\\\n\\\\n## Hypothyroidism Treatment\\\\n\\\\n**Levothyroxine (L-thyroxine) - First-line:**\\\\n- Synthetic T4, prodrug (converted to active T3 peripherally)\\\\n- Advantages: Long half-life (7 days), once-daily dosing, predictable absorption, reversible\\\\n- Starting dose: 25-50 mcg daily (higher in younger, cardiac-safe in older)\\\\n- Titration: Increase by 25-50 mcg every 6-8 weeks based on TSH\\\\n- Target: TSH 0.5-2.0 mIU/L (higher in elderly, cardiac disease)\\\\n- Take on empty stomach (food, iron, calcium impair absorption)\\\\n\\\\n**Liothyronine (T3) - Rarely indicated:**\\\\n- Short half-life, unpredictable absorption\\\\n- May cause cardiac ischemia if not careful\\\\n- Not recommended as monotherapy\\\\n\\\\n**Desiccated thyroid (NDT) - Avoid:**\\\\n- Variable potency, not reproducible\\\\n- Not recommended by guidelines\\\\n\\\\n**Combination T4/T3 - Insufficient evidence:**\\\\n- May help in subset of patients with persistent symptoms\\\\n- Not routine practice\\\\n\\\\n**Monitoring:**\\\\n- Check TSH 6-8 weeks after dose change\\\\n- Re-check annually once stable\\\\n- Monitor symptoms (fatigue, weight, cold intolerance resolve within weeks)\\\\n- Cardiac patients: Monitor carefully, start low dose\\\\n\\\\n## Special Situations\\\\n**Myxedema coma (rare emergency):**\\\\n- IV liothyronine (T3) 25 mcg, repeat q4H to q6H\\\\n- Concurrent levothyroxine loading\\\\n- Supportive care (warm, oxygen, fluids, treat infection)\\\\n\\\\n**Pregnancy:**\\\\n- PTU first trimester (methimazole embryopathy risk)\\\\n- Switch to Methimazole second/third trimester (PTU hepatotoxicity)\\\\n- Monitor TSH closely (increased T4 requirements)\\\\n- Avoid I-131,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"PTU in pregnancy (1st trimester), Methimazole after\\\\\\\", explanation: \\\\\\\"PTU prevents embryopathy risk with methimazole\\\\\\\" },\\\\n          { text: \\\\\\\"I-131 AFTER PTU (prevent thyroid storm)\\\\\\\", explanation: \\\\\\\"Start antithyroid drug first, then radioiodine\\\\\\\" },\\\\n          { text: \\\\\\\"Levothyroxine ON EMPTY STOMACH\\\\\\\", explanation: \\\\\\\"Food, iron, calcium, PPIs impair absorption\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"ATD therapy: PTU or Methimazole, expect euthyroidism in 6-8 weeks\\\\\\\",\\\\n          \\\\\\\"Beta-blockers provide rapid symptom relief (within hours)\\\\\\\",\\\\n          \\\\\\\"I-131 causes permanent hypothyroidism (not avoidable long-term)\\\\\\\",\\\\n          \\\\\\\"Levothyroxine adjustments need 6-8 weeks between doses\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"389: Disorders of the Thyroid Gland\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"ESC Thyroid Guidelines\\\\\\\", chapter: \\\\\\\"Management\\\\\\\", edition: \\\\\\\"2012\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"thyroid-recall\\\\\\\",\\\\n        title: \\\\\\\"Thyroid Disorders - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"7 recall questions on TSH interpretation, Graves vs Hashimoto differentiation, ATD/I131 management, and pregnancy considerations.\\\\\\\",\\\\n        contentMd: ``# Thyroid Disorders Active Recall\\\\n\\\\n**Q1: A patient has TSH 0.05 mIU/L (low) and free T4 9.5 ng/dL (normal). Is this subclinical or overt hyperthyroidism? When would treatment be indicated?**\\\\n> **Answer:** Subclinical hyperthyroidism (low TSH, normal free T4). Treatment indicated if: Age >60 years, cardiac disease/AF, symptoms (tremor, anxiety), TSH <0.1 (higher risk). Otherwise, observe with repeat testing in 6-12 weeks. Risk of progression to overt: ~3-5% per year.\\\\n\\\\n**Q2: Differentiate Graves disease from Hashimoto thyroiditis at presentation.**\\\\n> **Answer:** GRAVES = hyperthyroid onset, diffuse goiter (smooth, tender), exophthalmos, high TSI antibodies, elevated radioiodine uptake. HASHIMOTO = hypothyroid onset, firm goiter (small or large), NO exophthalmos, anti-TPO/thyroglobulin positive, low radioiodine uptake. Key: Graves = hyper + exophthalmos = specific.\\\\n\\\\n**Q3: A 28-year-old pregnant woman on Methimazole is confirmed pregnant (8 weeks gestation). What is the management?**\\\\n> **Answer:** Switch to PTU immediately. Methimazole carries risk of embryopathy (methimazole embryopathy syndrome = rare, but risk exists in first trimester). PTU is safer in first trimester (crosses placenta less, no embryopathy). Plan to switch back to Methimazole after first trimester if needed (PTU hepatotoxicity risk long-term).\\\\n\\\\n**Q4: A patient with Graves disease is planned for thyroidectomy. Outline the pre-operative preparation.**\\\\n> **Answer:** 1) Start Methimazole to achieve euthyroid state (6-8 weeks). 2) Add beta-blocker (propranolol) for symptom control + peripheral T4→T3 blocking. 3) Once euthyroid, add Lugol iodine solution 10-14 days pre-op (reduces gland vascularity, blocks hormone release). 4) Monitor for thyroid storm (fever, tachycardia, delirium - rare, but life-threatening if occurred pre-prep).\\\\n\\\\n**Q5: A 55-year-old woman on levothyroxine for hypothyroidism presents with persistent fatigue despite TSH 1.0 mIU/L (goal range). What is the differential diagnosis?**\\\\n> **Answer:** 1) Persistent hypothyroidism (rare - ensure good compliance, absorption, appropriate dose). 2) Other causes of fatigue (anemia, depression, sleep disorder, cardiac, malignancy). 3) Levothyroxine-only replacement (subset reports improvement with T4+T3 combo, though evidence mixed). 4) Inadequate dose for individual (some need higher TSH suppression). Assess compliance, absorption factors (iron, calcium, PPIs), and check free T4 + T3 levels. Screen for other conditions.\\\\n\\\\n**Q6: Explain why exophthalmos may worsen after I-131 treatment of Graves disease.**\\\\n> **Answer:** I-131 induces sudden thyroid destruction → release of stored antigen → immune reactivation against orbital fibroblasts and muscle. CD8+ T cells infiltrate retrobulbar space → inflammation → exophthalmos worsening. Managed by: treat hyperthyroidism first with ATD to euthyroid state, then I-131 to reduce immune flare. Some use glucocorticoids perioperatively to suppress immune response.\\\\n\\\\n**Q7: A 42-year-old presents with TSH 8.2 mIU/L, free T4 0.8 ng/dL, anti-TPO positive. Anti-TSH receptor antibodies negative. Diagnose and outline initial management.**\\\\n> **Answer:** PRIMARY HYPOTHYROIDISM FROM HASHIMOTO THYROIDITIS (anti-TPO positive rules out Graves which is anti-TSHR). Start levothyroxine 50-75 mcg daily on empty stomach. Recheck TSH in 6-8 weeks, titrate dose to target TSH 0.5-2.0 mIU/L. Most patients stable on 75-150 mcg/day. Monitor annually. Counsel on compliance, timing of dose (morning, fasting), and potential need for dose adjustment with pregnancy, medications (iron, calcium, PPIs).,\\\\n        mnemonics: [],\\\\n        keyPoints: [\\\\n          \\\\\\\"7 questions on thyroid function interpretation and management\\\\\\\",\\\\n          \\\\\\\"Graves = exophthalmos (pathognomonic), Hashimoto = anti-TPO\\\\\\\",\\\\n          \\\\\\\"PTU in pregnancy (1st trimester), Methimazole after\\\\\\\",\\\\n          \\\\\\\"TSH most sensitive; free T4 confirms, antibodies classify\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"389: Disorders of the Thyroid Gland\\\\\\\", edition: \\\\\\\"21st\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  },\\\\n  // IM-MOD-05: Endocrinology - Adrenal Disorders\\\\n  {\\\\n    topicCode: \\\\\\\"IM-MOD-05-TOP-03\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"adrenal-foundation\\\\\\\",\\\\n        title: \\\\\\\"Adrenal Disorders - Foundation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Adrenal anatomy, zones, synthesis of cortisol/aldosterone/catecholamines, and HPA axis regulation.\\\\\\\",\\\\n        contentMd: ``# Adrenal Disorders - Foundation\\\\n\\\\n## Adrenal Gland Anatomy\\\\n**Location:** Bilateral, sitting on top of kidneys, supplied by three arteries (superior, middle, inferior adrenal arteries from aorta)\\\\n\\\\n**Two components:**\\\\n1. **Adrenal cortex** (90% of gland mass, derived from mesodermal coelomic epithelium)\\\\n2. **Adrenal medulla** (10%, derived from neural crest - chromaffin cells)\\\\n\\\\n## Adrenal Cortex - Three Zones (Mnemonic: GFR)\\\\n1. **Zona Glomerulosa** (outer): Produces aldosterone (mineralocorticoid) via 18-hydroxylase\\\\n2. **Zona Fasciculata** (middle, largest): Produces cortisol (glucocorticoid) via 21-hydroxylase and 11β-hydroxylase\\\\n3. **Zona Reticularis** (inner): Produces DHEA and androstenedione (weak androgens)\\\\n\\\\n## Cortisol Synthesis & Release\\\\n- All three enzymes needed: 17α-hydroxylase, 21-hydroxylase, 11β-hydroxylase\\\\n- HPA axis drives cortisol:\\\\n  1. **Hypothalamus:** CRH (corticotropin-releasing hormone)\\\\n  2. **Anterior pituitary:** ACTH (adrenocorticotropic hormone)\\\\n  3. **Adrenal cortex:** Cortisol secretion\\\\n  4. **Feedback:** Cortisol inhibits CRH and ACTH (negative feedback)\\\\n\\\\n## Aldosterone Synthesis & Control\\\\n- **Stimulus:** High potassium, low sodium, angiotensin II\\\\n- **Does NOT require ACTH** (controlled by renin-angiotensin-aldosterone system)\\\\n- **Effect:** Increases sodium reabsorption, potassium excretion in kidney\\\\n\\\\n## Adrenal Medulla - Catecholamines\\\\n- **Chromaffin cells:** Contain catecholamine granules\\\\n- **Tyrosine → DOPA → dopamine → noradrenaline → adrenaline**\\\\n- **Controlled by:** Sympathetic nervous system (splanchnic nerve stimulation)\\\\n- **Effects:** Increase HR, BP, cardiac output, glucose release\\\\n\\\\n## Cortisol Functions (Circadian, Pulsatile)\\\\n- **Metabolism:** Gluconeogenesis, lipolysis, antagonize insulin (hyperglycemia)\\\\n- **Cardiovascular:** Maintains vascular tone, responsive to catecholamines\\\\n- **Anti-inflammatory:** Suppresses immune response, reduces fever\\\\n- **Circadian rhythm:** Peak at 6-8 AM, nadir at midnight\\\\n- **Stress response:** Increases with illness, injury, emotional stress,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"GFR Zones: Glomerulosa (aldosterone), Fasciculata (cortisol), Reticularis (androgens)\\\\\\\", explanation: \\\\\\\"Outermost to innermost cortical layers\\\\\\\" },\\\\n          { text: \\\\\\\"HPA = Hypothalamus-Pituitary-Adrenal\\\\\\\", explanation: \\\\\\\"CRH → ACTH → cortisol axis\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Cortisol has diurnal variation (high AM, low PM/night)\\\\\\\",\\\\n          \\\\\\\"Cortisol is 90% protein-bound (mainly cortisol-binding globulin)\\\\\\\",\\\\n          \\\\\\\"Adrenal medulla not essential for survival (can be removed)\\\\\\\",\\\\n          \\\\\\\"ACTH-independent conditions exist (adrenal adenoma, carcinoma)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"400: Disorders of the Adrenal Cortex\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"21: Endocrinology\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"adrenal-mechanism\\\\\\\",\\\\n        title: \\\\\\\"Adrenal Disorders - Mechanism\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Pathophysiology of Cushing syndrome, Addison disease, primary hyperaldosteronism, and pheochromocytoma.\\\\\\\",\\\\n        contentMd: ``# Adrenal Pathophysiology\\\\n\\\\n## Cushing Syndrome - Excess Cortisol\\\\n**Classification:**\\\\n1. **Cushing disease (ACTH-dependent, pituitary source):** Corticotroph adenoma (70% of ACTH-dependent cases)\\\\n2. **Ectopic ACTH:** Small cell lung cancer, carcinoids, pancreatic tumors (15-20%)\\\\n3. **Cushing syndrome - Adrenal:** Primary adrenal adenoma (10%), carcinoma (5%), nodular hyperplasia\\\\n4. **Iatrogenic:** Chronic glucocorticoid use (most common overall cause)\\\\n\\\\n**Pathophysiology:**\\\\n- Loss of negative feedback from excess cortisol → constitutive ACTH/CRH secretion\\\\n- Increased metabolic effects: Hyperglycemia, hypertension, centripetal obesity, purple striae\\\\n- Immunosuppression: Increased infection risk\\\\n\\\\n## Addison Disease - Cortisol Deficiency\\\\n**Primary adrenal insufficiency causes:**\\\\n1. **Autoimmune (90% in iodine-sufficient):** Anti-adrenergic antibodies, associated with other autoimmune\\\\n2. **Tuberculosis (still significant in India):** Granulomatous destruction of adrenal glands\\\\n3. **Adrenoleukodystrophy (rare):** Genetic peroxisomal disorder, males affected\\\\n4. **Hemorrhage/thrombosis:** Waterhouse-Friderichsen syndrome (meningococcemia), anticoagulation\\\\n5. **Infiltration:** Lymphoma, metastatic cancer, fungal (histoplasmosis in AIDS)\\\\n\\\\n**Pathophysiology:**\\\\n- Loss of cortisol → loss of negative feedback → elevated ACTH (secondary response)\\\\n- Loss of aldosterone (if severe) → salt wasting, hyperkalemia\\\\n- Symptoms from cortisol deficiency: Hypoglycemia, hypotension, infection susceptibility\\\\n\\\\n## Primary Hyperaldosteronism\\\\n**Causes:**\\\\n1. **Aldosterone-producing adenoma (Conn syndrome):** Benign adrenal tumor, most common (35-40%)\\\\n2. **Idiopathic hyperaldosteronism:** Bilateral adrenal hyperplasia (60% of primary cases)\\\\n3. **Familial hyperaldosteronism:** Rare genetic forms\\\\n\\\\n**Pathophysiology:**\\\\n- Autonomous aldosterone production → sodium retention, potassium loss\\\\n- Hypertension, hypokalemia, metabolic alkalosis\\\\n- **Normal or low plasma renin** (suppressed by volume expansion)\\\\n\\\\n## Pheochromocytoma - Catecholamine-Producing Tumor\\\\n**Biology:**\\\\n- Arise from adrenal medulla chromaffin cells (90%), or extra-adrenal paraganglia (10%)\\\\n- Produce catecholamines (epinephrine, norepinephrine, dopamine)\\\\n- \\\\\\\"Rule of 10s:\\\\\\\" 10% bilateral, 10% extra-adrenal, 10% malignant, 10% associated with MEN-2 or NF1\\\\n\\\\n**Pathophysiology:**\\\\n- Episodic catecholamine release → hypertensive paroxysms\\\\n- Sustained hypertension possible\\\\n- Alpha > beta effects → vasoconstriction, hypertension (tachycardia less prominent)\\\\n- Risk of hypertensive crisis, MI, stroke, death if untreated,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Cushing DISEASE = pituitary ACTH\\\\\\\", explanation: \\\\\\\"vs Cushing syndrome = general term for high cortisol\\\\\\\" },\\\\n          { text: \\\\\\\"ADDISON = Autoimmune + Dark skin (hyperpigmentation from ACTH)\\\\\\\", explanation: \\\\\\\"Primary adrenal insufficiency\\\\\\\" },\\\\n          { text: \\\\\\\"Pheochromocytoma = Rule of 10s\\\\\\\", explanation: \\\\\\\"10% bilateral, malignant, extra-adrenal, familial\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Cushing disease is most common ACTH-dependent Cushing syndrome\\\\\\\",\\\\n          \\\\\\\"Addison = elevated ACTH + low cortisol (opposite of Cushing)\\\\\\\",\\\\n          \\\\\\\"Hyperaldosteronism = high aldosterone + LOW renin (distinguishes from secondary)\\\\\\\",\\\\n          \\\\\\\"Pheochromocytoma is life-threatening if missed (risk of crisis)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"400: Disorders of the Adrenal Cortex\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Robbins Basic Pathology\\\\\\\", chapter: \\\\\\\"24: Endocrine System\\\\\\\", edition: \\\\\\\"10th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"adrenal-clinical\\\\\\\",\\\\n        title: \\\\\\\"Adrenal Disorders - Clinical\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Clinical presentation, diagnostic tests (24h UFC, LDDST, imaging), and differentiation of ACTH-dependent vs independent.\\\\\\\",\\\\n        contentMd: ``# Adrenal Disorders: Clinical & Diagnosis\\\\n\\\\n## Cushing Syndrome - Clinical Features\\\\n**Cortisol excess effects:**\\\\n- **Metabolic:** Glucose intolerance/DM, dyslipidemia, weight gain (central obesity, fat redistribution)\\\\n- **Cardiovascular:** Hypertension (60-80%), atherosclerosis\\\\n- **Musculoskeletal:** Proximal muscle weakness, osteoporosis, kyphosis\\\\n- **Cutaneous:** Purple striae, easy bruising, acne, hirsutism, skin atrophy\\\\n- **Psychological:** Mood disorder, depression, cognitive dysfunction, psychosis\\\\n- **Immune:** Increased infections\\\\n- **Endocrine:** Secondary hypogonadism, hypothyroidism\\\\n\\\\n**Diagnostic approach:**\\\\n1. **Suspect:** Features + risk (steroid use, family history, MEN-1)\\\\n2. **Confirm hypercortisolism:** 24-hour urinary free cortisol (UFC), late-night salivary cortisol, 1mg LDDST\\\\n3. **Determine ACTH:** Plasma ACTH level\\\\n   - If high (>10 pg/mL) → ACTH-dependent → Cushing disease vs ectopic\\\\n   - If low (<5 pg/mL) → ACTH-independent → adrenal source\\\\n4. **Imaging:** MRI pituitary (if ACTH-dependent), CT chest (ectopic ACTH search), CT adrenals (if independent)\\\\n\\\\n## Addison Disease - Clinical Features\\\\n**Cortisol deficiency:**\\\\n- **Constitutional:** Fatigue, weakness, weight loss, anorexia\\\\n- **Cardiovascular:** Hypotension (especially orthostatic), syncope\\\\n- **Metabolic:** Hypoglycemia (fasting), hyponatremia, hyperkalemia\\\\n- **Skin:** Hyperpigmentation (elevated ACTH stimulates melanocytes) - \\\\\\\"bronzing\\\\\\\"\\\\n- **GI:** Nausea, diarrhea, abdominal pain\\\\n- **Psychiatric:** Depression, mood disturbance\\\\n\\\\n**Addisonian crisis (acute emergency):**\\\\n- Severe hypotension, shock\\\\n- Severe hyponatremia, hyperkalemia\\\\n- Precipitated by infection, surgery, stress, sudden medication withdrawal\\\\n\\\\n**Diagnostic approach:**\\\\n1. **Clinical suspicion:** Fatigue + hyperpigmentation + hypotension + hyponatremia/hyperkalemia\\\\n2. **Confirm deficiency:** 8 AM cortisol (normal >18 mcg/dL, Addison <3 mcg/dL)\\\\n3. **Cosyntropin stimulation test:** ACTH 250 mcg IV → measure cortisol at 30-60 min (normal >18, Addison flat response)\\\\n4. **Elevated ACTH:** Primary adrenal disease\\\\n5. **Cause:** Autoantibodies (adrenal peroxidase), TB serology, imaging\\\\n\\\\n## Primary Hyperaldosteronism - Clinical Features\\\\n- **Hypertension:** Often resistant to medications (stage 2-3)\\\\n- **Hypokalemia:** May cause weakness, polyuria\\\\n- **Metabolic alkalosis**\\\\n- **Often asymptomatic** (found on screening hypertensive patient with hypokalemia)\\\\n\\\\n**Diagnostic approach:**\\\\n1. **Suspect:** Resistant HTN + hypokalemia, or HTN + adrenal incidentaloma\\\\n2. **Aldosterone/Renin ratio:** Elevated (typically >20-25)\\\\n3. **Confirmatory tests:** Saline suppression test, captopril challenge\\\\n4. **Imaging:** CT adrenal (adenoma vs hyperplasia)\\\\n5. **Adrenal vein sampling:** If imaging unclear, to localize\\\\n\\\\n## Pheochromocytoma - Clinical Features\\\\n- **Paroxysmal hypertension:** Classic triad = severe HTN + severe headache + profuse sweating + palpitations\\\\n- **Symptoms:** Tremor, anxiety, chest/abdominal pain, nausea\\\\n- **Hypotension:** Between episodes (rare, but can occur from vasodilation)\\\\n- **Severe complications:** MI, arrhythmia, stroke, pulmonary edema, DKA-like state\\\\n\\\\n**Diagnostic approach:**\\\\n1. **Biochemical confirmation:** 24h urine metanephrines and catecholamines (or plasma free metanephrines)\\\\n2. **Imaging:** CT/MRI abdomen (adrenal vs extra-adrenal), consider chest/pelvis (ectopic)\\\\n3. **Rule out familial:** Genetic testing if <40 years, bilateral, family history, extra-adrenal (MEN-2, NF1),\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"CUSHING = Centripetal obesity, Hyperglycemia, Purple striae, Hypertension, Infections\\\\\\\", explanation: \\\\\\\"Multiple system effects of excess cortisol\\\\\\\" },\\\\n          { text: \\\\\\\"ADDISON = Anemia + Darkening (hyperpigmentation) + Orthostatic hypotension\\\\\\\", explanation: \\\\\\\"Triad of primary adrenal insufficiency\\\\\\\" },\\\\n          { text: \\\\\\\"PHEOCHROMOCYTOMA CLASSIC TRIAD: Headache + Sweating + Palpitations\\\\\\\", explanation: \\\\\\\"With episodic severe hypertension\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"24h UFC and LDDST both used to confirm Cushing (high sensitivity/specificity)\\\\\\\",\\\\n          \\\\\\\"Addison: Low cortisol + high ACTH (opposite feedback loop)\\\\\\\",\\\\n          \\\\\\\"Hyperaldosteronism: High aldosterone + LOW renin (key distinction)\\\\\\\",\\\\n          \\\\\\\"Pheochromocytoma: Always screen biochemically before imaging or biopsy (risk of crisis)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"400: Disorders of the Adrenal Cortex\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"21: Endocrinology\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"adrenal-exam\\\\\\\",\\\\n        title: \\\\\\\"Adrenal Disorders - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"Management of Cushing syndrome, Addison disease replacement, hyperaldosteronism treatment, and pheochromocytoma operative protocol.\\\\\\\",\\\\n        contentMd: ``# Adrenal Disorders Management - Exam Focus\\\\n\\\\n## Cushing Syndrome Treatment\\\\n\\\\n**Cushing disease (pituitary ACTH-secreting adenoma):**\\\\n- **First-line:** Transsphenoidal surgery (adenomectomy)\\\\n- **Success rate:** 80-90% if microadenoma, 50-60% if macroadenoma\\\\n- **Pre-operative:** Control cortisol with adrenolytic (mitotane) or enzyme inhibitors\\\\n- **If failed surgery:** Repeat TRANSS, radiation (Gamma Knife), or adrenalectomy\\\\n- **Medical options:** Ketoconazole, metyrapone, mitotane (enzyme inhibitors)\\\\n\\\\n**Ectopic ACTH syndrome:**\\\\n- **Treat primary tumor:** Surgery if localized and resectable (e.g., lung carcinoid)\\\\n- **If not resectable:** Adrenolytic agents or bilateral adrenalectomy (rare last resort)\\\\n\\\\n**Adrenal adenoma/carcinoma:**\\\\n- **Adrenalectomy:** Surgical removal (laparoscopic if <6cm, open if >6cm or malignancy)\\\\n- **Mitotane:** Adjuvant for adrenocortical carcinoma (cytotoxic, causes permanent insufficiency)\\\\n\\\\n**Iatrogenic Cushing (chronic steroids):**\\\\n- **Gradual withdrawal:** Taper dose slowly to allow HPA axis recovery\\\\n- **Replacement:** May need temporary physiologic steroid coverage during taper\\\\n\\\\n## Addison Disease Management\\\\n\\\\n**Hormone replacement (mandatory lifelong):**\\\\n1. **Glucocorticoid:** Hydrocortisone 15-25 mg daily (divided doses: 10 AM + 5 PM typical)\\\\n   - Adjust for stress (double-triple dose during illness)\\\\n   - Target: Symptom relief, normal glucose/electrolytes\\\\n\\\\n2. **Mineralocorticoid:** Fludrocortisone 0.05-0.1 mg daily (if primary adrenal insufficiency)\\\\n   - Not needed if secondary/tertiary (ACTH deficiency only)\\\\n   - Monitor potassium, sodium\\\\n\\\\n**Emergency management (Addisonian crisis):**\\\\n- IV hydrocortisone 100 mg Q6-8H initially\\\\n- IV fluids (normal saline for hypovolemia/hyponatremia)\\\\n- Monitor electrolytes, gradually transition to oral maintenance\\\\n\\\\n**Monitoring:**\\\\n- Adjust dose based on symptoms, electrolytes, glucose\\\\n- Annual check-up\\\\n- Educate on steroid cards, medical alert bracelet\\\\n- Counseling on increased infection risk\\\\n\\\\n## Primary Hyperaldosteronism Treatment\\\\n\\\\n**If adenoma (Conn syndrome):**\\\\n- **Adrenalectomy:** Curative, improves HTN in >90%\\\\n- **Preoperative preparation:** Control HTN with spironolactone (blocks aldosterone)\\\\n\\\\n**If idiopathic hyperaldosteronism (bilateral):**\\\\n- **Medical management:** Spironolactone 25-50 mg daily (non-selective aldosterone antagonist)\\\\n- **Monitor:** Potassium, creatinine (monitor for hyperkalemia)\\\\n- **Alternative:** Eplerenone (selective aldosterone antagonist, fewer gynecomastia side effects)\\\\n\\\\n**BP control:** Often improves dramatically with aldosterone blockade or surgery\\\\n\\\\n## Pheochromocytoma Management\\\\n\\\\n**Pre-operative alpha-blockade (CRITICAL):**\\\\n- Start **phenoxybenzamine** (non-selective alpha blocker) WEEKS before surgery\\\\n- Blocks catecholamine effects, prevents hypertensive crisis during anesthesia/manipulation\\\\n- Dose titration to normotension or mild hypotension acceptable\\\\n\\\\n**Beta-blockade (AFTER alpha-blockade):**\\\\n- Add beta-blocker (propranolol) only AFTER adequate alpha-blockade\\\\n- Prevents unopposed alpha-mediated vasoconstriction if beta-blocked first\\\\n- Manage tachycardia/arrhythmia from catecholamines\\\\n\\\\n**Surgical removal:**\\\\n- Laparoscopic adrenalectomy (preferred if <6cm, unilateral)\\\\n- Open surgery if large, extra-adrenal, or malignant\\\\n- Operative monitoring: Arterial line, aggressive hemodynamic support\\\\n\\\\n**Medication options:**\\\\n- **Phenoxybenzamine:** Non-selective, irreversible alpha-blocker (preferred)\\\\n- **Prazosin:** Selective alpha-1 blocker (alternative, shorter acting)\\\\n- **Metyrosine:** Blocks catecholamine synthesis (inhibits tyrosine hydroxylase)\\\\n\\\\n**Postoperative monitoring:**\\\\n- Watch for acute hypotension (catecholamine suddenly removed)\\\\n- Hypoglycemia common (catecholamines suppressed glucose release)\\\\n- Monitor for recurrence (annual biochemical screening),\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"CUSHING DISEASE = Transsphenoidal surgery (80-90% cure)\\\\\\\", explanation: \\\\\\\"Pituitary adenoma removal is first-line\\\\\\\" },\\\\n          { text: \\\\\\\"ADDISON = Hydrocortisone + Fludrocortisone + EDUCATE\\\\\\\", explanation: \\\\\\\"Replacement + stress coverage + alert bracelet\\\\\\\" },\\\\n          { text: \\\\\\\"PHEOCHROMOCYTOMA = ALPHA then BETA blockade\\\\\\\", explanation: \\\\\\\"Always block alpha first (phenoxybenzamine) before beta-blockade\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Cushing disease: Surgery > medical (lower relapse rate)\\\\\\\",\\\\n          \\\\\\\"Addison: Lifelong replacement, emergency protocols for stress/illness\\\\\\\",\\\\n          \\\\\\\"Hyperaldosteronism: Adrenalectomy curative for adenoma (90% HTN improvement)\\\\\\\",\\\\n          \\\\\\\"Pheochromocytoma: Pre-operative alpha-blockade prevents hypertensive crisis (life-saving)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"400: Disorders of the Adrenal Cortex\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"ESC Adrenal Insufficiency Guidelines\\\\\\\", chapter: \\\\\\\"Management\\\\\\\", edition: \\\\\\\"2016\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"adrenal-recall\\\\\\\",\\\\n        title: \\\\\\\"Adrenal Disorders - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"7 recall questions on diagnosis of Cushing/Addison, ACTH-dependent differentiation, and emergency management.\\\\\\\",\\\\n        contentMd: ``# Adrenal Disorders Active Recall\\\\n\\\\n**Q1: A 45-year-old woman with centripetal obesity, purple striae, hypertension, and hypokalemia is suspected of Cushing syndrome. How would you distinguish between Cushing disease vs ectopic ACTH source?**\\\\n> **Answer:** 1) Check plasma ACTH (both will be high if ACTH-dependent). 2) HIGH-DOSE DEXAMETHASONE SUPPRESSION TEST (HDDST): Cushing disease = cortisol suppresses >50% (pituitary tumor remains ACTH-responsive to high-dose dex). Ectopic ACTH = no suppression (<50%, ectopic tumor is autonomous). 3) If HDST unclear: MRI pituitary (pituitary adenoma?) + chest imaging (lung carcinoid, small cell lung cancer). 4) Inferior petrosal sinus sampling (IPSS): Highest sensitivity for pituitary source.\\\\n\\\\n**Q2: A 35-year-old with fatigue, hypotension, hyponatremia, and hyperpigmentation is suspected of Addison disease. What is the diagnostic sequence?**\\\\n> **Answer:** 1) Measure MORNING CORTISOL (8 AM, before cortisol peaks): If <3 mcg/dL = very likely Addison, >18 = likely normal. 2) If borderline, do COSYNTROPIN STIMULATION TEST: ACTH 250 mcg IV, measure cortisol at 30-60 min. Normal = rise to >18 mcg/dL; Addison = flat/minimal response (<18). 3) Check ACTH level: HIGH ACTH + LOW cortisol = primary adrenal insufficiency. 4) Determine cause: Autoantibodies (71-adrenergic), TB serology/imaging, CT abdomen. 5) Start replacement immediately if diagnosis confirmed.\\\\n\\\\n**Q3: Why must mineralocorticoid (fludrocortisone) be given to patients with primary Addison disease but NOT with secondary (pituitary) adrenal insufficiency?**\\\\n> **Answer:** Primary Addison = BOTH cortex zones damaged (glomerulosa + fasciculata) → loss of aldosterone + cortisol. Fludrocortisone replaces aldosterone (maintains Na+/K+ balance). SECONDARY insufficiency = only loss of ACTH → cortisol deficiency only; glomerulosa INTACT (responds to angiotensin II). Aldosterone preserved, so fludrocortisone not needed (and could cause volume overload).\\\\n\\\\n**Q4: A 55-year-old is found to have unilateral left adrenal adenoma on imaging during workup for resistant hypertension. Aldosterone is elevated at 15 ng/dL with suppressed renin 0.4 ng/mL/hr. What is the diagnosis and management?**\\\\n> **Answer:** PRIMARY HYPERALDOSTERONISM (Conn syndrome) with adenoma source. Pre-operative management: Start spironolactone 25-50 mg daily to control aldosterone effects + normalize potassium. Once eukalemia + HTN controlled, proceed to laparoscopic left adrenalectomy (adenoma is unilateral = curative). Post-operative: HTN improves in >90%, often off all antihypertensives eventually. Histology confirms adenoma.\\\\n\\\\n**Q5: A 28-year-old with episodic headaches, severe diaphoresis, palpitations, and paroxysmal hypertension (200-230/120 mmHg) has elevated 24h urine metanephrines. What is the critical management step BEFORE surgery?**\\\\n> **Answer:** ALPHA-BLOCKADE FIRST with phenoxybenzamine (non-selective alpha antagonist, starts 10-20 mg daily, titrate upward). This blocks catecholamine-induced vasoconstriction/hypertension. Goal: Normotension or mild hypotension. ONLY AFTER adequate alpha-blockade, add beta-blocker (propranolol) if still tachycardic. Why this order: If beta-blocked first without alpha-blockade, unopposed alpha activity → hypertensive crisis, MI, stroke risk. After adequate preoperative preparation → safe surgical removal with less perioperative crisis risk.\\\\n\\\\n**Q6: A 50-year-old on chronic prednisone 10 mg daily for autoimmune disease develops Cushing syndrome features. Can the steroids be suddenly stopped?**\\\\n> **Answer:** NO. Sudden withdrawal risks acute adrenal insufficiency (HPA axis has been suppressed for years). Management: 1) Gradually taper steroids over WEEKS-MONTHS. 2) Reduce by 2.5-5mg every 1-2 weeks. 3) At lower doses (<7.5 mg), slower taper. 4) Monitor for symptoms of insufficiency during taper. 5) During taper or acute illness, increase dose temporarily for stress coverage. 6) Once off steroids, HPA recovery takes 6-12 months (ACTH + cortisol gradual restoration). If symptoms develop during taper (orthostasis, weakness), increase dose or slow taper further.\\\\n\\\\n**Q7: Compare/contrast the diagnostic findings in Cushing syndrome vs Addison disease in terms of ACTH and cortisol levels.**\\\\n> **Answer:** CUSHING SYNDROME = HIGH cortisol + HIGH ACTH (if pituitary/ectopic source) OR HIGH cortisol + LOW ACTH (if adrenal source). The excess cortisol tries to suppress ACTH but pituitary tumor/ectopic source ignores feedback. ADDISON DISEASE = LOW cortisol + HIGH ACTH (primary; pituitary increases ACTH trying to drive failing gland). The opposite of Cushing. This inverse relationship (high cortisol = low ACTH in Addison is KEY). Summary: Cushing = loss of negative feedback (tumor ignores suppression); Addison = preserved negative feedback but gland can't respond.,\\\\n        mnemonics: [],\\\\n        keyPoints: [\\\\n          \\\\\\\"7 questions covering diagnostic tests and treatment decisions\\\\\\\",\\\\n          \\\\\\\"HDST distinguishes Cushing disease from ectopic ACTH\\\\\\\",\\\\n          \\\\\\\"Addison: Low cortisol + HIGH ACTH (opposite of Cushing)\\\\\\\",\\\\n          \\\\\\\"Pheochromocytoma: ALPHA blockade BEFORE beta-blockade (critical safety)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"400: Disorders of the Adrenal Cortex\\\\\\\", edition: \\\\\\\"21st\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\"\""
-}
-}
-}
-}
-];
-];
-];
+        summary: "Overview of infective endocarditis pathophysiology, classification, risk factors, microbiology, and epidemiology in Indian context.",
+        contentMd: `# Infective Endocarditis - Foundation
+
+## Definition
+Microbial infection of cardiac endocardium (heart valves or mural endocardium) causing inflammation and vegetations.
+
+## Classification
+
+### Acute Endocarditis
+- Fulminant course (days to weeks)
+- Highly virulent organisms (S. aureus, group B streptococci)
+- Often affects normal valves
+- Rapid valve destruction
+
+### Subacute Endocarditis
+- Indolent course (weeks to months)
+- Viridans group streptococci most common
+- Usually affects abnormal valves
+- Progressive course if untreated
+
+## Risk Factors & Predisposing Conditions
+
+**Cardiac Risk Factors:**
+- **Rheumatic heart disease** (most common in India)
+- Prosthetic valves (mechanical > bioprosthetic)
+- Degenerative valve disease
+- Congenital heart disease (PDA, VSD, coarctation)
+- Marfan syndrome (aortic root dilatation)
+- Mitral valve prolapse (with regurgitation)
+
+**Non-Cardiac Risk Factors:**
+- IV drug abuse (high incidence of acute endocarditis)
+- Dental procedures
+- Genitourinary tract procedures
+- Gastrointestinal procedures
+- Poor hygiene, immunosuppression
+
+## Microbiology
+
+### Most Common Causative Organisms
+
+**Native Valve Endocarditis (NVE):**
+- **Viridans group streptococci** (50-60%) - most common
+- **S. aureus** (20-30%) - associated with IV drug use, acute presentation
+- **Enterococci** (5-10%)
+- **Haemophilus, Aggregatibacter, Cardiobacterium, Eikenella, Kingella (HACEK)** (1-2%)
+- **Streptococcus bovis/gallolyticus** (5%) - associated with GI malignancy
+
+**Prosthetic Valve Endocarditis (PVE):**
+- **Early (<1 year post-valve)**: S. aureus, coagulase-negative staph, gram-negatives
+- **Late (>1 year post-valve)**: Similar to NVE (streptococci, S. aureus)
+
+### India-Specific Microbiology:
+- Increased prevalence of tuberculosis (mycobacterial endocarditis possible)
+- Fungal endocarditis more common in certain regions
+- Higher prevalence of rheumatic heart disease → streptococcal endocarditis
+
+## Pathophysiology
+
+### Initiation
+1. Bacteremia from source (dental, IV drug use, GU tract, skin)
+2. Bacterial seeding on cardiac endocardium (abnormal valve preferred)
+3. Bacteria adhere to valve surface via adhesins
+
+### Vegetations Formation
+1. Platelet and fibrin deposition around bacteria
+2. Formation of bacterial vegetation (microthrombi)
+3. Local inflammatory response
+4. Progressive vegetation growth
+
+### Complications
+1. **Valve destruction**: Perforation, regurgitation, stenosis
+2. **Emboli**: Septic emboli to lungs, brain, spleen (from vegetations)
+3. **Mycotic aneurysms**: Septic arteritis from septic emboli
+4. **Conduction defects**: From abscess formation
+5. **Acute heart failure**: From acute valve insufficiency
+
+## Epidemiology - India
+
+- Incidence: 2-4 per 100,000 population (vs 3-10 in developed countries)
+- Most common predisposing condition: rheumatic heart disease (60-70%)
+- Less common in pure mitral stenosis (narrow orifice protective)
+- Aortic valve most commonly involved (45%), followed by mitral (30%), tricuspid (5%)
+- In IV drug users: tricuspid valve commonly affected (right-sided endocarditis)`,
+        mnemonics: [
+          { text: "ABCDE of Endocarditis: Acute/indolent, Bacteremia, Cardiac seeding, Vegetation, Emboli", explanation: "Pathophysiology of IE" },
+          { text: "Common Organisms: VSAH-E", explanation: "Viridans streptococci, S. aureus, Haemophilus, Enterococci" },
+          { text: "Risk Valves: Aortic > Mitral > Tricuspid > Pulmonary", explanation: "In native valve; tricuspid common in IVDU" }
+        ],
+        keyPoints: [
+          "Infective endocarditis: microbial infection of cardiac endocardium with vegetation formation",
+          "Acute endocarditis: fulminant, normal valves, virulent organisms (S. aureus)",
+          "Subacute endocarditis: indolent, abnormal valves, viridans streptococci",
+          "Rheumatic heart disease most common predisposing condition in India",
+          "Viridans streptococci most common cause (50-60%), S. aureus in IV drug users"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "110: Infective Endocarditis", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "3: Cardiovascular System", edition: "11th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "infective-endocarditis-layer-2-mechanism",
+        title: "Infective Endocarditis - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Detailed pathophysiology of bacterial adhesion, vegetation formation, immune responses, and mechanisms of complications.",
+        contentMd: `# Infective Endocarditis - Mechanism
+
+## Bacterial Adhesion
+
+### Factors Enhancing Adhesion
+1. **Bacteremia intensity and duration** - higher bacterial counts, prolonged bacteremia increase seeding
+2. **Bacterial virulence factors** (adhesins) - determine ability to adhere
+3. **Valve damage/turbulence** - abnormal hemodynamics increase bacterial trapping
+4. **Endothelial damage** - from abnormal flow (stenosis, regurgitation)
+5. **Fibrin and platelets** - deposit on damaged valve; bacteria adhere to fibrin-platelet matrix
+
+### Preference for Abnormal Valves
+- Vegetations form on line of valve closure (high-pressure gradient side)
+- Abnormal valves have:
+  - Altered endothelial permeability
+  - Fibrin-platelet microthrombi (from altered hemodynamics)
+  - Lower local blood flow (platelets and fibrin accumulate)
+
+## Vegetation Formation & Growth
+
+### Early Vegetation (Hours to Days)
+- Fibrin and platelets deposit on bacterial colony
+- Bacteria multiplied rapidly within vegetation
+- Protected from antibiotics (impaired penetration) and immune system
+
+### Established Vegetation (Days to Weeks)
+- Dense bacterial flora (10⁹ bacteria per mg of vegetation)
+- Layers of fibrin, platelets, immune cells
+- Inflammatory infiltrate (PMN, macrophages)
+- Progressive valve destruction
+
+## Immune Response
+
+### Antibody Formation
+- Circulating immune complexes from bacterial antigens
+- Antibodies against bacterial epitopes
+- Antibodies against altered host antigens (molecular mimicry)
+
+### Complement Activation
+- Both classical and alternative pathways
+- C3a, C5a generation → neutrophil recruitment
+- Immune complex deposition → vasculitis
+
+### Immunological Manifestations
+1. **Vasculitis**: From immune complex deposition in small vessels
+2. **Glomerulonephritis**: IgG-IgM immune complex deposition (10-30% of IE)
+3. **Arthralgias**: From immune complex disease
+
+## Mechanisms of Complications
+
+### Valvular Destruction
+1. **Direct bacterial invasion** → tissue necrosis
+2. **Proteolytic enzymes** from neutrophils → collagen breakdown
+3. **Septic thrombi** → valve perforation
+4. **Vegetation erosion** → progressive regurgitation
+
+### Septic Emboli
+- **Source**: Fragments of vegetation break off
+- **Size**: 1-5 mm (largest size that passes circulation)
+- **Destination**: Lungs (right-sided IE), brain (left-sided IE), spleen, kidneys
+- **Consequence**: Septic infarction, abscess formation, microaneurysm
+
+### Mycotic Aneurysm Formation
+1. Septic embolus lodges in arterial wall
+2. Septic arteritis develops
+3. Weakening of arterial wall → aneurysm formation
+4. High rupture risk
+
+### Conduction Abnormalities
+- Abscess formation near conduction pathways (AV node, Bundle of His)
+- Leads to conduction blocks, arrhythmias
+- Progressive involvement → complete heart block
+
+### Acute Heart Failure
+- Acute aortic regurgitation (from vegetation or perforation)
+- Acute mitral regurgitation (from papillary muscle infection)
+- Sudden hemodynamic decompensation`,
+        mnemonics: [
+          { text: "Vegetation Formation: Bacteremia → Adhesion → Fibrin-Platelet → Growth → Destruction", explanation: "Step-by-step pathophysiology" },
+          { text: "Septic Emboli: Break from vegetation, lodge distally, cause septic infarction/abscess", explanation: "Leads to clinical manifestations" },
+          { text: "Immune Complications: IC-GN-V", explanation: "Immune Complexes → GN, Vasculitis" },
+          { text: "Valve Destruction: Bacteria + Enzymes + Thrombosis", explanation: "Multiple mechanisms" }
+        ],
+        keyPoints: [
+          "Bacterial adhesion enhanced by abnormal hemodynamics, endothelial damage, fibrin-platelet matrix",
+          "Vegetation forms primarily on abnormal valve at line of closure",
+          "Within vegetation, bacteria protected from antibiotics and immune system (10⁹ bacteria per mg)",
+          "Septic emboli break from vegetation and lodge distally (lungs in right-sided IE, brain in left-sided)",
+          "Immune complex deposition causes glomerulonephritis, vasculitis, and arthralgias",
+          "Mycotic aneurysm forms from septic arteritis in arterial wall from septic embolus"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "110: Infective Endocarditis", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "3: IE Pathophysiology", edition: "11th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "infective-endocarditis-layer-3-clinical",
+        title: "Infective Endocarditis - Clinical",
+        estimatedMinutes: 35,
+        summary: "Clinical diagnosis of infective endocarditis, investigations, Duke criteria, blood cultures, echocardiography, and antimicrobial therapy.",
+        contentMd: `# Infective Endocarditis - Clinical Diagnosis & Management
+
+## Clinical Presentation
+
+### Acute Endocarditis (S. aureus)
+- Fever (>39°C), chills, rigors
+- Rapid clinical deterioration
+- Septic shock possible
+- Embolic phenomena early
+- New murmur may be absent initially
+
+### Subacute Endocarditis (Viridans streptococci)
+- Low-grade fever (37-39°C)
+- Insidious onset (weeks to months)
+- Fatigue, malaise, weight loss
+- Arthralgias, myalgias
+- New or changing heart murmur
+
+### General Features
+- **Fever** (90% of patients) - most sensitive feature
+- **Heart murmur** (60-90%) - new or changing
+- **Embolic phenomena** (30%)
+
+## Vascular Phenomena
+1. **Splinter hemorrhages** - linear streaks under nails (also seen in trauma, psoriasis)
+2. **Osler nodes** - painful nodules on fingertips/toes (immune complex vasculitis)
+3. **Janeway lesions** - painless erythematous macules on palms/soles (septic emboli)
+4. **Petechiae** - small red macules (emboli, vasculitis)
+5. **Retinal hemorrhages with white centers** (cotton-wool spots)
+
+## Investigations
+
+### Blood Cultures (Most Important)
+- **Timing**: Obtain before antibiotics (critical)
+- **Number**: At least 2-3 sets (ideally 3) from different sites
+- **Volume**: 10 mL per culture bottle
+- **Timing of collection**: Not correlated with fever; obtain anytime before antibiotics
+- **Positive in**: 90% of native valve, 50% of prosthetic valve, 80% of post-operative IE
+
+### Echocardiography
+
+**Transthoracic Echocardiography (TTE)**
+- Sensitivity: 50-60%
+- Not sensitive but good for assessing hemodynamic consequences
+- Shows vegetations, valve destruction, regurgitation
+- Useful for negative predictive value
+
+**Transesophageal Echocardiography (TEE)**
+- Sensitivity: 90-95%
+- Better for prosthetic valves, small vegetations
+- Detects paravalvular abscesses
+- Preferred imaging modality
+
+### Blood Tests
+- **CBC**: Anemia (chronic disease), leukocytosis
+- **ESR/CRP**: Elevated (nonspecific)
+- **Rheumatoid factor**: Positive in 50% (false positive, immune complex)
+- **Complement (C3, C4)**: Low in 10-20% (immune complex consumption)
+- **Blood urea, creatinine**: Assess renal function (nephritis possible)
+
+### Duke Criteria for Diagnosis
+
+**Major Criteria** (1 point each):
+1. **Blood culture positive**:
+   - Viridans streptococci, S. bovis, or HACEK from 2 separate cultures
+   - S. aureus from 1 or more cultures (community-acquired)
+   - Repeating positive cultures from blood
+2. **Echocardiographic evidence**:
+   - Vegetation, abscess, new prosthetic dehiscence, new regurgitation
+   - TEE more sensitive than TTE
+
+**Minor Criteria** (0.5 point each):
+1. Predisposing heart condition or IV drug use
+2. Fever ≥38°C
+3. Vascular phenomena (emboli, splinter hemorrhages, petechiae, Janeway)
+4. Immunological phenomena (Osler nodes, Roth spots, GN, RF)
+5. Microbiological evidence not meeting major criteria
+
+**Diagnosis**:
+- Definite: 2 major, or 1 major + 3 minor, or all 5 minor
+- Possible: 1 major + 1 minor, or 3 minor
+
+## Management
+
+### Antibiotic Therapy (Before Culture Results)
+
+**Native Valve Endocarditis** (Empiric, before culture):
+- **IV ceftriaxone** 2 g every 12 hours
+- **Plus IV gentamicin** 3 mg/kg once daily
+- **Plus IV ampicillin** 2 g every 4 hours (if streptococci suspected)
+
+**Prosthetic Valve Endocarditis** (Empiric):
+- **IV vancomycin** 15-20 mg/kg every 8-12 hours (S. aureus resistance risk)
+- **Plus IV gentamicin** 3 mg/kg once daily
+
+### Organism-Specific Therapy
+
+**Viridans Streptococci** (Native valve):
+- **High-dose IV penicillin** 18-24 million units daily OR
+- **IV ceftriaxone** 2 g every 12 hours
+- Duration: 4 weeks total
+- Add gentamicin first 2 weeks if severe
+
+**S. aureus** (IV drug users, acute presentation):
+- **IV nafcillin/oxacillin** 6-12 g daily
+- OR **IV cefazolin** 4 g every 6 hours
+- OR **IV vancomycin** (if β-lactam allergy) 15-20 mg/kg every 8-12 hours
+- Duration: 4-6 weeks
+
+**Enterococci**:
+- **IV ampicillin/penicillin** high-dose
+- **Plus gentamicin** synergistic
+- Duration: 4-6 weeks (longer than streptococci)
+
+**HACEK Organisms**:
+- **IV ceftriaxone** 2 g every 12 hours OR
+- **IV fluoroquinolone**
+- Duration: 4 weeks
+
+### Surgical Indications (Urgent)
+1. **Acute heart failure** from valve destruction
+2. **Large vegetation** (>10 mm) with embolization risk
+3. **Prosthetic valve dysfunction** (paravalvular leak, dehiscence)
+4. **Recurrent embolization** despite antibiotic therapy
+5. **Uncontrolled infection** (relapsed after therapy, non-streptococcal, fungal)
+6. **Abscess formation** (especially aortic root abscess)
+
+### Monitoring
+- Repeat blood cultures after 48-72 hours (should be sterile)
+- Repeat echocardiography at 6-8 weeks or if clinical deterioration
+- Serum creatinine, urinalysis (monitor for nephritis)
+- Antibiotic levels (gentamicin trough <1 μg/mL, peak 8-12 μg/mL)`,
+        mnemonics: [
+          { text: "FEVER in IE: Fever, Emboli, Valve murmur, Emboli, elevated Reactants", explanation: "Main clinical features" },
+          { text: "Vascular Phenomena: SPORE", explanation: "Splinter hemorrhages, Petechiae, Osler nodes, Roth spots, Emboli (septic)" },
+          { text: "Duke Criteria: 2 Major OR 1 Major + 3 Minor OR 5 Minor", explanation: "Diagnostic criteria for IE" },
+          { text: "Blood Culture Critical: Before antibiotics, 3 sets, aseptic technique", explanation: "Most important investigation" }
+        ],
+        keyPoints: [
+          "Blood cultures before antibiotics: 2-3 sets from different sites, most important diagnostic tool",
+          "TEE >90% sensitive; TTE 50-60% sensitive for detecting vegetations",
+          "Duke criteria: 2 major (BC + echo), or 1 major + 3 minor criteria = definite IE",
+          "Empiric antibiotics before culture: ceftriaxone + gentamicin for native valve endocarditis",
+          "Organism-specific therapy: viridans strep (4 weeks), S. aureus (4-6 weeks), enterococci (4-6 weeks)",
+          "Surgical indications: acute heart failure, large vegetation, prosthetic dysfunction, uncontrolled infection, abscess"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "110: Infective Endocarditis", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "3: IE Diagnosis & Management", edition: "11th" },
+          { book: "2015 ESC Guidelines for Infective Endocarditis", chapter: "Diagnosis and Treatment", edition: "2015" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "infective-endocarditis-layer-4-exam",
+        title: "Infective Endocarditis - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "Comprehensive exam-focused review of infective endocarditis, NEET-PG pattern questions, high-yield facts, and clinical pearls.",
+        contentMd: `# Infective Endocarditis - Exam Preparation
+
+## Differential Diagnosis of Fever + Heart Murmur
+
+1. **Infective endocarditis** - positive blood cultures, vegetation on echo
+2. **Acute rheumatic fever** - preceded by strep infection, transient murmur, doesn't destroy valve
+3. **Acute myocarditis** - viral prodrome, diffuse ST changes, elevated troponin
+4. **Septic embolism** - fever, septic phenomena, history of bacteremia
+5. **Valve rupture** - trauma, connective tissue disorder, acute pulmonary edema
+
+## High-Yield Facts
+
+### Risk Factors (Remember "ABCDE"):
+- **A**: Abnormal valves (RHD, degenerative, prosthetic)
+- **B**: Bacteremia (dental, IV drug use, GU procedures)
+- **C**: Congenital heart disease
+- **D**: Drug use (IV)
+- **E**: Endothelial damage
+
+### Most Common Organisms (Remember "VSH"):
+- **V**: Viridans streptococci (50-60%) - most common
+- **S**: S. aureus (20-30%) - associated with IVDU, acute IE
+- **H**: HACEK, Haemophilus (1-2%)
+
+### Duke Criteria Simplified:
+- **Major Criteria**: Positive BC (correct organism) + Echo vegetation
+- **Minor Criteria**: Fever, vascular phenomena, immunological phenomena, host factors
+- **Diagnosis**: 2 Major OR (1 Major + 3 Minor) OR (5 Minor)
+
+### Blood Culture Protocol:
+- **Critical**: Obtain BEFORE antibiotics
+- **Minimum**: 2-3 sets from different sites, different times
+- **Volume**: 10 mL per bottle
+- **Result timing**: 5-7 days for streptococci, may need extended incubation for fastidious organisms
+
+### Echocardiographic Findings:
+- **Vegetation**: Highly specific but low sensitivity on TTE (50-60%)
+- **TEE**: Preferred modality (90-95% sensitivity)
+- **Paravalvular abscess**: Indicates surgical emergency
+- **New regurgitation**: Indicates ongoing valve destruction
+
+### Vascular Phenomena (Remember "J-O-S-P"):
+- **J**: Janeway lesions (painless, septic emboli)
+- **O**: Osler nodes (painful, immune complex)
+- **S**: Splinter hemorrhages (under nails)
+- **P**: Petechiae (small red macules)
+
+### Empiric Antibiotic Choice:
+- **Native valve**: Ceftriaxone + gentamicin (covers streptococci + S. aureus)
+- **Prosthetic valve**: Vancomycin + gentamicin (covers resistant organisms)
+- **IVDU**: Higher risk S. aureus → consider vancomycin initially
+
+### Duration of Antibiotic Therapy:
+- **Viridans streptococci**: 4 weeks
+- **S. aureus**: 4-6 weeks (longer for complex IE)
+- **Enterococci**: 4-6 weeks
+- **HACEK**: 4 weeks
+
+### Surgical Indications (Remember "ACE"):
+- **A**: Acute heart failure
+- **C**: Complications (abscess, paravalvular leak, large vegetation)
+- **E**: Embolic phenomena (recurrent despite antibiotics)
+
+## Common Exam Questions
+
+**Q: 35-year-old IV drug user with fever, new systolic murmur, positive blood cultures (S. aureus). Management?**
+A: Start IV vancomycin (β-lactamase resistance risk) + gentamicin. Get TEE (high sensitivity). Consider surgical referral if large vegetation (>10 mm) or abscess.
+
+**Q: Aortic regurgitation murmur after dental procedure. Blood cultures negative. Diagnosis?**
+A: Likely acute rheumatic fever or acute aortic dissection (not IE). Check for Todd-Fauci criteria (previous GAS, arthritis, polyarthritis, etc.). Rheumatic fever doesn't usually destroy valve acutely.
+
+**Q: Patient with IE presenting with focal neurological deficit. What imaging indicated?**
+A: MRI brain or CT brain to rule out septic embolism or mycotic aneurysm. Septic emboli can lodge in brain vessels → stroke or hemorrhage.
+
+**Q: When is surgical intervention absolutely necessary in IE?**
+A: Acute heart failure (prosthetic valve failure, large vegetation), septic shock, aortic root abscess, recurrent embolization despite antibiotics.`,
+        mnemonics: [
+          { text: "ABCDE Risk Factors", explanation: "Abnormal valves, Bacteremia, Congenital HD, Drug abuse, Endothelial damage" },
+          { text: "VSH Organisms", explanation: "Viridans strept (60%), S. aureus (30%), Haemophilus/HACEK (1-2%)" },
+          { text: "JOPS Vascular Phenomena", explanation: "Janeway (painless emboli), Osler (painful IC), Splinter, Petechiae" },
+          { text: "Duke: 2 Major OR 1M+3m OR 5m", explanation: "2 major criteria = definite IE" },
+          { text: "Blood Culture: BEFORE antibiotics, 3 sets, 10 mL each", explanation: "Critical for diagnosis" },
+          { text: "Echo: TTE 50-60%, TEE 90-95%", explanation: "TEE preferred, especially prosthetic" },
+          { text: "ACE Surgical Indications", explanation: "Acute HF, Complications (abscess), Embolization recurrent" },
+          { text: "Antibiotic Durations: 4-6 weeks (depending on organism)", explanation: "Viridans 4w, S. aureus 4-6w, enterococci 4-6w" },
+          { text: "Empiric: Cef+Gent (native), Vanco+Gent (prosthetic)", explanation: "Start before culture results" },
+          { text: "New Murmur = New valve destruction until proven otherwise", explanation: "Indicates ongoing valve involvement" }
+        ],
+        keyPoints: [
+          "IE: microbial infection of cardiac endocardium causing fever, murmur, and embolic phenomena",
+          "Viridans streptococci most common (50-60%), S. aureus in IV drug users (30%)",
+          "Blood cultures before antibiotics: 2-3 sets, most important diagnostic tool",
+          "Duke criteria: 2 major (BC + echo), or 1 major + 3 minor criteria = definite IE",
+          "Echocardiography: TTE 50-60% sensitive, TEE 90-95% sensitive (preferred for prosthetic valves)",
+          "Empiric antibiotics: ceftriaxone + gentamicin for native valve, vancomycin + gentamicin for prosthetic",
+          "Surgical indications: acute heart failure, uncontrolled infection, large vegetation, recurrent embolization",
+          "Rheumatic heart disease most common predisposing factor in India",
+          "Complications: valve destruction, septic emboli, mycotic aneurysm, heart failure"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "110: Infective Endocarditis", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "3: IE Diagnosis", edition: "11th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "infective-endocarditis-layer-5-active-recall",
+        title: "Infective Endocarditis - Active Recall",
+        estimatedMinutes: 20,
+        summary: "Flashcard-based active recall for rapid learning and retention of critical infective endocarditis concepts.",
+        contentMd: `# Infective Endocarditis - Active Recall Flashcards
+
+**Q1: What is infective endocarditis and what are the two main classifications?**
+A: Microbial infection of cardiac endocardium causing vegetation. Acute (fulminant, normal valves, virulent organisms like S. aureus) vs Subacute (indolent, abnormal valves, viridans streptococci).
+
+**Q2: What is the most common predisposing condition for infective endocarditis in India?**
+A: Rheumatic heart disease (60-70% of cases in India), unlike developed countries where degenerative valve disease is more common.
+
+**Q3: What are the most common causative organisms in native valve endocarditis?**
+A: Viridans group streptococci (50-60%, most common), S. aureus (20-30%), Enterococci (5-10%), HACEK (1-2%).
+
+**Q4: How does bacterial adhesion and vegetation formation occur in IE?**
+A: Bacteremia deposits bacteria on cardiac endocardium → bacteria adhere via adhesins → fibrin-platelet matrix forms around bacteria → vegetation grows with embedded bacteria (10⁹ bacteria per mg).
+
+**Q5: Why are abnormal valves preferentially affected in IE?**
+A: Abnormal hemodynamics create areas of low flow where fibrin-platelet microthrombi accumulate, trapping bacteria and protecting them from antibiotics and immune system.
+
+**Q6: What is the most important diagnostic investigation for infective endocarditis and what is critical about its timing?**
+A: Blood cultures - must be obtained BEFORE starting antibiotics. Obtain 2-3 sets from different sites, 10 mL per bottle.
+
+**Q7: What is the sensitivity and specificity of transthoracic vs transesophageal echocardiography in IE?**
+A: TTE: 50-60% sensitive. TEE: 90-95% sensitive. TEE preferred, especially for prosthetic valves and detecting paravalvular abscesses.
+
+**Q8: What are the Duke criteria for diagnosis of infective endocarditis?**
+A: Definite IE: 2 major criteria OR (1 major + 3 minor) OR (5 minor). Major: positive blood culture (correct organism) + echocardiographic evidence of vegetation or abscess.
+
+**Q9: What are the vascular phenomena seen in IE and what do they represent?**
+A: Janeway lesions (painless, septic emboli), Osler nodes (painful, immune complex vasculitis), splinter hemorrhages, petechiae, Roth spots. Result from septic emboli and immune complex deposition.
+
+**Q10: What is immunoglobulin abnormality found in IE and why?**
+A: Rheumatoid factor positive in 50% (false positive). Due to immune complex formation and B cell stimulation from chronic bacteremia.
+
+**Q11: What are the septic emboli in IE and what is their consequence?**
+A: Fragments of vegetation (1-5 mm) that break off and lodge distally → septic infarction, microabscess, or mycotic aneurysm. Most common in left-sided IE (brain, spleen); lungs in right-sided.
+
+**Q12: What is mycotic aneurysm and how does it form in IE?**
+A: Septic embolus lodges in arterial wall → septic arteritis → weakening of arterial wall → aneurysm formation. High rupture risk, requiring vascular surgery.
+
+**Q13: What is the empiric antibiotic regimen for native valve endocarditis before blood culture results?**
+A: IV ceftriaxone 2 g every 12 hours + IV gentamicin 3 mg/kg once daily + IV ampicillin 2 g every 4 hours (if streptococci suspected).
+
+**Q14: What is the organism-specific antibiotic therapy and duration for viridans streptococci?**
+A: High-dose IV penicillin or IV ceftriaxone for 4 weeks (add gentamicin first 2 weeks if severe IE).
+
+**Q15: What is the organism-specific therapy for S. aureus endocarditis?**
+A: IV nafcillin/oxacillin 6-12 g daily OR IV cefazolin 4 g every 6 hours OR IV vancomycin if β-lactam allergy. Duration: 4-6 weeks (longer for complex IE).
+
+**Q16: When should surgical intervention be considered in IE?**
+A: Acute heart failure from valve destruction, large vegetation (>10 mm) with recurrent embolization, prosthetic valve dysfunction, paravalvular abscess, uncontrolled infection.
+
+**Q17: What is the mechanism of glomerulonephritis in IE?**
+A: Immune complex deposition in glomeruli from persistent antigenemia and antibody formation → IgG-IgM complexes → complement activation → glomerular inflammation.
+
+**Q18: What organism is associated with endocarditis following colon cancer?**
+A: Streptococcus bovis/gallolyticus (5% of native valve IE). Screen for GI malignancy in patients with S. bovis endocarditis.
+
+**Q19: Why is right-sided endocarditis (tricuspid valve) more common in IV drug users?**
+A: Direct bacterial inoculation into pulmonary circulation from infected drugs → tricuspid vegetation. Lower embolic risk to vital organs (emboli go to lungs, not brain/spleen).
+
+**Q20: What is the difference between early and late prosthetic valve endocarditis (PVE)?**
+A: Early PVE (<1 year post-valve): S. aureus, coagulase-negative staph, gram-negatives (acquired during surgery). Late PVE (>1 year): similar to native valve IE (viridans strep, S. aureus).`,
+        mnemonics: [
+          { text: "IE Classification: Acute = Normal valve, Subacute = Abnormal valve", explanation: "Acute: S. aureus; Subacute: viridans strept" },
+          { text: "ABCDE Risk Factors", explanation: "Abnormal valves, Bacteremia, Congenital HD, Drug abuse, Endothelial damage" },
+          { text: "VSH Organisms: 60-30-1", explanation: "Viridans strept 60%, S. aureus 30%, HACEK 1-2%" },
+          { text: "Duke Diagnosis: 2M or 1M+3m or 5m", explanation: "Major criteria (BC + echo) or combinations of major + minor" },
+          { text: "JOPS Vascular: Janeway, Osler, Splinter, Petechiae", explanation: "Clinical stigmata of IE" },
+          { text: "Blood Culture CRITICAL: Before antibiotics, 3 sets, aseptic", explanation: "90% sensitivity if done correctly" },
+          { text: "Echo: TTE 50-60%, TEE 90-95%", explanation: "TTE screens; TEE confirms" },
+          { text: "Empiric Antibiotics: Cef+Gent (native), Vanco+Gent (prosthetic)", explanation: "Before organism identification" },
+          { text: "Antibiotic Duration: 4-6 weeks (depending on organism, 4w viridans, 4-6w S. aureus)", explanation: "Longer than other infections" },
+          { text: "ACE Surgical Indications", explanation: "Acute HF, Complications, Embolization recurrent" }
+        ],
+        keyPoints: [
+          "IE: microbial infection of cardiac endocardium causing fever, new/changing murmur, embolic phenomena",
+          "Viridans streptococci most common (50-60%), S. aureus in IVDU (30%), HACEK (1-2%)",
+          "Bacteria protected within vegetations (10⁹ CFU per mg), explaining need for prolonged antibiotics",
+          "Blood cultures before antibiotics: most important diagnostic investigation (90% sensitivity)",
+          "Duke criteria: 2 major (positive BC + vegetation on echo) = definite IE",
+          "Echo: TTE 50-60% sensitive, TEE 90-95% sensitive (preferred); detects vegetations, abscesses, regurgitation",
+          "Empiric antibiotics: ceftriaxone + gentamicin for native valve; vancomycin + gentamicin for prosthetic",
+          "Antibiotic duration: 4 weeks for viridans streptococci, 4-6 weeks for S. aureus and enterococci",
+          "Surgical indications: acute heart failure, uncontrolled infection, large vegetation, recurrent embolization",
+          "Complications: valve destruction, septic emboli (brain, spleen, kidneys), mycotic aneurysm, conduction defects"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "110: Infective Endocarditis", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "3: Cardiovascular System", edition: "11th" }
+        ]
+      }
+    ]
+  }
 ];

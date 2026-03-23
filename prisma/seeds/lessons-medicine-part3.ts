@@ -1,18 +1,648 @@
-export const medicinePart3Lessons = [
-  // IM-MOD-04: Nephrology - Acute Kidney Injury
+import type { TopicLessons } from "./content-loader";
+
+export const medicinePart3Lessons: TopicLessons[] = [
   {
     topicCode: "IM-MOD-04-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "aki-foundation",
+        slug: "aki-layer-1-foundation",
         title: "Acute Kidney Injury - Foundation",
         estimatedMinutes: 20,
-        summary: "Understanding the basic concepts of acute kidney injury, including definition based on KDIGO criteria, functional anatomy of the nephron, and GFR measurement.",
-        contentMd: "# Acute Kidney Injury - Foundation\n\n## Definition & Epidemiology\n- **AKI**: Rapid loss of renal function within hours to days\n- **Incidence**: 5-7% of hospitalized patients, up to 50% in ICU\n- **Mortality**: 5-40% depending on severity\n\n## KDIGO Classification\n| Stage | Serum Creatinine | Urine Output | Prognosis |\n|-------|-----------------|--------------|-----------|\n| 1 | 1.5-1.9x baseline | <0.5 mL/kg/hr x 6-8 hrs | Reversible |\n| 2 | 2.0-2.9x baseline | <0.5 mL/kg/hr x 16 hrs | Often reversible |\n| 3 | ≥3x baseline or ≥4.0 mg/dL | <0.3 mL/kg/hr x 24 hrs or anuria | High mortality |\n\n## Functional Anatomy - The Nephron\n1. **Glomerulus**: Filtration barrier (endothelium, GBM, podocytes)\n2. **Proximal tubule**: Reabsorbs glucose, amino acids, sodium (65% of filtered load)\n3. **Loop of Henle**: Creates osmotic gradient for water reabsorption\n4. **DCT & Collecting duct**: Fine-tuning of Na+ and K+ excretion, water reabsorption (ADH)\n\n## GFR Estimation\n- **Normal**: >90 mL/min/1.73m²\n- **Creatinine-based**: MDRD, CKD-EPI equations\n- **Cystatin C**: Less affected by muscle mass\n- **Measured GFR**: 24-hour urine collection (gold standard)\n- **Indian population**: Often need adjustment for body composition,\n        mnemonics: [\n          { text: \"KDIGO Stages: 1-2-3 CRUMBLE\", explanation: \"Creatinine increases in stages, Urine output decreases, Mortality increases\" },\n          { text: \"NEPHRON: Glom-PROX-LOOP-DCT-CD\", explanation: \"Glomerulus → Proximal → Loop of Henle → Distal convoluted tubule → Collecting duct\" }\n        ],\n        keyPoints: [\n          \"AKI is defined by rapid change in creatinine, not absolute value\",\n          \"Stage 3 has 60% mortality in hospitalized patients\",\n          \"Baseline creatinine critical for diagnosis - assess if patient is catabolic\",\n          \"Indian population has lower muscle mass - interpret creatinine carefully\"\n        ],\n        textbookRefs: [\n          { book: \"Harrison's Principles of Internal Medicine\", chapter: \"261: Acute Kidney Injury\", edition: \"21st\" },\n          { book: \"Davidson's Principles and Practice of Medicine\", chapter: \"17: Diseases of the kidney and urinary system\", edition: \"24th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"aki-mechanism\",\n        title: \"Acute Kidney Injury - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Detailed pathophysiology of prerenal, intrinsic renal, and postrenal AKI mechanisms, including ischemic-reperfusion injury, tubular injury patterns, and acute tubular necrosis.\",\n        contentMd: "# Acute Kidney Injury - Mechanism\\n\\n## Classification by Location: PIP Framework\\n### **Prerenal AKI (55% of AKI)**\\n**Mechanism**: Reduced renal perfusion without parenchymal damage\\n\\n**Causes**:\\n- **Hypovolemia**: Hemorrhage, dehydration, peritonitis, burns (third-spacing)\\n- **Decreased cardiac output**: MI, cardiogenic shock, sepsis, CPR\\n- **Vasodilation**: Sepsis, anesthesia, NSAIDs, ACE-I/ARB\\n- **Renal vasoconstriction**: NSAIDs, cyclosporine\\n\\n**Pathophysiology**:\\n- Glomerular filtration pressure drops (↓ afferent arteriolar flow)\\n- Renin-angiotensin system activated → intense vasoconstriction\\n- Tubular reabsorption increases (hyperabsorption of sodium and water)\\n- **Reversible** if perfusion restored within hours\\n\\n**Markers**: BUN:Cr ratio >20:1, FENa <1%, urine osmolality >500 mOsm/kg\\n\\n### **Intrinsic Renal AKI (35% of AKI)**\\n**Mechanism**: Direct parenchymal damage\\n\\n#### ATN (Acute Tubular Necrosis) - 50% of AKI\\n**Ischemic ATN** (nephrotoxic)\\n- Most common type (70% of ATN)\\n- Prolonged hypotension, sepsis, major surgery\\n- Tubular epithelial cell death (coagulation necrosis), loss of tight junctions\\n- Loss of barrier → back-leak of filtrate into blood\\n- Inflammatory infiltrate → further damage\\n\\n**Patho-progression**:\\n1. **Initiation** (minutes-hours): Hypotension → ischemia\\n2. **Extension** (hours-days): Continued tubular damage despite reperfusion\\n3. **Recovery** (days-weeks): Epithelial cell proliferation, regeneration\\n\\n**Tubulotoxic ATN** (nephrotoxins)\\n- Drugs: Aminoglycosides, cisplatin, NSAIDs, ACE-I\\n- Endogenous: Myoglobin (rhabdo), hemoglobin (massive transfusion), uric acid (tumor lysis)\\n- Exogenous: Heavy metals, organic solvents, contrast agents\\n\\n#### Acute Glomerulonephritis\\n- Post-streptococcal, lupus, vasculitis\\n- Immune complex deposition → glomerular injury\\n- RBC casts in urine (dysmorphic RBC, granular casts)\\n\\n#### Acute Interstitial Nephritis (AIN)\\n- Drugs: NSAIDs, PPI, antibiotics (β-lactams, fluoroquinolones)\\n- Infections: TB, pyelonephritis\\n- Tubulointerstitial inflammation\\n- Fever + rash + eosinophiluria (\\\"drug fever triad\\\")\\n\\n#### Contrast-Induced Nephropathy (CIN)\\n- Risk factors: Pre-existing CKD, diabetes, dehydration\\n- Mechanism: Osmotic diuresis + direct tubular toxicity + ROS\\n- Prevention: IV hydration (0.9% saline), use iso-osmolar contrast, hold metformin\\n\\n### **Postrenal AKI (10% of AKI)**\\n**Mechanism**: Obstruction to urine flow\\n\\n**Causes**:\\n- **Ureteral obstruction**: Stones, tumors, fibrosis\\n- **Bladder outlet**: BPH, urethral stricture, neurogenic bladder\\n- **Intratubular**: Crystal nephropathy (uric acid, oxalate, myoglobin)\\n\\n**Pattern**: High initial Cr, then gradual decline if obstruction relieved\\n\\n## Molecular Mechanisms of Injury\\n1. **Ischemic injury**: ATP depletion → loss of Na/K-ATPase → cell swelling → lysis\\n2. **Oxidative stress**: ROS generation → lipid peroxidation → mitochondrial damage\\n3. **Inflammation**: IL-6, TNF-α, neutrophil infiltration\\n4. **Apoptosis vs necrosis**: Severe injury → necrosis; moderate → apoptosis\\n5. **Loss of tight junctions**: Paracellular backleak of filtrate,\\n        mnemonics: [\\n          { text: \\\"PRERENAL AKI: BUN/Cr >20, FENa <1%\\\", explanation: \\\"The kidney is trying to hold onto sodium and water\\\" },\\n          { text: \\\"ATN = Tubular Death\\\", explanation: \\\"Acute tubular necrosis = actual death of epithelial cells\\\" },\\n          { text: \\\"AIN = 'DRUG FEVER'\\\", explanation: \\\"Drugs (NSAIDs, PPIs, antibiotics), plus fever and rash\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Prerenal AKI is functional, not structural - early recognition allows reversal\\\",\\n          \\\"ATN has poor prognosis once established - 50% mortality in ICU\\\",\\n          \\\"FENa <1% highly specific for prerenal AKI (excludes intrinsic renal disease)\\\",\\n          \\\"Crystal-induced AKI preventable with hydration (alkaline urine for uric acid)\\\",\\n          \\\"Contrast-induced nephropathy largely preventable with hydration and low-osmolar agents\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Harrison's Principles of Internal Medicine\\\", chapter: \\\"261: Acute Kidney Injury\\\", edition: \\\"21st\\\" },\\n          { book: \\\"Robbins Basic Pathology\\\", chapter: \\\"16: The Kidney\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"aki-clinical\\\",\\n        title: \\\"Acute Kidney Injury - Clinical Presentation & Diagnosis\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Clinical features of AKI in different stages, laboratory and imaging findings, urinalysis interpretation, and diagnostic algorithms to identify the type of AKI.\\\",\\n        contentMd: "# Acute Kidney Injury - Clinical & Diagnostic\\\\n\\\\n## Clinical Presentation\\\\n\\\\n### Stage 1 (No symptoms usually)\\\\n- May have oliguria without systemic symptoms\\\\n- Initial lab finding: Cr rise 1.5-1.9x baseline\\\\n- Often recognized retrospectively\\\\n\\\\n### Stage 2 (Oliguria develops)\\\\n- Oliguria <0.5 mL/kg/hr for 16+ hours\\\\n- Mild uremia: lethargy, anorexia\\\\n- Fluid overload may develop\\\\n\\\\n### Stage 3 (Anuric or severely oliguric)\\\\n- Anuria <50 mL/day or severe oliguria\\\\n- **Uremia**: Encephalopathy, pericarditis, bleeding, seizures\\\\n- **Fluid overload**: Pulmonary edema, hypertension\\\\n- **Hyperkalemia**: Cardiac arrhythmias (peaked T waves, QRS widening)\\\\n- **Metabolic acidosis**: Altered mental status, Kussmaul respiration\\\\n- **Hypocalcemia**: Muscle cramps, tetany\\\\n- **Hyperphosphatemia**: Secondary hyperparathyroidism\\\\n\\\\n## Diagnostic Approach: PIP Framework\\\\n\\\\n### Labs for AKI Classification\\\\n| Finding | Prerenal | ATN | Postrenal |\\\\n|---------|----------|-----|-----------|\\\\n| **BUN:Cr ratio** | >20:1 | <10:1 | Variable |\\\\n| **FENa** | <1% | >2% | >2% |\\\\n| **Urine osmolality** | >500 | <300 | Variable |\\\\n| **Urine specific gravity** | >1.020 | <1.010 | Variable |\\\\n| **RBC in urine** | No | No | Yes (if stone) |\\\\n\\\\n**FENa Formula**: (Urine Na × Plasma Cr) / (Plasma Na × Urine Cr) × 100\\\\n\\\\n### Urine Sediment - Critical Finding\\\\n- **Prerenal**: Bland urine or hyaline casts\\\\n- **ATN**: Muddy brown casts (epithelial cell debris), granular casts\\\\n- **AGN**: RBC casts, dysmorphic RBCs, protein\\\\n- **AIN**: WBC casts, eosinophils (>1-5% on Hansel stain)\\\\n- **Postrenal**: Crystals, blood, normal or bland\\\\n\\\\n### Imaging\\\\n- **Renal ultrasound**:\\\\n  - Assess kidney size (>11 cm = normal, <9 cm = chronic disease)\\\\n  - Hydronephrosis suggests postrenal cause\\\\n  - Echogenicity assessment (bright = fibrosis, poor prognosis)\\\\n- **CT without contrast**: Rule out obstruction in postrenal AKI\\\\n- **Renal biopsy**: If AKI etiology unclear, suspicion of AGN/AIN\\\\n\\\\n## Diagnostic Algorithm\\\\n1. **Is it true AKI?** Check baseline Cr (may be chronically elevated)\\\\n2. **Assess volume status**: Orthostatics, JVP, urine output, weight\\\\n3. **If prerenal suspected**: Trial of IV fluids (0.9% saline)\\\\n4. **If intrinsic renal**:\\\\n   - Urine dipstick + microscopy → hematuria/protein suggests AGN\\\\n   - Muddy casts confirm ATN\\\\n   - Eosinophiluria + fever suggests AIN\\\\n5. **If postrenal suspected**: Renal ultrasound or CT,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"UREMIA: COMA\\\\\\\", explanation: \\\\\\\"Coagulopathy, Overload (fluid), Metabolic acidosis, Arrhythmias (from hyperkalemia)\\\\\\\" },\\\\n          { text: \\\\\\\"AKI LABS: BUN/Cr-FENa-Osm\\\\\\\", explanation: \\\\\\\"Check BUN:Cr ratio, FENa, and urine osmolality to classify\\\\\\\" },\\\\n          { text: \\\\\\\"MUDDY BROWN CASTS = ATN\\\\\\\", explanation: \\\\\\\"Epithelial cells in urine = tubular necrosis\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Muddy brown granular casts are pathognomonic for ATN\\\\\\\",\\\\n          \\\\\\\"RBC casts indicate glomerulonephritis (AGN)\\\\\\\",\\\\n          \\\\\\\"FENa <1% in presence of oliguria suggests prerenal (>90% sensitivity)\\\\\\\",\\\\n          \\\\\\\"Preserved urine osmolality and BUN:Cr >20 support prerenal etiology\\\\\\\",\\\\n          \\\\\\\"Hydronephrosis on ultrasound confirms postrenal AKI (ultrasound 90% sensitive)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"261: Acute Kidney Injury\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"17: Diseases of the kidney and urinary system\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"aki-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Acute Kidney Injury - Exam Preparation\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Management protocols, indications for dialysis, drug dosing in renal failure, complications, and prognosis of AKI. Focus on clinical decision-making and exam-style scenarios.\\\\\\\",\\\\n        contentMd: ``# Acute Kidney Injury - Management & Exam Prep\\\\n\\\\n## Management Principles: The STOP-ABCD Mnemonic\\\\n\\\\n### STOP (Initial Management)\\\\n- **S**: Stabilize volume status (0.9% saline for prerenal, fluid restriction for intrinsic/postrenal)\\\\n- **T**: Toxin removal (eliminate nephrotoxic drugs: NSAIDs, ACE-I, aminoglycosides)\\\\n- **O**: Obstruction relief (catheterization for postrenal AKI)\\\\n- **P**: Prevent complications (nutrition, infection, electrolyte management)\\\\n\\\\n### ABCD (Complications Management)\\\\n- **A**: Acidosis (sodium bicarbonate if pH <7.2, Kussmaul respiration)\\\\n- **B**: Blood pressure (antihypertensives cautiously; avoid ACE-I in acute phase)\\\\n- **C**: Calcium-phosphate (hyperphosphatemia management with binders)\\\\n- **D**: Dialysis indications\\\\n\\\\n## Dialysis Indications - AEIOU Criteria\\\\n- **A**: Acidosis (pH <7.1) unresponsive to medical therapy\\\\n- **E**: Electrolytes (K+ >6.5 with ECG changes, unresponsive to insulin + dextrose)\\\\n- **I**: Ingestion (overdose of dialyzable drugs: salicylates, methanol, ethylene glycol)\\\\n- **O**: Overload (pulmonary edema, refractory hypertension, >10% weight gain)\\\\n- **U**: Uremia (pericarditis, encephalopathy, bleeding)\\\\n\\\\n**Timing**: Early dialysis (eGFR 20-25) may improve outcomes in sepsis-related AKI\\\\n\\\\n## Drug Dosing in AKI\\\\n- **No change**: Penicillins, cephalosporins (given frequently)\\\\n- **Reduce dose/frequency**:\\\\n  - Aminoglycosides (30% baseline if Cr >3)\\\\n  - Ciprofloxacin (reduce dose by 50%)\\\\n  - NSAIDs (contraindicated)\\\\n  - ACE-I (contraindicated acutely)\\\\n- **Avoid**: Contrast agents (unless hydrated), metformin\\\\n\\\\n## Complications & Management\\\\n\\\\n| Complication | Mechanism | Management |\\\\n|---|---|---|\\\\n| **Hyperkalemia** | Acidosis + tissue catabolism | Insulin 10U + 25g dextrose, calcium gluconate IV, sodium bicarbonate, loop diuretic |\\\\n| **Pulmonary edema** | Fluid overload | Diuretics, restrict fluids to 800-1000 mL/day, dialysis |\\\\n| **Hypertension** | Fluid retention + catecholamines | Fluid restriction, hydralazine (safe in AKI) |\\\\n| **Infection** | ICU-acquired (pneumonia, UTI) | Empiric antibiotics, source control |\\\\n| **Coagulopathy** | Uremia + thrombocytopenia | Platelet transfusion if <20k, dialysis |\\\\n| **Seizures** | Uremia + hyponatremia | Avoid hypertonic saline (paradoxical), dialysis |\\\\n\\\\n## Recovery & Prognosis\\\\n- **Oliguria duration**: Prognostic indicator (persistent oliguria = poor prognosis)\\\\n- **Age**: >65 years have higher mortality (30-40%)\\\\n- **Comorbidities**: Sepsis-related AKI has 50-60% mortality\\\\n- **Non-oliguric AKI**: Better prognosis (10% mortality) vs oliguric (50%)\\\\n- **Recovery time**: Usually 1-3 weeks; some require long-term dialysis\\\\n- **RIFLE score**: Predicts mortality better than KDIGO\\\\n\\\\n## Prevention in High-Risk Patients\\\\n1. **Optimize volume status** pre-procedure\\\\n2. **Avoid nephrotoxins**: NSAIDs, ACE-I, contrast in CKD\\\\n3. **Maintain renal perfusion**: BP >65 mmHg (in sepsis)\\\\n4. **Hepatorenal syndrome**: Low-dose dopamine, terlipressin, albumin infusion,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"DIALYSIS INDICATIONS: AEIOU\\\\\\\", explanation: \\\\\\\"Acidosis, Electrolytes (K+), Ingestion, Overload, Uremia\\\\\\\" },\\\\n          { text: \\\\\\\"HYPERKALEMIA ACLS: 'I KNOW MY CaBiG'\\\\\\\", explanation: \\\\\\\"Insulin + dextrose, Calcium gluconate, Bicarbonate, Glucose, Kayexalate, Dialysis\\\\\\\" },\\\\n          { text: \\\\\\\"DRUG DOSING: 'Amino acids = Reduce'\\\\\\\", explanation: \\\\\\\"Aminoglycosides need dose reduction in AKI\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Non-oliguric AKI has 5-10x better prognosis than oliguric\\\\\\\",\\\\n          \\\\\\\"Early recognition and management of prerenal AKI prevents progression\\\\\\\",\\\\n          \\\\\\\"Hyperkalemia with peaked T waves on ECG is dialysis emergency\\\\\\\",\\\\n          \\\\\\\"NSAIDs are major cause of AKI - avoid in all at-risk patients\\\\\\\",\\\\n          \\\\\\\"Rhabdomyolysis AKI: Aggressive hydration to maintain urine output >200 mL/hr\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"261: Acute Kidney Injury\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Critical Care Medicine\\\\\\\", chapter: \\\\\\\"Renal Failure\\\\\\\", edition: \\\\\\\"4th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"aki-active-recall\\\\\\\",\\\\n        title: \\\\\\\"Acute Kidney Injury - Active Recall & Clinical Scenarios\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"High-yield Q&A covering AKI classification, diagnostic interpretation, management decisions, and challenging clinical scenarios for competitive exams.\\\\\\\",\\\\n        contentMd: ``# AKI - Active Recall Q&A\\\\n\\\\n## Diagnostic Interpretation Q&A\\\\n\\\\n**Q1**: 55-year-old male with hypertension on lisinopril + NSAID for arthritis. Cr 0.8 mg/dL baseline, now 2.4. BP 90/50, Urine osmolality 520, BUN:Cr ratio 25:1, FENa 0.5%. What type of AKI?\\\\n**A**: **Prerenal AKI**. Classic presentation: ACE-I + NSAID (combined renal vasoconstriction), hypotension, preserved tubular function (FENa <1%, high osmolality). **Management**: Hold ACE-I + NSAID, IV hydration. Expect Cr reversal in 24-48 hours.\\\\n\\\\n**Q2**: ICU patient post-op day 2. Oliguric (50 mL/day), Cr rise 3.5-fold, BP 110/70, JVP normal, UA shows muddy brown casts + granular casts. BUN:Cr 8:1, FENa 3%. Diagnosis?\\\\n**A**: **Ischemic ATN**. Intraoperative hypotension (surgery) → ischemic injury. Muddy brown casts pathognomonic. High FENa indicates tubular dysfunction. **Prognosis**: 50-60% mortality; expect 2-3 week recovery if he survives.\\\\n\\\\n**Q3**: Chemotherapy for lymphoma. Day 3: Cr 2.5 (baseline 0.9), anuria, uric acid 18 mg/dL, phosphate 8 mg/dL, K+ 6.8. UA: Orange crystals, no RBCs. Type of AKI?\\\\n**A**: **Intrinsic renal AKI - Tumor lysis syndrome with crystal nephropathy**. Rapid cell death → hyperuricemia, hyperkalemia. Orange urate crystals in urine. **Emergency management**: Aggressive hydration, diuretics, rasburicase (uricase), dialysis for K+ >6.5 + ECG changes, avoid allopurinol.\\\\n\\\\n**Q4**: 35-year-old with fever 4 days, rash on lower limbs, acute renal dysfunction. UA: RBC casts, dysmorphic RBCs, proteinuria 2.8 g/day. Cr 1.8 (baseline 0.7). Type of AKI?\\\\n**A**: **Intrinsic renal AKI - Acute glomerulonephritis**. RBC casts + dysmorphic RBCs + proteinuria = glomerular disease. Fever + rash suggest post-streptococcal or IgA nephropathy. **Management**: Check strep serology, complement levels, consider renal biopsy, immunosuppression if IgA or ANCA-associated.\\\\n\\\\n## Management Decision Q&A\\\\n\\\\n**Q5**: 68-year-old post-MI with cardiogenic shock. BP 85/50, CVP 14 cm H2O, Cr 3.2, K+ 6.5, pH 7.15. Which interventions in AKI management?\\\\n**A**:\\\\n- DO NOT give IV fluids (CVP elevated = already overloaded)\\\\n- **Dopamine** to improve renal perfusion (target MAP >65 mmHg)\\\\n- **Insulin + dextrose** for hyperkalemia\\\\n- **Sodium bicarbonate** for acidosis (pH <7.2)\\\\n- **Dialysis soon** (meets AEIOU criteria: Acidosis + Electrolytes)\\\\n\\\\n**Q6**: 45-year-old with AKI post-bypass. Urine dark brown, myoglobin 850 ng/mL. Current urine output: 80 mL/hr. Management?\\\\n**A**: **Rhabdomyolysis AKI**. Dark urine + elevated myoglobin. Currently acceptable urine output (≈1.2 mL/kg/hr). **Prevention of worsening**:\\\\n- Maintain urine output 200-300 mL/hr (aggressive hydration, loop diuretics)\\\\n- Urine alkalinization (IV sodium bicarbonate to target pH >6.5)\\\\n- Monitor CK (peak day 2-3, then decline)\\\\n- Expect 1-2 week recovery\\\\n\\\\n**Q7**: Diabetic patient with CKD (Cr 2.5, eGFR 25). Undergoing CT angiography with iodinated contrast. Risk of AKI?\\\\n**A**: **HIGH RISK for contrast-induced nephropathy (CIN)**. CKD + diabetes = major risk. **Prevention**:\\\\n- Use iso-osmolar or low-osmolar contrast (osmolality <400 mOsm/kg)\\\\n- IV hydration: 0.9% saline 1 mL/kg/hr for 12 hours before, 6 hours after\\\\n- Hold metformin (risk of lactic acidosis if AKI develops)\\\\n- Hold NSAIDs, ACE-I\\\\n- Consider N-acetylcysteine (though evidence mixed)\\\\n- Recheck Cr in 72 hours (CIN peaks 3-5 days post-contrast)\\\\n\\\\n## High-Yield Patterns\\\\n\\\\n| Scenario | Type | Key Finding | Management |\\\\n|---|---|---|---|\\\\n| Sepsis + hypotension | Prerenal or ATN | Septic shock + oliguria | Resuscitate, pressors, early antibiotics |\\\\n| Post-op hypotension | ATN | Muddy brown casts | Restore perfusion, supportive care |\\\\n| Drug-induced (NSAID) | Prerenal | FENa <1%, bland UA | Hold offending drug, hydrate |\\\\n| Tumor lysis | Intrinsic (crystal) | Uric acid crystals | Rasburicase, dialysis |\\\\n| Post-infectious | AGN | RBC casts, dysmorphic RBC | Immunosuppression if needed |\\\\n| AIN | Intrinsic (AIN) | WBC casts, fever, rash | Hold drug, steroids if severe |\\\\n| Obstruction | Postrenal | Hydronephrosis on US | Catheterization or stent |\\\\n\\\\n## Indian Context - High-Yield Points\\\\n- **Snake bite**: Myotoxic envenomation (cobra, Russell's viper) → rhabdo → AKI\\\\n- **Malaria**: Severe malaria → DIC + AKI (high mortality)\\\\n- **Leptospirosis**: Occupational exposure → Weil's disease → AKI\\\\n- **Organophosphate poisoning**: Cholinergic crisis + pulmonary edema → AKI\\\\n- **Crush injuries**: Common after earthquakes, building collapse → rhabdo AKI,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"MUDDY CASTS = ATN, RBC CASTS = AGN, WBC CASTS = AIN\\\\\\\", explanation: \\\\\\\"Urine sediment tells the diagnosis\\\\\\\" },\\\\n          { text: \\\\\\\"CONTRAST AKI: 'CKD + DM = RISK'\\\\\\\", explanation: \\\\\\\"CKD + Diabetes Mellitus = High risk, need prevention\\\\\\\" },\\\\n          { text: \\\\\\\"RHABDO: 'Myoglobin=Dark urine, Maintain 200 mL/hr output'\\\\\\\", explanation: \\\\\\\"Monitor myoglobin, aggressively hydrate\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"FENa <1% is 90% specific for prerenal AKI - use to guide fluid therapy\\\\\\\",\\\\n          \\\\\\\"Muddy brown casts are pathognomonic for ATN - poor prognosis\\\\\\\",\\\\n          \\\\\\\"RBC casts mandate investigation for AGN (serology, biopsy)\\\\\\\",\\\\n          \\\\\\\"AEIOU dialysis criteria memorized = pass the exam\\\\\\\",\\\\n          \\\\\\\"Rhabdomyolysis: maintain urine output >200 mL/hr to prevent myoglobin precipitation\\\\\\\",\\\\n          \\\\\\\"Contrast-induced AKI preventable with hydration + low-osmolar agents\\\\\\\",\\\\n          \\\\\\\"Non-oliguric AKI: 10% mortality vs oliguric: 50% mortality\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"261: Acute Kidney Injury\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"17: Diseases of the kidney and urinary system\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  },\\\\n\\\\n  // IM-MOD-04: Nephrology - Chronic Kidney Disease\\\\n  {\\\\n    topicCode: \\\\\\\"IM-MOD-04-TOP-02\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"ckd-foundation\\\\\\\",\\\\n        title: \\\\\\\"Chronic Kidney Disease - Foundation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Understanding CKD definition using eGFR and albuminuria categories, KDIGO classification system, and normal kidney function physiology.\\\\\\\",\\\\n        contentMd: ``# Chronic Kidney Disease - Foundation\\\\n\\\\n## Definition & Classification\\\\n**CKD**: Kidney damage or GFR <60 mL/min/1.73m² for ≥3 months\\\\n\\\\n### KDIGO 2012 Classification: GFR + Albuminuria\\\\n**GFR Stages**:\\\\n| Stage | GFR (mL/min/1.73m²) | Clinical Significance |\\\\n|-------|-----|---|\\\\n| G1 | ≥90 | Normal |\\\\n| G2 | 60-89 | Mildly decreased |\\\\n| G3a | 45-59 | Mildly to moderately decreased |\\\\n| G3b | 30-44 | Moderately to severely decreased |\\\\n| G4 | 15-29 | Severely decreased |\\\\n| G5 | <15 | Kidney failure |\\\\n\\\\n**Albuminuria Categories**:\\\\n| Category | ACR (mg/mmol) | 24-hr Urine (mg/day) |\\\\n|----------|---|---|\\\\n| A1 (Normal) | <3 | <30 |\\\\n| A2 (Mild) | 3-30 | 30-300 |\\\\n| A3 (Severe) | >30 | >300 |\\\\n\\\\n**Combined risk**: Both GFR and albuminuria affect progression and mortality\\\\n\\\\n## Epidemiology in India\\\\n- **Prevalence**: 7-10% of Indian population (60 million people)\\\\n- **Leading causes**:\\\\n  1. Diabetes (40%)\\\\n  2. Hypertension (25%)\\\\n  3. Chronic glomerulonephritis (15%)\\\\n  4. Others: PCOS, reflux nephropathy, obstruction\\\\n\\\\n## Normal Kidney Structure & Function\\\\n- **Two kidneys**: 250,000 nephrons each\\\\n- **Single nephron filtration**: 40-50 L/day, reabsorption 99%\\\\n- **Autoregulation**: Maintains GFR despite BP fluctuations (80-180 mmHg)\\\\n- **Functions**: Filtration, reabsorption, secretion, hormone synthesis (EPO, calcitriol, renin),\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"KDIGO GFR: 90-60-45-30-15-0\\\\\\\", explanation: \\\\\\\"Each stage divides kidney function: G1 (90+), G2 (60-89), G3a (45-59), G3b (30-44), G4 (15-29), G5 (<15)\\\\\\\" },\\\\n          { text: \\\\\\\"CKD CAUSES: 'DH + CGN + Others'\\\\\\\", explanation: \\\\\\\"Diabetes (40%), Hypertension (25%), Chronic glomerulonephritis (15%), Others\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"CKD is defined by duration (≥3 months), not severity\\\\\\\",\\\\n          \\\\\\\"GFR <60 is abnormal regardless of cause\\\\\\\",\\\\n          \\\\\\\"Albuminuria indicates glomerular damage and predicts progression\\\\\\\",\\\\n          \\\\\\\"CKD-EPI equation preferred over MDRD for eGFR estimation\\\\\\\",\\\\n          \\\\\\\"Indian patients: Lower muscle mass may give false normal creatinine\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"262: Chronic Kidney Disease\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"17: Diseases of the kidney and urinary system\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"ckd-mechanism\\\\\\\",\\\\n        title: \\\\\\\"Chronic Kidney Disease - Pathophysiology & Progression\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Mechanisms of progressive nephron loss, adaptive hyperfiltration in remaining nephrons, proteinuria-induced injury, and the progression of CKD to ESRD.\\\\\\\",\\\\n        contentMd: ``# Chronic Kidney Disease - Mechanism\\\\n\\\\n## The Progressive Nephron Loss Model\\\\n### Intact Nephron Hypothesis (Bricker & Brenner)\\\\n**Stage 1: Initial injury** (any cause: DM, HTN, GN)\\\\n- 30-50% of nephrons damaged/sclerotic\\\\n- Remaining nephrons structurally normal\\\\n- GFR still normal (hyperfiltration compensates)\\\\n\\\\n**Stage 2: Compensatory hyperfiltration**\\\\n- Remaining healthy nephrons increase GFR from 40 to 60+ mL/min each\\\\n- Mediated by: Angiotensin II, increased intraglomerular pressure (Pgh)\\\\n- Achieved by: Afferent arteriolar dilation, efferent arteriolar constriction\\\\n- **Cost**: Excessive intraglomerular pressure → glomerulosclerosis\\\\n\\\\n**Stage 3: Progressive sclerosis**\\\\n- Hyperfiltration damages remaining nephrons\\\\n- Positive feedback loop: Fewer nephrons → greater hyperfiltration per nephron\\\\n- Each nephron has finite capacity (GFR plateau ~60-100 mL/min per nephron)\\\\n- Once crossed, decline becomes linear\\\\n\\\\n**Stage 4: End-stage renal disease**\\\\n- GFR <15 mL/min/1.73m²\\\\n- Requires dialysis or transplant\\\\n\\\\n## Mechanisms of Progression\\\\n\\\\n### Glomerular Hypertension Hypothesis\\\\n- **Mechanism**: Remaining nephrons develop high intraglomerular pressure (Pgh)\\\\n- **Mediators**: Angiotensin II (preferentially constricts efferent arteriole)\\\\n- **Result**: Proteinuria develops as pressure damages glomerular filter\\\\n- **Consequence**: Tubular epithelial cells exposed to filtered protein → tubular toxicity\\\\n\\\\n### Proteinuria as Toxic Agent\\\\n1. **Filtered protein** enters proximal tubule (normally <150 mg/day)\\\\n2. **Tubular reabsorption** of protein → tubulotoxicity\\\\n3. **Activation of complement**: C3a, C5a → tubular inflammation\\\\n4. **Growth factors**: TGF-β, VEGF → fibrosis and apoptosis\\\\n5. **Tubular dysfunction**: Proteinuria >1 g/day predicts faster progression\\\\n\\\\n**Proteinuria targets**: Start ACE-I/ARB when ACR >3 mg/mmol (↓ intraglomerular pressure by 20-30%)\\\\n\\\\n### Other Progression Mechanisms\\\\n- **Oxidative stress**: ROS production → mitochondrial damage\\\\n- **Hyperlipidemia**: Lipid accumulation in glomeruli → sclerosis\\\\n- **Systemic hypertension**: HTN itself damages remaining nephrons\\\\n- **Anemia**: Tissue hypoxia → fibroblast activation → fibrosis\\\\n- **Secondary HPTH**: Phosphate retention → FGF23 → tubulointerstitial fibrosis\\\\n\\\\n## Complications Cascade in Advanced CKD\\\\n\\\\n### G4-G5 Stage Complications\\\\n1. **Anemia** (eGFR <45): EPO resistance + iron deficiency + hemolysis\\\\n2. **Hypertension** (80% of CKD patients): Volume retention + RAAS activation\\\\n3. **Mineral-bone disorder**:\\\\n   - Phosphate retention → hyperphosphatemia\\\\n   - Low active vitamin D → hypocalcemia\\\\n   - Secondary hyperparathyroidism → bone disease\\\\n   - Vascular calcification\\\\n4. **Cardiovascular disease**: #1 cause of death in CKD (HTN, LVH, heart failure)\\\\n5. **Metabolic acidosis**: Retained H+ and organic acids\\\\n6. **Hyperkalemia**: GFR <20 → inability to excrete K+\\\\n7. **Volume overload**: Na+ retention → HTN, edema, heart failure\\\\n\\\\n## Predictors of Progression\\\\n- **Albuminuria level**: >1 g/day = 3-5x faster decline\\\\n- **GFR decline slope**: >3-4 mL/min/1.73m²/year = rapid progression\\\\n- **HTN control**: Each 10 mmHg increase → 1 mL/min/1.73m² faster decline\\\\n- **Proteinuria reduction**: 30-50% reduction with ACE-I → slows decline by 50%,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"CKD PROGRESSION: 'HYPE-PROTEINURIA-FIBROSIS'\\\\\\\", explanation: \\\\\\\"Hyperfiltration → Proteinuria → Progressive fibrosis → ESRD\\\\\\\" },\\\\n          { text: \\\\\\\"G4-G5 COMPLICATIONS: 'CAM-HVK'\\\\\\\", explanation: \\\\\\\"Cardiac disease, Anemia, Mineral-bone disorder, Hypertension, Vascular calcification, Hyperkalemia\\\\\\\" },\\\\n          { text: \\\\\\\"ACE-I BENEFIT: '30% proteinuria ↓ = 50% progression ↓'\\\\\\\", explanation: \\\\\\\"Reduces intraglomerular pressure and slows decline\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Intact nephron hypothesis explains why early CKD is asymptomatic\\\\\\\",\\\\n          \\\\\\\"Proteinuria is both marker AND mediator of progression\\\\\\\",\\\\n          \\\\\\\"ACE-I/ARB are kidney-protective even without HTN (use if ACR >3)\\\\\\\",\\\\n          \\\\\\\"Each 30% reduction in proteinuria correlates with 50% slower progression\\\\\\\",\\\\n          \\\\\\\"Anemia in CKD indicates severe renal fibrosis and EPO resistance\\\\\\\",\\\\n          \\\\\\\"Hyperkalemia is medical emergency at GFR <20 (may need dialysis urgently)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"262: Chronic Kidney Disease\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Robbins Basic Pathology\\\\\\\", chapter: \\\\\\\"16: The Kidney\\\\\\\", edition: \\\\\\\"10th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"ckd-clinical\\\\\\\",\\\\n        title: \\\\\\\"Chronic Kidney Disease - Clinical Manifestations & Complications\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Systemic manifestations of CKD stages G3-G5, complications management, and monitoring parameters for disease progression.\\\\\\\",\\\\n        contentMd: ``# Chronic Kidney Disease - Clinical & Complications\\\\n\\\\n## Stage-Based Clinical Features\\\\n\\\\n### G3 (eGFR 30-59)\\\\n- Mostly asymptomatic\\\\n- Lab findings: Slight Cr elevation, mild anemia (Hb 10-12)\\\\n- Management: Identify and slow progression\\\\n\\\\n### G4 (eGFR 15-29)\\\\n- Mild uremia symptoms: Fatigue, poor appetite, nausea\\\\n- **Anemia**: Hb <10 (EPO deficiency, uremia)\\\\n- **Hypertension**: Difficult to control (volume-dependent)\\\\n- **Mineral bone disease**: Rising PTH, falling calcitriol\\\\n- **Cardiovascular**: LVH, diastolic dysfunction\\\\n\\\\n### G5 (eGFR <15) - Uremic Syndrome\\\\n**Neuropsychiatric**: Encephalopathy, seizures, coma, asterixis\\\\n**Cardiovascular**: Hypertension, pulmonary edema, pericarditis\\\\n**GI**: Nausea, vomiting, anorexia, uremic colitis\\\\n**Hematologic**: Bleeding (uremic platelet dysfunction), anemia\\\\n**Metabolic**: Acidosis, hyperkalemia, hypocalcemia\\\\n**Endocrine**: Secondary HPTH, erectile dysfunction\\\\n**Skeletal**: Bone pain, pathologic fractures, osteodystrophy\\\\n\\\\n## Complications Management\\\\n\\\\n### Anemia in CKD\\\\n**Pathophysiology**:\\\\n- EPO deficiency (90% of anemia cause in CKD)\\\\n- Uremia → RBC hemolysis and shortened survival\\\\n- Iron deficiency (blood loss, phlebotomy)\\\\n- ACE-I → ↓ EPO production\\\\n\\\\n**Target**: Hb 10-12 g/dL (higher targets associated with more CVD events)\\\\n\\\\n**Management**:\\\\n- Iron supplementation: Oral (if Hb >9) or IV (if intolerant)\\\\n- ESA (erythropoiesis-stimulating agents):\\\\n  - Epoetin alfa or beta (IV/SC weekly)\\\\n  - Darbepoetin (SC/IV every 2 weeks)\\\\n  - Target Hb 10-12 g/dL\\\\n  - Risk: Thrombosis if over-corrected\\\\n\\\\n### Secondary Hyperparathyroidism\\\\n**Pathophysiology**:\\\\n- Phosphate retention → ↓ FGF23 → ↓ calcitriol (active vitamin D)\\\\n- Low calcitriol + hyperphosphatemia → ↑ PTH\\\\n- Tertiary HPTH: Autonomous PTH secretion (transplant complication)\\\\n\\\\n**Management**:\\\\n1. **Phosphate binders**: Calcium carbonate, sevelamer, lanthanum\\\\n2. **Calcitriol supplementation**: 0.5-1 mcg/day (active vitamin D)\\\\n3. **Monitor**: Serum Ca, PO4, PTH, ALP\\\\n4. **Target**: Ca 8.5-9.5, PO4 3.5-5.5, PTH 150-300 pg/mL (for G4-G5)\\\\n\\\\n### Cardiovascular Protection\\\\n- **ACE-I/ARB**: First-line for proteinuria (start with dose titration)\\\\n- **Beta-blockers**: Essential for HTN control\\\\n- **Calcium channel blockers**: Adjunctive for HTN\\\\n- **Diuretics**: Loop diuretics if fluid overload\\\\n- **Statins**: Reduce CVD risk (20-30% reduction)\\\\n- **Avoid NSAIDs**: Risk of hyperkalemia, AKI, progression\\\\n\\\\n### Metabolic Acidosis\\\\n- **Target**: Serum HCO3 >20 mEq/L\\\\n- **Treatment**: Sodium bicarbonate 650 mg tid or potassium citrate\\\\n- **Mechanism**: Acid retention, loss of ammonia excretion\\\\n- **Consequence**: Bone loss, muscle wasting, mortality increase\\\\n\\\\n### Hyperkalemia Management\\\\n| K+ Level | Clinical Signs | Management |\\\\n|---|---|---|\\\\n| 5.5-6.0 | None | Restrict K+ intake, recheck weekly |\\\\n| 6.0-6.5 | Peaked T waves | + Diuretics, restrict K+, consider dialysis prep |\\\\n| 6.5-7.0 | QRS widening | EMERGENCY: Insulin 10U + dextrose, calcium gluconate, sodium bicarbonate |\\\\n| >7.0 | Cardiac arrhythmias | Dialysis, consider hyperkalemia-inducing drugs |\\\\n\\\\n## Monitoring & Progression Assessment\\\\n\\\\n**Every 3-6 months (G3-G4)**:\\\\n- Serum creatinine & eGFR\\\\n- Potassium\\\\n- Hemoglobin\\\\n- Calcium, phosphate, PTH (G4 onwards)\\\\n\\\\n**Urine**: ACR annual (more frequent if on ACE-I/ARB)\\\\n\\\\n**Annual**:\\\\n- Bone density (DXA) if G4-G5 or on dialysis\\\\n- Cardiovascular assessment\\\\n\\\\n## Dialysis Preparation (GFR approaching 15)\\\\n- **Timing**: Initiate when symptoms develop OR GFR <6 (in developed countries)\\\\n- **Types**:\\\\n  - **Hemodialysis**: 3-4x/week, 4-5 hours\\\\n  - **Peritoneal dialysis**: Daily (CAPD) or nightly (automated PD)\\\\n- **Vascular access**: Create AV fistula when GFR 20-25,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"UREMIC SYNDROME: 'CLAMPED'\\\\\\\", explanation: \\\\\\\"Cardiac, Lactic acidosis, Anemia, Mineral bone disease, Hyperkalemia, Pulmonary edema, Encephalopathy, Bleeding\\\\\\\" },\\\\n          { text: \\\\\\\"CKD-MINERAL BONE: 'P↑-D↓-Ca↓-PTH↑'\\\\\\\", explanation: \\\\\\\"Phosphate retention → Vitamin D deficiency → Hypocalcemia → Hyperparathyroidism\\\\\\\" },\\\\n          { text: \\\\\\\"K+ >6.5 WITH ECG CHANGES = EMERGENCY\\\\\\\", explanation: \\\\\\\"Calcium gluconate + insulin + glucose + sodium bicarbonate + dialysis\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Target Hb 10-12 g/dL in CKD - higher targets increase CVD risk\\\\\\\",\\\\n          \\\\\\\"ACE-I/ARB reduce proteinuria by 30-40% and slow progression by 50%\\\\\\\",\\\\n          \\\\\\\"Phosphate binders taken WITH meals to reduce absorption\\\\\\\",\\\\n          \\\\\\\"Secondary HPTH starts at GFR <60 - begin calcitriol prophylaxis at GFR 45\\\\\\\",\\\\n          \\\\\\\"Acidosis accelerates bone loss and muscle wasting - correct to HCO3 >20\\\\\\\",\\\\n          \\\\\\\"Hyperkalemia risk increases dramatically at GFR <20\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"262: Chronic Kidney Disease\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"17: Diseases of the kidney and urinary system\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"ckd-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Chronic Kidney Disease - Exam Preparation & Drug Management\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Drug dosing in CKD, treatment algorithms, complications management, and clinical decision-making for board exams.\\\\\\\",\\\\n        contentMd: ``# Chronic Kidney Disease - Management & Board Prep\\\\n\\\\n## Drug Dosing in CKD: The Essential Guide\\\\n### Category 1: No Dose Adjustment Needed\\\\n- **ACE-I/ARB**: Safe throughout CKD (titrate to effect)\\\\n- **Amlodipine**: Calcium channel blocker (metabolized hepatically)\\\\n- **Hydralazine**: Direct vasodilator\\\\n- **Diuretics**: Loop diuretics may need higher doses in G4-G5\\\\n\\\\n### Category 2: Dose Reduction Required\\\\n| Drug | Normal Dose | GFR <30 Adjustment |\\\\n|---|---|---|\\\\n| Metoprolol | 100 mg BD | 25-50 mg daily |\\\\n| Atenolol | 50 mg daily | Avoid (renally cleared) |\\\\n| Lisinopril | 10 mg daily | 2.5-5 mg daily |\\\\n| Atorvastatin | 20 mg daily | 10 mg daily |\\\\n\\\\n### Category 3: Contraindicated in CKD\\\\n- **NSAIDs**: Hyperkalemia, acute AKI risk\\\\n- **Thiazide diuretics**: Ineffective at GFR <30 (use loop)\\\\n- **Metformin**: Lactic acidosis risk at GFR <30\\\\n- **Aminoglycosides**: Nephrotoxic, accumulate\\\\n- **Contrast agents**: Contrast-induced nephropathy\\\\n\\\\n## Management Algorithm by Stage\\\\n\\\\n### G3a (eGFR 45-59)\\\\n1. **BP target**: <120/90 mmHg (tighter control slows progression)\\\\n2. **ACE-I/ARB**: If albuminuria present\\\\n3. **Statin**: For CVD prevention\\\\n4. **Avoid NSAIDs**: Even if asymptomatic\\\\n5. **Monitor**: Cr + eGFR every 6 months\\\\n\\\\n### G3b (eGFR 30-44)\\\\n1. **BP target**: <120/90 mmHg\\\\n2. **ACE-I/ARB**: Essential if albuminuria\\\\n3. **Anemia screening**: Check Hb (target 10-12)\\\\n4. **Mineral-bone**: Check Ca, PO4, PTH if trend suggesting progression\\\\n5. **Dialysis education**: Begin discussing options\\\\n\\\\n### G4 (eGFR 15-29)\\\\n1. **BP target**: <120/90 mmHg\\\\n2. **ACE-I/ARB**: Continue (renoprotective)\\\\n3. **Anemia management**: Start ESA if Hb <10 (target 10-12)\\\\n4. **Mineral-bone**: Active management\\\\n   - Phosphate binders with meals\\\\n   - Calcitriol 0.5-1 mcg daily\\\\n   - Monitor PTH (target 150-300 pg/mL)\\\\n5. **Dialysis preparation**:\\\\n   - Create AV fistula (>3 months to mature)\\\\n   - Teach dialysis options\\\\n   - Psychosocial support\\\\n\\\\n### G5 (GFR <15)\\\\n1. **Dialysis**: Initiate when symptomatic or GFR <6\\\\n2. **Intensive mineral-bone management**\\\\n3. **Cardiovascular**: Aggressive HTN + lipid control\\\\n4. **Nutrition**: Protein 0.8-1.0 g/kg/day (higher if on dialysis)\\\\n5. **Transplant referral**: If candidate\\\\n\\\\n## Proteinuria Reduction Strategy\\\\n**ACE-I/ARB Response**:\\\\n- Expect 30-40% reduction in albuminuria acutely\\\\n- Maximum renoprotection at 2-4 weeks\\\\n- If inadequate response: Add second agent (calcium channel blocker or diuretic)\\\\n- **NOT additive**: Two ACE-I/ARB drugs together increase hyperkalemia risk\\\\n\\\\n**Monitoring post-ACE-I initiation**:\\\\n- **Week 1**: Recheck Cr (expect rise 10-15%, normal and reversible)\\\\n- **Month 1**: Check K+ (may rise 0.3-0.5 mEq/L)\\\\n- **Month 3**: Repeat Cr to confirm stabilization\\\\n\\\\n## Complications Management - Decision Matrix\\\\n\\\\n| Complication | First-Line | Second-Line | Avoid |\\\\n|---|---|---|---|\\\\n| **Anemia** | ESA if Hb <10 | Iron IV infusion | Over-correcting Hb >13 |\\\\n| **HTN** | ACE-I/ARB | CCB, loop diuretic | NSAIDs, thiazides |\\\\n| **Hyperkalemia** | Diuretics, K+ binders | Insulin+dextrose | NSAIDs, ACE-I if K+ >6 |\\\\n| **Acidosis** | NaHCO3, dietary | Citrate | Fluid overload |\\\\n| **HPTH** | Calcitriol, phosphate binders | Cinacalcet | Vitamin D2 (calciferol) |\\\\n\\\\n## Transplant Considerations\\\\n- **Timing**: Can be done preemptively (before dialysis)\\\\n- **Immunosuppression**: CNI (calcineurin inhibitor) nephrotoxic - monitor\\\\n- **Graft failure**: Return to dialysis, consider re-transplant\\\\n- **Survival**: Living donor >20 years, deceased donor 10-15 years,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"CKD BP TARGET: '<120/90' for All stages\\\\\\\", explanation: \\\\\\\"Tighter BP control slows progression by 50%\\\\\\\" },\\\\n          { text: \\\\\\\"ACE-I INIT: 'Expect Cr rise 10-15%, K+ rise 0.3-0.5'\\\\\\\", explanation: \\\\\\\"Normal acute response, recheck at 1 month\\\\\\\" },\\\\n          { text: \\\\\\\"PROTEINURIA ↓30% = Progression ↓50%\\\\\\\", explanation: \\\\\\\"ACE-I/ARB most effective intervention\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Serum Cr rise 10-15% after ACE-I initiation is normal - continue drug\\\\\\\",\\\\n          \\\\\\\"Two ACE-I/ARB drugs together increase K+ risk without added benefit\\\\\\\",\\\\n          \\\\\\\"Anemia development correlates with degree of fibrosis\\\\\\\",\\\\n          \\\\\\\"Mineral-bone disease starts at GFR <60 - begin prevention early\\\\\\\",\\\\n          \\\\\\\"NSAIDs contraindicated in all CKD stages (even G1-G2 if risk factors)\\\\\\\",\\\\n          \\\\\\\"Metformin contraindicated at GFR <30 (lactic acidosis risk)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"262: Chronic Kidney Disease\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Kidney Disease: Improving Global Outcomes (KDIGO) Clinical Practice Guidelines\\\\\\\", edition: \\\\\\\"2012 & 2021\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"ckd-active-recall\\\\\\\",\\\\n        title: \\\\\\\"Chronic Kidney Disease - Active Recall & Case Scenarios\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"High-yield Q&A on CKD diagnosis, progression, complications, and management scenarios for competitive exams.\\\\\\\",\\\\n        contentMd: ``# CKD - Active Recall Q&A\\\\n\\\\n## Diagnostic Scenarios\\\\n\\\\n**Q1**: 50-year-old diabetic, Cr 1.8 (baseline 0.8), eGFR 35 (CKD-EPI), ACR 4.5 mg/mmol. Diagnosis and staging?\\\\n**A**: **CKD Stage G3b + A2 (Mild albuminuria)**. Despite severe proteinuria risk category (2-3x normal), eGFR 30-44 defines G3b. Combined risk high (G3b + A2 = Stage 4 progressor). **Management**: ACE-I titration to target Hb, control BP <120/90, avoid NSAIDs, annual monitoring.\\\\n\\\\n**Q2**: Patient on lisinopril for HTN + CKD. 2 weeks post-initiation: Cr rises 1.4 → 1.8 mg/dL, K+ rises 4.2 → 4.8 mEq/L. Continue or stop lisinopril?\\\\n**A**: **CONTINUE lisinopril**. 26% Cr rise is expected (within 30% threshold). K+ rise is also normal. Recheck in 1 month. Only stop if Cr rises >30% or K+ >6.0 mEq/L. Early discontinuation prevents renoprotection.\\\\n\\\\n**Q3**: 62-year-old, eGFR 22, Hb 8.5 g/dL, not on dialysis. Anemia management?\\\\n**A**: **Start ESA** (epoetin or darbepoetin). Hb <9 in G4 CKD indicates EPO deficiency. Target Hb 10-12 g/dL. Also check iron stores (ferritin, TSAT) - supplement if needed. Avoid Hb >13 (↑ thrombosis risk).\\\\n\\\\n**Q4**: eGFR 28, K+ 6.2, pH 7.28, HCO3 17. Which acute interventions?\\\\n**A**:\\\\n- **Mild hyperkalemia** (K+ 6.2): Start loop diuretic, restrict K+ diet, recheck in 48 hours\\\\n- **Metabolic acidosis** (HCO3 <20): Start sodium bicarbonate 650 mg BD-TID, target HCO3 >20\\\\n- If K+ rises to 6.5 with peaked T waves → EMERGENCY dialysis consideration\\\\n\\\\n**Q5**: Diabetic CKD, eGFR 42, ACR 0.8 (A1: normal albuminuria). Start ACE-I?\\\\n**A**: **NO ACE-I indicated** at this time. ACE-I reserved for albuminuria (ACR >3). Normal albuminuria = no hemodynamic glomerular injury. Monitor annually. If albuminuria develops → initiate ACE-I.\\\\n\\\\n## Complications Management Scenarios\\\\n\\\\n**Q6**: CKD G5 on dialysis, PTH 820 pg/mL (target 150-300), Ca 8.2, PO4 7.8. Mineral-bone management?\\\\n**A**: **Severe secondary HPTH**.\\\\n- Increase calcitriol dose (0.5 → 1.0 mcg/day)\\\\n- Increase phosphate binder dose (calcium carbonate 2-3 g with meals)\\\\n- Consider cinacalcet (calcimimetic) if refractory\\\\n- Check Ca levels (avoid hypercalcemia >10)\\\\n- Plan parathyroidectomy if medical management fails\\\\n\\\\n**Q7**: Diabetic CKD, on lisinopril + amlodipine, BP 145/92. Add which agent next?\\\\n**A**: **Add loop diuretic** (furosemide). At eGFR <30, thiazides ineffective. Second-line agents: beta-blockers or hydralazine. Avoid second ACE-I/ARB (synergistic hyperkalemia). Target BP <120/90 (tighter = slower progression).\\\\n\\\\n**Q8**: eGFR 18, nausea, poor appetite, fatigue for 2 weeks. Cr trending down (paradoxically). Plan?\\\\n**A**: **Unlikely true AKI** (Cr declining). Likely: Progressive CKD with symptomatology. **Uremic symptoms present** → **Dialysis urgent** (even if eGFR >6). Don't wait for GFR to drop further. Educate patient on dialysis options (HD vs PD). Create access urgently.\\\\n\\\\n## High-Yield Board Questions\\\\n\\\\n**Q9**: 45-year-old, eGFR 52, metformin 1000 mg BD for diabetes. Appropriate?\\\\n**A**: **INAPPROPRIATE**. Metformin contraindicated at eGFR <30. At eGFR 52 (G3a), **acceptable but caution** - reduce to 1000 mg daily. Stop if eGFR falls below 30 or if acute illness (risk of lactic acidosis). Switch to alternative agent (SGLT2i preferred for CKD).\\\\n\\\\n**Q10**: CKD G4, considering ACE-I. Patient reports previous cough on ACE-I. Alternative?\\\\n**A**: **Switch to ARB** (losartan, valsartan). ARBs have equal renoprotection, lower cough rate (10-15% vs 20% with ACE-I). If ARB also causes symptoms → calcium channel blocker (amlodipine) + loop diuretic.\\\\n\\\\n**Q11**: Cr rises from 2.0 → 3.5 mg/dL over 2 weeks (eGFR 20). Possible causes?\\\\n**A**: Rapid decline suggests:\\\\n- **Acute decompensation**: New NSAID use, radiocontrast exposure, ACE-I initiation\\\\n- **Acute superimposed AKI**: Infection, dehydration, new drug\\\\n- **Acute on chronic**: Most common\\\\n**Management**: Check volume status, medication list, recent procedures. Hold NSAID/ACE-I if new. IV hydration cautiously. May need emergent dialysis if K+ rising.\\\\n\\\\n## Indian-Specific High-Yield Points\\\\n- **Snake bite**: Can cause AKI via myotoxins → CKD if not managed\\\\n- **Malaria + Dengue**: Thrombocytopenia + acute kidney injury → CKD progression\\\\n- **TB-related**: Rifampicin + isoniazid hepatotoxicity → secondary CKD in some\\\\n- **Tropical conditions**: Leptospirosis → spirochete-induced glomerulonephritis\\\\n- **Occupational**: Farmers with CKD (pesticide exposure, dehydration)\\\\n- **Traditional medicines**: Heavy metal contamination → toxic nephropathy,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"ACE-I INDICATIONS: 'A3' = Albuminuria >3 mg/mmol\\\\\\\", explanation: \\\\\\\"Only start ACE-I if ACR >3 (proteinuria present)\\\\\\\" },\\\\n          { text: \\\\\\\"CKD ANEMIA: Start ESA when Hb <10\\\\\\\", explanation: \\\\\\\"Target 10-12 g/dL (avoid over-correction)\\\\\\\" },\\\\n          { text: \\\\\\\"METFORMIN CONTRAINDICATED: eGFR <30\\\\\\\", explanation: \\\\\\\"Lactic acidosis risk\\\\\\\" },\\\\n          { text: \\\\\\\"PHOSPHATE BINDER: 'WITH MEALS'\\\\\\\", explanation: \\\\\\\"Take simultaneously to reduce absorption\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Cr rise 10-30% after ACE-I is expected - continue drug, recheck at 1 month\\\\\\\",\\\\n          \\\\\\\"Albuminuria >1 g/day predicts 50% faster progression\\\\\\\",\\\\n          \\\\\\\"BP <120/90 reduces progression by 50% compared to <140/90\\\\\\\",\\\\n          \\\\\\\"Anemia appears at eGFR <45 - early ESA prevents complications\\\\\\\",\\\\n          \\\\\\\"Secondary HPTH starts at eGFR <60 - prevention better than treatment\\\\\\\",\\\\n          \\\\\\\"NSAIDs contraindicated in all CKD (even if asymptomatic)\\\\\\\",\\\\n          \\\\\\\"Metformin stop at eGFR <30 (lactic acidosis)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"262: Chronic Kidney Disease\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"KDIGO Clinical Practice Guidelines for CKD\\\\\\\", edition: \\\\\\\"2012 & 2021\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\"\""
-}
-}
-}
-];
-];
+        summary: "Overview of acute kidney injury pathophysiology, classification, major causes, and physiological responses to sudden loss of renal function.",
+        contentMd: `# Acute Kidney Injury - Foundation
+
+## Definition
+- Rapid loss of renal function (hours to days) causing ↑ serum creatinine and ↑ serum urea
+- Previously called acute renal failure (ARF)
+
+## AKI Classification (KDIGO)
+
+### Stage 1 (Mild)
+- Serum creatinine 1.5-1.9x baseline OR
+- ≥0.3 mg/dL increase above baseline
+- Urine output 0.5-0.9 mL/kg/hr (6-12 hours)
+
+### Stage 2 (Moderate)
+- Serum creatinine 2-2.9x baseline
+- Urine output 0.5 mL/kg/hr (≥12 hours)
+
+### Stage 3 (Severe)
+- Serum creatinine ≥3x baseline OR
+- ≥4 mg/dL increase OR
+- Urine output <0.3 mL/kg/hr (≥24 hours) OR
+- Anuria ≥12 hours
+- Requires dialysis in many cases
+
+## Causes of AKI (Clinical Classification)
+
+### Prerenal AKI (60% of cases)
+**Mechanisms**: Reduced renal perfusion
+- **Hypovolemia**: Dehydration, GI losses, hemorrhage
+- **Hypotension**: Shock, sepsis, cardiogenic
+- **Renal vasoconstriction**: NSAIDs, ACE-I, ARBs, contrast agents
+- **Increased renal vascular resistance**: Hepatorenal syndrome
+
+### Intrinsic Renal AKI (35% of cases)
+
+**Glomerular**:
+- Post-infectious GN, IgAN, lupus nephritis
+
+**Tubular Injury (ATN - most common)**:
+- **Ischemic**: Prolonged hypotension, sepsis
+- **Toxic**: Medications (aminoglycosides, cisplatin), contrast, myoglobin (rhabdomyolysis), hemoglobin
+
+**Tubulointerstitial**:
+- Interstitial nephritis (drugs, infections)
+- Pyelonephritis
+
+**Vascular**:
+- Thrombotic microangiopathy, vasculitis, renal infarction
+
+### Postrenal AKI (5% of cases)
+**Mechanisms**: Obstruction to urine flow
+- **Upper urinary tract**: Kidney stones, tumors, strictures
+- **Lower urinary tract**: BPH, prostate cancer, urethral strictures, bladder stones
+
+## Pathophysiology of AKI
+
+### Prerenal AKI Mechanism
+1. ↓ Renal perfusion pressure
+2. ↓ Glomerular filtration rate (GFR)
+3. Activation of RAAS (preserves renal blood flow)
+4. **Reversible** if perfusion restored quickly
+
+### Acute Tubular Necrosis (ATN) Mechanism
+1. Ischemic or toxic tubular injury
+2. Tubular epithelial cell death and sloughing
+3. ↓ GFR (tubular obstruction + loss of barrier function)
+4. Tubular epithelial regeneration required (days to weeks)
+
+## Diagnostic Approach
+
+### History & Examination
+- **Fluid status**: Assess volume (JVD, edema, orthostasis, dry mucosa)
+- **Urine output**: Oliguria (<400 mL/day), anuria (<50 mL/day)
+- **Medications**: NSAIDs, ACE-I, contrast, aminoglycosides
+- **Systemic symptoms**: Fever (infection), rash (drug reaction), arthralgia
+
+### Laboratory Findings
+
+**Serum Creatinine**:
+- Rises 0.3-0.7 mg/dL/day in ATN
+- In prerenal: may rise >1 mg/dL/day if severe
+- Affected by age, muscle mass, gender
+
+**Blood Urea Nitrogen (BUN)**:
+- BUN/Cr ratio >20 suggests prerenal
+- BUN/Cr ratio 10-15 suggests intrinsic renal or postrenal
+
+**Urinalysis**
+- Prerenal: concentrated urine, minimal proteinuria, few cells
+- ATN: muddy brown casts, epithelial cells, granular casts
+- GN: RBCs, RBC casts, proteinuria
+- Obstruction: normal or few casts
+
+**Electrolytes**
+- Hyperkalemia (from ↓ renal excretion and cell death)
+- Hyperphosphatemia
+- Hypocalcemia
+- Metabolic acidosis`,
+        mnemonics: [
+          { text: "AKI Classification: KDIGO (1-2-3)", explanation: "Stage 1: Cr 1.5-1.9x or increase 0.3 mg/dL | Stage 2: Cr 2-2.9x | Stage 3: Cr ≥3x or anuria" },
+          { text: "AKI Causes: 60-35-5 Rule", explanation: "Prerenal 60%, Intrinsic 35%, Postrenal 5%" },
+          { text: "BUN/Cr Ratio: Prerenal >20, Intrinsic 10-15, Postrenal variable", explanation: "Higher ratio favors prerenal" },
+          { text: "ATN Casts: Muddy Brown", explanation: "Muddy brown/granular casts suggest acute tubular necrosis" }
+        ],
+        keyPoints: [
+          "AKI is rapid loss of renal function (hours to days) with rise in serum creatinine and urea",
+          "Prerenal AKI (60%): reduced renal perfusion - most common and usually reversible",
+          "Intrinsic renal AKI (35%): direct kidney damage (ATN most common)",
+          "Postrenal AKI (5%): obstruction to urine flow",
+          "Muddy brown granular casts on urinalysis suggest acute tubular necrosis"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "275: Acute Kidney Injury", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "9: Renal System", edition: "11th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "aki-layer-2-mechanism",
+        title: "Acute Kidney Injury - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Detailed pathophysiology of prerenal vs intrinsic renal AKI, mechanisms of tubular injury, recovery phases, and prevention strategies.",
+        contentMd: `# Acute Kidney Injury - Mechanism
+
+## Prerenal AKI Pathophysiology
+
+### Compensatory Mechanisms
+1. **RAAS Activation**
+   - ↓ Renal perfusion → ↑ renin release
+   - Angiotensin II → afferent vasoconstriction (less than efferent)
+   - Maintains GFR in early stages
+
+2. **Sympathetic Nervous System**
+   - ↑ Norepinephrine → systemic vasoconstriction
+   - Renal blood flow preserved by autoregulation
+
+3. **Antidiuretic Hormone (ADH)**
+   - Released → water reabsorption in collecting duct
+   - Maintains intravascular volume
+
+### Progression to ATN
+- If hypoperfusion continues >2-3 hours
+- Tubular epithelial cells are ischemic
+- Conversion to intrinsic AKI (ATN)
+
+## Acute Tubular Necrosis (ATN) Mechanism
+
+### Ischemic ATN (Most Common)
+**Initial Phase (Minutes to Hours)**
+1. ↓ Renal perfusion
+2. ↓ ATP production (switch to anaerobic metabolism)
+3. Loss of Na⁺/K⁺-ATPase function
+4. ↑ Intracellular Na⁺, Ca²⁺
+5. Cell swelling and injury
+
+**Extension Phase (Hours to Days)**
+6. Mitochondrial dysfunction
+7. Generation of reactive oxygen species (ROS)
+8. Oxidative stress
+9. Tubular epithelial cell necrosis and apoptosis
+10. Cell debris occludes tubules
+
+**Maintenance Phase (Days)**
+- Decreased GFR due to:
+  - Tubular obstruction from cell debris
+  - Tubular epithelial barrier breakdown (loss of tight junctions)
+  - ↓ Glomerular capillary permeability
+  - Backleak of filtrate through damaged epithelium
+
+### Toxic ATN Pathogenesis
+1. **Nephrotoxins** (drugs, contrast, myoglobin, hemoglobin)
+2. Direct tubular epithelial cell toxicity
+3. ROS generation
+4. Apoptosis and necrosis
+5. Similar repair phase as ischemic ATN
+
+## Recovery Phase of AKI
+
+### Initiation Phase (Days 1-3)
+- GFR reaches nadir
+- Urine output minimal (oliguria persists)
+- Serum creatinine plateaus then begins to decline slowly
+
+### Recovery Phase (Days 3-14)
+- **Polyuric phase** (if AKI was severe)
+  - Urine output increases dramatically (>1-2 L/day)
+  - Serum creatinine still elevated but declining
+  - Risk of hypokalemia, dehydration from excessive urine loss
+  
+- **Epithelial repair and regeneration**
+  - Tubular epithelial cells regenerate from progenitor cells
+  - Restoration of tight junctions and epithelial integrity
+  - Mitochondrial function recovers
+  - Brush border membranes reform
+
+### Resolution Phase (Weeks)
+- Serum creatinine normalizes (or near baseline)
+- GFR returns to normal (usually completely)
+- Full epithelial restitution
+
+### Chronic Phase (If Occurs)
+- Incomplete recovery → chronic kidney disease (CKD)
+- Fibrosis and scarring may develop
+- Risk factors: severe AKI, advanced age, diabetes, baseline CKD
+
+## Complications of AKI
+
+### Electrolyte Disorders
+- **Hyperkalemia**: Risk of cardiac arrhythmias (peaked T waves, widened QRS)
+- **Hyponatremia**: From ADH release and fluid retention
+- **Hypocalcemia**: From ↑ phosphate, impaired calcitriol synthesis
+- **Hyperphosphatemia**: From ↓ renal excretion
+
+### Metabolic Acidosis
+- ↓ Renal acid excretion
+- Accumulation of organic acids
+- Respiratory compensation (Kussmaul breathing)
+
+### Fluid Overload
+- ↑ Intravascular volume → pulmonary edema
+- ↑ Interstitial volume → peripheral edema
+- Risk of hypertension and cardiac decompensation
+
+### Uremia
+- Accumulation of uremic toxins (urea, creatinine, other waste products)
+- Symptoms: nausea, vomiting, lethargy, seizures
+- Indication for dialysis if severe`,
+        mnemonics: [
+          { text: "Prerenal → ATN Progression: Time-dependent", explanation: "Prolonged hypoperfusion (>2-3 hours) converts prerenal to ATN" },
+          { text: "ATN Mechanism: ATP ↓ → Na⁺/K⁺ pump fails → Cell swells → ROS → Death", explanation: "Ischemic cascade in tubular epithelium" },
+          { text: "AKI Phases: Initiation (1-3d) → Recovery (3-14d) → Resolution (weeks)", explanation: "Recovery phase may be polyuric with high urine output" },
+          { text: "AKI Complications: HFEU", explanation: "Hyperkalemia, Fluid overload, Electrolyte disorders, Uremia" }
+        ],
+        keyPoints: [
+          "Prerenal AKI: functional (no tubular injury) and potentially reversible if perfusion restored within 24-48 hours",
+          "ATN: intrinsic renal injury with tubular epithelial cell death and necrosis",
+          "Ischemic ATN results from prolonged hypoperfusion; toxic ATN from nephrotoxic drugs or myoglobin",
+          "Recovery of AKI requires tubular epithelial cell regeneration (days to weeks); polyuric phase may occur",
+          "Complications of AKI: hyperkalemia (cardiac risk), fluid overload (pulmonary edema), metabolic acidosis, uremia"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "275: Acute Kidney Injury", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "9: AKI Pathophysiology", edition: "11th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "aki-layer-3-clinical",
+        title: "Acute Kidney Injury - Clinical",
+        estimatedMinutes: 35,
+        summary: "Clinical diagnosis and management of AKI, fluid and electrolyte management, dialysis indications, and prevention strategies.",
+        contentMd: `# Acute Kidney Injury - Clinical Diagnosis & Management
+
+## Clinical Diagnosis
+
+### History
+- **Exposure history**: NSAIDs, ACE-I/ARBs, contrast, aminoglycosides, cisplatin
+- **Symptoms**: Oliguria, nausea, vomiting, lethargy
+- **Risk factors**: Diabetes, CKD, advanced age, liver disease, heart failure
+
+### Physical Examination
+**Assessment of volume status (critical)**:
+- **Hypovolemic**: Dry mucosa, orthostasis, tachycardia, flat JVD
+- **Euvolemic**: Normal findings
+- **Hypervolemic**: JVD elevation, peripheral edema, rales, hepatomegaly
+
+### Laboratory Investigations
+
+**Serum Creatinine & BUN**:
+- Serial measurements track AKI stage
+- Establish baseline for comparison (may not be available)
+
+**Fractional Excretion of Sodium (FENa)**
+- **Formula**: FENa = (Urine Na × Serum Cr) / (Serum Na × Urine Cr) × 100
+- **Prerenal**: FENa <1%
+- **ATN/Intrinsic**: FENa >2%
+- **Intermediate**: FENa 1-2%
+- **Limitations**: On diuretics, contrast agents may give false results
+
+**Urinalysis & Sediment**
+- **Prerenal**: Concentrated urine, few cells, no casts
+- **ATN**: Muddy brown casts, granular casts, tubular epithelial cells
+- **GN**: RBC casts, RBCs, significant proteinuria
+- **Obstruction**: Usually normal or few cells
+
+**Electrolytes**:
+- Hyperkalemia (ECG changes: peaked T waves, prolonged PR, widened QRS)
+- Hyponatremia, hypocalcemia, hyperphosphatemia
+- Metabolic acidosis (low HCO3, low pH)
+
+**Imaging Studies**
+
+**Renal Ultrasound**:
+- Rule out obstruction (hydronephrosis)
+- Assess kidney size (normal ~11-14 cm)
+- Small kidneys suggest chronic kidney disease
+
+## Management of AKI
+
+### Immediate Management
+
+### 1. Assess and Correct Volume Status
+**If Hypovolemic**:
+- IV fluid resuscitation with 0.9% saline (Ringer's lactate less preferred due to K⁺ content)
+- Target: urine output 0.5-1 mL/kg/hr
+- Monitor for overcorrection (hypervolemia)
+
+**If Hypervolemic**:
+- Restrict fluids to insensible losses + measured urine output
+- Diuretics (furosemide) if pulmonary edema present
+- Monitor daily weights, serial electrolytes
+
+**If Euvolemic**:
+- Maintenance fluids only
+- Monitor and adjust based on output
+
+### 2. Eliminate Nephrotoxic Agents
+- Discontinue NSAIDs, ACE-I, ARBs immediately
+- Hold aminoglycosides (adjust dosing if essential)
+- Avoid further contrast exposure
+
+### 3. Blood Pressure Management
+- Target MAP >60 mmHg (perfusion pressure)
+- Vasopressors if shock (norepinephrine preferred)
+- Avoid antihypertensive drugs initially (may worsen AKI)
+
+### 4. Metabolic Support
+**Hyperkalemia Management** (if K⁺ >5.5 or ECG changes):
+- **Membrane stabilization**: Calcium gluconate 10 mL IV (calcium channel blockade)
+- **Shift intracellular**: Insulin 10 units + Dextrose 25g IV, or Albuterol nebulized
+- **Removal**: Diuretics (furosemide), cation exchange resins (polystyrene sulfonate), dialysis
+- **Dietary restriction**: K⁺ <2g/day
+
+**Acidosis**:
+- Usually managed by treating underlying cause and fluids
+- Sodium bicarbonate rarely needed in AKI
+
+**Hypocalcemia**:
+- Usually corrects with phosphate binders and recovery
+- Avoid calcium supplementation (precipitation of calcium phosphate)
+
+**Hyperphosphatemia**:
+- Phosphate binders: calcium carbonate 1.25-2.5g with meals (poor efficacy in renal failure)
+- Better binders: aluminum hydroxide (neurotoxicity risk), sevelamer
+
+### 5. Nutrition
+- Avoid protein (urea accumulation) - target 0.6-0.8 g/kg/day or less
+- Calories: 25-35 kcal/kg/day (reduce catabolism)
+- Avoid excess potassium, phosphorus, sodium
+- Low sodium diet (<2g/day)
+
+### 6. Monitor Complications
+- **Infection** (catheter-related, aspiration)
+- **Bleeding** (uremia causes platelet dysfunction)
+- **Seizures** (uremia, hyperammonemia)
+
+## Dialysis Indications in AKI
+
+### Absolute Indications:
+1. **Refractory hyperkalemia** (K⁺ >6.5 with ECG changes despite medical therapy)
+2. **Severe acidosis** (pH <7.15)
+3. **Pulmonary edema** (refractory to diuretics)
+4. **Uremia with symptoms** (confusion, seizures, pericarditis)
+
+### Relative Indications:
+1. **Oliguria** refractory to fluid challenge + diuretics (>5-7 days)
+2. **Rapid rise in creatinine** (suggests severe AKI)
+3. **BUN >100 mg/dL**
+4. **Fluid overload** with inability to diurese
+5. **Severe metabolic abnormalities**
+
+### Types of Renal Replacement Therapy (RRT):
+- **Hemodialysis**: Most efficient (4 hrs, 3x/week)
+- **Continuous venovenous hemofiltration (CVVH)**: Gentler for hemodynamically unstable patients
+- **Peritoneal dialysis**: If access not available, minimal infrastructure
+- **Slow low-efficiency dialysis (SLED)**: Intermediate option
+
+## Prevention of AKI
+
+### Risk Assessment
+- Identify high-risk patients (diabetes, CKD, elderly, heart failure, liver disease)
+
+### Volume Status Optimization
+- Aggressive hydration perioperatively and with contrast exposure
+- Monitor fluid balance carefully
+
+### Medication Management
+- Avoid NSAIDs in at-risk patients
+- Use ACE-I/ARBs cautiously (stop if AKI develops)
+- Adjust drug dosing in renal impairment
+
+### Contrast-Induced Nephropathy Prevention
+- **IV hydration**: 0.9% NaCl 1 mL/kg/hr before and after contrast
+- **Consider alternative imaging**: MRI, ultrasound
+- **N-acetylcysteine**: May provide modest benefit`,
+        mnemonics: [
+          { text: "FENa: <1% = Prerenal, >2% = ATN", explanation: "Fractional excretion of sodium helps differentiate causes" },
+          { text: "Hyperkalemia ECG: Peaked T, Prolonged PR, Widened QRS", explanation: "Progressive EKG changes indicate severity" },
+          { text: "K⁺ Management: Calcium (stabilize) → Insulin+Dextrose (shift) → Dialysis (remove)", explanation: "Three steps to treat hyperkalemia" },
+          { text: "Dialysis Indications: SHURE", explanation: "Severe hyperkalemia, Hypervolemia (pulmonary edema), URemia (symptoms), Refractory acidosis, Electrolyte abnormalities" }
+        ],
+        keyPoints: [
+          "FENa <1% suggests prerenal AKI (functional, reversible); FENa >2% suggests ATN (intrinsic injury)",
+          "Immediate management: assess volume status, give fluids if hypovolemic, restrict if hypervolemic",
+          "Eliminate nephrotoxic drugs (NSAIDs, ACE-I, contrast) immediately upon AKI diagnosis",
+          "Hyperkalemia is major life-threatening complication; ECG changes (peaked T) indicate urgency for treatment",
+          "Dialysis indicated for: refractory hyperkalemia, severe acidosis, pulmonary edema, uremic symptoms"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "275: Acute Kidney Injury", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "9: AKI Management", edition: "11th" },
+          { book: "KDIGO Clinical Practice Guideline for AKI", chapter: "Diagnosis and management", edition: "2021" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "aki-layer-4-exam",
+        title: "Acute Kidney Injury - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "Comprehensive exam-focused review of AKI, NEET-PG pattern questions, high-yield facts, differentials, and clinical pearls.",
+        contentMd: `# Acute Kidney Injury - Exam Preparation
+
+## Differential Diagnosis of Elevated Creatinine
+
+### Acute Kidney Injury (hours to days)
+- KDIGO criteria: ↑ Cr or ↓ urine output
+- Reversible or may progress to CKD
+
+### Chronic Kidney Disease (>3 months)
+- Irreversible renal damage
+- Small kidneys on imaging (AKI: normal size)
+
+### Acute-on-Chronic Kidney Disease
+- Baseline CKD with superimposed AKI
+- More severe prognosis
+
+## High-Yield Facts for Exams
+
+### AKI Classification (KDIGO):
+- **Stage 1**: Cr 1.5-1.9x baseline or ↑ 0.3 mg/dL
+- **Stage 2**: Cr 2-2.9x baseline
+- **Stage 3**: Cr ≥3x baseline OR ≥4 mg/dL increase OR anuria ≥12 hrs
+
+### Causes Distribution:
+- **Prerenal**: 60% (hypovolemia, hypotension, renal vasoconstriction)
+- **Intrinsic**: 35% (ATN most common, GN, interstitial nephritis)
+- **Postrenal**: 5% (obstruction)
+
+### Urinary Biomarkers for ATN:
+- **FENa**: <1% (prerenal), 1-2% (intermediate), >2% (ATN)
+- **Casts**: Muddy brown granular casts = ATN hallmark
+- **Cells**: Tubular epithelial cells suggest ATN
+
+### Risk Factors for AKI:
+- Diabetes, CKD, advanced age (>65 years)
+- Heart failure, liver disease
+- Exposure to nephrotoxins (NSAIDs, ACE-I, contrast, aminoglycosides)
+
+### Drugs Causing AKI:
+- **NSAIDs**: Reduce renal blood flow via PG inhibition
+- **ACE-I/ARBs**: Vasodilation of efferent arteriole
+- **Aminoglycosides**: Direct tubular toxicity
+- **Cisplatin**: Proximal tubular toxicity
+- **Contrast**: Osmotic + direct toxic effect
+- **Amphotericin B**: Tubular injury
+- **Allopurinol**: (Crystalluria from metabolites)
+
+### Hyperkalemia ECG Changes:
+- **Early**: Peaked T waves (narrowed apex)
+- **Progressive**: Prolonged PR interval, widened QRS
+- **Late**: Loss of P wave, "sine wave" pattern (cardiac arrest imminent)
+
+### K⁺ Management Algorithm:
+1. **Stabilize**: Calcium gluconate 10 mL IV (membrane stabilization)
+2. **Shift intracellular**: Insulin 10 units + 25g dextrose IV
+3. **Alternative shift**: Albuterol nebulized or NaHCO3 IV
+4. **Remove**: Diuretics (furosemide), cation exchange resins, dialysis
+
+### Dialysis Indications (SHURE):
+- **S**: Severe/refractory hyperkalemia
+- **H**: Hypervolemia (pulmonary edema)
+- **U**: URemia (symptoms)
+- **R**: Refractory acidosis
+- **E**: Electrolyte abnormalities
+
+## Common Exam Questions
+
+**Q: 65-year-old diabetic with serum Cr 1.2 baseline, now 3.2 mg/dL. FENa 0.8%. Diagnosis?**
+A: Prerenal AKI (FENa <1%). Likely from hypovolemia or renal vasoconstriction (ACE-I, NSAIDs). Stop offending agents, give IV fluids.
+
+**Q: Patient with ATN after sepsis. Serial Cr: Day 1=2.5, Day 3=3.5, Day 5=3.2, Day 7=2.8. What phase?**
+A: Polyuric recovery phase has started (Cr declining from peak). Expect high urine output; risk of hypokalemia and dehydration.
+
+**Q: Patient with serum K⁺ 6.8 mg/dL and peaked T waves. ECG shows prolonged QRS. Immediate management?**
+A: IV calcium gluconate first for membrane stabilization, then insulin + dextrose. Consider dialysis if K⁺ not responding.
+
+## Exam Mnemonics Worth Remembering
+
+**Prerenal AKI Causes**: AHHH + HRS
+- **A**: Anemia (reduced O2 carrying)
+- **HHH**: Hemorrhage, Hypovolemia, Heart failure
+- **HRS**: Hepatorenal Syndrome
+- Plus: NSAIDs, contrast, ACE-I (renal vasoconstriction)
+
+**ATN Causes**: I-ATION
+- **I**: Ischemia (hypotension, sepsis)
+- **A**: Aminoglycosides
+- **T**: Toxins (myoglobin, hemoglobin, contrast, cisplatin)
+- **I**: Interstitial nephritis
+- **O**: Obstruction (postrenal)
+- **N**: NSAIDs`,
+        mnemonics: [
+          { text: "KDIGO AKI Stages: 1-2-3 (Cr multipliers 1.5-2-3x baseline)", explanation: "Or absolute increases 0.3-0.5-4 mg/dL" },
+          { text: "Cause Distribution: 60-35-5 (Prerenal-Intrinsic-Postrenal)", explanation: "Prerenal most common, most reversible" },
+          { text: "FENa Interpretation: <1 Prerenal, 1-2 Gray, >2 ATN", explanation: "Gray zone may be either, clinical context helps" },
+          { text: "ECG Changes in Hyperkalemia: Peaked T → Prolonged PR → Widened QRS → Sine wave", explanation: "Progressive changes, sine wave = cardiac arrest imminent" },
+          { text: "K⁺ Management: Calcium (stabilize) → Shift (insulin) → Remove (dialysis)", explanation: "Three steps in order" },
+          { text: "Dialysis Indications: SHURE", explanation: "Severe hyperkalemia, Hypervolemia, URemia, Refractory acidosis, Electrolyte abnormalities" },
+          { text: "Prerenal Causes: AHHH+HRS+Meds", explanation: "Anemia, Hemorrhage, Hypovole, Heart failure | Hepatorenal | NSAIDs/ACE-I/Contrast" },
+          { text: "ATN Causes: I-ATION", explanation: "Ischemia, Aminoglycosides, Toxins, Interstitial, Obstruction, NSAIDs" },
+          { text: "AKI Phases: Initiation (1-3d) → Recovery (3-14d) → Resolution (weeks)", explanation: "Recovery phase polyuric phase may occur" },
+          { text: "Urinary Sediment: Prerenal=clean, ATN=muddy brown, GN=RBC casts, Obstruction=normal", explanation: "Microscopy helps differentiate" }
+        ],
+        keyPoints: [
+          "AKI: rapid loss of renal function with ↑ Cr, classified into 3 stages by KDIGO",
+          "Prerenal AKI (60%): functional, reversible if perfusion restored; FENa <1%",
+          "Intrinsic renal AKI (35%): direct kidney injury; ATN most common with muddy brown casts",
+          "Postrenal AKI (5%): obstruction; ultrasound shows hydronephrosis",
+          "Hyperkalemia is major life-threatening complication; ECG changes indicate urgency",
+          "Management: fluid status optimization, stop nephrotoxic drugs, dialysis if indicated",
+          "Recovery usually complete unless severe AKI with fibrosis (risk of chronic kidney disease)"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "275: Acute Kidney Injury", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "9: Renal System", edition: "11th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "aki-layer-5-active-recall",
+        title: "Acute Kidney Injury - Active Recall",
+        estimatedMinutes: 20,
+        summary: "Flashcard-based active recall for rapid learning and retention of critical AKI concepts.",
+        contentMd: `# Acute Kidney Injury - Active Recall Flashcards
+
+**Q1: What is the definition of acute kidney injury?**
+A: Rapid loss of renal function (hours to days) with elevation of serum creatinine and BUN, classified by KDIGO into 3 stages based on Cr rise and urine output.
+
+**Q2: What are the KDIGO AKI stages and their serum creatinine thresholds?**
+A: Stage 1: Cr 1.5-1.9x baseline or ≥0.3 mg/dL increase | Stage 2: Cr 2-2.9x baseline | Stage 3: Cr ≥3x baseline or ≥4 mg/dL increase.
+
+**Q3: What are the three major categories of AKI causes and their approximate prevalence?**
+A: Prerenal 60% (reduced renal perfusion), Intrinsic 35% (direct kidney injury), Postrenal 5% (obstruction).
+
+**Q4: Define fractional excretion of sodium (FENa) and its interpretation.**
+A: FENa = (UNa × SCr) / (SNa × UCr) × 100. FENa <1% suggests prerenal, >2% suggests ATN, 1-2% is gray zone.
+
+**Q5: What are the main causes of prerenal AKI?**
+A: Hypovolemia (dehydration, hemorrhage), hypotension (shock, sepsis), renal vasoconstriction (NSAIDs, ACE-I, contrast).
+
+**Q6: What is acute tubular necrosis and how does it differ from prerenal AKI?**
+A: ATN is intrinsic renal injury with tubular epithelial cell death. Unlike prerenal, it involves direct tissue damage and takes days-weeks to recover.
+
+**Q7: What are the phases of AKI recovery and the typical timeline?**
+A: Initiation phase (1-3 days, GFR nadir), Recovery phase (3-14 days, polyuric phase if severe), Resolution phase (weeks, Cr normalizes).
+
+**Q8: What are the ECG changes in severe hyperkalemia and their progression?**
+A: Peaked T waves → Prolonged PR interval → Widened QRS → Loss of P wave → Sine wave pattern (cardiac arrest imminent).
+
+**Q9: What is the mechanism of hyperkalemia in AKI?**
+A: ↓ Renal K⁺ excretion (due to oliguria and low GFR) + K⁺ release from damaged cells (tumor lysis, rhabdomyolysis).
+
+**Q10: Describe the three-step management of hyperkalemia in AKI.**
+A: (1) Stabilize: IV calcium gluconate (membrane stabilization) | (2) Shift intracellular: Insulin + dextrose or albuterol | (3) Remove: Diuretics, exchange resins, dialysis.
+
+**Q11: What is muddy brown granular cast and what does it indicate?**
+A: Casts composed of degenerated tubular epithelial cells and Tamm-Horsfall protein. Hallmark of acute tubular necrosis (ATN).
+
+**Q12: What is the difference between prerenal AKI and volume-responsive oliguria?**
+A: Volume-responsive oliguria (as in dehydration) can be corrected with fluid challenge; prerenal AKI refers to the pathophysiology of ↓ GFR from reduced renal perfusion.
+
+**Q13: What are the absolute indications for dialysis in AKI?**
+A: Refractory hyperkalemia (K⁺ >6.5 with ECG changes), severe acidosis (pH <7.15), pulmonary edema (refractory to diuretics), uremia with symptoms.
+
+**Q14: How do NSAIDs cause AKI?**
+A: NSAIDs inhibit COX enzymes → ↓ prostaglandins → renal vasoconstriction + loss of protective effects on glomerular perfusion.
+
+**Q15: What is the polyuric phase of AKI and what complications can occur?**
+A: Occurs during recovery when urine output increases dramatically (>1-2 L/day) while Cr still elevated. Risk of severe hypokalemia and dehydration.
+
+**Q16: When should you check FENa and what are its limitations?**
+A: Check FENa in oliguric AKI to differentiate prerenal from ATN. Limitations: unreliable on diuretics, contrast agents, acute GN.
+
+**Q17: What is contrast-induced nephropathy (CIN) and how is it prevented?**
+A: Acute kidney injury after IV contrast exposure. Prevention: IV hydration (0.9% saline 1 mL/kg/hr before and after), avoid NSAIDS, consider alternatives (MRI, ultrasound).
+
+**Q18: What is hepatorenal syndrome and how does it differ from other prerenal causes?**
+A: Functional renal vasoconstriction in advanced cirrhosis. Represents severe prerenal AKI. Diagnosis: AKI without proteinuria, normal kidney imaging, renal failure reversible with liver transplant.
+
+**Q19: What are the risk factors for mortality in AKI?**
+A: Advanced age, multiple organ failure, underlying chronic disease (diabetes, CKD), high creatinine at presentation, requirement for dialysis.
+
+**Q20: What is the difference between AKI recovery and chronic kidney disease (CKD)?**
+A: AKI: rapid onset (hours-days), potentially reversible, usually complete recovery | CKD: gradual onset (>3 months), irreversible, progressive.`,
+        mnemonics: [
+          { text: "AKI Causes: 60-35-5 (Prerenal-Intrinsic-Postrenal)", explanation: "Prerenal most common (60%), most reversible" },
+          { text: "KDIGO Stages: 1.5-2-3 (Creatinine multipliers)", explanation: "Or absolute increases: 0.3, 0.5, 4 mg/dL" },
+          { text: "FENa: <1 Prerenal, 1-2 Gray, >2 ATN", explanation: "Fractional excretion of sodium helps differentiate" },
+          { text: "ATN Casts: Muddy Brown with Granules", explanation: "Degenerated epithelial cells + Tamm-Horsfall protein" },
+          { text: "Hyperkalemia ECG: T peak → PR long → QRS wide → Sine wave (arrest)", explanation: "Progressive severity of changes" },
+          { text: "K⁺ Treatment: Calcium (stabilize) → Insulin+Dextrose (shift) → Dialysis (remove)", explanation: "Three-step management" },
+          { text: "Dialysis Indications: SHURE", explanation: "Severe hyperkalemia, Hypervolemia, URemia, Refractory acidosis, Electrolyte abnormalities" },
+          { text: "AKI Phases: Initiation (1-3d) → Recovery (3-14d) → Resolution (weeks)", explanation: "Recovery phase may be polyuric" },
+          { text: "NSAIDs Mechanism: COX inhibition → ↓ PGs → renal vasoconstriction → ↓ GFR", explanation: "Direct renal vasoconstriction effect" },
+          { text: "Prerenal → ATN: Time-dependent (>2-3 hrs ischemia), irreversible transformation possible", explanation: "Early recognition and treatment crucial" }
+        ],
+        keyPoints: [
+          "AKI: rapid loss of renal function with ↑ serum creatinine and ↑ BUN, staged 1-3 by KDIGO",
+          "Prerenal AKI (60%): functional, ↓ renal perfusion; FENa <1%; reversible if perfusion restored quickly",
+          "Intrinsic renal AKI (35%): direct kidney injury; ATN most common with muddy brown granular casts",
+          "Postrenal AKI (5%): obstruction to urine flow; ultrasound shows hydronephrosis",
+          "Key diagnostic tests: serum Cr/BUN, FENa, urinalysis with microscopy, electrolytes, renal ultrasound",
+          "Management: (1) Assess volume status, (2) Give fluids if hypovolemic, (3) Stop nephrotoxic drugs, (4) Treat complications",
+          "Hyperkalemia is major life-threatening complication; ECG changes (peaked T) indicate urgency for treatment",
+          "Dialysis indications: refractory hyperkalemia, severe acidosis, pulmonary edema, uremic symptoms",
+          "Recovery: tubular epithelial cell regeneration (days-weeks); usually complete recovery unless severe fibrosis",
+          "Prevention: aggressive hydration, avoid nephrotoxic drugs, optimize volume status perioperatively"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "275: Acute Kidney Injury", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "9: Renal System", edition: "11th" }
+        ]
+      }
+    ]
+  }
 ];

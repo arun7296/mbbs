@@ -1,18 +1,988 @@
-export const medicinePart6Lessons = [
-  // IM-MOD-06: Hematology - Iron Deficiency & Megaloblastic Anemias
+import type { TopicLessons } from "./content-loader";
+
+export const medicinePart6Lessons: TopicLessons[] = [
   {
     topicCode: "IM-MOD-06-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "anemia-foundation",
+        slug: "anemia-layer-1-foundation",
         title: "Iron Deficiency & Megaloblastic Anemia - Foundation",
         estimatedMinutes: 20,
-        summary: "Definition of anemia, RBC indices (MCV), classification by morphology, pathophysiology of iron deficiency vs megaloblastic anemias.",
-        contentMd: "# Iron Deficiency & Megaloblastic Anemia - Foundation\n\n## Definition of Anemia\nAnemia: Hemoglobin <13.5 g/dL (males) or <12.0 g/dL (females), or RBC <4.5 million/μL males or <4.0 million/μL females\n\n## RBC Indices Classification\n**Mean Corpuscular Volume (MCV):**\n- **Microcytic:** <80 fL (iron deficiency, thalassemia, lead poisoning, anemia of chronic disease)\n- **Normocytic:** 80-100 fL (hemolysis, bleeding, acute illness)\n- **Macrocytic:** >100 fL (B12/folate deficiency, alcohol, methotrexate, hypothyroidism)\n\n**Mean Corpuscular Hemoglobin Concentration (MCHC):**\n- Hypochromic: <32 g/dL (iron deficiency, thalassemia)\n- Normochromic: 32-36 g/dL\n\n**RBC Distribution Width (RDW):**\n- Elevated (>15%): Suggests mixed cell populations (early iron deficiency, B12/folate mixed with others)\n\n## Iron Metabolism\n- **Daily iron requirement:** 1 mg/day (females 1.8 mg due to menstruation)\n- **Absorption:** Duodenum/jejunum, enhanced by vitamin C, heme iron more bioavailable\n- **Transport:** Transferrin carries iron (saturation 25-35% normal)\n- **Storage:** Ferritin (intracellular), hemosiderin (insoluble form)\n- **Total body iron:** 3-4 grams (2g hemoglobin, 1g stores, 0.5g myoglobin/enzymes)\n\n## Iron Deficiency - Pathophysiology\n**Three stages:**\n1. **Iron depletion:** Ferritin low, iron stores depleted, Hgb normal\n2. **Early functional iron deficiency:** Ferritin low, serum iron low, transferrin saturation <15%, Hgb normal\n3. **Iron deficiency anemia:** Ferritin low, serum iron low, transferrin low, TIBC high, Hgb low, MCV low\n\n**Mechanism of anemia:**\n- Insufficient iron for hemoglobin synthesis\n- Microcytic, hypochromic RBCs\n- Tissue iron deficiency causes koilonychia, restless legs, pica\n\n## Megaloblastic Anemia - Pathophysiology\n**Definition:** Anemia with abnormally large immature RBCs (megaloblasts in bone marrow)\n\n**Pathophysiology:**\n- Impaired DNA synthesis (B12 or folate required for thymidine synthesis)\n- RNA/protein synthesis continues → nuclear-cytoplasmic asynchrony\n- Large, immature RBCs released (megaloblasts)\n- Ineffective erythropoiesis → dyserythropoiesis\n\n**Causes:**\n- **B12 deficiency:** Pernicious anemia, fish tapeworm, bacterial overgrowth, terminal ileum disease\n- **Folate deficiency:** Nutritional, alcoholism, pregnancy, sulfasalazine, methotrexate\n- **Both:** Combined deficiency\n\n**Note:** Other causes of macrocytosis exist (alcohol, hypothyroidism, reticulocytosis) without megaloblastic changes,\n        mnemonics: [\n          { text: \"Microcytic = low MCV (<80), often IRON deficiency\", explanation: \"Small RBCs from reduced hemoglobin synthesis\" },\n          { text: \"Megaloblastic = large nucleated precursors from impaired DNA synthesis (B12/Folate)\", explanation: \"Nuclear-cytoplasmic asynchrony\" }\n        ],\n        keyPoints: [\n          \"MCV is key to anemia classification (micro/normo/macro)\",\n          \"Iron deficiency is MOST common anemia worldwide (especially developing countries)\",\n          \"Megaloblastic anemias are rare but important (neurological complications if missed)\",\n          \"B12 deficiency can cause neurological symptoms (subacute combined degeneration)\"\n        ],\n        textbookRefs: [\n          { book: \"Harrison's Principles of Internal Medicine\", chapter: \"103: Microcytic Anemias\", edition: \"21st\" },\n          { book: \"Davidson's Principles and Practice of Medicine\", chapter: \"27: Blood Disorders\", edition: \"24th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"anemia-mechanism\",\n        title: \"Iron Deficiency & Megaloblastic Anemia - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Detailed mechanisms of iron absorption, hepcidin regulation, B12/folate metabolism, and tissue manifestations.\",\n        contentMd: "# Anemia Pathophysiology - Detailed\\n\\n## Iron Deficiency Mechanisms\\n\\n**Causes of iron deficiency:**\\n1. **Decreased intake:** Vegetarian, malnutrition (rare in developed countries)\\n2. **Impaired absorption:** Celiac, tropical sprue, H. pylori, gastric surgery, achlorhydria, PPIs (iron needs acidic pH)\\n3. **Increased loss:** GI bleeding (melena, occult blood in stool), menorrhagia (heaviest periods >80 mL/cycle), hematuria\\n4. **Increased demand:** Pregnancy, adolescence, lactation\\n\\n**Role of hepcidin (key hormone):**\\n- Produced by liver in response to iron overload + inflammation\\n- Inhibits ferroportin (iron export from enterocytes/macrophages)\\n- In iron deficiency: Hepcidin suppressed → increased absorption + iron release from stores\\n- In chronic disease: Inflammation ↑ hepcidin → iron sequestration despite normal stores\\n\\n**Tissue effects of iron deficiency:**\\n- **Epithelial:** Koilonychia (spoon nails), glossitis, cheilitis, esophageal webs (Plummer-Vinson syndrome)\\n- **Neurological:** Restless leg syndrome, impaired cognitive function\\n- **Behavioral:** Pica (ice, starch, dirt - from iron lack, normalizes with replacement)\\n\\n## B12 Deficiency Mechanisms\\n\\n**B12 absorption pathway:**\\n1. Intrinsic factor (IF) from gastric parietal cells binds B12 in stomach\\n2. IF-B12 complex transported to terminal ileum\\n3. Specific receptor uptake in ileum\\n4. Stored in liver (2-5 year supply)\\n\\n**Causes of deficiency:**\\n1. **Pernicious anemia (most common):** Autoimmune destruction of parietal cells → loss of IF\\n   - Anti-parietal cell antibodies (60%)\\n   - Anti-intrinsic factor antibodies (50%, specific for pernicious anemia)\\n2. **Post-gastrectomy:** Loss of parietal cells (total or subtotal gastrectomy)\\n3. **Terminal ileum disease:** Crohn's, tropical sprue, fish tapeworm (Diphyllobothrium), bacterial overgrowth\\n4. **Vegan diet:** Only animal products contain B12 (bacteria synthesize it, humans can't)\\n5. **Metformin, PPI:** Reduce absorption (not complete deficiency, usually in combination with other causes)\\n\\n**Mechanism of neurological damage:**\\n- B12 required for methylmalonyl-CoA mutase + methionine synthase\\n- Impaired myelin synthesis in spinal cord + dorsal columns\\n- Subacute combined degeneration: Posterior columns (proprioception loss) + spinocerebellar tracts (ataxia) + corticospinal tracts (weakness)\\n- Peripheral neuropathy (paresthesias)\\n- Cognitive: Memory loss, personality changes, psychosis (\\\"megaloblastic madness\\\")\\n\\n## Folate Deficiency Mechanisms\\n\\n**Folate absorption:**\\n- Absorbed in proximal small bowel\\n- Short-term stores (few weeks supply)\\n- Rapidly depleted without intake\\n\\n**Causes of folate deficiency:**\\n1. **Nutritional:** Poor diet (no leafy greens, fruits, legumes), alcoholism (malnutrition + impaired absorption)\\n2. **Malabsorption:** Celiac, tropical sprue, Crohn's\\n3. **Medications:** Methotrexate (inhibits dihydrofolate reductase), sulfonamides, phenytoin\\n4. **Increased demand:** Pregnancy (demands double), lactation, hemolysis, hyperthyroidism, rapid cell turnover\\n\\n**Note:** Folate deficiency does NOT cause neurological symptoms (unlike B12) - this is key distinguisher\\n\\n## Distinguishing B12 vs Folate Deficiency\\n| Feature | B12 Deficiency | Folate Deficiency |\\n|---------|----------------|-------------------|\\n| **Neurological** | YES (subacute combined degeneration) | NO |\\n| **Serum level** | Low (<100 pg/mL) | Low (<3 ng/mL) |\\n| **RBC folate** | Low | Low |\\n| **Methylmalonic acid** | Elevated (B12 metabolite) | Normal |\\n| **Homocysteine** | Elevated | Elevated |\\n| **Response to folate** | No neurological improvement | Neurological worsens if B12 not given |,\\n        mnemonics: [\\n          { text: \\\"FOLATE = Fast depletion, Food-dependent (unlike B12)\\\", explanation: \\\"Short stores, dietary deficiency common\\\" },\\n          { text: \\\"B12 = 'Big' stores (2-5 years), pernicious anemia common\\\", explanation: \\\"Long storage, autoimmune common cause\\\" },\\n          { text: \\\"B12 NEURO, Folate NO neuro\\\", explanation: \\\"B12 causes subacute combined degeneration; folate does not\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Hepcidin regulates iron absorption (suppressed in deficiency)\\\",\\n          \\\"B12 stored for 2-5 years (deficiency develops slowly)\\\",\\n          \\\"Folate stores last only weeks (deficiency rapid)\\\",\\n          \\\"IF antibodies specific for pernicious anemia (vs gastric surgery)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Harrison's Principles of Internal Medicine\\\", chapter: \\\"103-104: Anemias\\\", edition: \\\"21st\\\" },\\n          { book: \\\"Robbins Basic Pathology\\\", chapter: \\\"15: The Hematopoietic System\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"anemia-clinical\\\",\\n        title: \\\"Iron Deficiency & Megaloblastic Anemia - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical presentation, laboratory diagnosis with ferritin/B12/folate levels, peripheral smear findings, bone marrow examination.\\\",\\n        contentMd: "# Anemia: Clinical & Diagnosis\\\\n\\\\n## Iron Deficiency - Clinical Features\\\\n**Anemia symptoms (general):** Fatigue, dyspnea on exertion, palpitations, syncope, angular cheilitis, glossitis\\\\n\\\\n**Iron deficiency-specific:**\\\\n- **Koilonychia:** Spoon-shaped nails (late finding, 5-15% of severe ID)\\\\n- **Pica:** Craving non-food items (ice, starch, dirt, clay) - from iron lack\\\\n- **Plummer-Vinson syndrome:** Esophageal web + iron deficiency + dysphagia (rare)\\\\n- **Restless leg syndrome:** From iron lack in nervous system\\\\n- **Dysphagia:** From esophageal webs\\\\n\\\\n**Physical exam:** Pallor (conjunctivae, palms), tachycardia, tachypnea, no splenomegaly (unless GI bleed with portal hypertension)\\\\n\\\\n## Iron Deficiency - Laboratory Diagnosis\\\\n| Test | Iron Deficiency |\\\\n|------|-----------------|\\\\n| **Hemoglobin** | Low (<12 g/dL) |\\\\n| **MCV** | Low (<80 fL) - microcytic |\\\\n| **MCH/MCHC** | Low - hypochromic |\\\\n| **Serum iron** | Low (<50 μg/dL) |\\\\n| **Ferritin** | LOW (<30 ng/mL) - most specific for iron depletion |\\\\n| **TIBC** | Elevated (>360 μg/dL) |\\\\n| **Transferrin saturation** | Low (<15%) |\\\\n| **RBC morphology** | Microcytic, hypochromic RBCs, pencil cells |\\\\n\\\\n**Next step - Identify source:** Iron deficiency is symptom of underlying disease\\\\n- **Menstruating women:** Heavy periods → measure menstrual blood loss\\\\n- **Post-menopausal/men:** GI source assumed until proven otherwise\\\\n- Stool occult blood, upper/lower endoscopy as indicated\\\\n\\\\n## Megaloblastic Anemia - Clinical Features\\\\n**B12 deficiency:**\\\\n- Constitutional: Fatigue, weakness (from anemia)\\\\n- GI: Glossitis, diarrhea, anorexia\\\\n- Neurological: Paresthesias (earliest), sensory loss in stocking-glove distribution, proprioception loss, ataxia, weakness, memory loss, depression, personality change\\\\n- Hematological: Macrocytic anemia, pancytopenia possible (bone marrow involvement)\\\\n\\\\n**Folate deficiency:**\\\\n- Constitutional: Similar to B12\\\\n- GI: Glossitis (less common)\\\\n- Neurological: ABSENT (key difference from B12)\\\\n- Hematological: Macrocytic anemia, pancytopenia possible\\\\n\\\\n## Megaloblastic Anemia - Laboratory Diagnosis\\\\n| Test | B12 Deficiency | Folate Deficiency |\\\\n|------|----------------|-------------------|\\\\n| **Hgb/MCV** | Low/High (macrocytic) | Low/High (macrocytic) |\\\\n| **Serum B12** | Low (<100 pg/mL) | Normal |\\\\n| **Serum folate** | Normal/High | Low (<3 ng/mL) |\\\\n| **RBC folate** | Low | Low |\\\\n| **Methylmalonic acid** | Elevated | Normal |\\\\n| **Homocysteine** | Elevated | Elevated |\\\\n| **Intrinsic factor Ab** | Positive in pernicious anemia | Negative |\\\\n| **Parietal cell Ab** | Often positive | Negative |\\\\n\\\\n**Peripheral smear:**\\\\n- Hypersegmented neutrophils (6+ lobes, normal <5)\\\\n- Macro-ovalocytes (large, oval RBCs)\\\\n- Anisocytosis (size variation)\\\\n- Howell-Jolly bodies (nuclear remnants)\\\\n\\\\n**Bone marrow** (if diagnosis unclear):\\\\n- Megaloblastic erythropoiesis (giant immature RBCs)\\\\n- Nuclear-cytoplasmic asynchrony\\\\n- Giant metamyelocytes\\\\n- Hypercellular marrow,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"FERRITIN = Gold standard for iron stores\\\\\\\", explanation: \\\\\\\"Most specific for iron depletion (ferritin <30)\\\\\\\" },\\\\n          { text: \\\\\\\"Hypersegmented neutrophils = Megaloblastic indicator\\\\\\\", explanation: \\\\\\\"6+ lobes (normal <5 lobes) on blood smear\\\\\\\" },\\\\n          { text: \\\\\\\"B12 NEURO, Folate NO neuro\\\\\\\", explanation: \\\\\\\"Key distinguisher: subacute combined degeneration in B12 only\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Iron deficiency: Low ferritin is most specific test\\\\\\\",\\\\n          \\\\\\\"Megaloblastic anemia requires both clinical + lab findings\\\\\\\",\\\\n          \\\\\\\"Hypersegmented neutrophils on blood smear suggest megaloblastic anemia\\\\\\\",\\\\n          \\\\\\\"Combined deficiencies (B12 + folate) can occur\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"103-104: Anemias\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"27: Blood Disorders\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"anemia-exam\\\\\\\",\\\\n        title: \\\\\\\"Iron Deficiency & Megaloblastic Anemia - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"Iron replacement therapy, B12/folate supplementation, management approach, and monitoring for treatment response.\\\\\\\",\\\\n        contentMd: ``# Anemia Management - Exam Focus\\\\n\\\\n## Iron Deficiency Treatment\\\\n\\\\n**Oral iron replacement (first-line):**\\\\n- **Ferrous sulfate:** 325 mg (65 mg elemental iron) TID with meals (though absorption better on empty stomach)\\\\n- **Alternative:** Ferrous gluconate, ferrous fumarate\\\\n- **Duration:** 3-6 months (replenish stores after Hgb normalizes)\\\\n- **Monitoring:** Reticulocyte count increases in 3-5 days (earliest sign of response), Hgb increases 1-2 g/dL per week, ferritin normalizes last (takes months)\\\\n\\\\n**Side effects of oral iron:**\\\\n- GI upset (10-20%): Constipation, nausea, epigastric discomfort\\\\n- Management: Take with food (reduces absorption slightly but improves tolerance), slower titration, different iron formulation, or vitamin C with iron\\\\n\\\\n**IV iron (if oral intolerant, need rapid repletion, ongoing losses):**\\\\n- **Iron dextran:** 500-1000 mg IV over 10-30 min (anaphylaxis risk 0.5-1%)\\\\n- **Iron sucrose:** Safer profile, no test dose needed, 200 mg IV weekly\\\\n- **Ferric carboxymaltose:** Newer, more stable, rapid infusion\\\\n\\\\n**Address underlying cause:**\\\\n- Post-menopausal/men with iron deficiency: GI source until proven otherwise (endoscopy evaluation)\\\\n- Heavy menstrual bleeding: Consider oral contraceptives, IUD, iron supplementation\\\\n- Follow-up labs after 2-3 months to confirm resolution\\\\n\\\\n## B12 Deficiency Treatment\\\\n\\\\n**Pernicious anemia/malabsorption (requires parenteral):**\\\\n- **IM B12 (cyanocobalamin):** 1000 mcg IM weekly x 4 weeks, then monthly indefinitely\\\\n- **Subcutaneous:** Alternative, same dosing\\\\n- **Oral high-dose:** Cyanocobalamin 2000 mcg daily (some absorption despite IF loss, 1-2% passive diffusion)\\\\n- **Intranasal gel:** Alternative for maintenance (weekly dosing)\\\\n\\\\n**Dietary B12 deficiency (vegan diet):**\\\\n- Oral supplements 1000-2000 mcg daily, or\\\\n- IM monthly if malabsorption coexists\\\\n\\\\n**Monitoring response:**\\\\n- Neurological symptoms resolve in weeks-months (longer timeframe than hematological)\\\\n- Hgb increase 1-2 g/dL per week\\\\n- Paresthesias improve first, proprioception/ataxia take longer (may be irreversible if prolonged)\\\\n- Reticulocyte count increases in 3-5 days\\\\n\\\\n**Key: If neurological symptoms, restore B12 URGENTLY** (delayed treatment may cause permanent damage)\\\\n\\\\n## Folate Deficiency Treatment\\\\n\\\\n**Folic acid supplementation:**\\\\n- **Dose:** 1-5 mg daily PO (depends on cause, duration)\\\\n- **Duration:** 3-6 months (replenish stores)\\\\n- **Monitoring:** Reticulocyte count increases in 3-5 days, Hgb increases 1-2 g/dL/week\\\\n\\\\n**If alcohol-related:**\\\\n- Folate 5 mg daily + thiamine (prevent Wernicke encephalopathy)\\\\n- Address alcohol abuse\\\\n\\\\n**Pregnancy:**\\\\n- Folic acid 400-800 mcg daily (prevent neural tube defects)\\\\n- Start pre-conception or early pregnancy\\\\n\\\\n**Drug-induced (methotrexate, phenytoin):**\\\\n- Consider folinic acid (leucovorin) instead - bypasses dihydrofolate reductase block\\\\n\\\\n**CAUTION:** Never give folate alone if B12 deficiency possible\\\\n- Folate supplementation can precipitate subacute combined degeneration (neurological worsening) if B12 deficiency unmasked\\\\n- Always check B12 level before giving folate\\\\n\\\\n## Combined B12 + Folate Deficiency\\\\n- Give both supplementations\\\\n- Monitor neurological carefully (B12 restoration urgent to prevent permanent damage)\\\\n\\\\n## Indian Context\\\\n- **Iron deficiency anemia:** Most common cause (dietary, heavy menses, GI bleeding)\\\\n- **B12 deficiency:** Vegetarians at high risk (no animal products)\\\\n- **Folate deficiency:** Common in alcoholics, tropical sprue endemic regions\\\\n- **Megaloblastic anemia:** Check both B12 + folate in all cases,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"IRON: 325mg TID, Reticulocyte peak 3-5 days, Hgb ↑ 1-2 g/dL per week\\\\\\\", explanation: \\\\\\\"Oral iron dosing and response timeline\\\\\\\" },\\\\n          { text: \\\\\\\"B12 IM: 1000 mcg weekly x4, then monthly FOREVER\\\\\\\", explanation: \\\\\\\"Pernicious anemia requires lifelong replacement\\\\\\\" },\\\\n          { text: \\\\\\\"Folate ALONE if B12 LOW = Neurological WORSENING\\\\\\\", explanation: \\\\\\\"Screen B12 before giving folate supplement\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Iron replacement takes 3-6 months (store repletion is slow)\\\\\\\",\\\\n          \\\\\\\"Neurological B12 symptoms may not fully reverse if treatment delayed\\\\\\\",\\\\n          \\\\\\\"IM B12 required for malabsorption (oral only for dietary deficiency)\\\\\\\",\\\\n          \\\\\\\"Monitor ferritin, B12 levels post-treatment to confirm response\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"103-104: Anemias\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Indian Council of Medical Research Guidelines\\\\\\\", chapter: \\\\\\\"Anemia Management\\\\\\\", edition: \\\\\\\"2023\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"anemia-recall\\\\\\\",\\\\n        title: \\\\\\\"Iron Deficiency & Megaloblastic Anemia - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"7 recall questions on anemia classification, diagnostic approach, and treatment decisions.\\\\\\\",\\\\n        contentMd: ``# Anemia Active Recall\\\\n\\\\n**Q1: A 35-year-old woman with microcytic anemia (Hgb 9.5, MCV 72), low ferritin (10 ng/mL), and elevated TIBC. What is the likely diagnosis and next step?**\\\\n> **Answer:** Iron deficiency anemia. Source of bleeding must be identified. Since she is menstruating: Ask about menstrual history (normal cycles 20-40 mL/month; >80 mL = menorrhagia). If heavy periods confirmed, manage with iron supplementation + consider oral contraceptives/tranexamic acid. If normal periods, investigate GI source (occult blood stool, upper/lower endoscopy). Remember: Post-menopausal women + men with iron deficiency have GI bleeding until proven otherwise.\\\\n\\\\n**Q2: A 55-year-old vegetarian presents with macrocytic anemia (Hgb 9, MCV 108), elevated methylmalonic acid, and low serum B12 (70 pg/mL). What is the diagnosis and management?**\\\\n> **Answer:** B12 DEFICIENCY from vegan diet. Neurological exam critical (check proprioception, vibration, ataxia). If no neurological findings: Oral cyanocobalamin 2000 mcg daily may be tried (passive diffusion 1-2%). If neurological symptoms present: IM cyanocobalamin 1000 mcg weekly x4, then monthly indefinitely (parenteral preferred to restore urgent neurological recovery). Educate on dietary sources (animal products) or continued supplementation.\\\\n\\\\n**Q3: A patient with low serum B12 and low serum folate presents with paresthesias and ataxia. Would you give folate monotherapy?**\\\\n> **Answer:** NO. Combined deficiency present. Must give B12 FIRST or simultaneously, never folate alone. Folate supplementation alone could precipitate subacute combined degeneration if B12 deficiency unmasked. Start IM B12 urgently + folic acid 5 mg daily. Monitor neurological recovery carefully.\\\\n\\\\n**Q4: A 45-year-old on methotrexate (for RA) develops macrocytic anemia with normal B12 and low serum folate. Explain the mechanism.**\\\\n> **Answer:** Methotrexate inhibits dihydrofolate reductase → blocks conversion of dihydrofolate to tetrahydrofolate → impaired DNA synthesis → megaloblastic anemia (folate deficiency pattern). Management: Give FOLINIC ACID (leucovorin) 1-5 mg daily, NOT folic acid (folinic acid bypasses the blocked enzyme). Continue methotrexate while supplementing folinic acid.\\\\n\\\\n**Q5: A 40-year-old alcoholic with fatigue and peripheral neuropathy has Hgb 8.5, MCV 105 (macrocytic), folate low, B12 normal. What is the diagnosis?**\\\\n> **Answer:** Folate deficiency from poor nutrition + alcohol impairs absorption. Notably: No B12 deficiency (must rule out concurrent), and NO neurological findings expected from folate deficiency alone. Peripheral neuropathy from alcohol itself or thiamine deficiency, not from B12. Manage: Folic acid 5 mg daily + thiamine 100 mg (prevent Wernicke syndrome). Counsel on alcohol reduction.\\\\n\\\\n**Q6: A post-gastrectomy patient 2 years post-surgery develops neurological symptoms (paresthesias, ataxia) with low B12 but no GI symptoms. Explain the delayed presentation.**\\\\n> **Answer:** Gastrectomy removes parietal cells → no intrinsic factor → B12 malabsorption. However, liver stores 2-5 years of B12. After 2 years, stores depleted → B12 deficiency develops. Late presentation is typical because of large hepatic pool. Once B12 deficiency develops, neurological manifestations can progress rapidly if not treated. Requires lifelong IM B12 replacement (1000 mcg monthly indefinitely). Patient missed opportunity for earlier screening/prevention.\\\\n\\\\n**Q7: A patient completes 3 months of iron supplementation. Hgb now 12.5 g/dL (normal), but ferritin still 15 ng/mL (low). Should iron be continued?**\\\\n> **Answer:** YES. Hemoglobin normalizes first (after 2-4 weeks), but iron stores (ferritin) take 3-6 months or longer to replenish. Continue iron supplementation for total 3-6 months to restore stores and reduce relapse risk. Recheck ferritin after 6 months to confirm repletion (target ferritin 30-50 ng/mL). Inadequate store repletion increases risk of recurrent iron deficiency.,\\\\n        mnemonics: [],\\\\n        keyPoints: [\\\\n          \\\\\\\"7 questions covering microcytic vs macrocytic classification\\\\\\\",\\\\n          \\\\\\\"B12 neurological symptoms = emergency treatment required\\\\\\\",\\\\n          \\\\\\\"Folate NEVER alone if concurrent B12 deficiency\\\\\\\",\\\\n          \\\\\\\"Iron stores take 3-6 months to replete (continue replacement beyond Hgb normalization)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"103-104: Anemias\\\\\\\", edition: \\\\\\\"21st\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  },\\\\n  // IM-MOD-07: Neurology - Stroke\\\\n  {\\\\n    topicCode: \\\\\\\"IM-MOD-07-TOP-01\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"stroke-foundation\\\\\\\",\\\\n        title: \\\\\\\"Stroke - Foundation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Definition of stroke, types (ischemic vs hemorrhagic), vascular territories (MCA/ACA/PCA), and epidemiology.\\\\\\\",\\\\n        contentMd: ``# Stroke - Foundation\\\\n\\\\n## Definition of Stroke\\\\nStroke: Sudden neurological deficit from cerebral vascular disease lasting >24 hours or leading to death.\\\\n\\\\n**TIA (Transient Ischemic Attack):** Neurological deficit resolving within 24 hours (usually <1 hour).\\\\n\\\\n## Classification of Stroke\\\\n\\\\n**By pathophysiology:**\\\\n1. **Ischemic stroke** (85% of strokes): Arterial occlusion → cerebral infarction\\\\n   - Thrombotic (atherosclerotic plaque occludes vessel locally)\\\\n   - Embolic (clot from heart or proximal artery)\\\\n   - Hemodynamic (hypoperfusion from severe stenosis)\\\\n   - Lacunar (small penetrating arteries)\\\\n\\\\n2. **Hemorrhagic stroke** (15% of strokes): Parenchymal bleeding\\\\n   - Intracerebral hemorrhage (ICH) - hypertension, amyloid, coagulopathy\\\\n   - Subarachnoid hemorrhage (SAH) - aneurysm rupture\\\\n   - Subdural/epidural - trauma (not primary stroke but stroke-like)\\\\n\\\\n## Cerebral Arterial Territories\\\\n\\\\n**Three main arteries supply brain:**\\\\n\\\\n1. **Middle Cerebral Artery (MCA):** Largest, supplies lateral hemisphere\\\\n   - Territory: Frontal, parietal, temporal lobes\\\\n   - Motor cortex, Broca's area (speech), sensory cortex\\\\n   - Contralateral hemiparesis, hemisensory loss, aphasia (dominant), neglect (non-dominant), homonymous hemianopia\\\\n\\\\n2. **Anterior Cerebral Artery (ACA):** Supplies medial hemisphere\\\\n   - Territory: Medial frontal, anterior temporal\\\\n   - Medial motor cortex (legs)\\\\n   - Contralateral leg weakness > arm, personality changes, urinary incontinence\\\\n\\\\n3. **Posterior Cerebral Artery (PCA):** Supplies posterior hemisphere\\\\n   - Territory: Occipital, medial temporal lobes\\\\n   - Visual cortex, memory\\\\n   - Contralateral homonymous hemianopia (with preserved pupil), memory loss, visual disturbance\\\\n\\\\n**Vertebrobasilar system (posterior circulation):**\\\\n- Vertebral arteries → basilar artery\\\\n- Supplies brainstem (pons, midbrain), cerebelum\\\\n- Presents with crossed syndromes (ipsilateral CN deficit + contralateral motor/sensory)\\\\n\\\\n## Risk Factors for Stroke\\\\n\\\\n**Non-modifiable:**\\\\n- Age (exponential increase after 55)\\\\n- Sex (males higher, females at higher risk after menopause)\\\\n- Race/ethnicity (African American, Hispanic higher risk in US; genetics varies globally)\\\\n- Family history\\\\n\\\\n**Modifiable (Major):**\\\\n- **Hypertension** (most significant modifiable risk)\\\\n- **Atrial fibrillation** (5x increased risk, embolic stroke)\\\\n- **Smoking** (dose-dependent)\\\\n- **Diabetes mellitus**\\\\n- **Dyslipidemia**\\\\n- **Obesity & physical inactivity**\\\\n- **Coronary artery disease**\\\\n\\\\n**Other modifiable:**\\\\n- **Coagulopathy** (hypercoagulable states, malignancy)\\\\n- **Oral contraceptives** (especially smoking + OCP)\\\\n- **Alcohol abuse** (heavy drinking = stroke risk)\\\\n- **Drug abuse** (cocaine, amphetamines)\\\\n\\\\n## Epidemiology\\\\n- Third leading cause of death worldwide\\\\n- Leading cause of long-term disability\\\\n- India: Rising incidence (urbanization, aging population, HTN prevalence)\\\\n- Recurrence: 10-15% within 90 days if untreated\\\\n- Mortality: 10-15% at 30 days for ischemic, 35-50% for ICH,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"MCA territory = Face, Arm, Speech (FACE-ARMS-SPEECH mnemonic for FAST)\\\\\\\", explanation: \\\\\\\"Largest territory = most common stroke\\\\\\\" },\\\\n          { text: \\\\\\\"ACA = medial (legs), PCA = posterior (vision)\\\\\\\", explanation: \\\\\\\"Territory determines deficits\\\\\\\" },\\\\n          { text: \\\\\\\"STROKE RISK FACTORS: A-F-I-B-D (AFIB classic mnemonic)\\\\\\\", explanation: \\\\\\\"Atrial Fibrillation, previous stroke, Inactivity, Biomarkers, Diabetes\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Ischemic stroke 85%, hemorrhagic 15% (management different)\\\\\\\",\\\\n          \\\\\\\"MCA territory most common (40-50% of ischemic strokes)\\\\\\\",\\\\n          \\\\\\\"Hypertension greatest modifiable risk factor\\\\\\\",\\\\n          \\\\\\\"Atrial fibrillation increases embolic stroke risk 5-fold\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"423: Cerebrovascular Diseases\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"26: Neurology\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"stroke-mechanism\\\\\\\",\\\\n        title: \\\\\\\"Stroke - Mechanism\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Ischemic cascade, cerebral autoregulation, penumbra concept, reperfusion injury, and hemorrhagic stroke pathophysiology.\\\\\\\",\\\\n        contentMd: ``# Stroke Pathophysiology\\\\n\\\\n## Ischemic Stroke - The Ischemic Cascade\\\\n\\\\n**Timeline of ischemic injury:**\\\\n1. **0-minutes:** Arterial occlusion → cerebral blood flow drop\\\\n2. **0-2 min:** Cessation of aerobic metabolism, ATP depletion begins\\\\n3. **2-5 min:** Failure of Na+/K+-ATPase pump → cellular edema, ion imbalance\\\\n4. **5-10 min:** Excitotoxicity: Glutamate release → NMDA/AMPA receptor activation → Ca2+ influx → cell death cascades\\\\n5. **Minutes-hours:** Apoptosis triggered (caspase activation, mitochondrial damage)\\\\n6. **Hours:** Inflammation: Leukocyte infiltration, microglial activation, cytokine release\\\\n7. **Days:** Necrosis and liquefactive dissolution of dead tissue\\\\n\\\\n**Critical concept - PENUMBRA:**\\\\n- **Infarct core:** Irreversibly damaged tissue (no salvage possible)\\\\n- **Ischemic penumbra:** Tissue at risk of infarction, still viable (salvageable if perfusion restored within \\\\\\\"therapeutic window\\\\\\\")\\\\n- Window for intervention: 3-4.5 hours (IV thrombolysis), 6-24 hours (mechanical thrombectomy in selected cases)\\\\n\\\\n## Cerebral Autoregulation\\\\n- Brain maintains constant blood flow (50 mL/100g/min) across BP range 50-150 mmHg\\\\n- Mechanisms: Metabolic (CO2, H+, adenosine) + myogenic (vessel wall responsiveness) + neural factors\\\\n- Impaired autoregulation in:\\\\n  - **Acute ischemia:** Loss of responsiveness to metabolites\\\\n  - **Hypertensive patients:** Upper pressure limit shifted upward (chronic adaptation)\\\\n  - **Chronic hypotension:** Lower limit increased\\\\n\\\\n**Clinical implication:** Don't lower BP acutely in ischemic stroke (lose autoregulation benefit, penumbra may infarct)\\\\n\\\\n## Reperfusion Injury\\\\n- Paradoxical worsening after blood flow restoration\\\\n- **Mechanism:** ROS generation, inflammatory cell influx, BBB breakdown, cerebral edema, hemorrhagic transformation\\\\n- **Significance:** Limits benefit of thrombolysis beyond 3-4.5 hour window\\\\n- **Management:** Oxygen control, temperature control, glucose management\\\\n\\\\n## Hemorrhagic Stroke - Intracerebral Hemorrhage\\\\n\\\\n**Pathophysiology:**\\\\n1. Arterial rupture → acute bleeding into brain parenchyma\\\\n2. Mass effect (hematoma volume) → increased ICP → midline shift\\\\n3. Edema surrounding hematoma (peaks at 2-3 days)\\\\n4. Secondary injury: Hemoglobin toxicity, iron-induced oxidative stress, inflammation\\\\n\\\\n**Causes (by location):**\\\\n- **Lobar (superficial):** Amyloid angiopathy (elderly), bleeding tendency, anticoagulation\\\\n- **Basal ganglia/thalamus:** Hypertension (90% of hypertensive ICH)\\\\n- **Brainstem/cerebellum:** Hypertension, vascular malformations\\\\n\\\\n**Prognosis:** Mortality 30-50% at 30 days; 50% at 1 month if ICH volume >30 mL\\\\n\\\\n## Subarachnoid Hemorrhage\\\\n\\\\n**Pathophysiology:**\\\\n1. Aneurysm rupture → acute bleeding into subarachnoid space (between arachnoid + pia)\\\\n2. Sudden severe headache (\\\\\\\"thunderclap\\\\\\\")\\\\n3. Blood irritates meninges → aseptic meningitis\\\\n4. Vasospasm (3-14 days post-rupture) → secondary ischemic stroke\\\\n\\\\n**Complications:**\\\\n- Rebleeding (before securing aneurysm)\\\\n- Vasospasm ischemia (delayed, preventable with nimodipine)\\\\n- Hydrocephalus (blood in ventricles)\\\\n- Seizures (cortical involvement)\\\\n\\\\n## Stroke Subtypes - TOAST Classification\\\\n1. **Large artery atherosclerosis:** Thrombotic, TIA/stroke in same distribution\\\\n2. **Cardioembolic:** Atrial fibrillation, prosthetic valve, endocarditis, LV thrombus\\\\n3. **Small vessel (lacunar):** Penetrating artery disease, hypertension-related\\\\n4. **Stroke of other determined etiology:** Arterial dissection, vasculitis, hypercoagulable\\\\n5. **Undetermined/cryptogenic:** No identifiable cause (20-30% of cases),\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"ISCHEMIC CASCADE: ATP → Edema → Glutamate → Apoptosis → Inflammation\\\\\\\", explanation: \\\\\\\"Progressive neuronal death if not reperfused\\\\\\\" },\\\\n          { text: \\\\\\\"PENUMBRA = Tissue AT RISK (salvageable if time)\\\\\\\", explanation: \\\\\\\"Core is lost, penumbra is target of thrombolysis\\\\\\\" },\\\\n          { text: \\\\\\\"HTN ICH in BASAL GANGLIA, Amyloid ICH in LOBAR\\\\\\\", explanation: \\\\\\\"Location varies by etiology\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Thrombolysis window: 3-4.5 hours IV, up to 24 hours mechanical thrombectomy\\\\\\\",\\\\n          \\\\\\\"Penumbra concept: 'time is brain' - early reperfusion saves tissue\\\\\\\",\\\\n          \\\\\\\"Reperfusion injury limits benefit beyond 3-4.5 hour window\\\\\\\",\\\\n          \\\\\\\"Hemorrhagic stroke pathophysiology entirely different (no thrombolysis; medical management)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"423: Cerebrovascular Diseases\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Robbins Basic Pathology\\\\\\\", chapter: \\\\\\\"28: The Nervous System\\\\\\\", edition: \\\\\\\"10th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"stroke-clinical\\\\\\\",\\\\n        title: \\\\\\\"Stroke - Clinical\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Clinical presentation by territory, NIHSS scoring, imaging (CT/MRI), and acute diagnostic approach.\\\\\\\",\\\\n        contentMd: ``# Stroke: Clinical & Diagnosis\\\\n\\\\n## FAST Screening for Acute Stroke\\\\n**Recognition at field/bedside:**\\\\n- **F**ace: Ask smile → facial droop (CN VII - look for asymmetry)\\\\n- **A**rms: Raise both arms → drift/weakness (motor deficit)\\\\n- **S**peech: Repeat phrase → slurred speech or aphasia\\\\n- **T**ime: Note time symptom onset (critical for intervention window)\\\\n\\\\n**If ANY positive → EMERGENCY call, transport to stroke center immediately**\\\\n\\\\n## Clinical Presentation by Territory\\\\n\\\\n**MCA territory (most common):**\\\\n- Contralateral hemiparesis (arm > leg), hemisensory loss\\\\n- Aphasia (Broca's - non-fluent, if dominant side) or dysarthria\\\\n- Neglect, visual field defect (homonymous hemianopia)\\\\n- Gaze deviation (toward lesion)\\\\n\\\\n**ACA territory:**\\\\n- Contralateral leg weakness > arm (medial motor cortex)\\\\n- Personality change, abulia (lack of motivation)\\\\n- Incontinence (medial prefrontal)\\\\n\\\\n**PCA territory:**\\\\n- Contralateral homonymous hemianopia (preserved pupillary response - key distinction from CN III palsy)\\\\n- Alexia without agraphia (can write but not read - angular gyrus)\\\\n- Memory disturbance, visual agnosia\\\\n\\\\n**Vertebrobasilar territory:**\\\\n- Crossed syndrome: Ipsilateral CN deficit (nucleus/nerve) + contralateral motor/sensory (crossed at brainstem level)\\\\n- Ataxia, nystagmus, vertigo (cerebellar signs)\\\\n- Bilateral findings possible (basilar occlusion = devastation)\\\\n\\\\n## NIHSS (National Institutes of Health Stroke Scale)\\\\n**15-item scale (0-42 points), predicts outcomes:**\\\\n- Score 0-4: Minor (1-2% mortality)\\\\n- Score 5-15: Moderate\\\\n- Score 16-20: Moderate-severe\\\\n- Score >20: Severe (>30% mortality)\\\\n\\\\n**Rapid assessment covers:** Consciousness, gaze, vision, facial/arm/leg motor, sensory, language, dysarthria, neglect\\\\n\\\\n## Diagnostic Imaging\\\\n\\\\n**Non-contrast CT (first):**\\\\n- **Ischemic stroke:** Hypodensity (appearing normal first 6-12 hours if small)\\\\n- **Hemorrhagic stroke:** Hyperdensity (acute bleeding)\\\\n- **Excludes** hemorrhage before thrombolysis\\\\n- **Limitation:** Not sensitive for early ischemic changes\\\\n\\\\n**CT angiography (CTA):**\\\\n- Evaluates arterial patency\\\\n- Identifies large vessel occlusion (candidate for thrombectomy)\\\\n- Aneurysm detection in SAH\\\\n\\\\n**MRI - More sensitive:**\\\\n- **DWI/ADC:** Acute ischemic changes visible within minutes (infarct core)\\\\n- **Perfusion-weighted imaging:** Identifies penumbra (perfusion deficit without infarction)\\\\n- **MRA:** Vessel patency assessment\\\\n- **Limitation:** Slower than CT, not practical in acute setting universally\\\\n\\\\n**Ultrasound (Carotid doppler):**\\\\n- Assesses carotid artery stenosis (>70% requires intervention)\\\\n- Useful for chronic secondary prevention\\\\n\\\\n## Laboratory Tests - Acute Stroke Workup\\\\n- **CBC:** Baseline, detect polycythemia/thrombocytopenia\\\\n- **Coagulation screen (PT/INR, PTT):** If anticoagulation planned\\\\n- **Glucose:** Hyperglycemia worsens outcomes; target 140-180 mg/dL\\\\n- **Electrolytes, creatinine:** Renal function (contrast clearance)\\\\n- **Cardiac enzymes:** Rule out concurrent MI (ACS possible with stroke)\\\\n- **ECG:** Screen for atrial fibrillation, MI, ischemia\\\\n- **Troponin:** Elevated in stress cardiomyopathy post-stroke,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"FAST = Face, Arms, Speech, Time (recognition mnemonic)\\\\\\\", explanation: \\\\\\\"Rapid bedside stroke screening\\\\\\\" },\\\\n          { text: \\\\\\\"NIHSS >20 = Severe (mortality >30%)\\\\\\\", explanation: \\\\\\\"Prognostic significance\\\\\\\" },\\\\n          { text: \\\\\\\"DWI MRI = GOLD for early ischemic stroke detection\\\\\\\", explanation: \\\\\\\"Visible within minutes, vs CT normal early\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"FAST screening critical for recognition and timing\\\\\\\",\\\\n          \\\\\\\"NIHSS predicts mortality and disability\\\\\\\",\\\\n          \\\\\\\"CT excludes hemorrhage before thrombolysis\\\\\\\",\\\\n          \\\\\\\"MRI DWI most sensitive for acute ischemia (not available everywhere)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"423: Cerebrovascular Diseases\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"26: Neurology\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"stroke-exam\\\\\\\",\\\\n        title: \\\\\\\"Stroke - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"Acute ischemic stroke thrombolysis, mechanical thrombectomy, hemorrhagic stroke management, and secondary prevention.\\\\\\\",\\\\n        contentMd: ``# Stroke Management - Exam Focus\\\\n\\\\n## Acute Ischemic Stroke - Time-Critical Management\\\\n\\\\n**Within 3-4.5 hours (IV thrombolysis window):**\\\\n1. **Confirm ischemic (exclude hemorrhage on CT)**\\\\n2. **Thrombolysis: IV alteplase (tPA)**\\\\n   - Dose: 0.9 mg/kg (max 90 mg), 10% bolus, rest over 60 min\\\\n   - Criteria: Symptom onset <3 hrs (or <4.5 hrs in selected patients >80 years, on anticoagulant, prior stroke)\\\\n   - Contraindications: ICH on imaging, active bleeding, recent surgery, INR >1.7, PTT >40, Plt <100K, glucose <50 or >400, seizure at onset\\\\n\\\\n3. **Supportive care:**\\\\n   - Airway protection (if GCS <8)\\\\n   - Oxygen if hypoxic\\\\n   - **DO NOT** aggressively lower BP (autoregulation lost, penumbra may worsen)\\\\n   - Target SBP 180-220 mmHg (if on thrombolysis) or 220/120 if not thrombolized\\\\n   - Glucose control (target 140-180)\\\\n   - DVT/PE prophylaxis (compression, early mobilization)\\\\n\\\\n**6-24 hours (Mechanical thrombectomy window):**\\\\n- **Thrombectomy indications:** Large vessel occlusion (MCA, ICA, basilar) with salvageable brain (penumbra on imaging)\\\\n- **Technique:** Stent retriever-based or aspiration\\\\n- **Success:** 80-90% recanalization, better outcomes if early\\\\n- **Superior to IV thrombolysis alone** for large vessel occlusion\\\\n\\\\n## Acute Hemorrhagic Stroke Management\\\\n\\\\n**Intracerebral Hemorrhage (ICH):**\\\\n1. **Reverse anticoagulation urgently:**\\\\n   - **Warfarin:** Vitamin K 10 mg IV + Fresh frozen plasma (FFP) or Prothrombin complex concentrate (PCC)\\\\n   - **Dabigatran:** Idarucizumab IV\\\\n   - **Apixaban/Rivaroxaban:** No specific reversal, use supportive care\\\\n\\\\n2. **Blood pressure management:**\\\\n   - Target SBP <140 mmHg (to limit hematoma expansion)\\\\n   - IV antihypertensives: Labetalol, nicardipine, esmolol\\\\n\\\\n3. **Supportive care:**\\\\n   - Avoid hyperthermia (elevates ICP)\\\\n   - Glucose control\\\\n   - Prevent seizures (prophylactic levetiracetam if lobar location)\\\\n   - Ventricular drainage if hydrocephalus from IVH\\\\n\\\\n4. **Surgical intervention:** Consider if:\\\\n   - Hematoma >30 mL in accessible location + GCS 5-12\\\\n   - Posterior fossa hematoma with mass effect (surgical emergency)\\\\n\\\\n**Subarachnoid hemorrhage (SAH):**\\\\n1. **Secure aneurysm:** Endovascular coiling (preferred) or open clipping\\\\n2. **Prevent vasospasm:** Nimodipine 60 mg Q4H oral (only proven preventive)\\\\n3. **Manage rebleeding risk:** Strict BP control pre-securing aneurysm\\\\n4. **Treat hydrocephalus:** Ventriculostomy if needed\\\\n5. **Anticipate/treat complications:** Seizures, rebleeding, ischemia from vasospasm\\\\n\\\\n## Secondary Prevention (Post-Stroke)\\\\n\\\\n**Antiplatelet therapy:**\\\\n- **Ischemic stroke:** Aspirin 75-325 mg daily indefinitely\\\\n- **Addition:** Clopidogrel 75 mg (if aspirin intolerant) or aspirin + ER dipyridamole (slightly superior to aspirin alone)\\\\n\\\\n**Anticoagulation (cardioembolic sources):**\\\\n- **Atrial fibrillation:** Warfarin (INR 2-3) or DOACs (apixaban, dabigatran, edoxaban, rivaroxaban)\\\\n- **LV thrombus:** Warfarin 3 months\\\\n- **Prosthetic valve:** Warfarin (INR higher per valve type)\\\\n\\\\n**Statins:** High-intensity statin regardless of cholesterol (atorvastatin 80 mg or rosuvastatin 40 mg)\\\\n\\\\n**Blood pressure control:** Target <140/90 (aggressive control - reduces recurrence 15%)\\\\n\\\\n**Risk factor modification:**\\\\n- Smoking cessation\\\\n- Diabetes control\\\\n- Weight loss\\\\n- Aerobic exercise\\\\n- Alcohol moderation\\\\n\\\\n**Carotid endarterectomy:** If ipsilateral carotid stenosis >70% and symptomatic (within 6 months of stroke)\\\\n\\\\n## Indian Context\\\\n- Early presentation often late (delayed hospital arrival)\\\\n- Thrombolysis less available (cost, facilities)\\\\n- Mechanical thrombectomy emerging in major centers\\\\n- Secondary prevention barriers (medications cost, adherence)\\\\n- Hypertension control critical (major modifiable risk),\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"IV tPA WINDOW: 3-4.5 hours from symptom onset\\\\\\\", explanation: \\\\\\\"Time is critical for thrombolysis decision\\\\\\\" },\\\\n          { text: \\\\\\\"Hemorrhagic BP TARGET: <140 mmHg (limit expansion)\\\\\\\", explanation: \\\\\\\"Unlike ischemic where higher tolerated\\\\\\\" },\\\\n          { text: \\\\\\\"SECONDARY PREVENTION: Aspirin/Statin/BP control\\\\\\\", explanation: \\\\\\\"Reduce recurrence risk\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"IV thrombolysis: 3-4.5 hour window, mechanical thrombectomy up to 24 hours\\\\\\\",\\\\n          \\\\\\\"Hemorrhagic ICH: Reverse anticoagulation + aggressive BP control\\\\\\\",\\\\n          \\\\\\\"SAH: Aneurysm securing urgent, nimodipine for vasospasm prevention\\\\\\\",\\\\n          \\\\\\\"Secondary prevention: Antiplatelet/anticoagulation + aggressive risk factor control\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"423: Cerebrovascular Diseases\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"AHA/ASA Stroke Guidelines\\\\\\\", chapter: \\\\\\\"Management\\\\\\\", edition: \\\\\\\"2023\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"stroke-recall\\\\\\\",\\\\n        title: \\\\\\\"Stroke - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"7 recall questions on clinical presentation by territory, thrombolysis eligibility, and management decisions.\\\\\\\",\\\\n        contentMd: ``# Stroke Active Recall\\\\n\\\\n**Q1: A patient presents 2 hours after symptom onset with right facial droop, left arm weakness, and aphasia. What is the likely vessel occlusion and why?**\\\\n> **Answer:** LEFT MIDDLE CEREBRAL ARTERY (MCA). MCA territory = contralateral hemiparesis (left weakness = right MCA lesion? NO - right facial droop + left weakness = LEFT side lesion). Broca's aphasia (non-fluent speech) suggests dominant hemisphere lesion (left in 95% of right-handers). MCA supplies motor cortex, Broca's area → hemiparesis + speech deficit classic MCA. Most common stroke territory (40-50% of ischemic strokes).\\\\n\\\\n**Q2: A 78-year-old on warfarin (INR 2.1) presents with acute left MCA stroke at 2.5 hours. Can IV thrombolysis be given?**\\\\n> **Answer:** RELATIVELY CONTRAINDICATED but potentially eligible. INR 2.1 is borderline (cutoff usually >1.7 for contraindication). Assess: 1) If INR <1.7, IV tPA eligible. 2) If INR >1.7, standard IV tPA contraindicated BUT mechanical thrombectomy remains option (safer for anticoagulated patients). 3) Consider idarucizumab if dabigatran (reverses faster than warfarin vitamin K). Decision requires risk-benefit analysis with patient. Most centers would attempt intervention regardless given 2.5h window.\\\\n\\\\n**Q3: A 45-year-old with atrial fibrillation and acute stroke presents at 6 hours. Can IV thrombolysis be given?**\\\\n> **Answer:** NO, outside IV tPA window (3-4.5 hours). HOWEVER, if large vessel occlusion confirmed on CTA: Mechanical THROMBECTOMY eligible (window extends to 24 hours for selected patients). Penumbra imaging (MRI perfusion) helps select candidates at 6+ hours. Get CTA/CTP urgently to assess candidacy for thrombectomy. Post-intervention, start anticoagulation (dual therapy not routine immediately post-thrombectomy due to bleeding risk, but likely indicated for AF).\\\\n\\\\n**Q4: A patient with acute intracerebral hemorrhage (ICH) on warfarin has INR 3.5. What is the reversal strategy?**\\\\n> **Answer:** 1) Vitamin K 10 mg IV (slow acting, takes 12-24 hours). 2) Fresh frozen plasma (FFP) 15 mL/kg OR Prothrombin complex concentrate (PCC) 25 units/kg (PCC preferred - faster, less volume, less hypocalcemia). 3) PCC superior (warfarin reversal within 30-60 min vs FFP 4-6 hours). 4) Repeat INR in 4-6 hours, goal <1.5. Additional vitamin K doses may be needed if INR rebound occurs. Reversal urgent to limit hematoma expansion.\\\\n\\\\n**Q5: Explain the concept of the ischemic penumbra and why it matters for stroke treatment.**\\\\n> **Answer:** CORE = irreversibly damaged tissue (necrotic). PENUMBRA = tissue at risk but still viable, surrounded by core. Penumbra receives collateral flow maintaining some viability (prolonged but compromised perfusion). Thrombolysis goal: Restore flow to penumbra before it infarcts. Penumbra viability window explains therapeutic window: 3-4.5h for IV thrombolysis (penumbra still viable), extended to 24h with mechanical thrombectomy if imaging confirms penumbra (MRI perfusion shows perfusion deficit but not DWI signal). Without penumbra (core only), intervention futile.\\\\n\\\\n**Q6: A patient post-ischemic stroke is hypertensive (SBP 180). Should antihypertensives be given acutely?**\\\\n> **Answer:** CAUTION. In acute ischemic stroke, aggressive BP lowering HARMFUL. Rationale: 1) Autoregulation lost in acute ischemia. 2) Lowering BP reduces perfusion pressure in penumbra → worsens ischemia. 3) Tolerating SBP 180-220 is acceptable and safe in acute phase. Only treat if SBP >220 or symptoms of hypertensive emergency (pulmonary edema, encephalopathy). If given thrombolysis, target SBP <180 (slight BP reduction safe). After acute phase (24-48h), gradually lower BP to <140/90 for secondary prevention (reduces recurrence). EXCEPTION: Hemorrhagic stroke = aggressive BP lowering target <140 (limit hematoma expansion).\\\\n\\\\n**Q7: A patient with acute ischemic stroke is on dual antiplatelet therapy (aspirin + clopidogrel). Is IV thrombolysis contraindicated?**\\\\n> **Answer:** NOT contraindicated. Chronic antiplatelet use does NOT contraindicate IV thrombolysis. tPA works via fibrinolysis mechanism (different from antiplatelet action). Continue aspirin post-thrombolysis. Dual antiplatelet (aspirin+clopidogrel) continued if cardiac source or recent stent. Anticoagulation considerations differ (if AF, may start warfarin/DOAC post-intervention, but timing varies per protocol - often delayed 24h post-thrombolysis due to hemorrhagic transformation risk).,\\\\n        mnemonics: [],\\\\n        keyPoints: [\\\\n          \\\\\\\"7 questions covering vessel territories, thrombolysis eligibility, reversal strategies\\\\\\\",\\\\n          \\\\\\\"IV tPA: 3-4.5h window; mechanical thrombectomy: 6-24h with imaging confirmation\\\\\\\",\\\\n          \\\\\\\"Acute BP: Tolerate up to 220 mmHg in ischemic stroke (avoid autoregulation loss)\\\\\\\",\\\\n          \\\\\\\"Penumbra concept critical for understanding intervention windows\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"423: Cerebrovascular Diseases\\\\\\\", edition: \\\\\\\"21st\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\"\""
-}
-}
-}
-];
-];
+        summary: "Overview of anemia classification, iron metabolism, B12/folate synthesis, normal hematological values, and morphological classification of anemias.",
+        contentMd: `# Iron Deficiency & Megaloblastic Anemia - Foundation
+
+## Definition & Classification of Anemia
+
+### Diagnostic Criteria
+- **Hemoglobin**: <13.5 g/dL (adult males), <12.0 g/dL (adult non-pregnant females), <11.0 g/dL (pregnant women)
+- **Red Blood Cell Count**: <4.5 million/μL (males), <4.0 million/μL (females)
+- **Hematocrit**: <41% (males), <36% (females)
+
+### Morphological Classification
+Anemias are classified based on RBC indices, primarily Mean Corpuscular Volume (MCV):
+
+**Microcytic Anemias (MCV <80 fL):**
+- Iron deficiency anemia (most common cause worldwide)
+- Thalassemia (alpha and beta variants)
+- Lead poisoning
+- Anemia of chronic disease (early)
+- Sideroblastic anemia
+
+**Normocytic Anemias (MCV 80-100 fL):**
+- Hemolytic anemias (G6PD deficiency, hereditary spherocytosis, autoimmune)
+- Acute blood loss
+- Anemia of chronic disease (advanced)
+- Renal failure (EPO deficiency)
+- Bone marrow disorders (aplastic anemia, leukemia)
+
+**Macrocytic Anemias (MCV >100 fL):**
+- **Megaloblastic**: Vitamin B12 deficiency, folate deficiency
+- **Non-megaloblastic**: Alcohol use, hypothyroidism, liver disease, medications (azathioprine, methotrexate, zidovudine)
+
+## Iron Metabolism Overview
+
+### Daily Iron Balance
+- **Daily requirement**: 1 mg/day (non-menstruating males/postmenopausal females)
+- **Menstruating women**: 1.8 mg/day
+- **Pregnancy/lactation**: 3 mg/day
+- **Adolescents**: 2-3 mg/day
+
+### Dietary Iron Sources in India
+- **Heme iron** (better bioavailability): Red meat, chicken, fish
+- **Non-heme iron**: Green leafy vegetables, fortified foods, beans, millets
+- **Enhancers**: Vitamin C, meat, fish
+- **Inhibitors**: Phytates (cereals), calcium, polyphenols (tea, coffee)
+
+### Iron Absorption
+- **Site**: Duodenum and proximal jejunum
+- **Mechanism**:
+  - Ferrous iron (Fe2+) absorbed more efficiently than ferric (Fe3+)
+  - Heme iron transport: Heme carrier protein 1 (HCP1)
+  - Non-heme iron: DMT1 (divalent metal transporter 1)
+  - Absorption enhanced by vitamin C (reduces Fe3+ to Fe2+)
+  - Enhanced by gastric acidity
+
+- **Normal absorption**: 10-20% of dietary iron
+- **With iron deficiency**: Up to 30% absorption (compensatory increase)
+
+### Iron Transport & Storage
+- **Transferrin**: Transport protein, carries iron in plasma
+- **Transferrin saturation**: Normal 25-35%
+- **Ferritin**: Primary storage form (intracellular), also acute phase reactant
+- **Hemosiderin**: Secondary storage form (insoluble polymer)
+- **Total body iron**:
+  - 2 grams in hemoglobin
+  - 1 gram in stores (liver, spleen, bone marrow)
+  - 0.5 grams in myoglobin and enzymes
+
+### Regulation of Iron Absorption: Hepcidin
+- **Hepcidin**: Master regulator hormone (produced by liver)
+- **Increases with**: Iron overload, inflammation, infection
+- **Decreases with**: Iron deficiency, hypoxia, erythroid demand
+- **Mechanism**: Binds ferroportin → internalization → decreased iron export
+
+## Normal RBC Indices
+
+### Mean Corpuscular Volume (MCV)
+- **Normal range**: 80-100 fL
+- **Calculation**: (Hematocrit × 10) / RBC count
+- **MCV <80**: Microcytic (iron deficiency, thalassemia)
+- **MCV >100**: Macrocytic (B12/folate deficiency, alcohol)
+
+### Mean Corpuscular Hemoglobin (MCH)
+- **Normal range**: 27-33 pg
+- **Low MCH**: Indicates hypochromic anemia (iron deficiency)
+
+### Mean Corpuscular Hemoglobin Concentration (MCHC)
+- **Normal range**: 32-36 g/dL
+- **Always normochromic** (by definition, cannot be >36 g/dL)
+- **Hypochromic**: MCHC <32 indicates hemoglobin saturation problem
+
+### Red Cell Distribution Width (RDW)
+- **Normal range**: 11-14%
+- **Elevated RDW**: Suggests mixed cell populations (anisocytosis)
+- **High RDW with low MCV**: Early iron deficiency or mixed deficiency
+- **High RDW with high MCV**: B12/folate deficiency or mixed patterns
+
+## Clinical Context in India
+
+### Epidemiology
+- **Iron deficiency anemia**: Most common anemia in India (prevalence 50-60% in women, 30-40% in men)
+- **B12 deficiency**: Growing concern, estimated 25-30% in vegetarians
+- **Folate deficiency**: Common in pregnant women and those with poor nutrition
+- **Combined deficiencies**: Increasingly seen in rural India
+
+### Risk Groups in Indian Context
+- **Vegetarians**: At higher risk for B12 deficiency
+- **Pregnant/lactating women**: Increased iron and folate needs
+- **Adolescent girls**: High prevalence of iron deficiency
+- **Those with parasitic infections** (hookworm, roundworms): Common in endemic areas
+- **Gastrointestinal disorders**: Celiac disease, tropical sprue more common in India
+
+### Public Health Importance
+- National Nutrition Mission targets anemia reduction
+- Iron fortification programs in schools and public distribution
+- Supplementation programs for pregnant women (IFA tablets)`,
+        mnemonics: [
+          {
+            text: "Microcytic Anemias: I-TAILS",
+            explanation: "Iron deficiency, Thalassemia, Anemia of chronic disease, Iron-sideroblastic, Lead poisoning, Sideropenia"
+          },
+          {
+            text: "Hepcidin regulates iron: High iron increases hepcidin decreases absorption; Low iron decreases hepcidin increases absorption",
+            explanation: "Master control mechanism of iron homeostasis"
+          },
+          {
+            text: "Iron sources in India: Dark leafy vegetables, fortified foods, jaggery with sesame",
+            explanation: "Public health dietary counseling"
+          },
+          {
+            text: "RDW high = Mixed cell population = Mixed deficiencies",
+            explanation: "RDW is marker of anisocytosis, not specific diagnosis"
+          }
+        ],
+        keyPoints: [
+          "Anemia defined by Hb <13.5 g/dL (males) or <12 g/dL (females), classified by MCV into microcytic/normocytic/macrocytic",
+          "Iron metabolism: Daily need 1-1.8 mg; absorption 10-20% of dietary iron; total body iron 3.5 grams",
+          "Hepcidin is master regulator: increases with iron overload, decreases with iron deficiency or hypoxia",
+          "Transferrin saturation normal 25-35%; ferritin is storage form and acute phase reactant",
+          "RDW elevation suggests anisocytosis and mixed cell populations; RDW normal with low MCV suggests pure iron deficiency"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "96: Iron Metabolism and Anemias", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "3: Hematology", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "24: Blood Disorders", edition: "24th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "anemia-layer-2-mechanism",
+        title: "Iron Deficiency & Megaloblastic Anemia - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Detailed pathophysiology of iron deficiency stages, B12/folate metabolism, megaloblastosis, impaired DNA synthesis, and causes relevant to Indian population.",
+        contentMd: `# Iron Deficiency & Megaloblastic Anemia - Mechanism
+
+## Iron Deficiency Pathophysiology
+
+### Three Stages of Iron Depletion
+
+**Stage 1: Iron Depletion (Asymptomatic)**
+- Depleted iron stores (ferritin <12 ng/mL)
+- Normal hemoglobin level (13.5+ g/dL)
+- Normal serum iron and transferrin saturation initially maintained
+- Increased TIBC (total iron binding capacity)
+- Bone marrow iron absent on staining
+- **Duration**: Can persist for months to years; minimal symptoms
+
+**Stage 2: Early Iron-Deficient Erythropoiesis (Functional Iron Deficiency)**
+- Further decline in serum iron (<50 μg/dL)
+- Transferrin saturation falls (<15%)
+- Serum ferritin very low (<10 ng/mL)
+- Hemoglobin may still be low-normal initially
+- Protoporphyrin increases (precursor for heme synthesis cannot be completed)
+- Serum soluble transferrin receptor increases (marker of erythroid iron demand)
+- **Timeline**: Weeks to months from stage 1
+
+**Stage 3: Iron Deficiency Anemia (Symptomatic)**
+- Hemoglobin <12 g/dL (females) or <13.5 g/dL (males)
+- Low MCV (<80 fL), low MCH (<27 pg)
+- Low serum iron, low ferritin, elevated TIBC, low saturation
+- Elevated RDW (anisocytosis from mixed RBC populations)
+- Microcytic hypochromic RBCs on peripheral smear
+- **Consequences**: Tissue hypoxia, clinical symptoms
+
+### Causes of Iron Deficiency in India
+
+**Nutritional (40-50% of cases)**
+- Low dietary intake: Vegetarian diets
+- Poor dietary diversity
+- Tea/coffee consumption with meals (inhibits iron absorption)
+- Fortified food access limited in rural areas
+- Malabsorption in celiac disease, tropical sprue
+
+**Blood Loss (25-30% of cases)**
+- **Menorrhagia**: Most common in women (menstrual loss >30 mL/month)
+- **Hookworm infection**: Endemic in tropical India
+- **Roundworm (Ascaris)**: Associated blood loss
+- **GI bleeding**: Ulcer disease, hemorrhoids, colorectal polyps
+- **Repeated blood donation**: Occupational in some populations
+- **Occult blood loss**: Chronic GI pathology
+
+**Malabsorption (10-15% of cases)**
+- **Tropical sprue**: Endemic in southern India, affects B12 and folate
+- **Celiac disease**: Increasing recognition in India
+- **Post-gastrectomy**: Reduced gastric acidity
+- **Achlorhydria**: From autoimmune gastritis
+- **H. pylori infection**: Impairs iron absorption
+- **PPI use**: Long-term suppression of gastric acid
+
+**Increased Demand (5-10% of cases)**
+- Pregnancy (expanded plasma volume, fetal needs)
+- Lactation (iron in breast milk)
+- Rapid growth in children/adolescents
+- Hemolysis with increased erythropoiesis
+
+### Pathophysiology of Microcytic Hypochromic Anemia
+
+**Iron and Hemoglobin Synthesis:**
+- Heme synthesis requires iron as cofactor for protoporphyrin
+- Without sufficient iron, protoporphyrin accumulates (cannot form heme)
+- Globin chains synthesized normally but limited heme availability
+- Excess globin chains precipitate → cell death
+
+**RBC Size and Hemoglobin Content:**
+- With iron deficiency, RBCs become smaller (microcytic)
+- Less hemoglobin per RBC (hypochromic)
+- Bone marrow compensates with increased RBC production
+- But size and quality diminish with each generation (iron-starved RBCs)
+
+**Tissue Consequences:**
+- Reduced oxygen carrying capacity
+- Compensatory increased cardiac output → tachycardia, increased metabolic rate
+- Increased 2,3-DPG → rightward Hb-oxygen curve (slight improvement in oxygen release)
+- Chronic tissue hypoxia → epithelial changes (glossitis, koilonychia, esophageal webs)
+
+## B12 and Folate Metabolism
+
+### Vitamin B12 (Cobalamin) Metabolism
+
+**Dietary Sources:**
+- **Animal products**: Meat, fish, eggs, dairy
+- **Plant sources**: Fortified foods, fermented foods
+- **Soil contamination**: Traditional farming practices
+- **Synthesis**: Only by bacteria; humans cannot synthesize B12
+
+**Absorption Steps:**
+1. **Mouth**: Salivary R-binder covers B12
+2. **Stomach**:
+   - Gastric acid releases B12 from food protein
+   - Intrinsic Factor (IF) produced by parietal cells
+   - IF binds B12, protecting from degradation
+3. **Small intestine**:
+   - Pancreatic protease removes R-binder
+   - IF-B12 complex remains intact
+   - Absorbed in terminal ileum via IF receptors
+4. **Transport**: Transcobalamin (TC) carries B12 to tissues
+5. **Storage**: Liver stores 2-5 years supply
+
+**Functions:**
+- **DNA synthesis**: Methyl-malonyl CoA mutase; nucleotide synthesis
+- **Methylation reactions**: Essential for myelin formation, neurotransmitter synthesis
+- **Amino acid metabolism**: Homocysteine → methionine conversion
+
+### Folate Metabolism
+
+**Dietary Sources:**
+- Leafy vegetables (spinach, fenugreek), legumes, fortified grains, liver
+- Cooking destroys 50-95% of folate
+- Particularly important in Indian diets (dals, leafy greens)
+
+**Absorption:**
+- Upper small intestine (jejunum primarily)
+- Folate monoglutamate absorbed by active transport
+- Polyglutamate forms require enzymatic hydrolysis first
+- No large body stores (only 10-12 mg total)
+
+**Functions:**
+- **One-carbon transfer**: Essential for methylation and nucleotide synthesis
+- **Purine synthesis**: Folate cofactor
+- **Thymidylate synthesis**: Required for dTMP formation (DNA)
+- **Amino acid metabolism**: Histidine → glutamic acid conversion
+
+### Relationship Between B12 and Folate
+
+**Folate Trap Hypothesis:**
+- B12 deficiency impairs methionine synthase
+- Folate accumulates as 5-methyltetrahydrofolate (inactive form)
+- Active folate forms unavailable → impaired DNA synthesis
+- Result: B12 deficiency causes secondary functional folate deficiency
+
+**Clinical Implication:**
+- B12 supplementation must precede folate (prevents SCD exacerbation)
+- Folate alone in B12 deficiency may worsen neurological symptoms
+
+## Megaloblastosis Mechanism
+
+### Normal vs Megaloblastic DNA Synthesis
+
+**Normal Erythropoiesis:**
+- Precise nuclear-cytoplasmic synchronization
+- DNA replication → mitotic division → hemoglobinization
+- Small dense nucleus in mature RBC (eventually extruded)
+- Balanced progression through maturation stages
+
+**Megaloblastic Erythropoiesis:**
+- Impaired DNA synthesis (thymidylate synthase blocked)
+- Nuclear maturation delayed relative to cytoplasmic maturation
+- Asynchrony: Nucleus immature but cytoplasm mature (hemoglobinized)
+- Results in larger cells (megaloblasts) with immature nuclear chromatin
+
+### Features of Megaloblasts
+
+- **Size**: 12-20 μm (vs normal 7-8 μm)
+- **Nuclear appearance**: Open, lacy, fine chromatin (immature)
+- **Nuclear-cytoplasmic ratio**: Low (cytoplasm relatively more mature)
+- **Hemoglobinization**: Present despite immature nucleus
+- **Fate**: Most megaloblasts destroyed in bone marrow (ineffective erythropoiesis)
+
+### Consequences of Megaloblastosis
+
+**Bone Marrow Changes:**
+- Hypercellular marrow (increased erythropoiesis attempting to compensate)
+- Megaloblasts and abnormal metamyelocytes present
+- Ineffective erythropoiesis (cells destroyed before release)
+- Intramedullary hemolysis
+- Hyperuricemia (from nucleic acid breakdown)
+
+**Peripheral Blood Changes:**
+- Macrocytic RBCs (MCV >100 fL)
+- Anisocytosis (variable cell sizes)
+- Hypersegmented neutrophils (>5 lobes; normal less than or equal to 4)
+- Anisopoikilocytosis
+- Reduced reticulocyte count (despite anemia)
+
+**Clinical Consequences:**
+- Severe anemia (from ineffective erythropoiesis)
+- Thrombocytopenia (affects all cell lines)
+- Leukopenia with increased infection risk
+- Pancytopenia common in severe B12/folate deficiency
+
+### Causes in Indian Context
+
+**B12 Deficiency (25-30% prevalence in vegetarians):**
+- **Nutritional**: Vegetarian/vegan diets
+- **Pernicious anemia**: Autoimmune destruction of parietal cells
+- **Gastrectomy**: Post-surgical B12 malabsorption
+- **Terminal ileum disease**: Crohn's disease, tropical sprue
+- **Fishworm infection**: Competes for B12
+- **H. pylori infection**: Impairs B12 absorption
+- **Proton pump inhibitor use**: Long-term reduces intrinsic factor production
+
+**Folate Deficiency (10-15% prevalence):**
+- **Nutritional**: Poor vegetable intake
+- **Malabsorption**: Tropical sprue, celiac disease, Crohn's disease
+- **Increased demand**: Pregnancy, lactation, hemolysis, malignancy
+- **Medications**: Methotrexate, phenytoin, sulfasalazine, trimethoprim
+- **Alcohol use**: Impaired absorption and storage`,
+        mnemonics: [
+          {
+            text: "Three stages of iron deficiency: Depletion → Functional deficiency → Anemia",
+            explanation: "Progressive stages with ferritin decline, then transferrin saturation, then Hb"
+          },
+          {
+            text: "Iron deficiency causes: Blood Loss (hookworm endemic), Nutritional (vegetarian), Malabsorption (tropical sprue), Demand (pregnancy)",
+            explanation: "BLNMD remembering Indian epidemiology"
+          },
+          {
+            text: "B12 absorption: Stomach acid + IF → Ileum absorption → 2-5 years storage",
+            explanation: "Multiple potential disruption points for deficiency"
+          },
+          {
+            text: "Folate trap: B12 deficiency blocks methylation blocked folate inactive DNA synthesis blocked",
+            explanation: "Why B12 must be given first, then folate"
+          },
+          {
+            text: "Megaloblasts: Nuclear immaturity + Cytoplasmic maturity = Asynchronous maturation",
+            explanation: "Core concept explaining morphology in B12/folate deficiency"
+          }
+        ],
+        keyPoints: [
+          "Iron deficiency occurs in three stages: Stage 1 (depleted stores), Stage 2 (functional deficiency), Stage 3 (anemia with symptoms)",
+          "Hookworm infection is major cause of iron deficiency in tropical India; blood loss >25 mL/month causes IDA",
+          "B12 absorption requires multiple steps: gastric acid, intrinsic factor production, terminal ileum absorption; liver stores 2-5 years supply",
+          "Folate stores only 10-12 mg total; depleted in 3-4 months; required for thymidylate synthesis and DNA replication",
+          "B12 deficiency causes functional folate deficiency (folate trap); both impair dTMP synthesis → megaloblastosis"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "96: Iron Metabolism and Anemias", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "3: Hematology and Hemostasis", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "24: Blood Disorders", edition: "24th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "anemia-layer-3-clinical",
+        title: "Iron Deficiency & Megaloblastic Anemia - Clinical Application",
+        estimatedMinutes: 25,
+        summary: "Clinical features, signs, investigations (CBC, iron studies, B12/folate levels, bone marrow), diagnosis, and evidence-based treatment protocols per Indian guidelines.",
+        contentMd: `# Iron Deficiency & Megaloblastic Anemia - Clinical Application
+
+## Clinical Features of Iron Deficiency Anemia
+
+### General Features (Tissue Hypoxia)
+- **Fatigue and weakness**: Most common complaint
+- **Dyspnea on exertion**: From reduced oxygen carrying capacity
+- **Palpitations**: Compensatory tachycardia and increased cardiac output
+- **Headache and dizziness**: From cerebral hypoperfusion
+- **Poor concentration**: Reduced cerebral oxygen delivery
+- **Pallor**: Visible on conjunctiva, nail beds, palm creases
+
+### Severe Anemia Features
+- **Glossitis**: Smooth, red, sore tongue; from epithelial changes
+- **Angular cheilitis**: Cracks at angles of mouth; from iron-dependent enzymes
+- **Koilonychia**: Spoon-shaped nails (late sign, reversible with treatment)
+- **Plummer-Vinson syndrome**: Triad of dysphagia, glossitis, koilonychia
+- **Pica**: Craving for non-food items (ice, clay, starch)
+
+### Cardiac Findings (Severe Anemia)
+- **Systolic flow murmur**: From high-output state
+- **Tachycardia**: Compensatory for reduced hemoglobin
+- **Increased JVP**: From high-output heart failure
+- **Peripheral edema**: From high-output cardiac failure
+- **Pulmonary edema**: In severe chronic anemia with heart failure
+
+### Pediatric Manifestations
+- **Developmental delay**: If deficiency in infancy
+- **Behavioral changes**: Hyperactivity or lethargy
+- **Poor school performance**: From reduced cognitive function
+- **Growth retardation**: In severe, prolonged deficiency
+
+## Clinical Features of B12 Deficiency
+
+### Hematological Features
+- Macrocytic anemia (MCV >100 fL)
+- Glossitis and angular cheilitis
+- Similar systemic symptoms to severe iron deficiency
+
+### Neurological Features (Unique to B12)
+
+**Peripheral Neuropathy:**
+- **Paresthesias**: Symmetrical, begins in toes then ascends
+- **Symmetrical distal sensory loss**: Vibration and proprioception most affected
+- **Absent ankle reflexes initially**: From sensory nerve damage
+- **Later: Spasticity and hyperreflexia**: If spinal cord involved
+- **Demyelination**: Dorsal columns primarily
+
+**Subacute Combined Degeneration (SCD):**
+- **Dorsal column involvement**: Loss of vibration and proprioception
+- **Lateral column involvement**: Spasticity, hyperreflexia, positive Babinski
+- **Mixed upper and lower motor neuron signs**: Hyperreflexia in legs
+- **Lhermitte sign**: Electric shock sensation with neck flexion
+- **Gait ataxia**: From loss of proprioception and spasticity
+
+**Cerebral Features:**
+- **Cognitive changes**: Memory loss, confusion, dementia (reversible early, permanent if delayed)
+- **Personality changes**: Irritability, depression, psychosis
+- **Optic neuropathy**: Impaired vision, scotomas (less common)
+
+**Important Note**: Neurological damage can become permanent if treatment is delayed.
+
+### Folate Deficiency
+- Primarily hematological: macrocytic anemia, glossitis
+- **NO neurological manifestations** (key distinction from B12)
+
+## Investigations
+
+### Complete Blood Count (CBC) & Peripheral Smear
+
+**Iron Deficiency Anemia Pattern:**
+- Hemoglobin: Low (usually <10 g/dL in symptomatic IDA)
+- MCV: Low (<80 fL; typically 60-70 fL in IDA)
+- MCH: Low (<27 pg)
+- MCHC: Low (<32 g/dL)
+- RBC count: Often normal or elevated
+- RDW: Elevated (>15%; anisocytosis)
+- Reticulocyte count: Normal or slightly elevated
+- **Peripheral smear**: Microcytic hypochromic RBCs, target cells, pencil cells
+
+**Megaloblastic Anemia Pattern:**
+- Hemoglobin: Very low (often <7 g/dL when diagnosed)
+- MCV: High (>100 fL; typically 110-120 fL)
+- RBC count: Low (often <2 million/μL)
+- White cells: Low (leukopenia; often <3000/μL)
+- Platelets: Low (thrombocytopenia; often <100,000/μL)
+- **Pancytopenia**: Common in megaloblastic anemia
+- **Peripheral smear**:
+  - Large oval macrocytes
+  - Hypersegmented neutrophils (6+ lobes; normal less than or equal to 5)
+  - Howell-Jolly bodies
+  - Basophilic stippling
+  - Anisopoikilocytosis
+
+### Iron Studies (For Iron Deficiency Diagnosis)
+
+**Serum Ferritin:**
+- **<12 ng/mL**: Diagnostic of iron deficiency
+- **>100 ng/mL**: Rules out iron deficiency
+- **12-100 ng/mL**: Inconclusive
+- **Limitation**: Acute phase reactant
+
+**Serum Iron:**
+- **<50 μg/dL**: Supports iron deficiency
+- **Fluctuates diurnally**
+- **Less specific** than ferritin
+
+**Transferrin Saturation:**
+- **Normal**: 25-35%
+- **<15%**: Consistent with iron deficiency
+- **>45%**: Suggests iron overload
+- **Calculated**: (Serum iron / TIBC) × 100
+
+**Total Iron Binding Capacity (TIBC):**
+- **Elevated (>360 μg/dL)**: Indicates depleted iron stores
+- **Normal TIBC** with low ferritin: Still supports iron deficiency
+
+**Diagnostic Criteria for IDA:**
+- Ferritin <12 ng/mL + Hemoglobin <12 g/dL (female) + MCV <80 fL = Iron deficiency anemia
+
+### B12 and Folate Studies
+
+**Serum Cobalamin (B12):**
+- **<200 pg/mL**: Diagnostic of B12 deficiency
+- **200-300 pg/mL**: Borderline (assess methylmalonic acid)
+- **>300 pg/mL**: Excludes B12 deficiency
+
+**Methylmalonic Acid (MMA):**
+- **Elevated (>0.4 μmol/L)**: Indicates B12 deficiency even if B12 borderline
+- **Most sensitive marker** for B12 deficiency
+
+**Homocysteine:**
+- **Elevated (>15 μmol/L)**: Nonspecific but supports B12 or folate deficiency
+- **Elevated in both B12 and folate deficiency**
+- **Also elevated in renal failure, hypothyroidism**
+
+**Serum Folate:**
+- **<3 ng/mL**: Diagnostic of folate deficiency
+- **3-5 ng/mL**: Borderline
+- **>5 ng/mL**: Excludes folate deficiency
+
+**Diagnostic Hierarchy for B12/Folate:**
+1. Check serum B12 first
+2. If B12 low/borderline → check MMA
+3. Check serum folate
+
+### Bone Marrow Examination
+
+**Indications:**
+- Diagnosis unclear after investigations
+- Pancytopenia (assess for aplasia, dysplasia, malignancy)
+- Nonresponse to standard therapy
+
+**Iron Deficiency on Bone Marrow:**
+- **Iron staining**: Absent in stroma, absent in erythroblasts
+- **Erythroid hyperplasia**: Increased erythroblasts
+- **Normal morphology**: Erythroblasts normoblastic
+
+**Megaloblastic Anemia on Bone Marrow:**
+- **Megaloblastic hyperplasia**: Increased megakaryocytes and erythroblasts
+- **Megaloblasts**: Large cells with immature nuclear chromatin
+- **Abnormal metamyelocytes**: Hypersegmented, left-shifted
+- **Ineffective erythropoiesis**: Many immature cells destroyed in marrow
+- **Iron stores**: Usually normal or elevated
+
+## Treatment Protocols (Indian Guidelines - AIIMS, API)
+
+### Iron Deficiency Anemia Treatment
+
+**Identify and Treat Cause First:**
+- Source of blood loss (menorrhagia management, GI investigation)
+- Deworming if hookworm endemic area (Mebendazole 500 mg BD × 3 days)
+- Dietary counseling for iron-rich foods
+
+**Oral Iron Supplementation (First-line):**
+- **Iron salt choice**: Ferrous salts (Fe2+) better absorbed than ferric (Fe3+)
+  - Ferrous sulfate: 325 mg BD-TDS = 65 mg elemental iron per tablet
+  - Ferrous fumarate: 200 mg BD-TDS = 66 mg elemental iron
+  - Ferrous gluconate: 300 mg BD-TDS = 36 mg elemental iron
+- **Dosing**: 100-200 mg elemental iron daily in divided doses
+- **Timing**: On empty stomach for better absorption; with vitamin C enhances absorption
+- **Duration**: 3-6 months after hemoglobin normalized (to replenish stores)
+- **Expected response**:
+  - Reticulocyte count rises by day 3-4
+  - Hemoglobin increases 1-2 g/dL per week
+  - Complete normalization: 2-3 months
+
+**Side Effects of Oral Iron:**
+- Nausea, abdominal discomfort, constipation
+- **Management**: Take with food, divide dose, reduce strength
+- Darkening of stools (expected, not harmful)
+
+**Parenteral Iron (For Intolerance or Severe Cases):**
+- **Indications**:
+  - Intolerance to oral iron
+  - Severe ongoing bleeding
+  - Malabsorption preventing oral absorption
+  - Non-compliance
+- **Options**:
+  - Iron dextran IM/IV
+  - Iron sucrose IV
+  - Ferric carboxymaltose IV
+- **Calculation of total iron needed**: (Target Hb - Actual Hb) × Weight (kg) × 2.4 + 500 (for stores)
+
+**Blood Transfusion:** Reserved for severe symptomatic anemia (Hb <5 g/dL) or with cardiac/pulmonary compromise
+
+### B12 Deficiency Treatment
+
+**Vitamin B12 Supplementation:**
+- **Parenteral (preferred for pernicious anemia/malabsorption):**
+  - Cyanocobalamin IM 1000 μg weekly × 4 weeks, then monthly maintenance
+  - IM route bypasses absorption defect
+  - Response: Reticulocytes rise by day 3-4, hemoglobin increases 1-2 g/dL weekly
+  - Neurological improvement: Begins within days-weeks (best if early treatment)
+
+- **Oral (For Nutritional Deficiency):**
+  - Cyanocobalamin 1000 μg daily
+  - Effective if patient compliant
+  - Less expensive than IM
+
+- **Intranasal Gel (Newer option):**
+  - Cyanocobalamin nasal gel 500 μg once weekly
+  - Non-invasive alternative
+
+**Adjunct Treatment:**
+- Identify cause: Vegetarian counseling, H. pylori eradication, discontinue PPI if possible
+- Folate supplementation concurrent (after B12 starts)
+- Neurological assessment: Referral if SCD suspected
+
+### Folate Deficiency Treatment
+
+**Folic Acid Supplementation:**
+- **Dosing**: Folic acid 5-10 mg daily (oral)
+- **Duration**: 3-4 months
+- **Response**: Similar to B12 (reticulocytes rise by day 3-4)
+- **Safe in B12 deficiency**: Does NOT cause SCD exacerbation if B12 started first
+
+**Cause Management:**
+- Dietary counseling: Leafy vegetables, legumes, fortified foods
+- Malabsorption management: Tropical sprue treatment, celiac disease management
+- Medication review: Discontinue methotrexate if possible
+
+**Prevention in High-Risk Groups:**
+- Pregnancy: Folic acid 400 μg daily from preconception
+- Hemolytic anemias: Increased demand
+- Chronic alcoholism: Management critical
+
+## Monitoring and Response to Treatment
+
+**Response Indicators:**
+- Serum iron/ferritin/B12 levels (take after 3-6 months treatment)
+- Hemoglobin (should rise 1-2 g/dL weekly)
+- Reticulocyte count (should rise day 3-4, peak by day 7-10)
+- Clinical improvement: Fatigue resolution, normalization of vital signs
+
+**Non-Response Causes:**
+- Continued blood loss (source not identified)
+- Non-compliance (poor adherence to supplementation)
+- Ongoing malabsorption (unrecognized celiac, tropical sprue)
+- Wrong diagnosis (test again)
+- Concurrent deficiencies
+- Bone marrow disorder (dysplasia, aplasia)`,
+        mnemonics: [
+          {
+            text: "Iron deficiency signs: Koilonychia, Pica, Plummer-Vinson, Glossitis",
+            explanation: "Iron-dependent epithelial changes with long-standing IDA"
+          },
+          {
+            text: "SCD signs: Sensory loss (vibration/proprioception) + Spasticity + Ataxia",
+            explanation: "Dorsal + lateral column involvement in B12 deficiency"
+          },
+          {
+            text: "CBC in megaloblastic: Macro + Hypersegmented neutrophils + Pancytopenia",
+            explanation: "Asynchronous nuclear-cytoplasmic maturation affects all cell lines"
+          },
+          {
+            text: "Iron studies diagnostic: Ferritin <12 + Transferrin sat <15% + TIBC elevated = IDA",
+            explanation: "Triple confirmation for iron deficiency"
+          },
+          {
+            text: "B12 treatment priority: B12 first, THEN folate (prevents SCD worsening)",
+            explanation: "Critical to prevent neurological complications"
+          }
+        ],
+        keyPoints: [
+          "Iron deficiency causes microcytic hypochromic RBCs, koilonychia, pica, Plummer-Vinson syndrome with esophageal webs",
+          "B12 deficiency causes macrocytic RBCs plus unique neurological features: peripheral neuropathy and subacute combined degeneration",
+          "Ferritin <12 ng/mL diagnostic for iron deficiency; B12 <200 pg/mL diagnostic but borderline levels need MMA confirmation",
+          "Bone marrow shows megaloblasts (asynchronous maturation) in B12/folate deficiency; absent iron staining in iron deficiency",
+          "First-line treatment: Oral ferrous iron 100-200 mg daily (3-6 months), B12 1000 μg IM weekly × 4 then monthly, folic acid 5 mg daily"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "96: Iron Metabolism and Anemias", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "3: Hematology and Hemostasis", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "24: Blood Disorders", edition: "24th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "anemia-layer-4-exam",
+        title: "Iron Deficiency & Megaloblastic Anemia - Exam Preparation",
+        estimatedMinutes: 20,
+        summary: "High-yield NEXT exam patterns, differential diagnosis, important values, previous year question themes, and clinical reasoning for MCQ practice.",
+        contentMd: `# Iron Deficiency & Megaloblastic Anemia - Exam Preparation
+
+## High-Yield Exam Concepts
+
+### Most Commonly Asked Topics
+1. **Differential diagnosis** of anemia based on MCV and clinical presentation
+2. **Iron studies interpretation**: Ferritin, transferrin saturation, TIBC
+3. **B12 vs Folate deficiency**: Neurological symptoms as key differentiator
+4. **Causes of anemia in India**: Hookworm, nutritional, tropical sprue
+5. **Treatment and expected response rates**: Timelines for hemoglobin increase
+6. **Complications**: SCD, cardiac failure, malignancy risk (Plummer-Vinson)
+
+### NEXT Pattern Distribution
+- **Problem-solving (60%)**: Case presentations with investigations requiring interpretation
+- **Analysis (30%)**: Mechanism-based questions, pathophysiology of complications
+- **Recall (10%)**: Definitions, normal values, drugs
+
+## Critical Values to Remember
+
+### Normal Hematological Values (Adult)
+- Hemoglobin: Males 13.5-17.5 g/dL, Females 12-15.5 g/dL
+- RBC: Males 4.5-5.9 million/μL, Females 4.1-5.1 million/μL
+- MCV: 80-100 fL
+- Ferritin: Males 30-400 ng/mL, Females 15-200 ng/mL
+- Serum iron: 60-170 μg/dL
+- Transferrin saturation: 25-35%
+- TIBC: 250-425 μg/dL
+- B12: >200 pg/mL
+- Folate: >3 ng/mL
+- Methylmalonic acid: <0.4 μmol/L
+- RDW: 11-14%
+
+### Diagnostic Thresholds (Exam Frequently Tests)
+- Ferritin <12 ng/mL = depleted iron stores
+- Transferrin saturation <15% = impaired iron availability
+- B12 <200 pg/mL = definite deficiency
+- B12 200-300 pg/mL = functional deficiency if MMA elevated
+- Folate <3 ng/mL = folate deficiency
+- MCV >100 fL = macrocytic
+- RDW >15% = anisocytosis
+
+## Differential Diagnosis: IDA vs Thalassemia vs ACD
+
+| Feature | IDA | Thalassemia | ACD |
+|---------|-----|-------------|-----|
+| **MCV** | Low (50-70) | Low (50-70) | Low (75-85) |
+| **RBC Count** | Normal/low | HIGH (5-7) | Normal/low |
+| **Ferritin** | LOW | HIGH | NORMAL/elevated |
+| **Transferrin Sat** | LOW | HIGH | NORMAL |
+| **Serum Iron** | LOW | HIGH | NORMAL/low |
+| **TIBC** | HIGH | NORMAL | NORMAL/LOW |
+| **Hemoglobin F** | Normal | Elevated | Normal |
+| **Peripheral smear** | Pencil cells | Target cells | No specific |
+| **Bone marrow iron** | ABSENT | Present | Present |
+
+**NEXT Exam Tip**: Questions often give RBC count elevation with microcytosis → think thalassemia, not IDA. Ferritin/iron elevation with microcytosis → anemia of chronic disease or sideroblastic anemia.
+
+## Differential Diagnosis: B12 vs Folate vs Alcohol
+
+| Feature | B12 Deficiency | Folate Deficiency | Alcohol | Hypothyroid |
+|---------|---|---|---|---|
+| **MCV** | >100 fL | >100 fL | >100 fL | >100 fL |
+| **WBC** | Low (pancytopenia) | Low (pancytopenia) | Normal/low | Normal |
+| **Platelets** | Low | Low | Low | Normal |
+| **Serum B12** | LOW | NORMAL | NORMAL | NORMAL |
+| **Folate** | NORMAL/LOW | LOW | LOW | NORMAL |
+| **MMA** | ELEVATED | NORMAL | NORMAL | NORMAL |
+| **Neurologic signs** | YES (SCD) | NO | Cerebellar | YES (slow) |
+
+**NEXT Exam Tip**: B12 deficiency with NORMAL folate = true B12 deficiency. B12 deficiency with LOW folate = folate trap (treat B12 first). Elevated homocysteine is NOT specific.
+
+## Common Question Patterns
+
+### Pattern 1: Iron Deficiency with Source Identification
+**Scenario**: 35-year-old woman with Hb 8.5 g/dL, MCV 65 fL, ferritin 8 ng/mL, normal GI examination
+**Expected reasoning**: IDA confirmed (ferritin <12, MCV <80, Hb low); In reproductive-age female menorrhagia is most likely cause; Treatment: Oral iron 100-200 mg daily, concurrent menstrual management
+
+### Pattern 2: B12 Deficiency with Neurological Complication
+**Scenario**: 65-year-old vegetarian with macrocytic anemia (Hb 7 g/dL, MCV 115 fL), paresthesias in feet, hypersegmented PMN, B12 135 pg/mL
+**Expected reasoning**: Confirmed B12 deficiency; Neurological signs present with peripheral neuropathy risk of SCD; Treatment priority: B12 IM 1000 μg weekly × 4, then monthly; Folate 5 mg daily concurrent; Early treatment improves prognosis
+
+### Pattern 3: Tropical Sprue Context (India)
+**Scenario**: 45-year-old from South India with chronic diarrhea, Hb 8 g/dL, B12 150 pg/mL, folate 2 ng/mL, steatorrhea
+**Expected reasoning**: Tropical sprue diagnosis (malabsorption of B12 and folate at terminal ileum); Treatment: Antibiotics (tetracycline or TMP-SMX) + B12 IM + folate oral + nutritional support; Not dietary counseling alone (cause is malabsorption, not intake)
+
+## Expected Exam Answer Patterns
+
+### Iron Deficiency Anemia MCQ (NEXT Style)
+**Q**: 35-year-old vegetarian woman with fatigue, Hb 9.5 g/dL, MCV 65 fL, ferritin 10 ng/mL, folate 5 ng/mL, B12 180 pg/mL. Most appropriate next step?
+**A**: Serum methylmalonic acid
+**Why**: B12 is borderline (180 pg/mL); elevated MMA would confirm functional B12 deficiency; ferritin is low (IDA confirmed); B12 deficiency should be confirmed first; Correct answer is MMA testing
+
+### B12 Deficiency with Neurological MCQ
+**Q**: 60-year-old on long-term PPI with Hb 7.5 g/dL, paresthesias in feet, B12 150 pg/mL, folate 8 ng/mL. Most appropriate management?
+**A**: Parenteral B12 1000 μg IM weekly × 4 weeks, then monthly, concurrent folic acid 5 mg daily
+**Why**: B12 <200 (definite deficiency); neurological signs present (paresthesias indicates SCD risk); IM route bypasses absorption defect (PPI reduces IF production); folate normal but given after B12 (prevents SCD worsening)`,
+        mnemonics: [
+          {
+            text: "Ferritin interpretation: <12 = IDA, 12-100 = unclear, >100 = rule out IDA",
+            explanation: "Key cutoff for iron study interpretation in exams"
+          },
+          {
+            text: "RBC high + MCV low = Thalassemia, not IDA",
+            explanation: "High RBC distinguishes thalassemia from IDA"
+          },
+          {
+            text: "B12 <200 = treat, 200-300 = check MMA, >300 = exclude B12",
+            explanation: "Diagnostic thresholds for B12 deficiency"
+          },
+          {
+            text: "Neurological B12 signs: Paresthesias (sensory), Spasticity (corticospinal), Ataxia (proprioception loss)",
+            explanation: "SCD signs in exam questions"
+          },
+          {
+            text: "B12 first, THEN folate = prevents SCD worsening",
+            explanation: "Treatment priority is frequently tested"
+          }
+        ],
+        keyPoints: [
+          "IDA diagnostic: Ferritin <12 ng/mL + MCV <80 fL + Hb low; thalassemia has HIGH RBC count (5-7 million) with low MCV",
+          "B12 deficiency diagnostic: <200 pg/mL definite, 200-300 pg/mL needs MMA confirmation; elevated MMA = functional deficiency",
+          "Key differentiator B12 vs Folate: Neurological symptoms (paresthesias, SCD) only in B12; folate has no neuro manifestations",
+          "Bone marrow helps classify: Megaloblastic (B12/folate), absent iron (IDA), or normoblastic (anemia of chronic disease, hemolysis)",
+          "Treatment timeline: Reticulocyte rise by day 3-4, Hb increase 1-2 g/dL per week, complete normalization 2-3 months"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "96: Iron Metabolism and Anemias", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "3: Hematology and Hemostasis", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "24: Blood Disorders", edition: "24th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "anemia-layer-5-active-recall",
+        title: "Iron Deficiency & Megaloblastic Anemia - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Flashcard-style Q&A pairs for spaced repetition, self-testing, and consolidation of critical concepts in anemia management.",
+        contentMd: `# Iron Deficiency & Megaloblastic Anemia - Active Recall (Flashcard Format)
+
+## Critical Concept Review - Q&A Format
+
+**Q: What is the diagnostic threshold for anemia in adult females?**
+A: Hemoglobin <12 g/dL (males <13.5 g/dL). Values below this indicate anemia requiring investigation.
+
+**Q: What distinguishes microcytic anemias from other morphologies on laboratory testing?**
+A: MCV <80 fL. Includes iron deficiency, thalassemia, lead poisoning, and anemia of chronic disease.
+
+**Q: What is the most common cause of iron deficiency anemia in reproductive-age women in India?**
+A: Menorrhagia (menstrual blood loss >30 mL/month). This is more common than GI bleeding in this demographic.
+
+**Q: Describe the three stages of iron deficiency and what happens at each stage.**
+A: Stage 1 (Depletion): Ferritin <12 ng/mL, stores depleted, Hb normal. Stage 2 (Functional deficiency): Ferritin low, serum iron <50 μg/dL, transferrin saturation <15%, Hb normal. Stage 3 (IDA): Hemoglobin falls <12 g/dL (female), microcytic/hypochromic anemia develops.
+
+**Q: What is the role of hepcidin in iron homeostasis and what happens when iron deficiency develops?**
+A: Hepcidin is the master hormone regulating iron absorption from intestine. In iron deficiency, hepcidin levels DECREASE allowing increased iron absorption. In iron overload, hepcidin INCREASES reducing iron absorption.
+
+**Q: A patient has ferritin 50 ng/mL, hemoglobin 11.5 g/dL, MCV 82 fL. Is this iron deficiency anemia?**
+A: No. Ferritin is normal-range (15-200 ng/mL in women), so iron stores are not depleted. This could be anemia of chronic disease, early B12/folate deficiency, or other causes.
+
+**Q: What is the most sensitive diagnostic marker for iron deficiency anemia?**
+A: Ferritin <12 ng/mL is most specific (100% specific for depleted stores). Serum transferrin receptor is not affected by inflammation unlike ferritin.
+
+**Q: What dietary factors enhance iron absorption and which inhibit it?**
+A: Enhance: Vitamin C, heme iron (meat/fish). Inhibit: Phytates (cereals), calcium, polyphenols (tea, coffee). Cooking leafy vegetables destroys iron bioavailability.
+
+**Q: Why are microcytic RBCs produced in iron deficiency?**
+A: Without adequate iron, heme synthesis is limited. Protoporphyrin accumulates. Globin chains are produced normally but cannot incorporate heme efficiently. RBCs are produced with less hemoglobin per cell (hypochromic) and smaller size (microcytic).
+
+**Q: What is ineffective erythropoiesis and how does it occur in megaloblastic anemia?**
+A: Ineffective erythropoiesis is intramedullary destruction of erythroblasts. In megaloblastosis, impaired DNA synthesis causes asynchrony between nuclear (immature) and cytoplasmic (mature) development. Megaloblasts are recognized as abnormal and destroyed.
+
+**Q: Explain the folate trap hypothesis and its clinical significance.**
+A: B12 is required for methionine synthase enzyme. B12 deficiency blocks this converting 5-methyltetrahydrofolate to tetrahydrofolate. Folate accumulates as inactive 5-methyltetrahydrofolate, functional folate is unavailable for DNA synthesis. This is why B12 must be given BEFORE folate to prevent SCD worsening.
+
+**Q: What is the difference between serum cobalamin and methylmalonic acid in diagnosing B12 deficiency?**
+A: Serum B12 (<200 pg/mL = definite deficiency) can be falsely normal in early deficiency. MMA (methylmalonic acid) is more functionally specific: elevated MMA (>0.4 μmol/L) indicates true functional B12 deficiency even if B12 is borderline (200-300 pg/mL).
+
+**Q: What are hypersegmented neutrophils and why do they appear in megaloblastic anemia?**
+A: Hypersegmented neutrophils have >5 nuclear lobes (normal less than or equal to 4 lobes). DNA synthesis impairment affects neutrophil precursors. Delayed mitotic division results in more nuclear segmentation before release.
+
+**Q: Describe subacute combined degeneration (SCD) and why it is a medical emergency.**
+A: SCD is demyelination of dorsal columns (vibration/proprioception loss) and lateral columns (spasticity, hyperreflexia) from B12 deficiency. It is a medical emergency because neurological damage can become PERMANENT if treatment is delayed.
+
+**Q: What are the key clinical differences between B12 deficiency and folate deficiency?**
+A: B12: Causes macrocytic anemia plus neurological symptoms (paresthesias, SCD, optic neuropathy). Folate: Causes macrocytic anemia only, NO neurological symptoms. This distinction is critical for determining which to treat first.
+
+**Q: Why is it necessary to give B12 BEFORE folate in combined deficiency?**
+A: Folate supplementation alone in B12 deficiency can cause paradoxical worsening of neurological symptoms (SCD exacerbation) through effects on methylation reactions. B12 corrects the enzymatic block; folate should be added after to avoid this complication.
+
+**Q: What are the clinical features of Plummer-Vinson syndrome and what is its significance?**
+A: Triad of dysphagia (esophageal webs), glossitis, and koilonychia from chronic severe iron deficiency. Significance: esophageal webs increase risk of esophageal squamous cell carcinoma. Requires iron supplementation and possible endoscopic management of webs.
+
+**Q: A patient develops paresthesias in feet 6 months into B12 deficiency. How much of this will reverse with treatment?**
+A: If B12 treatment started within weeks of symptom onset: Good reversibility expected. If >6 months of symptoms: Partial reversal likely; some permanent damage probable. This emphasizes early diagnosis importance.
+
+**Q: What is the expected response timeline for hemoglobin increase in iron deficiency anemia?**
+A: Reticulocyte count rises by day 3-4 (earliest marker). Hemoglobin increases 1-2 g/dL per week (week 2-4). Complete normalization takes 2-3 months of adequate supplementation. Non-response by 4 weeks suggests ongoing bleeding, malabsorption, or non-compliance.
+
+**Q: What is the standard oral iron supplementation dose and expected response?**
+A: 100-200 mg elemental iron daily (e.g., ferrous sulfate 325 mg = 65 mg elemental iron). Divided dosing (BD-TDS) improves tolerability. Take on empty stomach for better absorption. After hemoglobin normalizes, continue 3-6 months to replenish iron stores.
+
+**Q: What are the side effects of oral iron supplementation and how can they be managed?**
+A: Nausea, abdominal discomfort, constipation/diarrhea. Management: Take with food (reduces absorption but improves tolerance), divide doses, use lower-strength iron preparations. Stool darkening is expected and not harmful. Parenteral iron reserved for true intolerance.
+
+**Q: What is the standard B12 supplementation regimen for pernicious anemia?**
+A: Cyanocobalamin 1000 μg IM weekly × 4 weeks, then monthly indefinite maintenance. IM route bypasses absorption defect (intrinsic factor deficiency). Oral high-dose (1000 μg daily) may work for nutritional deficiency if compliant. Intranasal gel 500 μg weekly is newer alternative.
+
+**Q: How long can liver B12 stores sustain the body in strict vegetarians without supplementation?**
+A: 2-5 years. This is why vegans can be asymptomatic despite lifelong zero B12 intake; stores eventually become depleted.
+
+**Q: What is tropical sprue and what causes it?**
+A: Tropical sprue is chronic malabsorption endemic in tropical regions (South India, Caribbean). Causes: Thought to be spirochete bacteria. Affects terminal ileum causing B12 and folate malabsorption. Presents with diarrhea, steatorrhea, combined B12/folate deficiency. Treatment: Tetracycline or trimethoprim-sulfamethoxazole plus B12 plus folate supplementation.
+
+**Q: How does H. pylori infection cause B12 deficiency?**
+A: H. pylori induces chronic gastritis causing atrophic changes in gastric mucosa reducing parietal cell function. Results in decreased intrinsic factor production and reduced gastric acid (needed to release B12 from food). Causes B12 malabsorption and functional deficiency.
+
+**Q: What is the relationship between long-term PPI use and B12 deficiency?**
+A: PPIs suppress gastric acid production preventing food B12 from being released from protein. Malabsorption develops. Typically requires 1-2 plus years of PPI use before B12 stores deplete. Risk patients: elderly, strict vegetarians, those with other absorption risks.
+
+**Q: What causes iron deficiency anemia from blood loss due to parasitic infection in India?**
+A: Hookworm infection (Necator americanus, Ancylostoma duodenale). Each worm causes 0.3-0.5 mL daily blood loss. Heavy infections (>500 worms) can cause 100 plus mL daily blood loss. Most common parasitic cause of IDA in tropical India. Treatment: Deworming (mebendazole 500 mg BD × 3 days) plus iron supplementation.
+
+**Q: What investigations confirm iron deficiency anemia definitively?**
+A: Ferritin <12 ng/mL (most specific) plus Hemoglobin <12 g/dL (female) plus MCV <80 fL plus low serum iron plus low transferrin saturation (<15%). Bone marrow absent iron on staining confirms depleted stores (rarely needed for diagnosis now).
+
+**Q: What investigations confirm B12 deficiency with borderline serum B12 (200-300 pg/mL)?**
+A: Methylmalonic acid (MMA) elevated >0.4 μmol/L indicates functional B12 deficiency. Can also check homocysteine, but less specific (elevated in renal failure, hypothyroidism). MMA is gold standard for confirming borderline B12 deficiency.
+
+**Q: How does one differentiate between megaloblastic (B12/folate) and non-megaloblastic macrocytic anemias?**
+A: Bone marrow examination shows megaloblasts (asynchronous maturation with immature nucleus/hemoglobinized cytoplasm) in B12/folate deficiency. Non-megaloblastic macrocytic anemias (alcohol, hypothyroid, liver disease) show normal maturation. Peripheral smear hypersegmented PMN also suggests megaloblastosis.
+
+**Q: What is the role of RDW (red cell distribution width) in anemia diagnosis?**
+A: RDW >15% indicates anisocytosis (variable RBC sizes) suggesting mixed cell populations. Early iron deficiency shows high RDW with normal MCV. Thalassemia shows low RDW despite low MCV (uniform microcytic cells). RDW helps differentiate IDA from thalassemia.
+
+**Q: If a patient has both iron deficiency and B12 deficiency, what does the MCV look like?**
+A: MCV depends on relative severity. If IDA predominates: low MCV. If B12 predominates: high MCV. If balanced: normal MCV. RDW will be markedly elevated due to very mixed cell populations. Requires both iron studies AND B12 testing to diagnose dual deficiency.
+
+**Q: What is the mechanism of pernicious anemia?**
+A: Autoimmune destruction of gastric parietal cells causing loss of intrinsic factor production. Results in B12 malabsorption (terminal ileum requires IF for absorption). Causes B12 deficiency with neurological complications. Requires lifelong B12 supplementation (oral high-dose or parenteral).`,
+        mnemonics: [
+          {
+            text: "Iron deficiency diagnosis triple check: Ferritin <12 AND MCV <80 AND Hb low",
+            explanation: "All three criteria needed; any one alone insufficient"
+          },
+          {
+            text: "B12 deficiency stages: <200=definite, 200-300=check MMA, >300=exclude",
+            explanation: "Diagnostic algorithm for B12 testing in exams"
+          },
+          {
+            text: "Megaloblastic features: Asynchronous maturation + Hypersegmented PMN + Pancytopenia",
+            explanation: "Triad for recognizing megaloblastosis on bone marrow/CBC"
+          },
+          {
+            text: "Treatment order: B12 FIRST, folate SECOND (prevents SCD worsening)",
+            explanation: "Recall for treatment of combined deficiency"
+          },
+          {
+            text: "Hematological response timeline: Day 3-4 retics increase, Week 2-4 Hb rises 1-2 g/dL, 2-3 months normalized",
+            explanation: "Expected response rates for iron/B12 supplementation"
+          }
+        ],
+        keyPoints: [
+          "IDA diagnostic: Ferritin <12 ng/mL is gold standard; MCV <80 fL microcytic; transferrin saturation <15% indicates iron shortage; normal RBC count helps rule out thalassemia",
+          "B12 deficiency: <200 pg/mL definite; borderline (200-300) needs MMA confirmation; neurological symptoms (paresthesias, SCD) are unique to B12, NOT folate",
+          "Megaloblastosis: Asynchrony of nuclear (immature) and cytoplasmic (mature) development causes cell destruction resulting in pancytopenia; hypersegmented PMN (>5 lobes) pathognomonic on smear",
+          "Treatment critical: Reticulocyte rise by day 3-4 is earliest sign of response; Hb increase 1-2 g/dL per week expected; 2-3 months for complete normalization; non-response suggests ongoing bleeding/malabsorption",
+          "B12 must precede folate in combined deficiency to prevent paradoxical neurological worsening (SCD exacerbation from disrupted methylation)"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "96: Iron Metabolism and Anemias", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "3: Hematology and Hemostasis", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "24: Blood Disorders", edition: "24th" }
+        ]
+      }
+    ]
+  }
 ];

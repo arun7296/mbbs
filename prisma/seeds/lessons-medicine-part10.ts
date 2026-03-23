@@ -6,14 +6,789 @@ export const medicinePart10Lessons = [
     layers: [
       {
         layer: 1,
-        slug: "leukemia-lymphoma-foundation",
+        slug: "leukemia-lymphoma-layer-1-foundation",
         title: "Leukemias & Lymphomas - Foundation",
         estimatedMinutes: 20,
-        summary: "Myeloid vs lymphoid malignancies, acute vs chronic leukemias, lymphoma types, and hematopoietic stem cell origin.",
-        contentMd: "# Leukemias & Lymphomas - Foundation\n\n## Classification Overview\n- **Leukemia:** Malignant proliferation of hematopoietic cells in bone marrow/blood\n- **Lymphoma:** Malignant proliferation of lymphoid cells in lymph nodes/tissues\n\n## WHO Classification Framework\n**Myeloid Neoplasms:**\n- Acute myeloid leukemia (AML)\n- Chronic myeloid leukemia (CML)\n- Myelodysplastic syndromes (MDS)\n\n**Lymphoid Neoplasms:**\n- Acute lymphoblastic leukemia (ALL)\n- Chronic lymphocytic leukemia (CLL)\n- Hodgkin lymphoma (HL)\n- Non-Hodgkin lymphoma (NHL) - B-cell, T-cell subtypes\n\n## Acute Leukemias vs Chronic\n- **Acute:** >20% blasts in marrow, rapid onset, aggressive\n- **Chronic:** <20% blasts, insidious onset, indolent course\n\n## Lymphoma vs Reactive Lymphadenopathy\n- **Lymphoma:** Clonal proliferation, effaced architecture, systemic features\n- **Reactive:** Benign proliferation, preserved architecture, localized\n\n## Key Pathways\n- **Philadelphia chromosome (BCR-ABL):** CML, ALL\n- **Translocations:** Generate oncogenic fusion proteins\n- **Tumor suppressors:** p53 loss worsens prognosis,\n        mnemonics: [\n          { text: \"CHALK\", explanation: \"Chronic leukemias: CML, Hairy cell, acute is JLACK (juvenile, lymphoblastic, AML, CLL-like, other)\" },\n          { text: \"ALL 4 L's\", explanation: \"ALL = Acute Lymphoblastic Leukemia, Adolescents/young, Large nuclei, L morphology\" },\n        ],\n        keyPoints: [\n          \"Leukemias in blood/marrow; lymphomas in tissues\",\n          \">20% blasts = acute; <20% = chronic\",\n          \"Hodgkin = Reed-Sternberg cells; NHL = monoclonal B or T cells\",\n          \"CML has Philadelphia chromosome t(9;22)\",\n          \"ALL most common childhood malignancy\",\n        ],\n        textbookRefs: [\n          { book: \"Harrison's Principles\", chapter: \"Hematopoietic Malignancies\", edition: \"21st\" },\n          { book: \"Davidson's Principles\", chapter: \"Blood Disorders\", edition: \"25th\" },\n        ],\n      },\n      {\n        layer: 2,\n        slug: \"leukemia-lymphoma-mechanism\",\n        title: \"Leukemias & Lymphomas - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiology of AML, CML, ALL, CLL, Hodgkin and non-Hodgkin lymphoma pathogenesis.\",\n        contentMd: "# Leukemias & Lymphomas - Pathophysiology\\n\\n## AML (Acute Myeloid Leukemia)\\n- **Pathophysiology:** Mutation in multipotent hematopoietic stem cell → blocks differentiation\\n- **Common mutations:** FLT3, NPM1, TP53, DNMT3A\\n- **Result:** Accumulation of immature myeloid blasts\\n- **Blast crisis:** >90% blasts, rapid worsening\\n- **FAB classification:** M0-M7 based on cell line involved (monocytic, myeloblastic, etc.)\\n- **Complications:** DIC (M3-APL highest risk), leukostasis, tumor lysis syndrome\\n\\n## CML (Chronic Myeloid Leukemia)\\n- **Philadelphia chromosome:** t(9;22) → BCR-ABL fusion\\n- **BCR-ABL mechanism:** Constitutive tyrosine kinase activity → uncontrolled proliferation\\n- **Three phases:** Chronic (5-7 yr) → Accelerated (6-9 mo) → Blast crisis (acute leukemia)\\n- **Presentation:** Often asymptomatic, found on routine blood work (high WBC)\\n- **Natural history:** Without treatment → blast crisis in 3-5 years\\n\\n## ALL (Acute Lymphoblastic Leukemia)\\n- **Pathophysiology:** Mutation in lymphoid progenitor → blocks T or B cell development\\n- **Philadelphia chromosome:** Present in 25% adults (poor prognosis)\\n- **Subtypes:** B-ALL, T-ALL (T-ALL worse prognosis)\\n- **Age pattern:** Peak 2-5 years, second peak >60 years\\n- **Complications:** CNS involvement (prophylaxis needed), DIC, hyperuricemia\\n\\n## CLL (Chronic Lymphocytic Leukemia)\\n- **Pathophysiology:** Clonal expansion of mature B lymphocytes (rarely T)\\n- **B-cell markers:** CD5+, CD19+, CD23+ (distinguishes from mantle cell lymphoma)\\n- **Course:** Variable; 30% indolent, 30% intermediate, 40% aggressive\\n- **Complications:** Autoimmune hemolytic anemia (AIHA), ITP, Richter transformation (→ aggressive lymphoma)\\n- **Del(13q) vs Del(17p):** 13q good; 17p/TP53 mutation poor prognosis\\n\\n## Hodgkin Lymphoma (HL)\\n- **Hallmark:** Reed-Sternberg (RS) cells - large multinucleated cells with \\\"owl-eye\\\" nuclei\\n- **Pathophysiology:** Malignant B cells with EBV association (especially in HIV, developing countries)\\n- **Immune evasion:** RS cells represent <1% of cells; surrounded by inflammatory infiltrate\\n- **Subtypes:** Classical HL (nodular sclerosis most common), lymphocyte-rich, lymphocyte-depleted, nodular lymphocyte-predominant\\n- **Spread:** Contiguous along lymph nodes (differs from NHL)\\n- **Age pattern:** Bimodal (20s and >55 years)\\n\\n## NHL (Non-Hodgkin Lymphoma)\\n- **B-cell NHL (80%):**\\n  - Diffuse large B-cell lymphoma (DLBCL) - most common adult NHL\\n  - Follicular lymphoma - indolent, t(14;18) bcl2 overexpression\\n  - Small lymphocytic lymphoma - tissue equivalent of CLL\\n  - Mantle cell lymphoma - t(11;14), poor prognosis despite indolent appearance\\n  - Burkitt lymphoma - t(8;14) MYC translocation, very aggressive\\n- **T-cell NHL:** Peripheral T-cell lymphomas - generally poor prognosis\\n- **Spread:** Random (non-contiguous), higher frequency extranodal involvement,\\n        mnemonics: [\\n          { text: \\\"APL = M3\\\", explanation: \\\"Acute Promyelocytic = AML-M3, highest DIC risk, PML-RARA fusion\\\" },\\n          { text: \\\"Philadelphia 9;22\\\", explanation: \\\"Chromosome 9 → 22, BCR-ABL, CML classic finding\\\" },\\n          { text: \\\"ALL 5 years\\\", explanation: \\\"Childhood ALL has ~5-year survival with modern therapy\\\" },\\n        ],\\n        keyPoints: [\\n          \\\"AML rapid with >20% blasts, APL has DIC risk\\\",\\n          \\\"CML BCR-ABL t(9;22), 3 phases: chronic→accelerated→blast\\\",\\n          \\\"ALL young children, B > T, Philadelphia in 25% adults\\\",\\n          \\\"CLL CD5+CD23+ mature B cells, variable course\\\",\\n          \\\"HL = Reed-Sternberg cells, contiguous spread, EBV role\\\",\\n          \\\"NHL 80% B-cell, DLBCL most common, random spread\\\",\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Harrison's Principles\\\", chapter: \\\"Leukemias and Lymphomas\\\", edition: \\\"21st\\\" },\\n          { book: \\\"Kumar & Clark's\\\", chapter: \\\"Malignant Haematology\\\", edition: \\\"10th\\\" },\\n        ],\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"leukemia-lymphoma-clinical\\\",\\n        title: \\\"Leukemias & Lymphomas - Clinical\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Clinical features, diagnosis (CBC, marrow aspirate/biopsy, flow cytometry, cytogenetics), and prognostic factors.\\\",\\n        contentMd: "# Leukemias & Lymphomas - Clinical Diagnosis\\\\n\\\\n## Clinical Features of Acute Leukemias\\\\n**AML/ALL common presentation:**\\\\n- Fever, infection (low neutrophils + immature cells)\\\\n- Bleeding/bruising (thrombocytopenia, DIC)\\\\n- Fatigue, dyspnea (anemia)\\\\n- Hepatosplenomegaly (organ infiltration)\\\\n- Lymphadenopathy (ALL more common)\\\\n- CNS symptoms (ALL >AML)\\\\n- Rapidly progressive (days to weeks)\\\\n\\\\n## Diagnostic Approach\\\\n\\\\n**CBC:**\\\\n- Elevated WBC with circulating blasts\\\\n- Anemia and thrombocytopenia common\\\\n- In CML: marked leukocytosis (200,000+), left shift, mature cells\\\\n\\\\n**Bone Marrow Examination (essential):**\\\\n- Aspiration: morphology, blast percentage\\\\n- Biopsy: cellularity, fibrosis, architecture\\\\n- >20% blasts = acute leukemia\\\\n\\\\n**Flow Cytometry:**\\\\n- CD marker panels identify B, T, myeloid origin\\\\n- LL: CD5+, CD19+ B-CLL; CD7+ T-CLL\\\\n- Crucial for diagnosis and classification\\\\n\\\\n**Cytogenetics & Molecular:**\\\\n- t(9;22) BCR-ABL: CML, some ALL\\\\n- t(15;17) PML-RARA: APL (M3)\\\\n- t(8;14) MYC: Burkitt lymphoma\\\\n- TP53 mutation: poor prognosis\\\\n\\\\n**Additional:**\\\\n- LDH, uric acid (tumor burden)\\\\n- Coagulation studies (DIC screening)\\\\n- CNS imaging (ALL)\\\\n\\\\n## Lymphoma Diagnosis\\\\n\\\\n**Lymph Node Biopsy (gold standard):**\\\\n- Excisional > FNA\\\\n- Histology + immunophenotype\\\\n- HL vs NHL distinction by Reed-Sternberg cells\\\\n- Grading in follicular lymphoma (1-3 vs 3a-3b)\\\\n\\\\n**Staging (Ann Arbor):**\\\\n- Stage I: Single node/site\\\\n- Stage II: 2+ nodes/sites same side diaphragm\\\\n- Stage III: Nodes both sides diaphragm\\\\n- Stage IV: Extranodal organs (bone marrow, liver, lung)\\\\n- A/B suffix: A=no B symptoms, B=fever/night sweats/weight loss\\\\n\\\\n**Workup:**\\\\n- PET-CT (88-95% sensitive for disease)\\\\n- Bone marrow aspirate (stage IV assessment)\\\\n- LDH (prognostic)\\\\n\\\\n## Prognostic Factors\\\\n\\\\n**AML:**\\\\n- Cytogenetics: t(8;21), t(15;17), inv(16) favorable; t(9;11) intermediate; complex, TP53 poor\\\\n- Age >60: worse\\\\n- Initial blast count: high adverse\\\\n- Multiresistance markers: adverse\\\\n\\\\n**CML:**\\\\n- Sokal score (age, spleen size, blast %), Euros score\\\\n- BCR-ABL transcript type (e1a2 better than e19a2)\\\\n- Early molecular response (BCR-ABL <10% at 3 months) crucial\\\\n\\\\n**ALL:**\\\\n- Age >60: very poor\\\\n- Philadelphia chromosome: adverse (but manageable with TKI+chemo)\\\\n- Leukocyte count: high WBC poor\\\\n- CNS involvement: systemic treatment needed\\\\n\\\\n**Lymphoma (IPI = International Prognostic Index):**\\\\n- Age >60\\\\n- LDH elevated\\\\n- ECOG PS >1\\\\n- Stage III-IV\\\\n- Extranodal sites >1\\\\n- 0-1 factor = 5yr OS ~90%; 4-5 factors = ~25%,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Blasts >20%\\\\\\\", explanation: \\\\\\\"Diagnostic cutoff for acute leukemia (AML/ALL)\\\\\\\" },\\\\n          { text: \\\\\\\"Ann Arbor I-IV\\\\\\\", explanation: \\\\\\\"HL/NHL staging: I (single), II (bilateral), III (both sides diaphragm), IV (extranodal)\\\\\\\" },\\\\n          { text: \\\\\\\"IPI = ALE3\\\\\\\", explanation: \\\\\\\"Age, LDH, ECOG, Extranodal sites - 5 risk factors for lymphoma prognosis\\\\\\\" },\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"AML/ALL: rapid onset fever, infection, bleeding\\\\\\\",\\\\n          \\\\\\\"CML: asymptomatic, high WBC on routine exam\\\\\\\",\\\\n          \\\\\\\"Marrow aspirate/biopsy essential for leukemia diagnosis\\\\\\\",\\\\n          \\\\\\\"Flow cytometry identifies cell lineage\\\\\\\",\\\\n          \\\\\\\"Cytogenetics crucial for prognosis (Philadelphia in CML, APL, poor risk in ALL)\\\\\\\",\\\\n          \\\\\\\"Lymphoma: excisional biopsy, staging with PET-CT\\\\\\\",\\\\n          \\\\\\\"IPI score predicts NHL prognosis\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"Diagnostic Approach to Hematologic Malignancies\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles\\\\\\\", chapter: \\\\\\\"Diagnosis and Staging\\\\\\\", edition: \\\\\\\"25th\\\\\\\" },\\\\n        ],\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"leukemia-lymphoma-exam\\\\\\\",\\\\n        title: \\\\\\\"Leukemias & Lymphomas - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Treatment overview, response assessment, common regimens, and management of complications.\\\\\\\",\\\\n        contentMd: ``# Leukemias & Lymphomas - Management & Treatment\\\\n\\\\n## AML Treatment Strategy\\\\n**Induction chemotherapy (standard):**)\\\\n- \\\\\\\"7+3\\\\\\\" = Cytarabine 7 days + Daunorubicin 3 days\\\\n- Goal: Complete remission (CR) <5% blasts\\\\n- Complications: Severe cytopenias, infection, mucositis\\\\n\\\\n**High-dose cytarabine (HiDAC):** For fit patients, consolidation\\\\n\\\\n**Targeted approaches:**\\\\n- **APL (M3):** ATRA + arsenic trioxide (ATO) - cure >90% (vs chemotherapy)\\\\n- **FLT3-ITD:** Sorafenib/midostaurin + chemo\\\\n- **IDH mutations:** Ivosidenib, enasidenib\\\\n\\\\n**Intensive vs Non-intensive:**\\\\n- Intensive: Fit younger patients, chemotherapy\\\\n- Non-intensive: Elderly/unfit, azacitidine, decitabine, HMA\\\\n\\\\n**Allogeneic HSCT:** Indication for high-risk features (poor cytogenetics, TP53)\\\\n\\\\n## CML Treatment Strategy\\\\n**TKI therapy (1st line):**\\\\n- Imatinib (Gleevec): 400 mg daily, ~95% CHR, 80% MMR in chronic phase\\\\n- Dasatinib, nilotinib: 2nd generation, faster response\\\\n- Mechanism: Competitive inhibitor of BCR-ABL tyrosine kinase\\\\n\\\\n**Monitoring:**\\\\n- BCR-ABL transcript by PCR (sensitive)\\\\n- Major molecular response (MMR): BCR-ABL <0.1%\\\\n- Deep molecular response (DMR): <0.01%\\\\n\\\\n**Treatment-free remission:** Possible in patients with sustained DMR\\\\n\\\\n**Accelerated/Blast crisis:** TKI + chemotherapy, HSCT urgently\\\\n\\\\n## ALL Treatment\\\\n**Induction:** Typically multi-agent (vincristine, daunorubicin, prednisolone, asparaginase)\\\\n\\\\n**CNS prophylaxis:** Essential (intrathecal chemo/cranial radiotherapy)\\\\n\\\\n**Philadelphia+ ALL:** TKI (imatinib) + chemotherapy (superior to chemo alone)\\\\n\\\\n**Consolidation + Maintenance:** 2-3 years total duration\\\\n\\\\n**Adolescents/young adults:** Pediatric regimens (better outcomes than adult)\\\\n\\\\n## CLL Treatment\\\\n**\\\\\\\"Watch and wait\\\\\\\":** For asymptomatic, early-stage disease (30% never need treatment)\\\\n\\\\n**First-line (fit patients):**\\\\n- Chemoimmunotherapy: FCR (Fludarabine, Cyclophosphamide, Rituximab)\\\\n- BTK inhibitors: Ibrutinib, acalabrutinib (increasingly used)\\\\n- Venetoclax + rituximab (BCL-2 inhibitor)\\\\n\\\\n**Elderly/unfit:** Chlorambucil, rituximab, or BTK inhibitors\\\\n\\\\n**Richter transformation:** Treat as DLBCL (aggressive chemotherapy)\\\\n\\\\n## Hodgkin Lymphoma Treatment\\\\n**Early-stage (IA-IIA):** Radiotherapy alone, ABVD + radiation, or ABVD alone (risk-adapted)\\\\n\\\\n**Advanced (IIB-IV):** ABVD (Doxorubicin, Bleomycin, Vinblastine, Dacarbazine) ± radiotherapy\\\\n\\\\n**Escalated BEACOPP:** Higher intensity, young patients, advanced disease\\\\n\\\\n**Modern approach:** Check for PET response after 2 cycles (PET-adapted therapy)\\\\n\\\\n**Relapsed/refractory:** Salvage chemo, HSCT, or brentuximab vedotin (anti-CD30 monoclonal)\\\\n\\\\n**~90% long-term survival** with modern therapy\\\\n\\\\n## NHL Treatment (risk-adapted)\\\\n\\\\n**Indolent NHL (follicular):**\\\\n- Observation initially if asymptomatic\\\\n- Rituximab monotherapy (anti-CD20)\\\\n- Rituximab + chemotherapy (bendamustine, CVP)\\\\n- HSCT for transformation/relapse\\\\n\\\\n**DLBCL (aggressive):**\\\\n- R-CHOP (Rituximab, Cyclophosphamide, Doxorubicin, Vincristine, Prednisolone) - standard\\\\n- ~60-70% cure rate\\\\n- PET-adapted therapy becoming standard\\\\n- Consolidate with HSCT if poor prognosis\\\\n\\\\n**Burkitt Lymphoma:**\\\\n- Intensive chemotherapy (CODOX-M/IVAC, HyperCVAD)\\\\n- CNS prophylaxis (high risk)\\\\n- ~90% cure in young patients, 50% elderly\\\\n\\\\n**Mantle Cell Lymphoma:**\\\\n- Initially indolent behavior but progressive\\\\n- High-dose chemotherapy + HSCT for fit\\\\n- Bortezomib + chemotherapy\\\\n- BTK inhibitors in relapsed\\\\n\\\\n## Supportive Care Critical\\\\n- **Hyperuricemia/tumor lysis:** Allopurinol, rasburicase (pre-treat before chemo)\\\\n- **DIC management:** FFP, platelets, target PTT, cryoprecipitate\\\\n- **Infection prophylaxis:** G-CSF, antibacterial/antifungal during cytopenias\\\\n- **Transfusion:** RBC <7 g/dL, platelets <10,000 (spontaneous bleed risk)\\\\n- **CMV/PCP prophylaxis:** In transplant recipients,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"ABVD\\\\\\\", explanation: \\\\\\\"Doxorubicin, Bleomycin, Vinblastine, Dacarbazine - Hodgkin standard\\\\\\\" },\\\\n          { text: \\\\\\\"R-CHOP\\\\\\\", explanation: \\\\\\\"Rituximab, Cyclophosphamide, Doxorubicin, Vincristine, Prednisolone - NHL standard\\\\\\\" },\\\\n          { text: \\\\\\\"APL = ATRA+ATO\\\\\\\", explanation: \\\\\\\"All-trans retinoic acid + Arsenic trioxide > chemotherapy for M3\\\\\\\" },\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"AML 7+3 induction, APL needs ATRA+ATO not chemo\\\\\\\",\\\\n          \\\\\\\"CML TKI (imatinib) 1st line, monitor BCR-ABL by PCR\\\\\\\",\\\\n          \\\\\\\"ALL multi-agent chemo + CNS prophylaxis, Philadelphia+ needs TKI\\\\\\\",\\\\n          \\\\\\\"CLL watch-wait initially, BTK inhibitors or FCR when needed\\\\\\\",\\\\n          \\\\\\\"HL ABVD + PET-adapted, ~90% long-term survival\\\\\\\",\\\\n          \\\\\\\"NHL R-CHOP for DLBCL, HSCT for transform/relapse\\\\\\\",\\\\n          \\\\\\\"Tumor lysis prophylaxis with allopurinol/rasburicase\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"Treatment of Hematopoietic Malignancies\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"NCCN Guidelines\\\\\\\", chapter: \\\\\\\"Acute Leukemias, CML, Lymphomas\\\\\\\", edition: \\\\\\\"2026\\\\\\\" },\\\\n        ],\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"leukemia-lymphoma-recall\\\\\\\",\\\\n        title: \\\\\\\"Leukemias & Lymphomas - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"Key questions testing knowledge of classification, diagnosis, prognosis, and treatment decisions.\\\\\\\",\\\\n        contentMd: ``# Active Recall: Leukemias & Lymphomas\\\\n\\\\n**Q1:** A 65-year-old man with fatigue and bruising has WBC 85,000 with 30% blasts. Marrow shows >20% myeloid blasts with monocytic differentiation. Cytogenetics show complex abnormalities. What is diagnosis and prognosis?\\\\n> **Answer:** AML (M5 monocytic), adverse prognosis (complex cytogenetics, age >60). Non-intensive therapy (azacitidine) likely. Without HSCT, median OS 5-10 months.\\\\n\\\\n**Q2:** Philadelphia chromosome t(9;22) BCR-ABL is found on cytogenetics. Patient has high WBC, left-shifted myeloid precursors, and was asymptomatic. Diagnosis?\\\\n> **Answer:** CML chronic phase. Treat with imatinib 400 mg daily, monitor BCR-ABL by PCR for MMR. ~95% CHR expected.\\\\n\\\\n**Q3:** A 35-year-old woman has fever, petechiae, WBC 150,000 with >20% blasts. Marrow shows ALL. Coagulopathy present (aPTT prolonged, fibrinogen low). What complication and management?\\\\n> **Answer:** DIC (ALL 5% risk, especially with high WBC). Treat with FFP, cryoprecipitate, target reversal with LMWH. Chemotherapy induction urgently to reduce blast burden.\\\\n\\\\n**Q4:** 50-year-old with painless cervical lymphadenopathy and night sweats has lymph node biopsy showing large multinucleated cells with \\\\\\\"owl-eye\\\\\\\" nuclei. Background small lymphocytes and eosinophils. Diagnosis?\\\\n> **Answer:** Hodgkin lymphoma (classical type), likely nodular sclerosis. Stage determined by imaging. Treat with ABVD. Prognosis excellent (~90% cure).\\\\n\\\\n**Q5:** A 70-year-old man with asymptomatic CLL (CD5+, CD19+, CD23+) presents with persistent stage II disease. Should treatment be started?\\\\n> **Answer:** No, \\\\\\\"watch and wait.\\\\\\\" ~30% CLL never require treatment, median survival after diagnosis 10+ years. Start monitoring; treat when symptomatic or progressive (rising LDH, short lymphocyte doubling time <6 months).\\\\n\\\\n**Q6:** Young male with Burkitt lymphoma (t(8;14) MYC translocation), high LDH, and jaw swelling. High risk for which complication post-chemotherapy?\\\\n> **Answer:** Tumor lysis syndrome (very high cell turnover). Prevent with aggressive hydration, allopurinol/rasburicase BEFORE chemo. Monitor K+, uric acid, phosphate, creatinine closely. Use high-dose chemotherapy with IVAC.\\\\n\\\\n**Q7:** DLBCL diagnosed; IPI score = 4 (age 75, elevated LDH, ECOG 2, stage IV). What is 5-year OS and treatment?\\\\n> **Answer:** IPI 4 = 5-year OS ~25%. Treat R-CHOP if fit, or non-chemotherapy options (rituximab monotherapy, bendamustine) if unfit. Consider reduced CHOP dose.\\\\n\\\\n**Q8:** 45-year-old with ALL Philadelphia+ (BCR-ABL+) has achieved CR with chemotherapy but no HSCT planned. What long-term complication risk?\\\\n> **Answer:** Relapse/resistance high without continued imatinib or HSCT. Recommend continuing imatinib during consolidation/maintenance. HSCT in 1st remission improves long-term disease-free survival.\\\\n\\\\n**Q9:** APL (M3) suspected - urgent ATRA + arsenic trioxide initiated before confirming t(15;17). Why rush vs waiting for cytogenetics?\\\\n> **Answer:** ATRA differentiates APL blasts, prevents DIC, improves coagulopathy rapidly. Don't wait - treat immediately on suspicion (morphology). ATRA toxicity (APL differentiation syndrome with ATRA) managed supportively.\\\\n\\\\n**Q10:** CLL patient on ibrutinib (BTK inhibitor) for 2 years develops fever, weight loss, rapidly enlarging nodes, and aggressive B-cell lymphoma on repeat biopsy. What happened?\\\\n> **Answer:** Richter transformation (~5% CLL). Treat as aggressive DLBCL with salvage chemotherapy (DHAP, R-CHOP, HyperCVAD). Prognosis poor; consider HSCT. Distinguish from acquired BTK resistance.,\\\\n        mnemonics: [],\\\\n        keyPoints: [\\\\n          \\\\\\\"8 recall questions covering AML/CML/ALL/CLL/HL/NHL\\\\\\\",\\\\n          \\\\\\\"DIC, tumor lysis, Richter transformation complications\\\\\\\",\\\\n          \\\\\\\"IPI prognostic scoring for NHL\\\\\\\",\\\\n          \\\\\\\"Philadelphia chromosome in CML and some ALL\\\\\\\",\\\\n          \\\\\\\"Watch-wait for indolent CLL vs treatment for aggressive disease\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"Case Studies in Hematologic Malignancies\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n        ],\\\\n      },\\\\n    ],\\\\n  },\\\\n  {\\\\n    topicCode: \\\\\\\"IM-MOD-06-TOP-04\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"bleeding-disorders-foundation\\\\\\\",\\\\n        title: \\\\\\\"Bleeding & Coagulation Disorders - Foundation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Hemostasis physiology, platelet function, coagulation cascade, fibrinolysis, and classification of bleeding disorders.\\\\\\\",\\\\n        contentMd: ``# Bleeding & Coagulation Disorders - Foundation\\\\n\\\\n## Normal Hemostasis (3 Components)\\\\n\\\\n**1. Vascular Endothelium**\\\\n- Barrier function\\\\n- Anticoagulant surface (endothelial protein C receptor, thrombomodulin)\\\\n- Antiplatelet properties\\\\n- Fibrinolytic activity (tPA release)\\\\n\\\\n**2. Platelets (Normal 150,000-400,000/μL)**\\\\n- Adhesion: von Willebrand factor (vWF) → subendothelium\\\\n- Activation: Thrombin, ADP, collagen\\\\n- Aggregation: Fibrinogen bridges platelet GPIIb/IIIa\\\\n- Secretion: ADP, vWF, fibrinogen (dense and alpha granules)\\\\n- Procoagulant function: Phosphatidylserine externalization\\\\n\\\\n**3. Coagulation Cascade**\\\\n- **Extrinsic pathway:** Tissue factor + Factor VII → Xa (rapid, low-level)\\\\n- **Intrinsic pathway:** Factors XII, XI, IX, VIII → Xa (slow, amplification)\\\\n- **Common pathway:** Factor V, II, X → thrombin → fibrinogen → fibrin clot\\\\n- **Cofactors:** Calcium (Ca2+), phospholipid (cell membrane)\\\\n\\\\n**Thrombin (Factor IIa) = central enzyme:**\\\\n- Cleaves fibrinogen → fibrin monomer → polymerizes\\\\n- Activates Factor XIII (transglutaminase) → cross-links fibrin\\\\n- Positive feedback: Activates factors V, VIII, XI\\\\n- Negative feedback: Generates thrombin-thrombomodulin complex → activates protein C (inhibits Va, VIIIa)\\\\n\\\\n**Fibrinolysis:**\\\\n- Plasminogen + tPA (endothelial) → plasmin\\\\n- Plasmin cleaves fibrin → D-dimers, fibrin degradation products (FDP)\\\\n- Regulated by PAI-1 (antifibrinolytic)\\\\n\\\\n## Classification of Bleeding Disorders\\\\n\\\\n**Platelet Disorders:**\\\\n- Quantitative: Thrombocytopenia (<150,000)\\\\n- Qualitative: Normal count, abnormal function\\\\n\\\\n**Coagulation Deficiencies:**\\\\n- Inherited: Hemophilia A/B, vWD, prothrombin deficiency\\\\n- Acquired: Liver disease, vitamin K deficiency, anticoagulants\\\\n\\\\n**Fibrinolytic Disorders:**\\\\n- Excessive fibrinolysis: DIC, liver disease, trauma\\\\n- Inadequate fibrinolysis: Antiplasmin deficiency\\\\n\\\\n**Vascular Disorders:**\\\\n- Vasculitis, Ehlers-Danlos syndrome, scurvy (vitamin C deficiency)\\\\n\\\\n## Pathophysiology Framework\\\\n- **Intrinsic pathway defects (Factor VIII, IX, XI, XII):** ↑ PTT, normal PT\\\\n- **Extrinsic pathway defects (Factor VII):** ↑ PT, normal PTT\\\\n- **Common pathway defects (Factor II, V, X, fibrinogen, XIII):** ↑ PT, ↑ PTT\\\\n- **Platelet defects:** ↑ Bleeding time (or PFA-100), normal coagulation tests,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"VTP (Vitamin K-dependent):\\\\\\\", explanation: \\\\\\\"Factors II, VII, IX, X (all synthesized in liver)\\\\\\\" },\\\\n          { text: \\\\\\\"Intrinsic = 12-11-9-8\\\\\\\", explanation: \\\\\\\"Factors XII→XI→IX→VIII then X (contact activation)\\\\\\\" },\\\\n          { text: \\\\\\\"PT = Extrinsic\\\\\\\", explanation: \\\\\\\"Prothrombin time = Factors II, V, VII, X\\\\\\\" },\\\\n          { text: \\\\\\\"aPTT = Intrinsic\\\\\\\", explanation: \\\\\\\"Activated PTT = Factors II, V, VIII, IX, X, XI, XII\\\\\\\" },\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Three components: vessel, platelets, coagulation factors\\\\\\\",\\\\n          \\\\\\\"Normal platelet count 150-400K/μL\\\\\\\",\\\\n          \\\\\\\"Coagulation cascade: Extrinsic (TF+VII) + Intrinsic (XII→XI→IX→VIII) → Common (II, V, X→thrombin→fibrin)\\\\\\\",\\\\n          \\\\\\\"Thrombin central enzyme, activates fibrin and factors V, VIII, XI\\\\\\\",\\\\n          \\\\\\\"Fibrinolysis: tPA → plasmin → fibrin degradation\\\\\\\",\\\\n          \\\\\\\"PT tests extrinsic (TF, VII) and common; aPTT tests intrinsic and common\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"Coagulation Disorders\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Kumar & Clark's\\\\\\\", chapter: \\\\\\\"Hemostasis and Bleeding Disorders\\\\\\\", edition: \\\\\\\"10th\\\\\\\" },\\\\n        ],\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"bleeding-disorders-mechanism\\\\\\\",\\\\n        title: \\\\\\\"Bleeding & Coagulation Disorders - Mechanism\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Pathophysiology of thrombocytopenia, hemophilia, vWD, DIC, ITP, and hereditary disorders.\\\\\\\",\\\\n        contentMd: ``# Bleeding & Coagulation Disorders - Pathophysiology\\\\n\\\\n## ITP (Immune Thrombocytopenia)\\\\n\\\\n**Acute ITP (children):**\\\\n- Autoimmune destruction of platelets post-viral infection\\\\n- Self-limited in 80%, resolve within 3-6 months\\\\n- Platelet antibodies → phagocytosis by spleen\\\\n\\\\n**Chronic ITP (adults):**\\\\n- Autoimmune platelet destruction without inciting infection\\\\n- Anti-GPIIb/IIIa or anti-Ib/IX antibodies\\\\n- Women > men, peak age 20-50 years\\\\n- Pathophysiology: ↓ Production + ↑ destruction\\\\n- Splenomegaly: Increased destruction site\\\\n\\\\n**Drug-induced:** Sulfonamides, PPI, DIC, infections\\\\n\\\\n## Hemophilia A & B\\\\n\\\\n**Hemophilia A (Factor VIII deficiency):**\\\\n- X-linked recessive (90% males affected)\\\\n- Prevalence 1/5,000 males\\\\n- Pathophysiology: ↓ Factor VIII → ↓ intrinsic pathway → ↓ thrombin generation\\\\n- Severity: <1% activity (severe), 1-5% (moderate), 5-40% (mild)\\\\n- Bleeding: Joint (hemarthrosis), muscle hematomas, post-trauma, delayed wound healing\\\\n- aPTT prolonged, PT normal (Factor VIII not in extrinsic pathway)\\\\n\\\\n**Hemophilia B (Factor IX deficiency - Christmas disease):**\\\\n- X-linked recessive\\\\n- Less common (1/30,000 males)\\\\n- Similar pathophysiology to Hemophilia A (also intrinsic pathway)\\\\n- Clinically indistinguishable from Hemophilia A\\\\n\\\\n**Complications:**\\\\n- Chronic synovitis from recurrent hemarthrosis\\\\n- Inhibitor alloantibodies (10-15% Hemophilia A, 3% Hemophilia B) → resistance to factor replacement\\\\n\\\\n## von Willebrand Disease (vWD)\\\\n\\\\n**Pathophysiology:**\\\\n- Deficiency or dysfunction of von Willebrand factor (vWF)\\\\n- vWF functions: (1) platelet adhesion via GPIb, (2) Factor VIII carrier, (3) hemostasis\\\\n\\\\n**Type 1 (partial vWF deficiency - 75%):**\\\\n- ↓ vWF and ↓ Factor VIII (parallel)\\\\n- Inheritance: Autosomal dominant (variable penetrance)\\\\n- Mild-moderate bleeding phenotype\\\\n\\\\n**Type 2 (qualitative vWF deficiency - 20%):**\\\\n- Dysfunctional vWF\\\\n- Subtypes: 2A (defective high-MW multimers), 2M (defective platelet binding), 2N (defective Factor VIII binding)\\\\n\\\\n**Type 3 (complete vWF deficiency - <5%):**\\\\n- Homozygous/compound heterozygous\\\\n- Autosomal recessive\\\\n- Severe bleeding phenotype, virtually no vWF\\\\n\\\\n**Diagnosis pitfalls:**\\\\n- vWF and Factor VIII vary with stress, exercise, estrogen, ABO blood group (O lower)\\\\n- Repeated testing may be needed\\\\n- Testing during acute illness unreliable\\\\n\\\\n## DIC (Disseminated Intravascular Coagulation)\\\\n\\\\n**Triggers:**\\\\n- Sepsis (gram-negative endotoxin, gram-positive superantigens)\\\\n- Trauma (tissue factor release)\\\\n- Malignancy (cancer procoagulants, mucin)\\\\n- Obstetric: Placental abruption, amniotic fluid embolism, retained dead fetus\\\\n- Transfusion reaction, acute hemolysis\\\\n- Snake venom, pancreatitis\\\\n\\\\n**Pathophysiology (Two-hit model):**\\\\n1. **Initial TF activation:** Tissue factor enters circulation → Factor VIIa complex → Xa generation → thrombin burst\\\\n2. **Platelet/fibrin consumption:** Microthrombi throughout microvasculature\\\\n3. **Depletion of anticoagulants:** Protein C, protein S, antithrombin deficiency\\\\n4. **Secondary fibrinolysis:** tPA release → plasmin → hyperfibrinolysis\\\\n\\\\n**Result:** Paradoxical coagulopathy (DIC = bleeding + clotting simultaneously)\\\\n- ↓ Platelets, ↓ fibrinogen\\\\n- ↑ PT, ↑ aPTT\\\\n- ↑ D-dimer, FDP\\\\n- ↓ Antithrombin, Protein C\\\\n\\\\n**Clinical:** Bleeding (cutaneous petechiae, GI, CNS), microvascular thrombosis (organ failure)\\\\n\\\\n## Vitamin K Deficiency\\\\n\\\\n**Pathophysiology:**\\\\n- Vitamin K (phylloquinone) → activates factors II, VII, IX, X (γ-carboxylation)\\\\n- Antagonized by warfarin/coumarin\\\\n\\\\n**Causes:**\\\\n- Malabsorption (celiac, surgical bypass)\\\\n- Antibiotics (suppress gut flora)\\\\n- Dietary restriction\\\\n- Biliary obstruction (fat-soluble vitamin absorption)\\\\n\\\\n**Presentation:** Bleeding, ↑ PT (Factor VII shortest half-life), ↑ aPTT (Factors II, IX, X), normal bleeding time\\\\n\\\\n## Liver Disease Coagulopathy\\\\n\\\\n**Pathophysiology:**\\\\n- Liver synthesizes: Factors II, V, VII, IX, X, XI, XII, fibrinogen\\\\n- ↓ Production all coagulation factors\\\\n- ↑ PT (earliest), ↑ aPTT\\\\n- ↓ Platelets (from portal hypertension + splenic pooling)\\\\n- ↑ Fibrinolysis (clearance of tPA ↓)\\\\n- DIC-like picture in acute liver failure\\\\n\\\\n**Results:** Coagulopathy + thrombocytopenia + hyperfibrinolysis = severe bleeding risk,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"THROMBOSES 2 T's\\\\\\\", explanation: \\\\\\\"Thrombocytopenia, Thrombosis = DIC opposite faces\\\\\\\" },\\\\n          { text: \\\\\\\"ITP Spleen\\\\\\\", explanation: \\\\\\\"Immune destruction in spleen → ITP improves post-splenectomy (~70% respond)\\\\\\\" },\\\\n          { text: \\\\\\\"vWF = Platelet adhesion\\\\\\\", explanation: \\\\\\\"von Willebrand Factor on platelet GPIb, plus Factor VIII carrier\\\\\\\" },\\\\n          { text: \\\\\\\"Hemophilia aPTT ↑\\\\\\\", explanation: \\\\\\\"Factor VIII/IX deficiency → intrinsic pathway prolonged aPTT\\\\\\\" },\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"ITP autoimmune platelet destruction, acute self-limited in children\\\\\\\",\\\\n          \\\\\\\"Hemophilia A/B X-linked, Factor VIII/IX deficiency, ↑ aPTT\\\\\\\",\\\\n          \\\\\\\"vWD most common inherited bleeding disorder, Type 1 (75%)\\\\\\\",\\\\n          \\\\\\\"DIC consumption coagulopathy, microthrombosis, bleeding + clotting\\\\\\\",\\\\n          \\\\\\\"Vitamin K synthesizes Factors II, VII, IX, X\\\\\\\",\\\\n          \\\\\\\"Liver disease coagulopathy: ↑ PT/aPTT, ↓ all factors, thrombocytopenia\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"Platelet and Bleeding Disorders\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Kumar & Clark's\\\\\\\", chapter: \\\\\\\"Hemostasis Disorders\\\\\\\", edition: \\\\\\\"10th\\\\\\\" },\\\\n        ],\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"bleeding-disorders-clinical\\\\\\\",\\\\n        title: \\\\\\\"Bleeding & Coagulation Disorders - Clinical\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Clinical presentation, diagnostic workup (PT/aPTT/bleeding time, marrow exam, antibody testing), and severity assessment.\\\\\\\",\\\\n        contentMd: ``# Bleeding & Coagulation Disorders - Clinical Diagnosis\\\\n\\\\n## Clinical Pattern Recognition\\\\n\\\\n**Platelet Disorders (bleeding time prolonged/PFA abnormal):**\\\\n- Petechiae (small, non-blanching)\\\\n- Mucosal bleeding (epistaxis, gum, GI)\\\\n- Superficial bruising\\\\n- Type: Spontaneous if <10,000/μL; post-trauma if 20-50K\\\\n\\\\n**Coagulation Deficiencies (PT/aPTT prolonged):**\\\\n- Hemarthrosis (joint bleeding - characteristic of Hemophilia)\\\\n- Delayed bleeding post-trauma\\\\n- Large hematomas (muscle, soft tissue)\\\\n- Post-surgical bleeding\\\\n- CNS bleeding (spontaneous risk)\\\\n\\\\n**vWD mixed pattern:**\\\\n- Mucosal bleeding (platelet-like) + delayed bleeding (Factor VIII deficiency)\\\\n- Heavy menstrual bleeding (women)\\\\n- Post-dental/surgical bleeding\\\\n\\\\n**DIC:**\\\\n- Acute illness + bleeding + thrombosis + organ failure\\\\n- Cutaneous manifestations: Petechiae → purpura → necrosis (acral necrosis)\\\\n\\\\n## Diagnostic Tests\\\\n\\\\n**Initial CBC:**\\\\n- Platelet count: <150K = thrombocytopenia\\\\n- Smear: Schistocytes (DIC), spherocytes (AIHA/microangiopathy)\\\\n\\\\n**Coagulation Screen:**\\\\n- **PT (prothrombin time):** Extrinsic pathway (TF, VII) + Common (II, V, X)\\\\n  - Prolonged: Factor deficiency, warfarin, DIC, liver disease\\\\n- **aPTT (activated partial thromboplastin time):** Intrinsic (XII, XI, IX, VIII) + Common (II, V, X)\\\\n  - Prolonged: Factor VIII, IX, XI, XII deficiency, antiphospholipid antibody, heparin, DIC\\\\n- **Thrombin time:** Fibrinogen → fibrin conversion\\\\n  - Prolonged: Hypofibrinogenemia, DIC, heparin, FDPs\\\\n- **Fibrinogen:** Normal 200-400 mg/dL\\\\n  - Low: DIC, liver disease, massive transfusion\\\\n\\\\n**Specific Factor Assays:**\\\\n- Factor VIII, Factor IX levels (Hemophilia A/B)\\\\n- vWF antigen, vWF activity (Ristocetin cofactor), Factor VIII (vWD diagnosis)\\\\n- Fibrin-degradation products, D-dimer (DIC)\\\\n\\\\n**Platelet Function Tests:**\\\\n- Bleeding time: Outdated (poor correlation)\\\\n- PFA-100 (Platelet Function Analyzer): Functional test for platelet/vWF\\\\n- Platelet aggregometry: Evaluate platelet activation pathways\\\\n\\\\n**ITP Diagnosis (Platelet Antibodies):**\\\\n- Anti-platelet IgG titers\\\\n- Diagnosis largely clinical + response to steroids/IVIG\\\\n\\\\n**Inhibitor Assays (Hemophilia):**\\\\n- Bethesda assay: Quantify alloantibodies in Hemophilia patients\\\\n- >5 BU = significant inhibitor\\\\n\\\\n**DIC Scoring (ISTH):**\\\\n- PT prolongation, ↓ platelets, ↑ D-dimer, ↓ fibrinogen\\\\n- Score ≥5 compatible with overt DIC\\\\n\\\\n## Hemophilia Severity Assessment\\\\n- **Severe (<1% Factor activity):** Spontaneous bleeding, hemarthrosis, post-trauma\\\\n- **Moderate (1-5%):** Bleeding with trauma, rarely spontaneous\\\\n- **Mild (5-40%):** Bleeding with major trauma/surgery only\\\\n\\\\n## vWD Workup (Challenging)\\\\n- Repeat testing (vWF and Factor VIII vary)\\\\n- Test during non-stressed state (stress ↑ vWF)\\\\n- vWF antigen + vWF activity + Factor VIII needed\\\\n- Type 1: ↓ vWF and Factor VIII (parallel)\\\\n- Type 2: ↓ vWF activity > antigen (discordance)\\\\n- Type 3: Absent vWF\\\\n\\\\n## DIC Differential\\\\n- Sepsis-induced DIC vs. TIC (trauma-induced coagulopathy)\\\\n- Procalcitonin, IL-6, lactate: ↑ in sepsis\\\\n- Early coagulopathy in massive transfusion is not DIC yet (dilutional)\\\\n\\\\n## Liver Disease Assessment\\\\n- INR (PT) most sensitive early marker\\\\n- Model for End-Stage Liver Disease (MELD) score predicts synthetic function\\\\n- Platelet count <50K → portal hypertension + splenomegaly\\\\n- FIB4 index predicts fibrosis,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Hemarthrosis = Hemophilia\\\\\\\", explanation: \\\\\\\"Joint bleeding classic for Factor VIII/IX deficiency\\\\\\\" },\\\\n          { text: \\\\\\\"Petechiae = Platelet disorder\\\\\\\", explanation: \\\\\\\"Small non-blanching spots, mucosal bleeding\\\\\\\" },\\\\n          { text: \\\\\\\"PT = Extrinsic (TF, VII)\\\\\\\", explanation: \\\\\\\"Prothrombin time fastest (Factor VII shortest half-life)\\\\\\\" },\\\\n          { text: \\\\\\\"aPTT = Intrinsic (XII→XI→IX→VIII)\\\\\\\", explanation: \\\\\\\"Contact activation pathway test\\\\\\\" },\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Platelet disorders: petechiae, mucosal bleeding\\\\\\\",\\\\n          \\\\\\\"Coagulation deficiency: hemarthrosis, delayed bleeding, hematomas\\\\\\\",\\\\n          \\\\\\\"PT prolonged: extrinsic/common pathway problem\\\\\\\",\\\\n          \\\\\\\"aPTT prolonged: intrinsic/common pathway problem\\\\\\\",\\\\n          \\\\\\\"Hemophilia: Factor VIII/IX deficiency, hemarthrosis, ↑ aPTT\\\\\\\",\\\\n          \\\\\\\"vWD: mixed mucosal + delayed pattern, ↓ vWF and Factor VIII\\\\\\\",\\\\n          \\\\\\\"DIC: consumption coagulopathy, bleeding + thrombosis, petechiae + necrosis\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"Diagnostic Approach to Bleeding\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Kumar & Clark's\\\\\\\", chapter: \\\\\\\"Bleeding Disorders - Diagnosis\\\\\\\", edition: \\\\\\\"10th\\\\\\\" },\\\\n        ],\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"bleeding-disorders-exam\\\\\\\",\\\\n        title: \\\\\\\"Bleeding & Coagulation Disorders - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Management of ITP, hemophilia, vWD, DIC, vitamin K deficiency; replacement strategies and complications.\\\\\\\",\\\\n        contentMd: ``# Bleeding & Coagulation Disorders - Management\\\\n\\\\n## ITP Management\\\\n\\\\n**Acute ITP (pediatric):**\\\\n- Usually self-limited, monitor\\\\n- IVIG 1-2 g/kg (rapid platelet increment, lasts 3-4 weeks)\\\\n- Corticosteroids: Prednisolone 2 mg/kg/day (slower, 2-4 weeks response)\\\\n- Reserve splenectomy for chronic evolution\\\\n\\\\n**Chronic ITP:**\\\\n- **First-line:** Corticosteroids (prednisolone 1 mg/kg/day)\\\\n- **Add IVIG:** For non-responders or need rapid platelet rise\\\\n- **Second-line:** Splenectomy (70% respond; permanent in 50-70%), danazol, azathioprine\\\\n- **Novel agents:** Romiplostim, eltrombopag (TPO agonists)\\\\n- **Target platelet count:** >30K (most bleeding stops), >50K (minor surgery)\\\\n\\\\n**ITP in Pregnancy:**\\\\n- Corticosteroids preferred (safest)\\\\n- IVIG alternative\\\\n- Assess neonatal risk (usually mild transient neonatal ITP)\\\\n\\\\n## Hemophilia Treatment Strategy\\\\n\\\\n**Hemophilia A (Factor VIII):**\\\\n- **Replacement therapy (mainstay):**\\\\n  - Plasma-derived Factor VIII (traditional)\\\\n  - Recombinant Factor VIII (safer, no virus risk) - rFVIII (octocog alfa, moroctocog alfa)\\\\n  - Desired level: 50% for minor bleeding, 100% for major/joint bleeds\\\\n  - Dosing: 1 IU/kg raises Factor VIII ~2%\\\\n  - Half-life 8-12 hours (twice daily or every-other-day dosing)\\\\n\\\\n- **Extended half-life (EHL) products:** Pegylated rFVIII (Adynovate), Fc-fusion (Eloctate)\\\\n  - HLF 18-25 hours → reduces infusion frequency to 1-2x/week\\\\n\\\\n- **Novel therapies (bypassing agents):**\\\\n  - Activated prothrombin complex concentrate (aPCC/FEIBA): Bypasses Factor VIII\\\\n  - Recombinant Factor VIIa (NovoSeven): Direct thrombin generation\\\\n  - Used in inhibitor patients (alloimmunization)\\\\n\\\\n- **Prevention (Prophylaxis):**\\\\n  - Primary prophylaxis (starting childhood): 3-4x/week Factor VIII infusions → prevents hemarthrosis\\\\n  - Standard dosing: 25-40 IU/kg 3x/week\\\\n  - Superior to on-demand therapy in preventing joint damage\\\\n\\\\n- **Inhibitor management:**\\\\n  - High-titer inhibitors: aPCC/rFVIIa bypassing agents\\\\n  - Immune tolerance induction (ITI): High-dose Factor VIII daily to induce tolerance (success 70%)\\\\n\\\\n**Hemophilia B (Factor IX):**\\\\n- Recombinant Factor IX (eftrenonacog alfa, albutrepenonacog alfa)\\\\n- Dosing: 1 IU/kg raises Factor IX ~1%\\\\n- Half-life 15-30 hours (once-daily possible)\\\\n- EHL prothrombin complex concentrates (PCCs): Contains Factors II, VII, IX, X\\\\n  - Rapid thrombin generation\\\\n  - Risk: Thrombosis (previous concern, modern PCCs safer)\\\\n\\\\n## von Willebrand Disease Treatment\\\\n\\\\n**Type 1 (partial deficiency):**\\\\n- **DDAVP (1-deamino-8-D-arginine vasopressin):** Releases endothelial vWF and Factor VIII\\\\n  - Dose: 0.3 μg/kg IV or intranasal\\\\n  - Response: ↑ vWF, Factor VIII within 30 minutes\\\\n  - Tachyphylaxis after 2-3 doses (desensitization)\\\\n  - Safe, no blood product\\\\n\\\\n- **vWF concentrate:** vWF + Factor VIII (Humate-P, Wilate)\\\\n  - When DDAVP fails or type 2/3\\\\n  - Dosing by vWF:RCo units\\\\n\\\\n- **Antifibrinolytics:** Tranexamic acid (oral 25 mg/kg TID) for mucosal bleeding\\\\n\\\\n**Type 2 & Type 3:**\\\\n- vWF concentrate (DDAVP ineffective)\\\\n- Factor VIII supplementation\\\\n\\\\n## DIC Management\\\\n\\\\n**Principles:**\\\\n1. **Treat underlying cause:** Antibiotics (sepsis), surgery (abruption), chemotherapy (malignancy)\\\\n2. **Supportive care (simultaneously):**\\\\n   - FFP: 10-15 mL/kg (replaces all coagulation factors + fibrinogen)\\\\n   - Cryoprecipitate: 1 unit/5 kg (fibrinogen source, factor XIII, fibronectin)\\\\n   - Target fibrinogen >100 mg/dL\\\\n   - Platelet transfusions: 1 unit/5 kg, target >30K\\\\n   - RBC transfusion: Maintain Hb >7 g/dL\\\\n3. **Anticoagulation (controversial):**\\\\n   - Heparin: 100 units/kg initial bolus, then 15-25 units/kg/hr infusion\\\\n   - Rationale: Blocks thrombin generation, reduces microvascular thrombosis\\\\n   - Consider if: Ongoing thrombosis (acral necrosis, organ failure) despite FFP/platelets\\\\n   - Monitor: aPTT, fibrinogen, platelet trend\\\\n4. **Antifibrinolytics (contraindicated in overt DIC):** ε-aminocaproic acid blocks tPA → worsens thrombosis\\\\n\\\\n**Prognosis:** Mortality 10-50% depending on trigger and organ failure\\\\n\\\\n## Vitamin K Deficiency Management\\\\n- **Vitamin K1 (phytonadione):** 10-20 mg IV/IM daily\\\\n  - INR normalizes in 24 hours (Factor VII corrects first)\\\\n  - Full correction takes 2-3 days (Factors II, IX, X)\\\\n  - Oral vitamin K: Slower (6-24 hours)\\\\n\\\\n**Urgent reversal needed (INR >2 + bleeding):**\\\\n- FFP 10-15 mL/kg (immediate but volume overload)\\\\n- Prothrombin complex concentrate (PCC): 2-4 units/kg (preferred, more concentrated)\\\\n\\\\n## Transfusion-Related Complications\\\\n- **Massive transfusion (>10 units PRBC in 24h):**\\\\n  - Dilutional coagulopathy (not DIC yet)\\\\n  - Maintain FFP:PRBC ratio 1:1-1:2 (vs 1:5-10 historical)\\\\n  - Tranexamic acid within 3 hours (CRASH-2 trial: reduces mortality in trauma),\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"DDAVP = D2D\\\\\\\", explanation: \\\\\\\"Desmopressin releases vWF and Factor VIII from endothelium\\\\\\\" },\\\\n          { text: \\\\\\\"Factor VIII half-life ~10 hours\\\\\\\", explanation: \\\\\\\"Infuse 2-3x daily for prophylaxis\\\\\\\" },\\\\n          { text: \\\\\\\"Factor IX half-life ~20 hours\\\\\\\", explanation: \\\\\\\"Can do once-daily dosing\\\\\\\" },\\\\n          { text: \\\\\\\"1 IU/kg Factor VIII = 2% level\\\\\\\", explanation: \\\\\\\"1 IU/kg Factor IX = 1% level\\\\\\\" },\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"ITP: Corticosteroids/IVIG first-line, splenectomy for chronic\\\\\\\",\\\\n          \\\\\\\"Hemophilia A: rFVIII replacement, prophylaxis prevents hemarthrosis, EHL reduces frequency\\\\\\\",\\\\n          \\\\\\\"Hemophilia B: rFIX, longer half-life than Factor VIII\\\\\\\",\\\\n          \\\\\\\"vWD Type 1: DDAVP first-line; Type 2/3: vWF concentrate\\\\\\\",\\\\n          \\\\\\\"DIC: Treat cause + supportive (FFP, cryo, platelets), consider heparin if thrombosis\\\\\\\",\\\\n          \\\\\\\"Vitamin K 10-20 mg reverses INR in 24 hours\\\\\\\",\\\\n          \\\\\\\"Massive transfusion: 1:1-1:2 FFP:PRBC ratio, tranexamic acid\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"Treatment of Bleeding Disorders\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"ISTH Guidelines\\\\\\\", chapter: \\\\\\\"DIC Management\\\\\\\", edition: \\\\\\\"2019\\\\\\\" },\\\\n        ],\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"bleeding-disorders-recall\\\\\\\",\\\\n        title: \\\\\\\"Bleeding & Coagulation Disorders - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"Clinical scenarios testing diagnostic reasoning and management decisions.\\\\\\\",\\\\n        contentMd: ``# Active Recall: Bleeding & Coagulation Disorders\\\\n\\\\n**Q1:** 5-year-old girl with petechiae, no hepatosplenomegaly, hemoglobin 11 g/dL, platelet 8,000/μL. PT/aPTT/fibrinogen normal. Bleeding time prolonged. Diagnosis?\\\\n> **Answer:** ITP (acute). Acute viral prodrome in child, isolated thrombocytopenia, normal coagulation studies. Treat with IVIG 1-2 g/kg ± prednisolone. 80% resolve spontaneously within 3-6 months.\\\\n\\\\n**Q2:** 8-year-old boy with acute hemarthrosis (knee), cannot extend leg. Mother mentions older brother has \\\\\\\"bleeding problem.\\\\\\\" PT normal, aPTT prolonged. What test confirms diagnosis?\\\\n> **Answer:** Factor VIII level will be low/absent (Hemophilia A). Confirm X-linked inheritance. Treat acute hemarthrosis: ice, elevation, analgesia, Factor VIII replacement 50-75% level. Avoid NSAIDs. Start prophylaxis 3-4x/week.\\\\n\\\\n**Q3:** 25-year-old woman with menorrhagia, bruising after minor trauma, and family history of bleeding. aPTT prolonged, corrects with normal plasma 1:1 mixing. vWF antigen 60% (low), Factor VIII 50%, vWF activity 40%. Diagnosis?\\\\n> **Answer:** Type 1 von Willebrand Disease (deficient vWF and Factor VIII). Mucosal bleeding + delayed bleeding pattern. Treat with DDAVP 0.3 μg/kg intranasal for hemostasis. Tranexamic acid for menorrhagia.\\\\n\\\\n**Q4:** 45-year-old man with sepsis (Klebsiella pneumoniae), now bleeding (petechiae, oozing from IV sites). Platelet 45K, fibrinogen 80 mg/dL, PT/aPTT markedly prolonged, D-dimer >20 μg/mL. ISTH DIC score?\\\\n> **Answer:** DIC score ≥5 (↓ platelets 1 point, ↑ D-dimer/FDP 3 points, ↓ fibrinogen 1 point, ↑ PT 1 point). Treat: broad-spectrum antibiotics for sepsis, FFP 10-15 mL/kg, cryoprecipitate 1 unit/5 kg (fibrinogen target >100), platelet transfusion. Consider heparin if thrombosis develops.\\\\n\\\\n**Q5:** Postoperative patient post-bypass surgery: ↑ PT 3x, ↑ aPTT 3x, ↓ fibrinogen 80, ↓ platelet 50K. D-dimer normal. Diagnosis?\\\\n> **Answer:** Dilutional coagulopathy from massive transfusion (not overt DIC yet - D-dimer normal). Maintain 1:1-1:2 FFP:PRBC ratio. Give cryoprecipitate for fibrinogen <100. Tranexamic acid if ongoing bleeding. Do NOT give heparin (no thrombosis yet).\\\\n\\\\n**Q6:** 35-year-old with INR 5.5 (unknown cause), no bleeding. What is management?\\\\n> **Answer:** Vitamin K deficiency likely (malabsorption, antibiotics). Give vitamin K1 10 mg IV/IM. Recheck INR in 24 hours (Factor VII corrects first). INR normalizes in 24h, full correction 2-3 days. No urgent reversal needed (no bleeding). Identify/treat underlying cause.\\\\n\\\\n**Q7:** Hemophilia A patient develops severe inhibitor (Bethesda titer 20 BU). Factor VIII replacement not working. What is bypass agent of choice?\\\\n> **Answer:** aPCC/FEIBA (Activated Prothrombin Complex Concentrate) or recombinant Factor VIIa (NovoSeven). Both bypass Factor VIII and generate thrombin directly. Prefer aPCC for cost/availability. For long-term: consider immune tolerance induction (ITI) with high-dose Factor VIII daily to induce tolerance (70% success).\\\\n\\\\n**Q8:** Young woman with menorrhagia (heavy periods requiring transfusion), normal Hb. aPTT mildly elevated, vWF antigen/activity discordant (activity 30%, antigen 60%). Type?\\\\n> **Answer:** Type 2 von Willebrand Disease (dysfunctional vWF - activity > antigen discordance). May not respond to DDAVP. Treat with vWF concentrate (Humate-P). Consider hormonal contraception or tranexamic acid for menorrhagia management.\\\\n\\\\n**Q9:** 60-year-old male with acute leukemia (AML-M3 APL), now with oozing, petechiae, ↑ PT/aPTT, ↓ fibrinogen 50, ↓ platelets 30K, ↑ D-dimer. What acute complication?\\\\n> **Answer:** DIC (APL notorious for DIC - highest risk AML subtype). Treat: ATRA + arsenic immediately (differentiates blasts), FFP + cryoprecipitate (fibrinogen target >150), platelet transfusion >30K. Do NOT start cytotoxic chemo (worsens DIC initially). Manage coagulopathy first.\\\\n\\\\n**Q10:** Liver cirrhosis patient with INR 2.5, ↓ fibrinogen 120, ↓ platelets 40K. Requires urgent endoscopy for variceal bleeding. What is most appropriate correction?\\\\n> **Answer:** PCC 2-4 units/kg (concentrates Factors II, VII, IX, X) corrects INR rapidly. Do NOT rely on FFP (volume overload risk, pulmonary edema in cirrhosis). Add cryoprecipitate for fibrinogen <100. Platelet target >50K. Fresh frozen plasma contraindicated (cirrhotic ascites → third-space fluid sequestration).,\\\\n        mnemonics: [],\\\\n        keyPoints: [\\\\n          \\\\\\\"ITP platelet destruction, acute self-limited in children\\\\\\\",\\\\n          \\\\\\\"Hemophilia hemarthrosis, ↑ aPTT, Factor VIII/IX replacement\\\\\\\",\\\\n          \\\\\\\"vWD Type 1 most common, DDAVP responsive\\\\\\\",\\\\n          \\\\\\\"DIC consumption coagulopathy in sepsis/trauma/malignancy\\\\\\\",\\\\n          \\\\\\\"Vitamin K 24h correction, PCC for urgent INR reversal\\\\\\\",\\\\n          \\\\\\\"APL highest DIC risk, ATRA + arsenic treatment\\\\\\\",\\\\n          \\\\\\\"Cirrhosis coagulopathy: PCC preferred over FFP\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"Case Studies in Hemostasis\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n        ],\\\\n      },\\\\n    ],\\\\n  },\\\\n  {\\\\n    topicCode: \\\\\\\"IM-MOD-07-TOP-02\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"epilepsy-foundation\\\\\\\",\\\\n        title: \\\\\\\"Epilepsy - Foundation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Seizure classification (generalized vs focal), epilepsy definition, triggers, and basic pathophysiology.\\\\\\\",\\\\n        contentMd: ``# Epilepsy - Foundation\\\\n\\\\n## Seizure vs Epilepsy\\\\n- **Seizure:** Single episode of abnormal brain activity\\\\n- **Epilepsy:** Tendency toward recurrent unprovoked seizures (2+ unprovoked seizures OR 1 unprovoked seizure + predisposing condition)\\\\n\\\\n## ILAE Seizure Classification (2017)\\\\n\\\\n**1. Generalized-Onset Seizures (bilateral hemispheres from start)**\\\\n- **Tonic-clonic:** Loss of consciousness, tonic phase (rigidity 10-20s) → clonic phase (rhythmic jerking 10-30s) → postictal confusion/sleep\\\\n- **Absence:** Brief (5-20s) staring, unresponsiveness, no postictal confusion (typical in children, 3/sec spike-wave on EEG)\\\\n- **Atonic:** Sudden loss of muscle tone (head drop, falls)\\\\n- **Tonic:** Sustained muscle contraction (flexion of limbs)\\\\n- **Clonic:** Rhythmic jerking (without initial tonic phase)\\\\n- **Myoclonic:** Brief muscle jerks, consciousness retained\\\\n\\\\n**2. Focal-Onset Seizures (begin in one hemisphere)**\\\\n- **Without impaired awareness (simple partial):** Consciousness preserved\\\\n  - Motor (focal twitching, Todd's paralysis post-ictal)\\\\n  - Sensory (tingling, visual symptoms)\\\\n  - Autonomic (palpitations, fear)\\\\n  - Psychic (déjà vu, fear, hallucinations)\\\\n- **With impaired awareness (complex partial):** Impaired consciousness, automatisms (lip smacking, picking)\\\\n  - Most common type of seizure in adolescents/adults\\\\n  - Temporal lobe origin common\\\\n\\\\n**3. Unknown Onset (unobserved seizures)**\\\\n\\\\n## Seizure Triggers & Precipitants\\\\n- Sleep deprivation (most common, EEG activation)\\\\n- Stress, fatigue\\\\n- Hormonal: Catamenial epilepsy (menstrual cycle), pregnancy, OCP\\\\n- Alcohol withdrawal (GABA reduction)\\\\n- Hypoglycemia, hyponatremia\\\\n- Fever (febrile seizures in children <3 years)\\\\n- Flashing lights (photosensitivity)\\\\n- Medications (antipsychotics, antidepressants lowering seizure threshold)\\\\n\\\\n## Epilepsy Classification by Etiology (ILAE)\\\\n- **Genetic (primary):** Benign neonatal familial convulsions, Dravet syndrome, juvenile absence epilepsy\\\\n- **Structural/metabolic:** Temporal lobe sclerosis, cortical malformations, tumors, stroke, traumatic brain injury\\\\n- **Infectious:** CNS infection (TB, meningitis, encephalitis)\\\\n- **Unknown:** No identified cause (primary generalized or primary localized)\\\\n\\\\n## Pathophysiology Overview\\\\n- **Seizure mechanism:** Excessive excitatory glutamatergic activity + insufficient inhibitory GABAergic activity\\\\n- **GABA (gamma-aminobutyric acid):** Primary inhibitory neurotransmitter\\\\n- **Glutamate:** Primary excitatory neurotransmitter\\\\n- **Imbalance:** Hyperexcitability of neuronal networks\\\\n- **Calcium channels:** CACNA1A, GABRA1 mutations affect seizure susceptibility\\\\n\\\\n## Prevalence & Prognosis\\\\n- **Prevalence:** 0.5-1% population (India 0.4-1%)\\\\n- **Age pattern:** Highest incidence <1 year, peaks at 60+ years\\\\n- **Prognosis:** 70-80% remission with treatment, 20-30% drug-resistant epilepsy (intractable),\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"GED ABC\\\\\\\", explanation: \\\\\\\"Generalized-onset: tonic-clonic, absence, atonic, myoclonic, clonic\\\\\\\" },\\\\n          { text: \\\\\\\"Focal impaired = complex partial\\\\\\\", explanation: \\\\\\\"Awareness ↓ + automatisms (lip smacking)\\\\\\\" },\\\\n          { text: \\\\\\\"Absence = staring 5-20s\\\\\\\", explanation: \\\\\\\"3/sec spike-wave EEG, no post-ictal\\\\\\\" },\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Epilepsy = 2+ unprovoked seizures (recurrent)\\\\\\\",\\\\n          \\\\\\\"Generalized: tonic-clonic, absence, atonic, myoclonic\\\\\\\",\\\\n          \\\\\\\"Focal: simple (conscious) or complex partial (impaired awareness)\\\\\\\",\\\\n          \\\\\\\"Sleep deprivation biggest trigger\\\\\\\",\\\\n          \\\\\\\"GABA ↓ + glutamate ↑ = hyperexcitability\\\\\\\",\\\\n          \\\\\\\"70-80% seizure control with medication, 20-30% drug-resistant\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"Seizures and Epilepsy\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Kumar & Clark's\\\\\\\", chapter: \\\\\\\"Epilepsy\\\\\\\", edition: \\\\\\\"10th\\\\\\\" },\\\\n        ],\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"epilepsy-mechanism\\\\\\\",\\\\n        title: \\\\\\\"Epilepsy - Mechanism\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Pathophysiology of common epilepsy syndromes, status epilepticus, and SUDEP (sudden unexpected nocturnal death).\\\\\\\",\\\\n        contentMd: ``# Epilepsy - Pathophysiology\\\\n\\\\n## Common Epilepsy Syndromes\\\\n\\\\n**Generalized Genetic Epilepsies:**\\\\n- **Childhood Absence Epilepsy (CAE):** Peak 4-8 years, 3-4 Hz spike-wave on EEG, good prognosis with ethosuximide\\\\n- **Juvenile Myoclonic Epilepsy (JME):** Adolescence, morning myoclonic jerks (arms), may have GTCS, photosensitivity 30%, lifelong treatment needed\\\\n- **Juvenile Absence Epilepsy (JAE):** Later onset than CAE, seizures less frequent\\\\n- **Generalized Tonic-Clonic Seizure:** Genetic generalized epilepsy, idiopathic\\\\n- **Dravet Syndrome:** Infants 6 months, severe, drug-resistant, SCN1A mutations\\\\n\\\\n**Focal Epilepsies:**\\\\n- **Temporal Lobe Epilepsy (TLE):** Most common focal epilepsy, hippocampal sclerosis, mesial temporal sclerosis\\\\n  - Pathophysiology: Neuronal loss in CA1/CA3, gliosis, sprouting\\\\n  - Seizures: Complex partial, may secondarily generalize\\\\n  - Imaging: Unilateral T2 hyperintensity, atrophy\\\\n- **Frontal Lobe Epilepsy:** Brief seizures, frequent at night, secondary generalization\\\\n- **Occipital Lobe Epilepsy:** Visual symptoms (flashes), brief seizures\\\\n- **Neocortical Epilepsy:** Cortical malformations, focal cortical dysplasia (FCD)\\\\n\\\\n## Mechanism of Epileptogenesis\\\\n- **Acute phase:** Single seizure (symptomatic)\\\\n- **Latent phase:** Brain changes (weeks to months) - neuroinflammation, sprouting\\\\n- **Chronic phase:** Recurrent unprovoked seizures (epilepsy)\\\\n- **Molecular changes:** GABA receptor downregulation, glutamate receptor upregulation, ion channel mutations\\\\n\\\\n## Status Epilepticus (SE)\\\\n\\\\n**Definition:** Seizure lasting >5 minutes OR repeated seizures without recovery between (≥2 seizures in 5 min without return to baseline)\\\\n\\\\n**Pathophysiology:**\\\\n- Continuous excessive neuronal firing → metabolic exhaustion\\\\n- GABA receptor desensitization (benzodiazepines less effective over time)\\\\n- Excitotoxic neuronal damage from prolonged glutamate excess\\\\n- Cerebral edema, altered blood-brain barrier permeability\\\\n\\\\n**Types:**\\\\n- **Convulsive SE:** Generalized tonic-clonic rhythmic jerking\\\\n- **Non-convulsive SE:** Impaired consciousness without visible seizure activity (absence/focal SE)\\\\n  - EEG shows spike-wave activity despite clinical quiescence\\\\n  - Risk: Delayed diagnosis, neuronal damage continues\\\\n\\\\n**Medical Complications:**\\\\n- Hyperthermia (from muscle activity)\\\\n- Acidosis (lactic + respiratory)\\\\n- Hyperkalemia (from muscle breakdown)\\\\n- Myoglobinuria (rhabdomyolysis → acute kidney injury)\\\\n- Aspiration pneumonia\\\\n- Cardiac dysrhythmia\\\\n\\\\n**Prognosis:**\\\\n- Mortality 10-30% if untreated\\\\n- Morbidity: 30-40% neuronal damage, permanent EEG abnormality, cognitive decline\\\\n\\\\n## Drug-Resistant Epilepsy (DRE)\\\\n- **Definition:** Failure of 2+ well-tolerated anti-seizure medications at optimal doses\\\\n- **Prevalence:** 20-30% of epilepsy patients\\\\n- **Mechanisms:** Reduced drug metabolism, impaired drug transport, altered drug targets, genetic factors\\\\n- **Management:** Polytherapy, non-pharmacological (surgery, vagal nerve stimulation, ketogenic diet)\\\\n\\\\n## SUDEP (Sudden Unexpected Nocturnal Death in Epilepsy)\\\\n- **Incidence:** 1-9 per 1000 patient-years\\\\n- **Risk factors:** Poorly controlled seizures, nocturnal generalized seizures, young adults\\\\n- **Proposed mechanism:** Postictal respiratory depression, aspiration, cardiac arrhythmia, seizure-induced central apnea\\\\n- **Prevention:** Seizure control, monitoring (wearables), sleep position (supine vs prone)\\\\n\\\\n## Postictal Phenomena\\\\n- **Postictal confusion:** Transient altered mental status (minutes to hours)\\\\n- **Postictal paralysis (Todd's):** Transient focal weakness, resolves in 12-48 hours (helps lateralize seizure focus)\\\\n- **Postictal headache:** Common, typically resolves in hours,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"TLE = hippocampal sclerosis\\\\\\\", explanation: \\\\\\\"Mesial temporal lobe epilepsy, most common focal epilepsy\\\\\\\" },\\\\n          { text: \\\\\\\"JME = adolescence + photosensitive\\\\\\\", explanation: \\\\\\\"Juvenile myoclastic epilepsy, morning jerks, lifelong medication\\\\\\\" },\\\\n          { text: \\\\\\\"CAE = absence 3/sec spike-wave\\\\\\\", explanation: \\\\\\\"Childhood absence epilepsy, responds to ethosuximide\\\\\\\" },\\\\n          { text: \\\\\\\"SE >5 min\\\\\\\", explanation: \\\\\\\"Status epilepticus definition, medical emergency\\\\\\\" },\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"TLE most common focal epilepsy, hippocampal sclerosis\\\\\\\",\\\\n          \\\\\\\"JME adolescence onset, myoclonic jerks, photosensitive, lifelong treatment\\\\\\\",\\\\n          \\\\\\\"CAE children, absence with 3-sec spike-wave, good prognosis\\\\\\\",\\\\n          \\\\\\\"Dravet infants, SCN1A mutation, severe/drug-resistant\\\\\\\",\\\\n          \\\\\\\"SE definition >5 min OR ≥2 seizures without return to baseline\\\\\\\",\\\\n          \\\\\\\"SE complications: cerebral edema, myoglobinuria, cardiac arrhythmia\\\\\\\",\\\\n          \\\\\\\"DRE 20-30%, consider surgery/VNS/ketogenic diet\\\\\\\",\\\\n          \\\\\\\"SUDEP 1-9/1000 patient-years, prevent with seizure control\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"Status Epilepticus\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Neurology Board Review\\\\\\\", chapter: \\\\\\\"Epilepsy Syndromes\\\\\\\", edition: \\\\\\\"2024\\\\\\\" },\\\\n        ],\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"epilepsy-clinical\\\\\\\",\\\\n        title: \\\\\\\"Epilepsy - Clinical\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Clinical presentation, diagnostic workup (EEG, MRI, video-telemetry), seizure classification, and first-aid management.\\\\\\\",\\\\n        contentMd: ``# Epilepsy - Clinical Diagnosis & Workup\\\\n\\\\n## Clinical Evaluation\\\\n\\\\n**History (eyewitness account critical):**\\\\n- Onset: Age, date, context (sleep vs wake, stress, hormonal)\\\\n- Prodrome: Feeling before seizure (fear, déjà vu)\\\\n- Ictal features: Head turning, eye deviation, posture, incontinence, biting tongue\\\\n- Duration: Exact timing difficult (appears longer than actual)\\\\n- Recovery: Confusion duration, headache, focal weakness (Todd's)\\\\n- Injury/complications: Aspiration, falls\\\\n\\\\n**Seizure semiology clues to focus:**\\\\n- **Head turning → focal onset** (contralateral to focus)\\\\n- **Versive eyes** (eyes deviate to side of seizure focus or away in generalized)\\\\n- **Incontinence → generalized** (loss of bladder control)\\\\n- **Tongue biting → generalized** (lateral biting focal, central generalized)\\\\n- **Postictal paralysis → focal** (localizes seizure onset)\\\\n\\\\n## EEG (Electroencephalogram)\\\\n\\\\n**Ictal EEG:**\\\\n- Focal seizure: Focal spike/sharp waves then progressive slowing\\\\n- Generalized: Bilateral synchronous spike-wave activity\\\\n- Absence: 3-Hz (3 cycles/second) spike-wave, atypical 2-4 Hz\\\\n- Convulsive SE: Continuous spike-wave activity with background slowing\\\\n\\\\n**Interictal EEG:**\\\\n- Generalized spike-wave: Absence, JME, genetic generalized epilepsy\\\\n- Focal spikes: TLE (temporal spikes), focal cortical lesion\\\\n- Normal EEG: Does NOT exclude epilepsy (20-30% normal between seizures)\\\\n\\\\n**Sleep-activated seizures:** EEG during sleep more sensitive (sleep deprivation activates seizures)\\\\n\\\\n## Neuroimaging\\\\n\\\\n**MRI (gold standard):**\\\\n- Temporal lobe epilepsy: Hippocampal sclerosis (T2 hyperintensity, atrophy)\\\\n- Structural lesions: Tumor, cavernoma, cortical malformation (FCD), stroke, AVM\\\\n- 3T MRI with epilepsy protocol: High-resolution images, susceptibility-weighted sequences (detects subtle lesions)\\\\n\\\\n**CT (if MRI contraindicated):**\\\\n- Lower sensitivity, detects hemorrhage, calcifications\\\\n\\\\n**PET-CT/SPECT:** For pre-surgical evaluation (hypometabolism in seizure focus)\\\\n\\\\n## Pre-Surgical Evaluation (for drug-resistant TLE)\\\\n\\\\n**Requirements:**\\\\n1. **Video-telemetry:** Capture clinical and EEG correlation during naturally occurring seizure\\\\n2. **MRI:** Identify structural lesion (hippocampal sclerosis, FCD)\\\\n3. **Neuropsychology:** Baseline cognitive function, memory lateralization\\\\n4. **Positron emission tomography (PET):** Interictal hypometabolism at seizure focus\\\\n\\\\n**Surgical candidates:** Focal seizure onset, discordant imaging/EEG/semiology, medically refractory\\\\n\\\\n## Diagnostic Criteria for Epilepsy\\\\n- **Unprovoked seizure:** No acute precipitant (infection, hypoglycemia, withdrawal)\\\\n- **Provoked seizure:** Secondary to acute condition (not epilepsy by definition)\\\\n  - First unprovoked seizure + brain abnormality predisposing to seizure = epilepsy even without second seizure\\\\n\\\\n## Risk of Seizure Recurrence After First Seizure\\\\n- **Risk factors for recurrence:**\\\\n  - Focal/abnormal EEG: 40-50% recurrence\\\\n  - Remote symptomatic cause (stroke, TBI): 80% recurrence\\\\n  - Normal EEG + no imaging abnormality: 20-30% recurrence\\\\n  - Genetic predisposition, family history\\\\n\\\\n## First-Aid Management of Seizures\\\\n\\\\n**Bystander management:**\\\\n1. **Stay calm, protect from injury** (remove nearby objects)\\\\n2. **Position recovery:** Lateral decubitus (prevents aspiration)\\\\n3. **Time the seizure** (critical for SE diagnosis)\\\\n4. **Never restrain** (can cause fractures)\\\\n5. **Never put anything in mouth** (airway management risk)\\\\n6. **Allow seizure to run natural course** (most self-limited in 1-2 minutes)\\\\n7. **Reassure during postictal confusion**\\\\n8. **Call ambulance if:** Seizure >5 min, repeated seizures, first seizure, injury\\\\n\\\\n## Status Epilepticus First Response\\\\n- **Call ambulance immediately**\\\\n- **Protect airway** (lateral position, remove secretions)\\\\n- **Time seizure** (critical for treatment)\\\\n- **IV access** if available\\\\n- **Do NOT delay benzodiazepines** waiting for IV (IM/intranasal/buccal routes acceptable),\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"EEG 3/sec absence\\\\\\\", explanation: \\\\\\\"Childhood absence epilepsy hallmark 3-cycle-per-second spike-wave\\\\\\\" },\\\\n          { text: \\\\\\\"Temporal lobes = TLE\\\\\\\", explanation: \\\\\\\"Most common focal epilepsy, hippocampal sclerosis on MRI\\\\\\\" },\\\\n          { text: \\\\\\\"Head turning seizure\\\\\\\", explanation: \\\\\\\"Focal seizure onset, head turns away from seizure focus\\\\\\\" },\\\\n          { text: \\\\\\\"Todd's paralysis = focal\\\\\\\", explanation: \\\\\\\"Postictal focal weakness, localizes seizure onset\\\\\\\" },\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"EEG: ictal vs interictal, 3-Hz spike-wave in absence\\\\\\\",\\\\n          \\\\\\\"MRI detects hippocampal sclerosis (TLE), cortical lesions (FCD)\\\\\\\",\\\\n          \\\\\\\"Video-telemetry essential for pre-surgical evaluation\\\\\\\",\\\\n          \\\\\\\"First seizure 20-50% recurrence depending on EEG/imaging\\\\\\\",\\\\n          \\\\\\\"Status epilepticus >5 min or repeated seizures without recovery\\\\\\\",\\\\n          \\\\\\\"First-aid: protect, lateral position, time, call ambulance if >5 min\\\\\\\",\\\\n          \\\\\\\"Do NOT restrain or put object in mouth\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"EEG and Neuroimaging in Seizure Diagnosis\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"American Academy of Neurology\\\\\\\", chapter: \\\\\\\"Clinical Practice Guidelines for Epilepsy\\\\\\\", edition: \\\\\\\"2024\\\\\\\" },\\\\n        ],\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"epilepsy-exam\\\\\\\",\\\\n        title: \\\\\\\"Epilepsy - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Antiseizure drugs (ASDs), mechanisms, selection by seizure type, side effects, teratogenicity, and status epilepticus management.\\\\\\\",\\\\n        contentMd: ``# Epilepsy - Management with Anti-Seizure Drugs\\\\n\\\\n## First-Line Antiseizure Drugs (ASDs)\\\\n\\\\n**Broad-spectrum (effective for generalized + focal):**\\\\n- **Valproic acid:** ↑ GABA synthesis + Na channel blockade\\\\n  - Effective: Generalized (absence, myoclonic, GTCS), focal (broad coverage)\\\\n  - SE: Weight gain, hair loss, tremor, hepatotoxicity (risk <0.5%), teratogenicity (fetal valproate syndrome)\\\\n  - Monitor: LFTs, CBC\\\\n  - Pregnancy: Avoid if possible (11% risk neural tube defects)\\\\n\\\\n- **Levetiracetam (Keppra):** SV2A protein modulation (mechanism unclear)\\\\n  - Effective: Generalized, focal, post-traumatic\\\\n  - SE: Behavioral changes (mood, aggression), somnolence\\\\n  - Advantages: No drug interactions, renal excretion\\\\n  - No monitoring needed\\\\n\\\\n- **Lamotrigine:** Na channel blockade\\\\n  - Effective: Generalized (absence, GTCS), focal, bipolar disorder (mood stabilizer)\\\\n  - SE: Rash (1-3%, Stevens-Johnson rash 0.01%), tremor\\\\n  - Slow titration required (lamotrigine-valproate interaction)\\\\n  - Benefits: No enzyme induction, weight-neutral\\\\n\\\\n- **Topiramate:** Multiple mechanisms (Na/Ca channel, GABA enhancement, carbonic anhydrase inhibition)\\\\n  - Effective: Generalized, focal, migraine prevention\\\\n  - SE: Cognition (word-finding), weight loss, hyperchloremic metabolic acidosis\\\\n  - Gradual titration\\\\n\\\\n**Generalized seizure-specific:**\\\\n- **Ethosuximide:** T-type calcium channel blockade\\\\n  - For absence seizures (first-line for CAE)\\\\n  - NO effect on GTCS (does NOT prevent secondarily generalized tonic-clonic)\\\\n  - SE: GI upset, hiccoughs\\\\n  - Safe in pregnancy\\\\n\\\\n**Focal seizure-specific:**\\\\n- **Carbamazepine:** Na channel blockade\\\\n  - Effective: Focal seizures (especially TLE), GTCS\\\\n  - SE: Hyponatremia, rash (HLA-B*1502 in Asian populations), enzyme induction (↓ OCP effectiveness)\\\\n  - Long-term SE: Osteoporosis, bone marrow suppression\\\\n\\\\n- **Phenytoin:** Na channel blockade\\\\n  - Effective: GTCS, focal seizures, post-traumatic\\\\n  - SE: Gingival hyperplasia, hirsutism, teratogenicity (fetal hydantoin syndrome)\\\\n  - Narrow therapeutic window (10-20 μg/mL)\\\\n  - Multiple drug interactions\\\\n  - Largely replaced by newer agents\\\\n\\\\n## Special Situations\\\\n\\\\n**Juvenile Myoclonic Epilepsy (JME):**\\\\n- First-line: Valproic acid (most effective)\\\\n- Alternative: Levetiracetam, lamotrigine\\\\n- Avoid: Carbamazepine (may worsen myoclonic seizures)\\\\n\\\\n**Pregnancy & Epilepsy:**\\\\n- Lamotrigine preferred (lowest teratogenicity risk 0.5-3%)\\\\n- Levetiracetam: Considered safe (limited data but reassuring)\\\\n- Valproate: Contraindicated if possible (fetal valproate syndrome - neural tube defects 1-2%, developmental delay)\\\\n- Carbamazepine: Teratogenic (1-3% neural tube defect risk)\\\\n- Phenytoin: Fetal hydantoin syndrome (hypoplastic nails, short stature, developmental delay)\\\\n- Manage seizures during pregnancy (seizure control > ASD teratogenicity)\\\\n\\\\n**Women of childbearing age:**\\\\n- Preconception counseling essential\\\\n- Avoid valproate, carbamazepine, phenytoin if possible\\\\n- High-dose folic acid 4-5 mg daily (reduces neural tube defect risk)\\\\n- Monitoring during pregnancy (seizure threshold ↓, ASD levels ↓ → may need dose increase)\\\\n\\\\n**Drug-Resistant Epilepsy Management:**\\\\n1. **Optimize single ASD:** Slow titration to therapeutic levels (compliance check)\\\\n2. **Switch to different mechanism:** Carbamazepine → Valproate, or try levetiracetam\\\\n3. **Polypharmacy:** Add 2nd, even 3rd ASD (different mechanisms)\\\\n4. **Non-pharmacological:**\\\\n   - Surgical evaluation (focal TLE with hippocampal sclerosis → anterior temporal lobe resection 60-70% seizure-free)\\\\n   - Vagal nerve stimulation (50% seizure reduction)\\\\n   - Ketogenic diet (high fat, low carbohydrate → ketone bodies, mechanism unclear, 50% seizure reduction in resistant)\\\\n   - Deep brain stimulation\\\\n\\\\n## Status Epilepticus Treatment Algorithm\\\\n\\\\n**IMMEDIATE (0-5 minutes):**\\\\n- Call emergency services\\\\n- Oxygen, pulse oximetry, cardiac monitor\\\\n- Establish IV access if possible\\\\n- **First-line benzodiazepine** (MUST GIVE URGENTLY):\\\\n  - IV lorazepam 4 mg bolus (preferred, longer half-life than diazepam)\\\\n  - IV diazepam 10 mg bolus (alternatives)\\\\n  - IM/intranasal midazolam 10 mg (if IV access difficult)\\\\n  - IM/buccal lorazepam (acceptable routes)\\\\n  - **Success rate:** 50-80% seizure cessation with benzodiazepine alone\\\\n\\\\n**5-20 MINUTES (if seizure continues after benzodiazepine):**\\\\n- **Second-line agent** (MUST START immediately if seizure continues):\\\\n  - IV phenytoin 15-20 mg/kg bolus (infuse slowly <50 mg/min to avoid hypotension)\\\\n  - IV levetiracetam 2-4 g bolus (preferred, faster, no infusion rate restrictions)\\\\n  - IV valproate 15-25 mg/kg bolus\\\\n  - IV fosphenytoin 15-20 mg phenytoin equivalents/kg (faster, less cardiac toxicity than phenytoin)\\\\n\\\\n**20+ MINUTES (if seizure continues):**\\\\n- **Refractory SE:**\\\\n  - Intubate (airway protection, ability to sedate)\\\\n  - Third-line agents:\\\\n    - IV propofol infusion (50-100 μg/kg/min, titrate; risk hypotension, propofol infusion syndrome)\\\\n    - IV pentobarbital infusion (sedative barbiturate)\\\\n    - IV anesthetic agents\\\\n  - Continuous EEG monitoring (risk non-convulsive SE)\\\\n  - Neurology consultation\\\\n\\\\n**Adjunctive:**\\\\n- Correct electrolytes (hyponatremia, hypoglycemia, hypocalcemia)\\\\n- Manage rhabdomyolysis (myoglobinuria, acute kidney injury)\\\\n- Aspiration precautions (NPO, OG tube if needed)\\\\n\\\\n## Breakthrough Seizure Management\\\\n- Review compliance (most common cause)\\\\n- Check drug levels if applicable\\\\n- Identify triggers (sleep deprivation, stress, hormonal, infection)\\\\n- Add rescue medications:\\\\n  - Rectal diazepam or intranasal midazolam for home rescue\\\\n  - Or increase daily ASD dose,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"VEL = broad-spectrum\\\\\\\", explanation: \\\\\\\"Valproate, Ethosuximide (absence only), Lamotrigine\\\\\\\" },\\\\n          { text: \\\\\\\"Carbamazepine = carb\\\\\\\", explanation: \\\\\\\"Na channel blocker, worsen absence/myoclonic\\\\\\\" },\\\\n          { text: \\\\\\\"Lorazepam > diazepam\\\\\\\", explanation: \\\\\\\"Longer half-life (lorazepam 10-20h vs diazepam 30h in IV)\\\\\\\" },\\\\n          { text: \\\\\\\"Levetiracetam = renal\\\\\\\", explanation: \\\\\\\"Excretion unchanged, no drug interactions, behavioral SE\\\\\\\" },\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Valproate broad-spectrum, teratogenic (avoid pregnancy)\\\\\\\",\\\\n          \\\\\\\"Lamotrigine safe in pregnancy, requires slow titration\\\\\\\",\\\\n          \\\\\\\"Ethosuximide for absence only, NOT GTCS\\\\\\\",\\\\n          \\\\\\\"Carbamazepine TLE first-line, enzyme induction, HLA risk\\\\\\\",\\\\n          \\\\\\\"SE lorazepam 4 mg IV, then levetiracetam 2-4 g or phenytoin 15-20 mg/kg\\\\\\\",\\\\n          \\\\\\\"Refractory SE >20 min: intubate, propofol/pentobarbital\\\\\\\",\\\\n          \\\\\\\"Pregnancy: lamotrigine or levetiracetam preferred\\\\\\\",\\\\n          \\\\\\\"DRE: optimize single → polypharmacy → surgery/VNS/ketogenic diet\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"Treatment of Epilepsy and Seizures\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Neurocritical Care\\\\\\\", chapter: \\\\\\\"Status Epilepticus Management\\\\\\\", edition: \\\\\\\"2023\\\\\\\" },\\\\n        ],\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"epilepsy-recall\\\\\\\",\\\\n        title: \\\\\\\"Epilepsy - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"Clinical scenarios for seizure classification, treatment decisions, and emergency management.\\\\\\\",\\\\n        contentMd: ``# Active Recall: Epilepsy\\\\n\\\\n**Q1:** 6-year-old girl with 10-second episodes of staring, no response to name, no postictal confusion. Happens 5-10x/day. EEG shows 3-Hz spike-wave. What is diagnosis and first-line treatment?\\\\n> **Answer:** Childhood Absence Epilepsy (CAE). First-line: ethosuximide 10-15 mg/kg/day. Valproate alternative. Prognosis excellent (80% remit by age 12). Do NOT use carbamazepine (worsens absence).\\\\n\\\\n**Q2:** 17-year-old boy with morning arm jerks (myoclonic), occasional tonic-clonic seizures at night. EEG shows polyspiked and slow wave activity. Photosensitivity noted. Diagnosis and treatment?\\\\n> **Answer:** Juvenile Myoclonic Epilepsy (JME). First-line: valproic acid 15 mg/kg/day (most effective). Lifelong treatment (recurrence 90% if discontinued). Counsel on triggers (sleep deprivation, stress, photic stimulation). Women: counsel on teratogenicity if pregnancy planned.\\\\n\\\\n**Q3:** 35-year-old with recurrent complex partial seizures (lip smacking, hand automatisms, postictal confusion). MRI shows left hippocampal atrophy + T2 hyperintensity. What is diagnosis and treatment consideration?\\\\n> **Answer:** Temporal Lobe Epilepsy (TLE) with hippocampal sclerosis. First-line medical: carbamazepine or valproate. If drug-resistant after 2+ trials: consider anterior temporal lobe resection (60-70% become seizure-free, evaluate with video-telemetry + neuropsych testing first).\\\\n\\\\n**Q4:** First unprovoked seizure in 28-year-old (tonic-clonic), no family history, normal MRI, EEG normal. Risk of recurrence?\\\\n> **Answer:** 20-30% recurrence risk (no adverse prognostic factors). Can observe without ASD initially (shared decision-making). ~70% never have second seizure. If recurs → diagnosis of epilepsy, start ASD. Driving restrictions apply.\\\\n\\\\n**Q5:** 45-year-old on carbamazepine for focal seizures wants pregnancy. What counseling?\\\\n> **Answer:** Carbamazepine teratogenic (fetal hydantoin-like syndrome - neural tube defects 1-3%, developmental delay). Switch to lamotrigine (0.5-3% risk) if possible, or levetiracetam (safer data). High-dose folic acid 4-5 mg daily. Seizure control > drug teratogenicity (uncontrolled seizures worse for fetus). Monitor ASD levels during pregnancy (clearance ↑).\\\\n\\\\n**Q6:** 55-year-old male with status epilepticus (continuous tonic-clonic seizures >10 min). What is immediate management?\\\\n> **Answer:** Call ambulance, IV lorazepam 4 mg bolus (first-line). If seizures continue at 5-10 min, add levetiracetam 2-4 g IV (or phenytoin 15-20 mg/kg, or valproate). Establish IV access, protect airway, lateral position. Intubate if continues >20 min (refractory SE), add propofol/pentobarbital, EEG monitoring.\\\\n\\\\n**Q7:** 40-year-old on valproate for 10 years develops tremor and hair loss, wants to switch. Seizure control with valproate very good. What is recommendation?\\\\n> **Answer:** Continue valproate if seizure control excellent (switching risk breakthrough seizures). If quality of life affected: consider slow switch to lamotrigine (overlap both drugs, gradually taper valproate over weeks). Alternative: add levetiracetam then gradually reduce valproate.\\\\n\\\\n**Q8:** Child with first febrile seizure (fever 39°C, generalized 2 min, full recovery). Concerned about epilepsy. What is risk?\\\\n> **Answer:** Febrile seizure ≠ epilepsy (defined as seizure WITH fever). 30-50% recurrence if febrile again (risk ↑ age <18 mo, family Hx, low fever threshold). Daily ASD prophylaxis NOT recommended (infrequent recurrence). Acetaminophen/ibuprofen for fever. Rarely recommend prophylactic lorazepam at fever onset. Most do not develop epilepsy (<5%).\\\\n\\\\n**Q9:** 30-year-old on levetiracetam has breakthrough seizures despite good compliance. Wants to stay on levetiracetam (prefers low toxicity). What next step?\\\\n> **Answer:** Increase levetiracetam to maximum dose 3000 mg/day (optimize monotherapy first). If seizures continue: add second agent (different mechanism). Consider valproate (broad-spectrum), lamotrigine, or carbamazepine depending on seizure type. Add folic acid/calcium if valproate added.\\\\n\\\\n**Q10:** Patient with drug-resistant focal seizures (2 ASDs failed), imaging shows cortical malformation (FCD). What is option?\\\\n> **Answer:** Refer for surgical evaluation. Pre-surgical workup: video-telemetry (capture seizures with EEG correlation), neuropsychology (baseline memory/cognition), PET-CT (hypometabolism at FCD). If seizures originate from FCD, focal resection 50-60% seizure-free. Alternative: vagal nerve stimulation (50% reduction) or ketogenic diet.,\\\\n        mnemonics: [],\\\\n        keyPoints: [\\\\n          \\\\\\\"CAE: 3-Hz spike-wave, ethosuximide first-line\\\\\\\",\\\\n          \\\\\\\"JME: myoclonic jerks morning, photosensitivity, valproate first-line, lifelong\\\\\\\",\\\\n          \\\\\\\"TLE: complex partial, hippocampal sclerosis, carbamazepine/valproate\\\\\\\",\\\\n          \\\\\\\"Febrile seizure ≠ epilepsy, recurrence 30-50%\\\\\\\",\\\\n          \\\\\\\"SE >5 min medical emergency, lorazepam + levetiracetam/phenytoin\\\\\\\",\\\\n          \\\\\\\"Pregnancy: lamotrigine or levetiracetam preferred\\\\\\\",\\\\n          \\\\\\\"DRE: surgery consideration if structural lesion (FCD, hippocampal sclerosis)\\\\\\\",\\\\n          \\\\\\\"First seizure 20-30% recurrence, can observe with shared decision-making\\\\\\\",\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles\\\\\\\", chapter: \\\\\\\"Case Studies in Seizures\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n        ],\\\\n      },\\\\n    ],\\\\n  },\\\\n];\\\\n\\\"\""
-}
-}
-}
+        summary: "Hematopoiesis overview, classification of leukemias and lymphomas (acute vs chronic, lymphoid vs myeloid), WHO classification basics, epidemiology by age groups, and introduction to Hodgkin's vs Non-Hodgkin's lymphoma.",
+        contentMd: `# Leukemias & Lymphomas - Foundation
+
+## Hematopoiesis Overview
+- **Hematopoietic stem cell (HSC):** Bone marrow origin, pluripotent
+- **Two main lineages:**
+  - **Myeloid:** RBCs, platelets, granulocytes (neutrophils, eosinophils, basophils), monocytes/macrophages
+  - **Lymphoid:** B cells, T cells, NK cells
+- **Process:** HSC → progenitor → precursor → mature cell (takes 7-10 days for granulocytes)
+- **Normal bone marrow:** 20-30% cellularity, myeloid-to-erythroid ratio 3:1
+
+## Classification of Leukemias
+
+**By onset (acute vs chronic):**
+- **Acute:** Rapid onset (weeks to months), immature blasts proliferate, highly aggressive
+- **Chronic:** Insidious onset (months to years), mature cells proliferate, slower progression
+
+**By cell lineage (lymphoid vs myeloid):**
+- **Lymphoid leukemias:** Malignant transformation of B cells or T cells
+  - ALL (acute lymphoblastic leukemia)
+  - CLL (chronic lymphocytic leukemia)
+- **Myeloid leukemias:** Malignant transformation of myeloid precursors
+  - AML (acute myeloid leukemia)
+  - CML (chronic myeloid leukemia)
+
+**Four main types:**
+1. **Acute Lymphoblastic Leukemia (ALL)**
+2. **Acute Myeloid Leukemia (AML)**
+3. **Chronic Lymphocytic Leukemia (CLL)**
+4. **Chronic Myeloid Leukemia (CML)**
+
+## WHO Classification
+
+**Acute leukemias:** >20% blasts in bone marrow/peripheral blood
+- **AML:** Myeloid lineage blasts >20%
+- **ALL:** Lymphoid lineage blasts >20%
+
+**Chronic leukemias:** <20% blasts (at diagnosis)
+- **CML:** Philadelphia chromosome t(9;22), BCR-ABL fusion
+- **CLL:** Clonal expansion of mature B lymphocytes
+
+**Lymphomas:** Malignant lymphoid tumors arising in lymph nodes/lymphoid tissue
+- **Hodgkin's lymphoma (HL):** Reed-Sternberg cells, 4 histologic subtypes
+- **Non-Hodgkin's lymphoma (NHL):** Diverse group, >60 subtypes (B-cell, T-cell, natural killer cell)
+
+## Epidemiology
+
+**ALL (Acute Lymphoblastic Leukemia):**
+- Most common malignancy in children (<15 years): 75-80% of childhood leukemias
+- Peak incidence: 2-5 years
+- Rare in adults: only 15-20% of adult acute leukemias
+
+**AML (Acute Myeloid Leukemia):**
+- Most common acute leukemia in adults: 80% of adult acute leukemias
+- Median age at diagnosis: 65 years
+- Rare in children (<2% of childhood leukemias)
+- Increased incidence with age, prior chemotherapy, benzene exposure, myelodysplastic syndrome
+
+**CML (Chronic Myeloid Leukemia):**
+- Accounts for 15-20% of all adult leukemias
+- Median age: 45-55 years
+- Incidence: 1-2 per 100,000/year
+- Associated with ionizing radiation exposure (Hiroshima survivors had high incidence)
+
+**CLL (Chronic Lymphocytic Leukemia):**
+- Most common leukemia in Western countries
+- Rare in India (environmental/genetic factors)
+- Median age: 65-70 years
+- 2-3 times more common in males
+
+**Hodgkin's Lymphoma (HL):**
+- Bimodal age distribution: peak 20-30 years (nodular sclerosis) and 50-70 years (mixed cellularity)
+- Incidence: 2-3 per 100,000/year
+- Associated with EBV (especially in developing countries), immunosuppression
+
+**Non-Hodgkin's Lymphoma (NHL):**
+- Incidence increases with age (median 55-60 years)
+- More common than HL
+- Indolent (low-grade) vs aggressive (high-grade) subtypes
+- Associated with HIV, hepatitis C, HTLV-1, immunosuppression, prior chemotherapy
+
+## Hodgkin's vs Non-Hodgkin's Lymphoma
+
+**Hodgkin's Lymphoma (HL):**
+- **Histology:** Reed-Sternberg (RS) cells (large cells with mirror-image nuclei, "owl's eye" appearance)
+- **Subtypes:** Nodular sclerosis (60%), mixed cellularity (15-25%), lymphocyte-rich (5%), lymphocyte-depleted (<1%)
+- **Presentation:** Often mediastinal mass, supraclavicular/mediastinal adenopathy, B symptoms (fever, night sweats, weight loss)
+- **Metastasis pattern:** Orderly, contiguous lymph node spread (stage by adjacent nodes)
+- **Prognosis:** Better overall (70-80% 5-year survival), more predictable
+
+**Non-Hodgkin's Lymphoma (NHL):**
+- **Histology:** Diverse (follicular, diffuse large B-cell, Burkitt's, T-cell subtypes, etc.)
+- **No RS cells:** Key distinguishing feature
+- **Presentation:** Variable (nodal or extranodal), peripheral adenopathy more common
+- **Metastasis pattern:** Random, often widespread at presentation
+- **Prognosis:** Varies widely by subtype (follicular 10-15 year survival, Burkitt's aggressive but curable with chemotherapy)
+
+## Key Definitions
+
+- **Blasts:** Immature hematopoietic cells (in acute leukemias, >20%)
+- **Leukoerythroblastic picture:** Presence of immature WBC and RBC precursors in peripheral blood
+- **Leukostasis:** Elevated WBC leading to capillary occlusion (CNS, pulmonary)
+- **Tumor lysis syndrome (TLS):** Rapid cell death releasing intracellular contents (K+, phosphate, uric acid), causing hyperkalemia, hyperphosphatemia, hyperuricemia, renal failure
+- **Differentiation syndrome (APL):** Fever, respiratory distress, fluid retention during treatment (especially ATRA in APL)
+- **Remission:** <5% blasts in marrow, normal counts (complete remission CR)
+`,
+        mnemonics: [
+          { text: "ALAC: ALL in children, AML in adults, CML chronic, CLL rare India", explanation: "Epidemiology by age and geography in India" },
+          { text: "RS cells Reed-Sternberg = Hodgkin", explanation: "Reed-Sternberg cells (owl-eye nuclei) pathognomonic for Hodgkin's lymphoma" },
+          { text: ">20% blasts = Acute leukemia", explanation: ">20% blasts in marrow/PB distinguishes acute from chronic" },
+        ],
+        keyPoints: [
+          "ALL most common in children; AML in adults",
+          "Acute: >20% blasts, rapid; Chronic: <20% blasts, slow",
+          "Myeloid (AML, CML) vs Lymphoid (ALL, CLL) lineages",
+          "HL: orderly spread, RS cells; NHL: random spread, no RS cells",
+          "CML associated with t(9;22) Philadelphia chromosome",
+          "EBV associated with Hodgkin's and Burkitt's lymphomas",
+          "CLL rare in India; HL shows bimodal age distribution",
+          "Leukostasis, TLS, DIC major complications of acute leukemias",
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "Acute Leukemias", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "Hematolymphoid Malignancies", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "Leukemias and Lymphomas", edition: "24th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "leukemia-lymphoma-layer-2-mechanism",
+        title: "Leukemias & Lymphomas - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Molecular pathogenesis of leukemias: Philadelphia chromosome in CML, t(15;17) PML-RARA in APL, t(8;14) c-MYC in Burkitt's, JAK2 in myeloproliferative disorders, EBV in lymphomas, clonal evolution, and transformation in blast crisis.",
+        contentMd: `# Leukemias & Lymphomas - Molecular Pathogenesis
+
+## Chronic Myeloid Leukemia (CML) - BCR-ABL
+
+**Philadelphia chromosome t(9;22):**
+- Translocation between chromosome 9 (ABL oncogene) and chromosome 22 (BCR gene)
+- Present in 95% of CML cases
+- **BCR-ABL fusion gene:** Produces constitutively active tyrosine kinase
+- **Mechanism:**
+  - Normal ABL: tightly regulated tyrosine kinase
+  - BCR-ABL: always "on", phosphorylates multiple substrates
+  - Drives uncontrolled myeloid proliferation without need for growth factors
+  - Interferes with DNA repair (genomic instability)
+  - Inhibits apoptosis (overexpression of anti-apoptotic proteins)
+
+**Molecular consequences:**
+- Increased RAS/MAPK signaling (proliferation)
+- Increased PI3K/AKT signaling (survival)
+- Impaired p53 function (loss of DNA damage checkpoint)
+- Reduced DNA repair (RAD51 downregulation)
+
+**Clinical phases (CML progression):**
+1. **Chronic phase:** Slow accumulation of mutations, stable disease for 3-5 years on imatinib
+2. **Accelerated phase:** >15% blasts, >30% basophils/eosinophils, extramedullary involvement
+3. **Blast crisis:** >30% blasts, acute leukemia-like state, fatal without treatment (median survival months)
+
+## Acute Promyelocytic Leukemia (APL) - t(15;17) PML-RARA
+
+**t(15;17) translocation:**
+- **Fusion gene:** PML-RARA (promyelocytic leukemia–retinoic acid receptor alpha)
+- **Normal RARA function:** Binds retinoic acid, activates differentiation genes
+- **PML-RARA fusion:** Abnormal repression of differentiation (blocks APL cell maturation)
+
+**Molecular mechanism:**
+- PML-RARA recruits histone deacetylase, silencing retinoic acid-responsive genes
+- Blocks differentiation of promyelocytes
+- Accumulation of abnormal promyelocytes with Auer rods (pathognomonic)
+
+**Treatment advantage (ATRA/Arsenic):**
+- **ATRA (all-trans retinoic acid):** Binds RARA component of fusion, causes differentiation
+- Promotes maturation of leukemic promyelocytes → apoptosis
+- **Arsenic trioxide:** Causes PML-RARA protein degradation
+- Combined ATRA + arsenic: >90% complete remission rate (best outcome among AML subtypes)
+
+**Clinical consequence:** DIC (disseminated intravascular coagulation) prominent due to promyelocytic granule content (tissue factor, phospholipid release)
+
+## Burkitt's Lymphoma - t(8;14) c-MYC
+
+**t(8;14)(q24;q32) translocation:**
+- **c-MYC oncogene** (chromosome 8) translocates adjacent to **immunoglobulin heavy chain (IgH)** promoter (chromosome 14)
+- **Result:** c-MYC driven by strong IgH promoter → constitutive c-MYC expression
+
+**Molecular mechanism:**
+- c-MYC is transcription factor driving proliferation/apoptosis balance
+- Overexpression of c-MYC: uncontrolled cell cycle progression
+- Bypass of normal checks (G1/S checkpoint)
+- Extremely high proliferation rate (Ki-67 >95%)
+
+**Associated with EBV:**
+- **EBV-associated cases:** Immunocompromised (HIV CD4 <50, post-transplant), endemic regions
+- **EBV-negative cases:** Sporadic Burkitt's (more common in developed countries)
+- **EBV mechanism:** Immortalizes B cells, second "hit" (c-MYC translocation) transforms to lymphoma
+
+**Clinical:** Highly aggressive lymphoma but chemotherapy-sensitive (high cure rate if treated)
+
+## Myeloproliferative Neoplasms - JAK2, CALR, MPL
+
+**JAK2 V617F mutation:**
+- **Gene:** Janus kinase 2 (JAK2) on chromosome 9
+- **Mutation type:** Valine → Phenylalanine at codon 617 (V617F)
+- **Mechanism:** Hyperactivates JAK-STAT signaling (erythropoietin and thrombopoietin independence)
+- **Prevalence:** 50-60% of polycythemia vera, 50% of essential thrombocythemia, 50% of primary myelofibrosis
+
+**CALR (calreticulin) mutations:**
+- 25% of essential thrombocythemia and myelofibrosis (JAK2-negative cases)
+- Type I or II mutations in exon 9
+- Activates STAT signaling
+
+**MPL (thrombopoietin receptor):**
+- 3-5% of myelofibrosis
+- Gain-of-function mutations
+
+**Clinical consequence:** Autonomous erythroid/platelet production independent of hormones (high RBC/platelets but not responsive to phlebotomy/agents in same way)
+
+## Hodgkin's and Non-Hodgkin's Lymphoma Pathogenesis
+
+**Hodgkin's Lymphoma:**
+- **Reed-Sternberg cells:** Large cells with mirror-image nuclei ("owl-eye" appearance)
+- **Origin:** Crippled B cells (non-functional B-cell receptor)
+- **EBV association:** 40-50% cases in developed countries, 75-100% in developing countries
+- **EBV mechanism:** EBNA-1 (nuclear antigen) drives proliferation, LMP-1 (latent membrane protein) activates NF-κB
+- **Immune evasion:**
+  - Loss of MHC class I (escapes CD8+ T cells)
+  - Recruitment of T cells, eosinophils (non-malignant, majority of tumor microenvironment)
+  - RS cells <1% of cellularity (mainly supporting cells)
+
+**Non-Hodgkin's Lymphoma (selected subtypes):**
+- **DLBCL (diffuse large B-cell lymphoma):**
+  - t(14;18) BCL2 translocation (15-20% cases) → anti-apoptotic
+  - Mutations in MYD88, CD79B (NF-κB pathway)
+  - Complex karyotype
+  - 50-70% 5-year survival with chemoimmunotherapy
+- **Follicular lymphoma:**
+  - t(14;18) BCL2 (90% cases) → constitutional anti-apoptosis
+  - Germinal center origin
+  - Slow growth, late diagnosis (stage III-IV)
+  - Indolent but difficult to cure
+- **Mantle cell lymphoma:**
+  - t(11;14) cyclin D1 translocation (100% cases)
+  - Aggressive, poor prognosis
+  - GI tract involvement
+- **Burkitt's:** (see above, t(8;14) c-MYC)
+
+## Clonal Evolution and Blast Crisis
+
+**Chronic phase → Blast crisis progression:**
+1. **Early CML:** Single BCR-ABL clone, stable
+2. **Accumulated mutations:** p53 inactivation, loss of RB pathway, myc upregulation, others
+3. **Clonal evolution:** Emergence of second, third clones with growth advantage
+4. **Blast crisis:** >30% blasts, rapid progression, fatal without treatment
+
+**Other leukemias:**
+- **Secondary AML:** Prior MDS (myelodysplastic syndrome) or chemotherapy exposure
+- **TP53 mutations:** Confer poor prognosis (accelerated transformation)
+- **Complex karyotype:** Predictor of advanced disease
+
+## Tumor Lysis Syndrome (TLS)
+
+**Pathophysiology:**
+- Rapid cell death (chemotherapy-induced) → release intracellular contents
+- **Hyperkalemia:** K+ release from cells (>5.5 mEq/L, can cause cardiac arrhythmias)
+- **Hyperphosphatemia:** Phosphate release (>4.5 mg/dL)
+- **Hyperuricemia:** Purine catabolism to uric acid (>7-8 mg/dL, crystallizes in renal tubules)
+- **Secondary hypocalcemia:** Calcium-phosphate precipitation (low ionized Ca2+, seizures/tetany)
+
+**At-risk malignancies:**
+- Acute leukemias (especially ALL with high blast burden)
+- Burkitt's lymphoma (high proliferation rate)
+- Other lymphomas if bulky disease
+
+**Prevention:** Allopurinol (xanthine oxidase inhibitor) or rasburicase (urate oxidase), aggressive hydration, avoid urate-elevating drugs
+`,
+        mnemonics: [
+          { text: "BCR-ABL (9;22): CML Philadelphia", explanation: "Translocation creates constitutively active tyrosine kinase BCR-ABL" },
+          { text: "PML-RARA (15;17): APL + DIC, responds to ATRA/arsenic", explanation: "Fusion gene blocks differentiation; ATRA reverses by binding RARA component" },
+          { text: "c-MYC (8;14): Burkitt's + EBV, aggressive but curable", explanation: "c-MYC driven by IgH promoter; translocation + EBV = lymphoma" },
+          { text: "JAK2 V617F: MPD (PV, ET, MF)", explanation: "Gain-of-function JAK-STAT signaling in myeloproliferative neoplasms" },
+        ],
+        keyPoints: [
+          "BCR-ABL in CML: constitutive TK activity, blocks apoptosis, accelerates progression",
+          "CML phases: chronic (stable years) → accelerated → blast crisis (rapid, fatal)",
+          "APL t(15;17): PML-RARA blocks differentiation; ATRA/arsenic cure 90%",
+          "Burkitt's t(8;14): c-MYC overexpression, high proliferation, EBV-associated",
+          "JAK2 V617F: autonomous erythroid/platelet production in MPD",
+          "HL: EBV-driven RS cells with non-malignant inflammatory infiltrate",
+          "NHL: diverse translocations (BCL2, cyclin D1, c-MYC) and mutations",
+          "TLS: hyperkalemia, hyperphosphatemia, hyperuricemia after treatment",
+          "Clonal evolution: sequential mutations drive CML progression to blast crisis",
+          "p53 loss: accelerated transformation, worse prognosis",
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "Molecular Basis of Cancer", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "Molecular Pathogenesis of Leukemias", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "Cytogenetics of Hematologic Malignancies", edition: "24th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "leukemia-lymphoma-layer-3-clinical",
+        title: "Leukemias & Lymphomas - Clinical",
+        estimatedMinutes: 25,
+        summary: "Clinical features of acute and chronic leukemias, lymphomas, investigations (CBC, smear, flow cytometry, cytogenetics), Ann Arbor staging for lymphomas, treatment approaches (chemotherapy, targeted therapy, supportive care) in Indian context.",
+        contentMd: `# Leukemias & Lymphomas - Clinical Presentation & Management
+
+## Acute Leukemias Clinical Features
+
+**ALL (Acute Lymphoblastic Leukemia):**
+- **Onset:** Sudden (days to weeks)
+- **Bone pain:** Due to expansion of marrow cavity, may be severe (especially long bones)
+- **Constitutional symptoms:** Fever (from infection), fatigue, weight loss
+- **Hepatosplenomegaly:** 60% at presentation (leukemic infiltration)
+- **Lymphadenopathy:** 70-80% (cervical, axillary, inguinal)
+- **Bleeding:** Thrombocytopenia from marrow replacement; petechiae, ecchymosis, mucosal bleeding
+- **CNS involvement:** 5-10% at diagnosis (headache, cranial nerve palsies, if untreated progresses to meningitis)
+- **Mediastinal mass:** Especially T-cell ALL (chest pain, dyspnea, superior vena cava syndrome)
+
+**AML (Acute Myeloid Leukemia):**
+- **Onset:** Often acute but sometimes preceded by MDS
+- **Gingival hyperplasia:** Pathognomonic (monocytic differentiation), bleeding gums, poor oral hygiene
+- **Bleeding manifestations:** DIC common (especially APL), mucosal bleeding, ecchymosis
+- **Infection:** Neutropenia (paradoxically, despite high WBC, many immature non-functional)
+- **Leukostasis:** High WBC (>100,000/μL) → CNS (confusion, stroke) or pulmonary (dyspnea, hypoxia)
+- **Hepatosplenomegaly:** Less frequent than ALL (~30%)
+- **Bone pain:** Less prominent than ALL
+
+**APL (Acute Promyelocytic Leukemia, AML-M3):**
+- **DIC:** Severe, life-threatening (abnormal promyelocytic granules release tissue factor)
+- **Hemorrhage:** Intracranial, GI, pulmonary (often fatal)
+- **Differentiation syndrome:** With ATRA or arsenic treatment (fever, respiratory distress, fluid retention, cardiac tamponade)
+- **Auer rods:** Pathognomonic (faggot cells with bundles of Auer rods)
+
+## Chronic Leukemias Clinical Features
+
+**CML (Chronic Myeloid Leukemia):**
+- **Often asymptomatic:** Discovered incidentally on routine CBC
+- **Massive splenomegaly:** Marked (splenic infarction, left upper quadrant pain possible)
+- **Hepatomegaly:** 50% at presentation
+- **Constitutional symptoms:** Fatigue, weight loss, night sweats (if advanced)
+- **Leukostasis:** Less common than ALL (WBCs are mature, less adhesive)
+- **Gout/hyperuricemia:** From high cell turnover
+- **Blast crisis:** Acute transformation (fever, rapid deterioration, >30% blasts)
+
+**CLL (Chronic Lymphocytic Leukemia):**
+- **Often asymptomatic:** Discovered on routine CBC or when evaluating lymphadenopathy
+- **Lymphadenopathy:** Painless, rubbery, non-tender nodes (cervical, axillary, inguinal)
+- **Splenomegaly:** 50-60%
+- **Hepatomegaly:** 10-20%
+- **Autoimmune complications:**
+  - **Autoimmune hemolytic anemia (AIHA):** 4-5% (positive direct Coombs), jaundice
+  - **Immune thrombocytopenia (ITP):** 2-3%, bleeding
+  - **Pure red cell aplasia:** Rare
+- **Infections:** Hypogammaglobulinemia (especially IgG), recurrent bacterial infections
+- **Progressive disease:** Lymphocytosis increases over time, marrow replacement
+
+## Lymphoma Clinical Features
+
+**Hodgkin's Lymphoma (HL):**
+- **B symptoms:** Fever (often Pel-Ebstein: cyclical fever patterns), night sweats, weight loss (>10% body weight)
+  - 25-30% at presentation
+  - Associated with advanced stage, worse prognosis
+- **Lymphadenopathy:** Painless, firm, rubbery nodes
+  - **Supraclavicular/mediastinal:** Most common (chest mass on CXR)
+  - Orderly spread along lymphatics
+- **Pruritus:** Paraneoplastic (worse with alcohol, responds to NSAIDs)
+- **Pel-Ebstein fever:** Cyclical pattern (characteristic but uncommon)
+- **Complications:** Superior vena cava syndrome (mediastinal mass), spinal cord compression
+
+**Non-Hodgkin's Lymphoma (NHL):**
+- **Lymphadenopathy:** Generalized, asymmetric, more likely extranodal involvement
+- **Extranodal disease:** GI (Burkitt's, MALT), CNS (lymphomatoid granulomatosis), bone marrow
+- **B symptoms:** Less frequent than HL (15-20%)
+- **Presentation:** Often advanced stage (III-IV) at diagnosis
+- **Specific subtypes:**
+  - **Burkitt's:** Young patients, jaw/abdomen masses, rapidly enlarging, CNS involvement
+  - **Follicular:** Indolent, slow growth, stage IV common
+  - **DLBCL:** Rapid growth, CNS risk, chemotherapy-responsive
+
+## Investigations
+
+**Complete Blood Count (CBC):**
+- **Hemoglobin:** Anemia (normocytic, from marrow replacement)
+- **WBC:** Elevated (except early CLL/HL may be normal)
+  - ALL: 30,000-100,000+/μL (often)
+  - CML: 100,000-1,000,000/μL (very high, mature forms)
+  - CLL: 5,000-50,000/μL (lymphocytes)
+- **Platelets:** Reduced (marrow replacement, DIC in APL)
+
+**Peripheral Blood Smear:**
+- **ALL:** Blasts with high nuclear-cytoplasmic ratio, fine chromatin, nucleoli, cytoplasm sparse/basophilic
+- **AML:** Blasts larger, may have Auer rods (APL), some myeloid differentiation
+- **CML:** Full spectrum myeloid maturation (immature to mature), left shift
+- **CLL:** Small lymphocytes, smudge cells (fragile lymphocytes), narrow cytoplasm
+
+**Flow Cytometry:**
+- **Immunophenotyping:** B-cell markers (CD19, CD20), T-cell (CD3, CD5), myeloid (CD13, CD33)
+- **ALL:** Blasts express lymphoid markers (CD19/CD20 for B-ALL, CD3/CD7 for T-ALL)
+- **AML:** Blasts express myeloid markers
+- **CLL:** CD5+ CD19+ CD23+ B cells (T-cell CLL: CD3+, CD4+/CD8+)
+- **Blast percentage:** >20% confirms acute leukemia
+
+**Bone Marrow Aspiration & Biopsy:**
+- **Aspiration:** Morphology, blasts percentage, differential
+- **Biopsy:** Marrow cellularity, fibrosis, megakaryocytes
+- **Diagnostic gold standard** for leukemias
+
+**Cytogenetics & Molecular Studies:**
+- **Karyotype:** t(9;22) in CML, t(15;17) in APL, t(8;14) in Burkitt's
+- **FISH (fluorescence in situ hybridization):** Philadelphia chromosome, other translocations
+- **PCR:** BCR-ABL transcript levels (CML monitoring), c-MYC (Burkitt's)
+- **Prognostic:** Complex karyotype = poor prognosis
+
+**Staging for Lymphomas (Ann Arbor Staging):**
+- **Stage I:** Single lymph node region
+- **Stage II:** Two or more node regions on same side of diaphragm
+- **Stage III:** Nodes on both sides of diaphragm ± spleen (IIIS if spleen involved)
+- **Stage IV:** Extranodal involvement (organ involvement)
+- **A/B suffix:** A = no B symptoms, B = B symptoms (fever, sweats, weight loss)
+
+**Imaging:**
+- **CXR:** Mediastinal mass (HL, lymphoma), pleural effusion
+- **CT chest/abdomen/pelvis:** Staging lymphomas, assess extranodal disease
+- **PET-CT:** Prognostic, often used for HL and NHL staging
+
+## Indian Context Management
+
+**Challenges:**
+- Late presentation (advanced stage at diagnosis)
+- Limited access to targeted therapy (imatinib, BCR-ABL inhibitors expensive)
+- Infection risk (tuberculosis, opportunistic infections)
+- Tumor lysis syndrome (high disease burden)
+
+**Standard Treatment Approaches:**
+
+**ALL in children:**
+- Chemotherapy protocols (pediatric ALL: INDALL, AIEOP-BFM)
+- Induction (vincristine, daunorubicin, asparaginase, prednisolone)
+- Consolidation, maintenance (6-24 months)
+- CNS prophylaxis (intrathecal methotrexate, cranial radiation if high-risk)
+- 70-80% 5-year survival in developed centers, 40-50% in India
+
+**AML in adults:**
+- Induction chemotherapy (3+7 regimen: cytarabine + daunorubicin)
+- Consolidation with high-dose cytarabine
+- Allogeneic stem cell transplantation (if fit, matched donor available)
+- Supportive care (transfusions, infection prophylaxis, TLS prevention)
+- 30-40% 5-year survival
+
+**APL:**
+- **ATRA + arsenic trioxide:** Gold standard, 80-90% 5-year survival
+- Combination highly effective with minimal toxicity
+- Early recognition of DIC/differentiation syndrome critical
+- All-trans retinoic acid (ATRA): 45 mg/m2/day divided doses
+- Arsenic trioxide: 0.15 mg/kg/day IV
+
+**CML:**
+- **Imatinib:** First-line tyrosine kinase inhibitor, 800 mg/day
+- **Cost limiting in India:** Attempts for generic imatinib
+- **BCR-ABL transcript monitoring:** Quantitative RT-PCR every 3-6 months
+- Milestones: >3 log reduction = major molecular response (MMR)
+- Resistance/intolerance: second-generation TKI (nilotinib, dasatinib)
+- Prognosis with imatinib: 90% 5-year survival
+
+**CLL:**
+- Often observation (watchful waiting) if asymptomatic
+- Chemotherapy when indicated (fludarabine, chlorambucil)
+- Monoclonal antibodies: rituximab (anti-CD20)
+- Allogeneic transplant if young, fit, high-risk disease
+- Median survival: 5-10 years (varies by prognostic factors)
+
+**Hodgkin's Lymphoma:**
+- **ABVD chemotherapy:** Adriamycin (doxorubicin), bleomycin, vinblastine, dacarbazine
+- Typically 6 cycles ± radiation to involved fields
+- **Stage I-II:** Chemotherapy ± radiation (90% 5-year survival)
+- **Stage III-IV:** Chemotherapy ± radiation (80% 5-year survival)
+- Modern therapy: Brentuximab vedotin (anti-CD30), nivolumab (checkpoint inhibitor)
+
+**Non-Hodgkin's Lymphoma (DLBCL):**
+- **R-CHOP:** Rituximab (monoclonal anti-CD20) + chemotherapy (cyclophosphamide, doxorubicin, vincristine, prednisolone)
+- 6-8 cycles, ± radiation
+- **60-70% 5-year survival**
+- Follicular NHL: Indolent, similar chemotherapy but longer follow-up needed
+
+**Supportive Care (all leukemias/lymphomas):**
+- **Transfusions:** RBC, platelets as needed
+- **Infection prophylaxis:** TMP-SMX (P. jirovecii), fluconazole (Candida), acyclovir if high-risk
+- **TLS prevention:** Allopurinol or rasburicase, aggressive hydration
+- **Anti-emetics:** For chemotherapy
+- **Growth factors:** G-CSF for neutropenia if indicated
+`,
+        mnemonics: [
+          { text: "ALL: bone pain, hepatosplenomegaly; AML: gingival hyperplasia, DIC", explanation: "Key clinical distinguishing features" },
+          { text: "CML: massive spleen; CLL: lymphadenopathy, AIHA", explanation: "Chronic leukemia presentations" },
+          { text: "HL: B symptoms, mediastinal mass, orderly spread; NHL: extranodal, random", explanation: "Lymphoma differences" },
+          { text: "Ann Arbor: I single node, II both sides same, III both sides, IV extranodal", explanation: "Lymphoma staging" },
+        ],
+        keyPoints: [
+          "ALL: bone pain, fever, hepatosplenomegaly, mediastinal mass; DIC rare",
+          "AML: gingival hyperplasia, DIC (especially APL), leukostasis",
+          "APL: severe DIC, Auer rods, ATRA/arsenic 80-90% cure",
+          "CML: massive splenomegaly, blast crisis 3-5 years without treatment",
+          "CLL: asymptomatic (often), lymphadenopathy, AIHA/ITP complications",
+          "HL: B symptoms, mediastinal mass, supraclavicular adenopathy, orderly spread",
+          "NHL: extranodal disease, stage IV at diagnosis (40%), advanced prognosis",
+          "CBC, smear, flow cytometry, cytogenetics/FISH diagnostic",
+          "APL: recognize DIC risk, differentiation syndrome with ATRA",
+          "CML imatinib: BCR-ABL monitoring (MMR target), resistance management",
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "Clinical Aspects of Leukemias and Lymphomas", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "Diagnosis and Management of Acute Leukemias", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "Chemotherapy and Symptom Management", edition: "24th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "leukemia-lymphoma-layer-4-exam",
+        title: "Leukemias & Lymphomas - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "NEXT-pattern MCQs, pathognomonic clinical findings, cytogenetics-diagnosis associations, and clinical vignettes for exam preparation.",
+        contentMd: `# Leukemias & Lymphomas - Exam Preparation
+
+## Pathognomonic Findings Table
+
+| Finding | Diagnosis |
+|---------|-----------|
+| Reed-Sternberg cells (mirror-image nuclei, owl-eye) | Hodgkin's lymphoma |
+| Auer rods / Faggot cells | Acute myeloid leukemia (especially APL) |
+| Gingival hyperplasia | AML (monocytic) |
+| Philadelphia chromosome t(9;22) BCR-ABL | CML |
+| PML-RARA t(15;17) with DIC | Acute promyelocytic leukemia (APL) |
+| c-MYC translocation t(8;14) | Burkitt's lymphoma |
+| Starry-sky pattern (histology) | Burkitt's lymphoma |
+| Smudge cells | CLL |
+| Fish-mouth cells | AML M4/M5 |
+| Auer rods bundles (Faggot formation) | M3 (APL) |
+| Basophilia >2% | CML (chronic phase) |
+| Massive splenomegaly | CML |
+| Bone pain, hepatosplenomegaly | ALL |
+| Mediastinal mass | T-cell ALL, Hodgkin's (sclerosis) |
+| B symptoms + supraclavicular adenopathy | Hodgkin's lymphoma |
+| Extranodal involvement, stage IV at diagnosis | NHL |
+| Petechial rash | Leukostasis or DIC |
+| Gum bleeding, hyperplasia | AML M4/M5 (monocytic) |
+
+## Cytogenetics-Diagnosis Associations
+
+| Cytogenetics | Diagnosis | Mechanism | Prognosis |
+|--------------|-----------|-----------|-----------|
+| t(9;22) BCR-ABL | CML | Constitutive TK | Good with imatinib |
+| t(15;17) PML-RARA | APL (AML-M3) | Blocks differentiation | Excellent (ATRA/arsenic) |
+| t(8;14) c-MYC | Burkitt's NHL | c-MYC overexpression | Excellent (chemo-sensitive) |
+| t(14;18) BCL2 | Follicular NHL, DLBCL | Anti-apoptosis | Moderate (indolent) |
+| t(11;14) Cyclin D1 | Mantle cell NHL | Cell cycle dysregulation | Poor |
+| JAK2 V617F | MPD (PV, ET, MF) | STAT signaling | Varies |
+| Complex karyotype | AML, advanced disease | Multiple hits | Poor |
+| del(5q) | MDS | Loss of tumor suppressors | Good |
+
+## Clinical Vignette Patterns for Exams
+
+**Vignette 1: Child with bone pain and hepatosplenomegaly**
+- Presentation: 5-year-old, bone pain (femur), fever, fatigue, bruising
+- Labs: Hemoglobin 7.5 g/dL, WBC 45,000/μL (blasts 80%), platelets 20,000/μL
+- Peripheral smear: Blasts with high N:C ratio, fine chromatin, nucleoli
+- **Answer:** Acute lymphoblastic leukemia (ALL)
+- Management: Induction chemotherapy (INDALL protocol), CNS prophylaxis
+- Prognosis: 70-80% 5-year survival with modern therapy
+
+**Vignette 2: Middle-aged patient with massive splenomegaly, left upper quadrant pain**
+- Presentation: 50-year-old, left upper quadrant pain, fatigue, weight loss
+- Labs: WBC 250,000/μL (full myeloid spectrum), hemoglobin low, platelets normal/elevated initially
+- Smear: Myelocytes, metamyelocytes, bands, mature neutrophils (left shift)
+- Cytogenetics: t(9;22) Philadelphia chromosome positive, BCR-ABL fusion
+- **Answer:** Chronic myeloid leukemia (CML)
+- Management: Imatinib 800 mg/day, BCR-ABL transcript monitoring
+- Prognosis: 90% 5-year survival with imatinib
+
+**Vignette 3: Young adult with fever, night sweats, weight loss, mediastinal mass on CXR**
+- Presentation: 28-year-old, fever (Pel-Ebstein pattern), night sweats, 5 kg weight loss, chest pain
+- Exam: Firm, rubbery supraclavicular lymph nodes
+- CXR: Large mediastinal mass
+- Pathology: Reed-Sternberg cells with lymphocytic background
+- **Answer:** Hodgkin's lymphoma (nodular sclerosis subtype)
+- Staging: Ann Arbor staging, PET-CT for prognosis
+- Management: ABVD chemotherapy ± mediastinal radiation
+- Prognosis: 85% 5-year survival
+
+**Vignette 4: Elderly patient with painless lymphadenopathy, discovered on routine exam**
+- Presentation: 72-year-old, asymptomatic, found to have cervical/axillary lymphadenopathy
+- Labs: WBC 12,000/μL (absolute lymphocytes 8,000/μL), hemoglobin 11 g/dL, normal platelets
+- Smear: Small lymphocytes, some smudge cells
+- Flow cytometry: CD5+ CD19+ CD23+ (B-cell markers)
+- **Answer:** Chronic lymphocytic leukemia (CLL)
+- Management: Observation if asymptomatic (watchful waiting)
+- Prognosis: Median 5-10 years
+
+**Vignette 5: Young woman with severe coagulopathy, Auer rods on smear**
+- Presentation: 32-year-old, fever, bleeding from gums/nose, bruising, severe coagulopathy
+- Labs: WBC 8,000/μL (abnormal promyelocytes), hemoglobin 7.5 g/dL, platelets 15,000/μL
+- PT/INR: Prolonged, fibrinogen low, D-dimer markedly elevated
+- Smear: Abnormal promyelocytes with Auer rods, some faggot cells (bundles of Auer rods)
+- Cytogenetics: t(15;17) PML-RARA
+- **Answer:** Acute promyelocytic leukemia (APL, AML-M3)
+- **CRITICAL:** Recognize DIC, immediate ATRA + arsenic trioxide, supportive transfusions
+- Prognosis: 80-90% 5-year survival
+
+**Vignette 6: Rapidly enlarging abdominal mass in adolescent**
+- Presentation: 17-year-old, rapidly enlarging abdominal mass, fever, weight loss
+- Labs: WBC 15,000/μL (mostly mature blasts/lymphocytes), hemoglobin 8.5 g/dL
+- Smear: Blasts with coarse chromatin, moderate cytoplasm, high mitotic rate
+- Cytogenetics: t(8;14) c-MYC translocation
+- **Answer:** Burkitt's lymphoma
+- **Alert:** Risk of tumor lysis syndrome (high cell turnover, aggressive)
+- Management: Prophylactic allopurinol/rasburicase, aggressive hydration, chemotherapy (high-dose, CNS prophylaxis)
+- Prognosis: 70-90% 5-year survival with modern therapy
+
+## Problem-Solving Q&A Examples (NEXT-pattern)
+
+**Q (Analysis): A 55-year-old with newly diagnosed AML has complex karyotype with monosomy 7 and t(5;11). What is the primary implication?**
+- A) Good prognosis with intensive chemotherapy alone
+- B) High-risk disease with poor prognosis; allogeneic transplant recommended
+- C) Excellent response to ATRA monotherapy
+- D) Optimal treatment with single-agent cytarabine
+- **Answer: B** (Analysis-level: interpretation of cytogenetics in prognosis)
+
+**Q (Problem-solving): A 12-year-old with ALL has been in complete remission for 8 months. She now presents with fever, bone pain, hepatosplenomegaly recurrence. What is the appropriate next step?**
+- A) Reassure parents, continue maintenance chemotherapy
+- B) Restart from induction phase; consider allogeneic transplantation
+- C) Switch to ATRA-based therapy
+- D) Admit for blood transfusion only
+- **Answer: B** (Problem-solving: requires recognition of relapse and adjusted strategy)
+
+**Q (Problem-solving): A 65-year-old with CML chronic phase on imatinib for 3 years now has BCR-ABL transcript elevation (10-fold increase) and appearance of T315I mutation. What is the best management?**
+- A) Increase imatinib dose to 1200 mg/day
+- B) Switch to second-generation TKI (nilotinib or dasatinib)
+- C) Immediate palliative care; prognosis poor
+- D) Add hydroxyurea to imatinib
+- **Answer: B** (Problem-solving: recognize TKI resistance and appropriate escalation; T315I specifically requires ponatinib)
+
+**Q (Recall): Which cytogenetic abnormality is associated with excellent prognosis in AML when treated with ATRA and arsenic trioxide?**
+- A) t(9;22)
+- B) Complex karyotype
+- C) t(15;17)
+- D) del(5q)
+- **Answer: C** (Recall: t(15;17) APL with ATRA/arsenic = 80-90% cure)
+
+## Exam Strategy Points
+
+1. **Recognize pathognomonic findings:** Reed-Sternberg cells = HL, Auer rods = AML, Philadelphia = CML
+2. **Age epidemiology:** ALL in children, AML in elderly, CLL rare in India
+3. **Cytogenetics drive treatment:** APL t(15;17) gets ATRA/arsenic (not standard chemo), Burkitt's t(8;14) intense chemo
+4. **Distinguish acute vs chronic:** Blasts >20% = acute (regardless of symptoms)
+5. **Flow cytometry immunophenotype:** CD5+CD19+CD23+ = CLL; CD33+CD13+ blasts = AML
+6. **DIC in APL:** Life-threatening, recognize early (coagulopathy, thrombocytopenia), ATRA reverses
+7. **TLS risk:** High cell turnover malignancies (ALL, Burkitt's), prevent with allopurinol/rasburicase
+8. **HL vs NHL:** HL orderly spread (stage by adjacent nodes), NHL random/extranodal
+9. **Indian context:** Limited access to newer agents, late presentation, infection risk
+10. **Prognosis factors:** Cytogenetics, age, WBC at diagnosis, response to initial therapy
+`,
+        mnemonics: [
+          { text: "RS = Reed-Sternberg = Hodgkin", explanation: "Pathognomonic cell for HL diagnosis" },
+          { text: "Auer + monocytic = APL DIC", explanation: "AML-M3 with Auer rods, severe DIC, ATRA responsive" },
+          { text: "Philadelphia t(9;22) = CML imatinib", explanation: "Tyrosine kinase target, good prognosis" },
+          { text: "Burkitt t(8;14) c-MYC = aggressive but curable", explanation: "High proliferation, chemo-sensitive" },
+        ],
+        keyPoints: [
+          "Reed-Sternberg cells → Hodgkin's lymphoma (diagnostic)",
+          "Auer rods → AML (especially APL)",
+          "Gingival hyperplasia → AML monocytic (M4/M5)",
+          "t(9;22) → CML (BCR-ABL, imatinib responsive)",
+          "t(15;17) → APL (ATRA/arsenic 80-90% cure)",
+          "t(8;14) → Burkitt's (c-MYC, high-dose chemo)",
+          "Smudge cells → CLL",
+          "Massive spleen → CML",
+          "Bone pain + hepatosplenomegaly → ALL",
+          "Complex karyotype → poor prognosis AML",
+          "B symptoms + mediastinal mass → HL",
+          "Extranodal stage IV at diagnosis → NHL",
+          "ALL: 70-80% survival (children); AML: 30-40%; APL: 80-90%; CML: 90%; HL: 85%; NHL: 60-70%",
+          "DIC recognition in APL critical (coagulopathy, low fibrinogen, elevated D-dimer)",
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "Case-Based Learning: Leukemias and Lymphomas", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "NEXT-Pattern Questions on Hematologic Malignancies", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "Clinical Scenarios in Oncology", edition: "24th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "leukemia-lymphoma-layer-5-active-recall",
+        title: "Leukemias & Lymphomas - Active Recall",
+        estimatedMinutes: 15,
+        summary: "10+ flashcard Q&A pairs for active recall and reinforcement of key concepts in leukemias and lymphomas.",
+        contentMd: `# Active Recall Flashcards: Leukemias & Lymphomas
+
+## Flashcard Q&A Set
+
+**Q1: What is the Philadelphia chromosome and which leukemia is it pathognomonic for?**
+> **A1:** The Philadelphia chromosome is a translocation t(9;22) involving the ABL gene (chromosome 9) and BCR gene (chromosome 22), producing a BCR-ABL fusion gene that encodes a constitutively active tyrosine kinase. It is pathognomonic for CML (found in 95% of cases) and is the molecular basis for targeted therapy with imatinib (tyrosine kinase inhibitor).
+
+**Q2: How do you distinguish ALL from AML based on clinical presentation?**
+> **A2:** ALL: bone pain, fever, hepatosplenomegaly (common in children). AML: gingival hyperplasia (pathognomonic for monocytic AML), DIC (especially APL with severe coagulopathy), leukostasis with very high WBC counts. APL specifically presents with severe bleeding from DIC. Age: ALL peaks 2-5 years (children); AML peaks in elderly (>65 years).
+
+**Q3: What is ATRA and why is it effective in APL?**
+> **A3:** ATRA (all-trans retinoic acid) is a derivative of vitamin A that binds to the RARA component of the PML-RARA fusion protein (from t(15;17) translocation in APL). This binding reverses the abnormal gene repression caused by the fusion protein, allowing differentiation of the leukemic promyelocytes. Combined with arsenic trioxide, ATRA achieves 80-90% complete remission and 5-year survival in APL, far superior to standard chemotherapy alone.
+
+**Q4: What is tumor lysis syndrome (TLS) and which malignancies carry highest risk?**
+> **A4:** TLS is acute hyperkalemia, hyperphosphatemia, hyperuricemia, and secondary hypocalcemia resulting from massive cell death (chemotherapy-induced). Highest risk: ALL (high blast burden), Burkitt's lymphoma (very high cell proliferation rate), other aggressive lymphomas with bulky disease. Prevention: allopurinol (xanthine oxidase inhibitor), rasburicase (urate oxidase), aggressive IV hydration. Monitor K+, phosphate, uric acid, calcium.
+
+**Q5: Distinguish Hodgkin's from Non-Hodgkin's lymphoma in terms of pathology, spread pattern, and prognosis.**
+> **A5:** Hodgkin's: Reed-Sternberg cells (pathognomonic), orderly contiguous spread along lymphatics, better overall prognosis (70-80% 5-year survival), more predictable staging. Non-Hodgkin's: no RS cells, diverse histology (60+ subtypes), random/extranodal spread, variable prognosis by subtype (follicular indolent ~10-15 year survival; Burkitt's aggressive but curable 70-90%; DLBCL 60-70%).
+
+**Q6: What are the cytogenetic abnormalities associated with Burkitt's lymphoma and what is the molecular consequence?**
+> **A6:** Burkitt's lymphoma is associated with t(8;14)(q24;q32) involving the c-MYC oncogene (chromosome 8) and the immunoglobulin heavy chain (IgH) promoter (chromosome 14). This juxtaposition places c-MYC under control of the strong IgH promoter, resulting in constitutive c-MYC overexpression and uncontrolled cell cycle progression. This is one of the most aggressive lymphomas but highly chemotherapy-sensitive (70-90% cure with high-dose chemotherapy and CNS prophylaxis). Often associated with EBV, especially in immunocompromised patients.
+
+**Q7: How do you manage DIC in APL? Why is early recognition critical?**
+> **A7:** DIC in APL (AML-M3) results from abnormal promyelocytic granules releasing tissue factor into circulation. Management: (1) Immediate ATRA + arsenic trioxide (reverses DIC), (2) supportive transfusions (RBC, FFP, platelets, cryoprecipitate), (3) avoid vitamin K, NSAIDs; (4) monitor PT/INR, fibrinogen, D-dimer, platelet count; (5) anticoagulation controversial (some use heparin if worsening). Early recognition is critical because untreated DIC leads to life-threatening hemorrhage (intracranial, GI, pulmonary). ATRA begins reversing coagulopathy within 24-48 hours.
+
+**Q8: What is the standard empirical chemotherapy regimen for Hodgkin's lymphoma?**
+> **A8:** ABVD chemotherapy:
+- Adriamycin (doxorubicin)
+- Bleomycin
+- Vinblastine
+- Dacarbazine
+Typically 6 cycles, often followed by radiation to involved-field regions. Achieves 80-90% 5-year survival for localized disease, 70-80% for advanced. Newer regimens include brentuximab vedotin (anti-CD30 monoclonal antibody) and checkpoint inhibitors (nivolumab) for relapsed/refractory disease.
+
+**Q9: Describe the phases of CML progression and what precipitates transformation to blast crisis.**
+> **A9:** CML has three phases: (1) Chronic phase: stable disease for 3-5 years on imatinib, <15% blasts; (2) Accelerated phase: >15% blasts, >30% basophils/eosinophils, extramedullary involvement, emerging resistance to imatinib; (3) Blast crisis: >30% blasts, acute leukemia-like picture, rapid deterioration, median survival months without treatment. Transformation driven by sequential mutations in addition to BCR-ABL (p53 loss, RB inactivation, myc upregulation). BCR-ABL transcript monitoring detects rising levels before morphologic blast crisis. TKI resistance (especially T315I mutation) necessitates switch to second-generation TKI (nilotinib, dasatinib) or ponatinib.
+
+**Q10: What is the pathophysiology of Hodgkin's lymphoma and why is the cell burden often low despite high symptoms?**
+> **A10:** Hodgkin's lymphoma arises from crippled germinal center B cells (non-functional B-cell receptor). The malignant Reed-Sternberg cells comprise <1% of the tumor cellularity; the majority (99%+) are non-malignant cells: T cells (CD8+, CD4+), eosinophils, and macrophages recruited by the RS cells through cytokine production (IL-5, eotaxin, CCL17). This unique microenvironment explains why HL often presents with high tumor burden/high symptoms but relatively low blast percentage on blood smear. EBV drives proliferation through EBNA-1 and LMP-1 signaling (40-50% cases in developed countries, 75-100% in developing countries). RS cells evade immune response by loss of MHC class I.
+
+**Q11: What is the management of CLL when asymptomatic versus when treatment is indicated?**
+> **A11:** Asymptomatic CLL (most at diagnosis): watchful waiting/observation, routine follow-up CBC every 3-6 months, monitor for complications (AIHA, ITP, infections). Treatment indicated when: (1) progressive marrow failure (anemia, thrombocytopenia); (2) massive lymphadenopathy/organomegaly; (3) autoimmune complications unresponsive to steroids; (4) clinical symptoms. Standard chemotherapy: fludarabine, cyclophosphamide, or chlorambucil. Monoclonal antibodies: rituximab (anti-CD20) improves outcomes. Allogeneic stem cell transplantation for young, fit patients with high-risk disease (del(17p), TP53 mutation). Median survival: 5-10 years (varies widely).
+
+**Q12: What is the immediate management of a patient presenting with suspected ALL and very high WBC (>100,000/μL)?**
+> **A12:** High WBC with high blast percentage carries risk of leukostasis (CNS and pulmonary). Immediate management: (1) gentle hydration with normal saline (avoid diuretics; maintain adequate kidney perfusion for TLS prevention); (2) avoid transfusions unless absolutely necessary (increase viscosity, worsen leukostasis); (3) monitor for CNS symptoms (confusion, stroke) and pulmonary symptoms (dyspnea, hypoxia); (4) consider cytoreduction with hydroxyurea or low-dose cytarabine to rapidly lower WBC if symptoms present; (5) TLS prophylaxis: allopurinol or rasburicase, aggressive hydration; (6) initiate induction chemotherapy urgently once TLS prevented. Mechanical ventilation may be needed for leukostatic pulmonary infiltrates.
+
+**Q13: What are the poor prognostic factors in AML?**
+> **A13:** Poor prognostic factors in AML: (1) Age >60 years (worse chemotherapy tolerance, higher mortality); (2) Complex karyotype (multiple cytogenetic abnormalities, 5-year survival <10%); (3) TP53 mutations (catastrophic, often complex karyotype); (4) Monosomy 7 or 5 (loss of chromosomes with tumor suppressors); (5) Secondary AML (prior MDS or chemotherapy); (6) High white blood cell count at diagnosis; (7) Poor response to induction therapy (not achieving complete remission); (8) High-risk fusion genes (PMLRARA, RUNX1RUNX1T1 generally good, but in context of other mutations can be poor). Good prognostic: t(15;17), t(8;21), inv(16), favorable cytogenetics, younger age, rapid response to chemotherapy.
+
+**Q14: What is the Ann Arbor staging system for lymphomas and why is it important for prognosis?**
+> **A14:** Ann Arbor Staging: (I) single lymph node region; (II) two or more node regions on same side of diaphragm; (III) nodes on both sides of diaphragm, may include spleen (IIIS); (IV) extranodal involvement (organs). A/B suffix: A = no B symptoms, B = B symptoms (fever >38.5°C, night sweats, unintentional weight loss >10% body weight in 6 months). Importance for prognosis: (1) Stage I-II HL: 90%+ 5-year survival; (2) Stage III-IV HL: 70-80% 5-year survival; (3) NHL staging less predictive (stage IV common); (4) B symptoms indicate worse prognosis; (5) Guides treatment intensity and radiation fields.
+
+**Q15: How does BCR-ABL transcript monitoring guide management in CML?**
+> **A15:** Quantitative RT-PCR measures BCR-ABL transcript levels (expressed as ratio to normal ABL gene or as absolute number of copies/mL blood). Monitoring performed every 3-6 months on imatinib therapy. Target: major molecular response (MMR), defined as >3-log reduction of BCR-ABL transcript from baseline (>4.5-log indicates complete molecular response). Milestones: (1) 3 months: >1-log reduction expected; (2) 6 months: >2-log; (3) 12 months: >3-log (MMR). Failure to achieve milestones suggests: (1) inadequate adherence; (2) imatinib resistance (mutant BCR-ABL, most common T315I); (3) need for dose escalation or TKI switch (nilotinib, dasatinib, or ponatinib for T315I). Rising transcript levels predict blast crisis 3-6 months ahead, allowing preemptive intervention.
+`,
+        mnemonics: [
+          { text: "Philadelphia = BCR-ABL = CML = imatinib", explanation: "Key association for exam; targeted TK therapy" },
+          { text: "ATRA reverses APL DIC", explanation: "Mechanism: binds RARA component of PML-RARA, restores differentiation" },
+          { text: "RS cells <1%, non-malignant 99% = HL", explanation: "Unique tumor microenvironment" },
+          { text: "t(8;14) c-MYC = Burkitt's + EBV + aggressive + curable", explanation: "Translocation drives constitutive proliferation" },
+        ],
+        keyPoints: [
+          "Philadelphia t(9;22) BCR-ABL: imatinib responsive, 90% 5-year survival",
+          "APL DIC: recognize coagulopathy; ATRA/arsenic reversal; monitor PT, fibrinogen, D-dimer",
+          "Burkitt's: high proliferation, TLS risk, CNS prophylaxis, 70-90% cure",
+          "CML phases: chronic (years) → accelerated → blast crisis (fatal without Rx)",
+          "HL: RS cells pathognomonic, orderly spread, B symptoms indicate worse prognosis",
+          "NHL: no RS cells, diverse subtypes, random spread, stage IV common",
+          "ALL: bone pain, hepatosplenomegaly, mediastinal mass, CNS prophylaxis critical",
+          "AML: gingival hyperplasia, DIC (APL), leukostasis, poor prognostic factors",
+          "CLL: asymptomatic (observation), AIHA/ITP complications, median 5-10 years",
+          "TLS: high-risk (ALL, Burkitt's); prevent with allopurinol/rasburicase, hydration",
+          "BCR-ABL monitoring: MMR target >3-log reduction, TKI resistance (T315I)",
+          "Cytogenetics drive treatment: APL gets ATRA, Burkitt's gets high-dose chemo",
+          "Prognosis: HL 85%, APL 80-90%, CML 90%, Burkitt's 70-90%, DLBCL 60-70%, ALL children 70-80%",
+          "Indian context: late presentation, limited imatinib access, infection/TB risk",
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "Active Recall Scenarios in Hematology", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "Board Exam Questions on Leukemias/Lymphomas", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "Clinical Problem Solving in Oncology", edition: "24th" },
+        ],
+      },
+    ],
+  },
 ];
-];
-];
+
+export default medicinePart10Lessons;
+`,

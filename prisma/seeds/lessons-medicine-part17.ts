@@ -1,17 +1,1212 @@
-export const medicineLessonsPart17 = [
+import type { TopicLessons } from "./content-loader";
+
+export const medicineLessonsPart17: TopicLessons[] = [
   {
     topicCode: "IM-MOD-09-TOP-04",
     layers: [
       {
         layer: 1,
-        slug: "hiv-aids-foundation",
+        slug: "hiv-aids-layer-1-foundation",
         title: "HIV/AIDS & Opportunistic Infections - Foundation",
         estimatedMinutes: 20,
-        summary: "HIV is a retrovirus causing progressive destruction of CD4+ T cells, leading to AIDS when CD4 count <200 cells/μL. Opportunistic infections including PCP, toxoplasmosis, CMV, and tuberculosis occur when immunosuppression is severe. Antiretroviral therapy (ART) has transformed HIV into a manageable chronic disease.",
-        contentMd: "# HIV/AIDS and Opportunistic Infections - Foundation\n\n## HIV Overview\n\n### Virology\n- **Retrovirus**: Contains reverse transcriptase enzyme\n- **Genome**: Two copies of RNA, ~9.7 kb\n- **Target**: CD4+ T lymphocytes (helper T cells)\n- **Structure**: Envelope glycoproteins (gp120, gp41), nucleocapsid core, integrase, protease\n- **Transmission**: Sexual contact, blood exposure, mother-to-child\n\n### Disease Progression\n- **CD4 count**: Normal 500-1500 cells/μL\n- **AIDS threshold**: CD4 <200 cells/μL or AIDS-defining illness\n- **Untreated**: Median survival 10 years from infection; progressive CD4 decline\n\n## AIDS-Defining Illnesses and Opportunistic Infections\n\n### CD4 Count Threshold for Common OIs\n| CD4 Count | Common OIs |\n|---|---|\n| >200 | Tuberculosis, vaginal candidiasis |\n| 100-200 | PCP (Pneumocystis jirovecii pneumonia), toxoplasmosis risk, cryptococcal meningitis |\n| <50 | CMV (retinitis, esophagitis), MAC (Mycobacterium avium complex), Cryptococcus |\n\n### Major Opportunistic Infections\n\n**Pneumocystis jirovecii Pneumonia (PCP):**\n- Most common serious OI in AIDS\n- CD4 <200\n- Subacute dyspnea, dry cough, chest discomfort\n- Hypoxia and elevated LDH characteristic\n\n**Toxoplasmosis:**\n- Reactivation in CD4 <100\n- CNS involvement: Space-occupying lesions in brain\n- Presents with focal neurologic deficits, seizures, altered mental status\n\n**Cryptococcosis:**\n- CD4 <100\n- Cryptococcal meningitis most common\n- Cryptococcal antigen test sensitive\n- CNS disease: Fever, headache, minimal meningeal signs\n\n**Cytomegalovirus (CMV):**\n- CD4 <50\n- CMV retinitis: Vision changes, floaters, scotomas\n- CMV esophagitis: Dysphagia, esophageal ulcers\n- CMV colitis: Severe diarrhea, abdominal pain\n\n**Mycobacterium avium Complex (MAC):**\n- CD4 <50\n- Systemic infection: Fever, weight loss, diarrhea, lymphadenopathy\n- Bacteremia common\n- Characterized by high organism burden\n\n**Tuberculosis (TB):**\n- Can occur at any CD4 level (unique among OIs)\n- CD4 <100: Progressive primary TB or disseminated TB\n- CD4 >200: Reactivation TB with cavitary disease\n- Leading cause of death in HIV+ patients in TB-endemic areas (India)\n\n### Candidiasis\n- **Oropharyngeal**: CD4 <200; white plaques on tongue/palate\n- **Esophageal**: CD4 <100; dysphagia, odynophagia\n- Indicator of advancing immunosuppression\n\n### Other OIs\n- Isosporiasis (diarrhea, CD4 <200)\n- Cystoisospora (chronic diarrhea)\n- Histoplasmosis (disseminated, CD4 <100)\n- Cryptosporidium (chronic diarrhea, CD4 <100)\n\n## Epidemiology - Global and India\n\n### Global\n- ~40 million people living with HIV\n- 1.2 million AIDS-related deaths annually\n- Sub-Saharan Africa most affected\n\n### India\n- ~27 million people living with HIV (one of largest burden)\n- Prevalence concentrated among key populations (FSWs, MSM, people who inject drugs)\n- TB-HIV coinfection major challenge\n- ART coverage improving but gaps remain in rural areas\n\n## Classification Systems\n\n### CDC Classification\n- **Category A** (CD4 >500): Asymptomatic, PGL, acute retroviral syndrome\n- **Category B** (200-499): Symptomatic but not AIDS-defining (oral candidiasis, herpes zoster)\n- **Category C** (<200): AIDS-defining illnesses (PCP, toxoplasmosis, CMV, TB)\n\n### WHO Staging (Pre-ART Era)\n- Stage 1: Asymptomatic, normal CD4\n- Stage 2: Mild symptoms (oral candidiasis, herpes zoster)\n- Stage 3: Advanced immunosuppression symptoms\n- Stage 4: AIDS-defining illnesses\n\n## Historical Context\n\n### Pre-ART Era\n- AIDS = death sentence\n- Opportunistic infections predictable based on CD4 count\n- Mortality high (median 10 years untreated)\n- Severe wasting syndrome common\n\n### ART Era (Post-1996)\n- Combination antiretroviral therapy (cART)\n- Suppression of viral replication\n- CD4 recovery possible\n- Prevention of OIs\n- Normal life expectancy possible\n- Transformed from fatal to manageable chronic disease,\n        mnemonics: [\n          {\n            text: \"AIDS-Defining OIs by CD4 - 200-100-50\",\n            explanation: \"CD4 <200: PCP/TB, CD4 <100: Toxo/Crypto/Candida esophagitis, CD4 <50: CMV/MAC\"\n          },\n          {\n            text: \"HIV Life Cycle - RIPE\",\n            explanation: \"Reverse transcriptase, Integration into host DNA, Protease (viral maturation), Envelope release\"\n          }\n        ],\n        keyPoints: [\n          \"HIV targets CD4+ T cells; replicates causing progressive cell destruction\",\n          \"AIDS defined by CD4 <200 or AIDS-defining illness\",\n          \"Opportunistic infections predictable by CD4 count threshold\",\n          \"TB unique among OIs: can occur at any CD4 level\",\n          \"ART suppresses viral replication and allows CD4 recovery\",\n          \"India: TB-HIV coinfection major issue; TB leading cause of death\"\n        ],\n        textbookRefs: [\n          { book: \"Harrison's Principles of Internal Medicine\", chapter: \"Chapter 145: HIV-1 Infection\", edition: \"21st\" },\n          { book: \"Davidson's Principles and Practice of Medicine\", chapter: \"Chapter 14: Sexually Transmitted Infections\", edition: \"24th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"hiv-aids-mechanism\",\n        title: \"HIV/AIDS & OI - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"HIV binds CD4 and CCR5/CXCR4 receptors, reverse transcribes RNA to DNA, integrates into host genome, and replicates. Protease cleaves polyproteins enabling virion maturation. Progressive CD4 loss through direct infection, immune activation, and apoptosis leads to immunodeficiency enabling OI development.\",\n        contentMd: "# HIV and AIDS - Molecular Mechanisms\\n\\n## HIV Replication Cycle\\n\\n### Step 1: Binding and Fusion\\n- **Binding**:\\n  - gp120 envelope protein binds CD4 receptor on T cells\\n  - Conformational change exposes gp41 subunit\\n\\n- **Coreceptor Binding**:\\n  - gp41 exposed domain recognizes coreceptors\\n  - CCR5 (R5-tropic, typically macrophage-tropic)\\n  - CXCR4 (X4-tropic, typically T cell-tropic, more virulent)\\n  - Tropism determines cell type and disease progression\\n\\n- **Fusion**:\\n  - gp41 inserts fusion peptide into cell membrane\\n  - Conformational changes drive fusion\\n  - Viral and cellular membranes merge\\n\\n### Step 2: Reverse Transcription\\n- **Uncoating**: Viral RNA and enzymes enter cytoplasm\\n- **Reverse Transcriptase**: Converts viral RNA to DNA (opposite of normal central dogma)\\n  - Creates strong stops and priming errors\\n  - Error rate: 1 per 10,000 bases (high)\\n  - Source of viral diversity and drug resistance\\n- **Integration**: Creates DNA copy integrated into host genome\\n\\n### Step 3: Integration\\n- **Integrase enzyme**: Catalyzes insertion into chromosome\\n- **Random integration**: Can disrupt host genes\\n- **Persistent infection**: Once integrated, not easily removed\\n- **Latency**: Can remain dormant in resting cells\\n\\n### Step 4: Transcription and Translation\\n- **Tat protein**: Transactivates viral gene transcription\\n- **Rev protein**: Exports unspliced/partially spliced RNA from nucleus\\n- **RNA processing**: Alternative splicing generates diverse transcripts\\n- **Translation**: Viral mRNAs translated on host ribosomes\\n\\n### Step 5: Viral Protein Processing\\n- **Polyproteins**: Long precursor proteins produced\\n- **Protease**: Cleaves polyproteins into functional proteins\\n  - Gag polyprotein → matrix, nucleocapsid, capsid proteins\\n  - Pol polyprotein → RT, integrase, protease\\n  - Env polyprotein → gp120, gp41\\n- **Protease inhibitors**: Block cleavage, preventing maturation\\n\\n### Step 6: Virion Assembly and Budding\\n- **Assembly**: Newly synthesized proteins and RNA assemble at membrane\\n- **Budding**: Virion acquires lipid bilayer from host cell\\n- **Maturation**: Protease completes final cleavage\\n- **Release**: New virions bud from cell (1000-10,000 per day)\\n\\n## CD4+ T Cell Depletion Mechanisms\\n\\n### Direct Infection and Lysis\\n- HIV infects CD4+ cells\\n- Viral budding from cell surface damages membrane\\n- Direct cytolysis from viral replication\\n- Syncytia formation (multiple infected cells fuse)\\n- Accounts for <10% of daily CD4 loss\\n\\n### Immune Activation and Apoptosis\\n- **Chronic immune activation**:\\n  - Persistent antigen stimulation\\n  - Constant interferon production\\n  - Chronic inflammation\\n  - Elevated TNF-α, IL-6\\n\\n- **Bystander apoptosis**:\\n  - CD8+ T cell killing of infected cells\\n  - Some killing of uninfected CD4+ cells (\\\"bystander killing\\\")\\n  - Immune activation-induced apoptosis\\n  - Programmed cell death in bystander cells\\n\\n- **FasL-Fas pathway**:\\n  - gp120 cross-links Fas receptors on CD4+ cells\\n  - Triggers apoptosis without infection\\n  - Mechanism of uninfected cell death\\n\\n### Loss of Thymic Production\\n- **Thymic dysfunction**: HIV causes thymic atrophy\\n- **Reduced naive T cells**: Impaired generation of new CD4+ cells\\n- **Immune reconstitution slow**: Even with ART, CD4 recovery limited\\n- **Age-related decline**: Thymic involution reduces regenerative capacity\\n\\n## Immune System Dysfunction\\n\\n### Qualitative Defects\\n- **Loss of function**: Surviving CD4+ cells have reduced ability to produce cytokines (IL-2, IFN-γ)\\n- **Impaired delayed hypersensitivity**: Inability to mount specific immune response\\n- **Defective antigen presentation**: Decreased MHC-II expression\\n- **Reduced vaccine response**: Cannot mount antibody responses (CD4-dependent)\\n\\n### B Cell Abnormalities\\n- **Hypergammaglobulinemia**: Elevated total immunoglobulins\\n- **Irrelevant antibodies**: High levels of non-protective antibodies\\n- **Poor response to new antigens**: Inability to make specific responses\\n- **Auto-antibodies**: Development of auto-reactive responses\\n\\n### Loss of Mucosal Immunity\\n- **GALT depletion**: Gut-associated lymphoid tissue loses CD4+ cells\\n- **Microbial translocation**: Loss of mucosal barrier integrity\\n- **LPS translocation**: Bacterial lipopolysaccharide enters bloodstream\\n- **Chronic inflammation**: Drives immune activation and further CD4 loss\\n\\n## Development of Opportunistic Infections\\n\\n### PCP Pathogenesis\\n- **Organisms present**: P. jirovecii normally present in lungs (colonizes most people)\\n- **Immune suppression**: CD4 <200 allows proliferation\\n- **Cyst rupture**: Causes pneumonia with foamy exudate\\n- **Inflammation**: Mononuclear infiltration\\n- **Hypoxia**: Due to diffuse infiltration and poor oxygenation\\n\\n### Toxoplasmosis Pathogenesis\\n- **Reactivation**: Most cases from prior infection\\n- **Cyst rupture**: CD4 <100 loses control of bradyzoites\\n- **Tachyzoite invasion**: Causes necrosis\\n- **Space-occupying lesions**: Multiple brain lesions from scattered foci\\n- **Seizures**: From lesion irritation\\n\\n### Cryptococcal Meningitis\\n- **Environmental source**: Pigeon droppings, soil\\n- **Initial lung infection**: Inhalation\\n- **Dissemination**: To CNS in immunosuppressed\\n- **Minimal inflammation**: Brain has few CD4+ cells; meningitis non-inflammatory\\n- **Antigen shedding**: Polysaccharide capsule causes antigenemia\\n\\n### CMV Disease\\n- **Reactivation**: Most cases from latent infection\\n- **Viral load**: Extremely high in retina and esophagus\\n- **Endothelitis**: Inflammation of blood vessels\\n- **Hemorrhage**: From vessel damage (especially retinitis—\\\"cottage cheese and ketchup\\\" appearance)\\n- **Disseminated disease**: Multiple organ involvement when CD4 <50\\n\\n## Why Specific OIs at Specific CD4 Counts\\n\\n### Immune Control Thresholds\\n- **TB**: Can occur at any CD4 (macrophage-mediated immunity partially preserved)\\n- **Candidiasis**: CD4 <200 (T cell-dependent mucosal immunity lost)\\n- **PCP**: CD4 <200 (requires CD4+ cell response for control)\\n- **Toxoplasmosis**: CD4 <100 (requires high CD4 for cyst control)\\n- **CMV**: CD4 <50 (requires CD4+ control of latently infected cells)\\n\\n### Pathogen Characteristics\\n- **High virulence pathogens** (TB): Lower CD4 threshold required\\n- **Low virulence commensals** (CMV): Higher virulence allows reactivation at very low CD4,\\n        mnemonics: [\\n          {\\n            text: \\\"HIV Replication - RIPE\\\",\\n            explanation: \\\"Reverse transcription, Integration, Protease cleavage, Envelope budding\\\"\\n          },\\n          {\\n            text: \\\"CD4 Depletion - DIAL\\\",\\n            explanation: \\\"Direct cytolysis, Immune activation apoptosis, Apoptosis (bystander), Loss of thymic production\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"HIV binds CD4 + CCR5/CXCR4; tropism determines pathogenesis\\\",\\n          \\\"Reverse transcriptase high error rate (1 per 10,000 bases) causes viral diversity\\\",\\n          \\\"Protease essential for virion maturation; target of protease inhibitors\\\",\\n          \\\"Bystander apoptosis via Fas-FasL causes CD4 loss without direct infection\\\",\\n          \\\"Thymic dysfunction impairs CD4 regeneration; explains slow recovery even on ART\\\",\\n          \\\"B cell dysfunction causes hypergammaglobulinemia but poor specific responses\\\",\\n          \\\"GALT depletion and microbial translocation drive chronic immune activation\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Harrison's Principles of Internal Medicine\\\", chapter: \\\"Chapter 145: HIV-1 Infection\\\", edition: \\\"21st\\\" },\\n          { book: \\\"Robbins and Cotran Pathologic Basis of Disease\\\", chapter: \\\"Chapter 6: Diseases of Immunity\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"hiv-aids-clinical\\\",\\n        title: \\\"HIV/AIDS & OI - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Acute retroviral syndrome presents with fever, pharyngitis, and rash; chronic HIV causes CD4 decline over years. AIDS presents with OIs predictable by CD4 count. Diagnosis via 4th generation antigen/antibody test; management with ART targeting undetectable viral load.\\\",\\n        contentMd: "# HIV and AIDS - Clinical Features and Diagnosis\\\\n\\\\n## Clinical Presentation of HIV Infection\\\\n\\\\n### Acute Retroviral Syndrome (ARS)\\\\n- **Timing**: 2-4 weeks after infection\\\\n- **Symptoms** (50-80% of infected patients):\\\\n  - Fever (most common)\\\\n  - Pharyngitis\\\\n  - Rash (maculopapular, trunk and extremities)\\\\n  - Lymphadenopathy (generalized)\\\\n  - Myalgias, arthralgias\\\\n  - Headache, aseptic meningitis (rare)\\\\n  - Gastrointestinal symptoms (diarrhea, nausea)\\\\n  - Thrombocytopenia (occasionally severe)\\\\n\\\\n- **Duration**: 1-2 weeks, self-limited\\\\n- **Mimics**: Mononucleosis, acute hepatitis, measles\\\\n- **Significance**: Extremely high viral load (peak viremia); highly infectious period\\\\n\\\\n### Chronic HIV Disease (Untreated)\\\\n- **Asymptomatic phase**: Can last 5-10 years (varies by individual)\\\\n  - Gradual CD4 decline (50-100 cells/year)\\\\n  - Persistent viremia\\\\n  - May feel well despite progressive infection\\\\n  - Infectious throughout\\\\n\\\\n- **Symptomatic disease** (CD4 200-500):\\\\n  - Persistent generalized lymphadenopathy (PGL): >1 cm lymph nodes >3 months in ≥2 sites\\\\n  - Oral candidiasis\\\\n  - Herpes zoster (dermatomal)\\\\n  - Constitutional symptoms (fever, night sweats, weight loss)\\\\n  - Persistent diarrhea\\\\n\\\\n- **AIDS-defining illnesses** (CD4 <200):\\\\n  - Opportunistic infections as detailed in Layer 1\\\\n  - Certain malignancies (lymphoma, cervical cancer, Kaposi sarcoma)\\\\n  - HIV-associated dementia (CNS HIV)\\\\n  - Wasting syndrome (>10% weight loss + fever/diarrhea)\\\\n\\\\n## Presentation of Specific OIs in AIDS\\\\n\\\\n### PCP (CD4 <200)\\\\n- **Presentation**: Subacute dyspnea, dry cough, fever\\\\n- **Timeline**: Over weeks (not acute)\\\\n- **Severity**: May be deceptively mild with severe hypoxia\\\\n- **Labs**: Elevated LDH (usually >450), hypoxia on exertion\\\\n- **CXR**: Can be normal or show diffuse bilateral infiltrates\\\\n- **Diagnosis**: Induced sputum or BAL with special stains (Giemsa, silver stain)\\\\n\\\\n### Toxoplasmosis (CD4 <100)\\\\n- **Presentation**: Focal neurologic deficits (weakness, speech disturbance, vision changes)\\\\n- **Seizures**: Common (30% present with seizures)\\\\n- **CNS imaging**: Multiple ring-enhancing lesions with edema\\\\n- **Diagnosis**: CT/MRI (lesions typically <2 cm, often multiple, distributed throughout brain)\\\\n- **Serology**: Toxo IgG usually positive (indicates prior infection) but not diagnostic\\\\n\\\\n### Cryptococcal Meningitis (CD4 <100)\\\\n- **Presentation**: Fever and headache (meningeal signs minimal despite meningitis!)\\\\n- **CNS findings**: Non-inflammatory meningitis (low WBC in CSF)\\\\n- **CSF**: May have normal or low WBC; protein high\\\\n- **Diagnosis**: Cryptococcal antigen (CSF or serum; >90% sensitive)\\\\n- **India context**: Common in TB-HIV coinfection\\\\n\\\\n### CMV (CD4 <50)\\\\n- **CMV Retinitis**: Vision changes, floaters, scotomas; ophthalmologic examination shows hemorrhagic infiltrates\\\\n- **CMV Esophagitis**: Severe odynophagia, dysphagia, esophageal ulcers on endoscopy\\\\n- **CMV Colitis**: Severe diarrhea, bloody stools, abdominal pain, toxic megacolon risk\\\\n\\\\n### MAC (CD4 <50)\\\\n- **Presentation**: High fever, weight loss, night sweats, diarrhea\\\\n- **Lymphadenopathy**: Generalized\\\\n- **Labs**: High-grade bacteremia (organisms in blood culture)\\\\n- **Diagnosis**: Blood culture with special mycobacterial media (BACTEC)\\\\n- **Pathology**: Foamy macrophages in GI and other tissues\\\\n\\\\n### Tuberculosis (All CD4 Levels)\\\\n- **CD4 >200**: Reactivation TB (cavitary, upper lobe predominant)\\\\n- **CD4 <100**: Progressive primary TB (diffuse, lower lobe, minimal cavitation)\\\\n- **Disseminated TB**: Occurs with very low CD4\\\\n- **IRIS risk**: TB can manifest or worsen early after starting ART\\\\n\\\\n## Diagnosis of HIV\\\\n\\\\n### Diagnostic Algorithm (4th Generation Test)\\\\n1. **4th Generation Antigen/Antibody Test**: Detects HIV-1 p24 antigen + anti-HIV antibodies\\\\n   - Sensitivity >99% after 18-45 days of infection\\\\n   - Can detect earlier than antibody-only tests\\\\n   - Can miss earliest window period (1-18 days post-infection)\\\\n\\\\n2. **If positive**: Confirmatory test\\\\n   - **HIV-1/HIV-2 Differentiation Immunoassay**: Distinguishes HIV-1 from HIV-2\\\\n   - **HIV-1 Nucleic Acid Test (NAT)**: Detects viral RNA (most sensitive, confirmatory)\\\\n\\\\n3. **Negative result with high suspicion**:\\\\n   - May be in window period\\\\n   - Repeat testing after 2-4 weeks\\\\n\\\\n### CD4 Counting and Viral Load\\\\n- **CD4 count**: Flow cytometry\\\\n  - Baseline CD4 critical for determining OI risk\\\\n  - Guide for prophylaxis and ART initiation\\\\n  - Monitoring tool for immune recovery\\\\n\\\\n- **HIV RNA (Viral Load)**:\\\\n  - Measured in copies/mL\\\\n  - Baseline: Predicts disease progression\\\\n  - On ART: Target <50 copies/mL (undetectable)\\\\n  - Monitoring: Every 3-6 months\\\\n\\\\n### Other Baseline Tests\\\\n| Test | Purpose |\\\\n|---|---|\\\\n| Genotype resistance test | Determines drug susceptibility |\\\\n| TB screening (TST, IGRA) | Rule out TB |\\\\n| Syphilis serology | Screen for coinfection |\\\\n| HBV serology | Determine vaccination need |\\\\n| HCV antibody | Assess HCV status |\\\\n| Renal function | Baseline for drug nephrotoxicity |\\\\n| Liver function | Baseline for drug hepatotoxicity |\\\\n\\\\n## AIDS-Defining Conditions\\\\n\\\\n### Opportunistic Infections\\\\n- PCP, toxoplasmosis, cryptococcosis, CMV, MAC, TB, candidiasis (esophageal)\\\\n- Isosporiasis, cryptosporidiosis, histoplasmosis, coccidioidomycosis\\\\n\\\\n### Malignancies\\\\n- **Kaposi sarcoma**: Associated with HHV-8\\\\n- **Lymphoma**: Especially CNS lymphoma (usually EBV-associated)\\\\n- **Cervical cancer**: Associated with HPV; more common in women with HIV\\\\n\\\\n### Other AIDS-Defining Illnesses\\\\n- **HIV encephalopathy**: Dementia, cognitive decline\\\\n- **HIV wasting syndrome**: >10% weight loss + diarrhea/fever >1 month\\\\n- **Recurrent bacterial pneumonia** (≥2 in 12 months)\\\\n\\\\n## India-Specific Clinical Context\\\\n- **TB-HIV coinfection**: Major challenge; TB leading cause of death\\\\n- **Presentation timing**: Often diagnosed late (CD4 <50)\\\\n- **OI spectrum**: TB, cryptococcal meningitis, toxoplasmosis most common\\\\n- **PCP**: Less common than in Western cohorts\\\\n- **Access issues**: Late diagnosis due to testing barriers\\\\n- **Stigma**: Significant barrier to care and disclosure,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"AIDS OIs by CD4 - 200-100-50 Mnemonic\\\\\\\",\\\\n            explanation: \\\\\\\"CD4 <200: Pneumocystis, TB, oesophageal Candida, Tuberculosis. CD4 <100: Toxo, Crypto. CD4 <50: CMV, MAC\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"ARS Features - PHARYNX\\\\\\\",\\\\n            explanation: \\\\\\\"Pharyngitis, Headache, Arthralgias, Rash, Ymphadenopathy, Nausea, Xerosis (dry symptoms)\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Acute retroviral syndrome: fever, rash, pharyngitis; occurs 2-4 weeks after infection\\\\\\\",\\\\n          \\\\\\\"CD4 decline ~50-100 cells/year in untreated disease\\\\\\\",\\\\n          \\\\\\\"OIs develop predictably based on CD4 threshold\\\\\\\",\\\\n          \\\\\\\"PCP rarely presents acutely; hypoxia may be severe despite mild symptoms\\\\\\\",\\\\n          \\\\\\\"Cryptococcal meningitis: minimal meningeal signs; CSF antigen test diagnostic\\\\\\\",\\\\n          \\\\\\\"TB can occur at any CD4; disseminated TB when CD4 <50\\\\\\\",\\\\n          \\\\\\\"Diagnosis: 4th generation antigen/antibody test; confirm with differentiation assay\\\\\\\",\\\\n          \\\\\\\"India: TB-HIV coinfection major; high mortality without simultaneous TB/HIV treatment\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"Chapter 145: HIV-1 Infection\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"Chapter 14: Sexually Transmitted Infections\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"hiv-aids-exam\\\\\\\",\\\\n        title: \\\\\\\"HIV/AIDS & OI - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"ART consists of three drug classes: NRTIs, NNRTIs/INSTIs, and PIs. First-line regimens avoid resistance; integrase inhibitors increasingly preferred. OI prophylaxis based on CD4 count (TMP-SMX for CD4 <200, azithromycin for CD4 <50). Treatment goals: undetectable viral load and CD4 >200.\\\\\\\",\\\\n        contentMd: ``# HIV and AIDS - Management and Treatment\\\\n\\\\n## Antiretroviral Therapy (ART)\\\\n\\\\n### Goals of ART\\\\n1. Suppress viral replication to undetectable levels (<50 copies/mL)\\\\n2. Restore/maintain immune function (CD4 recovery)\\\\n3. Prevent disease progression\\\\n4. Reduce transmission (Undetectable = Untransmittable, U=U)\\\\n5. Improve quality of life\\\\n\\\\n### ART Classes and Mechanisms\\\\n\\\\n**NRTIs (Nucleoside/Nucleotide Reverse Transcriptase Inhibitors):**\\\\n- Tenofovir (TDF or TAF): Backbone of most regimens\\\\n- Lamivudine (3TC): Good penetration, few side effects\\\\n- Emtricitabine (FTC): Similar to 3TC\\\\n- Abacavir (ABC): Avoid in HLA-B*5701+ (hypersensitivity)\\\\n\\\\n**NNRTIs (Non-Nucleoside Reverse Transcriptase Inhibitors):**\\\\n- Efavirenz: CNS side effects common\\\\n- Rilpivirine: Lower side effect profile\\\\n\\\\n**Integrase Strand Transfer Inhibitors (INSTIs):**\\\\n- Dolutegravir (DTG): Excellent resistance profile; increasingly first-line\\\\n- Bictegravir (BIC): Newer option\\\\n- Raltigravir: Older INSTI\\\\n\\\\n**Protease Inhibitors:**\\\\n- Darunavir (DRV/r with ritonavir boosting): Most commonly used PI now\\\\n- Ritonavir: Booster (not fully active but increases PI levels)\\\\n- Lopinavir/ritonavir (LPV/r): Older option\\\\n\\\\n**Entry Inhibitors:**\\\\n- Maraviroc (CCR5 antagonist): Used in selected cases\\\\n- Enfuvirtide: Rarely used (requires injection)\\\\n\\\\n### First-Line ART Regimens (WHO/India Guidelines)\\\\n\\\\n**Integrase-Based Regimen (Preferred):**\\\\n- TDF + 3TC + DTG (or BIC)\\\\n- Excellent efficacy, minimal side effects\\\\n- DTG: Advantages—high barrier to resistance, CNS activity\\\\n\\\\n**Alternative Backbones:**\\\\n- TAF + 3TC + DTG (if renal disease or bone concerns)\\\\n- ABC + 3TC + DTG (if TDF intolerant; requires negative HLA-B*5701)\\\\n\\\\n**PI-Based Regimen (Alternative):**\\\\n- TDF + 3TC + DRV/r\\\\n- Good for specific situations (pregnancy, rifampicin co-administration)\\\\n\\\\n**NNRTI-Based Regimen (Older, Less Preferred Now):**\\\\n- TDF + 3TC + Efavirenz (or rilpivirine)\\\\n- Acceptable if INSTI unavailable, but DTG preferred\\\\n\\\\n### When to Start ART\\\\n- **All patients**: Recommend immediate ART regardless of CD4 (START trial: better outcomes)\\\\n- **Urgent**: CD4 <50 or AIDS-defining illness (start within 2 weeks)\\\\n- **TB-HIV**: Timing depends on CD4\\\\n  - CD4 <50: Start TB therapy first 2 weeks, then ART\\\\n  - CD4 >50: Start both within 2 weeks\\\\n  - TB meningitis: Delay ART 2-8 weeks to avoid IRIS\\\\n\\\\n### Monitoring on ART\\\\n\\\\n| Parameter | Timing | Goal |\\\\n|---|---|---|\\\\n| Viral load | 4-12 weeks post-start | <50 copies/mL |\\\\n| CD4 count | Baseline, then 3-6 months | >200 (safety), >500 (immune recovery) |\\\\n| Resistance testing | If virologic failure | Guide salvage regimen |\\\\n| Adherence | Every visit | >95% (critical for suppression) |\\\\n| Side effects | Every visit | Manage or switch |\\\\n| Renal/liver function | 6 months | Monitor for toxicity |\\\\n\\\\n## Opportunistic Infection Prophylaxis\\\\n\\\\n### TMP-SMX Prophylaxis (CD4 <200)\\\\n- **Dosing**: DS tablet daily (160/800 mg)\\\\n- **Benefits**: Covers PCP, toxoplasmosis, some bacterial infections\\\\n- **Side effects**: Rash (especially in HIV), hepatotoxicity, nephrotoxicity\\\\n- **Discontinuation**: After CD4 >200 for ≥3 months on ART\\\\n- **Allergy alternative**: Atovaquone or pentamidine (less effective for toxo)\\\\n\\\\n### Azithromycin (CD4 <50)\\\\n- **Purpose**: MAC prophylaxis\\\\n- **Dosing**: 1200 mg weekly\\\\n- **Discontinuation**: After CD4 >50 for ≥3 months on ART\\\\n- **Alternative**: Clarithromycin (similar efficacy)\\\\n\\\\n### Fluconazole (CD4 <50)\\\\n- **Purpose**: Cryptococcal prophylaxis\\\\n- **Dosing**: 200 mg daily\\\\n- **Effectiveness**: Reduces but doesn't eliminate risk\\\\n- **Discontinuation**: After CD4 >100 for ≥3 months\\\\n\\\\n### TB Prophylaxis (CD4 <200 if TST+ or TB contact)\\\\n- **Isoniazid**: 300 mg daily × 9 months (preferred)\\\\n- **Rifampicin**: 600 mg daily × 4 months (if INH-resistant)\\\\n- **Can occur alongside ART**: Manage drug interactions\\\\n\\\\n## Treatment of Specific OIs\\\\n\\\\n### PCP\\\\n- **Acute treatment**: TMP-SMX DS 2 tablets QID × 21 days\\\\n- **Adjunctive**: Prednisolone 40 mg BD × 5 days, then taper if PaO2 <70 or A-a gradient >35\\\\n- **Second-line**: Pentamidine or clindamycin + primaquine\\\\n- **Success rate**: 80-90% with ART\\\\n\\\\n### Toxoplasmosis\\\\n- **Acute**: Sulfadiazine 1.5 g QID + pyrimethamine 50 mg daily + folinic acid (leucovorin) 10 mg daily\\\\n- **Alternative**: Clindamycin + pyrimethamine\\\\n- **Duration**: 6 weeks, then lifelong suppression (TMP-SMX covers)\\\\n- **Seizure prophylaxis**: Often needed\\\\n\\\\n### Cryptococcal Meningitis\\\\n- **Induction**: Amphotericin B 0.7-1 mg/kg IV daily × 2 weeks\\\\n- **Consolidation**: Fluconazole 400 mg BD × 8 weeks\\\\n- **Maintenance**: Fluconazole 200 mg daily lifelong (can discontinue if CD4 >100 × 3 months)\\\\n- **Monitoring**: CSF opening pressure (elevated in 50%); may need repeat LP\\\\n- **Mortality**: Still significant despite treatment\\\\n\\\\n### CMV\\\\n- **Retinitis**: Ganciclovir intravitreal injections or valganciclovir (if systemically unwell)\\\\n- **Esophagitis**: Valganciclovir or IV ganciclovir\\\\n- **Colitis**: IV ganciclovir or foscarnet\\\\n- **Discontinuation**: Can stop when CD4 >100 for 3 months\\\\n\\\\n### MAC\\\\n- **Treatment**: Azithromycin + ethambutol + rifabutin (for severe disease)\\\\n- **Duration**: Lifelong until CD4 >50 for ≥3 months on ART\\\\n- **Immune reconstitution inflammation syndrome (IRIS)**: Can develop early on ART\\\\n\\\\n## Immune Reconstitution Inflammatory Syndrome (IRIS)\\\\n\\\\n### Pathophysiology\\\\n- **Paradoxical worsening** of symptoms as CD4 recovers\\\\n- Restoration of inflammatory response to pathogens\\\\n- Occurs 2-12 weeks after starting ART\\\\n\\\\n### Common Presentations\\\\n- **TB-IRIS**: Worsening TB despite treatment\\\\n- **MAC-IRIS**: Fever, lymphadenitis after CD4 recovery\\\\n- **CMV-IRIS**: Uveitis with immune recovery\\\\n\\\\n### Management\\\\n- Continue ART (essential for eventual immune recovery)\\\\n- Add corticosteroids for severe cases (prednisolone 1 mg/kg)\\\\n- Manage underlying infection\\\\n\\\\n## Monitoring and Long-term Management\\\\n\\\\n### CD4 Recovery Timeline\\\\n- **Rapid phase**: First 3 months (CD4 may increase 50-100/month)\\\\n- **Slow phase**: 3-12 months (slower increase)\\\\n- **Final plateau**: Year 2+ (may not return to normal if started at very low CD4)\\\\n\\\\n### Quality of Life\\\\n- Return to work/study\\\\n- Restore relationships\\\\n- Manage stigma and disclosure\\\\n- Address mental health (depression common)\\\\n- Sexual health counseling (protection from reinfection)\\\\n\\\\n### India-Specific Issues\\\\n- **Drug costs**: Generic antiretrovirals affordable; accessibility issues\\\\n- **TB-HIV management**: Requires careful coordination\\\\n- **Adherence support**: Essential due to complex regimens\\\\n- **Treatment as prevention**: Critical for reducing transmission,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"First-Line ART - DTG + Backbone\\\\\\\",\\\\n            explanation: \\\\\\\"DTG (dolutegravir/integrase) + TDF/3TC (backbone); alternative DTG + ABC/3TC if TDF contraindicated\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"OI Prophylaxis - TMP at 200, Azith at 50\\\\\\\",\\\\n            explanation: \\\\\\\"TMP-SMX CD4 <200, Azithromycin CD4 <50, Consider fluconazole CD4 <50\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Integrase inhibitors (DTG) increasingly first-line due to efficacy and tolerability\\\\\\\",\\\\n          \\\\\\\"All patients should start ART immediately after diagnosis\\\\\\\",\\\\n          \\\\\\\"Target viral load: <50 copies/mL (undetectable)\\\\\\\",\\\\n          \\\\\\\"TMP-SMX prophylaxis CD4 <200; can discontinue after CD4 >200 × 3 months on ART\\\\\\\",\\\\n          \\\\\\\"Azithromycin for MAC prophylaxis when CD4 <50\\\\\\\",\\\\n          \\\\\\\"TB-HIV requires coordinated treatment; timing depends on CD4\\\\\\\",\\\\n          \\\\\\\"IRIS can occur 2-12 weeks after starting ART; continue ART and add steroids if needed\\\\\\\",\\\\n          \\\\\\\"Adherence >95% critical for virologic suppression and prevention of resistance\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"Chapter 145: HIV-1 Infection\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"Chapter 14: Sexually Transmitted Infections\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"hiv-aids-recall\\\\\\\",\\\\n        title: \\\\\\\"HIV/AIDS & OI - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"Test your knowledge of HIV pathophysiology, OI epidemiology by CD4 count, diagnostic approaches, and ART management.\\\\\\\",\\\\n        contentMd: ``# Active Recall - HIV/AIDS and Opportunistic Infections\\\\n\\\\n**Q1: Explain the mechanisms of CD4+ T cell depletion in HIV infection. Why is bystander apoptosis significant?**\\\\n> Direct viral lysis accounts for <10% of CD4 loss. Bystander apoptosis (killing of uninfected CD4+ cells) is major mechanism via FasL-Fas cross-linking and immune activation-induced death. Chronic immune activation drives persistent apoptosis. Thymic dysfunction further reduces generation of new CD4 cells.\\\\n\\\\n**Q2: A 32-year-old man presents with fever, pharyngitis, and maculopapular rash. HIV test is negative but done 1 week after unprotected sexual exposure. Should you counsel him to repeat testing? Why?**\\\\n> YES. This is likely acute retroviral syndrome (ARS) presenting during window period. With exposure 1 week ago, HIV may not be detected yet (window period 1-18 days for antigen/antibody test). Repeat 4th gen test in 2-4 weeks. Viral load extremely high during ARS; patient highly infectious.\\\\n\\\\n**Q3: Why does tuberculosis occur at ANY CD4 count in HIV+ patients, while PCP typically requires CD4 <200?**\\\\n> TB requires macrophage-mediated immunity (preserved longer in HIV). PCP requires CD4-mediated immunity (IL-2, IFN-γ production) which is lost earlier. This explains TB as leading AIDS-defining illness at any CD4, unlike other OIs with clear thresholds.\\\\n\\\\n**Q4: A patient with CD4 100 develops meningitis. CSF shows 150 WBC with protein 200, glucose normal. Blood cultures grow Cryptococcus. What is the diagnosis and what is the mortality rate?**\\\\n> Cryptococcal meningitis. The non-inflammatory picture (low CSF WBC, normal glucose, minimal meningeal signs) is characteristic despite serious CNS infection. Diagnosis confirmed by cryptococcal antigen (>90% sensitive). Mortality remains 15-20% despite amphotericin B + fluconazole therapy.\\\\n\\\\n**Q5: Explain why a patient on excellent ART can still develop CMV retinitis months after immune recovery. What must be done?**\\\\n> CMV disease typically occurs CD4 <50 but can develop with immune recovery (immune recovery uveitis/IRU). Due to reactivation of latent CMV with inflammatory response to viral antigen. Continue ART. Add corticosteroids if significant uveitis. Systemic valganciclovir may be needed.\\\\n\\\\n**Q6: A newly diagnosed HIV patient refuses to start ART immediately, wanting \\\\\\\"just treatment for CD4 <50.\\\\\\\" Counsel him on the START trial and current guidelines.**\\\\n> START trial (2015) showed immediate ART initiation superior to waiting for CD4 <350. Benefits: 56% reduction in AIDS events, better CD4 recovery, prevents complications. Current WHO/Indian guidelines recommend ART for ALL patients regardless of CD4. Early ART prevents progression, reduces mortality.\\\\n\\\\n**Q7: Why is genotype resistance testing important at diagnosis, and how does it guide initial ART selection?**\\\\n> Detects pre-existing resistance (transmitted resistance). ~10% of treatment-naive patients have some resistance. Guides initial regimen to avoid resistant strains. Prevents virologic failure from starting with drugs against which virus is resistant. Essential in high-prevalence areas.\\\\n\\\\n**Q8: A patient on efavirenz-based ART for 6 months reports persistent cognitive dysfunction. What is likely happening, and what would you do?**\\\\n> Efavirenz CNS toxicity. Common with efavirenz (15-20% experience neuropsychiatric effects). In this case, consider switching to DTG-based regimen (excellent CNS penetration but different mechanism; less CNS toxicity). Ensure CD4 recovery hasn't occurred (check CD4; if >500, could be other causes).\\\\n\\\\n**Q9: List the criteria for stopping TMP-SMX prophylaxis and the rationale for CD4 threshold.**\\\\n> Stop when CD4 >200 for ≥3 months on ART. Rationale: CD4 >200 associated with <2% risk of PCP. Requirement for documented improvement on ART ensures sustained immune recovery, not transient CD4 elevation.\\\\n\\\\n**Q10: A TB-HIV coinfected patient (CD4 30) presents with TB meningitis. What is the optimal timing for starting ART, and why?**\\\\n> Delay ART 2-8 weeks after starting TB therapy. Rationale: TB meningitis carries high mortality; early ART increases IRIS risk with resultant CNS inflammation. Start TB drugs first, allow CSF sterilization, then initiate ART. High dose dexamethasone essential for TB meningitis.,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"OI Risk by CD4 - PEE-T-CCC\\\\\\\",\\\\n            explanation: \\\\\\\"CD4 <200: PCP, Esophageal candida, CD4 <100: Toxo, Crypto; CD4 <50: CMV, Coccidioides\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Bystander apoptosis via FasL-Fas is major mechanism of CD4 loss\\\\\\\",\\\\n          \\\\\\\"Acute retroviral syndrome: window period 1-18 days; repeat 4th gen test if negative at 1 week\\\\\\\",\\\\n          \\\\\\\"TB unique among OIs: occurs at any CD4; macrophage immunity partially preserved\\\\\\\",\\\\n          \\\\\\\"Cryptococcal meningitis: non-inflammatory; CSF antigen test diagnostic; mortality still 15-20%\\\\\\\",\\\\n          \\\\\\\"START trial: ART for all patients; earlier initiation better outcomes\\\\\\\",\\\\n          \\\\\\\"Genotype resistance testing guides initial regimen selection\\\\\\\",\\\\n          \\\\\\\"Stop TMP-SMX prophylaxis when CD4 >200 × 3 months on ART\\\\\\\",\\\\n          \\\\\\\"TB meningitis-HIV: Delay ART 2-8 weeks after TB treatment to reduce IRIS\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"Chapter 145: HIV-1 Infection\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"Chapter 14: Sexually Transmitted Infections\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  },\\\\n  {\\\\n    topicCode: \\\\\\\"IM-MOD-09-TOP-05\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"sepsis-sirs-foundation\\\\\\\",\\\\n        title: \\\\\\\"Sepsis & SIRS - Foundation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Sepsis is a life-threatening condition caused by dysregulated host response to infection, progressing from SIRS to septic shock with organ dysfunction. SIRS criteria identify systemic inflammation; qSOFA or SOFA scores predict mortality and guide management intensity.\\\\\\\",\\\\n        contentMd: ``# Sepsis and SIRS - Foundation\\\\n\\\\n## Definitions and Classification\\\\n\\\\n### Systemic Inflammatory Response Syndrome (SIRS)\\\\nSystemic inflammation regardless of cause (infection or not):\\\\n- **Criteria** (≥2 required):\\\\n  1. Fever >38°C or hypothermia <36°C\\\\n  2. Heart rate >90 beats/minute\\\\n  3. Respiratory rate >20 breaths/minute\\\\n  4. WBC >12,000 or <4,000 cells/μL (or >10% bands)\\\\n\\\\n### Sepsis (SEPSIS-3 Definition, 2016)\\\\n- **Infection**: Confirmed or suspected\\\\n- **PLUS dysregulated host response**: ≥1 organ dysfunction\\\\n- **SOFA score ≥2** (increased from baseline)\\\\n\\\\n### Septic Shock\\\\n- **Sepsis** PLUS:\\\\n- **Persistent hypotension**: Requiring vasopressor to maintain MAP ≥65 mmHg\\\\n- **Lactate >2 mmol/L** despite adequate fluid resuscitation\\\\n- **Mortality**: 40-50% (higher than sepsis without shock)\\\\n\\\\n### Progression Spectrum\\\\n- SIRS → Sepsis → Severe Sepsis → Septic Shock\\\\n- Not all SIRS is infection; not all infections cause SIRS\\\\n- Early recognition critical\\\\n\\\\n## Epidemiology\\\\n\\\\n### Global Burden\\\\n- **Incidence**: 15-30 million cases annually\\\\n- **Mortality**: 30-40% in developed countries, >50% in developing countries\\\\n- **Leads to**: ICU admission, prolonged hospitalization, long-term disability\\\\n\\\\n### India-Specific Epidemiology\\\\n- **Higher mortality**: 50-60% due to:\\\\n  - Late presentation (CD4 depletion, delayed care-seeking)\\\\n  - Limited ICU resources\\\\n  - Antibiotic resistance\\\\n  - Underlying malnutrition\\\\n\\\\n- **Common sources**:\\\\n  - Pneumonia (most common)\\\\n  - Intra-abdominal infection (appendicitis, perforation)\\\\n  - Urinary tract infection\\\\n  - Bacteremia (sometimes unclear source)\\\\n  - TB-associated sepsis\\\\n\\\\n- **Common pathogens**:\\\\n  - Gram-negative bacilli (E. coli, Klebsiella)\\\\n  - Gram-positive cocci (Staph, Strep)\\\\n  - Fungi (Candida, Aspergillus) in immunocompromised\\\\n  - Mycobacteria (TB)\\\\n\\\\n## Risk Factors\\\\n\\\\n| Category | Examples |\\\\n|---|---|\\\\n| Age | Extremes (<1 year, >65 years) |\\\\n| Immunocompromise | HIV, chemotherapy, splenectomy, chronic corticosteroids |\\\\n| Chronic diseases | Diabetes, CKD, cirrhosis, malignancy |\\\\n| Acute severity | Trauma, burns, major surgery |\\\\n| Invasive procedures | Central lines, catheters, mechanical ventilation |\\\\n| Malnutrition | Common in India |\\\\n| Alcohol abuse | Impaired immune response |\\\\n\\\\n## SOFA and qSOFA Scores\\\\n\\\\n### SOFA (Sequential Organ Failure Assessment)\\\\nPredicts mortality; ≥1 point increase from baseline = sepsis:\\\\n\\\\n| System | Variable | Points |\\\\n|---|---|---|\\\\n| Respiratory | PaO2/FiO2 ratio (mmHg) | 0-4 based on levels |\\\\n| Coagulation | Platelet count (×10³/μL) | 0-4 based on levels |\\\\n| Liver | Bilirubin (mg/dL) | 0-4 based on levels |\\\\n| Cardiovascular | Mean arterial pressure or vasopressor requirement | 0-4 |\\\\n| CNS | Glasgow Coma Scale | 0-4 (inverse) |\\\\n| Renal | Creatinine (mg/dL) or urine output | 0-4 based on levels |\\\\n\\\\n- **Score ≥2**: Increased mortality risk (~10% in-hospital mortality)\\\\n- **Score ≥3**: Even higher mortality risk\\\\n- **Predictive value**: SOFA ≥2 predicts mortality better than SIRS\\\\n\\\\n### qSOFA (Quick SOFA)\\\\nBedside assessment; requires ≥2 points for risk:\\\\n1. **Altered mentation** (GCS <15)\\\\n2. **Systolic BP ≤100 mmHg**\\\\n3. **Respiratory rate ≥22 breaths/minute**\\\\n\\\\n- **Advantages**: Rapid assessment without labs\\\\n- **Use**: Identifies high-risk sepsis patients requiring ICU\\\\n- **Sensitivity**: ~64% for adverse outcome\\\\n\\\\n## Pathophysiology Overview\\\\n\\\\n### Initial Response to Infection\\\\n1. **Microbe-associated molecular patterns (MAMPs)** recognized by toll-like receptors (TLRs)\\\\n2. **Innate immune activation**: Macrophages, neutrophils, complement\\\\n3. **Inflammatory mediator release**: IL-1, IL-6, TNF-α, chemokines\\\\n4. **Vascular changes**: Increased permeability, vasodilation\\\\n\\\\n### Dysregulation in Sepsis\\\\n- **Excessive inflammation**: Uncontrolled cytokine release\\\\n- **Immunosuppression**: Paradoxical immune paralysis in late sepsis\\\\n- **Coagulation activation**: DIC development\\\\n- **Tissue injury**: Organ dysfunction from inflammation + hypoperfusion\\\\n- **Multiple organ failure**: Sequential system failure\\\\n\\\\n## Clinical Significance\\\\n\\\\n### Why Recognition Matters\\\\n- **Golden hour**: Recognition and treatment in first hour critical\\\\n- **Mortality increases**: ~8% per hour of delayed antibiotics\\\\n- **Reversibility**: Early recognition allows reversal; late sepsis irreversible\\\\n- **Resource-intensive**: Requires ICU, vasopressors, mechanical ventilation,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"SIRS Criteria - SCREW IT\\\\\\\",\\\\n            explanation: \\\\\\\"Systemic (≥2), Fever/hypotermia, HR >90, RR >20, WBC abnormal\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"SOFA Score - RCL CVR\\\\\\\",\\\\n            explanation: \\\\\\\"Respiratory, Coagulation, Liver, Cardiovascular, CNS, Renal\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"SIRS: Systemic inflammation (≥2 criteria) regardless of cause\\\\\\\",\\\\n          \\\\\\\"Sepsis: Infection + dysregulated response with organ dysfunction (SOFA ≥2)\\\\\\\",\\\\n          \\\\\\\"Septic shock: Sepsis + hypotension requiring vasopressors + lactate >2\\\\\\\",\\\\n          \\\\\\\"qSOFA: Rapid bedside score for mortality risk (≥2 points concerning)\\\\\\\",\\\\n          \\\\\\\"India: Higher sepsis mortality (50-60%); common sources pneumonia, UTI, intra-abdominal\\\\\\\",\\\\n          \\\\\\\"Early recognition and antibiotic initiation within 1 hour critical\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"Chapter 168: Sepsis\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"Chapter 12: Critical Care\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"sepsis-sirs-mechanism\\\\\\\",\\\\n        title: \\\\\\\"Sepsis & SIRS - Mechanism\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"PAMPs activate TLRs and NOD-like receptors, triggering NF-κB and MAPK pathways leading to excessive IL-1, IL-6, TNF-α production. Endotoxemia causes vasodilation, increased vascular permeability, coagulation activation, and hypovolemic shock. Immune paralysis in late sepsis impairs secondary infection clearance.\\\\\\\",\\\\n        contentMd: ``# Sepsis and SIRS - Molecular Mechanisms\\\\n\\\\n## Initiation: Pathogen Recognition\\\\n\\\\n### Pattern Recognition Receptors (PRRs)\\\\n- **TLRs (Toll-like Receptors)**:\\\\n  - TLR4: LPS (gram-negative endotoxin)\\\\n  - TLR2: Peptidoglycans (gram-positive)\\\\n  - TLR9: DNA (bacterial DNA)\\\\n  - Binding triggers MyD88-dependent and TRIF-dependent pathways\\\\n\\\\n- **NOD-like Receptors**:\\\\n  - NOD1, NOD2: Intracellular peptidoglycans\\\\n  - NLRP3: Inflammasome activation\\\\n  - ASC and Pro-caspase-1 complex\\\\n\\\\n## Signal Transduction Pathways\\\\n\\\\n### NF-κB Pathway (Primary)\\\\n1. TLR ligation → MyD88 recruitment\\\\n2. IRAK kinase activation\\\\n3. TRAF6 ubiquitination\\\\n4. IκB kinase activation\\\\n5. IκB phosphorylation and degradation\\\\n6. NF-κB nuclear translocation\\\\n7. Pro-inflammatory gene transcription\\\\n\\\\n### MAPK Pathway (Secondary)\\\\n- **ERK1/2**: Phosphorylation cascades\\\\n- **p38 MAPK**: Stress response\\\\n- **JNK**: c-Jun N-terminal kinase\\\\n- **Outcome**: IL-1, IL-6, TNF-α, IL-8 production\\\\n\\\\n### NLRP3 Inflammasome Activation\\\\n- PAMPs/DAMPs → Inflammasome assembly\\\\n- Caspase-1 activation\\\\n- Pro-IL-1β → Active IL-1β (key cytokine in sepsis)\\\\n- Pro-IL-18 → Active IL-18\\\\n\\\\n## Inflammatory Mediator Cascade\\\\n\\\\n### Key Cytokines in Sepsis\\\\n\\\\n**TNF-α (Tumor Necrosis Factor):**\\\\n- Produced by macrophages, neutrophils\\\\n- Induces IL-1 and IL-6 production\\\\n- Causes vasodilation, increased permeability\\\\n- Directly toxic to endothelium\\\\n- Activates coagulation (TF expression)\\\\n- High levels correlate with mortality\\\\n\\\\n**IL-1β (Interleukin-1):**\\\\n- Released from inflammasome\\\\n- Induces COX-2 and PGE2 (fever)\\\\n- Increases IL-6 and IL-8 production\\\\n- Activates endothelium\\\\n- Impairs myocardial function\\\\n\\\\n**IL-6 (Interleukin-6):**\\\\n- Produced by macrophages, endothelium, fibroblasts\\\\n- Most important predictor of mortality\\\\n- Induces coagulation cascade\\\\n- Causes fever via hypothalamic PGE2\\\\n- Promotes immune activation\\\\n\\\\n**IL-8 (Chemokine):**\\\\n- Neutrophil chemoattractant\\\\n- Increases vascular permeability\\\\n- Enhances neutrophil degranulation\\\\n\\\\n### Chemokines\\\\n- MCP-1, MIP-1α, MIP-1β\\\\n- Recruit monocytes and lymphocytes\\\\n- Amplify inflammation\\\\n\\\\n## Vascular Dysfunction\\\\n\\\\n### Endothelial Activation\\\\n- Cytokine-induced upregulation of adhesion molecules (ICAM-1, VCAM-1)\\\\n- Increased vascular permeability\\\\n- Loss of nitric oxide (NO) production initially; later excessive\\\\n- Vasodilatation from NO and prostacyclin\\\\n\\\\n### Vasodilation and Shock\\\\n- Excessive NO production → Loss of vascular tone\\\\n- Results in distributive shock\\\\n- Relative hypovolemia (maldistribution)\\\\n- Hypotension despite normal/high cardiac output initially\\\\n- Requires vasopressors (norepinephrine) to maintain perfusion\\\\n\\\\n### Increased Vascular Permeability\\\\n- Loss of tight junction integrity (ZO-1 loss)\\\\n- Endothelial cell apoptosis\\\\n- Result: Fluid shifts to interstitium\\\\n- Hypovolemia + peripheral edema\\\\n- Requires aggressive fluid resuscitation\\\\n\\\\n## Coagulation Cascade Activation\\\\n\\\\n### Tissue Factor (TF) Expression\\\\n- Endotoxemia → TNF-α → TF expression on endothelium and monocytes\\\\n- TF + Factor VII → Extrinsic pathway activation\\\\n- Thrombin generation amplification via feedback loops\\\\n\\\\n### Disseminated Intravascular Coagulation (DIC)\\\\n- **Pathophysiology**:\\\\n  1. Thrombin overproduction\\\\n  2. Consumption of platelets and coagulation factors\\\\n  3. Fibrin deposition in microvasculature\\\\n  4. Microthrombi → Organ ischemia and dysfunction\\\\n  5. Paradoxical bleeding (consumption coagulopathy)\\\\n\\\\n- **Laboratory findings**:\\\\n  - ↓ Platelets\\\\n  - ↑ PT/INR (factor depletion)\\\\n  - ↓ Fibrinogen\\\\n  - ↑ D-dimer, fibrin degradation products\\\\n\\\\n### Anticoagulation Failure\\\\n- Protein C activation impaired (normal anticoagulant)\\\\n- Thrombomodulin downregulation (endothelial dysfunction)\\\\n- Loss of natural anticoagulation mechanisms\\\\n\\\\n## Cellular Dysfunction\\\\n\\\\n### Mitochondrial Dysfunction\\\\n- **ROS generation**: Excessive free radicals from activated neutrophils\\\\n- **Mitochondrial membrane damage**: Loss of electron transport chain function\\\\n- **Impaired ATP generation**: Cellular energy depletion\\\\n- **Result**: Cellular dysfunction and apoptosis\\\\n\\\\n### Neutrophil Activation and NETosis\\\\n- Excessive neutrophil recruitment\\\\n- NET (Neutrophil Extracellular Trap) formation\\\\n- Can damage tissue; also capture bacteria\\\\n- Neutrophil products (elastase, collagenase) cause tissue damage\\\\n\\\\n### Immune Paralysis (Late Sepsis)\\\\n- **HLA-DR downregulation**: Antigen presentation impaired\\\\n- **Th2 shift**: Away from Th1 responses\\\\n- **IL-10, TGF-β elevation**: Anti-inflammatory cytokines\\\\n- **T cell exhaustion**: Programmed death-1 (PD-1) expression ↑\\\\n- **Result**: Cannot clear secondary infections (fungal, bacterial superinfection)\\\\n\\\\n## Organ Dysfunction Mechanisms\\\\n\\\\n### Acute Kidney Injury\\\\n- **Pre-renal**: Hypotension, vasoconstriction\\\\n- **Intrinsic**: Tubular damage from ROS, cytokines\\\\n- **Result**: Oliguria, azotemia, hyperkalemia\\\\n\\\\n### Acute Respiratory Distress Syndrome (ARDS)\\\\n- **Mechanism**: Inflammatory cascade → increased pulmonary permeability\\\\n- **Result**: Pulmonary edema, ventilation-perfusion mismatch\\\\n- **Requires**: Mechanical ventilation in severe cases\\\\n\\\\n### Myocardial Depression\\\\n- **IL-1 and TNF-α**: Directly depress contractility\\\\n- **Decreased responsiveness to catecholamines**\\\\n- **Result**: Cardiogenic shock component despite high inflammatory state\\\\n\\\\n### Hepatic Dysfunction\\\\n- **Inflammatory injury**: Cytokine-mediated hepatocyte apoptosis\\\\n- **Metabolic dysfunction**: Impaired gluconeogenesis, protein synthesis\\\\n- **Result**: Hypoglycemia, coagulopathy, encephalopathy\\\\n\\\\n## Endotoxemia and LPS Effects\\\\n\\\\n### Lipopolysaccharide (LPS)\\\\n- Gram-negative bacterial outer membrane component\\\\n- Released with bacterial lysis or shedding\\\\n- TLR4 ligation → Sepsis initiation\\\\n- Levels correlate with severity\\\\n\\\\n### LPS-Binding Protein (LBP)\\\\n- Facilitates LPS-TLR4 interaction\\\\n- LBP levels elevated in sepsis\\\\n- Potential therapeutic target\\\\n\\\\n## Why Dysregulation Matters\\\\n\\\\n### Early Sepsis (Hyperinflammatory)\\\\n- Excessive TNF, IL-1, IL-6\\\\n- Tissue damage from inflammation\\\\n- Organ dysfunction\\\\n- DIC development\\\\n\\\\n### Late Sepsis (Immunosuppression)\\\\n- IL-10, TGF-β dominance\\\\n- T cell exhaustion\\\\n- Cannot clear pathogens\\\\n- Risk of secondary infections\\\\n- Chronic critical illness,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Sepsis Inflammation - TIN FAD\\\\\\\",\\\\n            explanation: \\\\\\\"TLR activation, IL-1/IL-6 release, NF-κB, Factor VII/TF, Activation of DIC\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Organ Failure in Sepsis - CHOPS\\\\\\\",\\\\n            explanation: \\\\\\\"Cardiac (myocardial depression), Hepatic (coagulopathy), Organ (renal), Pulmonary (ARDS), Septic shock\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"TLRs recognize PAMPs; activate NF-κB and MAPK pathways\\\\\\\",\\\\n          \\\\\\\"NLRP3 inflammasome activation produces active IL-1β (key sepsis cytokine)\\\\\\\",\\\\n          \\\\\\\"TNF-α and IL-1 cause vasodilation and increased vascular permeability\\\\\\\",\\\\n          \\\\\\\"Tissue Factor expression activates coagulation; DIC results from thrombin overproduction\\\\\\\",\\\\n          \\\\\\\"Mitochondrial dysfunction and ROS generation impair cellular energy metabolism\\\\\\\",\\\\n          \\\\\\\"Immune paralysis in late sepsis: HLA-DR ↓, PD-1 ↑, secondary infection risk\\\\\\\",\\\\n          \\\\\\\"Organ dysfunction from hypoperfusion + direct inflammatory injury\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"Chapter 168: Sepsis\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Robbins and Cotran Pathologic Basis of Disease\\\\\\\", chapter: \\\\\\\"Chapter 4: Hemodynamic Disorders\\\\\\\", edition: \\\\\\\"10th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"sepsis-sirs-clinical\\\\\\\",\\\\n        title: \\\\\\\"Sepsis & SIRS - Clinical\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Sepsis presents with signs of infection plus organ dysfunction. qSOFA and SOFA scores identify high-risk patients. Lactate elevation indicates tissue hypoperfusion. Blood cultures and source identification guide empiric antibiotics. Sequential organ failure (MODS) determines prognosis.\\\\\\\",\\\\n        contentMd: ``# Sepsis and SIRS - Clinical Features and Diagnosis\\\\n\\\\n## Clinical Presentation\\\\n\\\\n### Early Signs (First Hours)\\\\n- **Fever or hypothermia** (hypothermia more ominous)\\\\n- **Tachycardia**: HR >90\\\\n- **Tachypnea**: RR >20\\\\n- **Altered mental status** (early sign of severe sepsis)\\\\n- **Source evident** in some (pneumonia, wound infection, etc.)\\\\n\\\\n### Progressive Signs (Hours to Days)\\\\n- **Hypotension**: May develop despite fluids\\\\n- **Mottled skin**: Sign of poor perfusion\\\\n- **Oliguria**: Urine output <0.5 mL/kg/hr\\\\n- **Altered mental status progresses**: Confusion, delirium\\\\n- **Tachycardia persists or worsens**\\\\n- **Respiratory distress**: May require mechanical ventilation\\\\n\\\\n### Shock Phase\\\\n- **Refractory hypotension**: BP <90 systolic despite fluids\\\\n- **Severe organ dysfunction**: Acute kidney injury, acute respiratory distress\\\\n- **Metabolic acidosis**: From lactate accumulation\\\\n- **DIC manifestations**: Bleeding, thrombosis\\\\n- **Multiple organ dysfunction syndrome (MODS)**\\\\n\\\\n## Physical Examination Findings\\\\n\\\\n### Vital Signs\\\\n| Finding | Significance |\\\\n|---|---|\\\\n| Fever >38.5°C | Most common; hypothermia more ominous |\\\\n| Hypotension | SBP <90, MAP <65 indicates shock |\\\\n| Tachycardia >120 | Compensatory; may indicate severe disease |\\\\n| Tachypnea >30 | Respiratory compromise |\\\\n| Altered mental status | Severe sepsis indicator |\\\\n\\\\n### Skin and Perfusion\\\\n- **Warm shock** (early): Warm extremities, rapid capillary refill\\\\n- **Cold shock** (late): Cold extremities, delayed capillary refill, mottled skin\\\\n- **Petechiae/purpura**: Meningococcemia concern\\\\n- **Cellulitis or wounds**: Potential source\\\\n\\\\n### Organ-Specific Findings\\\\n- **Lungs**: Crackles (pneumonia), stridor (airway), respiratory distress\\\\n- **Abdomen**: Tenderness, guarding (intra-abdominal source), absent bowel sounds\\\\n- **Meninges**: Neck stiffness, Kernig sign (meningitis)\\\\n- **Heart**: Tachycardia, arrhythmias\\\\n\\\\n## Scoring Systems\\\\n\\\\n### qSOFA (Quick SOFA) - Bedside Assessment\\\\n**Requires ≥2 points:**\\\\n1. **Altered mentation**: GCS <15\\\\n2. **Systolic BP ≤100 mmHg**\\\\n3. **Respiratory rate ≥22 breaths/min**\\\\n\\\\n- **Sensitivity**: 64% for adverse outcome\\\\n- **Specificity**: 80%\\\\n- **Use**: Identifies sepsis at bedside without labs\\\\n\\\\n### SOFA Score - Laboratory-Based\\\\n\\\\n| System | Score 0 | 1 | 2 | 3 | 4 |\\\\n|---|---|---|---|---|---|\\\\n| Respiratory (PaO2/FiO2) | ≥400 | 300-399 | 200-299 | 100-199 | <100 |\\\\n| Platelets | ≥150 | 100-149 | 50-99 | 20-49 | <20 |\\\\n| Bilirubin (mg/dL) | <1.2 | 1.2-1.9 | 2.0-5.9 | 6.0-11.9 | >12 |\\\\n| Cardiovascular | No hypotension | MAP <70 | Dopa/Dob <5 | Dopa/Dob 5-15 or epi/nore ≤0.1 | Dopa >15 or epi/nore >0.1 |\\\\n| CNS (GCS) | 15 | 13-14 | 10-12 | 6-9 | <6 |\\\\n| Renal (Cr/UO) | <1.2 | 1.2-1.9 | 2.0-3.4 | 3.5-4.9 | >5.0 |\\\\n\\\\n- **Score ≥2**: Increased mortality risk\\\\n- **Score ≥3**: ~50% mortality\\\\n- **Score ≥4**: ~75% mortality\\\\n\\\\n## Diagnostic Approach\\\\n\\\\n### Identification of Infection Source\\\\n**Blood cultures**: Before antibiotics (gold standard)\\\\n- Positive in 20-50% of sepsis\\\\n- Multiple sets increase sensitivity\\\\n- Guides organism-specific therapy\\\\n\\\\n**Imaging by suspected source**:\\\\n- **Pneumonia**: CXR (infiltrate)\\\\n- **Urinary**: Urinalysis, urine culture\\\\n- **Intra-abdominal**: CT or ultrasound\\\\n- **Skin/soft tissue**: Physical exam; imaging if deep space\\\\n- **Meningitis**: CT head, then lumbar puncture\\\\n\\\\n**Cultures from suspected site**:\\\\n- Sputum, urine, CSF, wound, abscess\\\\n- Obtained BEFORE antibiotics if possible\\\\n\\\\n### Laboratory Findings\\\\n\\\\n**WBC and Differential:**\\\\n- Leukocytosis >12,000 (in sepsis, may be normal or low)\\\\n- Left shift (bands >10%)\\\\n- Leukopenia <4,000 (ominous sign; immune exhaustion)\\\\n\\\\n**Coagulation Profile:**\\\\n- PT/INR ↑ (factor consumption)\\\\n- aPTT ↑ (factor consumption)\\\\n- Platelets ↓ (consumption, DIC)\\\\n- Fibrinogen (variable; low in severe DIC)\\\\n- D-dimer ↑ (fibrin formation)\\\\n\\\\n**Metabolic and Organ Function:**\\\\n| Test | Finding | Significance |\\\\n|---|---|---|\\\\n| Lactate | >2 mmol/L | Tissue hypoperfusion; guides resuscitation |\\\\n| Creatinine | ↑ | Acute kidney injury |\\\\n| Bilirubin | ↑ | Hepatic dysfunction |\\\\n| ALT/AST | ↑ | Hepatocellular injury |\\\\n| PaO2/FiO2 | <300 | ARDS (if infiltrates on CXR) |\\\\n| pH | ↓ | Metabolic acidosis (lactate) or respiratory failure |\\\\n\\\\n**Inflammatory Markers:**\\\\n- CRP (>10 mg/dL suggests infection; rises quickly)\\\\n- Procalcitonin (>2 ng/mL suggests bacterial sepsis; specific)\\\\n- Both nonspecific but support infection diagnosis\\\\n\\\\n### Procalcitonin\\\\n- **Production**: Induced by TNF-α and IL-6 in sepsis\\\\n- **Normal**: <0.05 ng/mL\\\\n- **Sepsis**: >2 ng/mL\\\\n- **Values 0.5-2**: Gray zone; clinical judgment needed\\\\n- **Use**: Serial measurements more useful than single value\\\\n- **Kinetics**: Rises in first 12-24 hours; peaks by 36-48 hours\\\\n\\\\n## Sepsis Severity Classification\\\\n\\\\n### Mild-Moderate Sepsis\\\\n- qSOFA <2\\\\n- SOFA <2\\\\n- No organ dysfunction\\\\n- Lactate <2\\\\n- Stable blood pressure\\\\n\\\\n### Severe Sepsis\\\\n- SOFA ≥2 (≥1 point increase from baseline)\\\\n- OR qSOFA ≥2\\\\n- Evidence of organ dysfunction:\\\\n  - Acute respiratory distress\\\\n  - Altered mental status\\\\n  - Oliguria (UO <0.5 mL/kg/hr)\\\\n  - Coagulopathy (INR >1.5 or PTT >60)\\\\n  - Thrombocytopenia (<100,000)\\\\n  - Hyperlactatemia (>2 mmol/L)\\\\n\\\\n### Septic Shock\\\\n- Sepsis + hypotension (SBP <90 or MAP <65)\\\\n- Requiring vasopressor support\\\\n- AND lactate >2 mmol/L\\\\n- Mortality 40-50%\\\\n\\\\n## India-Specific Clinical Context\\\\n\\\\n### Presentation Patterns\\\\n- **Late presentation**: Often with established organ dysfunction\\\\n- **Malnutrition**: Risk factor; reduces immune response\\\\n- **Comorbidities**: TB-HIV coinfection, diabetes\\\\n- **Resource limitations**: Limited ICU beds; triaging difficult\\\\n\\\\n### Common Sources\\\\n- **Community-acquired pneumonia**: Most common\\\\n- **Gram-negative sepsis**: E. coli, Klebsiella from UTI, intra-abdominal\\\\n- **TB**: Disseminated TB can present as sepsis\\\\n- **Meningitis**: Pneumococcal, meningococcal\\\\n\\\\n### Antibiotic Resistance\\\\n- **MDR gram-negatives**: ESBL, carbapenem resistance\\\\n- **Empiric coverage**: Broad-spectrum required until culture results\\\\n- **Local epidemiology**: Varies by region; institution-specific patterns important,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Sepsis Red Flags - FLOCK\\\\\\\",\\\\n            explanation: \\\\\\\"Fever/hypothermia, Lactate >2, Oliguria, Coagulopathy, Kerning/Kernig (meningitis signs)\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"qSOFA ≥2 = High Risk - ABS\\\\\\\",\\\\n            explanation: \\\\\\\"Altered mentation, Blood pressure ≤100, (Respiratory rate >22)\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"qSOFA ≥2 points identifies high-risk sepsis patients at bedside\\\\\\\",\\\\n          \\\\\\\"SOFA score ≥2 defines sepsis; predicts mortality better than SIRS alone\\\\\\\",\\\\n          \\\\\\\"Lactate >2 mmol/L indicates tissue hypoperfusion; guide for resuscitation\\\\\\\",\\\\n          \\\\\\\"Blood cultures BEFORE antibiotics; source identification guides initial therapy\\\\\\\",\\\\n          \\\\\\\"Hypothermia more ominous than fever in sepsis\\\\\\\",\\\\n          \\\\\\\"Coagulopathy/thrombocytopenia signals progression to septic shock\\\\\\\",\\\\n          \\\\\\\"DIC: PT ↑, aPTT ↑, Plt ↓, Fibrinogen variable, D-dimer ↑\\\\\\\",\\\\n          \\\\\\\"Procalcitonin >2 ng/mL suggests bacterial sepsis; serial trends more useful\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"Chapter 168: Sepsis\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"Chapter 12: Critical Care\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"sepsis-sirs-exam\\\\\\\",\\\\n        title: \\\\\\\"Sepsis & SIRS - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"Sepsis management: Early recognition, blood cultures, broad-spectrum antibiotics within 1 hour, aggressive fluid resuscitation (30 mL/kg crystalloid), vasopressors if hypotensive, and source control (drainage, debridement). Goals: MAP ≥65, lactate clearance, urine output >0.5 mL/kg/hr.\\\\\\\",\\\\n        contentMd: ``# Sepsis and SIRS - Management and Treatment\\\\n\\\\n## Golden Hours: Time-Critical Interventions\\\\n\\\\n### Surviving Sepsis Campaign Bundle (First Hour)\\\\n1. **Measure lactate**\\\\n2. **Obtain blood cultures before antibiotics**\\\\n3. **Start broad-spectrum antibiotics within 1 hour**\\\\n4. **Begin fluid resuscitation (30 mL/kg crystalloid)**\\\\n5. **Apply vasopressor if hypotensive (after fluids)**\\\\n\\\\n### Why Speed Matters\\\\n- **Mortality increases**: ~8% per hour of delayed antibiotics\\\\n- **Golden hour critical**: Recognition and initiation of interventions\\\\n- **Lactate clearance**: Marker of tissue perfusion improvement\\\\n\\\\n## Antibiotic Therapy\\\\n\\\\n### Empiric Coverage Principles\\\\n- **Start broad-spectrum**: Cover likely organisms for source\\\\n- **De-escalate when possible**: Once culture results available\\\\n- **Use combinations**: For better coverage and synergy\\\\n- **Adequate dosing**: Especially in septic shock (renal clearance altered)\\\\n\\\\n### Empiric Regimens by Source (India)\\\\n\\\\n**Pneumonia (CAP):**\\\\n- Ceftriaxone 2 g IV BD + Azithromycin 500 mg IV daily\\\\n- OR Fluoroquinolone (Levofloxacin) alone\\\\n- Consider TB if appropriate clinical picture\\\\n\\\\n**Urinary Tract Infection:**\\\\n- Fluoroquinolone (Levofloxacin 750 mg IV daily)\\\\n- OR Ceftriaxone 2 g IV BD\\\\n- Adjust for local resistance patterns\\\\n\\\\n**Intra-abdominal:**\\\\n- Ceftriaxone + Metronidazole (for anaerobes)\\\\n- OR Piperacillin-tazobactam 4.5 g IV TDS\\\\n- Requires source control (drainage, surgery)\\\\n\\\\n**Unknown Source (Empiric):**\\\\n- Ceftriaxone 2 g IV BD + Gentamicin 7 mg/kg IV daily + Metronidazole 500 mg IV TDS\\\\n- OR Piperacillin-tazobactam 4.5 g IV TDS\\\\n- OR Meropenem 1 g IV TDS (if suspected resistant organisms)\\\\n\\\\n**Meningitis:**\\\\n- Ceftriaxone 2 g IV QID + Vancomycin 15-20 mg/kg IV QID\\\\n- (Covers pneumococcus, meningococcus, Listeria coverage with ampicillin if age >50 or immunocompromised)\\\\n\\\\n### Duration\\\\n- Typical course: 7-14 days depending on source and response\\\\n- Shorter courses acceptable for some sources (UTI, some pneumonias)\\\\n- Longer for CNS infections (meningitis 10-14 days), endocarditis (4-6 weeks)\\\\n\\\\n## Fluid Resuscitation\\\\n\\\\n### Initial Approach (First 3 Hours)\\\\n- **30 mL/kg crystalloid IV** for hypotension or lactate >2\\\\n- **Large-bore IV lines** (minimum 2)\\\\n- **Rapid infusion**: Over 1 hour (aggressive resuscitation)\\\\n\\\\n### Types of Fluids\\\\n- **Crystalloids preferred**: Normal saline (0.9% NaCl) or Lactated Ringer's\\\\n  - Normal saline: Hyperchloremic acidosis risk\\\\n  - Lactated Ringer's: Contains potassium, calcium; avoid in hyperkalemia\\\\n- **Avoid hypertonic saline**: No mortality benefit in sepsis\\\\n- **Colloids not preferred**: No survival benefit; cost higher\\\\n- **Blood products**: Only if hemorrhage component\\\\n\\\\n### Reassessment (After 3 Hours)\\\\n- **Responders**: Continue maintenance + ongoing losses\\\\n- **Non-responders**:\\\\n  - Repeat lactate (should trend down)\\\\n  - Assess for inadequate source control\\\\n  - Start vasopressor support\\\\n  - Consider echo (myocardial dysfunction?)\\\\n  - Consider further diagnostics\\\\n\\\\n### Goals of Resuscitation\\\\n- **MAP ≥65 mmHg**: Organ perfusion threshold\\\\n- **Lactate clearance**: Reduction by 10% per hour indicates improving perfusion\\\\n- **Urine output ≥0.5 mL/kg/hr**: Kidney perfusion indicator\\\\n- **Central venous pressure**: 8-12 mmHg (if central line placed)\\\\n- **Avoid overload**: Excessive fluids cause pulmonary edema, ARDS\\\\n\\\\n## Vasopressor Therapy\\\\n\\\\n### When to Start\\\\n- **After fluid challenge**: Adequate initial fluid given (30 mL/kg)\\\\n- **Persistent hypotension**: SBP <90 or MAP <65\\\\n- **Lactate elevation**: Ongoing tissue hypoperfusion\\\\n\\\\n### First-Line: Norepinephrine\\\\n- **Mechanism**: Alpha-1 (vasoconstriction) + Beta-1 (mild inotropic)\\\\n- **Dosing**: 0.01-0.5 μg/kg/min IV (titrate to MAP ≥65)\\\\n- **Route**: Central line preferred (peripheral acceptable initially)\\\\n- **Advantages**: Better renal perfusion than dopamine; better outcomes in trials\\\\n\\\\n### Second-Line Options\\\\n- **Dopamine**: 5-20 μg/kg/min (less preferred; arrhythmia risk)\\\\n- **Vasopressin**: 0.04 units/min (fixed dose; not titrated)\\\\n- **Epinephrine**: If norepinephrine inadequate (higher arrhythmia risk)\\\\n\\\\n### Adjunctive Inotropic Support\\\\n- **Dobutamine**: 2-20 μg/kg/min (increases contractility; causes vasodilation)\\\\n- **Milrinone**: 0.25-0.75 μg/kg/min (inotropic + vasodilator; preserves renal flow)\\\\n- **Used if**: Myocardial dysfunction evident (reduced ejection fraction, elevated wedge pressure)\\\\n\\\\n## Source Control\\\\n\\\\n### Essential Component of Sepsis Management\\\\n**Source control measures:**\\\\n1. **Drainage**: Abscess drainage, thoracentesis, paracentesis\\\\n2. **Debridement**: Necrotic tissue removal (necrotizing fasciitis, gangrene)\\\\n3. **Removal**: Infected indwelling catheters (central lines, foleys)\\\\n4. **Surgery**: Perforated viscus, ischemic bowel, infected prosthetic material\\\\n5. **Antibiotics**: Only temporarily suppress infection; cannot substitute for drainage\\\\n\\\\n### Timing\\\\n- **Early source control**: Better outcomes\\\\n- **Appendicitis**: Laparotomy urgent (high perforation risk)\\\\n- **Necrotizing fasciitis**: Immediate surgery (mortality increases with delay)\\\\n- **Abscess**: Drainage within 24-48 hours\\\\n\\\\n## Supportive Care\\\\n\\\\n### Mechanical Ventilation (ARDS)\\\\n- **Lung-protective strategy**: Low tidal volume (6 mL/kg ideal body weight)\\\\n- **PEEP titration**: Prevent atelectotrauma\\\\n- **FiO2/PEEP tables**: PaO2 90-100 target\\\\n- **Prone positioning**: If severe ARDS\\\\n\\\\n### Renal Replacement Therapy\\\\n- **Indication**: Oliguria, hyperkalemia, fluid overload, uremia\\\\n- **Timing**: Early initiation may improve outcomes\\\\n- **Modality**: CVVH (continuous venovenous hemofiltration) or intermittent hemodialysis\\\\n\\\\n### Glycemic Control\\\\n- **Target**: 140-180 mg/dL (avoid tight control <110; hypoglycemia harmful)\\\\n- **Reason**: Hyperglycemia impairs immune response; hypoglycemia causes CNS injury\\\\n\\\\n### Stress Ulcer Prophylaxis\\\\n- **PPI or H2-blocker** if mechanically ventilated\\\\n\\\\n### Thromboprophylaxis\\\\n- **Mechanical**: Compression stockings (limited benefit)\\\\n- **Pharmacologic**: Enoxaparin if not contraindicated (bleeding risk)\\\\n\\\\n### Monitoring\\\\n- **Continuous**: Cardiac monitoring, pulse oximetry, BP\\\\n- **Frequent**: Vital signs every 1-4 hours based on stability\\\\n- **Labs**: Serial lactate, organ function tests, coagulation profile\\\\n- **SOFA score**: Reassess daily\\\\n\\\\n## Special Considerations in India\\\\n\\\\n### Limited Resources\\\\n- **ICU availability**: Major constraint; early recognition enables earlier admission\\\\n- **Vasopressor availability**: Norepinephrine may be limited; improvisation needed\\\\n- **Blood products**: Expensive; use judiciously\\\\n- **Microbiology**: Culture facilities may be limited; empiric coverage critical\\\\n\\\\n### Antibiotic Resistance\\\\n- **Local epidemiology**: Know your hospital's resistance patterns\\\\n- **De-escalation**: Once susceptibilities available\\\\n- **Combination therapy**: Often needed for resistant organisms\\\\n\\\\n### Mortality Reduction Strategies\\\\n- **Early warning systems**: Nurse-driven protocols for sepsis recognition\\\\n- **Bundle compliance**: Sepsis bundle adherence improves outcomes\\\\n- **Education**: Physician and nursing awareness of sepsis criteria\\\\n\\\\n## Prognosis and Long-term Outcomes\\\\n\\\\n### Hospital Mortality\\\\n- **Overall**: 20-30% (in ICU)\\\\n- **Septic shock**: 40-50%\\\\n- **Multiple organ failure**: >60%\\\\n\\\\n### Survivors' Long-term Issues\\\\n- **Cognitive impairment**: ICU delirium sequelae\\\\n- **Weakness**: Critical illness polyneuropathy/myopathy\\\\n- **PTSD**: Psychological trauma from critical illness\\\\n- **Quality of life**: May be reduced for months to years,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Sepsis Management - BLOOD\\\\\\\",\\\\n            explanation: \\\\\\\"Blood cultures, Lactate assessment, Oxygen (fluids), Broad-spectrum antibiotics, Diagnostics (source control)\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"First-Line Antibiotic for Pneumonia - CAM\\\\\\\",\\\\n            explanation: \\\\\\\"Ceftriaxone + Azithromycin (Macrolide)\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Antibiotic initiation within 1 hour reduces mortality; 8% increase per hour delayed\\\\\\\",\\\\n          \\\\\\\"30 mL/kg crystalloid fluid resuscitation is foundational therapy\\\\\\\",\\\\n          \\\\\\\"Norepinephrine preferred vasopressor (better renal perfusion than dopamine)\\\\\\\",\\\\n          \\\\\\\"Source control (drainage, surgery) essential; antibiotics alone insufficient\\\\\\\",\\\\n          \\\\\\\"Goals: MAP ≥65, lactate clearance, UO >0.5 mL/kg/hr\\\\\\\",\\\\n          \\\\\\\"Mechanical ventilation: Low tidal volume strategy (6 mL/kg IBW)\\\\\\\",\\\\n          \\\\\\\"Glycemic control 140-180 mg/dL; tight control <110 harmful\\\\\\\",\\\\n          \\\\\\\"Early recognition and bundle adherence significantly improve survival\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"Chapter 168: Sepsis\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"Chapter 12: Critical Care\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"sepsis-sirs-recall\\\\\\\",\\\\n        title: \\\\\\\"Sepsis & SIRS - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"Test your knowledge of sepsis pathophysiology, scoring systems, diagnostic approaches, and time-critical management.\\\\\\\",\\\\n        contentMd: ``# Active Recall - Sepsis and SIRS\\\\n\\\\n**Q1: Distinguish between SIRS, sepsis, severe sepsis, and septic shock using current definitions.**\\\\n> SIRS: ≥2 systemic inflammatory criteria (fever, HR >90, RR >20, WBC abnormal); may be from infection or non-infection. Sepsis: Confirmed/suspected infection + dysregulated response with organ dysfunction (SOFA ≥2 or ≥1 point increase from baseline). Severe sepsis: Sepsis with obvious organ dysfunction. Septic shock: Sepsis + persistent hypotension requiring vasopressors + lactate >2; distinct entities no longer used in SEPSIS-3 but conceptually useful.\\\\n\\\\n**Q2: A patient presents with pneumonia but qSOFA is 0. Can this patient have sepsis? Explain.**\\\\n> YES. qSOFA has 64% sensitivity; 36% of sepsis patients will have qSOFA <2. SOFA ≥2 is more specific (defines sepsis in SEPSIS-3). qSOFA is a screening tool (negative doesn't exclude); SOFA is diagnostic. Must check SOFA score and look for organ dysfunction even if qSOFA negative.\\\\n\\\\n**Q3: Explain the mechanism by which TNF-α causes septic shock (hypotension despite high cardiac output initially).**\\\\n> TNF-α induces excessive nitric oxide (NO) production by endothelial cells and inducible nitric oxide synthase (iNOS). NO is potent vasodilator causing loss of vascular tone. Results in distributive shock: cardiac output may be normal or high, but vascular resistance is very low, causing relative hypovolemia and hypotension. Requires vasopressors (norepinephrine) to restore tone.\\\\n\\\\n**Q4: A patient with sepsis has PT 18, aPTT 45, platelet 60,000, fibrinogen 90. What is happening?**\\\\n> DIC (Disseminated Intravascular Coagulation). Sepsis activates tissue factor; thrombin overproduction leads to: platelet consumption (60,000), fibrinogen consumption (90), factor consumption (PT ↑, aPTT ↑). This is consumption coagulopathy; labs worsen as illness progresses. Requires aggressive treatment of underlying sepsis, fresh frozen plasma and platelets if bleeding.\\\\n\\\\n**Q5: Why is lactate >2 mmol/L concerning in sepsis, and what does it tell you?**\\\\n> Lactate indicates tissue hypoperfusion (anaerobic metabolism). Lactate >2 is criterion for septic shock. Increasing lactate despite fluids/vasopressors = worsening tissue perfusion; mortality increases. Lactate clearance (serial measurements declining) indicates response to resuscitation. Target: 10% reduction per hour with resuscitation.\\\\n\\\\n**Q6: Blood cultures grow Klebsiella pneumoniae (E. coli resistant to fluoroquinolones). Organism resistant to cephalosporins. You're on ceftriaxone. What would you do?**\\\\n> Change to meropenem (carbapenem) or piperacillin-tazobactam if organism susceptible. Do NOT wait for sensitivities; change based on resistance pattern immediately upon preliminary results. Extended-spectrum beta-lactamase (ESBL) or carbapenemase-producing organisms require broader coverage. Get susceptibility results ASAP to potentially narrow therapy.\\\\n\\\\n**Q7: A 4-year-old child with meningitis and sepsis is started on ceftriaxone. What additional antimicrobial is needed and why?**\\\\n> Vancomycin. Must cover Streptococcus pneumoniae, which increasingly shows cephalosporin resistance in some regions. Ceftriaxone monotherapy may fail. Combination provides broader coverage. Additionally, if >50 years or immunocompromised, need ampicillin for Listeria monocytogenes coverage.\\\\n\\\\n**Q8: A patient with sepsis is on 30 mL/kg fluids and norepinephrine drip but remains hypotensive (BP 85/50) with lactate 4.5 (increased from 3.2 at admission). What are your next steps?**\\\\n> 1) Reassess adequacy of resuscitation (CVP 8-12 if available), 2) Check for ongoing source (abscess not drained, new pathology), 3) Add second vasopressor (epinephrine or vasopressin), 4) Consider myocardial dysfunction—get echo to assess ejection fraction; consider dobutamine if low EF, 5) Recheck lactate and electrolytes, 6) Assess for new complications (DIC, ARDS, MODS).\\\\n\\\\n**Q9: Why is early source control (drainage, debridement) essential in sepsis, and what happens if it's delayed?**\\\\n> Source control removes ongoing bacterial production and toxin release. Antibiotics suppress but don't eliminate infection without drainage/debridement. Delayed source control = continued bacterial proliferation, greater bacterial load, increased endotoxin, worsening shock, higher mortality. Example: Appendiceal abscess drainage within 24-48 hrs vs delay means ~70% mortality difference.\\\\n\\\\n**Q10: A sepsis patient improves on antibiotics/fluids but now develops fever again on day 5 despite negative repeat blood cultures. What are the differential diagnoses?**\\\\n> 1) Secondary infection (fungal from indwelling lines, aspiration pneumonia), 2) Inadequate source control (undrained collection, infected prosthetic), 3) SIRS from non-infectious cause (medications, transfusion reaction), 4) New infection site (ventilator-associated pneumonia if intubated), 5) Immune reconstitution phenomenon. Requires imaging to reassess source, remove infected lines if possible, broaden antibiotics if immunocompromised.,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Sepsis DIC Cascade - TF→TC\\\\\\\",\\\\n            explanation: \\\\\\\"Tissue Factor activation, Thrombin cascade, Coagulation factor consumption, Coagulopathy development\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"qSOFA <2 doesn't exclude sepsis; check SOFA score and organ function\\\\\\\",\\\\n          \\\\\\\"TNF-α causes vasodilation via NO; requires vasopressors for tone restoration\\\\\\\",\\\\n          \\\\\\\"DIC: PT ↑, aPTT ↑, Platelets ↓, Fibrinogen ↓; consumption coagulopathy\\\\\\\",\\\\n          \\\\\\\"Lactate >2 defines septic shock; lactate clearance monitors resuscitation response\\\\\\\",\\\\n          \\\\\\\"Early source control (drainage, debridement) essential; antibiotics alone insufficient\\\\\\\",\\\\n          \\\\\\\"De-escalate antibiotics when susceptibilities available; broaden if resistant organisms\\\\\\\",\\\\n          \\\\\\\"Meningitis: Ceftriaxone + Vancomycin mandatory (for pneumococcal resistance)\\\\\\\",\\\\n          \\\\\\\"Secondary infection risk day 5+; fever recurrence requires imaging and assessment\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"Chapter 168: Sepsis\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Davidson's Principles and Practice of Medicine\\\\\\\", chapter: \\\\\\\"Chapter 12: Critical Care\\\\\\\", edition: \\\\\\\"24th\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\"\""
-}
-}
-}
-];
-];
+        summary: "Introduction to HIV virology, structure, and epidemiology. Understanding HIV as a retrovirus, its genetic material, and the Indian epidemiological landscape of HIV/AIDS.",
+        contentMd: `# HIV/AIDS Foundation: Virology and Epidemiology
+
+## What is HIV?
+
+Human Immunodeficiency Virus (HIV) is a **lentivirus** belonging to the retrovirus family. It is an enveloped, single-stranded RNA virus that specifically targets the human immune system, particularly CD4+ T lymphocytes, macrophages, and dendritic cells.
+
+### Key Characteristics of Retroviruses
+
+Retroviruses are unique RNA viruses that encode **reverse transcriptase**, an enzyme that allows them to convert their RNA genome into DNA. This DNA can then integrate into the host cell's genome, establishing persistent infection.
+
+## HIV Structure
+
+Understanding HIV structure is fundamental to comprehending its pathogenesis and targeting it with antiretroviral drugs.
+
+### Viral Envelope Components
+
+The outermost layer of HIV contains **lipid bilayer** derived from the host cell membrane. Embedded within this envelope are two critical glycoproteins:
+
+1. **gp120 (Surface Glycoprotein)**: This protein is responsible for initial binding to CD4 receptors on target cells. It is highly variable, explaining why HIV can evade antibodies. The gp120-CD4 interaction is the first step in viral attachment.
+
+2. **gp41 (Transmembrane Glycoprotein)**: This protein mediates fusion between the viral envelope and the host cell membrane, allowing viral entry. After gp120 binds CD4, conformational changes expose gp41, which then inserts into the host membrane.
+
+### Core Components
+
+The HIV core contains:
+
+1. **Reverse Transcriptase (RT)**: A polymerase enzyme with three enzymatic activities:
+   - DNA synthesis from RNA template (RNA-dependent DNA polymerase)
+   - Degradation of original RNA (RNase H)
+   - DNA synthesis from DNA template (DNA-dependent DNA polymerase)
+
+2. **Integrase**: This enzyme catalyzes the integration of viral DNA into the host cell genome, allowing for stable, persistent infection.
+
+3. **Protease**: A viral aspartate protease that cleaves viral polyproteins into mature, functional proteins. Protease inhibitors target this enzyme.
+
+4. **p24 (Capsid Protein)**: This protein forms the core shell containing viral RNA and enzymes. p24 levels in blood correlate with viral load and are used clinically as biomarkers.
+
+5. **Viral RNA**: HIV contains two copies of single-stranded, positive-sense RNA (~9.7 kb), making it one of the smallest DNA viruses when considering genetic economy.
+
+## HIV-1 vs HIV-2
+
+### HIV-1
+- Most common globally and in India
+- More pathogenic, faster disease progression
+- Higher viral load and transmissibility
+- Responsible for majority of AIDS cases
+
+### HIV-2
+- Found primarily in West Africa
+- Less transmissible, slower progression
+- Often diagnosed incidentally
+- Requires different diagnostic algorithms (some ELISA/rapid tests may miss HIV-2)
+
+## Indian Epidemiology
+
+### NACO (National AIDS Control Organization) Data
+
+According to current NACO estimates:
+
+- **Estimated PLHIV (People Living with HIV)**: Approximately 24 lakh (2.4 million)
+- **Prevalence**: 0.29% among general population
+- **Key Affected Populations**: Men who have sex with men (MSM), sex workers, transgender individuals, incarcerated persons, healthcare workers
+- **Geographic Distribution**: Highest in Southern and Northeastern states (Andhra Pradesh, Karnataka, Maharashtra, Manipur, Nagaland)
+
+### Transmission in Indian Context
+
+India follows patterns typical of heterosexual epidemiology with emerging MSM transmission:
+
+1. **Sexual Transmission** (85%): Unprotected heterosexual and homosexual contact
+2. **Blood and Blood Products** (10%): Blood transfusions, needle sharing among PWID (People Who Inject Drugs)
+3. **Mother-to-Child Transmission** (5%): During pregnancy, labor, or breastfeeding
+
+## Natural History Timeline
+
+The infection progresses through predictable stages:
+
+1. **Acute HIV Infection** (2-4 weeks): Acute retroviral syndrome with high viral load
+2. **Early Chronic Phase** (months to years): Asymptomatic with gradual CD4 decline
+3. **Advanced HIV Disease** (CD4 <200): Opportunistic infections begin
+4. **AIDS** (CD4 <50 with opportunistic infections): Without ART, median survival is 9-11 months
+
+## Transmission Routes
+
+### Sexual Transmission
+- Highest risk: Receptive anal intercourse, unprotected vaginal intercourse
+- Genital inflammation increases risk
+- Circumcision reduces transmission risk
+
+### Blood-Borne Transmission
+- Needle sharing among PWID
+- Occupational exposure (needlestick injury)
+- Contaminated blood products (rare in developed blood banks)
+
+### Mother-to-Child Transmission
+- Vertical transmission risk without prophylaxis: 15-45%
+- Highest during labor and delivery
+- Breastfeeding increases risk substantially in resource-limited settings
+
+## Tropism and Cell Targets
+
+HIV specifically targets cells expressing:
+
+1. **CD4 Receptor**: Present on CD4+ T cells, macrophages, dendritic cells
+2. **Co-receptors**: Either CCR5 (R5 tropism) or CXCR4 (X4 tropism)
+   - R5-tropic virus typically predominates during early infection
+   - X4-tropic virus emerges during disease progression
+   - The CCR5-delta32 mutation confers resistance to R5-tropic virus
+
+This tropism pattern is important because it explains disease progression and influences treatment decisions.
+
+## Clinical Significance in Foundation Understanding
+
+Understanding HIV structure, tropism, and epidemiology forms the basis for:
+- Explaining mechanisms of viral entry and replication (Layer 2)
+- Understanding how clinical complications arise (Layer 3)
+- Interpreting laboratory tests (Layer 4)
+- Quick recall of key facts (Layer 5)`,
+        mnemonics: [
+          {
+            text: "GRIN",
+            explanation: "GP120 = envelope (G), Reverse Transcriptase = converts RNA (R), INtegrase = inserts DNA. Remembers key HIV enzymes."
+          },
+          {
+            text: "TRIP",
+            explanation: "Transmission Routes in India: sexual, blood, mother-to-child (perinatal) - three main routes."
+          }
+        ],
+        keyPoints: [
+          "HIV is a lentivirus with RNA genome and reverse transcriptase enzyme",
+          "gp120/gp41 mediate attachment and fusion; p24, RT, integrase, protease are core functional proteins",
+          "HIV-1 is most common; HIV-2 less transmissible but found in West Africa",
+          "India has ~24 lakh PLHIV with heterosexual transmission predominating, highest in Southern and NE states",
+          "CCR5 and CXCR4 co-receptors determine viral tropism and disease progression pattern"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "123: Human Immunodeficiency Virus Infection and AIDS", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "10.10: HIV Infection and AIDS", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "14: HIV Infection and AIDS", edition: "24th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "hiv-aids-layer-2-mechanism",
+        title: "HIV/AIDS & Opportunistic Infections - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Deep dive into HIV replication cycle, viral entry mechanisms, CD4 T-cell depletion, immune reconstitution, and the progression from acute to latent to AIDS phases.",
+        contentMd: `# HIV Replication Cycle and Pathophysiology
+
+## Complete HIV Replication Cycle
+
+The HIV replication cycle is the molecular foundation of infection. Understanding each step is crucial for grasping how antiretroviral drugs work.
+
+### Step 1: Attachment (Binding)
+
+HIV attachment occurs through a two-step binding process:
+
+1. **Initial Recognition**: gp120 on the HIV surface binds to **CD4 receptors** on target cells (CD4+ T cells, macrophages, dendritic cells)
+
+2. **Co-receptor Binding**: After CD4 binding, gp120 undergoes conformational change, exposing the binding site for **CCR5** or **CXCR4** co-receptors
+
+The choice of co-receptor is critical:
+- **R5-tropic HIV**: Uses CCR5 chemokine receptor
+  - Predominates early in infection
+  - Found in macrophage-tropic strains
+  - Blocked by the CCR5-delta32 mutation (which confers natural resistance)
+
+- **X4-tropic HIV**: Uses CXCR4 chemokine receptor
+  - Emerges during disease progression
+  - Associated with faster CD4 decline
+  - Marker of advancing immunosuppression
+
+### Step 2: Fusion
+
+Once co-receptor binding occurs:
+
+1. **gp41 Exposure**: The fusion protein gp41 becomes exposed and inserts into the host cell membrane
+
+2. **Membrane Fusion**: gp41 mediates fusion between viral and cellular membranes, allowing viral core entry
+
+**Clinical Relevance**: Fusion inhibitors (e.g., enfuvirtide) block this step.
+
+### Step 3: Reverse Transcription
+
+Inside the target cell, reverse transcriptase converts the viral RNA genome into DNA:
+
+1. **First Strand Synthesis**: RT uses viral RNA as template to synthesize complementary DNA (cDNA)
+
+2. **RNA Degradation**: The RNase H activity of RT degrades the original RNA template
+
+3. **Second Strand Synthesis**: RT synthesizes the second DNA strand, creating double-stranded DNA
+
+This step is error-prone due to RT lacking proofreading ability, generating mutations at a rate of ~10^-4 to 10^-5 per nucleotide per replication cycle. This high mutation rate explains:
+- Rapid development of drug resistance
+- Viral escape from immune responses
+- Quasi-species dynamics (swarm of slightly different viral variants)
+
+**Clinical Relevance**: Nucleoside/nucleotide and non-nucleoside RT inhibitors block this step.
+
+### Step 4: Integration
+
+The newly synthesized viral DNA enters the nucleus where integrase catalyzes its integration into the host genome:
+
+1. **Strand Cleavage**: Integrase makes staggered cuts in both viral DNA and host chromosomal DNA
+
+2. **DNA Transfer**: Viral DNA is inserted between host DNA sequences
+
+3. **Gap Filling**: Host cell DNA repair machinery fills in the gaps and ligates the DNA
+
+Once integrated, the viral DNA (provirus) becomes a permanent part of the host genome and is replicated along with host DNA during cell division.
+
+**Clinical Significance**: This integration explains why HIV establishes latent reservoirs that persist despite ART. Integrase inhibitors block this step.
+
+### Step 5: Transcription and Translation
+
+After integration, viral genes are transcribed into mRNA by host RNA polymerase II:
+
+1. **Spliced and Unspliced mRNAs**: Different viral genes are expressed via alternative splicing
+   - Early genes: regulatory proteins (Tat, Rev)
+   - Late genes: structural and enzymatic proteins
+
+2. **Translation**: Viral mRNAs are translated into viral proteins at host ribosomes
+
+3. **Post-Translational Modifications**: Viral proteins undergo modifications (phosphorylation, glycosylation, ubiquitination)
+
+### Step 6: Assembly and Budding
+
+Viral proteins and RNA self-assemble at the host cell membrane:
+
+1. **Immature Particle Formation**: Gag polyproteins, RNA, and enzymes accumulate at the cell membrane
+
+2. **Budding**: The immature particle acquires a lipid bilayer from the host cell membrane and buds from the cell
+
+3. **Maturation**: Viral protease cleaves Gag and Gag-Pol polyproteins into mature, functional proteins
+
+**Clinical Significance**: Protease inhibitors block protease function, resulting in non-infectious immature particles.
+
+## CD4+ T-Cell Depletion Mechanisms
+
+Multiple mechanisms contribute to CD4+ T-cell depletion in HIV infection:
+
+### Direct Viral Cytopathic Effect
+
+- **Uninfected Bystander Killing**: The gp120-gp41 envelope proteins expressed on infected cell surface can bind to CD4 and co-receptors on uninfected neighboring cells, causing syncytium formation and cell death
+
+- **Proteasome-Mediated Degradation**: Viral proteins (especially Vpr and Nef) promote degradation of CD4 and class I MHC molecules
+
+- **Apoptosis Induction**: Accumulation of reverse-transcribed unintegrated DNA and viral proteins triggers apoptosis through intrinsic and extrinsic pathways
+
+### Chronic Immune Activation
+
+- **Residual Viremia**: Even with ART, low-level viral replication and immune activation persist
+
+- **Persistent Antigenic Stimulation**: Continuous T-cell activation against HIV antigens drives proliferation and exhaustion
+
+- **CD4 T-Cell Exhaustion**: Repeated activation induces upregulation of inhibitory receptors (PD-1, TIM-3, LAG-3), rendering cells dysfunctional
+
+- **Th17 Cell Loss**: Selective depletion of Th17 cells compromises mucosal barrier function and increases susceptibility to bacterial infections
+
+### Lymph Node Disruption
+
+- **Fibrosis**: Progressive fibrosis of lymph node germinal centers impairs T-cell generation and survival
+
+- **Microbial Translocation**: Loss of Th17 cells and mucosal integrity allows bacterial translocation from the gut, perpetuating immune activation
+
+## Progression Model: Acute → Latent → AIDS
+
+### Acute HIV Infection (2-4 weeks)
+
+**Virological Features**:
+- Explosive viral replication with plasma viral load > 1 million copies/mL
+- Rapid CD4 decline (can drop 200-400 cells/μL)
+- High infectivity period
+
+**Clinical Features**:
+- Acute retroviral syndrome (fever, rash, lymphadenopathy, myalgias)
+- High levels of p24 antigen and viral RNA
+- Weak or absent antibodies initially
+
+**Immune Response**:
+- Emergence of CTL (cytotoxic T lymphocyte) response
+- Development of antibodies (seroconversion)
+- Partial containment of viral replication
+
+### Clinical Latency (months to years)
+
+**Virological Features**:
+- Viral load stabilizes at "set point" (usually 1000-100,000 copies/mL)
+- Set point determined by:
+  - Viral characteristics (replication capacity)
+  - Host immune competence
+  - HLA type (certain HLA alleles control infection better)
+  - Genetic factors (CCR5-delta32 mutation)
+
+**Clinical Features**:
+- Asymptomatic or minimal symptoms
+- CD4 count gradually declines (typically 40-100 cells/μL/year)
+- Persistent lymphadenopathy may be present
+
+**Immunological Features**:
+- Strong CD4+ and CD8+ T-cell responses
+- Persistent viral replication in lymphoid tissues despite undetectable plasma levels
+
+### Advanced HIV Disease and AIDS (CD4 <200)
+
+**Virological Features**:
+- Breakthrough in viral containment
+- Increase in viral load and X4-tropic virus emergence
+- Accelerated CD4 decline
+
+**Clinical Features**:
+- Opportunistic infections and malignancies
+- Constitutional symptoms (fever, weight loss, diarrhea)
+- Progressive immunosuppression
+
+**Immunological Collapse**:
+- Severe loss of CD4+ T-cell help
+- Failure of antibody responses
+- Loss of delayed-type hypersensitivity (unable to mount Th1 responses)
+
+## Immune Reconstitution Inflammatory Syndrome (IRIS)
+
+When ART is initiated in patients with advanced immunosuppression (CD4 <50), two types of IRIS can occur:
+
+### Unmasking IRIS (Paradoxical IRIS)
+
+- Occurs when subclinical opportunistic infection becomes clinically apparent as immune system recovers
+- Examples: TB lymphadenitis, PCP, CMV
+- Mechanism: Restoration of cell-mediated immunity against previously controlled organisms
+
+### Exacerbation IRIS
+
+- Worsening of known opportunistic infection despite clinical improvement
+- Occurs after ART initiation in patients already being treated for OI
+- Mechanism: Excessive inflammatory response against OI antigens
+
+**Management**: Continuation of ART plus anti-inflammatory therapy (corticosteroids) in severe cases.
+
+## Viral Set Point and Progression Rate
+
+The viral set point (steady-state plasma viral load) is the best single predictor of disease progression:
+
+- **Set point <1,000 copies/mL**: Slow progression (>10 years to AIDS without ART)
+- **Set point 1,000-10,000 copies/mL**: Intermediate progression (5-10 years)
+- **Set point >100,000 copies/mL**: Rapid progression (<3 years to AIDS)
+
+Factors determining set point:
+1. **HLA Type**: Certain HLA-B alleles (e.g., B57, B58) are associated with better viral control
+2. **Viral Genotype**: Replication capacity of the infecting strain
+3. **CCR5-delta32 Mutation**: Confers resistance to R5-tropic virus; heterozygotes have slower progression
+4. **CD8+ T-cell Response**: Strength of CTL response influences early set point
+5. **Integration Burden**: Number of integrated proviruses in long-lived cells
+
+## Clinical Implications of Mechanism Understanding
+
+These mechanisms explain why:
+- Early treatment is beneficial (preserves immune function)
+- Adherence to ART is critical (prevents resistance)
+- CD4 count recovery is slow despite viral load suppression (requires thymic reconstitution)
+- Long-lived latent reservoirs persist despite undetectable viral load (integrated provirus)
+- OI prophylaxis is essential (when CD4 <200 or <50)
+- Regular viral load and CD4 monitoring guides clinical decisions`,
+        mnemonics: [
+          {
+            text: "ATTACH-FUSE-REV-INT-TRANS-ASSEM",
+            explanation: "Six main steps of HIV replication: ATTACHment (gp120-CD4-CCR5/CXCR4), FUSEion (gp41), REVerse transcription (RT), INTegration (integrase), TRANScription, and ASSEMbly/Budding (protease)."
+          },
+          {
+            text: "R5-Early, X4-Late",
+            explanation: "R5-tropic HIV (CCR5) predominates EARLY in infection; X4-tropic (CXCR4) emerges LATE during disease progression and predicts faster CD4 decline."
+          },
+          {
+            text: "SET POINT Predicts Progression",
+            explanation: "Set point (steady viral load) determines speed to AIDS. Less than 1,000 = slow; 1,000-10,000 = intermediate; more than 100,000 = rapid progression."
+          }
+        ],
+        keyPoints: [
+          "HIV replication involves six sequential steps: attachment via gp120-CD4-co-receptor, fusion via gp41, reverse transcription, integration, transcription/translation, and assembly with protease maturation",
+          "R5-tropic virus (CCR5) dominates early infection while X4-tropic virus (CXCR4) emerges late; CCR5-delta32 mutation provides R5 resistance",
+          "CD4 depletion results from direct cytopathic effects, chronic immune activation, Th17 loss, and lymph node fibrosis",
+          "Viral set point (steady-state viral load) is the strongest predictor of progression rate; HLA type and CCR5 genotype influence set point",
+          "ART-induced immune reconstitution can cause IRIS (unmasking or exacerbation type), especially in CD4 <50 patients with occult opportunistic infections"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "123: Human Immunodeficiency Virus Infection and AIDS", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "10.10: HIV Infection and AIDS", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "14: HIV Infection and AIDS", edition: "24th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "hiv-aids-layer-3-clinical",
+        title: "HIV/AIDS & Opportunistic Infections - Clinical",
+        estimatedMinutes: 25,
+        summary: "Clinical staging, opportunistic infections by CD4 count, diagnosis algorithms including NACO 3-test strategy, and antiretroviral therapy per Indian guidelines.",
+        contentMd: `# Clinical Management of HIV/AIDS and Opportunistic Infections
+
+## WHO Clinical Staging and CDC Classification
+
+### WHO Clinical Staging System (1-4)
+
+**Stage 1 (Primary HIV Infection)**
+- No symptoms or asymptomatic lymphadenopathy
+- CD4 count usually preserved
+- Examples: Acute retroviral syndrome, persistent generalized lymphadenopathy
+
+**Stage 2 (Early HIV Disease)**
+- Persistent fever >37.5°C for >1 month
+- Persistent diarrhea for >1 month
+- Persistent cough for >1 month (not TB)
+- Skin/nail manifestations (seborrheic dermatitis, tinea, molluscum)
+- Oral ulcers
+- Persistent generalized lymphadenopathy
+
+**Stage 3 (Advanced HIV Disease)**
+- Wasting syndrome (involuntary weight loss >10%)
+- Pneumocystis jirovecii pneumonia (PCP)
+- Toxoplasmosis of brain
+- Cryptosporidiosis (>1 month)
+- Cryptococcosis
+- Tuberculosis (pulmonary or extrapulmonary)
+- Candidiasis (esophageal, tracheal, bronchial)
+- Cytomegalovirus (CMV) disease
+- Herpes simplex (ulcers >1 month)
+- Kaposi sarcoma
+- Other serious infections
+
+**Stage 4 (AIDS)**
+- CD4 count <50 cells/μL with severe immunodeficiency
+- Opportunistic infections with CD4 <50:
+  - MAC (Mycobacterium avium complex)
+  - CMV retinitis
+  - Cryptococcal meningitis
+  - Toxoplasma encephalitis
+  - Progressive multifocal leukoencephalopathy (PML)
+  - Histoplasmosis
+- AIDS-defining malignancies
+
+### CDC Classification
+
+The CDC uses CD4 count categories:
+
+- **CD4 ≥500 cells/μL**: Category 1
+- **CD4 200-499 cells/μL**: Category 2
+- **CD4 <200 cells/μL**: Category 3 (AIDS)
+
+## Opportunistic Infections by CD4 Count
+
+Understanding the CD4 thresholds for OI occurrence is critical for clinical practice and prophylaxis decisions.
+
+### CD4 <500 cells/μL
+
+**Tuberculosis (TB)**
+- Most common OI in resource-limited settings and India
+- Can occur at any CD4 count but more frequent and severe below 500
+- Presents as pulmonary TB (atypical presentations common)
+- Extrapulmonary TB: lymphadenitis, pericarditis, meningitis
+- High mortality if not treated
+
+**Oral Candidiasis**
+- First sign of immunosuppression in many patients
+- Presents as white plaques (pseudomembranous), erythema (atrophic), or angular cheilitis
+- Responsive to topical or systemic antifungals
+
+**Cytomegalovirus (CMV) Infection**
+- Can involve esophagus (odynophagia), colon, or other organs
+- CMV retinitis primarily at CD4 <50
+
+**Herpes Simplex Virus (HSV)**
+- Mucosal ulcers, perirectal herpes, disseminated disease
+- More common in patients with low CD4
+
+### CD4 <200 cells/μL
+
+**Pneumocystis jirovecii Pneumonia (PCP)**
+- Subacute presentation: dyspnea, fever, cough, chest pain
+- Chest X-ray: bilateral interstitial infiltrates (or normal early)
+- LDH markedly elevated, oxygen-alveolar gradient widened
+- PCP prophylaxis indicated: TMP-SMX, atovaquone, pentamidine
+- **Indian prevalence**: Less common than in Western countries but increasing
+
+**Toxoplasmosis**
+- Most common cause of brain lesions at CD4 <100
+- Presents with focal neurological signs, seizures, headache
+- Brain imaging: multiple ring-enhancing lesions
+- Prophylaxis: TMP-SMX (also covers PCP)
+- More common in Latin America and Africa; rare in India
+
+**Cryptococcosis**
+- Cryptococcal meningitis (most common CNS infection at CD4 <100)
+- Presents with insidious meningitis: fever, headache, confusion
+- Cryptococcal antigen in CSF/serum is diagnostic
+- India has significant burden; can be fulminant
+- Prophylaxis with fluconazole controversial in India
+
+**Esophageal Candidiasis**
+- Presents with odynophagia and dysphagia
+- Endoscopy shows white plaques or ulcers
+- Treated with systemic azoles (fluconazole, itraconazole)
+
+### CD4 <100 cells/μL
+
+**Mycobacterium avium Complex (MAC)**
+- Disseminated infection: bacteremia, fever, anemia, hepatosplenomegaly
+- Rare in patients receiving ART; prophylaxis with azithromycin if CD4 <50
+- Occurs primarily when CD4 <50
+
+**Cytomegalovirus (CMV) Retinitis**
+- Progressive visual loss, floaters, field defects
+- Requires urgent ophthalmology evaluation
+- Treated with intravenous ganciclovir or foscarnet
+- CMV prophylaxis not standard; immune recovery with ART is primary treatment
+
+**Progressive Multifocal Leukoencephalopathy (PML)**
+- JC virus (John Cunningham virus) reactivation
+- Subacute onset: cognitive decline, weakness, speech disturbance
+- White matter lesions on MRI
+- Poor prognosis; immune reconstitution with ART is main treatment
+- Rare in India; higher in Western populations
+
+### CD4 <50 cells/μL
+
+**CMV Disease**
+- Retinitis, colitis, esophagitis, pneumonitis
+- CMV prophylaxis: valganciclovir if CD4 <50
+
+**Cryptococcal Meningitis**
+- Cryptococcal antigen testing is life-saving
+- Fluconazole for CNS prophylaxis if antigen positive
+
+**Histoplasmosis**
+- Disseminated disease with fever, hepatosplenomegaly, respiratory symptoms
+- Less common in India; more prevalent in endemic regions (Central America, Africa)
+
+## Diagnosis of HIV
+
+### NACO 3-Test Strategy (India)
+
+India follows a sequential testing algorithm recommended by NACO:
+
+**Test 1: ELISA (Enzyme-Linked Immunosorbent Assay)**
+- Detects anti-HIV antibodies and p24 antigen
+- High sensitivity (>99%) and specificity (>95%)
+- Window period: 23-24 days (antibodies appear)
+- First-line screening test
+
+**Test 2: Rapid Test**
+- Performed if Test 1 is positive
+- Alternative algorithm if Test 1 negative
+- High specificity (>98%)
+- Confirms initial test result
+
+**Test 3: Western Blot or HIV Differentiation Immunoassay**
+- Performed if Tests 1 and 2 are concordant positive
+- Differentiates HIV-1 from HIV-2
+- Resolves discordant results
+
+**In case of discordant results**: Repeat testing in 2 weeks or use HIV RNA (viral load) testing
+
+### Additional Diagnostic Tests
+
+**p24 Antigen Testing**
+- Detects viral antigen in blood
+- Useful in window period (before antibodies appear)
+- Positive during acute infection
+- Becomes negative as antibodies develop
+
+**HIV RNA Testing (Viral Load)**
+- Gold standard for diagnosis and monitoring
+- Detects virus directly (not antibodies)
+- Quantifies viral load (copies/mL)
+- Useful in:
+  - Window period diagnosis
+  - Discordant serology results
+  - Monitoring treatment response
+  - Assessing treatment failure
+
+**CD4+ T-Cell Count**
+- Essential for staging and OI prophylaxis decisions
+- Normal: 600-1500 cells/μL
+- Baseline CD4 determines initial OI prophylaxis
+- Used to monitor immune reconstitution on ART
+
+### Baseline Evaluation (at diagnosis)
+
+All newly diagnosed HIV patients should have:
+1. CD4 count and viral load
+2. Complete blood count
+3. Renal function (creatinine, eGFR)
+4. Liver function tests
+5. Tuberculosis screening (TB symptoms, TB spot test if available, chest X-ray)
+6. STI screening (syphilis, gonorrhea, chlamydia, hepatitis B and C)
+7. HLA-B5701 testing (before abacavir-containing regimens)
+8. Pregnancy test (women of childbearing age)
+
+## Antiretroviral Therapy (ART) in India
+
+### Current NACO Guidelines (2023-24)
+
+**When to Start ART**
+- All people with HIV should start ART regardless of CD4 count
+- Ideally within 2 weeks of diagnosis
+- START strategy (Start Treatment At Recall, Target Everyone)
+
+**First-Line ART Regimens**
+
+**Preferred Regimen (TLD/TLE)**:
+- **TLD**: Tenofovir (TDF) + Lamivudine (3TC) + Dolutegravir (DTG)
+- **TLE**: Tenofovir (TDF) + Lamivudine (3TC) + Efavirenz (EFV)
+- DTG is preferred over EFV (faster CD4 recovery, fewer side effects, once-daily dosing)
+
+**Core Components**:
+1. **Nucleoside Reverse Transcriptase Inhibitors (NRTIs)**:
+   - Tenofovir (TDF): First-line, excellent barrier to resistance
+   - Lamivudine (3TC): Component of most regimens
+   - Abacavir (ABC): Alternative (requires HLA-B5701 negative)
+
+2. **Integrase Strand Transfer Inhibitor (INSTI)**:
+   - Dolutegravir (DTG): Preferred; rapid CD4 recovery
+   - Raltegravir (RAL): Alternative; twice-daily dosing
+   - Bictegravir: Alternative
+
+3. **Non-Nucleoside Reverse Transcriptase Inhibitors (NNRTIs)**:
+   - Efavirenz (EFV): Component of TLE; less preferred due to side effects
+   - Rilpivirine: Alternative; better tolerability
+
+**Second-Line Regimens** (for treatment failure):
+- Usually involve protease inhibitors (PI): Lopinavir/Ritonavir (LPV/r), Atazanavir/Ritonavir
+- Combined with NRTIs and sometimes integrase inhibitors
+
+### Monitoring on ART
+
+**Initial Phase** (weeks 0-24):
+- Viral load at weeks 2, 4, 12, 24
+- CD4 count at weeks 4, 12, 24
+- Clinical monitoring for adverse effects
+- Adherence assessment
+
+**Maintenance Phase** (after 6 months)**:
+- Viral load every 3-6 months
+- CD4 count annually (when CD4 >500)
+- Clinical assessment for adverse effects and OI
+
+**Success Definition**:
+- Viral load <50 copies/mL by 24 weeks
+- CD4 recovery: ~50-100 cells/month initially, slower later
+- Clinical improvement and resolution of opportunistic infections
+
+### Special Populations
+
+**Pregnancy**
+- All pregnant women with HIV should be on ART
+- Continue throughout pregnancy and postpartum
+- Preferred: DTG-based or PI-based regimens
+- CD4 count, viral load, and clinical monitoring as above
+
+**TB-HIV Coinfection**
+- Integrate TB and HIV treatment
+- TB medications can be given with ART
+- Rifampicin reduces DTG levels; use higher DTG dose or switch integrase inhibitor
+- Start TB treatment first, ART within 2 weeks for CD4 <50
+
+**Hepatitis B or C Coinfection**
+- Use TDF + 3TC (both have activity against HBV)
+- Monitor liver enzymes
+- Consider HCV treatment with DAAs (direct-acting antivirals)
+
+## Prevention of Mother-to-Child Transmission (PMTCT)
+
+### Mechanism of Transmission
+
+- **In utero** (10-15%): Transplacental transmission
+- **Intrapartum** (60-75%): During labor and delivery (highest risk)
+- **Postpartum** (5-20%): Through breastfeeding
+
+### PMTCT Strategy (India)
+
+**Mother**:
+- Initiate ART immediately upon diagnosis
+- Goal: viral load <50 copies/mL before delivery
+- Continue throughout pregnancy, labor, and postpartum
+
+**Infant**:
+- Antiretroviral prophylaxis: AZT from birth until 4-6 weeks
+- Higher doses if mother had detectable viral load
+- Combination prophylaxis (AZT + 3TC + nevirapine) if maternal VL >1000
+- Avoidance of breastfeeding in India (mixed feeding increases risk)
+
+**Results**: With optimal PMTCT, transmission risk <2%
+
+## Post-Exposure Prophylaxis (PEP)
+
+### Occupational PEP (Healthcare Workers)
+
+**Indication**: After needlestick injury or mucosal exposure to HIV-positive blood
+
+**Risk Assessment**:
+- High risk: Deep injury, visible blood, needle directly from vein/artery (risk ~0.3%)
+- Low risk: Superficial injury, blood on skin (risk ~0.03%)
+
+**PEP Regimen**:
+- Start within 2 hours (maximum 72 hours)
+- 28 days duration
+- Combination ART: 3-drug regimen (e.g., TDF + 3TC + DTG)
+- Follow-up: Baseline and 6-week HIV test
+
+### Non-Occupational PEP (Sexual or Drug Exposure)
+
+**Indication**: After potential sexual exposure (unprotected intercourse, condom breakage) or needle sharing
+
+**Administration**:
+- Start within 72 hours of exposure
+- 28 days duration
+- Same ART as occupational PEP
+
+**Adherence**: Critical for efficacy; >90% adherence needed for optimal protection
+
+## Clinical Features of Common OIs in India
+
+### Tuberculosis (Most Common in India)
+
+- Pulmonary TB: cough, fever, night sweats, weight loss
+- Atypical presentations common (minimal cavitation, diffuse infiltrates)
+- Extrapulmonary: lymphadenitis, meningitis, pericarditis
+- Diagnosis: Sputum microscopy, culture, GeneXpert MTB/RIF
+- Treatment: Standard ATT regimen; drug interactions with DTG
+
+### Oral Candidiasis
+
+- White plaques on tongue, hard palate, oropharynx
+- Erythematous patches (atrophic candidiasis)
+- Angular cheilitis (cracks at corner of mouth)
+- Treatment: Topical antifungals (nystatin, miconazole) or systemic (fluconazole)
+
+### Cryptococcal Meningitis
+
+- Subacute meningitis: fever, headache, confusion, meningeal signs often absent
+- CSF: elevated protein, low glucose, positive cryptococcal antigen
+- India has high burden; consider in all CD4 <100 with fever/headache
+- Treatment: Amphotericin B (induction) + fluconazole (consolidation and maintenance)
+
+### CMV Retinitis
+
+- Progressive visual loss, floaters, scotomas
+- Ophthalmology finding: hemorrhagic retinal infiltrates
+- Treatment: IV ganciclovir or foscarnet
+- Prognosis: Depends on immune recovery with ART`,
+        mnemonics: [
+          {
+            text: "TB <500, PCP/Toxo/Crypto <200, MAC <50",
+            explanation: "CD4 thresholds for major OIs: TB can occur >500 but worsens below; PCP, toxo, crypto <200; MAC primarily <50. India: TB predominates at all CD4 levels."
+          },
+          {
+            text: "NACO 3-Test: ELISA-Rapid-Western Blot",
+            explanation: "Indian testing algorithm: Test 1 (ELISA), Test 2 (Rapid test), Test 3 (Western Blot/Differentiation Immunoassay). Three confirmatory tests before diagnosis."
+          },
+          {
+            text: "TLD = TDF + 3TC + DTG",
+            explanation: "Tenofovir + Lamivudine + Dolutegravir - preferred first-line ART in India. Covers NRTIs, integrase inhibitor (fast CD4 recovery)."
+          },
+          {
+            text: "Start ART NOW, regardless of CD4",
+            explanation: "Current NACO guideline: Universal treatment (START: Start Treatment At Recall, Target Everyone). All diagnosed patients start ART immediately."
+          }
+        ],
+        keyPoints: [
+          "WHO Stage 1-4 and CDC CD4 classification guide OI prophylaxis; TB most common OI in India (can occur at any CD4), PCP/toxo/crypto at CD4 <200, MAC at CD4 <50",
+          "NACO 3-test strategy: ELISA → Rapid test → Western Blot; p24 antigen testing useful in window period; viral load gold standard for diagnosis and monitoring",
+          "First-line ART: TLD (TDF + 3TC + DTG) preferred; all patients start ART immediately regardless of CD4 count per current NACO guidelines",
+          "Prophylaxis: TMP-SMX at CD4 <200 (covers PCP, toxo, bacterial infections); azithromycin at CD4 <50 (MAC prophylaxis)",
+          "PMTCT strategy: Maternal ART to achieve VL <50, infant AZT prophylaxis, avoidance of breastfeeding in India reduces transmission to <2%; PEP after occupational/sexual exposure: 28-day ART within 72 hours"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "123: Human Immunodeficiency Virus Infection and AIDS", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "10.10: HIV Infection and AIDS", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "14: HIV Infection and AIDS", edition: "24th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "hiv-aids-layer-4-exam",
+        title: "HIV/AIDS & Opportunistic Infections - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "High-yield exam facts: CD4-OI correlation table, ART drug classes and mechanisms, IRIS pathophysiology, and clinical vignettes for rapid recall.",
+        contentMd: `# HIV/AIDS Exam Essentials and Clinical Vignettes
+
+## CD4 Count and OI Correlation Quick Reference
+
+| CD4 Count | Key OI | Prophylaxis | Mechanism |
+|-----------|--------|-------------|-----------|
+| >200 | Oral candidiasis, HSV | None; treat symptomatically | Early immunosuppression marker |
+| 200 | PCP, Toxoplasmosis, Cryptococcus, Esophageal candidiasis | TMP-SMX or alternatives | Severe T-cell depletion |
+| <100 | Add: Cryptococcal meningitis, CMV, PML, Histoplasmosis | As above + fluconazole | Very severe immunodeficiency |
+| <50 | Add: MAC, CMV retinitis, CMV colitis, Cryptococcal meningitis | Azithromycin + above | Profound immunosuppression |
+
+## ART Drug Classes: Mechanisms and Effects
+
+### Nucleoside/Nucleotide RT Inhibitors (NRTIs/NtRTIs)
+
+**Mechanism**: Compete with natural nucleotides for incorporation into growing DNA chain; lack 3'OH group so chain termination occurs
+
+**Examples**:
+- Tenofovir (TDF/TAF): First-line; bone and renal toxicity monitoring
+- Lamivudine (3TC): Dual activity against HBV; M184V resistance mutation
+- Abacavir (ABC): Risk of hypersensitivity reaction; requires HLA-B5701 screening
+- Zidovudine (AZT): Historical; bone marrow suppression
+
+**Advantages**: Low cost, oral, once-daily options
+**Disadvantages**: Resistance mutations, mitochondrial toxicity (rare with newer agents)
+
+### Non-Nucleoside RT Inhibitors (NNRTIs)
+
+**Mechanism**: Allosteric inhibition of RT; binds to hydrophobic pocket distinct from substrate binding site
+
+**Examples**:
+- Efavirenz (EFV): CNS side effects (dizziness, nightmares); teratogenic in first trimester
+- Rilpivirine (RPV): Better tolerability; requires acidic pH for absorption
+- Doravirine (DOR): Newer; improved resistance profile
+
+**Advantages**: Once-daily dosing, good CNS penetration (EFV)
+**Disadvantages**: Low genetic barrier to resistance (single mutation often sufficient); drug interactions
+
+### Protease Inhibitors (PIs)
+
+**Mechanism**: Block protease cleavage of viral polyproteins; results in non-infectious immature particles
+
+**Examples**:
+- Lopinavir/Ritonavir (LPV/r): Most commonly used PI; requires boosting with ritonavir
+- Atazanavir/Ritonavir (ATV/r): Once-daily option
+- Darunavir/Ritonavir (DRV/r): High genetic barrier; most active against resistant virus
+
+**Advantages**: High genetic barrier to resistance (multiple mutations needed)
+**Disadvantages**: GI side effects, lipid elevation, metabolic effects, complex drug interactions due to CYP450 metabolism
+
+### Integrase Strand Transfer Inhibitors (INSTIs)
+
+**Mechanism**: Block integrase-catalyzed integration of viral DNA into host chromosome
+
+**Examples**:
+- Dolutegravir (DTG): Preferred; once-daily, rapid CD4 recovery, high barrier to resistance
+- Raltegravir (RAL): Twice-daily option; well-tolerated
+- Bictegravir (BIC): Single-tablet regimen option
+- Elvitegravir (EVG): Requires ritonavir boosting
+
+**Advantages**: Fast-acting, high genetic barrier (high barrier with DTG), good tolerability
+**Disadvantages**: Cost; potential neuropsychiatric effects (rare)
+
+### Fusion and Entry Inhibitors
+
+**Mechanism**: Block viral attachment (CCR5 antagonists), co-receptor binding, or membrane fusion
+
+**Examples**:
+- Maraviroc (MVC): CCR5 antagonist; requires tropism testing
+- Enfuvirtide (T-20): Fusion inhibitor; SC injection; rare in routine care
+
+**Use**: Salvage therapy for resistant virus; maraviroc in R5-tropic resistant cases
+
+### Pharmacokinetic Boosters
+
+**Ritonavir (RTV)**: Low-dose ritonavir used to boost PI and EVG levels (CYP3A4 inhibition)
+
+**Cobicistat (COBI)**: Alternative booster; fewer drug interactions than RTV but renally cleared
+
+## Resistance Development
+
+### Mechanisms
+
+1. **Reverse Transcriptase Inhibitor Resistance**:
+   - NRTIs: Thymidine analog mutations (TAMs), M184V
+   - NNRTIs: Single amino acid changes (K103N) confer high-level resistance
+   - NRTI + NNRTI: Usually confer cross-class resistance
+
+2. **Protease Inhibitor Resistance**:
+   - Multiple mutations required (high genetic barrier)
+   - Causes reduced but not absent PI activity
+   - Hypersusceptibility mutations exist
+
+3. **Integrase Inhibitor Resistance**:
+   - DTG: High barrier; Q148H/R/K mutations
+   - RAL: Lower barrier; N155H mutations
+
+4. **Risk Factors**: Poor adherence (most important), high viral load, low CD4 count
+
+### Management
+
+- Baseline resistance testing (genotype or phenotype)
+- Resistance testing if VL >50 on ART
+- Switch regimens based on resistance results
+- Adherence counseling critical
+
+## Immune Reconstitution Inflammatory Syndrome (IRIS): Exam-Focused
+
+### Unmasking IRIS
+
+**Classic Presentation**: Start ART → CD4 rises → OI becomes symptomatic
+
+**Common Causes**:
+- TB IRIS: Lymph node enlargement, fever (within 2 weeks of starting ART)
+- PCP IRIS: Worsening dyspnea, CXR infiltrates
+- CMV IRIS: Visual symptoms, retinitis worsening
+- Cryptococcal meningitis IRIS: Meningitis signs reappearing
+
+**Pathophysiology**: Restoration of CD4 T-cell response against previously controlled pathogen antigens
+
+**Management**:
+- Continue ART (critical!)
+- Anti-inflammatory: NSAIDs initially
+- Severe IRIS: Corticosteroids (prednisolone 1 mg/kg/day, taper over 4-6 weeks)
+- Treat underlying OI
+
+### Exacerbation IRIS
+
+**Scenario**: Patient on ART + TB treatment → increased inflammatory symptoms
+
+**Management**: Similar to unmasking IRIS; continue all medications
+
+## Clinical Vignettes for Rapid Recall
+
+### Vignette 1: Acute Retroviral Syndrome
+
+**Presentation**: 28-year-old male with 3-week history of fever, rash, lymphadenopathy, malaise
+
+**Lab**: CD4 500, VL 500,000 copies/mL, negative ELISA on day 5 of illness, positive p24 antigen
+
+**Diagnosis**: Acute HIV infection (window period)
+
+**Key Points**:
+- High viral load, rash (can be mistaken for drug reaction or other viral illness)
+- Antibodies not yet developed (negative ELISA)
+- p24 antigen positive (diagnostic during window period)
+- VL peak during acute phase; set point will be established in weeks
+
+**Management**: Start ART immediately; rapid test and Western blot may be falsely negative initially
+
+### Vignette 2: CD4 <200 with Fever and Headache
+
+**Presentation**: 35-year-old female, CD4 120, on ART for 3 months, develops fever and headache
+
+**CSF Analysis**: Protein 150 mg/dL, glucose 40 mg/dL, opening pressure 25 cm H2O, India ink smear shows yeast
+
+**Diagnosis**: Cryptococcal meningitis
+
+**Management**:
+- Cryptococcal antigen (CSF/serum) confirms diagnosis
+- Amphotericin B deoxycholate IV (induction phase) + flucytosine
+- Fluconazole for consolidation/maintenance
+- Manage elevated intracranial pressure (repeat LPs if needed)
+- Continue ART; IRIS may develop as CD4 rises
+
+**Key Exam Point**: India has high burden of cryptococcal disease; think of it in all CD4 <100 with meningitis
+
+### Vignette 3: Treatment Failure with CD4 >200 but Persistent VL
+
+**Presentation**: 40-year-old male on TLD for 12 months; VL still 5,000 copies/mL, CD4 300
+
+**Likely Causes**:
+1. Poor adherence (most common)
+2. Drug interactions
+3. Viral resistance
+
+**Assessment Steps**:
+1. Assess adherence (structured interview, pill counts)
+2. Obtain resistance testing
+3. Consider DI (TB drugs, other meds)
+4. Repeat VL after adherence counseling
+
+**Key Point**: Do NOT switch regimen without adherence optimization and resistance testing
+
+### Vignette 4: TB-HIV Coinfection
+
+**Presentation**: 30-year-old with CD4 50 and recently diagnosed TB (sputum GeneXpert positive)
+
+**When to Start ART?**
+- CD4 <50: Start ART within 2 weeks of TB treatment initiation
+- CD4 50-200: Start within 2 weeks
+- CD4 >200: Can delay ART slightly to ensure TB diagnosis confirmed
+
+**Which ART?**
+- Avoid DTG (rifampicin induces DTG metabolism; DTG levels subtherapeutic)
+- Use PI-based: LPV/r can be used (requires higher doses with rifampicin)
+- Alternative: EFV-based regimen (though EFV has CNS effects)
+
+**Monitoring**:
+- TB symptoms improvement
+- CD4 recovery
+- IRIS risk (especially TB IRIS with lymph node enlargement, fever)
+
+**Key Point**: Integrate TB and HIV treatment; drug interactions are significant
+
+### Vignette 5: Pregnancy with HIV
+
+**Presentation**: 26-year-old G2P1 newly diagnosed with HIV at 20 weeks gestation
+
+**Counseling**:
+- Risk of mother-to-child transmission without treatment: 15-45%
+- With optimal PMTCT: <2%
+- ART is safe in pregnancy; benefit outweighs risks
+- Continue ART throughout pregnancy and postpartum
+
+**ART Choice**:
+- Preferred: DTG-based or PI-based (EFV teratogenic in 1st trimester)
+- Current NACO: TLD can be used if CD4 >500; otherwise PI-based initially
+
+**Delivery**:
+- Elective C-section if VL >1,000
+- Vaginal delivery acceptable if VL <50
+
+**Infant Prophylaxis**:
+- AZT from birth for 4-6 weeks
+- Combined prophylaxis (AZT + 3TC + NVP) if maternal VL >1,000
+- Infant testing: At birth (PCR), 6 weeks, 3 months, 6 months
+
+**Key Point**: Maternal viral suppression is key to preventing vertical transmission
+
+## High-Yield Exam Facts
+
+1. **Viral load**, not CD4, predicts infectivity and sexual transmission risk
+2. **p24 antigen** becomes positive before antibodies (window period diagnosis)
+3. **Western blot** (or differentiation immunoassay) differentiates HIV-1 from HIV-2
+4. **IRIS** occurs when CD4 rises; continue ART, don't stop (common exam trap)
+5. **TMP-SMX** provides prophylaxis for PCP, toxo, and some bacterial infections at CD4 <200
+6. **DTG** preferred INSTI due to high genetic barrier and rapid CD4 recovery
+7. **Single-tablet regimens** (Bictegravir-TAF-FTC, Dolutegravir-TAF-FTC) improve adherence
+8. **MAC** prophylaxis (azithromycin) starts at CD4 <50, not earlier
+9. **TB-HIV**: Rifampicin reduces many drug levels; DTG contraindicated without adjustment
+10. **PEP**: 28 days, start within 72 hours, must include 3-drug ART for efficacy`,
+        mnemonics: [
+          {
+            text: "NRTI-NNRTI-PI-INSTI",
+            explanation: "Four main ART classes: NRTIs (chain termination), NNRTIs (allosteric inhibition), PIs (protease block), INSTIs (integrase block). Each has distinct mechanism."
+          },
+          {
+            text: "DTG > EFV > RAL",
+            explanation: "Ranking of preferred INSTIs and NNRTIs: Dolutegravir best (high barrier, fast CD4 recovery), Efavirenz intermediate, Raltegravir third (RAL older)."
+          },
+          {
+            text: "IRIS = Continue ART!",
+            explanation: "Key exam point: IRIS is immune recovery, not treatment failure. Always CONTINUE ART, add anti-inflammatory/steroids if severe."
+          }
+        ],
+        keyPoints: [
+          "CD4 <200: PCP, toxo, crypto, esophageal candida prophylaxis with TMP-SMX or alternatives; CD4 <50: add MAC prophylaxis with azithromycin",
+          "NRTIs work by chain termination; NNRTIs by allosteric inhibition (low barrier); PIs block protease (high barrier); INSTIs block integration (DTG has highest barrier)",
+          "IRIS (immune reconstitution inflammatory syndrome) occurs when CD4 rises after ART start; unmasking type reveals occult OI; continue ART and use anti-inflammatory therapy",
+          "DTG preferred integrase inhibitor: once-daily, rapid CD4 recovery, high genetic barrier; avoid with rifampicin (TB) without DTG dose increase",
+          "TB-HIV: Start ART within 2 weeks of TB treatment; use PI-based or EFV-based (avoid DTG with rifampicin); risk of TB-IRIS with CD4 <50"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "123: Human Immunodeficiency Virus Infection and AIDS", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "10.10: HIV Infection and AIDS", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "14: HIV Infection and AIDS", edition: "24th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "hiv-aids-layer-5-active-recall",
+        title: "HIV/AIDS & Opportunistic Infections - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Flashcard-style Q&A pairs for rapid recall of critical HIV/AIDS facts, OI management, and ART decisions.",
+        contentMd: `# Active Recall: HIV/AIDS Flashcard Questions
+
+## Question 1: HIV Structure and Tropism
+**Q: What is the function of gp120 and gp41, and which co-receptors do they use?**
+
+A: gp120 binds to CD4 receptors on target cells (initial attachment); gp41 mediates membrane fusion. Co-receptors are CCR5 (R5-tropic, early infection) or CXCR4 (X4-tropic, late disease). CCR5-delta32 mutation confers R5 resistance.
+
+---
+
+## Question 2: HIV Replication Cycle
+**Q: Name the six steps of HIV replication in order.**
+
+A: (1) Attachment via gp120-CD4-co-receptor binding, (2) Fusion via gp41, (3) Reverse transcription (RNA to DNA), (4) Integration by integrase, (5) Transcription and translation, (6) Assembly and budding with protease maturation.
+
+---
+
+## Question 3: CD4 Count and OI Threshold
+**Q: At what CD4 count does Pneumocystis jirovecii pneumonia (PCP) typically occur, and what is the prophylaxis?**
+
+A: PCP occurs at CD4 <200 cells/μL. Prophylaxis is TMP-SMX (trimethoprim-sulfamethoxazole) first-line; alternatives include atovaquone, pentamidine, or dapsone + pyrimethamine.
+
+---
+
+## Question 4: Cryptococcal Meningitis
+**Q: A patient with CD4 80 presents with insidious meningitis (fever, headache, confusion). What is the diagnosis and how is it confirmed?**
+
+A: Cryptococcal meningitis. Confirmed by CSF India ink stain (yeast visible), CSF cryptococcal antigen (>95% sensitivity), and serum cryptococcal antigen. CSF shows elevated protein, low glucose, and cryptococcal growth on culture.
+
+---
+
+## Question 5: NACO 3-Test Strategy
+**Q: What is the NACO 3-test algorithm for HIV diagnosis in India?**
+
+A: Test 1: ELISA (detects antibodies and p24 antigen). Test 2: Rapid test (confirms Test 1 if positive). Test 3: Western blot or HIV differentiation immunoassay (confirms both tests and differentiates HIV-1 from HIV-2). If discordant, repeat or use viral load testing.
+
+---
+
+## Question 6: Acute HIV Infection
+**Q: A patient has fever, rash, and lymphadenopathy for 3 weeks but ELISA is negative. What is the diagnosis, and why is the ELISA negative?**
+
+A: Acute HIV infection (acute retroviral syndrome). ELISA is negative because of the window period (before antibodies appear). Diagnosis is confirmed by positive p24 antigen or viral load testing.
+
+---
+
+## Question 7: Viral Load and Set Point
+**Q: What is the viral set point, and why is it clinically important?**
+
+A: Viral set point is the steady-state plasma viral load after acute infection resolves (typically 1,000-100,000 copies/mL). It is the best predictor of disease progression: set point <1,000 predicts slow progression (>10 years); >100,000 predicts rapid progression (<3 years).
+
+---
+
+## Question 8: First-Line ART in India
+**Q: What is the preferred first-line ART regimen in India according to NACO guidelines, and why is it preferred?**
+
+A: TLD (Tenofovir + Lamivudine + Dolutegravir) is preferred. DTG (integrase inhibitor) offers rapid CD4 recovery, once-daily dosing, high genetic barrier to resistance, and good tolerability compared to EFV (TLE).
+
+---
+
+## Question 9: CD4 Recovery on ART
+**Q: How quickly does CD4 count recover after starting ART?**
+
+A: Initial recovery is rapid (~50-100 cells/μL per month) for the first 3 months, then slower. CD4 >200 typically achieved within 6-12 months; full recovery to normal levels (600-1,500) may take 2-3 years or longer.
+
+---
+
+## Question 10: TB-HIV Coinfection
+**Q: A patient with CD4 50 is diagnosed with TB. When should ART be started, and which ART regimen should be avoided?**
+
+A: Start ART within 2 weeks of TB treatment initiation (standard timing for CD4 <50). AVOID DTG because rifampicin (TB drug) induces DTG metabolism, making DTG levels subtherapeutic. Use PI-based (LPV/r) or EFV-based regimens instead.
+
+---
+
+## Question 11: IRIS Pathophysiology
+**Q: What is immune reconstitution inflammatory syndrome (IRIS), and what is the management?**
+
+A: IRIS is worsening of symptoms or appearance of new opportunistic infection as CD4 count recovers after ART initiation. Caused by restoration of immune response against OI antigens. Management: CONTINUE ART (critical!), treat underlying OI, use NSAIDs or corticosteroids if severe.
+
+---
+
+## Question 12: Tuberculosis as Most Common OI
+**Q: Why is tuberculosis the most common opportunistic infection in India, even at CD4 counts >500?**
+
+A: TB is endemic in India with high community prevalence. HIV-infected individuals have 20-30 times higher TB risk at any CD4 count compared to non-HIV. TB can reactivate (latent infection) at CD4 >200, unlike other OIs.
+
+---
+
+## Question 13: MAC Prophylaxis
+**Q: At what CD4 count is MAC (Mycobacterium avium complex) prophylaxis indicated, and with what drug?**
+
+A: MAC prophylaxis is indicated at CD4 <50 cells/μL using azithromycin (1200 mg once weekly). It can be discontinued when CD4 >50 on ART for 3 months.
+
+---
+
+## Question 14: Mother-to-Child Transmission
+**Q: What is the risk of mother-to-child transmission of HIV without treatment, and what is the risk with optimal PMTCT?**
+
+A: Without treatment: 15-45% (approximately 30% average). With optimal PMTCT (maternal ART to undetectable VL, infant AZT prophylaxis, elective C-section if VL >1,000, avoidance of breastfeeding): <2%.
+
+---
+
+## Question 15: Post-Exposure Prophylaxis Timing
+**Q: What is the window period for starting PEP after occupational exposure to HIV, and what is the duration of PEP?**
+
+A: PEP must be started as soon as possible but no later than 72 hours post-exposure (ideally within 2 hours). Duration is 28 days with a 3-drug ART regimen (e.g., TDF + 3TC + DTG). Follow-up HIV testing at 6 weeks.`,
+        mnemonics: [
+          {
+            text: "gp120-CCR5 Early, gp41-CXCR4 Late",
+            explanation: "gp120 binds CD4 + CCR5 (R5) early in infection; later, X4-tropic emerges via CXCR4 co-receptor. CCR5-delta32 = natural R5 resistance."
+          },
+          {
+            text: "TB <500, MAC <50, IRIS with CD4 rise",
+            explanation: "TB at any CD4; MAC prophylaxis <50; IRIS occurs as CD4 increases on ART—always continue ART during IRIS."
+          },
+          {
+            text: "DTG beats EFV for speed and resistance",
+            explanation: "Dolutegravir preferred: fast CD4 recovery, once-daily, high genetic barrier. Efavirenz has CNS effects, lower barrier."
+          },
+          {
+            text: "PEP = 72 hours, 28 days, 3 drugs",
+            explanation: "Post-exposure prophylaxis: within 72-hour window, 28-day duration, 3-drug ART (TDF+3TC+DTG or equivalent)."
+          },
+          {
+            text: "PMTCT: Undetectable = Untransmittable (U=U)",
+            explanation: "Maternal viral load <50 copies/mL with ART = essentially zero transmission risk. Most important PMTCT factor."
+          }
+        ],
+        keyPoints: [
+          "gp120 binds CD4; gp41 mediates fusion; CCR5 (R5) early, CXCR4 (X4) late; CCR5-delta32 = natural resistance",
+          "HIV replication: Attach → Fuse → Reverse transcribe → Integrate → Transcribe → Assemble/Bud with protease cleavage",
+          "Window period diagnosis: p24 antigen or viral load positive, ELISA negative; seroconversion occurs 23-24 days",
+          "CD4 <200: PCP (TMP-SMX), toxo (TMP-SMX), crypto (fluconazole consideration); CD4 <50: MAC (azithro), CMV prophylaxis (valganciclovir)",
+          "ART initiation: All patients immediately per NACO (START strategy); TLD preferred (DTG-based fast recovery); TB-HIV avoid DTG + rifampicin; IRIS management: continue ART + anti-inflammatory"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "123: Human Immunodeficiency Virus Infection and AIDS", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "10.10: HIV Infection and AIDS", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "14: HIV Infection and AIDS", edition: "24th" }
+        ]
+      }
+    ]
+  }
 ];

@@ -1,15 +1,443 @@
-export const medicineLessonsPartXX = [
+import type { TopicLessons } from "./content-loader";
+
+export const medicineLessonsPart15: TopicLessons[] = [
   {
     topicCode: "IM-MOD-10-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "shock-types-management-foundation",
-        title: "Shock: Types and Management - Foundation",
+        slug: "shock-layer-1-foundation",
+        title: "Shock: Types & Management - Foundation",
         estimatedMinutes: 20,
-        summary: "Overview of shock, a state of inadequate tissue perfusion. Foundation covers classification of shock types, pathophysiology of each, compensatory mechanisms, and clinical stages of shock.",
-        contentMd: "# Shock: Types and Management\n\n## Definition\nShock is a state of inadequate tissue perfusion leading to cellular hypoxia and dysfunction. Results from failure to deliver oxygen to tissues relative to metabolic demand.\n\n## Pathophysiology - General Principles\n**Oxygen delivery** (DO₂) = Cardiac output (CO) × Arterial O₂ content\n- Cardiac output = Heart rate × Stroke volume\n- Arterial O₂ content = (Hb × 1.34 × SaO₂) + (PaO₂ × 0.003)\n\n**Tissue perfusion failure** when:\n- Cardiac output insufficient\n- Blood pressure too low (inadequate perfusion pressure)\n- Blood not distributed properly (microvascular failure)\n- RBC insufficient (severe anemia)\n- Hemoglobin dysfunction\n\n## Classification of Shock\n\n### 1. Hypovolemic Shock\n**Cause**: Decreased intravascular volume\n- Hemorrhagic: Acute blood loss (trauma, GI bleeding, rupture)\n- Non-hemorrhagic: Fluid loss (burns, diarrhea, vomiting, sweating)\n\n**Mechanism**: ↓ Preload → ↓ Stroke volume → ↓ CO → ↓ BP\n\n**Clinical features**: Thirst, tachycardia, tachypnea, cool extremities, oliguria\n\n**Shock stages**:\n- **Class I** (blood loss <15%): Minimal symptoms\n- **Class II** (15-30%): Tachycardia, anxiety, mild hypotension\n- **Class III** (30-40%): Marked tachycardia, hypotension, altered mental status\n- **Class IV** (>40%): Profound shock, barely palpable pulse, near-death state\n\n### 2. Cardiogenic Shock\n**Cause**: Decreased cardiac function\n- Acute MI (most common)\n- Cardiomyopathy, myocarditis\n- Arrhythmias\n- Valvular disease\n- Pericardial tamponade\n- PE (right ventricle infarction)\n\n**Mechanism**: ↓ Contractility → ↓ CO → ↓ BP; increased pulmonary edema\n\n**Clinical features**: Pulmonary edema, JVD, cold extremities, oliguria, altered sensorium\n\n**Hemodynamics**: ↓ CO, ↑ PCWP (pulmonary capillary wedge pressure indicates left heart failure)\n\n### 3. Distributive Shock\n**Cause**: Abnormal distribution of blood flow; total peripheral resistance drops\n\n**Subtypes**:\n\n**Septic shock** (most common in ICU):\n- Systemic infection (usually bacterial)\n- Cytokine-mediated vasodilation\n- Microvascular thrombosis\n- Increased capillary permeability\n- Results: Hypotension, warm extremities initially, then cooling\n\n**Anaphylactic shock**:\n- IgE-mediated allergic reaction\n- Massive mast cell degranulation\n- Histamine, tryptase, leukotrienes released\n- Vasodilation, capillary leakage, bronchospasm\n- Rapid onset (minutes)\n\n**Neurogenic shock**:\n- Spinal cord injury, regional anesthesia\n- Loss of sympathetic tone\n- Bradycardia (parasympathetic unopposed)\n- Hypotension, warm extremities\n\n### 4. Obstructive Shock\n**Cause**: Physical obstruction to blood flow\n- Tension pneumothorax\n- Massive PE (right ventricular afterload)\n- Cardiac tamponade (pericardial fluid)\n- Aortic dissection with tamponade\n- Prosthetic valve thrombosis\n\n**Mechanism**: ↓ Venous return (preload) OR ↑ Afterload → ↓ CO\n\n## Compensatory Mechanisms\n\n**Body tries to maintain perfusion**:\n\n1. **Sympathetic nervous system activation**:\n   - Increased heart rate (tachycardia)\n   - Increased contractility\n   - Vasoconstriction (maintain BP)\n   - Result: Cool, clammy skin (peripheral vasoconstriction)\n\n2. **Fluid shifts**:\n   - Fluid mobilized from interstitium to intravascular space\n   - Attempt to restore volume\n\n3. **Renal compensation**:\n   - Renin-angiotensin-aldosterone system (RAAS) activated\n   - Sodium/fluid reabsorption\n   - Vasoconstriction\n\n4. **Respiratory compensation**:\n   - Tachypnea to increase oxygen delivery\n   - Hyperventilation to blow off CO₂ (may worsen acidosis buffering)\n\n**These mechanisms maintain BP temporarily but eventually fail if shock continues → progressive organ failure**\n\n## Clinical Stages of Shock\n\n### Stage 1: Compensated Shock\n- Blood pressure maintained (sympathetic compensation)\n- Tachycardia, vasoconstriction\n- Oliguria (urine output <0.5 mL/kg/hr)\n- Cool extremities\n- Patient alert but anxious\n- Lactate beginning to rise\n\n### Stage 2: Progressive Shock\n- Blood pressure falling despite compensation\n- Tachycardia severe (>120)\n- Altered mental status (confusion, restlessness)\n- Oliguria severe (<0.3 mL/kg/hr)\n- Metabolic acidosis (lactate >4)\n- Skin mottling\n\n### Stage 3: Irreversible Shock\n- Profound hypotension unresponsive to therapy\n- Severe altered consciousness, unresponsiveness\n- Severe metabolic acidosis\n- Anuria (no urine output)\n- Multi-organ failure\n- Death imminent despite treatment\n\n## Tissue Damage Mechanisms in Shock\n\n**Hypoxia leads to**:\n- Mitochondrial dysfunction → reduced ATP\n- Switch to anaerobic metabolism → lactate accumulation\n- Cellular acidosis\n- Na-K-ATPase pump failure\n- Cell swelling, death\n\n**Inflammatory cascade**:\n- Tissue hypoxia → inflammatory mediator release\n- Further vasodilation, capillary leakage\n- Sepsis component (even non-septic shock)\n\n**Coagulopathy development**:\n- DIC from tissue factor release (shock)\n- Thrombosis and consumption of clotting factors\n- Bleeding tendency paradoxically,\n        mnemonics: [\n          {\n            text: \"Shock types: Hypo (volume), Cardio (pump), Distrib (pipes), Obstruct (blockage)\",\n            explanation: \"Four main shock categories\"\n          },\n          {\n            text: \"Shock stages: Compensated (BP up, lactate ↑) → Progressive (BP down) → Irreversible (unresponsive, death)\",\n            explanation: \"Progression of shock severity\"\n          }\n        ],\n        keyPoints: [\n          \"Shock is inadequate tissue perfusion; four main types: hypovolemic, cardiogenic, distributive, obstructive\",\n          \"Hypovolemic shock: Blood loss classification (Class I <15% to Class IV >40%)\",\n          \"Distributive shock most common in ICU; septic most frequent (endothelial dysfunction, vasodilation)\",\n          \"Compensatory mechanisms: Sympathetic activation, fluid shifts, RAAS → maintain BP transiently\",\n          \"Shock progression: Compensated → Progressive → Irreversible; lactate and metabolic acidosis worsen with progression\"\n        ],\n        textbookRefs: [\n          {\n            book: \"Harrison's Principles of Internal Medicine\",\n            chapter: \"Ch 265 (Shock)\",\n            edition: \"21st\"\n          },\n          {\n            book: \"Critical Care Medicine textbooks\",\n            chapter: \"Hemodynamic monitoring and shock\",\n            edition: \"Recent\"\n          }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"shock-types-management-mechanism\",\n        title: \"Shock: Types and Management - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Detailed pathophysiology of each shock type including hemodynamic patterns, cellular mechanisms, organ dysfunction, and progression to multi-organ failure.\",\n        contentMd: "# Pathophysiological Mechanisms\\n\\n## Hypovolemic Shock Mechanisms\\n\\n### Compensatory Response\\n**Initial (minutes-hours)**:\\n- ↓ Circulating volume → ↓ Venous return → ↓ Preload\\n- Frank-Starling mechanism: ↓ Preload → ↓ Stroke volume\\n- Tachycardia and increased contractility restore CO temporarily\\n- Sympathetic activation causes vasoconstriction → maintains MAP initially\\n\\n**Late compensatory (hours)**:\\n- Fluid mobilization from interstitium (Starling forces reversed)\\n- RAAS activation: Renin → Angiotensin II → aldosterone\\n- Aldosterone increases Na+ reabsorption → water follows → volume restored slowly\\n- ADH release → water reabsorption\\n\\n### Progression to Shock\\n**If volume not restored**:\\n- Compensatory mechanisms fail\\n- Vasoconstriction becomes excessive → tissue hypoxia\\n- Anaerobic metabolism → lactate accumulation\\n- Acidosis worsens vasoconstriction\\n- Multi-organ hypoperfusion\\n\\n**Organ-specific damage**:\\n- **Kidneys**: Acute tubular necrosis (ATN); oliguria → anuria\\n- **Brain**: Cerebral hypoperfusion → altered mental status, seizures\\n- **Liver**: Ischemic hepatitis; elevated transaminases\\n- **Heart**: Myocardial ischemia → arrhythmias, cardiogenic shock cascade\\n- **GI tract**: Bacterial translocation from intestinal ischemia\\n\\n## Cardiogenic Shock Mechanisms\\n\\n### Left Ventricular Dysfunction\\n**Acute MI**:\\n- Coronary occlusion → myocardial necrosis\\n- Loss of contractile tissue\\n- Stroke volume ↓ → CO ↓ → BP ↓\\n- Compensatory mechanisms: Tachycardia, increased contractility (worsen ischemia)\\n\\n**Vicious cycle**:\\n- ↓ CO → ↓ Coronary perfusion pressure\\n- Coronary blood flow primarily in diastole (diastolic pressure key)\\n- Hypotension → worsened coronary ischemia\\n- More myocardial damage → further ↓ CO\\n\\n### Left Heart Failure Consequences\\n**Increased LVEDP** (left ventricular end-diastolic pressure):\\n- Blood backs up into left atrium\\n- Pulmonary venous congestion\\n- Alveolar flooding → pulmonary edema\\n- Hypoxemia\\n- Increased work of breathing\\n\\n**Cardiogenic shock + pulmonary edema**: Dual problem (hypotension + respiratory failure)\\n\\n### Mechanical Complications of MI\\n**Papillary muscle rupture**:\\n- Severe mitral regurgitation\\n- Blood regurgitates into LA → pulmonary congestion\\n- Acute cardiogenic shock + pulmonary edema\\n\\n**Ventricular septal rupture**:\\n- Left-to-right shunt\\n- Increased RV afterload, acute RV failure\\n- Shock from inadequate LV output\\n\\n**Free wall rupture**:\\n- Cardiac tamponade\\n- Acute obstructive shock\\n- Sudden cardiovascular collapse\\n\\n## Distributive (Septic) Shock Mechanisms\\n\\n### Pathogenesis\\n**Initial phase** (early sepsis):\\n1. Infection/inflammatory stimulus\\n2. Endotoxin (Gram-negative) or exotoxins (Gram-positive) released\\n3. TLR (Toll-like receptor) activation on macrophages, dendritic cells\\n4. Cytokine storm: TNF-α, IL-1, IL-6, IL-8 massive release\\n\\n### Endothelial Dysfunction\\n**Effects of cytokines on endothelium**:\\n- Vasodilation (from NO, prostacyclins)\\n- Loss of autoregulation (vasoconstriction fails even if hypotensive)\\n- Increased capillary permeability → fluid leak into interstitium\\n- Hypovolemia develops despite normal total body water\\n\\n### Microvascular Dysfunction\\n**Pathologic changes**:\\n- Increased vascular permeability → fluid shifts to interstitium\\n- Microthrombi formation (activated coagulation cascade)\\n- RBC aggregation → \\\"sludging\\\" → impaired flow\\n- Leukocyte sequestration in capillaries → inflammatory mediator release\\n- Result: Regional hypoperfusion despite \\\"adequate\\\" CO initially\\n\\n### Myocardial Depression\\n**Sepsis causes direct myocardial dysfunction**:\\n- Cytokines (TNF-α, IL-1β) depress contractility\\n- Myocardial apoptosis\\n- Mitochondrial dysfunction\\n- Reduced ejection fraction despite preserved CO (due to increased preload)\\n- Diastolic dysfunction common\\n\\n**Result**: Septic patients may have NORMAL or even HIGH CO but still in shock (distributive type)\\n\\n### Organ Dysfunction in Sepsis\\n**Multiple organ failure**:\\n- **Liver**: Impaired synthetic function, increased metabolism of lactate, hepatomegaly\\n- **Kidneys**: AKI from hypoperfusion, direct tubular injury, myoglobin/hemoglobin precipitation\\n- **Brain**: Septic encephalopathy, altered mental status, seizures\\n- **Coagulation**: DIC from tissue factor release, consumption of platelets and factors\\n- **Lungs**: ARDS from increased capillary permeability, leukocyte infiltration\\n\\n## Anaphylactic Shock Mechanisms\\n\\n### Immediate Pathophysiology\\n**Antigen crosslinks IgE**:\\n- Binds to high-affinity IgE receptors on mast cells, basophils\\n- Rapid degranulation (within seconds-minutes)\\n- Release of histamine, tryptase, proteases, leukotrienes, prostaglandins\\n\\n### Systemic Effects\\n**Vasodilation** (from histamine):\\n- H₁ receptors on arterioles → vasodilation\\n- H₂ receptors on endothelium → increased permeability\\n- Result: Distributive shock pattern (hypotension, warm skin initially)\\n\\n**Bronchoconstriction**:\\n- Leukotrienes (more potent than histamine)\\n- Mast cell tryptase\\n- Histamine stimulation of bronchial smooth muscle\\n- Airway edema (upper airway swelling)\\n- Respiratory failure possible\\n\\n**Increased capillary permeability**:\\n- 30% of circulating volume can shift to interstitium rapidly\\n- Anaphylactic shock may be combination hypovolemic + distributive\\n\\n### Biphasic Reaction\\n- **Immediate phase**: Minutes\\n- **Delayed phase**: 24-48 hours (secondary release of mediators)\\n- Can present as worsening despite initial treatment\\n\\n## Obstructive Shock Mechanisms\\n\\n### Tension Pneumothorax\\n**Pathophysiology**:\\n- Air enters pleural space; builds pressure with each breath\\n- Lung collapse\\n- Mediastinal shift → kinks SVC/IVC\\n- Venous return severely impaired\\n- Preload drops dramatically\\n- Cardiogenic-like picture (low CO) from low preload\\n\\n**Acute cardiovascular collapse** if untreated\\n\\n### Cardiac Tamponade\\n**Mechanisms**:\\n- Fluid accumulation in pericardium\\n- Intrapericardial pressure rises\\n- Diastolic filling impaired\\n- Equalization of diastolic pressures (RA = RV = LA = LV)\\n- Preload falls dramatically\\n- Stroke volume falls → CO drops\\n\\n**Beck's triad**: JVD (high venous pressure trying to fill heart), muffled heart sounds, hypotension\\n\\n## Metabolic Consequences of Shock\\n\\n### Anaerobic Metabolism\\n**When DO₂ insufficient**:\\n- Cells shift to anaerobic glycolysis\\n- Pyruvate → Lactate (instead of entering Krebs cycle)\\n- Lactate accumulation → Lactic acidosis\\n- NAD+ depletion → impaired NADH metabolism\\n- Cellular ATP production drastically reduced\\n\\n### Acid-Base Disturbance\\n**Mixed acidosis**:\\n- Metabolic acidosis from lactate\\n- Respiratory acidosis if respiratory failure develops\\n- Severe acidosis impairs cardiac contractility further\\n- Vasopressor responsiveness decreases\\n\\n### Coagulopathy Development\\n**DIC (Disseminated Intravascular Coagulation)**:\\n- Tissue factor released from damaged endothelium\\n- Extrinsic pathway activated → thrombin generation\\n- Fibrin deposition in microvasculature\\n- Consumption of platelets, fibrinogen, factors II, V, VII, X\\n- Bleeding tendency despite thrombosis (paradoxical)\\n- Prothrombotic → thrombotic → bleeding as coagulation factors consumed,\\n        mnemonics: [\\n          {\\n            text: \\\"Septic shock = Low SVR + High/Normal CO (distributive); Cardiogenic = Low CO + High SVR (pump failure)\\\",\\n            explanation: \\\"Hemodynamic differentiation\\\"\\n          },\\n          {\\n            text: \\\"Anaerobic metabolism → Lactate ↑ → Acidosis → Cellular death (ATP ↓, Na-K pump fails)\\\",\\n            explanation: \\\"Cascade of metabolic failure\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Hypovolemic shock: ↓ Preload → ↓ CO; compensatory vasoconstriction maintains BP initially; ischemia develops if untreated\\\",\\n          \\\"Cardiogenic shock: ↓ Contractility → ↓ CO + ↑ Preload (pulmonary edema); vicious cycle of worsening coronary ischemia\\\",\\n          \\\"Septic shock: Endothelial dysfunction + microvascular disease + myocardial depression; cytokine-mediated, often high CO but still shock\\\",\\n          \\\"Anaerobic metabolism in all shock types leads to lactate accumulation, acidosis, cellular ATP depletion → organ dysfunction\\\",\\n          \\\"DIC develops in severe shock; thrombosis (microthrombi) + consumption (bleeding) coexist\\\"\\n        ],\\n        textbookRefs: [\\n          {\\n            book: \\\"Harrison's Principles of Internal Medicine\\\",\\n            chapter: \\\"Ch 265\\\",\\n            edition: \\\"21st\\\"\\n          },\\n          {\\n            book: \\\"Critical Care Medicine: A Comprehensive Study Guide\\\",\\n            chapter: \\\"Shock and organ failure\\\",\\n            edition: \\\"Recent\\\"\\n          }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"shock-types-management-clinical\\\",\\n        title: \\\"Shock: Types and Management - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical diagnosis and management of different shock types including hemodynamic monitoring, diagnostic approach, and treatment algorithms for each shock type.\\\",\\n        contentMd: "# Clinical Diagnosis and Management\\\\n\\\\n## Diagnostic Approach\\\\n\\\\n### Clinical Assessment\\\\n\\\\n**History and presentation** identify shock type:\\\\n- **Hypovolemic**: Trauma, GI bleeding, burns, diarrhea/vomiting\\\\n- **Cardiogenic**: Chest pain (MI), dyspnea (HF), palpitations\\\\n- **Distributive**: Infection signs (fever, infection source), anaphylaxis (exposure history, urticaria), spinal trauma\\\\n- **Obstructive**: Chest trauma, hyperacute dyspnea (PE), knife wound (tamponade)\\\\n\\\\n### Physical Examination\\\\n\\\\n**Vital signs**:\\\\n- **Hypovolemic/Cardiogenic**: Tachycardia, hypotension, tachypnea\\\\n- **Septic**: Fever (often; may be absent), tachycardia, hypotension, variable skin (initially warm; later cold)\\\\n- **Anaphylactic**: Urticaria, angioedema, stridor (airway compromise), hypotension\\\\n- **Obstructive**: JVD, muffled heart sounds (tamponade), absent breath sounds (pneumothorax)\\\\n\\\\n**Skin perfusion**:\\\\n- **Hypovolemic/Cardiogenic**: Cool, clammy, mottled (sympathetic activation)\\\\n- **Septic/Anaphylactic**: Warm initially (vasodilation); may cool if progress\\\\n\\\\n**Organ function**:\\\\n- Neurological: Altered mental status indicates hypoperfusion\\\\n- Urine output: <0.5 mL/kg/hr indicates shock\\\\n- JVD: Elevated suggests RV failure, fluid overload, or tamponade\\\\n- Lung auscultation: Crackles (pulmonary edema in cardiogenic), wheezing (anaphylaxis)\\\\n- Abdomen: Distension (third spacing in sepsis), tenderness\\\\n\\\\n### Hemodynamic Monitoring\\\\n\\\\n**Arterial line**:\\\\n- Continuous BP monitoring\\\\n- Access for serial blood gases\\\\n- Waveform analysis (pulse pressure variability in hypovolemia)\\\\n\\\\n**Venous access**:\\\\n- Central venous catheter for CVP/JVP assessment\\\\n- Assess fluid responsiveness\\\\n- CVP >8 cm H₂O suggests fluid overload or RV failure\\\\n\\\\n**Pulmonary artery catheter** (Swan-Ganz, increasingly replaced by echocardiography):\\\\n- CO, SVR measurement\\\\n- Wedge pressure (left heart function)\\\\n- Thermodilution measurement\\\\n\\\\n**Echocardiography** (increasingly preferred):\\\\n- Assess cardiac function\\\\n- Pericardial fluid (tamponade)\\\\n- Wall motion abnormalities (MI)\\\\n- Valve function\\\\n- Bedside availability\\\\n\\\\n### Laboratory Studies\\\\n\\\\n**All shock types**:\\\\n- CBC: Hemoglobin (anemia contribution), WBC (infection)\\\\n- Lactate (indicator of anaerobic metabolism; prognostic value)\\\\n- Electrolytes, creatinine, BUN (renal function)\\\\n- Liver function tests (hepatic congestion, ischemia)\\\\n- Coagulation profile (PT, aPTT, fibrinogen, D-dimer for DIC)\\\\n- Blood glucose (stress hyperglycemia, hypoglycemia)\\\\n- Troponin (myocardial injury), BNP (cardiac failure)\\\\n- Blood cultures (if sepsis suspected)\\\\n- Urinalysis, urine osmolality (prerenal vs intrinsic renal injury)\\\\n\\\\n**Imaging**:\\\\n- Chest X-ray: Pulmonary edema, pneumothorax, widened mediastinum (dissection)\\\\n- ECG: ST elevation/depression (MI), arrhythmias\\\\n- Echocardiography: Cardiac function, structural abnormalities\\\\n- CTPA: PE if suspected\\\\n- CT chest: Aortic dissection, pneumothorax\\\\n\\\\n## General Management Principles (All Shock Types)\\\\n\\\\n### Immediate Resuscitation\\\\n\\\\n**ABCs**:\\\\n1. **Airway**: Secure if altered mental status, respiratory distress\\\\n2. **Breathing**: Oxygen to maintain SaO₂ >90%; intubate if needed\\\\n3. **Circulation**: IV access (large bore), fluids, medications\\\\n\\\\n**Monitoring**:\\\\n- Continuous cardiac monitoring\\\\n- Pulse oximetry\\\\n- Frequent vital signs (Q5-15 min)\\\\n- Urine catheter (hourly output monitoring)\\\\n\\\\n### Resuscitation Goals\\\\n\\\\n**Target parameters** (varies slightly by shock type):\\\\n- MAP ≥65 mmHg (minimum)\\\\n- Urine output ≥0.5 mL/kg/hr (0.5 mL/kg/hr for most; 1 mL/kg/hr for trauma)\\\\n- Lactate <4 (normal); clearance of lactate indicates improvement\\\\n- Altered mental status improvement\\\\n- Normalization of mixed venous O₂ saturation (SvO₂) if available\\\\n\\\\n## Shock Type-Specific Management\\\\n\\\\n### Hypovolemic Shock\\\\n\\\\n**Fluid resuscitation**:\\\\n- **Type**: Isotonic crystalloid (NS, Ringer's lactate preferred)\\\\n- **Initial bolus**: 30 mL/kg over 1-2 hours\\\\n- **Reassess**: Check vitals, lactate, urine output; repeat bolus if inadequate response\\\\n- **Goal**: Restore MAP ≥65, UO ≥0.5 mL/kg/hr, lactate clearance\\\\n\\\\n**Hemorrhagic hypovolemia** (trauma):\\\\n- **Massive transfusion protocol** if significant bleeding:\\\\n  - 1:1:1 ratio RBC:FFP:Platelets (1 unit each)\\\\n  - Target: Hb >7 g/dL, normal coagulation\\\\n  - Early TXA (tranexamic acid) within 3 hours reduces mortality\\\\n  - Permissive hypotension in uncontrolled bleeding (delay fluid until source control)\\\\n\\\\n**Non-hemorrhagic hypovolemia** (burns, diarrhea):\\\\n- Aggressive fluid resuscitation\\\\n- **Burn formula**: Parkland formula = 4 mL × body weight (kg) × %TBSA (third degree burns)\\\\n  - Give half in first 8 hours, half over next 16 hours\\\\n  - Adjust based on urine output goal (0.5 mL/kg/hr)\\\\n\\\\n**Source control**:\\\\n- Stop bleeding (surgery, interventional radiology)\\\\n- Replace ongoing losses (nasogastric suction, diarrhea)\\\\n\\\\n### Cardiogenic Shock\\\\n\\\\n**Improve contractility**:\\\\n- **Inotropes**:\\\\n  - Dobutamine: 2-20 mcg/kg/min (increases contractility + decreases SVR)\\\\n  - Milrinone: 0.25-0.75 mcg/kg/min (inodilator, reduces afterload)\\\\n  - Dopamine: 5-20 mcg/kg/min (dose-dependent effects)\\\\n  - Note: Increases myocardial O₂ demand; can worsen ischemia\\\\n\\\\n**Reduce afterload** (if elevated):\\\\n- Vasodilators: Nitroprusside, nitroglycerin (if hypertensive)\\\\n- Goal: Improve CO while reducing LV wall stress\\\\n- Caution: Hypotension limit\\\\n\\\\n**Mechanical support** (in severe/refractory cases):\\\\n- Intra-aortic balloon pump (IABP): Diastolic augmentation improves coronary flow\\\\n- Extracorporeal membrane oxygenation (ECMO): Allows cardiac recovery time\\\\n- Percutaneous ventricular assist devices (Impella)\\\\n\\\\n**Coronary revascularization**:\\\\n- Urgent angiography/PCI for MI-related cardiogenic shock\\\\n- Medical therapy alone inadequate; revascularization improves survival\\\\n\\\\n**Heart failure management** (if applicable):\\\\n- Fluids cautiously (pulmonary edema risk)\\\\n- Diuretics if fluid overload\\\\n- ACE inhibitors once stable\\\\n- Beta-blockers once compensated\\\\n\\\\n**Treat mechanical complications**:\\\\n- VSR or papillary muscle rupture: Surgical repair\\\\n- Cardiac tamponade: Pericardiocentesis (needle or surgical drainage)\\\\n\\\\n### Septic Shock\\\\n\\\\n**Early recognition and aggressive management critical** (Surviving Sepsis Campaign guidelines):\\\\n\\\\n**Within 1 hour**:\\\\n1. **Lactate measurement** (if >4, indicates severe sepsis)\\\\n2. **Blood cultures** BEFORE antibiotics\\\\n3. **IV fluids**: 30 mL/kg crystalloid bolus (if hypotensive or lactate >4)\\\\n4. **Antibiotics**: Broad-spectrum within 1 hour\\\\n   - Empiric coverage (later adjusted per culture results)\\\\n   - E.g., Ceftriaxone + Vancomycin (covers Gram + and -)\\\\n5. **Vasopressors** if hypotensive despite fluid:\\\\n   - Norepinephrine first-line (α and β activity; maintains BP + CO)\\\\n   - Vasopressin, phenylephrine if inadequate norepinephrine response\\\\n   - Target MAP ≥65 mmHg\\\\n\\\\n**Within 3 hours**:\\\\n6. **Source control**: Identify and treat infection source\\\\n   - Abscess drainage\\\\n   - Debridement (necrotizing fasciitis)\\\\n   - Remove infected lines/devices\\\\n7. **Re-evaluate fluid status**: Assess response; repeat fluids or start vasopressors\\\\n\\\\n**Ongoing management**:\\\\n- **Steroids**: Low-dose hydrocortisone (50 mg IV q6h) if refractory hypotension despite fluids/vasopressors\\\\n- **Insulin**: Target glucose <180 mg/dL (tight control increases mortality)\\\\n- **Activated Protein C (APC)**: Removed from recommendations (no benefit)\\\\n- **Supportive care**: Mechanical ventilation if needed, renal replacement therapy if AKI\\\\n\\\\n### Anaphylactic Shock\\\\n\\\\n**Immediate management** (URGENT):\\\\n\\\\n1. **Epinephrine IM (first-line)**:\\\\n   - Adult: 0.3-0.5 mg IM (1:1000 solution) into lateral thigh\\\\n   - Can repeat q5-15 minutes as needed\\\\n   - Mechanism: α (vasoconstriction), β₁ (contractility), β₂ (bronchodilation)\\\\n\\\\n2. **Airway management**:\\\\n   - High-flow O₂\\\\n   - Intubate if stridor/airway compromise\\\\n   - Emergency cricothyrotomy if airway closure\\\\n\\\\n3. **IV access and fluids**:\\\\n   - Large-bore IV\\\\n   - Aggressive fluid resuscitation (isotonic crystalloid)\\\\n   - Goal: MAP ≥65\\\\n\\\\n4. **Vasopressors** (if epinephrine insufficient):\\\\n   - Norepinephrine IV\\\\n   - Maintain BP while treating underlying cause\\\\n\\\\n5. **Adjunctive medications**:\\\\n   - H1 blocker: Diphenhydramine 50 mg IV\\\\n   - H2 blocker: Famotidine 20 mg IV (blocks H2 effects)\\\\n   - Corticosteroids: Methylprednisolone 125 mg IV (prevents biphasic reaction)\\\\n   - Albuterol: If bronchospasm present\\\\n\\\\n6. **Observation**: Minimum 4-8 hours (risk of biphasic reaction)\\\\n\\\\n### Obstructive Shock\\\\n\\\\n**Tension pneumothorax** (life-threatening emergency):\\\\n- Clinical diagnosis: JVD, hypotension, absent breath sounds\\\\n- **DO NOT wait for imaging**\\\\n- Needle decompression: 14-16 gauge needle in 2nd ICS, midclavicular line\\\\n- Followed by chest tube (tube thoracostomy)\\\\n\\\\n**Cardiac tamponade**:\\\\n- **Pericardiocentesis** (needle or catheter drainage)\\\\n  - Acute temporizing measure\\\\n  - Diagnostic: Confirm pericardial fluid\\\\n- **Surgical drainage** for definitive management\\\\n- **IV fluids** to optimize preload while awaiting intervention\\\\n\\\\n**Massive PE**:\\\\n- **Thrombolysis** (alteplase) if massive PE with hemodynamic instability\\\\n- IV unfractionated heparin\\\\n- Consideration for embolectomy\\\\n- IVC filter if contraindication to anticoagulation\\\\n\\\\n**Aortic dissection with tamponade**:\\\\n- Controlled BP reduction (target SBP 100-120)\\\\n- **Surgical intervention** (pericardial drainage + repair)\\\\n\\\\n## Monitoring Response to Treatment\\\\n\\\\n**Serial assessments**:\\\\n- Vital signs Q15 min initially, then hourly as stable\\\\n- Urine output hourly\\\\n- Repeat lactate (should decrease with effective resuscitation)\\\\n- Repeat physical exam (perfusion improvement: warm extremities, alert mentation)\\\\n\\\\n**Lactate clearance** most prognostic:\\\\n- >10% reduction in 3 hours associated with better outcomes\\\\n- Persistent elevation indicates ongoing hypoperfusion\\\\n\\\\n**Organ function**:\\\\n- Assess kidney function (creatinine, urine output)\\\\n- Monitor liver function\\\\n- Coagulation status (PT, PTT, fibrinogen)\\\\n\\\\n## Prognosis\\\\n\\\\n**Outcomes vary by shock type**:\\\\n- **Hypovolemic**: >90% survival with prompt resuscitation\\\\n- **Cardiogenic (MI)**: 50-80% in-hospital mortality (depends on extent of infarction)\\\\n- **Septic**: 30-50% mortality despite aggressive treatment (higher if delayed recognition)\\\\n- **Anaphylactic**: >90% survival if epinephrine given promptly\\\\n- **Obstructive**: Depends on reversibility (PE thrombolysis, tamponade drainage),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Septic shock management: Blood cultures → Broad antibiotics → 30 mL/kg fluids → Vasopressors → Source control\\\\\\\",\\\\n            explanation: \\\\\\\"1-hour bundle critical\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Anaphylaxis: EPInephrine IM first; then airway, fluids, H1/H2 blockers, steroids\\\\\\\",\\\\n            explanation: \\\\\\\"Immediate treatment priorities\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Hypovolemic shock: Fluid resuscitation 30 mL/kg isotonic crystalloid; control bleeding source\\\\\\\",\\\\n          \\\\\\\"Cardiogenic shock: Inotropes (dobutamine), consider IABP/ECMO, urgent revascularization for MI\\\\\\\",\\\\n          \\\\\\\"Septic shock: Blood cultures → Antibiotics (within 1 hr) → Fluids 30 mL/kg → Vasopressors (norepinephrine) if hypotensive\\\\\\\",\\\\n          \\\\\\\"Anaphylactic shock: Epinephrine IM 0.3-0.5 mg FIRST-LINE; adjunctive H1/H2 blockers, steroids\\\\\\\",\\\\n          \\\\\\\"Monitor lactate clearance (should decrease >10% in 3 hours); persistent elevation indicates inadequate resuscitation\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          {\\\\n            book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\",\\\\n            chapter: \\\\\\\"Ch 265\\\\\\\",\\\\n            edition: \\\\\\\"21st\\\\\\\"\\\\n          },\\\\n          {\\\\n            book: \\\\\\\"Surviving Sepsis Campaign Guidelines\\\\\\\",\\\\n            chapter: \\\\\\\"Sepsis management\\\\\\\",\\\\n            edition: \\\\\\\"2021-2024\\\\\\\"\\\\n          }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"shock-types-management-exam\\\\\\\",\\\\n        title: \\\\\\\"Shock: Types and Management - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield facts for NEXT/NEET including shock classification, hemodynamic patterns, first-line management, and clinical decision-making.\\\\\\\",\\\\n        contentMd: ``# High-Yield Exam Facts\\\\n\\\\n## Shock Classification Quick Reference\\\\n\\\\n| Type | Cause | CO | SVR | PCWP | Management |\\\\n|------|-------|----|----|------|------------|\\\\n| Hypovolemic | Blood/fluid loss | ↓ | ↑ | ↓ | Fluids |\\\\n| Cardiogenic | Heart failure | ↓ | ↑ | ↑ | Inotropes, vasodilators |\\\\n| Septic | Infection | ↑/normal | ↓ | ↓ | Antibiotics, fluids, vasopressors |\\\\n| Anaphylactic | Allergic | ↓ | ↓ | ↓ | Epinephrine IM |\\\\n| Obstructive | PE/Tamponade | ↓ | ↑ | ↑/↓ | Remove obstruction |\\\\n\\\\n## Critical Shock Presentations\\\\n\\\\n**Hypovolemic shock classification by blood loss**:\\\\n- Class I: <15% (850 mL for 70 kg) - HR <100, normal BP\\\\n- Class II: 15-30% (850-1500 mL) - HR 100-120, normal SBP, ↓ pulse pressure\\\\n- Class III: 30-40% (1500-2000 mL) - HR >120, ↓ SBP, altered mental status\\\\n- Class IV: >40% (>2000 mL) - HR >140, SBP undetectable, near-death\\\\n\\\\n**Recognition**: Class III/IV requires immediate massive transfusion protocol\\\\n\\\\n## Septic Shock 1-Hour Bundle\\\\n\\\\n**CRITICAL - must be done within 1 hour**:\\\\n1. Lactate measurement\\\\n2. Blood cultures\\\\n3. Broad-spectrum antibiotics\\\\n4. 30 mL/kg isotonic fluid bolus\\\\n5. Vasopressors if persistent hypotension (target MAP ≥65)\\\\n\\\\n**Survival decreases 7-8% for each hour delay**\\\\n\\\\n## Anaphylaxis Management\\\\n\\\\n**First-line**: **Epinephrine 0.3-0.5 mg IM** (NOT IV first)\\\\n**Why IM not IV**: IV epinephrine risks arrhythmias, MI; IM safer\\\\n**Location**: Lateral thigh (better absorption than arm)\\\\n**Repeat**: Q5-15 minutes as needed\\\\n\\\\n**DO NOT delay** for labs, IV access, or airway management\\\\n**Adjunctive**: H1 (diphenhydramine), H2 (famotidine), steroids, airway support\\\\n\\\\n## NEXT Exam Scenarios\\\\n\\\\n**Scenario 1**: \\\\\\\"Trauma patient: BP 90, HR 130, pale, anxious; classification?\\\\\\\"\\\\n→ Class III hypovolemic shock (30-40% blood loss); needs immediate transfusion\\\\n\\\\n**Scenario 2**: \\\\\\\"Septic patient: BP 88, HR 120, lactate 6; treatment priorities?\\\\\\\"\\\\n→ Blood cultures → Antibiotics → 30 mL/kg fluids → Norepinephrine if SBP <65 after fluids\\\\n\\\\n**Scenario 3**: \\\\\\\"Anaphylaxis with angioedema, stridor; first action?\\\\\\\"\\\\n→ Epinephrine 0.3-0.5 mg IM into lateral thigh FIRST (don't delay for IV)\\\\n\\\\n**Scenario 4**: \\\\\\\"Acute MI with pulmonary edema, SBP 85; treatment?\\\\\\\"\\\\n→ Dobutamine (inotrope) + consider IABP; avoid excessive fluids (worsens pulmonary edema)\\\\n\\\\n**Scenario 5**: \\\\\\\"JVD, muffled heart sounds, SBP 70; diagnosis and treatment?\\\\\\\"\\\\n→ Cardiac tamponade; pericardiocentesis (needle drainage) first\\\\n\\\\n## Hemodynamic Patterns by Shock Type\\\\n\\\\n**Hypovolemic**: ↓ CO, ↑ SVR, ↓ CVP, ↓ PCWP\\\\n- Fluids restore preload → improves CO\\\\n\\\\n**Cardiogenic**: ↓ CO, ↑ SVR, ↑ CVP, ↑ PCWP\\\\n- Problem: Increased afterload worsens HF; need vasodilators + inotropes\\\\n\\\\n**Septic** (early): ↑ CO, ↓ SVR (warm shock)\\\\n- Endothelial dysfunction; problem is distribution not total volume\\\\n- May appear \\\\\\\"well perfused\\\\\\\" initially despite hypotension\\\\n\\\\n**Septic** (late): ↓ CO, ↑ SVR (cold shock)\\\\n- Decompensation; myocardial depression\\\\n\\\\n**Anaphylactic**: ↓ CO, ↓ SVR (distributive)\\\\n- Similar to septic pathophysiology\\\\n\\\\n## Lactate Interpretation\\\\n\\\\n**Normal**: <2 mmol/L\\\\n**Elevated lactate** (>4): Indicates tissue hypoxia\\\\n**Lactate >4 + SBP <90** = Septic shock (high mortality if not reversed)\\\\n\\\\n**Prognostic value**:\\\\n- Serial lactate > absolute value\\\\n- ↑ Lactate → worsening perfusion\\\\n- ↓ Lactate → improvement with treatment\\\\n- >10% reduction in 3 hours = good response to resuscitation\\\\n\\\\n## Fluid Resuscitation Principles\\\\n\\\\n**Isotonic crystalloid** (first-line all shock types):\\\\n- Normal saline (NS) or Ringer's lactate (RL preferred due to potassium composition)\\\\n- Initial bolus: 30 mL/kg over 1-2 hours\\\\n\\\\n**Blood products** (hemorrhagic shock):\\\\n- Massive transfusion protocol: 1:1:1 ratio RBC:FFP:Platelets\\\\n- Damage control resuscitation: Restrictive transfusion if uncontrolled bleeding\\\\n\\\\n**Albumin**:\\\\n- Not superior to crystalloid for septic shock (SAFE trial)\\\\n- May be useful in cirrhotic patients with ascites\\\\n\\\\n**Avoid over-resuscitation** (fluid overload risks):\\\\n- Pulmonary edema\\\\n- Abdominal compartment syndrome\\\\n- Increased mortality (especially ARDS)\\\\n\\\\n## Vasopressor Selection\\\\n\\\\n**Norepinephrine** (first-line most shock types):\\\\n- α (vasoconstriction) + β₁ (inotropic effect)\\\\n- Maintains BP + cardiac output\\\\n- Preferred for septic shock\\\\n\\\\n**Dopamine** (alternative):\\\\n- Low dose (<5): Dopaminergic (renal vasodilation)\\\\n- Medium (5-10): β₁ + dopaminergic\\\\n- High (>10): α predominant\\\\n- Risk of arrhythmias; less preferred now\\\\n\\\\n**Epinephrine**:\\\\n- Used if norepinephrine inadequate\\\\n- More potent but arrhythmia risk\\\\n\\\\n**Phenylephrine**:\\\\n- Pure α agonist\\\\n- Raises BP but reduces CO; second-line\\\\n\\\\n**Vasopressin**:\\\\n- Adjunctive agent\\\\n- Limited benefit alone\\\\n\\\\n## Key Mortality Data\\\\n\\\\n**Septic shock**:\\\\n- 30-50% mortality despite treatment\\\\n- Delayed antibiotics (each hour delay = 7-8% mortality increase)\\\\n- Early recognition and aggressive resuscitation critical\\\\n\\\\n**Cardiogenic shock from MI**:\\\\n- 50-80% in-hospital mortality\\\\n- PCI for CAD significantly improves outcomes\\\\n\\\\n**Hypovolemic (trauma)**:\\\\n- >90% if rapidly treated\\\\n- Damage control resuscitation (restrictive fluids) improves outcomes\\\\n\\\\n**Anaphylaxis**:\\\\n- >90% if epinephrine given promptly\\\\n- Death from airway obstruction or cardiovascular collapse,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Shock CO/SVR patterns: Hypovolemic & Cardiogenic = ↓CO, ↑SVR; Septic & Anaphylactic = ↑/normal CO, ↓SVR\\\\\\\",\\\\n            explanation: \\\\\\\"Hemodynamic pattern differentiation\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Septic shock: 1-hour bundle = Lactate, Blood cultures, Broad Antibiotics, 30 mL/kg fluids, +/- Vasopressors\\\\\\\",\\\\n            explanation: \\\\\\\"Critical management sequence\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Four shock types: Hypovolemic (volume), Cardiogenic (pump), Distributive/Septic (pipes), Obstructive (blockage)\\\\\\\",\\\\n          \\\\\\\"Septic shock: Most common in ICU; requires blood cultures → antibiotics within 1 hour → aggressive resuscitation\\\\\\\",\\\\n          \\\\\\\"Anaphylaxis: Epinephrine IM 0.3-0.5 mg FIRST (not IV); then airway, fluids, H1/H2 blockers\\\\\\\",\\\\n          \\\\\\\"Hemodynamic patterns guide therapy: Hypovolemic/Cardiogenic have ↑SVR; Septic/Anaphylactic have ↓SVR\\\\\\\",\\\\n          \\\\\\\"Lactate >4 indicates tissue hypoxia; >10% reduction in 3 hours = good response; persistent elevation = inadequate resuscitation\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          {\\\\n            book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\",\\\\n            chapter: \\\\\\\"Ch 265\\\\\\\",\\\\n            edition: \\\\\\\"21st\\\\\\\"\\\\n          }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"shock-types-management-recall\\\\\\\",\\\\n        title: \\\\\\\"Shock: Types and Management - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"Self-assessment Q&A covering shock classification, pathophysiology, management priorities, and clinical decision-making.\\\\\\\",\\\\n        contentMd: ``# Active Recall Q&A\\\\n\\\\n**Q1: Define shock and explain why tissue damage occurs.**\\\\n> Shock is inadequate tissue perfusion relative to metabolic demand. Tissue damage occurs because: (1) Hypoxia forces cells to anaerobic metabolism → lactate accumulation → acidosis, (2) ATP production drops (anaerobic << aerobic), (3) Na-K-ATPase pump fails → cell swelling → death.\\\\n\\\\n**Q2: Classify hypovolemic shock by blood loss percentage and describe Class III features.**\\\\n> Class I: <15% (HR <100, normal BP); Class II: 15-30% (HR 100-120, mild BP drop); Class III: 30-40% (HR >120, SBP dropping, altered mental status); Class IV: >40% (HR >140, SBP undetectable, near-death). Class III/IV need massive transfusion protocol.\\\\n\\\\n**Q3: Differentiate cardiogenic shock from septic shock by hemodynamic pattern.**\\\\n> Cardiogenic: ↓ CO, ↑ SVR, ↑ PCWP (high pulmonary pressure from backed-up blood). Septic: ↑/normal CO (early), ↓ SVR (vasodilation), ↓ PCWP (low preload from fluid leak). Opposite SVR patterns → different treatments.\\\\n\\\\n**Q4: What are compensatory mechanisms in early shock and why do they eventually fail?**\\\\n> Mechanisms: (1) Sympathetic activation (tachycardia, vasoconstriction), (2) RAAS (fluid retention), (3) Fluid shifts from interstitium. They fail because: Continued shock → tissue hypoxia → metabolic acidosis → vasodilation worsens despite sympathetic stimulation (reflex failure) → progressive organ failure.\\\\n\\\\n**Q5: Septic shock management: What are the components of the 1-hour bundle?**\\\\n> (1) Lactate measurement (prognostic), (2) Blood cultures BEFORE antibiotics, (3) Broad-spectrum antibiotics, (4) 30 mL/kg isotonic crystalloid IV, (5) Vasopressors (norepinephrine) if hypotensive after fluids. Each hour delay = 7-8% mortality increase.\\\\n\\\\n**Q6: Why is epinephrine IM preferred over IV in anaphylaxis?**\\\\n> IM epinephrine is safer; IV carries risk of arrhythmias, myocardial ischemia. IM absorption into thigh muscle is reliable and rapid (peak 5-15 min). IV reserved if trained in acute cardiology/resuscitation. IM location: lateral thigh (better absorption than arm/gluteal).\\\\n\\\\n**Q7: Explain cardio-pulmonary compromise in cardiogenic shock: Why does elevated PCWP cause respiratory distress?**\\\\n> High PCWP (left atrial pressure elevated) → blood backs up into pulmonary veins → increased capillary hydrostatic pressure → fluid leaks into alveoli → pulmonary edema → hypoxemia → respiratory distress. Unlike hypovolemic (low pressure), cardiogenic has dual problem: low CO (shock) + high pressure (edema).\\\\n\\\\n**Q8: What is DIC in shock and why does it develop?**\\\\n> DIC (Disseminated Intravascular Coagulation) develops because: Tissue hypoxia → endothelial damage → tissue factor release → extrinsic pathway activation → excessive thrombin → fibrin deposition in microvasculature + consumption of platelets/factors. Paradoxical: Thrombosis (microthrombi) + bleeding tendency (consumption).\\\\n\\\\n**Q9: Cardiac tamponade presents as shock; what is Beck's triad and how is it treated?**\\\\n> Beck's triad: JVD (elevated venous pressure), Muffled heart sounds, Hypotension. Mechanism: Pericardial fluid prevents diastolic filling → preload drops → CO drops. Treatment: Pericardiocentesis (needle drainage) first (life-saving); IV fluids meanwhile; surgical drainage for definitive management.\\\\n\\\\n**Q10: Interpret lactate trends: Why is lactate >4 concerning and what does >10% reduction in 3 hours mean?**\\\\n> Lactate >4 indicates tissue hypoxia (anaerobic metabolism). >10% reduction in 3 hours indicates adequate resuscitation and tissue perfusion restoration. Persistent lactate elevation despite aggressive treatment = inadequate perfusion still OR developing organ failure. Lactate clearance more prognostic than absolute value.\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\"\""
-}
-}
-];
+        summary: "Overview of shock definition, classification into four major types, basic hemodynamic parameters, and oxygen delivery concepts essential for understanding circulatory failure.",
+        contentMd: `# Shock: Types & Management - Foundation
+
+## Definition
+Shock is a life-threatening condition of **circulatory failure** resulting in inadequate tissue perfusion and cellular hypoxia. If untreated, it progresses to irreversible organ damage and death.
+
+## Hemodynamic Basics
+- **Cardiac Output (CO)** = Stroke Volume (SV) x Heart Rate (HR)
+- **Mean Arterial Pressure (MAP)** = CO x Systemic Vascular Resistance (SVR)
+- **Oxygen Delivery (DO2)** = CO x CaO2 x 10 (where CaO2 = 1.34 x Hb x SaO2)
+- Normal MAP: 70-105 mmHg; MAP <65 mmHg = inadequate organ perfusion
+- Normal CO: 4-8 L/min; CI (Cardiac Index) = CO/BSA, normal 2.5-4.0 L/min/m2
+
+## Classification of Shock
+
+### 1. Hypovolemic Shock
+- **Cause**: Reduced circulating volume
+- Hemorrhagic: trauma, GI bleeding, obstetric hemorrhage
+- Non-hemorrhagic: dehydration, burns, pancreatitis (third-spacing)
+- Most common type of shock in India (trauma, diarrheal diseases)
+
+### 2. Cardiogenic Shock
+- **Cause**: Pump failure - heart cannot generate adequate CO
+- Acute MI (most common cause), acute myocarditis, valvular emergencies
+- Arrhythmias (severe bradycardia/tachycardia), cardiac tamponade
+- Mortality 40-50% even with treatment
+
+### 3. Distributive Shock
+- **Cause**: Pathological vasodilation with maldistribution of blood flow
+- **Septic shock**: most common subtype (50% of ICU shock cases)
+- Anaphylactic shock: IgE-mediated, rapid onset
+- Neurogenic shock: spinal cord injury above T6
+- Adrenal crisis: acute adrenal insufficiency
+
+### 4. Obstructive Shock
+- **Cause**: Mechanical obstruction to blood flow
+- Tension pneumothorax, cardiac tamponade
+- Massive pulmonary embolism
+- Constrictive pericarditis (chronic)
+
+## Hemodynamic Profiles
+
+| Type | CO | SVR | CVP/PCWP | SvO2 |
+|------|-----|------|----------|------|
+| Hypovolemic | Low | High | Low | Low |
+| Cardiogenic | Low | High | High | Low |
+| Distributive (septic early) | High | Low | Low-Normal | High |
+| Distributive (septic late) | Low | Low | Low | Low |
+| Obstructive | Low | High | Variable | Low |
+
+## Stages of Shock
+1. **Compensated (Pre-shock)**: Tachycardia, vasoconstriction maintain BP; subtle signs only
+2. **Decompensated**: Hypotension, oliguria, altered sensorium
+3. **Irreversible**: Multiorgan failure, refractory to treatment, cellular death`,
+        mnemonics: [
+          { text: "SHOCK types = HCDO: Hypovolemic, Cardiogenic, Distributive, Obstructive", explanation: "Four major classifications of shock" },
+          { text: "MAP = CO x SVR (like Ohm's law: V = I x R)", explanation: "Mean arterial pressure equals cardiac output times systemic vascular resistance" },
+          { text: "Distributive = SANA: Septic, Anaphylactic, Neurogenic, Adrenal", explanation: "Four subtypes of distributive shock" }
+        ],
+        keyPoints: [
+          "Shock is defined by inadequate tissue perfusion, NOT just low blood pressure",
+          "MAP <65 mmHg generally indicates inadequate organ perfusion",
+          "Hypovolemic shock is the most common type in India (trauma, diarrheal diseases)",
+          "Septic shock is the most common type in ICU settings worldwide",
+          "Cardiogenic shock has the highest mortality (~40-50%) among shock types",
+          "Early (warm) septic shock shows HIGH CO and LOW SVR; late septic shock shows LOW CO"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "298: Approach to the Patient with Shock", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "Critical Care: Shock", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "9: Critical Care Medicine", edition: "24th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "shock-layer-2-mechanism",
+        title: "Shock: Types & Management - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Detailed pathophysiology of each shock type including compensatory mechanisms, cellular injury pathways, sepsis cascade, anaphylaxis mediators, and progression to multiorgan dysfunction.",
+        contentMd: `# Shock: Types & Management - Mechanism
+
+## Compensatory Mechanisms in Shock
+
+### Baroreceptor Response
+- Carotid sinus and aortic arch detect decreased stretch
+- Sympathetic activation → catecholamine surge
+- Effects: tachycardia, vasoconstriction, increased contractility
+- Redistributes blood from skin, gut, kidneys → heart, brain
+
+### Hormonal Response
+- **RAAS activation**: Renin → Angiotensin II (vasoconstriction) → Aldosterone (Na+/water retention)
+- **ADH release**: Water retention, vasoconstriction (V1 receptors)
+- **Cortisol**: Maintains vascular tone, permissive effect on catecholamines
+- **Glucagon**: Hepatic glycogenolysis → hyperglycemia
+
+### Microcirculatory Changes
+- Precapillary sphincter constriction → reduced capillary flow
+- Fluid shifts from interstitial to intravascular (transcapillary refill)
+- Duration-dependent: prolonged shock → sphincter fatigue → pooling
+
+## Septic Shock Pathophysiology (Most Complex)
+
+### Inflammatory Cascade
+1. Pathogen triggers (PAMPs) activate innate immunity via TLRs
+2. Macrophage/monocyte activation → cytokine storm
+3. **Pro-inflammatory**: TNF-alpha, IL-1, IL-6, IL-8
+4. **Anti-inflammatory**: IL-10, IL-4 (can cause immunoparalysis)
+5. Complement activation (C3a, C5a) → further inflammation
+
+### Vasodilation Mechanism
+- iNOS induction → excessive NO production → profound vasodilation
+- NO activates guanylate cyclase → cGMP → smooth muscle relaxation
+- Resistant to vasopressors (catecholamine hyporesponsiveness)
+
+### Endothelial Dysfunction
+- Glycocalyx degradation → increased permeability → edema
+- Tissue factor expression → DIC activation
+- Loss of endothelial barrier → capillary leak syndrome
+
+### Myocardial Depression in Sepsis
+- Circulating myocardial depressant factors (TNF-alpha, IL-1)
+- Mitochondrial dysfunction → bioenergetic failure
+- Both systolic and diastolic dysfunction
+- Usually reversible if patient survives
+
+## Hypovolemic Shock - Hemorrhage Classes (ATLS)
+
+| Class | Blood Loss | HR | BP | Mental Status |
+|-------|-----------|----|----|---------------|
+| I | <750 mL (<15%) | <100 | Normal | Normal/anxious |
+| II | 750-1500 mL (15-30%) | 100-120 | Normal | Anxious |
+| III | 1500-2000 mL (30-40%) | 120-140 | Decreased | Confused |
+| IV | >2000 mL (>40%) | >140 | Very low | Lethargic/obtunded |
+
+## Anaphylactic Shock Mechanism
+- IgE-mediated (Type I hypersensitivity) → mast cell/basophil degranulation
+- Histamine, tryptase, leukotrienes, prostaglandins released
+- Effects: vasodilation, bronchospasm, increased permeability, laryngeal edema
+- Rapid onset (minutes) → can be fatal within 30 minutes
+
+## Cellular Injury in Shock
+1. Inadequate O2 delivery → anaerobic metabolism → lactic acidosis
+2. ATP depletion → Na+/K+ ATPase failure → cell swelling
+3. Calcium influx → activates phospholipases, proteases
+4. Mitochondrial dysfunction → cytochrome c release → apoptosis
+5. Lysosomal rupture → autodigestion
+6. Ischemia-reperfusion injury: ROS generation during resuscitation
+
+## Multiorgan Dysfunction Syndrome (MODS)
+- Gut barrier failure → bacterial translocation → perpetuates sepsis
+- Acute kidney injury → oliguria, uremia
+- ARDS → refractory hypoxemia
+- Hepatic dysfunction → coagulopathy, hypoglycemia
+- DIC → consumption coagulopathy + microthrombosis
+- Encephalopathy → altered sensorium`,
+        mnemonics: [
+          { text: "Sepsis mediators = TNI-168: TNF-alpha, NO (iNOS), IL-1, IL-6, IL-8", explanation: "Key inflammatory mediators in septic shock cascade" },
+          { text: "ATLS hemorrhage: 15-30-40 rule for class boundaries", explanation: "Class I <15%, Class II 15-30%, Class III 30-40%, Class IV >40% blood volume loss" },
+          { text: "Cell death in shock = LACMA: Lactic acidosis, ATP depletion, Calcium influx, Mitochondrial failure, Autodigestion", explanation: "Sequence of cellular injury in prolonged shock" }
+        ],
+        keyPoints: [
+          "Baroreceptor-mediated sympathetic activation is the earliest compensatory mechanism",
+          "In septic shock, excessive NO production via iNOS causes vasopressor-resistant vasodilation",
+          "ATLS Class III hemorrhage (30-40% loss) is the first class with hypotension",
+          "Anaphylaxis is IgE-mediated mast cell degranulation with histamine release",
+          "Gut bacterial translocation in prolonged shock perpetuates the inflammatory cycle",
+          "Myocardial depression in sepsis is mediated by TNF-alpha and IL-1 but is usually reversible"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "298: Approach to the Patient with Shock", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "Critical Care: Shock", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "9: Critical Care Medicine", edition: "24th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "shock-layer-3-clinical",
+        title: "Shock: Types & Management - Clinical Application",
+        estimatedMinutes: 25,
+        summary: "Clinical recognition, diagnostic workup, and evidence-based management of each shock type including fluid resuscitation, vasopressors, and the Surviving Sepsis Campaign guidelines.",
+        contentMd: `# Shock: Types & Management - Clinical Application
+
+## Clinical Recognition
+
+### Common Signs Across All Types
+- Hypotension (SBP <90 or MAP <65 mmHg)
+- Tachycardia (HR >100, may be absent in neurogenic/beta-blocker use)
+- Tachypnea, altered mental status
+- Oliguria (<0.5 mL/kg/hr)
+- Cool, clammy extremities (except warm shock in early sepsis)
+- Mottled skin, delayed capillary refill (>3 seconds)
+
+### Type-Specific Features
+- **Hypovolemic**: Flat neck veins, dry mucosa, postural hypotension, obvious bleeding source
+- **Cardiogenic**: Elevated JVP, S3 gallop, pulmonary crackles, cold extremities
+- **Septic**: Warm extremities (early), fever/hypothermia, identifiable source of infection
+- **Anaphylactic**: Urticaria, angioedema, stridor, wheezing, known allergen exposure
+- **Neurogenic**: Bradycardia + hypotension (loss of sympathetic tone), warm dry skin below injury level
+- **Obstructive**: Distended neck veins, muffled heart sounds (tamponade), unilateral absent breath sounds (tension pneumo)
+
+## Diagnostic Workup
+- **Labs**: CBC, lactate (>2 mmol/L = tissue hypoperfusion), ABG, renal/liver function, coagulation, blood cultures (x2 before antibiotics in sepsis)
+- **Lactate**: Single most useful biomarker; serial measurements guide resuscitation
+- **Imaging**: CXR, ECHO (bedside), CT as indicated
+- **Bedside ECHO (RUSH exam)**: Pump (LV function), Tank (IVC, fluid status), Pipes (DVT, PE)
+- **Invasive monitoring**: Arterial line, CVP, PA catheter (selected cases)
+
+## Management by Type
+
+### Hypovolemic Shock
+- **Fluid resuscitation**: Crystalloids first (Ringer's Lactate preferred over NS)
+- Hemorrhagic: Balanced resuscitation, 1:1:1 ratio (PRBC:FFP:Platelets) for massive transfusion
+- Target MAP >65 mmHg, UOP >0.5 mL/kg/hr
+- Permissive hypotension (SBP 80-90) in uncontrolled hemorrhage until surgical control
+- Indian context: Dengue hemorrhagic fever, obstetric hemorrhage, road traffic accidents
+
+### Cardiogenic Shock
+- Treat underlying cause (PCI for STEMI, pericardiocentesis for tamponade)
+- Inotropes: Dobutamine first-line, milrinone if on beta-blockers
+- Vasopressors: Norepinephrine if MAP remains low despite inotropes
+- IABP (Intra-Aortic Balloon Pump) for mechanical support
+- Avoid excessive fluids (worsens pulmonary edema)
+
+### Septic Shock - Surviving Sepsis Campaign (Hour-1 Bundle)
+1. Measure lactate (re-measure if >2 mmol/L)
+2. Blood cultures before antibiotics
+3. Broad-spectrum IV antibiotics within 1 hour
+4. 30 mL/kg crystalloid bolus for hypotension or lactate >4
+5. Vasopressors for MAP <65 after fluid resuscitation
+- **Norepinephrine** = first-line vasopressor
+- Add **vasopressin** (0.03 U/min) as second agent
+- Add **epinephrine** if MAP target not met
+- **Hydrocortisone** 200 mg/day if vasopressor-refractory (stress-dose steroids)
+- Source control within 6-12 hours (drainage, debridement, device removal)
+
+### Anaphylactic Shock
+- **Epinephrine IM** 0.3-0.5 mg (1:1000) into anterolateral thigh - FIRST-LINE
+- Repeat every 5-15 minutes if needed
+- IV fluids (1-2L crystalloid bolus)
+- Adjuncts: H1 blocker (chlorpheniramine), H2 blocker (ranitidine), hydrocortisone 200 mg IV
+- Bronchodilators (salbutamol nebulization) for bronchospasm
+- Observe for biphasic reaction (4-6 hours minimum)
+
+### Neurogenic Shock
+- IV fluids first; if refractory → vasopressors (norepinephrine/phenylephrine)
+- Atropine for symptomatic bradycardia
+- Spinal immobilization, treat underlying cord injury
+
+## Vasopressor Comparison
+
+| Drug | Alpha | Beta-1 | Dose Range | Primary Use |
+|------|-------|--------|------------|-------------|
+| Norepinephrine | +++ | ++ | 0.1-2 mcg/kg/min | First-line septic shock |
+| Epinephrine | +++ | +++ | 0.1-1 mcg/kg/min | Anaphylaxis, refractory shock |
+| Vasopressin | V1 | - | 0.03-0.04 U/min | Adjunct in septic shock |
+| Dopamine | +/++ | ++ | 2-20 mcg/kg/min | Second-line (arrhythmia risk) |
+| Dobutamine | + | +++ | 2-20 mcg/kg/min | Cardiogenic shock (inotrope) |
+| Phenylephrine | +++ | - | 0.1-0.5 mcg/kg/min | Neurogenic shock |`,
+        mnemonics: [
+          { text: "Sepsis Hour-1 Bundle = LABS-V: Lactate, Antibiotics, Blood cultures, Saline (30mL/kg), Vasopressors", explanation: "Five components of the Surviving Sepsis Campaign Hour-1 bundle" },
+          { text: "Anaphylaxis = EPI FIRST: Epinephrine IM, Fluids IV, Remove allergen, Steroids, Treatment observation", explanation: "Management priorities in anaphylactic shock" },
+          { text: "Vasopressor order in sepsis: NorEpi → Vasopressin → Epinephrine → Hydrocortisone", explanation: "Stepwise escalation of vasopressor support per SSC guidelines" }
+        ],
+        keyPoints: [
+          "Norepinephrine is the first-line vasopressor for septic shock per SSC guidelines",
+          "IM epinephrine (1:1000) into anterolateral thigh is first-line for anaphylaxis",
+          "Lactate is the single most useful biomarker for assessing tissue perfusion in shock",
+          "Hour-1 bundle: lactate, blood cultures, antibiotics, fluids, vasopressors",
+          "Bedside ECHO (RUSH exam) helps differentiate shock types rapidly",
+          "Permissive hypotension (SBP 80-90) used in uncontrolled hemorrhagic shock"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "298: Approach to the Patient with Shock", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "Critical Care: Shock", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "9: Critical Care Medicine", edition: "24th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "shock-layer-4-exam",
+        title: "Shock: Types & Management - Exam Preparation",
+        estimatedMinutes: 20,
+        summary: "High-yield NEXT exam topics covering hemodynamic profiles, vasopressor choices, clinical vignettes, and common exam question patterns for shock management.",
+        contentMd: `# Shock: Types & Management - Exam Preparation
+
+## Hemodynamic Profile Recognition (Most Asked)
+
+| Parameter | Hypovolemic | Cardiogenic | Septic (Early) | Septic (Late) | Obstructive |
+|-----------|-------------|-------------|----------------|---------------|-------------|
+| CO/CI | Low | Low | High | Low | Low |
+| SVR | High | High | Low | High | High |
+| CVP | Low | High | Low/Normal | Variable | High |
+| PCWP | Low | High | Low | Variable | Variable |
+| SvO2 | Low | Low | High | Low | Low |
+
+**Key rule**: If CO low + SVR high + CVP low → Hypovolemic. If CO low + SVR high + CVP high → Cardiogenic.
+
+## Clinical Vignettes - NEXT Pattern
+
+### Vignette 1: Identifying Shock Type
+"45-year-old man in RTA, BP 80/50, HR 130, cold extremities, flat JVP, estimated blood loss 1.5L. What type of shock?"
+→ **Hypovolemic (Class III hemorrhage)** - low BP + tachycardia + flat JVP + trauma
+
+### Vignette 2: Vasopressor Choice
+"60-year-old with UTI, fever 39.5C, BP 75/40, HR 115, warm extremities. After 2L NS, MAP still 58. What is the first vasopressor?"
+→ **Norepinephrine** - septic shock refractory to fluids, NE is first-line per SSC
+
+### Vignette 3: Anaphylaxis Management
+"30-year-old develops urticaria, stridor, BP 70/40 within 10 minutes of IV ceftriaxone. What is the IMMEDIATE treatment?"
+→ **IM Epinephrine 0.5 mg (1:1000)** into anterolateral thigh. NOT IV antihistamines first.
+
+### Vignette 4: Cardiogenic Shock
+"55-year-old with anterior STEMI, BP 80/60, HR 110, elevated JVP, bilateral crackles, S3. What is the best initial management?"
+→ **Emergency PCI** + Norepinephrine (MAP support) + Dobutamine (inotropic support). Avoid excessive IV fluids.
+
+### Vignette 5: Obstructive Shock
+"22-year-old with stab wound to left chest, BP 70/50, HR 140, distended neck veins, muffled heart sounds. Diagnosis and immediate treatment?"
+→ **Cardiac tamponade** (Beck's triad). Immediate **pericardiocentesis** (needle aspiration of pericardial fluid).
+
+### Vignette 6: Refractory Septic Shock
+"Patient on norepinephrine 0.5 mcg/kg/min + vasopressin 0.03 U/min, MAP still 55. What to add next?"
+→ **Hydrocortisone 50 mg IV q6h** (stress-dose steroids for vasopressor-refractory septic shock)
+
+## Common Exam Traps
+1. **Neurogenic shock has BRADYCARDIA** (not tachycardia) — loss of sympathetic tone
+2. **Dopamine increases arrhythmia risk** — NE preferred as first-line vasopressor
+3. **Epinephrine for anaphylaxis is IM (1:1000)**, NOT IV (1:10,000 is for cardiac arrest only)
+4. **Beck's triad** (hypotension, JVD, muffled heart sounds) = tamponade, NOT tension pneumothorax
+5. **Tension pneumothorax**: needle decompression BEFORE chest X-ray
+6. **Warm shock** (early septic) can have NORMAL or HIGH cardiac output
+7. **Lactate >4 mmol/L** mandates fluid resuscitation even without hypotension
+
+## Quick Reference Values
+- MAP target: >65 mmHg
+- UOP target: >0.5 mL/kg/hr
+- Lactate normal: <2 mmol/L; severe: >4 mmol/L
+- CVP target: 8-12 mmHg (12-15 if ventilated)
+- ScvO2 target: >70%
+- Class III hemorrhage: 30-40% blood loss = first class with hypotension`,
+        mnemonics: [
+          { text: "Beck's Triad = 3 Ds: Distended veins, Diminished heart sounds, Decreased BP", explanation: "Classic triad of cardiac tamponade" },
+          { text: "Neurogenic shock = BRAD + HYPO: BRADycardia + HYPOtension (unlike other shock types)", explanation: "Unique hemodynamic pattern in neurogenic shock due to loss of sympathetic tone" },
+          { text: "Shock lactate rule: 2-4-dead: >2 tissue hypoperfusion, >4 mandatory fluids, persistent = bad prognosis", explanation: "Lactate thresholds for clinical decision-making in shock" }
+        ],
+        keyPoints: [
+          "Neurogenic shock is unique: bradycardia + hypotension (all other types have tachycardia)",
+          "Norepinephrine is preferred over dopamine as first-line vasopressor (less arrhythmia risk)",
+          "Beck's triad (JVD, muffled sounds, hypotension) is pathognomonic for cardiac tamponade",
+          "Epinephrine for anaphylaxis: IM 1:1000 (0.5 mg); IV 1:10,000 is only for cardiac arrest",
+          "Tension pneumothorax: needle decompression is a clinical diagnosis — do NOT wait for CXR"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "298: Approach to the Patient with Shock", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "Critical Care: Shock", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "9: Critical Care Medicine", edition: "24th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "shock-layer-5-active-recall",
+        title: "Shock: Types & Management - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Flashcard-style active recall covering shock classification, hemodynamics, vasopressor pharmacology, and clinical management protocols.",
+        contentMd: `# Shock: Types & Management - Active Recall
+
+## Flashcard Q&A
+
+**Q1:** What are the four major types of shock?
+**A1:** Hypovolemic (volume loss), Cardiogenic (pump failure), Distributive (vasodilation — septic, anaphylactic, neurogenic, adrenal), and Obstructive (mechanical obstruction — tamponade, tension pneumo, massive PE).
+
+**Q2:** What is the hemodynamic profile of early septic shock?
+**A2:** HIGH cardiac output, LOW SVR (vasodilation from NO), LOW-normal CVP/PCWP, HIGH SvO2 (poor oxygen extraction). This is "warm shock" with warm extremities and bounding pulses despite hypotension.
+
+**Q3:** What is the first-line vasopressor for septic shock and why?
+**A3:** Norepinephrine. It has strong alpha-1 (vasoconstriction) and moderate beta-1 (cardiac output) effects. Preferred over dopamine because of lower arrhythmia risk (SOAP II trial).
+
+**Q4:** What is the Hour-1 bundle for sepsis management?
+**A4:** 1) Measure lactate (repeat if >2), 2) Blood cultures before antibiotics, 3) Broad-spectrum IV antibiotics within 1 hour, 4) 30 mL/kg crystalloid for hypotension or lactate >4, 5) Vasopressors if MAP <65 after fluids.
+
+**Q5:** What is the immediate treatment for anaphylactic shock?
+**A5:** IM Epinephrine 0.3-0.5 mg of 1:1000 concentration into anterolateral thigh. Repeat every 5-15 minutes. Also: IV fluids, remove allergen, H1/H2 blockers, and steroids as adjuncts. Observe 4-6 hours for biphasic reaction.
+
+**Q6:** How do you differentiate hypovolemic from cardiogenic shock clinically?
+**A6:** Both have low CO and high SVR. Key difference: Hypovolemic has LOW CVP/JVP (flat neck veins, dry mucosa) while Cardiogenic has HIGH CVP/JVP (distended neck veins, pulmonary crackles, S3 gallop).
+
+**Q7:** What are the ATLS hemorrhage classes and when does hypotension first appear?
+**A7:** Class I: <15% (normal vitals), Class II: 15-30% (tachycardia, normal BP), Class III: 30-40% (FIRST with hypotension, confusion), Class IV: >40% (severe hypotension, lethargy). Hypotension first appears at Class III.
+
+**Q8:** What is Beck's triad and what does it indicate?
+**A8:** Beck's triad = hypotension + distended neck veins (JVD) + muffled heart sounds. It indicates cardiac tamponade. Treatment: emergency pericardiocentesis.
+
+**Q9:** Why is neurogenic shock unique hemodynamically?
+**A9:** It presents with BRADYCARDIA + hypotension (all other shock types have tachycardia). This is because spinal cord injury above T6 causes loss of sympathetic tone with unopposed vagal (parasympathetic) activity. Treatment: IV fluids, then vasopressors + atropine for bradycardia.
+
+**Q10:** What is the role of lactate in shock management?
+**A10:** Lactate is the best biomarker for tissue hypoperfusion. Normal <2 mmol/L. Levels >2 indicate tissue hypoxia. Levels >4 mandate aggressive fluid resuscitation even without hypotension. Serial lactate clearance (>10% per 2 hours) indicates adequate resuscitation.
+
+**Q11:** When are stress-dose steroids indicated in septic shock?
+**A11:** Hydrocortisone 200 mg/day (50 mg IV q6h) is indicated in vasopressor-refractory septic shock (when adequate MAP cannot be maintained despite norepinephrine + vasopressin). Addresses relative adrenal insufficiency and restores vascular catecholamine sensitivity.
+
+**Q12:** What is the massive transfusion protocol ratio?
+**A12:** 1:1:1 ratio of PRBC:FFP:Platelets. Used when >10 units PRBC expected in 24 hours or >4 units in 1 hour. Balanced resuscitation prevents dilutional coagulopathy and the "lethal triad" (hypothermia, acidosis, coagulopathy).
+
+**Q13:** What is permissive hypotension and when is it used?
+**A13:** Permissive hypotension targets SBP 80-90 mmHg in uncontrolled hemorrhagic shock (before surgical hemostasis). Rationale: aggressive fluid resuscitation before bleeding control can worsen hemorrhage by disrupting clots and diluting clotting factors.
+
+**Q14:** What is the RUSH exam in shock assessment?
+**A14:** Rapid Ultrasound in Shock and Hypotension. Three components: PUMP (cardiac function - LV contractility, pericardial effusion), TANK (volume status - IVC diameter and collapsibility), PIPES (DVT assessment, aorta). Helps rapidly differentiate shock types at bedside.
+
+**Q15:** What vasopressor is used as second-line adjunct in septic shock?
+**A15:** Vasopressin 0.03-0.04 U/min (fixed dose, not titrated). Acts on V1 receptors causing vasoconstriction independent of catecholamine pathway. Added when norepinephrine alone is insufficient (VASST trial). Helps reduce norepinephrine dose.`,
+        mnemonics: [
+          { text: "Lethal Triad of Trauma = HAC: Hypothermia, Acidosis, Coagulopathy", explanation: "Three mutually reinforcing factors that worsen hemorrhagic shock outcomes" },
+          { text: "RUSH = Pump-Tank-Pipes", explanation: "Bedside echo assessment: Pump (heart), Tank (IVC/volume), Pipes (DVT/aorta)" }
+        ],
+        keyPoints: [
+          "Shock is inadequate tissue perfusion, not just low BP — lactate is the key biomarker",
+          "Norepinephrine is first-line vasopressor for septic shock (SOAP II trial)",
+          "IM epinephrine 1:1000 is the immediate first-line treatment for anaphylaxis",
+          "Hypotension first appears at ATLS Class III hemorrhage (30-40% blood loss)",
+          "Beck's triad (JVD + muffled sounds + hypotension) = cardiac tamponade",
+          "RUSH exam (Pump-Tank-Pipes) rapidly differentiates shock types at bedside"
+        ],
+        textbookRefs: [
+          { book: "Harrison's Principles of Internal Medicine", chapter: "298: Approach to the Patient with Shock", edition: "21st" },
+          { book: "API Textbook of Medicine", chapter: "Critical Care: Shock", edition: "11th" },
+          { book: "Davidson's Principles and Practice of Medicine", chapter: "9: Critical Care Medicine", edition: "24th" }
+        ]
+      }
+    ]
+  }
 ];
