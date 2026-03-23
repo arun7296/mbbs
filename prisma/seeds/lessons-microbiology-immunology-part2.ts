@@ -1,20 +1,458 @@
-export const microbiologyImmunologyLessonsPart2 = [
-  // MI-MOD-02-TOP-04: Hypersensitivity Reactions
+import type { TopicLessons } from "./content-loader";
+
+export const microbiologyImmunologyLessonsPart2: TopicLessons[] = [
   {
     topicCode: "MI-MOD-02-TOP-04",
     layers: [
       {
         layer: 1,
-        slug: "hypersensitivity-foundation",
+        slug: "hypersensitivity-reactions-layer-1-foundation",
         title: "Hypersensitivity Reactions - Foundation",
+        estimatedMinutes: 20,
+        summary: "Classification of Type I-IV hypersensitivity, mechanisms, timing, clinical examples, India context.",
+        contentMd: `# Hypersensitivity Reactions - Foundation
+
+## Definition
+- **Hypersensitivity**: Excessive immune response to harmless or low-dose antigen
+- **Differs from**: Immunity (appropriate response to pathogen)
+- **Result**: Immune-mediated tissue damage
+- **Gell & Coombs classification**: Types I (immediate), II (cytotoxic), III (immune complex), IV (delayed)
+
+## Type I Hypersensitivity (Immediate, IgE-Mediated)
+
+### Mechanism (Two-Phase)
+1. **Sensitization** (first exposure): Antigen → Th2 response → IgE production
+2. **IgE binding**: Mast cells/basophils express high-affinity FcεRI
+3. **Re-exposure**: Antigen cross-links IgE on mast cells → degranulation
+4. **Immediate release**: Histamine, tryptase, leukotrienes (minutes)
+
+### Timeline
+- **Immediate phase**: Minutes (histamine-mediated)
+- **Late phase**: 4-12 hours (leukotriene, prostaglandin-mediated)
+
+### Clinical Manifestations
+- **Local**: Urticaria (wheals, itching), angioedema, rhinitis, conjunctivitis
+- **Respiratory**: Bronchospasm, wheezing, laryngeal edema
+- **GI**: Vomiting, diarrhea, abdominal cramps
+- **Systemic**: Anaphylaxis (cardiovascular collapse, death within minutes)
+
+### Common Allergens
+- **Foods**: Peanuts, shellfish, milk, eggs (IgE-mediated)
+- **Drugs**: Penicillin (IgE-mediated), NSAIDs (pseudoallergy)
+- **Venom**: Bee, wasp stings
+- **Pollen**: Seasonal rhinitis
+- **Environmental**: Dust mites, pet dander, latex
+
+## Type II Hypersensitivity (Cytotoxic, IgG/IgM-Mediated)
+
+### Mechanism
+- IgG/IgM bind to cell-surface or tissue-bound antigens
+- **Result**: Antibody-dependent cellular cytotoxicity (ADCC) or complement activation
+
+### Clinical Examples
+- **Hemolytic transfusion reaction**: ABO incompatibility → RBC lysis
+- **Hemolytic disease newborn**: Rh incompatibility, maternal IgG crosses placenta
+- **Drug-induced hemolytic anemia**: Penicillin hapten + antibody → RBC destruction
+- **Goodpasture syndrome**: Anti-basement membrane antibodies → pulmonary hemorrhage
+- **Graves' disease**: TSH receptor antibodies → thyroid stimulation (autoimmunity)
+
+## Type III Hypersensitivity (Immune Complex, IgG/IgM-Mediated)
+
+### Mechanism
+- Antigen-antibody complexes deposit in tissues
+- **Size matters**: Large complexes cleared; small complexes (antigen excess) deposit
+- **Result**: Complement activation → inflammation → tissue damage
+
+### Clinical Examples
+- **Serum sickness**: Foreign antigen (drug, vaccine) + IgG complex → fever, rash, arthritis
+- **Post-infectious glomerulonephritis**: *Streptococcus pyogenes* antigen + IgG complex → GN
+- **Arthus reaction**: Localized antigen + IgG complex → local vasculitis
+- **SLE**: Auto-antigen + IgG complex deposition → glomerulonephritis, vasculitis
+
+## Type IV Hypersensitivity (Delayed, Cell-Mediated)
+
+### Mechanism
+- **CD8+ T cells**: Direct cytotoxicity (virus-infected, tumor cells)
+- **CD4+ T cells**: Th1 cells produce IFN-gamma → macrophage activation
+- **Kinetics**: 24-72 hours (memory T cells need time to migrate and respond)
+
+### Clinical Examples
+- **Contact dermatitis**: Hapten (urushiol oil poison ivy) → Th1 response → delayed rash
+- **Tuberculin skin test (PPD)**: *Mycobacterium tuberculosis* antigen → Th1 infiltrate (48-72h)
+- **Organ rejection**: Allogeneic MHC → CD8+ CTL cytotoxicity
+- **Graft-versus-host disease (GVHD)**: Donor T cells attack host tissue`,
+        mnemonics: [
+          {
+            text: "Type I = IgE (Immediate), II = IgG/IgM (Cytotoxic), III = Immune Complex, IV = T cells (Delayed)",
+            explanation: "Gell-Coombs classification by mechanism and Ig type"
+          },
+          {
+            text: "I=Minutes, IV=Hours to Days",
+            explanation: "IgE immediate vs T cell delayed timing"
+          }
+        ],
+        keyPoints: [
+          "Type I: IgE-mast cell degranulation; immediate (minutes), anaphylaxis risk",
+          "Type II: IgG/IgM cytotoxicity; ADCC or complement lysis",
+          "Type III: Immune complex deposition; glomerulonephritis, vasculitis",
+          "Type IV: T cell-mediated; delayed (24-72h), contact dermatitis, TB test",
+          "Small immune complexes (antigen excess) deposit; large complexes cleared"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker's Textbook of Microbiology", chapter: "Hypersensitivity", edition: "11th" },
+          { book: "Jawetz, Melnick & Adelberg's Medical Microbiology", chapter: "Immune Response", edition: "28th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "hypersensitivity-reactions-layer-2-mechanism",
+        title: "Hypersensitivity Reactions - Mechanism",
         estimatedMinutes: 25,
-        summary: "Classification of hypersensitivity types I-IV, mechanisms, timing, clinical examples.",
-        contentMd: "# Hypersensitivity Reactions - Foundation\n\n## Definition\n- **Hypersensitivity**: Excessive immune response to harmless or low-level antigen\n- **Differs from**: Immunity (appropriate response to pathogen)\n- **Result**: Tissue damage from immune response itself\n\n## Type I Hypersensitivity (Immediate, IgE-Mediated)\n\n### Mechanism (Two-Phase Reaction)\n1. **Sensitization**: Antigen → Th2 response → IgE production\n2. **IgE binding**: Mast cells/basophils express high-affinity FcεRI\n3. **Re-exposure**: Antigen cross-links IgE on mast cells\n4. **Degranulation**: Immediate release of histamine, tryptase, leukotrienes\n\n### Timeline\n- **Immediate phase**: Minutes (histamine, prostaglandins)\n- **Late phase**: 4-12 hours (leukotrienes, cytokines)\n\n### Clinical Manifestations\n- **Local**: Urticaria (itching), angioedema (swelling), rhinitis, conjunctivitis\n- **Respiratory**: Bronchospasm, wheezing, stridor\n- **GI**: Vomiting, diarrhea, abdominal cramps\n- **Systemic**: Anaphylaxis (shock, death within minutes)\n\n### Common Allergens\n- Foods: peanuts, shellfish, milk, eggs\n- Drugs: Penicillin, NSAIDs, ACE inhibitors\n- Venom: Bee, wasp stings\n- Pollen: Seasonal rhinitis\n- Dust mites, pet dander\n\n## Type II Hypersensitivity (Cytotoxic, IgG/IgM-Mediated)\n\n### Mechanism\n- **IgG/IgM** bind to cell-surface or tissue-bound antigens\n- **Result**: Antibody-dependent cellular cytotoxicity (ADCC) via NK cells or complement activation\n\n### Examples\n- **Hemolytic transfusion reaction**: ABO incompatibility → RBC lysis\n- **Hemolytic disease of newborn**: Rh-incompatibility (mother RhD-, baby RhD+)\n- **Drug-induced hemolytic anemia**: Penicillin acts as hapten\n- **Grave's disease**: IgG against TSH receptor → thyroid stimulation (unique!)\n- **Goodpasture syndrome**: IgG against basement membrane → lung/kidney bleeding\n\n### Timeline\n- **Minutes to hours** (complement pathway)\n- **Hours to days** (ADCC via NK cells)\n\n## Type III Hypersensitivity (Immune Complex-Mediated)\n\n### Mechanism\n- **Excess antigen** + IgG → small immune complexes\n- **Complexes deposit** in tissues (not cleared by CR1)\n- **Complement activation** → inflammation (C5a recruitment)\n\n### Examples\n- **Serum sickness**: Foreign antigen (drug, antiserum) → 1-2 weeks delayed\n- **Post-infectious GN**: Streptococcal antigen + IgG → glomeruli\n- **SLE**: Autoantigens + IgG → kidneys, joints, skin\n- **Arthus reaction**: Antigen + IgG in skin → local vasculitis (4 hours)\n\n### Timeline\n- **Delayed**: 1-2 weeks (circulating immune complexes)\n- **Arthus reaction**: 4-10 hours (local tissue complexes)\n\n## Type IV Hypersensitivity (Delayed, Cell-Mediated)\n\n### Mechanism\n- **Th1 cells** recognize antigen on APCs\n- **IFN-gamma** activates macrophages\n- **Cytokines** (TNF-alpha, IL-17) recruit more lymphocytes\n\n### Examples\n- **Contact dermatitis**: Poison ivy (urushiol antigen) → Th1\n- **TB skin test (PPD)**: M. tuberculosis antigen → Th1 induration (48-72h)\n- **Organ transplant rejection**: Allogenic MHC → CD8+ CTLs\n- **Graft-vs-host disease**: Donor T cells attack host tissues\n\n### Timeline\n- **Slow**: 24-72 hours (unlike Type I immediate)\n\n## Comparative Overview\n\n| Type | Mediator | Cells | Timing | Examples |\n|------|----------|-------|--------|----------|\n| I | IgE | Mast cells | Minutes | Anaphylaxis, urticaria |\n| II | IgG/IgM | Complement, NK | Hours-days | Hemolytic anemia, Graves |\n| III | IgG-Ag | Complement | 1-2 weeks | Serum sickness, SLE |\n| IV | Th1 cells | Macrophages, CTLs | 24-72 hours | PPD, contact dermatitis |,\n        mnemonics: [\n          {\n            text: \"Type I = Immediate (IgE), Type IV = Delayed (T cells)\",\n            explanation: \"Fastest (I) to slowest (IV) hypersensitivity.\"\n          },\n          {\n            text: \"I = Immediate IgE, II = cyto2xic antibody, III = Immune complex, IV = T cell\",\n            explanation: \"Memory for all four types.\"\n          }\n        ],\n        keyPoints: [\n          \"Type I: IgE-mast cells, minutes (histamine), anaphylaxis life-threatening\",\n          \"Type II: IgG-cytotoxic, hours-days, hemolytic anemia/transfusion reactions\",\n          \"Type III: Immune complexes deposit, 1-2 weeks, glomerulonephritis\",\n          \"Type IV: Th1-mediated, 24-72 hours, PPD positive (induration)\",\n          \"Anaphylaxis treatment: Epinephrine IM (first-line), antihistamines, steroids\"\n        ],\n        textbookRefs: [\n          { book: \"Jawetz, Melnick & Adelberg\", chapter: \"Chapter 10: Hypersensitivity\", edition: \"28th\" },\n          { book: \"Ananthanarayan & Paniker\", chapter: \"Chapter 8: Hypersensitivity\", edition: \"10th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"hypersensitivity-mechanism\",\n        title: \"Hypersensitivity Reactions - Mechanism\",\n        estimatedMinutes: 25,\n        summary: \"Mast cell degranulation, ADCC, immune complex deposition, Th1 activation detailed.\",\n        contentMd: "# Hypersensitivity Reactions - Mechanism\\n\\n## Type I Mechanism - Degranulation Cascade\\n\\n### Sensitization Phase\\n1. **Antigen processing**: Dendritic cells present allergen to Th2\\n2. **Th2 activation**: IL-4, IL-13 production (B cell help)\\n3. **B cell activation**: Germinal center reaction\\n4. **Class switching**: IgM → IgE (via CD40 ligand + IL-4)\\n5. **IgE binding**: High-affinity FcεRI on mast cell membrane\\n6. **Stability**: IgE persists on mast cells for months\\n\\n### Challenge Phase (Re-exposure)\\n1. **Allergen binding**: Cross-links two adjacent IgE molecules\\n2. **FcεRI clustering**: Brings signaling chains together\\n3. **Lyn/Syk kinase**: Phosphorylation cascade (similar to TCR)\\n4. **Calcium influx**: PIP2 → IP3 → ER calcium release\\n5. **Granule fusion**: SNAREs mediate mast cell granule exocytosis\\n6. **Release**: Histamine, tryptase, heparin, leukotrienes\\n\\n### Mediator Effects\\n- **Histamine**: H1 (itching, smooth muscle contraction), H2 (vasodilation)\\n- **Tryptase**: Serine protease (tissue damage, activation cascade)\\n- **Leukotrienes**: LTC4, LTD4, LTE4 (bronchoconstriction, vascular permeability)\\n- **Prostaglandins**: PGD2 (vasodilation, smooth muscle relaxation)\\n- **Cytokines**: TNF-alpha, IL-4, IL-6 (recruitment, late-phase response)\\n\\n## Type II Mechanism - ADCC vs Complement\\n\\n### Antibody-Dependent Cellular Cytotoxicity (ADCC)\\n1. **Target coating**: IgG binds cell surface antigen\\n2. **NK cell recognition**: FcγRIII (CD16) recognizes Fc\\n3. **Activation**: Signaling through CD16\\n4. **Killing**: Perforin/granzyme release → apoptosis\\n\\n### Complement Activation\\n1. **IgG-antigen complex**: Two IgG molecules clustered\\n2. **C1q binding**: To Fc region\\n3. **Classical cascade**: C4b2a → C3b → C5b-9 MAC\\n4. **RBC lysis**: Membrane pores → osmotic lysis\\n\\n### Special Case: Graves Disease (Stimulating Antibody)\\n- **Difference**: IgG binds TSH receptor but STIMULATES (not blocks)\\n- **Result**: TSH-like signaling → thyroid hormone overproduction\\n- **Mechanism**: Antibody acts as agonist, not antagonist\\n\\n## Type III Mechanism - Immune Complex Deposition\\n\\n### Complex Formation\\n1. **Antigen excess**: Small complexes form (optimal 1:2 or 1:3 ratio)\\n2. **Poor clearance**: Size prevents binding to CR1 on RBCs\\n3. **Deposition**: Complexes lodge in vessel walls, glomeruli\\n\\n### Arthus Reaction (Local Type III)\\n- **Intradermal antigen** + circulating IgG\\n- **Localized complex formation** in skin vessels\\n- **Timeline**: 4-10 hours (slower than immediate)\\n- **Appearance**: Edema, erythema, hemorrhage (necrosis possible)\\n\\n### Systemic Type III\\n- **Circulating complexes**: Deposit at vessel bifurcations (kidney, joints)\\n- **Complement activation**: C1q, C3 consumption (C3/C4 low)\\n- **Inflammation**: C5a recruitment → neutrophil infiltration\\n- **Tissue damage**: Vasculitis, glomerulonephritis\\n\\n## Type IV Mechanism - Th1 Activation\\n\\n### Antigen Presentation\\n1. **Antigen uptake**: Dendritic cells phagocytose allergen\\n2. **MHC II presentation**: Processed peptide to Th cells in lymph nodes\\n3. **Th1 priming**: IL-12 + IFN-gamma (chronic stimulation vs acute Th2)\\n\\n### Effector Phase (48-72 hours)\\n1. **Memory Th1 activation**: Recognize antigen on local APCs\\n2. **IFN-gamma production**: Activates macrophages (increased MHC II)\\n3. **Recruitment**: TNF-alpha, IL-17 recruit neutrophils, more Th cells\\n4. **Amplification**: Self-sustaining inflammatory response\\n\\n### CTL-Mediated (Organ Transplant)\\n1. **Allogeneic MHC**: Host recognizes donor MHC as foreign\\n2. **CD8+ priming**: Donor dendritic cells present donor MHC\\n3. **CTL infiltration**: Killer T cells destroy transplanted cells\\n4. **Granzyme/perforin**: Apoptosis of graft tissue\\n\\n## Contact Dermatitis Mechanism\\n- **Allergen (hapten)**: Urushiol in poison ivy\\n- **Penetration**: Small lipophilic molecule enters skin\\n- **Protein binding**: Conjugates to Langerhans cell proteins\\n- **MHC presentation**: Th1 recognition → local inflammation\\n- **Clinical**: Delayed (24-48h) itchy vesicles and edema,\\n        mnemonics: [\\n          {\\n            text: \\\"Type I = FcεRI cross-linking → Ca²⁺ → Granule fusion → Release\\\",\\n            explanation: \\\"Mast cell degranulation cascade.\\\"\\n          },\\n          {\\n            text: \\\"Type IV = T cell recognition → IFN-gamma → Macrophage activation → 48-72h\\\",\\n            explanation: \\\"Delayed hypersensitivity timeline.\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Type I: FcεRI clustering triggers kinase cascade → mast cell degranulation\\\",\\n          \\\"Histamine H1 effects: itching, smooth muscle contraction, vasodilation\\\",\\n          \\\"Type II ADCC: FcγRIII on NK cells recognizes IgG-coated target\\\",\\n          \\\"Type III: Small immune complexes deposit in kidneys (glomerular BM)\\\",\\n          \\\"Type IV: MHC II presentation → Th1 → IFN-gamma → macrophage activation (slow)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Jawetz, Melnick & Adelberg\\\", chapter: \\\"Chapter 10: Mechanisms\\\", edition: \\\"28th\\\" },\\n          { book: \\\"Ananthanarayan & Paniker\\\", chapter: \\\"Chapter 8: Mechanisms\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"hypersensitivity-clinical\\\",\\n        title: \\\"Hypersensitivity Reactions - Clinical Application\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Anaphylaxis management, serum sickness, drug allergy, India-endemic allergies, latex allergy.\\\",\\n        contentMd: "# Hypersensitivity Reactions - Clinical Application\\\\n\\\\n## Anaphylaxis Management\\\\n\\\\n### Triggers (Common in India)\\\\n- **Foods**: Peanuts, tree nuts, shellfish, eggs\\\\n- **Drugs**: Penicillin (IgE-hapten complex), NSAIDs, aspirin\\\\n- **Venom**: Bee, wasp stings (seasonal in farming areas)\\\\n- **Latex**: Glove exposure (healthcare workers, medical procedures)\\\\n\\\\n### Pathophysiology\\\\n1. **Mast cell degranulation**: Within seconds (histamine peak 5-10 min)\\\\n2. **Immediate effects**: Urticaria, bronchospasm, hypotension\\\\n3. **Late phase**: Leukotriene-mediated (worsening 6-12 hours)\\\\n4. **Biphasic reaction**: Recovery then recurrence (20% of cases)\\\\n\\\\n### Clinical Features\\\\n- **Skin**: Urticaria, pruritus, flushing, angioedema\\\\n- **Respiratory**: Stridor (laryngeal), wheezing (bronchial)\\\\n- **Cardiovascular**: Hypotension, syncope, shock (histamine, vasodilation)\\\\n- **GI**: Nausea, vomiting, diarrhea, cramping\\\\n- **Severe**: Cardiovascular collapse, respiratory failure\\\\n\\\\n### Emergency Management (ASAP)\\\\n1. **Epinephrine IM** (0.3-0.5 mg, 1:1000) - **FIRST-LINE**\\\\n   - Alpha-1: Vasoconstriction (reverses hypotension)\\\\n   - Beta-2: Bronchodilation (reverses bronchospasm)\\\\n   - Mast cell stabilization (reduces mediator release)\\\\n2. **Antihistamines** (H1 + H2 blockers) - prevent recurrence\\\\n   - H1: Diphenhydramine (blocks histamine effects)\\\\n   - H2: Cimetidine (reduces gastric effects)\\\\n3. **Corticosteroids** (methylprednisolone) - prevents biphasic reaction\\\\n4. **Airway management**: Intubation if laryngeal edema\\\\n5. **IV fluids**: Restore circulating volume\\\\n\\\\n### Prevention\\\\n- **Avoidance**: Allergen identification and removal\\\\n- **Epinephrine auto-injectors**: EpiPen for at-risk patients\\\\n- **Medical alert**: Bracelet/card with allergen information\\\\n\\\\n## Serum Sickness\\\\n\\\\n### Mechanism\\\\n- **Antigen**: Foreign protein (drug, antiserum, vaccine)\\\\n- **IgG production**: 5-10 days\\\\n- **Immune complex formation**: Antigen + IgG → small complexes\\\\n- **Deposition**: Vessels, joints, skin, kidneys\\\\n\\\\n### Clinical Features (1-2 weeks after exposure)\\\\n- **Fever**: Cytokine-mediated\\\\n- **Arthralgias/Arthritis**: Wrists, knees, small joints\\\\n- **Rash**: Urticaria, maculopapular (non-pruritic usually)\\\\n- **Lymphadenopathy**: Regional nodes near exposure site\\\\n- **Glomerulonephritis**: Hematuria, proteinuria (rare)\\\\n\\\\n### Common Culprits (India context)\\\\n- **Antivenom**: Snake, spider antivenom (polyclonal antibodies)\\\\n- **Antimicrobials**: Penicillin (beta-lactam allergy), sulfonamides\\\\n- **Anticonvulsants**: Phenytoin, phenobarbital\\\\n- **NSAIDs**: Aspirin, ibuprofen\\\\n\\\\n### Management\\\\n1. **Discontinue antigen**: Stop offending drug/antiserum\\\\n2. **Antihistamines**: H1 blockers for rash/itching\\\\n3. **Corticosteroids**: Prednisone 0.5-1 mg/kg/day (severe cases)\\\\n4. **NSAIDs**: Pain management (if tolerated)\\\\n5. **Timeline**: Self-resolving (days-weeks after antigen removal)\\\\n\\\\n## Drug Allergy\\\\n\\\\n### IgE-Mediated (Type I)\\\\n- **Beta-lactams**: Penicillin, cephalosporin (cross-reactivity 1-3%)\\\\n- **Presentation**: Anaphylaxis, urticaria, angioedema\\\\n- **Timing**: Minutes to 1 hour\\\\n- **Mechanism**: Drug acts as hapten (binds protein carrier)\\\\n\\\\n### Non-IgE-Mediated (Type II, III, IV)\\\\n- **Stevens-Johnson Syndrome (SJS)**: Drug-specific CTLs attack keratinocytes\\\\n- **Type IV**: Delayed (24-72h) maculopapular rash\\\\n- **Serum sickness**: Immune complex 1-2 weeks\\\\n\\\\n### India-Specific Drug Allergy Concerns\\\\n- **Anti-TB drugs**: Rifampin, isoniazid (hypersensitivity syndrome)\\\\n- **Antimalarials**: Quinine, sulfonamides\\\\n- **Antiretrovirals**: NNRTIs (rash, SJS)\\\\n\\\\n### Desensitization Protocol\\\\n1. **Gradual dose escalation**: Start sub-therapeutic, increase every 15-30 min\\\\n2. **Risk**: Anaphylaxis during protocol (ICU setting required)\\\\n3. **Mechanism**: Mast cell tolerance? Basophil exhaustion?\\\\n4. **Duration**: Repeat with each course (tolerance not permanent)\\\\n\\\\n## India-Endemic Hypersensitivity Issues\\\\n\\\\n### Insect Allergy (Bee, Wasp, Scorpion)\\\\n- **Prevalence**: High in rural agricultural areas\\\\n- **Venom proteins**: Phospholipase A2, hyaluronidase\\\\n- **Risk**: Anaphylaxis with multiple stings\\\\n- **Management**: Venom immunotherapy (gradual tolerance)\\\\n\\\\n### Latex Allergy\\\\n- **Prevalence**: 1-6% general population, 6-17% healthcare workers\\\\n- **Cross-reactivity**: Banana, avocado, kiwi (latex-fruit syndrome)\\\\n- **Mechanism**: IgE to Hev b 5 protein\\\\n- **Prevention**: Latex-free gloves in medical settings\\\\n\\\\n### Environmental Allergies (Pollen)\\\\n- **Seasonal**: Grass pollen (monsoon), tree pollen (spring)\\\\n- **Symptoms**: Allergic rhinitis (rhinorrhea, nasal obstruction)\\\\n- **Management**: H1 antihistamines, intranasal steroids,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Anaphylaxis = Epi FIRST, then Antihistamines, then steroids (EAS)\\\\\\\",\\\\n            explanation: \\\\\\\"Management priorities for anaphylaxis.\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Serum sickness = 1-2 weeks delay, immune complex, self-limited\\\\\\\",\\\\n            explanation: \\\\\\\"Type III hypersensitivity timeline and resolution.\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Anaphylaxis: Epinephrine IM immediately (only life-saving drug)\\\\\\\",\\\\n          \\\\\\\"Epinephrine alpha-1 (vasoconstriction) + beta-2 (bronchodilation)\\\\\\\",\\\\n          \\\\\\\"Serum sickness: Immune complex formation 1-2 weeks after antigen exposure\\\\\\\",\\\\n          \\\\\\\"Contact dermatitis: Delayed (24-48h) due to Th1 priming phase\\\\\\\",\\\\n          \\\\\\\"Latex allergy: IgE-mediated, cross-reacts with fruit proteins\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz, Melnick & Adelberg\\\\\\\", chapter: \\\\\\\"Chapter 10: Clinical\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"Ananthanarayan & Paniker\\\\\\\", chapter: \\\\\\\"Chapter 8: Clinical\\\\\\\", edition: \\\\\\\"10th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"hypersensitivity-exam\\\\\\\",\\\\n        title: \\\\\\\"Hypersensitivity Reactions - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield type classification, timeline, management pearls, India-endemic triggers.\\\\\\\",\\\\n        contentMd: ``# Hypersensitivity - High-Yield Facts\\\\n\\\\n## Four Types Comparison\\\\n| Type | IgE | Ag-Ab | Immune Complex | T Cell |\\\\n|------|-----|-------|---|---|\\\\n| Mediator | IgE | IgG/IgM | IgG-Ag complex | Th1/CTL |\\\\n| Cell | Mast cell | Complement/NK | Neutrophil | Macrophage |\\\\n| Timing | Minutes | Hours-days | 1-2 weeks | 24-72 hours |\\\\n| Example | Anaphylaxis | Hemolytic anemia | Serum sickness | PPD positive |\\\\n\\\\n## Anaphylaxis Recognition & Treatment\\\\n**Urticaria + Respiratory/CV symptoms + Minutes = Epi IM NOW (not IV, not SQ)**\\\\n- 0.3-0.5 mg 1:1000 epinephrine IM\\\\n- Repeat every 5-15 min if refractory\\\\n- IV fluids, antihistamines, steroids follow-up\\\\n\\\\n## Timeline Pearls\\\\n- Type I = Seconds/minutes (FcεRI cross-linking is fast)\\\\n- Type II = Minutes to days (complement slower than ADCC)\\\\n- Type III = 1-2 weeks (IgG production, complex deposition)\\\\n- Type IV = 24-72 hours (Th1 priming required)\\\\n\\\\n## Serum Sickness Triggers\\\\n- Antivenom (snake, spider)\\\\n- Beta-lactam antibiotics\\\\n- NSAIDs, anticonvulsants\\\\n- Vaccines (rare)\\\\n\\\\n## Graves Disease (Type II Special)\\\\n- **Unique**: IgG stimulates TSH receptor (not blocking)\\\\n- **Result**: Thyroid hyperfunction\\\\n- **Antibody type**: TSI (thyroid-stimulating immunoglobulin)\\\\n- **Treatment**: Beta-blockers, PTU/methimazole (block synthesis)\\\\n\\\\n## Goodpasture Syndrome (Type II)\\\\n- **Target**: Basement membrane (lungs + kidneys)\\\\n- **Disease**: Rapidly progressive glomerulonephritis + pulmonary hemorrhage\\\\n- **Antibody**: Anti-GBM (IgG)\\\\n- **Treatment**: Plasmapheresis (remove antibodies), immunosuppression\\\\n\\\\n## Hemolytic Disease of Newborn (Type II)\\\\n- **Rh incompatibility**: Mother RhD⁻, baby RhD⁺\\\\n- **Risk**: Second/third pregnancy (maternal IgG crosses placenta)\\\\n- **Prevention**: RhoGAM (anti-D IgG) to mother at 28 weeks + within 72h of delivery\\\\n- **Mechanism**: IgG-coated RBCs destroyed in fetal spleen\\\\n\\\\n## Arthus Reaction (Local Type III)\\\\n- **Location**: Skin\\\\n- **Timing**: 4-10 hours (slower than urticaria)\\\\n- **Mechanism**: Intradermal antigen + circulating IgG\\\\n- **Appearance**: Edema, erythema, possible necrosis\\\\n\\\\n## Contact Dermatitis (Type IV)\\\\n- **Timeline**: 24-72 hours (requires T cell priming)\\\\n- **Common**: Poison ivy, nickel, fragrances\\\\n- **Pathology**: Th1-mediated keratinocyte destruction\\\\n- **Treatment**: Topical steroids (block macrophage activation),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Type IV = 4 hours to 4 days delayed (24-72h)\\\\\\\",\\\\n            explanation: \\\\\\\"Easy memory for Type IV timing.\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Epi for Type I anaphylaxis IM (not IV), epinephrine is ONLY life-saver\\\\\\\",\\\\n            explanation: \\\\\\\"Critical clinical pearl for exam.\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Type I (immediate): IgE, mast cells, minutes - anaphylaxis medical emergency\\\\\\\",\\\\n          \\\\\\\"Type II (cytotoxic): IgG/IgM-coated cells destroyed by complement or NK\\\\\\\",\\\\n          \\\\\\\"Type III (immune complex): Tissue deposition from excess antigen 1-2 weeks\\\\\\\",\\\\n          \\\\\\\"Type IV (delayed): Th1-mediated, 24-72h, PPD test example\\\\\\\",\\\\n          \\\\\\\"Serum sickness: Immune complex from foreign antigen, self-limited after exposure stops\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz, Melnick & Adelberg\\\\\\\", chapter: \\\\\\\"Chapter 10: Quick Ref\\\\\\\", edition: \\\\\\\"28th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"hypersensitivity-recall\\\\\\\",\\\\n        title: \\\\\\\"Hypersensitivity Reactions - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"Q&A on hypersensitivity types, anaphylaxis management, India-endemic allergies.\\\\\\\",\\\\n        contentMd: ``# Hypersensitivity Reactions - Active Recall\\\\n\\\\n## Q1: What is the Mechanism of Type I Hypersensitivity Anaphylaxis?\\\\n**A**: Sensitization phase: Allergen → Th2 response → IgE class switching. Challenge phase: Allergen cross-links IgE on mast cells (FcεRI clustering) → kinase cascade → calcium influx → granule exocytosis. Immediate release of histamine (vasodilation, smooth muscle contraction) + tryptase. Life-threatening within minutes.\\\\n\\\\n## Q2: Why is Epinephrine Intramuscular Preferred Over IV in Anaphylaxis?\\\\n**A**: IM delivers drug reliably to systemic circulation without IV access delay (critical in shock). IV risks: central line placement delays, arrhythmias from rapid IV bolus. IM epi in anterolateral thigh rapidly absorbed → peak in 5-10 minutes. Dosing: 0.3-0.5 mg of 1:1000 (1 mg/mL), repeat every 5-15 min.\\\\n\\\\n## Q3: Differentiate Anaphylaxis From Anaphylactoid Reactions?\\\\n**A**: **Anaphylaxis**: IgE-mediated (true allergy history). **Anaphylactoid**: Non-IgE (direct mast cell degranulation by drugs like NSAIDs, vancomycin \\\\\\\"red-man syndrome\\\\\\\"). Both present identically (urticaria, bronchospasm, hypotension). Both treated identically (epinephrine IM). Distinction historical only (no practical difference).\\\\n\\\\n## Q4: How Does Graves Disease Differ From Other Type II Hypersensitivity Reactions?\\\\n**A**: Most Type II reactions: IgG blocks or destroys target (hemolytic anemia, Goodpasture). **Graves disease**: IgG to TSH receptor STIMULATES (acts as agonist). IgG mimics TSH → thyroid cell activation → excessive hormone production. Unique antibody mechanism = unique presentation (hyperthyroidism, not destruction).\\\\n\\\\n## Q5: What is Serum Sickness and Why Does It Take 1-2 Weeks to Develop?\\\\n**A**: Type III hypersensitivity from foreign antigen (drug, antiserum) + IgG immune complex formation. Timeline: 0-7 days antigen exposure → primary IgG response (germinal center) → day 7-10 sufficient IgG titer → complex deposition in vessels/joints/kidneys. Day 10-14 manifestation (fever, arthritis, rash).\\\\n\\\\n## Q6: Explain the Pathophysiology of Hemolytic Disease of Newborn (Rh Incompatibility)?\\\\n**A**: First pregnancy: Mother RhD⁻ sensitized by fetal RhD⁺ blood (at delivery). Second pregnancy: Maternal IgG crosses placenta → binds fetal RhD+ RBCs → opsonization → destruction in fetal spleen. Prevention: RhoGAM (anti-D IgG) within 72h of delivery to mother (blocks alloimmunization). RhoGAM at 28 weeks recommended.\\\\n\\\\n## Q7: What is the Arthus Reaction and How Does It Differ From Immediate Hypersensitivity?\\\\n**A**: **Arthus reaction**: Type III (not I), localized to intradermal antigen site. Circulating IgG + local antigen → immune complex → complement activation (C5a recruitment) → neutrophil infiltration. Timeline: 4-10 hours (slower than urticaria minutes). Appearance: Edema, erythema, hemorrhage (not urticarial). Self-limited if antigen removed.\\\\n\\\\n## Q8: Why Does Contact Dermatitis Take 24-72 Hours to Develop?\\\\n**A**: Type IV (delayed) hypersensitivity requires T cell-mediated response. Sensitization: Small hapten (urushiol) penetrates skin → binds proteins → Langerhans cell antigen presentation → Th1 priming in lymph nodes. Challenge phase: Memory Th cells recognize antigen on local APCs → IFN-gamma → macrophage activation → inflammation. Delayed due to T cell expansion requirement.\\\\n\\\\n## Q9: What are the Stages of Mast Cell Degranulation in Type I Hypersensitivity?\\\\n**A**: 1) **Allergen cross-linking**: IgE on mast cells, 2) **FcεRI clustering**: Brings signaling chains together, 3) **Kinase activation**: Lyn/Syk phosphorylation cascade, 4) **Calcium influx**: PIP2 hydrolysis → IP3 → ER calcium release, 5) **SNARE interaction**: Granule membranes fuse with cell membrane, 6) **Release**: Histamine, tryptase, leukotrienes immediately available.\\\\n\\\\n## Q10: How Does Venom Immunotherapy Induce Tolerance in Bee Sting Allergy?\\\\n**A**: Gradual dose escalation of bee venom extract (starting sub-therapeutic). Proposed mechanisms: 1) Anergy (T regulatory cell induction), 2) IgG blocking antibodies compete with IgE, 3) Basophil desensitization (repeated stimulation → exhaustion), 4) Shift from Th2 (IL-4) to Th1 (IFN-gamma). Effective in ~80% of patients.,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Anaphylaxis = Epi IM, timing = Minutes (mast cells are FAST)\\\\\\\",\\\\n            explanation: \\\\\\\"Fastest hypersensitivity type requires fastest treatment.\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Type I: FcεRI cross-linking → mast cell degranulation → immediate release\\\\\\\",\\\\n          \\\\\\\"Anaphylaxis: Epinephrine IM only life-saving drug (alpha-1 + beta-2 effects)\\\\\\\",\\\\n          \\\\\\\"Type II: IgG-coated cells destroyed; Graves unique (stimulating antibody)\\\\\\\",\\\\n          \\\\\\\"Type III: Immune complexes 1-2 weeks, self-limited if antigen removed\\\\\\\",\\\\n          \\\\\\\"Type IV: Th1-mediated, 24-72h delay, contact dermatitis classic example\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz, Melnick & Adelberg\\\\\\\", chapter: \\\\\\\"Chapter 10: Complete Review\\\\\\\", edition: \\\\\\\"28th\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  },\\\\n  // MI-MOD-02-TOP-05: Autoimmunity & Immunodeficiency (continues in next part due to length)\\\\n  {\\\\n    topicCode: \\\\\\\"MI-MOD-02-TOP-05\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"autoimmunity-immunodef-foundation\\\\\\\",\\\\n        title: \\\\\\\"Autoimmunity & Immunodeficiency - Foundation\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Central vs peripheral tolerance loss, autoimmune mechanisms, primary immunodeficiency overview, India contexts.\\\\\\\",\\\\n        contentMd: ``# Autoimmunity & Immunodeficiency - Foundation\\\\n\\\\n## Autoimmunity Definition\\\\n- **Autoimmunity**: Immune response against self-antigens\\\\n- **Differs**: Normal: tolerize self, respond to non-self\\\\n- **Mechanism failure**: Loss of tolerance (central or peripheral)\\\\n- **Result**: Tissue damage from self-reactive T/B cells\\\\n\\\\n## Tolerance Mechanisms (Broken in Autoimmunity)\\\\n\\\\n### Central Tolerance (Thymus & Bone Marrow)\\\\n- **Negative selection**: Self-reactive T/B cells deleted\\\\n- **Medullary TECs**: Express tissue-specific antigens (AIRE gene)\\\\n- **Process**: Autoreactive TCR recognizes self-MHC-peptide → apoptosis\\\\n- **Defect**: AIRE mutation → loss of TSA expression → autoimmunity (APECED)\\\\n\\\\n### Peripheral Tolerance\\\\n1. **Regulatory T cells (Tregs)**: IL-10, TGF-beta suppression\\\\n2. **Anergy**: Antigen without co-stimulation → T cell unresponsiveness\\\\n3. **Deletion**: Activated-induced cell death (AICD) via Fas-FasL\\\\n4. **Immune privilege**: Immune sequestered sites (eye, brain, testes)\\\\n\\\\n## Loss of Tolerance Mechanisms\\\\n\\\\n### Genetic Factors\\\\n- **HLA association**: 90% SLE patients HLA-DR3/DR4\\\\n- **Gene mutations**: FoxP3 (Tregs) deficiency → IPEX syndrome\\\\n- **Polymorphisms**: PTPN22, CTLA4 genes predispose\\\\n- **Concordance**: 50% identical twins develop same autoimmune disease\\\\n\\\\n### Environmental Triggers\\\\n- **Infections**: Molecular mimicry (Strep GAS cross-reacts with cardiac myosin)\\\\n- **Drugs**: Procainamide, hydralazine → drug-induced lupus\\\\n- **UV exposure**: SLE flare with sun exposure (DNA damage)\\\\n- **Tissue damage**: Trauma, surgery can breach immune privilege\\\\n\\\\n### Loss of Tregs\\\\n- **FoxP3+ depletion**: Reduced IL-10, TGF-beta production\\\\n- **IL-2 deficiency**: Tregs require IL-2 for maintenance\\\\n- **Result**: Unopposed autoreactive T/B cell activity\\\\n\\\\n## Major Autoimmune Diseases (India Context)\\\\n\\\\n### SLE (Systemic Lupus Erythematosus)\\\\n- **Prevalence**: More common in women (9:1), peak 20-40 years\\\\n- **Pathophysiology**: Anti-dsDNA, anti-histone antibodies → immune complex\\\\n- **India**: Variable prevalence (less documented than Western countries)\\\\n- **Manifestations**: Malar rash, arthritis, renal (glomerulonephritis), CNS\\\\n\\\\n### Rheumatoid Arthritis (RA)\\\\n- **Prevalence**: 0.5-1%, women > men\\\\n- **Pathophysiology**: Anti-CCP antibodies, TNF-alpha-driven inflammation\\\\n- **India**: Growing prevalence, underdiagnosed in rural areas\\\\n- **Manifestations**: Joint pain (hands, feet), morning stiffness, bone erosion\\\\n\\\\n### Thyroid Autoimmunity (Graves & Hashimoto)\\\\n- **Graves**: TSI (thyroid-stimulating immunoglobulin) → hyperthyroidism\\\\n- **Hashimoto**: Anti-TPO, anti-thyroglobulin → hypothyroidism\\\\n- **Prevalence**: Most common endocrine autoimmunity\\\\n\\\\n### Type 1 Diabetes Mellitus\\\\n- **Mechanism**: CD8+ T cells destroy pancreatic beta cells\\\\n- **Antibodies**: Anti-GAD, anti-islet, anti-insulin\\\\n- **Genetics**: HLA-DR3/DR4 association\\\\n- **India**: Increasing incidence (DDM - double diabetes common)\\\\n\\\\n## Primary Immunodeficiency Overview\\\\n\\\\n### Levels of Defect\\\\n1. **Innate**: Neutrophil (CGD), complement, NK cell defects\\\\n2. **Adaptive**: T cell (DiGeorge), B cell (agammaglobulinemia), both\\\\n3. **Regulatory**: Treg defects (IPEX), checkpoint defects\\\\n\\\\n### Clinical Patterns\\\\n\\\\n#### Recurrent Infections Suggest:\\\\n- **Encapsulated bacteria** (Strep pneumo, H. influenza) → B cell defect\\\\n- **Intracellular bacteria** (TB, MAC) → T cell (CD4) defect\\\\n- **Catalase-positive bacteria** (Staph, Pseudo, Aspergillus) → CGD\\\\n- **Neisseria meningitidis** → Complement deficiency\\\\n\\\\n### Common Primary Immunodeficiencies\\\\n\\\\n**Severe Combined Immunodeficiency (SCID)**\\\\n- **Defect**: IL-7 receptor, RAG gene, adenosine deaminase\\\\n- **Result**: No functional T cells ± B cells\\\\n- **Presentation**: Severe infections from birth (PCP, CMV)\\\\n- **Prognosis**: Fatal without hematopoietic stem cell transplant\\\\n\\\\n**X-Linked Agammaglobulinemia (XLA)**\\\\n- **Defect**: Btk tyrosine kinase gene\\\\n- **Result**: Absent B cells, normal T cells\\\\n- **Presentation**: Recurrent pyogenic infections after 6 months (maternal IgG wanes)\\\\n- **Infections**: Bacterial (Strep, H. flu), viral (enterovirus)\\\\n- **Treatment**: Immunoglobulin replacement (IV or SQ)\\\\n\\\\n**IgA Deficiency**\\\\n- **Defect**: Absent IgA (most common PID in Western countries)\\\\n- **Result**: Reduced mucosal immunity\\\\n- **Presentation**: Asymptomatic or recurrent respiratory/GI infections\\\\n- **Risk**: Anaphylaxis with blood transfusion (IgA antibody formation),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Autoimmunity = Loss of Tolerance (Central + Peripheral failures)\\\\\\\",\\\\n            explanation: \\\\\\\"Pathophysiology central concept.\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Encapsulated bacteria → B cell; Intracellular → T cell; Catalase+ → CGD\\\\\\\",\\\\n            explanation: \\\\\\\"Immune defect pattern recognition.\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Autoimmunity: Loss of central tolerance (negative selection) or peripheral tolerance (Tregs)\\\\\\\",\\\\n          \\\\\\\"HLA association: 90% SLE (HLA-DR3/4), RA (HLA-DRB1)\\\\\\\",\\\\n          \\\\\\\"AIRE gene: Medullary TEC expression of tissue-specific antigens (lost in APECED)\\\\\\\",\\\\n          \\\\\\\"SLE: Anti-dsDNA, anti-histone → immune complex disease\\\\\\\",\\\\n          \\\\\\\"SCID: No T cells (± B cells) → severe infections from birth, requires HSCT\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz, Melnick & Adelberg\\\\\\\", chapter: \\\\\\\"Chapter 11: Autoimmunity & Immunodeficiency\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"Ananthanarayan & Paniker\\\\\\\", chapter: \\\\\\\"Chapter 9: Immunodeficiency\\\\\\\", edition: \\\\\\\"10th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"autoimmunity-immunodef-mechanism\\\\\\\",\\\\n        title: \\\\\\\"Autoimmunity & Immunodeficiency - Mechanism\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Molecular mimicry, bystander activation, Treg loss mechanisms, TCR/BCR development defects.\\\\\\\",\\\\n        contentMd: ``# Autoimmunity & Immunodeficiency - Mechanism\\\\n\\\\n## Autoimmunity Mechanisms\\\\n\\\\n### Molecular Mimicry\\\\n- **Definition**: Pathogen antigen sequence similarity to self-antigen\\\\n- **Cross-reaction**: Antibodies/T cells recognize both pathogen + self\\\\n- **Classic example**: Streptococcal M protein vs cardiac myosin\\\\n  - Sequence homology: LQALR vs cardiac myosin LQALR\\\\n  - Result: Post-streptococcal glomerulonephritis, rheumatic fever\\\\n- **Other examples**:\\\\n  - Borrelia outer surface protein vs human tenascin (Lyme arthritis)\\\\n  - Coxsackievirus vs glutamic acid decarboxylase (GAD) - Type 1 diabetes\\\\n\\\\n### Bystander Activation\\\\n- **Mechanism**: Infection → local inflammation → innocent bystanders recruited\\\\n- **Result**: Non-pathogen-specific T/B cells activated\\\\n- **Consequence**: Autoimmune response even after pathogen cleared\\\\n- **Example**: TB granuloma rupture → local destruction spreads autoimmunity\\\\n\\\\n### Epitope Spreading\\\\n- **Initial**: Immune response to single epitope on pathogen\\\\n- **Expansion**: Response spreads to related epitopes on same antigen\\\\n- **Intramolecular spreading**: Additional epitopes on same protein\\\\n- **Intermolecular spreading**: Related self-antigens targeted\\\\n- **Timeline**: Weeks to months\\\\n\\\\n### Polyclonal B Cell Activation (Bystander)\\\\n- **EBV infection**: Activates many non-specific B cells\\\\n- **Result**: Heterophile antibodies (sheep RBC agglutination)\\\\n- **Autoimmunity risk**: Some activated clones may be autoreactive\\\\n- **SLE context**: EBV reactivation associated with SLE flare\\\\n\\\\n## Loss of Regulatory T Cell Function\\\\n\\\\n### Mechanism 1: Treg Depletion\\\\n- **IL-2 deficiency**: Tregs require IL-2 for survival/expansion\\\\n- **FoxP3 mutation**: Impaired Treg differentiation/function (IPEX)\\\\n- **CTLA-4 blockade**: Used in cancer therapy, causes autoimmunity\\\\n- **Result**: Unopposed autoreactive T/B cell activity\\\\n\\\\n### Mechanism 2: Treg Dysfunction\\\\n- **TGF-beta resistance**: Inability to sense suppressive signal\\\\n- **IL-10 deficiency**: Impaired anti-inflammatory response\\\\n- **Metabolism**: Tregs starved of glucose by activated effector T cells\\\\n- **Result**: Suppression fails despite normal Treg numbers\\\\n\\\\n### Mechanism 3: Conversion to Effector Th17\\\\n- **Plasticity**: Tregs can convert to Th17 under inflammation\\\\n- **Loss of FoxP3**: Gain of RORγt expression\\\\n- **Consequence**: Loss of suppression + gain of pro-inflammatory function\\\\n- **Trigger**: IL-6 (inflammation marker)\\\\n\\\\n## Primary Immunodeficiency Mechanisms\\\\n\\\\n### T Cell Development Defects (DiGeorge Syndrome)\\\\n\\\\n**Mechanism**: 22q11 microdeletion\\\\n- **Affected**: Thymic development (3rd/4th pharyngeal pouch)\\\\n- **Result**: Hypoplasia or aplasia of thymus\\\\n- **Consequence**: Reduced T cell production, inverted CD4:CD8 ratio (low CD4)\\\\n- **Presentation**: Candidiasis, PCP, viral/fungal infections\\\\n- **Associated**: Cardiac defects, cleft palate, hypocalcemia\\\\n\\\\n### B Cell Development Defects (XLA)\\\\n\\\\n**Btk (Bruton tyrosine kinase) defect**\\\\n1. **Pre-B cell stage**: Btk required for light chain gene rearrangement\\\\n2. **Blockade**: Disabled pre-BCR signaling → arrest of development\\\\n3. **Result**: Absent mature B cells (normal T cells)\\\\n4. **Clinical**: Pyogenic bacterial infections (after maternal IgG wanes at 6m)\\\\n\\\\n### RAG Gene Defects (Severe Combined Immunodeficiency)\\\\n\\\\n**Mechanism**: RAG1/RAG2 mutation\\\\n- **Function lost**: V(D)J recombination (cutting + joining DNA segments)\\\\n- **Consequence**: Cannot generate TCR or BCR gene segments\\\\n- **Result**: No functional T cells or B cells\\\\n- **Presentation**: Severe infections from birth, requires isolation\\\\n\\\\n### Adenosine Deaminase Deficiency (SCID)\\\\n\\\\n**Mechanism**: Purine salvage pathway defect\\\\n- **Toxic metabolites**: dATP accumulation in lymphocytes\\\\n- **Result**: Lymphocyte apoptosis (T > B > NK)\\\\n- **Presentation**: SCID phenotype (like RAG deficiency)\\\\n- **Treatment**: Gene therapy, enzyme replacement, HSCT\\\\n\\\\n## Immunodeficiency Pattern Recognition\\\\n\\\\n### Antibody Defects → Pyogenic Bacteria (Capsulated)\\\\n- **Organisms**: Streptococcus pneumoniae, H. influenzae, Neisseria\\\\n- **Why**: Need opsonizing IgG antibodies for complement + phagocytosis\\\\n- **Example**: XLA (Btk deficiency) - absent B cells\\\\n\\\\n### T Cell Defects (CD4+) → Intracellular/Opportunistic\\\\n- **Organisms**: Mycobacteria (TB, MAC), Pneumocystis jirovecii (PCP), CMV\\\\n- **Why**: Need Th1 (IFN-gamma) to activate macrophages\\\\n- **Example**: HIV/AIDS (CD4 <200) - severe PCP, MAC risk\\\\n\\\\n### Complement Defects → Neisseria\\\\n- **Organisms**: Neisseria meningitidis, N. gonorrhoeae\\\\n- **Why**: Late complement (C5-9) essential for MAC formation\\\\n- **Presentation**: Meningitis (unusual age), disseminated gonorrhea,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Molecular mimicry = M protein vs myosin (post-strep GN, rheumatic fever)\\\\\\\",\\\\n            explanation: \\\\\\\"Classic cross-reactive antigens.\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Treg loss = IL-2 deficiency or FoxP3 mutation (IPEX)\\\\\\\",\\\\n            explanation: \\\\\\\"Mechanism of regulatory T cell failure.\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Molecular mimicry: Pathogen antigen sequence homology triggers cross-reactive autoimmunity\\\\\\\",\\\\n          \\\\\\\"Bystander activation: Local infection → nonspecific T/B cell recruitment/activation\\\\\\\",\\\\n          \\\\\\\"Epitope spreading: Immune response expands from initial to related epitopes\\\\\\\",\\\\n          \\\\\\\"Treg plasticity: Tregs convert to Th17 under IL-6 (inflammation)\\\\\\\",\\\\n          \\\\\\\"V(D)J recombination (RAG genes): Required for TCR + BCR diversity\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz, Melnick & Adelberg\\\\\\\", chapter: \\\\\\\"Chapter 11: Mechanisms\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"Ananthanarayan & Paniker\\\\\\\", chapter: \\\\\\\"Chapter 9: Mechanisms\\\\\\\", edition: \\\\\\\"10th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"autoimmunity-immunodef-clinical\\\\\\\",\\\\n        title: \\\\\\\"Autoimmunity & Immunodeficiency - Clinical Application\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"SLE/RA diagnosis, immunodeficiency management, India epidemiology, immune reconstitution.\\\\\\\",\\\\n        contentMd: ``# Autoimmunity & Immunodeficiency - Clinical Application\\\\n\\\\n## SLE Clinical Diagnosis & Management\\\\n\\\\n### Revised EULAR/ACR Criteria (Entry + Additive Scoring)\\\\n- **ANA positive** (required entry point)\\\\n- **Additive criteria**: Rash, hematologic, renal, serology (anti-dsDNA/C3/C4)\\\\n- **Score ≥10**: Classify as SLE\\\\n\\\\n### Clinical Manifestations\\\\n- **Mucocutaneous**: Malar rash, discoid rash, oral ulcers, photosensitivity\\\\n- **Hematologic**: Anemia, thrombocytopenia, leukopenia\\\\n- **Renal**: Class III/IV glomerulonephritis (hematuria, proteinuria, hypertension)\\\\n- **CNS**: Seizures, psychosis, cognitive dysfunction\\\\n- **Serositis**: Pleurisy, pericarditis\\\\n\\\\n### Autoantibodies in SLE\\\\n- **ANA**: Highly sensitive (95%) but non-specific\\\\n- **Anti-dsDNA**: Highly specific (70%), correlates with renal involvement\\\\n- **Anti-histone**: Drug-induced lupus (procainamide, hydralazine)\\\\n- **Anti-Smith (Sm)**: SLE-specific (marker of active disease)\\\\n- **Anti-SSA/SSB**: Associated with Sjögren syndrome\\\\n\\\\n### Complement in SLE\\\\n- **C3/C4 consumption**: Immune complex activation of classical pathway\\\\n- **Low C3/C4**: Associated with active disease (nephritis)\\\\n- **CH50**: Low if severe complement consumption\\\\n\\\\n### Management\\\\n1. **Mild**: NSAIDs, topical corticosteroids, antimalarials (hydroxychloroquine)\\\\n2. **Moderate**: Corticosteroids (prednisolone 10-30 mg/day)\\\\n3. **Severe**: High-dose steroids + cyclophosphamide (lupus nephritis)\\\\n4. **Maintenance**: Mycophenolate, azathioprine (steroid-sparing)\\\\n\\\\n## Rheumatoid Arthritis\\\\n\\\\n### Pathophysiology\\\\n- **Trigger**: Unknown (possibly infection + genetic)\\\\n- **Initial**: Synovial macrophage activation\\\\n- **Perpetuation**: TNF-alpha, IL-6, IL-17 (Th17)\\\\n- **Destruction**: Joint erosion by osteoclasts\\\\n\\\\n### Autoantibodies\\\\n- **RF (Rheumatoid factor)**: IgM anti-Fc IgG (70% positive)\\\\n- **Anti-CCP**: More specific (anti-cyclic citrullinated peptide)\\\\n- **Positive RF + anti-CCP**: Prognostic markers (rapid progression)\\\\n\\\\n### Clinical Features\\\\n- **Polyarticular**: Small joints (hands, wrists, feet)\\\\n- **Symmetrical**: Bilateral involvement\\\\n- **Morning stiffness**: >1 hour (improvement with activity)\\\\n- **Progression**: Permanent joint damage if untreated\\\\n\\\\n### India-Specific Concerns\\\\n- **Delayed diagnosis**: Rural areas lack rheumatology services\\\\n- **TB mimicry**: TB can present with polyarthritis (TB arthritis/Poncet disease)\\\\n- **Drug access**: Biological DMARDs expensive, rarely available\\\\n\\\\n### Management\\\\n1. **Early DMARDs**: Methotrexate (first-line), sulfasalazine\\\\n2. **Biological**: TNF inhibitors (infliximab, adalimumab), IL-6 inhibitors\\\\n3. **Remission goal**: Early aggressive treatment\\\\n\\\\n## Immunodeficiency Management\\\\n\\\\n### X-Linked Agammaglobulinemia (XLA)\\\\n- **Diagnosis**: Absent B cells (<1%), normal T cell count\\\\n- **Infections**: Recurrent bacterial (Strep, H. flu), viral (enterovirus)\\\\n- **Treatment**: Immunoglobulin replacement (IVIg 400-600 mg/kg monthly)\\\\n- **Prognosis**: Near-normal lifespan with IgG replacement\\\\n\\\\n### DiGeorge Syndrome (22q11 Deletion)\\\\n- **Severity**: Ranges from cardiac defect only to severe immunodeficiency\\\\n- **T cell recovery**: Often improves with age (thymic remnant growth)\\\\n- **Management**:\\\\n  - Mild: Avoidance of live vaccines\\\\n  - Severe: HSCT (if <50 CD4+ T cells)\\\\n  - Calcium supplementation (hypocalcemia from parathyroid hypoplasia)\\\\n\\\\n### IgA Deficiency\\\\n- **Most common**: PID in developed countries\\\\n- **Manifestation**: Asymptomatic or mild infections (mucosal)\\\\n- **Risk**: Anaphylaxis with blood transfusion (anti-IgA antibody formation)\\\\n- **Management**: Transfuse with washed RBCs (remove plasma), avoid IVIg\\\\n- **Screening**: IgA level + anti-IgA antibodies before transfusion (high-risk)\\\\n\\\\n### SCID (Severe Combined Immunodeficiency)\\\\n- **Presentation**: Failure to thrive, severe infections from birth\\\\n- **Organisms**: PCP, CMV, bacteria, fungi (all types)\\\\n- **Isolation**: Required (bubble therapy in SCID babies)\\\\n- **Treatment**:\\\\n  - HSCT: Best outcome if matched donor (90% survival)\\\\n  - Gene therapy: Experimental (some successes)\\\\n  - IVIG: Supportive measure only\\\\n\\\\n## India-Specific Immunodeficiency Issues\\\\n\\\\n### TB + Immunodeficiency\\\\n- **Problem**: TB endemic in India + rising HIV prevalence\\\\n- **Diagnosis**: Tuberculin skin test unreliable in immunosuppressed\\\\n- **GeneXpert MTB/RIF**: Better for immunocompromised patients\\\\n- **IRIS**: Immune reconstitution inflammatory syndrome (TB-IRIS with ART initiation)\\\\n\\\\n### Vaccine Administration in Immunocompromised\\\\n- **Live vaccines contraindicated**: MMR, varicella, BCG, rotavirus\\\\n- **India context**: BCG at birth (before known immunodeficiency screening)\\\\n- **Killed vaccines**: OK but often poor response\\\\n- **Timing**: Delay non-urgent vaccinations until immune reconstitution (if possible)\\\\n\\\\n### Immune Reconstitution Inflammatory Syndrome (IRIS)\\\\n- **Occurs**: Weeks after HAART initiation in advanced HIV\\\\n- **Mechanism**: Recovering immune system recognizes previously uncontrolled pathogen\\\\n- **Manifestation**: Worsening symptoms (fever, lymphadenopathy, organ dysfunction)\\\\n- **Management**: Continue ART, corticosteroids (TNF-alpha excess),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"SLE = ANA required + scoring (rash, hematologic, renal, serology)\\\\\\\",\\\\n            explanation: \\\\\\\"EULAR/ACR classification criteria.\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"XLA = No B cells (Btk defect) = Bacterial infections (encapsulated)\\\\\\\",\\\\n            explanation: \\\\\\\"X-linked agammaglobulinemia pattern.\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"SLE: ANA positive (entry), anti-dsDNA specific, C3/C4 low in active disease\\\\\\\",\\\\n          \\\\\\\"RA: RF + anti-CCP positive, TNF-alpha central (blockade effective)\\\\\\\",\\\\n          \\\\\\\"XLA: Absent B cells, normal T cells, recurrent pyogenic infections\\\\\\\",\\\\n          \\\\\\\"SCID: No T cells (± B cells), fatal without HSCT\\\\\\\",\\\\n          \\\\\\\"IgA deficiency: Transfusion risk (anti-IgA anaphylaxis), use washed RBCs\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz, Melnick & Adelberg\\\\\\\", chapter: \\\\\\\"Chapter 11: Clinical\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"Ananthanarayan & Paniker\\\\\\\", chapter: \\\\\\\"Chapter 9: Clinical\\\\\\\", edition: \\\\\\\"10th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"autoimmunity-immunodef-exam\\\\\\\",\\\\n        title: \\\\\\\"Autoimmunity & Immunodeficiency - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield autoantibodies, immunodeficiency patterns, HLA associations, India epidemiology.\\\\\\\",\\\\n        contentMd: ``# Autoimmunity & Immunodeficiency - High-Yield Facts\\\\n\\\\n## SLE Autoantibodies Quick Reference\\\\n| Antibody | Sensitivity | Specificity | Clinical |\\\\n|-----------|---|---|---|\\\\n| ANA | 95% | Low | Screening test |\\\\n| Anti-dsDNA | 70% | High | Renal activity |\\\\n| Anti-Smith | 30% | High | SLE marker |\\\\n| Anti-SSA/SSB | 60% | High | Sjögren |\\\\n| Anti-histone | 80% | Moderate | Drug-induced lupus |\\\\n| Complement (C3/C4) | Low | Activity | Immune complex |\\\\n\\\\n## RA Autoantibodies\\\\n| Antibody | % Positive | Significance |\\\\n|----------|---|---|\\\\n| RF (IgM anti-Fc IgG) | 70% | Non-specific |\\\\n| Anti-CCP | 70% | More specific, prognostic |\\\\n| Both + | High | Rapid joint destruction |\\\\n\\\\n## Immunodeficiency Pattern Recognition Table\\\\n| Pattern | Defect | Organism Risk | Example |\\\\n|---------|--------|---|---|\\\\n| No B cells | B cell develpmt | Pyogenic (Strep, H. flu) | XLA |\\\\n| No T cells | T cell develpmt | PCP, CMV, fungi | SCID, DiGeorge |\\\\n| No complement | Terminal cascade | Neisseria | C5-9 deficiency |\\\\n| No neutrophils | Phagocyte | Catalase+ (Staph, Pseudo) | CGD |\\\\n\\\\n## HLA Associations\\\\n- **HLA-DR3/DR4**: SLE (90%)\\\\n- **HLA-DRB1**: RA (70%)\\\\n- **HLA-B27**: Ankylosing spondylitis, Reiter syndrome\\\\n- **HLA-DR5**: Type 1 diabetes\\\\n\\\\n## SCID Characteristics\\\\n**Absent T cells (± B cells) = Severe infections from birth (PCP, CMV, bacteria)**\\\\n- Genetic: RAG, IL-7R, ADA, Jak3\\\\n- Diagnosis: Low CD4+CD8+ on flow, absent T cell zones on lymph node biopsy\\\\n- Treatment: HSCT (best), gene therapy, enzyme replacement\\\\n- Live vaccines contraindicated (reversion risk)\\\\n\\\\n## XLA vs Hypogammaglobulinemia\\\\n| Feature | XLA | CVG |\\\\n|---------|-----|-----|\\\\n| B cell count | Absent | Low but present |\\\\n| Immunoglobulin | Near zero | 300-500 mg/dL |\\\\n| Age of onset | 6 months | Variable (2-50 years) |\\\\n| Treatment | IVIg | IVIg (if symptomatic) |\\\\n\\\\n## Drug-Induced Lupus\\\\n- **Drugs**: Procainamide, hydralazine, minocycline, NSAIDs\\\\n- **Antibody**: Anti-histone (high), anti-dsDNA absent\\\\n- **Lupus serology**: Not anti-Smith\\\\n- **Resolution**: Stops after drug discontinuation\\\\n- **No renal/CNS**: Milder than idiopathic SLE\\\\n\\\\n## India-Specific High-Yield\\\\n- **TB burden**: Immunodeficiency diagnosis challenge (TB endemic)\\\\n- **Live vaccine at birth**: BCG before immunodeficiency screening (may occur)\\\\n- **Delayed RA diagnosis**: Rural areas lack rheumatology\\\\n- **SLE underdiagnosed**: Resource-limited healthcare systems\\\\n- **IRIS risk**: Concurrent TB + HIV in immunocompromised patients,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"ANA 95% sensitive but non-specific (autoimmune screening only)\\\\\\\",\\\\n            explanation: \\\\\\\"Why ANA must be interpreted with clinical context.\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Anti-dsDNA = Renal (glomerulonephritis) in SLE\\\\\\\",\\\\n            explanation: \\\\\\\"Antibody-disease correlation.\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"SLE: ANA entry, anti-dsDNA specific, immune complex disease (kidneys, joints)\\\\\\\",\\\\n          \\\\\\\"RA: TNF-alpha-driven, RF + anti-CCP positive, joint erosion untreated\\\\\\\",\\\\n          \\\\\\\"SCID: No T cells = severe infections from birth, HSCT definitive\\\\\\\",\\\\n          \\\\\\\"XLA: No B cells = bacterial infections, IgG replacement lifelong\\\\\\\",\\\\n          \\\\\\\"HLA-DR3/4 = 90% SLE risk (genetic predisposition)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz, Melnick & Adelberg\\\\\\\", chapter: \\\\\\\"Chapter 11: Quick Ref\\\\\\\", edition: \\\\\\\"28th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"autoimmunity-immunodef-recall\\\\\\\",\\\\n        title: \\\\\\\"Autoimmunity & Immunodeficiency - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"Q&A on SLE pathophysiology, RA cytokines, immunodeficiency patterns, India contexts.\\\\\\\",\\\\n        contentMd: ``# Autoimmunity & Immunodeficiency - Active Recall\\\\n\\\\n## Q1: What is Molecular Mimicry and How Does It Lead to Autoimmunity?\\\\n**A**: Pathogen antigen has sequence homology to self-antigen. Cross-reactive T/B cells recognize both pathogen + self. Example: Streptococcal M protein (LQALR) vs cardiac myosin → post-streptococcal glomerulonephritis (PSGN) and acute rheumatic fever (ARF). Consequence: Autoimmunity persists after pathogen cleared (self-perpetuating).\\\\n\\\\n## Q2: Why Does SLE Preferentially Affect Women (9:1 Ratio)?\\\\n**A**: Estrogen enhances B cell (IgG production) and Th2 response; testosterone suppresses. Genetic: X-chromosome immunoglobulin genes escape X-inactivation (more B cell diversity). Epigenetic: DNMTs less active in female lymphocytes → more autoreactive clones expand. Pregnancy flare: Immune tolerance to fetus breaks down.\\\\n\\\\n## Q3: Explain the Role of Complement Consumption in SLE Nephritis?\\\\n**A**: SLE antibodies (anti-dsDNA) form immune complexes → deposit in glomeruli → classical pathway activation (C1q binding) → C3b/C4b consumption. Low serum C3/C4 indicates active immune complex disease. Mechanism: C5a recruitment of neutrophils → glomerular inflammation → hematuria + proteinuria. CH50 low = complement dysfunction.\\\\n\\\\n## Q4: How Does TNF-Alpha Blockade Treat RA When TNF is Essential for Fighting Infections?\\\\n**A**: RA is TNF-dependent (activates synovial macrophages, induces IL-6/IL-17). TNF blockade suppresses joint inflammation but carries infection risk (TB, fungal). In controlled RA patients, benefit (remission) > risk (most fight off infections). Screening: TB (IGRA) before anti-TNF therapy; monitor for atypical infections.\\\\n\\\\n## Q5: What is the Pathophysiology of X-Linked Agammaglobulinemia (XLA)?\\\\n**A**: Btk (Bruton tyrosine kinase) mutation → defective BCR signaling in pre-B cells → arrest at pro-B → pre-B transition → no mature B cells generated. T cells normal. Presentation: Asymptomatic until 6 months (maternal IgG wanes) → recurrent pyogenic infections (Strep, H. flu). Diagnosis: Flow cytometry absent B cells, normal T cells.\\\\n\\\\n## Q6: Why is SCID (\\\\\\\"Bubble Baby Disease\\\\\\\") Fatal Without Hematopoietic Stem Cell Transplant?\\\\n**A**: SCID: No functional T cells (± B cells) from birth. RAG1/2 mutations prevent V(D)J recombination (TCR/BCR genes not rearranged). Cannot generate immune response to any pathogen. Infection inevitable (PCP, CMV, bacteria). Only curative: HSCT (donor T cell reconstitution) or gene therapy (restore RAG genes).\\\\n\\\\n## Q7: Differentiate DiGeorge Syndrome From SCID?\\\\n**A**: **DiGeorge**: 22q11 deletion → thymic hypoplasia (partial T cell deficiency), but T cells can recover with age (residual thymic tissue grows). **SCID**: Genetic (RAG, IL-7R, ADA) → permanent T cell deficiency (no recovery). DiGeorge: Variable severity (can be mild with cardiac defects only); SCID: Always severe (birth infection).\\\\n\\\\n## Q8: Why is Transfusion Dangerous in IgA Deficiency?\\\\n**A**: Severely IgA-deficient patients lack IgA in serum → exposed to blood product IgA (from donor plasma) → develop anti-IgA IgE/IgG antibodies (alloimmunization). Next transfusion: Anti-IgA + IgA in donor plasma → Type III immune complex reaction or anaphylaxis (if IgE-mediated). Prevention: Transfuse washed RBCs (plasma removed).\\\\n\\\\n## Q9: What is Immune Reconstitution Inflammatory Syndrome (IRIS) and How Does it Occur?\\\\n**A**: IRIS: Paradoxical worsening of symptoms after immune recovery (ART initiation in HIV). Mechanism: Previously controlled pathogen (TB, MAC, CMV) now recognized by recovering CD4+ T cells → exaggerated Th1/TNF-alpha response → inflammation. Timing: 2-12 weeks after ART. Management: Continue ART, add corticosteroids (suppress TNF-alpha).\\\\n\\\\n## Q10: Explain Why Anti-CCP Antibodies are More Specific Than RF in RA Diagnosis?\\\\n**A**: **RF (IgM anti-Fc IgG)**: Non-specific (positive in SLE, hepatitis C, normal aged individuals). **Anti-CCP**: Specific for RA (anti-cyclic citrullinated peptide antibodies). Mechanism: Post-translational modification of proteins (citrullination) by peptidylarginine deiminase in inflamed synovium. Anti-CCP + RF = highest specificity/prognostic marker for aggressive RA.,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"SLE women (estrogen), RA any age, SCID from birth (genetics)\\\\\\\",\\\\n            explanation: \\\\\\\"Age/sex patterns of major autoimmune + immunodeficiency diseases.\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Molecular mimicry: Pathogen Ag cross-reacts with self-Ag (strep M protein → myosin)\\\\\\\",\\\\n          \\\\\\\"SLE women > men (estrogen), anti-dsDNA specific, complement consumption\\\\\\\",\\\\n          \\\\\\\"RA: TNF-alpha central (blockade curative), anti-CCP specific marker\\\\\\\",\\\\n          \\\\\\\"SCID: No T cells = birth infections, requires HSCT (only cure)\\\\\\\",\\\\n          \\\\\\\"XLA: Btk deficiency, no B cells, bacterial infections at 6 months\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz, Melnick & Adelberg\\\\\\\", chapter: \\\\\\\"Chapter 11: Complete Review\\\\\\\", edition: \\\\\\\"28th\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\"\""
-}
-}
-}
-}
-];
-];
-];
+        summary: "Detailed mechanisms of each hypersensitivity type, mediator actions, immune complex formation and deposition.",
+        contentMd: `# Hypersensitivity Mechanisms
+
+## Type I Detailed Mechanism
+
+### Mast Cell Degranulation
+1. **Antigen cross-links IgE** on FcεRI (high-affinity receptor)
+2. **Src family kinase activation**: Lyn, Syk phosphorylate ITAM domains
+3. **IP3 generation** → calcium influx
+4. **Granule exocytosis**: Release of preformed mediators
+
+### Mediators Released
+
+#### Preformed (Minutes)
+- **Histamine**: Vasodilation (H1 receptor), increased vascular permeability → edema
+- **Tryptase**: Serine protease, measure post-reaction
+- **Heparin**: Anticoagulant, stabilizes vessel integrity
+- **Leukotrienes** (C4, D4, E4): Bronchial constriction, mucus secretion
+
+#### De Novo Synthesized (Hours)
+- **Prostaglandins** (PGD2): Vasodilation, platelet aggregation
+- **Leukotrienes**: Continued bronchospasm, vascular leak
+- **Cytokines** (TNF-alpha, IL-4): Amplify inflammation
+
+### Anaphylactic Shock Cascade
+1. **Massive mast cell degranulation** → histamine surge
+2. **Vasodilation** → hypotension, ↓ perfusion pressure
+3. **Vascular leak** → hemoconcentration, shock
+4. **Bronchospasm** → airway compromise
+5. **Cardiac effects**: Negative inotropic effect
+
+## Type II Detailed Mechanism
+
+### ADCC (Antibody-Dependent Cellular Cytotoxicity)
+1. **IgG binds antigen** on target cell surface (e.g., RBC)
+2. **Fcγ receptor** on NK cells, macrophages, neutrophils recognize Fc
+3. **Cell-cell contact** → target cell lysis (perforin-granzyme pathway)
+
+### Complement Activation
+1. **IgG/IgM + antigen complex** binds C1q
+2. **Classical pathway** → C3b cascade → membrane attack complex (C5b-9)
+3. **Result**: Cell membrane lysis
+
+## Type III Detailed Mechanism
+
+### Immune Complex Formation
+- **Antigen-antibody ratio matters**:
+  - Antigen excess: Small complexes (do NOT precipitate) → deposit in tissues
+  - Balanced: Large lattice complexes → precipitate, cleared by CR1
+  - Antibody excess: Small complexes → cleared
+
+### Deposition Sites
+1. **Capillary endothelium**: Highest pressure areas
+2. **Glomerular basement membrane**: Kidney (most common)
+3. **Joint synovium**: Arthritis
+4. **Skin vasculature**: Rashes, vasculitis
+
+### Inflammation at Deposition Sites
+1. **Complement activation** (C3, C5) → anaphylatoxins
+2. **Neutrophil recruitment** → degranulation, oxidative burst
+3. **Tissue damage** from immune cells, not pathogen
+
+## Type IV Detailed Mechanism
+
+### Delayed-Type Hypersensitivity (DTH)
+1. **Antigen presentation** by dendritic cells (MHC II) to CD4+ T cells
+2. **Th1 differentiation**: IL-12 → T-bet → IFN-gamma production
+3. **Migration**: Sensitized T cells reach antigen site (24-72 hours)
+4. **Local activation**: IFN-gamma → macrophage activation → granuloma formation
+5. **Result**: Induration (not exudation like Type I)
+
+### Contact Dermatitis Example
+1. **Sensitization**: Hapten (e.g., urushiol) + skin protein → immunogenic
+2. **Sensitized T cells** circulate (2 weeks to years)
+3. **Re-exposure**: DTH reaction develops at 24-72 hours
+4. **Mechanism**: Th1 cytokines → keratinocyte apoptosis, edema`,
+        mnemonics: [
+          {
+            text: "Type I = Histamine (minutes), Type IV = T cells (hours-days)",
+            explanation: "Mediator differences drive timing"
+          },
+          {
+            text: "Immune complex = Antigen EXCESS = Small = Deposit",
+            explanation: "Why small complexes deposit (not large ones)"
+          }
+        ],
+        keyPoints: [
+          "Type I: mast cell FcεRI cross-linking → histamine surge → immediate symptoms",
+          "Anaphylaxis: massive histamine → vasodilation → shock + bronchospasm",
+          "Type II: ADCC (NK via Fcγ) or complement lysis (C5b-9 MAC)",
+          "Type III: small antigen-excess complexes deposit; large balanced complexes cleared",
+          "Type IV: Th1 IFN-gamma → delayed (24-72h), induration (not exudation)"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker's Textbook of Microbiology", chapter: "Hypersensitivity Mechanisms", edition: "11th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "hypersensitivity-reactions-layer-3-clinical",
+        title: "Hypersensitivity Reactions - Clinical Application",
+        estimatedMinutes: 30,
+        summary: "Clinical management, testing, India-specific presentations, drug allergies, anaphylaxis management.",
+        contentMd: `# Clinical Application
+
+## Type I Hypersensitivity Management
+
+### Acute Anaphylaxis
+- **First-line**: Epinephrine IM 0.3-0.5 mg of 1:1000 (alpha-1 vasoconstriction + beta-2 bronchodilation)
+- **Positioning**: Supine with legs elevated (improve cerebral perfusion)
+- **Second-line**: IV access, fluid resuscitation (normal saline)
+- **Adjuncts**: Antihistamines (H1: diphenhydramine; H2: ranitidine), corticosteroids (dexamethasone)
+- **Observation**: 4-6 hours minimum (biphasic reactions possible)
+
+### Chronic Allergic Disorders
+- **Avoidance**: Remove allergen (peanut-free diet, avoid shellfish)
+- **H1 antagonists**: Cetirizine, loratadine (non-sedating) vs diphenhydramine (sedating)
+- **Nasal corticosteroids**: Fluticasone for rhinitis
+- **Leukotriene antagonists**: Montelukast for bronchial asthma
+- **Immunotherapy**: Allergen desensitization (slow escalating doses → Treg induction)
+
+## Type II Hypersensitivity Management
+
+### Hemolytic Transfusion Reactions
+- **Prevention**: Blood type/cross-match before transfusion
+- **Acute management**: Stop transfusion, IV fluids, diuretics (furosemide) for kidney protection
+- **RBC transfusion**: Use compatible blood (usually O negative in emergencies)
+
+### Hemolytic Disease Newborn
+- **Prevention**: Rh-negative mothers → RhoGAM (anti-D IgG) at 28 weeks + delivery
+- **Postnatal**: Phototherapy (bilirubin risk), exchange transfusion if severe
+
+### Drug-Induced Hemolytic Anemia
+- **Penicillin**: Bind RBC, IgG forms complex → hemolysis
+- **Management**: Stop drug, supportive care, transfusion if severe
+
+## Type III Hypersensitivity Management
+
+### Serum Sickness
+- **Prevention**: Avoid foreign serum; use humanized monoclonal antibodies
+- **Acute**: NSAIDs for arthritis, antihistamines for rash, corticosteroids for severe
+- **Timeline**: Self-limited (days-weeks after antigen cleared)
+
+### Post-Infectious GN
+- **Acute streptococcal**: Antibiotics (penicillin), supportive care
+- **Prognosis**: Usually self-limited (weeks); serial urinalysis for recovery
+- **Monitoring**: Creatinine, proteinuria, hematuria
+
+### SLE Management
+- **Mild**: NSAIDs, hydroxychloroquine
+- **Moderate-severe**: Corticosteroids, immunosuppressants (mycophenolate, azathioprine)
+- **Renal involvement**: Aggressive immunosuppression (cyclophosphamide, mycophenolate)
+
+## Type IV Hypersensitivity Management
+
+### Contact Dermatitis
+- **Prevention**: Avoid allergen (gloves if latex, wash urushiol oil)
+- **Acute**: Topical corticosteroids (triamcinolone), oral antihistamines
+- **Severe**: Systemic corticosteroids (prednisone taper)
+
+### Organ Rejection (Transplant)
+- **Prevention**: Calcineurin inhibitors (tacrolimus), mycophenolate, corticosteroids
+- **Acute rejection**: Pulse corticosteroids, increase immunosuppression
+- **Chronic rejection**: Difficult; increased immunosuppression (risk of infection)
+
+### TB Test (PPD)
+- **Mechanism**: Intradermal *M. tuberculosis* antigen → Th1 response (48-72h)
+- **Reading**: Induration (NOT erythema) ≥5-15 mm (depends on risk)
+- **Positive**: Exposure/infection/BCG vaccination
+- **False negative**: Immunocompromised, recent infection (<8 weeks)
+
+## India-Specific Presentations
+
+### Drug Allergies (High in India)
+- **Penicillin G IM**: Common (injections common in India)
+- **Antitubercular drugs**: Rifampicin (drug fever), INH (hypersensitivity)
+- **Antimalarials**: Quinine (Type II hemolysis), chloroquine (rash)
+- **Aminoglycosides**: Contact dermatitis (handling without gloves)
+
+### Food Allergies (India Context)
+- **Peanuts**: High prevalence (common snack)
+- **Shellfish**: Coastal populations
+- **Tree nuts**: Growing prevalence
+- **Milk proteins**: Common in infants
+
+### Tropical Parasites & Hypersensitivity
+- **Filaria**: Late-phase reactions to dying worms
+- **Schistosomiasis**: Type III (Schistosome antigen complexes)
+- **Hookworm**: Type I (IgE-mediated itch)
+
+### Vaccine Adverse Events
+- **Anaphylaxis**: Rare (1-2 per million MMR doses)
+- **Serum sickness**: 5-10 days post-vaccination (foreign serum, antitoxins)
+- **Guillain-Barré**: 1-2 per million influenza vaccine (Type IV-like autoimmunity)`,
+        mnemonics: [
+          {
+            text: "Anaphylaxis = Epi IM FIRST (not IV), then IV fluids",
+            explanation: "IM epinephrine is life-saving first intervention"
+          },
+          {
+            text: "Type III = Small complexes deposit, large cleared",
+            explanation: "Immune complex deposition depends on antigen-antibody ratio"
+          }
+        ],
+        keyPoints: [
+          "Anaphylaxis: epinephrine IM 0.3-0.5 mg 1:1000 (absolute first step)",
+          "Serum sickness: self-limited (days-weeks), NSAIDs, corticosteroids if severe",
+          "Post-strep GN: antibiotics + supportive; usually self-limited",
+          "TB test (PPD): Th1-mediated, 48-72h induration (not erythema)",
+          "India: penicillin allergy common (IM injections), antitubercular drug hypersensitivity"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker's Textbook of Microbiology", chapter: "Clinical Hypersensitivity", edition: "11th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "hypersensitivity-reactions-layer-4-exam",
+        title: "Hypersensitivity Reactions - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield facts on types I-IV, mediators, timing, clinical presentations, management.",
+        contentMd: `# Hypersensitivity Reactions - High-Yield Facts
+
+## Type Classification Quick Reference
+| Type | Mediator | Timing | Mechanism | Example |
+|------|----------|--------|-----------|---------|
+| **I** | IgE | Minutes | Mast cell degen. | Anaphylaxis |
+| **II** | IgG/IgM | Hours | ADCC, complement | Hemolytic anemia |
+| **III** | IgG/IgM | Hours-days | Immune complex | Post-strep GN |
+| **IV** | T cells | 24-72h | Th1, macrophage | Contact dermatitis |
+
+## Type I Mediators
+- **Preformed**: Histamine (minutes), tryptase, heparin
+- **Synthesized**: Prostaglandins, leukotrienes, cytokines (hours)
+
+## Type II Clinical Examples
+- Hemolytic transfusion reaction (ABO mismatch)
+- Hemolytic disease newborn (Rh incompatibility)
+- Drug-induced (penicillin + RBC)
+- Graves' disease (TSH-R antibodies)
+
+## Type III Clinical Examples
+- Serum sickness (foreign serum, drugs)
+- Post-infectious GN (Strep pyogenes)
+- SLE (auto-antigen complexes)
+- Arthus reaction (local vasculitis)
+
+## Type IV Clinical Examples
+- Contact dermatitis (Th1 → 24-72h)
+- TB test (PPD, Th1, induration)
+- Organ rejection (CD8+ CTL)
+- GVHD (donor T cells vs host)
+
+## Anaphylaxis Management Pearls
+- **Epinephrine IM**: FIRST and ONLY life-saving drug (IV contraindicated)
+- **Dose**: 0.3-0.5 mg 1:1000 in adults
+- **Observation**: 4-6 hours (biphasic possible, though rare)
+- **Cannot be replaced** by antihistamines or corticosteroids (too slow)
+
+## Timing Mnemonics
+- **Type I = Immediate** (minutes, IgE)
+- **Type II = Hours** (ADCC/complement)
+- **Type III = Hours-days** (immune complex)
+- **Type IV = Delayed** (24-72h, T cells)
+
+## India-Specific High-Yield
+- **Penicillin allergy**: Very common (IM routes frequent)
+- **Serum sickness**: Antitubercular drugs, antivenom
+- **Contact dermatitis**: Urushiol (poison ivy), latex gloves
+- **Post-strep GN**: High Strep burden in India`,
+        mnemonics: [
+          {
+            text: "I-M = Immediate Minutes, IV = hours-days",
+            explanation: "Type 1 = IgE immediate, types 2-4 = delayed"
+          },
+          {
+            text: "Anaphylaxis = Epi IM (not IV, not antihistamines first)",
+            explanation: "Epinephrine IM is the ONLY life-saving drug"
+          }
+        ],
+        keyPoints: [
+          "Type I: IgE → mast cell → histamine surge → anaphylaxis (minutes)",
+          "Type II: IgG/IgM → ADCC or complement → cell lysis (hours)",
+          "Type III: immune complexes → glomeruli, joints → GN, arthritis (hours-days)",
+          "Type IV: Th1 → induration (NOT exudation) → 24-72h onset",
+          "Anaphylaxis: epinephrine IM 0.3-0.5 mg, no delays"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker's Textbook of Microbiology", chapter: "Quick Ref", edition: "11th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "hypersensitivity-reactions-layer-5-active-recall",
+        title: "Hypersensitivity Reactions - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Q&A flashcards on hypersensitivity types, mechanisms, mediators, management.",
+        contentMd: `# Active Recall Flashcards
+
+## Q1: What is the difference between Type I and Type IV hypersensitivity in terms of timing and mechanism?
+**A**: Type I: IgE-mediated mast cell degranulation, IMMEDIATE (minutes). Histamine pre-formed. Type IV: T cell-mediated (Th1), DELAYED (24-72 hours). Requires T cell migration and activation. Timing difference is defining feature.
+
+## Q2: Why are small antigen-antibody complexes more likely to deposit in tissues than large lattice complexes?
+**A**: Large lattice complexes precipitate out, easily cleared by complement receptor 1 (CR1) on RBCs. Small complexes stay soluble, circulate, deposit in capillaries (especially kidney glomeruli). Antigen excess → small complexes; balanced ratio → large complexes.
+
+## Q3: What mediators are released within minutes vs hours in a Type I hypersensitivity reaction?
+**A**: **Minutes** (preformed): histamine, tryptase, heparin. **Hours** (newly synthesized): prostaglandins, leukotrienes, cytokines. Preformed mediators stored in granules; synthesized mediators require de novo synthesis.
+
+## Q4: How does molecular mimicry cause Graves' disease?
+**A**: Thyroid peroxidase (TPO) resembles *Streptococcus pyogenes* antigen. Immune response to strep generates IgG to TPO. IgG binds TSH receptor on thyroid → stimulation (NOT blocking). Results in thyroid hormone overproduction (hyperthyroidism).
+
+## Q5: Why is TB skin test (PPD) read at 48-72 hours, and what does induration measure?
+**A**: Delayed-type hypersensitivity: Th1 T cells need time to migrate to intradermal site and produce IFN-gamma (activates macrophages). Induration (hardness) = Th1-mediated granuloma; erythema (redness) = vasodilation (non-specific). Induration measures cell-mediated response.
+
+## Q6: What is the mechanism of anaphylactic shock, and why is epinephrine the critical first intervention?
+**A**: Massive mast cell degranulation → histamine surge → vasodilation (H1 + H2) → hypotension, ↓ perfusion. Epinephrine: alpha-1 (vasoconstriction, raises BP), beta-2 (bronchodilation). Immediate reversal of shock. Antihistamines/corticosteroids too slow to prevent death.
+
+## Q7: How does calcineurin inhibitor (tacrolimus) prevent organ transplant rejection?
+**A**: Tacrolimus inhibits calcineurin → prevents NFAT (nuclear factor activated T cells) dephosphorylation → IL-2 gene transcription blocked. Result: T cell activation suppressed, both Th1 (acute cellular rejection) and Th2 (antibody) responses reduced.
+
+## Q8: What is the pathophysiology of hemolytic disease of the newborn (HDN) due to Rh incompatibility?
+**A**: First pregnancy: fetal RBC antigen (Rh+) contacts maternal immune system during delivery. Maternal IgM response (IgM doesn't cross placenta, baby protected). Second Rh+ pregnancy: prior IgG (crosses placenta) binds fetal RBCs → hemolysis → jaundice, anemia. Prevention: maternal RhoGAM (anti-D IgG) at 28 weeks.
+
+## Q9: How does contact dermatitis represent a delayed-type hypersensitivity reaction?
+**A**: Hapten (urushiol) binds skin protein → becomes immunogenic. Sensitized CD4+ Th1 cells develop (2 weeks-years). Re-exposure: Th1 cells at skin release IFN-gamma → macrophage activation → keratinocyte apoptosis → dermatitis (24-72h delay allows T cell migration).
+
+## Q10: Why is serum sickness self-limited, while acute hemolytic transfusion reaction is not?
+**A**: Serum sickness: foreign antigen cleared by immune system → immune complexes dissolve → resolution. Acute transfusion: incompatible RBCs continuously lysed until RBCs transfused are destroyed → life-threatening if massive transfusion. Difference: single foreign antigen vs continuously transfused incompatible RBCs.`,
+        mnemonics: [
+          {
+            text: "Type I-Immediate-Minutes, Type IV-delayed-days",
+            explanation: "Key timing distinction"
+          }
+        ],
+        keyPoints: [
+          "Type I: preformed histamine (minutes), synthesized mediators (hours)",
+          "Type III: small complexes deposit, large clear (antigen ratio critical)",
+          "Type IV: Th1 → IFN-gamma → macrophage activation, 24-72h (not hours)",
+          "Anaphylaxis: epinephrine IM immediately (only life-saving drug)",
+          "HDN: prevention (RhoGAM), postnatal management (phototherapy, exchange transfusion)"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker's Textbook of Microbiology", chapter: "Complete Review", edition: "11th" }
+        ]
+      }
+    ]
+  }
 ];

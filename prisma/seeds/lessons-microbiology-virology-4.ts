@@ -1,19 +1,276 @@
-export const microbiologyVirologyLessons4 = [
+import type { TopicLessons } from "./content-loader";
+
+export const microbiologyVirologyLessons4: TopicLessons[] = [
   {
     topicCode: "MI-MOD-05-TOP-05",
     layers: [
       {
         layer: 1,
-        slug: "respiratory-enteric-foundation",
+        slug: "resp-enteric-virus-layer-1-foundation",
         title: "Respiratory & Enteric Viruses - Foundation",
         estimatedMinutes: 25,
-        summary: "Influenza, SARS-CoV-2, respiratory syncytial virus (RSV), parainfluenza, rotavirus, norovirus, poliovirus. Transmission, epidemiology, and tissue tropism.",
-        contentMd: "# Respiratory & Enteric Viruses - Foundation\n\n## Orthomyxoviruses (Influenza)\n\n### Virology\n- Enveloped, segmented ssRNA(-) virus; 8 genomic segments\n- Hemagglutinin (HA): Binds sialic acid receptors; target of vaccines/antivirals\n- Neuraminidase (NA): Cleaves sialic acid; viral release\n- M2 protein: Ion channel; amantadine/rimantadine target\n\n### Epidemiology & Strains\n- Influenza A: Most virulent; causes pandemics (subtypes H1N1, H3N2)\n- Influenza B: Milder, more stable; no pandemic history\n- Influenza C: Rare, mild illness\n- Antigenic Drift: HA/NA point mutations; gradual change; vaccine update yearly\n- Antigenic Shift: Reassortment of segments from co-infection; potential pandemic (novel virus)\n- Seasonal Epidemics: Winter months; R0=1-2 (moderate contagiousness)\n\n## Paramyxoviruses (Respiratory)\n\n### RSV (Respiratory Syncytial Virus)\n- Enveloped, non-segmented ssRNA(-) virus\n- Most common viral lower respiratory infection in infants (<2 years)\n- Transmission: Respiratory droplets, fomites\n- Reinfection common (incomplete immunity)\n- Bronchiolitis hallmark (inflammation of small airways)\n\n### Parainfluenza\n- Four types; causes croup (laryngotracheobronchitis)\n- Peak age: 6 months - 3 years\n- Barking cough, inspiratory stridor, subglottic narrowing\n\n### Measles & Mumps\n- Highly contagious (R0=12-18); vaccine-preventable\n- Covered in previous serology/clinical modules\n\n## Coronaviruses (SARS-CoV-2, Endemic)\n\n### SARS-CoV-2 (COVID-19)\n- Novel enveloped ssRNA(+) virus; spike (S) protein binds ACE2 receptor\n- Pangenic pandemic (2019-present); multiple variants of concern\n- Transmission: Respiratory droplets, aerosol, fomites\n- Asymptomatic: 40-50% of infections\n- R0: 1.5-2 (ancestral strain); delta ~6-8; omicron >8 (highly contagious)\n- Incubation: 2-14 days; mean 5 days\n\n### Endemic Coronaviruses (HCoV-229E, HCoV-OC43, HCoV-NL63, HCoV-HKU1)\n- Cause mild upper respiratory infection\n- Seroprevalence: >80% by adulthood\n- Seasonal winter peaks\n\n## Picornaviruses (Enteroviruses)\n\n### Poliovirus\n- Non-enveloped ssRNA(+) virus\n- Three serotypes; vaccine-derived immunity type-specific\n- Global eradication nearly complete; endemic only in Afghanistan, Pakistan\n- India: Polio-free since 2011 (surveillance continues; vaccine-derived poliovirus risks)\n- Transmission: Fecal-oral; highly contagious (R0=5-7)\n- Motor neuron destruction → flaccid paralysis (lower motor neuron pattern)\n\n### Coxsackievirus & Echovirus\n- Cause acute febrile illness, exanthema, myositis, meningitis\n- Transmission: Fecal-oral\n- Summer/fall epidemics in temperate regions\n\n### Rhinovirus\n- Most common cause of common cold\n- >150 serotypes; minimal cross-immunity\n- Non-enveloped ssRNA(+)\n- Replicates in upper respiratory tract\n- Usually mild self-limited illness\n\n## Reoviruses (Rotavirus)\n\n### Virology\n- Non-enveloped dsRNA virus (segmented, 11 segments)\n- Four major groups (A-D); Group A most common pathogenic\n- Genotypes: G and P types important for epidemiology/vaccines\n\n### Epidemiology\n- Most common cause of acute gastroenteritis worldwide in children <5 years\n- Peak age: 6-24 months\n- Winter epidemics in temperate; year-round in tropics\n- India: High burden before rotavirus vaccine introduction\n- Transmission: Fecal-oral; highly contagious\n\n## Caliciviruses (Norovirus)\n\n### Virology\n- Non-enveloped ssRNA(+) virus\n- Two major genogroups (GI, GII); multiple genotypes\n- Short replication cycle; high mutation rate\n- No animal reservoir (human-specific)\n\n### Epidemiology\n- Leading cause of epidemic gastroenteritis in adults\n- School, cruise ship, healthcare facility outbreaks\n- Winter predominance\n- Asymptomatic shedding common\n- Immunity incomplete; reinfection possible\n\n### Transmission & Characteristics\n- Fecal-oral, airborne (norovirus particles aerosolize)\n- Incubation: 24-48 hours\n- Duration: 24-72 hours typically\n- Highly contagious; low inoculum sufficient\n,\n        mnemonics: [\n          {\n            text: \"Segmented RNA Viruses\",\n            explanation: \"Influenza (8 segments = Orthomyxo), Rotavirus (11 segments = Reo), Bunyavirus (3 segments)\"\n          },\n          {\n            text: \"P-R-I-C-E for Respiratory Viruses\",\n            explanation: \"P=Parainfluenza (croup), R=RSV (bronchiolitis), I=Influenza (fever, myalgia), C=Coronavirus (SARS-CoV-2), E=Enterovirus (coxsackie)\"\n          }\n        ],\n        keyPoints: [\n          \"Influenza: Segmented RNA; antigenic drift yearly, shift potential pandemic; treat with neuraminidase inhibitors\",\n          \"RSV: Most common viral lower respiratory in infants; bronchiolitis; reinfection common\",\n          \"SARS-CoV-2: Novel pandemic virus; ACE2 receptor; asymptomatic 40-50%; high transmission variants\",\n          \"Poliovirus: Fecal-oral transmission; motor neuron infection; flaccid paralysis; eradication near complete\",\n          \"Rotavirus: Segmented dsRNA; most common child gastroenteritis globally; vaccine prevents disease\",\n          \"Norovirus: Non-enveloped ssRNA; epidemic gastroenteritis in adults; airborne transmission possible\"\n        ],\n        textbookRefs: [\n          { book: \"Jawetz Melnick & Adelberg's Medical Microbiology\", chapter: \"37-38: Respiratory & Enteric Viruses\", edition: \"28th\" },\n          { book: \"Ananthanarayan & Paniker's Textbook of Microbiology\", chapter: \"Respiratory & Enteric Viruses\", edition: \"10th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"respiratory-enteric-mechanism\",\n        title: \"Respiratory & Enteric Viruses - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Replication in respiratory epithelium, intestinal tropism, immune evasion, antigenic drift/shift, and pathophysiology of complications.\",\n        contentMd: "# Respiratory & Enteric Viruses - Mechanism\\n\\n## Influenza Replication & Antigenic Variation\\n\\n### Segmented Genome Advantage\\n- **8 Genomic Segments**: Each segment independently transcribed; allows reassortment\\n- **Antigenic Shift**: Co-infection in single cell (often pig) → segment reassortment → novel virus\\n- **Historical Pandemics**: 1918 (H1N1), 1957 (H2N2), 1968 (H3N2), 2009 (H1N1)\\n- **Pandemic Potential**: Shift creates virus with novel HA/NA unrecognized by population immunity\\n\\n### Antigenic Drift\\n- **Point Mutations**: HA/NA genes accumulate changes; antibodies less effective\\n- **Rate**: ~1-2 mutations/year in HA; gradual loss of vaccine effectiveness\\n- **Vaccine Strategy**: Seasonal update predicts circulating strains\\n- **Strain Selection**: WHO recommends vaccine composition annually\\n\\n### Neuraminidase Inhibitors (NAIs)\\n- **Mechanism**: Block sialic acid cleavage; prevent viral release\\n- **Examples**: Oseltamivir (Tamiflu), zanamivir (Relenza)\\n- **Resistance**: Histidine-at-274 mutations confer resistance; emergence varies\\n\\n## Respiratory Epithelial Infection\\n\\n### Attachment & Spread\\n- **Sialic Acid Binding**: HA recognizes α-2,6 linked sialic acids (human upper respiratory epithelium)\\n- **Avian Influenza H5N1**: Prefers α-2,3 linkages (lower respiratory); explains lower transmissibility\\n- **Cell-to-Cell Spread**: Neuraminidase enables budding; spreads within respiratory tract\\n- **Viral Replication Kinetics**: Rapid in respiratory epithelium; peaks day 2-3 post-infection\\n\\n### Pathophysiology in Lower Respiratory Tract\\n- **Direct Cytopathology**: Viral replication → epithelial damage → loss of ciliary clearance\\n- **Innate Immune Activation**: Type I IFN response; recruitment of inflammatory cells\\n- **Secondary Bacterial Infection**: Epithelial damage allows Staphylococcus aureus, Streptococcus pneumoniae invasion\\n- **Cytokine Storm**: Excessive TNF-α, IL-1, IL-6 → tissue damage, ARDS (especially 2009 H1N1)\\n\\n## Enteric Virus Replication\\n\\n### Poliovirus Pathogenesis\\n- **Primary Replication**: Peyer's patches, intestinal epithelium\\n- **Viremia**: Dissemination to lymphoid tissue, CNS\\n- **CNS Infection**: Anterior horn motor neurons; lytic infection → apoptosis\\n- **Muscle Paralysis**: Lower motor neuron signs; typically asymmetric, non-ascending\\n- **Recovery**: Surviving neurons show sprouting; incomplete recovery of strength\\n\\n### Rotavirus Pathophysiology\\n- **Villous Atrophy**: Viral replication → epithelial loss, shortened villi\\n- **Osmotic Diarrhea**: Loss of absorptive surface; increased osmolarity\\n- **Secretory Component**: Rotavirus toxin (possibly NSP4) → secretion\\n- **Dehydration**: Major complication; electrolyte loss\\n- **Recovery**: Villous regrowth over 5-7 days; regenerating epithelium initially hypopermeable\\n\\n## SARS-CoV-2 Immune Response & Pathogenesis\\n\\n### ACE2 Receptor & Tropism\\n- **ACE2 Expression**: Epithelial cells (respiratory, GI, vascular endothelium)\\n- **TMPRSS2**: Serine protease facilitates spike (S) protein cleavage, cell entry\\n- **Viral Variants**: Omicron spike mutations increase ACE2 binding affinity\\n- **Multi-system Tropism**: Respiratory, GI, cardiovascular, neurologic involvement\\n\\n### Pathogenesis of Severe COVID\\n- **Type I IFN Response**: Initial control; delayed in severe disease\\n- **Hyperinflammation**: Excessive IL-6, TNF-α, IL-1; immune dysregulation\\n- **Endothelial Damage**: Direct viral infection of endothelium; microthrombi, DIC\\n- **ARDS**: Bilateral infiltrates, hypoxemia; mortality 20-30%\\n- **Post-COVID Syndrome**: Prolonged fatigue, dyspnea, cognitive dysfunction (pathophysiology unclear)\\n\\n## Immune Evasion in Respiratory Viruses\\n\\n### Interferon Antagonism\\n- **Influenza NS1 Protein**: Blocks interferon production and signaling; antagonizes RIG-I\\n- **Coronavirus ORF proteins**: NSP1, NSP3 interfere with IFN signaling pathways\\n- **Result**: Delayed innate immune response; higher viral replication\\n\\n### Antigenic Variation (RSV, Rhinovirus)\\n- **RSV**: G and F protein variability; limited cross-immunity\\n- **Rhinovirus**: 150+ serotypes; each exposure doesn't prevent infection with other serotypes\\n- **Consequence**: Reinfection common throughout life\\n\\n## Rotavirus Immune Evasion\\n\\n### Mechanisms\\n- **NSP4 Toxin**: Interferes with innate immunity (not just secretory diarrhea)\\n- **Viral Proteins**: Inhibit NF-κB pathway; reduce proinflammatory response\\n- **Limited Mucosal Immunity**: Local IgA response; systemic immunity variable\\n- **Serotype Specificity**: VP4 and VP7 genotypes determine serological response\\n,\\n        mnemonics: [\\n          {\\n            text: \\\"Influenza Antigenic Changes\\\",\\n            explanation: \\\"D=Drift (mutations yearly), S=Shift (reassortment pandemic), A=Annual vaccine update, D=Drift slower, S=Shift sudden\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Influenza: Segmented genome enables shift (reassortment); drift gradual antigenic change\\\",\\n          \\\"Respiratory epithelial damage leads to secondary bacterial pneumonia (S. aureus, S. pneumoniae)\\\",\\n          \\\"Poliovirus: Motor neuron infection; flaccid paralysis; asymmetric pattern\\\",\\n          \\\"Rotavirus: Villous atrophy, osmotic diarrhea; dehydration main complication\\\",\\n          \\\"SARS-CoV-2: ACE2 tropism; hyperinflammation in severe disease; microthrombi, ARDS\\\",\\n          \\\"Viral IFN antagonism: NS1 (influenza), ORF proteins (coronavirus) delay innate response\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Jawetz Melnick & Adelberg's Medical Microbiology\\\", chapter: \\\"37-38: Viral Pathogenesis\\\", edition: \\\"28th\\\" },\\n          { book: \\\"Molecular Virology textbooks\\\", chapter: \\\"Respiratory Virus Mechanisms\\\", edition: \\\"Current\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"respiratory-enteric-clinical\\\",\\n        title: \\\"Respiratory & Enteric Viruses - Clinical\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Clinical presentations, complications, diagnosis, management of influenza, RSV, SARS-CoV-2, polio, rotavirus, norovirus infections.\\\",\\n        contentMd: "# Respiratory & Enteric Viruses - Clinical\\\\n\\\\n## Influenza\\\\n\\\\n### Clinical Presentation\\\\n- **Sudden Onset**: Fever, malaise, myalgia (often severe), headache\\\\n- **Respiratory**: Cough, sore throat, nasal symptoms (may be mild initially)\\\\n- **Duration**: 3-7 days typically; fever 3-5 days\\\\n- **Complications**: Pneumonia (viral or secondary bacterial), myositis, encephalitis\\\\n- **Risk Groups**: Age >65, chronic medical disease, pregnancy, immunocompromised\\\\n\\\\n### Pneumonia Complications\\\\n- **Primary Viral Pneumonia**: Bilateral infiltrates, hypoxemia, rapid progression\\\\n- **Secondary Bacterial Pneumonia**: ~7-14 days after flu onset; S. aureus (especially MRSA), S. pneumoniae\\\\n- **Mortality**: Significant in pandemic strains (H5N1 ~60%, 2009 H1N1 ~1-2% hospitalized)\\\\n\\\\n### Diagnosis & Treatment\\\\n- **Rapid Diagnostic**: Rapid antigen test (NAAT, RT-PCR most sensitive)\\\\n- **Antiviral**: Neuraminidase inhibitors (oseltamivir 75 mg BID × 5 days) if <48 hours from onset\\\\n- **Vaccine**: Annual inactivated vaccine; live attenuated (LAIV) for children\\\\n- **Prophylaxis**: Oseltamivir for post-exposure; healthcare workers, close contacts\\\\n\\\\n## RSV (Respiratory Syncytial Virus)\\\\n\\\\n### Bronchiolitis (Infants)\\\\n- **Peak Age**: 2-12 months\\\\n- **Symptoms**: Cough, wheezing, tachypnea, crackles; hypoxemia in severe\\\\n- **Pathophysiology**: Small airway inflammation → obstruction → air trapping\\\\n- **Severity Determinants**: Age <3 months, prematurity, immunodeficiency, congenital heart disease\\\\n- **Diagnosis**: Rapid antigen test, immunofluorescence, RT-PCR\\\\n- **Management**: Supportive (oxygen, fluids); ribavirin in severe/immunocompromised; no other antivirals\\\\n\\\\n### Severe Disease in Immunocompromised\\\\n- **Prolonged Shedding**: Weeks-months; persistent infection\\\\n- **Lower Respiratory Tract**: Pneumonia, diffuse alveolar damage\\\\n- **Treatment**: Ribavirin, sometimes IV immunoglobulin (IVIG)\\\\n\\\\n## SARS-CoV-2 (COVID-19)\\\\n\\\\n### Asymptomatic to Mild (80-85%)\\\\n- **Incubation**: 2-14 days (mean 5)\\\\n- **Symptoms**: None, or mild cough, sore throat, fever\\\\n- **Viral Shedding**: Peaks at symptom onset; PCR positive ±5 days before to ±10 days after\\\\n- **No Hospitalization Needed**\\\\n\\\\n### Moderate (10-15%)\\\\n- **Pneumonia**: Bilateral lower lobeinfiltrates; mild hypoxemia (SpO2 >90%)\\\\n- **Symptoms**: Fever, cough, dyspnea, malaise\\\\n- **Duration**: 5-10 days typically\\\\n- **Hospitalization**: Often needed for monitoring, oxygen therapy\\\\n\\\\n### Severe (3-5%)\\\\n- **ARDS Criteria**: SpO2 <90%, PaO2/FiO2 <300, bilateral infiltrates on imaging\\\\n- **Cytokine Storm**: Elevated IL-6, TNF-α, CRP; thrombosis risk\\\\n- **Complications**: Thromboembolism, DIC, multi-organ failure\\\\n- **Mortality**: 1-2% overall (higher in age >60, comorbidities)\\\\n\\\\n### Diagnosis & Management\\\\n- **Diagnostic**: RT-PCR (nasal/oropharyngeal swab); chest CT shows bilateral infiltrates\\\\n- **Antivirals**: Remdesivir (if hospitalized, SpO2 <94%); Paxlovid (nirmatrelvir/ritonavir) if high-risk\\\\n- **Immunomodulation**: Dexamethasone if SpO2 <94% on oxygen; tocilizumab (IL-6 inhibitor) for cytokine storm\\\\n- **Anticoagulation**: Thromboprophylaxis; therapeutic anticoagulation if thrombosis\\\\n- **Vaccines**: mRNA (Pfizer, Moderna) highly effective; updated variants recommended\\\\n\\\\n## Poliovirus\\\\n\\\\n### Poliomyelitis Manifestations\\\\n- **Minor Illness** (100x more common than major): Nonspecific fever, malaise, GI symptoms; resolves\\\\n- **Non-Paralytic Aseptic Meningitis**: Headache, neck stiffness, paresthesias; recovery typical\\\\n- **Paralytic Poliomyelitis** (0.1-1%): Lower motor neuron weakness/paralysis, often asymmetric, non-ascending\\\\n  - **Bulbar Polio**: Cranial nerve involvement; dysphagia, dysarthria, respiratory muscle paralysis\\\\n  - **Spinal Polio**: Leg weakness/paralysis (lower extremities more common)\\\\n  - **Respiration**: Diaphragm paralysis may require ventilator\\\\n\\\\n### Outcomes\\\\n- **Recovery Variable**: Some weakness permanent; muscles may regain strength over months\\\\n- **Mortality**: Bulbar polio ~5-10%; respiratory failure if ventilator unavailable\\\\n- **Post-Polio Syndrome**: Decades later; progressive weakness, fatigue (mechanism unknown)\\\\n\\\\n### Eradication Status & Surveillance\\\\n- **Global**: Endemic only in Afghanistan, Pakistan (2 cases 2023)\\\\n- **India**: Polio-free since 2011; continued surveillance for vaccine-derived poliovirus (VDPV)\\\\n- **Vaccination**: OPV (oral polio vaccine) safer globally now; IPV (inactivated) in non-endemic\\\\n\\\\n## Rotavirus Gastroenteritis\\\\n\\\\n### Clinical Presentation\\\\n- **Acute Gastroenteritis**: Watery diarrhea (5-10 stools/day), vomiting, fever\\\\n- **Duration**: 3-8 days; diarrhea outlasts vomiting\\\\n- **Dehydration**: Major concern; electrolyte loss (Na+, K+, Cl-)\\\\n- **Severity**: Moderate in developed countries with hydration; severe in malnourished\\\\n\\\\n### Management\\\\n- **Fluid Therapy**: Oral rehydration solution (ORS); IV if unable to drink/severe dehydration\\\\n- **Electrolytes**: Monitor K+, Na+; supplementation if needed\\\\n- **Diet**: Continue feeding (breastfeeding safe)\\\\n- **Antivirals**: None effective\\\\n- **Vaccine**: RotaTeq (penta-valent), Rotarix (bivalent); 2-3 doses starting 6 weeks\\\\n\\\\n### Vaccine Impact\\\\n- **Global**: Rotavirus mortality decreased 40% post-vaccine introduction\\\\n- **India**: Rotavirus vaccine introduced 2006; coverage variable; burden remains high in private sector\\\\n\\\\n## Norovirus Gastroenteritis\\\\n\\\\n### Outbreaks\\\\n- **Settings**: Schools, cruise ships, healthcare facilities, military barracks\\\\n- **Attack Rate**: >50% (highly contagious)\\\\n- **Duration**: 24-72 hours typically; explosive onset\\\\n- **Asymptomatic Shedding**: Common; viral shedding weeks post-recovery\\\\n\\\\n### Management\\\\n- **Supportive**: ORS, antiemetics (avoid antimotility agents in bloody diarrhea)\\\\n- **Isolation**: 48 hours post-symptom resolution recommended\\\\n- **Cleaning**: Bleach/hypochlorite (dilute 1:10 household bleach); alcohol NOT effective\\\\n- **No Antiviral**: No specific therapy; self-limited\\\\n\\\\n## Indian Context\\\\n\\\\n### Polio Surveillance\\\\n- **EPI Surveillance**: Acute flaccid paralysis (AFP) program detects poliovirus\\\\n- **Immunization**: Universal OPV with IPV integration\\\\n- **Vaccine-Derived Poliovirus (VDPV)**: Risk with prolonged OPV use; monitoring critical\\\\n\\\\n### Rotavirus in India\\\\n- **Burden**: High among children <5 years despite vaccine availability\\\\n- **Vaccination Coverage**: Variable; higher in private sector\\\\n- **Genotypes**: G1P[8] and G2P[4] prevalent\\\\n\\\\n### Influenza & SARS-CoV-2\\\\n- **Seasonal Flu**: Winter peaks; dual burden with COVID-19\\\\n- **COVID-19**: High prevalence; vaccination campaigns ongoing\\\\n- **Co-infection**: Flu + COVID simultaneously possible; additive respiratory effects\\\\n,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Flu Complications Severe\\\\\\\",\\\\n            explanation: \\\\\\\"F=Fever with myalgia, L=Lower respiratory (pneumonia), U=Unusual (encephalitis rare)\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"COVID ARDS Features\\\\\\\",\\\\n            explanation: \\\\\\\"A=Acute onset, R=Respiratory distress, D=Diffuse bilateral infiltrates, S=SpO2<90%, A=Acute respiratory failure\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Influenza: Sudden fever/myalgia, secondary bacterial pneumonia risk, antivirals <48h\\\\\\\",\\\\n          \\\\\\\"RSV bronchiolitis: Infants <2 years, wheezing, hypoxemia, supportive care only\\\\\\\",\\\\n          \\\\\\\"COVID-19: Bilateral infiltrates, cytokine storm in severe, remdesivir/Paxlovid/dexamethasone\\\\\\\",\\\\n          \\\\\\\"Poliomyelitis: Flaccid paralysis, asymmetric, bulbar/spinal variants, eradication near complete\\\\\\\",\\\\n          \\\\\\\"Rotavirus: Watery diarrhea, dehydration (main complication), vaccine effective\\\\\\\",\\\\n          \\\\\\\"Norovirus: Explosive gastroenteritis outbreaks, bleach disinfection effective\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz Melnick & Adelberg's Medical Microbiology\\\\\\\", chapter: \\\\\\\"37-38: Viral Disease Management\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"180-186: Respiratory Viruses\\\\\\\", edition: \\\\\\\"21st\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"respiratory-enteric-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Respiratory & Enteric Viruses - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"High-yield facts, rapid diagnostics, treatment algorithms, and case-based learning for respiratory and enteric viruses.\\\\\\\",\\\\n        contentMd: ``# Respiratory & Enteric Viruses - Exam Prep\\\\n\\\\n## Quick Differential Diagnosis\\\\n\\\\n### Respiratory Illness Clues\\\\n| Feature | Virus | | |\\\\n|---------|-------|----|----|\\\\n| **Sudden Fever + Myalgia** | Influenza >> RSV | | |\\\\n| **Barking Cough** | Parainfluenza (croup) > RSV | | |\\\\n| **Wheezing in Infant** | RSV (bronchiolitis) | | |\\\\n| **Bilateral Infiltrates** | COVID-19, influenza, RSV | | |\\\\n| **Gradual Onset** | Common cold (rhinovirus) | | |\\\\n| **High Infectivity** | COVID-19 (delta/omicron) > Influenza | | |\\\\n\\\\n### Gastrointestinal Illness Clues\\\\n| Feature | Virus | | |\\\\n|---------|-------|----|----|\\\\n| **Watery Diarrhea in Child <5** | Rotavirus > Norovirus | | |\\\\n| **Explosive Acute Onset** | Norovirus >> Rotavirus | | |\\\\n| **Outbreak Setting** | Norovirus (cruise, facility) | | |\\\\n| **Prolonged Diarrhea** | Rotavirus (typically resolves 7d) | | |\\\\n| **Asymptomatic Shedding** | Norovirus (weeks), Rotavirus (days) | | |\\\\n\\\\n## Rapid Diagnostics\\\\n\\\\n### Specimen & Timing\\\\n| Virus | Specimen | Timing | Test |\\\\n|-------|----------|--------|------|\\\\n| **Influenza** | Nasal/throat swab | <48h (best) | Rapid Ag, RT-PCR |\\\\n| **RSV** | Nasal swab | First week | Rapid Ag, RT-PCR |\\\\n| **COVID-19** | Nasopharyngeal swab | Any time | RT-PCR (gold std), Rapid Ag |\\\\n| **Rotavirus** | Stool | First 3-5 days | ELISA, RT-PCR |\\\\n| **Norovirus** | Stool | First 48-72h | RT-PCR (no rapid Ag) |\\\\n| **Polio** | Stool, throat, CSF (meningitis) | First week | RT-PCR, Culture |\\\\n\\\\n## Treatment Quick Reference\\\\n\\\\n### Influenza\\\\n- **Oseltamivir**: 75 mg PO BID × 5 days if <48 hours from onset\\\\n- **Zanamivir**: 5 mg inhaled BID × 5 days\\\\n- **Efficacy**: ~60% reduction in duration if given <48h\\\\n- **Prophylaxis**: Oseltamivir 75 mg daily × 10 days post-exposure\\\\n\\\\n### SARS-CoV-2\\\\n- **Mild**: Supportive care only\\\\n- **Moderate-Severe (SpO2 <94%)**:\\\\n  - Remdesivir 200 mg IV day 1, then 100 mg daily × 4 more days\\\\n  - Dexamethasone 6 mg daily × 10 days (if on oxygen)\\\\n- **High-Risk Mild-Moderate (within 5 days symptom onset)**:\\\\n  - Paxlovid (nirmatrelvir 300mg + ritonavir 100mg) BID × 5 days\\\\n  - OR Molnupiravir 800 mg BID × 5 days (alternative)\\\\n- **Anticoagulation**: Prophylactic LMWH for hospitalized; therapeutic if thrombosis\\\\n\\\\n### Rotavirus\\\\n- **Supportive**: ORS, antidiarrheals if needed\\\\n- **No Antiviral**: Ribavirin not routinely used\\\\n- **Vaccination**: Rotarix (2 doses), RotaTeq (3 doses) starting 6 weeks; prevents severe disease\\\\n\\\\n### Norovirus\\\\n- **Supportive**: ORS, antiemetics\\\\n- **Isolation**: 48 hours post-symptom resolution\\\\n- **No Antiviral**: Self-limited; only supportive\\\\n\\\\n## High-Risk Complications\\\\n\\\\n### Influenza Pneumonia\\\\n- **Risk Factors**: Age >65, COPD, asthma, chronic heart disease, pregnancy\\\\n- **Secondary Bacterial**: S. aureus (MRSA), S. pneumoniae; occurs 5-7 days post-flu onset\\\\n- **Management**: Antibiotics (cover for MRSA if healthcare-associated); supportive respiratory care\\\\n\\\\n### COVID-19 ARDS\\\\n- **Criteria**: SpO2 <90%, PaO2/FiO2 <300, bilateral infiltrates\\\\n- **Mortality**: ~20-30% if intubated\\\\n- **Management**: Prone positioning, high PEEP, remdesivir, dexamethasone, tocilizumab (IL-6 inhibitor)\\\\n- **Anticoagulation**: Significant thrombosis risk (VTE, DIC)\\\\n\\\\n### Poliomyelitis Bulbar Involvement\\\\n- **Risk**: Respiratory failure (diaphragm paralysis)\\\\n- **Management**: Ventilatory support; iron lungs historical (not available now)\\\\n- **Prognosis**: Permanent weakness common; variable recovery\\\\n\\\\n## India-Specific High-Yield\\\\n\\\\n### Polio Surveillance (Critical)\\\\n- **AFP Program**: Acute flaccid paralysis surveillance detects poliovirus\\\\n- **VDPV Risk**: Vaccine-derived poliovirus can emerge with prolonged OPV; IPV transition ongoing\\\\n- **Imports**: Risk from endemic countries (Afghanistan, Pakistan); vigilance required\\\\n\\\\n### Rotavirus Vaccination\\\\n- **Coverage**: Variable India-wide; higher private sector\\\\n- **Schedule**: Rotarix (2 doses: 6, 10 weeks), RotaTeq (3 doses: 6, 10, 14 weeks)\\\\n- **Impact**: 40-70% reduction in severe rotavirus disease\\\\n\\\\n### Influenza in India\\\\n- **Seasonal**: Winter peaks; monsoon secondary peaks\\\\n- **Vaccine**: Annual update; coverage low in public sector\\\\n- **Co-infection Risk**: Dual burden with COVID-19 during overlapping seasons\\\\n\\\\n## Rapid-Fire Facts\\\\n- **Influenza R0**: 1-2 (moderate contagiousness)\\\\n- **COVID-19 R0**: Original 1.5-2; Delta 6-8; Omicron >8 (very high)\\\\n- **Poliovirus R0**: 5-7 (highly contagious; eradication near complete)\\\\n- **Rotavirus Incubation**: 1-3 days\\\\n- **Norovirus Incubation**: 24-48 hours\\\\n- **Influenza Antivirals Best <48h**: 60% reduction in duration\\\\n- **COVID Paxlovid**: Must start within 5 days; high-risk only (age, comorbidity)\\\\n- **Polio Paralysis**: Flaccid, asymmetric, non-ascending (differs from GBS)\\\\n,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Flu Treatment SOON\\\\\\\",\\\\n            explanation: \\\\\\\"S=Start early (<48h), O=Oseltamivir 75mg BID, O=Or zanamivir, N=Neuramidase inhibitor\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"COVID Severe DRDC\\\\\\\",\\\\n            explanation: \\\\\\\"D=Dexamethasone, R=Remdesivir, D=Dexamethasone (repeated), C=COVID severe management\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Influenza: Rapid Ag/RT-PCR <48h; oseltamivir effective if started early\\\\\\\",\\\\n          \\\\\\\"RSV: Diagnosis immunofluorescence/RT-PCR; supportive care; ribavirin in severe\\\\\\\",\\\\n          \\\\\\\"COVID-19: RT-PCR gold standard; remdesivir + dexamethasone if SpO2<94%; Paxlovid high-risk <5d\\\\\\\",\\\\n          \\\\\\\"Rotavirus: ELISA in stool; supportive (ORS); vaccine prevents severe disease\\\\\\\",\\\\n          \\\\\\\"Norovirus: RT-PCR diagnosis; bleach disinfection (not alcohol); self-limited\\\\\\\",\\\\n          \\\\\\\"Polio: RT-PCR; supportive; flaccid paralysis asymmetric (vs GBS ascending)\\\\\\\",\\\\n          \\\\\\\"Antiviral timing critical: Influenza/Paxlovid within 48-72 hours optimal\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz Melnick & Adelberg's Medical Microbiology\\\\\\\", chapter: \\\\\\\"Summary Treatment Tables\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"Board Exam Preparatory Material\\\\\\\", chapter: \\\\\\\"Respiratory & Enteric Viruses\\\\\\\", edition: \\\\\\\"Latest\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"respiratory-enteric-active-recall\\\\\\\",\\\\n        title: \\\\\\\"Respiratory & Enteric Viruses - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Q&A on clinical presentations, diagnostics, management, and complications for respiratory and enteric viruses.\\\\\\\",\\\\n        contentMd: ``# Respiratory & Enteric Viruses - Active Recall Q&A\\\\n\\\\n**Q1: 6-month-old with 3-day history of cough, wheezing, tachypnea (60/min), and SpO2=85% on room air. CXR shows hyperinflation. Diagnosis and immediate management?**\\\\nA) Pneumonia; antibiotics + oxygen\\\\nB) RSV bronchiolitis; oxygen + supportive care\\\\nC) Foreign body aspiration; emergency bronchoscopy\\\\nD) Asthma exacerbation; albuterol inhaler\\\\n**Answer: B) RSV bronchiolitis; oxygen + supportive care** — Peak age 2-12 months, wheezing, hyperinflation on CXR = RSV bronchiolitis. No antibiotics (viral). Supportive: oxygen to SpO2 >90%, IV fluids if unable to feed, monitor respiratory status. Ribavirin only in severe/immunocompromised.\\\\n\\\\n---\\\\n\\\\n**Q2: 68-year-old with sudden fever (39.5°C), malaise, myalgia, and cough ×2 days. Rapid flu test positive. What is the most important next action?**\\\\nA) Wait 48 hours; viremia typically resolves\\\\nB) Start oseltamivir 75 mg PO BID × 5 days immediately\\\\nC) Check CXR and CBC; antivirals not indicated\\\\nD) Admit to hospital for isolation\\\\n**Answer: B) Start oseltamivir 75 mg PO BID × 5 days immediately** — Within 48 hours of onset; oseltamivir ~60% effective in reducing duration. Age 68 = high-risk group (complications). Early treatment critical. CXR may be done to assess for pneumonia, but antiviral not delayed.\\\\n\\\\n---\\\\n\\\\n**Q3: 3-year-old with barking cough, inspiratory stridor, and hoarseness. CXR shows subglottic narrowing. Diagnosis and treatment?**\\\\nA) RSV bronchiolitis; bronchodilators\\\\nB) Parainfluenza croup; dexamethasone + supportive care\\\\nC) Foreign body; emergency removal\\\\nD) Epiglottitis; immediate intubation\\\\n**Answer: B) Parainfluenza croup; dexamethasone + supportive care** — Barking cough, stridor, subglottic narrowing = parainfluenza croup. Dexamethasone 0.6 mg/kg single dose; supportive care (humidified air, avoid agitation). Epiglottitis typically H. influenzae (now rare with vaccine); presents with tripod positioning, difficulty swallowing, drooling.\\\\n\\\\n---\\\\n\\\\n**Q4: 45-year-old hospitalized with bilateral lower lobe infiltrates, SpO2=88% on room air, fever, dry cough. COVID RT-PCR positive. What is the appropriate initial therapy?**\\\\nA) Remdesivir only; observe\\\\nB) Remdesivir 200 mg IV day 1, then 100 mg daily × 4 more days + dexamethasone 6 mg daily\\\\nC) Oseltamivir; likely influenza misidentified\\\\nD) Chloroquine (no evidence-based use)\\\\n**Answer: B) Remdesivir 200 mg IV day 1, then 100 mg daily × 4 more days + dexamethasone 6 mg daily** — Hospitalized with SpO2<94% on oxygen. Both remdesivir (antiviral, shortens duration) and dexamethasone (reduces inflammation, mortality) indicated. Tocilizumab (IL-6 inhibitor) for severe cytokine storm if available.\\\\n\\\\n---\\\\n\\\\n**Q5: 18-month-old with 5 watery stools/day, fever 38.5°C, and low oral intake. Serum osmolality 295. Rotavirus antigen positive. Management?**\\\\nA) IV antivirals (ribavirin)\\\\nB) Antibiotics for bacterial superinfection\\\\nC) Oral rehydration solution (ORS) + continued breastfeeding\\\\nD) NPO (nothing by mouth) until diarrhea resolves\\\\n**Answer: C) Oral rehydration solution (ORS) + continued breastfeeding** — Rotavirus = viral gastroenteritis; no antivirals (ribavirin not indicated). ORS primary therapy; breastfeeding safe (protective). Avoid NPO; feeding improves villous recovery. Dehydration is the complication, not the virus itself.\\\\n\\\\n---\\\\n\\\\n**Q6: Cruise ship outbreak: 150 passengers/crew with acute vomiting, diarrhea, and malaise lasting 24-48 hours. Attack rate >50%. Most likely diagnosis?**\\\\nA) Rotavirus (unlikely in adults; peaks in children)\\\\nB) Norovirus (explosive outbreak, high attack rate, short duration)\\\\nC) E. coli (traveler's diarrhea)\\\\nD) Cholera (wrong geography, duration)\\\\n**Answer: B) Norovirus (explosive outbreak, high attack rate, short duration)** — Norovirus hallmark: explosive outbreaks in congregate settings (cruise ships, schools), high attack rate (>50%), short duration (24-72 hours). Rotavirus peaks in children <5 years. Disinfection: bleach/hypochlorite (1:10 dilution); alcohol NOT effective against norovirus.\\\\n\\\\n---\\\\n\\\\n**Q7: 9-month-old presents with acute flaccid paralysis of both legs, history of high fever, and diarrhea ×2 weeks. CSF: pleocytosis (lymphocytic), normal glucose. Diagnosis and differential?**\\\\nA) Guillain-Barré syndrome (ascending paralysis)\\\\nB) Poliomyelitis (flaccid paralysis, asymmetric, anterior horn motor neurons)\\\\nC) Transverse myelitis (bilateral, ascending with level)\\\\nD) Acute disseminated encephalomyelitis (multifocal, not just motor)\\\\n**Answer: B) Poliomyelitis (flaccid paralysis, asymmetric, anterior horn motor neurons)** — Flaccid paralysis, fever, diarrhea, CSF pleocytosis = poliomyelitis. Lower motor neuron pattern (flaccid, areflexic, asymmetric). GBS typically ascending (lower extremities first, then upper). Confirm with stool RT-PCR. India surveillance critical; IP vaccine continuation.\\\\n\\\\n---\\\\n\\\\n**Q8: 2-day-old newborn develops respiratory distress, diffuse infiltrates on CXR. Mother had bilateral pneumonia (COVID RT-PCR+ day of delivery). What is the likely diagnosis?**\\\\nA) Neonatal respiratory distress syndrome (HMD)\\\\nB) Vertical transmission of SARS-CoV-2; neonatal COVID pneumonia\\\\nC) Group B Streptococcus (GBS) pneumonia\\\\nD) Aspiration pneumonia (meconium aspiration)\\\\n**Answer: B) Vertical transmission of SARS-CoV-2; neonatal COVID pneumonia** — Maternal COVID at delivery; rapid onset respiratory symptoms in neonate = vertical transmission. COVID RT-PCR on neonatal nasopharyngeal swab confirms. RDS typically presents with grunting, retractions, but may be difficult to differentiate; clinical context matters. Early supportive care; COVID is usually milder in neonates.\\\\n\\\\n---\\\\n\\\\n**Q9: 72-year-old with influenza (rapid test+) presents with sudden shortness of breath on day 7 of illness. CXR shows infiltrate in right lower lobe. Sputum culture grows methicillin-resistant Staphylococcus aureus (MRSA). What happened?**\\\\nA) Influenza progressing to severe infection\\\\nB) Secondary bacterial pneumonia (S. aureus); influenza predisposed to superinfection\\\\nC) Aspiration pneumonia (different pathogen expected)\\\\nD) Nosocomial infection (unrelated to flu)\\\\n**Answer: B) Secondary bacterial pneumonia (S. aureus); influenza predisposed to superinfection** — Day 7 of flu = secondary bacterial pneumonia window. Influenza epithelial damage → S. aureus (often MRSA), S. pneumoniae superinfection. Requires antibiotics (MRSA coverage; vancomycin or linezolid). This is the major complication mortality driver in influenza.\\\\n\\\\n---\\\\n\\\\n**Q10: 28-year-old with high-risk factors (age, diabetes) tests COVID-positive on day 2 of symptoms (mild, SpO2=96% on room air). What is the appropriate intervention?**\\\\nA) Observe; mild symptoms don't require intervention\\\\nB) Paxlovid (nirmatrelvir/ritonavir) within 5 days of symptom onset\\\\nC) Remdesivir IV (requires hospitalization)\\\\nD) Wait for symptoms to worsen; antivirals reserved for moderate-severe\\\\n**Answer: B) Paxlovid (nirmatrelvir/ritonavir) within 5 days of symptom onset** — High-risk (diabetes, age consider antiviral despite mild symptoms; Paxlovid indicated if high-risk within 5 days. Reduces hospitalization/mortality by ~90% in high-risk. Remdesivir reserved for hospitalized/moderate-severe.\\\\n,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Respiratory Virus KIDS\\\\\\\",\\\\n            explanation: \\\\\\\"K=Know timing for antivirals, I=Influenza oseltamivir <48h, D=Diagnostic tests matter, S=Supportive care primary\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"RSV bronchiolitis: Infants <2 years, wheezing, hyperinflation, supportive care (no antivirals)\\\\\\\",\\\\n          \\\\\\\"Influenza secondary bacterial: Day 7, S. aureus/S. pneumoniae, require antibiotics\\\\\\\",\\\\n          \\\\\\\"Poliomyelitis: Flaccid asymmetric paralysis; GBS ascending; stool RT-PCR diagnosis\\\\\\\",\\\\n          \\\\\\\"Norovirus: Explosive outbreaks, high attack rate, bleach disinfection effective\\\\\\\",\\\\n          \\\\\\\"COVID high-risk: Paxlovid within 5 days; mild symptoms if risk factors (diabetes, age)\\\\\\\",\\\\n          \\\\\\\"Rotavirus: ORS primary treatment; no antivirals; vaccine prevents severe disease\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz Melnick & Adelberg's Medical Microbiology\\\\\\\", chapter: \\\\\\\"Case Studies\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"Board Exam Questions\\\\\\\", chapter: \\\\\\\"Respiratory & Enteric Viruses\\\\\\\", edition: \\\\\\\"Current\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n`\\\\n\\\"\""
-}
-}
-}
-}
-];
-];
-];
+        summary: "Influenza, SARS-CoV-2, RSV, parainfluenza, rotavirus, norovirus, poliovirus epidemiology and transmission.",
+        contentMd: `# Respiratory & Enteric Viruses - Foundation
+
+## Respiratory Viruses
+- **Influenza**: Segmented -RNA; antigenic drift/shift; neuraminidase inhibitor targets
+- **SARS-CoV-2**: Enveloped +RNA; ACE2 receptor; high transmissibility variants (delta, omicron)
+- **RSV**: Non-enveloped -RNA; most common viral lower respiratory infants; bronchiolitis
+- **Parainfluenza**: Causes croup (laryngotracheobronchitis); barking cough, stridor
+- **Rhinovirus**: Most common cold; >150 serotypes; reinfection common
+
+## Enteric Viruses
+- **Poliovirus**: Non-enveloped +RNA; fecal-oral; motor neuron paralysis; eradication near complete
+- **Rotavirus**: Non-enveloped dsRNA; most common gastroenteritis children <5; vaccine prevents
+- **Norovirus**: Non-enveloped +RNA; epidemic gastroenteritis adults; outbreaks (ships, schools, facilities)
+- **Coxsackievirus/Echovirus**: Acute febrile illness, exanthema, meningitis
+
+## Key Characteristics
+- **Respiratory transmission**: Droplet/aerosol (influenza <50% secondary attack; delta/omicron higher)
+- **Fecal-oral**: Poliovirus (R0 5-7), rotavirus, norovirus
+- **Incubation**: Influenza 2-3d, COVID 5d mean, RSV 4-5d, rotavirus 1-3d
+- **Seasonality**: Winter respiratory; summer GI (temperate); year-round tropics`,
+        mnemonics: [
+          { text: "Segmented RNA Viruses", explanation: "Influenza (8 segments), Rotavirus (11 segments)" },
+          { text: "Respiratory vs Enteric Routes", explanation: "Respiratory: droplet/aerosol; Fecal-oral: stable GI" }
+        ],
+        keyPoints: [
+          "Influenza: Segmented; antigenic drift yearly, shift pandemic potential",
+          "RSV: Most common viral lower respiratory infants <2 years; bronchiolitis",
+          "SARS-CoV-2: Novel pandemic; ACE2 receptor; asymptomatic 40-50%",
+          "Poliovirus: Fecal-oral transmission; motor neuron paralysis; eradication ongoing",
+          "Rotavirus: Most common gastroenteritis <5 years; vaccine effective",
+          "Norovirus: Epidemic gastroenteritis adults; airborne possible"
+        ],
+        textbookRefs: [
+          { book: "Jawetz Melnick & Adelberg's Medical Microbiology", chapter: "37-38: Respiratory & Enteric", edition: "28th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "resp-enteric-virus-layer-2-mechanism",
+        title: "Respiratory & Enteric Viruses - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Viral replication in respiratory epithelium, intestinal tropism, antigenic drift/shift, and pathophysiology of complications.",
+        contentMd: `# Pathophysiology & Pathogenesis
+
+## Influenza Antigenic Variation
+- **Drift**: Point mutations HA/NA yearly; gradual antibody loss
+- **Shift**: Reassortment of 8 segments in co-infection; novel virus, pandemic potential
+- **Neuraminidase inhibitors**: Block sialic acid cleavage; prevent viral release
+
+## Respiratory Epithelial Infection
+- **HA receptor binding**: Sialic acid (α-2,6 linked in humans; α-2,3 in avian)
+- **Cytopathology**: Epithelial damage → loss of ciliary clearance
+- **Secondary bacterial**: S. aureus, S. pneumoniae (day 5-7 after viral onset)
+- **Cytokine storm**: TNF-α, IL-6 → ARDS (especially 2009 H1N1)
+
+## Poliovirus Motor Neuron Pathogenesis
+- **Replication**: Peyer's patches → viremia → anterior horn motor neurons
+- **Neuronal necrosis**: Lytic infection of motor neurons
+- **Paralysis**: Lower motor neuron pattern; typically asymmetric
+- **Recovery**: Nerve sprouting; incomplete strength recovery
+
+## Rotavirus Diarrhea Mechanism
+- **Villous atrophy**: Epithelial loss, shortened villi
+- **Osmotic diarrhea**: Loss of absorptive surface; increased osmolarity
+- **Secretory component**: NSP4 toxin-mediated secretion
+- **Dehydration**: Major complication; electrolyte loss
+
+## SARS-CoV-2 Pathogenesis
+- **ACE2 receptor**: Epithelial cells (respiratory, GI, endothelium)
+- **Type I IFN response**: Initial control; delayed in severe disease
+- **Hyperinflammation**: IL-6, TNF-α, IL-1 dysregulation
+- **Endothelial damage**: Microthrombi, DIC, ARDS
+- **IRIS-like**: Post-COVID syndrome (fatigue, dyspnea, cognitive dysfunction)`,
+        mnemonics: [
+          { text: "Influenza Antigenic Changes", explanation: "Drift (mutations yearly), Shift (reassortment pandemic)" },
+          { text: "SARS-CoV-2 ACE2 Tropism", explanation: "ACE2 on respiratory, GI, endothelium; multi-system disease" }
+        ],
+        keyPoints: [
+          "Influenza: Segmented genome enables shift (reassortment); drift gradual change",
+          "Respiratory epithelial damage → secondary bacterial (S. aureus, S. pneumoniae)",
+          "Poliovirus: Motor neuron lytic infection; flaccid paralysis",
+          "Rotavirus: Villous atrophy, osmotic diarrhea; dehydration complication",
+          "SARS-CoV-2: ACE2 tropism; hyperinflammation in severe; microthrombi"
+        ],
+        textbookRefs: [
+          { book: "Jawetz Melnick & Adelberg's Medical Microbiology", chapter: "37-38: Pathogenesis", edition: "28th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "resp-enteric-virus-layer-3-clinical",
+        title: "Respiratory & Enteric Viruses - Clinical",
+        estimatedMinutes: 35,
+        summary: "Influenza presentations, RSV bronchiolitis, COVID-19 severity, polio paralysis, rotavirus/norovirus management, and Indian context.",
+        contentMd: `# Clinical Presentations & Management
+
+## Influenza
+- **Presentation**: Sudden fever, malaise, myalgia, headache
+- **Complications**: Pneumonia (viral, secondary bacterial), myositis, encephalitis
+- **High-risk**: Age >65, chronic disease, pregnancy, immunocompromised
+- **Treatment**: Oseltamivir <48h (60% duration reduction); neuraminidase inhibitors
+- **Secondary bacterial**: S. aureus (MRSA), S. pneumoniae (day 5-7 post-flu onset)
+
+## RSV (Bronchiolitis)
+- **Peak**: 2-12 months; wheezing, tachypnea, hypoxemia
+- **Pathophysiology**: Small airway inflammation, air trapping
+- **Diagnosis**: Immunofluorescence, RT-PCR
+- **Management**: Supportive (oxygen, fluids); ribavirin in severe/immunocompromised
+
+## SARS-CoV-2 (COVID-19)
+- **Mild (80-85%)**: Cough, sore throat, fever; no hospitalization
+- **Moderate (10-15%)**: Bilateral infiltrates, mild hypoxemia (SpO2 >90%)
+- **Severe (3-5%)**: ARDS (SpO2 <90%), bilateral infiltrates, PaO2/FiO2 <300
+- **Treatment**:
+  - Mild: Supportive only
+  - Moderate-severe (SpO2 <94%): Remdesivir + dexamethasone
+  - High-risk mild (within 5d): Paxlovid (nirmatrelvir/ritonavir)
+  - Thrombosis risk: Anticoagulation
+- **Mortality**: 1-2% overall; higher age >60, comorbidities
+
+## Poliovirus (Poliomyelitis)
+- **Minor illness** (most): Nonspecific fever, resolves
+- **Non-paralytic**: Meningitis signs; recovery typical
+- **Paralytic** (0.1-1%): Flaccid asymmetric paralysis (lower motor neuron)
+  - Bulbar: Dysphagia, dysarthria, respiratory paralysis
+  - Spinal: Leg weakness/paralysis
+- **Mortality**: Bulbar ~5-10% (respiratory failure)
+- **Eradication**: Endemic only Afghanistan, Pakistan; India polio-free since 2011
+
+## Rotavirus Gastroenteritis
+- **Peak**: 6-24 months; watery diarrhea (5-10 stools/day), vomiting, fever
+- **Duration**: 3-8 days; diarrhea outlasts vomiting
+- **Complication**: Dehydration; electrolyte loss
+- **Management**: ORS primary; continue feeding; vaccine prevents severe disease
+- **Vaccine**: RotaTeq (3 doses), Rotarix (2 doses)
+
+## Norovirus Outbreaks
+- **Settings**: Schools, cruise ships, healthcare facilities
+- **Attack rate**: >50%; explosive onset
+- **Duration**: 24-72 hours
+- **Management**: ORS, isolation 48h post-symptom resolution
+- **Disinfection**: Bleach/hypochlorite (alcohol NOT effective)
+
+## India Context
+- **Polio surveillance**: AFP program monitors for vaccine-derived poliovirus
+- **Influenza**: Winter peaks; dual burden with COVID
+- **Rotavirus**: High burden despite vaccine availability
+- **COVID-19**: High prevalence; ongoing vaccination campaigns`,
+        mnemonics: [
+          { text: "Flu Complications Severe", explanation: "Secondary bacterial pneumonia day 5-7; S. aureus/S. pneumoniae" },
+          { text: "COVID ARDS", explanation: "Bilateral infiltrates, SpO2<90%, PaO2/FiO2<300; remdesivir+dexamethasone" },
+          { text: "Norovirus Bleach Disinfection", explanation: "Bleach/hypochlorite 1:10 effective; alcohol NOT" }
+        ],
+        keyPoints: [
+          "Influenza: Neuraminidase inhibitors <48h; secondary bacterial day 5-7",
+          "RSV: Infants <2 years, wheezing, supportive care, ribavirin in severe",
+          "COVID-19: Bilateral infiltrates, remdesivir+dex if SpO2<94%, Paxlovid if high-risk <5d",
+          "Polio: Flaccid paralysis asymmetric, bulbar/spinal variants, eradication ongoing",
+          "Rotavirus: Watery diarrhea, ORS (main treatment), vaccine effective",
+          "Norovirus: Explosive outbreaks, bleach disinfection, airborne possible"
+        ],
+        textbookRefs: [
+          { book: "Jawetz Melnick & Adelberg's Medical Microbiology", chapter: "37-38: Diseases", edition: "28th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "resp-enteric-virus-layer-4-exam",
+        title: "Respiratory & Enteric Viruses - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "High-yield diagnostic clues, treatment algorithms, and rapid reference.",
+        contentMd: `# Exam High-Yield
+
+## Rapid Diagnostic Clues
+- **Sudden fever + myalgia**: Influenza >> RSV
+- **Barking cough**: Parainfluenza (croup) > RSV
+- **Wheezing infant**: RSV (bronchiolitis)
+- **Watery diarrhea <5y**: Rotavirus > Norovirus
+- **Explosive GI outbreak**: Norovirus >> Rotavirus
+- **Flaccid paralysis asymmetric**: Poliovirus (GBS ascending)
+
+## Treatment Timing
+- **Influenza oseltamivir**: <48h optimal (60% duration ↓)
+- **COVID Paxlovid**: <5 days high-risk (90% hospitalization ↓)
+- **Rotavirus ORS**: Anytime (supportive)
+- **Polio**: Supportive only (no antiviral)
+
+## Vaccines Quick Reference
+| Vaccine | Type | Efficacy | Duration |
+|---------|------|----------|----------|
+| **Influenza** | Inactivated | 40-60% | 1 year |
+| **IPV** | Inactivated | >95% | Boosters |
+| **OPV** | Live-attenuated | >95% | Lifelong |
+| **RotaTeq** | Live-attenuated | 85-98% | Lifelong |
+| **COVID mRNA** | mRNA | 90-95% | Waning 1yr |`,
+        mnemonics: [
+          { text: "Oseltamivir <48h", explanation: "Most effective within 48 hours of symptom onset" },
+          { text: "Paxlovid <5d High-Risk", explanation: "COVID: within 5 days; high-risk only (age, comorbidity)" }
+        ],
+        keyPoints: [
+          "Influenza: Oseltamivir <48h; secondary bacterial day 5-7",
+          "RSV: Diagnosis IF/RT-PCR; supportive care; ribavirin severe",
+          "COVID: RT-PCR gold std; remdesivir+dex SpO2<94%; Paxlovid high-risk <5d",
+          "Polio: RT-PCR; flaccid paralysis; eradication ongoing",
+          "Rotavirus: ELISA; ORS primary; vaccine prevents",
+          "Norovirus: PCR; bleach disinfection; self-limited"
+        ],
+        textbookRefs: [
+          { book: "Jawetz Melnick & Adelberg's Medical Microbiology", chapter: "37-38: Summary", edition: "28th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "resp-enteric-virus-layer-5-active-recall",
+        title: "Respiratory & Enteric Viruses - Active Recall",
+        estimatedMinutes: 20,
+        summary: "Case-based Q&A on diagnostics, management, and complications.",
+        contentMd: `# Active Recall Q&A
+
+**Q1:** 6-month-old with cough, wheezing, tachypnea (60/min), SpO2=85%. CXR hyperinflation. Diagnosis?
+**A1:** RSV bronchiolitis; oxygen+supportive; no antibiotics; ribavirin only if severe/immunocompromised
+
+**Q2:** 68-year-old, fever, malaise, myalgia, cough × 2d. Rapid flu positive. Management?
+**A2:** Oseltamivir 75mg BID × 5 days immediately; high-risk (age 68); assess for pneumonia
+
+**Q3:** 3-year-old, barking cough, inspiratory stridor, subglottic narrowing CXR. Diagnosis?
+**A3:** Parainfluenza croup; dexamethasone 0.6mg/kg; supportive (humidified air)
+
+**Q4:** 45-year-old hospitalized, bilateral infiltrates, SpO2=88% on room air, fever, COVID PCR+. Treatment?
+**A4:** Remdesivir 200mg IV day 1, then 100mg × 4 more + dexamethasone 6mg daily; oxygen; anticoagulation
+
+**Q5:** 18-month-old with 5 watery stools/day, fever, low oral intake. Rotavirus Ag+. Management?
+**A5:** ORS primary treatment; continue breastfeeding; no antivirals; dehydration main complication
+
+**Q6:** Cruise ship: 150 passengers/crew with acute vomiting/diarrhea, 24-72h duration, attack rate >50%. Diagnosis?
+**A6:** Norovirus (explosive outbreak, high attack rate); bleach disinfection; self-limited
+
+**Q7:** 9-month-old, flaccid bilateral leg paralysis, fever × 2w, diarrhea. CSF lymphocytic, normal glucose. Diagnosis?
+**A7:** Poliomyelitis (flaccid asymmetric); stool RT-PCR; India surveillance critical
+
+**Q8:** Influenza patient, day 7, sudden SOB, RLL infiltrate, MRSA in sputum. What happened?
+**A8:** Secondary bacterial pneumonia (S. aureus MRSA); occurred day 5-7 post-flu; requires antibiotics
+
+**Q9:** 2-day-old, respiratory distress, bilateral infiltrates CXR. Mother COVID PCR+ at delivery. Diagnosis?
+**A9:** Vertical transmission COVID; neonatal COVID pneumonia; likely mild; supportive care
+
+**Q10:** Pandemic alert: New influenza strain H1N2 (swine+avian combination) emerges. Mechanism?
+**A10:** Antigenic shift; reassortment of genome segments; co-infection → novel virus, pandemic potential`,
+        mnemonics: [],
+        keyPoints: [
+          "RSV bronchiolitis: Infants <2yr, wheezing, hyperinflation, supportive care",
+          "Influenza: Oseltamivir <48h; secondary bacterial day 5-7 (S. aureus/pneumo)",
+          "COVID: RT-PCR gold std; remdesivir+dex SpO2<94%; Paxlovir high-risk <5d",
+          "Polio: Flaccid asymmetric paralysis; eradication ongoing",
+          "Rotavirus: ORS main therapy; vaccine effective",
+          "Norovirus: Explosive outbreaks, bleach effective, self-limited"
+        ],
+        textbookRefs: [
+          { book: "Jawetz Melnick & Adelberg's Medical Microbiology", chapter: "37-38: Cases", edition: "28th" }
+        ]
+      }
+    ]
+  }
 ];

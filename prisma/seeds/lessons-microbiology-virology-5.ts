@@ -1,19 +1,293 @@
-export const microbiologyVirologyLessons5 = [
+import type { TopicLessons } from "./content-loader";
+
+export const microbiologyVirologyLessons5: TopicLessons[] = [
   {
     topicCode: "MI-MOD-05-TOP-06",
     layers: [
       {
         layer: 1,
-        slug: "arboviruses-rabies-foundation",
+        slug: "arboviruses-rabies-layer-1-foundation",
         title: "Arboviruses & Rabies - Foundation",
         estimatedMinutes: 25,
-        summary: "Arthropod-borne viruses (dengue, chikungunya, Japanese encephalitis, yellow fever) and rabies virus. Structure, transmission, epidemiology, and Indian endemicity.",
-        contentMd: "# Arboviruses & Rabies - Foundation\n\n## Arboviruses Overview\n\n### Classification\n- **Arthropod-Borne Viruses**: Transmitted by mosquitoes (Aedes, Culex, Anopheles) and ticks\n- **Major Families**:\n  - **Flaviviruses**: Dengue (4 serotypes), yellow fever, Japanese encephalitis (JE), Zika, West Nile\n  - **Alphaviruses (Togaviruses)**: Chikungunya, Ross River, o'nyong'nyong\n  - **Bunyaviruses**: Crimean-Congo hemorrhagic fever, hantavirus\n- **Replication**: Usually in mosquito midgut, salivary gland; transmitted to humans via saliva\n- **Amplification Cycle**: Human → mosquito → human (viremia required in human phase)\n\n## Dengue Virus\n\n### Virology & Epidemiology\n- **Four Serotypes**: DEN-1, -2, -3, -4 (variable regional prevalence)\n- **Transmission**: Aedes aegypti mosquito (daytime biter, urban)\n- **Geographic Distribution**: Tropical/subtropical 40°N-40°S; highest in Southeast Asia, India, Brazil\n- **Global Burden**: ~390 million infections annually; 96 million symptomatic\n- **Incubation**: 3-14 days; mean 4-6 days\n- **Viremia Duration**: 4-5 days typically (overlaps with fever)\n- **Immunity**: Type-specific after infection; cross-protection variable\n\n### Indian Context (Critical)\n- **Prevalence**: Hyperendemic in urban/semi-urban areas; all states affected\n- **Monsoon Peaks**: June-October (water accumulation, Aedes breeding)\n- **Serotype Circulation**: DEN-3 and DEN-4 recent dominance; genotype shifts documented\n- **Secondary Infection Risk**: High in India due to sequential serotype exposure\n- **Dengue Hemorrhagic Fever (DHF)**: Higher incidence with secondary infection\n\n## Chikungunya Virus\n\n### Virology & Epidemiology\n- **Alphavirus (Togavirus)**: Enveloped ssRNA(+)\n- **Transmission**: Aedes mosquitoes (daylight feeders)\n- **Incubation**: 3-7 days; mean 4 days\n- **Recent Outbreaks**: 2006 Indian epidemic (Kerala, Delhi); recurring seasonal cases\n- **Viremia**: 5-7 days (peak day 2-3)\n\n### Clinical Hallmark\n- **Arthralgia/Arthritis**: Severe joint pain (especially knees, ankles, wrists, shoulders)\n- **Myalgia**: Muscle pain complementing arthralgia\n- **Post-Chikungunya Arthritis**: Can persist months-years (chronic sequela)\n\n## Japanese Encephalitis Virus (JE)\n\n### Virology & Epidemiology\n- **Flavivirus**: Enveloped ssRNA(+)\n- **Transmission**: Culex mosquitoes (nighttime feeders); animal amplification (pigs, birds)\n- **Incubation**: 5-15 days; mean 8 days\n- **Geographic Distribution**: East and Southeast Asia, India, parts of China\n- **Seasonal Pattern**: Summer/early autumn (monsoon-dependent); epidemics occur\n\n### Indian Endemicity (High-Burden)\n- **Endemic Areas**: Bihar, Uttar Pradesh, Jharkhand, Assam (Northern India)\n- **Sporadic Cases**: Throughout India; higher burden Northern states\n- **Mortality**: 20-30% in clinical encephalitis; significant morbidity in survivors\n- **Age**: Affects children disproportionately; sporadic cases in unvaccinated adults\n\n## Yellow Fever Virus\n\n### Virology & Epidemiology\n- **Flavivirus**: Enveloped ssRNA(+)\n- **Transmission**: Aedes aegypti (urban), Haemagogus (jungle/rural)\n- **Geographic Distribution**: Africa, South America; NOT in Asia\n- **Clinical Forms**:\n  - **Sylvatic (Jungle)**: Rural; monkeys amplify virus\n  - **Urban**: Human-to-mosquito-to-human cycle\n- **Mortality**: 15-50% in severe hemorrhagic form\n\n### Not Relevant to India\n- **Geographic**: Not endemic in India; imported cases rare\n- **Vaccination**: Yellow fever vaccine required for travelers to endemic countries\n- **Diagnosis**: In India, important differential for fever, but less likely than dengue\n\n## Rabies Virus\n\n### Virology\n- **Rhabdovirus Family**: Negative-sense ssRNA, bullet-shaped (characteristic)\n- **Envelope Glycoprotein (G)**: Only protein on surface; induces neutralizing antibodies\n- **Genome Size**: Small (11.9 kb); minimal coding capacity; depends heavily on host machinery\n- **Replication**: Cytoplasmic (unlike most RNA viruses); uses viral RNA polymerase\n- **Host Interference**: Viral phosphoprotein P interferes with host immune response\n\n### Epidemiology (Global & Indian)\n- **Global Burden**: ~59,000 deaths annually (likely underestimated)\n- **India Burden**: ~20,000-40,000 deaths annually (highest global burden, >30% of world deaths)\n- **Animal Reservoirs**: Dogs (85-90% bites in India), bats, cats, wildlife\n- **Transmission Routes**:\n  - **Bite**: Most common (inoculation of virus in saliva)\n  - **Mucous Membrane Exposure**: Rare but possible\n  - **Inhalation**: Bat-associated in caves (very rare)\n  - **Transplantation**: Organ transplant (rare)\n- **Incubation**: Highly variable (weeks to months, exceptionally years); depends on distance from CNS\n\n### High-Risk Exposures\n- **Category III (Highest Risk)**: Multiple bites, bites/scratches on head/neck/hands/genitals, virus-rich saliva visible, domestic animal with signs of rabies\n- **Category II (Moderate)**: Single bite on arms/legs, no profuse bleeding, animal health status unknown\n- **Category I (Low Risk)**: Intact skin touching, no exposure to mucous membranes/abraded skin\n\n### Case-Fatality Rate\n- **Without Post-Exposure Prophylaxis (PEP)**: ~100% (once symptomatic)\n- **With Timely PEP**: >99% prevented (pre-symptomatic intervention)\n- **With Symptom Onset**: ~100% (only ~6-10 survivors globally with Milwaukee protocol)\n,\n        mnemonics: [\n          {\n            text: \"Dengue D4 Severity\",\n            explanation: \"D=Dengue fever (day 2-5), D=DHF (secondary infection, day 3-7), D=DSS (dengue shock, day 4-6), D=Death risk in DHF\"\n          },\n          {\n            text: \"JE-JI Geographic\",\n            explanation: \"J=Japanese Encephalitis, E=Endemic Bihar/UP, J=Jharkhand, I=Incidence high children\"\n          },\n          {\n            text: \"Rabies R.A.B.I.E.S\",\n            explanation: \"R=Rhabdovirus, A=Animal bite, B=Bullet-shaped, I=India high burden, E=Encephalitis (fatal), S=Saliva transmission\"\n          }\n        ],\n        keyPoints: [\n          \"Dengue: 4 serotypes; Aedes aegypti vector; monsoon peaks; DHF risk secondary infection\",\n          \"Chikungunya: Severe arthralgia/arthritis; chronic sequelae possible; recent epidemics India\",\n          \"JE: Culex vector; endemic Bihar/UP; high pediatric mortality; vaccine available\",\n          \"Yellow fever: Absent India; important travel consideration; severe hemorrhagic form\",\n          \"Rabies: 100% fatal untreated; ~20-40,000 deaths India annually; PEP highly effective\",\n          \"Incubation variation: Rabies longest (weeks-months); dengue/JE shorter (days)\"\n        ],\n        textbookRefs: [\n          { book: \"Jawetz Melnick & Adelberg's Medical Microbiology\", chapter: \"40-41: Arboviruses & Rabies\", edition: \"28th\" },\n          { book: \"Ananthanarayan & Paniker's Textbook of Microbiology\", chapter: \"Arboviruses & Rabies\", edition: \"10th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"arboviruses-rabies-mechanism\",\n        title: \"Arboviruses & Rabies - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Arbovirus replication in vector and human, viremia kinetics, immune responses. Rabies pathogenesis: axonal transport, neuroinvasion, and immune evasion.\",\n        contentMd: "# Arboviruses & Rabies - Mechanism\\n\\n## Dengue Viral Replication & Immune Response\\n\\n### Replication Cycle\\n- **Mosquito Infection**: Virus ingested with blood meal → replication in midgut epithelium → spread to salivary glands\\n- **Extrinsic Incubation Period**: 10-14 days in mosquito before transmission competence\\n- **Human Infection**: Viral entry via dendritic cells, skin fibroblasts; rapid dissemination\\n- **Viremia Onset**: 1-2 days post-infection; peaks day 2-3; subsides by day 5-7\\n- **NS5 Protease**: Cleaves viral and host IFN-signaling proteins; immune evasion\\n\\n### Antibody-Dependent Enhancement (ADE)\\n- **Primary Infection**: Type-specific IgG neutralizes homologous serotype; protection\\n- **Secondary Infection (Different Serotype)**: Non-neutralizing IgG from prior infection enhances uptake into Fc-receptor-bearing cells (monocytes, macrophages)\\n- **Higher Viremia**: ADE leads to 10-100 fold increase in viral load\\n- **DHF/DSS Risk**: High viremia + immune-mediated endothelial damage → plasma leakage, hemorrhage, shock\\n- **Thrombocytopenia Mechanism**: Direct viral infection of megakaryocytes; immune-mediated destruction\\n\\n## Japanese Encephalitis Pathogenesis\\n\\n### CNS Invasion\\n- **Blood-Brain Barrier (BBB) Crossing**: Unknown mechanism; possibly dendritic cell transmigration, direct endothelial infection\\n- **Neuroinvasion**: Replication in neurons and glia → neuronal necrosis, cytokine-driven inflammation\\n- **Cytokine Storm**: TNF-α, IL-6, IL-8 → BBB disruption, edema, neuronal death\\n- **Specific Neuronal Damage**: Brainstem, basal ganglia, thalamus preferentially affected\\n- **Sequelae**: Neuronal loss → permanent motor/cognitive deficits\\n\\n## Rabies Pathogenesis\\n\\n### Unique Pathophysiology\\n- **Slow Progression**: Weeks-months incubation before CNS involvement; allows PEP window\\n- **Axonal Transport Route**: Rabies travels from bite wound up sensory/motor nerves → spinal cord → brainstem → cortex\\n- **Distance-Dependent Incubation**: Shorter distance = faster symptoms\\n  - Bite on face: ~30 days\\n  - Bite on arm: ~60 days\\n  - Bite on leg: ~90+ days\\n  - Multiple bites/severe exposure: <7 days possible\\n\\n### Molecular Mechanisms\\n- **Phosphoprotein (P)**: Interferes with host interferon response; prevents IFN-β production\\n- **Nucleoprotein (N)**: Evades RIG-I-like receptor recognition\\n- **V-Protein (from P gene)**: Blocks STAT signaling; critical immune evasion\\n- **Result**: Minimal innate immune response during long incubation; when symptoms appear, delayed adaptive response too late\\n\\n### Neuroinvasion & CNS Pathology\\n- **Dorsal Root Ganglion**: Replication site after axonal arrival; relatively silent immune activation\\n- **Spinal Cord Ascent**: Retrograde transport up dorsal root; entry into brainstem\\n- **Brainstem Infection**: Replication in Ammon horn, medulla, midbrain\\n- **Encephalitis**: Mild inflammation despite high viral load (contrast with other encephalitides)\\n- **Excitotoxicity**: Viral proteins → glutamate release, calcium influx, neuronal death\\n- **Autonomic Dysfunction**: Viral replication in autonomic centers → dysrhythmia, hypersalivation\\n\\n## Immune Responses\\n\\n### Dengue Immune Response (Cellular vs Humoral)\\n- **IgM Antibody**: Appears day 3-5; peaks day 7-10; protective in primary infection\\n- **IgG Antibody**: Appears day 5-7; long-lasting (lifetime)\\n- **CD8+ T Cell Response**: Type-specific; important for viral clearance\\n- **Memory**: Type-specific immunity prevents reinfection with same serotype; cross-reactive immunity wanes\\n\\n### Rabies Immune Response (Delayed)\\n- **Early Innate**: Minimal (viral P protein blocks); high viral replication unchecked\\n- **Antibodies**: Appear week 7-10 of illness (too late); found in CSF late in course\\n- **CD8+ T Cells**: CTL response week 2-3 (after symptom onset, too late)\\n- **Survival Mechanism (Milwaukee Protocol)**: Induced coma, antivirals (ribavirin), IFN-α; aims to allow immune response while minimizing excitotoxicity\\n\\n## Chikungunya Arthralgia Mechanism\\n\\n### Joint Involvement\\n- **Viral Replication**: Direct infection of synovial fibroblasts, macrophages\\n- **Immune-Mediated**: IgG deposition in joints; CD8+ T cell infiltration\\n- **Chronic Arthritis**: Viral antigen or RNA persistence in joint synovium; continues months-years\\n- **Risk Factors**: Female, age >40, prior arthritic history\\n- **Molecular Mimicry**: Possible autoimmune component (unconfirmed)\\n,\\n        mnemonics: [\\n          {\\n            text: \\\"ADE = Antibody-Dependent Enhancement\\\",\\n            explanation: \\\"A=Antigen-antibody, D=Different serotype, E=Enhancement (10-100x higher viremia), leads to DHF/DSS\\\"\\n          },\\n          {\\n            text: \\\"Rabies DISTANCE & DELAY\\\",\\n            explanation: \\\"D=Distance determines incubation, I=Immune evasion (P protein), S=Slow ascent axons, T=Time to reach CNS, A=Allow PEP, N=Neuronal death once symptoms, C=Cannot survive symptoms, E=Early PEP critical\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Dengue ADE: Non-neutralizing IgG enhances viral uptake; secondary infection = DHF/DSS risk\\\",\\n          \\\"JE: BBB crossing poorly understood; basal ganglia/brainstem preferentially affected\\\",\\n          \\\"Rabies: Slow axonal transport allows PEP window; P-protein blocks interferon response\\\",\\n          \\\"Incubation inversely proportional to distance from CNS (face <hand <leg)\\\",\\n          \\\"Rabies immune response too slow: antibodies appear week 7-10, already symptomatic\\\",\\n          \\\"Chikungunya: Chronic arthritis from viral persistence in synovium\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Jawetz Melnick & Adelberg's Medical Microbiology\\\", chapter: \\\"40-41: Pathophysiology\\\", edition: \\\"28th\\\" },\\n          { book: \\\"Molecular Virology textbooks\\\", chapter: \\\"Arbovirus & Rabies Mechanisms\\\", edition: \\\"Current\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"arboviruses-rabies-clinical\\\",\\n        title: \\\"Arboviruses & Rabies - Clinical\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Dengue fever variants, DHF/DSS management, JE clinical features, chikungunya arthralgia, rabies pathophysiology, PEP regimens, and Indian management.\\\",\\n        contentMd: "# Arboviruses & Rabies - Clinical\\\\n\\\\n## Dengue Fever Spectrum\\\\n\\\\n### Dengue Fever (Classic)\\\\n- **Symptoms** (3-5 days, biphasic fever pattern):\\\\n  - Day 1-3 (Febrile Phase): Fever (39-40°C), headache (severe), retro-orbital pain, myalgia, rash (maculopapular)\\\\n  - Day 4-5 (Critical Phase): Fever defervescence, but hemodynamic instability begins\\\\n  - Day 6-7 (Recovery): Rash fades, appetite returns, gradual recovery\\\\n- **Rash**: Blanching erythema (not vesicular); spares palms/soles typically\\\\n- **Laboratory**: Thrombocytopenia (common), leukopenia, elevated transaminases\\\\n- **Self-Limited**: 95% recover uneventfully in 5-7 days\\\\n\\\\n### Dengue Hemorrhagic Fever (DHF) & Dengue Shock Syndrome (DSS)\\\\n- **Warning Signs** (Day 4-5, critical phase):\\\\n  - Abdominal pain, persistent vomiting, bleeding (petechiae, mucosal, GI), lethargy, hepatomegaly\\\\n  - Laboratory: Hematocrit rise >20% (plasma leakage), rapid platelet decline (<100k)\\\\n- **DHF Pathophysiology**: ADE-driven high viremia → intense immune activation → vascular endothelial permeability → plasma leakage\\\\n  - Ascites, pleural effusion (detected by ultrasound)\\\\n  - Coagulopathy (PT/PTT prolongation, low fibrinogen)\\\\n  - Hepatic dysfunction (AST>ALT typical)\\\\n- **DSS (Dengue Shock Syndrome)**:\\\\n  - Progression to compensated shock (tachycardia, narrowed pulse pressure, cold extremities)\\\\n  - Hypotension (SBP <90), shock irreversible if prolonged\\\\n  - Mortality 2-5% with supportive care; 50% if untreated\\\\n\\\\n### Dengue Management\\\\n- **Uncomplicated**: Supportive care, acetaminophen (avoid NSAIDs); platelet transfusion if <20k with bleeding\\\\n- **DHF/DSS**: Fluid resuscitation (isotonic crystalloid), monitoring for plasma leakage, platelet transfusions, careful volume status assessment\\\\n- **Fluid Overload Risk**: Causes pulmonary edema, worsens shock state; meticulous fluid balance essential\\\\n- **Monitoring**: Hematocrit every 4-6 hours (indicates plasma leakage); platelet count; vital signs\\\\n- **NSAIDs Contraindicated**: Risk of GI bleed in thrombocytopenic patients\\\\n\\\\n## Japanese Encephalitis\\\\n\\\\n### Clinical Presentation\\\\n- **Prodrome** (2-3 days): Fever, headache, malaise, myalgia\\\\n- **Acute Encephalitis Phase**:\\\\n  - High fever, altered consciousness, seizures (30-50%)\\\\n  - Movement disorders: Tremor, rigidity, dystonia (unusual for viral encephalitis)\\\\n  - Upper motor neuron signs (hyperreflexia, Babinski) mixed with lower motor neuron signs (flaccidity, atrophy)\\\\n  - Focal neurologic deficits: Hemiparesis, aphasia\\\\n  - Flaccid paralysis possible (polio-like; anterior horn involvement)\\\\n  - **Characteristic**: Preferential brainstem/basal ganglia involvement\\\\n- **CSF**: Pleocytosis (lymphocytic), elevated protein, normal/low glucose\\\\n\\\\n### Outcomes\\\\n- **Mortality**: 20-30% with treatment; higher without\\\\n- **Sequelae** (in survivors):\\\\n  - Cognitive deficits, behavioral problems\\\\n  - Movement disorders persisting (Parkinsonian features)\\\\n  - Epilepsy (30-40% of survivors)\\\\n  - Muscle weakness/paralysis (10-20%)\\\\n\\\\n### Prevention (Most Important)\\\\n- **Vaccine**: Inactivated JE vaccine (Vero-derived) highly effective; offered in endemic areas\\\\n- **Mosquito Control**: Culex control (DDT spraying, habitat elimination)\\\\n\\\\n## Chikungunya\\\\n\\\\n### Acute Phase\\\\n- **Symptoms** (3-5 days fever):\\\\n  - **Arthralgia**: Severe joint pain, especially knees, ankles, wrists, shoulders; symmetrical\\\\n  - **Myalgia**: Muscle pain complementing joint pain\\\\n  - **Fever**: Biphasic pattern similar to dengue\\\\n  - **Rash**: Maculopapular, often on trunk/extremities\\\\n- **Laboratory**: Thrombocytopenia (mild), elevated transaminases, elevated CRP\\\\n\\\\n### Post-Chikungunya Chronic Arthritis\\\\n- **Prevalence**: 30-60% of patients have persistent joint symptoms\\\\n- **Duration**: Months to years (average 3-6 months; some >1 year)\\\\n- **Joints Affected**: Knees, wrists, ankles (similar to acute)\\\\n- **Management**: NSAIDs, physiotherapy, corticosteroid injection in severely affected joints\\\\n- **Pathophysiology**: Viral persistence in synovial tissue; ongoing immune activation\\\\n\\\\n## Rabies\\\\n\\\\n### Clinical Phases\\\\n\\\\n**Prodromal Phase** (Days 1-4):\\\\n- Fever, malaise, headache, anxiety\\\\n- Paresthesias at bite site; can be diagnostic (highly specific)\\\\n- Behavioral changes, irritability\\\\n\\\\n**Acute Encephalitis Phase** (Days 4-10 after symptoms):\\\\n- **Furious Rabies** (~80%):\\\\n  - Hyperactivity, aggression, hypersalivation, hydrophobia (water triggers laryngeal spasm)\\\\n  - Autonomic instability: Hypertension, tachycardia, arrhythmias\\\\n  - Hallucinations, seizures, delirium\\\\n  - Death from cardiopulmonary failure, aspiration\\\\n- **Paralytic Rabies** (~20%):\\\\n  - Ascending paralysis (usually flaccid, sometimes spastic)\\\\n  - Bladder/bowel dysfunction\\\\n  - Respiratory muscle paralysis\\\\n\\\\n**Coma & Death Phase**:\\\\n- Brainstem death, respiratory failure\\\\n- Median survival: 4-7 days after symptom onset (rarely longer)\\\\n- Case-fatality rate: ~100%\\\\n\\\\n### Milwaukee Protocol (Rarely Successful)\\\\n- **Induced Coma**: Reduce excitotoxicity (prevents seizures, reduces viral-induced damage)\\\\n- **Antivirals**: Ribavirin (limited efficacy); intravenous immunoglobulin (IVIG)\\\\n- **Supportive Care**: Mechanical ventilation, ICU monitoring\\\\n- **Success Rate**: ~6 survivors globally; most develop severe sequelae (locked-in syndrome, minimal recovery)\\\\n\\\\n### Diagnosis\\\\n- **During Life**:\\\\n  - **Direct Fluorescent Antibody Test** (DFA): Rabies antigen in corneal impression smears (80-90% sensitivity)\\\\n  - **RT-PCR**: Saliva, CSF (high specificity; available in reference labs)\\\\n  - **Brain Imaging**: CT/MRI may show hippocampal changes, encephalitis pattern\\\\n  - **Clinical Suspicion**: Hydrophobia, paresthesias at bite, encephalitis with CSF lymphocytosis\\\\n- **Post-Mortem**: Neuropathology (Negri bodies in hippocampus, Ammon horn), DFA on brain tissue\\\\n\\\\n### Prevention (Post-Exposure Prophylaxis)\\\\n\\\\n**Rabies PEP Protocol** (Must Start Within 14 Days, Ideally <24 Hours):\\\\n- **Wound Care**: Thorough washing with soap/water, 70% alcohol or povidone-iodine (critical first step)\\\\n- **HRIG (Rabies Immunoglobulin)**: 20 IU/kg (give as much as possible at wound site; rest IM in anterolateral thigh)\\\\n  - NOT given if time >7 days from exposure (body already mounted response)\\\\n  - Expensive; limited availability in India public sector\\\\n- **Vaccine**: PVRV (post-exposure prophylaxis regimen):\\\\n  - Day 0, 3, 7, 14 (IM in deltoid or anterolateral thigh)\\\\n  - OR Day 0, 3, 7, 14, 28, 90 (if immunocompromised)\\\\n  - Alternative: 2 doses on day 0 (one in each shoulder) + days 3, 7\\\\n- **Efficacy**: >99% if started before symptom onset\\\\n\\\\n### High-Risk Exposures Requiring PEP (NACO Guidelines)\\\\n- **Definitely Require**: Bite/scratch with bleeding, exposure to mucous membranes, saliva visible on bite, multiple bites, bites on head/neck/hands\\\\n- **Probably Require**: Single bite on arm/leg without profuse bleeding\\\\n- **Consider Carefully**: Exposure with unknown animal health status\\\\n\\\\n## Indian Management Context\\\\n\\\\n### Public Health Challenges\\\\n- **Limited Vaccine Access**: HRIG expensive, often unavailable in peripheral health centers\\\\n- **Awareness**: Many rabies deaths due to delayed presentation, incomplete PEP\\\\n- **District Hospitals**: Free vaccine available, but HRIG often unavailable\\\\n- **Animal Control**: Stray dog population; inadequate mass dog vaccination programs\\\\n\\\\n### Dengue Management in India\\\\n- **Monsoon Seasons**: Public health alerts; vector control campaigns\\\\n- **Private Hospitals**: Platelet transfusions available; critical care support\\\\n- **Public Hospitals**: Often overburdened; DHF mortality higher in under-resourced centers\\\\n- **Supportive Care Key**: Fluid management, platelet transfusion, close monitoring prevent most deaths\\\\n\\\\n### JE Prevention\\\\n- **Endemic Areas**: Vaccination campaigns in Bihar, Uttar Pradesh, Assam\\\\n- **Vectorborne Control**: Less effective than vaccination; Culex spraying during season\\\\n- **Immunization Schedule**: JE vaccine increasingly included in government immunization programs\\\\n,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"DHF Warning Signs CRASH\\\\\\\",\\\\n            explanation: \\\\\\\"C=Cramps abdominal pain, R=Rash absence/return, A=Abdominal pain, S=Serous (pleural/peritoneal fluid), H=Hemorrhage bleeding\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Rabies Phases FED\\\\\\\",\\\\n            explanation: \\\\\\\"F=Furious (80%), E=Encephalitis (days 4-10), D=Death (4-7 days after symptom onset)\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Rabies PEP WASH\\\\\\\",\\\\n            explanation: \\\\\\\"W=Wound (wash immediately), A=Aggressive cleaning, S=Soap/water/alcohol, H=HRIG/vaccine (days 0,3,7,14)\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Dengue: Biphasic fever, critical phase day 4-5 with warning signs (pain, bleeding, lethargy)\\\\\\\",\\\\n          \\\\\\\"DHF: ADE-driven plasma leakage; fluid resuscitation key; avoid volume overload\\\\\\\",\\\\n          \\\\\\\"JE: Basal ganglia/brainstem involvement; seizures, movement disorders; high mortality\\\\\\\",\\\\n          \\\\\\\"Chikungunya: Severe arthralgia; chronic joint pain in 30-60% lasting months-years\\\\\\\",\\\\n          \\\\\\\"Rabies: 100% fatal once symptomatic; furious (80%) vs paralytic (20%)\\\\\\\",\\\\n          \\\\\\\"Rabies PEP: Must start <14 days, ideally <24 hours; wound washing CRITICAL; HRIG at wound site + vaccine series\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz Melnick & Adelberg's Medical Microbiology\\\\\\\", chapter: \\\\\\\"40-41: Clinical Diseases\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"Harrison's Principles of Internal Medicine\\\\\\\", chapter: \\\\\\\"192-193: Arboviruses & Rabies\\\\\\\", edition: \\\\\\\"21st\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"arboviruses-rabies-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Arboviruses & Rabies - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"High-yield facts, diagnostic approaches, management protocols, and rabies exposure categorization for board exams.\\\\\\\",\\\\n        contentMd: ``# Arboviruses & Rabies - Exam Prep\\\\n\\\\n## Rapid Diagnostics\\\\n\\\\n### Dengue Serology & Timing\\\\n| Day | IgM | IgG | NS1 Ag | Viral Culture |\\\\n|-----|-----|-----|--------|---------------|\\\\n| **Day 1-3** | Negative/Weak | Negative | Positive | Positive |\\\\n| **Day 4-5** | Strongly Positive | Appears | Declining | Can isolate |\\\\n| **Day 6-10** | Positive | Rising | Negative | Negative |\\\\n| **Recovery** | Wanes | Persists | Absent | Absent |\\\\n\\\\n### JE Diagnosis\\\\n- **Serology**: IgM in CSF (preferred) or serum (less specific)\\\\n- **RT-PCR**: Blood/CSF (not widely available in peripheral labs)\\\\n- **Culture**: Difficult; not practical for acute diagnosis\\\\n\\\\n### Rabies Diagnosis\\\\n- **During Life**:\\\\n  - DFA on corneal impression smears (80-90% sensitivity, rapid)\\\\n  - Saliva RT-PCR (emerging; higher sensitivity than DFA)\\\\n  - Brain imaging shows encephalitis pattern, not specific\\\\n- **Post-Mortem**: Negri bodies on brain histology, DFA on brain tissue (confirmatory)\\\\n\\\\n## Quick Differentiators\\\\n\\\\n### Fever + Headache Differential (Tropics)\\\\n| Virus | Rash | Joint Pain | Hemorrhage | Encephalitis | Muscle Weakness |\\\\n|-------|------|-----------|-----------|--------------|-----------------|\\\\n| **Dengue** | Yes (blanching) | Mild | Yes (DHF) | Rare | No |\\\\n| **Chikungunya** | Yes (macular) | Severe | No | Very rare | No |\\\\n| **JE** | No/Rare | No | No | YES | Yes (flaccid) |\\\\n| **Measles** | Yes (maculopapular) | No | No | Rare (encephalitis) | No |\\\\n\\\\n### Encephalitis Syndromes\\\\n| Virus | CSF Cell Type | Glucose | Protein | Duration | Motor Findings |\\\\n|-------|---------------|---------|---------|----------|----------------|\\\\n| **JE** | Lymphocytic | Normal/Low | Elevated | Days-weeks | Movement disorder, flaccid |\\\\n| **HSV** | Lymphocytic + RBC | Low | Elevated | Days-weeks | Rare; motor less typical |\\\\n| **Rabies** | Lymphocytic | Normal | Normal/Mild | Days (fatal) | Flaccid (paralytic form) |\\\\n\\\\n## Rabies Exposure Risk Categorization\\\\n\\\\n### Category I (Low): Minimal Risk\\\\n- Intact skin exposure (hand touch)\\\\n- No saliva on broken skin\\\\n- **PEP**: Observation; vaccine only if proven high-risk source\\\\n\\\\n### Category II (Moderate): Local wound\\\\n- Single bite/scratch on arm/leg without profuse bleeding\\\\n- Contact with mucous membrane without saliva visible\\\\n- **PEP**: HRIG at wound + vaccine series mandatory\\\\n\\\\n### Category III (Severe): High Risk\\\\n- Multiple bites/scratches\\\\n- Bite/scratch on head, neck, hands, genitals, feet\\\\n- Visible saliva on bite wound\\\\n- Mucous membrane exposure (eye, mouth)\\\\n- Exposure to brain tissue\\\\n- **PEP**: Urgent HRIG + vaccine series (start immediately)\\\\n\\\\n## PEP Regimens\\\\n\\\\n### Standard PVRV Schedule (Days Post-Exposure)\\\\n```\\\\nDay 0: 2 doses (0.5 mL IM in 2 shoulders OR 0.5+0.5 mL split-dose intradermal)\\\\nDay 3: 1 dose (0.5 mL IM)\\\\nDay 7: 1 dose (0.5 mL IM)\\\\nDay 14: 1 dose (0.5 mL IM)\\\\n(Total: 4 doses over 14 days)\\\\n```\\\\n\\\\n### HRIG Administration\\\\n- **Dose**: 20 IU/kg (based on body weight)\\\\n- **Route**: Infiltrate at wound site as much as possible; give remainder IM in anterolateral thigh\\\\n- **Timing**: HRIG only at first vaccine dose (day 0); not repeated at later doses\\\\n- **Contraindication**: Do not give HRIG after >7 days from exposure (body already responding)\\\\n\\\\n## High-Yield Clinical Facts\\\\n\\\\n### Dengue\\\\n- **Biphasic Fever**: \\\\\\\"Saddleback\\\\\\\" pattern characteristic\\\\n- **Critical Phase**: Day 4-5 most dangerous; DHF develops, bleeding, shock\\\\n- **Platelet Count**: Nadir often at critical phase; <100k common in DHF\\\\n- **Hematocrit Rise**: >20% indicates plasma leakage; indicates need for close monitoring\\\\n- **Hemorrhagic Manifestations**: Petechiae, GI bleed, vaginal bleed; usually self-limited if fluid-resuscitated\\\\n\\\\n### JE\\\\n- **Seasonality**: Rainy season (monsoon) peaks\\\\n- **Endemic Areas (India)**: Bihar (highest), Uttar Pradesh, Assam (all Northern)\\\\n- **Mortality**: 20-30% acute phase; 30-40% develop sequelae\\\\n- **Vaccine Efficacy**: >90% with proper vaccination\\\\n\\\\n### Chikungunya\\\\n- **Acute Arthralgia Severity**: Often disabling (vs dengue myalgia mild)\\\\n- **Chronic Joint Pain**: 30-60% have persistent arthritis; months-years\\\\n- **Risk Factors for Chronic**: Female, age >40\\\\n- **Differential from RA**: Viral arthritis usually resolves; RA typically progressive\\\\n\\\\n### Rabies\\\\n- **Hydrophobia**: Water triggers laryngeal spasm; highly specific (not all cases have it)\\\\n- **Paresthesias at Bite Site**: Highly specific for rabies; tingling, burning precedes other symptoms\\\\n- **Incubation Range**: 5 days to 19 months (exceptionally longer); average 1-3 months\\\\n- **Distance Rule**: Head/face bites → shorter incubation; leg bites → longer\\\\n- **Post-Exposure Prophylaxis Efficacy**: >99% if started pre-symptomatic; 0% if symptomatic\\\\n\\\\n## Rapid-Fire Facts\\\\n- **Dengue R0**: 1.5-2 (moderate contagiousness)\\\\n- **Dengue Viremia**: 4-5 days (overlaps with fever)\\\\n- **JE Vaccine**: Highly effective; available in endemic regions\\\\n- **Chikungunya Incubation**: 3-7 days (mean 4)\\\\n- **Rabies Incubation**: Variable (5 days to 19 months); depends on exposure severity/location\\\\n- **Rabies Symptoms**: 100% fatal once started\\\\n- **Rabies PEP**: >99% effective if <14 days; 0% if symptomatic\\\\n- **Rabies Median Survival**: 4-7 days from symptom onset\\\\n- **India Rabies Deaths**: ~20-40,000 annually (highest global burden)\\\\n- **DHF Mortality**: 2-5% with supportive care; 50% untreated\\\\n,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"PEP = Post-Exposure Prophylaxis\\\\\\\",\\\\n            explanation: \\\\\\\"P=PVRV vaccine days 0,3,7,14; E=Early is best (within 7 days); P=Peripheral wound infiltration HRIG\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Category Rabies Risk\\\\\\\",\\\\n            explanation: \\\\\\\"C=Category I low, A=At observation only; T=Type II moderate local bite; E=Extreme III high risk; G=Give HRIG/vaccine; O=Organize immediately for III; R=Risk assessment critical; Y=Years possible incubation\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Dengue: IgM peaks day 4-7; NS1 antigen day 1-5; critical phase day 4-5 = bleeding/shock\\\\\\\",\\\\n          \\\\\\\"DHF: Plasma leakage, thrombocytopenia, hemoconcentration; fluid management KEY\\\\\\\",\\\\n          \\\\\\\"JE: DFA on corneal impression smears; IgM in CSF preferred; endemic Bihar/UP\\\\\\\",\\\\n          \\\\\\\"Chikungunya: Severe arthralgia, chronic joint pain in 30-60%; persistent arthritis\\\\\\\",\\\\n          \\\\\\\"Rabies: Category III = urgent HRIG + vaccine; start <7 days ideally\\\\\\\",\\\\n          \\\\\\\"Rabies PEP: 4 doses (days 0,3,7,14); HRIG at wound site + IM; HRIG day 0 only\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz Melnick & Adelberg's Medical Microbiology\\\\\\\", chapter: \\\\\\\"40-41: Summary Tables\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"Board Exam Review Books\\\\\\\", chapter: \\\\\\\"Arboviruses & Rabies High-Yield\\\\\\\", edition: \\\\\\\"Latest\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"arboviruses-rabies-active-recall\\\\\\\",\\\\n        title: \\\\\\\"Arboviruses & Rabies - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Case-based Q&A on dengue, JE, chikungunya, rabies diagnosis, management, and PEP decisions.\\\\\\\",\\\\n        contentMd: ``# Arboviruses & Rabies - Active Recall Q&A\\\\n\\\\n**Q1: 5-year-old from Bihar presents with fever × 5 days, headache, seizures, and altered consciousness. CSF: 120 WBC (lymphocytic), glucose normal, protein 80. Most likely diagnosis?**\\\\nA) Bacterial meningitis (N. meningitidis)\\\\nB) Tuberculous meningitis (TBM)\\\\nC) Japanese Encephalitis (JE)\\\\nD) Viral (HSV) encephalitis\\\\n**Answer: C) Japanese Encephalitis (JE)** — Bihar endemic (high burden), age 5 (pediatric), seizures, CSF lymphocytic with normal glucose = JE likely. Dexamethasone for cerebral edema, supportive care; no specific antiviral (vaccine for prevention).\\\\n\\\\n---\\\\n\\\\n**Q2: Pregnant woman (32 weeks) from Kerala presents with fever × 4 days, severe joint pain (knees, wrists), and maculopapular rash. Most likely diagnosis?**\\\\nA) Dengue fever\\\\nB) Chikungunya virus\\\\nC) Zika virus\\\\nD) Measles\\\\n**Answer: B) Chikungunya virus** — Severe arthralgia (joint pain) with fever = chikungunya characteristic (dengue myalgia milder). Kerala endemic; seasonal epidemic. Pregnancy: Monitor for vertical transmission (rare); congenital chikungunya rare but reported.\\\\n\\\\n---\\\\n\\\\n**Q3: 8-year-old bitten by stray dog on left forearm × 6 hours ago. Wound with bleeding. No prior rabies vaccination. Immediately appropriate?**\\\\nA) Observation only; risk assessment in hospital\\\\nB) Immediate wound care + Category III PEP (HRIG + vaccine series)\\\\nC) Vaccine only; HRIG unnecessary (post-exposure only)\\\\nD) Wait 24 hours; observe for dog health status\\\\n**Answer: B) Immediate wound care + Category III PEP (HRIG + vaccine series)** — Single bite on arm with profusion bleeding = Category III high-risk. Wound wash immediately (soap/water), HRIG at wound + IM (20 IU/kg), vaccine days 0,3,7,14. No waiting for dog status; dog unknown = treat as potentially rabid.\\\\n\\\\n---\\\\n\\\\n**Q4: 45-year-old from Delhi with fever × 3 days, rash, and mild headache. Dengue IgM+, NS1 antigen+, platelet 80k. Which is correct assessment?**\\\\nA) Severe dengue (DHF) developing; requires hospitalization\\\\nB) Uncomplicated dengue fever; outpatient management with follow-up\\\\nC) Dengue convalescence; no longer infectious\\\\nD) Dengue immunity; repeat infection unlikely\\\\n**Answer: B) Uncomplicated dengue fever; outpatient management with follow-up** — Day 3 of dengue, IgM+ (confirms dengue), normal vital signs (presumed), platelet 80k acceptable for uncomplicated dengue. Close follow-up (day 5-7 for critical phase monitoring); warning signs monthly reviewed. DHF if plasma leakage, severe bleeding, shock develops.\\\\n\\\\n---\\\\n\\\\n**Q5: Man bitten by bat on face × 15 days ago. Now presents with fever, hydrophobia, confusion. Diagnosis?**\\\\nA) Symptomatic rabies; PEP still effective if started immediately\\\\nB) Symptomatic rabies; 100% fatal; no effective treatment once symptoms\\\\nC) Rabies unlikely; hydrophobia suggests other diagnosis\\\\nD) Contact prophylaxis only; no rabies infection\\\\n**Answer: B) Symptomatic rabies; 100% fatal; no effective treatment once symptoms** — Bat bite (high-risk), incubation 15 days (consistent), hydrophobia + fever + mental status = symptomatic rabies. Too late for PEP; only supportive care (Milwaukee protocol attempted rarely, <1% success). Counsel family regarding infectivity (respiratory secretions, saliva); contact precautions.\\\\n\\\\n---\\\\n\\\\n**Q6: 6-month-old with watery diarrhea × 3 days, fever, and vomiting. Dengue IgM negative, rotavirus ELISA positive. Mosquito-borne disease ruled out. Management?**\\\\nA) Antivirals (ribavirin); hospital admission\\\\nB) Oral rehydration solution (ORS), continued feeding, supportive care\\\\nC) Antibiotics for secondary infection\\\\nD) Blood transfusion if diarrhea persists\\\\n**Answer: B) Oral rehydration solution (ORS), continued feeding, supportive care** — Rotavirus gastroenteritis (not dengue dengue). ORS primary therapy; dehydration is complication (not virus itself). Continue feeding (supports villous recovery); no antivirals. Monitor for signs of dehydration.\\\\n\\\\n---\\\\n\\\\n**Q7: Healthcare worker stuck by contaminated needle from patient with rabies. What is the appropriate PEP protocol?**\\\\nA) Observation only; healthcare setting implies availability of care\\\\nB) Immediate wound care + Category III PEP (HRIG + vaccine days 0,3,7,14)\\\\nC) Vaccine only; HRIG unnecessary for occupational exposure\\\\nD) Postexposure serology; PEP if seroconversion detected\\\\n**Answer: B) Immediate wound care + Category III PEP (HRIG + vaccine days 0,3,7,14)** — Percutaneous needle-stick = Category III (exposure to infected blood/tissue). HRIG + vaccine required. Wound care critical (wash, disinfection). Start PEP immediately (within hours; can do up to 14 days).\\\\n\\\\n---\\\\n\\\\n**Q8: 35-year-old with fever × 2 days, myalgia, headache, but no rash yet. Dengue NS1 antigen + , IgM negative. What is the clinical assessment?**\\\\nA) Dengue fever, early presentation (NS1 positive before antibodies); confirm day 5\\\\nB) Not dengue (IgM negative); other viral illness\\\\nC) Dengue convalescence; viral load declining\\\\nD) False positive NS1; repeat testing\\\\n**Answer: A) Dengue fever, early presentation (NS1 positive before antibodies); confirm day 5** — NS1 positive (day 1-5), IgM not yet positive (appears day 3-5) = very early dengue. Clinical dengue (fever, myalgia, headache) + NS1+ confirms dengue in first week. Repeat serology day 5 for IgM confirmation.\\\\n\\\\n---\\\\n\\\\n**Q9: Chikungunya patient (acute phase) asks about arthralgia prognosis. Risk for chronic joint pain?**\\\\nA) <5% (virus self-limited; joint pain resolves)\\\\nB) 30-60% develop persistent arthritis lasting months-years\\\\nC) 100% recover joint function within 2 weeks\\\\nD) Chronic arthritis develops only if RA history\\\\n**Answer: B) 30-60% develop persistent arthritis lasting months-years** — Chikungunya distinctive: chronic arthralgia in 30-60%. Female, age >40 = higher risk. Months to years duration; NSAIDs, physiotherapy, corticosteroid injections for management.\\\\n\\\\n---\\\\n\\\\n**Q10: Child bitten by dog (status unknown) on leg × 8 days ago. Now presents requesting rabies PEP. What recommendation?**\\\\nA) Start PVRV vaccine + HRIG immediately (within 14-day window)\\\\nB) HRIG ineffective after 7 days; vaccine only\\\\nC) PEP no longer indicated (beyond 7 days); monitor for symptoms\\\\nD) HRIG + vaccine, but reduced efficacy after 7 days\\\\n**Answer: A) Start PVRV vaccine + HRIG immediately (within 14-day window)** — Category II (single bite leg = moderate). Within 14-day window for PEP; efficacy decreases but still offered. HRIG still give if within 7 days is ideal, but some guidelines extend to 14 days if high-risk exposure. Vaccine mandatory (days 0,3,7,14).\\\\n,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Rabies Fatal Once SYMPTOMATIC\\\\\\\",\\\\n            explanation: \\\\\\\"S=Symptom onset = doom, Y=Yet to present = PEP window, M=Milwaukee protocol rare, P=Post-exposure prophylaxis >99%, T=Time critical <7d ideal, O=Outcome 100% fatal symptomatic, M=Most deaths preventable\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"JE: Endemic Bihar/UP, seizures, CSF lymphocytic, endemic area = JE high probability\\\\\\\",\\\\n          \\\\\\\"Chikungunya: Severe arthralgia (vs dengue mild myalgia), chronic in 30-60%\\\\\\\",\\\\n          \\\\\\\"Dengue: NS1 early (day 1-5), IgM late (day 3-5), critical phase day 4-5\\\\\\\",\\\\n          \\\\\\\"Rabies: Face bite shortest incubation; hydrophobia pathognomonic; 100% fatal symptomatic\\\\\\\",\\\\n          \\\\\\\"Rabies PEP: Within 14 days acceptable, within 7 days ideal; HRIG + vaccine\\\\\\\",\\\\n          \\\\\\\"Category rabies: III = high-risk (bites head/neck/multiple); requires HRIG immediately\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz Melnick & Adelberg's Medical Microbiology\\\\\\\", chapter: \\\\\\\"40-41: Case Studies\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"Board Exam Question Banks\\\\\\\", chapter: \\\\\\\"Arboviruses & Rabies\\\\\\\", edition: \\\\\\\"Current\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n`\\\\n\\\"\""
-}
-}
-}
-}
-];
-];
-];
+        summary: "Dengue, chikungunya, JE, yellow fever, and rabies epidemiology, transmission, and Indian context.",
+        contentMd: `# Arboviruses & Rabies - Foundation
+
+## Arboviruses (Arthropod-Borne)
+- **Dengue**: Aedes aegypti (daytime); 4 serotypes; monsoon peaks
+- **Chikungunya**: Aedes mosquito; severe joint pain; chronic arthritis 30-60%
+- **Japanese Encephalitis (JE)**: Culex (nighttime); endemic Bihar/Jharkhand/UP
+- **Yellow fever**: Absent Asia; not relevant India
+- **General mechanism**: Virus → mosquito → human amplification cycle
+
+## Dengue Epidemiology
+- 4 serotypes (variable regional); secondary infection = DHF risk
+- Aedes aegypti (urban, daytime biter)
+- Incubation 3-14d (mean 4-6d)
+- Monsoon peaks (water accumulation)
+- India: All states affected; hyperendemic urban/semi-urban
+
+## Chikungunya
+- Severe arthralgia (knees, ankles, wrists, shoulders) = hallmark
+- Post-chikungunya chronic arthritis: 30-60%; months-years duration
+- Recent epidemics India (2006 Kerala); recurring seasonal
+
+## Japanese Encephalitis
+- Culex vector (nighttime); pigs, birds amplify
+- Endemic Bihar, Uttar Pradesh, Jharkhand, Assam (Northern India)
+- High pediatric mortality: 20-30% clinical encephalitis
+- Brainstem/basal ganglia preferentially affected
+
+## Rabies (Not Arbovirus - Rhabdovirus)
+- ~20-40,000 deaths India annually (highest global burden)
+- Dog bite 85-90%; bats, cats, wildlife
+- Incubation weeks-months (distance-dependent)
+- **100% fatal once symptomatic** (only ~6-10 survivors globally with Milwaukee protocol)
+- **PEP >99% effective** if started pre-symptomatic`,
+        mnemonics: [
+          { text: "Dengue D4 Severity", explanation: "D=Fever, D=DHF (secondary), D=DSS, D=Death risk" },
+          { text: "JE-JI Geographic", explanation: "J=Japanese, E=Endemic Bihar/UP, I=India high burden" },
+          { text: "Rabies R.A.B.I.E.S", explanation: "Rhabdovirus, Animal bite, Bullet-shaped, India burden, Fatal, Saliva" }
+        ],
+        keyPoints: [
+          "Dengue: 4 serotypes, Aedes vector, monsoon peaks, secondary infection = DHF",
+          "Chikungunya: Severe arthralgia, chronic joint pain 30-60%",
+          "JE: Culex vector, endemic Bihar/UP, high pediatric mortality",
+          "Rabies: 100% fatal untreated, 20-40k deaths India, PEP >99% if pre-symptomatic"
+        ],
+        textbookRefs: [
+          { book: "Jawetz Melnick & Adelberg's Medical Microbiology", chapter: "40-41: Arboviruses & Rabies", edition: "28th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "arboviruses-rabies-layer-2-mechanism",
+        title: "Arboviruses & Rabies - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Antibody-dependent enhancement in dengue, JE neuroinvasion, rabies axonal transport and immune evasion, antigenic variation.",
+        contentMd: `# Pathophysiology
+
+## Dengue ADE (Antibody-Dependent Enhancement)
+- **Primary infection**: Type-specific IgG neutralizes homologous serotype
+- **Secondary (different serotype)**: Non-neutralizing IgG from prior infection enhances uptake (Fc-receptor bearing cells)
+- **Result**: 10-100 fold viremia increase → DHF/DSS risk
+- **Thrombocytopenia**: Direct viral infection of megakaryocytes + immune destruction
+- **Plasma leakage**: Immune-mediated endothelial damage (day 4-5 critical phase)
+
+## JE Neuroinvasion
+- **BBB crossing**: Mechanism unclear; possibly dendritic cell, direct endothelial
+- **Preferential CNS sites**: Brainstem, basal ganglia, thalamus
+- **Cytokine storm**: TNF-α, IL-6, IL-8 → BBB disruption, edema
+- **Neuronal loss**: Movement disorders (Parkinsonian), seizures, paralysis
+
+## Rabies Pathogenesis (Unique)
+- **Slow progression**: Weeks-months incubation allows PEP window
+- **Axonal transport route**: Bite wound → sensory/motor nerves → spinal cord → brainstem
+- **Distance-dependent**: Face bite ~30d; arm ~60d; leg ~90+d
+- **Phosphoprotein (P)**: Blocks interferon; prevents innate immune response
+- **Result**: Minimal immune activation during long incubation; when symptomatic, too late
+
+## Chikungunya Chronic Arthritis
+- **Viral persistence**: Viral antigen/RNA in synovial tissue
+- **Immune-mediated**: IgG deposition, CD8+ infiltration
+- **Chronic phase**: Months-years duration; NSAIDs, physiotherapy, corticosteroid injection`,
+        mnemonics: [
+          { text: "ADE = Antibody-Dependent Enhancement", explanation: "Non-neutralizing IgG enhances viral uptake 10-100x" },
+          { text: "Rabies DISTANCE & DELAY", explanation: "D=Distance (face shortest), D=Delay (long incubation), E=Evasion (P protein), L=Late immune (symptomatic = fatal), A=Allow PEP window" }
+        ],
+        keyPoints: [
+          "Dengue ADE: Secondary infection with different serotype = DHF/DSS risk",
+          "JE: Basal ganglia/brainstem; seizures, movement disorder",
+          "Rabies: Slow axonal transport; P protein blocks interferon",
+          "Incubation: Distance-dependent (face <hand <leg)",
+          "Chikungunya: Chronic arthritis from viral persistence"
+        ],
+        textbookRefs: [
+          { book: "Jawetz Melnick & Adelberg's Medical Microbiology", chapter: "40-41: Pathophysiology", edition: "28th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "arboviruses-rabies-layer-3-clinical",
+        title: "Arboviruses & Rabies - Clinical",
+        estimatedMinutes: 35,
+        summary: "DHF/DSS management, JE clinical features, chikungunya arthritis, rabies presentations, and PEP protocols.",
+        contentMd: `# Clinical Presentations & Management
+
+## Dengue Fever (Classic)
+- **Day 1-3**: Fever (39-40°C), headache, retro-orbital pain, myalgia, rash
+- **Day 4-5 (Critical)**: Fever defervescence, BUT hemodynamic instability begins
+- **Day 6-7**: Rash fades, appetite returns, recovery
+- **Self-limited**: 95% recover in 5-7 days
+
+## DHF/DSS (Plasma Leakage)
+- **Warning signs** (day 4-5): Abdominal pain, vomiting, bleeding (petechiae, GI), lethargy
+- **Lab**: Hematocrit rise >20% (plasma leakage), platelet decline (<100k)
+- **Pathophysiology**: ADE-driven high viremia → intense immune activation → endothelial permeability
+- **Management**: Fluid resuscitation (isotonic crystalloid), platelet transfusion (<20k with bleeding)
+- **Complication**: Fluid overload → pulmonary edema (meticulous volume balance essential)
+- **Mortality**: 2-5% with supportive care; 50% if untreated
+
+## JE (Japanese Encephalitis)
+- **Acute phase**: High fever, altered consciousness, seizures (30-50%)
+- **Movement disorders**: Tremor, rigidity, dystonia (unusual for viral encephalitis)
+- **Flaccid paralysis possible**: Anterior horn involvement (polio-like)
+- **CSF**: Lymphocytic pleocytosis, elevated protein, normal/low glucose
+- **Mortality**: 20-30% with treatment
+- **Sequelae** (survivors): Cognitive deficits, behavioral problems, epilepsy (30-40%), movement disorder, muscle weakness (10-20%)
+- **Prevention**: Vaccine (Vero-derived inactivated JE vaccine); highly effective
+
+## Chikungunya (Acute & Chronic)
+- **Acute**: Fever (biphasic), severe arthralgia (knees, ankles, wrists), maculopapular rash, myalgia
+- **Chronic arthritis**: 30-60% develop persistent joint pain; months to years
+- **Risk factors**: Female, age >40
+- **Management**: NSAIDs, physiotherapy, corticosteroid joint injection (severe)
+
+## Rabies
+- **Prodromal** (days 1-4): Fever, malaise, paresthesias at bite site (diagnostic if present)
+- **Acute encephalitis** (days 4-10):**
+  - Furious (80%): Hyperactivity, aggression, hypersalivation, hydrophobia (water → laryngeal spasm)
+  - Paralytic (20%): Ascending paralysis, respiratory/bladder dysfunction
+- **Death**: Brainstem death, respiratory failure (median survival 4-7 days post-symptom)
+- **Milwaukee Protocol**: Rare success (6 survivors); induced coma + ribavirin + IVIg
+- **100% fatal** once symptomatic
+
+## Rabies Diagnosis
+- **During life**: DFA on corneal impression smears (80-90% sensitivity), saliva RT-PCR, brain imaging
+- **Post-mortem**: Negri bodies in brain (pathognomonic), DFA on brain tissue
+
+## Rabies PEP (Post-Exposure Prophylaxis)
+- **Window**: <14 days (ideally <24h); >99% effective if started pre-symptomatic
+- **Wound care**: Wash soap/water, 70% alcohol, povidone-iodine (critical first step)
+- **HBIG** (rabies immunoglobulin): 20 IU/kg at wound site (first dose); not if >7d
+- **Vaccine**: Days 0, 3, 7, 14 (4 doses); IM deltoid or anterolateral thigh
+- **Efficacy**: >99% if within 14 days; 0% if symptomatic
+
+## Rabies Exposure Categories (NACO)
+- **Category I**: Intact skin; observation
+- **Category II**: Single bite/scratch no profuse bleed; HBIG + vaccine
+- **Category III**: Multiple bites, head/neck/hands/genitals, visible saliva; urgent HBIG + vaccine`,
+        mnemonics: [
+          { text: "DHF Warning Signs CRASH", explanation: "C=Cramps/abdominal pain, R=Rash, A=Abdominal, S=Serous (pleural), H=Hemorrhage" },
+          { text: "Rabies Phases FED", explanation: "F=Furious (80%), E=Encephalitis (days 4-10), D=Death (4-7 days)" },
+          { text: "Rabies PEP WASH", explanation: "W=Wound (wash immediately), A=Aggressive cleaning, S=Soap/water/alcohol, H=HBIG/vaccine" }
+        ],
+        keyPoints: [
+          "Dengue: Biphasic fever, critical phase day 4-5 with warning signs",
+          "DHF: ADE-driven plasma leakage; fluid resuscitation key; avoid volume overload",
+          "JE: Basal ganglia/brainstem; seizures, movement disorder, high mortality",
+          "Chikungunya: Severe arthralgia, chronic joint pain 30-60%",
+          "Rabies: 100% fatal symptomatic; furious vs paralytic; PEP >99% pre-symptomatic",
+          "Rabies PEP: Wound care, HBIG at wound (<7d), vaccine series days 0,3,7,14"
+        ],
+        textbookRefs: [
+          { book: "Jawetz Melnick & Adelberg's Medical Microbiology", chapter: "40-41: Diseases", edition: "28th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "arboviruses-rabies-layer-4-exam",
+        title: "Arboviruses & Rabies - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "High-yield diagnostics, rapid protocols, and rabies risk categorization.",
+        contentMd: `# Exam High-Yield
+
+## Rapid Diagnostics
+- **Dengue**: NS1 antigen (day 1-5), IgM serology (day 5-7), PCR
+- **JE**: IgM in CSF (preferred), serum IgM (less specific)
+- **Rabies**: DFA corneal impression (80-90%), saliva PCR, brain imaging
+- **Chikungunya**: Serology (IgM), PCR (not widely available)
+
+## Rabies Exposure Categorization
+| Category | Risk | Action |
+|----------|------|--------|
+| **I** | Low (intact skin) | Observation |
+| **II** | Moderate (local wound) | HBIG + vaccine mandatory |
+| **III** | High (multiple/head/neck) | Urgent HBIG + vaccine |
+
+## PEP Regimen (Rabies)
+```
+Day 0: 2 doses (0.5 mL IM in 2 shoulders OR intradermal split-dose)
+Day 3: 1 dose (0.5 mL IM)
+Day 7: 1 dose (0.5 mL IM)
+Day 14: 1 dose (0.5 mL IM)
+Total: 4 doses × 0.5 mL = 2 mL
+```
+
+## High-Yield Facts
+- **Dengue R0**: 1.5-2 (moderate)
+- **Dengue viremia**: 4-5 days (overlaps with fever)
+- **JE vaccine**: Highly effective in endemic regions
+- **Chikungunya incubation**: 3-7 days (mean 4)
+- **Rabies incubation**: 5 days to 19 months (variable)
+- **Rabies mortality**: 100% symptomatic; 0% if PEP >99%
+- **India rabies deaths**: 20-40k annually (highest globally)
+- **DHF mortality**: 2-5% with care; 50% untreated`,
+        mnemonics: [
+          { text: "PEP = Post-Exposure Prophylaxis", explanation: "Days 0,3,7,14 vaccine; HBIG wound infiltration" },
+          { text: "Category Rabies III Urgent", explanation: "Category I=observe, II=HBIG+vax, III=urgent HBIG+vax" }
+        ],
+        keyPoints: [
+          "Dengue: IgM peak day 4-7; NS1 antigen day 1-5",
+          "DHF: Plasma leakage, thrombocytopenia, hemoconcentration",
+          "JE: DFA; endemic Bihar/UP; high pediatric mortality",
+          "Chikungunya: Severe joint pain, chronic arthritis 30-60%",
+          "Rabies: Category III = urgent; PEP <14d ideally",
+          "Rabies PEP: 4 doses (days 0,3,7,14); HBIG at wound site only"
+        ],
+        textbookRefs: [
+          { book: "Jawetz Melnick & Adelberg's Medical Microbiology", chapter: "40-41: Summary", edition: "28th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "arboviruses-rabies-layer-5-active-recall",
+        title: "Arboviruses & Rabies - Active Recall",
+        estimatedMinutes: 20,
+        summary: "Case-based Q&A on dengue, JE, chikungunya, and rabies diagnosis and management.",
+        contentMd: `# Active Recall Q&A
+
+**Q1:** 5-year-old Bihar, fever × 5d, seizures, altered consciousness. CSF lymphocytic, normal glucose. Diagnosis?
+**A1:** JE (endemic Bihar); high pediatric mortality; dexamethasone for edema; supportive care
+
+**Q2:** 32-week pregnant Kerala, fever × 4d, severe joint pain (knees, wrists). Rash present. Diagnosis?
+**A2:** Chikungunya; monitor vertical transmission (rare, ~30%); congenital effects unknown
+
+**Q3:** 8-year-old, bitten stray dog forearm × 6h, bleeding wound. Category and management?
+**A3:** Category III (local wound on arm) → Category II or III (depends on depth/profusion); HBIG + vaccine immediately
+
+**Q4:** 45-year-old Delhi, fever × 3d, rash, mild headache. Dengue IgM+, NS1+, platelet 80k. Assessment?
+**A4:** Uncomplicated dengue fever (day 3); follow-up day 5-7 for critical phase; warning signs review
+
+**Q5:** Man bitten bat × 15d, now fever, hydrophobia, confusion. Prognosis?
+**A5:** Symptomatic rabies; 100% fatal; no effective treatment (Milwaukee protocol rare); supportive only
+
+**Q6:** 6-month-old, 5 watery stools/day, fever, low intake. Rotavirus+. Management?
+**A6:** ORS primary; continue breastfeeding; dehydration complication, not virus itself
+
+**Q7:** 72-year-old dengue (day 4), sudden abdominal pain, bleeding, narrowed pulse pressure. Status?
+**A7:** DHF with progression to DSS (shock); fluid resuscitation critical; avoid volume overload; platelet transfusion if bleeding
+
+**Q8:** Healthcare worker stuck contaminated needle from rabies patient. PEP protocol?
+**A8:** Category III (percutaneous); immediate HBIG + vaccine; days 0,3,7,14; repeat HIV testing
+
+**Q9:** Chikungunya patient acute phase asks prognosis of joint pain. Risk chronic?
+**A9:** 30-60% develop persistent arthritis lasting months-years; female, age >40 = higher risk
+
+**Q10:** Bitten dog × 8d ago, now requesting rabies PEP. Recommendation?
+**A10:** Within 14-day window; HBIG still option if <7d, vaccine mandatory (days 0,3,7,14); delayed is less ideal`,
+        mnemonics: [],
+        keyPoints: [
+          "JE: Endemic Bihar/UP, seizures, high pediatric mortality",
+          "Dengue DHF: Critical phase day 4-5, plasma leakage, fluid resuscitation",
+          "Chikungunya: Severe arthralgia, chronic 30-60%",
+          "Rabies: 100% fatal symptomatic; Category III urgent PEP",
+          "Rabies PEP: Wound care, HBIG/vaccine <14d; >99% effective",
+          "Incubation: Dengue/JE short; Rabies long (5d to 19m)"
+        ],
+        textbookRefs: [
+          { book: "Jawetz Melnick & Adelberg's Medical Microbiology", chapter: "40-41: Cases", edition: "28th" }
+        ]
+      }
+    ]
+  }
 ];

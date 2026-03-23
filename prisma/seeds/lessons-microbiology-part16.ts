@@ -1,16 +1,422 @@
-// 5-layer lessons for Microbiology gaps (MI-MOD-04)
 import type { TopicLessons } from "./content-loader";
 
 export const microbiologyLessonsPart16: TopicLessons[] = [
-  // ─── MI-MOD-04-TOP-04: Spirochetes ──────────
   {
     topicCode: "MI-MOD-04-TOP-04",
     layers: [
-      { layer: 1, slug: "spirochetes-foundation", title: "Spirochetes - Foundation", estimatedMinutes: 20,
+      {
+        layer: 1,
+        slug: "spirochetes-layer-1-foundation",
+        title: "Spirochetes - Foundation",
+        estimatedMinutes: 20,
         summary: "Spirochetes are motile, spiral gram-negative bacteria with axial filaments enabling movement. Major pathogens: Treponema pallidum (syphilis), Leptospira (leptospirosis), Borrelia (Lyme disease, relapsing fever). Diagnosis via dark-field microscopy or serology; treatment with penicillin generally effective.",
-        contentMd: "# Spirochetes: Overview\n\n## Morphology & Structure\n- **Shape**: Helical/spiral morphology (6-20 µm long, 0.1-0.2 µm diameter)\n- **Gram stain**: Gram-negative but NOT stained well (visualized by dark-field, fluorescence, silver stains)\n- **Motility**: Flagella-like **axial filaments** (located between cell wall and outer membrane) enable corkscrew motion\n- **Cell wall**: Gram-negative, outer membrane more permeable than gram-positive\n\n## Major Spirochetes in Medicine\n\n| Organism | Disease | Transmission | Geographic |\n|----------|---------|--------------|-----------|\n| **Treponema pallidum** | Syphilis | Sexual (STI) | Worldwide |\n| **Leptospira interrogans** | Leptospirosis | Rodent urine contamination | Tropical, rainy season |\n| **Borrelia burgdorferi** | Lyme disease | Tick bite | North America, Europe |\n| **Borrelia recurrentis** | Relapsing fever | Human louse (epidemic) | Africa, Central Asia |\n| **Borrelia hermsii** | Relapsing fever | Soft tick (endemic) | Western USA |\n\n## Treponema pallidum (Syphilis)\n\n### Epidemiology\n- Obligate human pathogen\n- **Incubation**: 3-90 days (average 21 days)\n- Transmission: Sexual contact (primary/secondary), transplacental (congenital)\n- Rising trend in India, especially among MSM\n\n### Syphilis Stages\n1. **Primary**: Chancre at inoculation site (painless, indurated, with clean base)\n2. **Secondary**: Rash (including palm/sole involvement), lymphadenopathy, fever (6-8 weeks after primary)\n3. **Latent**: Asymptomatic; early latent (< 1 year) infectious; late latent non-infectious\n4. **Tertiary**: Gumma (granuloma), neurosyphilis (tabes dorsalis, GPI), cardiovascular (aortic aneurysm)\n\n## Leptospira interrogans (Leptospirosis)\n\n### Epidemiology\n- Zoonosis: Rats, cattle, pigs are reservoirs\n- Transmission: Contact of skin/mucous membranes with contaminated urine (often occupational)\n- Seasonal: Monsoon/rainy season in India (high incidence)\n- Occupations at risk: Farmers, sewage workers, slaughterhouse workers\n\n### Clinical Features\n- **Biphasic illness**: Leptospiremia phase → immune phase\n- Fever, headache, myalgia (esp. calf muscle pain)\n- **Weil's disease** (severe): Renal failure, hepatic dysfunction, pulmonary hemorrhage, jaundice\n- Case fatality: 5-15% in severe form\n\n## Borrelia species (Lyme Disease & Relapsing Fever)\n\n### Lyme Disease (B. burgdorferi)\n- Vector: Ixodes tick (hard tick)\n- Clinical: Erythema migrans rash (bull's eye appearance), arthralgia, neuroborreliosis\n- Geographic: Rare in India; common in North America, Europe\n\n### Relapsing Fever\n- **Epidemic**: B. recurrentis, human body louse (Pediculus humanus) transmission\n- **Endemic**: B. hermsii, soft ticks (Ornithodoros)\n- Clinical: Recurrent fever episodes (fever-apyrexia cycles) due to antigenic variation\n- Geographic: Tropical Africa, Central Asia (epidemic); Western USA (endemic),\n        mnemonics: [\n          { text: \"TSL = Treponema, Spirochetes are Spiraled, Leptospira\", explanation: \"Three major spirochetes: Treponema (syphilis), Leptospira (leptospirosis), and others like Borrelia\" },\n          { text: \"Primary-Secondary-Latent-Tertiary for Syphilis Stages\", explanation: \"Four stages of untreated syphilis: Chancre → Rash → Asymptomatic → Gumma/Neuro\" }\n        ],\n        keyPoints: [\n          \"Spirochetes: helical bacteria with axial filaments (not true flagella); gram-negative; move by corkscrew motion\",\n          \"Not stained well by Gram; visualized by dark-field, fluorescence, or silver stains\",\n          \"Treponema pallidum: obligate human pathogen; syphilis via sexual contact; four stages\",\n          \"Leptospira: zoonosis from rodent urine; severe form (Weil's disease) has renal, hepatic, pulmonary involvement\",\n          \"Borrelia burgdorferi: Lyme disease via Ixodes tick; erythema migrans rash (bull's eye)\",\n          \"Borrelia recurrentis/hermsii: Relapsing fever with fever-apyrexia cycles; rare in India\"\n        ],\n        textbookRefs: [{ book: \"Textbook of Microbiology\", chapter: \"Spirochetes\", edition: \"Ananthanarayan & Paniker\" }] },\n\n      { layer: 2, slug: \"spirochetes-mechanism\", title: \"Spirochetes - Mechanism\", estimatedMinutes: 30,\n        summary: \"Pathophysiology of spirochete infections. How T. pallidum evades immunity, antigenic variation in Borrelia. Leptospira toxins and tissue damage. Immune response and immunopathology in each infection.\",\n        contentMd: "# Pathophysiology & Pathogenesis\\n\\n## Treponema pallidum Pathogenesis\\n\\n### Immune Evasion Mechanisms\\n- **Limited surface antigens**: Few outer membrane proteins (Omps) exposed\\n- **Molecular mimicry**: Treponemal antigens resemble host antigens (hyaluronic acid-like) → poor immune recognition\\n- **Antigenic variation** (limited): Slow rate compared to Borrelia\\n- **IgG coating**: Treponemal surface coated with IgG → impairs complement activation\\n\\n### Tissue Invasion & Damage\\n1. **Chancre formation** (primary syphilis):\\n   - Treponemes invade mucous membranes/abraded skin\\n   - Local inflammatory response → induration with clean base\\n   - Healing occurs with formation of scar in untreated\\n\\n2. **Secondary syphilis**:\\n   - Hematogenous dissemination of treponemes\\n   - Immune complex deposition (treponeme + IgM/IgG) → vasculitis\\n   - Rash distribution: Entire body, including palms and soles\\n   - Lymph node hyperplasia from antigenic stimulation\\n\\n3. **Neurosyphilis**:\\n   - CSF invasion → meningitis or meningovascular disease\\n   - Late manifestations: Tabes dorsalis (dorsal root/spinal cord degeneration), GPI (parenchymal neurosyphilis)\\n   - Pathology: Perivascular inflammation, gliosis, neuronal loss\\n\\n## Leptospira interrogans Pathogenesis\\n\\n### Biphasic Illness Mechanism\\n- **Leptospiremia phase** (Days 0-7):\\n  - Leptospires multiply in blood and tissue (liver, kidney, brain)\\n  - Endotoxin-like activity → fever, myalgia, hypotension\\n  - CSF invasion possible → aseptic meningitis\\n\\n- **Immune phase** (Days 7-30+):\\n  - Antibody production (IgM then IgG) → spiremes clear from blood\\n  - BUT organisms persist in kidney tubules, eye, CNS\\n  - Immune complex deposition → vasculitis, hemorrhage, inflammation\\n\\n### Weil's Disease (Severe Form)\\n- High-grade leptospiremia with organ tropism\\n- **Renal damage**: Acute tubular necrosis → acute kidney injury, oliguria\\n- **Hepatic involvement**: Hepatocyte necrosis → jaundice (relatively mild hepatic dysfunction despite high bilirubin)\\n- **Pulmonary**: Alveolar hemorrhage → hemoptysis, ARDS\\n- **Hemorrhage**: DIC-like coagulopathy → bleeding manifestations\\n- Case fatality: 5-15% (deaths mainly from renal failure and pulmonary involvement)\\n\\n## Borrelia Pathogenesis\\n\\n### Antigenic Variation (Relapsing Fever)\\n- **VLP (Variable Lipoprotein) switch**: Spirochete switches surface lipoprotein expression\\n- Process: DNA rearrangement → new VLP variant escapes prior antibodies\\n- Result: Multiple fever episodes as new variants emerge\\n- Host mounts antibody response → brief apyrexia until next variant appears\\n\\n### Lyme Disease Pathogenesis (B. burgdorferi)\\n- **Local**: Erythema migrans rash at tick bite site\\n  - Hyaluronic acid in cell wall → mimics host tissue → poor immune recognition initially\\n  - Antigens: OspA (tick midgut), OspC (mammalian host) help transmission\\n- **Disseminated**: Hematogenous spread → arthritis (Lyme arthritis), neuroborreliosis\\n- **Chronic**: Joint inflammation persists despite antibiotics in some cases\\n\\n## Immune Response\\n\\n### Treponema\\n- **Humoral**: Treponemal antibodies (FTA, TP-PA) and non-treponemal (RPR, VDRL)\\n- **Cellular**: Th1 response; but immune evasion limits control\\n\\n### Leptospira\\n- **Early IgM**: Appears 5-7 days, peaks at 1 month, then declines\\n- **Late IgG**: Persists long-term; indicates past/current infection\\n- **Complement activation**: Potential exacerbation of inflammation\\n\\n### Borrelia\\n- **Antigenic variation**: Host antibodies ineffective against variant antigens\\n- **Immune evasion**: Antigenic variation allows persistence despite antibody response,\\n        mnemonics: [\\n          { text: \\\"Treponema = Mimics = Not Cleared\\\", explanation: \\\"T. pallidum: molecular mimicry helps evade immune response; limited surface antigens impair recognition\\\" },\\n          { text: \\\"Leptospira Biphasic: Leptospiremia (7d) then Immune (7-30d)\\\", explanation: \\\"Week 1: spiremes in blood; Week 2+: antibodies clear blood but renal persistence occurs\\\" },\\n          { text: \\\"Borrelia Variation = Relapsing Fever\\\", explanation: \\\"Antigenic variation in VLP → escape from antibodies → new fever episode\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"T. pallidum: molecular mimicry and limited surface antigens → immune evasion; IgG coating impairs complement\\\",\\n          \\\"Syphilis pathology: Chancre (local), secondary rash (vasculitis from immune complexes), neurosyphilis (CNS invasion)\\\",\\n          \\\"Leptospira biphasic: leptospiremia phase (fever, myalgia) → immune phase (antibodies, but renal persistence)\\\",\\n          \\\"Weil's disease: High leptospiremia with organ tropism → renal failure, hepatic jaundice, pulmonary hemorrhage\\\",\\n          \\\"Borrelia: Antigenic variation via VLP switch → escape from antibodies → multiple fever episodes\\\",\\n          \\\"Lyme disease: Hyaluronic acid mimicry → poor initial immune response; disseminated → arthritis, neuroborreliosis\\\"\\n        ],\\n        textbookRefs: [{ book: \\\"Textbook of Microbiology\\\", chapter: \\\"Spirochetes & Pathogenesis\\\", edition: \\\"Ananthanarayan & Paniker\\\" }] },\\n\\n      { layer: 3, slug: \\\"spirochetes-clinical\\\", title: \\\"Spirochetes - Clinical\\\", estimatedMinutes: 20,\\n        summary: \\\"Diagnosis and management of spirochete infections. Serological tests (RPR, VDRL, FTA, TP-PA for syphilis), dark-field microscopy for treponemes, culture for leptospira. Treatment with penicillin (first-line), doxycycline alternatives. Congenital syphilis and latent syphilis management.\\\",\\n        contentMd: "# Diagnosis & Management\\\\n\\\\n## Treponema pallidum (Syphilis) Diagnosis\\\\n\\\\n### Clinical Diagnosis\\\\n- **Primary**: Chancre examination; dark-field microscopy of exudate (spirochetes visible)\\\\n- **Secondary**: Serological tests; clinical findings (rash with palms/soles involvement)\\\\n- **Tertiary**: Clinical + serological; neurosyphilis requires CSF examination\\\\n\\\\n### Serological Tests\\\\n\\\\n**Non-Treponemal Tests** (Lipid antibodies in host; not spirochete-specific)\\\\n- **RPR** (Rapid Plasma Reagin): Quantitative, detects IgG + IgM\\\\n- **VDRL** (Venereal Disease Research Lab): Similar to RPR\\\\n- High titers: Active infection\\\\n- **Prozone effect**: Very high titers may show false-negative (dilute specimen)\\\\n- Decline after treatment (good treatment response marker)\\\\n\\\\n**Treponemal Tests** (Spiral-specific antigens)\\\\n- **FTA-ABS** (Fluorescent Treponemal Antibody - Absorption): Gold standard, most sensitive\\\\n- **TP-PA** (Treponema pallidum Particle Agglutination): Automated, convenient\\\\n- Remain positive even after treatment (indicate past infection)\\\\n\\\\n**Interpretation**\\\\n| Tests | Meaning |\\\\n|-------|---------|\\\\n| Non-treponemal (+), Treponemal (+) | Active infection |\\\\n| Non-treponemal (-), Treponemal (+) | Past infection treated, or false-positive treponemal |\\\\n| Non-treponemal (+), Treponemal (-) | Likely biological false positive (check for autoimmune disease, malignancy) |\\\\n\\\\n### Special Scenarios\\\\n- **Neurosyphilis**: CSF VDRL/RPR + elevated protein + pleocytosis\\\\n- **Congenital syphilis**: Maternal serology + infant RPR (may be passive maternal transfer) + clinical findings\\\\n- **Primary chancre**: Dark-field microscopy of exudate\\\\n\\\\n## Leptospira Diagnosis\\\\n\\\\n### Culture\\\\n- **First week (leptospiremia)**: Blood culture in Fletcher medium or bovine serum albumin medium\\\\n- Slow growth (days to weeks)\\\\n- Not practical for acute diagnosis\\\\n\\\\n### Serology\\\\n- **IgM ELISA**: Appears day 5-7; diagnostic\\\\n- **MAT (Microscopic Agglutination Test)**: Gold standard; identifies serovar\\\\n- **PCR**: Molecular confirmation; available in reference labs\\\\n\\\\n### Urine Culture\\\\n- From second week onwards (during immune phase)\\\\n- **Leptospiruria** persists weeks to months → indicates persistence\\\\n- Culture from urine in advanced labs\\\\n\\\\n## Borrelia Diagnosis\\\\n\\\\n### Relapsing Fever\\\\n- **Thick blood smear** (Wright-Giemsa stain): Spirochetes visible during fever episodes\\\\n- Serology: Not helpful (due to antigenic variation)\\\\n- PCR: Species identification\\\\n\\\\n### Lyme Disease\\\\n- **Erythema migrans**: Clinical diagnosis sufficient\\\\n- **Serology**: Two-tier testing (ELISA then confirmatory Western blot)\\\\n- **PCR**: Joint fluid for arthritis confirmation\\\\n\\\\n## Treatment\\\\n\\\\n### Syphilis\\\\n- **Penicillin G**: First-line\\\\n  - Primary/secondary: 2.4 MU IM once\\\\n  - Latent < 1 year: 2.4 MU IM weekly × 3\\\\n  - Late/tertiary: 2.4 MU IM weekly × 3\\\\n- **Alternatives**: Doxycycline 100 mg BD × 2-4 weeks (for penicillin allergy)\\\\n- **Monitoring**: RPR/VDRL at 3, 6, 12 months; should decline (4-fold drop indicates cure)\\\\n\\\\n### Leptospirosis\\\\n- **Penicillin G IV**: 1-2 MU 6-hourly (severe, Weil's disease)\\\\n- **Doxycycline**: 100 mg BD (milder cases, prophylaxis)\\\\n- **Supportive care**: Dialysis for renal failure, mechanical ventilation for pulmonary hemorrhage\\\\n\\\\n### Relapsing Fever\\\\n- **Penicillin G IV**: 1 MU 6-hourly × 10 days\\\\n- **Doxycycline**: 100 mg BD × 10 days\\\\n- **Jarisch-Herxheimer reaction**: Fever spike after treatment from endotoxin release\\\\n\\\\n## Prevention\\\\n\\\\n### Syphilis\\\\n- Sexual health education, partner notification, screening in pregnancy\\\\n- Congenital syphilis prevention: Maternal screening + early treatment\\\\n\\\\n### Leptospirosis\\\\n- Rodent control, worker PPE (gloves, boots)\\\\n- Vaccination: Occupational protection available in some countries (limited efficacy in India)\\\\n\\\\n### Relapsing Fever\\\\n- Louse control, tick avoidance, housing improvements\\\\n\\\\n## Congenital Syphilis\\\\n- **Manifestations**: Hepatosplenomegaly, jaundice, rash, bone changes, neurosyphilis\\\\n- **Early** (< 2 years): Mucocutaneous, hepatic, renal, bone involvement\\\\n- **Late** (> 2 years): Interstitial keratitis, 8th nerve deafness, Hutchinson triad (peg teeth, interstitial keratitis, 8th nerve deafness)\\\\n- **Prevention**: Maternal screening + penicillin treatment during pregnancy,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Non-treponemal (RPR/VDRL) declines with treatment; Treponemal (FTA/TP-PA) stays positive\\\\\\\", explanation: \\\\\\\"Test choice guides interpretation: non-treponemal for monitoring treatment, treponemal for confirming diagnosis\\\\\\\" },\\\\n          { text: \\\\\\\"VDRL-FTA: V=Vital (monitor treatment), F=Fixed (indicates past infection)\\\\\\\", explanation: \\\\\\\"VDRL (non-treponemal) declines with cure; FTA (treponemal) remains positive\\\\\\\" },\\\\n          { text: \\\\\\\"Penicillin: Primary 1×, Latent 3×, Late 3× dosing\\\\\\\", explanation: \\\\\\\"Syphilis treatment regimen: once for primary, weekly × 3 for latent < 1 year, weekly × 3 for late\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Dark-field microscopy diagnoses primary chancre; RPR/VDRL screens; FTA/TP-PA confirms treponeme\\\\\\\",\\\\n          \\\\\\\"Biological false-positive non-treponemal tests: check for autoimmune disease, malignancy\\\\\\\",\\\\n          \\\\\\\"Penicillin first-line syphilis treatment; doxycycline alternative for allergy\\\\\\\",\\\\n          \\\\\\\"Leptospirosis: culture (first week), serology (IgM day 5-7), MAT gold standard\\\\\\\",\\\\n          \\\\\\\"Relapsing fever: thick smear shows spirochetes during fever; serology unhelpful due to antigenic variation\\\\\\\",\\\\n          \\\\\\\"Congenital syphilis preventable with maternal screening and penicillin; Hutchinson triad late manifestation\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [{ book: \\\\\\\"Textbook of Microbiology\\\\\\\", chapter: \\\\\\\"Spirochetes & Diagnosis\\\\\\\", edition: \\\\\\\"Ananthanarayan & Paniker\\\\\\\" }] },\\\\n\\\\n      { layer: 4, slug: \\\\\\\"spirochetes-exam\\\\\\\", title: \\\\\\\"Spirochetes - Exam Prep\\\\\\\", estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield facts on spirochete morphology, syphilis stages, serological tests, and treatment regimens.\\\\\\\",\\\\n        contentMd: ``# Exam High Yield\\\\n\\\\n## One-Liners\\\\n- Spirochetes visualized by: **Dark-field, fluorescence, or silver stains (NOT Gram stain)**\\\\n- Motility in spirochetes: **Axial filaments** (not true flagella)\\\\n- Syphilis incubation: **3-90 days (avg 21 days)**\\\\n- Primary syphilis lesion: **Painless indurated chancre with clean base**\\\\n- Secondary syphilis timing: **6-8 weeks after primary**\\\\n- Tertiary syphilis manifestations: **Gumma, neurosyphilis (tabes, GPI), vascular**\\\\n- RPR/VDRL: **Non-treponemal, decline with treatment**\\\\n- FTA/TP-PA: **Treponemal, remain positive after treatment**\\\\n- Syphilis first-line treatment: **Penicillin G (IM or IV)**\\\\n- Leptospirosis incubation: **7-10 days**\\\\n- Weil's disease: **Severe leptospirosis with renal, hepatic, pulmonary involvement**\\\\n- Leptospirosis diagnosis: **IgM serology day 5-7, MAT confirms serovar**\\\\n- Relapsing fever cycles: **Fever-apyrexia due to antigenic variation**\\\\n- Lyme disease rash: **Erythema migrans (bull's eye appearance)**\\\\n- Borrelia relapsing fever: **Multiple fever spikes** due to VLP switch\\\\n\\\\n## Syphilis Stages Quick Reference\\\\n\\\\n| Stage | Timing | Lesion | Serology |\\\\n|-------|--------|--------|----------|\\\\n| **Primary** | 3-90d | Chancre (painless) | Positive after 2-3 weeks |\\\\n| **Secondary** | 6-8w after 1° | Rash (palms/soles) | Both high titers |\\\\n| **Latent** | Months-years | None | Both positive |\\\\n| **Tertiary** | Years | Gumma, neuro, vascular | Both positive |\\\\n\\\\n## Serological Test Interpretation\\\\n\\\\n| Non-treponemal | Treponemal | Interpretation |\\\\n|---|---|---|\\\\n| + | + | Active syphilis (confirm with FTA) |\\\\n| + | - | Biological false positive (BFP) |\\\\n| - | + | Past treated syphilis or false positive |\\\\n| - | - | No syphilis |\\\\n\\\\n## NEXT Themes\\\\n- Spirochete morphology and visualization\\\\n- Syphilis stages and clinical features\\\\n- Serological tests and interpretation\\\\n- Treatment regimens and monitoring\\\\n- Leptospirosis and relapsing fever diagnosis,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Dark-field sees Spirals\\\\\\\", explanation: \\\\\\\"Spirochetes NOT visible by Gram; use dark-field, fluorescence, or silver stains\\\\\\\" },\\\\n          { text: \\\\\\\"RPR drops; FTA stays\\\\\\\", explanation: \\\\\\\"Non-treponemal RPR declines with cure; treponemal FTA remains positive\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Spirochetes: helical morphology, axial filaments, gram-negative but visualized by special stains\\\\\\\",\\\\n          \\\\\\\"Syphilis: Primary chancre → Secondary rash (palms/soles) → Latent → Tertiary (gumma, neurosyphilis)\\\\\\\",\\\\n          \\\\\\\"RPR/VDRL (non-treponemal) decline with treatment; FTA/TP-PA (treponemal) remain positive\\\\\\\",\\\\n          \\\\\\\"Penicillin G: 2.4 MU IM once for primary, weekly × 3 for latent < 1 year, weekly × 3 for late\\\\\\\",\\\\n          \\\\\\\"Leptospirosis: IgM serology (day 5-7), MAT for serovar, culture (first week)\\\\\\\",\\\\n          \\\\\\\"Relapsing fever: spirochetes visible on thick smear during fever; multiple fever episodes from antigenic variation\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [{ book: \\\\\\\"Textbook of Microbiology\\\\\\\", chapter: \\\\\\\"Spirochetes\\\\\\\", edition: \\\\\\\"Ananthanarayan & Paniker\\\\\\\" }] },\\\\n\\\\n      { layer: 5, slug: \\\\\\\"spirochetes-recall\\\\\\\", title: \\\\\\\"Spirochetes - Active Recall\\\\\\\", estimatedMinutes: 10,\\\\n        summary: \\\\\\\"Flashcard-style questions on spirochete morphology, diagnosis, and treatment.\\\\\\\",\\\\n        contentMd: ``# Active Recall\\\\n\\\\n**Q1:** How are spirochetes visualized microscopically?\\\\n> Dark-field microscopy, fluorescence microscopy, or silver stains (not well-stained by Gram stain)\\\\n\\\\n**Q2:** What enables spirochete motility?\\\\n> Axial filaments (located between cell wall and outer membrane)\\\\n\\\\n**Q3:** What is the incubation period for syphilis?\\\\n> 3-90 days (average 21 days)\\\\n\\\\n**Q4:** Describe the primary syphilis lesion.\\\\n> Painless, indurated chancre with clean base at inoculation site\\\\n\\\\n**Q5:** When does secondary syphilis appear after primary infection?\\\\n> 6-8 weeks after primary syphilis\\\\n\\\\n**Q6:** What is the difference between RPR/VDRL and FTA/TP-PA?\\\\n> RPR/VDRL are non-treponemal (decline with treatment); FTA/TP-PA are treponemal (remain positive after treatment)\\\\n\\\\n**Q7:** What is the first-line treatment for syphilis?\\\\n> Penicillin G (IM or IV depending on stage)\\\\n\\\\n**Q8:** What is Weil's disease?\\\\n> Severe form of leptospirosis with renal failure, hepatic dysfunction, and pulmonary hemorrhage\\\\n\\\\n**Q9:** What causes the recurrent fever episodes in relapsing fever?\\\\n> Antigenic variation in spirochete surface lipoproteins (VLP switch) allowing escape from antibodies\\\\n\\\\n**Q10:** What is the causative agent of Lyme disease?\\\\n> Borrelia burgdorferi (transmitted by Ixodes tick),\\\\n        mnemonics: [],\\\\n        keyPoints: [\\\\\\\"10 key questions on spirochete diagnosis, syphilis staging, and treatment\\\\\\\"],\\\\n        textbookRefs: [{ book: \\\\\\\"Textbook of Microbiology\\\\\\\", chapter: \\\\\\\"Spirochetes\\\\\\\", edition: \\\\\\\"Ananthanarayan & Paniker\\\\\\\" }] },\\\\n    ],\\\\n  },\\\\n\\\\n  // ─── MI-MOD-04-TOP-05: Pseudomonas & Non-fermenters ──────────\\\\n  {\\\\n    topicCode: \\\\\\\"MI-MOD-04-TOP-05\\\\\\\",\\\\n    layers: [\\\\n      { layer: 1, slug: \\\\\\\"pseudomonas-non-fermenters-foundation\\\\\\\", title: \\\\\\\"Pseudomonas & Non-fermenters - Foundation\\\\\\\", estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Non-fermenting gram-negative bacteria do not ferment glucose; primarily aerobic. Pseudomonas aeruginosa most clinically important. Causes respiratory, urinary, wound infections, especially in immunocompromised. Other non-fermenters: Acinetobacter, Burkholderia, Stenotrophomonas. MDR-P. aeruginosa increasingly common.\\\\\\\",\\\\n        contentMd: ``# Non-Fermenters: Pseudomonas & Related Bacteria\\\\n\\\\n## Classification\\\\n\\\\n**Non-Fermenting Gram-Negative Bacilli**\\\\n- Do NOT ferment glucose (or ferment very slowly)\\\\n- Primarily aerobic (oxidize rather than ferment glucose)\\\\n- Oxidase test: Key differentiating feature\\\\n\\\\n| Organism | Oxidase | Glucose Fermentation | Key Feature |\\\\n|----------|---------|-----|---|\\\\n| **Pseudomonas aeruginosa** | (+) | Oxidize | Motile, aeruginous pigment |\\\\n| **Acinetobacter baumannii** | (-) | Non-fermenting | Coccobacillus, strictly aerobic |\\\\n| **Burkholderia cepacia** | (+) | Oxidize | Multi-resistant, biofilm producer |\\\\n| **Stenotrophomonas maltophilia** | (-) | Non-fermenting | TMP-SMX resistant, TMP-SMX susceptible |\\\\n\\\\n## Pseudomonas aeruginosa\\\\n\\\\n### Characteristics\\\\n- **Gram-negative** rod\\\\n- **Oxidase-positive** (diagnostic feature)\\\\n- **Pigment production**: Green (pyoverdine), blue (pyocyanin) - aeruginous color\\\\n- **Motility**: Monotrichous polar flagellum\\\\n- **Habitat**: Environmental (soil, water, moist environments); doesn't need specific nutrients\\\\n- **Growth at 37°C and 42°C** (higher optimal growth temperature than typical pathogens)\\\\n\\\\n### Virulence Factors\\\\n1. **Pili (fimbriae)**: Adherence to respiratory epithelium\\\\n2. **Flagella**: Motility and invasion\\\\n3. **Lipopolysaccharide (LPS)**: Endotoxin; triggers inflammatory response\\\\n4. **Exotoxins**:\\\\n   - Exotoxin A: ADP-ribosylation of EF-2 → protein synthesis inhibition\\\\n   - Elastase: Tissue destruction\\\\n5. **Proteases**: Elastase, alkaline protease → tissue invasion\\\\n6. **Biofilm**: Exopolysaccharide matrix → antibiotic resistance\\\\n\\\\n### Clinical Infections\\\\n- **Respiratory**: Chronic respiratory colonization in CF, ventilator-associated pneumonia (VAP)\\\\n- **Urinary**: Catheter-associated UTI (biofilm)\\\\n- **Wound/Burn**: Opportunistic in immunocompromised\\\\n- **Otitis externa**: \\\\\\\"Swimmer's ear\\\\\\\" in otherwise healthy\\\\n- **Eye**: Keratitis, corneal ulcer (contact lens-related)\\\\n- **Bone/Joint**: Osteomyelitis in IV drug users\\\\n- **Blood**: Sepsis in severely immunocompromised\\\\n\\\\n## Acinetobacter baumannii\\\\n\\\\n### Characteristics\\\\n- **Gram-negative coccobacillus**\\\\n- **Oxidase-negative** (distinguishes from P. aeruginosa)\\\\n- **Strictly aerobic**\\\\n- **Environmental**: Water, soil, medical equipment biofilm\\\\n- **Nosocomial**: Hospital-acquired pathogen\\\\n\\\\n### Clinical Infections\\\\n- HAI pathogen: Ventilator-associated pneumonia (VAP), wound infections, bloodstream infections\\\\n- **Multidrug-resistant (MDR)**: Common; often resistant to multiple antibiotic classes\\\\n- **ESBL and carbapenem resistance** common in India\\\\n\\\\n## Burkholderia cepacia & Stenotrophomonas maltophilia\\\\n\\\\n### Burkholderia cepacia\\\\n- **Oxidase-positive**\\\\n- CF patients: Chronic colonization → accelerated lung disease\\\\n- **Multi-resistant**: Often resistant to most antibiotics\\\\n- **Healthcare-associated**: Contamination of disinfectants, saline solutions\\\\n\\\\n### Stenotrophomonas maltophilia\\\\n- **Oxidase-negative**\\\\n- **TMP-SMX sensitive** (unusual for non-fermenters; key identifier)\\\\n- Healthcare-associated: VAP, catheter-associated infections\\\\n- Increasing prevalence in hospitals,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Non-Fermenters: Oxidize, NOT ferment glucose\\\\\\\", explanation: \\\\\\\"Key feature: use oxidative rather than fermentative metabolism; aerobic organisms\\\\\\\" },\\\\n          { text: \\\\\\\"PAO-positive: P. aeruginosa Oxidase-positive\\\\\\\", explanation: \\\\\\\"P. aeruginosa is oxidase-positive; Acinetobacter is oxidase-negative (key distinction)\\\\\\\" },\\\\n          { text: \\\\\\\"Green means Pseudomonas (pyoverdine)\\\\\\\", explanation: \\\\\\\"P. aeruginosa produces green (pyoverdine) and blue (pyocyanin) pigments\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Non-fermenters: gram-negative, aerobic, oxidize (not ferment) glucose, oxidase test key\\\\\\\",\\\\n          \\\\\\\"P. aeruginosa: oxidase-positive, pigment-producing, motile, grows at 42°C\\\\\\\",\\\\n          \\\\\\\"P. aeruginosa virulence: pili, flagella, exotoxins, elastase, biofilm production\\\\\\\",\\\\n          \\\\\\\"P. aeruginosa infections: respiratory (CF, VAP), UTI (catheter), wound, otitis externa, keratitis\\\\\\\",\\\\n          \\\\\\\"Acinetobacter: oxidase-negative coccobacillus, MDR, nosocomial pathogen\\\\\\\",\\\\n          \\\\\\\"Burkholderia, Stenotrophomonas: less common; B. cepacia in CF, S. maltophilia TMP-SMX sensitive\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [{ book: \\\\\\\"Textbook of Microbiology\\\\\\\", chapter: \\\\\\\"Non-Fermenters\\\\\\\", edition: \\\\\\\"Ananthanarayan & Paniker\\\\\\\" }] },\\\\n\\\\n      { layer: 2, slug: \\\\\\\"pseudomonas-non-fermenters-mechanism\\\\\\\", title: \\\\\\\"Pseudomonas & Non-fermenters - Mechanism\\\\\\\", estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Pathogenesis of P. aeruginosa infections. Biofilm formation and antibiotic resistance. Pseudomonas infection in CF vs immunocompromised hosts. Multidrug resistance mechanisms (beta-lactamase, MBL, efflux pumps, mutation).\\\\\\\",\\\\n        contentMd: ``# Pathogenesis & Antibiotic Resistance\\\\n\\\\n## Pseudomonas aeruginosa Pathogenesis\\\\n\\\\n### Acute Infection Mechanism\\\\n1. **Adhesion**: Pili attach to respiratory/urinary epithelium\\\\n2. **Invasion**: Flagella-mediated motility; toxins penetrate epithelium\\\\n3. **Exotoxin A**: ADP-ribosylation of EF-2 → apoptosis, tissue damage\\\\n4. **Elastase/Alkaline Protease**: Tissue destruction, vascular invasion\\\\n5. **Inflammatory response**: LPS endotoxin → excessive inflammation\\\\n\\\\n### Chronic Infection - Biofilm Formation\\\\n\\\\n**CF Lung Model**:\\\\n- Mucus trapping and colonization (favorable anaerobic environment)\\\\n- Transition from motile (flagellated) to biofilm-forming phenotype\\\\n- Exopolysaccharide alginate production: mucoid strains characteristic\\\\n- Biofilm benefits: ↓ Antibiotic penetration, ↓ Phagocytosis, ↑ Resistance\\\\n\\\\n**Clinical Consequences**:\\\\n- Chronic infection despite antibiotics\\\\n- Immune response dysregulation → tissue destruction\\\\n- Progressive lung function decline\\\\n- Exacerbations from biofilm instability releasing planktonic cells\\\\n\\\\n### Two-Component Regulatory Systems\\\\n- **GacA/GacS** and **PSL/PEL pathways**: Switch between motile and biofilm phenotypes\\\\n- Environmental signals (nutrient starvation, hypoxia) trigger biofilm formation\\\\n\\\\n## Antibiotic Resistance in P. aeruginosa & Non-Fermenters\\\\n\\\\n### Mechanisms of Resistance\\\\n\\\\n**1. Beta-Lactamase Production**\\\\n- **ESBLs** (Extended-Spectrum Beta-Lactamases): Inhibited by beta-lactamase inhibitors (clavulanic acid)\\\\n- **AmpC**: Chromosomally encoded; NOT inhibited by clavulanic acid\\\\n- **Metallo-beta-lactamases (MBLs)**: Zinc-dependent; hydrolyze carbapenems\\\\n  - **NDM-1** (New Delhi Metallo-lactamase) in India\\\\n  - **VIM, IMP types** globally\\\\n\\\\n**2. Efflux Pumps**\\\\n- **MexAB-OprM**: RND-type efflux pump → fluoroquinolone resistance\\\\n- Pumps out multiple drug classes → multidrug resistance\\\\n- Overexpression via regulatory mutations\\\\n\\\\n**3. Altered Outer Membrane Permeability**\\\\n- **OprD porin loss**: Reduced carbapenem entry → carbapenem resistance\\\\n- Point mutations in gene → porin absent\\\\n\\\\n**4. Chromosomal Resistance**\\\\n- Intrinsic cephalosporin resistance (poor gram-negative activity)\\\\n- **Fluoroquinolone resistance**: High mutation rate\\\\n\\\\n### MDR Pseudomonas Definition\\\\n- Resistant to 3+ antibiotic classes: fluoroquinolones, aminoglycosides, anti-pseudomonal beta-lactams\\\\n- Often also resistant to carbapenems\\\\n\\\\n### Acinetobacter baumannii Resistance\\\\n- **Carbapenem resistance**: MBL, OXA-type beta-lactamases, porin loss\\\\n- **Polymyxin resistance** (colistin): Emerging in some strains\\\\n- WHO-listed \\\\\\\"critical\\\\\\\" organism due to multi-resistance\\\\n\\\\n## Biofilm & Antibiotic Resistance\\\\n\\\\n### Biofilm Structure\\\\n- **Matrix**: Polysaccharides, proteins, lipids\\\\n- **Microenvironment**: Anaerobic center, pH gradient, nutrient diffusion limitation\\\\n- **Phenotypic heterogeneity**: Different metabolic states of bacteria\\\\n\\\\n### Why Biofilm Antibiotics Fail\\\\n- Physical barrier: ↓ Antibiotic diffusion\\\\n- **Tolerance**: Slow-growing cells (stationary phase) less susceptible than planktonic\\\\n- **Metabolic slow-down**: Reduced drug targets\\\\n- **Quorum sensing**: Produces resistance-associated molecules\\\\n\\\\n### Clinical Implications\\\\n- Biofilm infections require **higher antibiotic concentrations**\\\\n- **Combination therapy** more effective (e.g., beta-lactam + aminoglycoside)\\\\n- **Source control** (removal of biofilm) often necessary (e.g., device removal)\\\\n- Chronic suppression rather than eradication goal in CF,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"PALE: Pili, Adhesion, Lipopolysaccharide, Exotoxin\\\\\\\", explanation: \\\\\\\"P. aeruginosa virulence factors for pathogenesis\\\\\\\" },\\\\n          { text: \\\\\\\"Biofilm = Beta-lactams fail\\\\\\\", explanation: \\\\\\\"Biofilm formation protects from antibiotics; need higher concentrations and source control\\\\\\\" },\\\\n          { text: \\\\\\\"MBL = carbapenems broken\\\\\\\", explanation: \\\\\\\"Metallo-beta-lactamases (MBLs) like NDM-1 break down carbapenems → carbapenem resistance\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"P. aeruginosa: adhesion (pili) → invasion (flagella) → exotoxins → inflammatory damage\\\\\\\",\\\\n          \\\\\\\"Biofilm formation: transition from motile to sessile, alginate production, anaerobic microenvironment\\\\\\\",\\\\n          \\\\\\\"Biofilm protects: physical barrier to antibiotics, slow growth reduces drug susceptibility, quorum sensing\\\\\\\",\\\\n          \\\\\\\"MDR mechanisms: ESBLs/AmpC/MBLs (enzymatic), efflux pumps (MexAB-OprM), porin loss (OprD), mutations\\\\\\\",\\\\n          \\\\\\\"MBLs (NDM-1, VIM): zinc-dependent, carbapenem resistance, not inhibited by beta-lactamase inhibitors\\\\\\\",\\\\n          \\\\\\\"Acinetobacter baumannii: nosocomial, high carbapenem resistance, polymyxin resistance emerging\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [{ book: \\\\\\\"Textbook of Microbiology\\\\\\\", chapter: \\\\\\\"Non-Fermenters & Resistance\\\\\\\", edition: \\\\\\\"Ananthanarayan & Paniker\\\\\\\" }] },\\\\n\\\\n      { layer: 3, slug: \\\\\\\"pseudomonas-non-fermenters-clinical\\\\\\\", title: \\\\\\\"Pseudomonas & Non-fermenters - Clinical\\\\\\\", estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Diagnosis: culture, oxidase test, pigment, growth characteristics. Antibiotic susceptibility testing. Treatment of P. aeruginosa: anti-pseudomonal beta-lactams (ceftazidime, piperacillin-tazobactam, carbapenems), aminoglycosides, fluoroquinolones. MDR management. Prevention of biofilm.\\\\\\\",\\\\n        contentMd: ``# Diagnosis & Management\\\\n\\\\n## Microbiological Diagnosis\\\\n\\\\n### Culture Characteristics\\\\n- **Media**: Growth on standard media (blood agar, MacConkey)\\\\n  - MacConkey: Non-lactose fermenting (colorless) colonies\\\\n  - Blood agar: Often with greenish discoloration from pigments\\\\n- **Odor**: Characteristic fruity or musty odor (\\\\\\\"grape-like\\\\\\\" smell from pyocyanin)\\\\n- **Growth**: Optimal 37-42°C (higher than most pathogens); grows in routine incubation\\\\n\\\\n### Identification\\\\n\\\\n**P. aeruginosa**:\\\\n1. **Gram stain**: Gram-negative rod\\\\n2. **Oxidase test**: **POSITIVE** (purple color within 10 seconds) - KEY feature\\\\n3. **Pigment**: Green (pyoverdine) or blue (pyocyanin) production on growth\\\\n4. **Non-fermenters**: No fermentation of glucose (oxidative only)\\\\n5. **Growth at 42°C**: Grows at higher temperature\\\\n\\\\n**Acinetobacter**:\\\\n1. **Gram stain**: Gram-negative coccobacillus\\\\n2. **Oxidase test**: **NEGATIVE** (key difference from P. aeruginosa)\\\\n3. **Growth**: Strictly aerobic, grows on standard media\\\\n\\\\n### Antibiotic Susceptibility Testing\\\\n- **Disc diffusion or E-test**: Determine resistance to key antibiotics\\\\n- **ESBL/AmpC detection**: Phenotypic tests (double disc diffusion, CLSI guidelines)\\\\n- **Carbapenem resistance**: MIC testing; <1 µg/mL susceptible per CLSI\\\\n- **NDM detection**: Molecular confirmation for MBL production\\\\n\\\\n## Treatment of P. aeruginosa Infections\\\\n\\\\n### Anti-Pseudomonal Beta-Lactams\\\\n- **Ceftazidime**: 1-2 g IV TID (respiratory, urinary)\\\\n- **Piperacillin-tazobactam**: 4.5 g IV TID (broad-spectrum, covers anaerobes too)\\\\n- **Meropenem**: 1-2 g IV TID (serious infections, biofilm-rich) - BUT emerging resistance\\\\n- **Cefepime**: 1-2 g IV TID (alternative to ceftazidime)\\\\n\\\\n### Aminoglycosides\\\\n- **Tobramycin**: 5-7 mg/kg IV daily (better CF lung penetration than gentamicin)\\\\n- **Amikacin**: 15 mg/kg IV daily\\\\n- **Combination with beta-lactam**: Synergistic for serious infections (especially biofilm)\\\\n- Pseudomonas has intrinsic aminoglycoside resistance; requires synergy approach\\\\n\\\\n### Fluoroquinolones\\\\n- **Ciprofloxacin**: 400-600 mg IV BD or 750 mg PO BD\\\\n- **Levofloxacin**: 750 mg IV/PO daily\\\\n- Good respiratory penetration; used for oral step-down or chronic suppression\\\\n- Resistance emerging; not monotherapy for serious infections\\\\n\\\\n### Anti-Pseudomonal Strategies\\\\n\\\\n**Acute Infection** (VAP, severe UTI):\\\\n- Beta-lactam (ceftazidime or pip-tazo) ± aminoglycoside\\\\n- Combination for synergy and delay resistance emergence\\\\n\\\\n**CF Chronic Infection**:\\\\n- **Inhaled tobramycin**: 300 mg BID (achieves high lung concentration)\\\\n- **Macrolides** (azithromycin): Anti-inflammatory, immune modulation\\\\n- **Oral fluoroquinolone** (ciprofloxacin): Chronic suppression\\\\n\\\\n**MDR Pseudomonas**:\\\\n- **Colistin (polymyxin E)**: Last-resort for colistin-susceptible MDR strains\\\\n- Nephrotoxic, neurotoxic; monitor renal function, neurological symptoms\\\\n- Combination with meropenem or high-dose beta-lactams: Synergistic\\\\n\\\\n## Prevention of Pseudomonas Infection\\\\n\\\\n### Healthcare-Associated\\\\n- **Hand hygiene**: Key (moist environment transmission)\\\\n- **Device care**: Catheter, ventilator maintenance\\\\n- **Environmental**: Disinfection of equipment\\\\n- **Water system**: Control biofilm in water lines, dialysis water\\\\n\\\\n### CF Lung\\\\n- **Eradication in early colonization**: Aggressive treatment of initial isolate with tobramycin inhalation ± systemic antibiotics\\\\n- **Chronic suppression**: Inhaled antibiotics (tobramycin, aztreonam lysine)\\\\n- **Macrolide prophylaxis**: Azithromycin for anti-inflammatory effect\\\\n\\\\n## Acinetobacter Management\\\\n\\\\n### Treatment\\\\n- **MDR Acinetobacter**: Colistin or polymyxin monotherapy\\\\n- **Carbapenem-susceptible**: Meropenem or imipenem\\\\n- **High-dose meropenem**: 2 g IV TID for serious infections\\\\n\\\\n### Prevention\\\\n- Healthcare-associated: Contact precautions, hand hygiene, environmental disinfection\\\\n- **Chlorhexidine baths**: Reduce colonization in ICU patients\\\\n\\\\n## Clinical Monitoring\\\\n- **Therapeutic drug monitoring**: Tobramycin/amikacin dosing in CF (high doses needed)\\\\n- **Renal function**: Nephrotoxicity with aminoglycosides\\\\n- **Response assessment**: Chest X-ray, sputum cultures, clinical improvement,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"OXIdase Positive = Pseudomonas\\\\\\\", explanation: \\\\\\\"P. aeruginosa oxidase-positive; Acinetobacter oxidase-negative\\\\\\\" },\\\\n          { text: \\\\\\\"Green Pseudomonas = Pyoverdine\\\\\\\", explanation: \\\\\\\"P. aeruginosa green pigment is pyoverdine; blue pigment is pyocyanin\\\\\\\" },\\\\n          { text: \\\\\\\"Beta-lactam + Aminoglycoside for synergy\\\\\\\", explanation: \\\\\\\"P. aeruginosa serious infections treated with combination for synergistic effect and resistance prevention\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Oxidase test distinguishes P. aeruginosa (positive) from Acinetobacter (negative)\\\\\\\",\\\\n          \\\\\\\"P. aeruginosa grows at 42°C; produces green/blue pigment; characteristic fruity odor\\\\\\\",\\\\n          \\\\\\\"Anti-pseudomonal beta-lactams: ceftazidime, piperacillin-tazobactam, carbapenems\\\\\\\",\\\\n          \\\\\\\"Combination therapy (beta-lactam + aminoglycoside) for serious infections and biofilm\\\\\\\",\\\\n          \\\\\\\"Tobramycin inhalation for CF; macrolides (azithromycin) for anti-inflammatory effect\\\\\\\",\\\\n          \\\\\\\"MDR P. aeruginosa: colistin last-resort; carbapenem-resistant strains emerging with MBLs\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [{ book: \\\\\\\"Textbook of Microbiology\\\\\\\", chapter: \\\\\\\"Non-Fermenters & Treatment\\\\\\\", edition: \\\\\\\"Ananthanarayan & Paniker\\\\\\\" }] },\\\\n\\\\n      { layer: 4, slug: \\\\\\\"pseudomonas-non-fermenters-exam\\\\\\\", title: \\\\\\\"Pseudomonas & Non-fermenters - Exam Prep\\\\\\\", estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield facts on non-fermenter identification, P. aeruginosa characteristics, resistance mechanisms, and treatment.\\\\\\\",\\\\n        contentMd: ``# Exam High Yield\\\\n\\\\n## One-Liners\\\\n- Non-fermenters characteristic: **Aerobic, do NOT ferment glucose (oxidize instead)**\\\\n- P. aeruginosa oxidase test: **POSITIVE (purple)**\\\\n- Acinetobacter oxidase test: **NEGATIVE**\\\\n- P. aeruginosa growth temperature: **37-42°C** (higher than most pathogens)\\\\n- P. aeruginosa pigment: **Green (pyoverdine), blue (pyocyanin)**\\\\n- P. aeruginosa most common healthcare infection: **Ventilator-associated pneumonia (VAP)**\\\\n- Biofilm formation in CF: **Transition to mucoid phenotype (alginate production)**\\\\n- MDR Pseudomonas definition: **Resistant to 3+ antibiotic classes**\\\\n- MBL producers (like NDM-1): **Resistant to carbapenems, NOT inhibited by beta-lactamase inhibitors**\\\\n- First-line P. aeruginosa therapy: **Ceftazidime or piperacillin-tazobactam ± aminoglycoside**\\\\n- CF Pseudomonas suppression: **Inhaled tobramycin + oral fluoroquinolone**\\\\n- Acinetobacter baumannii role: **Major nosocomial MDR pathogen**\\\\n- Colistin use: **Last-resort for MDR strains** (nephrotoxic, neurotoxic)\\\\n\\\\n## Non-Fermenter Identification Quick Reference\\\\n\\\\n| Feature | P. aeruginosa | Acinetobacter |\\\\n|---------|---|---|\\\\n| **Morphology** | Rod | Coccobacillus |\\\\n| **Oxidase** | (+) | (-) |\\\\n| **Pigment** | Green/blue | None |\\\\n| **Growth at 42°C** | Yes | No |\\\\n| **Common infection** | VAP, wound | HAI, VAP |\\\\n| **Resistance** | ESBLs, MBLs, efflux | ESBLs, MBLs, porin loss |\\\\n\\\\n## Pseudomonas Virulence Factors\\\\n- **Adhesion**: Pili, flagella\\\\n- **Toxins**: Exotoxin A, elastase, alkaline protease\\\\n- **Resistance**: Efflux pumps, biofilm, beta-lactamases\\\\n- **LPS**: Endotoxin\\\\n\\\\n## NEXT Themes\\\\n- Non-fermenter identification (oxidase key)\\\\n- P. aeruginosa in CF and immunocompromised\\\\n- Biofilm and antibiotic resistance\\\\n- MDR mechanisms (MBLs, efflux)\\\\n- Treatment with anti-pseudomonal agents,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"Oxidase: P(ositive) = Pseudomonas, N(egative) = (A)cinetobacter\\\\\\\", explanation: \\\\\\\"Oxidase test differentiates major non-fermenters: P. aeruginosa positive, Acinetobacter negative\\\\\\\" },\\\\n          { text: \\\\\\\"Pseudomonas = Pyoverdine (green) + Pyocyanin (blue)\\\\\\\", explanation: \\\\\\\"P. aeruginosa pigments give green/blue discoloration\\\\\\\" },\\\\n          { text: \\\\\\\"42°C = Pseudomonas thermophile\\\\\\\", explanation: \\\\\\\"P. aeruginosa grows optimally at 42°C, higher than usual 37°C\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Non-fermenters: aerobic, oxidize (not ferment) glucose; oxidase test key differentiator\\\\\\\",\\\\n          \\\\\\\"P. aeruginosa: oxidase-positive rod, pigment-producing, 42°C growth, motile\\\\\\\",\\\\n          \\\\\\\"Acinetobacter: oxidase-negative coccobacillus, nosocomial, MDR\\\\\\\",\\\\n          \\\\\\\"Biofilm: mucoid phenotype in CF, protects from antibiotics, requires higher concentrations\\\\\\\",\\\\n          \\\\\\\"MBLs (NDM-1): carbapenem resistance, zinc-dependent, not inhibited by beta-lactamase inhibitors\\\\\\\",\\\\n          \\\\\\\"Treatment: anti-pseudomonal beta-lactam ± aminoglycoside for synergy; colistin for MDR\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [{ book: \\\\\\\"Textbook of Microbiology\\\\\\\", chapter: \\\\\\\"Non-Fermenters\\\\\\\", edition: \\\\\\\"Ananthanarayan & Paniker\\\\\\\" }] },\\\\n\\\\n      { layer: 5, slug: \\\\\\\"pseudomonas-non-fermenters-recall\\\\\\\", title: \\\\\\\"Pseudomonas & Non-fermenters - Active Recall\\\\\\\", estimatedMinutes: 10,\\\\n        summary: \\\\\\\"Flashcard-style questions on non-fermenter identification, P. aeruginosa characteristics, and treatment.\\\\\\\",\\\\n        contentMd: ``# Active Recall\\\\n\\\\n**Q1:** What is the key characteristic that defines non-fermenting gram-negative bacilli?\\\\n> They do not ferment glucose; instead they oxidize glucose or are non-fermenting, and are primarily aerobic\\\\n\\\\n**Q2:** What is the oxidase test result for Pseudomonas aeruginosa?\\\\n> Positive (purple color within 10 seconds)\\\\n\\\\n**Q3:** What is the oxidase test result for Acinetobacter baumannii?\\\\n> Negative (no color change or turns black slowly)\\\\n\\\\n**Q4:** What pigments does P. aeruginosa produce?\\\\n> Green (pyoverdine) and blue (pyocyanin)\\\\n\\\\n**Q5:** At what temperature does P. aeruginosa grow optimally?\\\\n> 37-42°C (higher than most pathogens; grows well at 42°C)\\\\n\\\\n**Q6:** What is the most common nosocomial infection caused by P. aeruginosa?\\\\n> Ventilator-associated pneumonia (VAP)\\\\n\\\\n**Q7:** What is biofilm and how does it affect antibiotic resistance?\\\\n> Biofilm is a protective exopolysaccharide matrix that slows antibiotic diffusion, reduces antibiotic susceptibility, and requires higher antibiotic concentrations for treatment\\\\n\\\\n**Q8:** What are metallo-beta-lactamases (MBLs) and why are they important?\\\\n> Zinc-dependent enzymes that break down carbapenems and are NOT inhibited by beta-lactamase inhibitors like clavulanic acid; cause carbapenem resistance\\\\n\\\\n**Q9:** What antibiotic combination is used for serious P. aeruginosa infections?\\\\n> Beta-lactam (ceftazidime or piperacillin-tazobactam) + aminoglycoside (tobramycin or amikacin) for synergistic effect\\\\n\\\\n**Q10:** What is the treatment for multidrug-resistant P. aeruginosa when carbapenems fail?\\\\n> Colistin (polymyxin E) monotherapy, though it is nephrotoxic and neurotoxic,\\\\n        mnemonics: [],\\\\n        keyPoints: [\\\\\\\"10 key questions on non-fermenter identification, virulence, resistance, and treatment\\\\\\\"],\\\\n        textbookRefs: [{ book: \\\\\\\"Textbook of Microbiology\\\\\\\", chapter: \\\\\\\"Non-Fermenters\\\\\\\", edition: \\\\\\\"Ananthanarayan & Paniker\\\\\\\" }] },\\\\n    ],\\\\n  },\\\\n];\\\\n\\\"\""
-}
-}
-];
-];
+        contentMd: `# Spirochetes: Overview
+
+## Morphology & Structure
+- **Shape**: Helical/spiral morphology (6-20 µm long, 0.1-0.2 µm diameter)
+- **Gram stain**: Gram-negative but NOT stained well (visualized by dark-field, fluorescence, silver stains)
+- **Motility**: Flagella-like **axial filaments** (located between cell wall and outer membrane) enable corkscrew motion
+- **Cell wall**: Gram-negative, outer membrane more permeable than gram-positive
+
+## Major Spirochetes in Medicine
+
+| Organism | Disease | Transmission | Geographic |
+|----------|---------|--------------|-----------|
+| **Treponema pallidum** | Syphilis | Sexual (STI) | Worldwide |
+| **Leptospira interrogans** | Leptospirosis | Rodent urine contamination | Tropical, rainy season |
+| **Borrelia burgdorferi** | Lyme disease | Tick bite | North America, Europe |
+| **Borrelia recurrentis** | Relapsing fever | Human louse (epidemic) | Africa, Central Asia |
+| **Borrelia hermsii** | Relapsing fever | Soft tick (endemic) | Western USA |
+
+## Treponema pallidum (Syphilis)
+
+### Epidemiology
+- Obligate human pathogen
+- **Incubation**: 3-90 days (average 21 days)
+- Transmission: Sexual contact (primary/secondary), transplacental (congenital)
+- Rising trend in India, especially among MSM
+
+### Syphilis Stages
+1. **Primary**: Chancre at inoculation site (painless, indurated, with clean base)
+2. **Secondary**: Rash (including palm/sole involvement), lymphadenopathy, fever (6-8 weeks after primary)
+3. **Latent**: Asymptomatic; early latent (<1 year) infectious; late latent non-infectious
+4. **Tertiary**: Gumma (granuloma), neurosyphilis (tabes dorsalis, GPI), cardiovascular (aortic aneurysm)
+
+## Leptospira interrogans (Leptospirosis)
+
+### Epidemiology
+- Zoonosis: Rats, cattle, pigs are reservoirs
+- Transmission: Contact of skin/mucous membranes with contaminated urine (often occupational)
+- Seasonal: Monsoon/rainy season in India (high incidence)
+- Occupations at risk: Farmers, sewage workers, slaughterhouse workers
+
+### Clinical Features
+- **Biphasic illness**: Leptospiremia phase → immune phase
+- Fever, headache, myalgia (esp. calf muscle pain)
+- **Weil's disease** (severe): Renal failure, hepatic dysfunction, pulmonary hemorrhage, jaundice
+- Case fatality: 5-15% in severe form
+
+## Borrelia species (Lyme Disease & Relapsing Fever)
+
+### Lyme Disease (B. burgdorferi)
+- Vector: Ixodes tick (hard tick)
+- Clinical: Erythema migrans rash (bull's eye appearance), arthralgia, neuroborreliosis
+- Geographic: Rare in India; common in North America, Europe
+
+### Relapsing Fever
+- **Epidemic**: B. recurrentis, human body louse (Pediculus humanus) transmission
+- **Endemic**: B. hermsii, soft ticks (Ornithodoros)
+- Clinical: Recurrent fever episodes (fever-apyrexia cycles) due to antigenic variation
+- Geographic: Tropical Africa, Central Asia (epidemic); Western USA (endemic)`,
+        mnemonics: [
+          { text: "TSL = Treponema, Spirochetes are Spiraled, Leptospira", explanation: "Three major spirochetes: Treponema (syphilis), Leptospira (leptospirosis), and others like Borrelia" },
+          { text: "Primary-Secondary-Latent-Tertiary for Syphilis Stages", explanation: "Four stages of untreated syphilis: Chancre → Rash → Asymptomatic → Gumma/Neuro" }
+        ],
+        keyPoints: [
+          "Spirochetes: helical bacteria with axial filaments (not true flagella); gram-negative; move by corkscrew motion",
+          "Not stained well by Gram; visualized by dark-field, fluorescence, or silver stains",
+          "Treponema pallidum: obligate human pathogen; syphilis via sexual contact; four stages",
+          "Leptospira: zoonosis from rodent urine; severe form (Weil's disease) has renal, hepatic, pulmonary involvement",
+          "Borrelia burgdorferi: Lyme disease via Ixodes tick; erythema migrans rash (bull's eye)",
+          "Borrelia recurrentis/hermsii: Relapsing fever with fever-apyrexia cycles; rare in India"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker's Textbook of Microbiology", chapter: "Spirochetes", edition: "11th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "spirochetes-layer-2-mechanism",
+        title: "Spirochetes - Mechanism",
+        estimatedMinutes: 25,
+        summary: "Pathophysiology of spirochete infections. How T. pallidum evades immunity, antigenic variation in Borrelia. Leptospira toxins and tissue damage. Immune response and immunopathology in each infection.",
+        contentMd: `# Pathophysiology & Pathogenesis
+
+## Treponema pallidum Pathogenesis
+
+### Immune Evasion Mechanisms
+- **Limited surface antigens**: Few outer membrane proteins (Omps) exposed
+- **Molecular mimicry**: Treponemal antigens resemble host antigens (hyaluronic acid-like) → poor immune recognition
+- **Antigenic variation** (limited): Slow rate compared to Borrelia
+- **IgG coating**: Treponemal surface coated with IgG → impairs complement activation
+
+### Tissue Invasion & Damage
+1. **Chancre formation** (primary syphilis):
+   - Treponemes invade mucous membranes/abraded skin
+   - Local inflammatory response → induration with clean base
+   - Healing occurs with formation of scar in untreated
+
+2. **Secondary syphilis**:
+   - Hematogenous dissemination of treponemes
+   - Immune complex deposition (treponeme + IgM/IgG) → vasculitis
+   - Rash distribution: Entire body, including palms and soles
+   - Lymph node hyperplasia from antigenic stimulation
+
+3. **Neurosyphilis**:
+   - CSF invasion → meningitis or meningovascular disease
+   - Late manifestations: Tabes dorsalis (dorsal root/spinal cord degeneration), GPI (parenchymal neurosyphilis)
+   - Pathology: Perivascular inflammation, gliosis, neuronal loss
+
+## Leptospira interrogans Pathogenesis
+
+### Biphasic Illness Mechanism
+- **Leptospiremia phase** (Days 0-7):
+  - Leptospires multiply in blood and tissue (liver, kidney, brain)
+  - Endotoxin-like activity → fever, myalgia, hypotension
+  - CSF invasion possible → aseptic meningitis
+
+- **Immune phase** (Days 7-30+):
+  - Antibody production (IgM then IgG) → spiremes clear from blood
+  - BUT organisms persist in kidney tubules, eye, CNS
+  - Immune complex deposition → vasculitis, hemorrhage, inflammation
+
+### Weil's Disease (Severe Form)
+- High-grade leptospiremia with organ tropism
+- **Renal damage**: Acute tubular necrosis → acute kidney injury, oliguria
+- **Hepatic involvement**: Hepatocyte necrosis → jaundice (relatively mild hepatic dysfunction despite high bilirubin)
+- **Pulmonary**: Alveolar hemorrhage → hemoptysis, ARDS
+- **Hemorrhage**: DIC-like coagulopathy → bleeding manifestations
+- Case fatality: 5-15% (deaths mainly from renal failure and pulmonary involvement)
+
+## Borrelia Pathogenesis
+
+### Antigenic Variation (Relapsing Fever)
+- **VLP (Variable Lipoprotein) switch**: Spirochete switches surface lipoprotein expression
+- Process: DNA rearrangement → new VLP variant escapes prior antibodies
+- Result: Multiple fever episodes as new variants emerge
+- Host mounts antibody response → brief apyrexia until next variant appears
+
+### Lyme Disease Pathogenesis (B. burgdorferi)
+- **Local**: Erythema migrans rash at tick bite site
+  - Hyaluronic acid in cell wall → mimics host tissue → poor immune recognition initially
+  - Antigens: OspA (tick midgut), OspC (mammalian host) help transmission
+- **Disseminated**: Hematogenous spread → arthritis (Lyme arthritis), neuroborreliosis
+- **Chronic**: Joint inflammation persists despite antibiotics in some cases
+
+## Immune Response
+
+### Treponema
+- **Humoral**: Treponemal antibodies (FTA, TP-PA) and non-treponemal (RPR, VDRL)
+- **Cellular**: Th1 response; but immune evasion limits control
+
+### Leptospira
+- **Early IgM**: Appears 5-7 days, peaks at 1 month, then declines
+- **Late IgG**: Persists long-term; indicates past/current infection
+- **Complement activation**: Potential exacerbation of inflammation
+
+### Borrelia
+- **Antigenic variation**: Host antibodies ineffective against variant antigens
+- **Immune evasion**: Antigenic variation allows persistence despite antibody response`,
+        mnemonics: [
+          { text: "Treponema = Mimics = Not Cleared", explanation: "T. pallidum: molecular mimicry helps evade immune response; limited surface antigens impair recognition" },
+          { text: "Leptospira Biphasic: Leptospiremia (7d) then Immune (7-30d)", explanation: "Week 1: spiremes in blood; Week 2+: antibodies clear blood but renal persistence occurs" },
+          { text: "Borrelia Variation = Relapsing Fever", explanation: "Antigenic variation in VLP → escape from antibodies → new fever episode" }
+        ],
+        keyPoints: [
+          "T. pallidum: molecular mimicry and limited surface antigens → immune evasion; IgG coating impairs complement",
+          "Syphilis pathology: Chancre (local), secondary rash (vasculitis from immune complexes), neurosyphilis (CNS invasion)",
+          "Leptospira biphasic: leptospiremia phase (fever, myalgia) → immune phase (antibodies, but renal persistence)",
+          "Weil's disease: High leptospiremia with organ tropism → renal failure, hepatic jaundice, pulmonary hemorrhage",
+          "Borrelia: Antigenic variation via VLP switch → escape from antibodies → multiple fever episodes",
+          "Lyme disease: Hyaluronic acid mimicry → poor initial immune response; disseminated → arthritis, neuroborreliosis"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker's Textbook of Microbiology", chapter: "Spirochetes & Pathogenesis", edition: "11th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "spirochetes-layer-3-clinical",
+        title: "Spirochetes - Clinical",
+        estimatedMinutes: 25,
+        summary: "Diagnosis and management of spirochete infections. Serological tests (RPR, VDRL, FTA, TP-PA for syphilis), dark-field microscopy for treponemes, culture for leptospira. Treatment with penicillin (first-line), doxycycline alternatives. Congenital syphilis and latent syphilis management.",
+        contentMd: `# Diagnosis & Management
+
+## Treponema pallidum (Syphilis) Diagnosis
+
+### Clinical Diagnosis
+- **Primary**: Chancre examination; dark-field microscopy of exudate (spirochetes visible)
+- **Secondary**: Serological tests; clinical findings (rash with palms/soles involvement)
+- **Tertiary**: Clinical + serological; neurosyphilis requires CSF examination
+
+### Serological Tests
+
+**Non-Treponemal Tests** (Lipid antibodies in host; not spirochete-specific)
+- **RPR** (Rapid Plasma Reagin): Quantitative, detects IgG + IgM
+- **VDRL** (Venereal Disease Research Lab): Similar to RPR
+- High titers: Active infection
+- **Prozone effect**: Very high titers may show false-negative (dilute specimen)
+- Decline after treatment (good treatment response marker)
+
+**Treponemal Tests** (Spiral-specific antigens)
+- **FTA-ABS** (Fluorescent Treponemal Antibody - Absorption): Gold standard, most sensitive
+- **TP-PA** (Treponema pallidum Particle Agglutination): Automated, convenient
+- Remain positive even after treatment (indicate past infection)
+
+**Interpretation**
+| Tests | Meaning |
+|-------|---------|
+| Non-treponemal (+), Treponemal (+) | Active infection |
+| Non-treponemal (-), Treponemal (+) | Past infection treated, or false-positive treponemal |
+| Non-treponemal (+), Treponemal (-) | Likely biological false positive (check for autoimmune disease, malignancy) |
+
+### Special Scenarios
+- **Neurosyphilis**: CSF VDRL/RPR + elevated protein + pleocytosis
+- **Congenital syphilis**: Maternal serology + infant RPR (may be passive maternal transfer) + clinical findings
+- **Primary chancre**: Dark-field microscopy of exudate
+
+## Leptospira Diagnosis
+
+### Culture
+- **First week (leptospiremia)**: Blood culture in Fletcher medium or bovine serum albumin medium
+- Slow growth (days to weeks)
+- Not practical for acute diagnosis
+
+### Serology
+- **IgM ELISA**: Appears day 5-7; diagnostic
+- **MAT (Microscopic Agglutination Test)**: Gold standard; identifies serovar
+- **PCR**: Molecular confirmation; available in reference labs
+
+### Urine Culture
+- From second week onwards (during immune phase)
+- **Leptospiruria** persists weeks to months → indicates persistence
+- Culture from urine in advanced labs
+
+## Borrelia Diagnosis
+
+### Relapsing Fever
+- **Thick blood smear** (Wright-Giemsa stain): Spirochetes visible during fever episodes
+- Serology: Not helpful (due to antigenic variation)
+- PCR: Species identification
+
+### Lyme Disease
+- **Erythema migrans**: Clinical diagnosis sufficient
+- **Serology**: Two-tier testing (ELISA then confirmatory Western blot)
+- **PCR**: Joint fluid for arthritis confirmation
+
+## Treatment
+
+### Syphilis
+- **Penicillin G**: First-line
+  - Primary/secondary: 2.4 MU IM once
+  - Latent <1 year: 2.4 MU IM weekly × 3
+  - Late/tertiary: 2.4 MU IM weekly × 3
+- **Alternatives**: Doxycycline 100 mg BD × 2-4 weeks (for penicillin allergy)
+- **Monitoring**: RPR/VDRL at 3, 6, 12 months; should decline (4-fold drop indicates cure)
+
+### Leptospirosis
+- **Penicillin G IV**: 1-2 MU 6-hourly (severe, Weil's disease)
+- **Doxycycline**: 100 mg BD (milder cases, prophylaxis)
+- **Supportive care**: Dialysis for renal failure, mechanical ventilation for pulmonary hemorrhage
+
+### Relapsing Fever
+- **Penicillin G IV**: 1 MU 6-hourly × 10 days
+- **Doxycycline**: 100 mg BD × 10 days
+- **Jarisch-Herxheimer reaction**: Fever spike after treatment from endotoxin release
+
+## Prevention
+
+### Syphilis
+- Sexual health education, partner notification, screening in pregnancy
+- Congenital syphilis prevention: Maternal screening + early treatment
+
+### Leptospirosis
+- Rodent control, worker PPE (gloves, boots)
+- Vaccination: Occupational protection available in some countries (limited efficacy in India)
+
+### Relapsing Fever
+- Louse control, tick avoidance, housing improvements
+
+## Congenital Syphilis
+- **Manifestations**: Hepatosplenomegaly, jaundice, rash, bone changes, neurosyphilis
+- **Early** (<2 years): Mucocutaneous, hepatic, renal, bone involvement
+- **Late** (>2 years): Interstitial keratitis, 8th nerve deafness, Hutchinson triad (peg teeth, interstitial keratitis, 8th nerve deafness)
+- **Prevention**: Maternal screening + penicillin treatment during pregnancy`,
+        mnemonics: [
+          { text: "Non-treponemal (RPR/VDRL) declines with treatment; Treponemal (FTA/TP-PA) stays positive", explanation: "Test choice guides interpretation: non-treponemal for monitoring treatment, treponemal for confirming diagnosis" },
+          { text: "VDRL-FTA: V=Vital (monitor treatment), F=Fixed (indicates past infection)", explanation: "VDRL (non-treponemal) declines with cure; FTA (treponemal) remains positive" },
+          { text: "Penicillin: Primary 1×, Latent 3×, Late 3× dosing", explanation: "Syphilis treatment regimen: once for primary, weekly × 3 for latent <1 year, weekly × 3 for late" }
+        ],
+        keyPoints: [
+          "Dark-field microscopy diagnoses primary chancre; RPR/VDRL screens; FTA/TP-PA confirms treponeme",
+          "Biological false-positive non-treponemal tests: check for autoimmune disease, malignancy",
+          "Penicillin first-line syphilis treatment; doxycycline alternative for allergy",
+          "Leptospirosis: culture (first week), serology (IgM day 5-7), MAT gold standard",
+          "Relapsing fever: thick smear shows spirochetes during fever; serology unhelpful due to antigenic variation",
+          "Congenital syphilis preventable with maternal screening and penicillin; Hutchinson triad late manifestation"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker's Textbook of Microbiology", chapter: "Spirochetes & Diagnosis", edition: "11th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "spirochetes-layer-4-exam",
+        title: "Spirochetes - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "High-yield facts on spirochete morphology, syphilis stages, serological tests, and treatment regimens.",
+        contentMd: `# Exam High Yield
+
+## One-Liners
+- Spirochetes visualized by: **Dark-field, fluorescence, or silver stains (NOT Gram stain)**
+- Motility in spirochetes: **Axial filaments** (not true flagella)
+- Syphilis incubation: **3-90 days (avg 21 days)**
+- Primary syphilis lesion: **Painless indurated chancre with clean base**
+- Secondary syphilis timing: **6-8 weeks after primary**
+- Tertiary syphilis manifestations: **Gumma, neurosyphilis (tabes, GPI), vascular**
+- RPR/VDRL: **Non-treponemal, decline with treatment**
+- FTA/TP-PA: **Treponemal, remain positive after treatment**
+- Syphilis first-line treatment: **Penicillin G (IM or IV)**
+- Leptospirosis incubation: **7-10 days**
+- Weil's disease: **Severe leptospirosis with renal, hepatic, pulmonary involvement**
+- Leptospirosis diagnosis: **IgM serology day 5-7, MAT confirms serovar**
+- Relapsing fever cycles: **Fever-apyrexia due to antigenic variation**
+- Lyme disease rash: **Erythema migrans (bull's eye appearance)**
+- Borrelia relapsing fever: **Multiple fever spikes** due to VLP switch
+
+## Syphilis Stages Quick Reference
+
+| Stage | Timing | Lesion | Serology |
+|-------|--------|--------|----------|
+| **Primary** | 3-90d | Chancre (painless) | Positive after 2-3 weeks |
+| **Secondary** | 6-8w after 1° | Rash (palms/soles) | Both high titers |
+| **Latent** | Months-years | None | Both positive |
+| **Tertiary** | Years | Gumma, neuro, vascular | Both positive |
+
+## Serological Test Interpretation
+
+| Non-treponemal | Treponemal | Interpretation |
+|---|---|---|
+| + | + | Active syphilis (confirm with FTA) |
+| + | - | Biological false positive (BFP) |
+| - | + | Past treated syphilis or false positive |
+| - | - | No syphilis |
+
+## NEXT Themes
+- Spirochete morphology and visualization
+- Syphilis stages and clinical features
+- Serological tests and interpretation
+- Treatment regimens and monitoring
+- Leptospirosis and relapsing fever diagnosis`,
+        mnemonics: [
+          { text: "Dark-field sees Spirals", explanation: "Spirochetes NOT visible by Gram; use dark-field, fluorescence, or silver stains" },
+          { text: "RPR drops; FTA stays", explanation: "Non-treponemal RPR declines with cure; treponemal FTA remains positive" }
+        ],
+        keyPoints: [
+          "Spirochetes: helical morphology, axial filaments, gram-negative but visualized by special stains",
+          "Syphilis: Primary chancre → Secondary rash (palms/soles) → Latent → Tertiary (gumma, neurosyphilis)",
+          "RPR/VDRL (non-treponemal) decline with treatment; FTA/TP-PA (treponemal) remain positive",
+          "Penicillin G: 2.4 MU IM once for primary, weekly × 3 for latent <1 year, weekly × 3 for late",
+          "Leptospirosis: IgM serology (day 5-7), MAT for serovar, culture (first week)",
+          "Relapsing fever: spirochetes visible on thick smear during fever; multiple fever episodes from antigenic variation"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker's Textbook of Microbiology", chapter: "Spirochetes", edition: "11th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "spirochetes-layer-5-active-recall",
+        title: "Spirochetes - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Flashcard-style questions on spirochete morphology, diagnosis, and treatment.",
+        contentMd: `# Active Recall
+
+**Q1:** How are spirochetes visualized microscopically?
+**A1:** Dark-field microscopy, fluorescence microscopy, or silver stains (not well-stained by Gram stain)
+
+**Q2:** What enables spirochete motility?
+**A2:** Axial filaments (located between cell wall and outer membrane)
+
+**Q3:** What is the incubation period for syphilis?
+**A3:** 3-90 days (average 21 days)
+
+**Q4:** Describe the primary syphilis lesion.
+**A4:** Painless, indurated chancre with clean base at inoculation site
+
+**Q5:** When does secondary syphilis appear after primary infection?
+**A5:** 6-8 weeks after primary syphilis
+
+**Q6:** What is the difference between RPR/VDRL and FTA/TP-PA?
+**A6:** RPR/VDRL are non-treponemal (decline with treatment); FTA/TP-PA are treponemal (remain positive after treatment)
+
+**Q7:** What is the first-line treatment for syphilis?
+**A7:** Penicillin G (IM or IV depending on stage)
+
+**Q8:** What is Weil's disease?
+**A8:** Severe form of leptospirosis with renal failure, hepatic dysfunction, and pulmonary hemorrhage
+
+**Q9:** What causes the recurrent fever episodes in relapsing fever?
+**A9:** Antigenic variation in spirochete surface lipoproteins (VLP switch) allowing escape from antibodies
+
+**Q10:** What is the causative agent of Lyme disease?
+**A10:** Borrelia burgdorferi (transmitted by Ixodes tick)`,
+        mnemonics: [],
+        keyPoints: ["10 key questions on spirochete diagnosis, syphilis staging, and treatment"],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker's Textbook of Microbiology", chapter: "Spirochetes", edition: "11th" }
+        ]
+      }
+    ]
+  }
 ];
