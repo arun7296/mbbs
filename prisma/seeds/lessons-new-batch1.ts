@@ -1,7 +1,9 @@
+import type { TopicLessons } from "./content-loader";
+
 // Medical content seed data for 20 MBBS topics with 5-layer teaching model
 // Generated for Indian NMC CBME standards
 
-export const newBatch1Lessons = [
+export const newBatch1Lessons: TopicLessons[] = [
   // 1. AS-MOD-02-TOP-02: Nerve Blocks
   {
     topicCode: "AS-MOD-02-TOP-02",
@@ -1340,7 +1342,69 @@ export const newBatch1Lessons = [
     ]
   },
   // 13. OP-MOD-01-TOP-03: Presbyopia & Contact Lenses
-  { topicCode: "OP-MOD-01-TOP-03", layers: [{ layer: 1, slug: "presbyopia-foundation", title: "Presbyopia & Contact Lenses - Foundation", estimatedMinutes: 20, summary: "Presbyopia pathophysiology and contact lens types", contentMd: "# Presbyopia - Foundation\nPresbyropia: Age-related loss of accommodation (typically >40 years). Loss of lens elasticity due to lens fiber accumulation and zonular laxity. Managed with: Reading glasses, bifocals, multifocals, contact lenses. Contact Lens Types: Soft (hydrogel, silicone hydrogel), RGP (rigid gas permeable), Hybrid. Indications: Myopia, hyperopia, astigmatism, presbyopia, keratoconus, post-cataract.", mnemonics: [{ text: "PRESBYOPIA-AGE", explanation: "P=Presbyopia >40, R=Reduced accommodation, E=Elasticity loss lens, S=Soft lenses option" }], keyPoints: ["Presbyopia: accommodation loss after 40", "Contact lenses: alternative to glasses", "RGP: better optics, shorter wear time", "Soft: comfort, longer wear"], textbookRefs: [{ book: "Ophthalmology (Kanski)", chapter: "Ch 5-6", edition: "9th" }] }, { layer: 2, slug: "presbyopia-mechanism", title: "Presbyopia & Contact Lenses - Mechanism", estimatedMinutes: 30, summary: "Accommodation mechanism and lens fitting", contentMd: "# Presbyopia - Mechanism\nAccommodation: Ciliary muscle contraction → zonular relaxation → lens thickens → increased power. Age-related: Lens loses elasticity (collagen cross-linking, nuclear fiber accumulation) → accommodation amplitude decreases. Contact Lens Mechanics: Posterior curve radius, lens diameter, oxygen permeability determine fit. Tear film beneath lens provides lubrication.", mnemonics: [{ text: "ACCOMMODATION-LOSS", explanation: "A=Age increases, C=Ciliary weaker, C=Collagen cross-links, O=Objective aging, M=Muscle can't work" }], keyPoints: ["Accommodation: 14D at 8yo → 1D at 60yo", "Lens elasticity decreases linearly", "Contact lens: vault, fit critical", "Oxygen transmission important"], textbookRefs: [{ book: "Ophthalmology (Kanski)", chapter: "Ch 5", edition: "9th" }] }, { layer: 3, slug: "presbyopia-clinical", title: "Presbyopia & Contact Lenses - Clinical", estimatedMinutes: 20, summary: "Management and complications", contentMd: "# Presbyopia - Clinical\nManagement: Single vision (reading), bifocals, progressive multifocals, monovision (one eye near, one far). Contact lens options: Multifocal, modified monovision. Complications: Corneal abrasion, infection (poor hygiene), neovascularization (tight lens), dehydration. Safety: Proper insertion/removal, cleaning, storage, replacement schedule.", mnemonics: [{ text: "CONTACT-CARE", explanation: "C=Clean hands first, O=On index finger, N=Never reuse solution, T=Time limits, A=Always remove before bed, C=Comfortable fit, T=Temperature check" }], keyPoints: ["Multifocal contacts available", "Replace per schedule (daily to monthly)", "Infection risk: Pseudomonas", "Need regular eye exams"], textbookRefs: [{ book: "Ophthalmology (Kanski)", chapter: "Ch 5-6", edition: "9th" }] }, { layer: 4, slug: "presbyopia-exam", title: "Presbyopia & Contact Lenses - Exam Prep", estimatedMinutes: 15, summary: "High-yield points", contentMd: "# Presbyopia - Exam Prep\nAccommodation Age: 8yo=14D, 20yo=8.5D, 40yo=3D, 50yo=1.5D, 60yo=1D. Reading vision blurs first (near objects). Presbyopia definition: amplitude <3D. Lens materials: Soft (comfort), RGP (optics, keratoconus). Oxygen permeability critical (Dk/t ratio). Complication: Corneal ulcer (infection risk highest).", mnemonics: [{ text: "EXAM-PRESBYOPIA", explanation: "E=Each age has accommodation value, X=X-ray equivalent ultrasound, A=Amplitude decreases" }], keyPoints: ["Presbyopia: >40 years typical", "RGP: better for keratoconus", "Soft: better comfort", "Replace daily/weekly/monthly"], textbookRefs: [{ book: "Ophthalmology (Kanski)", chapter: "Ch 5", edition: "9th" }] }, { layer: 5, slug: "presbyopia-recall", title: "Presbyopia & Contact Lenses - Active Recall", estimatedMinutes: 10, summary: "Quick Q&A", contentMd: "# Presbyopia - Active Recall\nQ1: Age presbyopia usually starts: A: >40 years. Q2: Accommodation loss mechanism: A: Lens loses elasticity, zonular relax. Q3: RGP advantage: A: Better optics, corneal mapping benefit. Q4: Soft lens advantage: A: Comfort, easier insertion. Q5: Contact lens complication: A: Infection (Pseudomonas), ulcer. Q6: Solution reuse: A: Never, risk of infection. Q7: Bifocal power addition: A: Based on near vision need. Q8: Dk/t importance: A: Oxygen transmission to cornea.", mnemonics: [{ text: "RECALL-PRESBYOPIA", explanation: "R=Remember age >40, E=Each decade varies" }], keyPoints: ["Presbyopia: accommodation loss", "Contact lenses: RGP vs soft", "Infection risk: poor hygiene", "Replace schedule critical"], textbookRefs: [{ book: "Ophthalmology (Kanski)", chapter: "Ch 5", edition: "9th" }] }] }
+  {
+    topicCode: "OP-MOD-01-TOP-03",
+    layers: [
+      {
+        layer: 1,
+        slug: "presbyopia-foundation",
+        title: "Presbyopia & Contact Lenses - Foundation",
+        estimatedMinutes: 20,
+        summary: "Presbyopia pathophysiology and contact lens types",
+        contentMd: "# Presbyopia - Foundation\nPresbyropia: Age-related loss of accommodation (typically >40 years). Loss of lens elasticity due to lens fiber accumulation and zonular laxity. Managed with: Reading glasses, bifocals, multifocals, contact lenses. Contact Lens Types: Soft (hydrogel, silicone hydrogel), RGP (rigid gas permeable), Hybrid. Indications: Myopia, hyperopia, astigmatism, presbyopia, keratoconus, post-cataract.",
+        mnemonics: [{ text: "PRESBYOPIA-AGE", explanation: "P=Presbyopia >40, R=Reduced accommodation, E=Elasticity loss lens, S=Soft lenses option" }],
+        keyPoints: ["Presbyopia: accommodation loss after 40", "Contact lenses: alternative to glasses", "RGP: better optics, shorter wear time", "Soft: comfort, longer wear"],
+        textbookRefs: [{ book: "Ophthalmology (Kanski)", chapter: "Ch 5-6", edition: "9th" }
+    ]
+  },
+      {
+        layer: 2,
+        slug: "presbyopia-mechanism",
+        title: "Presbyopia & Contact Lenses - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Accommodation mechanism and lens fitting",
+        contentMd: "# Presbyopia - Mechanism\nAccommodation: Ciliary muscle contraction → zonular relaxation → lens thickens → increased power. Age-related: Lens loses elasticity (collagen cross-linking, nuclear fiber accumulation) → accommodation amplitude decreases. Contact Lens Mechanics: Posterior curve radius, lens diameter, oxygen permeability determine fit. Tear film beneath lens provides lubrication.",
+        mnemonics: [{ text: "ACCOMMODATION-LOSS", explanation: "A=Age increases, C=Ciliary weaker, C=Collagen cross-links, O=Objective aging, M=Muscle can't work" }],
+        keyPoints: ["Accommodation: 14D at 8yo → 1D at 60yo", "Lens elasticity decreases linearly", "Contact lens: vault, fit critical", "Oxygen transmission important"],
+        textbookRefs: [{ book: "Ophthalmology (Kanski)", chapter: "Ch 5", edition: "9th" }
+    ]
+  },
+      {
+        layer: 3,
+        slug: "presbyopia-clinical",
+        title: "Presbyopia & Contact Lenses - Clinical",
+        estimatedMinutes: 20,
+        summary: "Management and complications",
+        contentMd: "# Presbyopia - Clinical\nManagement: Single vision (reading), bifocals, progressive multifocals, monovision (one eye near, one far). Contact lens options: Multifocal, modified monovision. Complications: Corneal abrasion, infection (poor hygiene), neovascularization (tight lens), dehydration. Safety: Proper insertion/removal, cleaning, storage, replacement schedule.",
+        mnemonics: [{ text: "CONTACT-CARE", explanation: "C=Clean hands first, O=On index finger, N=Never reuse solution, T=Time limits, A=Always remove before bed, C=Comfortable fit, T=Temperature check" }],
+        keyPoints: ["Multifocal contacts available", "Replace per schedule (daily to monthly)", "Infection risk: Pseudomonas", "Need regular eye exams"],
+        textbookRefs: [{ book: "Ophthalmology (Kanski)", chapter: "Ch 5-6", edition: "9th" }
+    ]
+  },
+      {
+        layer: 4,
+        slug: "presbyopia-exam",
+        title: "Presbyopia & Contact Lenses - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield points",
+        contentMd: "# Presbyopia - Exam Prep\nAccommodation Age: 8yo=14D, 20yo=8.5D, 40yo=3D, 50yo=1.5D, 60yo=1D. Reading vision blurs first (near objects). Presbyopia definition: amplitude <3D. Lens materials: Soft (comfort), RGP (optics, keratoconus). Oxygen permeability critical (Dk/t ratio). Complication: Corneal ulcer (infection risk highest).",
+        mnemonics: [{ text: "EXAM-PRESBYOPIA", explanation: "E=Each age has accommodation value, X=X-ray equivalent ultrasound, A=Amplitude decreases" }],
+        keyPoints: ["Presbyopia: >40 years typical", "RGP: better for keratoconus", "Soft: better comfort", "Replace daily/weekly/monthly"],
+        textbookRefs: [{ book: "Ophthalmology (Kanski)", chapter: "Ch 5", edition: "9th" }
+    ]
+  },
+      {
+        layer: 5,
+        slug: "presbyopia-recall",
+        title: "Presbyopia & Contact Lenses - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Quick Q&A",
+        contentMd: "# Presbyopia - Active Recall\nQ1: Age presbyopia usually starts: A: >40 years. Q2: Accommodation loss mechanism: A: Lens loses elasticity, zonular relax. Q3: RGP advantage: A: Better optics, corneal mapping benefit. Q4: Soft lens advantage: A: Comfort, easier insertion. Q5: Contact lens complication: A: Infection (Pseudomonas), ulcer. Q6: Solution reuse: A: Never, risk of infection. Q7: Bifocal power addition: A: Based on near vision need. Q8: Dk/t importance: A: Oxygen transmission to cornea.",
+        mnemonics: [{ text: "RECALL-PRESBYOPIA", explanation: "R=Remember age >40, E=Each decade varies" }],
+        keyPoints: ["Presbyopia: accommodation loss", "Contact lenses: RGP vs soft", "Infection risk: poor hygiene", "Replace schedule critical"],
+        textbookRefs: [{ book: "Ophthalmology (Kanski)", chapter: "Ch 5", edition: "9th" }
+    ]
+  }] }
 ];
 
 export const newBatch1Lessons_Combined = newBatch1Lessons;
