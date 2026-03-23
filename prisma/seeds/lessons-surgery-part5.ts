@@ -1,17 +1,364 @@
-export const surgeryPart5Lessons = [
+import type { TopicLessons } from "./content-loader";
+
+export const surgeryPart5Lessons: TopicLessons[] = [
   {
     topicCode: "SU-MOD-05-TOP-02",
     layers: [
       {
         layer: 1,
-        slug: "hernia-foundation",
+        slug: "inguinal-hernia-layer-1-foundation",
         title: "Inguinal & Femoral Hernia - Foundation",
+        estimatedMinutes: 20,
+        summary: "Anatomy of inguinal canal, classification of inguinal and femoral hernias, and clinical features.",
+        contentMd: `# Inguinal & Femoral Hernia - Foundation
+
+## Anatomy of the Inguinal Canal
+### Boundaries
+- **Length**: 4 cm, directed medially and downward
+- **Anterior wall**: External oblique aponeurosis (reinforced laterally by internal oblique)
+- **Posterior wall**: Transversalis fascia (reinforced medially by conjoint tendon)
+- **Roof**: Arching fibers of internal oblique and transversus abdominis
+- **Floor**: Inguinal ligament + lacunar ligament medially
+
+### Important Landmarks
+- **Deep (internal) ring**: Opening in transversalis fascia; lateral to inferior epigastric vessels
+- **Superficial (external) ring**: Triangular opening in external oblique aponeurosis above pubic tubercle
+- **Hesselbach triangle**: Bounded by inferior epigastric artery (lateral), rectus sheath (medial), inguinal ligament (inferior)
+
+### Contents
+- Males: Spermatic cord (vas deferens, testicular artery, pampiniform plexus, cremasteric artery, ilioinguinal nerve)
+- Females: Round ligament of uterus
+
+## Classification of Groin Hernias
+### Inguinal Hernia (75% of all abdominal wall hernias)
+- **Indirect**: Through deep ring, lateral to inferior epigastric vessels; 65% of inguinal hernias
+- **Direct**: Through Hesselbach triangle, medial to inferior epigastric vessels; 35%
+- **Pantaloon hernia**: Both direct and indirect components straddling epigastric vessels
+
+### Femoral Hernia (5% of groin hernias)
+- Through femoral canal, below inguinal ligament
+- Femoral canal boundaries: Inguinal ligament (anterior), pectineal ligament (posterior), lacunar ligament (medial), femoral vein (lateral)
+- More common in females (F:M = 4:1)
+- HIGH strangulation risk due to rigid femoral ring
+
+## Clinical Features
+- **Inguinal hernia**: Swelling above and medial to pubic tubercle; reduces on lying down
+- **Femoral hernia**: Swelling below and lateral to pubic tubercle; may be irreducible
+- **Cough impulse**: Expansile impulse on coughing = hallmark sign
+- **Indirect vs Direct**: Deep ring occlusion test (Zieman technique)
+
+## Epidemiology
+- Inguinal hernia: Most common surgical condition worldwide
+- Lifetime risk: 27% males, 3% females
+- Right side > Left (due to later descent of right testis)
+- Risk factors: Heavy lifting, chronic cough, BPH, constipation, ascites, obesity`,
+        mnemonics: [
+          { text: "NAVEL: Nerve, Artery, Vein, Empty space, Lymphatics", explanation: "Contents of femoral sheath from lateral to medial (femoral canal is the empty space)" },
+          { text: "MID rule: Medial = Direct, Indirect = Deep ring (lateral)", explanation: "Direct hernia is medial to epigastric vessels; Indirect passes through deep ring laterally" },
+        ],
+        keyPoints: [
+          "Indirect hernia: through deep ring, lateral to inferior epigastric vessels; most common type",
+          "Direct hernia: through Hesselbach triangle, medial to inferior epigastric vessels",
+          "Femoral hernia: below inguinal ligament, high strangulation risk, more common in females",
+          "Cough impulse is the hallmark clinical sign of a hernia",
+          "Deep ring occlusion test differentiates indirect from direct inguinal hernia",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 11: Hernia", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 60: Abdominal Wall Hernias", edition: "28th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "inguinal-hernia-layer-2-mechanism",
+        title: "Inguinal & Femoral Hernia - Mechanism",
         estimatedMinutes: 25,
-        summary: "Overview of inguinal and femoral hernia anatomy, classification, epidemiology, and pathophysiology.",
-        contentMd: "`# Inguinal & Femoral Hernia - Foundation\n\n## Anatomy of Inguinal Canal\n\n### Key Structures\n- **Length**: 4-6 cm, oblique course medial and downward\n- **Walls**: Anterior (external oblique aponeurosis), Posterior (transversus abdominis and internal oblique aponeurosis), Floor (inguinal and pectineal ligaments)\n- **Ring**: External ring (superficial, below inguinal ligament), Internal ring (deep, lateral to epigastric vessels)\n- **Contents**: Spermatic cord (males), round ligament (females)\n\n### Inguinal Ligament\n- Extends from ASIS to pubic tubercle\n- Forms floor of inguinal canal\n- Lacunar ligament: Medial portion, sharp edge predisposes to femoral hernia strangulation\n\n## Hernia Classification\n\n### Inguinal Hernia\n- **Direct hernia**: Protrusion medial to epigastric vessels (lateral to Hesselbach triangle)\n  - Defect in transversus abdominis fascia\n  - Often multiple, acquired, adult\n  - Risk of recurrence slightly lower than indirect\n\n- **Indirect hernia**: Protrusion lateral to epigastric vessels\n  - Herniation through internal ring\n  - Can be congenital (patent processus vaginalis)\n  - More common (85-90%)\n  - Higher recurrence if untreated\n\n### Femoral Hernia\n- Protrusion through femoral ring (below inguinal ligament)\n- Enclosed by femoral sheath\n- Medial to femoral vein\n- Rare (5-10% of groin hernias)\n- HIGH strangulation risk (20-40% of presentations)\n\n## Epidemiology\n- **Inguinal**: Most common hernia (75%)\n- **Incidence**: ~10% lifetime risk\n- **Gender**: Males > Females (8:1 inguinal, 1:1 femoral)\n- **Age**: Increases with age\n- **Side**: Right > Left (2:1)\n\n## Risk Factors\n- **Congenital**: Patent processus vaginalis (indirect)\n- **Acquired**: Increased intra-abdominal pressure\n  - Straining (constipation, BPH)\n  - Chronic cough (COPD, smoking)\n  - Heavy lifting/strenuous work\n  - Obesity\n  - Pregnancy\n  - Ascites\n  - Chronic peritoneal dialysis\n\n## Clinical Presentation\n- **Asymptomatic**: Found incidentally (20%)\n- **Symptomatic**: Lump in groin, discomfort, pain with exertion\n- **Inguinal**: Above inguinal ligament\n- **Femoral**: Below inguinal ligament\n- **Strangulation**: Severe pain, nausea, vomiting, irreducible mass,\n        mnemonics: [\n          { text: \"INGUINAL HERNIA = Indirect (lateral to epigastric), N=85%, G=groin, U=unilateral usually, I=irreducibility risk, N=neural complications, A=acquired form, L=location RLQ often\", explanation: \"Inguinal hernia classification\" },\n          { text: \"FEMORAL RISK = Female more, Elderly, Medial to vein, Orale (rare), R=restricted (strangulation), Acetabulum level, Lacunar ligament\", explanation: \"Femoral hernia characteristics\" }\n        ],\n        keyPoints: [\n          \"Inguinal hernia: 75% of all hernias; indirect (85-90%) > direct\",\n          \"Femoral hernia: Rare (5-10%); high strangulation risk (20-40%)\",\n          \"Males > Females (8:1 inguinal); Right > Left (2:1)\",\n          \"Risk factors: Increased intra-abdominal pressure, heavy lifting, straining\",\n          \"Clinical: Lump in groin, discomfort with exertion, pain with strangulation\"\n        ],\n        textbookRefs: [\n          { book: \"Bailey & Love's Short Practice of Surgery\", chapter: \"Hernia: Anatomy and Classification\", edition: \"28th\" },\n          { book: \"SRB's Manual of Surgery\", chapter: \"Inguinal and Femoral Hernia\", edition: \"4th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"hernia-mechanism\",\n        title: \"Inguinal & Femoral Hernia - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiologic mechanisms of hernia formation, strangulation, and tissue involvement.\",\n        contentMd: "# Inguinal & Femoral Hernia - Mechanism\\n\\n## Pathogenesis of Hernia Formation\\n\\n### Indirect Hernia Mechanism\\n- **Patent processus vaginalis**: Failure of obliteration (congenital predisposition)\\n- **Increased abdominal pressure**: Strains already weakened internal ring\\n- **Sac formation**: Peritoneum herniates alongside spermatic cord\\n- **Contents**: Any viscera can enter (small bowel, omentum, colon)\\n- **Progressive enlargement**: Continued pressure enlarges defect\\n\\n### Direct Hernia Mechanism\\n- **Weakness in transversus abdominis**: Acquired (smoking, aging, collagen disorders)\\n- **Loss of muscular tone**: From connective tissue degradation\\n- **Focal defect**: Usually Hesselbach triangle (bounded by epigastric vessels, inguinal ligament)\\n- **Diffuse weakness**: Not true defect; entire posterior wall weakened\\n- **Progressive enlargement**: Gradual expansion of weak area\\n\\n### Femoral Hernia Mechanism\\n- **Femoral ring**: Natural gap between inguinal ligament and pectineal ligament\\n- **Risk of strangulation**: TIGHT opening (femoral ring diameter ~1.5 cm)\\n- **Lacunar ligament edge**: Sharp medial border compresses hernia sac\\n\\n## Strangulation Pathophysiology\\n\\n### Initial Phase\\n- **Obstruction**: Neck of hernia constricts vessels in hernia sac\\n- **Venous obstruction first**: Lower pressure; obstructed before arterial\\n- **Edema formation**: Venous engorgement with fluid accumulation\\n- **Tissue hypoxia**: Reduced perfusion without immediate gangrene\\n\\n### Progressive Phase\\n- **Arterial compression**: Higher pressure; obstructs after prolonged constriction\\n- **Ischemia worsening**: Tissue oxygen drops to critical levels\\n- **Metabolic shift**: Aerobic → anaerobic metabolism; lactate accumulation\\n- **Tissue necrosis**: Usually starts 6-8 hours from strangulation onset\\n\\n### Terminal Phase\\n- **Full-thickness necrosis**: Intestinal wall compromised\\n- **Bacterial translocation**: Gram-negatives and anaerobes cross damaged mucosa\\n- **Perforation risk**: 48-72 hours without intervention\\n- **Sepsis cascade**: Endotoxin release, multi-organ failure\\n\\n## Tissue Involvement in Strangulation\\n\\n### Richter's Hernia\\n- **Partial bowel wall**: Only antimesenteric border involved\\n- **May reduce**: Hernia reduces while maintaining constriction of partial wall\\n- **Clinical trap**: Appears reduced clinically; partial necrosis continues\\n- **Perforation risk**: Even with apparent reduction\\n\\n### Maydl's Hernia\\n- **Interloop strangulation**: Two loops of bowel in sac; third loop strangled between\\n- **Difficult to detect**: Two loops may reduce, third remains strangulated\\n- **Operative finding**: Careful bowel inspection needed\\n\\n### Sliding Hernia\\n- **Viscus forms part of sac**: Colon or bladder wall is sac itself\\n- **Difficult reduction**: Cannot completely reduce without tearing viscus\\n- **Risk during repair**: May inadvertently narrow viscal lumen\\n\\n## Complications Timeline\\n\\n### Irreducibility (without strangulation)\\n- Mass cannot be pushed back into abdomen\\n- Adhesions fix hernia contents\\n- May occur without vascular compromise\\n- Still requires surgical intervention\\n\\n### Strangulation\\n- **6-8 hours**: Ischemia begins\\n- **12-24 hours**: Tissue damage accumulating\\n- **48-72 hours**: Perforation risk increases dramatically\\n- **Death risk**: Without treatment, mortality 20-30% after perforation\\n\\n## Recurrence Mechanisms\\n\\n### Reasons for Hernia Recurrence\\n- **Inadequate mesh fixation**: Poor techniques, insufficient overlap\\n- **Mesh rejection/infection**: Foreign body reaction, biofilm formation\\n- **Continued pressure**: Obesity, chronic cough, constipation unaddressed\\n- **Technical factors**: Tension repair (high recurrence), poor dissection\\n- **Smoking**: Delays wound healing, weakens collagen\\n\\n### Recurrence Rates\\n- **Open tension repair**: 10-15% recurrence\\n- **Open mesh repair (Lichtenstein)**: 1-3% recurrence\\n- **Laparoscopic/TEP**: 5-10% recurrence\\n- **Robotic**: Similar to laparoscopic,\\n        mnemonics: [\\n          { text: \\\"STRANGULATION TIMELINE = Starts with venous obstruction, Then arterial, Rani (hypoxia) occurs, Anaerobic metabolism, Necrosis begins 6-8h, Gangrene at 12-24h, Ul (ulceration/perforation) at 48-72h, Lethal if untreated\\\", explanation: \\\"Tissue damage progression in strangulation\\\" },\\n          { text: \\\"RICHTER TRAP = Reduces clinically, In sac but partial wall, Choke point remains, Hernia seems better, Euthanasia delay, Ring constricts segment\\\", explanation: \\\"Richter's hernia danger\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Indirect hernia: Patent processus vaginalis + increased pressure\\\",\\n          \\\"Direct hernia: Weakness in transversus abdominis fascia\\\",\\n          \\\"Strangulation: Venous obstruction first → ischemia → necrosis\\\",\\n          \\\"Tissue damage begins 6-8 hours; perforation risk 48-72 hours\\\",\\n          \\\"Richter's hernia partial wall involvement; can appear reduced while strangulated\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love's Short Practice of Surgery\\\", chapter: \\\"Hernia Pathophysiology and Strangulation\\\", edition: \\\"28th\\\" },\\n          { book: \\\"SRB's Manual of Surgery\\\", chapter: \\\"Hernia Mechanisms and Complications\\\", edition: \\\"4th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"hernia-clinical\\\",\\n        title: \\\"Inguinal & Femoral Hernia - Clinical\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Clinical diagnosis, investigations, and surgical management of inguinal and femoral hernias in Indian practice.\\\",\\n        contentMd: "# Inguinal & Femoral Hernia - Clinical\\\\n\\\\n## Clinical Examination\\\\n\\\\n### Inguinal Hernia Examination\\\\n- **Inspection**: Visible bulge in groin (inguinal canal region)\\\\n- **Palpation**:\\\\n  - Impulse test: Increases on cough/straining (positive = hernia)\\\\n  - Reduction test: Push hernia back into abdomen\\\\n  - Finger in external ring: Feel sac herniating (finger gets \\\\\\\"silk glove\\\\\\\" sensation)\\\\n  - Differentiate direct vs indirect: Finger at internal ring; indirect passes through ring\\\\n\\\\n- **Location**: Above inguinal ligament\\\\n- **Characteristics**: Often pain-free; may be tender if strangulated\\\\n\\\\n### Femoral Hernia Examination\\\\n- **Location**: Below inguinal ligament (high in medial thigh)\\\\n- **Size**: Usually <2-3 cm (contained by femoral sheath)\\\\n- **Appearance**: Small, often missed\\\\n- **Strangulation risk**: Higher (20-40%); present with acute pain\\\\n\\\\n### Strangulation Presentation\\\\n- **Severe pain**: Sudden onset, progressive\\\\n- **Irreducibility**: Cannot reduce despite traction\\\\n- **Constitutional symptoms**: Nausea, vomiting, fever\\\\n- **Tenderness**: Severe local tenderness\\\\n- **Overlying skin**: May show erythema if gangrenous\\\\n\\\\n## Investigations\\\\n\\\\n### Clinical Diagnosis\\\\n- Diagnosis usually clinical; investigations rarely needed for obvious hernia\\\\n\\\\n### Imaging (If Diagnosis Unclear)\\\\n- **Ultrasound**:\\\\n  - Defect in fascia\\\\n  - Movement of viscera in sac with Valsalva\\\\n  - Sensitivity 90-95%\\\\n  - Non-invasive, dynamic\\\\n\\\\n- **CT/MRI**:\\\\n  - Rarely needed\\\\n  - Helps with complex/recurrent hernias\\\\n  - Assesses for occult hernia\\\\n\\\\n## Management\\\\n\\\\n### Conservative Management\\\\n- **Asymptomatic hernia**:\\\\n  - ~12% become symptomatic per year\\\\n  - ~1-3% risk of strangulation per year\\\\n  - Many surgeons recommend observation\\\\n  - Surgery elective if becomes symptomatic\\\\n\\\\n- **Symptomatic hernia**:\\\\n  - Advice: Avoid heavy lifting, straining\\\\n  - Hernia belt/truss: Provides support, not curative\\\\n  - Not recommended routinely; interferes with daily activity\\\\n\\\\n### Surgical Management (Definitive)\\\\n\\\\n**Indications for Surgery**\\\\n- Symptomatic hernia\\\\n- Strangulation (emergency)\\\\n- Femoral hernia (high strangulation risk)\\\\n- Young patient (long life expectancy)\\\\n- Risk factors for strangulation\\\\n\\\\n**Open Hernia Repair (Lichtenstein Tension-Free Mesh Repair)**\\\\n- **Gold standard** for primary inguinal hernia\\\\n- **Technique**:\\\\n  1. Local anesthesia possible\\\\n  2. Skin incision over inguinal canal\\\\n  3. Identify sac; ligate high above internal ring\\\\n  4. Reduce contents\\\\n  5. Place polypropylene/polyester mesh over defect\\\\n  6. Mesh secured with sutures ± tissue adhesive\\\\n  7. No tension on repair site\\\\n\\\\n- **Advantages**: Low recurrence (1-3%), short recovery, office-based possible\\\\n- **Disadvantages**: Local anesthesia limiting, recurrent hernias more complex\\\\n- **Recovery**: 1-2 weeks light activity, 4-6 weeks full activity\\\\n\\\\n**Laparoscopic/TEP (Totally Extraperitoneal) Repair**\\\\n- **Technique**: Mesh placed via laparoscope in extraperitoneal space\\\\n- **Advantages**: Bilateral repair possible, less postop pain, faster return to work\\\\n- **Disadvantages**: More costly, steep learning curve, requires GA\\\\n- **Recurrence**: 5-10% (slightly higher than open mesh)\\\\n- **Recovery**: Faster return to activity than open\\\\n\\\\n**Robotic-Assisted Repair**\\\\n- **Technique**: Similar to TEP but with robotic instruments\\\\n- **Advantages**: Enhanced visualization, precision, less fatigue\\\\n- **Disadvantages**: High cost, learning curve\\\\n- **Outcomes**: Similar to laparoscopic\\\\n\\\\n**Open Direct Hernia Repair**\\\\n- Less aggressive (no need for high ligation)\\\\n- Mesh onlay or inlay\\\\n- Open approach usually adequate\\\\n\\\\n**Femoral Hernia Repair**\\\\n- **High strangulation risk**: Recommend surgical repair\\\\n- **Approaches**:\\\\n  1. **Inguinal approach**: Most common\\\\n  2. **Crural approach**: Medial to femoral vein\\\\n  3. **Lockwood approach**: Inguinal with descent into thigh\\\\n\\\\n- **Mesh preferred** over primary repair (lower recurrence)\\\\n\\\\n## Emergency Management: Strangulated Hernia\\\\n\\\\n### Resuscitation\\\\n- **IV access**: 2 large-bore cannulae\\\\n- **Fluids**: Aggressive resuscitation (often 3-4L needed for 3rd space losses)\\\\n- **NPO**: Nothing orally\\\\n- **NG tube**: If significant vomiting\\\\n- **Catheterization**: Monitor urine output\\\\n- **Antibiotics**: Broad-spectrum (cephalosporin + metronidazole)\\\\n- **Analgesia**: IV opioids after surgical consultation\\\\n\\\\n### Surgery\\\\n- **Urgent operation** (within 2-4 hours once resuscitated)\\\\n- **Incision over hernia** (don't delay with other incisions)\\\\n- **Assess viability**:\\\\n  - **Viable bowel**: Pink, bleeds when scraped, normal mesentery\\\\n  - **Questionable**: Warm intestine, observe 5-10 minutes after releasing constriction\\\\n  - **Non-viable**: Dark, No bleeding, perforated\\\\n\\\\n- **Resection**: If non-viable; primary anastomosis if feasible\\\\n- **Repair**: Mesh repair safe even with resection (peritonitis rare if ischemic <72h)\\\\n\\\\n### Outcomes\\\\n- **Mortality**:\\\\n  - Elective repair: <1%\\\\n  - Strangulated hernia: 5-15% (worse with delay, resection, age)\\\\n\\\\n### Special Situation: Richter's Hernia\\\\n- **Clinical challenge**: May appear reduced\\\\n- **Approach**: If suspected strangulation, explore despite apparent reduction\\\\n- **Resection**: Usually feasible if small segment involved\\\\n- **Prognosis**: Better if caught early,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"LICHTENSTEIN = Local anesthesia, Incision small, Cortisone not needed, Hernia high ligation, Tension-free repair, Exact mesh placement, Ny/sutures secure, Stitches only, Tnx (thanks) recurrence low (1-3%)\\\\\\\", explanation: \\\\\\\"Lichtenstein tension-free mesh repair\\\\\\\" },\\\\n          { text: \\\\\\\"STRANGULATED HERNIA = Sudden pain severe, Treatment emergency, Resuscitation aggressive, Antibiotics broad-spectrum, Nasogastric tube, Gates to surgery, Urgent exploration, Long-term mesh safe, Assist with resection if needed, Test viability, Erosion of tissue\\\\\\\", explanation: \\\\\\\"Emergency strangulated hernia management\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Inguinal hernia above inguinal ligament; femoral below\\\\\\\",\\\\n          \\\\\\\"Asymptomatic: ~1-3% annual strangulation risk; observation safe\\\\\\\",\\\\n          \\\\\\\"Symptomatic or femoral: Surgical repair recommended\\\\\\\",\\\\n          \\\\\\\"Lichtenstein mesh repair: Gold standard (1-3% recurrence)\\\\\\\",\\\\n          \\\\\\\"Strangulation: Emergency surgery after brief resuscitation\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Bailey & Love's Short Practice of Surgery\\\\\\\", chapter: \\\\\\\"Hernia: Clinical Presentation and Surgical Management\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"SRB's Manual of Surgery\\\\\\\", chapter: \\\\\\\"Inguinal and Femoral Hernia: Treatment\\\\\\\", edition: \\\\\\\"4th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"hernia-exam\\\\\\\",\\\\n        title: \\\\\\\"Inguinal & Femoral Hernia - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 22,\\\\n        summary: \\\\\\\"Exam-focused strategies for hernia diagnosis, management, and surgical decision-making.\\\\\\\",\\\\n        contentMd: ``# Inguinal & Femoral Hernia - Exam Prep\\\\n\\\\n## High-Yield Facts for NEET PG / INI-CET\\\\n\\\\n### Classification\\\\n- **Inguinal** (90%): Indirect (85%) > Direct (15%)\\\\n  - Indirect: Lateral to epigastric vessels; through internal ring\\\\n  - Direct: Medial to epigastric vessels; through Hesselbach triangle\\\\n\\\\n- **Femoral** (10%): High strangulation risk (20-40%)\\\\n\\\\n### Epidemiology\\\\n- Males > Females (8:1 inguinal)\\\\n- Right > Left (2:1)\\\\n- Indirect more common, higher recurrence if untreated\\\\n\\\\n### Examination Findings\\\\n| Finding | Significance |\\\\n|---------|--------------|\\\\n| Cough impulse | Confirms hernia |\\\\n| Impulse through internal ring | Indirect |\\\\n| No impulse through internal ring | Direct |\\\\n| Below inguinal ligament | Femoral |\\\\n| Irreducible + pain | Strangulation |\\\\n\\\\n## Key Clinical Signs\\\\n\\\\n### \\\\\\\"Silk Glove\\\\\\\" Sensation\\\\n- **Finger in external ring**: Feel sac wall against finger\\\\n- **Implies**: Indirect hernia patent processus vaginalis\\\\n- **Significance**: High-yield exam sign\\\\n\\\\n### Cough Impulse (Most Important)\\\\n- **Technique**: Palpate hernia; ask patient to cough\\\\n- **Positive**: Feel impulse against examining hand\\\\n- **Meaning**: Increased abdominal pressure transmitted to sac\\\\n- **Specificity**: Very specific for hernia\\\\n\\\\n### Irreducibility Test\\\\n- **Technique**: Try to push hernia back into abdomen\\\\n- **Reducible**: Hernia pushes back in (no strangulation acutely)\\\\n- **Irreducible**: Cannot reduce despite gentle pressure\\\\n- **Significance**: May indicate strangulation or adhesions\\\\n\\\\n## Exam-Style Scenarios\\\\n\\\\n### Scenario 1: Asymptomatic Inguinal Hernia\\\\n\\\\\\\"60-year-old male with asymptomatic RLQ bulge found on exam, palpable on Valsalva. No pain. Strangulation risk?\\\\\\\"\\\\n- **Answer**: ~1-3% annual strangulation risk; observation safe; surgery elective when symptomatic\\\\n\\\\n### Scenario 2: Symptomatic Indirect Inguinal Hernia\\\\n\\\\\\\"45-year-old male with intermittent RLQ pain worse with lifting, bulge on exam, cough impulse positive, impulse through internal ring. Management?\\\\\\\"\\\\n- **Answer**: Lichtenstein mesh repair (gold standard, 1-3% recurrence)\\\\n\\\\n### Scenario 3: Strangulated Femoral Hernia\\\\n\\\\\\\"55-year-old female with acute severe groin pain, mass below inguinal ligament, irreducible, vomiting, fever. Diagnosis and management?\\\\\\\"\\\\n- **Answer**: Strangulated femoral hernia; emergency surgery after brief resuscitation\\\\n\\\\n### Scenario 4: Richter's Hernia (Exam Trap)\\\\n\\\\\\\"35-year-old with acute severe hernia pain; hernia appears to reduce. Exam improved but severe tenderness persists. Next?\\\\\\\"\\\\n- **Answer**: Suspect Richter's (partial wall strangulation); explore despite apparent reduction\\\\n\\\\n## Management Decision Tree\\\\n\\\\n```\\\\nHERNIA PRESENTATION\\\\n├─ Asymptomatic\\\\n│  └─ Observation (1-3% strangulation risk/year)\\\\n│\\\\n├─ Symptomatic (pain with activity)\\\\n│  ├─ Inguinal → Lichtenstein mesh (open) or TEP (lap)\\\\n│  └─ Femoral → Surgery (high strangulation risk)\\\\n│\\\\n└─ Strangulated\\\\n   └─ Emergency surgery after brief resuscitation\\\\n```\\\\n\\\\n## Treatment Pearls for Exams\\\\n\\\\n### Lichtenstein Repair (Most Common)\\\\n- Gold standard for primary inguinal hernia\\\\n- Tension-free mesh repair\\\\n- Local anesthesia possible\\\\n- 1-3% recurrence rate\\\\n- 4-6 weeks full recovery\\\\n\\\\n### When to Choose Laparoscopic/TEP\\\\n- Young patient (long life expectancy)\\\\n- Bilateral hernia\\\\n- Need for faster return to work\\\\n- Recurrent hernia (more complex open repair)\\\\n- Higher cost acceptable\\\\n\\\\n### Femoral Hernia Management\\\\n- Always consider high strangulation risk (20-40%)\\\\n- Surgical repair even if asymptomatic recommended\\\\n- Inguinal approach most common\\\\n- Mesh preferred over primary repair\\\\n\\\\n### Strangulated Hernia Emergency Steps\\\\n1. **IV access** + **Fluid resuscitation** (aggressive)\\\\n2. **NPO** + **NG tube** (if vomiting)\\\\n3. **Catheterization** (monitor output)\\\\n4. **Antibiotics** (broad-spectrum)\\\\n5. **Surgery** (within 2-4 hours)\\\\n6. **Assess viability** during exploration\\\\n7. **Resect** if non-viable; repair with mesh safe\\\\n\\\\n## Red Flags (Exam Love These)\\\\n- **Femoral location** → High strangulation risk\\\\n- **Irreducible mass** → Consider strangulation\\\\n- **Severe pain + vomiting** → Strangulation until proven otherwise\\\\n- **Fever + hernia pain** → Infection/perforation risk\\\\n- **Richter's hernia** → Can appear reduced while strangulated\\\\n\\\\n## Traps in Exam Questions\\\\n- \\\\\\\"Asymptomatic hernia - what to do?\\\\\\\" → Observation (not automatic surgery)\\\\n- \\\\\\\"Strangulation diagnosed - 12 hours onset, doing well\\\\\\\" → Still emergency surgery (tissue damage ongoing)\\\\n- \\\\\\\"Hernia seems to reduce - pain continues\\\\\\\" → Richter's hernia possible (explore)\\\\n- \\\\\\\"Femoral hernia found incidentally\\\\\\\" → High strangulation risk (surgery recommended)\\\\n- \\\\\\\"Recurrent hernia after tension repair\\\\\\\" → Use mesh in repair,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"INDIRECT HERNIA = Impulse through internal ring, Nearer epigastric, Does pass through ring, Infant/congenital, Reaching back through, Early presentation, Common (85%), Traction repair causes recurrence\\\\\\\", explanation: \\\\\\\"Indirect inguinal hernia characteristics\\\\\\\" },\\\\n          { text: \\\\\\\"DIRECT HERNIA = Defect medial to epigastric, In Hesselbach, Rarer (15%), Enlarged from pressure, Collagen weak (smoking), Through transversus abdominis\\\\\\\", explanation: \\\\\\\"Direct inguinal hernia characteristics\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Indirect (85%) lateral to epigastric; direct (15%) medial\\\\\\\",\\\\n          \\\\\\\"Cough impulse confirms hernia; palpate through internal ring for type\\\\\\\",\\\\n          \\\\\\\"Asymptomatic: Observation safe; 1-3% strangulation risk/year\\\\\\\",\\\\n          \\\\\\\"Symptomatic or femoral: Surgical repair (Lichtenstein standard)\\\\\\\",\\\\n          \\\\\\\"Strangulation: Emergency surgery after brief resuscitation\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Bailey & Love's Short Practice of Surgery\\\\\\\", chapter: \\\\\\\"Hernia\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"SRB's Manual of Surgery\\\\\\\", chapter: \\\\\\\"Inguinal and Femoral Hernia\\\\\\\", edition: \\\\\\\"4th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"hernia-recall\\\\\\\",\\\\n        title: \\\\\\\"Inguinal & Femoral Hernia - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"Active recall questions on hernia diagnosis and management for comprehensive understanding.\\\\\\\",\\\\n        contentMd: ``# Inguinal & Femoral Hernia - Active Recall\\\\n\\\\n## Q1: Most Common Type of Hernia?\\\\n**Answer**: Inguinal hernia (90% of all groin hernias)\\\\n- Indirect inguinal: 85% of groin hernias\\\\n- Direct inguinal: 15% of groin hernias\\\\n- Femoral: 5-10% (high strangulation risk)\\\\n\\\\n## Q2: How to Differentiate Indirect vs Direct Hernia on Examination?\\\\n**Answer**: Finger in external ring feeling impulse through internal ring\\\\n- Indirect: Impulse felt passing through internal ring\\\\n- Direct: NO impulse through internal ring (but hernia present)\\\\n- Also: Indirect lateral to epigastric vessels; direct medial\\\\n\\\\n## Q3: What Is \\\\\\\"Silk Glove\\\\\\\" Sensation?\\\\n**Answer**: Feel of hernia sac against examining finger in external ring\\\\n- Implies patent processus vaginalis (indirect)\\\\n- Characteristic sensation when finger in ring with hernia sac\\\\n- High-yield exam finding\\\\n\\\\n## Q4: Annual Strangulation Risk in Asymptomatic Hernia?\\\\n**Answer**: 1-3% per year (relatively low)\\\\n- Observation safe for asymptomatic\\\\n- Surgery only if becomes symptomatic\\\\n- Exception: Femoral hernia (20-40% strangulation risk; recommend surgery)\\\\n\\\\n## Q5: Lichtenstein Repair - Recurrence Rate?\\\\n**Answer**: 1-3% (gold standard tension-free mesh repair)\\\\n- Significantly better than tension repair (10-15% recurrence)\\\\n- Local anesthesia possible\\\\n- Day-case or short stay procedure\\\\n\\\\n## Q6: Femoral Hernia - Why High Strangulation Risk?\\\\n**Answer**: Tight femoral ring (~1.5 cm) + sharp lacunar ligament\\\\n- Anatomically constrictive\\\\n- 20-40% present with strangulation\\\\n- Recommend surgical repair even if asymptomatic\\\\n\\\\n## Q7: What Is Richter's Hernia?\\\\n**Answer**: Partial bowel wall (antimesenteric border) in hernia sac\\\\n- Hernia may reduce clinically\\\\n- Partial wall remains strangulated → necrosis → perforation risk\\\\n- Exam trap: Appears improved but partial necrosis continues\\\\n- Always explore if suspected\\\\n\\\\n## Q8: Strangulated Hernia - Emergency Management Priority?\\\\n**Answer**: Resuscitation FIRST, then urgent surgery\\\\n- IV fluids (aggressive, 3-4L needed)\\\\n- Broad-spectrum antibiotics\\\\n- NPO + NG tube\\\\n- Catheterization (monitor urine)\\\\n- Surgery within 2-4 hours after initial resuscitation\\\\n\\\\n## Q9: Strangulation Timeline - When Does Tissue Die?\\\\n**Answer**: Ischemia begins within 6 hours; gangrene at 12-24 hours\\\\n- Venous obstruction (first) → arterial obstruction (progressive)\\\\n- Anaerobic metabolism and lactate accumulation\\\\n- Tissue necrosis: 12-24 hours\\\\n- Perforation risk: 48-72 hours\\\\n\\\\n## Q10: Indirect Hernia + Patent Processus Vaginalis - Adult Risk?\\\\n**Answer**: Patent in 20-25% of adults; symptomatic in <5%\\\\n- Presence alone not indication for surgery\\\\n- Surgery only if symptomatic or strangulation risk\\\\n- Congenital but may not cause symptoms until adult\",\\n        mnemonics: [\\n          { text: \\\"SILK GLOVE = Sensation in external ring, Indicates indirect hernia, Landmark for diagnosis, Keyed finding on exam\\\", explanation: \\\"Silk glove sensation significance\\\" },\\n          { text: \\\"STRANGULATION = Severe pain sudden, Tenderness irreducible, Resuscitate aggressive, Antibiotics broad, Nausea/vomiting, Gangrene after 12-24h, Urgent surgery, Lethal if delayed, Assess viability, Test tissue damage, Emergency protocol\\\", explanation: \\\"Strangulated hernia management\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Indirect (85%) passes through internal ring; direct medial to epigastric vessels\\\",\\n          \\\"Cough impulse confirms hernia; finger through ring differentiates type\\\",\\n          \\\"Asymptomatic inguinal: 1-3% strangulation risk/year; observation safe\\\",\\n          \\\"Femoral hernia: 20-40% strangulation risk; surgery recommended\\\",\\n          \\\"Strangulation: Emergency surgery after brief resuscitation; mortality 5-15%\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love's Short Practice of Surgery\\\", chapter: \\\"Groin Hernia\\\", edition: \\\"28th\\\" },\\n          { book: \\\"SRB's Manual of Surgery\\\", chapter: \\\"Inguinal and Femoral Hernia\\\", edition: \\\"4th\\\" }\\n        ]\\n      }\\n    ]\\n  }\\n];\\n\",\n"
-}
-}
-}
-];
-];
+        summary: "Pathogenesis of inguinal and femoral hernias, processus vaginalis, strangulation pathophysiology, and special hernia types.",
+        contentMd: `# Inguinal & Femoral Hernia - Mechanism
+
+## Pathogenesis of Indirect Inguinal Hernia
+- Patent processus vaginalis (PPV) is the congenital predisposition
+- PPV present in 80% neonates; obliterates in most by age 2
+- Patent in 20% adults but only a fraction develop hernia
+- Increased intra-abdominal pressure forces abdominal contents through patent deep ring
+- Progressive enlargement: Bubonocele → Funicular → Complete (inguinoscrotal)
+
+## Pathogenesis of Direct Inguinal Hernia
+- Acquired weakness of transversalis fascia in Hesselbach triangle
+- Collagen metabolism abnormality: Decreased type I:III collagen ratio
+- Risk factors: Smoking (inhibits collagen synthesis), aging, connective tissue disorders
+- Usually occurs in older men (>40 years)
+- Does NOT descend into scrotum (blocked by transversalis fascia at deep ring)
+
+## Pathogenesis of Femoral Hernia
+- Pre-existing potential space (femoral canal) allows herniation
+- Enlarged femoral ring in multiparous women
+- Rigid boundaries (lacunar ligament medially) prevent expansion
+- This rigidity explains high strangulation rate (30-40%)
+
+## Strangulation Pathophysiology
+### Sequence of Events
+1. Hernia becomes irreducible (adhesions or narrow neck)
+2. Venous obstruction first (lower pressure) → congestion and edema
+3. Arterial compromise follows → ischemia
+4. Mucosal necrosis → bacterial translocation
+5. Full-thickness gangrene → perforation → peritonitis
+
+### Timeline
+- 6 hours: Tissue ischemia begins
+- 12-24 hours: Gangrenous changes
+- 24-48 hours: Perforation risk significantly increases
+
+## Special Types of Hernia
+### Richter Hernia
+- Only antimesenteric border of bowel wall involved
+- May NOT cause intestinal obstruction (lumen still patent)
+- Can strangulate and perforate without obstructive symptoms
+- Most common in femoral hernia (small rigid ring)
+
+### Littre Hernia
+- Meckel diverticulum in the hernia sac
+- Can present with inflammation mimicking strangulation
+
+### Maydl Hernia (W-hernia)
+- Two loops of bowel in sac; intervening loop in abdomen may strangulate
+- Retrograde strangulation of the connecting loop
+
+### Sliding Hernia (Hernia en glissade)
+- Viscus forms part of the sac wall
+- Sigmoid colon (left), Caecum (right), Bladder
+- Important: Do not excise sac completely; risk of visceral injury`,
+        mnemonics: [
+          { text: "Hernia progression: BFC", explanation: "Bubonocele (at deep ring) → Funicular (in canal) → Complete (inguinoscrotal)" },
+          { text: "Richter = Rim (antimesenteric border only); No obstruction but can perforate", explanation: "Only rim/edge of bowel wall trapped; lumen patent so no obstruction signs" },
+        ],
+        keyPoints: [
+          "Patent processus vaginalis is the congenital basis for indirect inguinal hernia",
+          "Direct hernia: acquired weakness in Hesselbach triangle; altered collagen metabolism",
+          "Femoral hernia has highest strangulation rate (30-40%) due to rigid ring boundaries",
+          "Strangulation: venous obstruction first, then arterial, then gangrene within 6-24 hours",
+          "Richter hernia: antimesenteric border only; can perforate without obstruction symptoms",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 11", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 60", edition: "28th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "inguinal-hernia-layer-3-clinical",
+        title: "Inguinal & Femoral Hernia - Clinical",
+        estimatedMinutes: 25,
+        summary: "Clinical examination, deep ring occlusion test, surgical repair techniques, and emergency management of strangulation.",
+        contentMd: `# Inguinal & Femoral Hernia - Clinical Management
+
+## Clinical Examination
+### Inspection
+- Ask patient to stand; inspect groin for visible swelling
+- Note site relative to pubic tubercle: Above + medial = inguinal; Below + lateral = femoral
+- Ask patient to cough: Look for expansile cough impulse
+
+### Palpation
+- Confirm cough impulse with hand over swelling
+- Attempt reduction (patient supine): Reducible vs irreducible
+- Check for tenderness (suggests complications)
+
+### Deep Ring Occlusion Test (Zieman Technique)
+- Reduce hernia completely
+- Press firmly over deep ring (midpoint of inguinal ligament)
+- Ask patient to cough or strain
+- Hernia controlled = Indirect (comes through deep ring)
+- Hernia NOT controlled = Direct (comes through posterior wall)
+
+### Differentiating from Other Groin Swellings
+- Inguinal lymph node: Multiple, firm, non-reducible, no cough impulse
+- Saphena varix: Disappears on lying down, thrill on coughing (not impulse)
+- Ectopic testis/lipoma of cord: Fixed position, no cough impulse
+
+## Surgical Management
+### Open Mesh Repair (Lichtenstein Technique) - Gold Standard
+- Tension-free mesh repair; recurrence rate <1-2%
+- Polypropylene mesh placed over posterior wall
+- Can be done under local anesthesia (ideal for high-risk patients)
+- Steps: Open external oblique → identify cord → dissect sac → reduce/ligate sac → place mesh → close
+
+### Laparoscopic Repair
+- **TEP (Totally Extraperitoneal)**: Preferred; does not enter peritoneal cavity
+- **TAPP (Transabdominal Preperitoneal)**: Enters peritoneum; mesh placed preperitoneally
+- Advantages: Less postoperative pain, faster recovery, ideal for bilateral/recurrent hernias
+- Disadvantage: Requires general anesthesia, higher cost, learning curve
+
+### Bassini Repair (Historical)
+- Posterior wall reconstruction by suturing conjoint tendon to inguinal ligament
+- Tissue repair (no mesh); higher recurrence (5-10%)
+- Largely replaced by mesh repair
+
+### Shouldice Repair
+- 4-layer repair of posterior wall; recurrence 1-2% in expert hands
+- Gold standard tissue repair (Shouldice Hospital, Canada)
+
+### Femoral Hernia Repair
+- **Lockwood (low/crural approach)**: Through thigh below inguinal ligament
+- **Lotheissen (high/inguinal approach)**: Through inguinal canal
+- **McEvedy (high/extraperitoneal approach)**: Through rectus sheath; preferred for strangulated femoral hernia
+- Always use mesh if not contaminated
+
+## Emergency Management of Strangulated Hernia
+1. Resuscitation: IV fluids, NG tube, catheterization
+2. Broad-spectrum antibiotics: Cefotaxime + Metronidazole
+3. Emergency surgery within 4-6 hours
+4. Assess bowel viability: Color, peristalsis, mesenteric pulsation, bleeding on incision
+5. Viable bowel: Reduce and repair
+6. Non-viable bowel: Resect with primary anastomosis if possible
+7. Never attempt forceful manual reduction (taxis) of suspected strangulation
+
+## Indian Context
+- Inguinal hernia repair is the most commonly performed elective surgery in India
+- Open mesh repair (Lichtenstein) is standard in most centers
+- Laparoscopic repair increasing in urban tertiary centers
+- Desarda technique (no mesh, using external oblique strip) popular in resource-limited settings`,
+        mnemonics: [
+          { text: "Lichtenstein = Tension-free mesh = Gold standard", explanation: "Polypropylene mesh, <2% recurrence, can do under local anesthesia" },
+          { text: "McEvedy for strangulated femoral hernia", explanation: "High extraperitoneal approach gives best access for bowel assessment in strangulated femoral hernia" },
+        ],
+        keyPoints: [
+          "Deep ring occlusion test: controlled = indirect; not controlled = direct",
+          "Lichtenstein tension-free mesh repair is the gold standard; <2% recurrence",
+          "TEP is preferred laparoscopic approach; does not enter peritoneal cavity",
+          "McEvedy approach preferred for strangulated femoral hernia",
+          "Never attempt taxis (forceful manual reduction) in suspected strangulation",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 11", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 60", edition: "28th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "inguinal-hernia-layer-4-exam",
+        title: "Inguinal & Femoral Hernia - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "High-yield exam facts on groin hernias for NEXT pattern questions.",
+        contentMd: `# Inguinal & Femoral Hernia - Exam Prep
+
+## Must-Know Differentials
+| Feature | Indirect Inguinal | Direct Inguinal | Femoral |
+|---------|------------------|----------------|---------|
+| Site | Lateral to epigastric | Medial to epigastric | Below inguinal ligament |
+| Age | Any (common young) | Older (>40) | Middle-aged women |
+| Sac relation | Through deep ring | Hesselbach triangle | Through femoral canal |
+| Descent to scrotum | Yes | No | No |
+| Deep ring test | Controlled | Not controlled | N/A |
+| Strangulation | Moderate risk | Low risk | HIGH risk (30-40%) |
+| Relation to pubic tubercle | Above and medial | Above and medial | Below and lateral |
+
+## Must-Know Facts
+- Most common hernia overall: Indirect inguinal
+- Most common hernia in females: Indirect inguinal (NOT femoral)
+- Femoral hernia: Most common hernia to strangulate
+- Richter hernia: Most common in femoral hernia; partial bowel wall; no obstruction
+- Sliding hernia: Sigmoid (left), Caecum (right)
+- Pantaloon hernia: Both direct + indirect components
+
+## Common Exam Traps
+- "Most common hernia in females" = Still indirect inguinal (femoral is most common ONLY among hernias that strangulate)
+- "Hernia does not descend into scrotum" = Direct inguinal (or femoral)
+- "Groin swelling below inguinal ligament" = Femoral hernia (not inguinal)
+- "Strangulated hernia with no obstructive symptoms" = Richter hernia
+- "Irreducible hernia + bowel sounds normal" = Think Richter hernia
+
+## Surgical Approach Quick Reference
+| Situation | Preferred Repair |
+|-----------|-----------------|
+| Primary unilateral | Lichtenstein (open mesh) |
+| Bilateral | Laparoscopic TEP/TAPP |
+| Recurrent after open | Laparoscopic TEP |
+| Recurrent after lap | Open Lichtenstein |
+| Strangulated inguinal | Open exploration + repair |
+| Strangulated femoral | McEvedy approach |
+| Pediatric | Herniotomy (no mesh needed) |
+
+## High-Yield Questions
+- Gold standard for primary inguinal hernia repair = Lichtenstein tension-free mesh
+- Preferred lap approach = TEP (totally extraperitoneal)
+- Best approach for strangulated femoral hernia = McEvedy (high extraperitoneal)
+- Hernia in children = Herniotomy only (sac ligation); mesh not needed
+- Most common complication post hernia repair = Chronic groin pain (inguinodynia)
+- Structure at risk during inguinal hernia repair = Ilioinguinal nerve`,
+        mnemonics: [
+          { text: "Femoral: Female, Fatal (strangulates), Below ligament", explanation: "More common in females, highest strangulation risk, below inguinal ligament" },
+          { text: "Direct = Doesn't Descend to scrotum", explanation: "Direct hernia bulges forward through posterior wall; does not follow spermatic cord into scrotum" },
+        ],
+        keyPoints: [
+          "Most common hernia in both sexes: indirect inguinal (NOT femoral in females)",
+          "Femoral hernia: highest strangulation rate; below and lateral to pubic tubercle",
+          "Richter hernia: antimesenteric border only; strangulates without obstruction",
+          "Lichtenstein = gold standard open repair; TEP = preferred laparoscopic",
+          "Pediatric hernia: herniotomy only (sac ligation); mesh not needed",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 11", edition: "6th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "inguinal-hernia-layer-5-active-recall",
+        title: "Inguinal & Femoral Hernia - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Flashcard Q&A for spaced repetition on groin hernias.",
+        contentMd: `# Active Recall - Inguinal & Femoral Hernia
+
+**Q1:** What are the boundaries of the inguinal canal?
+**A1:** Anterior: external oblique aponeurosis. Posterior: transversalis fascia + conjoint tendon. Roof: internal oblique + transversus. Floor: inguinal ligament.
+
+**Q2:** How do you differentiate indirect from direct inguinal hernia clinically?
+**A2:** Deep ring occlusion test: press over deep ring (midpoint of inguinal ligament); if hernia is controlled = indirect; if not controlled = direct.
+
+**Q3:** What defines Hesselbach triangle?
+**A3:** Inferior epigastric artery (lateral), lateral border of rectus (medial), inguinal ligament (inferior). Direct hernia protrudes through this triangle.
+
+**Q4:** Why does femoral hernia have such high strangulation risk?
+**A4:** Rigid boundaries of femoral ring (inguinal ligament anterior, pectineal ligament posterior, lacunar ligament medial, femoral vein lateral) prevent expansion, causing constriction.
+
+**Q5:** What is the gold standard surgical repair for primary inguinal hernia?
+**A5:** Lichtenstein tension-free mesh repair. Polypropylene mesh over posterior wall. Recurrence <1-2%. Can be done under local anesthesia.
+
+**Q6:** What is a Richter hernia and why is it dangerous?
+**A6:** Only antimesenteric border of bowel is trapped. Dangerous because it can strangulate and perforate WITHOUT causing intestinal obstruction symptoms.
+
+**Q7:** What is the preferred approach for strangulated femoral hernia?
+**A7:** McEvedy approach (high extraperitoneal through rectus sheath). Provides best access for bowel assessment and resection if needed.
+
+**Q8:** What is the difference between TEP and TAPP?
+**A8:** TEP (Totally Extraperitoneal): does not enter peritoneum; preferred. TAPP (Transabdominal Preperitoneal): enters peritoneum, mesh placed preperitoneally. Both place mesh in same position.
+
+**Q9:** What is a sliding hernia?
+**A9:** A hernia where a viscus forms part of the sac wall. Sigmoid colon on left, caecum on right, sometimes bladder. Risk of visceral injury during sac excision.
+
+**Q10:** What is the most common hernia in females?
+**A10:** Indirect inguinal hernia (NOT femoral). Femoral hernia is more common in females compared to males, but indirect inguinal is still the overall most common.
+
+**Q11:** What nerve is most commonly injured during inguinal hernia repair?
+**A11:** Ilioinguinal nerve. Injury causes chronic inguinodynia (groin pain) and loss of sensation over medial thigh and scrotum/labia.
+
+**Q12:** How is pediatric inguinal hernia managed?
+**A12:** Herniotomy (ligation and excision of sac at deep ring). Mesh is NOT needed in children as tissues are healthy and defect is congenital (PPV), not acquired weakness.`,
+        mnemonics: [
+          { text: "NAVEL for femoral sheath (lateral to medial): Nerve, Artery, Vein, Empty space, Lymphatics", explanation: "Femoral canal (empty space) is where femoral hernia occurs; medial to femoral vein" },
+          { text: "Strangulation sequence: VAGGP", explanation: "Venous obstruction → Arterial compromise → Gangrene → Gas (bacterial) → Perforation" },
+        ],
+        keyPoints: [
+          "Indirect hernia: lateral to epigastric vessels, through deep ring; most common type",
+          "Femoral hernia: below inguinal ligament, highest strangulation risk, rigid ring",
+          "Lichtenstein mesh repair: gold standard, <2% recurrence, local anesthesia possible",
+          "Richter hernia: antimesenteric border; strangulates without obstruction",
+          "Pediatric hernia: herniotomy only (no mesh needed); always indirect",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 11", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 60", edition: "28th" },
+        ],
+      },
+    ],
+  },
 ];

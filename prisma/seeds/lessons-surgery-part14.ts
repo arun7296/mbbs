@@ -1,15 +1,370 @@
-// 5-layer lessons for Surgery gaps (SU-MOD-10)
 import type { TopicLessons } from "./content-loader";
 
 export const surgeryLessonsPart14: TopicLessons[] = [
-  // ─── SU-MOD-10-TOP-02: Pyloric Stenosis & Intussusception ──────────
   {
     topicCode: "SU-MOD-10-TOP-02",
     layers: [
-      { layer: 1, slug: "pyloric-stenosis-intussusception-foundation", title: "Pyloric Stenosis & Intussusception - Foundation", estimatedMinutes: 20,
-        summary: "Infantile hypertrophic pyloric stenosis (IHPS): males > females, 2-8 weeks age, projectile vomiting, leads to hypokalemic hypochloremic metabolic alkalosis. Intussusception: 6-36 months, abdominal pain (colicky), currant jelly stools, palpable mass. Both are surgical emergencies requiring fluid resuscitation before surgery.",
-        contentMd: "# Infantile Pyloric Stenosis & Intussusception\n\n## Infantile Hypertrophic Pyloric Stenosis (IHPS)\n\n### Epidemiology\n- **Age**: 2-8 weeks (peak 3-5 weeks); can present up to 3-4 months\n- **Male:Female ratio**: 4-5:1 (males predominantly affected)\n- **Family history**: Positive in 20%; higher if mother affected\n- **Incidence**: 1-3 per 1000 live births (varying by geography)\n\n### Pathophysiology\n- Concentric hypertrophy of pyloric muscle (circular and longitudinal)\n- Causes gastric outlet obstruction\n- Results in **projectile vomiting** (forceful, shoots across room)\n- Gastric peristalsis attempts overcome obstruction (visible peristaltic waves)\n\n### Clinical Presentation\n1. **Vomiting**: Projectile, non-bilious (occurs 30-60 min after feeding)\n2. **Hunger**: Baby appears hungry, feeds eagerly after vomiting\n3. **Failure to gain weight**: Or weight loss despite feeding\n4. **Dehydration**: Progressive; visible ribs, sunken fontanelle\n5. **Abdominal findings**: Visible peristaltic waves (left-to-right), sometimes palpable \"olive\" (hypertrophied pylorus)\n\n### Fluid & Electrolyte Abnormalities\n- **Hypochloremic, hypokalemic, metabolic alkalosis**\n  - Loss of gastric HCl → ↑ pH, ↓ Cl⁻\n  - Loss of K⁺ in vomitus\n  - Alkalemia causes renal K⁺ reabsorption → paradoxical aciduria with alkalemia\n- **Dehydration**: Hypovolemia from vomiting losses\n\n## Intussusception\n\n### Epidemiology\n- **Age**: 6 months to 3 years (peak 6-9 months)\n- **Male:Female**: Slightly male predominance\n- **Season**: Spring/summer (association with viral infections)\n- **Risk factors**: Rotavirus vaccination (slight ↑ risk first 2 weeks post-vaccination), viral illness (adenovirus, rhinovirus)\n\n### Pathophysiology\n- **Most common**: Ileocolic intussusception (~90%)\n- A segment of bowel (intussusceptum) telescopes into adjacent bowel (intussuscipiens)\n- Mesentery becomes trapped → edema → ischemia → necrosis if untreated\n\n### Clinical Presentation\n\n**Classic Triad**:\n1. **Colicky abdominal pain**: Intermittent, baby draws up knees, crying\n2. **Palpable mass**: \"Sausage-like\" in right upper abdomen\n3. **Red currant jelly stools**: Mucus + blood; late sign indicating mucosal ischemia\n\n**Associated Features**:\n- Vomiting (initially non-bilious, becomes bilious if complete obstruction)\n- Lethargy or irritability\n- Fever: Usually absent or low-grade\n- Abdominal distension: Progressive\n\n### Types of Intussusception\n\n| Type | Location | Frequency | Pathology |\n|------|----------|-----------|-----------|\n| **Ileocolic** | Ileum invaginates into colon | 90% | Most common; may reduce spontaneously |\n| **Ileo-ileal** | Ileum invaginates into ileum | 5% | Smaller lead point possible (Meckel's, polyp) |\n| **Colocolic** | Colon invaginates into colon | 5% | Rare; usually with lead point |,\n        mnemonics: [\n          { text: \"IHPS = Males (4:1), Hungry, Hypochloremic alkalosis\", explanation: \"Infantile pyloric stenosis: male predominance, hungry after vomiting, develops metabolic alkalosis\" },\n          { text: \"Intussusception = Ileocolic (90%), Currant jelly, Colicky\", explanation: \"Classic triad: colicky pain, currant jelly stools, palpable mass; 90% are ileocolic\" }\n        ],\n        keyPoints: [\n          \"IHPS: 2-8 weeks, males > females (4:1), projectile vomiting, hypochloremic hypokalemic metabolic alkalosis\",\n          \"Intussusception: 6-36 months, colicky pain, currant jelly stools (blood + mucus), palpable mass\",\n          \"IHPS requires fluid/electrolyte correction before surgery\",\n          \"Intussusception: 90% ileocolic; can reduce spontaneously or with hydrostatic/pneumatic reduction\",\n          \"Dehydration assessment critical in both; IHPS requires correction of alkalosis before anesthesia\",\n          \"Intussusception: risk with viral illness, rotavirus vaccination (slight increase)\"\n        ],\n        textbookRefs: [{ book: \"Sabiston Textbook of Surgery\", chapter: \"Pediatric Surgery\", edition: \"20th\" }] },\n\n      { layer: 2, slug: \"pyloric-stenosis-intussusception-mechanism\", title: \"Pyloric Stenosis & Intussusception - Mechanism\", estimatedMinutes: 30,\n        summary: \"Pathophysiology of IHPS: muscle hypertrophy pathogenesis, effects on gastric function and systemic complications. Intussusception: mesenteric ischemia progression, bowel perforation risk. Mechanical and metabolic consequences of each condition.\",\n        contentMd: "# Pathophysiology & Complications\\n\\n## IHPS Pathophysiology\\n\\n### Pyloric Muscle Hypertrophy - Etiology Unknown\\n- **Genetic factors**: Family history, male predominance → familial predisposition\\n- **Environmental**: Possibly related to feeding practice, hormones\\n- **Gastrin hypothesis**: Not consistently supported\\n- **Neuronal factors**: Abnormal innervation or nitric oxide deficiency suggested\\n- **Result**: Progressive concentric hypertrophy of pyloric muscle (thickening from normal ~3-4 mm to 4-5 mm or more)\\n\\n### Gastric Function Consequences\\n1. **Outlet obstruction**: Hypertrophied muscle prevents pyloric opening\\n2. **Gastric peristalsis**: ↑ Forceful as stomach attempts to empty against obstruction\\n3. **Gastric distension**: Progressive → stretches muscle (leads to visible peristaltic waves)\\n4. **Vomiting**: Forceful expulsion of gastric contents\\n\\n### Fluid & Electrolyte Consequences\\n\\n**Gastric fluid composition**:\\n- Na⁺: ~20 mEq/L, K⁺: ~10 mEq/L, Cl⁻: ~140 mEq/L, H⁺: High concentration\\n\\n**With repeated vomiting**:\\n1. **Hypochloremia**: Loss of gastric HCl → ↓ Cl⁻ in serum\\n2. **Hypokalemia**: Loss of gastric K⁺ → ↓ K⁺ in serum\\n3. **Metabolic alkalosis**: Loss of H⁺ → ↑ pH, ↓ HCO₃⁻ reabsorption at kidney\\n4. **Paradoxical aciduria**: Alkalemia triggers renal K⁺ conservation → H⁺ excretion in urine (paradoxically acid urine despite alkalemia)\\n5. **Hypovolemia**: ↓ Intracellular fluid (from dehydration), ↑ antidiuretic hormone (ADH)\\n\\n### Anesthetic Risk in IHPS\\n- **Hypokalemia**: Risk of cardiac arrhythmias\\n- **Alkalosis**: Shifts oxygen-hemoglobin dissociation curve → impairs O₂ delivery\\n- **Hypovolemia**: Risk of hypotension with anesthesia induction\\n- **Aspiration risk**: Full stomach with gastric contents\\n\\n## Intussusception Pathophysiology\\n\\n### Progression of Intussusception\\n\\n**Phase 1 (Edema, 0-24 hours)**:\\n- Mesentery compressed between intussusceptum and intussuscipiens\\n- Venous return impaired → tissue edema → mucosal layer affected\\n- **Currant jelly stools**: Blood oozes from edematous mucosa\\n\\n**Phase 2 (Ischemia, 24-48 hours)**:\\n- Arterial blood supply compromised by continued pressure\\n- Bowel wall becomes ischemic → necrosis begins\\n- **Risk of perforation**: Transmural necrosis → leak of intestinal contents\\n\\n**Phase 3 (Perforation, > 48 hours)**:\\n- Full-thickness bowel wall necrosis\\n- **Perforation**: Feculent peritonitis, sepsis, shock\\n- **Mortality**: Increases significantly with perforation\\n\\n### Factors Affecting Ischemia Timeline\\n- **Degree of obstruction**: Complete vs partial\\n- **Length of intussuscepted segment**: Longer segments worse\\n- **Temperature**: Sepsis speeds ischemia\\n- **Edema extent**: Severe edema → earlier ischemia\\n\\n### Natural Outcome\\n- **Partial intussusceptions**: ~10-15% spontaneous reduction\\n- **Reduction leads to**: Normal bowel, restoration of peristalsis\\n- **Non-reduction**: Progression to ischemia and potential perforation\\n\\n### Lead Points (Pathological Causes)\\n- **Pediatric idiopathic (>90%)**: No identifiable lead point\\n- **With lead point** (unusual in infants):\\n  - Meckel's diverticulum (most common pathological lead point)\\n  - Polyp\\n  - Lymphoid hyperplasia (viral)\\n  - Tumor (rare in infants),\\n        mnemonics: [\\n          { text: \\\"IHPS Alkalosis: HCl lost → H↓, pH↑, K↓\\\", explanation: \\\"Loss of gastric hydrochloric acid causes metabolic alkalosis, hypokalemia, hypochloremia\\\" },\\n          { text: \\\"Intussusception Stages: Edema (24h) → Ischemia (48h) → Perforation (>48h)\\\", explanation: \\\"Progressive ischemia; early reduction essential to prevent necrosis and perforation\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"IHPS: pyloric muscle hypertrophy (etiology unclear); progressive vomiting → dehydration → alkalosis\\\",\\n          \\\"Electrolyte abnormality in IHPS: hypochloremic hypokalemic metabolic alkalosis with paradoxical aciduria\\\",\\n          \\\"Anesthetic risks in IHPS: hypokalemia (arrhythmias), alkalosis (O₂ impairment), hypovolemia, aspiration\\\",\\n          \\\"Intussusception: mesenteric compression → edema → ischemia → necrosis/perforation progression\\\",\\n          \\\"Currant jelly stools = blood from ischemic mucosa; late sign indicating need for urgent intervention\\\",\\n          \\\"Intussusception timeline critical: edema (24h), ischemia (24-48h), perforation (>48h); early reduction prevents complications\\\"\\n        ],\\n        textbookRefs: [{ book: \\\"Sabiston Textbook of Surgery\\\", chapter: \\\"Pediatric Emergencies\\\", edition: \\\"20th\\\" }] },\\n\\n      { layer: 3, slug: \\\"pyloric-stenosis-intussusception-clinical\\\", title: \\\"Pyloric Stenosis & Intussusception - Clinical\\\", estimatedMinutes: 20,\\n        summary: \\\"Diagnosis of IHPS: ultrasound gold standard, clinical examination. Management: fluid/electrolyte resuscitation, pylormyotomy (Ramstedt procedure). Intussusception diagnosis: ultrasound with target sign, letter sign. Non-operative reduction: hydrostatic/pneumatic, or operative reduction if contraindicated.\\\",\\n        contentMd: ``# Diagnosis & Management\\n\\n## IHPS Diagnosis\\n\\n### Clinical Examination\\n- **Visible peristaltic waves**: Left-to-right across epigastrium (gastric peristalsis)\\n- **Palpable olive**: Hard, mobile mass in right epigastrium (hypertrophied pylorus)\\n- **Dehydration**: Decreased skin turgor, sunken fontanelle, sparse urine\\n\\n### Imaging - Ultrasound (Gold Standard)\\n- **Target sign**: Hypoechoic pyloric muscle surrounding echogenic center\\n- **Muscle thickness**: > 3-4 mm indicates IHPS (normal ~1-2 mm)\\n- **Pyloric channel length**: > 14-16 mm (normal ~10 mm)\\n- **No gastric outlet obstruction**: Doppler shows normal blood flow\\n- **Sensitivity/Specificity**: 98-99% with experienced sonographer\\n\\n### Upper GI Contrast Studies\\n- **String sign**: Narrow pyloric channel (\\\"string of beads\\\")\\n- **Delayed gastric emptying**: Retained gastric contents\\n- Rarely needed now with ultrasound availability\\n\\n### Laboratory Evaluation\\n- **Electrolytes**: Confirm hypokalemia, hypochloremia, alkalosis\\n- **Urea/Creatinine**: Assess dehydration and renal function\\n- **Blood gas**: Confirm metabolic alkalosis\\n\\n## IHPS Management\\n\\n### Preoperative Preparation\\n**Fluid & Electrolyte Resuscitation** (critical before surgery):\\n1. **IV access**: Secure IV line\\n2. **IV fluids**: Normal saline + KCl\\n   - Initial: 0.9% NaCl with 20 mEq/L KCl at 1.5× maintenance\\n   - Goal: Correct hypokalemia BEFORE anesthesia (risk of arrhythmias)\\n3. **Nasogastric decompression**: Reduces aspiration risk\\n4. **Monitoring**: Urine output, serum electrolytes (K⁺ > 3.5 mEq/L before surgery)\\n5. **Target**: Normal serum electrolytes, normal urine output, corrected alkalosis\\n\\n### Surgical Treatment - Ramstedt Pyloromyotomy\\n- **Timing**: After resuscitation complete (12-24 hours typically)\\n- **Procedure**: Division of pyloric muscle fibers (longitudinal incision)\\n  - Don't enter mucosa (risk of perforation)\\n  - Muscle splits as baby cries post-op (natural opening)\\n- **Approach**: RUQ muscle-splitting incision or laparoscopic\\n- **Postoperative**: Resume feeds in 4-6 hours (gradually progress)\\n\\n## Intussusception Diagnosis\\n\\n### Clinical History & Examination\\n- **Age**: 6-36 months typical\\n- **Colicky pain**: Intermittent, baby cries and draws up legs\\n- **Palpable mass**: \\\"Sausage\\\" in RUQ or epigastrium\\n- **Red currant jelly stools**: Blood-stained mucus (late sign)\\n- **Shock signs**: Lethargy, pallor (if ischemia advanced)\\n\\n### Ultrasound (Gold Standard)\\n- **Target sign** (transverse): Concentric rings of intussuscepted bowel\\n- **Letter sign** (longitudinal): Elongated appearance\\n- **Mesenteric nodes**: May be enlarged from viral illness\\n- **Free fluid**: Suggests peritonitis/perforation\\n- **Sensitivity**: 95-98% for diagnosis\\n\\n### Contrast Enema (Therapeutic)\\n- **Appearance**: Meniscus/crescent sign (head of intussusception)\\n- **Filling defect**: Intraluminal mass-like appearance\\n- Diagnostic AND therapeutic (contrast pressure can reduce)\\n\\n### Signs of Non-Viability\\n- **Perforation signs**: Free air (pneumoperitoneum)\\n- **Advanced ischemia**: Echogenic/thickened bowel, free fluid with sepsis signs\\n\\n## Management of Intussusception\\n\\n### Non-operative Reduction\\n**Hydrostatic Reduction** (Water-soluble contrast):\\n- Setup: Child supine, fluoroscopy guidance\\n- Pressure applied (< 120 cm H₂O)\\n- Inject contrast slowly → observe for reduction\\n- Success: Reflux of contrast into terminal ileum\\n- Success rate: 70-90%\\n- Safety: No perforation risk if technique correct; radiology must be present\\n\\n**Pneumatic Reduction** (Air via rectal tube):\\n- Similar to hydrostatic but uses air pressure\\n- Success rate: 80-90%\\n- May be quicker than hydrostatic\\n\\n### Criteria for Operative Reduction\\n- **Signs of perforation**: Free air on imaging\\n- **Shock/sepsis**: Suggests advanced ischemia\\n- **Failed non-operative reduction**: Attempted but unsuccessful\\n- **Long symptom duration** (> 48-72 hours): Risk of non-viability\\n- **Ileo-ileal or colocolic intussusception**: May be difficult to reduce non-operatively\\n\\n### Operative Reduction Technique\\n- **Gentle manual reduction**: Hand-reduce intussuscepted segment\\n- **Avoid excessive traction**: Risk of perforation\\n- **Assess viability**: Color, peristalsis, bleeding\\n- **Resection**: If bowel non-viable; otherwise reduce\\n- **Inspection for lead point**: Look for Meckel's, polyp, lymphoid hyperplasia\\n\\n### Postoperative Care\\n- **NG tube** if perforation occurred or bowel resected\\n- **IV fluids**: Maintenance + replacement\\n- **Antibiotics**: If perforation or delayed surgery\\n- **Feeding**: Resume gradually after signs of obstruction resolve\\n- **Recurrence**: 5-10% (may reduce non-operatively again if no perforation)\\n\\n## Special Considerations in India\\n\\n### IHPS\\n- Similar presentation and management as Western countries\\n- Delayed presentation sometimes due to lack of early recognition\\n- Careful fluid resuscitation before surgery essential (resource-limited settings)\\n\\n### Intussusception\\n- Rotavirus vaccination program effects variable\\n- Some centers still prefer contrast enema approach\\n- Resource constraints: Ultrasound may not always be immediately available\\n- Higher morbidity if delayed diagnosis (peritonitis),\\n        mnemonics: [\\n          { text: \\\"Ramstedt = Pyloric split\\\", explanation: \\\"Ramstedt pyloromyotomy: longitudinal division of pyloric muscle without entering mucosa\\\" },\\n          { text: \\\"Hydrostatic < 120 cm H₂O pressure\\\", explanation: \\\"Non-operative reduction pressure limit to prevent perforation\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"IHPS ultrasound gold standard: muscle thickness > 3-4 mm, channel length > 14-16 mm\\\",\\n          \\\"Preoperative fluid resuscitation essential: correct K⁺ > 3.5 mEq/L, correct alkalosis before anesthesia\\\",\\n          \\\"Ramstedt pyloromyotomy: divide muscle longitudinally without entering mucosa\\\",\\n          \\\"Intussusception ultrasound: target sign (transverse), letter sign (longitudinal)\\\",\\n          \\\"Non-operative reduction: hydrostatic or pneumatic < 90% success; apply pressure < 120 cm H₂O\\\",\\n          \\\"Operative reduction indicated if perforation, shock, failed non-operative reduction, or > 48-72 hour delay\\\"\\n        ],\\n        textbookRefs: [{ book: \\\"Sabiston Textbook of Surgery\\\", chapter: \\\"Pediatric Surgery\\\", edition: \\\"20th\\\" }] },\\n\\n      { layer: 4, slug: \\\"pyloric-stenosis-intussusception-exam\\\", title: \\\"Pyloric Stenosis & Intussusception - Exam Prep\\\", estimatedMinutes: 15,\\n        summary: \\\"High-yield facts on presentation, diagnosis, and management of both conditions.\\\",\\n        contentMd: ``# Exam High Yield\\n\\n## One-Liners - IHPS\\n- Age of presentation: **2-8 weeks (peak 3-5 weeks)**\\n- Male:Female ratio: **4-5:1**\\n- Classic vomiting: **Projectile, non-bilious**\\n- Electrolyte abnormality: **Hypochloremic hypokalemic metabolic alkalosis**\\n- Imaging gold standard: **Ultrasound**\\n- Ultrasound findings: **Muscle thickness > 3-4 mm, channel length > 14-16 mm**\\n- Preoperative critical step: **Fluid/electrolyte resuscitation**\\n- Surgical procedure: **Ramstedt pyloromyotomy**\\n- Anesthetic risk: **Hypokalemia (arrhythmias), alkalosis, hypovolemia, aspiration**\\n\\n## One-Liners - Intussusception\\n- Age: **6-36 months (peak 6-9 months)**\\n- Classic triad: **Colicky pain, palpable mass, currant jelly stools**\\n- Currant jelly stools timing: **Late sign of ischemia**\\n- Most common type: **Ileocolic (90%)**\\n- Imaging gold standard: **Ultrasound**\\n- Ultrasound signs: **Target sign, letter sign**\\n- Non-operative reduction: **Hydrostatic or pneumatic (70-90% success)**\\n- Pressure limit: **< 120 cm H₂O to prevent perforation**\\n- Operative indication: **Perforation, shock, failed reduction, > 48-72h delay**\\n- Recurrence rate: **5-10%**\\n\\n## Comparison Table\\n\\n| Feature | IHPS | Intussusception |\\n|---------|---|---|\\n| Age | 2-8 weeks | 6-36 months |\\n| Presentation | Projectile vomiting | Colicky pain + mass |\\n| Stool | Normal | Currant jelly |\\n| Imaging | US (muscle thick) | US (target sign) |\\n| Management | Surgery (pyloromyotomy) | Reduction (hydrostatic/operative) |\\n| Emergency level | Elective after resuscitation | Urgent |\\n\\n## NEXT Themes\\n- Age of presentation (2-8 weeks IHPS vs 6-36 months intussusception)\\n- Electrolyte abnormalities in IHPS\\n- Ultrasound findings\\n- Management approach (operative vs non-operative)\\n- Risk of complications (perforation in intussusception),\\n        mnemonics: [\\n          { text: \\\"2-8 weeks = Pyloric Stenosis; 6-36 months = Intussusception\\\", explanation: \\\"Age helps differentiate: very young infant with vomiting suggests IHPS; older infant with colicky pain suggests intussusception\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"IHPS: 2-8 weeks, males 4-5:1, projectile vomiting, hypochloremic hypokalemic alkalosis\\\",\\n          \\\"Intussusception: 6-36 months, colicky pain, palpable mass, currant jelly stools (late sign)\\\",\\n          \\\"IHPS ultrasound: muscle > 3-4 mm, channel > 14-16 mm\\\",\\n          \\\"Intussusception ultrasound: target sign, letter sign\\\",\\n          \\\"IHPS management: preoperative resuscitation critical, then Ramstedt pyloromyotomy\\\",\\n          \\\"Intussusception: hydrostatic reduction 70-90% success, operative if contraindicated or failed\\\"\\n        ],\\n        textbookRefs: [{ book: \\\"Sabiston Textbook of Surgery\\\", chapter: \\\"Pediatric Surgery\\\", edition: \\\"20th\\\" }] },\\n\\n      { layer: 5, slug: \\\"pyloric-stenosis-intussusception-recall\\\", title: \\\"Pyloric Stenosis & Intussusception - Active Recall\\\", estimatedMinutes: 10,\\n        summary: \\\"Flashcard-style questions on presentation, diagnosis, and treatment.\\\",\\n        contentMd: ``# Active Recall\\n\\n**Q1:** What is the typical age of presentation for infantile pyloric stenosis?\\n> 2-8 weeks, with peak incidence at 3-5 weeks\\n\\n**Q2:** What is the male-to-female ratio for IHPS?\\n> 4-5:1 (males predominantly affected)\\n\\n**Q3:** Describe the characteristic vomiting in IHPS.\\n> Projectile vomiting (forceful, shoots across room), non-bilious, occurring 30-60 minutes after feeding\\n\\n**Q4:** What fluid and electrolyte abnormality occurs with IHPS vomiting?\\n> Hypochloremic hypokalemic metabolic alkalosis with paradoxical aciduria\\n\\n**Q5:** What is the gold standard imaging test for IHPS?\\n> Ultrasound showing muscle thickness > 3-4 mm and pyloric channel length > 14-16 mm\\n\\n**Q6:** What is the critical preoperative step in managing IHPS?\\n> Fluid and electrolyte resuscitation to correct hypokalemia (K > 3.5 mEq/L), hypochloremia, and alkalosis before anesthesia\\n\\n**Q7:** What is the surgical procedure for IHPS?\\n> Ramstedt pyloromyotomy - longitudinal division of pyloric muscle without entering mucosa\\n\\n**Q8:** What is the typical age range for intussusception?\\n> 6 months to 3 years, with peak incidence at 6-9 months\\n\\n**Q9:** What is the classic triad of intussusception?\\n> Colicky abdominal pain, palpable sausage-like mass, and red currant jelly stools\\n\\n**Q10:** What is the gold standard imaging test for intussusception and what are the characteristic findings?\\n> Ultrasound showing target sign (transverse) and letter sign (longitudinal appearance of intussuscepted bowel),\\n        mnemonics: [],\\n        keyPoints: [\\\"10 key questions on IHPS and intussusception presentation, diagnosis, and management\\\"],\\n        textbookRefs: [{ book: \\\"Sabiston Textbook of Surgery\\\", chapter: \\\"Pediatric Surgery\\\", edition: \\\"20th\\\" }] },\\n    ],\\n  },\\n\\n  // ─── SU-MOD-10-TOP-03: Undescended Testis & Wilms Tumor ──────────\\n  {\\n    topicCode: \\\"SU-MOD-10-TOP-03\\\",\\n    layers: [\\n      { layer: 1, slug: \\\"undescended-testis-wilms-tumor-foundation\\\", title: \\\"Undescended Testis & Wilms Tumor - Foundation\\\", estimatedMinutes: 20,\\n        summary: \\\"Cryptorchidism (undescended testis) occurs in 3-4% of newborns; risk of malignancy increases with intra-abdominal location. Orchiopexy before 12-18 months recommended. Wilms tumor (nephroblastoma) most common renal malignancy in children (ages 2-7); presents with abdominal mass, hematuria; association with WAGR/Beckwith-Wiedemann syndromes.\\\",\\n        contentMd: ``# Undescended Testis & Wilms Tumor\\n\\n## Cryptorchidism (Undescended Testis)\\n\\n### Epidemiology\\n- **Incidence**: 3-4% of full-term newborns; ~1% at 1 year\\n- **Etiology**: Failure of gubernacular descent; hormonal/mechanical factors\\n- **Bilateral**: 10% of cases\\n- **Associated syndromes**: PAIS (Persistent Androgen Insensitivity Syndrome), Kallmann syndrome\\n\\n### Descent Pathway\\n- **Intra-abdominal**: Within abdomen (higher risk for malignancy)\\n- **Inguinal**: In inguinal canal (palpable, lower malignancy risk)\\n- **Ectopic**: Emerges from inguinal canal but descends abnormally (superficial inguinal, pubic, femoral)\\n\\n### Complications of Cryptorchidism\\n\\n**Malignancy Risk**:\\n- **Intra-abdominal testis**: 1 in 20 lifetime risk (5% malignancy)\\n- **Inguinal testis**: 1 in 80 risk (lower than intra-abdominal)\\n- **Bilateral cryptorchidism**: Risk in contralateral testis also ↑ (even if normally descended)\\n- **Types**: Seminoma (50-70%), non-seminomatous germ cell tumors\\n- **Age of presentation**: Malignancy typically appears in 2nd-3rd decade\\n\\n**Infertility**:\\n- **Bilateral cryptorchidism**: Nearly universal infertility if untreated\\n- **Unilateral**: Variable; may be subfertility if surgery delayed\\n- **Heat damage**: Spermatogenesis temperature-sensitive; intra-abdominal temperature ↑\\n\\n**Trauma Risk**:\\n- Superficial inguinal testis vulnerable to injury\\n- Pain/trauma with physical activity\\n\\n**Testicular torsion**:\\n- Maldescended testis at risk for torsion\\n\\n### Clinical Presentation\\n- **No testis palpable** in scrotum on examination\\n- **Palpable mass** in inguinal canal or femoral region (for ectopic)\\n- **Empty scrotum** on palpation\\n- **Associated findings**: Hypospadias, short stature, developmental delay (syndromic cases)\\n\\n## Wilms Tumor (Nephroblastoma)\\n\\n### Epidemiology\\n- **Most common renal malignancy** in children\\n- **Age**: Peak 2-7 years (90% < 5 years)\\n- **Incidence**: 1 per 10,000 live births\\n- **Genetics**: 90% sporadic; 10% hereditary\\n  - **WAGR syndrome**: Wilms, Aniridia, GU anomalies, Retardation (deletion 11p13, WT1 gene)\\n  - **Beckwith-Wiedemann syndrome**: Overgrowth, omphalocel, hypoglycemia; WT1 mutations\\n  - **Denys-Drash syndrome**: XY pseudohermaphroditism, Wilms, glomerulonephritis\\n\\n### Pathology\\n- **Embryonal tumor**: Arises from remnant metanephric mesenchyme\\n- **Histology**: Blastemal, epithelial, stromal components (mixed histology)\\n- **Classification**: Favorable (90%) vs unfavorable (anaplasia)\\n- **Staging**: I-V based on extent (I = confined kidney, V = bilateral)\\n\\n### Clinical Presentation\\n\\n**Classic Triad**:\\n1. **Abdominal mass** (~90%): Often large at diagnosis, flank bulge\\n2. **Hematuria** (20-25%): Gross or microscopic\\n3. **Abdominal pain** (5-10%): From tumor or hemorrhage\\n\\n**Associated Features**:\\n- **Hypertension** (60%): From renin secretion or mass effect\\n- **Constitutional symptoms**: Fever, malaise\\n- **Anemia**: From bleeding or chronic disease\\n- **Varicocele**: May be present (left-sided from renal vein compression)\\n\\n### Risk Groups\\n- **Aniridia**: 1 in 50 risk of Wilms\\n- **Hemihypertrophy/Beckwith-Wiedemann**: Increased risk\\n- **Cryptorchidism, hypospadias**: Associated anomalies\\n- **Intrauterine growth restriction**: Increased risk\\n\\n## Comparison: Cryptorchidism vs Wilms Tumor\\n\\n| Feature | Cryptorchidism | Wilms Tumor |\\n|---------|---|---|\\n| Age | 3-4% newborns; diagnosed by 6-12 mo | Peak 2-7 years |\\n| Presentation | No testis in scrotum | Abdominal mass + hematuria |\\n| Malignancy | 1 in 20 (intra-abd), develops 2nd-3rd decade | 1 in 10,000 incidence, typically age 2-7 |\\n| Management | Orchiopexy before 12-18 mo | Neoadjuvant chemo, surgery, radiation |\\n| Prognosis | Good if treated early; risk persists | 90% favorable histology; 80%+ cure with treatment |,\\n        mnemonics: [\\n          { text: \\\"Cryptorchidism = 3-4% at birth, 1% at 1 year\\\", explanation: \\\"Incidence decreases with age; some descent spontaneously\\\" },\\n          { text: \\\"Wilms = WAGR (Wilms, Aniridia, GU, Retardation)\\\", explanation: \\\"Associated syndrome: deletion 11p13 (WT1 gene)\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Cryptorchidism: 3-4% newborns; intra-abdominal location has 5% malignancy risk\\\",\\n          \\\"Orchiopexy before 12-18 months recommended; bilateral cryptorchidism has infertility risk\\\",\\n          \\\"Malignancy in cryptorchidism typically 2nd-3rd decade; seminoma most common\\\",\\n          \\\"Wilms tumor: peak 2-7 years, most common renal malignancy in children\\\",\\n          \\\"Wilms classic triad: abdominal mass, hematuria, abdominal pain\\\",\\n          \\\"WAGR syndrome (aniridia, GU anomalies, retardation) and Beckwith-Wiedemann associated with ↑ Wilms risk\\\"\\n        ],\\n        textbookRefs: [{ book: \\\"Sabiston Textbook of Surgery\\\", chapter: \\\"Pediatric Surgery\\\", edition: \\\"20th\\\" }] },\\n\\n      { layer: 2, slug: \\\"undescended-testis-wilms-tumor-mechanism\\\", title: \\\"Undescended Testis & Wilms Tumor - Mechanism\\\", estimatedMinutes: 30,\\n        summary: \\\"Pathophysiology of cryptorchidism: gubernacular descent failure, hormonal factors. Malignant potential and heat-induced damage to spermatogenesis. Wilms tumor: embryonal renal origin, inactivation of WT1/WT2, bi-allelic hits in tumorigenesis. Staging and prognostic factors.\\\",\\n        contentMd: ``# Pathophysiology & Tumorigenesis\\n\\n## Cryptorchidism Pathophysiology\\n\\n### Normal Descent - Three Phases\\n1. **Transabdominal migration** (8-12 weeks IUL): Gubernacular shortening, hormonal guidance (Leydig cells, testosterone, MIF)\\n2. **Inguinal passage** (12-16 weeks IUL): Gubernacular proliferation pulls testis through internal ring\\n3. **Inguinal-to-scrotal descent** (28 weeks IUL - post-natal): Gubernacular degeneration; hormone-guided (calcitonin gene-related peptide, androgen signaling)\\n\\n### Causes of Failed Descent\\n- **Mechanical**: Short gubernaculum, thick mesorchium, inadequate cremasteric reflex\\n- **Endocrine**: Androgen insensitivity (mutations in AR gene)\\n- **Neural**: Abnormal innervation, impaired GnRH signaling\\n- **Genetic**: Various mutations affect descent genes (INSL3, AR, etc.)\\n\\n### Heat Damage to Spermatogenesis\\n- **Normal temperature**: Testicular temperature 1-2°C below core body temperature\\n- **Intra-abdominal position**: Exposed to core body temperature → damage\\n- **Spermatogenesis effects**:\\n  - Heat-sensitive spermatogonia apoptosis\\n  - Reduced Sertoli cell function\\n  - Progressive decrease in spermatogenic capacity\\n  - **Bilateral effect**: Even contralateral testis may have reduced spermatogenesis\\n\\n### Malignant Transformation Mechanism\\n- **Increased local growth factors**: Intra-abdominal position exposes testis to abnormal growth factors\\n- **Gonadal dysgenesis component**: Histological abnormalities present even in cryptorchid testis\\n- **Carcinoma in situ (CIS)**: Precursor lesion; found in cryptorchid testis\\n- **Two-hit hypothesis**: Inactivation of tumor suppressor genes (PTEN, TSC2 in germ cells)\\n\\n## Wilms Tumor Tumorigenesis\\n\\n### WT1 Gene (Chromosome 11p13)\\n- **Zinc-finger transcription factor**: Regulates kidney development and differentiation\\n- **Loss of function**: Allows persistence of embryonal renal tissue → malignant transformation\\n- **Mutation types**: Deletions (WAGR), point mutations (Denys-Drash)\\n\\n### WT2/Loss of Imprinting (11p15)\\n- **Beckwith-Wiedemann locus**: Imprinted genes (IGF2, H19)\\n- **Loss of imprinting**: ↑ Expression of growth-promoting genes (IGF2) → predisposition\\n\\n### Two-Hit Tumorigenesis (Knudson Hypothesis)\\n1. **First hit**: Germline mutation (hereditary) or somatic mutation (sporadic)\\n   - WT1 or WT2 inactivation\\n   - Heterozygous loss → predisposition\\n2. **Second hit**: Loss of other allele (11p15, other tumor suppressors)\\n   - Complete inactivation → malignant transformation\\n   - Clonal expansion → tumor formation\\n\\n### Other Genes Involved\\n- **CTNNB1**: β-catenin; Wnt pathway dysregulation (20%)\\n- **TP53**: Li-Fraumeni syndrome; rare\\n- **FBXW7**: Notch pathway dysregulation\\n- **MYCN, CDK6, REST**: Copy number alterations\\n\\n### Favorable vs Unfavorable Histology\\n- **Favorable** (90%): Embryonal, mixed; better prognosis\\n- **Unfavorable**: Anaplasia (>% cells with anaplastic features); worse prognosis\\n  - Diffuse anaplasia: Whole tumor affected\\n  - Focal anaplasia: Localized region affected\\n\\n### Staging (COG System)\\n| Stage | Extent | Prognosis |\\n|-------|--------|-----------|\\n| **I** | Confined to kidney; completely excised | Best |\\n| **II** | Beyond kidney but completely excised (renal sinus penetration, renal vein involvement) | Good |\\n| **III** | Incomplete excision (residual disease) | Fair |\\n| **IV** | Metastatic (lung, liver, bone, brain) | Poor |\\n| **V** | Bilateral disease | Requires careful management |,\\n        mnemonics: [\\n          { text: \\\"Cryptorchidism Heat = Spermatogenesis Damage\\\", explanation: \\\"Intra-abdominal temperature damages heat-sensitive spermatogonia\\\" },\\n          { text: \\\"Wilms = Two-Hit WT1 inactivation\\\", explanation: \\\"First hit: germline/somatic mutation; second hit: loss of allele → malignancy\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Cryptorchidism: mechanical, endocrine, neural factors impair descent; hormones (testosterone, CGRP) guide descent\\\",\\n          \\\"Heat damage from intra-abdominal position → spermatogonia apoptosis → reduced spermatogenesis (bilateral effect)\\\",\\n          \\\"Cryptorchid testis has histological abnormalities; carcinoma in situ (CIS) precedes malignancy\\\",\\n          \\\"Wilms: WT1 transcription factor loss → persistence of embryonal renal tissue\\\",\\n          \\\"Two-hit tumorigenesis: first hit (germline/somatic WT1), second hit (loss of 11p15) → malignant transformation\\\",\\n          \\\"Favorable histology (90%) better prognosis; anaplasia predicts poor outcome\\\"\\n        ],\\n        textbookRefs: [{ book: \\\"Sabiston Textbook of Surgery\\\", chapter: \\\"Pediatric Tumors\\\", edition: \\\"20th\\\" }] },\\n\\n      { layer: 3, slug: \\\"undescended-testis-wilms-tumor-clinical\\\", title: \\\"Undescended Testis & Wilms Tumor - Clinical\\\", estimatedMinutes: 20,\\n        summary: \\\"Diagnosis and management of cryptorchidism: physical examination, imaging (ultrasound, MRI for intra-abdominal). Orchiopexy timing and technique. Wilms tumor: imaging (ultrasound, CT/MRI), preoperative staging, neoadjuvant chemotherapy, surgical resection, radiation, and prognosis.\\\",\\n        contentMd: ``# Diagnosis & Management\\n\\n## Cryptorchidism Management\\n\\n### Evaluation\\n- **Physical examination**: Palpable mass in inguinal canal or femoral region; empty scrotum\\n- **Retractile testis**: Cremasteric reflex pulls testis up but can be palpated in scrotum (normal variant, no treatment)\\n\\n### Imaging\\n- **Ultrasound**: First-line; locates palpable or non-palpable testis\\n- **MRI**: For intra-abdominal testis; better soft tissue definition\\n- **Diagnostic laparoscopy**: Gold standard for intra-abdominal testis; allows assessment of vas/vessels\\n\\n### Hormonal Treatment\\n- **GnRH agonists**: Limited evidence; may help in borderline cases\\n- **hCG**: Rarely used now\\n- **Success rate**: 20-30%; generally reserved for borderline palpability cases\\n\\n### Surgical Treatment - Orchiopexy\\n\\n**Timing**:\\n- **Optimal**: Before 12-18 months (some recommend < 1 year for fertility preservation)\\n- **Earlier treatment**: Better spermatogenic potential preserved\\n- **Benefits**: Reduced malignancy risk with earlier intervention\\n\\n**Inguinal Orchiopexy**:\\n1. Small groin incision\\n2. Identify testis and its attachments\\n3. Ligate processus vaginalis (reduce hernia risk)\\n4. Bring testis into scrotum\\n5. Create dartos pouch\\n6. Anchor with absorbable suture\\n7. Success: 99% with experienced surgeon\\n\\n**Intra-abdominal Orchiopexy** (Two-stage):\\n1. Stage 1: Lengthen vessels/vas by staged stretching (Fowler-Stephens procedure)\\n   - Ligate testicular artery (collateral via deferential/cremasteric vessels develops)\\n   - Wait 3-6 months for collateral development\\n2. Stage 2: Bring testis to scrotum using lengthened vessels\\n\\n**Laparoscopic approach**: Less invasive for intra-abdominal testis; good visualization\\n\\n### Postoperative Follow-up\\n- **Testes viability**: Check color, perfusion during procedure\\n- **Fertility**: Assess spermatogenesis via biopsy/hormone levels if needed\\n- **Malignancy surveillance**: Even after orchiopexy, malignancy risk persists\\n  - Regular self-examination\\n  - Annual examinations\\n  - Consider biopsy for dysgenetic testis\\n\\n## Wilms Tumor Management\\n\\n### Diagnosis & Staging\\n\\n**Imaging**:\\n- **Ultrasound**: First-line; echogenicity, size, extension into renal veins\\n- **CT/MRI**: Staging; assess:\\n  - Local extension (renal sinus, perinephric)\\n  - Renal vein/IVC thrombus\\n  - Regional lymph nodes\\n  - Contralateral kidney involvement\\n  - Distant metastases (lung, liver, bone)\\n- **Chest X-ray/CT**: Lung metastases (most common site)\\n- **Bone scan/MRI**: Bone involvement if indicated\\n\\n**Laboratory**:\\n- Urinalysis: Hematuria\\n- Tumor markers: Not specific for Wilms (FP, AFP negative unlike germ cell tumors)\\n\\n### Treatment Approach (COG Protocol)\\n\\n**Preoperative Neoadjuvant Chemotherapy**:\\n- Reduces tumor size (facilitates resection)\\n- Decreases morbidity of en bloc resection\\n- **Regimens**: Vincristine + Dactinomycin (VAD), or with doxorubicin for high-risk tumors\\n- **Duration**: 4-6 weeks typically\\n- **Response**: Assess with repeat imaging after neoadjuvant phase\\n\\n**Surgical Resection**:\\n1. **Nephrectomy**: Radical (kidney + perinephric fat + regional nodes)\\n2. **Extent of lymph node dissection**: Based on initial size and stage\\n3. **IVC/renal vein thrombus**: Extends surgery; vascular surgeon may be needed\\n4. **Contralateral kidney assessment**: For bilateral disease (nephron-sparing approach considered)\\n5. **Timing**: After chemotherapy (3-5 weeks)\\n\\n**Adjuvant Chemotherapy**:\\n- **Low-risk** (Stage I favorable histology): Observation only; some get VAD\\n- **Intermediate/High-risk**: Continue chemotherapy after surgery (VAD or more intensive)\\n- **High-risk** (anaplasia, metastatic): Intensified regimens with etoposide, cisplatin\\n\\n**Radiation Therapy**:\\n- **Local field**: For advanced local disease (Stage III/IV)\\n- **Lung radiation**: For pulmonary metastases\\n- **Timing**: After initial chemotherapy and surgery; delayed if possible (reduces toxicity)\\n\\n### Outcomes & Prognosis\\n- **Stage I-II favorable histology**: 95%+ 5-year survival\\n- **Stage III-IV favorable histology**: 70-80% 5-year survival\\n- **Anaplastic histology**: 50-60% 5-year survival\\n- **Bilateral disease**: 70-80% with nephron-sparing approach\\n- **Late effects**: Secondary malignancies, renal dysfunction (solitary kidney), cardiac toxicity (doxorubicin)\\n\\n### Special Situations\\n\\n**Bilateral Wilms**:\\n- Nephron-sparing surgery for smaller tumors\\n- Chemotherapy to allow preservation of renal tissue\\n- Risk of loss of remaining kidney → renal failure\\n\\n**Anirida/WAGR Syndrome**:\\n- Increased surveillance for Wilms\\n- Ultrasound every 3 months until age 5-7\\n- Aniridia also increases Wilms risk → careful eye surveillance\\n\\n**Beckwith-Wiedemann**:\\n- Increased Wilms risk\\n- Regular screening recommended\\n- Omphalocele/macroglossia also present,\\n        mnemonics: [\\n          { text: \\\"Orchiopexy < 18 months for fertility\\\", explanation: \\\"Earlier treatment preserves spermatogenic potential; intra-abdominal testis needs staged approach (Fowler-Stephens)\\\" },\\n          { text: \\\"Wilms = Neoadjuvant Chemo → Surgery → Adjuvant\\\", explanation: \\\"Standard approach: preoperative chemo to shrink tumor, then nephrectomy, then postoperative chemo based on staging\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Cryptorchidism: ultrasound locates testis; inguinal orchiopexy < 18 months optimal\\\",\\n          \\\"Intra-abdominal testis: Fowler-Stephens procedure (stage 1: ligate vessels, stage 2: bring to scrotum)\\\",\\n          \\\"Malignancy risk persists even after orchiopexy; regular self-exam and surveillance needed\\\",\\n          \\\"Wilms staging: I (confined), II (beyond kidney), III (incomplete excision), IV (metastatic), V (bilateral)\\\",\\n          \\\"Wilms treatment: preoperative neoadjuvant chemotherapy → nephrectomy → adjuvant therapy based on stage/histology\\\",\\n          \\\"Favorable histology: 95%+ Stage I, 70-80% Stage III-IV; anaplasia: 50-60% survival\\\"\\n        ],\\n        textbookRefs: [{ book: \\\"Sabiston Textbook of Surgery\\\", chapter: \\\"Pediatric Surgery & Tumors\\\", edition: \\\"20th\\\" }] },\\n\\n      { layer: 4, slug: \\\"undescended-testis-wilms-tumor-exam\\\", title: \\\"Undescended Testis & Wilms Tumor - Exam Prep\\\", estimatedMinutes: 15,\\n        summary: \\\"High-yield facts on cryptorchidism and Wilms tumor epidemiology, presentation, diagnosis, and treatment.\\\",\\n        contentMd: ``# Exam High Yield\\n\\n## One-Liners - Cryptorchidism\\n- Incidence: **3-4% newborns, 1% at 1 year**\\n- Malignancy risk (intra-abdominal): **1 in 20 (5%)**\\n- Orchiopexy timing: **< 18 months for optimal fertility preservation**\\n- Heat damage affects: **Spermatogenesis (bilateral effect)**\\n- Malignancy type: **Seminoma (50-70%), germ cell tumors**\\n- Age of malignancy: **2nd-3rd decade**\\n- Imaging: **Ultrasound first-line, MRI for intra-abdominal**\\n- Surgery for intra-abdominal: **Fowler-Stephens (two-stage)**\\n- Success rate orchiopexy: **99% with experienced surgeon**\\n\\n## One-Liners - Wilms Tumor\\n- Most common renal malignancy: **In children (1 per 10,000 births)**\\n- Peak age: **2-7 years (90% < 5 years)**\\n- Classic triad: **Abdominal mass (90%), hematuria (20-25%), pain (5-10%)**\\n- Associated syndromes: **WAGR (11p13 WT1 deletion), Beckwith-Wiedemann (11p15 imprinting)**\\n- Histology: **Favorable (90%); unfavorable (anaplasia)**\\n- Staging: **I-V based on extent; Stage I best, Stage IV/V worst**\\n- Treatment approach: **Neoadjuvant chemo → nephrectomy → adjuvant therapy**\\n- Stage I favorable histology prognosis: **95%+ 5-year survival**\\n- Anaplastic histology survival: **50-60%**\\n\\n## Risk Factors - Cryptorchidism\\n- Bilateral cryptorchidism → nearly universal infertility if untreated\\n- Intra-abdominal testis → higher malignancy risk than inguinal\\n- Contralateral testis → increased malignancy risk even if normally descended\\n\\n## Risk Factors - Wilms Tumor\\n- **Aniridia**: 1 in 50 risk of Wilms\\n- **Beckwith-Wiedemann**: Increased risk\\n- **Hemihypertrophy**: Associated\\n- **Associated anomalies**: Cryptorchidism, hypospadias, GU anomalies\\n- **Family history**: 1-2% familial\\n\\n## NEXT Themes\\n- Timing of orchiopexy and fertility outcomes\\n- WT1 gene and tumorigenesis\\n- Staging of Wilms tumor\\n- Treatment algorithm (neoadjuvant vs adjuvant)\\n- Prognosis based on stage and histology,\\n        mnemonics: [\\n          { text: \\\"3-4% newborn cryptorchidism → 1% at 1 year\\\", explanation: \\\"Some cryptorchid testis descend spontaneously\\\" },\\n          { text: \\\"2-7 years = Wilms peak; 2-8 weeks = Pyloric stenosis\\\", explanation: \\\"Age helps differentiate pediatric conditions\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Cryptorchidism: 3-4% newborns; intra-abdominal 5% malignancy; orchiopexy < 18 months optimal\\\",\\n          \\\"Heat damage affects spermatogenesis; bilateral effect possible even for unilateral cryptorchidism\\\",\\n          \\\"Wilms: most common renal malignancy in children; peak 2-7 years\\\",\\n          \\\"Favorable histology 90%; anaplasia predicts poor outcome\\\",\\n          \\\"Wilms treatment: neoadjuvant chemo → nephrectomy → adjuvant based on stage/histology\\\",\\n          \\\"Stage I favorable: 95%+ survival; Stage IV/anaplastic: 50-70%\\\"\\n        ],\\n        textbookRefs: [{ book: \\\"Sabiston Textbook of Surgery\\\", chapter: \\\"Pediatric Surgery\\\", edition: \\\"20th\\\" }] },\\n\\n      { layer: 5, slug: \\\"undescended-testis-wilms-tumor-recall\\\", title: \\\"Undescended Testis & Wilms Tumor - Active Recall\\\", estimatedMinutes: 10,\\n        summary: \\\"Flashcard-style questions on cryptorchidism and Wilms tumor.\\\",\\n        contentMd: ``# Active Recall\\n\\n**Q1:** What is the incidence of cryptorchidism in newborns?\\n> 3-4% of full-term newborns; decreases to ~1% by 1 year\\n\\n**Q2:** What is the malignancy risk for intra-abdominal cryptorchidism?\\n> 1 in 20 (5%) lifetime risk\\n\\n**Q3:** What is the optimal timing for orchiopexy?\\n> Before 12-18 months for optimal fertility preservation\\n\\n**Q4:** How does heat from intra-abdominal position affect the testis?\\n> Heat-induced apoptosis of spermatogonia → reduced spermatogenesis; bilateral effect possible\\n\\n**Q5:** What is the Fowler-Stephens procedure?\\n> Two-stage procedure for intra-abdominal testis: Stage 1 ligates testicular vessels to develop collateral circulation; Stage 2 (after 3-6 months) brings testis to scrotum\\n\\n**Q6:** What is the most common renal malignancy in children?\\n> Wilms tumor (nephroblastoma)\\n\\n**Q7:** What is the classic age of presentation for Wilms tumor?\\n> Peak 2-7 years (90% present before age 5)\\n\\n**Q8:** What is the classic triad of Wilms tumor?\\n> Abdominal mass (90%), hematuria (20-25%), and abdominal pain (5-10%)\\n\\n**Q9:** What genetic alterations are associated with Wilms tumor?\\n> WT1 gene mutations (WAGR syndrome with 11p13 deletion) and WT2/loss of imprinting (Beckwith-Wiedemann with 11p15 abnormalities)\\n\\n**Q10:** What is the standard treatment approach for Wilms tumor?\\n> Neoadjuvant chemotherapy (VAD) → nephrectomy → adjuvant chemotherapy based on stage and histology,\\n        mnemonics: [],\\n        keyPoints: [\\\"10 key questions on cryptorchidism and Wilms tumor epidemiology, genetics, and treatment\\\"],\\n        textbookRefs: [{ book: \\\"Sabiston Textbook of Surgery\\\", chapter: \\\"Pediatric Surgery\\\", edition: \\\"20th\\\" }] },\\n    ],\\n  },\\n];\\n\""
-}
-}
-];
+      {
+        layer: 1,
+        slug: "pyloric-stenosis-intussusception-layer-1-foundation",
+        title: "Pyloric Stenosis & Intussusception - Foundation",
+        estimatedMinutes: 22,
+        summary: "Infantile hypertrophic pyloric stenosis and childhood intussusception: definition, epidemiology, and clinical features.",
+        contentMd: `# Pyloric Stenosis & Intussusception - Foundation
+
+## Infantile Hypertrophic Pyloric Stenosis (IHPS)
+### Definition
+- Hypertrophy and hyperplasia of circular muscle of pylorus
+- Causes gastric outlet obstruction in neonates/infants
+- Not present at birth; develops over first 2-8 weeks of life
+
+### Epidemiology
+- Incidence: 2-5 per 1000 live births
+- Male:Female = 4-5:1 (strong male predominance)
+- First-born males most commonly affected
+- Family history in 15%; multifactorial inheritance
+- Associated with macrolide antibiotics (erythromycin) in early infancy
+
+### Clinical Features
+- **Onset**: 2-8 weeks of age (peak 3-5 weeks)
+- **Projectile non-bilious vomiting**: Hallmark; immediately after feeds
+- **Hungry baby**: Wants to feed again immediately after vomiting
+- **Weight loss and dehydration**: Progressive if untreated
+- **Visible gastric peristalsis**: Left to right wave visible on abdomen
+- **Palpable "olive"**: Firm, mobile mass in right upper quadrant/epigastrium (best felt during feed)
+- **Metabolic derangement**: Hypochloremic, hypokalemic metabolic alkalosis (loss of HCl from vomiting)
+
+## Intussusception
+### Definition
+- Telescoping of proximal bowel (intussusceptum) into distal bowel (intussuscipiens)
+- Most common cause of intestinal obstruction in infants (3 months to 2 years)
+
+### Epidemiology
+- Peak age: 6-9 months
+- Male:Female = 3:1
+- Most common type: Ileocolic (ileum into colon through ileocecal valve) - 90%
+- Seasonal variation: Higher in spring/autumn (viral illness peaks)
+
+### Etiology
+- **Children** (<2 years): Usually idiopathic (95%); viral lymphoid hyperplasia (Peyer patches) acts as lead point
+- **Older children/Adults**: Usually pathological lead point (Meckel diverticulum, polyp, lymphoma, duplication cyst)
+
+### Clinical Features (Classic Triad - present in only 20%)
+1. **Colicky abdominal pain**: Episodic, severe; child draws up legs and screams
+2. **Vomiting**: Initially non-bilious, later bilious
+3. **Red currant jelly stool**: Blood and mucus from mucosal ischemia (late sign)
+
+### Other Features
+- **Sausage-shaped mass**: Palpable in right upper quadrant/transverse colon
+- **Dance sign**: Empty right iliac fossa (caecum drawn up)
+- **Lethargy**: Between episodes of pain (may be misdiagnosed as sepsis/meningitis)
+- **Dehydration and shock**: If presentation delayed`,
+        mnemonics: [
+          { text: "IHPS: Projectile + Non-bilious + Olive + Hungry baby + Alkalosis", explanation: "Five cardinal features of infantile hypertrophic pyloric stenosis" },
+          { text: "Intussusception: Red Currant Jelly + Sausage mass + Dance sign + Colicky pain", explanation: "Classic clinical features of childhood intussusception" },
+        ],
+        keyPoints: [
+          "IHPS: 2-8 weeks age, projectile non-bilious vomiting, palpable olive, hypochloremic hypokalemic metabolic alkalosis",
+          "Intussusception: 6-9 months peak, ileocolic (90%), red currant jelly stool is late sign",
+          "IHPS: first-born males; Intussusception: idiopathic in <2 years (viral lymphoid hyperplasia)",
+          "Dance sign: empty RIF in intussusception (caecum drawn up with intussusception)",
+          "Lethargy between pain episodes in intussusception may mimic sepsis/meningitis",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 35: Pediatric Surgery", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 8: Pediatric Surgery", edition: "28th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "pyloric-stenosis-intussusception-layer-2-mechanism",
+        title: "Pyloric Stenosis & Intussusception - Mechanism",
+        estimatedMinutes: 22,
+        summary: "Pathophysiology of pyloric muscle hypertrophy, intussusception vascular compromise, and metabolic derangements.",
+        contentMd: `# Pyloric Stenosis & Intussusception - Mechanism
+
+## IHPS Pathophysiology
+### Muscle Hypertrophy
+- Circular muscle layer of pylorus undergoes progressive hypertrophy
+- Pyloric channel becomes elongated and narrowed ("string sign" on imaging)
+- Mucosa is folded and may prolapse into gastric antrum
+- Not present at birth; develops postnatally (hence presentation at 2-8 weeks)
+
+### Proposed Mechanisms
+- Deficiency of nitric oxide synthase (nNOS) in pyloric muscle
+- Reduced nitric oxide → failure of smooth muscle relaxation
+- Elevated gastrin levels may contribute
+- Genetic predisposition + environmental triggers (macrolides, bottle feeding)
+
+### Metabolic Consequences
+- Persistent vomiting of gastric contents (HCl-rich)
+- **Loss of H+ and Cl-** → Hypochloremic metabolic alkalosis
+- **Renal compensation**: Kidneys retain H+ and excrete HCO3- (but limited by volume depletion)
+- **K+ depletion**: Kidneys exchange K+ for H+ to retain acid → hypokalemia
+- **Paradoxical aciduria**: Despite systemic alkalosis, kidneys excrete acidic urine (Na+/K+ depleted → H+ exchange prioritized)
+- Dehydration from fluid losses
+
+### Correction Priority
+1. Correct dehydration first (NS bolus)
+2. Replace chloride (NS with KCl)
+3. Monitor electrolytes
+4. Surgery ONLY after metabolic correction (not an immediate emergency)
+
+## Intussusception Pathophysiology
+### Telescoping Mechanism
+1. Lead point (lymphoid tissue/pathological mass) carried distally by peristalsis
+2. Proximal bowel invaginates into distal bowel
+3. Mesentery drawn in between bowel layers
+4. Mesenteric vessels compressed → venous congestion
+
+### Vascular Compromise Sequence
+1. **Venous obstruction** (first): Congestion, edema, blood oozing from mucosa
+2. **"Red currant jelly" stool**: Blood + mucus from ischemic mucosa
+3. **Arterial obstruction** (later): Full-thickness ischemia
+4. **Gangrene and perforation**: If untreated (usually after 24-48 hours)
+
+### Lead Points by Age
+- **Infants (<2 years)**: Hypertrophied Peyer patches (viral); IDIOPATHIC in 95%
+- **Children (>2 years)**: Meckel diverticulum, polyps, Henoch-Schonlein purpura
+- **Adults**: Tumors (lymphoma, adenoma, lipoma), Meckel diverticulum
+
+### Types of Intussusception
+- **Ileocolic (90%)**: Ileum into colon through ileocecal valve (most common)
+- **Ileoileal**: Small bowel into small bowel (Henoch-Schonlein purpura)
+- **Colocolic**: Colon into colon (rare; usually pathological lead point)`,
+        mnemonics: [
+          { text: "IHPS metabolic: HCl loss → Alkalosis + Low Cl + Low K + Paradoxical aciduria", explanation: "Sequential metabolic derangement from persistent vomiting of gastric acid" },
+          { text: "Intussusception: Venous first → Edema → Red currant jelly → Arterial → Gangrene", explanation: "Progressive vascular compromise sequence" },
+        ],
+        keyPoints: [
+          "IHPS: nNOS deficiency → pyloric muscle fails to relax → hypertrophy and narrowing",
+          "Metabolic derangement: hypochloremic hypokalemic metabolic alkalosis with paradoxical aciduria",
+          "MUST correct metabolic derangement BEFORE surgery (IHPS is not an immediate surgical emergency)",
+          "Intussusception: mesentery trapped → venous obstruction first → ischemia → gangrene",
+          "Idiopathic in 95% of infants; pathological lead point in older children/adults",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 35", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 8", edition: "28th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "pyloric-stenosis-intussusception-layer-3-clinical",
+        title: "Pyloric Stenosis & Intussusception - Clinical",
+        estimatedMinutes: 25,
+        summary: "Diagnostic imaging, Ramstedt pyloromyotomy, and air/hydrostatic reduction of intussusception.",
+        contentMd: `# Pyloric Stenosis & Intussusception - Clinical Management
+
+## IHPS Investigations
+### Ultrasound Abdomen (Gold Standard)
+- **Pyloric muscle thickness >3 mm** (most important criterion)
+- **Pyloric channel length >15 mm**
+- **Target sign**: Cross-section shows thickened muscle around narrowed lumen
+- Sensitivity and specificity >95%
+
+### Upper GI Contrast Study (If USG Equivocal)
+- "String sign": Narrow elongated pyloric channel
+- "Shoulder sign": Mass effect of pylorus on gastric antrum
+- "Double track sign": Contrast in narrowed channel with mucosal folds
+
+### Blood Gas and Electrolytes
+- Metabolic alkalosis (pH >7.45, HCO3- elevated)
+- Low Cl- (<95 mEq/L), Low K+ (<3.5 mEq/L)
+- Must be corrected before surgery
+
+## IHPS Management
+### Pre-operative Correction (CRITICAL)
+- IV fluids: NS with 5% dextrose; add KCl once urine output established
+- Target: Cl- >100, K+ >3.5, HCO3- <26 before surgery
+- NG tube decompression
+- Usually takes 24-48 hours to correct
+
+### Ramstedt Pyloromyotomy (Definitive)
+- **Procedure**: Longitudinal incision through hypertrophied pyloric muscle down to mucosa (but NOT through mucosa)
+- Muscle fibers split apart; mucosa bulges through (Fredet-Ramstedt operation)
+- **Open** (RUQ incision or periumbilical) or **Laparoscopic** (increasingly preferred)
+- **Complications**: Mucosal perforation (1-2%; recognized by air leak), incomplete myotomy, wound infection
+- **Post-op**: Start feeds 4-6 hours post-surgery; rapid recovery
+- Cure rate: >99%
+
+## Intussusception Investigations
+### Ultrasound Abdomen (Gold Standard)
+- **Target sign/Doughnut sign**: Cross-section shows layers of intussuscepted bowel
+- **Pseudokidney sign**: Longitudinal view resembles kidney
+- **Crescent-in-doughnut sign**: Mesenteric fat within intussusception
+- Sensitivity >98%; also assesses blood flow and lead points
+
+### X-ray Abdomen
+- Soft tissue mass (usually RUQ)
+- Absence of gas in caecum/ascending colon
+- Signs of obstruction in late presentation
+
+## Intussusception Management
+### Non-operative Reduction (First-line in Uncomplicated Cases)
+- **Air enema reduction** (preferred): Air insufflated per rectum under fluoroscopy
+  - Pressure limit: 120 mmHg; 3 attempts of 3 minutes each
+  - Success rate: 80-90%
+  - Contraindicated if peritonitis, perforation, or shock
+
+- **Hydrostatic reduction**: Saline under ultrasound guidance
+  - Increasingly popular; no radiation
+  - Success rate: 80-85%
+
+### Criteria for Attempting Reduction
+- Duration <48 hours (relative)
+- No peritonitis, no perforation
+- Hemodynamically stable child
+- No lead point suspected (age <2 years)
+
+### Operative Management
+- **Indications**: Failed reduction, peritonitis, perforation, shock, pathological lead point suspected, recurrent intussusception
+- **Procedure**: Laparotomy or laparoscopy
+  - Manual reduction: "Milking" intussusceptum out of intussuscipiens (push from distal end, NOT pull)
+  - If gangrenous or irreducible: Resection + primary anastomosis
+  - Appendicectomy often performed incidentally
+
+### Recurrence
+- After non-operative reduction: 10% recurrence rate
+- After surgical reduction: 2-5% recurrence
+- Recurrent cases: Investigate for pathological lead point`,
+        mnemonics: [
+          { text: "IHPS USG: 3 and 15 = Thickness >3mm, Length >15mm", explanation: "Two key ultrasound measurements for pyloric stenosis diagnosis" },
+          { text: "Reduce intussusception: PUSH (from distal), never PULL", explanation: "Manual reduction technique: milk intussusceptum out by pushing from distal end" },
+        ],
+        keyPoints: [
+          "IHPS: USG gold standard; muscle >3mm, channel >15mm; target sign",
+          "Correct metabolic alkalosis BEFORE Ramstedt pyloromyotomy (24-48h resuscitation)",
+          "Intussusception: USG target/doughnut sign; air enema reduction 80-90% success",
+          "Air enema contraindicated in peritonitis/perforation/shock",
+          "Surgical reduction: push from distal (milk out), never pull; resect if gangrenous",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 35", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 8", edition: "28th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "pyloric-stenosis-intussusception-layer-4-exam",
+        title: "Pyloric Stenosis & Intussusception - Exam Prep",
+        estimatedMinutes: 18,
+        summary: "High-yield exam facts on pediatric surgical emergencies for NEXT pattern questions.",
+        contentMd: `# Pyloric Stenosis & Intussusception - Exam Prep
+
+## IHPS Must-Know Facts
+- Age: 2-8 weeks; Male:Female = 4-5:1; first-born males
+- Projectile NON-BILIOUS vomiting (below ampulla = bilious; IHPS is above = non-bilious)
+- Palpable olive (right upper quadrant during feeding)
+- Metabolic alkalosis: Hypochloremic, hypokalemic with paradoxical aciduria
+- USG: Muscle >3mm, channel >15mm
+- Ramstedt pyloromyotomy: Split muscle to mucosa, NOT through mucosa
+- CORRECT METABOLIC DERANGEMENT FIRST (not a surgical emergency)
+
+## Intussusception Must-Know Facts
+- Peak: 6-9 months; Male > Female; ileocolic 90%
+- Classic triad (only 20%): Colicky pain + vomiting + red currant jelly stool
+- Sausage-shaped mass; Dance sign (empty RIF)
+- USG: Target/doughnut sign
+- Treatment: Air/hydrostatic reduction (80-90% success); surgery if failed
+- Recurrence: 10% after non-operative; investigate lead point if recurrent
+
+## Common Exam Traps
+- "3-week-old with projectile vomiting" = IHPS (non-bilious = above ampulla)
+- "3-week-old with bilious vomiting" = Malrotation with volvulus (surgical emergency!)
+- "Correct metabolic alkalosis BEFORE pyloromyotomy" = Yes! IHPS can wait; metabolic correction first
+- "8-month-old with episodic crying and red stool" = Intussusception; USG then air enema
+- "2-year-old with recurrent intussusception" = Look for lead point (Meckel, polyp, lymphoma)
+- "Lethargy in infant misdiagnosed as sepsis" = Consider intussusception
+
+## Bilious vs Non-Bilious Vomiting in Neonates
+| Feature | Non-Bilious | Bilious |
+|---------|-------------|---------|
+| Implies | Obstruction ABOVE ampulla | Obstruction BELOW ampulla |
+| Examples | IHPS, Overfeeding, GERD | Malrotation, Duodenal atresia, NEC |
+| Urgency | Investigate; not immediate emergency | SURGICAL EMERGENCY until proven otherwise |
+
+## High-Yield Questions
+- Most common cause of intestinal obstruction in infants = Intussusception
+- Gold standard for IHPS diagnosis = USG (muscle >3mm, length >15mm)
+- Procedure for IHPS = Ramstedt pyloromyotomy
+- Most common type of intussusception = Ileocolic
+- First-line treatment for intussusception = Air enema reduction
+- Metabolic picture of IHPS = Hypochloremic hypokalemic metabolic alkalosis`,
+        mnemonics: [
+          { text: "Non-bilious = Above ampulla (IHPS); Bilious = Below ampulla (EMERGENCY)", explanation: "Critical distinction in neonatal vomiting that guides urgency" },
+          { text: "3 and 15: Muscle >3mm, Channel >15mm = IHPS on USG", explanation: "Diagnostic criteria for pyloric stenosis" },
+        ],
+        keyPoints: [
+          "IHPS: non-bilious projectile vomiting; metabolic correction before surgery",
+          "Bilious vomiting in neonate = surgical emergency (malrotation until proven otherwise)",
+          "Intussusception: air enema first-line; surgery if failed, peritonitis, or lead point",
+          "USG gold standard for both conditions; target sign in intussusception",
+          "Recurrent intussusception in older child = investigate for pathological lead point",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 35", edition: "6th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "pyloric-stenosis-intussusception-layer-5-active-recall",
+        title: "Pyloric Stenosis & Intussusception - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Flashcard Q&A for spaced repetition on pyloric stenosis and intussusception.",
+        contentMd: `# Active Recall - Pyloric Stenosis & Intussusception
+
+**Q1:** At what age does IHPS typically present?
+**A1:** 2-8 weeks (peak 3-5 weeks). Not present at birth. Male:Female = 4-5:1. First-born males most commonly affected.
+
+**Q2:** What is the hallmark vomiting pattern in IHPS?
+**A2:** Projectile, non-bilious vomiting immediately after feeds. Baby remains hungry and wants to feed again immediately. Non-bilious because obstruction is above the ampulla of Vater.
+
+**Q3:** What is the metabolic derangement in IHPS?
+**A3:** Hypochloremic, hypokalemic metabolic alkalosis with paradoxical aciduria. From loss of HCl in vomitus. Kidneys exchange K+ and Na+ for H+ retention.
+
+**Q4:** What are the USG criteria for IHPS?
+**A4:** Pyloric muscle thickness >3 mm AND pyloric channel length >15 mm. Target sign on cross-section. Sensitivity and specificity >95%.
+
+**Q5:** What is Ramstedt pyloromyotomy?
+**A5:** Longitudinal incision through hypertrophied pyloric muscle down to (but NOT through) the mucosa. Muscle fibers split apart allowing mucosa to bulge through. Cure rate >99%.
+
+**Q6:** Why must metabolic correction precede surgery in IHPS?
+**A6:** Uncorrected alkalosis and hypokalemia increase anesthetic risk (cardiac arrhythmias, respiratory depression). IHPS is NOT an immediate emergency; safe to correct electrolytes over 24-48 hours first.
+
+**Q7:** What is the most common type of intussusception in children?
+**A7:** Ileocolic (90%). Ileum telescopes into colon through the ileocecal valve. Idiopathic in 95% of children <2 years (viral lymphoid hyperplasia as lead point).
+
+**Q8:** What is the classic triad of intussusception?
+**A8:** Colicky abdominal pain (episodic), vomiting, and red currant jelly stool. Only present in 20% of cases. Lethargy between episodes may be only finding.
+
+**Q9:** What is the target/doughnut sign?
+**A9:** USG cross-sectional appearance of intussusception showing concentric rings of bowel wall layers. Pathognomonic. Also called "bull's eye" sign.
+
+**Q10:** What is the first-line treatment for uncomplicated intussusception?
+**A10:** Air enema reduction under fluoroscopy (80-90% success). Pressure limit 120 mmHg. Three attempts of 3 minutes each. Contraindicated if peritonitis, perforation, or shock.
+
+**Q11:** When is surgery needed for intussusception?
+**A11:** Failed non-operative reduction, peritonitis, perforation, hemodynamic instability, suspected pathological lead point, and recurrent intussusception.
+
+**Q12:** How do you differentiate IHPS vomiting from malrotation vomiting?
+**A12:** IHPS: Non-bilious (obstruction above ampulla); not an immediate emergency. Malrotation with volvulus: Bilious (obstruction below ampulla); SURGICAL EMERGENCY. Bilious vomiting in a neonate = urgent investigation.`,
+        mnemonics: [
+          { text: "IHPS: Olive + Non-bilious + Alkalosis + 3-5 weeks + First-born male", explanation: "Complete clinical picture of infantile pyloric stenosis" },
+          { text: "Intussusception: 6-9 months, Ileocolic, Idiopathic, Red currant jelly, Air enema", explanation: "Five key facts about childhood intussusception" },
+        ],
+        keyPoints: [
+          "IHPS: 2-8 weeks, projectile non-bilious vomiting, olive, metabolic alkalosis, Ramstedt pyloromyotomy",
+          "Correct metabolic derangement BEFORE pyloromyotomy (not an immediate emergency)",
+          "Intussusception: 6-9 months, ileocolic 90%, red currant jelly stool, target sign on USG",
+          "Air enema first-line (80-90%); surgery if failed or complicated",
+          "Bilious vomiting in neonate = surgical emergency (malrotation) vs non-bilious = IHPS",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 35", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 8", edition: "28th" },
+        ],
+      },
+    ],
+  },
 ];

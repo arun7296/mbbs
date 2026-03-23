@@ -1,15 +1,373 @@
-export const surgeryPart7Lessons = [
+import type { TopicLessons } from "./content-loader";
+
+export const surgeryPart7Lessons: TopicLessons[] = [
   {
     topicCode: "SU-MOD-05-TOP-05",
     layers: [
       {
         layer: 1,
-        slug: "colorectal-carcinoma-foundation",
+        slug: "colorectal-carcinoma-layer-1-foundation",
         title: "Colorectal Carcinoma - Foundation",
+        estimatedMinutes: 22,
+        summary: "Epidemiology, risk factors, adenoma-carcinoma sequence, and hereditary colorectal cancer syndromes.",
+        contentMd: `# Colorectal Carcinoma - Foundation
+
+## Epidemiology
+- Third most common cancer worldwide; second most common cause of cancer death
+- Rising incidence in India (especially urban populations)
+- Peak age: 60-70 years; increasing in younger adults
+- Male:Female ratio approximately 1.5:1
+- Rectal cancer 40%, sigmoid 25%, caecum/ascending 15%, others 20%
+
+## Risk Factors
+### Non-Modifiable
+- Age >50 years (90% of cases)
+- Family history of CRC (first-degree relative: 2-3x risk)
+- Hereditary syndromes: FAP, Lynch syndrome (HNPCC)
+- Inflammatory bowel disease (UC > Crohn; risk increases with duration)
+- Previous colorectal polyps or CRC
+
+### Modifiable
+- Diet: High red/processed meat, low fiber
+- Obesity, physical inactivity
+- Smoking, heavy alcohol use
+- Type 2 diabetes mellitus
+
+## Adenoma-Carcinoma Sequence (Vogelstein Model)
+- Normal epithelium → Adenoma → Carcinoma (takes 10-15 years)
+- Key mutations in sequence: APC (initiation) → KRAS (progression) → p53 (malignant transformation)
+- APC gene mutation: Gatekeeper; loss of function initiates adenoma formation
+- This sequence explains why polypectomy prevents CRC
+
+## Hereditary Syndromes
+### Familial Adenomatous Polyposis (FAP)
+- Autosomal dominant; APC gene mutation (chromosome 5q21)
+- >100 adenomatous polyps in colon by age 20
+- 100% cancer risk if untreated
+- Prophylactic proctocolectomy recommended
+- Gardner syndrome: FAP + osteomas + desmoid tumors + epidermoid cysts
+- Turcot syndrome: FAP + CNS tumors (medulloblastoma)
+
+### Lynch Syndrome (HNPCC)
+- Autosomal dominant; mismatch repair gene mutations (MLH1, MSH2, MSH6, PMS2)
+- Amsterdam criteria: 3-2-1 rule (3 relatives, 2 generations, 1 <50 years)
+- Right-sided predominance; better prognosis than sporadic CRC
+- Also increases risk of endometrial, ovarian, gastric, urinary cancers
+- Microsatellite instability (MSI) is hallmark
+
+## Pathology
+### Macroscopic Types
+- Polypoid/fungating (right colon): Grows into lumen
+- Annular/stricturing (left colon): Encircles and narrows lumen ("napkin ring")
+- Ulcerative: Central ulceration with raised edges
+
+### Histology
+- Adenocarcinoma (95%); mucinous adenocarcinoma (10-15%, worse prognosis)
+- Signet ring cell type: Rare, very poor prognosis`,
+        mnemonics: [
+          { text: "APC → KRAS → p53: Adenoma-Carcinoma Sequence", explanation: "Sequential mutations driving normal epithelium to carcinoma over 10-15 years" },
+          { text: "Amsterdam 3-2-1: 3 relatives, 2 generations, 1 under 50", explanation: "Diagnostic criteria for Lynch syndrome (HNPCC)" },
+        ],
+        keyPoints: [
+          "Adenoma-carcinoma sequence: APC → KRAS → p53; takes 10-15 years",
+          "FAP: APC mutation, >100 polyps, 100% cancer risk; needs prophylactic colectomy",
+          "Lynch syndrome: mismatch repair mutations, right-sided, MSI positive, better prognosis",
+          "Right colon: polypoid/fungating; Left colon: annular/stricturing (napkin ring)",
+          "Rising incidence in India especially in urban populations",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 24: Large Intestine", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 72: The Colon", edition: "28th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "colorectal-carcinoma-layer-2-mechanism",
+        title: "Colorectal Carcinoma - Mechanism",
         estimatedMinutes: 25,
-        summary: "Epidemiology, pathology, and classification of colorectal cancer in Indian context.",
-        contentMd: "# Colorectal Carcinoma - Foundation\n\n## Epidemiology in India\n\n### Incidence & Mortality\n- **Incidence**: 4-5 per 100,000 (rising in urban areas)\n- **Mortality**: ~2-3 per 100,000\n- **Age**: Peak incidence 50-60 years; increasing in <40 years\n- **Gender**: Male > Female (1.5:1)\n- **Site**: Left colon > right colon (65-70% vs 20-25%)\n\n### Risk Factors\n\n**Non-Modifiable**\n- Age (>50 years)\n- Family history (2-3x increase)\n- Hereditary syndromes:\n  - Lynch syndrome (HNPCC): 70% lifetime risk\n  - FAP (Familial Adenomatous Polyposis): 100% if untreated\n\n**Modifiable**\n- Dietary: Red meat, processed meat, low fiber\n- Lifestyle: Sedentary, obesity, smoking, alcohol\n- Inflammatory bowel disease: UC > Crohn's (1-5% lifetime risk)\n- Adenomatous polyps: 10-year progression to cancer in 40%\n\n## Pathology & Histology\n\n### Adenocarcinoma (Most Common, 95%)\n- **Tubular** (60%): Better prognosis\n- **Mucinous** (10%): Worse prognosis, often penetrating\n- **Signet-ring** (3%): Very aggressive, poor prognosis\n- **Neuroendocrine** (2%): Rare, variable behavior\n\n### Non-Adenocarcinomas (Rare)\n- Squamous cell (1-2%): Usually lower rectum\n- Lymphomas: MALT type common\n- Sarcomas: Leiomyosarcoma\n\n## Anatomical Classification\n\n### Right Colon\n- Cecum, ascending colon, hepatic flexure\n- Larger lumen → late presentation\n- Often fungating, exophytic\n- Anemia (occult bleeding)\n- May perforate into peritoneum\n\n### Left Colon\n- Splenic flexure, descending, sigmoid\n- Smaller lumen → stricturing\n- Early obstruction symptoms\n- Circumscribing, annular\n- Fecal obstruction common\n\n### Rectum\n- Extraperitoneal → may involve adjacent organs\n- Surgical challenge: TME (Total Mesorectal Excision) required\n- Sphincter preservation possible if >5cm from anal verge\n\n## TNM Staging (AJCC 8th Edition)\n\n### T Stage (Depth of Invasion)\n- **T1**: Invades submucosa\n- **T2**: Invades muscularis propria\n- **T3**: Through muscularis into subserosa/beyond\n- **T4a**: Penetrates visceral peritoneum\n- **T4b**: Invades adjacent structures\n\n### N Stage (Lymph Node)\n- **N0**: No nodes involved\n- **N1**: 1-3 regional nodes\n- **N2**: ≥4 regional nodes\n\n### M Stage (Metastasis)\n- **M0**: No distant metastasis\n- **M1**: Distant metastasis present\n\n### Stage Grouping\n| Stage | TNM | 5-yr Survival |\n|-------|-----|---------------|\n| I | T1-2, N0 | 90-95% |\n| IIA | T3, N0 | 80-85% |\n| IIB | T4a, N0 | 75-80% |\n| IIC | T4b, N0 | 60-70% |\n| IIIA | T1-2, N1 | 80-85% |\n| IIIB | T3-4a, N1 | 60-75% |\n| IIIC | Any T, N2 | 40-60% |\n| IV | Any T, N, M1 | 5-15% |\n\n## Growth Patterns\n\n### Fungating (Exophytic)\n- Polypoid, protruding into lumen\n- Bleeds easily\n- Usually right colon\n- Perforation risk lower\n\n### Infiltrating (Annular)\n- Circumscribing, stenosing\n- Napkin-ring appearance\n- Usually left colon\n- Obstruction common\n\n### Ulcerative\n- Central ulcer with raised edges\n- Significant bleeding\n- Tissue invasion significant\n\n### Scirrhous\n- Linitis plastica (leather-bottle stomach equivalent for colon)\n- Extensive fibrosis\n- Poor prognosis,\n        mnemonics: [\n          { text: \"COLORECTAL CANCER = Carcinoma most common (adenocarcinoma 95%), Older age (50-60), Left > right location, Obstruction (left) or bleeding (right), Regional nodes, Early symptoms miss (India late diagnosis), Cancer adenocarcinoma staging\", explanation: \"Colorectal cancer epidemiology\" },\n          { text: \"TNM = T: Tumor depth (T1-T4), N: Nodes (N0-N2), M: Metastasis (M0-M1)\" }\n        ],\n        keyPoints: [\n          \"Incidence India 4-5/100,000; male > female; left > right colon\",\n          \"Adenocarcinoma 95%; tubular most common, signet-ring worst prognosis\",\n          \"Right colon: fungating, anemia; left colon: annular, obstruction\",\n          \"TNM staging: Stage I (90-95% survival), Stage IV (5-15% survival)\",\n          \"Risk factors: Age, family history, polyps, IBD, diet\"\n        ],\n        textbookRefs: [\n          { book: \"Bailey & Love's Short Practice of Surgery\", chapter: \"Colorectal Carcinoma\", edition: \"28th\" },\n          { book: \"SRB's Manual of Surgery\", chapter: \"Carcinoma of Colon and Rectum\", edition: \"4th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"colorectal-mechanism\",\n        title: \"Colorectal Carcinoma - Mechanism & Metastasis\",\n        estimatedMinutes: 25,\n        summary: \"Pathogenesis, spread patterns, and metastatic pathways in colorectal cancer.\",\n        contentMd: "# Colorectal Carcinoma - Mechanism & Metastasis\\n\\n## Adenoma-Carcinoma Sequence\\n\\n### Polyp-to-Cancer Progression\\n**Timeline**: 10-15 years (estimated)\\n\\n**Adenoma Phase** (Years 0-5)\\n- Small adenoma, no dysplasia\\n- 40% regress, 40% remain stable, 20% progress\\n- Risk factors: Large size (>2cm), villous histology, high-grade dysplasia\\n\\n**Dysplasia Development** (Years 5-10)\\n- Low-grade dysplasia (LGD) → high-grade dysplasia (HGD)\\n- Molecular changes: APC gene mutations early, KRAS mid-sequence\\n- Cancer development risk: 5% at 5 years, 10% at 10 years\\n\\n**Invasive Cancer** (Years 10-15)\\n- TP53 mutations occur (later in sequence)\\n- Basement membrane penetration\\n- Lymphatic/vascular invasion develops\\n\\n### Genetic Alterations (Fearon-Vogelstein Model)\\n1. **APC mutation**: Early, found in 80% of adenomas\\n2. **KRAS mutation**: Intermediate step, 40% of cancers\\n3. **TP53 mutation**: Late, 50% of cancers\\n4. **SMAD4/DPC4 loss**: Late, 30% of cancers\\n\\n## Spread Patterns\\n\\n### Local Spread\\n- **Direct extension**: Through muscularis → subserosa → peritoneum\\n- **Circumferential growth**: Encircles bowel lumen\\n- **Linear spread**: Along submucosal plane (can be 2-5cm from gross tumor)\\n- **Intramural spread**: Through lymphatic plexuses in muscularis\\n\\n### Lymphatic Spread\\n- **First station**: Regional lymph nodes (mesenteric, pericolic)\\n- **Sequence**: Follows blood supply (superior mesenteric vessels)\\n- **Skip metastases**: Can occur (regional nodes negative, distant positive)\\n- **N-stage prognostic**: >4 nodes worse than 1-3 nodes\\n\\n### Hematogenous Spread\\n- **Primary site**: Venous invasion through mesenteric veins\\n- **First stop**: Liver (via portal circulation)\\n- **Liver metastases**: 25% at presentation, 50% develop during disease\\n- **Lung metastases**: Second most common (15-20%)\\n- **Other sites**: Peritoneal (carcinomatosis), ovary, brain (rare)\\n\\n### Peritoneal Spread\\n- **Mechanism**: Direct perforation or serosal penetration\\n- **Presentation**: Ascites, peritoneal nodules\\n- **Prognosis**: Very poor (median survival 1-2 years even with chemotherapy)\\n\\n## Obstruction Mechanisms (Left Colon)\\n\\n### Annular Stricture\\n- Progressive narrowing of lumen\\n- Obstruction develops over days/weeks\\n- Proximal bowel dilates (Rigler's law)\\n\\n### Perforation Risk\\n- **Closed-loop obstruction**: Proximal and distal blocks\\n- **Caecal perforation**: Most common site (thinner wall, highest pressures)\\n- **Timing**: Mortality 20-40% if perforation occurs\\n\\n### Fecal Loading Distal to Tumor\\n- Accumulation of stool\\n- Increased intraluminal pressure\\n- Perforation risk exponentially increases\\n\\n## Hepatic Metastases\\n\\n### Mechanisms\\n**Direct spread**: Via portal blood\\n**Ischemic necrosis**: Central tumor necrosis from poor perfusion\\n**Immune escape**: Loss of tumor suppressors, gain of oncogenes\\n\\n### Resectability Factors\\n- **Technically resectable**: <50% of liver involved, adequate remnant function\\n- **Downstaging**: Chemotherapy can render unresectable → resectable\\n- **Benefit**: 5-year survival 30-40% with metastasectomy (vs 5% medical only)\\n\\n## Molecular Subtypes (Emerging Prognostic)\\n\\n### Microsatellite Instability (MSI)\\n- **High MSI (MSI-H)**: Better prognosis despite higher grade\\n- **DNA mismatch repair deficient**: Lynch syndrome often\\n- **Immunotherapy sensitive**: Checkpoint inhibitors effective\\n\\n### CpG Island Methylator Phenotype (CIMP)\\n- **Epigenetic changes**: Promoter methylation\\n- **Often right-sided, worse prognosis**\\n- **Associated MSI in some**\\n\\n### KRAS/BRAF Mutation Status\\n- **KRAS mutant**: Worse prognosis, resistant to anti-EGFR therapy\\n- **BRAF mutant**: Very poor prognosis, associated with MSI,\\n        mnemonics: [\\n          { text: \\\"ADENOMA-CARCINOMA = Adenoma phase first (small), Dysplasia develops, Enlarge progressively, No sudden malignant change, Omit screening = risk, Molecular APC early, Accumulates mutations\\\", explanation: \\\"Adenoma-carcinoma sequence\\\" },\\n          { text: \\\"SPREAD PATHWAYS = Spreading locally circumferentially, Progresses hematogenously (liver first), Read regional nodes carefully, Extends through muscularis\\\", explanation: \\\"CRC spread routes\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Adenoma-to-cancer: 10-15 year progression; large adenomas high-risk\\\",\\n          \\\"APC early, KRAS intermediate, TP53 late mutations (Fearon model)\\\",\\n          \\\"Liver metastases via portal circulation (25% at presentation)\\\",\\n          \\\"Left colon: annular, obstruction; caecal perforation risk high\\\",\\n          \\\"Peritoneal spread: Very poor prognosis (median 1-2 years)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love's Short Practice of Surgery\\\", chapter: \\\"Pathogenesis and Spread of CRC\\\", edition: \\\"28th\\\" },\\n          { book: \\\"SRB's Manual of Surgery\\\", chapter: \\\"Colorectal Cancer Metastasis\\\", edition: \\\"4th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"colorectal-clinical\\\",\\n        title: \\\"Colorectal Carcinoma - Clinical & Management\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Clinical presentation, diagnosis, and surgical management of colorectal cancer.\\\",\\n        contentMd: ``# Colorectal Carcinoma - Clinical & Management\\n\\n## Clinical Presentation\\n\\n### Right Colon Cancer\\n- **Anemia**: Occult bleeding, microcytic hypochromic anemia\\n- **Abdominal mass**: Palpable RLQ mass in 20%\\n- **Abdominal pain**: RLQ pain, cramps\\n- **Late presentation**: Often asymptomatic until advanced (larger lumen allows growth)\\n- **Perforation**: Can occur with mucinous type\\n\\n### Left Colon/Rectum Cancer\\n- **Change in bowel habits**: Constipation, frequency changes, pencil stools\\n- **Blood in stool**: Visible hematochezia (bright red blood)\\n- **Abdominal pain**: LLQ pain, cramps\\n- **Obstruction**: Progressive, intermittent (partial) to complete\\n- **Tenesmus**: Incomplete evacuation sensation (rectal)\\n\\n### Metastatic Presentation\\n- **Liver metastases**: RUQ pain, jaundice, ascites\\n- **Peritoneal**: Abdominal distension, ascites\\n- **Systemic**: Weight loss, fatigue, anorexia\\n\\n## Investigations\\n\\n### Clinical Examination\\n- **General**: Signs of anemia, weight loss, cachexia\\n- **Abdomen**: Mass (right), distension (obstruction), ascites\\n- **Rectum**: Digital rectal exam (DRE) identifies rectal cancers\\n- **Lymph nodes**: Cervical, axillary, inguinal (metastatic disease)\\n\\n### Laboratory\\n- **CBC**: Anemia (right colon)\\n- **LFTs**: Elevated ALP/GGT (liver metastases), elevated bilirubin (jaundice)\\n- **CEA**: Baseline level; prognostic value; useful for follow-up (not screening)\\n\\n### Imaging\\n\\n**Colonoscopy** (GOLD STANDARD for diagnosis)\\n- Allows visualization, biopsy, polypectomy\\n- Assesses location (distance from anal verge, rectum vs colon)\\n- Full colonoscopy mandatory (rule out synchronous cancers in 3-5%)\\n\\n**CT Staging**\\n- **CT chest/abdomen/pelvis**: Assess metastases (liver, peritoneum)\\n- **Sensitivity**: 85% for liver metastases (>1cm)\\n- **Distant staging**: Essential before surgery\\n\\n**MRI Pelvis** (Rectal cancer)\\n- **Superior** for local staging (mesorectal fascia involvement, T-stage)\\n- **Predicts**: Circumferential resection margin (CRM) status\\n- **Guides**: Neoadjuvant therapy decisions\\n\\n**PET-CT**\\n- **Selectively** for stage IV (assess metastatic extent)\\n- **Not routine** for early disease\\n\\n### Staging Assessment\\n| Test | Purpose |\\n|------|---------|\\n| Colonoscopy + biopsy | Diagnosis, location |\\n| CT abdomen/pelvis | T/N/M staging |\\n| MRI pelvis | Rectal CRM assessment |\\n| Chest imaging | Pulmonary metastases |\\n\\n## Surgical Management\\n\\n### Curative Surgery Principles\\n\\n**Adequate Margins**\\n- **Proximal/distal**: 5cm macroscopic (though 2cm adequate histologically)\\n- **Circumferential**: Clear mesorectum (TME for rectum)\\n- **En bloc resection**: Adjacent organ if invaded\\n\\n**Regional Lymphadenectomy**\\n- **Minimum**: 12 lymph nodes examined (adequate staging)\\n- **Right colon**: Ileo-colic, right colic, right gastroepiploic vessels\\n- **Left colon**: Left colic, sigmoid vessels ligated\\n- **Rectum**: Inferior mesenteric artery level, mesorectal fascia\\n\\n**Types of Resection**\\n\\n**Right Hemicolectomy**\\n- Indication: Cecum, ascending, hepatic flexure\\n- Anastomosis: Ileocolic\\n- Extent: From terminal ileum to mid-transverse colon\\n- Advantage: Can treat right-sided tumors with wide margins\\n\\n**Left Hemicolectomy**\\n- Indication: Splenic flexure, descending, proximal sigmoid\\n- Anastomosis: Colo-colic\\n- Extent: From mid-transverse to proximal rectum\\n- Advantage: Preserves maximum colon\\n\\n**Sigmoid Colectomy**\\n- Indication: Sigmoid colon, distal left\\n- Anastomosis: Colo-colic\\n- More limited than left hemicolectomy\\n- Risk: Inadequate lymphadenectomy if too limited\\n\\n**Anterior Resection** (Rectosigmoid/Upper Rectal)\\n- Indication: Upper/middle rectum (>5cm from anal verge)\\n- Anastomosis: Colo-rectal\\n- Sphincters preserved\\n- TME essential (mesorectal fascia intact)\\n- Protective colostomy if: <5cm from anal verge or poor blood supply\\n\\n**Abdominoperineal Resection (APR)**\\n- Indication: Lower rectum (<5cm from anal verge)\\n- Requirement: Permanent colostomy\\n- En bloc resection: Rectum, mesorectum, anal sphincters, perineal skin\\n- TME still applied\\n\\n### Management of Obstruction\\n\\n**Left Colon Obstruction** (Most Common CRC Presentation)\\n\\n**Options**:\\n1. **Resection + Primary Anastomosis** (Preferred)\\n   - If patient well, no perforation, <6h obstruction\\n   - Single-stage operation\\n   - Intraoperative colonic irrigation if needed\\n\\n2. **Hartmann's Procedure** (Temporary Colostomy)\\n   - If patient in shock, perforation, >6h obstruction\\n   - Resect tumor, create colostomy, close distal limb\\n   - Restore continuity later (3-6 months)\\n   - Two-stage surgery\\n\\n3. **Colonic Stent + Elective Resection**\\n   - Self-expanding metal stent (SEMS) across stenosis\\n   - Bridge to elective surgery (24-48h)\\n   - Allows adequate staging, neoadjuvant therapy\\n   - Reduces emergency surgery rate\\n\\n### Management of Perforation\\n\\n**Perforated CRC**: Mortality 20-40%\\n\\n**Management**:\\n- Resection of tumor segment (not primary closure; cancer-bearing)\\n- Hartmann's procedure (resect, colostomy, close distal)\\n- Restore later (3-6 months)\\n- Exceptions: Small perforation at edge, adequate resection possible → anastomose\\n\\n### Laparoscopic Surgery\\n- **Benefits**: Less pain, faster recovery\\n- **Limitations**: Difficulty with adherent tumors, limited en bloc resection\\n- **Outcomes**: Similar recurrence rates, improved QoL\\n- **Adoption**: Increasing in India\\n\\n## Adjuvant Therapy\\n\\n### Stage II/III (High Risk)\\n- **Indication**: T4 or node-positive disease\\n- **Regimen**: Fluoropyrimidine-based (5-FU/capecitabine ± oxaliplatin)\\n- **Benefit**: 20-30% reduction in recurrence, 10-15% survival improvement\\n\\n### Stage IV (Metastatic)\\n- **Resectable metastases**: Surgery ± chemotherapy\\n- **Unresectable**: Chemotherapy (5-FU + oxaliplatin ± irinotecan)\\n- **Targeted therapy**: Anti-VEGF (bevacizumab), anti-EGFR if KRAS WT\\n\\n### Rectal Cancer Neoadjuvant\\n- **Indication**: T3-4 or node-positive\\n- **Regimen**: Chemoradiation (5-FU + 50.4Gy radiation)\\n- **Timing**: 4-6 weeks before surgery\\n- **Benefits**: Downstaging, improved sphincter preservation, reduced recurrence,\\n        mnemonics: [\\n          { text: \\\"RIGHT COLON = Rare early symptoms, Intestinal anemia, Growth large before obstruction, Hidden hematochezia\\\", explanation: \\\"Right colon cancer presentation\\\" },\\n          { text: \\\"LEFT COLON = Lumen narrower, Early obstruction, Fecal pattern change, Tumor circumscribing\\\", explanation: \\\"Left colon cancer presentation\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Right colon: Anemia, late presentation; left: obstruction, early symptoms\\\",\\n          \\\"Colonoscopy gold standard; CT for staging; MRI for rectal local assessment\\\",\\n          \\\"Right hemicolectomy, left hemicolectomy, anterior resection, APR\\\",\\n          \\\"Obstructed left colon: SEMS bridge, or Hartmann's if unstable\\\",\\n          \\\"Adjuvant chemotherapy improves survival in stage II-III\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love's Short Practice of Surgery\\\", chapter: \\\"Surgical Management of CRC\\\", edition: \\\"28th\\\" },\\n          { book: \\\"SRB's Manual of Surgery\\\", chapter: \\\"Colorectal Cancer Surgery\\\", edition: \\\"4th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"colorectal-exam\\\",\\n        title: \\\"Colorectal Carcinoma - Exam Prep\\\",\\n        estimatedMinutes: 18,\\n        summary: \\\"Exam-focused key facts on CRC diagnosis and management.\\\",\\n        contentMd: ``# Colorectal Carcinoma - Exam Prep\\n\\n## High-Yield Facts\\n\\n### Epidemiology\\n- Left > Right (65-70% vs 20-25%)\\n- Male > Female (1.5:1)\\n- Peak age 50-60 years\\n- Incidence India 4-5/100,000\\n\\n### Presentation\\n- Right: Anemia, mass; Left: obstruction, hematochezia\\n- Rectal: Hematochezia, tenesmus\\n- Late diagnosis common in India\\n\\n## Staging & Prognosis\\n\\n| Stage | 5-Year Survival |\\n|-------|-----------------|\\n| I | 90-95% |\\n| II | 75-85% |\\n| III | 40-75% |\\n| IV | 5-15% |\\n\\n## Exam Scenarios\\n\\n### Scenario 1: Right Colon Cancer\\n\\\"60-year-old male, incidental mass on imaging, anemia (Hb 8), CEA elevated. No obstruction. Management?\\\"\\n- **Answer**: Right hemicolectomy + adjuvant chemo if node-positive\\n\\n### Scenario 2: Obstructed Left Colon\\n\\\"55-year-old female, acute abdominal pain, constipation 1 week, CT: annular left colon mass. Management?\\\"\\n- **Answer**: SEMS bridge (if available) + elective surgery; or Hartmann's if unstable\\n\\n### Scenario 3: Rectal Cancer\\n\\\"50-year-old with rectal mass 4cm from anal verge, MRI: T3 N1. Next?\\\"\\n- **Answer**: Neoadjuvant chemoradiation, then anterior resection (sphincters preserved)\\n\\n## Key Decision Points\\n\\n```\\nCOLORECTAL CANCER\\n│\\n├─ RIGHT COLON → Right hemicolectomy\\n├─ LEFT COLON → Left hemicolectomy\\n├─ SIGMOID → Sigmoid colectomy\\n│\\n├─ RECTOSIGMOID (>5cm) → Anterior resection\\n├─ LOWER RECTUM (<5cm) → APR + permanent colostomy\\n│\\n├─ OBSTRUCTED\\n│  ├─ Stable → SEMS or primary resection\\n│  └─ Unstable → Hartmann's\\n│\\n├─ STAGE II-III → Adjuvant chemotherapy\\n└─ STAGE IV → Palliative/metastasectomy\\n```\\n\\n## Pearls for Exams\\n\\n- **Synchronous cancer**: Check 3-5% have second cancer; full colonoscopy needed\\n- **Minimum nodes**: 12 lymph nodes for adequate staging\\n- **TME**: Essential for rectal cancer (total mesorectal excision)\\n- **Neoadjuvant rectal**: Chemoradiation improves outcomes\\n- **Liver metastases**: Consider resection if <50% liver involved\\n- **CEA**: Baseline, follow-up; not screening tool,\\n        mnemonics: [\\n          { text: \\\"CRC SURGERY = Colon location determines approach, Rectum needs TME, Cancer requires adequate margins, Nodes ≥12 needed\\\", explanation: \\\"CRC surgical principles\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Right: hemicolectomy; Left: hemicolectomy/sigmoid; Rectum: anterior resection or APR\\\",\\n          \\\"Obstructed left: SEMS bridge or Hartmann's\\\",\\n          \\\"Neoadjuvant chemoradiation for rectal T3-4\\\",\\n          \\\"Adjuvant chemo stage II-III improves survival\\\",\\n          \\\"Minimum 12 nodes for adequate staging\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love's Short Practice of Surgery\\\", chapter: \\\"Colorectal Cancer\\\", edition: \\\"28th\\\" },\\n          { book: \\\"SRB's Manual of Surgery\\\", chapter: \\\"Colorectal Carcinoma\\\", edition: \\\"4th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"colorectal-recall\\\",\\n        title: \\\"Colorectal Carcinoma - Active Recall\\\",\\n        estimatedMinutes: 12,\\n        summary: \\\"Active recall questions on CRC.\\\",\\n        contentMd: ``# Colorectal Carcinoma - Active Recall\\n\\n## Q1: Most Common Site for CRC?\\n**Answer**: Left colon/sigmoid (65-70%); followed by right (20-25%), rectum (10-15%)\\n\\n## Q2: Right vs Left Colon Cancer: Presentation Differences?\\n**Answer**: Right: Anemia, mass; Left: obstruction, change bowel habits, hematochezia\\n\\n## Q3: Minimum Lymph Nodes for Adequate CRC Staging?\\n**Answer**: 12 lymph nodes; <12 considered inadequate staging\\n\\n## Q4: Adenoma to Cancer: Typical Timeline?\\n**Answer**: 10-15 years for progression through dysplasia to invasive cancer\\n\\n## Q5: Liver Metastases in CRC: When to Consider Resection?\\n**Answer**: If ≤50% liver involved, adequate remnant function, and patient fit for surgery\\n- 5-year survival 30-40% with metastasectomy (vs 5% medical)\\n\\n## Q6: TME: What Does It Stand For?\\n**Answer**: Total Mesorectal Excision\\n- Complete mesorectal tissue removal with tumor\\n- Essential for rectal cancer\\n- Reduces recurrence from 40% to 10%\\n\\n## Q7: Rectal Cancer <5cm from Anal Verge: Management?\\n**Answer**: APR (Abdominoperineal Resection) with permanent colostomy\\n- Sphincters removed; continuity impossible\\n- >5cm: Anterior resection possible (sphincters preserved)\\n\\n## Q8: Neoadjuvant Therapy for Rectal Cancer: Indication?\\n**Answer**: T3-4 or node-positive disease\\n- Chemoradiation 5-FU + 50.4Gy before surgery\\n- Downstages tumor, improves sphincter preservation\\n\\n## Q9: Obstructed Left Colon CRC: When to Use SEMS?\\n**Answer**: Stable patient, available facility; allows 24-48h bridge to elective surgery\\n- Reduces emergency surgery rate\\n- Allows staging, neoadjuvant therapy if needed\\n\\n## Q10: Stage IV CRC: What Determines Prognosis?\\n**Answer**: Resectability of metastases; extent of spread\\n- Resectable liver mets: 30-40% 5-year survival\\n- Unresectable/peritoneal: 5-15% 5-year survival`\",\n        mnemonics: [\n          { text: \"CRC PRESENTATION = Colon location key, Right anemia, Cancer obstruction (left), Site determines symptoms\", explanation: \"CRC presentation by location\" }\n        ],\n        keyPoints: [\n          \"Right colon: Anemia; left colon: obstruction, hematochezia\",\n          \"Stage I: 90-95% survival; Stage IV: 5-15%\",\n          \"Minimum 12 nodes; TME for rectum; sphincter preservation >5cm\",\n          \"Neoadjuvant chemoradiation: T3-4 or N+ rectal\",\n          \"Liver metastasectomy: 30-40% 5-year survival if resectable\"\n        ],\n        textbookRefs: [\n          { book: \"Bailey & Love's Short Practice of Surgery\", chapter: \"Colorectal Carcinoma\", edition: \"28th\" },\n          { book: \"SRB's Manual of Surgery\", chapter: \"Colorectal Cancer\", edition: \"4th\" }\n        ]\n      }\n    ]\n  },\n  {\n    topicCode: \"SU-MOD-05-TOP-06\",\n    layers: [\n      {\n        layer: 1,\n        slug: \"anorectal-diseases-foundation\",\n        title: \"Anorectal Diseases - Foundation\",\n        estimatedMinutes: 20,\n        summary: \"Classification and epidemiology of common anorectal pathologies.\",\n        contentMd: \"# Anorectal Diseases - Foundation\\n\\n## Common Anorectal Conditions\\n\\n### Internal Hemorrhoids\\n- Above pectinate line (internal sphincter level)\\n- **Grade I**: Bleeding, no prolapse\\n- **Grade II**: Prolapse, auto-reduce\\n- **Grade III**: Prolapse, manual reduction needed\\n- **Grade IV**: Permanent prolapse, irreducible\\n- **Painless hematochezia** on toilet paper/bowel\\n\\n### External Hemorrhoids\\n- Below pectinate line (external sphincter)\\n- Tender when thrombosed\\n- Can see/feel as skin tag\\n\\n### Anal Fissure\\n- **Location**: Usually posterior midline (90%); anterior (10%)\\n- **Pathophysiology**: Hypertonia internal sphincter + trauma\\n- **Symptom**: Severe pain with defecation (disproportionate to size)\\n- **Associated**: Constipation, hard stools\\n\\n### Anorectal Abscess\\n- **Classification by location**:\\n  - Perianal (most common)\\n  - Ischiorectal (horseshoe potential)\\n  - Intersphincteric (between internal/external sphincter)\\n  - Supralevator (rare)\\n\\n### Fistula-in-Ano\\n- **Track**: From internal opening (cryptoglandular, usually) to external\\n- **Associated**: Often follows abscess drainage\\n- **Goodsall's rule**: Posterior midline origin; anterior radial\\n- **Classification**: Simple vs complex (involving sphincter)\\n\\n### Pilonidal Sinus\\n- Hair-containing cavity, sacrococcygeal region\\n- **Pathophysiology**: Hirsute males, poor hygiene, friction\\n- **Presentation**: Pain, drainage, abscess\\n- **Indian context**: Less common than Western countries\\n\\n## Epidemiology\\n\\n### Hemorrhoids\\n- **Incidence**: ~50% population at some point\\n- **Peak age**: 40-60 years\\n- **Causes**: Constipation (chronic straining), pregnancy, portal hypertension\\n\\n### Anal Fissure\\n- **Incidence**: Second most common anorectal condition\\n- **Age**: 20-40 years\\n- **Causes**: Hard stools, constipation, inflammatory bowel disease, trauma\\n\\n### Anorectal Abscess\\n- **Incidence**: 1-40 per 10,000 (variable)\\n- **Risk factors**: IBD (especially Crohn's), immunosuppression, diabetes\\n- **Source**: Cryptoglandular infection (90%), traumatic inoculation\\n\\n### Fistula-in-Ano\\n- **Prevalence**: ~20-30% of patients with anorectal abscess develop fistula\\n- **Gender**: Male > Female (3:1)\\n- **IBD-associated**: 10-40% of Crohn's patients\\n\\n## Anatomy Relevant to Anorectal Disease\\n\\n### Anal Verge to Pectinate Line (Anoderm)\\n- Distance: ~2-3 cm\\n- Sensitive to pain (somatic innervation - inferior rectal nerve)\\n- Arterial: Inferior rectal vessels\\n- Venous: Inferior rectal veins → internal pudendal → internal iliac\\n\\n### Above Pectinate Line\\n- Insensitive to pain (visceral innervation)\\n- Arterial: Superior rectal vessel (continuation of IMA)\\n- Venous: Superior rectal veins → portal system\\n- Lymphatic: Internal iliac nodes\\n\\n### Anal Sphincters\\n- **Internal sphincter**: Smooth muscle (involuntary), ~3cm length, posterior thickening\\n- **External sphincter**: Skeletal muscle (voluntary), ~4cm length, extends 1-2cm above IAS\\n- **Puborectalis**: Acts as sling, maintains anorectal angle (~90 degrees)\\n\\n### Anal Glands\\n- Located in anal crypts (pectinate line)\\n- ~6-12 glands in ~12 crypts\\n- Source of infection (cryptoglandular origin of most abscesses/fistulas)\\n\\n## Pathophysiology of Common Conditions\\n\\n### Hemorrhoid Formation\\n1. **Chronic straining**: Increased intra-abdominal pressure\\n2. **Shearing forces**: Hemorrhoidal vessels stretched, displaced\\n3. **Vascular dilation**: Vessels engorge, mucosa herniates\\n4. **Symptom development**: Pain (if thrombosed), bleeding, prolapse\\n\\n### Fissure Pathophysiology\\n1. **Trauma**: Hard stool tears mucosa\\n2. **Sphincter spasm**: Reflex hypertonia internal sphincter\\n3. **Ischemia**: Increased resting pressure reduces blood flow\\n4. **Pain cycle**: Spasm → pain → constipation → harder stools\\n\\n### Abscess Development\\n1. **Gland infection**: Obstructed anal gland, bacterial infection\\n2. **Spread**: Along tissue planes (determines location)\\n3. **Perforation**: Into perianal space (usually), or deeper spaces\\n4. **Fluctuance**: Collection matures over 3-5 days,\\n        mnemonics: [\\n          { text: \\\"ANORECTAL = Anal verge to pectinate line sensitive, No pain above pectinate, Orbital (above) insensitive, Rectum venous portal bound\\\", explanation: \\\"Anal anatomy sensitivity\\\" },\\n          { text: \\\"HEMORRHOID GRADES = Grade 1: Bleeding only, 2: Prolapse with reduction, 3: Prolapse manual reduction, 4: Permanent prolapse\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Hemorrhoids 50% population; internal above pectinate (painless), external below (painful)\\\",\\n          \\\"Anal fissure: Posterior midline, severe pain, constipation-related\\\",\\n          \\\"Abscess: Cryptoglandular source 90%; locations determine management\\\",\\n          \\\"Fistula: 20-30% progress from abscess; Goodsall's rule for internal opening\\\",\\n          \\\"Pain above pectinate = referred (visceral); below pectinate = severe (somatic)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love's Short Practice of Surgery\\\", chapter: \\\"Anorectal Diseases\\\", edition: \\\"28th\\\" },\\n          { book: \\\"SRB's Manual of Surgery\\\", chapter: \\\"Anorectal Conditions\\\", edition: \\\"4th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"anorectal-mechanism\\\",\\n        title: \\\"Anorectal Diseases - Pathophysiology & Complications\\\",\\n        estimatedMinutes: 24,\\n        summary: \\\"Detailed pathophysiology and complications of anorectal diseases.\\\",\\n        contentMd: ``# Anorectal Diseases - Pathophysiology & Complications\\n\\n## Hemorrhoid Pathophysiology\\n\\n### Pathological Basis\\n**Displacement of hemorrhoidal vessels**\\n- Normal: Vessels in submucosal plexus, supported by ligament of Parks\\n- Pathological: Loosening of supporting ligaments, downward displacement\\n\\n**Engorgement mechanisms**\\n- Portal hypertension (cirrhosis, portal vein thrombosis)\\n- Chronic constipation and straining\\n- Pregnancy (IVC compression, progesterone effects)\\n- Diarrhea (mucosal prolapse)\\n\\n### Thrombosed Hemorrhoid\\n**Pathophysiology**:\\n1. External hemorrhoid ruptures\\n2. Venous stasis → thrombosis in hemorrhoid\\n3. Edema, severe pain\\n4. Auto-amputation possible (tissue necrosis) over days\\n5. Bleeding profuse if ruptures\\n\\n**Timeline**: Acute pain 24-48h, peaks day 3, improves by week 2\\n\\n### Bleeding Mechanism\\n- **Bleeding**: From exposed mucosa (internal) or rupture (external)\\n- **Quantity**: Bright red, on paper, toilet bowl (not mixed with stool)\\n- **Risk**: Chronic bleeding → iron-deficiency anemia\\n\\n## Anal Fissure: The Pain Mechanism\\n\\n### Sphincter Hypertonicity\\n**Mechanism**:\\n1. Trauma → pain → reflex internal sphincter contraction\\n2. Contraction → ischemia at fissure base\\n3. Ischemia → poor healing → persistent pain\\n4. Pain → more spasm (vicious cycle)\\n\\n**Pressure measurements**:\\n- Normal resting pressure: 40-50 cm H₂O\\n- Fissure patients: 80-100 cm H₂O\\n- External sphincter activity: Normal/increased\\n\\n### Ischemic Basis\\n- **Blood supply** at fissure apex (posterior) is poorer\\n- Fissure extends to internal sphincter\\n- Healing impossible while sphincter hypertonic\\n- Treatment: Reduce sphincter tone\\n\\n### Chronic Fissure\\n**Features**:\\n- Sentinel skin tag at distal end (chronic irritation/edema)\\n- Hypertrophied papilla at proximal end (anal crypt)\\n- Fibrosis at base\\n- Difficult healing even with conservative measures\\n\\n## Anorectal Abscess: Tracking Patterns\\n\\n### Perianal Abscess (Most Common, 40%)\\n- Confined to perianal space\\n- Superficial, easily drainable\\n- Risk: Low for sphincter damage if correct drainage\\n\\n### Ischiorectal (Ischioanal) Abscess (40%)\\n- Between external sphincter medially, obturator fascia laterally\\n- **Horseshoe potential**: If posterior, can track across midline\\n- **Deep spread**: Can reach opposite side at level of puborectalis\\n\\n### Intersphincteric Abscess (20%)\\n- Between internal and external sphincters\\n- Risk: Often missed initially (higher location)\\n- Drainage: May need fistulotomy to expose\\n\\n### Supralevator Abscess (Rare)\\n- Above levator ani\\n- **Serious**: Can track superiorly to peritoneum\\n- **May present** as high fever without obvious abscess\\n\\n## Fistula-in-Ano: Pathophysiology\\n\\n### Cryptoglandular Theory (Most Common)\\n1. Infection in anal gland (at crypt)\\n2. Spread along tissue plane of least resistance\\n3. Rupture at external opening\\n4. If internal opening remains patent: Fistula track forms\\n5. Chronic suppuration maintains fistula\\n\\n### Parks Classification (Complex)\\n**Simple**:\\n- Low intersphincteric (internal opening + track at fissure level)\\n- Low transsphincteric (crosses only external sphincter)\\n\\n**Complex**:\\n- High transsphincteric (high internal opening)\\n- Suprasphincteric (tracks above external sphincter)\\n- Extrasphincteric (outside sphincter complex; rare; consider trauma, IBD, malignancy)\\n\\n### Goodsall's Rule\\n**Anterior fistulas**: Radial opening (internal opening at corresponding clock position)\\n**Posterior fistulas**: Midline opening (internal opening at posterior midline)\\n\\n## Complications\\n\\n### Hemorrhoid Complications\\n**Bleeding**:\\n- Chronic → iron-deficiency anemia\\n- Massive → transfusion rare but possible\\n\\n**Incarceration**:\\n- Prolapsed internal hemorrhoid trapped\\n- Strangulation → necrosis (auto-amputation)\\n\\n**Thrombosis**:\\n- Acute pain, swelling\\n- Auto-rupture possible with bleeding\\n\\n### Fissure Complications\\n**Sentinel skin tag**: Chronic edema → permanent skin tag (hypertrophic)\\n**Hypertrophic anal papilla**: At proximal fissure edge\\n**Anal stenosis**: Rare; if repeated fissures → scarring → narrowing\\n\\n### Abscess/Fistula Complications\\n**Drainage to internal organs**:\\n- Supralevator → peritoneal cavity (fecal peritonitis)\\n- Intersphincteric → complex fistula development\\n\\n**Sphincter damage**:\\n- Drainage/fistulotomy: Risk of continence loss if not careful\\n- Complete fistulotomy: 30-60% temporary incontinence\\n\\n**Chronic sepsis**:\\n- Persistent fistula → constitutional symptoms\\n- Recurrent abscess → repeated drainage needed\\n\\n**Malignancy**:\\n- Long-standing fistula → squamous cell cancer risk (rare),\\n        mnemonics: [\\n          { text: \\\"FISSURE PAIN = Fissure posterior mostly, Internal sphincter hypertonic, Ischemia at base, Sphincter contraction reflex, Unforgettable pain, Regeneration poor\\\", explanation: \\\"Why anal fissures hurt so much\\\" },\\n          { text: \\\"ABSCESS TRACKING = Perianal common, Ischiorectal horseshoe (posterior), Intersphincteric missed, Complex supralevator rare\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Hemorrhoid pain: Only if thrombosed or prolapsed (internal painless above pectinate)\\\",\\n          \\\"Fissure: Posterior midline, sphincter spasm → ischemia → poor healing\\\",\\n          \\\"Abscess sites: Perianal (40%), ischiorectal (40%), intersphincteric (20%)\\\",\\n          \\\"Fistula: From abscess drainage; Goodsall's rule for internal opening location\\\",\\n          \\\"Hemorrhoid complications: Bleeding (anemia), thrombosis, incarceration\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love's Short Practice of Surgery\\\", chapter: \\\"Anorectal Pathophysiology\\\", edition: \\\"28th\\\" },\\n          { book: \\\"SRB's Manual of Surgery\\\", chapter: \\\"Anorectal Disease Mechanisms\\\", edition: \\\"4th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"anorectal-clinical\\\",\\n        title: \\\"Anorectal Diseases - Clinical Management\\\",\\n        estimatedMinutes: 28,\\n        summary: \\\"Clinical diagnosis and management of hemorrhoids, fissures, abscess, and fistula.\\\",\\n        contentMd: ``# Anorectal Diseases - Clinical Management\\n\\n## Hemorrhoids: Clinical Management\\n\\n### Grade I (Bleeding only)\\n**Management**:\\n- Dietary fiber, fluids, stool softeners\\n- Avoid constipation, straining\\n- High-fiber diet (25-30g/day)\\n- Success rate: 80-90%\\n\\n### Grade II (Prolapse with auto-reduction)\\n**Medical First**:\\n- Conservative measures (fiber, fluids)\\n- Topical anesthetics (rarely effective alone)\\n- Success rate: 50-70%\\n\\n**Interventional** (if medical fails):\\n- **Rubber band ligation**: Outpatient, effective (80-90% success)\\n  - Apply band at hemorrhoid base\\n  - Tissue necrosis → slough after 1-2 weeks\\n  - Pain minimal (above pectinate line)\\n  - Bleeding can occur (2-5% need intervention)\\n\\n- **Sclerotherapy**: Injection of sclerosant agents\\n  - Less effective than banding (70-80%)\\n  - Recurrence higher (40-50%)\\n  - Can combine with banding\\n\\n### Grade III (Prolapse needing manual reduction)\\n**Interventional**:\\n- Usually require banding or surgical intervention\\n- Multiple sittings for banding\\n- Surgery if conservative/interventional fails\\n\\n### Grade IV (Permanent prolapse/irreducible)\\n**Surgical**:\\n- **Hemorrhoidectomy**: Excisional removal\\n  - Open (bleeding control by ligation/cautery)\\n  - Closed (sutured)\\n  - Stapled (PPH - less pain, faster recovery)\\n\\n**Outcomes**:\\n- Effective cure rate ~99%\\n- Pain significant for 2-4 weeks\\n- Risk of anal stenosis (~1-5%)\\n- Incontinence rare (<1%)\\n\\n### Thrombosed External Hemorrhoid\\n**Management**:\\n- **Acute (<48h)**: Evacuation under local anesthesia or simple incision\\n  - Provides rapid relief\\n  - Local anesthesia + incision + clot evacuation\\n\\n- **Late (>48h)**: Often managed conservatively (auto-amputation progressing)\\n  - May develop sentinel skin tag\\n\\n## Anal Fissure: Management\\n\\n### Conservative (First-Line)\\n**Medical**:\\n- High-fiber diet, stool softeners\\n- Topical analgesics (lidocaine 5%)\\n- Topical nitrates (GTN 0.2%) or nifedipine (2%)\\n  - Reduce sphincter pressure (70-80% healing)\\n  - Headache (GTN), lower extremity edema (nifedipine)\\n- Topical botulinum toxin (botox)\\n  - Paralyzes internal sphincter\\n  - Success 50-80%, expensive\\n\\n**Healing time**: 2-8 weeks with medical therapy\\n\\n### Surgical (Refractory)\\n**Lateral internal sphincterotomy (LIS)**\\n- Gold standard if medical fails\\n- Divide internal sphincter laterally (2-4mm length)\\n- Healing: 90%+ within 2-4 weeks\\n- **Complication**: Occasional incontinence (10-20% flatus, <1% stool)\\n\\n**Advancement flap**: For chronic fissures with fibrosis\\n- Anoplasty with mucosal advancement\\n- Covers fissure base\\n\\n## Anorectal Abscess: Management\\n\\n### Presentation & Diagnosis\\n**Clinical**:\\n- Severe pain, induration, fluctuance\\n- Fever, systemic toxicity\\n- Diagnostic: Clinical + imaging (CT/MRI if deep)\\n\\n**Drainage Timing**:\\n- Urgent (within hours) if septic, fever, immunocompromised\\n- Otherwise: Can wait for fluctuance development (may self-drain)\\n\\n### Management Principles\\n**Incision & Drainage (I&D)**:\\n1. **Antibiotics**: Start before drainage (anaerobic coverage needed)\\n2. **Anesthesia**: General or local (spinal for deep abscess)\\n3. **Incision**: Over point of maximum fluctuance\\n4. **Drainage**: Complete evacuation of pus\\n5. **Wound care**: Leave open for drainage (tight closure → recurrence)\\n6. **Packing**: Gauze packing (changed daily/twice daily initially)\\n\\n### Specific Locations\\n\\n**Perianal**:\\n- Simple external incision\\n- Heal rapidly (1-3 weeks)\\n- Fistula development: 20-30%\\n\\n**Ischiorectal (Horseshoe)**:\\n- May need bilateral incisions (posterior)\\n- Or single incision with counter-opening\\n- Packing essential\\n\\n**Intersphincteric**:\\n- May need endoanal ultrasound for location\\n- Incision at fissure line possible\\n- Or trans-sphincteric approach\\n\\n**Supralevator**:\\n- Urgent CT\\n- May require transabdominal drainage if not accessible from below\\n- Serious: Can lead to peritonitis\\n\\n## Fistula-in-Ano: Management\\n\\n### Diagnostic Approach\\n**History**:\\n- Prior abscess?\\n- Recurrent drainage/pain\\n- Systemic features (IBD, immunosuppression)?\\n\\n**Physical Exam**:\\n- Palpate tract\\n- Probe (carefully, gently)\\n- Look for secondary openings\\n\\n**Imaging**:\\n- **Endoanal ultrasound**: Location, complexity\\n- **MRI**: Excellent for complex fistula (sphincter involvement)\\n- **Fistulography**: Less common now (invasive)\\n\\n### Management by Type\\n\\n**Simple Fistula** (Low transsphincteric, low intersphincteric)\\n- **Fistulotomy**: Divide tract, convert to open wound\\n  - Healing: 4-8 weeks\\n  - Incontinence risk: Low (5-10%)\\n  - Cure: >95%\\n\\n**Complex Fistula** (High transsphincteric, suprasphincteric)\\n- **Seton placement**: Non-cutting initially\\n  - Allows slow sphincter division over weeks\\n  - Reduces incontinence risk\\n  - Staged cutting after fibrosis develops\\n\\n- **Flap procedures**: LIFT (ligation of intersphincteric fistula tract)\\n  - Preserves sphincter\\n  - Success 60-80%\\n  - Less incontinence\\n\\n- **Fibrin glue/plug**:\\n  - Success 40-70%\\n  - Less invasive\\n  - May need repeat\\n\\n### Special Situations\\n**IBD-associated fistula**:\\n- Treat underlying IBD aggressively (biologic therapy)\\n- Defer surgery if possible\\n- May heal with medical therapy\\n- Surgery only if medical fails + obstructing\\n\\n**Rectovaginal fistula**:\\n- Usually requires flap (advancement flap common)\\n- High healing rates with experience\\n\\n## Follow-up & Prevention\\n\\n### Post-Treatment Complications\\n- **Hemorrhoid**: Ensure adequate fiber (prevent recurrence)\\n- **Fissure**: Chronic pain syndrome in 10%; may need further intervention\\n- **Abscess**: Fistula formation monitoring\\n- **Fistula**: Recurrence 5-15% (higher complex); scar tissue formation\\n\\n### Infection Prevention\\n- Hygiene: Gentle cleaning, avoid aggressive wiping\\n- Stool management: Soft stools (fiber, fluids)\\n- Avoid prolonged sitting on toilets,\\n        mnemonics: [\\n          { text: \\\"HEMORRHOID TREATMENT = Hemorrhoid grades determine, Early grades conservative, More severe banding, Irreducible surgery, Options: RBL, sclerotherapy, hemorrhoidectomy\\\", explanation: \\\"Hemorrhoid management by grade\\\" },\\n          { text: \\\"FISSURE = Fiber first-line, Internal sphincter relax needed, Surgical LIS if fails, Sphincterotomy divides IAS\\\", explanation: \\\"Fissure treatment progression\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Grade I-II hemorrhoid: Fiber, banding; Grade III-IV: Surgery\\\",\\n          \\\"Fissure: Fiber + nitrate/botox first; LIS if fails\\\",\\n          \\\"Abscess: I&D urgent if septic; leave open; packing essential\\\",\\n          \\\"Simple fistula: Fistulotomy; complex: Seton or flap\\\",\\n          \\\"Complication: LIS incontinence 10-20% flatus; fistulotomy 5-10%\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love's Short Practice of Surgery\\\", chapter: \\\"Anorectal Diseases: Management\\\", edition: \\\"28th\\\" },\\n          { book: \\\"SRB's Manual of Surgery\\\", chapter: \\\"Anorectal Conditions: Treatment\\\", edition: \\\"4th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"anorectal-exam\\\",\\n        title: \\\"Anorectal Diseases - Exam Prep\\\",\\n        estimatedMinutes: 16,\\n        summary: \\\"Exam-focused review of anorectal conditions.\\\",\\n        contentMd: ``# Anorectal Diseases - Exam Prep\\n\\n## High-Yield Facts\\n\\n### Hemorrhoids\\n- Grade I: Bleeding; Grade II: Prolapse reducible; Grade III: Manual reduction; Grade IV: Irreducible\\n- Management: Fiber → banding → surgery\\n- RBL 80-90% success; Hemorrhoidectomy 99% cure\\n\\n### Anal Fissure\\n- Posterior 90%; anterior 10%\\n- Severe pain, constipation\\n- Sphincter hypertonia (80-100 cm H₂O)\\n- Treatment: Fiber, nitrate/botox, LIS\\n\\n### Abscess\\n- Cryptoglandular 90%\\n- Locations: Perianal (40%), ischiorectal (40%), intersphincteric (20%)\\n- Management: I&D, leave open\\n\\n### Fistula\\n- Simple: Fistulotomy; complex: Seton/flap\\n- Goodsall's rule for anterior/posterior opening\\n- 20-30% progress from abscess\\n\\n## Exam Scenarios\\n\\n### Scenario 1: Grade II Hemorrhoid\\n\\\"35-year-old with bright red bleeding post-defecation, prolapsing mass. Conservative failed (2 months). Next?\\\"\\n- **Answer**: Rubber band ligation\\n\\n### Scenario 2: Anal Fissure\\n\\\"50-year-old with severe anorectal pain, posterior tear visible, constipated. Medical trial 6 weeks failed. Management?\\\"\\n- **Answer**: Lateral internal sphincterotomy\\n\\n### Scenario 3: Perianal Abscess\\n\\\"30-year-old, fever, anorectal pain, fluctuant mass. CT pending. Management?\\\"\\n- **Answer**: Urgent I&D; antibiotics; leave open; daily packing\\n\\n## Pearls for Exams\\n\\n- **Hemorrhoid pain**: Only if thrombosed (external) or prolapsed (internal)\\n- **Fissure location**: Posterior 90% (ischemic zone)\\n- **Abscess**: Cryptoglandular origin 90%; drain urgently if septic\\n- **Fistula**: 20-30% follow abscess drainage\\n- **Sphincterotomy incontinence**: 10-20% flatus, <1% stool (acceptable),\\n        mnemonics: [\\n          { text: \\\"HEMORRHOID GRADES = Grade 1: One = bleeding only, 2: Two = prolapse reducible, 3: Three = manual reduction, 4: Four = permanent prolapse\\\", explanation: \\\"Hemorrhoid grading\\\" },\\n          { text: \\\"FISSURE MANAGEMENT = Fiber first, Internal sphincter relax (GTN/botox), Sphincterotomy if fails, Surgery lateral (LIS)\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Hemorrhoid: Fiber → banding → surgery (by grade)\\\",\\n          \\\"Fissure: Posterior 90%, severe pain, sphincter hypertonia\\\",\\n          \\\"Abscess: I&D urgent if septic, leave open, pack daily\\\",\\n          \\\"Fistula: Goodsall's rule, simple fistulotomy, complex seton/flap\\\",\\n          \\\"LIS incontinence: 10-20% flatus (acceptable); <1% stool\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love's Short Practice of Surgery\\\", chapter: \\\"Anorectal Diseases\\\", edition: \\\"28th\\\" },\\n          { book: \\\"SRB's Manual of Surgery\\\", chapter: \\\"Anorectal Conditions\\\", edition: \\\"4th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"anorectal-recall\\\",\\n        title: \\\"Anorectal Diseases - Active Recall\\\",\\n        estimatedMinutes: 10,\\n        summary: \\\"Active recall questions on anorectal conditions.\\\",\\n        contentMd: ``# Anorectal Diseases - Active Recall\\n\\n## Q1: Hemorrhoid Grades: Which Need Surgery?\\n**Answer**: Grade IV (permanent prolapse); sometimes Grade III if conservative fails\\n\\n## Q2: Why Are Internal Hemorrhoids Above Pectinate Line Painless?\\n**Answer**: Visceral innervation (autonomic) is not pain-sensitive above pectinate\\n\\n## Q3: Anal Fissure Pain Cause: Explain Mechanism?\\n**Answer**: Internal sphincter hypertonia (80-100 cm H₂O) → ischemia at fissure base → poor healing + pain\\n\\n## Q4: What Is \\\"Goodsall's Rule\\\"?\\n**Answer**: Anterior fissure → radial internal opening; posterior → midline opening\\n\\n## Q5: Anorectal Abscess: Most Common Location?\\n**Answer**: Perianal (40%) and ischiorectal (40%) are equally common\\n\\n## Q6: Why Is \\\"Horseshoe\\\" Abscess Serious?\\n**Answer**: Posterior ischiorectal abscess can track across midline to opposite side\\n\\n## Q7: Fistula Development After Abscess: Incidence?\\n**Answer**: 20-30% of drained abscesses develop fistula\\n\\n## Q8: Lateral Internal Sphincterotomy: Incontinence Risk?\\n**Answer**: 10-20% transient flatus incontinence; <1% stool incontinence (acceptable)\\n\\n## Q9: Simple vs Complex Fistula: Treatment Difference?\\n**Answer**: Simple: Fistulotomy (divide tract); Complex: Seton or flap (preserve sphincter)\\n\\n## Q10: Chronic Fissure: Anatomical Features?\\n**Answer**: Sentinel skin tag (distal), hypertrophic papilla (proximal), fibrosis at base`\",\n        mnemonics: [\n          { text: \"ABSCESS DRAINAGE = Abscess incision, Drainage complete, Packing open, Antibiotics anaerobic, Seton if fistula\", explanation: \"Abscess management\" }\n        ],\n        keyPoints: [\n          \"Hemorrhoid grades I-IV; surgery for grade IV\",\n          \"Fissure: Posterior 90%, sphincter hypertonia, GTN/botox/LIS\",\n          \"Abscess: I&D urgent, cryptoglandular 90%, fistula 20-30% risk\",\n          \"Fistula: Simple fistulotomy, complex seton/flap, Goodsall's rule\",\n          \"LIS incontinence: 10-20% flatus acceptable\"\n        ],\n        textbookRefs: [\n          { book: \"Bailey & Love's Short Practice of Surgery\", chapter: \"Anorectal Diseases\", edition: \"28th\" },\n          { book: \"SRB's Manual of Surgery\", chapter: \"Anorectal Conditions\", edition: \"4th\" }\n        ]\n      }\n    ]\n  }\n];\n"
-}
-}
-];
+        summary: "Molecular pathways of colorectal carcinogenesis, staging systems, and patterns of spread.",
+        contentMd: `# Colorectal Carcinoma - Mechanism
+
+## Molecular Pathways
+### Chromosomal Instability Pathway (CIN) - 85%
+- Classic adenoma-carcinoma sequence
+- Involves tumor suppressor genes (APC, p53) and oncogenes (KRAS)
+- Aneuploidy and loss of heterozygosity
+- Associated with sporadic CRC and FAP
+
+### Microsatellite Instability Pathway (MSI) - 15%
+- Defective DNA mismatch repair (MMR)
+- Accumulation of errors in microsatellite repeats
+- Associated with Lynch syndrome and some sporadic CRC
+- MSI-high tumors: Better prognosis, respond to immunotherapy (PD-1 inhibitors)
+- Sporadic MSI: Usually due to MLH1 promoter methylation
+
+### Serrated Pathway
+- Via serrated polyps (sessile serrated lesions)
+- BRAF mutation + CpG island methylation
+- Right-sided predilection; often missed on colonoscopy (flat morphology)
+
+## Staging
+### Dukes Classification (Historical)
+- A: Confined to bowel wall (>90% 5-year survival)
+- B: Through bowel wall, no nodes (65-75%)
+- C: Lymph node involvement (30-50%)
+- D: Distant metastases (<5%)
+
+### TNM Staging (Current Standard)
+- T1: Submucosa; T2: Muscularis propria; T3: Through muscularis into subserosa; T4: Penetrates visceral peritoneum or invades adjacent organs
+- N0: No nodes; N1: 1-3 nodes; N2: >/=4 nodes
+- M0: No distant metastasis; M1: Distant metastasis (liver, lung, peritoneum)
+
+## Patterns of Spread
+### Direct
+- Circumferential (encircling bowel wall); longitudinal spread limited
+- Into adjacent structures (T4): Bladder, uterus, abdominal wall
+
+### Lymphatic
+- Follows arterial supply: Epicolic → paracolic → intermediate → principal nodes
+- Minimum 12 lymph nodes must be examined for adequate staging
+
+### Hematogenous
+- Via portal vein to liver (most common site of distant metastasis)
+- Via systemic veins: Lung (second most common)
+- Low rectal cancer: Via internal iliac veins to lung (bypasses liver)
+
+### Transcoelomic
+- Peritoneal seeding; produces Krukenberg tumors in ovaries
+- Blumer shelf: Palpable mass in rectovesical/rectouterine pouch on PR exam
+
+## Tumor Markers
+- **CEA (Carcinoembryonic Antigen)**: NOT for screening; used for monitoring recurrence post-surgery
+- Pre-op elevated CEA: Suggests advanced disease
+- Post-op CEA rise: Indicates recurrence (sensitivity 80%)`,
+        mnemonics: [
+          { text: "Dukes ABCD: A=wall, B=beyond wall, C=nodes, D=distant", explanation: "Historical staging classification; correlates with prognosis" },
+          { text: "CRC spreads to Liver first (portal vein), then Lung", explanation: "Most common metastatic sites in order; low rectal cancer can bypass liver" },
+        ],
+        keyPoints: [
+          "CIN pathway (85%): APC/KRAS/p53 mutations; MSI pathway (15%): mismatch repair defects",
+          "MSI-high tumors: better prognosis, respond to immunotherapy",
+          "Liver is most common metastatic site (portal vein); lung second",
+          "Minimum 12 lymph nodes must be examined for adequate staging",
+          "CEA is for monitoring recurrence, NOT screening",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 24", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 72", edition: "28th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "colorectal-carcinoma-layer-3-clinical",
+        title: "Colorectal Carcinoma - Clinical",
+        estimatedMinutes: 25,
+        summary: "Clinical presentation, diagnostic workup, surgical management, and adjuvant therapy for colorectal carcinoma.",
+        contentMd: `# Colorectal Carcinoma - Clinical Management
+
+## Clinical Presentation
+### Right-Sided Colon Cancer (Caecum, Ascending)
+- Iron deficiency anemia (occult bleeding); fatigue, weakness
+- Palpable abdominal mass (often late presentation)
+- Rarely causes obstruction (large lumen, liquid stool)
+- Weight loss, anorexia
+
+### Left-Sided Colon Cancer (Descending, Sigmoid)
+- Change in bowel habit (alternating constipation/diarrhea)
+- Tenesmus, blood/mucus in stool
+- Intestinal obstruction (common; narrow lumen, formed stool)
+- "Napkin ring" stricture on barium enema
+
+### Rectal Cancer
+- Fresh bleeding per rectum (most common symptom)
+- Tenesmus, sense of incomplete evacuation
+- Palpable on digital rectal examination (within 8 cm of anal verge)
+
+## Diagnostic Workup
+### Colonoscopy (Gold Standard)
+- Visualizes entire colon; allows biopsy
+- Screening recommended from age 50 (earlier if high risk)
+- Complete colonoscopy mandatory even if tumor found (synchronous tumors in 3-5%)
+
+### Imaging
+- **CT chest/abdomen/pelvis**: Staging (local extent + liver/lung metastases)
+- **MRI pelvis**: Essential for rectal cancer (T and N staging, mesorectal fascia involvement)
+- **PET-CT**: For suspected recurrence or equivocal metastases
+- **Endorectal ultrasound**: T staging for early rectal cancer
+
+### Blood Tests
+- CBC (anemia), LFTs (liver metastases), CEA (baseline for monitoring)
+
+## Surgical Management
+### Colon Cancer
+- **Right hemicolectomy**: Caecal and ascending colon tumors (includes hepatic flexure)
+- **Extended right hemicolectomy**: Transverse colon tumors
+- **Left hemicolectomy**: Descending colon tumors
+- **Sigmoid colectomy**: Sigmoid tumors
+- **Principles**: En bloc resection with adequate margins, high ligation of feeding vessels, minimum 12 lymph nodes
+
+### Rectal Cancer
+- **Anterior resection**: Upper and mid rectum; anastomosis preserves sphincter
+- **Low anterior resection (LAR)**: Low rectum; may need defunctioning stoma
+- **Abdominoperineal resection (APR)**: Very low tumors (<5 cm from anal verge); permanent colostomy
+- **Total mesorectal excision (TME)**: Standard; sharp dissection of entire mesorectum; reduces local recurrence to <5%
+
+### Emergency Presentation (Obstruction/Perforation)
+- Right-sided: Right hemicolectomy + primary anastomosis
+- Left-sided: Hartmann procedure (resection + end colostomy) or subtotal colectomy
+
+## Adjuvant Therapy
+- **Stage II (high risk)**: Consider adjuvant chemotherapy (MSI testing guides decision)
+- **Stage III**: FOLFOX chemotherapy (5-FU + Leucovorin + Oxaliplatin) for 6 months
+- **Rectal cancer**: Neoadjuvant chemoradiation (5-FU + RT) for T3/T4 or node-positive disease; improves local control and sphincter preservation
+
+## Screening in India
+- Average risk: Colonoscopy every 10 years from age 50
+- High risk (family history, IBD): Earlier and more frequent screening
+- FOBT (fecal occult blood test): Annual; less sensitive but widely available`,
+        mnemonics: [
+          { text: "Right = Red (anemia); Left = Altered bowel habit; Rectum = Red blood PR", explanation: "Classic presentation pattern by tumor location" },
+          { text: "TME = Total Mesorectal Excision = Gold standard for rectal cancer", explanation: "Sharp mesorectal dissection reduces local recurrence from 30% to <5%" },
+        ],
+        keyPoints: [
+          "Right colon: iron deficiency anemia; Left colon: obstruction/bowel habit change; Rectum: bleeding PR",
+          "Colonoscopy is gold standard; complete colonoscopy mandatory (synchronous tumors 3-5%)",
+          "TME is standard for rectal cancer surgery; reduces local recurrence to <5%",
+          "Stage III: FOLFOX adjuvant chemotherapy; Rectal T3/T4: neoadjuvant chemoradiation",
+          "Minimum 12 lymph nodes examined for adequate staging",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 24", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 72", edition: "28th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "colorectal-carcinoma-layer-4-exam",
+        title: "Colorectal Carcinoma - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "High-yield exam facts on colorectal carcinoma for NEXT pattern questions.",
+        contentMd: `# Colorectal Carcinoma - Exam Prep
+
+## Must-Know Facts
+- Most common cause of LBO: Colorectal carcinoma
+- Most common site: Rectum (40%)
+- Adenoma-carcinoma sequence: APC → KRAS → p53 (10-15 years)
+- FAP: APC gene, >100 polyps, 100% cancer risk, prophylactic colectomy
+- Lynch: MMR genes, right-sided, MSI-high, better prognosis
+- CEA: Monitoring only (NOT screening)
+- Minimum 12 nodes for staging; TME for rectal cancer
+
+## Common Exam Traps
+- "Iron deficiency anemia in elderly male" = Think right colon cancer (always investigate)
+- "Change in bowel habit in >50" = Colonoscopy to rule out left colon cancer
+- "Young patient with >100 polyps" = FAP (APC mutation)
+- "Right-sided colon cancer, MSI-high, young patient" = Lynch syndrome
+- "CEA elevated post-surgery" = Recurrence (not primary screening tool)
+- "Apple core lesion on barium enema" = Annular carcinoma (left colon)
+
+## Surgical Procedure by Site
+| Tumor Location | Procedure |
+|---------------|-----------|
+| Caecum/Ascending | Right hemicolectomy |
+| Hepatic flexure | Extended right hemicolectomy |
+| Transverse | Extended right or transverse colectomy |
+| Splenic flexure | Extended left hemicolectomy |
+| Descending | Left hemicolectomy |
+| Sigmoid | Sigmoid colectomy |
+| Upper rectum | Anterior resection |
+| Low rectum (>5cm) | Low anterior resection + TME |
+| Very low rectum (<5cm) | APR + permanent colostomy |
+
+## Staging Quick Reference
+| Dukes | TNM | 5-Year Survival |
+|-------|-----|----------------|
+| A | T1-2 N0 | >90% |
+| B | T3-4 N0 | 65-75% |
+| C | Any T, N+ | 30-50% |
+| D | M1 | <10% |
+
+## High-Yield Questions
+- Gene mutated in FAP = APC (chromosome 5q21)
+- Genes mutated in Lynch = MLH1, MSH2, MSH6, PMS2
+- Investigation of choice = Colonoscopy with biopsy
+- Most common distant metastasis = Liver (portal vein drainage)
+- Rectal cancer: Neoadjuvant chemoRT for T3/T4
+- Tumor marker for monitoring = CEA`,
+        mnemonics: [
+          { text: "Apple Core = Annular carcinoma on barium enema (left colon)", explanation: "Classic radiological appearance of stricturing left colon cancer" },
+          { text: "FAP = 5q21 = APC = 100 polyps = 100% cancer", explanation: "FAP genetics and natural history in one line" },
+        ],
+        keyPoints: [
+          "Iron deficiency anemia in elderly = investigate for right colon cancer",
+          "FAP: APC gene (5q21), >100 polyps, 100% cancer risk",
+          "Lynch: MMR genes, Amsterdam 3-2-1 criteria, MSI-high",
+          "Liver is most common metastatic site; CEA for monitoring recurrence",
+          "APR with permanent colostomy for tumors <5 cm from anal verge",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 24", edition: "6th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "colorectal-carcinoma-layer-5-active-recall",
+        title: "Colorectal Carcinoma - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Flashcard Q&A for spaced repetition on colorectal carcinoma.",
+        contentMd: `# Active Recall - Colorectal Carcinoma
+
+**Q1:** What is the adenoma-carcinoma sequence?
+**A1:** Normal epithelium → Adenoma → Carcinoma. Key mutations: APC (initiation) → KRAS (progression) → p53 (malignant transformation). Takes 10-15 years.
+
+**Q2:** What gene is mutated in FAP?
+**A2:** APC gene on chromosome 5q21 (autosomal dominant). Produces >100 polyps by age 20. 100% cancer risk without prophylactic colectomy.
+
+**Q3:** What are the Amsterdam criteria for Lynch syndrome?
+**A3:** 3-2-1 rule: At least 3 relatives with CRC, across 2 generations, at least 1 diagnosed before age 50. Associated with mismatch repair gene mutations.
+
+**Q4:** How does right-sided CRC present differently from left-sided?
+**A4:** Right: Iron deficiency anemia, palpable mass, weight loss (rarely obstructs). Left: Change in bowel habit, obstruction, blood/mucus in stool (napkin ring stricture).
+
+**Q5:** What is the gold standard investigation for CRC?
+**A5:** Colonoscopy with biopsy. Complete colonoscopy mandatory even after finding a tumor (3-5% synchronous tumors). CT for staging.
+
+**Q6:** What is TME?
+**A6:** Total Mesorectal Excision. Sharp dissection of entire mesorectum as a unit. Reduced local recurrence in rectal cancer from 30% to <5%. Standard of care.
+
+**Q7:** When is APR indicated?
+**A7:** Abdominoperineal resection for very low rectal tumors (<5 cm from anal verge) where sphincter preservation is not possible. Results in permanent end colostomy.
+
+**Q8:** What is the role of CEA?
+**A8:** CEA is for post-operative monitoring of recurrence (NOT screening). Pre-op elevated CEA suggests advanced disease. Post-op rise indicates recurrence.
+
+**Q9:** What adjuvant therapy is given for Stage III CRC?
+**A9:** FOLFOX (5-FU + Leucovorin + Oxaliplatin) for 6 months. Improves survival significantly.
+
+**Q10:** What is the significance of MSI-high status?
+**A10:** MSI-high tumors have better prognosis and respond to immunotherapy (PD-1 inhibitors like pembrolizumab). Found in Lynch syndrome and some sporadic CRC.
+
+**Q11:** What is the most common site of distant metastasis?
+**A11:** Liver (via portal venous drainage). Lung is second most common. Low rectal cancer can metastasize to lung first (bypasses portal system via internal iliac veins).
+
+**Q12:** What is Hartmann procedure?
+**A12:** Resection of sigmoid/rectum with end colostomy and closure of rectal stump. Used in emergency left-sided CRC with obstruction or perforation.`,
+        mnemonics: [
+          { text: "Right = anemia, Left = obstruction, Rectum = bleeding", explanation: "Classic presentation pattern of CRC by anatomical location" },
+          { text: "FOLFOX = 5-FU + Leucovorin + Oxaliplatin = Stage III adjuvant", explanation: "Standard adjuvant chemotherapy regimen for node-positive colorectal cancer" },
+        ],
+        keyPoints: [
+          "Adenoma-carcinoma sequence: APC → KRAS → p53 over 10-15 years",
+          "FAP: APC gene, >100 polyps, 100% cancer risk; Lynch: MMR genes, MSI-high",
+          "Right CRC = anemia; Left = obstruction; Rectum = bleeding PR",
+          "TME standard for rectal cancer; APR for very low tumors; FOLFOX for stage III",
+          "Liver is most common metastatic site; CEA for monitoring, not screening",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 24", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 72", edition: "28th" },
+        ],
+      },
+    ],
+  },
 ];

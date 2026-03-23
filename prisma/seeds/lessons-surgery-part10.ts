@@ -1,17 +1,366 @@
-export const surgeryPart10Lessons = [
+import type { TopicLessons } from "./content-loader";
+
+export const surgeryPart10Lessons: TopicLessons[] = [
   {
     topicCode: "SU-MOD-08-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "renal-calculi-foundation",
+        slug: "renal-calculi-layer-1-foundation",
         title: "Renal Calculi - Foundation",
+        estimatedMinutes: 22,
+        summary: "Types of renal stones, composition, risk factors, and clinical presentation of urolithiasis.",
+        contentMd: `# Renal Calculi - Foundation
+
+## Epidemiology
+- Prevalence: 5-15% worldwide; very common in India (stone belt: Rajasthan, Gujarat, Maharashtra, Punjab)
+- Male:Female = 3:1; peak age 30-50 years
+- Recurrence rate: 50% within 5-10 years without prevention
+- Most common site of impaction: Pelviureteric junction (PUJ), pelvic brim, vesicoureteric junction (VUJ)
+
+## Types of Renal Stones
+### Calcium Stones (75-80%)
+- **Calcium oxalate** (most common overall): Envelope-shaped crystals; hard, dark, irregular
+- **Calcium phosphate**: Smooth, white; forms in alkaline urine
+- Causes: Hypercalciuria (most common), hyperparathyroidism, RTA type 1, hypocitraturia
+
+### Struvite (Magnesium Ammonium Phosphate) Stones (10-15%)
+- "Infection stones" or "triple phosphate"
+- Caused by urease-producing organisms: Proteus, Klebsiella, Pseudomonas
+- Form staghorn calculi (fill renal pelvis and calyces)
+- Alkaline urine (pH >7); coffin-lid shaped crystals
+
+### Uric Acid Stones (5-10%)
+- Radiolucent (not visible on X-ray KUB; seen on CT)
+- Form in acidic urine (pH <5.5)
+- Associated with gout, myeloproliferative disorders, chronic diarrhea
+- Can be dissolved with alkalinization (potassium citrate)
+
+### Cystine Stones (1-2%)
+- Autosomal recessive disorder of amino acid transport (cystinuria)
+- Hexagonal crystals; positive cyanide-nitroprusside test
+- Recurrent from childhood; may form staghorn calculi
+- Radiopaque (ground-glass appearance)
+
+## Risk Factors
+- Dehydration (most important modifiable factor)
+- Diet: High oxalate (spinach, chocolate), high sodium, high animal protein
+- Family history, obesity, diabetes
+- Metabolic: Hyperparathyroidism, RTA, medullary sponge kidney
+- Anatomical: PUJ obstruction, horseshoe kidney, medullary sponge kidney
+
+## Clinical Presentation
+### Renal Colic
+- Sudden onset severe colicky flank pain radiating to groin/testis/labia
+- Patient writhes in agony (cannot find comfortable position)
+- Nausea and vomiting common
+- Hematuria (microscopic or gross) in 85%
+
+### By Stone Location
+- **Renal pelvis**: Dull flank pain; may be asymptomatic
+- **Upper ureter**: Flank pain radiating to abdomen
+- **Mid ureter**: Pain radiating to inguinal region
+- **Lower ureter (VUJ)**: Urgency, frequency, dysuria (mimics UTI)`,
+        mnemonics: [
+          { text: "Stone Types by frequency: Calcium > Struvite > Uric acid > Cystine", explanation: "80% > 10-15% > 5-10% > 1-2%; calcium oxalate is most common single type" },
+          { text: "Struvite = Staghorn = Infection = Proteus = Alkaline urine", explanation: "Infection stones from urease-producing bacteria creating alkaline environment" },
+        ],
+        keyPoints: [
+          "Calcium oxalate: most common stone type (75-80%); radiopaque",
+          "Struvite: infection stones (urease producers); form staghorn calculi; alkaline urine",
+          "Uric acid stones: radiolucent on X-ray; form in acidic urine; can be dissolved",
+          "India is in the 'stone belt'; dehydration is the most important modifiable risk factor",
+          "Renal colic: severe colicky flank pain radiating to groin; hematuria in 85%",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 31: Urinary Calculi", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 76: The Kidney and Ureter", edition: "28th" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "renal-calculi-layer-2-mechanism",
+        title: "Renal Calculi - Mechanism",
+        estimatedMinutes: 22,
+        summary: "Pathogenesis of stone formation, supersaturation theory, and metabolic evaluation.",
+        contentMd: `# Renal Calculi - Mechanism
+
+## Stone Formation Theory
+### Supersaturation
+- Urine becomes supersaturated with stone-forming salts
+- Exceeds the metastable limit → spontaneous crystallization
+- Factors: Low urine volume, high solute excretion, low inhibitors
+
+### Nucleation
+- **Homogeneous**: Crystals form de novo in pure supersaturated solution (rare)
+- **Heterogeneous**: Crystals form on pre-existing surfaces (cell debris, other crystals, Randall plaques)
+- Randall plaques: Calcium phosphate deposits in renal papillae; serve as nidus for calcium oxalate
+
+### Crystal Growth and Aggregation
+- Nucleated crystals grow by adding more ions
+- Crystal aggregation forms larger particles that cannot pass through collecting system
+- Retention in kidney = stone formation
+
+## Inhibitors of Stone Formation
+- **Citrate**: Most important inhibitor; binds calcium, reduces supersaturation
+- **Magnesium**: Binds oxalate, reduces calcium oxalate formation
+- **Pyrophosphate**: Inhibits crystal growth
+- **Nephrocalcin, uropontin, Tamm-Horsfall protein**: Glycoprotein inhibitors
+- Hypocitraturia is the most common metabolic abnormality in stone formers
+
+## Metabolic Abnormalities
+### Hypercalciuria (Most Common Cause of Calcium Stones)
+- **Absorptive** (Type I): Increased intestinal calcium absorption; normal serum calcium
+- **Resorptive**: Primary hyperparathyroidism; elevated serum calcium + PTH
+- **Renal leak**: Defective renal tubular reabsorption of calcium
+
+### Hyperoxaluria
+- **Primary**: Genetic enzyme deficiency (rare, severe)
+- **Enteric**: Crohn disease, short bowel syndrome (fat malabsorption → increased oxalate absorption)
+- **Dietary**: Excess oxalate intake (spinach, rhubarb, chocolate, tea)
+
+### Hyperuricosuria
+- Gout, myeloproliferative disorders, high purine diet
+- Uric acid acts as nidus for calcium oxalate stones too
+
+### Cystinuria
+- Autosomal recessive; defective renal tubular reabsorption of cystine, ornithine, lysine, arginine (COLA)
+- Cystine is poorly soluble; precipitates in acidic urine
+
+## Obstructive Complications
+- Stone causes ureteric obstruction → hydronephrosis → back-pressure on kidney
+- Prolonged obstruction → renal parenchymal damage → loss of function
+- Complete obstruction: Renal damage begins within 24 hours; irreversible after 6 weeks
+- Infected hydronephrosis (pyonephrosis): Surgical emergency requiring drainage`,
+        mnemonics: [
+          { text: "Citrate = Chief inhibitor; Hypocitraturia = Most common metabolic defect", explanation: "Citrate binds calcium, preventing stone formation; low citrate is most treatable cause" },
+          { text: "COLA = Cystine, Ornithine, Lysine, Arginine", explanation: "Amino acids with defective tubular reabsorption in cystinuria" },
+        ],
+        keyPoints: [
+          "Stone formation: supersaturation → nucleation → crystal growth → aggregation",
+          "Citrate is the most important inhibitor; hypocitraturia is most common metabolic defect",
+          "Hypercalciuria: most common cause of calcium stones; check PTH if serum calcium elevated",
+          "Cystinuria: autosomal recessive, COLA amino acids, hexagonal crystals",
+          "Complete ureteric obstruction: kidney damage begins in 24 hours; irreversible after 6 weeks",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 31", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 76", edition: "28th" },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "renal-calculi-layer-3-clinical",
+        title: "Renal Calculi - Clinical",
         estimatedMinutes: 25,
-        summary: "Overview of urolithiasis including types, epidemiology, and pathophysiology of stone formation.",
-        contentMd: "# Renal Calculi - Foundation\n\n## Definition and Epidemiology\n- **Definition**: Formation of mineral aggregates (stones/concretions) within urinary system\n- **Incidence**: 1-5% in developed countries, 10-15% in India (higher due to heat, dehydration)\n- **Male predominance**: 2:1 to 4:1 male to female ratio\n- **Peak age**: 30-50 years\n\n## Types of Renal Stones\n\n### Calcium Stones (75-80%)\n**Calcium oxalate** (most common 70%):\n- Sparingly soluble → crystallizes easily\n- Associated with: Hypercalciuria, hyperoxaluria, hypocitraturia\n- Appearance: Envelope-shaped crystals\n\n**Calcium phosphate** (5-10%):\n- Often associated with alkaline urine\n- Mixed oxalate-phosphate stones common\n\n### Struvite (Magnesium Ammonium Phosphate) Stones (10-15%)\n- **Associated with**: Recurrent UTI with urea-splitting bacteria (Proteus, Pseudomonas, Klebsiella)\n- **Appearance**: Coffin-lid or prism crystals\n- **Tendency**: Form rapidly, \"staghorn\" calculi (large, branching)\n- **Predominance**: Female patients (UTI more common)\n- **Significance**: Higher risk infection, obstruction\n\n### Uric Acid Stones (5-10%)\n- **Associated with**: Gout, high dietary purine, acidic urine, dehydration\n- **Radiolucent**: Not visible on X-ray (important for diagnosis)\n- **Risk**: Can dissolve with alkalization (unlike calcium stones)\n\n### Cystine Stones (1-2%)\n- **Associated with**: Cystinosis (genetic disorder), cystinuria\n- **Radiolucent or faintly radiopaque**\n- **Characteristics**: Recurrent, starts in childhood, family history\n\n### Rare Stones (<1%)\n- **Xanthine**: Allopurinol therapy\n- **Silicate**: Silica-containing minerals\n- **Drug-related**: Indinavir (antiretroviral), acetazolamide\n\n## Risk Factors for Stone Formation\n\n### Systemic Factors\n- **Immobility**: Prolonged bed rest, paraplegia\n- **Tropical climate**: Heat → dehydration → concentrated urine\n- **Family history**: Familial hypercalciuria (autosomal dominant)\n- **Age/Sex**: Males 30-50 years\n\n### Metabolic Factors\n- **Hypercalciuria**: 24-hour urine calcium >250 mg/day (abnormal)\n- **Hyperuricemia**: From gout, purine-rich diet\n- **Hyperoxaluria**: Primary (genetic), secondary (inflammatory bowel disease)\n- **Hypocitraturia**: Citrate inhibits crystallization; low levels promote stones\n\n### Urinary Factors\n- **Dehydration**: Low urine volume → concentrated urine → stone formation\n- **pH abnormality**: Acidic urine (uric acid, cystine), alkaline urine (struvite, calcium phosphate)\n- **Stasis**: Obstruction, neurogenic bladder, renal artery stenosis\n\n### Infectious Factors\n- **UTI history**: Especially struvite stones (recurrent infection)\n- **Specific organisms**: Proteus urease-producing organisms\n\n### Dietary Factors\n- **Excess salt**: Increases urinary calcium\n- **Excess protein**: Increases uric acid and calcium\n- **Excess purine**: Increases uric acid (meat, fish, organ meats)\n- **Low fluid intake**: Major risk factor in tropical India\n\n## Pathophysiology of Stone Formation\n\n### Crystal Nucleation Theory\n**Prerequisites**:\n1. **Supersaturation**: Solute concentration exceeds solubility\n2. **Nucleation**: Crystal formation (requires nucleating agents)\n3. **Aggregation**: Crystals coalesce into stones\n4. **Retention**: Stone stays in urinary system (not passed)\n\n### Factors Promoting Stone Formation\n- **High urine concentration** (low urine volume)\n- **pH changes** (affects solubility of different salts)\n- **Promoters of crystallization**: Absence of inhibitors\n- **Inhibitors normally present**: Citrate, magnesium, glycosaminoglycans, proteins\n\n### Kolff Membrane Theory\n- Organic matrix (Tamm-Horsfall protein) acts as framework\n- Crystals deposit on matrix\n- Stone grows around nucleated center\n\n## Clinical Significance by Stone Type\n\n**Calcium oxalate**: Most common, risk of hypercalciuria evaluation needed\n\n**Struvite**: Requires aggressive infection management, high recurrence\n\n**Uric acid**: Can be dissolved with alkalization (unlike others)\n\n**Cystine**: Requires lifelong management, high recurrence, family screening\n\n**India-specific**: Tropical climate + dehydration = higher incidence overall; struvite more common in females with UTI,\n        mnemonics: [\n          {\n            text: \"STONE TYPES = Calcium 75-80% (oxalate most), Struvite 10-15%, Uric acid 5-10%, Cystine 1-2%, Rare <1%\",\n            explanation: \"Distribution of stone types\"\n          },\n          {\n            text: \"STRUVITE ASSOCIATIONS = Recurrent UTI, urea-splitting bacteria, staghorn, female predominance\",\n            explanation: \"Distinctive features of infection stones\"\n          },\n          {\n            text: \"NUCLEATION REQUIREMENT = Supersaturation + nucleating agents + stasis = stone formation\",\n            explanation: \"Prerequisites for crystallization\"\n          }\n        ],\n        keyPoints: [\n          \"Calcium oxalate most common; requires metabolic workup\",\n          \"Struvite stones associated with recurrent UTI; aggressive treatment needed\",\n          \"Uric acid stones radiolucent; diagnosis may require CT\",\n          \"Dehydration primary risk factor; prophylaxis centers on hydration\",\n          \"India has higher incidence due to tropical climate and heat\"\n        ],\n        textbookRefs: [\n          { book: \"Bailey & Love's Short Practice of Surgery\", chapter: \"Urolithiasis\", edition: \"28th\" },\n          { book: \"Sabiston Textbook of Surgery\", chapter: \"Disorders of the Urinary Bladder and Urethra\", edition: \"21st\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"renal-calculi-mechanism\",\n        title: \"Renal Calculi - Mechanisms\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiological mechanisms of stone formation and clinical consequences.\",\n        contentMd: "# Renal Calculi - Mechanisms\\n\\n## Mechanisms of Stone Formation\\n\\n### Supersaturation and Crystal Formation\\n**Solubility factors**:\\n- Temperature: Inverse relationship for most salts (cooler = less soluble)\\n- pH: Different salts have different optimal pH for precipitation\\n- Ionic strength: Affects solubility product\\n\\n**Calcium stones**:\\n- Calcium oxalate solubility decreases with ↓ urine pH (favorable in acidic urine)\\n- Calcium phosphate solubility decreases with ↑ urine pH (favorable in alkaline urine)\\n- Both form when supersaturated\\n\\n**Struvite stones**:\\n- Form only in alkaline urine (pH >6.5)\\n- Bacteria (Proteus) produce urease → ammonia → alkaline urine\\n- Precipitation: Mg²⁺ + NH₄⁺ + PO₄³⁻ → struvite\\n\\n**Uric acid stones**:\\n- Solubility dramatically decreases at pH <6.0\\n- Acidic urine (pH 4.5-5.5) promotes crystallization\\n- Gout → increased uric acid → uric acid stones\\n\\n**Cystine stones**:\\n- Solubility <300 mg/L (very low)\\n- Excess urinary cystine (genetic defect) → crystallizes readily\\n- Neutral to alkaline pH preferred\\n\\n### Kolff Membrane (Organic Matrix)\\n**Components**:\\n- Tamm-Horsfall protein (uromodulin)\\n- Glycosaminoglycans\\n- Proteins, lipids\\n- Epithelial cell debris\\n\\n**Role in stone formation**:\\n- Provides framework for crystal nucleation\\n- Stone growth occurs on matrix\\n- Explains why all stones have organic matrix center\\n- Matrix may account for 10% of stone weight\\n\\n## Pathophysiology of Obstruction\\n\\n### Acute Obstruction (Acute Renal Colic)\\n**Phase 1** (Minutes to hours):\\n- Stone lodges in ureter\\n- Immediate muscular spasm and peristalsis\\n- Pain from ureteral distension\\n- Elevated ureteral pressure\\n\\n**Phase 2** (Hours to days):\\n- Persistent obstruction → proximal dilation (ureter and renal pelvis)\\n- Increased interstitial pressure\\n- Renal lymph flow impaired\\n- Increased glomerular filtration pressure initially (mechanism of continued urine production despite obstruction)\\n\\n**Phase 3** (Days):\\n- Glomerular filtration rate decreases\\n- Renal blood flow decreases\\n- Swelling of renal parenchyma\\n- Pain may paradoxically improve (GFR falls)\\n\\n### Chronic Obstruction\\n**Early changes**:\\n- Tubular dilation → hydronephrosis\\n- Parenchymal thinning (progressive)\\n- Fibrosis and atrophy\\n\\n**Late changes**:\\n- Loss of renal function\\n- Permanent damage if not relieved\\n\\n**Recovery potential**:\\n- If <2-3 weeks: Potentially reversible\\n- If >6-8 weeks: Significant permanent changes\\n- If complete unilateral obstruction >3 months: Likely irreversible\\n\\n## Infection Complications\\n\\n### Infected Stone Pathophysiology\\n**Urea-splitting bacteria** (Proteus, Klebsiella, Pseudomonas):\\n- Produce urease enzyme\\n- Urea → ammonia + CO₂\\n- Ammonia → alkaline environment (pH >7)\\n- Alkaline pH + Mg²⁺/NH₄⁺ → struvite precipitation\\n- Positive feedback: Stone formation → infection persistence\\n\\n### Pyonephrosis\\n**Definition**: Pus-filled obstructed kidney (infected hydronephrosis)\\n**Pathophysiology**:\\n- Obstructing stone + infection\\n- Pus accumulation under pressure\\n- Renal tissue destruction\\n- Emergency condition (mortality 10-60% if untreated)\\n\\n**Consequences**:\\n- Rapid renal function loss\\n- Sepsis risk\\n- Permanent irreversible damage\\n\\n## Size and Location Effects on Clinical Course\\n\\n### Stone Size Impact\\n**<5 mm**: 90% pass spontaneously\\n**5-10 mm**: 50% pass spontaneously, 50% require intervention\\n**>10 mm**: <10% pass spontaneously, >90% require intervention\\n\\n### Location Impact\\n**Ureteropelvic junction**: Often impacted, high obstruction rates\\n**Pelvic brim**: Narrow, difficult passage, highest impaction rates\\n**Intramural ureter**: Least obstructive despite location\\n**Urethra**: Severe obstruction, may cause acute urinary retention\\n\\n## Metabolic Consequences of Obstruction\\n\\n### Fluid and Electrolyte Changes\\n- **Hyperchloremic acidosis**: Post-obstructive diuresis can cause dehydration\\n- **Hypokalemia**: Possible if prolonged diarrhea (renal loss minimized)\\n- **Volume depletion**: Risk with post-obstructive diuresis\\n\\n### Acid-Base Changes\\n- **Metabolic acidosis**: If significant renal impairment\\n- **Hyperkalemia**: Possible if severe bilateral obstruction\\n\\n### Protein Changes\\n- **Proteinuria**: Common with obstruction\\n- **Magnitude**: Usually modest unless severe kidney disease,\\n        mnemonics: [\\n          {\\n            text: \\\"STONE FORMATION TIMELINE = Acute spasm (minutes), Pressure rise (hours), GFR fall (days), Permanent damage (weeks-months)\\\",\\n            explanation: \\\"Stages of obstruction progression\\\"\\n          },\\n          {\\n            text: \\\"SIZE AND PASSAGE = <5mm (90% pass), 5-10mm (50% pass), >10mm (<10% pass)\\\",\\n            explanation: \\\"Prediction of spontaneous passage\\\"\\n          },\\n          {\\n            text: \\\"INFECTION + STONE = Urease-producing bacteria + struvite → alkaline urine → stone propagation\\\",\\n            explanation: \\\"Mechanism of infected stone formation\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Obstruction phases: acute spasm → pressure rise → GFR decline → permanent damage\\\",\\n          \\\"Recovery potential better if <3 weeks obstruction\\\",\\n          \\\"Infected obstructed kidney (pyonephrosis) is emergency\\\",\\n          \\\"Stone size predicts spontaneous passage rate\\\",\\n          \\\"Struvite stones perpetuate infection cycle\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Urolithiasis Complications\\\", edition: \\\"28th\\\" },\\n          { book: \\\"Campbell-Walsh Urology\\\", chapter: \\\"Renal Calculi\\\", edition: \\\"12th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"renal-calculi-clinical\\\",\\n        title: \\\"Renal Calculi - Clinical Assessment\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Clinical presentation, diagnosis, and management of renal calculi and obstructive complications.\\\",\\n        contentMd: ``# Renal Calculi - Clinical Assessment\\n\\n## Clinical Presentation\\n\\n### Acute Renal Colic (Uncomplicated)\\n**Classic features**:\\n- **Pain character**: Severe colicky pain (comes in waves)\\n- **Location**: Flank pain, radiates to groin/genitalia (follows ureteral course)\\n- **Onset**: Sudden, crescendo over 30 minutes\\n- **Associated**: Nausea, vomiting, restlessness (severe, unlike peritonitis where patient still)\\n- **Urinary**: Hematuria (visible or microscopic)\\n- **Duration**: Minutes to hours per episode, recurrent\\n\\n**Examination findings**:\\n- **General**: Restless, in acute distress\\n- **CVS/RS**: Usually normal\\n- **Abdomen**: Flank tenderness, costovertebral angle tenderness, no peritoneal signs\\n- **Urinary**: Hematuria on urinalysis\\n\\n### Asymptomatic Stones\\n- Discovered incidentally on imaging for other reasons\\n- Often small, non-obstructing\\n- Prevalence 5-15% depending on population\\n\\n### Chronic Stone Disease\\n- Recurrent episodes\\n- Repeated infection\\n- Progressive renal impairment (if bilateral)\\n- Hydroureteronephrosis development\\n\\n## Diagnosis\\n\\n### Laboratory Investigation\\n**Urinalysis**:\\n- **Hematuria**: Present in 85-90% (RBC varies from microscopic to brisk)\\n- **Absence of hematuria**: Doesn't exclude stone (if non-obstructing)\\n- **Crystalluria**: May show specific crystals (calcium oxalate, uric acid, etc.)\\n- **Infection signs**: WBC, bacteria if concurrent UTI\\n\\n**Urine culture**:\\n- Indicated if fever, pyuria, or recurrent infections\\n- Important for struvite stone assessment\\n\\n**24-hour urine**: For metabolic assessment\\n- Calcium, phosphate, oxalate, citrate, uric acid, cystine\\n- Helps determine stone type and prevention strategy\\n\\n**Blood work**:\\n- Creatinine, urea: Assess renal function\\n- Calcium, phosphate, uric acid: Metabolic assessment\\n- In first presentation with obstruction: Check for hyperparathyroidism (calcium >10.5 mg/dL)\\n\\n### Imaging\\n\\n**X-ray (KUB)**:\\n- **Sensitivity**: 70-80% for radiopaque stones (calcium, struvite)\\n- **Limitation**: Uric acid stones radiolucent (not visible)\\n- **Useful for**: Initial screening, follow-up monitoring\\n- **Disadvantage**: Cannot assess obstruction severity\\n\\n**Ultrasound**:\\n- **Advantages**: No radiation, shows hydronephrosis (obstruction indicator)\\n- **Limitations**: Cannot detect non-obstructing stones reliably, operator-dependent\\n- **Use**: Confirm obstruction, assess hydronephrosis degree\\n\\n**CT KUB (Non-contrast CT)**:\\n- **Gold standard**: Sensitivity 95-98% for all stone types\\n- **Advantages**: Detects radiolucent stones (uric acid, cystine), shows obstruction, measures density (predicts composition)\\n- **Disadvantage**: Radiation exposure\\n- **Use**: Definitive diagnosis when ultrasound equivocal, recurrent stones, first presentation with complication\\n\\n**IVP (Intravenous Pyelography)**:\\n- Largely replaced by CT\\n- Shows function of both kidneys, drainage\\n- Useful if CT contraindicated and diagnosis uncertain\\n\\n## Management\\n\\n### Acute Uncomplicated Renal Colic\\n\\n**Conservative management** (60-75% pass spontaneously if <6 mm):\\n- **Analgesics**: NSAIDs (indomethacin 50 mg, ibuprofen) or opioids (if severe)\\n- **Fluids**: Adequate hydration (IV if severe vomiting)\\n- **Anti-emetics**: Ondansetron if nausea\\n- **Watchful waiting**: Imaging confirmation, renal function check\\n- **Follow-up imaging**: Ultrasound or X-ray at 2-4 weeks to confirm passage\\n\\n**Indications for intervention**:\\n- **Obstructive**: Evidence of obstruction (hydroureteronephrosis on imaging)\\n- **Infected**: Fever, pyuria → pyonephrosis risk\\n- **Impaired renal function**: Creatinine rise\\n- **Intractable pain/nausea**: Despite analgesics\\n- **Solitary kidney**: Any obstruction risky\\n- **Pregnancy**: Special consideration (deferred unless complication)\\n- **Large stone** (>10 mm): Low passage rate\\n\\n### Intervention Options\\n\\n**Temporary decompression** (if infected/obstructed):\\n- **Percutaneous nephrostomy**: Tube through skin into renal pelvis\\n- **Ureteric stent**: Retrograde catheter placement via cystoscopy\\n- **Used for**: Pyonephrosis, urosepsis, pregnant woman with obstruction\\n\\n**Definitive stone removal**:\\n\\n**Extracorporeal shock wave lithotripsy (ESWL)**:\\n- Non-invasive sound waves fragment stones\\n- Requires: Stone <2 cm, normal anatomy, good renal function\\n- Advantage: Least invasive\\n- Disadvantage: Fragments may need passage, not suitable for all stones\\n\\n**Percutaneous nephrolithotomy (PCNL)**:\\n- Percutaneous access to collecting system, direct stone removal\\n- For: Large stones (>2 cm), staghorn, struvite, failure of other methods\\n- Advantage: High success rate\\n- Disadvantage: Morbidity higher (fever, bleeding)\\n\\n**Ureteroscopy + Laser/Pneumatic lithotripsy**:\\n- Retrograde approach via urethra\\n- For: Ureteric stones, small renal stones\\n- Advantage: Minimal morbidity\\n- Disadvantage: Size/location limitations\\n\\n**Open pyelolithotomy**:\\n- Rarely used in modern practice (reserved for failed endoscopy, anatomical constraints)\\n\\n## Prevention\\n\\n### Hydration\\n- **Most important measure**: Maintain urine volume >2 liters/day\\n- **Higher in hot climate**: Critical in India\\n- **Patient compliance**: Major factor in recurrence\\n\\n### Dietary Measures (Stone-type specific)\\n\\n**Calcium oxalate stones**:\\n- Restrict oxalate (spinach, nuts, chocolate)\\n- Adequate calcium (not low, which increases absorption)\\n- Restrict sodium (increases urinary calcium)\\n- Restrict excess protein\\n\\n**Uric acid stones**:\\n- Low purine diet\\n- Alkalization with potassium citrate or sodium bicarbonate\\n- Allopurinol if hyperuricemia\\n\\n**Struvite stones**:\\n- Aggressive UTI treatment and prevention\\n- Urine acidification (may help but less reliable)\\n- Acetohydroxamic acid (rarely used, toxic)\\n\\n**Cystine stones**:\\n- High fluid intake (2-3 L daily minimum)\\n- Dietary sodium/protein restriction\\n- Urine alkalization\\n- Chelating agents if medical failure\\n\\n### Pharmacologic Prevention\\n\\n**Thiazide diuretics**: For hypercalciuria (hydrochlorothiazide 25-50 mg daily)\\n\\n**Citrate supplementation**: For hypocitraturia (potassium citrate)\\n\\n**Allopurinol**: For hyperuricemia (300 mg daily)\\n\\n### Metabolic Workup (After first stone or recurrence)\\n- 24-hour urine calcium, oxalate, citrate\\n- Serum calcium, parathyroid hormone (if high calcium)\\n- Serum uric acid\\n- Identify modifiable factors,\\n        mnemonics: [\\n          {\\n            text: \\\"RENAL COLIC CLASSIC = Flank pain to groin, hematuria, restlessness, CVA tenderness, NO peritoneal signs\\\",\\n            explanation: \\\"Distinguishes from acute abdomen\\\"\\n          },\\n          {\\n            text: \\\"IMAGING LADDER = KUB (first), Ultrasound (obstruction), CT (gold standard)\\\",\\n            explanation: \\\"Diagnostic approach\\\"\\n          },\\n          {\\n            text: \\\"INTERVENTION INDICATIONS = Obstruction + fever (emergency), impaired renal function, solitary kidney, failed conservative (>6 weeks)\\\",\\n            explanation: \\\"When to act vs observe\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Acute colic managed conservatively if <6 mm and uncomplicated\\\",\\n          \\\"CT non-contrast gold standard imaging modality\\\",\\n          \\\"Infected obstructed kidney needs urgent decompression\\\",\\n          \\\"PCNL for large/struvite; ureteroscopy for ureteric stones\\\",\\n          \\\"Hydration most important prevention measure\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Urolithiasis Clinical Management\\\", edition: \\\"28th\\\" },\\n          { book: \\\"Campbell-Walsh Urology\\\", chapter: \\\"Renal Calculi Management\\\", edition: \\\"12th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"renal-calculi-exam\\\",\\n        title: \\\"Renal Calculi - Exam Preparation\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Board-level examination topics on urolithiasis diagnosis and management.\\\",\\n        contentMd: ``# Renal Calculi - Exam Preparation\\n\\n## High-Yield Examination Topics\\n\\n### Stone Composition and Risk Factors\\n\\n| Stone Type | Frequency | Risk Factors | Key Features |\\n|---|---|---|---|\\n| Calcium oxalate | 70-75% | Hypercalciuria, hyperoxaluria | Envelope crystals, radiopaque |\\n| Struvite | 10-15% | Recurrent UTI, female | Coffin-lid crystals, staghorn, alkaline urine |\\n| Uric acid | 5-10% | Gout, acidic urine | RADIOLUCENT, dissolvable with alkalization |\\n| Cystine | 1-2% | Cystinuria, genetic | Recurrent from childhood, family history |\\n\\n### Imaging Modality Comparison\\n\\n| Modality | Sensitivity | Specificity | Shows Obstruction | Shows Function |\\n|---|---|---|---|---|\\n| KUB | 70-80% (radiopaque only) | High | No | No |\\n| Ultrasound | 60-70% | High | Yes | Partially |\\n| CT (non-contrast) | 95-98% | Excellent | Yes | No |\\n| IVP | 85-90% | Good | Yes | Yes |\\n\\n### Spontaneous Stone Passage Rates\\n- **<5 mm**: 90% pass spontaneously\\n- **5-10 mm**: 50% pass spontaneously\\n- **>10 mm**: <10% pass spontaneously\\n- **Correlated with**: Stone size, location, patient factors\\n\\n### Intervention Selection\\n\\n**ESWL**: <2 cm stone, normal renal anatomy, good function\\n**PCNL**: Large (>2 cm), staghorn, resistant stones, struvite\\n**Ureteroscopy**: Ureteric stones, small renal stones\\n**Open surgery**: Failure of all endoscopic methods (rare)\\n\\n## Exam-Style Scenarios\\n\\n### Scenario 1: Acute Colic Diagnosis\\n**Case**: 35-year-old man with sudden left flank pain radiating to groin, hematuria. Costoverte bral angle tenderness. Ultrasound shows left hydronephrosis.\\n\\n**Question**: What is diagnosis and immediate management?\\n\\n**Answer**: Acute left ureteric stone causing obstructive uropathy. Diagnosis based on: (1) Classic renal colic presentation (sudden flank-groin pain, hematuria); (2) Imaging (hydronephrosis = obstruction). Management: (1) Analgesics (NSAID like indomethacin 50 mg IV or opioid if severe); (2) IV fluids if dehydrated; (3) Imaging confirmation (CT or ultrasound already done); (4) Conservative management if uncomplicated (no fever, renal function okay) with hope of spontaneous passage—90% stones <5 mm pass. If stone >10 mm, intervention likely needed. Follow-up: Repeat imaging in 2-4 weeks to confirm passage or plan intervention.\\n\\n### Scenario 2: Infected Stone Emergency\\n**Case**: 42-year-old woman with fever (39°C), left flank pain, leukocytosis (WBC 18,000), creatinine elevated (1.8). Imaging shows left hydronephrosis with stone.\\n\\n**Question**: What is diagnosis and urgent management?\\n\\n**Answer**: Pyonephrosis (infected obstructed kidney)—obstetric emergency. Management: (1) IV antibiotics (broad-spectrum: ceftriaxone + gentamicin until culture results); (2) Urgent urinary decompression: Percutaneous nephrostomy (tube drainage) or retrograde ureteric stent (if technically feasible); (3) Sepsis management (IV fluids, monitoring); (4) Definitive stone removal (PCNL) after acute infection controlled (after 24-48 hours of antibiotics). Timeline: Cannot wait for spontaneous passage in infected obstruction—immediate decompression mandatory. Prognosis: High mortality (10-60%) if not relieved urgently.\\n\\n### Scenario 3: Recurrent Stones Metabolic Workup\\n**Case**: 38-year-old male presents with 4th stone in 3 years. All previous stones were calcium oxalate. No constitutional symptoms.\\n\\n**Question**: What investigations guide prevention?\\n\\n**Answer**: Metabolic evaluation indicated (recurrent stones). Investigations: (1) 24-hour urine: Calcium (normal <250 mg/day), oxalate (normal <40 mg/day), citrate (normal >400 mg/day); (2) Serum: Calcium (check for hyperparathyroidism), phosphate, uric acid; (3) Parathyroid hormone if serum calcium elevated (primary hyperparathyroidism causes hypercalciuria); (4) Urine culture to rule out infection. Expected findings: Likely hypercalciuria or hyperoxaluria or hypocitraturia (low-normal citrate). Management based on findings: Thiazide diuretic if hypercalciuria, citrate supplementation if hypocitraturia, dietary restriction of oxalate/protein/sodium. Prevention: Increased hydration (2-3 L daily) most important.\\n\\n### Scenario 4: Radiolucent Stone Diagnosis\\n**Case**: 48-year-old male with history of gout (on allopurinol), presents with renal colic. KUB X-ray shows no stone. Ultrasound shows right hydronephrosis.\\n\\n**Question**: What is likely stone type and how would you diagnose?\\n\\n**Answer**: Likely uric acid stone (radiolucent—not visible on X-ray). Gout history increases risk. Diagnosis: CT non-contrast (will show stone despite being radiolucent; sensitivity 95-98%). KUB limitation: Detects only radiopaque stones; misses uric acid, cystine, others. Management of uric acid stone: Medical management possible (alkalization with potassium citrate pH >6.5, allopurinol). Ureteroscopy + laser if obstructing and not responsive to medical therapy. Prognosis: Better than calcium stones (can dissolve); prevention with urine alkalization and allopurinol dose optimization.\\n\\n### Scenario 5: Staghorn Calculus Decision\\n**Case**: 52-year-old woman with history of recurrent UTI, now presents with left flank pain. Imaging shows large staghorn calculus filling renal pelvis and extending into calyces. No obstruction currently. Renal function normal bilaterally.\\n\\n**Question**: What management and expected outcome?\\n\\n**Answer**: Staghorn calculus—large branching stone typical of struvite (infection stone). Decision: Despite non-obstructing currently, staghorn should be treated (high recurrence, infection risk, eventual obstruction). Management: PCNL (percutaneous nephrolithotomy)—surgical approach with direct access for stone removal. Rationale: Large stone not suitable for ESWL or ureteroscopy. Risk factors: Struvite stone suggests recurrent UTI—must identify and treat causative organism (likely Proteus urea-splitting bacteria). Prevention: Aggressive UTI prevention and treatment; urine culture monitoring. Prognosis: 10-20% recurrence rate even with successful PCNL (infection perpetuates stone formation).\\n\\n## High-Yield Facts\\n\\n**Classic triad of renal colic**: Flank pain + hematuria + CVA tenderness\\n\\n**Hematuria absent in**: Non-obstructing stones (no irritation)\\n\\n**Most common type**: Calcium oxalate (75%)\\n\\n**Female predominance**: Struvite (infection stones)\\n\\n**Radiolucent stones**: Uric acid (major), cystine (partial)\\n\\n**Spontaneous passage**: Depends on size (<5 mm = 90%, >10 mm = 10%)\\n\\n**India-specific**: Higher incidence due to heat and dehydration; endemic stones in certain regions,\\n        mnemonics: [\\n          {\\n            text: \\\"STONE TYPE INDIA = Calcium oxalate most, Struvite female with UTI, Uric acid gout patients\\\",\\n            explanation: \\\"Common types in Indian practice\\\"\\n          },\\n          {\\n            text: \\\"IMAGING SELECTION = KUB screen, Ultrasound confirms obstruction, CT gold standard if diagnosis unclear\\\",\\n            explanation: \\\"Practical approach to imaging\\\"\\n          },\\n          {\\n            text: \\\"EMERGENCY SIGNS = Fever + obstruction + elevated creatinine = pyonephrosis = URGENT DECOMPRESSION\\\",\\n            explanation: \\\"Life-threatening combination\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Calcium oxalate 75% of stones; requires metabolic workup if recurrent\\\",\\n          \\\"Struvite stones always indicate UTI; aggressive treatment needed\\\",\\n          \\\"Uric acid stones radiolucent; require CT for diagnosis\\\",\\n          \\\"Staghorn calculi require PCNL; high recurrence if infection untreated\\\",\\n          \\\"Pyonephrosis is emergency requiring immediate decompression\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Renal Calculi\\\", edition: \\\"28th\\\" },\\n          { book: \\\"NEET-PG Previous Years\\\", chapter: \\\"Urolithiasis\\\", edition: \\\"2023\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"renal-calculi-recall\\\",\\n        title: \\\"Renal Calculi - Active Recall\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Q&A on stone diagnosis, management, and prevention strategies.\\\",\\n        contentMd: ``# Renal Calculi - Active Recall Questions\\n\\n## Q&A Section\\n\\n**Q1: A 32-year-old patient presents with acute severe colicky left flank pain radiating to groin, with hematuria. Ultrasound shows left hydronephrosis. What is the diagnosis and initial management? How would you counsel regarding spontaneous passage probability?**\\n\\nA: Diagnosis: Acute obstructive uropathy from left ureteric stone (renal colic). Diagnostic features: (1) Classic presentation—sudden flank-groin pain (colicky), hematuria; (2) Imaging shows hydronephrosis (obstruction). Initial management: (1) Analgesics—NSAIDs (indomethacin 50 mg IV or 100 mg rectal) first choice (NSAIDs decrease prostaglandins, reduce ureteral spasm) OR opioids (morphine, pethidine) if contraindication to NSAIDs or severe pain; (2) Antiemetics—ondansetron for nausea/vomiting; (3) IV fluids if dehydrated; (4) Confirm diagnosis with imaging (CT or ultrasound done). Spontaneous passage probability: Depends on stone size—CRITICAL question. If <5 mm = 90% pass spontaneously (90% within 4-6 weeks). If 5-10 mm = 50% pass. If >10 mm = <10% pass. Therefore need stone sizing (CT provides exact dimensions). Counseling: \\\"90% of small stones (<5 mm) pass on their own. We'll monitor with pain management and imaging. If stone large (>10 mm), we may need intervention. Expect passage within 4-6 weeks if small.\\\"\\n\\n**Q2: Explain the pathophysiology of pyonephrosis and why it constitutes a surgical emergency.**\\n\\nA: Pyonephrosis definition: Obstructed kidney infected (pus-filled obstructed system). Pathophysiology: (1) Obstruction + UTI → ascending infection to obstructed kidney; (2) Obstructed system unable to drain → pus accumulates under pressure; (3) Pressure compresses renal parenchyma → ischemic necrosis; (4) Gram-negative bacteria (E. coli, Klebsiella, Proteus) → endotoxemia and septic shock. Why emergency: (1) Mortality very high (10-60% if untreated)—highest mortality of urologic emergencies; (2) Renal function loss rapid (days); (3) Septic shock develops rapidly; (4) Permanent irreversible kidney damage if not relieved urgently. Clinical presentation: Fever + flank pain + obstruction imaging findings + elevated creatinine = pyonephrosis until proven otherwise. Immediate management: (1) Broad-spectrum IV antibiotics (ceftriaxone + gentamicin); (2) Urgent urinary decompression—percutaneous nephrostomy tube (through skin into renal pelvis) or retrograde ureteric stent (if feasible); (3) IV fluids, hemodynamic support; (4) Definitive stone removal (PCNL) after 24-48 hours of antibiotics when acute infection controlled. Delay in decompression = preventable death.\\n\\n**Q3: How would you approach a patient with first kidney stone? What investigations guide prevention of recurrence?**\\n\\nA: First kidney stone approach: (1) Confirm diagnosis (imaging: CT or ultrasound); (2) Identify stone type (composition determines prevention); (3) Metabolic evaluation (identify modifiable risk factors). Metabolic evaluation components: (1) 24-hour urine calcium (normal <250 mg/day)—if high, suggests hypercalciuria; (2) 24-hour urine oxalate (normal <40 mg/day)—if high, hyperoxaluria; (3) 24-hour urine citrate (normal >400 mg/day)—if low, hypocitraturia (citrate is inhibitor); (4) 24-hour urine volume—low volume (<1 L) highly predictive of recurrence; (5) Serum calcium—check for primary hyperparathyroidism (if elevated, measure PTH); (6) Serum uric acid—if high, uric acid stone risk. Prevention based on findings: (1) HYDRATION—universal recommendation, most important; increase urine volume to >2 L daily (critical in India's hot climate); (2) Dietary modifications—restrict sodium (increases urinary calcium), restrict protein (increases uric acid), restrict oxalate (if hyperoxaluria); (3) Pharmacologic—thiazide diuretics if hypercalciuria (HCTZ 25-50 mg), citrate supplementation if hypocitraturia (potassium citrate), allopurinol if hyperuricemia. Prognosis: Without intervention, recurrence 10-15% per year; with compliance to prevention, reduces to 1-2% annually.\\n\\n**Q4: Explain why uric acid stones are radiolucent and how this affects diagnosis and management differently from calcium stones.**\\n\\nA: Radiolucency explanation: Uric acid has low atomic number compared to calcium oxalate/phosphate. X-rays pass through uric acid without significant absorption; therefore, KUB X-ray fails to visualize uric acid stones. Calcium stones have higher atomic number → greater X-ray absorption → visible on X-ray (radiopaque). Diagnostic implication: KUB may show hydronephrosis but no stone visualized = likely uric acid (or cystine, other radiolucent types). Requires CT non-contrast imaging for definitive diagnosis. Management differences: (1) REVERSIBILITY—Uric acid stones can dissolve with medical therapy (unlike calcium stones); (2) Alkalization—pH >6.5 increases uric acid solubility dramatically; target urine pH 6.5-7.0 using potassium citrate or sodium bicarbonate; (3) Allopurinol—Reduce production of uric acid (300 mg daily, adjust based on serum uric acid); (4) Low-purine diet—Restrict meat, organ meats, fish, shellfish (purine sources); (5) Surgery less common—Medical management often successful for uric acid stones; if must intervene surgically, laser ureteroscopy preferred. Prognosis: Better than calcium stones (medical dissolution possible); if compliance to alkalization + allopurinol, recurrence rare.\\n\\n**Q5: A patient has staghorn calculus on imaging. Explain the typical pathophysiology and why it requires intervention despite current lack of obstruction.**\\n\\nA: Staghorn calculus definition: Large branching stone filling renal pelvis and extending into calyces (appearance resembles stag antlers). Typical pathophysiology: (1) Struvite stone composition (90% of staghorn—magnesium ammonium phosphate); (2) Struvite forms in alkaline urine from urea-splitting bacteria (Proteus, Pseudomonas); (3) Positive feedback loop—stone causes obstruction → urine stasis → recurrent infection → bacteria persist → more struvite formation → stone grows. Recurrent infection drives stone growth perpetually. Female predominance: UTI more common in women; explains 60-70% staghorn in females. Why intervention despite non-obstructing currently: (1) Will cause obstruction eventually (progressive growth); (2) Recurrent infection risk high (chronic source of bacteria); (3) Predisposes to pyelonephritis, sepsis; (4) Increases renal cancer risk (chronic irritation); (5) Eventually causes renal failure if bilateral. Management: PCNL (percutaneous nephrolithotomy)—surgical procedure with direct access to renal pelvis for complete stone removal. Advantages: Can remove large stones completely. Recurrence: 10-20% even after successful PCNL (infection substrate persists). Prevention of recurrence: Aggressive UTI prevention (urine culture monitoring), complete stone removal important (residual fragments become nidus for recurrent growth). Prognosis: Better if causative UTI pathogen identified and eliminated; permanent cure unlikely without treating underlying infection.\\n\\n**Q6: Describe the role of imaging modalities in stone diagnosis and staging of complications.**\\n\\nA: Imaging progression for stone diagnosis: (1) KUB X-ray—screening tool, detects radiopaque stones (calcium, struvite 70-80% sensitivity), shows spine, abdominal anatomy; limitation: misses radiolucent stones, doesn't show obstruction. (2) Ultrasound—shows hydronephrosis (indicates obstruction), assesses renal echogenicity and atrophy; limitation: 60-70% sensitivity for stones (operator-dependent), cannot detect non-obstructing stones reliably. (3) CT non-contrast (NCCT)—gold standard (95-98% sensitivity for all stone types including radiolucent), shows stone size/shape/density, level of obstruction, hydronephrosis degree, complications (parenchymal atrophy, infection); only limitation: radiation. IVP (now rarely used)—shows function of both kidneys (dilated system function), drainage pattern; largely replaced by CT. Specific investigations: (1) Renal function assessment—serum creatinine, urea (obstruction impact); (2) Urine culture—if UTI suspected or recurrent stone history; (3) 24-hour urine—metabolic evaluation for prevention; (4) Imaging for complicated stone—CT shows pyonephrosis (fluid density abnormality), perinephric abscess, renal infarction. Clinical decision: First presentation uncomplicated colic → Ultrasound (confirms obstruction) or KUB + Ultrasound sufficient. If diagnosis unclear, fever present, or recurrent → CT essential.\\n\\n**Q7: How does stone location in the ureter affect likelihood of spontaneous passage and clinical presentation?**\\n\\nA: Stone location impact on passage: (1) Ureteropelvic junction—narrow transition point, highest obstruction rate, lowest spontaneous passage (especially stones >8 mm); (2) Pelvic brim (iliac crossing)—narrow, difficult passage in female, low passage rate; (3) Intramural ureter (distal ureter in bladder wall)—least obstructive despite location, highest spontaneous passage rate; (4) Most stones lodge at these three physiologic narrowings. Size × location interaction: Stone <5 mm may pass even at ureteropelvic junction; stone 8-10 mm at pelvic brim likely impacted. Clinical presentation variation: (1) Upper ureteric stone—classic flank-groin pain, may present as pyelonephritis if infected; (2) Mid-ureteric stone—lateral pain radiation; (3) Lower ureteric stone—suprapubic pain, urgency/dysuria symptoms (mimics UTI); (4) Stone at ureteropelvic junction—may not show much hydronephrosis (pressure relief at ureter dilates proximally). Management implication: Stone at ureteropelvic junction—lower chance spontaneous passage, earlier intervention consideration. Stone at intramural ureter—higher chance passage, observe longer if uncomplicated.\\n\\n**Q8: Explain metabolic prevention strategies for calcium oxalate stones.**\\n\\nA: Calcium oxalate stone pathophysiology: Most common (70-75% of stones). Formation requires: Hypercalciuria (high urinary calcium) OR hyperoxaluria (high oxalate) OR hypocitraturia (low citrate/inhibitor) OR low urine volume (concentration effect). Prevention targeting each factor: (1) HYDRATION—increase urine volume to >2.5 L daily (MOST IMPORTANT, applies to all stone types); dilution decreases crystallization risk. (2) Restrict sodium—high sodium increases urinary calcium excretion (thiazide mechanism: blocks sodium reabsorption, blocks calcium reabsorption secondarily); target <2-3 g sodium daily. (3) Adequate calcium intake—PARADOXICALLY, low calcium diet increases hyperoxaluria (calcium binds oxalate in gut, preventing absorption); recommend adequate dietary calcium (1000-1200 mg daily) from dairy. (4) Restrict oxalate—only if 24-hour urine shows hyperoxaluria; restrict spinach, nuts (almonds, peanuts), chocolate, tea, wheat bran (high oxalate foods). (5) Restrict excess protein—high protein increases uric acid and calcium excretion; limit to 1-1.2 g/kg body weight. (6) Pharmacologic—thiazide diuretic (HCTZ 25-50 mg daily) if hypercalciuria found; reduces calcium excretion by 30-40%. Citrate supplementation (potassium citrate 20-40 mEq daily) if hypocitraturia—citrate is natural inhibitor of crystallization. Monitoring: Repeat 24-hour urine at 3 months to assess intervention effectiveness. Expected outcome: Recurrence reduction from 10-15% annually to <2% with compliance.\\n\\n**Q9: How would you manage a non-obstructing stone found incidentally on CT done for other reason?**\\n\\nA: Non-obstructing stone management: Definition—stone visualized on imaging but without obstruction (no hydronephrosis, normal renal function). Decision: Observe vs remove. Observation rationale: (1) Risk of spontaneous passage or no further growth significant; (2) Intervention risks (surgery, anesthesia, possible stricture post-ureteroscopy) must be weighed against symptom potential; (3) Most non-obstructing stones remain asymptomatic long-term. Factors favoring intervention: (1) Large stone (>15 mm non-obstructing unlikely to pass); (2) Struvite stone (growth risk with infection); (3) Patient anxiety/preference; (4) Occupational hazard (pilot, geographic isolation from hospital). Factors favoring observation: (1) Small stone (<10 mm); (2) Asymptomatic; (3) Good renal function; (4) No infection history. Management if observe: (1) Baseline imaging (CT) documentation; (2) Annual/biennial imaging to assess growth; (3) Metabolic evaluation (24-hour urine) to guide prevention; (4) Patient counseling about colic risk; (5) Imaging earlier if symptoms develop. Metabolic prevention applies regardless: Hydration, dietary modification tailored to stone type. Prognosis: 5-10% require intervention over 5-year follow-up (stones grow, cause obstruction, or patient chooses removal); 90% remain stable on observation.\\n\\n**Q10: Describe technical and clinical differences between ESWL, PCNL, and ureteroscopy in stone management.**\\n\\nA: Three main interventions for stone removal: (1) ESWL (extracorporeal shock wave lithotripsy) mechanism—external sound waves focused on stone, causes fragmentation; patient supine, no surgery required. Advantages: Non-invasive, outpatient, quick recovery. Disadvantages: Fragments must pass (risk of obstruction), stone density must be suitable for fracture, unsuitable for all stone types. Candidates: Stone <2 cm, radiopaque or visible on CT, normal renal anatomy, adequate renal function. Success: 70-90% depending on selection. Complications: Hematuria, flank bruising, rare reflex arrhythmias. (2) PCNL (percutaneous nephrolithotomy) mechanism—percutaneous puncture through flank skin into renal pelvis, direct visualization and stone removal. Advantages: Highest success rate (>95%), removes large stones completely (staghorn), allows observation of collecting system. Disadvantages: Invasive, requires anesthesia, higher morbidity (fever 5-10%, bleeding, urosepsis 0.5%), hospitalization. Candidates: Large stones (>2 cm), staghorn, struvite, failed ESWL. Complications: Post-operative fever, sepsis (10-38% fever rate), bleeding requiring transfusion (1%), ureteric injury. (3) Ureteroscopy mechanism—retrograde approach through urethra, cystoscope into ureter, laser or ultrasonic lithotripsy of stone. Advantages: Minimal morbidity, outpatient possible, good visualization. Disadvantages: Not suitable for large stones (>2 cm), limited by patient anatomy, higher stress on ureter (risk of stricture). Candidates: Ureteric stones, small renal (<1.5 cm), difficult patient anatomy for PCNL. Complications: Ureteric perforation (1-3%), stricture (0.5-2%). Selection strategy: <2 cm stone in favorable anatomy → ureteroscopy or ESWL. >2 cm or staghorn → PCNL. Failed or recurrent after ESWL → ureteroscopy or PCNL. Struvite → PCNL preferred.,\\n        mnemonics: [\\n          {\\n            text: \\\"SPONTANEOUS PASSAGE RATES = <5mm (90%), 5-10mm (50%), >10mm (10%)\\\",\\n            explanation: \\\"Size prediction guide\\\"\\n          },\\n          {\\n            text: \\\"URIC ACID ADVANTAGE = Radiolucent (CT finds it), Reversible (alkalization dissolves), Allopurinol effective\\\",\\n            explanation: \\\"Distinctive management features\\\"\\n          },\\n          {\\n            text: \\\"STAGHORN = Struvite 90%, female, recurrent UTI, needs PCNL, 10-20% recurrence\\\",\\n            explanation: \\\"Key facts about large stones\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Spontaneous passage depends on size; <5 mm = 90% pass\\\",\\n          \\\"Fever + obstruction = pyonephrosis = emergency decompression\\\",\\n          \\\"Metabolic workup critical for recurrent stone prevention\\\",\\n          \\\"Uric acid stones reversible with alkalization\\\",\\n          \\\"Staghorn calculi require PCNL; infection drives growth\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Bailey & Love\\\", chapter: \\\"Urolithiasis\\\", edition: \\\"28th\\\" },\\n          { book: \\\"Campbell-Walsh Urology\\\", chapter: \\\"Renal Calculi and Nephrolithiasis\\\", edition: \\\"12th\\\" }\\n        ]\\n      }\\n    ]\\n  }\\n];\\n\""
-}
-}
-}
-];
-];
+        summary: "Diagnostic workup, NCCT, treatment by stone size and location, and surgical options.",
+        contentMd: `# Renal Calculi - Clinical Management
+
+## Investigations
+### Non-Contrast CT KUB (Gold Standard)
+- Sensitivity >95%, specificity >98% for all stone types (including uric acid)
+- Identifies stone size, location, number, and hydronephrosis
+- First-line imaging in acute renal colic
+
+### X-ray KUB
+- Shows radiopaque stones (calcium, struvite, cystine)
+- Misses uric acid stones (radiolucent) and small stones
+- Useful for follow-up of known radiopaque stones
+
+### Ultrasound
+- First-line in pregnancy and children (no radiation)
+- Good for hydronephrosis and renal stones; poor for ureteric stones
+- Sensitivity 45% for ureteric stones vs >95% for CT
+
+### Urine Analysis
+- Microscopic hematuria (85%), pyuria if infection
+- Urine culture (rule out UTI)
+- 24-hour urine collection: Calcium, oxalate, uric acid, citrate, creatinine, volume (metabolic workup)
+
+### Blood Tests
+- Serum calcium, phosphate, PTH (hyperparathyroidism screen)
+- Serum uric acid, creatinine (renal function)
+
+## Management by Stone Size
+### Conservative (Medical Expulsive Therapy)
+- Stones <5 mm: 90% pass spontaneously
+- Stones 5-10 mm: 50% pass; trial of MET for 4-6 weeks
+- **Tamsulosin** (alpha-blocker): Relaxes ureteric smooth muscle; increases passage rate
+- Adequate hydration (>2.5 L/day), NSAIDs for pain (diclofenac first-line)
+
+### Interventional
+- Stones >10 mm or failed MET or complicated (infection, obstruction, single kidney)
+
+## Surgical Options
+### ESWL (Extracorporeal Shock Wave Lithotripsy)
+- Non-invasive; shock waves fragment stones
+- Best for: Renal stones <2 cm, upper ureteric stones <1 cm
+- Contraindicated: Pregnancy, coagulopathy, aortic aneurysm, obstruction distal to stone
+- Stone-free rate: 70-90% for stones <1 cm
+
+### URS (Ureteroscopy) with Laser Lithotripsy
+- Semi-rigid or flexible ureteroscope with Holmium laser
+- Best for: Ureteric stones (all sizes), lower pole renal stones
+- Stone-free rate: >90% for ureteric stones
+- Day-case procedure; stent placement may be needed
+
+### PCNL (Percutaneous Nephrolithotomy)
+- For large renal stones (>2 cm), staghorn calculi
+- Percutaneous tract into renal collecting system → nephroscope → fragmentation + extraction
+- Stone-free rate: >90% for large stones
+- Requires hospitalization; bleeding risk
+
+### Open Surgery (Rarely Needed)
+- <1% of cases; complex anatomy, failed endoscopic approaches, very large staghorn
+
+## Emergency Management
+### Acute Renal Colic
+- Analgesia: IV/IM diclofenac (first-line NSAID) or IV paracetamol; opioids if refractory
+- Antiemetics: Ondansetron
+- CT KUB for diagnosis
+
+### Infected Obstructed Kidney (Pyonephrosis)
+- Surgical emergency: Fever + obstruction + infection
+- Urgent decompression: DJ stent or percutaneous nephrostomy
+- IV antibiotics (ceftriaxone + gentamicin)
+- Definitive stone treatment AFTER infection resolves`,
+        mnemonics: [
+          { text: "Stone <5mm = 90% pass; 5-10mm = MET trial; >10mm = Intervene", explanation: "Size-based management algorithm for ureteric stones" },
+          { text: "ESWL <2cm renal; URS for ureter; PCNL >2cm renal", explanation: "Choosing the right procedure based on stone size and location" },
+        ],
+        keyPoints: [
+          "NCCT KUB is gold standard (>95% sensitivity); detects all stone types including uric acid",
+          "Stones <5 mm: 90% spontaneous passage; Tamsulosin aids expulsion",
+          "ESWL for renal stones <2 cm; URS for ureteric stones; PCNL for stones >2 cm or staghorn",
+          "Infected obstructed kidney (pyonephrosis): emergency drainage (DJ stent or nephrostomy)",
+          "Diclofenac is first-line analgesic for renal colic (NSAID preferred over opioids)",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 31", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 76", edition: "28th" },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "renal-calculi-layer-4-exam",
+        title: "Renal Calculi - Exam Prep",
+        estimatedMinutes: 18,
+        summary: "High-yield exam facts on urolithiasis for NEXT pattern questions.",
+        contentMd: `# Renal Calculi - Exam Prep
+
+## Must-Know Facts
+- Most common stone: Calcium oxalate (envelope-shaped crystals)
+- Most common metabolic abnormality: Hypocitraturia
+- Only radiolucent stone: Uric acid (all others radiopaque on X-ray)
+- Staghorn calculus: Struvite (infection stone); urease producers (Proteus)
+- Hexagonal crystals: Cystine; positive cyanide-nitroprusside test
+- Investigation of choice: Non-contrast CT KUB
+
+## Common Exam Traps
+- "Radiolucent stone on X-ray, seen on CT" = Uric acid stone
+- "Staghorn calculus + alkaline urine + UTI" = Struvite (infection stone)
+- "Recurrent stones from childhood + hexagonal crystals" = Cystine stones (cystinuria)
+- "Hypercalcemia + renal stones" = Primary hyperparathyroidism (check PTH)
+- "Stone in pregnancy" = USG first (no radiation); definitive treatment after delivery
+- "Fever + obstructed kidney + stone" = Pyonephrosis; emergency drainage
+
+## Stone Radiopacity (Most to Least)
+1. Calcium phosphate (most opaque)
+2. Calcium oxalate
+3. Struvite (magnesium ammonium phosphate)
+4. Cystine (ground-glass)
+5. Uric acid (RADIOLUCENT - not seen on X-ray)
+
+## Treatment Selection
+| Stone | Size/Location | Treatment |
+|-------|--------------|-----------|
+| Ureteric <5 mm | Any | MET (Tamsulosin + hydration) |
+| Ureteric 5-10 mm | Any | MET trial 4-6 weeks → URS if failed |
+| Ureteric >10 mm | Any | URS with laser |
+| Renal <2 cm | Not lower pole | ESWL |
+| Renal <2 cm | Lower pole | URS (flexible) or ESWL |
+| Renal >2 cm | Any | PCNL |
+| Staghorn | Any | PCNL (may need multiple sessions) |
+
+## High-Yield Questions
+- First-line analgesic for renal colic = Diclofenac (NSAID)
+- Drug for MET = Tamsulosin (alpha-blocker)
+- Dissolve uric acid stones with = Potassium citrate (alkalinize urine)
+- Prevention of calcium stones = High fluid intake + potassium citrate + low sodium diet`,
+        mnemonics: [
+          { text: "Uric Acid = Unseen (radiolucent) = acidic Urine = dissolves with Alkalinization", explanation: "Three key facts about uric acid stones for exams" },
+          { text: "ESWL = External, Small (<2cm), Wave, Litho", explanation: "ESWL for renal stones under 2 cm" },
+        ],
+        keyPoints: [
+          "Calcium oxalate: most common; envelope crystals; uric acid: only radiolucent stone",
+          "Struvite: infection stone, staghorn, Proteus, alkaline urine, coffin-lid crystals",
+          "NCCT KUB: gold standard investigation; diclofenac: first-line analgesic",
+          "Treatment: MET <5mm, URS for ureter, ESWL <2cm renal, PCNL >2cm renal",
+          "Pyonephrosis (infected obstructed kidney) = emergency drainage",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 31", edition: "6th" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "renal-calculi-layer-5-active-recall",
+        title: "Renal Calculi - Active Recall",
+        estimatedMinutes: 15,
+        summary: "Flashcard Q&A for spaced repetition on urolithiasis.",
+        contentMd: `# Active Recall - Renal Calculi
+
+**Q1:** What is the most common type of renal stone?
+**A1:** Calcium oxalate (75-80% of all stones). Envelope-shaped crystals on urine microscopy. Radiopaque on X-ray.
+
+**Q2:** Which stone is radiolucent on X-ray?
+**A2:** Uric acid stone. Not visible on X-ray KUB but clearly seen on NCCT. Forms in acidic urine (pH <5.5). Can be dissolved with alkalinization.
+
+**Q3:** What causes staghorn calculi?
+**A3:** Struvite (magnesium ammonium phosphate) stones. Caused by urease-producing organisms (Proteus, Klebsiella). Alkaline urine. Fill the renal pelvis and calyces.
+
+**Q4:** What is the gold standard investigation for renal colic?
+**A4:** Non-contrast CT KUB. Sensitivity >95%, specificity >98%. Detects all stone types including radiolucent uric acid stones.
+
+**Q5:** At what size do ureteric stones usually pass spontaneously?
+**A5:** <5 mm: 90% pass spontaneously. 5-10 mm: 50% pass with MET (Tamsulosin). >10 mm: Usually need intervention (URS).
+
+**Q6:** What is the first-line analgesic for renal colic?
+**A6:** Diclofenac (NSAID). More effective than opioids for renal colic and reduces ureteric spasm. IV/IM route preferred.
+
+**Q7:** When do you use ESWL vs URS vs PCNL?
+**A7:** ESWL: Renal stones <2 cm (not lower pole). URS: Ureteric stones of any size, lower pole renal. PCNL: Renal stones >2 cm, staghorn calculi.
+
+**Q8:** What is the most common metabolic abnormality in stone formers?
+**A8:** Hypocitraturia. Citrate is the most important inhibitor of stone formation; binds calcium. Treatment: Potassium citrate supplementation.
+
+**Q9:** What is pyonephrosis and how is it managed?
+**A9:** Infected obstructed kidney. Surgical emergency. Urgent decompression with DJ stent or percutaneous nephrostomy + IV antibiotics. Stone treatment after infection resolves.
+
+**Q10:** What is cystinuria?
+**A10:** Autosomal recessive disorder. Defective tubular reabsorption of COLA (Cystine, Ornithine, Lysine, Arginine). Hexagonal crystals. Positive cyanide-nitroprusside test. Recurrent from childhood.
+
+**Q11:** How do you prevent stone recurrence?
+**A11:** High fluid intake (>2.5 L/day) is most important. Potassium citrate for calcium stones. Low sodium, moderate calcium diet. Specific treatment based on metabolic workup.
+
+**Q12:** What are the three common sites of ureteric stone impaction?
+**A12:** PUJ (pelviureteric junction), pelvic brim (where ureter crosses iliac vessels), and VUJ (vesicoureteric junction, most narrow point).`,
+        mnemonics: [
+          { text: "PUJ → Brim → VUJ: Three narrow points where stones impact", explanation: "Pelviureteric junction, pelvic brim (iliac vessels), vesicoureteric junction" },
+          { text: "Cystine = COLA + Hexagonal + Childhood + Cyanide-nitroprusside positive", explanation: "Complete cystine stone identification for exams" },
+        ],
+        keyPoints: [
+          "Calcium oxalate most common; uric acid radiolucent; struvite = staghorn + infection",
+          "NCCT gold standard; diclofenac first-line; tamsulosin for MET",
+          "Size guides treatment: <5mm observe, URS for ureter, ESWL <2cm, PCNL >2cm",
+          "Hypocitraturia: most common metabolic defect; potassium citrate for prevention",
+          "Pyonephrosis = emergency; three impaction sites: PUJ, brim, VUJ",
+        ],
+        textbookRefs: [
+          { book: "SRB's Manual of Surgery", chapter: "Chapter 31", edition: "6th" },
+          { book: "Bailey & Love's Short Practice of Surgery", chapter: "Chapter 76", edition: "28th" },
+        ],
+      },
+    ],
+  },
 ];
