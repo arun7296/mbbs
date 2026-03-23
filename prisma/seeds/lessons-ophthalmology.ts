@@ -1,5 +1,6 @@
-export const ophthalmologyLessons = [
-  // OP-MOD-01: Optics & Refraction - Topic 1: Optics & Image Formation
+import type { TopicLessons } from "./content-loader";
+
+export const ophthalmologyLessons: TopicLessons[] = [
   {
     topicCode: "OP-MOD-01-TOP-01",
     layers: [
@@ -7,10 +8,522 @@ export const ophthalmologyLessons = [
         layer: 1,
         slug: "optics-image-formation-foundation",
         title: "Optics & Image Formation - Foundation",
+        estimatedMinutes: 20,
+        summary: "Basics of optical refraction, corneal power, lens accommodation, pupil function, and near reflex.",
+        contentMd: `# Optics & Image Formation - Foundation
+
+## Optical Properties of the Eye
+
+### Refractive Components
+- **Cornea**: 43 diopters (2/3 of eye's refractive power) - largest contributor
+- **Lens**: 20 diopters at rest, can increase to 34D with accommodation
+- **Aqueous humor**: Minimal refractive change
+- **Vitreous**: Minimal refractive change
+- **Total refractive power**: ~60 diopters
+- **Focal length**: ~24mm (matches approximate retinal distance)
+
+### Image Formation Process
+1. Light enters eye at cornea (air-to-cornea interface, largest refraction)
+2. Cornea bends light maximally (43D power)
+3. Lens fine-tunes focus via accommodation (additional 0-14D)
+4. Image forms on retina (inverted, real, magnified)
+5. Photoreceptors detect image and send signals to brain
+
+## Accommodation Mechanism
+
+### Ciliary Muscle & Lens Changes
+- **Ciliary muscle contraction**: Parasympathetic stimulation (CN III)
+- **Zonular fiber relaxation**: Tension on zonules decreases
+- **Lens thickening**: Elastic lens bulges equatorially
+- **Lens power increase**: From 20D to 34D (increase of 14D possible in young)
+- **Near reflex components**: Accommodation + convergence + miosis (ACM triad)
+
+### Age-Related Changes
+- **Age 8**: Accommodation amplitude ~14 diopters, near point 10cm
+- **Age 25**: Accommodation amplitude ~10D, near point 10cm
+- **Age 45**: Accommodation amplitude ~1-2D, near point >30cm (presbyopia symptomatic)
+- **Age 65**: Accommodation amplitude ~0D, near point >100cm
+- **Mechanism**: Lens nucleus becomes sclerotic (stiffens), loses elasticity
+
+## Pupil Function
+
+### Pupil Light Reflex
+- **Afferent**: CN II (optic nerve) carries sensory input
+- **Efferent**: CN III (oculomotor) carries parasympathetic fibers
+- **Muscles**: Sphincter (circular, parasympathetic) constricts; dilator (radial, sympathetic) dilates
+- **Normal response**: Bilateral equal constriction to light
+- **Direct reflex**: Light in eye → constriction of same eye
+- **Consensual**: Light in eye → constriction of opposite eye
+
+### Near Reflex Components
+1. **Accommodation**: Lens thickens (ciliary muscle contracts)
+2. **Convergence**: Eyes turn inward (medial recti contract)
+3. **Miosis**: Pupils constrict (sphincter muscle contracts)
+- All three triggered together by near visual stimulus
+
+## Key Optical Concepts
+- **Diopter**: Unit of refractive power; 1D = 1 meter focal length
+- **Myopia**: Light focuses in front of retina (concave lens correction)
+- **Hyperopia**: Light focuses behind retina (convex lens correction)
+- **Astigmatism**: Different meridians focus at different distances (cylindrical lens)`,
+        mnemonics: [
+          {
+            text: "Cornea 43D + Lens 20D (rest) = 63D total refractive power",
+            explanation: "Main refractive components of eye",
+          },
+          {
+            text: "Accommodation triad: thickening (lens) + convergence (medial recti) + miosis (pupils)",
+            explanation: "Three components of near response",
+          },
+          {
+            text: "CN II → CN III: light reflex afferent to efferent pathway",
+            explanation: "Pupillary light reflex neural pathway",
+          },
+          {
+            text: "Age 45 presbyopia begins when accommodation amplitude drops below 2-3D",
+            explanation: "Presbyopia onset correlation",
+          },
+        ],
+        keyPoints: [
+          "Cornea provides 2/3 of eye's refractive power (43D out of 60D)",
+          "Lens accommodation ranges from 20D (rest) to 34D (maximally contracted)",
+          "Image formed on retina is inverted, real, and magnified",
+          "Accommodation involves ciliary muscle, lens, and pupil (accommodation triad)",
+          "Pupillary light reflex mediated by CN II (afferent) and CN III (efferent)",
+          "Near reflex involves accommodation, convergence, and miosis simultaneously",
+          "Accommodation amplitude decreases predictably with age (presbyopia develops)",
+        ],
+        textbookRefs: [
+          { book: "AK Khurana Comprehensive Ophthalmology", chapter: "1", edition: "7th" },
+          { book: "Parsons' Diseases of the Eye", chapter: "1", edition: "23rd" },
+        ],
+      },
+      {
+        layer: 2,
+        slug: "optics-image-formation-mechanism",
+        title: "Optics & Image Formation - Mechanism",
         estimatedMinutes: 25,
-        summary: "Basics of optics, eye anatomy for refraction, accommodation mechanism, pupil function.",
-        contentMd: "# Optics & Image Formation - Foundation\n\n## Optical Properties of Eye\n- **Cornea**: 43 diopters (2/3 of eye's refractive power)\n- **Lens**: 20 diopters at rest, can increase to 34 D (accommodation)\n- **Total refractive power**: ~60 diopters\n- **Focal length**: ~24mm (approximate retinal distance)\n\n## Refraction Components\n1. **Corneal refraction**: Air to cornea (43D, largest component)\n2. **Aqueous humor**: Minimal (no air-liquid interface)\n3. **Lens refraction**: Biconvex, variable power\n4. **Vitreous**: Minimal\n\n## Image Formation\n- **Object**: Light from object enters eye\n- **Cornea**: First refracting surface, bends light maximally\n- **Lens**: Fine-tunes focus via accommodation\n- **Retina**: Focal plane, image formed on photoreceptors\n- **Image**: Inverted, real, magnified\n\n## Accommodation Mechanism\n- **Ciliary muscle contraction**: Zonular tension reduced\n- **Lens thickening**: Equatorial bulging increases power\n- **Pupil constriction**: Depth of focus increases (near reflex)\n- **Convergence**: Eyes turn inward (accommodation triad)\n\n## Pupil Function\n- **Dilation (mydriasis)**: Radial muscle, sympathetic innervation\n- **Constriction (miosis)**: Circular muscle (sphincter), parasympathetic\n- **Reflex**: Light → CN II afferent → CN III parasympathetic → miosis\n- **Near reflex**: Accommodation + convergence + miosis,\n        mnemonics: [\n          { text: \"Cornea 43D + Lens 20D = 63D total\", explanation: \"Refractive power contributions\" },\n          { text: \"Accommodation triad: thickening + convergence + miosis\", explanation: \"Three components of accommodation\" },\n          { text: \"CNI I (afferent) to CN III (efferent) pupillary light reflex\", explanation: \"Pupil innervation pathway\" }\n        ],\n        keyPoints: [\n          \"Cornea provides 2/3 of eye's refractive power\",\n          \"Lens accommodation ranges from 20D (rest) to 34D (near)\",\n          \"Image formed on retina is inverted\",\n          \"Accommodation involves ciliary muscle, lens, and pupil\",\n          \"Pupillary light reflex mediated by CN II and CN III\"\n        ],\n        textbookRefs: [\n          { book: \"Kanski\", chapter: \"Optics and Refraction\", edition: \"9th\" },\n          { book: \"Parson's\", chapter: \"Optics of Eye\", edition: \"20th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"optics-mechanism\",\n        title: \"Optics & Image Formation - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Detailed optical principles, Snell's law, accommodation physiology, optical aberrations.\",\n        contentMd: "# Optical Mechanisms\\n\\n## Refraction Principles\\n### Snell's Law\\n- **n₁ sin θ₁ = n₂ sin θ₂**\\n- **Air to cornea**: Large refractive index change (1.0 to 1.376)\\n- **Most bending occurs** at air-cornea interface\\n- **Lens provides fine adjustment** via accommodation\\n\\n## Accommodation Physiology\\n### Ciliary Muscle Action\\n1. Parasympathetic stimulation (Edinger-Westphal nucleus via CN III)\\n2. Ciliary muscle contracts, zonule relaxes\\n3. Lens capsule elasticity causes bulging\\n4. Lens power increases (accommodation amplitude decreases with age)\\n\\n### Age-Related Loss\\n- **Age 8**: Amplitude ~14 diopters\\n- **Age 25**: Amplitude ~10 diopters\\n- **Age 45**: Amplitude ~2-4 diopters (presbyopia begins)\\n- **Age 65**: Amplitude ~0-1 diopters (presbyopia established)\\n- **Cause**: Lens becomes less elastic with age\\n\\n## Optical Aberrations\\n- **Spherical**: Peripheral rays focus differently than central (blur)\\n- **Chromatic**: Different wavelengths focus at different distances (color fringing)\\n- **Astigmatism**: Different meridians have different focusing power\\n- **Coma/Trefoil**: Higher-order aberrations affecting image quality\\n\\n## Depth of Field\\n- **Concept**: Range where image remains acceptably sharp\\n- **Pupil role**: Smaller pupil (miosis) increases depth of field\\n- **Near reflex**: Pupil constriction + accommodation maintain near focus\\n- **Clinical relevance**: Pinhole effect in vision test\\n\\n## Convergence\\n- **Definition**: Inward turning of eyes to maintain binocular fixation\\n- **Muscles**: Medial recti contract bilaterally (CN III medial subnucleus)\\n- **Accommodation link**: Accommodation → convergence (accommodation-vergence coupling)\\n- **Distance vs near**: Convergence minimal at distance, maximal at near,\\n        mnemonics: [\\n          { text: \\\"Snell's law: n₁sinθ₁ = n₂sinθ₂\\\", explanation: \\\"Refraction principle at interface\\\" },\\n          { text: \\\"Accommodation: parasympathetic → ciliary muscle → lens thickens\\\", explanation: \\\"Accommodation pathway\\\" },\\n          { text: \\\"Age ~40-45 = presbyopia onset\\\", explanation: \\\"Loss of accommodation amplitude\\\" },\\n          { text: \\\"Smaller pupil = greater depth of field\\\", explanation: \\\"Pinhole effect\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Cornea-air interface provides most refraction (n change 1.0→1.376)\\\",\\n          \\\"Lens accommodation decreases with age (presbyopia ~age 45)\\\",\\n          \\\"Ciliary muscle contraction reduces zonular tension\\\",\\n          \\\"Accommodation amplitude: 14D at age 8, ~0D at age 65\\\",\\n          \\\"Optical aberrations degrade image quality (spherical, chromatic)\\\",\\n          \\\"Pupil constriction increases depth of field\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kanski\\\", chapter: \\\"Refraction Mechanism\\\", edition: \\\"9th\\\" },\\n          { book: \\\"AK Khurana\\\", chapter: \\\"Accommodation and Presbyopia\\\", edition: \\\"5th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"optics-clinical\\\",\\n        title: \\\"Optics & Image Formation - Clinical\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Clinical examination of refraction, near point of accommodation, pupil examination, presbyopia.\\\",\\n        contentMd: ``# Clinical Optics Assessment\\n\\n## Refraction Examination\\n### Distance Testing\\n- **Chart distance**: 6 meters (20 feet in US)\\n- **Eye chart**: Landolt C, Snellen, or logMAR\\n- **Procedure**: Occlude one eye, read smallest visible line\\n- **Notation**: 6/6 (20/20) = normal; 6/60 = sees at 6m what normal sees at 60m\\n\\n### Refraction Determination\\n- **Objective**: Retinoscopy, autorefraction\\n- **Subjective**: Phoropter testing (manifest refraction)\\n- **Endpoint**: Best visual acuity with minimal lens power (BSCVA)\\n\\n## Accommodation Assessment\\n### Near Point of Accommodation\\n- **Normal age 8**: ~10cm (accommodation amplitude ~14D)\\n- **Age 25**: ~16cm (amplitude ~10D)\\n- **Age 45**: >30cm (amplitude <2D) - presbyopia symptomatic\\n- **Age 55+**: >100cm (amplitude ~0D)\\n- **Clinical method**: Move object from distance until patient reports blur\\n\\n### Accommodation Amplitude\\n- **Formula**: Amplitude (D) = 100/near point distance (cm)\\n- **Example**: If near point at 25cm, amplitude = 100/25 = 4 diopters\\n- **Loss with age**: Predictable decline, independent of refractive error\\n\\n## Pupil Examination\\n### Light Reflex\\n- **Afferent**: CN II (optic nerve)\\n- **Efferent**: CN III (oculomotor, parasympathetic)\\n- **Normal**: Bilateral equal constriction to light\\n- **Abnormalities**:\\n  - Relative afferent pupillary defect (RAPD) = optic nerve lesion\\n  - Anisocoria = unequal pupils (pathology or normal variation)\\n\\n### Accommodation Reflex\\n- **Component 1**: Accommodation (lens thickens)\\n- **Component 2**: Convergence (eyes turn inward)\\n- **Component 3**: Miosis (pupils constrict)\\n- **Testing**: Ask patient to look near object, observe pupil response\\n\\n## Presbyopia\\n### Definition\\n- Age-related loss of accommodation from lens stiffening\\n- Becomes symptomatic ~age 40-45\\n- Affects near vision specifically\\n\\n### Symptoms\\n- Difficulty reading (especially small print)\\n- Eyestrain with near work\\n- Need to hold reading material at arm's length\\n- Symptoms worse in poor lighting (requires larger pupil for more light)\\n\\n### Management\\n- Reading glasses\\n- Bifocals or progressive lenses\\n- Contact lenses (monovision)\\n- Surgical options (corneal inlays, refractive lensotomy),\\n        mnemonics: [\\n          { text: \\\"6/6 (20/20) = normal vision\\\", explanation: \\\"Visual acuity reference\\\" },\\n          { text: \\\"Amplitude (D) = 100 / near point distance (cm)\\\", explanation: \\\"Accommodation calculation\\\" },\\n          { text: \\\"Age ~45 presbyopia begins\\\", explanation: \\\"Near vision difficulty onset\\\" },\\n          { text: \\\"Light reflex: CN II → CN III\\\", explanation: \\\"Pupillary pathway\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Visual acuity 6/6 = reading 6m distance line at 6m\\\",\\n          \\\"Refraction determines refractive error prescription\\\",\\n          \\\"Accommodation amplitude decreases predictably with age\\\",\\n          \\\"Near point moves from 10cm (age 8) to >100cm (age 65)\\\",\\n          \\\"Presbyopia: lens stiffness reduces accommodation\\\",\\n          \\\"Pupil light reflex tests CN II and CN III function\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kanski\\\", chapter: \\\"Clinical Refraction\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Parson's\\\", chapter: \\\"Examination of Eye\\\", edition: \\\"20th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"optics-exam-prep\\\",\\n        title: \\\"Optics & Image Formation - Exam Prep\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"High-yield facts, accommodation calculations, presbyopia age correlation.\\\",\\n        contentMd: ``# Exam Prep: Optics & Image Formation\\n\\n## Key Facts\\n1. Cornea 43D (2/3 of power), Lens 20D at rest\\n2. Total refractive power ~60 diopters\\n3. Image on retina: inverted, real, magnified\\n4. Accommodation amplitude age 8: ~14D; age 45: ~2D; age 65: ~0D\\n5. Near point age 8: ~10cm; age 45: ~30cm; age 65: >100cm\\n6. Presbyopia becomes symptomatic age 40-45\\n7. Ciliary muscle: parasympathetic innervation (CN III)\\n8. Pupil constriction: CN III parasympathetic\\n9. Light reflex: CN II afferent, CN III efferent\\n10. Accommodation triad: thickening + convergence + miosis\\n\\n## Accommodation Amplitude by Age\\n| Age | Amplitude | Near Point |\\n|-----|-----------|------------|\\n| 8   | 14D       | 10cm       |\\n| 20  | 10D       | 10cm       |\\n| 30  | 6D        | 17cm       |\\n| 40  | 3D        | 33cm       |\\n| 45  | 1.5D      | 67cm       |\\n| 50  | 0.5D      | >100cm     |\\n| 65  | 0D        | >100cm     |\\n\\n## Refraction Formulas\\n- **Amplitude (D) = 100 / near point distance (cm)**\\n- **Visual acuity notation**: 6/X = patient sees at 6m what normal sees at X meters\\n- **Diopter**: 1 diopter = 1 meter focal length (or 100/cm)\\n\\n## Presbyopia Pearls\\n- Onset age: 40-45 years\\n- First symptom: Difficulty reading small print\\n- Progression: Stabilizes by age 55-60\\n- Management progression: Reading glasses → bifocals → progressives,\\n        mnemonics: [\\n          { text: \\\"43D cornea, 20D lens\\\", explanation: \\\"Refractive power distribution\\\" },\\n          { text: \\\"Age ~45 presbyopia begins\\\", explanation: \\\"Peak patient complaint age\\\" },\\n          { text: \\\"6/6 = normal vision\\\", explanation: \\\"Standard reference\\\" },\\n          { text: \\\"CN II → CN III light reflex\\\", explanation: \\\"Pupil pathway\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Cornea: 43D (2/3); Lens: 20D; Total: ~60D\\\",\\n          \\\"Accommodation amplitude predictable by age\\\",\\n          \\\"Presbyopia: age 40-45 onset, stabilizes by age 55-60\\\",\\n          \\\"Near point doubles roughly every 10-15 years\\\",\\n          \\\"Accommodation formula: Amplitude (D) = 100/near point (cm)\\\",\\n          \\\"Light reflex tests afferent (CN II) and efferent (CN III) pathways\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kanski\\\", chapter: \\\"Quick Reference\\\", edition: \\\"9th\\\" },\\n          { book: \\\"AK Khurana\\\", chapter: \\\"Optics Summary\\\", edition: \\\"5th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"optics-active-recall\\\",\\n        title: \\\"Optics & Image Formation - Active Recall\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"7-10 clinical questions on accommodation, presbyopia, and refraction.\\\",\\n        contentMd: ``# Active Recall: Optics & Image Formation\\n\\n## Q1: Accommodation Amplitude Calculation\\n**Q: 38-year-old complains of difficulty reading small print at normal distance. Near point measured at 30cm. Calculate accommodation amplitude.**\\n\\nA: **Amplitude = 100 / 30 = 3.33 diopters**. Normal for age 38 is ~4-5D, so patient showing early presbyopic symptoms. This explains difficulty with near vision, likely compensating by holding material at arm's length.\\n\\n## Q2: Presbyopia Onset Timing\\n**Q: 44-year-old presents with new onset difficulty reading, no previous refractive error. Glasses correct distance vision but reading still blurred. What's happening?**\\n\\nA: **Presbyopia**. Onset typically age 40-45 as accommodation amplitude drops below 2-3D. Distance refractive error corrected with glasses, but lens cannot accommodate for near focus. Solution: bifocals or progressive lenses with near add (typically +1.25 to +3.00 D).\\n\\n## Q3: Ciliary Muscle Innervation\\n**Q: Patient with CN III palsy has mydriasis (dilated pupil) but cannot accommodate. Explain both findings anatomically.**\\n\\nA: **CN III carries parasympathetic fibers**: (1) **Pupil constriction**: Parasympathetic lost → unopposed sympathetic → mydriasis (dilated); (2) **Accommodation**: Ciliary muscle innervation lost → cannot contract → lens cannot thicken → accommodation paralysis. **Accommodation loss** more obvious clinically because pupil still responsive to light (CN II still intact).\\n\\n## Q4: Optical Aberrations in High Myopia\\n**Q: Highly myopic patient (-10D) wearing corrective lens complains of edge glare and color fringing especially peripherally. Which optical aberrations?**\\n\\nA: **Spherical aberration**: Peripheral rays focus differently, causing edge blur/glare. **Chromatic aberration**: Different wavelengths focus at different distances, causing color fringing (especially red-blue edges). **Solution**: Aspheric lens design reduces spherical aberration; anti-reflective coatings reduce chromatic appearance.\\n\\n## Q5: Near Reflex vs Light Reflex\\n**Q: Patient has normal light reflex but cannot accommodate (near reflex absent). Where is the lesion - different than light reflex lesion?**\\n\\nA: **Different neuroanatomical pathways**: Light reflex uses CN II (afferent) → CN III parasympathetic to pupil only. Near reflex uses higher centers → CN III to ciliary muscle + pupil. **Dissociation** suggests: (1) Dorsal midbrain lesion (Argyll Robertson pupil - syphilis), (2) Pharmacological (atropine blocks ciliary muscle), (3) Ciliary muscle disease. **Normal light reflex preserved** because that pathway still intact (CN II-CN III).\\n\\n## Q6: Accommodation Amplitude Progression\\n**Q: Child age 8 has 14D accommodation amplitude. Predict amplitude at age 40 and explain why it declines.**\\n\\nA: **Age 40 predicted**: ~3-4D (dramatic loss from 14D). **Mechanism**: Lens nucleus becomes increasingly sclerotic (stiffens) with age. Elastic lens capsule can no longer deform the stiff nucleus as effectively. **Ciliary muscle still works**, but lens material property deterioration limits accommodation. **Result**: Progressive presbyopia as elastic modulus of lens increases with age.\\n\\n## Q7: Convergence-Accommodation Coupling\\n**Q: Patient fixating near object shows appropriate lens thickening and pupil constriction, but eyes don't converge. Where is lesion?**\\n\\nA: **Accommodation and miosis intact** → ciliary nucleus (CN III parasympathetic) working. **Convergence absent** → medial rectus innervation impaired (might be CN III medial subnucleus or bilateral medial recti pathology). This suggests **dissociation** of accommodation-convergence coupling, indicating brainstem or bilateral CN III lesion. **Normal coupling** should show all three components (accommodation, convergence, miosis) together.\\n\\n## Q8: Presbyopia Management by Age\\n**Q: 52-year-old with stable presbyopia wants reading correction. What options and why is accommodation amplitude now stable?**\\n\\nA: **Accommodation amplitude at age 52**: ~0.5D or less (minimal). **Why stable**: Lens nucleus fully sclerosed, little further change possible. **Options**: (1) Reading glasses, (2) Bifocals/progressives, (3) Monovision contact lenses (non-dominant eye set for near). **Stabilization**: By age 55-60, further progression minimal, allowing definitive correction prescription.\\n\\n## Q9: Depth of Field in Accommodation\\n**Q: Pinhole test (small pupil) improves vision in refractive error. How does pupil size relate to accommodation and depth of field?**\\n\\nA: **Smaller pupil**: (1) Increases depth of field via diffraction (Fresnel lens effect), (2) Reduces spherical aberration (peripheral rays blocked), (3) Allows sharper focus across range of distances. **Clinical application**: Patient squinting (reducing pupil) improves vision temporarily - demonstrates that refraction is present. **Accommodation link**: Near reflex includes miosis, which increases depth of field for near work.\\n\\n## Q10: Corneal Power Reduction Presbyopia Surgery\\n**Q: LASIK for monovision presbyopia: non-dominant eye given -1.50D to -2.00D for reading. Explain the optical principle.**\\n\\nA: **Principle**: Create intentional myopia in non-dominant eye for near focus. **Optics**: Myopic eye has shorter focal length, focusing near objects sharply on retina without accommodation need. **Brain adaptation**: Brain learns to use dominant eye for distance, non-dominant for near (similar to monovision contacts). **Limitation**: Works best in patients aged 40-55 when accommodation already significantly reduced (can't miss accommodation much).\\n      }\\n    ]\\n  },\\n  {\\n    topicCode: \\\"OP-MOD-01-TOP-02\\\",\\n    layers: [\\n      {\\n        layer: 1,\\n        slug: \\\"refractive-errors-foundation\\\",\\n        title: \\\"Myopia, Hypermetropia & Astigmatism - Foundation\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Definitions, pathophysiology, clinical presentation of myopia, hyperopia, and astigmatism.\\\",\\n        contentMd: ``# Refractive Errors - Foundation\\n\\n## Myopia (Nearsightedness)\\n- **Definition**: Light focuses in front of retina\\n- **Cause**: Excessive corneal power OR long axial length\\n- **Prevalence**: Increasing globally (environmental + genetic factors)\\n- **Symptoms**: Blurred distance vision, clear near vision, squinting\\n- **Types**:\\n  - Congenital: Present from birth\\n  - Developmental: Progressive during childhood\\n  - Acquired: From lens changes (nuclear sclerosis)\\n\\n## Hypermetropia (Farsightedness)\\n- **Definition**: Light focuses behind retina\\n- **Cause**: Low corneal power OR short axial length\\n- **Accommodation**: Young patients compensate with accommodation (initially no symptoms)\\n- **Symptoms**: Blurred near vision (especially after accommodation fatigue), eyestrain\\n- **Presbyopic patients**: Both distance and near blurred\\n\\n## Astigmatism\\n- **Definition**: Different meridians have different refractive power\\n- **Cause**: Corneal (more common) or lenticular irregularity\\n- **Types**:\\n  - **With-the-rule**: Vertical meridian more curved (common in young)\\n  - **Against-the-rule**: Horizontal meridian more curved (common in older age)\\n  - **Oblique**: Axis 45° or 135°\\n- **Symptoms**: Blurred vision at all distances, eyestrain, astigmatic stress\\n\\n## Clinical Assessment\\n- **Visual acuity**: Usually reduced\\n- **Refraction**: Determines refractive error magnitude and axis\\n- **Keratometry**: Measures corneal curvature\\n- **Axial length**: Measured by A-scan (in myopia typically >24mm),\\n        mnemonics: [\\n          { text: \\\"Myopia = focus in front (near clear, far blurred)\\\", explanation: \\\"Light focuses before retina\\\" },\\n          { text: \\\"Hyperopia = focus behind (accommodation compensates initially)\\\", explanation: \\\"Light focuses after retina\\\" },\\n          { text: \\\"Astigmatism = different meridians (blurred all distances)\\\", explanation: \\\"Cylindrical error\\\" },\\n          { text: \\\"With-the-rule vs Against-the-rule = meridian orientation\\\", explanation: \\\"Astigmatism axis classification\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Myopia: excessive power or long eye\\\",\\n          \\\"Hyperopia: low power or short eye\\\",\\n          \\\"Astigmatism: meridional difference\\\",\\n          \\\"With-the-rule (vertical steeper) common in youth\\\",\\n          \\\"Against-the-rule (horizontal steeper) common in age\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kanski\\\", chapter: \\\"Refractive Error\\\", edition: \\\"9th\\\" },\\n          { book: \\\"AK Khurana\\\", chapter: \\\"Refractive Errors\\\", edition: \\\"5th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 2,\\n        slug: \\\"refractive-errors-mechanism\\\",\\n        title: \\\"Myopia, Hypermetropia & Astigmatism - Mechanism\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Optical mechanisms, progression factors, environmental and genetic influences.\\\",\\n        contentMd: ``# Refractive Error Mechanisms\\n\\n## Myopia Pathophysiology\\n### Optical Factors\\n- **Excessive corneal power**: Usually genetic\\n- **Excessive axial length**: Most common cause of myopia progression\\n- **Combination**: Both factors may contribute\\n\\n### Myopia Progression in Children\\n- **Critical period**: Age 6-15 years (school-age)\\n- **Environmental factors**: Near work (reading, screens), reduced outdoor time\\n- **Genetic**: Family history strong predictor\\n- **Annual progression**: 0.5-1.0D per year typical\\n- **Plateau**: Usually slows by age 20-25\\n\\n### Myopia Control Strategies\\n- **Outdoor time**: 2+ hours/day reduces progression\\n- **Near work**: Frequent breaks (20-20-20 rule: every 20min, look 20ft away for 20sec)\\n- **Optical interventions**: Bifocals, contact lenses, atropine drops\\n- **Mechanism**: Peripheral retinal defocus may trigger axial elongation\\n\\n## Hypermetropia Pathophysiology\\n### Compensation Mechanism\\n- **Young patients**: Accommodation compensates (ciliary muscle works extra)\\n- **Symptom onset**: When accommodation demand > accommodation capacity\\n- **Presbyopic patients**: No accommodation reserve → symptoms begin earlier\\n\\n### Accommodation Demand\\n- **Near work**: Requires more accommodation in hyperopes\\n- **Reading distance 25cm**: Requires ~4D accommodation\\n- **Hyperope +3D**: Needs 7D total (3D error + 4D near demand)\\n\\n## Astigmatism Optical Mechanism\\n### Meridional Differences\\n- **Corneal astigmatism**: 90% of total astigmatism\\n- **Lenticular astigmatism**: 10%, often opposite direction (partially corrects corneal)\\n- **Congruence**: Vertical and horizontal meridians focus at different distances\\n- **Blurring pattern**: 2 focal lines instead of single point\\n\\n### Age-Related Changes\\n- **Newborn**: ~0.5D average astigmatism (with-the-rule)\\n- **Regression**: Against-the-rule increases with age (eyelid laxity effect)\\n- **Lid pressure**: Causes gradual corneal flattening in horizontal meridian\\n\\n## Environmental and Genetic Factors\\n### Myopia Development\\n- **Genetic**: Polygenic inheritance, multiple genes involved\\n- **Environmental**: Near work, screen time, reduced outdoor exposure\\n- **Critical factors**: Early onset, fast progression, family history\\n- **Prevention**: Outdoor exposure (light intensity, dopamine stimulation)\\n\\n### Hypermetropia and Astigmatism\\n- **Genetic**: Largely inherited\\n- **Environmental**: Less modifiable than myopia\\n- **Stability**: Usually stable after age 18-20,\\n        mnemonics: [\\n          { text: \\\"Myopia progression: age 6-15 critical, 0.5-1D/year typical\\\", explanation: \\\"School-age eye growth\\\" },\\n          { text: \\\"Outdoor time >2h/day reduces myopia progression\\\", explanation: \\\"Light exposure protective\\\" },\\n          { text: \\\"20-20-20 rule: 20min → 20ft → 20sec\\\", explanation: \\\"Near work break strategy\\\" },\\n          { text: \\\"With-the-rule (vertical) common youth; against-the-rule (horizontal) common age\\\", explanation: \\\"Astigmatism axis change\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Myopia primarily from axial elongation during childhood\\\",\\n          \\\"Outdoor time protective (dopamine release, light intensity)\\\",\\n          \\\"Hyperopia compensated by accommodation until demand exceeds capacity\\\",\\n          \\\"Astigmatism: corneal (90%) vs lenticular (10%)\\\",\\n          \\\"With-the-rule more common in children; against-the-rule in elderly\\\",\\n          \\\"Myopia progression critical age 6-15 years\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kanski\\\", chapter: \\\"Myopia Mechanism and Control\\\", edition: \\\"9th\\\" },\\n          { book: \\\"AK Khurana\\\", chapter: \\\"Refractive Error Pathophysiology\\\", edition: \\\"5th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"refractive-errors-clinical-management\\\",\\n        title: \\\"Myopia, Hypermetropia & Astigmatism - Clinical\\\",\\n        estimatedMinutes: 40,\\n        summary: \\\"Clinical presentation, diagnosis, correction options, myopia control strategies.\\\",\\n        contentMd: ``# Clinical Management of Refractive Errors\\n\\n## Clinical Presentation and Diagnosis\\n### Myopia\\n- **Symptoms**: Blurred distance vision, clear near vision, squinting\\n- **Signs**: Minus lens correction improves vision\\n- **Examination**: Refraction shows minus cylinder\\n- **Progression check**: Serial refraction to monitor annual change\\n\\n### Hypermetropia\\n- **Symptoms**: Blurred near vision, eyestrain, accommodation fatigue\\n- **Young patients**: Often asymptomatic (accommodation compensates)\\n- **Presbyopic**: Both distance and near blurred\\n- **Signs**: Plus lens correction improves vision\\n- **Examination**: Refraction shows plus sphere\\n\\n### Astigmatism\\n- **Symptoms**: Blurred vision all distances, eyestrain, line distortion\\n- **Signs**: Different acuity in different meridians\\n- **Examination**: Astigmatic dial shows axis of maximum clarity\\n- **Keratometry**: Confirms corneal astigmatism magnitude/axis\\n\\n## Correction Methods\\n### Spectacles (Glasses)\\n- **Advantages**: Safe, affordable, easy correction changes\\n- **Disadvantages**: Optical distortion at edges, weight, cosmetic\\n- **Indications**: First choice for children, variable refractive errors\\n\\n### Contact Lenses\\n- **Advantages**: Better optics, larger visual field, cosmetic\\n- **Astigmatism correction**: Toric lenses maintain axis orientation\\n- **Myopia control**: Orthokeratology (rigid lenses), defocus profiles\\n- **Complications**: Infection risk, fitting challenges, cost\\n\\n### Refractive Surgery\\n- **LASIK**: Laser-assisted in situ keratomileusis (most common)\\n- **PRK**: Photorefractive keratectomy (alternative for thin corneas)\\n- **SMILE**: Small incision lenticule extraction (newer, emerging)\\n- **Indications**: Stable refraction, age >18-20, adequate corneal thickness\\n- **Myopia limit**: Up to -10 to -12D typically correctable\\n\\n## Myopia Control Strategies\\n### Optical Methods\\n- **Bifocals**: Reduce accommodation demand\\n- **Contact lenses**: Orthokeratology (peripheral retinal defocus reduction)\\n- **Defocus-profile lenses**: Reduce myopic periphery\\n- **Efficacy**: 20-40% slowing of progression\\n\\n### Pharmacological\\n- **Atropine drops**: Low-dose (0.01%) effective, minimal side effects\\n- **Mechanism**: Inhibits dopamine antagonism, increases scleral rigidity(?)\\n- **Efficacy**: 50-60% reduction in progression\\n- **Limitation**: Rebound increase when stopped\\n\\n### Behavioral/Environmental\\n- **Outdoor time**: 2+ hours daily recommended (2x weekly not sufficient)\\n- **Near work reduction**: Frequent breaks essential\\n- **Lighting**: Bright light protective\\n- **Screen time**: Reduce continuous near accommodation\\n\\n## Indian Healthcare Context\\n- **High myopia prevalence**: 15-25% in urban areas (increasing)\\n- **School-age concern**: Progressive myopia significant public health issue\\n- **Access**: Glasses affordable; contact lenses, surgery less accessible in rural areas\\n- **Environmental factors**: Increasing screen time, competitive academics,\\n        mnemonics: [\\n          { text: \\\"Myopia: minus lens, far blurred, near clear\\\", explanation: \\\"Myopic symptom pattern\\\" },\\n          { text: \\\"Hyperopia: plus lens, near blurred, far compensated\\\", explanation: \\\"Hyperopic symptom pattern\\\" },\\n          { text: \\\"Astigmatism: cylinder axis critical, blurred all distances\\\", explanation: \\\"Astigmatic correction\\\" },\\n          { text: \\\"Myopia control: outdoor 2h/d, atropine 0.01%, bifocals/contacts\\\", explanation: \\\"Control strategies\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Myopia: minus lens, squinting for distance vision\\\",\\n          \\\"Hyperopia: plus lens, accommodation compensates initially\\\",\\n          \\\"Astigmatism: cylinder correction with proper axis\\\",\\n          \\\"Myopia control: outdoor time, frequent breaks, low-dose atropine\\\",\\n          \\\"LASIK up to -10 to -12D myopia correction\\\",\\n          \\\"Indian context: High urban myopia prevalence, screen time risk\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kanski\\\", chapter: \\\"Management of Refractive Error\\\", edition: \\\"9th\\\" },\\n          { book: \\\"AK Khurana\\\", chapter: \\\"Myopia Control and Management\\\", edition: \\\"5th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"refractive-errors-exam-prep\\\",\\n        title: \\\"Myopia, Hypermetropia & Astigmatism - Exam Prep\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"High-yield facts, refractive notation, myopia control pearls.\\\",\\n        contentMd: ``# Exam Prep: Refractive Errors\\n\\n## Key Facts\\n1. Myopia: excessive power or long eye\\n2. Hyperopia: low power or short eye\\n3. Astigmatism: meridional power difference\\n4. With-the-rule: vertical steeper (common youth)\\n5. Against-the-rule: horizontal steeper (common age)\\n6. Myopia progression critical age 6-15 years\\n7. Myopia control: outdoor >2h/d, atropine 0.01%, bifocals/contacts\\n8. LASIK limit: -10 to -12D typically\\n9. Corneal astigmatism: 90% of total\\n10. Lenticular astigmatism: 10% (often opposite, partially cancels corneal)\\n\\n## Refractive Error Definitions\\n| Error | Focus | Symptom |\\n|-------|-------|---------|\\n| Myopia | In front | Far blurred |\\n| Hyperopia | Behind | Near blurred |\\n| Astigmatism | Two lines | All blurred |\\n| Mixed | Combined | Variable |\\n\\n## Myopia Control Efficacy\\n- **Outdoor time**: 30-50% reduction in progression\\n- **Atropine 0.01%**: 50-60% reduction\\n- **Bifocals**: 20-30% reduction\\n- **Contact lenses**: 20-40% reduction\\n- **Combined**: Additive effects\\n\\n## Correction Notation\\n- **Spherical**: -2.50 (myopia) or +1.50 (hyperopia)\\n- **Cylindrical**: -1.00 × 180 (axis notation)\\n- **Combined**: -2.50 -1.00 × 180 (sphere, cylinder, axis),\\n        mnemonics: [\\n          { text: \\\"Myopia - far blurred, near clear\\\", explanation: \\\"Negative lens correction\\\" },\\n          { text: \\\"Hyperopia + near blurred, far OK initially\\\", explanation: \\\"Positive lens correction\\\" },\\n          { text: \\\"With-the-rule (vertical) youth; against-the-rule (horizontal) age\\\", explanation: \\\"Astigmatism change\\\" },\\n          { text: \\\"Myopia control: outdoor >2h, atropine 0.01%, contacts\\\", explanation: \\\"Evidence-based strategies\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Myopia from excessive power or long eye (axial elongation)\\\",\\n          \\\"Myopia progression age 6-15 critical for intervention\\\",\\n          \\\"Outdoor exposure 2+ hours daily protective\\\",\\n          \\\"Atropine 0.01% effective (50-60% reduction)\\\",\\n          \\\"LASIK suitable for -10 to -12D or less\\\",\\n          \\\"Astigmatism axis critical for correction\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kanski\\\", chapter: \\\"Quick Reference\\\", edition: \\\"9th\\\" },\\n          { book: \\\"AK Khurana\\\", chapter: \\\"Refractive Summary\\\", edition: \\\"5th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 5,\\n        slug: \\\"refractive-errors-active-recall\\\",\\n        title: \\\"Myopia, Hypermetropia & Astigmatism - Active Recall\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"7-10 clinical cases on refractive error management and myopia control.\\\",\\n        contentMd: ``# Active Recall: Refractive Errors\\n\\n## Q1: Myopia Progression in Child\\n**Q: 10-year-old boy, refraction -1.50D six months ago, now -2.25D. Annual progression 1.5D. Discuss myopia control options for Indian context.**\\n\\nA: **Progression rate 1.5D/year is rapid** (normal 0.5-1.0D/year), high-risk for high myopia. **Control strategies**: (1) **Outdoor time**: Ensure 2+ hours daily (protective); (2) **Low-dose atropine**: 0.01% nightly (50-60% efficacy, minimal side effects); (3) **Bifocals or contact lenses**: 20-40% reduction; (4) **Near work reduction**: 20-20-20 rule, frequent breaks. **Indian advantage**: Atropine inexpensive, readily available. **Baseline**: Serial refraction every 3-6 months to monitor.\\n\\n## Q2: Hyperopia with Accommodation Fatigue\\n**Q: 38-year-old with +2.50D hyperopia presents with near vision blur and eye strain. Close work 8 hours daily. Explain accommodation demand vs capacity.**\\n\\nA: **Accommodation demand at 25cm**: ~4 diopters (1/0.25). **Total power needed**: 4D (near demand) + 2.5D (refractive error) = 6.5D accommodation required. **Patient's capacity age 38**: ~4-5D (decreasing with age). **Result**: Accommodation demand exceeds capacity → blur and fatigue. **Solution**: Reading glasses (+2.50 to +3.00) for near work to reduce accommodation demand to level patient can sustain.\\n\\n## Q3: Astigmatism Axis Importance\\n**Q: Patient with -1.00D cylinder: first prescribed -1.00 × 180 with adequate acuity; weeks later complains of blur despite same prescription. Refraction now -1.00 × 175. Explain vision change.**\\n\\nA: **Axis shift 180→175 = 5-degree error**. Small axis errors in astigmatism cause significant blur due to meridional sensitivity. **Rule**: For every 1-degree axis error, vision can worsen by ~0.25D effective cylinder. **Clinical relevance**: Astigmatism correction demands accurate axis determination (±5 degrees important). **Solution**: Recheck refraction, adjust axis to -1.00 × 175 (or verify 180 correct).\\n\\n## Q4: Myopia Control Strategy Selection\\n**Q: 8-year-old with myopia -2.50D, progressive (1D/year). Parents want myopia control but concerned about drops. Which strategy most realistic for rural India?**\\n\\nA: **First-line in rural setting**: (1) **Outdoor time** (free, safe): 2+ hours daily - most practical; (2) **Bifocals/progressive lenses** (affordable): Available at local optometrist; (3) **Near work discipline**: Reduced screen time. **Second-line if adherence**: **Atropine 0.01%** (inexpensive, once-daily). **Avoid**: Contact lenses (cleaning water safety, frequent visits required). **Combined approach**: Outdoor time + bifocals likely most sustainable in rural India.\\n\\n## Q5: With-the-Rule to Against-the-Rule Change\\n**Q: Child age 10 has -0.50D with-the-rule astigmatism. At age 40, eye shows -0.50D against-the-rule. Explain the corneal change mechanism.**\\n\\nA: **Corneal tightness change with age**: Young eyes: vertical meridian steeper (with-the-rule). Older eyes: horizontal meridian becomes steeper (against-the-rule). **Mechanism**: Eyelid laxity and gravity → increased horizontal stromal pressure → gradual corneal flattening in vertical meridian → shift to against-the-rule. **Clinical significance**: Regular astigmatism axis may change with age, affecting refractive surgery planning (LASIK or PRK).\\n\\n## Q6: LASIK Candidacy Assessment\\n**Q: 42-year-old with -8.50D myopia and -1.50D astigmatism wants LASIK. Corneal topography shows adequate thickness. Other considerations?**\\n\\nA: **Total refractive error**: -8.50D sphere + (-1.50D cylinder) = within typical LASIK range (up to -10 to -12D). **Age consideration**: 42 years old, likely presbyopic - accommodation minimal, LASIK safe. **Corneal thickness**: Adequate. **Additional considerations**: (1) **Inform about presbyopia**: LASIK won't address presbyopia developing; (2) **Monovision option**: Non-dominant eye -1.50 to -2.00D for near vision; (3) **Residual after LASIK**: Even perfect LASIK leaves some astigmatism possible, may need glasses for very fine vision. **Good candidate overall**.\\n\\n## Q7: Hyperopia Latent Component\\n**Q: Child refraction: manifest hyperopia +1.00D, but cycloplegia shows +2.00D. Which is actual refractive error? Why the difference?**\\n\\nA: **Actual error: +2.00D** (cycloplegic refraction = true refraction, removes accommodation). **Manifest +1.00D** represents +2.00D error minus +1.00D accommodation compensation. **Clinical significance**: (1) Children can accommodate significantly, masking hyperopia; (2) cycloplegic refraction essential in pediatric refraction; (3) Latent hyperopia becomes apparent as accommodation fails with age. **Cycloplegia necessity**: Can't accurately determine hyperopia without removing accommodation in young patients.\\n\\n## Q8: Screen Time and Myopia\\n**Q: Child with myopia progression 1.5D/year. During COVID lockdown, increased screen time 8 hours daily, minimal outdoor time. Explain mechanism of progression acceleration.**\\n\\nA: **Screen-related myopia acceleration mechanisms**: (1) **Reduced light exposure**: Indoor light <500 lux vs outdoor >5000 lux; dopamine stimulation reduced; (2) **Sustained near accommodation**: 8 hours continuous near work causes accommodation lag; (3) **Peripheral defocus**: Indoor near work creates myopic defocus in peripheral retina; (4) **Reduced scleral oxygen**: Close work reduces oxygen diffusion. **2020 pandemic studies**: Show significant myopia progression increases in lockdown. **Prevention**: Resume outdoor activity, enforce 20-20-20 rule for screens.\\n      }\\n    ]\\n  },\\n  // Continue with remaining topics in similar format (abbreviated to save space)\\n  // OP-MOD-01-TOP-03, OP-MOD-02 topics, etc.\\n];\\n\""
-}
-}
-];
+        summary: "Snell's law, corneal refraction physics, accommodation physiology, optical aberrations, and depth of field.",
+        contentMd: `# Optics & Image Formation - Mechanism
+
+## Refraction Principles: Snell's Law
+
+### Law of Refraction
+- **Formula**: n₁ sin θ₁ = n₂ sin θ₂
+- **Air-to-cornea interface**: Largest refractive index change (air 1.0 to cornea 1.376)
+- **Result**: Most bending occurs at cornea surface (first refracting surface)
+- **Aqueous-to-lens**: Additional refraction at lens surfaces
+- **Lens-to-vitreous**: Minimal additional refraction
+
+### Focal Length & Focal Distance
+- **Focal length**: Distance where parallel rays converge after refraction
+- **Normal eye**: Focal length ~24mm (matches retinal distance)
+- **Myopic eye**: Focal length shorter than axial length → image in front of retina
+- **Hyperopic eye**: Focal length longer than axial length → image behind retina
+
+## Accommodation Physiology
+
+### Ciliary Muscle Anatomy & Action
+1. **Ciliary muscle innervation**: Parasympathetic CN III (Edinger-Westphal nucleus)
+2. **At rest**: Zonular tension pulls on lens capsule (lens stretched, flattened)
+3. **Contraction**: Ciliary muscle contracts → reduces zonular tension
+4. **Result**: Lens elasticity causes equatorial bulging → increases power
+5. **Lens shape change**: From ~8.5mm diameter flattened to ~9.5mm diameter thickened
+
+### Age-Related Accommodation Loss (Presbyopia)
+- **Mechanism**: Lens nucleus becomes sclerotic with age (loses elasticity)
+- **Age 8**: Amplitude ~14D, near point 10cm
+- **Age 30**: Amplitude ~6D, near point 17cm
+- **Age 45**: Amplitude ~1.5D, near point 67cm (presbyopia symptomatic)
+- **Age 55**: Amplitude ~0.5D, near point >100cm
+- **Age 65**: Amplitude ~0D (no accommodation possible)
+- **Cause**: Lens protein crosslinks accumulate, reducing lens deformability
+
+### Accommodation-Vergence Coupling
+- **Neural linkage**: Accommodation command simultaneously triggers convergence
+- **Anatomical substrate**: Medial subnuclei CN III for both functions
+- **Consequence**: Cannot converge without accommodating (in normal eye)
+
+## Optical Aberrations
+
+### Types of Optical Aberrations
+
+**Spherical Aberration**
+- Peripheral rays focus differently than central rays
+- Causes edge blur, loss of image quality
+- Pupil size affects: smaller pupil reduces spherical aberration
+
+**Chromatic Aberration**
+- Different wavelengths (colors) focus at different distances
+- Blue light focuses closer than red light
+- Creates color fringing, especially at edges
+
+**Astigmatism**
+- Different meridians have different refractive power
+- Can be corneal (most common), lenticular, or combined
+- With-the-rule (vertical steeper) vs against-the-rule (horizontal steeper)
+
+**Higher-Order Aberrations**
+- Coma, trefoil: More complex distortions
+- Less common than spherical/chromatic
+
+## Depth of Field
+
+### Concept & Clinical Significance
+- **Definition**: Range where image remains acceptably sharp
+- **Determined by**: Pupil size, refractive error, object distance
+- **Pinhole effect**: Smaller pupil increases depth of field
+- **Near reflex benefit**: Pupil constriction with accommodation increases depth of field
+
+### Near Reflex Advantage
+- **All three components together**: Accommodation + convergence + miosis
+- **Result**: Allows clear focus at near with range of accommodation
+- **Pupil constriction**: Reduces spherical aberration, increases depth of field
+- **Convergence**: Eyes aligned for binocular vision
+
+## Convergence
+
+### Definition & Muscles
+- **Definition**: Inward turning of eyes to maintain single binocular image
+- **Muscles involved**: Medial recti (CN III medial subnuclei control both)
+- **Amount varies**: From minimal at distance to maximal at near
+- **Accommodation-convergence coupling**: 1 diopter accommodation triggers ~4 prism diopters convergence`,
+        mnemonics: [
+          {
+            text: "Snell's law: n₁sinθ₁ = n₂sinθ₂ (air-cornea interface has largest n change)",
+            explanation: "Refraction principle at optical interface",
+          },
+          {
+            text: "Accommodation: parasympathetic → ciliary muscle → zonules relax → lens thickens",
+            explanation: "Accommodation pathway and mechanism",
+          },
+          {
+            text: "Age presbyopia: 8yr=14D, 25yr=10D, 45yr=2D, 65yr=0D (predictable decline)",
+            explanation: "Accommodation loss with age",
+          },
+          {
+            text: "Smaller pupil = greater depth of field (pinhole effect protects against blur)",
+            explanation: "Pupil size effect on vision",
+          },
+        ],
+        keyPoints: [
+          "Cornea-air interface provides most refraction (n change 1.0→1.376)",
+          "Lens accommodation decreases with age; presbyopia onset ~age 45",
+          "Ciliary muscle contraction reduces zonular tension, allowing lens to thicken",
+          "Accommodation amplitude: 14D (age 8) → 0D (age 65)",
+          "Accommodation triad: lens thickening + convergence + miosis all together",
+          "Optical aberrations (spherical, chromatic, astigmatism) degrade image quality",
+          "Pupil constriction increases depth of field and reduces spherical aberration",
+          "Near reflex brings accommodation, convergence, and miosis together",
+        ],
+        textbookRefs: [
+          { book: "AK Khurana Comprehensive Ophthalmology", chapter: "2", edition: "7th" },
+          {
+            book: "Parsons' Diseases of the Eye",
+            chapter: "2",
+            edition: "23rd",
+          },
+        ],
+      },
+      {
+        layer: 3,
+        slug: "optics-image-formation-clinical",
+        title: "Optics & Image Formation - Clinical",
+        estimatedMinutes: 25,
+        summary: "Refraction testing, accommodation amplitude measurement, pupil examination, presbyopia assessment and management.",
+        contentMd: `# Optics & Image Formation - Clinical
+
+## Refraction Examination
+
+### Distance Testing
+- **Chart distance**: 6 meters (20 feet in US)
+- **Eye chart types**: Landolt C, Snellen, logMAR
+- **Procedure**: Occlude one eye, read smallest visible line
+- **Notation**: 6/6 (20/20) = sees at 6m what normal sees at 6m; 6/60 = sees at 6m what normal sees at 60m
+- **BSCVA**: Best spectacle/contact corrected visual acuity (endpoint of refraction)
+
+### Objective Refraction
+- **Retinoscopy**: Gold standard; light reflex movement indicates refractive error
+- **Autorefraction**: Machine measures refraction automatically
+- **A-scan ultrasound**: Measures axial length (in myopia or when refraction not possible)
+
+### Subjective Refraction
+- **Phoropter testing**: Patient views through lens combinations
+- **Endpoint**: Best visual acuity with minimal lens power (least negative/most positive)
+- **Red-green test**: Final refinement of spherical power
+- **Astigmatism determination**: Axis and power of cylindrical lens
+
+## Accommodation Assessment
+
+### Near Point of Accommodation (NPA)
+- **Measurement**: Distance at which patient first reports blur (accommodation amplitude limit)
+- **Age 8**: ~10cm (14D accommodation)
+- **Age 25**: ~10cm (10D accommodation)
+- **Age 45**: ~30cm (2D accommodation) - presbyopia symptomatic threshold
+- **Age 55+**: >100cm (minimal accommodation)
+- **Formula**: Accommodation amplitude (D) = 100 / near point distance (cm)
+
+### Accommodation Amplitude Calculation
+- **Example**: If near point at 25cm, amplitude = 100/25 = 4 diopters
+- **Clinical use**: Identifies when patient needs reading glasses
+- **Expected by age**: Compare to age-predicted amplitude
+
+### Accommodation Lag
+- **Definition**: Difference between accommodation demand and actual accommodation
+- **Occurs with**: High viewing distances or fatigue
+- **Clinical relevance**: May contribute to presbyopic symptoms
+
+## Pupil Examination
+
+### Light Reflex Testing
+- **Technique**: Shine light in eye; observe pupil constriction
+- **Normal**: Bilateral equal constriction within 1 second
+- **Abnormalities**:
+  - **RAPD (relative afferent pupillary defect)**: Affected eye has weaker response (optic nerve lesion)
+  - **Anisocoria**: Pupils unequal size (pathology or normal variation)
+  - **Reactivity**: Should still constrict even if unequal size
+
+### Accommodation Reflex Assessment
+- **Test**: Ask patient to look at distant object, then at near object (25cm)
+- **Expected response**: Pupils constrict (miosis) during accommodation
+- **Component 1**: Accommodation (lens thickens)
+- **Component 2**: Convergence (eyes turn inward)
+- **Component 3**: Miosis (pupils constrict)
+- **Dissociation**: Normal light reflex but absent accommodation suggests brainstem lesion (Argyll Robertson pupil in neurosyphilis)
+
+## Presbyopia Assessment & Management
+
+### Definition
+- Age-related loss of accommodation from lens stiffening
+- Becomes symptomatic ~age 40-45 when accommodation amplitude <2-3D
+- Affects near vision specifically
+
+### Symptoms
+- Difficulty reading small print at normal distance (~33cm)
+- Eye strain with prolonged near work
+- Need to hold reading material at arm's length
+- Worse in poor lighting (requires larger pupil for more light; but larger pupil has less depth of field)
+
+### Management Strategies
+1. **Reading glasses**: For near work, removed for distance
+2. **Bifocals**: Distance prescription in top, near add in bottom
+3. **Progressive lenses**: Gradual transition from distance to near
+4. **Contact lenses**:
+   - Monovision: Non-dominant eye set for near focus (dominant for distance)
+   - Modified monovision: Both eyes corrected for distance, with mini-monovision add
+5. **Surgical options** (emerging):
+   - Corneal inlays: Small aperture placed in cornea for depth of field
+   - Refractive lensotomy: Modification of lens shape
+   - Implantable lens: Focus-adjustable IOL
+
+### Presbyopic Bifocal/Progressive Add Calculation
+- **Add power**: Depends on presbyopic amplitude loss and occupation
+- **Typical**: +1.25D to +3.50D depending on near work demands
+- **Occupational**: Computer workers may need less; readers need more`,
+        mnemonics: [
+          {
+            text: "6/6 (20/20) = normal vision; patient sees at 6m what normal sees at 6m",
+            explanation: "Visual acuity notation interpretation",
+          },
+          {
+            text: "Accommodation amplitude (D) = 100 / near point distance (cm)",
+            explanation: "Formula for calculating accommodation",
+          },
+          {
+            text: "Age ~45 = presbyopia begins; accommodation amplitude drops below 2-3D",
+            explanation: "Presbyopia onset timing",
+          },
+          {
+            text: "Light reflex: CN II afferent → CN III efferent (parasympathetic to sphincter)",
+            explanation: "Pupil light reflex pathway",
+          },
+        ],
+        keyPoints: [
+          "Visual acuity 6/6 = patient reads at 6m what standard eye reads at 6m",
+          "Refraction determines refractive error magnitude and axis (sphero-cylindrical)",
+          "Accommodation amplitude decreases predictably with age (presbyopia)",
+          "Near point moves from 10cm (age 8) to >100cm (age 65)",
+          "Presbyopia: lens stiffness reduces accommodation capacity",
+          "Pupil light reflex tests CN II (afferent) and CN III (efferent) integrity",
+          "Accommodation reflex dissociation suggests neurologic pathology",
+          "Presbyopia management: glasses (simplest) → bifocals → progressives → surgical options",
+        ],
+        textbookRefs: [
+          { book: "AK Khurana Comprehensive Ophthalmology", chapter: "3", edition: "7th" },
+          {
+            book: "Parsons' Diseases of the Eye",
+            chapter: "3",
+            edition: "23rd",
+          },
+        ],
+      },
+      {
+        layer: 4,
+        slug: "optics-image-formation-exam",
+        title: "Optics & Image Formation - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "High-yield facts on accommodation, presbyopia, refraction, visual acuity notation, and age-related changes.",
+        contentMd: `# Optics & Image Formation - Exam Prep
+
+## Key Facts
+1. Cornea 43D (2/3 of power), Lens 20D at rest
+2. Total refractive power ~60 diopters
+3. Image on retina: inverted, real, magnified
+4. Accommodation amplitude age 8: ~14D; age 45: ~2D; age 65: ~0D
+5. Near point age 8: ~10cm; age 45: ~30cm; age 65: >100cm
+6. Presbyopia becomes symptomatic age 40-45
+7. Ciliary muscle: parasympathetic innervation (CN III)
+8. Pupil constriction: CN III parasympathetic
+9. Light reflex: CN II afferent, CN III efferent
+10. Accommodation triad: lens thickening + convergence + miosis
+
+## Accommodation Amplitude by Age
+| Age | Amplitude (D) | Near Point |
+|-----|---------------|-----------|
+| 8   | 14            | 10cm      |
+| 20  | 10            | 10cm      |
+| 30  | 6             | 17cm      |
+| 40  | 3             | 33cm      |
+| 45  | 1.5           | 67cm      |
+| 50  | 0.5           | >100cm    |
+| 65  | 0             | >100cm    |
+
+## Refraction Formulas
+- **Accommodation (D) = 100 / near point distance (cm)**
+- **Visual acuity**: 6/X = patient sees at 6m what normal sees at X meters
+- **Diopter**: Unit of refractive power; inverse of focal length in meters
+
+## Presbyopia Pearls
+- Onset age: 40-45 years
+- First symptom: Difficulty reading small print
+- Progression: Stabilizes by age 55-60
+- Management progression: Reading glasses → bifocals → progressives → surgical
+
+## Pupil Innervation
+- **Dilation (mydriasis)**: Radial muscle, sympathetic
+- **Constriction (miosis)**: Sphincter muscle, parasympathetic (CN III)
+- **Light reflex**: CN II (afferent) → CN III (efferent)
+- **Accommodation reflex**: CN III to ciliary muscle + sphincter
+
+## NEET-Style Quick Reference
+- **Best visual acuity endpoint**: Least negative/most positive lens that gives clearest vision
+- **Accommodation deficit**: Lost at rate ~0.5D per decade after age 8
+- **Presbyopia**: When accommodation amplitude insufficient for patient's near work (typically <3D)
+- **CN III palsy**: Mydriasis (dilated pupil) + accommodation paralysis
+- **Argyll Robertson pupil**: Light reflex absent, accommodation present (neurosyphilis)`,
+        mnemonics: [
+          {
+            text: "43D cornea, 20D lens = 63D power total",
+            explanation: "Refractive power distribution",
+          },
+          {
+            text: "Age ~45 presbyopia begins when accommodation ~2D",
+            explanation: "Presbyopia onset criteria",
+          },
+          {
+            text: "6/6 = normal; 6/60 = sees at 6m what normal sees at 60m",
+            explanation: "Visual acuity notation",
+          },
+          {
+            text: "CN II → CN III light reflex pathway",
+            explanation: "Pupil pathway memory",
+          },
+        ],
+        keyPoints: [
+          "Cornea: 43D (2/3); Lens: 20D (1/3) of total 60D refractive power",
+          "Accommodation amplitude predictable by age; presbyopia inevitable",
+          "Presbyopia: lens stiffness reduces accommodation after age 40-45",
+          "Near point doubles roughly every 10-15 years after age 8",
+          "Accommodation formula: Amplitude (D) = 100/near point (cm)",
+          "Light reflex tests afferent (CN II) and efferent (CN III) pathways",
+          "Presbyopia management: correction essential for near work after age 45",
+          "Visual acuity 6/6 = patient's eye matches normal eye performance",
+        ],
+        textbookRefs: [
+          { book: "AK Khurana Comprehensive Ophthalmology", chapter: "1-3", edition: "7th" },
+          { book: "Parsons' Diseases of the Eye", chapter: "1-3", edition: "23rd" },
+        ],
+      },
+      {
+        layer: 5,
+        slug: "optics-image-formation-recall",
+        title: "Optics & Image Formation - Active Recall",
+        estimatedMinutes: 20,
+        summary: "10 clinical questions on accommodation, presbyopia calculations, refraction, and pupil examination.",
+        contentMd: `# Active Recall: Optics & Image Formation
+
+**Q1: Accommodation Amplitude Calculation**
+A 38-year-old complains of difficulty reading at normal distance. Near point measured at 30cm. Calculate accommodation amplitude and interpret.
+> **Answer**: Amplitude = 100/30 = 3.3 diopters. Normal for age 38 is ~4-5D. This patient shows early presbyopic symptoms (amplitude dropping below 4D), explains difficulty with near vision. Solution: reading glasses with +1.50 to +2.00D power for sustained near work.
+
+**Q2: Presbyopia Onset & Management**
+44-year-old seeing well at distance but struggling with fine print, especially in poor lighting. What's happening and management?
+> **Answer**: Presbyopia onset (age 44 at threshold). Accommodation amplitude dropping below 2D. Lighting issue: larger pupil in poor light has less depth of field, so accommodation lag more noticeable. Management: Reading glasses (bifocals or progressives); improve lighting for near work; periodic accommodation breaks.
+
+**Q3: Accommodation Amplitude vs Age**
+If a 25-year-old has accommodation amplitude of 10D, at what age would this patient likely need reading glasses?
+> **Answer**: Progressive loss ~0.5D per decade. Age 25: 10D; Age 35: 7.5D; Age 45: 5D; Age 55: 2.5D (presbyopic, needs glasses). Presbyopia symptomatic when amplitude <2-3D, typically age 45-50. This patient needs glasses when amplitude insufficient for occupational demands (~age 50 if office worker).
+
+**Q4: Near Point Measurement**
+Patient reports near point at 50cm. What is accommodation amplitude and what does this indicate?
+> **Answer**: Amplitude = 100/50 = 2D. This indicates presbyopia present (accommodation <3D). Patient age likely 50+ years. For comparison: age 40 near point ~33cm (amplitude 3D, presbyopia barely starting); age 60 near point >100cm (amplitude ~0.5D or less). Management: reading glasses mandatory.
+
+**Q5: Corneal vs Lenticular Refraction**
+In total refractive power of 60D, cornea contributes 43D and lens 20D. Explain why cornea has such large contribution despite lens ability to change power.
+> **Answer**: Air-cornea interface has largest refractive index change (1.0 to 1.376). Snell's law: n₁sinθ₁=n₂sinθ₂; larger Δn = larger angle change for parallel rays. Aqueous-lens and lens-vitreous interfaces have smaller Δn (aqueous 1.336 to lens 1.41, less change than air-cornea). Lens advantage: can change shape (accommodation), not total power. Cornea fixed (cannot change); laser LASIK exploits this to reshape cornea for refractive error.
+
+**Q6: Accommodation Triad Components**
+Describe the three components of the near reflex and anatomical substrate.
+> **Answer**: (1) **Accommodation**: Lens thickens (ciliary muscle contracts via parasympathetic CN III); (2) **Convergence**: Eyes turn inward (medial recti contract, CN III medial subnuclei); (3) **Miosis**: Pupils constrict (sphincter muscle via CN III parasympathetic). **Anatomical substrate**: Medial longitudinal fasciculus connects accommodation/convergence centers to CN III medial subnuclei. Cannot accommodate without convergence (unlike presbyopic lens implants which decouple them). **Neural integration**: Frontal eye fields and midbrain coordinating centers drive all three together.
+
+**Q7: CN III Palsy Effects**
+CN III palsy causes mydriasis (dilated pupil) and accommodation loss. Explain both findings mechanistically.
+> **Answer**: **Mydriasis**: CN III carries parasympathetic fibers to sphincter muscle. Loss of parasympathetic → sphincter paralyzed → unopposed sympathetic (dilator muscle) → pupil dilated. **Accommodation loss**: CN III also innervates ciliary muscle. Loss of parasympathetic → ciliary muscle cannot contract → zonules cannot relax → lens cannot thicken → accommodation impossible. **Clinical**: Both findings expected with CN III palsy; light reflex still responsive (CN II afferent pathway intact, but efferent CN III damaged).
+
+**Q8: Argyll Robertson Pupil Dissociation**
+Patient has normal light reflex but cannot accommodate. Pupil responds to light but not near stimulus. Where is lesion?
+> **Answer**: Dissociation of light reflex (present) vs accommodation reflex (absent). **Anatomy**: Light reflex uses CN II→CN III pathway at level of pupil (midbrain dorsal level). Accommodation uses higher neural centers → CN III ciliary muscle (intermediate nucleus level). **Lesion location**: Dorsal midbrain (Sylvian aqueduct region) can selectively damage light reflex pathways while sparing accommodation pathways. **Classic condition**: Argyll Robertson pupil in neurosyphilis (dorsal midbrain involvement). **Result**: Pupils constrict to accommodation but not light (reverse of normal).
+
+**Q9: Presbyopia & Occupational Management**
+45-year-old computer programmer becoming presbyopic. How would refraction and correction differ from 45-year-old reader?
+> **Answer**: **Both presbyopic** (accommodation amplitude ~1.5D). **Difference in near add power**: (1) **Computer worker**: Viewing distance ~65cm (accommodation demand ~1.5D). Near add +1.25 to +1.50D adequate. Can use same lens for screen and desk. (2) **Reader**: Viewing distance ~33cm (demand ~3D). Need stronger near add +2.50 to +3.00D. Bifocals or progressives with larger near zone needed. **Intermediate zone**: Computer workers benefit from intermediate correction (~50-60cm) in progressive lenses. **Occupational modification**: Computer worker can adjust screen distance if wearing wrong correction; reader cannot adjust book distance easily.
+
+**Q10: Pupil Size & Depth of Field**
+Why does squinting (reducing pupil) temporarily improve vision in a patient with uncorrected refractive error?
+> **Answer**: **Pinhole effect**: Smaller pupil (miosis) acts like pinhole camera, increasing depth of field. **Mechanism**: With large pupil, spherical aberration of peripheral rays causes blur. Smaller pupil blocks peripheral rays (eliminates spherical aberration pathway). **Result**: Fewer rays = sharper image despite refractive error. **Clinical application**: Pinhole test used in refraction to confirm refractive error (if vision improves with pinhole, error is refractive, not organic). **Normal vision**: Near reflex uses miosis (pupil constriction) during accommodation partly for this depth of field benefit (plus reduces spherical aberration, allowing sharper accommodation).`,
+        mnemonics: [
+          {
+            text: "Presbyopia arithmetic: Age ~40-45 onwards; 100/near point = accommodation D; <3D = presbyopic",
+            explanation: "Presbyopia calculation and threshold",
+          },
+          {
+            text: "Accommodation triad: Thickening + Turning + Tightening (of pupils)",
+            explanation: "Three components mnemonic",
+          },
+          {
+            text: "CN III effects: Mydriasis (no parasympathetic to dilator unopposed) + no accommodation (ciliary paralyzed)",
+            explanation: "CN III palsy findings",
+          },
+          {
+            text: "Argyll Robertson: Light present, accommodation absent (reversed from normal)",
+            explanation: "Dissociation pattern",
+          },
+        ],
+        keyPoints: [
+          "Accommodation amplitude declines ~0.5D per decade after age 25",
+          "Presbyopia symptomatic when accommodation amplitude <2-3D (typically age 45)",
+          "Near point = 100/accommodation amplitude; useful for patient communication",
+          "Accommodation triad: lens thickens + eyes converge + pupils constrict (CN III parasympathetic)",
+          "Cornea-air interface (Δn largest) provides 2/3 refractive power despite lens variability",
+          "CN III palsy: mydriasis (unopposed sympathetic) + accommodation loss (ciliary paralyzed)",
+          "Squinting (pinhole effect) improves vision by increasing depth of field in refractive error",
+          "Argyll Robertson pupil: light reflex lost, accommodation present (neurosyphilis)",
+        ],
+        textbookRefs: [
+          { book: "AK Khurana Comprehensive Ophthalmology", chapter: "1-3", edition: "7th" },
+          { book: "Parsons' Diseases of the Eye", chapter: "1-3", edition: "23rd" },
+        ],
+      },
+    ],
+  },
 ];
