@@ -1,0 +1,31 @@
+REMAINING LESSON FILES TO CREATE (Due to token limits, creating summary)
+
+ORTHOPEDICS FILES NEEDED:
+1. lessons-orthopedics-part8-continued.ts - Tibia & Ankle, Foot & Calcaneum (2 topics)
+2. lessons-orthopedics-part9.ts - TB Spine, Scoliosis, Pelvic Fractures (3 topics)
+3. lessons-orthopedics-part10.ts - Septic Arthritis, Hip Disorders & AVN (2 topics)
+4. lessons-orthopedics-part11.ts - Osteomyelitis, Osteoporosis, Peripheral Nerve Injuries (3 topics)
+
+OBG FILES NEEDED:
+1. lessons-obg-part12-continued.ts - Ovarian Tumors, Endometrial & GTD (2 topics)
+2. lessons-obg-part13.ts - Contraception, Infertility, MTP & Legal (3 topics)
+
+TOTAL: 11 topics remaining (6 ortho + 5 obg)
+
+Each file needs:
+- 5 layers per topic (foundation, mechanism, clinical, exam, recall)
+- Foundation: 20 min, Mechanism: 30 min, Clinical: 20 min, Exam: 15 min, Recall: 10 min
+- Indian context and standards
+- Evidence-based, detailed content
+- Mnemonics, key points, textbook references
+
+FILES CREATED SO FAR:
+✓ lessons-obg-part9.ts (Rh Incompatibility, Instrumental Delivery)
+✓ lessons-obg-part10.ts (Menstrual Disorders)
+✓ lessons-obg-part10-continued.ts (PCOS, Fibroids)
+✓ lessons-obg-part11.ts (Endometriosis, Adenomyosis)
+✓ lessons-obg-part11-continued.ts (PID & STIs)
+✓ lessons-obg-part12.ts (Cervical Cancer & Screening)
+✓ lessons-orthopedics-part8.ts (Hand Injuries - Scaphoid, Tendons)
+
+STATUS: Token limit approaching. Proceeding with remaining files in separate batch or compressed format.

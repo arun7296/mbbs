@@ -24,13 +24,9 @@ import {
   anesthesiologySubject, anesthesiologyModules, anesthesiologyTopics,
   radiologySubject, radiologyModules, radiologyTopics,
 } from "./seeds/remaining-subjects";
-import { anatomyMcqs } from "./seeds/anatomy-mcqs";
-import { physiologyMcqs } from "./seeds/mcqs-physiology";
-import { clinicalCases } from "./seeds/clinical-cases";
-import { medicineCases } from "./seeds/clinical-case-medicine";
-import { upperLimbLessons } from "./seeds/lessons-anatomy-upper-limb";
-import { physiologyLessons } from "./seeds/lessons-physiology";
-import { pathologyMcqs } from "./seeds/mcqs-pathology";
+
+// Bulk content loaders
+import { allLessons, allMcqs, allClinicalCases } from "./seeds/content-loader";
 
 const directUrl = process.env.DIRECT_DATABASE_URL
   || "postgres://postgres:postgres@localhost:51214/template1?sslmode=disable";
@@ -93,6 +89,194 @@ async function seedSubject(
   return subject;
 }
 
+// Generic lesson seeder
+async function seedAllLessons() {
+  console.log("\n📖 Seeding all lessons...");
+  let count = 0;
+  let skipped = 0;
+
+  for (const topicData of allLessons) {
+    try {
+      if (!topicData || !topicData.topicCode) continue;
+
+      const topic = await prisma.topic.findUnique({
+        where: { code: topicData.topicCode },
+        include: { module: true },
+      });
+
+      if (!topic) {
+        skipped++;
+        continue;
+      }
+
+      const layers = Array.isArray(topicData.layers) ? topicData.layers : [];
+      for (const l of layers) {
+        try {
+          if (!l || !l.slug) continue;
+
+          const existing = await prisma.lesson.findUnique({
+            where: { slug: l.slug },
+          });
+
+          if (existing) continue;
+
+          await prisma.lesson.create({
+            data: {
+              layer: l.layer || 1,
+              slug: l.slug,
+              title: l.title || "Untitled",
+              estimatedMinutes: l.estimatedMinutes || 30,
+              summary: l.summary || "",
+              contentMd: l.contentMd || "",
+              mnemonics: l.mnemonics || [],
+              keyPoints: l.keyPoints || [],
+              textbookRefs: l.textbookRefs || [],
+              topicId: topic.id,
+              moduleId: topic.moduleId,
+              status: "PUBLISHED",
+              examTags: ["NEXT_STEP1", "NEET_PG"],
+            },
+          });
+          count++;
+        } catch (e) {
+          console.warn(`   ⚠️  Failed to seed lesson ${l?.slug}: ${(e as Error).message}`);
+        }
+      }
+    } catch (e) {
+      console.warn(`   ⚠️  Failed to seed topic ${topicData?.topicCode}: ${(e as Error).message}`);
+    }
+  }
+
+  console.log(`   ✅ ${count} lessons created (${skipped} topics not found)`);
+}
+
+// Generic MCQ seeder
+async function seedAllMcqs() {
+  console.log("\n❓ Seeding all MCQs...");
+  let count = 0;
+
+  for (const mcq of allMcqs) {
+    try {
+      if (!mcq || !mcq.stem) continue;
+
+      // Handle both MCQs with subjectCode and topicCode
+      const topicCode = (mcq as any).topicCode;
+      const subjectCode = (mcq as any).subjectCode;
+
+      let subject;
+      let topic = null;
+
+      // Try to find subject and topic
+      if (topicCode) {
+        topic = await prisma.topic.findUnique({
+          where: { code: topicCode },
+          include: { module: { include: { subject: true } } },
+        });
+        if (topic) {
+          subject = topic.module.subject;
+        }
+      }
+
+      if (!subject && subjectCode) {
+        subject = await prisma.subject.findUnique({
+          where: { code: subjectCode },
+        });
+      }
+
+      if (!subject) continue;
+
+      // Check for existing MCQ
+      const existing = await prisma.question.findFirst({
+        where: { stem: mcq.stem },
+      });
+
+      if (existing) continue;
+
+      await prisma.question.create({
+        data: {
+          type: mcq.type || "MCQ_SINGLE",
+          subjectId: subject.id,
+          topicId: topic?.id || null,
+          stem: mcq.stem,
+          clinicalVignette: (mcq as any).clinicalVignette || null,
+          options: mcq.options || [],
+          explanation: mcq.explanation || "",
+          difficulty: mcq.difficulty || "MEDIUM",
+          bloomsLevel: mcq.bloomsLevel || "Recall",
+          examTags: (mcq.examTags || ["NEXT_STEP1"]) as unknown as string[],
+          textbookRefs: mcq.textbookRefs || [],
+          status: "PUBLISHED",
+        },
+      });
+      count++;
+    } catch (e) {
+      console.warn(`   ⚠️  Failed to seed MCQ: ${(e as Error).message}`);
+    }
+  }
+
+  console.log(`   ✅ ${count} MCQs created`);
+}
+
+// Generic clinical case seeder
+async function seedAllClinicalCases() {
+  console.log("\n🏥 Seeding all clinical cases...");
+  let count = 0;
+
+  for (const c of allClinicalCases) {
+    try {
+      if (!c || !c.title) continue;
+
+      const existing = await prisma.clinicalCase.findFirst({
+        where: { title: c.title },
+      });
+
+      if (existing) continue;
+
+      const cc = await prisma.clinicalCase.create({
+        data: {
+          title: c.title,
+          presentingComplaint: c.presentingComplaint || "",
+          caseType: c.caseType || "Ward",
+          difficulty: c.difficulty || "MEDIUM",
+          estimatedMinutes: c.estimatedMinutes || 30,
+          subjectIds: [],
+          topicIds: [],
+          competencyIds: [],
+          examTags: (c.examTags || ["NEXT_STEP1"]) as unknown as string[],
+          patientProfile: c.patientProfile || {},
+          status: "PUBLISHED",
+        },
+      });
+
+      const stages = Array.isArray(c.stages) ? c.stages : [];
+      for (const s of stages) {
+        try {
+          if (!s || !s.prompt) continue;
+
+          await prisma.caseStage.create({
+            data: {
+              caseId: cc.id,
+              stage: s.stage || "ASSESSMENT",
+              stageOrder: s.stageOrder || 1,
+              prompt: s.prompt,
+              availableActions: s.availableActions || [],
+            },
+          });
+        } catch (e) {
+          console.warn(`   ⚠️  Failed to seed case stage: ${(e as Error).message}`);
+        }
+      }
+
+      count++;
+      console.log(`   🩺 ${c.title}`);
+    } catch (e) {
+      console.warn(`   ⚠️  Failed to seed clinical case ${c?.title}: ${(e as Error).message}`);
+    }
+  }
+
+  console.log(`   ✅ ${count} clinical cases created`);
+}
+
 async function main() {
   console.log("🌱 Seeding complete MBBS curriculum...\n");
 
@@ -124,104 +308,18 @@ async function main() {
   ];
 
   console.log("📚 Seeding 19 subjects...");
-  let anatomySubjectRecord;
   for (const { subject, modules, topics } of allSubjects) {
-    const record = await seedSubject(subject, modules, topics);
-    if (subject.code === "AN") anatomySubjectRecord = record;
+    await seedSubject(subject, modules, topics);
   }
 
-  // Seed Brachial Plexus lessons (5 layers)
-  console.log("\n📖 Creating Brachial Plexus lessons...");
-  const bpTopic = await prisma.topic.findUnique({ where: { code: "AN-MOD-01-TOP-05" }, include: { module: true } });
-  if (bpTopic) {
-    const layers = [
-      { layer: 1, title: "Brachial Plexus - Foundation", slug: "brachial-plexus-foundation", estimatedMinutes: 20,
-        summary: "The brachial plexus is a network of nerves formed by ventral rami of C5-T1.",
-        contentMd: "# Brachial Plexus - Foundation\n\n## The 5 Parts\n1. **Roots** (5): C5-T1\n2. **Trunks** (3): Upper (C5+C6), Middle (C7), Lower (C8+T1)\n3. **Divisions** (6): Each trunk splits into anterior + posterior\n4. **Cords** (3): Lateral, Posterior, Medial (named by relation to axillary artery)\n5. **Terminal Branches** (5): Musculocutaneous, Axillary, Radial, Median, Ulnar",
-        mnemonics: [{ text: "Robert Taylor Drinks Cold Beer", explanation: "Roots → Trunks → Divisions → Cords → Branches" }],
-        keyPoints: ["Formed by C5-T1 ventral rami", "3 trunks, 3 cords, 5 terminal branches", "Cords named by relation to axillary artery"],
-        textbookRefs: [{ book: "BD Chaurasia", chapter: "Upper Limb - Ch 5", edition: "8th" }] },
-      { layer: 2, title: "Brachial Plexus - Mechanism", slug: "brachial-plexus-mechanism", estimatedMinutes: 30,
-        summary: "Detailed branches, innervation patterns of each part of the brachial plexus.",
-        contentMd: "# Detailed Anatomy\n\n## Terminal Branches\n| Branch | Cord | Muscles |\n|--------|------|---------|\n| Musculocutaneous | Lateral | Biceps, Brachialis |\n| Axillary | Posterior | Deltoid, Teres minor |\n| Radial | Posterior | All extensors |\n| Median | Lat+Med | Forearm flexors, thenar |\n| Ulnar | Medial | Hand intrinsics |",
-        mnemonics: [{ text: "HALT for Posterior Cord", explanation: "Highest subscapular, Axillary, Lower subscapular, Thoracodorsal" }],
-        keyPoints: ["Median nerve: NO branches in arm", "Radial = great extensor nerve", "Long thoracic from roots → serratus anterior"],
-        textbookRefs: [{ book: "BD Chaurasia", chapter: "Upper Limb - Ch 5", edition: "8th" }] },
-      { layer: 3, title: "Brachial Plexus - Clinical", slug: "brachial-plexus-clinical", estimatedMinutes: 20,
-        summary: "Clinical injuries: Erb's palsy, Klumpke's palsy, wrist drop, claw hand.",
-        contentMd: "# Clinical Correlations\n\n## Erb's Palsy (C5,C6)\nWaiter's tip position\n\n## Klumpke's (C8,T1)\nClaw hand + Horner's syndrome\n\n## Wrist Drop\nRadial nerve at spiral groove\n\n## Claw Hand\nUlnar nerve at elbow\n\n## Ulnar Paradox\nHigher injury = LESS clawing",
-        mnemonics: [], keyPoints: ["Erb's = Waiter's tip (C5,C6)", "Wrist drop = Radial at spiral groove", "Claw hand = Ulnar at elbow"],
-        textbookRefs: [{ book: "BD Chaurasia", chapter: "Clinical Anatomy", edition: "8th" }] },
-      { layer: 4, title: "Brachial Plexus - Exam Prep", slug: "brachial-plexus-exam", estimatedMinutes: 15,
-        summary: "High-yield points for NEXT and NEET PG.",
-        contentMd: "# Exam High Yield\n\n| Injury | Nerve | Finding |\n|--------|-------|---------|\n| Erb's | Upper trunk C5,C6 | Waiter's tip |\n| Klumpke's | Lower trunk C8,T1 | Claw hand |\n| Wrist drop | Radial | Cannot extend wrist |\n| Ape thumb | Median (wrist) | Loss of opposition |",
-        mnemonics: [{ text: "LOAF", explanation: "Lateral 2 lumbricals, Opponens pollicis, Abductor pollicis brevis, Flexor pollicis brevis" }],
-        keyPoints: ["Quadrangular space = Axillary nerve + PCHA", "Long thoracic nerve injury = winging of scapula"],
-        textbookRefs: [{ book: "BD Chaurasia", chapter: "Ch 5", edition: "8th" }] },
-      { layer: 5, title: "Brachial Plexus - Active Recall", slug: "brachial-plexus-recall", estimatedMinutes: 10,
-        summary: "Flashcard-style Q&A for brachial plexus.",
-        contentMd: "# Active Recall\n\n**Q1:** Roots of brachial plexus?\n> C5, C6, C7, C8, T1\n\n**Q2:** 5 terminal branches?\n> MARMU: Musculocutaneous, Axillary, Radial, Median, Ulnar\n\n**Q3:** Wrist drop - which nerve?\n> Radial nerve at spiral groove\n\n**Q4:** No branches in arm?\n> Median nerve",
-        mnemonics: [], keyPoints: ["10 flashcard Q&A pairs"],
-        textbookRefs: [{ book: "BD Chaurasia", chapter: "Ch 5", edition: "8th" }] },
-    ];
+  // Seed all lessons using the generic loader
+  await seedAllLessons();
 
-    for (const l of layers) {
-      await prisma.lesson.upsert({
-        where: { slug: l.slug },
-        update: {},
-        create: {
-          ...l, topicId: bpTopic.id, moduleId: bpTopic.moduleId,
-          status: "PUBLISHED", examTags: ["NEXT_STEP1", "NEET_PG"],
-        },
-      });
-    }
-    console.log("   ✅ 5 lesson layers created");
-  }
+  // Seed all MCQs using the generic loader
+  await seedAllMcqs();
 
-  // Seed MCQs
-  console.log("\n❓ Seeding MCQs...");
-  let mcqCount = 0;
-  for (const mcq of anatomyMcqs) {
-    const topic = await prisma.topic.findUnique({ where: { code: mcq.topicCode } });
-    if (!topic || !anatomySubjectRecord) continue;
-    const existing = await prisma.question.findFirst({ where: { stem: mcq.stem } });
-    if (existing) continue;
-    await prisma.question.create({
-      data: {
-        type: mcq.type, subjectId: anatomySubjectRecord.id, topicId: topic.id,
-        stem: mcq.stem, clinicalVignette: (mcq as { clinicalVignette?: string }).clinicalVignette ?? null,
-        options: mcq.options, explanation: mcq.explanation,
-        difficulty: mcq.difficulty, bloomsLevel: mcq.bloomsLevel,
-        examTags: mcq.examTags as unknown as string[],
-        textbookRefs: mcq.textbookRefs, status: "PUBLISHED",
-      },
-    });
-    mcqCount++;
-  }
-  console.log(`   ✅ ${mcqCount} MCQs created`);
-
-  // Seed Clinical Cases
-  console.log("\n🏥 Seeding clinical cases...");
-  for (const c of clinicalCases) {
-    const existing = await prisma.clinicalCase.findFirst({ where: { title: c.title } });
-    if (existing) continue;
-    const cc = await prisma.clinicalCase.create({
-      data: {
-        title: c.title, presentingComplaint: c.presentingComplaint, caseType: c.caseType,
-        difficulty: c.difficulty, estimatedMinutes: c.estimatedMinutes,
-        subjectIds: anatomySubjectRecord ? [anatomySubjectRecord.id] : [],
-        topicIds: [], competencyIds: [],
-        examTags: c.examTags as unknown as string[],
-        patientProfile: c.patientProfile, status: "PUBLISHED",
-      },
-    });
-    for (const s of c.stages) {
-      await prisma.caseStage.create({
-        data: { caseId: cc.id, stage: s.stage, stageOrder: s.stageOrder, prompt: s.prompt, availableActions: s.availableActions },
-      });
-    }
-    console.log(`   🩺 ${c.title}`);
-  }
+  // Seed all clinical cases using the generic loader
+  await seedAllClinicalCases();
 
   // Seed AETCOM modules
   console.log("\n🎓 Seeding AETCOM modules...");
@@ -234,118 +332,13 @@ async function main() {
     { moduleNumber: 6, title: "Medical errors and patient safety", phase: "PHASE_1" as const, description: "Understanding and preventing medical errors" },
   ];
   for (const m of aetcomModules) {
-    await prisma.aetcomModule.upsert({ where: { id: `aetcom-${m.moduleNumber}` }, update: {}, create: { id: `aetcom-${m.moduleNumber}`, ...m } });
+    await prisma.aetcomModule.upsert({
+      where: { id: `aetcom-${m.moduleNumber}` },
+      update: {},
+      create: { id: `aetcom-${m.moduleNumber}`, ...m },
+    });
   }
   console.log(`   ✅ ${aetcomModules.length} AETCOM modules`);
-
-  // Seed Upper Limb lessons (Topics 1-4, Brachial Plexus already done above)
-  console.log("\n📖 Seeding Upper Limb lesson content...");
-  let lessonCount = 0;
-  for (const topicData of upperLimbLessons) {
-    const topic = await prisma.topic.findUnique({ where: { code: topicData.topicCode }, include: { module: true } });
-    if (!topic) continue;
-    for (const l of topicData.layers) {
-      const existing = await prisma.lesson.findUnique({ where: { slug: l.slug } });
-      if (existing) continue;
-      await prisma.lesson.create({
-        data: {
-          ...l, topicId: topic.id, moduleId: topic.moduleId,
-          status: "PUBLISHED", examTags: ["NEXT_STEP1", "NEET_PG"],
-        },
-      });
-      lessonCount++;
-    }
-  }
-  console.log(`   ✅ ${lessonCount} Upper Limb lessons created`);
-
-  // Seed Physiology MCQs
-  console.log("\n❓ Seeding Physiology MCQs...");
-  const pySubject = await prisma.subject.findUnique({ where: { code: "PY" } });
-  let pyMcqCount = 0;
-  if (pySubject) {
-    for (const mcq of physiologyMcqs) {
-      const topic = await prisma.topic.findUnique({ where: { code: mcq.topicCode } });
-      if (!topic) continue;
-      const existing = await prisma.question.findFirst({ where: { stem: mcq.stem } });
-      if (existing) continue;
-      await prisma.question.create({
-        data: {
-          type: mcq.type, subjectId: pySubject.id, topicId: topic.id,
-          stem: mcq.stem, options: mcq.options, explanation: mcq.explanation,
-          difficulty: mcq.difficulty, bloomsLevel: mcq.bloomsLevel,
-          examTags: mcq.examTags as unknown as string[],
-          textbookRefs: mcq.textbookRefs, status: "PUBLISHED",
-        },
-      });
-      pyMcqCount++;
-    }
-  }
-  console.log(`   ✅ ${pyMcqCount} Physiology MCQs created`);
-
-  // Seed Medicine Clinical Cases
-  console.log("\n🏥 Seeding Medicine clinical cases...");
-  const imSubject = await prisma.subject.findUnique({ where: { code: "IM" } });
-  for (const c of medicineCases) {
-    const existing = await prisma.clinicalCase.findFirst({ where: { title: c.title } });
-    if (existing) continue;
-    const cc = await prisma.clinicalCase.create({
-      data: {
-        title: c.title, presentingComplaint: c.presentingComplaint, caseType: c.caseType,
-        difficulty: c.difficulty, estimatedMinutes: c.estimatedMinutes,
-        subjectIds: imSubject ? [imSubject.id] : [],
-        topicIds: [], competencyIds: [],
-        examTags: c.examTags as unknown as string[],
-        patientProfile: c.patientProfile, status: "PUBLISHED",
-      },
-    });
-    for (const s of c.stages) {
-      await prisma.caseStage.create({
-        data: { caseId: cc.id, stage: s.stage, stageOrder: s.stageOrder, prompt: s.prompt, availableActions: s.availableActions },
-      });
-    }
-    console.log(`   🩺 ${c.title}`);
-  }
-
-  // Seed Physiology lessons
-  console.log("\n📖 Seeding Physiology lesson content...");
-  let pyLessonCount = 0;
-  for (const topicData of physiologyLessons) {
-    const topic = await prisma.topic.findUnique({ where: { code: topicData.topicCode }, include: { module: true } });
-    if (!topic) continue;
-    for (const l of topicData.layers) {
-      const existing = await prisma.lesson.findUnique({ where: { slug: l.slug } });
-      if (existing) continue;
-      await prisma.lesson.create({
-        data: { ...l, topicId: topic.id, moduleId: topic.moduleId, status: "PUBLISHED", examTags: ["NEXT_STEP1", "NEET_PG"] },
-      });
-      pyLessonCount++;
-    }
-  }
-  console.log(`   ✅ ${pyLessonCount} Physiology lessons created`);
-
-  // Seed Pathology MCQs
-  console.log("\n❓ Seeding Pathology MCQs...");
-  const paSubject = await prisma.subject.findUnique({ where: { code: "PA" } });
-  let paMcqCount = 0;
-  if (paSubject) {
-    for (const mcq of pathologyMcqs) {
-      const topic = await prisma.topic.findUnique({ where: { code: mcq.topicCode } });
-      if (!topic) continue;
-      const existing = await prisma.question.findFirst({ where: { stem: mcq.stem } });
-      if (existing) continue;
-      await prisma.question.create({
-        data: {
-          type: mcq.type, subjectId: paSubject.id, topicId: topic.id,
-          stem: mcq.stem, options: mcq.options, explanation: mcq.explanation,
-          difficulty: mcq.difficulty, bloomsLevel: mcq.bloomsLevel,
-          examTags: mcq.examTags as unknown as string[],
-          textbookRefs: mcq.textbookRefs, status: "PUBLISHED",
-        },
-      });
-      paMcqCount++;
-    }
-  }
-  console.log(`   ✅ ${paMcqCount} Pathology MCQs created`);
 
   console.log("\n🎉 Complete MBBS curriculum seeded successfully!");
 }
