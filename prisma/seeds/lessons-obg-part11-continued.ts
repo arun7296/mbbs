@@ -1,19 +1,722 @@
-export const obgLessonsPartElevenContinued = [
+import type { TopicLessons } from "./content-loader";
+
+export const obgLessonsPartElevenContinued: TopicLessons[] = [
   {
     topicCode: "OG-MOD-05-TOP-05",
     layers: [
       {
         layer: 1,
-        slug: "pid-stis-foundation",
-        title: "PID & STIs (Sexually Transmitted Infections) - Foundation",
+        slug: "pid-stis-layer-1-foundation",
+        title: "PID & STIs - Foundation",
         estimatedMinutes: 20,
         summary: "Pelvic inflammatory disease is a serious infection of upper reproductive tract often from STIs (Chlamydia, Gonorrhea, Mycoplasma). Complications include infertility, ectopic pregnancy, chronic pelvic pain, and tubo-ovarian abscess.",
-        contentMd: "# PID & STIs - Foundation\n\n## Sexually Transmitted Infections (STIs)\n\n### Common STI Agents in India\n\n**Bacterial**:\n- **Neisseria gonorrhoeae** (gonorrhea) - gram-negative diplococcus\n- **Chlamydia trachomatis** (chlamydia) - obligate intracellular\n- **Mycoplasma genitalium** - emerging pathogen\n- **Ureaplasma** species\n\n**Viral**:\n- **Human Papillomavirus (HPV)** - risk factor for cervical cancer\n- **Herpes Simplex Virus (HSV)** - causes genital ulceration\n- **Human Immunodeficiency Virus (HIV)**\n\n**Parasitic**:\n- **Trichomonas vaginalis** - causes trichomoniasis\n- **Candida albicans** - causes vulvovaginal candidiasis (not strictly STI, but opportunistic)\n\n## Pelvic Inflammatory Disease (PID)\n\n### Definition\nAcute or chronic inflammation of upper reproductive tract (endometrium, fallopian tubes, ovaries, parametrium) caused by infection.\n\n### Epidemiology\n- **Incidence**: 1-2% of reproductive-age women\n- **Peak age**: 15-25 years (but occurs at all reproductive ages)\n- **Risk factors**: Multiple sexual partners, unprotected intercourse, douching, IUD use (slightly), history of STI\n\n### Ascending Infection Pathway\n1. **Initial infection**: Lower genital tract (cervicitis, urethritis)\n2. **Ascending infection**: Bacteria traverse cervix, endometrium\n3. **Reaches tubes**: Salpingitis (tube inflammation)\n4. **Spreads**: To ovary (oophoritis), surrounding tissues (parametritis)\n5. **Advanced**: Tubo-ovarian abscess (pyosalpinx with ovarian involvement)\n\n### Causative Organisms in PID\n\n**Most common**:\n- **Chlamydia trachomatis** (40-60% of culture-positive cases)\n- **Neisseria gonorrhoeae** (20-30%)\n- **Mixed flora** (often polymicrobial)\n\n**Additional organisms**:\n- **Mycoplasma genitalium** (emerging, more common than previously thought)\n- **Anaerobes**: Bacteroides, Prevotella\n- **Gram-positive cocci**: Streptococci\n- **Mixed STI**: Often both Chlamydia + Gonorrhea\n\n### Classification\n\n**Acute PID**:\n- Sudden onset (<3 months)\n- Acute pelvic/abdominal pain\n- Recent vaginal discharge change\n\n**Chronic PID**:\n- Insidious onset (>3 months)\n- Low-grade symptoms\n- Often sequelae of untreated acute PID\n\n## STI Manifestations in Women\n\n### Chlamydia trachomatis\n- **Cervicitis**: Purulent cervical discharge (may be asymptomatic)\n- **Urethritis**: Dysuria\n- **PID**: 10-40% if untreated\n- **Complications**: Tubal damage, infertility, ectopic pregnancy\n\n### Neisseria gonorrhoeae\n- **Cervicitis**: Purulent discharge\n- **Urethritis**: Dysuria\n- **Bartholin's abscess**: Painful swelling\n- **PID**: 15-40% if untreated\n- **Pharyngitis/proctitis**: If oral/anal exposure\n- **Systemic**: Disseminated gonococcal infection (arthritis, dermatitis)\n\n### Mycoplasma genitalium\n- **Urogenital infection**: Often asymptomatic\n- **PID**: Associated with severe PID\n- **Persistent infection**: Responds poorly to some antibiotics\n- **Pelvic pain**: Chronic pelvic pain association\n\n### Trichomonas vaginalis\n- **Vaginitis**: Frothy yellow discharge, vulvar itching\n- **Urethritis**: Dysuria, urinary frequency\n- **PID**: Can cause PID (less common than Chlamydia/Gonorrhea)\n\n## Clinical Features of PID\n\n### Symptoms (Acute)\n- **Pelvic pain**: Bilateral lower abdominal pain (cardinal symptom)\n- **Abnormal vaginal discharge**: Purulent, mucopurulent\n- **Fever**: Present in 30-40% of cases\n- **Dysuria**: Urinary symptoms\n- **Irregular bleeding**: Menstrual irregularities\n- **Deep dyspareunia**: Pain with intercourse\n\n### Signs (Examination)\n- **Fever**: Temperature often >38.5°C in acute cases\n- **Lower abdominal tenderness**: Often bilateral\n- **Rebound tenderness/guarding**: Suggests severe disease\n- **Cervical motion tenderness** (Chandelier sign): Classic finding\n- **Adnexal tenderness**: On bimanual exam\n- **Cervical discharge**: Purulent or mucopurulent\n\n### Minimal Diagnostic Criteria (CDC)\n**PID diagnosed if**:\n- Pelvic pain AND\n- One of following: Cervical motion tenderness, Uterine tenderness, Adnexal tenderness\n- **No other diagnosis explaining illness**\n\n### Severe PID Criteria\n- Severe pelvic pain/peritonitis\n- Fever >38.9°C\n- Immunocompromised state\n- Surgical emergency considerations\n\n## Complications of PID\n\n### Short-term\n- **Sepsis**: Severe systemic infection\n- **Peritonitis**: Peritoneal inflammation\n- **Septic shock**: Life-threatening\n\n### Long-term (Tubal Damage)\n- **Infertility**: 40% after first episode PID, 80% after third\n- **Ectopic pregnancy**: 6-10x increased risk\n- **Chronic pelvic pain**: 20% of PID survivors\n- **Recurrent PID**: 25-50% recurrence rate\n\n### Microbiological\n- **Tubo-ovarian abscess**: Collection of pus in tubes/ovaries\n- **Pyosalpinx**: Pus-filled fallopian tube\n- **Rupture**: Ruptured abscess → Peritonitis → Surgical emergency,\n        mnemonics: [\n          {\n            text: \"STIs in PID: CGM\",\n            explanation: \"Chlamydia, Gonorrhea, Mycoplasma (most common organisms)\"\n          },\n          {\n            text: \"PID Diagnosis: PAT\",\n            explanation: \"Pelvic pain, Adnexal tenderness, Tenderness (cervical motion)\"\n          },\n          {\n            text: \"Complications: FECTR\",\n            explanation: \"Fertility loss (40% first PID), Ectopic (6-10x risk), Chronic pain (20%), Tubo-ovarian abscess, Recurrence (25-50%)\"\n          }\n        ],\n        keyPoints: [\n          \"Chlamydia and Gonorrhea most common STI causes of PID (50-70% of cases)\",\n          \"Mycoplasma genitalium increasingly recognized as PID pathogen\",\n          \"PID diagnosis clinical (pain + tenderness); imaging helps exclude other conditions\",\n          \"Infertility risk 40% after first PID, increases with recurrent episodes\",\n          \"Ascending infection: cervix → endometrium → tubes → ovaries\"\n        ],\n        textbookRefs: [\n          { book: \"DC Dutta\", chapter: \"Ch 20\", edition: \"9th\" },\n          { book: \"Williams Gynecology\", chapter: \"Ch 19\", edition: \"4th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"pid-stis-mechanism\",\n        title: \"PID & STIs - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiology involves microbial virulence factors, ascending infection through cervix, mucosal adherence, inflammatory response, and tubal damage leading to scarring and obstruction.\",\n        contentMd: "# PID & STIs - Mechanism\\n\\n## Microbial Virulence Factors\\n\\n### Chlamydia trachomatis\\n1. **Adhesion molecules**:\\n   - Outer membrane protein (OMP) binds to host CD46 receptors\\n   - Adhesin proteins target epithelial cells\\n\\n2. **Invasion mechanisms**:\\n   - Induces host cell endocytosis\\n   - Obligate intracellular pathogen\\n   - Resides in inclusion vacuole\\n\\n3. **Immune evasion**:\\n   - Delays apoptosis of infected cells\\n   - Suppresses antigen presentation (reduced MHC)\\n   - Produces tryptophan synthase (tryptophan depletion → TH1 immunity suppressed)\\n\\n4. **Persistence**:\\n   - Can form non-infectious persistent state\\n   - Associated with chronic inflammation\\n\\n### Neisseria gonorrhoeae\\n1. **Pili (fimbriae)**:\\n   - Variable pili allow antigenic variation\\n   - Enable attachment to urethral/endocervical epithelium\\n\\n2. **Opacity proteins (Opa)**:\\n   - Facilitate adherence and invasion\\n   - Target CD66 and CD45 receptors\\n\\n3. **Lipopolysaccharide (LPS)**:\\n   - Endotoxin triggers inflammatory response\\n   - Potent complement activator\\n\\n4. **Intracellular survival**:\\n   - Survives inside polymorphonuclear leukocytes (PMNs)\\n   - Resists lysosomal killing\\n\\n## Ascending Infection Mechanism\\n\\n### Step 1: Cervical Infection\\n1. **Initial site**: Endocervix (columnar epithelium, primary site of infection)\\n2. **Cervicitis**: Inflammation, purulent discharge\\n3. **Symptoms**: May be asymptomatic (especially Chlamydia)\\n\\n### Step 2: Breach of Cervical Barrier\\n1. **Mucosal damage**: Inflammatory response damages epithelium\\n2. **Loss of ciliary action**: Cilia destruction reduces clearance\\n3. **Cervical mucus changes**: Altered composition, reduced protective proteins\\n\\n### Step 3: Endometrial Invasion\\n1. **Upward migration**: Bacteria ascend into uterine cavity\\n2. **Endometritis**: Inflammation of endometrium\\n3. **Increased uterine contractility**: Uterine contractions may aid bacterial spread\\n4. **Impaired endometrial defense**: Reduced complement, lysozyme\\n\\n### Step 4: Tubal Infection (Salpingitis)\\n1. **Fallopian tube entry**: Through tubal ostium\\n2. **Epithelial damage**:\\n   - Ciliary loss (tubal cilia normally push menstrual debris downward)\\n   - Mucosal ulceration\\n   - Loss of epithelial barrier\\n\\n3. **Inflammatory response**:\\n   - Massive leukocyte infiltration\\n   - Cytokine production (TNF-α, IL-6, IL-8)\\n   - Edema, mucosal swelling\\n\\n4. **Pyosalpinx formation**:\\n   - Pus accumulates in tube lumen\\n   - Tubal occlusion by exudate/swelling\\n   - Potential rupture\\n\\n### Step 5: Ovarian and Surrounding Tissue Involvement\\n1. **Oophoritis**: Ovarian inflammation, often with tubal involvement\\n2. **Tubo-ovarian complex**: Inflamed tube + ovary + adhesions\\n3. **Tubo-ovarian abscess**: Pus collection involving both structures\\n4. **Parametritis**: Infection of parametrial tissue\\n5. **Peritonitis**: Spread to peritoneal surface\\n\\n## Inflammatory Response in PID\\n\\n### Acute Inflammation\\n1. **Innate immunity activation**:\\n   - TLR (Toll-like receptors) recognize bacterial PAMPs\\n   - Complement cascade activated\\n   - PMNs recruited to site\\n\\n2. **Cytokine cascade**:\\n   - **TNF-α**: Initiates systemic inflammation\\n   - **IL-1, IL-6, IL-8**: Amplify inflammatory response\\n   - **Prostaglandins**: Increase vascular permeability\\n\\n3. **Vascular effects**:\\n   - Vasodilation → Edema\\n   - Increased vascular permeability → Exudation\\n   - Leukocyte extravasation\\n\\n### Chronic Inflammation and Tubal Damage\\n1. **Persistent infection**: Intracellular organisms evade immune response\\n2. **Chronic inflammatory state**: Ongoing TNF-α, IL-6 production\\n3. **Fibroblast activation**: Collagen deposition → Scarring\\n4. **Epithelial remodeling**:\\n   - Loss of ciliated epithelium\\n   - Replacement with non-ciliated epithelium\\n   - Stricture formation\\n\\n5. **Tubal dysfunction**:\\n   - Loss of ciliary activity → Impaired ovum transport\\n   - Strictures → Obstruction\\n   - Adhesions → Kinking, reduced patency\\n\\n## Infertility Mechanisms in PID\\n\\n### 1. Tubal Obstruction\\n- **Complete occlusion**: From strictures, exudative material\\n- **Partial occlusion**: Reduced gamete transport\\n- **Location**: Often proximal (near uterine end)\\n- **Bilateral involvement**: Risk of complete infertility\\n\\n### 2. Ciliary Loss\\n- **Normal tubal epithelium**: 30-40% ciliated cells\\n- **Post-PID**: Cilia reduced/absent\\n- **Mechanism**: Inflammatory damage during acute infection, never fully regenerates\\n- **Consequence**: Impaired ovum and sperm transport\\n\\n### 3. Tubal Strictures\\n- **Formation**: Fibrosis, scarring, epithelial damage\\n- **Result**: Narrowed lumen, reduces gamete passage\\n- **May prevent but allow sperm** → Risk of ectopic pregnancy\\n\\n### 4. Adhesions\\n- **Pelvic adhesions**: From inflammation, peritonitis\\n- **Tubal kinking**: Adhesions cause distortion\\n- **Reduced tubal motility**: Fibrotic tubes less peristaltic\\n\\n### 5. Impaired Gamete Transport\\n- **Sperm**: Reduced passage through scarred/obstructed tubes\\n- **Ovum**: Impaired movement from ovary to uterus\\n- **Embryo**: If fertilization occurs, may not reach uterus (→ ectopic pregnancy)\\n\\n## Ectopic Pregnancy Risk\\n\\n### Mechanism\\n- **Partial tubal occlusion/strictures**: Sperm can pass but ovum/embryo cannot\\n- **Location**: Embryo develops in tube (ampullary or isthmic)\\n- **Risk**: 6-10 fold increased after PID\\n- **Severity**: Tubal rupture → Life-threatening hemorrhage\\n\\n## Tubo-Ovarian Abscess Pathophysiology\\n1. **Inflammatory collection**: Pus accumulation from mixed organisms\\n2. **Rapid expansion**: Continues to enlarge if untreated\\n3. **Wall formation**: Surrounding inflamed tissue + fibrosis encapsulates abscess\\n4. **Risk**: Rupture → Peritonitis, sepsis, shock\\n5. **Bacterial flora**: Polymicrobial (aerobic + anaerobic),\\n        mnemonics: [\\n          {\\n            text: \\\"Ascending Infection: CEOTAP\\\",\\n            explanation: \\\"Cervicitis, Endometritis, Oophoritis, Tubal (salpingitis), Abscess, Peritonitis\\\"\\n          },\\n          {\\n            text: \\\"Tubal Damage Mechanisms: LOSS\\\",\\n            explanation: \\\"Loss of cilia, Obstruction (strictures), Strictures, Scars/adhesions\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Chlamydia and Gonorrhea have specific virulence factors enabling infection\\\",\\n          \\\"Ascending infection proceeds: cervix → endometrium → tubes → ovaries\\\",\\n          \\\"Chronic inflammation causes irreversible tubal damage (ciliary loss, scarring)\\\",\\n          \\\"Partial tubal obstruction creates ectopic pregnancy risk (sperm pass but embryo doesn't)\\\",\\n          \\\"Tubo-ovarian abscess formed from polymicrobial infection with rupture risk\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"DC Dutta\\\", chapter: \\\"Ch 20\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Williams Gynecology\\\", chapter: \\\"Ch 19\\\", edition: \\\"4th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"pid-stis-clinical\\\",\\n        title: \\\"PID & STIs - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical diagnosis, imaging findings, antibiotic management of PID, treatment of STIs, and prevention strategies. Early recognition and appropriate antibiotic therapy prevent tubal damage.\\\",\\n        contentMd: "# PID & STIs - Clinical\\\\n\\\\n## STI Diagnosis and Treatment\\\\n\\\\n### Chlamydia trachomatis\\\\n\\\\n**Diagnosis**:\\\\n- **NAAT** (Nucleic Acid Amplification Test): Gold standard\\\\n  - Endocervical swab, urine (first-void)\\\\n  - Sensitivity/Specificity: >95%\\\\n- **Culture**: Limited sensitivity (60-70%), takes 48-72 hours\\\\n- **Rapid tests**: Lower sensitivity, not recommended\\\\n\\\\n**Treatment**:\\\\n- **First-line**: Azithromycin 1 g PO single dose (or 500 mg daily × 3 days)\\\\n- **Alternative**: Doxycycline 100 mg PO BID × 7 days\\\\n- **Pregnancy**: Azithromycin (avoid doxycycline)\\\\n- **Partner notification**: Essential, treat sexual partners\\\\n- **Test of cure**: Not needed if compliant with standard regimen\\\\n\\\\n### Neisseria gonorrhoeae\\\\n\\\\n**Diagnosis**:\\\\n- **NAAT**: Gold standard (same as Chlamydia)\\\\n- **Gram stain**: Gram-negative intracellular diplococci (PMNs), sensitivity 90% in urethritis, only 50% in cervicitis\\\\n- **Culture**: Selective medium (Thayer-Martin), sensitivity 95% in urethritis, 80% in cervicitis\\\\n\\\\n**Treatment**:\\\\n- **First-line**: Ceftriaxone 250 mg IM single dose (or 500 mg if severe) + Azithromycin 1 g PO single dose (covers Chlamydia coinfection)\\\\n- **Alternative**: Ceftriaxone + Doxycycline (if Chlamydia status known)\\\\n- **Partner notification**: Essential\\\\n- **Test of cure**: NAAT at 3-5 weeks post-treatment (if continued symptoms)\\\\n\\\\n### Mycoplasma genitalium\\\\n\\\\n**Diagnosis**:\\\\n- **NAAT**: Most sensitive/specific test\\\\n- **Culture**: Not routinely available\\\\n- **Serology**: Not recommended for acute diagnosis\\\\n\\\\n**Treatment**:\\\\n- **First-line**: Doxycycline 100 mg PO BID × 7 days\\\\n- **Alternative**: Azithromycin (but resistance emerging)\\\\n- **Resistant strains**: May need fluoroquinolones (moxifloxacin)\\\\n\\\\n### Trichomonas vaginalis\\\\n\\\\n**Diagnosis**:\\\\n- **Wet mount microscopy**: 50-70% sensitivity (most common in India)\\\\n- **NAAT**: >95% sensitivity (if available)\\\\n- **Rapid tests**: Immunochromatographic or nucleic acid, good sensitivity\\\\n\\\\n**Treatment**:\\\\n- **First-line**: Metronidazole 400 mg PO TID × 5 days (or 2 g single dose)\\\\n- **Alternative**: Tinidazole 2 g PO single dose\\\\n- **Partner treatment**: Essential (contagious)\\\\n\\\\n## Diagnosis of PID\\\\n\\\\n### Clinical Criteria (Empiric Treatment Threshold)\\\\n**Minimum criteria for treatment**:\\\\n- Pelvic pain AND one of:\\\\n  - Cervical motion tenderness\\\\n  - Uterine tenderness\\\\n  - Adnexal tenderness\\\\n\\\\n**Additional clinical findings supporting diagnosis**:\\\\n- Fever (>38.5°C)\\\\n- Abnormal vaginal/cervical discharge\\\\n- Elevated ESR or CRP\\\\n\\\\n### Investigations\\\\n\\\\n**Microbiology**:\\\\n- **Endocervical swab**: NAAT for Chlamydia, Gonorrhea, Mycoplasma\\\\n- **Culture**: Not routinely needed, cultures may be negative\\\\n- **Blood cultures**: If severe sepsis suspected\\\\n\\\\n**Imaging**:\\\\n- **Transvaginal ultrasound**:\\\\n  - Free pelvic fluid\\\\n  - Thickened/dilated tubes (>6 mm)\\\\n  - Tubo-ovarian complex\\\\n  - **Tubo-ovarian abscess**: Anechoic collection with septations\\\\n  - **Sensitivity**: 60-80% for acute PID\\\\n\\\\n- **Pelvic MRI**: For complex cases, better definition of extent\\\\n\\\\n**Laboratory**:\\\\n- **ESR/CRP**: Elevated in PID (but non-specific)\\\\n- **CBC**: WBC may be elevated\\\\n- **Pregnancy test**: Rule out ectopic pregnancy (differential diagnosis)\\\\n\\\\n### Imaging Findings in Tubo-Ovarian Abscess\\\\n- Anechoic or hypoechoic collection\\\\n- Complex (may have septations)\\\\n- Irregular margins (indistinct)\\\\n- Adnexal location\\\\n- **MRI**: Better definition of fluid vs tissue, shows inflammatory changes\\\\n\\\\n## Management of PID\\\\n\\\\n### Outpatient Treatment (Uncomplicated, Mild-Moderate PID)\\\\n**Empiric antibiotics** (must cover Chlamydia + Gonorrhea + anaerobes):\\\\n\\\\n**Option 1** (CDC recommended):\\\\n- **Ceftriaxone** 250-500 mg IM single dose\\\\n- **PLUS Doxycycline** 100 mg PO BID × 7 days\\\\n- **PLUS Metronidazole** 500 mg PO BID × 7 days (anaerobes)\\\\n\\\\n**Option 2**:\\\\n- **Cefoxitin** 2 g IM single dose (covers Gonorrhea + anaerobes)\\\\n- **PLUS Doxycycline** 100 mg PO BID × 7 days\\\\n- **PLUS Probenecid** 1 g PO (to increase cefoxitin levels)\\\\n\\\\n**Option 3** (Oral regimen for mildest cases):\\\\n- **Cefpodoxime** 400 mg PO BID × 7 days (gonorrhea)\\\\n- **PLUS Doxycycline** 100 mg PO BID × 7 days\\\\n- **PLUS Metronidazole** 500 mg PO BID × 7 days\\\\n\\\\n**Duration**: 7-10 days typically\\\\n\\\\n### Inpatient Treatment (Severe or Complicated PID)\\\\n\\\\n**Indications for hospitalization**:\\\\n- Severe pelvic pain/peritonitis\\\\n- Fever >38.9°C\\\\n- Sepsis\\\\n- Tubo-ovarian abscess\\\\n- Immunocompromised\\\\n- Surgical emergency considerations\\\\n- Failed outpatient therapy\\\\n\\\\n**Empiric IV antibiotics**:\\\\n**Option 1**:\\\\n- **Cefotetan** 2 g IV Q12H\\\\n- **PLUS Doxycycline** 100 mg PO/IV BID\\\\n\\\\n**Option 2**:\\\\n- **Cefoxitin** 2 g IV Q6H\\\\n- **PLUS Doxycycline** 100 mg PO/IV BID\\\\n\\\\n**Option 3** (Clindamycin-based):\\\\n- **Clindamycin** 900 mg IV Q8H\\\\n- **PLUS Gentamicin** 2 mg/kg IV loading, then 1.5 mg/kg Q8H\\\\n- (Better for anaerobes, especially Bacteroides)\\\\n\\\\n**Duration**: IV antibiotics until clinical improvement (defervescence, decreasing pain), then switch to oral antibiotics to complete 7-10 days total\\\\n\\\\n### Tubo-Ovarian Abscess Management\\\\n\\\\n**Medical management** (if <7 cm, hemodynamically stable):\\\\n- **Hospitalization**: IV antibiotics as above\\\\n- **Imaging follow-up**: Ultrasound at 48-72 hours to assess response\\\\n- **Response markers**: Defervescence, decreasing pain/WBC\\\\n- **Duration**: Antibiotics until complete resolution (usually 3-4 weeks)\\\\n\\\\n**Surgical management**:\\\\n- **Indications**:\\\\n  - Abscess >7 cm (higher rupture risk)\\\\n  - Rupture (peritonitis)\\\\n  - Failed medical therapy (no improvement 48-72 hours)\\\\n  - Hemodynamic instability\\\\n- **Procedure**: Drainage (percutaneous or surgical), +/- hysterectomy/oophorectomy depending on extent\\\\n\\\\n## Prevention\\\\n\\\\n### Primary Prevention\\\\n1. **Safe sex practices**:\\\\n   - Consistent condom use\\\\n   - Limit sexual partners\\\\n   - Sexual health education\\\\n\\\\n2. **Screening**:\\\\n   - Annual Chlamydia/Gonorrhea screening for sexually active women <25 years\\\\n   - Pregnant women (testing recommended)\\\\n   - STI symptoms → immediate testing\\\\n\\\\n3. **Vaccination**:\\\\n   - **HPV vaccine**: Prevents HPV-related genital disease\\\\n   - Available in India (Cervarix, Gardasil)\\\\n\\\\n### Secondary Prevention (Partner Management)\\\\n- **Partner notification**: Essential\\\\n- **Partner testing**: All sexual contacts in past 60 days\\\\n- **Partner treatment**: Treat presumptively if partner cannot be tested\\\\n- **Abstinence**: During treatment (until 7 days after single-dose therapy)\\\\n\\\\n### Tertiary Prevention (Fertility Preservation)\\\\n- **Early recognition and treatment**: Reduces tubal damage\\\\n- **Avoid IUD insertion**: In women with PID risk factors\\\\n- **Fertility counseling**: After PID (increased ectopic risk, infertility),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"PID Antibiotics: CDM\\\\\\\",\\\\n            explanation: \\\\\\\"Ceftriaxone, Doxycycline, Metronidazole (3-drug empiric regimen)\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Tubo-Ovarian Abscess: SMR\\\\\\\",\\\\n            explanation: \\\\\\\"Surgery if >7 cm, Medical if <7 cm, Response in 48-72 hours\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"NAAT gold standard for STI diagnosis (sensitivity/specificity >95%)\\\\\\\",\\\\n          \\\\\\\"Empiric 3-drug antibiotic therapy for PID covers Chlamydia + Gonorrhea + anaerobes\\\\\\\",\\\\n          \\\\\\\"Tubo-ovarian abscess <7 cm: medical management; >7 cm or rupture: surgical drainage\\\\\\\",\\\\n          \\\\\\\"Early STI treatment and PID recognition prevent tubal damage\\\\\\\",\\\\n          \\\\\\\"Partner notification and treatment essential to prevent reinfection\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta\\\\\\\", chapter: \\\\\\\"Ch 20\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Williams Gynecology\\\\\\\", chapter: \\\\\\\"Ch 19\\\\\\\", edition: \\\\\\\"4th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"pid-stis-exam\\\\\\\",\\\\n        title: \\\\\\\"PID & STIs - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield concepts: STI diagnosis, PID diagnostic criteria, antibiotic regimens, imaging findings, and complications (ectopic pregnancy, infertility, tubo-ovarian abscess).\\\\\\\",\\\\n        contentMd: ``# PID & STIs - Exam Prep\\\\n\\\\n## High-Yield Facts\\\\n\\\\n### 1. Gold Standard Diagnostic Tests\\\\n**Chlamydia, Gonorrhea, Mycoplasma**: **NAAT** (Nucleic Acid Amplification Test)\\\\n- Sensitivity/Specificity: >95%\\\\n- Can use endocervical swab, urine, or rectal\\\\n- Culture limited sensitivity (60-80%)\\\\n\\\\n**Trichomonas**: **NAAT** (if available) or **Wet mount microscopy** (sensitivity 50-70%)\\\\n\\\\n### 2. PID Diagnosis Criteria (CDC)\\\\n**Minimum**:\\\\n- **Pelvic pain** AND one of:\\\\n  - Cervical motion tenderness\\\\n  - Uterine tenderness\\\\n  - Adnexal tenderness\\\\n- **No other diagnosis explaining symptoms**\\\\n\\\\n**Supportive findings**: Fever >38.5°C, abnormal vaginal discharge, elevated ESR/CRP\\\\n\\\\n### 3. STI Treatment Regimens\\\\n\\\\n| STI | First-Line Treatment |\\\\n|-----|----------------------|\\\\n| **Chlamydia** | Azithromycin 1 g PO single dose |\\\\n| **Gonorrhea** | Ceftriaxone 250-500 mg IM + Azithromycin 1 g PO |\\\\n| **Mycoplasma** | Doxycycline 100 mg BID × 7 days |\\\\n| **Trichomonas** | Metronidazole 400 mg TID × 5 days (or 2 g single) |\\\\n\\\\n### 4. PID Antibiotic Regimens\\\\n**Outpatient** (uncomplicated):\\\\n- **Ceftriaxone** 250 mg IM + **Doxycycline** 100 mg BID × 7 days + **Metronidazole** 500 mg BID × 7 days\\\\n\\\\n**Inpatient** (severe/complicated):\\\\n- **Cefotetan** 2 g IV Q12H + **Doxycycline** 100 mg BID (switch to oral after improvement)\\\\n- OR **Clindamycin** 900 mg IV Q8H + **Gentamicin** (for anaerobic coverage)\\\\n\\\\n### 5. Most Common STI Causes of PID\\\\n| Organism | Frequency |\\\\n|----------|-----------|\\\\n| **Chlamydia** | 40-60% |\\\\n| **Gonorrhea** | 20-30% |\\\\n| **Mycoplasma** | Increasing (10-20%) |\\\\n| **Mixed flora** | Common |\\\\n\\\\n### 6. Infertility Risk After PID\\\\n- **First episode**: 10-15% infertility risk\\\\n- **Increase per episode**: Cumulative effect\\\\n- **First PID + second PID**: 30-40% cumulative\\\\n- **Three or more**: 80% infertility risk\\\\n\\\\n### 7. Ectopic Pregnancy Risk\\\\n- **6-10 fold increased** after PID\\\\n- **Mechanism**: Partial tubal obstruction (sperm pass, embryo blocked)\\\\n- **Location**: Usually ampullary or isthmic tube\\\\n- **Severity**: Rupture risk if undiagnosed\\\\n\\\\n### 8. Tubo-Ovarian Abscess Management\\\\n\\\\n| Finding | Management |\\\\n|---------|------------|\\\\n| **<7 cm, hemodynamically stable** | IV antibiotics, monitor |\\\\n| **>7 cm** | Surgical drainage or early drainage |\\\\n| **Rupture** | Emergency surgery, ICU |\\\\n| **No improvement 48-72 hours** | Drainage (percutaneous or surgical) |\\\\n\\\\n### 9. Imaging Findings in PID\\\\n**Transvaginal ultrasound**:\\\\n- Thickened tubes (>6 mm)\\\\n- Free pelvic fluid\\\\n- Tubo-ovarian complex\\\\n- Tubo-ovarian abscess (anechoic with septations)\\\\n- Sensitivity: 60-80%\\\\n\\\\n### 10. Ascending Infection Pathway\\\\n```\\\\nCervix (Cervicitis)\\\\n    ↓\\\\nEndometrium (Endometritis)\\\\n    ↓\\\\nFallopian Tubes (Salpingitis)\\\\n    ↓\\\\nOvaries (Oophoritis)\\\\n    ↓\\\\nPeritoneum (Peritonitis) → Tubo-Ovarian Abscess\\\\n```\\\\n\\\\n### 11. Chandelier Sign\\\\n- **Severe cervical motion tenderness** (so severe patient wants to hit ceiling)\\\\n- Classic finding in acute PID\\\\n- Indicates significant cervical/tubal inflammation\\\\n\\\\n### 12. Partner Notification Timeline\\\\n- **All sexual contacts in past 60 days**: Should be notified, tested, treated\\\\n- **Treatment before test results**: If partner cannot be tested quickly\\\\n- **Abstinence**: 7 days after single-dose therapy to prevent reinfection\\\\n\\\\n### 13. Complications Prevention\\\\n- **Early diagnosis and treatment**: Reduces tubal damage (prevents scarring)\\\\n- **Appropriate antibiotics**: Covers Chlamydia + Gonorrhea + anaerobes\\\\n- **Avoid IUD insertion**: In women at PID risk\\\\n- **Partner treatment**: Prevents reinfection\\\\n\\\\n### 14. Exam Scenarios\\\\n\\\\n**Scenario 1**: 24-year-old with pelvic pain, cervical motion tenderness, fever 38.7°C. Diagnosis?\\\\n- **Answer**: PID (meets criteria: pelvic pain + cervical motion tenderness)\\\\n- **Next**: Endocervical swab for NAAT, pelvic ultrasound, CBC\\\\n- **Treatment**: Empiric 3-drug regimen (outpatient if hemodynamically stable)\\\\n\\\\n**Scenario 2**: After PID treatment, patient returns with severe pelvic pain, fever. Ultrasound shows 8 cm anechoic collection. Management?\\\\n- **Answer**: Tubo-ovarian abscess (>7 cm)\\\\n- **Management**: Surgical drainage (percutaneous or open) ± antibiotic continuation\\\\n\\\\n**Scenario 3**: NAAT positive for Chlamydia. Treatment and follow-up?\\\\n- **Answer**: Azithromycin 1 g PO single dose. Partner notification and treatment. No test of cure needed if compliant. But if symptoms persist, retest.,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"STI Organisms: CGM\\\\\\\",\\\\n            explanation: \\\\\\\"Chlamydia (40-60%), Gonorrhea (20-30%), Mycoplasma (emerging)\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"PID Criteria: PCAT\\\\\\\",\\\\n            explanation: \\\\\\\"Pelvic pain, Cervical motion tenderness/uterine/adnexal, Abnormal discharge, Temperature high\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Antibiotic Regimen: CDM\\\\\\\",\\\\n            explanation: \\\\\\\"Ceftriaxone, Doxycycline, Metronidazole (cover gram-neg, gram-pos, anaerobes)\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"NAAT is gold standard for Chlamydia, Gonorrhea, Mycoplasma diagnosis\\\\\\\",\\\\n          \\\\\\\"PID diagnosed with pelvic pain + cervical/uterine/adnexal tenderness\\\\\\\",\\\\n          \\\\\\\"Empiric 3-drug antibiotics essential (covers Chlamydia, Gonorrhea, anaerobes)\\\\\\\",\\\\n          \\\\\\\"Infertility risk 10-15% after first PID; cumulative with recurrent episodes\\\\\\\",\\\\n          \\\\\\\"Tubo-ovarian abscess >7 cm needs surgical/percutaneous drainage\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta\\\\\\\", chapter: \\\\\\\"Ch 20\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Williams Gynecology\\\\\\\", chapter: \\\\\\\"Ch 19\\\\\\\", edition: \\\\\\\"4th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"pid-stis-recall\\\\\\\",\\\\n        title: \\\\\\\"PID & STIs - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        contentMd: ``# Active Recall - PID & STIs\\\\n\\\\n**Q1**: What are the diagnostic criteria for PID according to CDC guidelines? Why is empiric treatment recommended?\\\\n> **A**: **PID diagnosis criteria**: Pelvic pain PLUS one of: (1) Cervical motion tenderness, (2) Uterine tenderness, (3) Adnexal tenderness. No other diagnosis explaining symptoms. **Rationale for empiric treatment**: (1) Microbiological confirmation difficult (cultures often negative), (2) Pelvic imaging not always diagnostic, (3) Delay in diagnosis/treatment increases tubal damage risk. (4) **Early treatment** (even before confirming organism) prevents scarring. Empiric regimen covers Chlamydia + Gonorrhea + anaerobes (most common organisms).\\\\n\\\\n**Q2**: Describe the three-drug empiric antibiotic regimen for outpatient PID treatment.\\\\n> **A**: **Ceftriaxone 250-500 mg IM single dose** (covers Gonorrhea) + **Doxycycline 100 mg PO BID × 7 days** (covers Chlamydia) + **Metronidazole 500 mg PO BID × 7 days** (covers anaerobes, including Bacteroides). This combination covers the polymicrobial flora of PID. Total treatment duration 7-10 days. Covers gram-negative cocci (gonorrhea), intracellular organisms (chlamydia), and gram-negative/positive anaerobes.\\\\n\\\\n**Q3**: A 26-year-old presents with pelvic pain, cervical motion tenderness, fever 38.6°C. Endocervical swab pending. She is hemodynamically stable. Treatment approach?\\\\n> **A**: **Diagnosis**: PID (meets clinical criteria). **Setting**: Outpatient management (hemodynamically stable, no signs of severe peritonitis). **Immediate treatment**: Start empiric 3-drug regimen immediately (Ceftriaxone IM + Doxycycline + Metronidazole PO), do NOT wait for culture/NAAT results. Waiting increases tubal damage risk. **Pelvic ultrasound** to assess for abscess. **Follow-up** in 48-72 hours to assess response (should have decreasing pain/fever). If no improvement, consider hospitalization/imaging reassessment.\\\\n\\\\n**Q4**: Explain the relationship between PID and ectopic pregnancy. How does tubal pathology lead to ectopic pregnancy?\\\\n> **A**: **Increased risk**: Ectopic pregnancy 6-10 fold more common after PID. **Mechanism**: PID causes tubal scarring, strictures, ciliary loss. **Partial tubal obstruction** is key: Strictures/scarring allow **sperm passage** (small enough) but **block embryo/ovum passage** (larger). Ovum fertilized proximally, cannot traverse scarred tube, lodges in tube → Ectopic pregnancy. **Risk**: Tubal rupture with hemorrhage if untreated. **Prevention**: Early PID diagnosis and treatment minimizes tubal damage, reducing ectopic risk.\\\\n\\\\n**Q5**: Compare Chlamydia and Gonorrhea infections. What is the rationale for dual therapy?\\\\n> **A**: **Chlamydia**: Often asymptomatic (50%), intracellular, incubation 1-3 weeks, commonly causes PID (40-60%), best treated with azithromycin or doxycycline. **Gonorrhea**: More symptomatic (purulent discharge), extracellular, incubation 2-7 days, causes PID (20-30%), best treated with cephalosporin (resistance to fluoroquinolones). **Coinfection common**: 20-30% of women with one STI have both. **Rationale for dual therapy**: (1) Covers both organisms, (2) Prevents resistance emergence, (3) Simplifies treatment (don't wait for organism identification), (4) Cost-effective.\\\\n\\\\n**Q6**: What is a tubo-ovarian abscess? How is it differentiated from simple pyosalpinx on imaging?\\\\n> **A**: **Tubo-ovarian abscess**: Pus collection involving BOTH fallopian tube AND ovary (complex inflammatory mass with both structures involved). **Pyosalpinx**: Pus confined to fallopian tube lumen (tube swollen but ovary not involved). **Imaging differentiation (ultrasound)**: **Abscess**: Larger collection (often >5 cm), anechoic/complex (heterogeneous), may have septations, involves adnexal structures (both tube + ovary visible). **Pyosalpinx**: Tubular structure, dilated (>6 mm), often with \\\\\\\"cogwheel\\\\\\\" appearance from folds. **Management difference**: Simple pyosalpinx often responds to antibiotics; abscess >7 cm may need drainage. **Risk**: Both can rupture → Peritonitis, sepsis.\\\\n\\\\n**Q7**: A 28-year-old is treated for PID with outpatient antibiotics. After 4 days, she still has fever and worsening pain. Ultrasound shows 6 cm fluid collection. Management?\\\\n> **A**: **Failed outpatient therapy** (no improvement 48-72 hours). **Likely diagnosis**: Tubo-ovarian abscess or complicated PID. **Management**: (1) **Hospitalization** for IV antibiotics, (2) **Switch to IV regimen**: Cefotetan 2 g IV Q12H + Doxycycline 100 mg IV BID (or Clindamycin + Gentamicin). (3) **Imaging follow-up**: Repeat ultrasound in 48 hours to assess response. (4) **Abscess size 6 cm**: At borderline for drainage consideration. If no improvement in 48 hours → Consider percutaneous drainage. (5) Duration: IV antibiotics until defervescence, then switch to oral to complete 10-14 days total.\\\\n\\\\n**Q8**: A woman is diagnosed with Chlamydia trachomatis on NAAT. She is asymptomatic. Treatment?\\\\n> **A**: **Treatment required**: Azithromycin 1 g PO single dose (or doxycycline 100 mg BID × 7 days). Asymptomatic Chlamydia still increases PID risk if untreated. **Partner notification**: Treat all sexual partners in past 60 days (even asymptomatic). **Partner testing**: If possible, but treat presumptively if cannot be tested quickly. **Abstinence**: 7 days after single-dose therapy. **Test of cure**: Not routine for azithromycin if compliant. **Retest after 3 months**: Recommended to detect reinfection.\\\\n\\\\n**Q9**: What are the indications for hospitalization and IV antibiotics in PID?\\\\n> **A**: **Severe PID indications for hospitalization**: (1) **Severe pelvic pain/peritonitis** (guarding, rebound tenderness), (2) **High fever** (>38.9°C), (3) **Systemic symptoms**: Nausea, vomiting, sepsis signs, (4) **Tubo-ovarian abscess**, (5) **Immunocompromised** state, (6) **Inability to tolerate** oral medications, (7) **Failed outpatient therapy** (no improvement 48-72 hours), (8) **Pregnancy** (if PID suspected).\\\\n\\\\n**Q10**: Outline the mechanism of ascending infection from cervicitis to PID to peritonitis.\\\\n> **A**: **(1) Cervicitis**: Initial infection at endocervix (columnar epithelium). Bacteria (Chlamydia, Gonorrhea) cause inflammation, purulent discharge. **(2) Endometritis**: Bacteria ascend through cervix into uterine cavity. Inflammatory response damages endometrium. **(3) Salpingitis**: Infection reaches fallopian tubes. Tubal epithelium damaged (cilia lost), inflammatory exudate accumulates. **(4) Oophoritis**: Ovarian inflammation often accompanies tubal disease. **(5) Tubo-ovarian complex**: Adhesions form between inflamed structures. **(6) Pyosalpinx/Abscess**: Pus accumulation in tubes/ovaries. **(7) Peritonitis**: If rupture occurs, pus spills into peritoneal cavity → Severe peritonitis, sepsis, shock. **Prevention**: Early antibiotic treatment (before reaching advanced stages) prevents progression.,\\\\n        mnemonics: [],\\\\n        keyPoints: [\\\\n          \\\\\\\"Empiric 3-drug PID treatment covers Chlamydia, Gonorrhea, anaerobes\\\\\\\",\\\\n          \\\\\\\"Ectopic pregnancy risk 6-10 fold after PID from partial tubal obstruction\\\\\\\",\\\\n          \\\\\\\"Tubo-ovarian abscess >7 cm needs percutaneous or surgical drainage\\\\\\\",\\\\n          \\\\\\\"Partner notification and treatment essential to prevent reinfection\\\\\\\",\\\\n          \\\\\\\"Failed outpatient therapy warrants hospitalization, IV antibiotics, imaging reassessment\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta\\\\\\\", chapter: \\\\\\\"Ch 20\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Williams Gynecology\\\\\\\", chapter: \\\\\\\"Ch 19\\\\\\\", edition: \\\\\\\"4th\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\"\""
-}
-}
-}
-}
+        contentMd: `# PID & STIs - Foundation
+
+## Sexually Transmitted Infections (STIs)
+
+### Common STI Agents in India
+**Bacterial**:
+- **Neisseria gonorrhoeae** (gonorrhea) - gram-negative diplococcus
+- **Chlamydia trachomatis** (chlamydia) - obligate intracellular
+- **Mycoplasma genitalium** - emerging pathogen
+- **Ureaplasma** species
+
+**Viral**:
+- **Human Papillomavirus (HPV)** - risk factor for cervical cancer
+- **Herpes Simplex Virus (HSV)** - causes genital ulceration
+- **Human Immunodeficiency Virus (HIV)**
+
+**Parasitic**:
+- **Trichomonas vaginalis** - causes trichomoniasis
+- **Candida albicans** - vulvovaginal candidiasis (opportunistic)
+
+## Pelvic Inflammatory Disease (PID)
+
+### Definition
+Acute or chronic inflammation of upper reproductive tract (endometrium, fallopian tubes, ovaries, parametrium) caused by infection.
+
+### Epidemiology
+- **Incidence**: 1-2% of reproductive-age women
+- **Peak age**: 15-25 years (but occurs at all reproductive ages)
+- **Risk factors**: Multiple sexual partners, unprotected intercourse, douching, IUD use (slightly), history of STI
+
+### Ascending Infection Pathway
+1. **Initial infection**: Lower genital tract (cervicitis, urethritis)
+2. **Ascending infection**: Bacteria traverse cervix, endometrium
+3. **Reaches tubes**: Salpingitis (tube inflammation)
+4. **Spreads**: To ovary (oophoritis), surrounding tissues (parametritis)
+5. **Advanced**: Tubo-ovarian abscess (pyosalpinx with ovarian involvement)
+
+### Causative Organisms in PID
+
+**Most common**:
+- **Chlamydia trachomatis** (40-60% of culture-positive cases)
+- **Neisseria gonorrhoeae** (20-30%)
+- **Mixed flora** (often polymicrobial)
+
+**Additional organisms**:
+- **Mycoplasma genitalium** (emerging, more common than previously thought)
+- **Anaerobes**: Bacteroides, Prevotella
+- **Gram-positive cocci**: Streptococci
+
+### Classification
+
+**Acute PID**:
+- Sudden onset (<3 months)
+- Acute pelvic/abdominal pain
+- Recent vaginal discharge change
+
+**Chronic PID**:
+- Insidious onset (>3 months)
+- Low-grade symptoms
+- Often sequelae of untreated acute PID
+
+## STI Manifestations in Women
+
+### Chlamydia trachomatis
+- **Cervicitis**: Purulent cervical discharge (may be asymptomatic)
+- **Urethritis**: Dysuria
+- **PID**: 10-40% if untreated
+- **Complications**: Tubal damage, infertility, ectopic pregnancy
+
+### Neisseria gonorrhoeae
+- **Cervicitis**: Purulent discharge
+- **Urethritis**: Dysuria
+- **Bartholin's abscess**: Painful swelling
+- **PID**: 15-40% if untreated
+- **Pharyngitis/proctitis**: If oral/anal exposure
+- **Systemic**: Disseminated gonococcal infection (arthritis, dermatitis)
+
+### Mycoplasma genitalium
+- **Urogenital infection**: Often asymptomatic
+- **PID**: Associated with severe PID
+- **Persistent infection**: Responds poorly to some antibiotics
+- **Pelvic pain**: Chronic pelvic pain association
+
+### Trichomonas vaginalis
+- **Vaginitis**: Frothy yellow discharge, vulvar itching
+- **Urethritis**: Dysuria, urinary frequency
+- **PID**: Can cause PID (less common than Chlamydia/Gonorrhea)
+
+## Clinical Features of PID
+
+### Symptoms (Acute)
+- **Pelvic pain**: Bilateral lower abdominal pain (cardinal symptom)
+- **Abnormal vaginal discharge**: Purulent, mucopurulent
+- **Fever**: Present in 30-40% of cases
+- **Dysuria**: Urinary symptoms
+- **Irregular bleeding**: Menstrual irregularities
+- **Deep dyspareunia**: Pain with intercourse
+
+### Signs (Examination)
+- **Fever**: Temperature often >38.5°C in acute cases
+- **Lower abdominal tenderness**: Often bilateral
+- **Rebound tenderness/guarding**: Suggests severe disease
+- **Cervical motion tenderness** (Chandelier sign): Classic finding
+- **Adnexal tenderness**: On bimanual exam
+- **Cervical discharge**: Purulent or mucopurulent
+
+### Minimal Diagnostic Criteria (CDC)
+**PID diagnosed if**:
+- Pelvic pain AND
+- One of following: Cervical motion tenderness, Uterine tenderness, Adnexal tenderness
+- **No other diagnosis explaining illness**
+
+## Complications of PID
+
+### Short-term
+- **Sepsis**: Severe systemic infection
+- **Peritonitis**: Peritoneal inflammation
+- **Septic shock**: Life-threatening
+
+### Long-term (Tubal Damage)
+- **Infertility**: 40% after first episode PID, 80% after third
+- **Ectopic pregnancy**: 6-10x increased risk
+- **Chronic pelvic pain**: 20% of PID survivors
+- **Recurrent PID**: 25-50% recurrence rate
+
+### Microbiological
+- **Tubo-ovarian abscess**: Collection of pus in tubes/ovaries
+- **Pyosalpinx**: Pus-filled fallopian tube
+- **Rupture**: Ruptured abscess → Peritonitis → Surgical emergency`,
+        mnemonics: [
+          {
+            text: "STIs in PID: CGM",
+            explanation: "Chlamydia, Gonorrhea, Mycoplasma (most common organisms)"
+          },
+          {
+            text: "PID Diagnosis: PAT",
+            explanation: "Pelvic pain, Adnexal tenderness, Tenderness (cervical motion)"
+          },
+          {
+            text: "Complications: FECTR",
+            explanation: "Fertility loss (40% first PID), Ectopic (6-10x risk), Chronic pain (20%), Tubo-ovarian abscess, Recurrence (25-50%)"
+          }
+        ],
+        keyPoints: [
+          "Chlamydia and Gonorrhea most common STI causes of PID (50-70% of cases)",
+          "Mycoplasma genitalium increasingly recognized as PID pathogen",
+          "PID diagnosis clinical (pain + tenderness); imaging helps exclude other conditions",
+          "Infertility risk 40% after first PID, increases with recurrent episodes",
+          "Ascending infection: cervix → endometrium → tubes → ovaries"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 20", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 29", edition: "17th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "pid-stis-layer-2-mechanism",
+        title: "PID & STIs - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pathophysiology involves microbial virulence factors, ascending infection through cervix, mucosal adherence, inflammatory response, and tubal damage leading to scarring and obstruction.",
+        contentMd: `# PID & STIs - Mechanism
+
+## Microbial Virulence Factors
+
+### Chlamydia trachomatis
+1. **Adhesion molecules**:
+   - Outer membrane protein (OMP) binds to host CD46 receptors
+   - Adhesin proteins target epithelial cells
+
+2. **Invasion mechanisms**:
+   - Induces host cell endocytosis
+   - Obligate intracellular pathogen
+   - Resides in inclusion vacuole
+
+3. **Immune evasion**:
+   - Delays apoptosis of infected cells
+   - Suppresses antigen presentation (reduced MHC)
+   - Produces tryptophan synthase (tryptophan depletion → TH1 immunity suppressed)
+
+4. **Persistence**:
+   - Can form non-infectious persistent state
+   - Associated with chronic inflammation
+
+### Neisseria gonorrhoeae
+1. **Pili (fimbriae)**:
+   - Variable pili allow antigenic variation
+   - Enable attachment to urethral/endocervical epithelium
+
+2. **Opacity proteins (Opa)**:
+   - Facilitate adherence and invasion
+   - Target CD66 and CD45 receptors
+
+3. **Lipopolysaccharide (LPS)**:
+   - Endotoxin triggers inflammatory response
+   - Potent complement activator
+
+4. **Intracellular survival**:
+   - Survives inside polymorphonuclear leukocytes (PMNs)
+   - Resists lysosomal killing
+
+## Ascending Infection Mechanism
+
+### Step 1: Cervical Infection
+1. **Initial site**: Endocervix (columnar epithelium, primary site of infection)
+2. **Cervicitis**: Inflammation, purulent discharge
+3. **Symptoms**: May be asymptomatic (especially Chlamydia)
+
+### Step 2: Breach of Cervical Barrier
+1. **Mucosal damage**: Inflammatory response damages epithelium
+2. **Loss of ciliary action**: Cilia destruction reduces clearance
+3. **Cervical mucus changes**: Altered composition, reduced protective proteins
+
+### Step 3: Endometrial Invasion
+1. **Upward migration**: Bacteria ascend into uterine cavity
+2. **Endometritis**: Inflammation of endometrium
+3. **Increased uterine contractility**: Uterine contractions may aid bacterial spread
+4. **Impaired endometrial defense**: Reduced complement, lysozyme
+
+### Step 4: Tubal Infection (Salpingitis)
+1. **Fallopian tube entry**: Through tubal ostium
+2. **Epithelial damage**:
+   - Ciliary loss (tubal cilia normally push menstrual debris downward)
+   - Mucosal ulceration
+   - Loss of epithelial barrier
+
+3. **Inflammatory response**:
+   - Massive leukocyte infiltration
+   - Cytokine production (TNF-α, IL-6, IL-8)
+   - Edema, mucosal swelling
+
+4. **Pyosalpinx formation**:
+   - Pus accumulates in tube lumen
+   - Tubal occlusion by exudate/swelling
+   - Potential rupture
+
+### Step 5: Ovarian and Surrounding Tissue Involvement
+1. **Oophoritis**: Ovarian inflammation, often with tubal involvement
+2. **Tubo-ovarian complex**: Inflamed tube + ovary + adhesions
+3. **Tubo-ovarian abscess**: Pus collection involving both structures
+4. **Parametritis**: Infection of parametrial tissue
+5. **Peritonitis**: Spread to peritoneal surface
+
+## Inflammatory Response in PID
+
+### Acute Inflammation
+1. **Innate immunity activation**:
+   - TLR (Toll-like receptors) recognize bacterial PAMPs
+   - Complement cascade activated
+   - PMNs recruited to site
+
+2. **Cytokine cascade**:
+   - **TNF-α**: Initiates systemic inflammation
+   - **IL-1, IL-6, IL-8**: Amplify inflammatory response
+   - **Prostaglandins**: Increase vascular permeability
+
+3. **Vascular effects**:
+   - Vasodilation → Edema
+   - Increased vascular permeability → Exudation
+   - Leukocyte extravasation
+
+### Chronic Inflammation and Tubal Damage
+1. **Persistent infection**: Intracellular organisms evade immune response
+2. **Chronic inflammatory state**: Ongoing TNF-α, IL-6 production
+3. **Fibroblast activation**: Collagen deposition → Scarring
+4. **Epithelial remodeling**:
+   - Loss of ciliated epithelium
+   - Replacement with non-ciliated epithelium
+   - Stricture formation
+
+5. **Tubal dysfunction**:
+   - Loss of ciliary activity → Impaired ovum transport
+   - Strictures → Obstruction
+   - Adhesions → Kinking, reduced patency
+
+## Infertility Mechanisms in PID
+
+### 1. Tubal Obstruction
+- **Complete occlusion**: From strictures, exudative material
+- **Partial occlusion**: Reduced gamete transport
+- **Location**: Often proximal (near uterine end)
+- **Bilateral involvement**: Risk of complete infertility
+
+### 2. Ciliary Loss
+- **Normal tubal epithelium**: 30-40% ciliated cells
+- **Post-PID**: Cilia reduced/absent
+- **Mechanism**: Inflammatory damage during acute infection, never fully regenerates
+- **Consequence**: Impaired ovum and sperm transport
+
+### 3. Tubal Strictures
+- **Formation**: Fibrosis, scarring, epithelial damage
+- **Result**: Narrowed lumen, reduces gamete passage
+- **May prevent but allow sperm** → Risk of ectopic pregnancy
+
+### 4. Adhesions
+- **Pelvic adhesions**: From inflammation, peritonitis
+- **Tubal kinking**: Adhesions cause distortion
+- **Reduced tubal motility**: Fibrotic tubes less peristaltic
+
+### 5. Impaired Gamete Transport
+- **Sperm**: Reduced passage through scarred/obstructed tubes
+- **Ovum**: Impaired movement from ovary to uterus
+- **Embryo**: If fertilization occurs, may not reach uterus (→ ectopic pregnancy)
+
+## Ectopic Pregnancy Risk
+- **Partial tubal occlusion/strictures**: Sperm can pass but ovum/embryo cannot
+- **Location**: Embryo develops in tube (ampullary or isthmic)
+- **Risk**: 6-10 fold increased after PID
+- **Severity**: Tubal rupture → Life-threatening hemorrhage
+
+## Tubo-Ovarian Abscess Pathophysiology
+1. **Inflammatory collection**: Pus accumulation from mixed organisms
+2. **Rapid expansion**: Continues to enlarge if untreated
+3. **Wall formation**: Surrounding inflamed tissue + fibrosis encapsulates abscess
+4. **Risk**: Rupture → Peritonitis, sepsis, shock
+5. **Bacterial flora**: Polymicrobial (aerobic + anaerobic)`,
+        mnemonics: [
+          {
+            text: "Ascending Infection: CEOTAP",
+            explanation: "Cervicitis, Endometritis, Oophoritis, Tubal (salpingitis), Abscess, Peritonitis"
+          },
+          {
+            text: "Tubal Damage Mechanisms: LOSS",
+            explanation: "Loss of cilia, Obstruction (strictures), Strictures, Scars/adhesions"
+          }
+        ],
+        keyPoints: [
+          "Chlamydia and Gonorrhea have specific virulence factors enabling infection",
+          "Ascending infection proceeds: cervix → endometrium → tubes → ovaries",
+          "Chronic inflammation causes irreversible tubal damage (ciliary loss, scarring)",
+          "Partial tubal obstruction creates ectopic pregnancy risk (sperm pass but embryo doesn't)",
+          "Tubo-ovarian abscess formed from polymicrobial infection with rupture risk"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 20", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 29", edition: "17th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "pid-stis-layer-3-clinical",
+        title: "PID & STIs - Clinical",
+        estimatedMinutes: 20,
+        summary: "Clinical diagnosis, imaging findings, antibiotic management of PID, treatment of STIs, and prevention strategies. Early recognition and appropriate antibiotic therapy prevent tubal damage.",
+        contentMd: `# PID & STIs - Clinical
+
+## STI Diagnosis and Treatment
+
+### Chlamydia trachomatis
+**Diagnosis**:
+- **NAAT** (Nucleic Acid Amplification Test): Gold standard
+  - Endocervical swab, urine (first-void)
+  - Sensitivity/Specificity: >95%
+
+**Treatment**:
+- **First-line**: Azithromycin 1 g PO single dose (or 500 mg daily × 3 days)
+- **Alternative**: Doxycycline 100 mg PO BID × 7 days
+- **Pregnancy**: Azithromycin (avoid doxycycline)
+- **Partner notification**: Essential, treat sexual partners
+- **Test of cure**: Not needed if compliant with standard regimen
+
+### Neisseria gonorrhoeae
+**Diagnosis**:
+- **NAAT**: Gold standard (same as Chlamydia)
+- **Gram stain**: Gram-negative intracellular diplococci (PMNs)
+- **Culture**: Selective medium (Thayer-Martin)
+
+**Treatment**:
+- **First-line**: Ceftriaxone 250 mg IM single dose (or 500 mg if severe) + Azithromycin 1 g PO single dose
+- **Alternative**: Ceftriaxone + Doxycycline (if Chlamydia status known)
+- **Partner notification**: Essential
+- **Test of cure**: NAAT at 3-5 weeks post-treatment (if continued symptoms)
+
+### Mycoplasma genitalium
+**Treatment**:
+- **First-line**: Doxycycline 100 mg PO BID × 7 days
+- **Alternative**: Azithromycin (but resistance emerging)
+- **Resistant strains**: May need fluoroquinolones (moxifloxacin)
+
+### Trichomonas vaginalis
+**Treatment**:
+- **First-line**: Metronidazole 400 mg PO TID × 5 days (or 2 g single dose)
+- **Alternative**: Tinidazole 2 g PO single dose
+- **Partner treatment**: Essential (contagious)
+
+## Diagnosis of PID
+
+### Clinical Criteria (Empiric Treatment Threshold)
+**Minimum criteria for treatment**:
+- Pelvic pain AND one of:
+  - Cervical motion tenderness
+  - Uterine tenderness
+  - Adnexal tenderness
+
+**Additional clinical findings supporting diagnosis**:
+- Fever (>38.5°C)
+- Abnormal vaginal/cervical discharge
+- Elevated ESR or CRP
+
+### Investigations
+
+**Microbiology**:
+- **Endocervical swab**: NAAT for Chlamydia, Gonorrhea, Mycoplasma
+- **Culture**: Not routinely needed, cultures may be negative
+- **Blood cultures**: If severe sepsis suspected
+
+**Imaging**:
+- **Transvaginal ultrasound**:
+  - Free pelvic fluid
+  - Thickened/dilated tubes (>6 mm)
+  - Tubo-ovarian complex
+  - **Tubo-ovarian abscess**: Anechoic collection with septations
+  - **Sensitivity**: 60-80% for acute PID
+
+**Laboratory**:
+- **ESR/CRP**: Elevated in PID (but non-specific)
+- **CBC**: WBC may be elevated
+- **Pregnancy test**: Rule out ectopic pregnancy
+
+## Management of PID
+
+### Outpatient Treatment (Uncomplicated, Mild-Moderate PID)
+**Empiric antibiotics** (must cover Chlamydia + Gonorrhea + anaerobes):
+
+**Option 1** (CDC recommended):
+- **Ceftriaxone** 250-500 mg IM single dose
+- **PLUS Doxycycline** 100 mg PO BID × 7 days
+- **PLUS Metronidazole** 500 mg PO BID × 7 days (anaerobes)
+
+**Option 2**:
+- **Cefoxitin** 2 g IM single dose (covers Gonorrhea + anaerobes)
+- **PLUS Doxycycline** 100 mg PO BID × 7 days
+
+**Option 3** (Oral regimen for mildest cases):
+- **Cefpodoxime** 400 mg PO BID × 7 days (gonorrhea)
+- **PLUS Doxycycline** 100 mg PO BID × 7 days
+- **PLUS Metronidazole** 500 mg PO BID × 7 days
+
+**Duration**: 7-10 days typically
+
+### Inpatient Treatment (Severe or Complicated PID)
+
+**Indications for hospitalization**:
+- Severe pelvic pain/peritonitis
+- Fever >38.9°C
+- Sepsis
+- Tubo-ovarian abscess
+- Immunocompromised
+- Failed outpatient therapy
+
+**Empiric IV antibiotics**:
+**Option 1**:
+- **Cefotetan** 2 g IV Q12H
+- **PLUS Doxycycline** 100 mg PO/IV BID
+
+**Option 2**:
+- **Cefoxitin** 2 g IV Q6H
+- **PLUS Doxycycline** 100 mg PO/IV BID
+
+**Option 3** (Clindamycin-based):
+- **Clindamycin** 900 mg IV Q8H
+- **PLUS Gentamicin** 2 mg/kg IV loading, then 1.5 mg/kg Q8H
+
+**Duration**: IV antibiotics until clinical improvement (defervescence, decreasing pain), then switch to oral antibiotics to complete 7-10 days total
+
+### Tubo-Ovarian Abscess Management
+
+**Medical management** (if <7 cm, hemodynamically stable):
+- **Hospitalization**: IV antibiotics as above
+- **Imaging follow-up**: Ultrasound at 48-72 hours to assess response
+- **Response markers**: Defervescence, decreasing pain/WBC
+- **Duration**: Antibiotics until complete resolution (usually 3-4 weeks)
+
+**Surgical management**:
+- **Indications**:
+  - Abscess >7 cm (higher rupture risk)
+  - Rupture (peritonitis)
+  - Failed medical therapy (no improvement 48-72 hours)
+  - Hemodynamic instability
+- **Procedure**: Drainage (percutaneous or surgical), +/- hysterectomy/oophorectomy
+
+## Prevention
+
+### Primary Prevention
+1. **Safe sex practices**: Consistent condom use, limit sexual partners
+2. **Screening**: Annual Chlamydia/Gonorrhea screening for sexually active women <25 years
+3. **Vaccination**: **HPV vaccine** prevents HPV-related genital disease
+
+### Secondary Prevention (Partner Management)
+- **Partner notification**: Essential
+- **Partner testing**: All sexual contacts in past 60 days
+- **Partner treatment**: Treat presumptively if partner cannot be tested
+- **Abstinence**: During treatment (until 7 days after single-dose therapy)
+
+### Tertiary Prevention (Fertility Preservation)
+- **Early recognition and treatment**: Reduces tubal damage
+- **Avoid IUD insertion**: In women with PID risk factors
+- **Fertility counseling**: After PID (increased ectopic risk, infertility)`,
+        mnemonics: [
+          {
+            text: "PID Antibiotics: CDM",
+            explanation: "Ceftriaxone, Doxycycline, Metronidazole (3-drug empiric regimen)"
+          },
+          {
+            text: "Tubo-Ovarian Abscess: SMR",
+            explanation: "Surgery if >7 cm, Medical if <7 cm, Response in 48-72 hours"
+          }
+        ],
+        keyPoints: [
+          "NAAT gold standard for STI diagnosis (sensitivity/specificity >95%)",
+          "Empiric 3-drug antibiotic therapy for PID covers Chlamydia + Gonorrhea + anaerobes",
+          "Tubo-ovarian abscess <7 cm: medical management; >7 cm or rupture: surgical drainage",
+          "Early STI treatment and PID recognition prevent tubal damage",
+          "Partner notification and treatment essential to prevent reinfection"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 20", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 29", edition: "17th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "pid-stis-layer-4-exam",
+        title: "PID & STIs - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield concepts: STI diagnosis, PID diagnostic criteria, antibiotic regimens, imaging findings, and complications (ectopic pregnancy, infertility, tubo-ovarian abscess).",
+        contentMd: `# PID & STIs - Exam Prep
+
+## High-Yield Facts
+
+### 1. Gold Standard Diagnostic Tests
+**Chlamydia, Gonorrhea, Mycoplasma**: **NAAT** (Nucleic Acid Amplification Test)
+- Sensitivity/Specificity: >95%
+- Can use endocervical swab, urine, or rectal
+
+**Trichomonas**: **NAAT** (if available) or **Wet mount microscopy** (sensitivity 50-70%)
+
+### 2. PID Diagnosis Criteria (CDC)
+**Minimum**:
+- **Pelvic pain** AND one of:
+  - Cervical motion tenderness
+  - Uterine tenderness
+  - Adnexal tenderness
+- **No other diagnosis explaining symptoms**
+
+**Supportive findings**: Fever >38.5°C, abnormal vaginal discharge, elevated ESR/CRP
+
+### 3. STI Treatment Regimens
+
+| STI | First-Line Treatment |
+|-----|----------------------|
+| **Chlamydia** | Azithromycin 1 g PO single dose |
+| **Gonorrhea** | Ceftriaxone 250-500 mg IM + Azithromycin 1 g PO |
+| **Mycoplasma** | Doxycycline 100 mg BID × 7 days |
+| **Trichomonas** | Metronidazole 400 mg TID × 5 days (or 2 g single) |
+
+### 4. PID Antibiotic Regimens
+**Outpatient** (uncomplicated):
+- **Ceftriaxone** 250 mg IM + **Doxycycline** 100 mg BID × 7 days + **Metronidazole** 500 mg BID × 7 days
+
+**Inpatient** (severe/complicated):
+- **Cefotetan** 2 g IV Q12H + **Doxycycline** 100 mg BID (switch to oral after improvement)
+- OR **Clindamycin** 900 mg IV Q8H + **Gentamicin** (for anaerobic coverage)
+
+### 5. Most Common STI Causes of PID
+| Organism | Frequency |
+|----------|-----------|
+| **Chlamydia** | 40-60% |
+| **Gonorrhea** | 20-30% |
+| **Mycoplasma** | Increasing (10-20%) |
+| **Mixed flora** | Common |
+
+### 6. Infertility Risk After PID
+- **First episode**: 10-15% infertility risk
+- **First PID + second PID**: 30-40% cumulative
+- **Three or more**: 80% infertility risk
+
+### 7. Ectopic Pregnancy Risk
+- **6-10 fold increased** after PID
+- **Mechanism**: Partial tubal obstruction (sperm pass, embryo blocked)
+- **Location**: Usually ampullary or isthmic tube
+
+### 8. Tubo-Ovarian Abscess Management
+
+| Finding | Management |
+|---------|------------|
+| **<7 cm, hemodynamically stable** | IV antibiotics, monitor |
+| **>7 cm** | Surgical drainage or early drainage |
+| **Rupture** | Emergency surgery, ICU |
+| **No improvement 48-72 hours** | Drainage (percutaneous or surgical) |
+
+### 9. Imaging Findings in PID
+**Transvaginal ultrasound**:
+- Thickened tubes (>6 mm)
+- Free pelvic fluid
+- Tubo-ovarian complex
+- Tubo-ovarian abscess (anechoic with septations)
+- Sensitivity: 60-80%
+
+### 10. Ascending Infection Pathway
+```
+Cervix (Cervicitis)
+    ↓
+Endometrium (Endometritis)
+    ↓
+Fallopian Tubes (Salpingitis)
+    ↓
+Ovaries (Oophoritis)
+    ↓
+Peritoneum (Peritonitis) → Tubo-Ovarian Abscess
+```
+
+### 11. Chandelier Sign
+- **Severe cervical motion tenderness** (patient wants to hit ceiling)
+- Classic finding in acute PID
+- Indicates significant cervical/tubal inflammation
+
+### 12. Partner Notification Timeline
+- **All sexual contacts in past 60 days**: Should be notified, tested, treated
+- **Treatment before test results**: If partner cannot be tested quickly
+- **Abstinence**: 7 days after single-dose therapy to prevent reinfection
+
+### 13. Exam Scenario
+
+**Scenario 1**: 24-year-old with pelvic pain, cervical motion tenderness, fever 38.7°C. Diagnosis?
+- **Answer**: PID (meets criteria: pelvic pain + cervical motion tenderness)
+- **Treatment**: Empiric 3-drug regimen (outpatient if hemodynamically stable)
+
+**Scenario 2**: After PID treatment, patient returns with severe pelvic pain, fever. Ultrasound shows 8 cm anechoic collection. Management?
+- **Answer**: Tubo-ovarian abscess (>7 cm)
+- **Management**: Surgical drainage (percutaneous or open)`,
+        mnemonics: [
+          {
+            text: "STI Organisms: CGM",
+            explanation: "Chlamydia (40-60%), Gonorrhea (20-30%), Mycoplasma (emerging)"
+          },
+          {
+            text: "PID Criteria: PCAT",
+            explanation: "Pelvic pain, Cervical motion tenderness/uterine/adnexal, Abnormal discharge, Temperature high"
+          },
+          {
+            text: "Antibiotic Regimen: CDM",
+            explanation: "Ceftriaxone, Doxycycline, Metronidazole (cover gram-neg, gram-pos, anaerobes)"
+          }
+        ],
+        keyPoints: [
+          "NAAT is gold standard for Chlamydia, Gonorrhea, Mycoplasma diagnosis",
+          "PID diagnosed with pelvic pain + cervical/uterine/adnexal tenderness",
+          "Empiric 3-drug antibiotics essential (covers Chlamydia, Gonorrhea, anaerobes)",
+          "Infertility risk 10-15% after first PID; cumulative with recurrent episodes",
+          "Tubo-ovarian abscess >7 cm needs surgical/percutaneous drainage"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 20", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 29", edition: "17th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "pid-stis-layer-5-active-recall",
+        title: "PID & STIs - Active Recall",
+        estimatedMinutes: 10,
+        contentMd: `# Active Recall - PID & STIs
+
+**Q1**: What are the diagnostic criteria for PID according to CDC guidelines? Why is empiric treatment recommended?
+> **A**: **PID diagnosis criteria**: Pelvic pain PLUS one of: (1) Cervical motion tenderness, (2) Uterine tenderness, (3) Adnexal tenderness. No other diagnosis explaining symptoms. **Rationale for empiric treatment**: (1) Microbiological confirmation difficult (cultures often negative), (2) Pelvic imaging not always diagnostic, (3) Delay in diagnosis/treatment increases tubal damage risk. (4) **Early treatment** (even before confirming organism) prevents scarring. Empiric regimen covers Chlamydia + Gonorrhea + anaerobes.
+
+**Q2**: Describe the three-drug empiric antibiotic regimen for outpatient PID treatment.
+> **A**: **Ceftriaxone 250-500 mg IM single dose** (covers Gonorrhea) + **Doxycycline 100 mg PO BID × 7 days** (covers Chlamydia) + **Metronidazole 500 mg PO BID × 7 days** (covers anaerobes, including Bacteroides). This combination covers polymicrobial flora of PID. Total treatment duration 7-10 days.
+
+**Q3**: A 26-year-old presents with pelvic pain, cervical motion tenderness, fever 38.6°C. Endocervical swab pending. She is hemodynamically stable. Treatment approach?
+> **A**: **Diagnosis**: PID (meets clinical criteria). **Setting**: Outpatient management (hemodynamically stable, no signs of severe peritonitis). **Immediate treatment**: Start empiric 3-drug regimen immediately (Ceftriaxone IM + Doxycycline + Metronidazole PO), do NOT wait for culture/NAAT results. **Pelvic ultrasound** to assess for abscess. **Follow-up** in 48-72 hours to assess response.
+
+**Q4**: Explain the relationship between PID and ectopic pregnancy. How does tubal pathology lead to ectopic pregnancy?
+> **A**: **Increased risk**: Ectopic pregnancy 6-10 fold more common after PID. **Mechanism**: PID causes tubal scarring, strictures, ciliary loss. **Partial tubal obstruction** is key: Strictures allow **sperm passage** (small enough) but **block embryo/ovum passage** (larger). Ovum fertilized proximally, cannot traverse scarred tube, lodges in tube → Ectopic pregnancy. **Risk**: Tubal rupture with hemorrhage if untreated.
+
+**Q5**: Compare Chlamydia and Gonorrhea infections. What is the rationale for dual therapy?
+> **A**: **Chlamydia**: Often asymptomatic (50%), intracellular, incubation 1-3 weeks, commonly causes PID (40-60%), best treated with azithromycin or doxycycline. **Gonorrhea**: More symptomatic (purulent discharge), extracellular, incubation 2-7 days, causes PID (20-30%), best treated with cephalosporin. **Coinfection common**: 20-30% of women with one STI have both. **Rationale for dual therapy**: (1) Covers both organisms, (2) Prevents resistance emergence, (3) Simplifies treatment, (4) Cost-effective.
+
+**Q6**: What is a tubo-ovarian abscess? How is it differentiated from simple pyosalpinx on imaging?
+> **A**: **Tubo-ovarian abscess**: Pus collection involving BOTH fallopian tube AND ovary (complex inflammatory mass with both structures involved). **Pyosalpinx**: Pus confined to fallopian tube lumen (tube swollen but ovary not involved). **Imaging differentiation (ultrasound)**: **Abscess**: Larger collection (often >5 cm), anechoic/complex (heterogeneous), may have septations. **Pyosalpinx**: Tubular structure, dilated (>6 mm), often with "cogwheel" appearance. **Management difference**: Simple pyosalpinx often responds to antibiotics; abscess >7 cm may need drainage.
+
+**Q7**: A 28-year-old is treated for PID with outpatient antibiotics. After 4 days, she still has fever and worsening pain. Ultrasound shows 6 cm fluid collection. Management?
+> **A**: **Failed outpatient therapy** (no improvement 48-72 hours). **Likely diagnosis**: Tubo-ovarian abscess or complicated PID. **Management**: (1) **Hospitalization** for IV antibiotics, (2) **Switch to IV regimen**: Cefotetan 2 g IV Q12H + Doxycycline 100 mg IV BID. (3) **Imaging follow-up**: Repeat ultrasound in 48 hours. (4) **Abscess size 6 cm**: At borderline for drainage consideration. If no improvement in 48 hours → Consider percutaneous drainage. (5) Duration: IV antibiotics until defervescence, then switch to oral to complete 10-14 days total.
+
+**Q8**: A woman is diagnosed with Chlamydia trachomatis on NAAT. She is asymptomatic. Treatment?
+> **A**: **Treatment required**: Azithromycin 1 g PO single dose (or doxycycline 100 mg BID × 7 days). Asymptomatic Chlamydia still increases PID risk if untreated. **Partner notification**: Treat all sexual partners in past 60 days (even asymptomatic). **Abstinence**: 7 days after single-dose therapy. **Retest after 3 months**: Recommended to detect reinfection.
+
+**Q9**: What are the indications for hospitalization and IV antibiotics in PID?
+> **A**: **Severe PID indications for hospitalization**: (1) **Severe pelvic pain/peritonitis** (guarding, rebound tenderness), (2) **High fever** (>38.9°C), (3) **Systemic symptoms**: Nausea, vomiting, sepsis signs, (4) **Tubo-ovarian abscess**, (5) **Immunocompromised** state, (6) **Inability to tolerate** oral medications, (7) **Failed outpatient therapy** (no improvement 48-72 hours), (8) **Pregnancy** (if PID suspected).
+
+**Q10**: Outline the mechanism of ascending infection from cervicitis to PID to peritonitis.
+> **A**: **(1) Cervicitis**: Initial infection at endocervix. Bacteria cause inflammation, purulent discharge. **(2) Endometritis**: Bacteria ascend through cervix into uterine cavity. Inflammatory response damages endometrium. **(3) Salpingitis**: Infection reaches fallopian tubes. Tubal epithelium damaged (cilia lost), inflammatory exudate accumulates. **(4) Oophoritis**: Ovarian inflammation accompanies tubal disease. **(5) Tubo-ovarian complex**: Adhesions form between inflamed structures. **(6) Pyosalpinx/Abscess**: Pus accumulation in tubes/ovaries. **(7) Peritonitis**: If rupture occurs, pus spills into peritoneal cavity → Severe peritonitis, sepsis, shock. **Prevention**: Early antibiotic treatment (before reaching advanced stages) prevents progression.`,
+        mnemonics: [],
+        keyPoints: [
+          "Empiric 3-drug PID treatment covers Chlamydia, Gonorrhea, anaerobes",
+          "Ectopic pregnancy risk 6-10 fold after PID from partial tubal obstruction",
+          "Tubo-ovarian abscess >7 cm needs percutaneous or surgical drainage",
+          "Partner notification and treatment essential to prevent reinfection",
+          "Failed outpatient therapy warrants hospitalization, IV antibiotics, imaging reassessment"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 20", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 29", edition: "17th" }
+        ]
+      }
+    ]
+  }
 ];
-];
-];
-];
+`,

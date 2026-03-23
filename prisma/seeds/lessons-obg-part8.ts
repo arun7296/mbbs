@@ -1,19 +1,362 @@
-export const obgPart8Lessons = [
+import type { TopicLessons } from "./content-loader";
+
+export const obgPart8Lessons: TopicLessons[] = [
   {
     topicCode: "OG-MOD-03-TOP-03",
     layers: [
       {
         layer: 1,
-        slug: "cesarean-section-foundation",
+        slug: "cesarean-section-layer-1-foundation",
         title: "Cesarean Section - Foundation",
         estimatedMinutes: 20,
         summary: "Overview of cesarean delivery, indications, types, and when operative delivery becomes necessary in modern obstetrics.",
-        contentMd: "# Cesarean Section - Foundation\n\n## Definition and Significance\nCesarean section is the delivery of fetus, placenta, and membranes through an incision in the uterus. It is the most common major abdominal surgery performed worldwide and accounts for 15-45% of deliveries globally.\n\n## Prevalence in India\n- Varies from 15-30% in urban centers to 5-15% in rural areas\n- Normal vaginal delivery remains the standard in India\n- LSCS is reserved for specific indications per NMC guidelines\n\n## Classification of Cesarean Sections\n\n### By Urgency\n- **Elective**: Planned before labor onset\n- **Emergency**: During labor or in urgent situations\n- **Perimortem**: During cardiopulmonary resuscitation\n\n### By Timing\n- **Planned (Primary)**: First LSCS\n- **Repeat**: Subsequent LSCS\n\n## Indications for Cesarean Delivery\n\n### Maternal Indications\n- Previous LSCS (relative)\n- Cephalopelvic disproportion\n- Placenta previa\n- Placental abruption\n- Uterine rupture\n- Severe pre-eclampsia/eclampsia\n- Medical conditions (cardiac disease, severe asthma)\n\n### Fetal Indications\n- Fetal distress/abnormal CTG\n- Malpresentation (transverse lie, brow)\n- Fetal anomalies incompatible with vaginal delivery\n\n### Combined Indications\n- Prolonged labor unresponsive to augmentation\n- Failed induction of labor\n\n## Legal and Ethical Aspects in India\n- LSCS on demand without medical indication is controversial\n- Informed consent mandatory\n- Documentation of indications required\n- LSCS for failure to progress should attempt trial of labor after prior vaginal delivery in India,\n        mnemonics: [\n          {\n            text: \"LSCS indications = Previous scar, Placenta (previa/abruption), Fetal distress, Malpresentation, Cephalopelvic disproportion, Pre-eclampsia\",\n            explanation: \"Major maternal and fetal indications for cesarean section\"\n          },\n          {\n            text: \"CEPHALIC vs NON-CEPHALIC = Only cephalic is suitable for vaginal trial\",\n            explanation: \"Presentation type determines delivery route\"\n          }\n        ],\n        keyPoints: [\n          \"LSCS is major abdominal surgery with significant maternal morbidity\",\n          \"Vaginal birth after cesarean (VBAC) is acceptable in appropriate candidates\",\n          \"Repeat LSCS increases complications: adhesions, placenta previa, accreta\",\n          \"India has high rates of unnecessary LSCS in private practice\",\n          \"Emergency LSCS carries higher maternal mortality than elective\"\n        ],\n        textbookRefs: [\n          { book: \"DC Dutta's Textbook of Obstetrics\", chapter: \"Operative Obstetrics - Cesarean Section\", edition: \"9th\" },\n          { book: \"Padubidri & Shirish's Obstetrics and Gynaecology\", chapter: \"Cesarean Delivery\", edition: \"3rd\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"cesarean-section-mechanism\",\n        title: \"Cesarean Section - Mechanism\",\n        estimatedMinutes: 25,\n        summary: \"Surgical anatomy, technique variations, and physiological changes during and after cesarean delivery.\",\n        contentMd: "# Cesarean Section - Mechanism\\n\\n## Surgical Anatomy\\n**Abdominal layers traversed**:\\n1. Skin and subcutaneous tissue\\n2. Anterior rectus sheath\\n3. Rectus abdominis muscle\\n4. Peritoneum\\n5. Bladder peritoneum (reflected downward)\\n6. Myometrium\\n7. Visceral peritoneum\\n\\n## Lower Segment Transverse Cesarean (LSCS) - Most Common\\n- **Incision location**: Lower uterine segment (non-contracting)\\n- **Advantages**:\\n  - Lower repeat LSCS requirement\\n  - Less uterine rupture in subsequent pregnancy\\n  - Easier repair\\n  - Less blood loss\\n- **Disadvantages**:\\n  - Slightly longer operative time\\n  - More bladder mobilization required\\n\\n## Classical Cesarean Section\\n- **Incision location**: Upper uterine segment\\n- **Indications**:\\n  - Placenta previa covering lower segment\\n  - Massive hemorrhage\\n  - Failed LSCS trial\\n- **Disadvantages**:\\n  - Higher infection risk\\n  - Greater blood loss\\n  - Increased uterine rupture in future pregnancies (contraindication to VBAC)\\n\\n## Operative Sequence for LSCS\\n1. Abdominal incision (Pfannenstiel preferred in India)\\n2. Peritoneal incision and bladder mobilization\\n3. Uterine incision (transverse preferred)\\n4. Amniotic fluid assessment\\n5. Fetal extraction\\n6. Placental delivery (spontaneous vs manual)\\n7. Uterine repair (1-2 layers)\\n8. Peritoneal closure vs non-closure (both acceptable)\\n9. Fascial and skin closure\\n\\n## Anesthesia for LSCS\\n- **Neuraxial (Regional)**: Spinal/epidural preferred in India\\n- **General anesthesia**: Emergency cases, failed regional\\n- **Local anesthesia**: Rare, only in resource-limited settings\\n\\n## Hemodynamic Changes During LSCS\\n- Aortocaval compression from supine position (left uterine displacement reduces)\\n- Blood loss: 800-1200 mL (higher in emergency)\\n- Third spacing: 1-2 L during and after LSCS,\\n        mnemonics: [\\n          {\\n            text: \\\"LSCS advantages = Lower infection, Better repair, Future VBAC possible, Less rupture risk\\\",\\n            explanation: \\\"Why lower segment LSCS is preferred\\\"\\n          },\\n          {\\n            text: \\\"Classical LSCS = Previa, Placenta accreta risk, Emergency massive bleed, Repeat failed LSCS\\\",\\n            explanation: \\\"Limited indications for classical incision\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"LSCS is major abdominal surgery requiring careful anesthesia and monitoring\\\",\\n          \\\"Blood loss averages 1000 mL - anticipate need for fluid resuscitation\\\",\\n          \\\"Regional anesthesia preferred in India for LSCS in absence of contraindications\\\",\\n          \\\"Peritoneal closure is optional and doesn't affect outcomes\\\",\\n          \\\"Double-layer uterine closure reduces dehiscence risk\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"DC Dutta's Textbook of Obstetrics\\\", chapter: \\\"Operative Obstetrics - Cesarean Section Technique\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Williams Obstetrics\\\", chapter: \\\"Delivery via Cesarean Section\\\", edition: \\\"26th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"cesarean-section-clinical\\\",\\n        title: \\\"Cesarean Section - Clinical Applications\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Clinical decision-making, trial of labor after cesarean, management of complications during and after LSCS.\\\",\\n        contentMd: "# Cesarean Section - Clinical Applications\\\\n\\\\n## Pre-operative Assessment for Elective LSCS\\\\n- Anemia screening and correction\\\\n- Infection screen (COVID, TB in India context)\\\\n- Cardiovascular and respiratory assessment\\\\n- Discuss risks: thromboembolism, infection, anesthesia complications\\\\n- Obtain informed consent documenting indication\\\\n\\\\n## Emergency vs Elective LSCS\\\\n**Elective LSCS**:\\\\n- Scheduled for 39 weeks for first LSCS (reduces neonatal morbidity)\\\\n- No labor contractions\\\\n- Normal hemodynamics\\\\n\\\\n**Emergency LSCS**:\\\\n- Variable blood loss\\\\n- Risk of aspiration with general anesthesia\\\\n- Fetal distress complicates decision-making\\\\n- Maternal exhaustion and dehydration\\\\n\\\\n## Maternal Morbidity After LSCS\\\\n- **Infection**: Wound (2-5%), endometritis (3-5%)\\\\n- **Thromboembolism**: DVT (0.5-2%), PE (0.1-0.3%)\\\\n- **Hemorrhage**: Major (1-2%), requiring transfusion\\\\n- **Anesthesia**: Headache, neurological injury (rare)\\\\n- **Adhesions**: Lead to infertility, ectopic pregnancy, bowel obstruction\\\\n- **Uterine rupture**: In future pregnancy (0.3-0.5% after LSCS)\\\\n- **Hysterectomy**: 0.1-0.4% (peripartum hysterectomy)\\\\n\\\\n## Trial of Labor After Cesarean (TOLAC) in India\\\\n**Candidates for TOLAC**:\\\\n- Previous LSCS with low transverse incision\\\\n- No other contraindications to vaginal delivery\\\\n- Adequate maternal pelvis\\\\n- Single pregnancy\\\\n- Informed consent after counseling\\\\n\\\\n**Success rate**: 60-80% achieve vaginal delivery\\\\n**Risk of uterine rupture**: 0.3-0.5% (vs 0% with repeat LSCS)\\\\n\\\\n**Contraindications to TOLAC**:\\\\n- Previous classical LSCS\\\\n- Previous uterine rupture\\\\n- Placenta previa\\\\n- Malpresentation\\\\n- Cephalopelvic disproportion\\\\n\\\\n## Neonatal Outcomes\\\\n- Planned LSCS at 39 weeks: Lower respiratory distress\\\\n- Emergency LSCS: Higher admission to NICU\\\\n- Planned LSCS at term: Excellent neonatal outcomes\\\\n\\\\n## Post-operative Care After LSCS\\\\n1. Monitor vital signs, urine output (target >0.5 mL/kg/hour)\\\\n2. Prophylactic antibiotics (cephalosporin within 60 minutes)\\\\n3. Thromboprophylaxis: LMWH for risk factors\\\\n4. Early ambulation (reduce VTE risk)\\\\n5. Delayed first oral intake (risk of aspiration)\\\\n6. Catheter removal when mobilizing\\\\n7. Pain management: Spinal morphine, NSAIDs, acetaminophen\\\\n8. Breastfeeding support from early postoperative period,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"VBAC CANDIDATES = Previous LSCS only, Adequate pelvis, Informed consent, No absolute contraindication\\\\\\\",\\\\n            explanation: \\\\\\\"Eligibility criteria for trial of labor after cesarean\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Morbidity after LSCS = Infection, Hemorrhage, Thrombosis, Adhesions, Future rupture\\\\\\\",\\\\n            explanation: \\\\\\\"Major complications requiring monitoring and prevention\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Elective LSCS at 39 weeks reduces respiratory distress without increasing stillbirth\\\\\\\",\\\\n          \\\\\\\"TOLAC success rate is 60-80% with proper patient selection in India\\\\\\\",\\\\n          \\\\\\\"Prophylactic antibiotics reduce infection by 60%\\\\\\\",\\\\n          \\\\\\\"Early mobilization and LMWH reduce VTE risk\\\\\\\",\\\\n          \\\\\\\"Repeated LSCS increases accreta risk: 1% after 2nd, 3% after 3rd, rising exponentially\\\\\\\",\\\\n          \\\\\\\"Antibiotic choice should include gram-negative coverage for Indian setting\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Postoperative Care and Complications of LSCS\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"FOGSI Guidelines on Cesarean Section\\\\\\\", chapter: \\\\\\\"TOLAC and Repeat LSCS\\\\\\\", edition: \\\\\\\"Latest\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"cesarean-section-exam\\\\\\\",\\\\n        title: \\\\\\\"Cesarean Section - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Important clinical scenarios, decision-making algorithms, and examination-focus topics for LSCS.\\\\\\\",\\\\n        contentMd: ``# Cesarean Section - Exam Prep\\\\n\\\\n## Common LSCS Scenarios in Exams\\\\n\\\\n### Scenario 1: Failed Induction\\\\n**Case**: 24-year-old G1P0 with meconium-stained liquor, CTG shows late deceleration, cervix 3 cm at 24 hours\\\\n- **Management**: Continuous monitoring, assess progress over next 4-6 hours\\\\n- **If no progress**: LSCS for failed induction + fetal distress\\\\n- **Not indication alone**: Many induce again or continue\\\\n\\\\n### Scenario 2: Placenta Previa\\\\n**Case**: 35-week G2P1 with placenta previa completely covering os on ultrasound\\\\n- **Management**: Elective LSCS at 37-39 weeks\\\\n- **Timing**: Discuss delivery at 37-38 weeks if preterm labor\\\\n- **Indications**: Painless vaginal bleeding necessitates urgent LSCS\\\\n\\\\n### Scenario 3: Previous LSCS Wanting TOLAC\\\\n**Case**: G2P1 with previous LSCS for failure to progress, now in active labor at 38 weeks\\\\n- **Suitability**: Assess pelvis (pelvimetry if indicated), discuss rupture risk\\\\n- **Decision**: If adequate pelvis + informed consent = trial TOLAC\\\\n- **Monitoring**: Continuous CTG, prepare for emergency LSCS\\\\n\\\\n### Scenario 4: Preeclampsia at 34 Weeks\\\\n**Case**: Severe preeclampsia with uncontrolled hypertension, platelets 80,000\\\\n- **Timing**: LSCS delivery (not vaginal)\\\\n- **Anesthesia**: Epidural safer than general if platelets >80,000\\\\n- **Adjuvants**: MgSO4, antihypertensives perioperatively\\\\n\\\\n## Clinical Pearls for Exams\\\\n- **Indication documentation**: Always document exact indication in records\\\\n- **LSCS on demand**: Describe risks to patient before consent\\\\n- **Vaginal delivery trial**: Can attempt even after 1-2 previous LSCS if appropriate\\\\n- **Repeat LSCS timing**: Elective LSCS should be at 39 weeks, not 37-38 weeks\\\\n- **Morbidity increases with**: Emergency status, prolonged labor before LSCS, previous LSCS\\\\n- **Success TOLAC predictors**: Maternal age <35, BMI <30, vaginal delivery before LSCS\\\\n\\\\n## Operative Indications - Ranking by Frequency in India\\\\n1. Previous LSCS (most common)\\\\n2. Failure to progress/CPD\\\\n3. Fetal distress\\\\n4. Malpresentation\\\\n5. Placenta previa\\\\n6. Pre-eclampsia/eclampsia\\\\n7. Placental abruption\\\\n8. Medical complications,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"LSCS TIMING = 39 weeks elective, 37 weeks placenta previa, ASAP fetal distress/abruption\\\\\\\",\\\\n            explanation: \\\\\\\"Appropriate timing for different indications\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"EMERGENCY LSCS = Fetal distress, Abruption, Cord prolapse, Failed emergency induction\\\\\\\",\\\\n            explanation: \\\\\\\"Requires delivery within 30 minutes ideally\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Document indication clearly: 'Failure to progress grade 2' vs vague 'prolonged labor'\\\\\\\",\\\\n          \\\\\\\"Discuss cesarean delivery risks before labor in high-risk patients\\\\\\\",\\\\n          \\\\\\\"Most common indication worldwide is previous LSCS\\\\\\\",\\\\n          \\\\\\\"India-specific: Awareness about unnecessary LSCS in private sector\\\\\\\",\\\\n          \\\\\\\"NMC competency: Manage LSCS indication, technique, and complications\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Indications and Complications of LSCS\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"FOGSI Guide to Operative Obstetrics\\\\\\\", chapter: \\\\\\\"Cesarean Delivery Indications and Timing\\\\\\\", edition: \\\\\\\"Latest\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"cesarean-section-q-and-a\\\\\\\",\\\\n        title: \\\\\\\"Cesarean Section - Q&A Review\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Essential questions and answers about LSCS indications, technique, and complications for active recall.\\\\\\\",\\\\n        contentMd: ``# Cesarean Section - Q&A Review\\\\n\\\\n## Q1: What is the most common indication for primary LSCS in India?\\\\n**A**: Failure to progress/cephalopelvic disproportion (CPD), though previous LSCS is most common overall in multiparous women. In private sector, non-progressive labor and patient request also drive LSCS.\\\\n\\\\n## Q2: At what gestational age should elective LSCS for first indication be scheduled?\\\\n**A**: 39+0 weeks or later. Delivery before 39 weeks increases neonatal respiratory morbidity. Exception: planned LSCS before 39 weeks for recurrent late stillbirth or other specific indications.\\\\n\\\\n## Q3: What is the success rate for VBAC in carefully selected candidates?\\\\n**A**: 60-80% achieve vaginal delivery after one prior LSCS. Higher success with vaginal delivery history, maternal age <35, BMI <30, spontaneous labor.\\\\n\\\\n## Q4: Describe double-layer uterine closure during LSCS. What is its advantage?\\\\n**A**: Two layers of continuous absorbable suture (typically 1-0 PDS or vicryl) approximating the myometrium. Advantages: reduces uterine dehiscence risk and hemostasis. Some studies suggest reduced uterine rupture in subsequent pregnancy.\\\\n\\\\n## Q5: A patient with placenta previa covering the entire internal os presents with painless bleeding at 36 weeks. Management?\\\\n**A**: Hospitalization, bed rest, anemia correction, corticosteroids if <37 weeks, LSCS delivery (transabdominal approached carefully to avoid placenta), pelvic preparation in OR, cross-matched blood available. If massive hemorrhage: emergency LSCS by experienced surgeon.\\\\n\\\\n## Q6: Post-LSCS, when is peritoneal closure recommended?\\\\n**A**: Closure is optional. Most studies show no benefit of closure vs non-closure. Reduces operative time if non-closure practiced. Many use closure for infection prevention in setting of contamination.\\\\n\\\\n## Q7: What is the approximate blood loss in an uncomplicated LSCS?\\\\n**A**: 800-1200 mL for vaginal deliveries; cesarean typically 1000-1500 mL blood loss. Emergency LSCS may have 1500-2000 mL loss. Measured blood loss typically underestimated by 30-50%.\\\\n\\\\n## Q8: Which anesthesia is preferred for LSCS in India and why?\\\\n**A**: Neuraxial anesthesia (spinal or epidural) is preferred because it: avoids aspiration risk, allows early maternal-infant bonding, has lower complication rates, reduces postoperative pain with intrathecal opioids. General anesthesia reserved for emergency cases, contraindicated neuraxial, or failed regional block.\\\\n\\\\n## Q9: A patient with previous LSCS for failed induction now wants TOLAC. You assess cephalopelvic adequacy. What pelvimetry method is best?\\\\n**A**: Clinical pelvimetry by experienced examiner is adequate for most. MRI pelvimetry reserved for clinical suspicion of inadequate pelvis. Pelvimetry should NOT be routine but can guide counseling for borderline cases.\\\\n\\\\n## Q10: What is peripartum hysterectomy and when is it indicated?\\\\n**A**: Surgical removal of uterus at or near delivery. Indications: placenta accreta spectrum (most common), massive PPH uncontrolled by other measures, uterine rupture, uterine atony unresponsive to uterotonics and tamponade. Morbidity 2-3 times higher than LSCS alone. Should be last resort after all conservative measures.\\\\n\\\\n## Q11: At what thickness is lower uterine segment considered \\\\\\\"thin\\\\\\\" and potentially at risk for rupture?\\\\n**A**: <1.5 mm on postoperative ultrasound correlates with increased dehiscence risk in literature. However, no absolute cutoff below which rupture is guaranteed. Clinical judgment and ultrasound assessment guide counseling.\\\\n\\\\n## Q12: How long should a patient avoid heavy lifting/exercise after LSCS?\\\\n**A**: Generally 6 weeks for routine activities. Return to strenuous exercise (gym, running) at 8-12 weeks after uncomplicated LSCS. Heavy lifting >5 kg avoided for 6 weeks to reduce hernia risk.\\\\n      }\\\\n    ]\\\\n  },\\\\n  {\\\\n    topicCode: \\\\\\\"OG-MOD-04-TOP-03\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"breastfeeding-lactation-foundation\\\\\\\",\\\\n        title: \\\\\\\"Breastfeeding & Lactation - Foundation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Physiology of lactation, benefits of breastfeeding, and lactation management in the immediate postpartum period.\\\\\\\",\\\\n        contentMd: ``# Breastfeeding & Lactation - Foundation\\\\n\\\\n## Definition and Importance\\\\nBreastfeeding is feeding an infant human milk from the breast. Lactation is the physiological process of milk production and secretion.\\\\n\\\\n## Importance in India\\\\n- WHO recommends exclusive breastfeeding for first 6 months\\\\n- India has National Breastfeeding Mission (2015) to increase breastfeeding rates\\\\n- Only 54% of infants exclusively breastfed in first 6 months in India\\\\n- Breastfeeding reduces infant mortality by 13% in developing countries\\\\n- Cost-effective intervention for child survival\\\\n\\\\n## Anatomy of the Breast\\\\n**Structural components**:\\\\n- 15-20 lobes arranged in branching pattern\\\\n- Each lobe has lobules containing alveoli (milk-secreting units)\\\\n- Lactiferous ducts collect milk from alveoli\\\\n- Lactiferous sinuses (dilations at areola)\\\\n- Nipple with 15-20 duct openings\\\\n\\\\n**Supporting structures**:\\\\n- Suspensory ligaments of Cooper\\\\n- Pectoralis major and serratus anterior muscles\\\\n\\\\n## Hormonal Control of Lactation\\\\n**Prolactin**: Primary hormone for milk production (secreted by anterior pituitary)\\\\n- Suckling stimulates TRH → increases prolactin\\\\n- Sleep, stress, and certain medications increase prolactin\\\\n- Dopamine inhibits prolactin (explained by dopamine agonists decreasing lactation)\\\\n\\\\n**Oxytocin**: Causes milk letdown reflex (posterior pituitary)\\\\n- Suckling triggers oxytocin release\\\\n- Causes myoepithelial cells around alveoli to contract\\\\n- Responsible for milk ejection reflex\\\\n\\\\n## Lactogenesis Stages\\\\n**Stage 1 (During pregnancy)**: Colostrum production\\\\n- Begins at 12-16 weeks gestation\\\\n- Rich in immunoglobulins, proteins, minerals\\\\n\\\\n**Stage 2 (Immediate postpartum)**: Lactogenesis II\\\\n- Triggered by placental delivery (progesterone withdrawal)\\\\n- Milk \\\\\\\"comes in\\\\\\\" at 2-4 days postpartum\\\\n- Increased prolactin and oxytocin\\\\n\\\\n**Stage 3 (After 2 weeks)**: Galactopoiesis\\\\n- Milk production established\\\\n- Supply controlled by demand (frequent removal)\\\\n- Continues throughout lactation period\\\\n\\\\n## Benefits of Breastfeeding\\\\n\\\\n### For Infant\\\\n- Optimal nutrition for growth and development\\\\n- Antibodies (IgA) protect against infections\\\\n- Reduced SIDS risk by 36%\\\\n- Lower incidence of allergies, asthma\\\\n- Improved cognitive development\\\\n- Lower obesity risk later in life\\\\n\\\\n### For Mother\\\\n- Reduces postpartum hemorrhage (oxytocin causes uterine contraction)\\\\n- Accelerates uterine involution\\\\n- Reduces ovarian and breast cancer risk\\\\n- Natural family planning effect\\\\n- Reduced risk of type 2 diabetes,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Lactation hormones = Prolactin (milk production), Oxytocin (milk letdown)\\\\\\\",\\\\n            explanation: \\\\\\\"Two key hormones controlling breastfeeding\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"STAGES of lactation = Colostrum (pregnancy), Lactogenesis II (postpartum), Galactopoiesis (maintenance)\\\\\\\",\\\\n            explanation: \\\\\\\"Timeline of breast milk changes\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Suckling is most powerful stimulus for maintaining milk supply\\\\\\\",\\\\n          \\\\\\\"Early and frequent feeds establish lactation better than scheduled feeds\\\\\\\",\\\\n          \\\\\\\"Colostrum is rich in antibodies and minerals despite low volume\\\\\\\",\\\\n          \\\\\\\"Breast engorgement at day 3-4 is normal and self-limiting\\\\\\\",\\\\n          \\\\\\\"Sleep/rest/stress reduce milk supply through decreased prolactin\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Breastfeeding and Lactation\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Padubidri & Shirish's Obstetrics and Gynaecology\\\\\\\", chapter: \\\\\\\"Lactation and Breastfeeding\\\\\\\", edition: \\\\\\\"3rd\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"breastfeeding-lactation-mechanism\\\\\\\",\\\\n        title: \\\\\\\"Breastfeeding & Lactation - Mechanism\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Biochemical mechanisms of milk production, composition changes, and factors affecting milk quality.\\\\\\\",\\\\n        contentMd: ``# Breastfeeding & Lactation - Mechanism\\\\n\\\\n## Cellular Mechanism of Milk Production\\\\n**Location**: Alveolar cells (lactocytes)\\\\n**Process**:\\\\n- Nutrients and water absorbed from blood into alveolar cells\\\\n- Milk components synthesized (lactose from glucose, casein and whey proteins)\\\\n- Milk secreted into alveolar lumen\\\\n- Myoepithelial contraction ejects milk into ducts\\\\n\\\\n## Milk Composition\\\\n\\\\n### Early Milk (Colostrum - Days 1-5)\\\\n**Volume**: 10-30 mL per feed initially, increasing to 50-100 mL\\\\n**Components**:\\\\n- Protein: 2-2.5% (higher than mature milk) - includes lactoferrin, lysozyme\\\\n- Fat: 2-3% (lower than mature milk)\\\\n- Lactose: 5.8% (similar to mature)\\\\n- White blood cells: 10⁴-10⁶/mL (most are leukocytes)\\\\n- IgA antibodies: Protect GI tract from pathogens\\\\n\\\\n### Transitional Milk (Days 5-21)\\\\n**Gradual change from colostrum to mature milk**\\\\n- Immunoglobulin content decreases\\\\n- Lactose and fat increase\\\\n- Protein decreases (casein increases, lactoferrin decreases)\\\\n\\\\n### Mature Milk (After 3-4 Weeks)\\\\n**Volume**: 600-1000 mL/day\\\\n**Foremilk** (beginning of feed):\\\\n- Lower fat content (2%)\\\\n- Higher volume\\\\n- Important for hydration and calories\\\\n\\\\n**Hindmilk** (end of feed):\\\\n- Higher fat content (4-5%) - calorie dense\\\\n- Infant satiety depends on hindmilk\\\\n\\\\n**Composition of mature milk**:\\\\n- Protein: 0.9-1.2% (casein 60%, whey 40%)\\\\n- Fat: 3-5% (varies with maternal diet and feed timing)\\\\n- Carbohydrate: 6.9-7.2% (lactose)\\\\n- Minerals: Calcium, phosphorus, iron (bioavailable)\\\\n- Vitamins: All essential vitamins present (except vitamin K in early milk)\\\\n\\\\n## Immunological Components\\\\n**Antibodies**: IgA (90%), IgG, IgM\\\\n- IgA coats infant GI tract, preventing pathogen attachment\\\\n- No systemic absorption but local protection\\\\n\\\\n**White blood cells**: Macrophages, neutrophils\\\\n- Kill bacteria through phagocytosis\\\\n- Present in colostrum >mature milk\\\\n\\\\n**Lysozyme and Lactoferrin**: Antimicrobial proteins\\\\n- Lysozyme: Lyses bacterial cell wall\\\\n- Lactoferrin: Binds iron (essential for bacterial growth)\\\\n\\\\n## Lactogenesis Maintenance - Supply and Demand\\\\n**Supply determined by**:\\\\n- Frequency of milk removal (most important)\\\\n- Complete emptying of breast\\\\n- Duration of lactation established (6-12 weeks)\\\\n\\\\n**Milk stasis**:\\\\n- If breast not emptied regularly → local inhibitor (FIL - Feedback Inhibitor of Lactation) accumulates\\\\n- Reduces prolactin signaling\\\\n- Leads to decreased milk production\\\\n\\\\n**Oversupply**:\\\\n- Occurs in first 4-6 weeks\\\\n- Results in engorgement, leaking, painful feeds\\\\n- Usually self-resolves with established lactation,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Colostrum benefits = Antibodies (IgA), White cells, Laxative (meconium), Protein-rich\\\\\\\",\\\\n            explanation: \\\\\\\"Why colostrum is called liquid gold\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Milk composition = Protein decreases, Fat increases, Lactose stays same from early to mature milk\\\\\\\",\\\\n            explanation: \\\\\\\"Changes in milk composition over time\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Foremilk vs hindmilk concept: infant must feed long enough to get fat-rich hindmilk\\\\\\\",\\\\n          \\\\\\\"Lactose in milk is unique sugar produced in breast - primary energy source for infant\\\\\\\",\\\\n          \\\\\\\"Mature milk composition relatively constant after 4 weeks despite maternal diet variations\\\\\\\",\\\\n          \\\\\\\"Breast rarely 'empties' completely - some residual milk remains\\\\\\\",\\\\n          \\\\\\\"Frequent, unrestricted feeds prevent engorgement and establish supply\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Physiology of Lactation\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Williams Obstetrics\\\\\\\", chapter: \\\\\\\"Lactation and Breastfeeding\\\\\\\", edition: \\\\\\\"26th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"breastfeeding-lactation-clinical\\\\\\\",\\\\n        title: \\\\\\\"Breastfeeding & Lactation - Clinical Applications\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Clinical management of breastfeeding, common problems, and lactation support in Indian healthcare settings.\\\\\\\",\\\\n        contentMd: ``# Breastfeeding & Lactation - Clinical Applications\\\\n\\\\n## Initiation of Breastfeeding\\\\n\\\\n### First Feed (Within 1 Hour)\\\\n- Skin-to-skin contact immediately after delivery\\\\n- Infant will instinctively search for breast (rooting reflex)\\\\n- Colostrum adequate for initial feeds\\\\n- Helps with uterine contraction (oxytocin) and placental delivery\\\\n\\\\n### Position and Latch\\\\n**Correct position**:\\\\n- Mother comfortable (sitting or lying)\\\\n- Infant's head, shoulders, and body in straight line\\\\n- Infant's mouth opposite mother's nipple\\\\n\\\\n**Correct latch**:\\\\n- Infant's mouth covers entire areola (not just nipple)\\\\n- Infant's lips flange outward\\\\n- Cheeks rounded (not dimpled)\\\\n- Chin touching breast\\\\n- Milk visible at corners of mouth\\\\n\\\\n**Signs of poor latch**:\\\\n- Nipple trauma, cracking\\\\n- Infant not gaining weight\\\\n- Mother experiences pain\\\\n- Inadequate milk transfer\\\\n\\\\n## Feeding Frequency and Duration\\\\n- **Newborns**: 8-12 feeds per 24 hours (every 2-3 hours)\\\\n- **Duration**: 10-20 minutes per breast (let infant come off spontaneously)\\\\n- **Both breasts**: Alternate starting breast to ensure equal stimulation\\\\n- **No scheduled feeds**: Demand-based feeding more successful\\\\n\\\\n## Monitoring Adequate Feeding\\\\n**Infant indicators**:\\\\n- 6-8 wet diapers per day by day 5\\\\n- 3-4 stools per day (yellow, seedy appearance in breastfed infants)\\\\n- Audible swallowing during feeds\\\\n- Weight: Return to birth weight by 10-14 days\\\\n- Active, alert behavior between feeds\\\\n\\\\n**Maternal indicators**:\\\\n- Feels milk letdown (tingling, fullness)\\\\n- Spontaneous leaking between feeds\\\\n- Breast softens after feeds\\\\n- No persistent pain\\\\n\\\\n## Common Breastfeeding Problems\\\\n\\\\n### Engorgement\\\\n**Cause**: Vascular congestion and edema from milk accumulation (usually days 3-5)\\\\n**Management**:\\\\n- Frequent feeds (every 2-3 hours)\\\\n- Manual expression before feeds to soften areola\\\\n- Cold compresses between feeds\\\\n- NSAIDs for pain\\\\n- Supportive bra\\\\n- Usually resolves in 24-48 hours\\\\n\\\\n### Sore/Cracked Nipples\\\\n**Cause**: Poor latch, aggressive suckling, thrush\\\\n**Management**:\\\\n- Correct latch (most important)\\\\n- Vary positions\\\\n- Express milk and apply to nipple (natural healing)\\\\n- Lanolin or purified hydrogel pads\\\\n- If bleeding/non-healing: Check for thrush, consider temporary expression\\\\n- Continue feeding through pain (usually resolves in 1-2 weeks)\\\\n\\\\n### Mastitis\\\\n**Cause**: Blocked duct, milk stasis, bacterial infection (S. aureus, E. coli)\\\\n**Clinical features**: Localized pain, redness, swelling, fever, malaise\\\\n**Management**:\\\\n- Frequent feeds from affected breast (gravity helps drainage)\\\\n- Change positions to help drain affected area\\\\n- Warm compresses before feeds\\\\n- Antibiotics: First-line amoxicillin-clavulanate or flucloxacillin (safe in lactation)\\\\n- Analgesics and antipyretics\\\\n- Breast abscess: May require drainage, continue feeds from opposite breast\\\\n\\\\n### Insufficient Milk Supply\\\\n**Assessment**:\\\\n- Infant not gaining weight\\\\n- <6 wet diapers after day 5\\\\n- Poor latch indicated by mother's examination\\\\n\\\\n**Causes**:\\\\n- Infrequent feeds (most common)\\\\n- Poor latch\\\\n- Stress, inadequate rest\\\\n- Maternal illness\\\\n- Medications (dopamine agonists)\\\\n- Hormonal: Thyroid disease, PCOS\\\\n\\\\n**Management**:\\\\n- Evaluate latch by lactation consultant\\\\n- Increase feed frequency to 10-12/day\\\\n- Ensure complete breast emptying (manual expression if needed)\\\\n- Maternal nutrition and hydration\\\\n- Stress reduction, adequate rest\\\\n- Galactagogues if above measures insufficient:\\\\n  - Metoclopramide (Reglan) 10 mg TID × 7-14 days\\\\n  - Domperidone (in some countries) 10 mg TID\\\\n  - Fenugreek, blessed thistle (herbal galactagogues)\\\\n\\\\n### Tongue-Tie (Ankyloglossia)\\\\n**Definition**: Short lingual frenulum limiting tongue mobility\\\\n**Effect**: Poor latch, difficulty with breastfeeding\\\\n**Management**:\\\\n- If severe and affecting feeding: Frenotomy (surgical release)\\\\n- Usually performed in first 6 months\\\\n- Improves latch and comfort\\\\n\\\\n## Contraindications to Breastfeeding\\\\n**Absolute** (maternal):\\\\n- Active tuberculosis (until treated)\\\\n- Herpes simplex on breast (can feed from other breast)\\\\n- HIV in resource-limited settings (MTCT risk)\\\\n- Certain medications: Chemotherapy, radioactive iodine\\\\n\\\\n**Neonatal**:\\\\n- Galactosemia (requires lactose-free formula)\\\\n- Severe phenylketonuria (may still breastfeed with medical supervision),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"ENGORGEMENT management = Frequent feeds, Express to soften, Cold compresses, NSAIDs\\\\\\\",\\\\n            explanation: \\\\\\\"Steps to manage breast engorgement\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"MASTITIS = Fever, localized pain/redness, antibiotics + frequent feeds from affected breast\\\\\\\",\\\\n            explanation: \\\\\\\"Key features and management\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Early and frequent breastfeeding is most effective prevention for breast problems\\\\\\\",\\\\n          \\\\\\\"Poor latch is most common cause of nipple pain and insufficient milk\\\\\\\",\\\\n          \\\\\\\"Lactation consultant should evaluate before considering supplementation\\\\\\\",\\\\n          \\\\\\\"Most maternal medications are compatible with breastfeeding\\\\\\\",\\\\n          \\\\\\\"Breast abscess treatment: antibiotics + drainage ± continued feeding from unaffected breast\\\\\\\",\\\\n          \\\\\\\"India-specific: Access to lactation consultants limited; training community health workers is key\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Management of Common Breastfeeding Problems\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"IAPA Guidelines on Breastfeeding\\\\\\\", chapter: \\\\\\\"Lactation Management and Troubleshooting\\\\\\\", edition: \\\\\\\"Latest\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"breastfeeding-lactation-exam\\\\\\\",\\\\n        title: \\\\\\\"Breastfeeding & Lactation - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Key clinical scenarios and examination-focus topics on breastfeeding management.\\\\\\\",\\\\n        contentMd: ``# Breastfeeding & Lactation - Exam Prep\\\\n\\\\n## Common Clinical Scenarios\\\\n\\\\n### Scenario 1: Engorgement at Day 3\\\\n**Case**: Postpartum mother with hard, painful breasts, low-grade fever, infant unable to latch\\\\n- **Management**: Educate about frequent feeds (8-12/24 hrs), manual expression to soften areola before feeds, cold compresses, NSAIDs for pain\\\\n- **Reassurance**: Usually resolves in 24-48 hours with these measures\\\\n- **Note**: Not mastitis if no localized signs\\\\n\\\\n### Scenario 2: Sore Nipples at Day 2\\\\n**Case**: Nipples are cracked and bleeding, mother reluctant to feed\\\\n- **Primary cause**: Poor latch\\\\n- **Management**: Lactation consultant assessment, correct position, varied feeds, lanolin application, consider temporary cup feeding while nipples heal\\\\n- **Key point**: Continue feeding if possible despite pain\\\\n\\\\n### Scenario 3: Suspected Mastitis\\\\n**Case**: Day 10 postpartum, fever 39°C, hard, red area in upper outer quadrant, mother systemically unwell\\\\n- **Management**: Antibiotics (amoxicillin-clavulanate 625 mg TID), analgesics, warm compresses, frequent feeds from affected breast, rest\\\\n- **Follow-up**: Reassess in 48 hours; if worsening → ultrasound to rule out abscess\\\\n- **Drain status**: If fluctuant → aspiration/drainage needed\\\\n\\\\n### Scenario 4: Poor Weight Gain\\\\n**Case**: 3-week-old infant born 3.5 kg, now 3.2 kg, <6 wet diapers/day\\\\n- **Assessment**: Evaluate for poor latch, tongue-tie, insufficient milk\\\\n- **Management**: Lactation consultant assessment, rule out infant issues (tongue-tie, palate issues), increase feed frequency\\\\n- **If latch normal**: Assess maternal factors (stress, inadequate rest, nutrition), consider supplementation temporarily while addressing cause\\\\n- **Monitoring**: Daily weights, reassess in 1 week\\\\n\\\\n### Scenario 5: Mother on Antibiotics\\\\n**Case**: Postpartum with cellulitis, needs antibiotics; concerned about breastfeeding safety\\\\n- **Counseling**: Most antibiotics (penicillins, cephalosporins, macrolides) are safe during breastfeeding\\\\n- **Safe choices**: Amoxicillin, cephalexin, erythromycin\\\\n- **Monitor infant**: Watch for diarrhea or rash; most infants unaffected\\\\n- **Note**: Continue breastfeeding through antibiotic course\\\\n\\\\n## Key Points for Exams\\\\n\\\\n### Milk Composition Knowledge\\\\n- **Colostrum** (days 1-5): High protein (2%), high antibodies, low volume\\\\n- **Mature milk** (after 3-4 weeks): Low protein (0.9%), high fat, standard volume\\\\n- **Foremilk**: Low fat (2%), high volume\\\\n- **Hindmilk**: High fat (4-5%), concentrated nutrition\\\\n\\\\n### Duration of Exclusive Breastfeeding\\\\n- **WHO/India recommendation**: 6 months exclusive breastfeeding\\\\n- **Introduction of solids**: 6 months\\\\n- **Continuation**: Breastfeeding up to 2 years or beyond\\\\n\\\\n### Lactogenesis Stages\\\\n- **Stage 1**: Pregnancy to day 5 (colostrum)\\\\n- **Stage 2**: Day 2-4 postpartum (milk \\\\\\\"comes in\\\\\\\")\\\\n- **Stage 3**: Maintenance lactation (after ~2 weeks)\\\\n\\\\n### Hormonal Control\\\\n- **Prolactin**: Increased by suckling, needed for milk production\\\\n- **Oxytocin**: Released by suckling, causes letdown reflex\\\\n- **Dopamine agonists**: Suppress lactation (cabergoline, bromocriptine)\\\\n\\\\n## India-Specific Exam Focus\\\\n- National Breastfeeding Promotion standards\\\\n- Integrated Child Development Services (ICDS) role in supporting breastfeeding\\\\n- NRHM initiatives for lactation support\\\\n- Training of Accredited Social Health Activists (ASHAs) in breastfeeding counseling\\\\n- Community Health Volunteers role in lactation support,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Adequate breastfeeding = 6-8 wet diapers, 3-4 yellow stools, audible swallowing, weight stable\\\\\\\",\\\\n            explanation: \\\\\\\"Signs infant is receiving adequate milk\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Maternal galactagogues = Metoclopramide, Domperidone, Fenugreek, Frequent feeds (most important)\\\\\\\",\\\\n            explanation: \\\\\\\"Methods to increase milk supply\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Frequent, unrestricted breastfeeding prevents most problems\\\\\\\",\\\\n          \\\\\\\"Lactation consultant assessment key before supplementing\\\\\\\",\\\\n          \\\\\\\"Mastitis requires antibiotics AND frequent feeding from affected breast\\\\\\\",\\\\n          \\\\\\\"Breast abscess may develop despite antibiotic treatment of mastitis\\\\\\\",\\\\n          \\\\\\\"Most maternal medications compatible with breastfeeding\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Troubleshooting Breastfeeding Challenges\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"FOGSI Manual on Breastfeeding\\\\\\\", chapter: \\\\\\\"Clinical Management\\\\\\\", edition: \\\\\\\"Latest\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"breastfeeding-lactation-q-and-a\\\\\\\",\\\\n        title: \\\\\\\"Breastfeeding & Lactation - Q&A Review\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Essential questions and answers about lactation physiology and breastfeeding management.\\\\\\\",\\\\n        contentMd: ``# Breastfeeding & Lactation - Q&A Review\\\\n\\\\n## Q1: What is the primary hormone responsible for milk production?\\\\n**A**: Prolactin, secreted by the anterior pituitary gland. Suckling stimulates TRH (thyrotropin-releasing hormone) which increases prolactin levels. Without frequent suckling/breast emptying, prolactin levels fall and milk production decreases.\\\\n\\\\n## Q2: How long after delivery should a mother initiate breastfeeding?\\\\n**A**: Within the first 1 hour postpartum, ideally through skin-to-skin contact. Early breastfeeding improves milk supply establishment, aids uterine involution through oxytocin, and reduces maternal hemorrhage.\\\\n\\\\n## Q3: A mother reports her breasts are painfully engorged on day 4. What is the cause and management?\\\\n**A**: **Cause**: Vascular congestion from milk accumulation. **Management**: Frequent feeds (8-12/day), manual expression to soften areola before feeds, cold compresses, NSAIDs, supportive bra. Reassurance that this typically resolves in 24-48 hours.\\\\n\\\\n## Q4: How do you assess if a newborn is receiving adequate breastfeeding?\\\\n**A**: By 5-6 days, adequate feeding is indicated by: 6-8 wet diapers/day, 3-4 yellow stools/day, audible swallowing during feeds, infant appearing satisfied between feeds. Weight should return to birth weight by 10-14 days.\\\\n\\\\n## Q5: A mother with a red, painful area on her breast, fever, and chills. Diagnosis and management?\\\\n**A**: **Diagnosis**: Mastitis (acute inflammation of breast tissue). **Management**: Antibiotics (amoxicillin-clavulanate or flucloxacillin - safe in lactation), analgesics, frequent feeds from affected breast (helps drain), warm compresses, rest. If no improvement in 48 hours: ultrasound to rule out breast abscess.\\\\n\\\\n## Q6: Distinguish between foremilk and hindmilk. Why is the distinction important?\\\\n**A**: **Foremilk**: First milk obtained at start of feed, lower fat (2%), higher lactose. **Hindmilk**: Milk at end of feed, higher fat (4-5%), more calories. **Importance**: Infant must feed long enough to obtain fat-rich hindmilk for satiety and growth; early cessation can lead to poor weight gain despite adequate milk supply.\\\\n\\\\n## Q7: A mother with tongue-tied infant struggling to breastfeed. When and how should this be managed?\\\\n**A**: If tongue-tie significantly affects feeding (poor latch, inadequate milk transfer), frenotomy (surgical release of frenulum) is indicated. Timing: Usually performed between 2-6 months of life. Referral to trained provider (pediatrician or ENT) for assessment and procedure.\\\\n\\\\n## Q8: What is the \\\\\\\"Feedback Inhibitor of Lactation\\\\\\\" (FIL) and its clinical significance?\\\\n**A**: FIL is a peptide in breast milk that accumulates when milk is not removed, reducing further prolactin signaling. **Clinical significance**: If breast is not emptied regularly, FIL accumulates → milk production decreases. This explains why breast fullness/pain can reduce supply if not managed (frequent feeding is treatment).\\\\n\\\\n## Q9: A mother reports insufficient milk supply. What are the most common causes and initial management approach?\\\\n**A**: **Most common causes**: (1) Infrequent feeds, (2) Poor latch. **Initial management**: Evaluate latch (lactation consultant), increase feed frequency to 10-12/day, ensure complete breast emptying, assess maternal rest/nutrition/stress, rule out tongue-tie in infant. Only if above measures fail should galactagogues be considered.\\\\n\\\\n## Q10: What medications are contraindicated during breastfeeding?\\\\n**A**: Most medications are compatible. **Contraindicated**: Chemotherapy agents, radioactive iodine, certain anticonvulsants. **Relative caution**: Some antithyroid drugs, immunosuppressants. Always check updated references (LactMed database, AAP guidelines) as safety data evolves.\\\\n\\\\n## Q11: A newborn with elevated bilirubin. Should breastfeeding be continued? Why or why not?\\\\n**A**: **Yes, continue breastfeeding frequently** (8-12/day) because: (1) Good milk intake reduces enterohepatic circulation of bilirubin, (2) Breastfeeding does not cause jaundice (though early inadequate feeding can contribute), (3) Phototherapy/exchange transfusion indicated for high bilirubin levels, not breastfeeding cessation. Monitor feeding adequacy and consider supplementation only if inadequate milk transfer.\\\\n\\\\n## Q12: Compare colostrum to mature milk in terms of composition and its clinical relevance.\\\\n**A**:\\\\n| Feature | Colostrum | Mature Milk |\\\\n|---------|-----------|------------|\\\\n| Protein | 2-2.5% | 0.9-1.2% |\\\\n| Fat | 2-3% | 3-5% |\\\\n| Lactose | 5.8% | 6.9-7.2% |\\\\n| IgA/antibodies | Very high | Lower but present |\\\\n| Volume | 10-100 mL/feed | 600-1000 mL/day |\\\\n| Laxative effect | High (meconium clearance) | Low |\\\\n| Minerals | High (especially iron) | Lower but bioavailable |\\\\n\\\\n**Clinical relevance**: Colostrum is complete nutrition for first 3-5 days despite low volume. IgA provides mucosal immunity. Gradual shift in composition matches infant's developmental needs.\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\"\""
-}
-}
-}
-}
-];
-];
-];
+        contentMd: `# Cesarean Section - Foundation
+
+## Definition and Significance
+Cesarean section is the delivery of fetus, placenta, and membranes through an incision in the uterus. It is the most common major abdominal surgery performed worldwide and accounts for 15-45% of deliveries globally.
+
+## Prevalence in India
+- Varies from 15-30% in urban centers to 5-15% in rural areas
+- Normal vaginal delivery remains the standard in India
+- LSCS is reserved for specific indications per NMC guidelines
+
+## Classification of Cesarean Sections
+
+### By Urgency
+- **Elective**: Planned before labor onset
+- **Emergency**: During labor or in urgent situations
+- **Perimortem**: During cardiopulmonary resuscitation
+
+### By Timing
+- **Planned (Primary)**: First LSCS
+- **Repeat**: Subsequent LSCS
+
+## Indications for Cesarean Delivery
+
+### Maternal Indications
+- Previous LSCS (relative)
+- Cephalopelvic disproportion
+- Placenta previa
+- Placental abruption
+- Uterine rupture
+- Severe pre-eclampsia/eclampsia
+- Medical conditions (cardiac disease, severe asthma)
+
+### Fetal Indications
+- Fetal distress/abnormal CTG
+- Malpresentation (transverse lie, brow)
+- Fetal anomalies incompatible with vaginal delivery
+
+### Combined Indications
+- Prolonged labor unresponsive to augmentation
+- Failed induction of labor
+
+## Legal and Ethical Aspects in India
+- LSCS on demand without medical indication is controversial
+- Informed consent mandatory
+- Documentation of indications required
+- LSCS for failure to progress should attempt trial of labor after prior vaginal delivery`,
+        mnemonics: [
+          { text: "LSCS indications = Previous scar, Placenta (previa/abruption), Fetal distress, Malpresentation, Cephalopelvic disproportion, Pre-eclampsia", explanation: "Major maternal and fetal indications" },
+          { text: "CEPHALIC vs NON-CEPHALIC = Only cephalic suitable for vaginal trial", explanation: "Presentation type determines delivery route" }
+        ],
+        keyPoints: [
+          "LSCS is major abdominal surgery with significant maternal morbidity",
+          "Vaginal birth after cesarean (VBAC) acceptable in appropriate candidates",
+          "Repeat LSCS increases complications: adhesions, placenta previa, accreta",
+          "India has high rates of unnecessary LSCS in private practice",
+          "Emergency LSCS carries higher maternal mortality than elective"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Operative Obstetrics - Cesarean Section", edition: "9th" },
+          { book: "Padubidri & Shirish's Obstetrics and Gynaecology", chapter: "Cesarean Delivery", edition: "3rd" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "cesarean-section-layer-2-mechanism",
+        title: "Cesarean Section - Mechanism",
+        estimatedMinutes: 25,
+        summary: "Surgical anatomy, technique variations, and physiological changes during and after cesarean delivery.",
+        contentMd: `# Cesarean Section - Mechanism
+
+## Surgical Anatomy
+**Abdominal layers traversed**:
+1. Skin and subcutaneous tissue
+2. Anterior rectus sheath
+3. Rectus abdominis muscle
+4. Peritoneum
+5. Bladder peritoneum (reflected downward)
+6. Myometrium
+7. Visceral peritoneum
+
+## Lower Segment Transverse Cesarean (LSCS) - Most Common
+- **Incision location**: Lower uterine segment (non-contracting)
+- **Advantages**:
+  - Lower repeat LSCS requirement
+  - Less uterine rupture in subsequent pregnancy
+  - Easier repair
+  - Less blood loss
+- **Disadvantages**:
+  - Slightly longer operative time
+  - More bladder mobilization required
+
+## Classical Cesarean Section
+- **Incision location**: Upper uterine segment
+- **Indications**:
+  - Placenta previa covering lower segment
+  - Massive hemorrhage
+  - Failed LSCS trial
+- **Disadvantages**:
+  - Higher infection risk
+  - Greater blood loss
+  - Increased uterine rupture in future pregnancies (contraindication to VBAC)
+
+## Operative Sequence for LSCS
+1. Abdominal incision (Pfannenstiel preferred in India)
+2. Peritoneal incision and bladder mobilization
+3. Uterine incision (transverse preferred)
+4. Amniotic fluid assessment
+5. Fetal extraction
+6. Placental delivery (spontaneous vs manual)
+7. Uterine repair (1-2 layers)
+8. Peritoneal closure vs non-closure (both acceptable)
+9. Fascial and skin closure
+
+## Anesthesia for LSCS
+- **Neuraxial (Regional)**: Spinal/epidural preferred in India
+- **General anesthesia**: Emergency cases, failed regional
+- **Local anesthesia**: Rare, only in resource-limited settings
+
+## Hemodynamic Changes During LSCS
+- Aortocaval compression from supine position (left uterine displacement reduces)
+- Blood loss: 800-1200 mL (higher in emergency)
+- Third spacing: 1-2 L during and after LSCS`,
+        mnemonics: [
+          { text: "LSCS advantages = Lower infection, Better repair, Future VBAC possible, Less rupture risk", explanation: "Why lower segment LSCS preferred" },
+          { text: "Classical LSCS = Previa, Placenta accreta risk, Emergency massive bleed, Repeat failed LSCS", explanation: "Limited indications" }
+        ],
+        keyPoints: [
+          "LSCS is major abdominal surgery requiring careful anesthesia and monitoring",
+          "Blood loss averages 1000 mL - anticipate need for fluid resuscitation",
+          "Regional anesthesia preferred in India for LSCS in absence of contraindications",
+          "Peritoneal closure is optional and doesn't affect outcomes",
+          "Double-layer uterine closure reduces dehiscence risk"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Operative Obstetrics - Cesarean Section Technique", edition: "9th" },
+          { book: "Williams Obstetrics", chapter: "Delivery via Cesarean Section", edition: "26th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "cesarean-section-layer-3-clinical",
+        title: "Cesarean Section - Clinical Applications",
+        estimatedMinutes: 25,
+        summary: "Clinical decision-making, trial of labor after cesarean, management of complications during and after LSCS.",
+        contentMd: `# Cesarean Section - Clinical Applications
+
+## Pre-operative Assessment for Elective LSCS
+- Anemia screening and correction
+- Infection screen (COVID, TB in India context)
+- Cardiovascular and respiratory assessment
+- Discuss risks: thromboembolism, infection, anesthesia complications
+- Obtain informed consent documenting indication
+
+## Emergency vs Elective LSCS
+**Elective LSCS**:
+- Scheduled for 39 weeks for first LSCS (reduces neonatal morbidity)
+- No labor contractions
+- Normal hemodynamics
+
+**Emergency LSCS**:
+- Variable blood loss
+- Risk of aspiration with general anesthesia
+- Fetal distress complicates decision-making
+- Maternal exhaustion and dehydration
+
+## Maternal Morbidity After LSCS
+- **Infection**: Wound (2-5%), endometritis (3-5%)
+- **Thromboembolism**: DVT (0.5-2%), PE (0.1-0.3%)
+- **Hemorrhage**: Major (1-2%), requiring transfusion
+- **Anesthesia**: Headache, neurological injury (rare)
+- **Adhesions**: Lead to infertility, ectopic pregnancy, bowel obstruction
+- **Uterine rupture**: In future pregnancy (0.3-0.5% after LSCS)
+- **Hysterectomy**: 0.1-0.4% (peripartum hysterectomy)
+
+## Trial of Labor After Cesarean (TOLAC) in India
+**Candidates for TOLAC**:
+- Previous LSCS with low transverse incision
+- No other contraindications to vaginal delivery
+- Adequate maternal pelvis
+- Single pregnancy
+- Informed consent after counseling
+
+**Success rate**: 60-80% achieve vaginal delivery
+**Risk of uterine rupture**: 0.3-0.5% (vs 0% with repeat LSCS)
+
+**Contraindications to TOLAC**:
+- Previous classical LSCS
+- Previous uterine rupture
+- Placenta previa
+- Malpresentation
+- Cephalopelvic disproportion
+
+## Neonatal Outcomes
+- Planned LSCS at 39 weeks: Lower respiratory distress
+- Emergency LSCS: Higher admission to NICU
+- Planned LSCS at term: Excellent neonatal outcomes
+
+## Post-operative Care After LSCS
+1. Monitor vital signs, urine output (target >0.5 mL/kg/hour)
+2. Prophylactic antibiotics (cephalosporin within 60 minutes)
+3. Thromboprophylaxis: LMWH for risk factors
+4. Early ambulation (reduce VTE risk)
+5. Delayed first oral intake (risk of aspiration)
+6. Catheter removal when mobilizing
+7. Pain management: Spinal morphine, NSAIDs, acetaminophen
+8. Breastfeeding support from early postoperative period`,
+        mnemonics: [
+          { text: "VBAC CANDIDATES = Previous LSCS only, Adequate pelvis, Informed consent, No absolute contraindication", explanation: "Eligibility criteria" },
+          { text: "Morbidity after LSCS = Infection, Hemorrhage, Thrombosis, Adhesions, Future rupture", explanation: "Major complications" }
+        ],
+        keyPoints: [
+          "Elective LSCS at 39 weeks reduces respiratory distress without increasing stillbirth",
+          "TOLAC success rate is 60-80% with proper patient selection in India",
+          "Prophylactic antibiotics reduce infection by 60%",
+          "Early mobilization and LMWH reduce VTE risk",
+          "Repeated LSCS increases accreta risk: 1% after 2nd, 3% after 3rd, rising exponentially",
+          "Antibiotic choice should include gram-negative coverage for Indian setting"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Postoperative Care and Complications of LSCS", edition: "9th" },
+          { book: "FOGSI Guidelines on Cesarean Section", chapter: "TOLAC and Repeat LSCS", edition: "Latest" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "cesarean-section-layer-4-exam",
+        title: "Cesarean Section - Exam Prep",
+        estimatedMinutes: 20,
+        summary: "Important clinical scenarios, decision-making algorithms, and examination-focus topics for LSCS.",
+        contentMd: `# Cesarean Section - Exam Prep
+
+## Common LSCS Scenarios in Exams
+
+### Scenario 1: Failed Induction
+**Case**: 24-year-old G1P0 with meconium-stained liquor, CTG shows late deceleration, cervix 3 cm at 24 hours
+- **Management**: Continuous monitoring, assess progress over next 4-6 hours
+- **If no progress**: LSCS for failed induction + fetal distress
+- **Not indication alone**: Many induce again or continue
+
+### Scenario 2: Placenta Previa
+**Case**: 35-week G2P1 with placenta previa completely covering os on ultrasound
+- **Management**: Hospitalization, bed rest, anemia correction, corticosteroids if <37 weeks, LSCS delivery (transabdominal approached carefully to avoid placenta), pelvic preparation in OR, cross-matched blood available
+- **If massive hemorrhage**: Emergency LSCS by experienced surgeon
+
+### Scenario 3: Previous LSCS Wanting TOLAC
+**Case**: G2P1 with previous LSCS for failure to progress, now in active labor at 38 weeks
+- **Suitability**: Assess pelvis (pelvimetry if indicated), discuss rupture risk
+- **Decision**: If adequate pelvis + informed consent = trial TOLAC
+- **Monitoring**: Continuous CTG, prepare for emergency LSCS
+
+### Scenario 4: Preeclampsia at 34 Weeks
+**Case**: Severe preeclampsia with uncontrolled hypertension, platelets 80,000
+- **Timing**: LSCS delivery (not vaginal)
+- **Anesthesia**: Epidural safer than general if platelets >80,000
+- **Adjuvants**: MgSO4, antihypertensives perioperatively
+
+## Clinical Pearls for Exams
+- **Indication documentation**: Always document exact indication in records
+- **LSCS on demand**: Describe risks to patient before consent
+- **Vaginal delivery trial**: Can attempt even after 1-2 previous LSCS if appropriate
+- **Repeat LSCS timing**: Elective LSCS should be at 39 weeks, not 37-38 weeks
+- **Morbidity increases with**: Emergency status, prolonged labor before LSCS, previous LSCS
+- **Success TOLAC predictors**: Maternal age <35, BMI <30, vaginal delivery before LSCS
+
+## Operative Indications - Ranking by Frequency in India
+1. Previous LSCS (most common)
+2. Failure to progress/CPD
+3. Fetal distress
+4. Malpresentation
+5. Placenta previa
+6. Pre-eclampsia/eclampsia
+7. Placental abruption
+8. Medical complications`,
+        mnemonics: [
+          { text: "LSCS TIMING = 39 weeks elective, 37 weeks placenta previa, ASAP fetal distress/abruption", explanation: "Appropriate timing" },
+          { text: "EMERGENCY LSCS = Fetal distress, Abruption, Cord prolapse, Failed emergency induction", explanation: "Requires delivery within 30 minutes" }
+        ],
+        keyPoints: [
+          "Document indication clearly: 'Failure to progress grade 2' vs vague 'prolonged labor'",
+          "Discuss cesarean delivery risks before labor in high-risk patients",
+          "Most common indication worldwide is previous LSCS",
+          "India-specific: Awareness about unnecessary LSCS in private sector",
+          "NMC competency: Manage LSCS indication, technique, and complications"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Indications and Complications of LSCS", edition: "9th" },
+          { book: "FOGSI Guide to Operative Obstetrics", chapter: "Cesarean Delivery Indications and Timing", edition: "Latest" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "cesarean-section-layer-5-active-recall",
+        title: "Cesarean Section - Q&A Review",
+        estimatedMinutes: 30,
+        summary: "Essential questions and answers about LSCS indications, technique, and complications for active recall.",
+        contentMd: `# Cesarean Section - Q&A Review
+
+## Q1: What is the most common indication for primary LSCS in India?
+**A**: Failure to progress/cephalopelvic disproportion (CPD), though previous LSCS is most common overall in multiparous women. In private sector, non-progressive labor and patient request also drive LSCS.
+
+## Q2: At what gestational age should elective LSCS for first indication be scheduled?
+**A**: 39+0 weeks or later. Delivery before 39 weeks increases neonatal respiratory morbidity. Exception: planned LSCS before 39 weeks for recurrent late stillbirth or other specific indications.
+
+## Q3: What is the success rate for VBAC in carefully selected candidates?
+**A**: 60-80% achieve vaginal delivery after one prior LSCS. Higher success with vaginal delivery history, maternal age <35, BMI <30, spontaneous labor.
+
+## Q4: Describe double-layer uterine closure during LSCS. What is its advantage?
+**A**: Two layers of continuous absorbable suture (typically 1-0 PDS or vicryl) approximating the myometrium. Advantages: reduces uterine dehiscence risk and hemostasis. Some studies suggest reduced uterine rupture in subsequent pregnancy.
+
+## Q5: A patient with placenta previa covering the entire internal os presents with painless bleeding at 36 weeks. Management?
+**A**: Hospitalization, bed rest, anemia correction, corticosteroids if <37 weeks, LSCS delivery (transabdominal approached carefully to avoid placenta), pelvic preparation in OR, cross-matched blood available. If massive hemorrhage: emergency LSCS by experienced surgeon.
+
+## Q6: Post-LSCS, when is peritoneal closure recommended?
+**A**: Closure is optional. Most studies show no benefit of closure vs non-closure. Reduces operative time if non-closure practiced. Many use closure for infection prevention in setting of contamination.
+
+## Q7: What is the approximate blood loss in an uncomplicated LSCS?
+**A**: 800-1200 mL for vaginal deliveries; cesarean typically 1000-1500 mL blood loss. Emergency LSCS may have 1500-2000 mL loss. Measured blood loss typically underestimated by 30-50%.
+
+## Q8: Which anesthesia is preferred for LSCS in India and why?
+**A**: Neuraxial anesthesia (spinal or epidural) is preferred because it: avoids aspiration risk, allows early maternal-infant bonding, has lower complication rates, reduces postoperative pain with intrathecal opioids. General anesthesia reserved for emergency cases, contraindicated neuraxial, or failed regional block.
+
+## Q9: A patient with previous LSCS for failed induction now wants TOLAC. You assess cephalopelvic adequacy. What pelvimetry method is best?
+**A**: Clinical pelvimetry by experienced examiner is adequate for most. MRI pelvimetry reserved for clinical suspicion of inadequate pelvis. Pelvimetry should NOT be routine but can guide counseling for borderline cases.
+
+## Q10: What is peripartum hysterectomy and when is it indicated?
+**A**: Surgical removal of uterus at or near delivery. Indications: placenta accreta spectrum (most common), massive PPH uncontrolled by other measures, uterine rupture, uterine atony unresponsive to uterotonics and tamponade. Morbidity 2-3 times higher than LSCS alone. Should be last resort after all conservative measures.
+
+## Q11: At what thickness is lower uterine segment considered "thin" and potentially at risk for rupture?
+**A**: <1.5 mm on postoperative ultrasound correlates with increased dehiscence risk in literature. However, no absolute cutoff below which rupture is guaranteed. Clinical judgment and ultrasound assessment guide counseling.
+
+## Q12: How long should a patient avoid heavy lifting/exercise after LSCS?
+**A**: Generally 6 weeks for routine activities. Return to strenuous exercise (gym, running) at 8-12 weeks after uncomplicated LSCS. Heavy lifting >5 kg avoided for 6 weeks to reduce hernia risk.`,
+        mnemonics: [],
+        keyPoints: [
+          "Elective LSCS at 39 weeks reduces respiratory distress without increasing stillbirth",
+          "TOLAC success 60-80%; requires previous low transverse LSCS and adequate pelvis",
+          "Double-layer uterine closure reduces dehiscence risk",
+          "Blood loss 1000-1500 mL typical; emergency cases may lose 1500-2000 mL",
+          "Regional anesthesia preferred in India; avoids aspiration and allows early bonding",
+          "Peripartum hysterectomy only if massive hemorrhage uncontrolled by other means",
+          "Previous LSCS most common indication overall; CPD most common for primary LSCS"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "LSCS Technique and Outcomes", edition: "9th" },
+          { book: "FOGSI Guide to Operative Obstetrics", chapter: "Cesarean Delivery", edition: "Latest" }
+        ]
+      }
+    ]
+  }
 ];

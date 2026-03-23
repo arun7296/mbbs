@@ -1,17 +1,567 @@
-export const obgLessonsPartEleven = [
+import type { TopicLessons } from "./content-loader";
+
+export const obgLessonsPartEleven: TopicLessons[] = [
   {
     topicCode: "OG-MOD-05-TOP-04",
     layers: [
       {
         layer: 1,
-        slug: "endometriosis-adenomyosis-foundation",
+        slug: "endometriosis-layer-1-foundation",
         title: "Endometriosis & Adenomyosis - Foundation",
         estimatedMinutes: 20,
         summary: "Endometriosis (ectopic endometrium outside uterus) and adenomyosis (ectopic endometrium within myometrium) are both estrogen-dependent conditions causing dysmenorrhea, infertility, and pelvic pain. Distinct but sometimes coexistent.",
-        contentMd: "# Endometriosis & Adenomyosis - Foundation\n\n## Endometriosis\n\n### Definition\nEctopic endometrial tissue (glands and stroma) present in locations outside the uterus.\n\n### Prevalence\n- **Overall**: 10-15% of reproductive-age women\n- **In infertile women**: 20-30%\n- **In women with dysmenorrhea**: 40-60%\n\n### Sites of Involvement (in order of frequency)\n1. **Ovary** (most common, 50-60%)\n2. **Peritoneum** (pelvic peritoneum, bowel serosa)\n3. **Rectosigmoid colon** (most common bowel site)\n4. **Fallopian tubes**\n5. **Round ligaments**\n6. **Rectovaginal septum**\n7. **Rare sites**: Bladder, ureter, lungs, brain, scars (surgical)\n\n### Classification\n\n**ASRM Staging (Based on extent)**:\n- **Stage I (Minimal)**: <1 cm\n- **Stage II (Mild)**: 1-5 cm\n- **Stage III (Moderate)**: 5-15 cm\n- **Stage IV (Severe)**: >15 cm or dense adhesions\n\n**Morphological Types**:\n1. **Peritoneal endometriosis**: Superficial (peritoneal implants)\n2. **Ovarian endometriomas**: \"Chocolate cysts\" (blood-filled)\n3. **Deep infiltrating endometriosis (DIE)**: Infiltrates myometrium or deeper structures (rectosigmoid, rectovaginal septum)\n\n### Clinical Features\n\n**Symptomatic**:\n- **Dysmenorrhea** (80% of women with endometriosis) - severe, progressive\n- **Dyspareunia** (especially if deep infiltrating disease)\n- **Pelvic pain** (chronic, cyclic or acyclic)\n- **Infertility** (30-50% of women with endometriosis)\n- **Diarrhea/constipation** (if bowel involvement)\n- **Hematuria/dysuria** (if bladder involvement)\n\n**Asymptomatic** (10-15% of cases, discovered incidentally)\n\n## Adenomyosis\n\n### Definition\nPresence of endometrial glands and stroma invading the myometrium (typically >2.5 mm beyond the junctional zone).\n\n### Prevalence\n- **Overall**: 10-15% of reproductive-age women, increases with age\n- **In women with dysmenorrhea**: 15-30%\n- **In women with infertility**: 10-20%\n\n### Pathological Features\n- **Junctional zone abnormality**: Thickening, increased vascularity\n- **Endometrial-myometrial junction disruption**: Abnormal interface\n- **Myometrial infiltration**: Glands and stroma invade myometrium\n- **Adenomyotic lesion**: Discrete nodular area (adenomyoma)\n\n### Classification\n\n**By Extent**:\n1. **Diffuse adenomyosis**: Widespread myometrial invasion\n2. **Focal adenomyosis**: Localized area (adenomyoma)\n\n**By Imaging/Pathology**:\n- **Mild**: <25% of myometrial depth involved\n- **Moderate**: 25-75% involvement\n- **Severe**: >75% involvement or continuous involvement from endometrium to serosa\n\n### Clinical Features\n\n**Dysmenorrhea**: 30-40% (often severe, progressive)\n- Different from endometriosis: Dull, aching (vs. sharp cramping)\n\n**Menorrhagia**: Heavy menstrual bleeding (50%)\n\n**Pelvic pain**: Chronic pelvic pain, often pre-menstrual\n\n**Infertility**: Present in 20% of adenomyosis patients\n\n**Tender, enlarged uterus**: On bimanual pelvic exam\n\n## Key Differences: Endometriosis vs Adenomyosis\n\n| Feature | Endometriosis | Adenomyosis |\n|---------|---------------|------------|\n| **Location** | Outside uterus | Within myometrium |\n| **Age** | Younger (20-40) | Older (40-50) |\n| **Parity** | Often nulliparous | Often multiparous |\n| **Menorrhagia** | Uncommon | Common (50%) |\n| **Dysmenorrhea** | Severe, sharp | Severe, dull, progressive |\n| **Exam finding** | May have nodules | Enlarged tender uterus |\n| **Imaging** | Ovarian cysts, peritoneal lesions | Junctional zone thickening |\n| **Infertility** | Common (30-50%) | Moderate (10-20%) |\n| **Coexistence** | 15-20% have both | 15-20% have both |\n\n## Pathophysiological Overview\n- **Retrograde menstruation** (endometriosis): Menstrual debris flows backward into peritoneum\n- **Coelomic metaplasia**: Primitive coelomic tissue differentiates into endometrium\n- **Bone marrow stem cell homing**: Progenitor cells migrate to ectopic sites\n- **Myometrial invasion** (adenomyosis): Endometrial basalis layer invades myometrium\n- **Estrogen dependence**: Both conditions ER-α overexpressed, aromatase upregulated\n- **Prostaglandin excess**: PGE2, PGF2α elevated → Pain, inflammation\n- **Inflammation**: Macrophages, IL-8, TNF-α, IL-6 elevated,\n        mnemonics: [\n          {\n            text: \"Endometriosis Locations: OPTICS\",\n            explanation: \"Ovary, Peritoneum, Tubes, Intestine (colon), Cervix, Scars\"\n          },\n          {\n            text: \"Adenomyosis Features: JAM\",\n            explanation: \"Junctional zone thickening, Age older, Myometrial invasion\"\n          }\n        ],\n        keyPoints: [\n          \"Endometriosis: ectopic endometrium outside uterus; prevalence 10-15%\",\n          \"Adenomyosis: endometrial invasion within myometrium; increases with age\",\n          \"Both cause dysmenorrhea and infertility; adenomyosis more often causes menorrhagia\",\n          \"Ovary most common site for endometriosis (chocolate cysts)\",\n          \"15-20% of women have both endometriosis and adenomyosis\"\n        ],\n        textbookRefs: [\n          { book: \"DC Dutta\", chapter: \"Ch 19\", edition: \"9th\" },\n          { book: \"Williams Gynecology\", chapter: \"Ch 16\", edition: \"4th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"endometriosis-adenomyosis-mechanism\",\n        title: \"Endometriosis & Adenomyosis - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiology involves retrograde menstruation, ectopic endometrial implantation, chronic inflammation, angiogenesis, prostaglandin production, and estrogen dysregulation. Understanding these mechanisms guides targeted therapy.\",\n        contentMd: "# Endometriosis & Adenomyosis - Mechanism\\n\\n## Endometriosis Pathophysiology\\n\\n### Theory 1: Retrograde Menstruation (Sampson Theory - Most Widely Accepted)\\n1. **Normal menstruation**: Anterograde flow (toward cervix)\\n2. **Retrograde menstruation**: 75-90% of women have some reflux through fallopian tubes\\n3. **Peritoneal spillage**: Menstrual debris (endometrial cells, blood, tissue) enters peritoneal cavity\\n4. **Implantation**: Endometrial cells implant on peritoneal surface\\n5. **Survival and growth**: Immune dysfunction allows cell survival and proliferation\\n\\n**Why doesn't everyone with retrograde menstruation get endometriosis?**\\n- Normal immune clearance eliminates most ectopic cells\\n- In endometriosis: Immune dysfunction allows persistence\\n\\n### Theory 2: Coelomic Metaplasia (de Novo Theory)\\n- Coelomic epithelium (peritoneum, ovarian surface) differentiates into endometrial tissue\\n- Triggered by inflammation, growth factors, hormones\\n- Explains endometriosis in locations without menstrual access (juvenile cases, nulliparous)\\n\\n### Theory 3: Bone Marrow-Derived Stem Cell Theory\\n- Progenitor cells from bone marrow migrate to ectopic sites\\n- Differentiate into endometrial cells\\n- May explain endometriosis in unusual locations\\n\\n## Cellular and Molecular Mechanisms in Endometriosis\\n\\n### 1. Immune Dysfunction\\n**Reduced immune clearance**:\\n- **NK (natural killer) cells**: Reduced number and function\\n- **Macrophages**: Increased but paradoxically fail to clear ectopic cells\\n  - Recruited by MCP-1 (monocyte chemoattractant protein-1)\\n  - Produce TNF-α, IL-8 perpetuating inflammation\\n- **T lymphocytes**: Reduced Th1, increased Th2 response (poor cell-mediated immunity)\\n\\n**Result**: Ectopic endometrial cells escape immune destruction\\n\\n### 2. Angiogenesis\\n- **VEGF** (vascular endothelial growth factor) upregulated in ectopic endometrium\\n- **Hypoxia-inducible factor-1α (HIF-1α)**: Activates VEGF\\n- **FGF** (fibroblast growth factor): Promotes new vessel formation\\n- **Result**: Abnormal vessel growth supporting ectopic lesions\\n\\n### 3. Inflammatory Mediators\\n**Prostaglandins**:\\n- **PGE2** and **PGF2α**: Markedly elevated in peritoneal fluid and ectopic lesions\\n- **Mechanism**: COX-2 upregulation in ectopic endometrium\\n- **Effects**: Myometrial contractions, uterine ischemia, pain\\n\\n**Cytokines**:\\n- **TNF-α**: Promotes inflammation, growth of ectopic tissue\\n- **IL-6, IL-8**: Promote angiogenesis, cell survival\\n- **IL-10, IL-11**: Anti-inflammatory, but dysregulated\\n\\n**Result**: Chronic inflammatory state perpetuates endometriosis\\n\\n### 4. Estrogen Dysregulation\\n**Estrogen receptor abnormalities**:\\n- **ER-α overexpression**: Increased estrogen responsiveness in ectopic endometrium\\n- **ER-β downregulation**: Loss of protective effect (ER-β normally suppresses proliferation)\\n\\n**Local estrogen production**:\\n- **Aromatase upregulation**: ↑ Conversion of androgens to estrogen locally\\n- **Result**: High local estrogen in lesions (20x higher than normal endometrium)\\n\\n**Estrogen metabolism**:\\n- **17β-HSD** (17 beta-hydroxysteroid dehydrogenase): ↑ Converts weak estrogen E1 to potent E2\\n- **Sulfatase activity**: ↑ Converts inactive estrone sulfate to active estrogen\\n\\n**Result**: Estrogen-dependent growth of ectopic endometrium\\n\\n### 5. Aromatase and Local Estrogen Synthesis\\n- Ectopic endometrium produces estrogen locally from androstenedione via aromatase\\n- Mediated by PGE2 (prostaglandins drive aromatase expression)\\n- Creates positive feedback loop: PGE2 ↑ → Aromatase ↑ → Estrogen ↑ → PGE2 ↑\\n\\n### 6. Progesterone Resistance\\n- **Progesterone receptor (PR)** expression altered in ectopic endometrium\\n- **Abnormal PR-A/PR-B ratio**: Loss of progesterone's anti-inflammatory effect\\n- **Impaired FOXO1 signaling**: Downstream of PR, normally suppresses growth\\n- **Result**: Ectopic endometrium fails to respond to progestins/progesterone\\n\\n### 7. Proliferation and Anti-apoptosis\\n- **Growth factors**: EGF, FGF, VEGF overexpressed\\n- **Anti-apoptotic factors**: Bcl-2, survivin upregulated\\n- **Result**: Ectopic endometrial cells survive and proliferate\\n\\n### 8. Neuroangiogenesis\\n- **Nerve fiber density**: Increased in peritoneal endometriosis lesions\\n- **Neurotrophins**: NGF (nerve growth factor) elevated\\n- **Result**: Increased innervation explains severe pain\\n\\n## Adenomyosis Pathophysiology\\n\\n### 1. Junctional Zone Dysfunction\\n**Normal structure**:\\n- Clear demarcation between endometrium and myometrium (junctional zone, <12 mm thick)\\n- Smooth muscle arrangement orderly\\n- Clear contractile activity pattern\\n\\n**In adenomyosis**:\\n- Junctional zone thickened (>14 mm on MRI)\\n- Irregular junctional zone interface\\n- Disrupted smooth muscle architecture\\n- Abnormal myometrial contractions (increased frequency, reduced coordination)\\n\\n**Mechanism**: Abnormal peristalsis → Impaired sperm transport, embryo implantation\\n\\n### 2. Endometrial-Myometrial Interface Disruption\\n- **Normal interface**: Distinct basement membrane separates endometrium from myometrium\\n- **In adenomyosis**: Basement membrane fragmentation\\n- **Loss of markers**: Laminin, integrin-α6 β4 reduced\\n- **Result**: Endometrial cells invade myometrium (depth >2.5 mm)\\n\\n### 3. Angiogenesis and Vascularity\\n- **VEGF upregulation**: Excessive vessel formation in adenomyotic lesions\\n- **Altered vascular architecture**: Dilated vessels, poor vasodilation response\\n- **Hypoxia-reperfusion cycles**: Abnormal contractions create ischemia → Reperfusion inflammation\\n- **Result**: Adenomyotic lesions have poor perfusion → Pain from hypoxia\\n\\n### 4. Estrogen Excess and Progesterone Resistance\\n- Similar to endometriosis: ER-α overexpression, aromatase upregulation\\n- Local estrogen synthesis from androgens\\n- **Progesterone resistance**: PR-B downregulation, abnormal PR signaling\\n- **Result**: Dysmenorrhea, bleeding, resistance to progestin therapy\\n\\n### 5. Myometrial Contractility Abnormality\\n- **Increased contractions**: Higher frequency and amplitude than normal myometrium\\n- **Loss of coordination**: Abnormal peristaltic waves (non-physiological)\\n- **Timing**: Increased during menstruation\\n- **Mechanism**: Estrogen-dependent, prostaglandin-mediated\\n- **Result**: Dysmenorrhea (painful contractions), reduced fertility (impaired embryo transport)\\n\\n### 6. Inflammation in Adenomyosis\\n- **Macrophages**: Increased infiltration\\n- **Cytokines**: TNF-α, IL-6, IL-8 elevated\\n- **T cells**: Increased but functionally impaired\\n- **Prostaglandins**: PGE2, PGF2α elevated\\n- **Result**: Chronic inflammation driving pain and infertility\\n\\n### 7. Adenomyotic Lesion Characteristics\\n- **Adenomyoma** (discrete form): Nodular area of adenomyosis, circumscribed\\n- **Diffuse adenomyosis**: Widespread endometrial infiltration throughout myometrium\\n- **Junctional zone hypertophy**: Myometrial thickening from smooth muscle hyperplasia and hypertrophy\\n- **Fibrosis**: Stromal fibrosis around lesions\\n\\n## Adenomyosis and Infertility Mechanisms\\n1. **Abnormal myometrial contractions**: Reduce embryo implantation, increase miscarriage\\n2. **Impaired endometrial receptivity**: Abnormal expression of adhesion molecules (integrins)\\n3. **Elevated prostaglandins**: Increase uterine contractions\\n4. **Chronic inflammation**: Toxic to embryo\\n5. **Reduced uterine blood flow**: In adenomyotic regions\\n6. **Stem cell dysfunction**: Impaired endometrial regeneration,\\n        mnemonics: [\\n          {\\n            text: \\\"Endometriosis Mechanisms: RAIGE\\\",\\n            explanation: \\\"Retrograde menstruation, Angiogenesis, Inflammation, Growth factors, Estrogen excess\\\"\\n          },\\n          {\\n            text: \\\"Adenomyosis Junctional Zone: JAM\\\",\\n            explanation: \\\"JZ thickening, Abnormal contractions, Myometrial invasion\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Retrograde menstruation deposits endometrial cells in peritoneum; immune dysfunction allows implantation\\\",\\n          \\\"Endometriosis involves angiogenesis, local aromatase activity, prostaglandin excess, progesterone resistance\\\",\\n          \\\"Adenomyosis causes junctional zone disruption, abnormal contractions, myometrial invasion\\\",\\n          \\\"Both conditions share estrogen dependence, inflammation, and progesterone resistance\\\",\\n          \\\"NK cell dysfunction and abnormal macrophage function key to endometriosis pathology\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"DC Dutta\\\", chapter: \\\"Ch 19\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Williams Gynecology\\\", chapter: \\\"Ch 16\\\", edition: \\\"4th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"endometriosis-adenomyosis-clinical\\\",\\n        title: \\\"Endometriosis & Adenomyosis - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Diagnosis relies on imaging, laparoscopy for endometriosis, and MRI/ultrasound for adenomyosis. Management includes medical (NSAIDs, hormonal, GnRH agonists) and surgical options tailored to symptoms and fertility goals.\\\",\\n        contentMd: "# Endometriosis & Adenomyosis - Clinical\\\\n\\\\n## Clinical Evaluation\\\\n\\\\n### History\\\\n- **Dysmenorrhea**: Severity, onset, progression\\\\n- **Dyspareunia**: Deep dyspareunia suggests deep infiltrating endometriosis\\\\n- **Pelvic pain**: Cyclic vs acyclic, severity, impact\\\\n- **Infertility**: Duration, prior investigations\\\\n- **Menorrhagia**: Presence, severity (more common in adenomyosis)\\\\n- **GI symptoms**: Diarrhea, constipation, painful defecation (bowel involvement)\\\\n- **Urinary symptoms**: Dysuria, hematuria (bladder involvement)\\\\n\\\\n### Physical Examination\\\\n- **Abdomen**: Tenderness, masses, guarding\\\\n- **Pelvic examination**:\\\\n  - **Endometriosis**: Nodules in pouch of Douglas, uterosacral ligaments, tender adnexal masses (endometriomas)\\\\n  - **Adenomyosis**: Tender, boggy, enlarged uterus (usually symmetric)\\\\n\\\\n## Diagnostic Investigations\\\\n\\\\n### For Endometriosis\\\\n\\\\n**Imaging First-line**:\\\\n- **Transvaginal ultrasound**: Best for ovarian endometriomas\\\\n  - Findings: Cysts with diffuse low-level echoes (\\\\\\\"chocolate cysts\\\\\\\"), homogeneous appearance\\\\n  - Sensitivity: 60-80% for ovarian endometriomas\\\\n  - Limited for peritoneal/deep disease\\\\n\\\\n- **MRI**: Best for deep infiltrating endometriosis, peritoneal disease\\\\n  - T1-weighted + gadolinium shows hemorrhagic lesions\\\\n  - Sensitivity: 85-90% for DIE\\\\n  - **Gold standard** for pre-operative mapping of DIE\\\\n\\\\n**Diagnostic Laparoscopy**:\\\\n- **Gold standard** for diagnosis of endometriosis (especially peritoneal)\\\\n- **Visual findings**: Peritoneal lesions (red, black, clear, white), endometriomas, adhesions\\\\n- **Biopsy**: Histology confirms diagnosis\\\\n- **Limitations**: Does not detect adenomyosis (requires histology = hysterectomy)\\\\n\\\\n**Biomarkers** (not routine):\\\\n- **CA-125**: Elevated but non-specific\\\\n- **Serum biomarkers**: Research stage\\\\n\\\\n### For Adenomyosis\\\\n\\\\n**Imaging**:\\\\n- **MRI** (gold standard):\\\\n  - Junctional zone thickening (>12-14 mm)\\\\n  - Irregular junctional zone interface\\\\n  - T2-weighted shows altered signal intensity\\\\n  - Sensitivity/Specificity: 70-90%\\\\n\\\\n- **Transvaginal ultrasound**:\\\\n  - Junctional zone thickening, heterogeneity\\\\n  - Hyperechoic lesions (adenomyomas)\\\\n  - Sensitivity/Specificity: 60-85% (operator-dependent)\\\\n  - **3D ultrasound**: Improved accuracy\\\\n\\\\n**Diagnostic Confirmation**:\\\\n- **Hysterectomy specimen**: Only definitive diagnosis (not practical)\\\\n- **Endometrial biopsy**: Not reliable for adenomyosis diagnosis\\\\n- **Non-invasive diagnosis**: Based on imaging + clinical features\\\\n\\\\n## Management\\\\n\\\\n### First-Line: Medical Management\\\\n\\\\n#### NSAIDs\\\\n- **Mechanism**: Reduce prostaglandins\\\\n- **Efficacy**: 20-30% pain reduction for dysmenorrhea\\\\n- **Dosing**: Naproxen 500 mg BID, ibuprofen 800 mg TID during menses\\\\n- **Timing**: Start at pain onset or 1-2 days before expected pain\\\\n- **Limitation**: Does not treat underlying disease\\\\n\\\\n#### Hormonal Contraceptives\\\\n- **OCPs**: Combined oral contraceptive pills\\\\n  - Suppress ovulation, thin endometrium\\\\n  - Continuous use reduces dysmenorrhea more than cyclic\\\\n  - Efficacy: 40-50% improvement\\\\n- **Progestin-only pills**: Lower-dose hormonal impact\\\\n- **Effectiveness**: Better for endometriosis than adenomyosis\\\\n\\\\n#### Progestins/Progesterone\\\\n- **Levonorgestrel IUD (Mirena)**:\\\\n  - Localizes progestin, reduces pain\\\\n  - Amenorrhea in 20% of users\\\\n  - Efficacy: 50-60% pain reduction\\\\n  - Good option if also need contraception\\\\n\\\\n- **Oral progestins**:\\\\n  - Norethisterone, medroxyprogesterone acetate\\\\n  - Efficacy: Variable, often moderate\\\\n  - **Limitation in adenomyosis**: Progesterone resistance reduces efficacy\\\\n\\\\n#### Gonadotropin-Releasing Hormone (GnRH) Agonists\\\\n- **Mechanism**: Downregulate GnRH → ↓ FSH/LH → ↓ Estrogen → Pain relief, lesion suppression\\\\n- **Duration**: 3-6 months maximum (bone loss risk)\\\\n- **Efficacy**: 80-90% pain reduction\\\\n- **Side effects**: Hot flashes, vaginal dryness, headache, mood changes, bone loss\\\\n- **Add-back therapy**: After 3 months (estrogen + progestin) to prevent osteoporosis\\\\n- **Indications**: Severe pain unresponsive to other options, before surgery\\\\n- **Timing to benefit**: 2-4 weeks for pain relief\\\\n\\\\n#### GnRH Antagonists - Newer Options\\\\n- **Elagolix**, **Relugolix**: Faster onset, no flare phase\\\\n- Similar efficacy to agonists\\\\n- Not yet widely available in India\\\\n\\\\n#### Aromatase Inhibitors\\\\n- **Mechanism**: Reduce local estrogen synthesis\\\\n- **Agents**: Letrozole, anastrozole (off-label use)\\\\n- **Efficacy**: 50-70% pain reduction for endometriosis\\\\n- **Research**: Showing promise, not standard first-line\\\\n- **Concern**: Bone loss, need for monitoring\\\\n\\\\n### Second-Line: Surgical Management\\\\n\\\\n#### For Endometriosis\\\\n\\\\n**Laparoscopic excision**:\\\\n- **Indications**: Moderate-severe pain, failed medical therapy, bowel/bladder involvement\\\\n- **Technique**: Excision of endometrial lesions, adherence lysis\\\\n- **Efficacy**: 60-80% pain improvement at 6-12 months\\\\n- **Advantages**: Minimally invasive, diagnostic + therapeutic\\\\n- **Limitations**: Recurrence rate 20-40% over 2-3 years\\\\n\\\\n**Radical excision/hysterectomy**:\\\\n- **Indications**: Severe disease, failed conservative surgery, adenomyosis coexistent\\\\n- **Efficacy**: Best long-term pain relief\\\\n- **Considerations**: Loss of fertility, surgical risks\\\\n\\\\n#### For Adenomyosis\\\\n\\\\n**Hysterectomy**:\\\\n- **Definitive treatment**: Only curative option\\\\n- **Indication**: Intractable symptoms, completed childbearing\\\\n- **Efficacy**: 80-90% symptom relief\\\\n- **Disadvantages**: Loss of uterus/fertility, surgical risks\\\\n\\\\n**Conservative surgical options** (if fertility desired):\\\\n- **Endometrial ablation**: Destroys endometrium → Reduces bleeding/pain\\\\n  - Efficacy: Moderate, 40-50% improvement\\\\n  - Limitations: Incomplete resolution, may require hysterectomy later\\\\n- **Adenomyomectomy**: Resection of discrete adenomyoma\\\\n  - Limited applicability (only focal adenomyosis)\\\\n  - Efficacy: Variable\\\\n  - May impair uterine function\\\\n\\\\n### Fertility Management\\\\n\\\\n#### Endometriosis-Related Infertility\\\\n1. **First-line**: Expectant management or ovulation induction + IUI for mild disease\\\\n2. **Second-line**: IVF for moderate-severe disease or failed other treatments\\\\n3. **Pre-IVF considerations**:\\\\n   - Ovarian endometriomas: Aspiration vs surgical excision (surgical impairs ovarian reserve)\\\\n   - GnRH agonist pretreatment: May improve outcomes\\\\n4. **Surgical vs IVF**: For moderate-severe disease, IVF often preferred (avoids surgery risks)\\\\n\\\\n#### Adenomyosis-Related Infertility\\\\n1. **Medical management**: GnRH agonists, combined with IVF\\\\n2. **IVF**: Improved implantation with GnRH agonist pre-treatment\\\\n3. **Limited surgical options**: Adenomyomectomy rarely possible\\\\n4. **Prognosis**: Poorer outcomes than endometriosis-related infertility\\\\n\\\\n### Management Summary Algorithm\\\\n```\\\\nDysmenorrhea + Pelvic Pain\\\\n↓\\\\nSuspect Endometriosis/Adenomyosis\\\\n↓\\\\nImaging: Transvaginal US ± MRI\\\\n↓\\\\nIf Endometrioma or symptoms severe → Laparoscopy (endometriosis diagnosis)\\\\nIf JZ thickening → Adenomyosis\\\\n↓\\\\nFirst-line: NSAIDs + Hormonal contraceptives (OCP, Mirena, progestins)\\\\n↓\\\\nIf fails after 3 months → GnRH agonist 3-6 months\\\\n↓\\\\nIf fails → Surgery (laparoscopic excision for endometriosis, hysterectomy for adenomyosis)\\\\n↓\\\\nIf infertility: IVF for both conditions\\\\n``\\\",\\n        mnemonics: [\\n          {\\n            text: \\\"Endometriosis Diagnosis: LUM\\\",\\n            explanation: \\\"Laparoscopy (gold standard), Ultrasound (ovarian cysts), MRI (deep disease)\\\"\\n          },\\n          {\\n            text: \\\"Adenomyosis Imaging: JZT\\\",\\n            explanation: \\\"Junctional Zone Thickening (>12-14 mm), MRI gold standard, Ultrasound also helpful\\\"\\n          },\\n          {\\n            text: \\\"First-Line Treatment: HIP\\\",\\n            explanation: \\\"Hormonal (OCPs, Mirena, progestins), Ibuprofen/NSAIDs, Progesterone-based options\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Laparoscopy gold standard for endometriosis diagnosis; MRI best for deep disease\\\",\\n          \\\"MRI gold standard for adenomyosis diagnosis (junctional zone thickening)\\\",\\n          \\\"First-line: NSAIDs + hormonal contraceptives (OCPs, Mirena, progestins)\\\",\\n          \\\"GnRH agonists for severe pain refractory to medical management; maximum 3-6 months\\\",\\n          \\\"Endometriosis: laparoscopic excision effective; adenomyosis: hysterectomy definitive\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"DC Dutta\\\", chapter: \\\"Ch 19\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Williams Gynecology\\\", chapter: \\\"Ch 16\\\", edition: \\\"4th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 4,\\n        slug: \\\"endometriosis-adenomyosis-exam\\\",\\n        title: \\\"Endometriosis & Adenomyosis - Exam Prep\\\",\\n        estimatedMinutes: 15,\\n        summary: \\\"Key exam concepts: pathophysiology (retrograde menstruation vs junctional zone invasion), diagnostic modalities, medical vs surgical management selection, and fertility implications.\\\",\\n        contentMd: \\\"# Endometriosis & Adenomyosis - Exam Prep\\\\n\\\\n## High-Yield Facts\\\\n\\\\n### 1. Diagnostic Modality Selection\\\\n**Endometriosis**:\\\\n- **Laparoscopy**: Gold standard (visual + biopsy diagnosis)\\\\n- **Ultrasound**: Best for ovarian endometriomas\\\\n- **MRI**: Best for deep infiltrating disease, peritoneal disease\\\\n\\\\n**Adenomyosis**:\\\\n- **MRI**: Gold standard (junctional zone assessment)\\\\n- **Ultrasound**: Transvaginal, 3D improves accuracy\\\\n- **Clinical diagnosis**: Based on imaging + symptoms (definitive only by hysterectomy)\\\\n\\\\n### 2. Imaging Findings\\\\n**Endometriosis**:\\\\n- Ovarian cysts: \\\\\\\"Chocolate cysts\\\\\\\" (low-level echoes, homogeneous)\\\\n- Peritoneal lesions: Variable appearance (red, black, clear)\\\\n- MRI: T1 hyperintense lesions (hemorrhage)\\\\n\\\\n**Adenomyosis**:\\\\n- Junctional zone thickening: >12-14 mm (normal <12 mm)\\\\n- Irregular JZ interface\\\\n- Hyperechoic/isochoic lesions (adenomyomas)\\\\n- Abnormal myometrial echogenicity\\\\n\\\\n### 3. First-Line Medical Management\\\\n**All symptomatic endometriosis/adenomyosis**:\\\\n1. **NSAIDs**: Naproxen, ibuprofen (prostaglandin reduction)\\\\n2. **Hormonal contraceptives**: OCPs (continuous dosing better than cyclic)\\\\n3. **Progestins**: Mirena IUD, oral progestins\\\\n\\\\n**Order of escalation**:\\\\n- Try NSAIDs + OCPs first (3-6 months)\\\\n- If inadequate relief → Add GnRH agonist (max 3-6 months with add-back)\\\\n- If still inadequate → Consider surgery\\\\n\\\\n### 4. GnRH Agonists Details\\\\n- **Indications**: Severe pain refractory to medical therapy\\\\n- **Mechanism**: Suppress FSH/LH → Estrogen deprivation\\\\n- **Efficacy**: 80-90% pain reduction\\\\n- **Duration**: 3-6 months MAXIMUM (bone loss risk)\\\\n- **Add-back therapy**: Required after 3 months\\\\n  - Conjugated estrogen (0.625 mg) + norethisterone (2.5 mg)\\\\n  - Maintains lesion suppression while protecting bone\\\\n- **Side effects**: Hot flashes, vaginal dryness, mood changes, bone loss\\\\n- **Monitoring**: Bone density, lipids\\\\n\\\\n### 5. Key Differences (Exam Favorite)\\\\n| Feature | Endometriosis | Adenomyosis |\\\\n|---------|---------------|------------|\\\\n| **Ectopic location** | Outside uterus | Within myometrium |\\\\n| **Diagnostic test** | Laparoscopy + biopsy | MRI (imaging), not definitive without hysterectomy |\\\\n| **Bleeding** | Minimal | Common (menorrhagia) |\\\\n| **Dysmenorrhea** | Severe, sharp, cyclic | Severe, dull, progressive |\\\\n| **Exam finding** | Tender nodules, masses | Enlarged tender uterus |\\\\n| **Age group** | Younger (20-40) | Older (40-50) |\\\\n| **Infertility** | 30-50% | 10-20% |\\\\n| **Surgical option** | Laparoscopic excision | Hysterectomy (definitive) |\\\\n\\\\n### 6. Adenomyosis and Infertility\\\\n- Impairs fertility through: Abnormal contractions, reduced endometrial receptivity, chronic inflammation\\\\n- Medical: Pretreatment with GnRH agonist improves IVF outcomes\\\\n- Surgical: Limited (adenomyomectomy rarely applicable)\\\\n- Prognosis: Lower success rates than endometriosis-related infertility\\\\n\\\\n### 7. Endometriosis Surgery Outcomes\\\\n- **Laparoscopic excision**: 60-80% pain improvement at 6-12 months\\\\n- **Recurrence**: 20-40% within 2-3 years\\\\n- **For IVF**: Often proceed directly to IVF for moderate-severe disease (avoids surgery delays)\\\\n\\\\n### 8. Medical Failure Definition\\\\n- Persistent/inadequate pain relief after 3-6 months of first-line medical therapy\\\\n- OR intolerable side effects\\\\n\\\\n### 9. Adenomyosis + Menorrhagia Management\\\\n- Mirena IUD: Good option (90% bleeding reduction) but doesn't treat underlying adenomyosis\\\\n- GnRH agonist: Causes amenorrhea, treats pain\\\\n- Endometrial ablation: Destroys endometrium (40-50% symptom improvement) but adenomyosis persists\\\\n- Hysterectomy: Definitive\\\\n\\\\n### 10. Exam Scenario Questions\\\\n\\\\n**Scenario 1**: 28-year-old with severe dysmenorrhea, negative workup. Ultrasound shows ovarian cyst (chocolate cyst). Diagnosis?\\\\n- **Answer**: Endometriosis (ovarian endometrioma)\\\\n- **Next**: Laparoscopy for definitive diagnosis if considering surgery\\\\n- **Management**: First-line NSAIDs + OCPs (continuous dosing)\\\\n\\\\n**Scenario 2**: 45-year-old with progressive dysmenorrhea, menorrhagia, tender enlarged uterus. MRI shows JZ thickening. Diagnosis?\\\\n- **Answer**: Adenomyosis\\\\n- **Management**: First-line NSAIDs + Mirena IUD or OCPs. If fails → GnRH agonist. If refractory → Hysterectomy\\\\n\\\\n**Scenario 3**: Woman with endometriosis on GnRH agonist for 4 months. Hot flashes, bone density concerns.\\\\n- **Answer**: Add-back therapy needed (estrogen + progestin) to prevent osteoporosis while maintaining suppression\\\\n\\\\n**Scenario 4**: Woman with adenomyosis, infertility. IVF planned.\\\\n- **Answer**: Pretreatment with GnRH agonist (3 months) before IVF improves implantation rates,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Adenomyosis Features: JTU\\\\\\\",\\\\n            explanation: \\\\\\\"Junctional zone (thickened), Tender uterus, Older age\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Endometriosis Diagnosis: LUM\\\\\\\",\\\\n            explanation: \\\\\\\"Laparoscopy (gold), Ultrasound (ovarian cysts), MRI (deep disease)\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"GnRH Add-Back: EN\\\\\\\",\\\\n            explanation: \\\\\\\"Estrogen + Norethisterone (after 3 months to prevent bone loss)\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Laparoscopy gold standard for endometriosis; MRI gold standard for adenomyosis\\\\\\\",\\\\n          \\\\\\\"First-line medical: NSAIDs + OCPs (continuous better than cyclic)\\\\\\\",\\\\n          \\\\\\\"GnRH agonists 3-6 months max; require add-back therapy after 3 months for bone protection\\\\\\\",\\\\n          \\\\\\\"Adenomyosis causes enlarged tender uterus; endometriosis causes tender nodules\\\\\\\",\\\\n          \\\\\\\"Adenomyosis: hysterectomy definitive; endometriosis: recurrent after laparoscopic excision\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta\\\\\\\", chapter: \\\\\\\"Ch 19\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Williams Gynecology\\\\\\\", chapter: \\\\\\\"Ch 16\\\\\\\", edition: \\\\\\\"4th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"endometriosis-adenomyosis-recall\\\\\\\",\\\\n        title: \\\\\\\"Endometriosis & Adenomyosis - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        contentMd: ``# Active Recall - Endometriosis & Adenomyosis\\\\n\\\\n**Q1**: Explain the retrograde menstruation theory of endometriosis. Why doesn't every woman develop endometriosis?\\\\n> **A**: Retrograde menstruation occurs when menstrual fluid flows backward through fallopian tubes into peritoneal cavity (occurs in 75-90% of women). Menstrual tissue/cells deposit on peritoneal surfaces. **Why not all develop endometriosis**: Normal immune function (NK cells, macrophages, T cells) clears ectopic endometrial cells. In endometriosis, **immune dysfunction** allows escape of ectopic cells from immune destruction. Reduced NK cell numbers/function, macrophages fail to eliminate cells despite increased infiltration.\\\\n\\\\n**Q2**: What is the gold standard diagnostic test for endometriosis? Can adenomyosis be definitively diagnosed without hysterectomy?\\\\n> **A**: **Endometriosis**: **Laparoscopy** (visual inspection + biopsy confirms histology). Findings: peritoneal lesions (red, black, clear), endometriomas (ovarian cysts), adhesions. **Adenomyosis**: No definitive diagnostic test without hysterectomy. Diagnosis based on **imaging (MRI)** + **clinical features**. MRI shows junctional zone thickening (>12-14 mm), irregular interface. Only histology after hysterectomy = definitive. Clinical diagnosis is presumptive based on imaging + symptoms.\\\\n\\\\n**Q3**: A 32-year-old has severe progressive dysmenorrhea. MRI shows junctional zone thickening (14 mm) with irregular interface. OCPs for 4 months not helpful. Next step?\\\\n> **A**: **Diagnosis**: Adenomyosis (JZ thickening). **Failed first-line** (OCPs). **Next management**: (1) **GnRH agonist** 3-6 months (e.g., leuprolide IM monthly, causes amenorrhea, 80-90% pain relief), (2) After 3 months, add **add-back therapy**: conjugated estrogen 0.625 mg + norethisterone 2.5 mg daily to prevent bone loss while maintaining lesion suppression. (3) If GnRH fails or side effects intolerable → **Hysterectomy** (definitive treatment for adenomyosis).\\\\n\\\\n**Q4**: Explain the progesterone resistance in endometriosis. How does this affect treatment options?\\\\n> **A**: **Mechanism**: Ectopic endometrium has abnormal **progesterone receptor (PR)** expression. PR-B (mediates anti-inflammatory, anti-proliferative effects) **downregulated**; PR-A relatively increased. Downstream signaling (FOXO1) impaired. **Result**: Ectopic endometrium fails to respond to progesterone/progestins normally. **Treatment implications**: (1) **Progestin-only therapy** (oral progestins, Mirena) may be **less effective** than in normal endometrium. (2) **Combined approach** often needed: OCPs (suppress ovulation) + GnRH agonists (block estrogen). (3) **Aromatase inhibitors** researched to reduce local estrogen production (bypassing progesterone resistance issue).\\\\n\\\\n**Q5**: Compare the dysmenorrhea in endometriosis vs adenomyosis. What is the pain mechanism in each?\\\\n> **A**: **Endometriosis dysmenorrhea**: **Sharp, cramping** pain, usually **well-localized** to affected area. Mechanism: (1) **Prostaglandins** (PGE2, PGF2α) elevated in lesions → Myometrial contractions, (2) **Neuroangiogenesis**: Increased nerve fiber innervation in peritoneal lesions, (3) **Chronic inflammation**: Macrophages, TNF-α, IL-6. **Adenomyosis dysmenorrhea**: **Dull, aching** pain, **diffuse**, **progressive**. Mechanism: (1) **Abnormal myometrial contractions**: Junctional zone dysfunction causes discoordinated, high-frequency contractions (non-physiological), (2) **Tissue hypoxia**: Poor perfusion from abnormal vasculature → ischemic pain, (3) **Prostaglandins elevated**: PGE2, PGF2α increase contractions, (4) **Chronic inflammation**: Similar to endometriosis.\\\\n\\\\n**Q6**: A woman with endometriosis on GnRH agonist develops hot flashes, headaches, and bone density loss concerns at 4 months. How do you manage?\\\\n> **A**: (1) **Hot flashes/headaches**: Expected side effects from estrogen deprivation. Counsel that these improve gradually over months, or consider **add-back therapy** sooner. (2) **Bone density loss**: GnRH agonists cause rapid bone loss (2-3% per year). **After 3 months**, must add **add-back therapy** to prevent osteoporosis: **Conjugated estrogen 0.625 mg + norethisterone 2.5 mg daily**. Add-back maintains lesion suppression while protecting bone. (3) **Total duration GnRH**: Maximum 6 months (beyond this, bone loss becomes severe). (4) **Monitor**: Check baseline bone density, consider repeat DEXA at 1 year. (5) **Calcium/vitamin D**: Supplement throughout.\\\\n\\\\n**Q7**: A 30-year-old with ovarian endometriomas (bilateral, 4 cm each) desires fertility. Laparoscopic ovarian cystectomy recommended. Should she proceed?\\\\n> **A**: **Consideration**: Laparoscopic ovarian cystectomy can impair ovarian reserve (damage to healthy ovarian tissue during cyst removal). **Options**: (1) **If pursuing IVF**: Often **skip surgery**, proceed directly to IVF (avoids surgery delay, ovarian damage). Reserve surgery for symptomatic cysts or if IVF unsuccessful. (2) **If symptoms severe/recurrent**: Surgery may be warranted. Cystectomy (removal) preferred over aspiration (lower recurrence). (3) **Preoperative GnRH**: 3-month GnRH agonist before surgery may reduce recurrence. (4) **Postoperative**: Continuation with hormonal therapy to suppress residual endometriosis. **Summary**: For fertility, strongly consider IVF rather than surgery; surgery risks ovarian reserve damage.\\\\n\\\\n**Q8**: Explain adenomyosis-related infertility mechanisms. Is it as common as endometriosis-related infertility?\\\\n> **A**: **Adenomyosis infertility mechanisms**: (1) **Abnormal myometrial contractions**: Junctional zone dysfunction → High-frequency, discoordinated contractions → Impair sperm transport and embryo movement, (2) **Impaired endometrial receptivity**: Abnormal adhesion molecule expression (integrins), impaired angiogenesis, (3) **Chronic inflammation**: High prostaglandins, TNF-α, IL-6 toxic to embryo, (4) **Reduced uterine blood flow**: In adenomyotic regions → Poor embryo implantation environment. **Prevalence in infertility**: Present in 10-20% of infertile women vs 20-30% for endometriosis. **Severity**: Generally causes **lower fertility reduction** than endometriosis-related infertility. **Management**: GnRH agonist pretreatment (3 months) before IVF improves outcomes.\\\\n\\\\n**Q9**: A woman with adenomyosis and menorrhagia received Mirena IUD. She has good bleeding control but persistent dysmenorrhea. Why isn't pain controlled?\\\\n> **A**: Mirena IUD **excellent for menorrhagia** (90% reduction) by suppressing endometrial function. However, **dysmenorrhea in adenomyosis** caused by **myometrial dysfunction** (abnormal contractions, junctional zone pathology), NOT just endometrial bleeding. Mirena's local progestin doesn't adequately suppress myometrial contractions. **Management**: (1) Add **NSAIDs** for pain (prostaglandin reduction), (2) Add **OCPs** (systemic hormone suppression), (3) If inadequate → **GnRH agonist** (suppresses myometrial contractions via estrogen deprivation), (4) If all fails → **Hysterectomy**. **Key point**: Adenomyosis dysmenorrhea requires systemic hormone suppression; local progestin insufficient.\\\\n\\\\n**Q10**: What is the difference between \\\\\\\"chocolate cysts\\\\\\\" and adenomyomas? Are they adenomyosis?\\\\n> **A**: **Chocolate cysts** = Ovarian **endometriomas** (from endometriosis), NOT adenomyosis. Location: **Outside uterus** (in ovary). Pathology: Ectopic endometrial tissue in ovary. **Adenomyomas** = Discrete focal area of **adenomyosis** within myometrium. Location: **Within myometrium** (inside uterus). Pathology: Endometrial glands and stroma invading myometrium in circumscribed area. **Relationship**: Chocolate cysts are endometriosis (can coexist with adenomyosis, but different entities). Adenomyomas are adenomyosis. **Clinical significance**: Chocolate cysts visible on ultrasound; adenomyomas visible but less specific than junctional zone thickening for adenomyosis diagnosis.,\\\\n        mnemonics: [],\\\\n        keyPoints: [\\\\n          \\\\\\\"Retrograde menstruation deposits cells; immune dysfunction allows survival and implantation\\\\\\\",\\\\n          \\\\\\\"Laparoscopy gold standard for endometriosis; MRI for adenomyosis imaging\\\\\\\",\\\\n          \\\\\\\"First-line: NSAIDs + OCPs (continuous); GnRH agonist for refractory disease\\\\\\\",\\\\n          \\\\\\\"GnRH max 3-6 months; add-back therapy after 3 months for bone protection\\\\\\\",\\\\n          \\\\\\\"Adenomyosis causes junctional zone dysfunction; requires systemic (not local) hormone suppression\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta\\\\\\\", chapter: \\\\\\\"Ch 19\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Williams Gynecology\\\\\\\", chapter: \\\\\\\"Ch 16\\\\\\\", edition: \\\\\\\"4th\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\"\""
-}
-}
-}
+        contentMd: `# Endometriosis & Adenomyosis - Foundation
+
+## Endometriosis
+
+### Definition
+Ectopic endometrial tissue (glands and stroma) present in locations outside the uterus.
+
+### Prevalence
+- **Overall**: 10-15% of reproductive-age women
+- **In infertile women**: 20-30%
+- **In women with dysmenorrhea**: 40-60%
+
+### Sites of Involvement (in order of frequency)
+1. **Ovary** (most common, 50-60%)
+2. **Peritoneum** (pelvic peritoneum, bowel serosa)
+3. **Rectosigmoid colon** (most common bowel site)
+4. **Fallopian tubes**
+5. **Round ligaments**
+6. **Rectovaginal septum**
+7. **Rare sites**: Bladder, ureter, lungs, brain, scars (surgical)
+
+### Classification: ASRM Staging
+- **Stage I (Minimal)**: <1 cm
+- **Stage II (Mild)**: 1-5 cm
+- **Stage III (Moderate)**: 5-15 cm
+- **Stage IV (Severe)**: >15 cm or dense adhesions
+
+### Morphological Types
+1. **Peritoneal endometriosis**: Superficial (peritoneal implants)
+2. **Ovarian endometriomas**: "Chocolate cysts" (blood-filled)
+3. **Deep infiltrating endometriosis (DIE)**: Infiltrates myometrium or deeper structures
+
+### Clinical Features
+- **Dysmenorrhea** (80% of women with endometriosis) - severe, progressive
+- **Dyspareunia** (especially if deep infiltrating disease)
+- **Pelvic pain** (chronic, cyclic or acyclic)
+- **Infertility** (30-50% of women with endometriosis)
+- **Diarrhea/constipation** (if bowel involvement)
+- **Asymptomatic** (10-15% of cases, discovered incidentally)
+
+## Adenomyosis
+
+### Definition
+Presence of endometrial glands and stroma invading the myometrium (typically >2.5 mm beyond the junctional zone).
+
+### Prevalence
+- **Overall**: 10-15% of reproductive-age women, increases with age
+- **In women with dysmenorrhea**: 15-30%
+- **In women with infertility**: 10-20%
+
+### Classification
+**By Extent**:
+1. **Diffuse adenomyosis**: Widespread myometrial invasion
+2. **Focal adenomyosis**: Localized area (adenomyoma)
+
+**By Imaging/Pathology**:
+- **Mild**: <25% of myometrial depth involved
+- **Moderate**: 25-75% involvement
+- **Severe**: >75% involvement
+
+### Clinical Features
+- **Dysmenorrhea**: 30-40% (often severe, progressive, dull aching)
+- **Menorrhagia**: Heavy menstrual bleeding (50%)
+- **Pelvic pain**: Chronic, often pre-menstrual
+- **Infertility**: Present in 20% of adenomyosis patients
+- **Tender, enlarged uterus**: On bimanual pelvic exam
+
+## Key Differences: Endometriosis vs Adenomyosis
+
+| Feature | Endometriosis | Adenomyosis |
+|---------|---------------|-------------|
+| **Location** | Outside uterus | Within myometrium |
+| **Age** | Younger (20-40) | Older (40-50) |
+| **Menorrhagia** | Uncommon | Common (50%) |
+| **Dysmenorrhea** | Severe, sharp | Severe, dull, progressive |
+| **Exam finding** | Nodules, masses | Enlarged tender uterus |
+| **Imaging** | Ovarian cysts, peritoneal lesions | Junctional zone thickening |
+| **Infertility** | Common (30-50%) | Moderate (10-20%) |
+| **Coexistence** | 15-20% have both | 15-20% have both |
+
+## Pathophysiological Overview
+- **Retrograde menstruation** (endometriosis): Menstrual debris flows backward into peritoneum
+- **Coelomic metaplasia**: Primitive coelomic tissue differentiates into endometrium
+- **Bone marrow stem cell homing**: Progenitor cells migrate to ectopic sites
+- **Myometrial invasion** (adenomyosis): Endometrial basalis layer invades myometrium
+- **Estrogen dependence**: Both conditions ER-α overexpressed, aromatase upregulated
+- **Prostaglandin excess**: PGE2, PGF2α elevated → Pain, inflammation
+- **Inflammation**: Macrophages, IL-8, TNF-α, IL-6 elevated`,
+        mnemonics: [
+          {
+            text: "Endometriosis Locations: OPTICS",
+            explanation: "Ovary, Peritoneum, Tubes, Intestine (colon), Cervix, Scars"
+          },
+          {
+            text: "Adenomyosis Features: JAM",
+            explanation: "Junctional zone thickening, Age older, Myometrial invasion"
+          }
+        ],
+        keyPoints: [
+          "Endometriosis: ectopic endometrium outside uterus; prevalence 10-15%",
+          "Adenomyosis: endometrial invasion within myometrium; increases with age",
+          "Both cause dysmenorrhea and infertility; adenomyosis more often causes menorrhagia",
+          "Ovary most common site for endometriosis (chocolate cysts)",
+          "15-20% of women have both endometriosis and adenomyosis"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 19", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 28", edition: "17th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "endometriosis-layer-2-mechanism",
+        title: "Endometriosis & Adenomyosis - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pathophysiology involves retrograde menstruation, ectopic endometrial implantation, chronic inflammation, angiogenesis, prostaglandin production, and estrogen dysregulation. Understanding these mechanisms guides targeted therapy.",
+        contentMd: `# Endometriosis & Adenomyosis - Mechanism
+
+## Endometriosis Pathophysiology
+
+### Theory 1: Retrograde Menstruation (Sampson Theory)
+1. **Normal menstruation**: Anterograde flow (toward cervix)
+2. **Retrograde menstruation**: 75-90% of women have some reflux through fallopian tubes
+3. **Peritoneal spillage**: Menstrual debris (endometrial cells, blood, tissue) enters peritoneal cavity
+4. **Implantation**: Endometrial cells implant on peritoneal surface
+5. **Survival and growth**: Immune dysfunction allows cell survival and proliferation
+
+### Theory 2: Coelomic Metaplasia
+- Coelomic epithelium (peritoneum, ovarian surface) differentiates into endometrial tissue
+- Triggered by inflammation, growth factors, hormones
+- Explains endometriosis in locations without menstrual access
+
+### Theory 3: Bone Marrow-Derived Stem Cell Theory
+- Progenitor cells from bone marrow migrate to ectopic sites
+- Differentiate into endometrial cells
+- May explain endometriosis in unusual locations
+
+## Cellular and Molecular Mechanisms
+
+### 1. Immune Dysfunction
+**Reduced immune clearance**:
+- **NK (natural killer) cells**: Reduced number and function
+- **Macrophages**: Increased but paradoxically fail to clear ectopic cells
+- **T lymphocytes**: Reduced Th1, increased Th2 response (poor cell-mediated immunity)
+**Result**: Ectopic endometrial cells escape immune destruction
+
+### 2. Angiogenesis
+- **VEGF** (vascular endothelial growth factor) upregulated in ectopic endometrium
+- **Hypoxia-inducible factor-1α (HIF-1α)**: Activates VEGF
+- **FGF** (fibroblast growth factor): Promotes new vessel formation
+**Result**: Abnormal vessel growth supporting ectopic lesions
+
+### 3. Inflammatory Mediators
+**Prostaglandins**:
+- **PGE2** and **PGF2α**: Markedly elevated in peritoneal fluid and ectopic lesions
+- **Mechanism**: COX-2 upregulation in ectopic endometrium
+- **Effects**: Myometrial contractions, uterine ischemia, pain
+
+**Cytokines**:
+- **TNF-α**: Promotes inflammation, growth of ectopic tissue
+- **IL-6, IL-8**: Promote angiogenesis, cell survival
+- **Result**: Chronic inflammatory state perpetuates endometriosis
+
+### 4. Estrogen Dysregulation
+**Estrogen receptor abnormalities**:
+- **ER-α overexpression**: Increased estrogen responsiveness in ectopic endometrium
+- **ER-β downregulation**: Loss of protective effect
+
+**Local estrogen production**:
+- **Aromatase upregulation**: ↑ Conversion of androgens to estrogen locally
+- **Result**: High local estrogen in lesions (20x higher than normal endometrium)
+
+### 5. Progesterone Resistance
+- **Progesterone receptor (PR)** expression altered in ectopic endometrium
+- **Abnormal PR-A/PR-B ratio**: Loss of progesterone's anti-inflammatory effect
+- **Result**: Ectopic endometrium fails to respond to progestins/progesterone
+
+### 6. Neuroangiogenesis
+- **Nerve fiber density**: Increased in peritoneal endometriosis lesions
+- **Neurotrophins**: NGF (nerve growth factor) elevated
+- **Result**: Increased innervation explains severe pain
+
+## Adenomyosis Pathophysiology
+
+### 1. Junctional Zone Dysfunction
+**In adenomyosis**:
+- Junctional zone thickened (>14 mm on MRI)
+- Irregular junctional zone interface
+- Disrupted smooth muscle architecture
+- Abnormal myometrial contractions (increased frequency, reduced coordination)
+
+**Consequence**: Abnormal peristalsis → Impaired sperm transport, embryo implantation
+
+### 2. Endometrial-Myometrial Interface Disruption
+- **Normal interface**: Distinct basement membrane separates endometrium from myometrium
+- **In adenomyosis**: Basement membrane fragmentation
+- **Loss of markers**: Laminin, integrin-α6 β4 reduced
+- **Result**: Endometrial cells invade myometrium (depth >2.5 mm)
+
+### 3. Angiogenesis and Vascularity
+- **VEGF upregulation**: Excessive vessel formation in adenomyotic lesions
+- **Altered vascular architecture**: Dilated vessels, poor vasodilation response
+- **Hypoxia-reperfusion cycles**: Abnormal contractions create ischemia → Reperfusion inflammation
+- **Result**: Adenomyotic lesions have poor perfusion → Pain from hypoxia
+
+### 4. Estrogen Excess and Progesterone Resistance
+- Similar to endometriosis: ER-α overexpression, aromatase upregulation
+- Local estrogen synthesis from androgens
+- **Progesterone resistance**: PR-B downregulation, abnormal PR signaling
+- **Result**: Dysmenorrhea, bleeding, resistance to progestin therapy
+
+### 5. Myometrial Contractility Abnormality
+- **Increased contractions**: Higher frequency and amplitude than normal myometrium
+- **Loss of coordination**: Abnormal peristaltic waves (non-physiological)
+- **Timing**: Increased during menstruation
+- **Mechanism**: Estrogen-dependent, prostaglandin-mediated
+- **Result**: Dysmenorrhea (painful contractions), reduced fertility
+
+### 6. Inflammation in Adenomyosis
+- **Macrophages**: Increased infiltration
+- **Cytokines**: TNF-α, IL-6, IL-8 elevated
+- **Prostaglandins**: PGE2, PGF2α elevated
+- **Result**: Chronic inflammation driving pain and infertility
+
+## Adenomyosis and Infertility Mechanisms
+1. **Abnormal myometrial contractions**: Reduce embryo implantation, increase miscarriage
+2. **Impaired endometrial receptivity**: Abnormal expression of adhesion molecules (integrins)
+3. **Elevated prostaglandins**: Increase uterine contractions
+4. **Chronic inflammation**: Toxic to embryo
+5. **Reduced uterine blood flow**: In adenomyotic regions`,
+        mnemonics: [
+          {
+            text: "Endometriosis Mechanisms: RAIGE",
+            explanation: "Retrograde menstruation, Angiogenesis, Inflammation, Growth factors, Estrogen excess"
+          },
+          {
+            text: "Adenomyosis Junctional Zone: JAM",
+            explanation: "JZ thickening, Abnormal contractions, Myometrial invasion"
+          }
+        ],
+        keyPoints: [
+          "Retrograde menstruation deposits endometrial cells in peritoneum; immune dysfunction allows implantation",
+          "Endometriosis involves angiogenesis, local aromatase activity, prostaglandin excess, progesterone resistance",
+          "Adenomyosis causes junctional zone disruption, abnormal contractions, myometrial invasion",
+          "Both conditions share estrogen dependence, inflammation, and progesterone resistance",
+          "NK cell dysfunction and abnormal macrophage function key to endometriosis pathology"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 19", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 28", edition: "17th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "endometriosis-layer-3-clinical",
+        title: "Endometriosis & Adenomyosis - Clinical",
+        estimatedMinutes: 20,
+        summary: "Diagnosis relies on imaging, laparoscopy for endometriosis, and MRI/ultrasound for adenomyosis. Management includes medical (NSAIDs, hormonal, GnRH agonists) and surgical options tailored to symptoms and fertility goals.",
+        contentMd: `# Endometriosis & Adenomyosis - Clinical
+
+## Clinical Evaluation
+
+### History
+- **Dysmenorrhea**: Severity, onset, progression
+- **Dyspareunia**: Deep dyspareunia suggests deep infiltrating endometriosis
+- **Pelvic pain**: Cyclic vs acyclic, severity, impact
+- **Infertility**: Duration, prior investigations
+- **Menorrhagia**: Presence, severity (more common in adenomyosis)
+- **GI symptoms**: Diarrhea, constipation, painful defecation (bowel involvement)
+- **Urinary symptoms**: Dysuria, hematuria (bladder involvement)
+
+### Physical Examination
+- **Abdomen**: Tenderness, masses, guarding
+- **Pelvic examination**:
+  - **Endometriosis**: Nodules in pouch of Douglas, uterosacral ligaments, tender adnexal masses (endometriomas)
+  - **Adenomyosis**: Tender, boggy, enlarged uterus (usually symmetric)
+
+## Diagnostic Investigations
+
+### For Endometriosis
+
+**Imaging First-line**:
+- **Transvaginal ultrasound**: Best for ovarian endometriomas
+  - Findings: Cysts with diffuse low-level echoes ("chocolate cysts"), homogeneous appearance
+  - Sensitivity: 60-80% for ovarian endometriomas
+  - Limited for peritoneal/deep disease
+
+- **MRI**: Best for deep infiltrating endometriosis, peritoneal disease
+  - T1-weighted + gadolinium shows hemorrhagic lesions
+  - Sensitivity: 85-90% for DIE
+  - **Gold standard** for pre-operative mapping of DIE
+
+**Diagnostic Laparoscopy**:
+- **Gold standard** for diagnosis of endometriosis (especially peritoneal)
+- **Visual findings**: Peritoneal lesions (red, black, clear, white), endometriomas, adhesions
+- **Biopsy**: Histology confirms diagnosis
+
+### For Adenomyosis
+
+**Imaging**:
+- **MRI** (gold standard):
+  - Junctional zone thickening (>12-14 mm)
+  - Irregular junctional zone interface
+  - T2-weighted shows altered signal intensity
+  - Sensitivity/Specificity: 70-90%
+
+- **Transvaginal ultrasound**:
+  - Junctional zone thickening, heterogeneity
+  - Hyperechoic lesions (adenomyomas)
+  - Sensitivity/Specificity: 60-85% (operator-dependent)
+  - **3D ultrasound**: Improved accuracy
+
+## Management
+
+### First-Line: Medical Management
+
+#### NSAIDs
+- **Mechanism**: Reduce prostaglandins
+- **Efficacy**: 20-30% pain reduction for dysmenorrhea
+- **Dosing**: Naproxen 500 mg BID, ibuprofen 800 mg TID during menses
+- **Limitation**: Does not treat underlying disease
+
+#### Hormonal Contraceptives
+- **OCPs**: Combined oral contraceptive pills suppress ovulation, thin endometrium
+- **Continuous use** reduces dysmenorrhea more than cyclic
+- **Efficacy**: 40-50% improvement
+- **Effectiveness**: Better for endometriosis than adenomyosis
+
+#### Progestins/Progesterone
+- **Levonorgestrel IUD (Mirena)**:
+  - Localizes progestin, reduces pain
+  - Amenorrhea in 20% of users
+  - Efficacy: 50-60% pain reduction
+  - Good option if also need contraception
+
+- **Oral progestins**:
+  - Norethisterone, medroxyprogesterone acetate
+  - Efficacy: Variable, often moderate
+
+#### Gonadotropin-Releasing Hormone (GnRH) Agonists
+- **Mechanism**: Downregulate GnRH → ↓ FSH/LH → ↓ Estrogen → Pain relief, lesion suppression
+- **Duration**: 3-6 months maximum (bone loss risk)
+- **Efficacy**: 80-90% pain reduction
+- **Side effects**: Hot flashes, vaginal dryness, headache, mood changes, bone loss
+- **Add-back therapy**: After 3 months (estrogen + progestin) to prevent osteoporosis
+- **Indications**: Severe pain unresponsive to other options, before surgery
+
+### Second-Line: Surgical Management
+
+#### For Endometriosis
+**Laparoscopic excision**:
+- **Indications**: Moderate-severe pain, failed medical therapy, bowel/bladder involvement
+- **Technique**: Excision of endometrial lesions, adherence lysis
+- **Efficacy**: 60-80% pain improvement at 6-12 months
+- **Limitations**: Recurrence rate 20-40% over 2-3 years
+
+#### For Adenomyosis
+**Hysterectomy**:
+- **Definitive treatment**: Only curative option
+- **Indication**: Intractable symptoms, completed childbearing
+- **Efficacy**: 80-90% symptom relief
+- **Disadvantages**: Loss of uterus/fertility, surgical risks
+
+**Conservative options** (if fertility desired):
+- **Endometrial ablation**: Destroys endometrium → Reduces bleeding/pain (40-50% improvement)
+- **Adenomyomectomy**: Resection of discrete adenomyoma (variable efficacy)
+
+### Fertility Management
+
+#### Endometriosis-Related Infertility
+1. **First-line**: Expectant management or ovulation induction + IUI for mild disease
+2. **Second-line**: IVF for moderate-severe disease or failed other treatments
+3. **Pre-IVF considerations**:
+   - Ovarian endometriomas: Aspiration vs surgical excision (surgical impairs ovarian reserve)
+   - GnRH agonist pretreatment: May improve outcomes
+
+#### Adenomyosis-Related Infertility
+1. **Medical management**: GnRH agonists, combined with IVF
+2. **IVF**: Improved implantation with GnRH agonist pre-treatment
+3. **Limited surgical options**: Adenomyomectomy rarely possible
+4. **Prognosis**: Poorer outcomes than endometriosis-related infertility`,
+        mnemonics: [
+          {
+            text: "Endometriosis Diagnosis: LUM",
+            explanation: "Laparoscopy (gold standard), Ultrasound (ovarian cysts), MRI (deep disease)"
+          },
+          {
+            text: "Adenomyosis Imaging: JZT",
+            explanation: "Junctional Zone Thickening (>12-14 mm), MRI gold standard, Ultrasound also helpful"
+          },
+          {
+            text: "First-Line Treatment: HIP",
+            explanation: "Hormonal (OCPs, Mirena, progestins), Ibuprofen/NSAIDs, Progesterone-based options"
+          }
+        ],
+        keyPoints: [
+          "Laparoscopy gold standard for endometriosis diagnosis; MRI best for deep disease",
+          "MRI gold standard for adenomyosis diagnosis (junctional zone thickening)",
+          "First-line: NSAIDs + hormonal contraceptives (OCPs, Mirena, progestins)",
+          "GnRH agonists for severe pain refractory to medical management; maximum 3-6 months",
+          "Endometriosis: laparoscopic excision effective; adenomyosis: hysterectomy definitive"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 19", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 28", edition: "17th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "endometriosis-layer-4-exam",
+        title: "Endometriosis & Adenomyosis - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "Key exam concepts: pathophysiology (retrograde menstruation vs junctional zone invasion), diagnostic modalities, medical vs surgical management selection, and fertility implications.",
+        contentMd: `# Endometriosis & Adenomyosis - Exam Prep
+
+## High-Yield Facts
+
+### 1. Diagnostic Modality Selection
+**Endometriosis**:
+- **Laparoscopy**: Gold standard (visual + biopsy diagnosis)
+- **Ultrasound**: Best for ovarian endometriomas
+- **MRI**: Best for deep infiltrating disease, peritoneal disease
+
+**Adenomyosis**:
+- **MRI**: Gold standard (junctional zone assessment)
+- **Ultrasound**: Transvaginal, 3D improves accuracy
+- **Clinical diagnosis**: Based on imaging + symptoms
+
+### 2. Imaging Findings
+**Endometriosis**:
+- Ovarian cysts: "Chocolate cysts" (low-level echoes, homogeneous)
+- MRI: T1 hyperintense lesions (hemorrhage)
+
+**Adenomyosis**:
+- Junctional zone thickening: >12-14 mm (normal <12 mm)
+- Irregular JZ interface
+- Hyperechoic/isochoic lesions (adenomyomas)
+
+### 3. First-Line Medical Management
+**All symptomatic endometriosis/adenomyosis**:
+1. **NSAIDs**: Naproxen, ibuprofen (prostaglandin reduction)
+2. **Hormonal contraceptives**: OCPs (continuous dosing better than cyclic)
+3. **Progestins**: Mirena IUD, oral progestins
+
+### 4. GnRH Agonists Details
+- **Indications**: Severe pain refractory to medical therapy
+- **Mechanism**: Suppress FSH/LH → Estrogen deprivation
+- **Efficacy**: 80-90% pain reduction
+- **Duration**: 3-6 months MAXIMUM (bone loss risk)
+- **Add-back therapy**: Required after 3 months
+- **Side effects**: Hot flashes, vaginal dryness, mood changes, bone loss
+
+### 5. Key Differences (Exam Favorite)
+| Feature | Endometriosis | Adenomyosis |
+|---------|---------------|------------|
+| **Location** | Outside uterus | Within myometrium |
+| **Diagnostic test** | Laparoscopy | MRI (imaging) |
+| **Bleeding** | Minimal | Common (menorrhagia) |
+| **Dysmenorrhea** | Severe, sharp | Severe, dull, progressive |
+| **Age group** | Younger (20-40) | Older (40-50) |
+| **Infertility** | 30-50% | 10-20% |
+| **Surgical option** | Laparoscopic excision | Hysterectomy (definitive) |
+
+### 6. Adenomyosis and Infertility
+- Impairs fertility through: Abnormal contractions, reduced endometrial receptivity, chronic inflammation
+- Medical: Pretreatment with GnRH agonist improves IVF outcomes
+- Prognosis: Lower success rates than endometriosis-related infertility
+
+### 7. Endometriosis Surgery Outcomes
+- **Laparoscopic excision**: 60-80% pain improvement at 6-12 months
+- **Recurrence**: 20-40% within 2-3 years
+- **For IVF**: Often proceed directly to IVF for moderate-severe disease
+
+### 8. Exam Scenario
+**Woman with adenomyosis, infertility. IVF planned**:
+- **Answer**: Pretreatment with GnRH agonist (3 months) before IVF improves implantation rates`,
+        mnemonics: [
+          {
+            text: "Adenomyosis Features: JTU",
+            explanation: "Junctional zone (thickened), Tender uterus, Older age"
+          },
+          {
+            text: "Endometriosis Diagnosis: LUM",
+            explanation: "Laparoscopy (gold), Ultrasound (ovarian cysts), MRI (deep disease)"
+          },
+          {
+            text: "GnRH Add-Back: EN",
+            explanation: "Estrogen + Norethisterone (after 3 months to prevent bone loss)"
+          }
+        ],
+        keyPoints: [
+          "Laparoscopy gold standard for endometriosis; MRI gold standard for adenomyosis",
+          "First-line medical: NSAIDs + OCPs (continuous better than cyclic)",
+          "GnRH agonists 3-6 months max; require add-back therapy after 3 months for bone protection",
+          "Adenomyosis causes enlarged tender uterus; endometriosis causes tender nodules",
+          "Adenomyosis: hysterectomy definitive; endometriosis: recurrent after laparoscopic excision"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 19", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 28", edition: "17th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "endometriosis-layer-5-active-recall",
+        title: "Endometriosis & Adenomyosis - Active Recall",
+        estimatedMinutes: 10,
+        contentMd: `# Active Recall - Endometriosis & Adenomyosis
+
+**Q1**: Explain the retrograde menstruation theory of endometriosis. Why doesn't every woman develop endometriosis?
+> **A**: Retrograde menstruation occurs when menstrual fluid flows backward through fallopian tubes into peritoneal cavity (occurs in 75-90% of women). Menstrual tissue/cells deposit on peritoneal surfaces. **Why not all develop endometriosis**: Normal immune function (NK cells, macrophages, T cells) clears ectopic endometrial cells. In endometriosis, **immune dysfunction** allows escape of ectopic cells from immune destruction. Reduced NK cell numbers/function, macrophages fail to eliminate cells.
+
+**Q2**: What is the gold standard diagnostic test for endometriosis? Can adenomyosis be definitively diagnosed without hysterectomy?
+> **A**: **Endometriosis**: **Laparoscopy** (visual inspection + biopsy confirms histology). **Adenomyosis**: No definitive diagnostic test without hysterectomy. Diagnosis based on **imaging (MRI)** + **clinical features**. MRI shows junctional zone thickening (>12-14 mm), irregular interface. Only histology after hysterectomy = definitive.
+
+**Q3**: A 32-year-old has severe progressive dysmenorrhea. MRI shows junctional zone thickening (14 mm) with irregular interface. OCPs for 4 months not helpful. Next step?
+> **A**: **Diagnosis**: Adenomyosis (JZ thickening). **Failed first-line** (OCPs). **Next management**: (1) **GnRH agonist** 3-6 months (e.g., leuprolide IM monthly), (2) After 3 months, add **add-back therapy**: conjugated estrogen 0.625 mg + norethisterone 2.5 mg daily to prevent bone loss. (3) If GnRH fails or side effects intolerable → **Hysterectomy** (definitive treatment).
+
+**Q4**: Explain the progesterone resistance in endometriosis. How does this affect treatment options?
+> **A**: **Mechanism**: Ectopic endometrium has abnormal **progesterone receptor (PR)** expression. PR-B (mediates anti-inflammatory, anti-proliferative effects) **downregulated**. **Result**: Ectopic endometrium fails to respond to progesterone/progestins normally. **Treatment implications**: (1) **Progestin-only therapy** may be **less effective**. (2) **Combined approach** often needed: OCPs (suppress ovulation) + GnRH agonists (block estrogen). (3) **Aromatase inhibitors** reduce local estrogen production.
+
+**Q5**: Compare the dysmenorrhea in endometriosis vs adenomyosis. What is the pain mechanism in each?
+> **A**: **Endometriosis dysmenorrhea**: **Sharp, cramping** pain, **well-localized**. Mechanism: (1) **Prostaglandins** (PGE2, PGF2α) elevated in lesions → Myometrial contractions, (2) **Neuroangiogenesis**: Increased nerve fiber innervation in peritoneal lesions. **Adenomyosis dysmenorrhea**: **Dull, aching** pain, **diffuse**, **progressive**. Mechanism: (1) **Abnormal myometrial contractions**: Junctional zone dysfunction causes discoordinated contractions, (2) **Tissue hypoxia**: Poor perfusion from abnormal vasculature → Ischemic pain, (3) **Prostaglandins elevated**.
+
+**Q6**: A woman with endometriosis on GnRH agonist develops hot flashes, headaches, and bone density loss concerns at 4 months. How do you manage?
+> **A**: (1) **Hot flashes/headaches**: Expected side effects from estrogen deprivation. (2) **Bone density loss**: GnRH agonists cause rapid bone loss (2-3% per year). **After 3 months**, must add **add-back therapy**: **Conjugated estrogen 0.625 mg + norethisterone 2.5 mg daily**. Add-back maintains lesion suppression while protecting bone. (3) **Total duration GnRH**: Maximum 6 months. (4) **Calcium/vitamin D**: Supplement throughout.
+
+**Q7**: A 30-year-old with ovarian endometriomas (bilateral, 4 cm each) desires fertility. Should she have laparoscopic ovarian cystectomy?
+> **A**: **Consideration**: Laparoscopic ovarian cystectomy can impair ovarian reserve (damage to healthy ovarian tissue). **Options**: (1) **If pursuing IVF**: Often **skip surgery**, proceed directly to IVF (avoids surgery delay, ovarian damage). (2) **If symptoms severe/recurrent**: Surgery may be warranted. **Summary**: For fertility, strongly consider IVF rather than surgery.
+
+**Q8**: Explain adenomyosis-related infertility mechanisms. Is it as common as endometriosis-related infertility?
+> **A**: **Adenomyosis infertility mechanisms**: (1) **Abnormal myometrial contractions**: Junctional zone dysfunction → Impair sperm transport and embryo movement, (2) **Impaired endometrial receptivity**: Abnormal adhesion molecule expression, (3) **Chronic inflammation**: High prostaglandins, TNF-α toxic to embryo. **Prevalence**: Present in 10-20% of infertile women vs 20-30% for endometriosis. **Severity**: Generally causes **lower fertility reduction** than endometriosis-related infertility.
+
+**Q9**: A woman with adenomyosis and menorrhagia received Mirena IUD. She has good bleeding control but persistent dysmenorrhea. Why isn't pain controlled?
+> **A**: Mirena IUD **excellent for menorrhagia** but **dysmenorrhea in adenomyosis** caused by **myometrial dysfunction**, NOT just endometrial bleeding. Mirena's local progestin doesn't adequately suppress myometrial contractions. **Management**: (1) Add **NSAIDs** for pain, (2) Add **OCPs** (systemic hormone suppression), (3) If inadequate → **GnRH agonist**, (4) If all fails → **Hysterectomy**.
+
+**Q10**: What is the difference between "chocolate cysts" and adenomyomas? Are they adenomyosis?
+> **A**: **Chocolate cysts** = Ovarian **endometriomas** (from endometriosis), NOT adenomyosis. Location: **Outside uterus** (in ovary). **Adenomyomas** = Discrete focal area of **adenomyosis** within myometrium. Location: **Within myometrium** (inside uterus). **Relationship**: Chocolate cysts are endometriosis; adenomyomas are adenomyosis. Different entities.`,
+        mnemonics: [],
+        keyPoints: [
+          "Retrograde menstruation deposits cells; immune dysfunction allows survival and implantation",
+          "Laparoscopy gold standard for endometriosis; MRI for adenomyosis imaging",
+          "First-line: NSAIDs + OCPs (continuous); GnRH agonist for refractory disease",
+          "GnRH max 3-6 months; add-back therapy after 3 months for bone protection",
+          "Adenomyosis causes junctional zone dysfunction; requires systemic (not local) hormone suppression"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 19", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 28", edition: "17th" }
+        ]
+      }
+    ]
+  }
 ];
-];
-];
+`,

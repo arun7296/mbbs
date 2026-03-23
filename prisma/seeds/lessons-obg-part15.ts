@@ -1,15 +1,778 @@
-export const obgLessonsPart15 = [
+import type { TopicLessons } from "./content-loader";
+
+export const obgLessonsPart15: TopicLessons[] = [
   {
     topicCode: "OG-MOD-07-TOP-02",
     layers: [
       {
         layer: 1,
-        slug: "infertility-foundation",
+        slug: "infertility-layer-1-foundation",
         title: "Infertility - Foundation",
         estimatedMinutes: 20,
         summary: "Infertility affects 10-15% of couples globally, 15-20% in India. Defined as failure to conceive after 1 year of unprotected intercourse. Causes split equally: 40% female, 40% male, 20% unexplained. Key factors: age (female fertility declines after 35), ovulation (PCOS, hypogonadism), tubal patency, sperm quality, and uterine pathology.",
-        contentMd: "# Infertility - Foundation\n\n## Definitions\n**Primary Infertility**: Never conceived\n**Secondary Infertility**: Conceived previously but unable to conceive again\n**Subfertility**: Difficulty conceiving but not absolute infertility\n\n## Epidemiology\n- Affects 10-15% of couples globally\n- India: 15-20% prevalence (higher in certain regions)\n- Female age-related decline: Sharp drop after 35 years\n- Causes: 40% female, 40% male, 20% unexplained (both partners have issue in 10%)\n\n## Classification of Female Infertility\n\n### Ovulatory Factors (30-40%)\n- **PCOS** (Polycystic Ovary Syndrome): Most common\n- **Hypothyroidism/Hyperprolactinemia**: Suppress GnRH\n- **Hypogonadotropic hypogonadism**: Low FSH/LH (weight loss, stress, exercise)\n- **Ovarian failure**: Premature ovarian insufficiency (POI), menopause\n- **Luteal phase defect**: Inadequate progesterone\n\n### Tubal/Peritoneal Factors (20-30%)\n- **Tubal obstruction**: STI (gonorrhea, chlamydia), TB, endometriosis\n- **Tubal dysfunction**: Impaired motility from scarring\n- **Adhesions**: Post-abortion, post-surgery, endometriosis\n- **Peritoneal factors**: Endometriosis, inflammation\n\n### Uterine/Cervical Factors (10-20%)\n- **Uterine anomalies**: Septate/bicornuate uterus, hypoplasia\n- **Fibroids (leiomyoma)**: If submucosal or distorting cavity\n- **Asherman's syndrome**: Intrauterine adhesions (post-D&C)\n- **Cervical factor**: Cervicitis, cervical stenosis, poor mucus quality\n\n### Immune/Unexplained (10-15%)\n- **Antisperm antibodies**: Impair sperm transport/function\n- **Endometrial receptivity defect**\n- **Embryo implantation failure**\n\n## Classification of Male Infertility\n\n### Testicular Causes (40-50%)\n- **Hypogonadism** (primary/secondary)\n- **Varicocele**: Increased scrotal temperature\n- **Cryptorchidism**: History of\n- **Orchitis/Testicular trauma**\n- **Radiation/Chemotherapy**: Testicular damage\n\n### Post-Testicular Causes (30-40%)\n- **Ejaculatory dysfunction**: Retrograde ejaculation, azoospermia\n- **Vas deferens obstruction**: Post-vasectomy, congenital absence\n- **Epididymitis/Prostatitis**: Infection, inflammation\n\n### Functional/Immune (10-15%)\n- **Antisperm antibodies**: Autoimmune\n- **Erectile dysfunction/Premature ejaculation**: Sexual dysfunction\n\n## Basic Investigations\n- Female: Semen analysis (male factor), hormonal assessment (FSH, LH, prolactin, TSH), imaging (HSG/laparoscopy), endometrial biopsy\n- Male: Semen analysis (volume, count, motility, morphology per WHO 2021), hormonal assessment (testosterone, FSH, LH),\n        mnemonics: [\n          {\n            text: \"40-40-20 - Female 40%, Male 40%, Unexplained 20%\",\n            explanation: \"Equal distribution of infertility causes between partners\"\n          },\n          {\n            text: \"FEMALE - Ovulation (PCOS), Tubal (adhesions), Uterine (fibroids), Cervix\",\n            explanation: \"Main female factors: ovulatory, tubal, uterine, cervical\"\n          },\n          {\n            text: \"MALE - Testicular (hypogonadism), Post-testicular (obstruction), Sexual (dysfunction)\",\n            explanation: \"Main male factors and associated conditions\"\n          },\n          {\n            text: \"AGE - Female fertility ↓ after 35 (sharp decline)\",\n            explanation: \"Maternal age is critical prognostic factor for fertility\"\n          }\n        ],\n        keyPoints: [\n          \"Infertility affects 10-15% globally; 15-20% in India\",\n          \"40% female factor, 40% male factor, 20% unexplained\",\n          \"PCOS most common ovulatory cause\",\n          \"Female fertility declines sharply after age 35\",\n          \"STI and TB are major tubal disease causes in India\"\n        ],\n        textbookRefs: [\n          { book: \"DC Dutta's Textbook of Obstetrics & Gynaecology\", chapter: \"Ch 12: Infertility\", edition: \"9th\" },\n          { book: \"Williams Gynecology\", chapter: \"Ch 40: Female Infertility\", edition: \"3rd\" },\n          { book: \"WHO Semen Analysis\", chapter: \"WHO Semen Analysis Manual\", edition: \"6th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"infertility-mechanism\",\n        title: \"Infertility - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Female infertility mechanisms: PCOS (hyperandrogenism, LH/FSH imbalance), tubal disease (scarring, adhesions from STI/TB), endometriosis (inflammation, impaired implantation), uterine pathology (fibroids distort cavity). Male infertility: varicocele (scrotal heat), hypogonadism (TRT deficiency), obstruction, antisperm antibodies.\",\n        contentMd: "# Infertility - Mechanism\\n\\n## Female Infertility Mechanisms\\n\\n### PCOS (Polycystic Ovary Syndrome)\\n**Pathophysiology**\\n- Chronic hyperandrogenism (elevated androstenedione, testosterone)\\n- Insulin resistance: Hyperinsulinemia stimulates ovarian androgen production\\n- LH/FSH imbalance: Elevated LH (high GnRH pulse frequency), normal/low FSH\\n- Follicle arrest: Multiple small follicles, impaired dominant follicle selection\\n\\n**Result**: Anovulation/oligomenorrhea, infertility in 20-30% of PCOS patients\\n\\n### Tubal Disease\\n**Mechanisms of Obstruction**\\n1. **STI (Gonorrhea/Chlamydia)**\\n   - Acute salpingitis → chronic inflammation\\n   - Scarring and strictures of tubal lumen\\n   - Adhesions between folds (agglutination)\\n   - Risk: 12% infertility after 1 infection, 75% after 3+ infections\\n\\n2. **Tuberculosis (TB)**\\n   - Hematogenous spread to fallopian tubes (90% of female genital TB)\\n   - Caseating granulomas destroy tubal epithelium\\n   - Strictures, occlusion, hydrosalpinx\\n   - Endometrial damage: impaired implantation\\n   - High prevalence in India; significant infertility cause\\n\\n3. **Endometriosis**\\n   - Ectopic endometrial tissue in peritoneal cavity\\n   - Inflammatory mediators (IL-6, IL-8, TNF-α): impair fertilization\\n   - Antibodies to endometrial antigens\\n   - Mechanical factor: adhesions obstruct tubes\\n   - Reduced oocyte quality, impaired embryo implantation\\n\\n### Uterine Factors\\n**Fibroids (Leiomyoma)**\\n- Mechanism: Submucosal fibroids distort endometrial cavity\\n- Altered uterine contractions: impaired sperm transport\\n- Reduced endometrial receptivity: altered gene expression\\n- Abortion risk increased with fibroids\\n\\n**Asherman's Syndrome (Intrauterine Adhesions)**\\n- Cause: Overly aggressive D&C, uterine artery embolization, myomectomy\\n- Mechanism: Fibrous adhesions obliterate endometrial cavity\\n- Result: Amenorrhea, infertility, recurrent miscarriage\\n\\n### Ovarian Failure/Diminished Ovarian Reserve (DOR)\\n**Premature Ovarian Insufficiency (POI)**\\n- FSH >40 IU/L, AMH <1 ng/mL\\n- Causes: Autoimmune (autoantibodies to ovarian antigens), genetic, iatrogenic (chemotherapy/radiation)\\n- Result: Reduced oocyte number, impaired fertility\\n\\n**Age-Related Decline**\\n- Oocyte quality declines with age (aneuploidy risk increases)\\n- At age 35: 1% aneuploidy; at 45: 25-30% aneuploidy\\n- Fertility drops sharply after 35 years\\n\\n### Luteal Phase Defect\\n**Insufficient Progesterone**\\n- Cause: Inadequate corpus luteum function (short luteal phase <10 days)\\n- Mechanism: Impaired endometrial decidualization\\n- Result: Impaired implantation, early miscarriage\\n\\n## Male Infertility Mechanisms\\n\\n### Varicocele\\n**Pathophysiology**\\n- Abnormal dilation of pampiniform plexus (testicular veins)\\n- Impaired blood drainage: Increased scrotal temperature\\n- Elevated temperature: Sperm production impaired (FSH action)\\n- ROS (reactive oxygen species) generation: Oxidative stress\\n- Result: Reduced sperm count, motility, morphology\\n\\n**Severity Grading**\\n- Grade 1: Palpable only during Valsalva maneuver\\n- Grade 2: Palpable at rest, not visible\\n- Grade 3: Visible through scrotum, easy palpation\\n\\n### Hypogonadism\\n**Primary Hypogonadism** (Testicular failure)\\n- Reduced testosterone production from Leydig cells\\n- Azoospermia/oligospermia from seminiferous tubule damage\\n- Causes: Klinefelter syndrome (47,XXY), Kallmann syndrome (GnRH deficiency)\\n\\n**Secondary Hypogonadism** (Hypothalamic-pituitary dysfunction)\\n- Impaired GnRH, FSH, LH secretion\\n- Causes: Obesity, prolactinoma, hypopituitarism, anabolic steroid use\\n\\n### Ejaculatory Dysfunction\\n**Retrograde Ejaculation**\\n- Semen enters bladder instead of urethra (open bladder neck during ejaculation)\\n- Causes: Post-transurethral resection of prostate (TURP), diabetes, spinal cord injury\\n- Post-ejaculatory urine analysis shows motile sperm\\n\\n**Azoospermia**\\n- No sperm in ejaculate\\n- Obstructive: Vas deferens obstruction (post-vasectomy, congenital absence)\\n- Non-obstructive: Azoospermia despite normal testes (immature arrest)\\n\\n### Antisperm Antibodies (ASA)\\n- Immune response against sperm antigens\\n- Causes: Post-vasectomy, testicular trauma, infection\\n- Result: Reduced motility, impaired penetration of egg,\\n        mnemonics: [\\n          {\\n            text: \\\"PCOS - Hyperandrogenism, LH↑/FSH normal, Anovulation\\\",\\n            explanation: \\\"PCOS involves hormonal imbalance and follicle arrest\\\"\\n          },\\n          {\\n            text: \\\"TUBAL DISEASE - STI (12% after 1, 75% after 3), TB (90% genital)\\\",\\n            explanation: \\\"Infections are major tubal disease causes in India\\\"\\n          },\\n          {\\n            text: \\\"ENDOMETRIOSIS - Inflammation, Adhesions, Impaired implantation\\\",\\n            explanation: \\\"Multifactorial mechanism reducing fertility\\\"\\n          },\\n          {\\n            text: \\\"VARICOCELE - Increased scrotal temperature, ROS generation\\\",\\n            explanation: \\\"Heat-mediated sperm dysfunction from dilated veins\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"PCOS: hyperandrogenism, LH/FSH imbalance, follicle arrest\\\",\\n          \\\"STI: 12% infertility after 1 infection, 75% after 3+\\\",\\n          \\\"TB: 90% of female genital TB involves fallopian tubes\\\",\\n          \\\"Endometriosis: inflammation + adhesions impair fertility\\\",\\n          \\\"Varicocele: elevated scrotal temperature reduces sperm production\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"DC Dutta's Textbook of Obstetrics & Gynaecology\\\", chapter: \\\"Ch 12: Infertility\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Novak's Gynecology\\\", chapter: \\\"Ch 40: Female Infertility\\\", edition: \\\"15th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"infertility-clinical\\\",\\n        title: \\\"Infertility - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical workup: detailed history (duration, contraception use, sexual frequency, male factor assessment), investigations (hormonal, imaging, semen analysis). PCOS presents with oligomenorrhea, hirsutism; endometriosis with dysmenorrhea; tubal disease with adhesions on laparoscopy. Male factor: erectile dysfunction, reduced ejaculate volume, infertility despite attempts.\\\",\\n        contentMd: "# Infertility - Clinical Presentation & Investigation\\\\n\\\\n## Clinical Assessment Framework\\\\n\\\\n### History Taking\\\\n**Female**\\\\n- Duration of infertility: Primary vs. secondary\\\\n- Contraception use: Any IUD-related issues?\\\\n- Menstrual history: Cycle length, regularity, dysmenorrhea (endometriosis?)\\\\n- Obstetric history: Abortion-related (Asherman's?), D&C procedures\\\\n- STI/pelvic infection: History of gonorrhea, chlamydia, TB\\\\n- Sexual history: Frequency of intercourse, timing\\\\n- Systemic symptoms: Weight changes, hirsutism, galactorrhea (hormonal issues)\\\\n\\\\n**Male**\\\\n- Duration of infertility\\\\n- Sexual history: Erectile dysfunction? Premature ejaculation?\\\\n- Ejaculate volume: Small volume (retrograde ejaculation?)\\\\n- Testicular history: Trauma, mumps orchitis, undescended testis\\\\n- Medications: Anabolic steroids, chemotherapy, antiandrogens\\\\n\\\\n### Female Investigation - Systematic Approach\\\\n\\\\n**Step 1: Confirm Ovulation**\\\\n- BBT (Basal Body Temperature): 0.3-0.5°C rise post-ovulation\\\\n- Serum progesterone: >3 ng/mL day 21 (ovulation confirmed)\\\\n- Mid-cycle LH surge: Positive ovulation predictor kit\\\\n\\\\n**Step 2: Hormonal Assessment**\\\\n- **Day 2-3 FSH/LH/Estradiol**: Assess ovarian reserve (FSH <10 mIU/mL normal)\\\\n- **AMH** (Anti-mullerian hormone): Reflects ovarian reserve (>2 ng/mL normal, <1 suggests DOR)\\\\n- **Prolactin**: Elevated (>25 ng/mL) suppresses GnRH\\\\n- **TSH**: Hypothyroidism (TSH >4) impairs fertility\\\\n- **Testosterone/DHEA-S**: If PCOS suspected (elevated)\\\\n\\\\n**Step 3: Tubal Patency**\\\\n- **Hysterosalpingography (HSG)**: X-ray with contrast; shows tubal patency, uterine cavity shape\\\\n  - Gold standard for tubal assessment\\\\n  - Advantages: Office procedure, less invasive\\\\n  - Disadvantages: Cannot visualize peritoneal adhesions\\\\n\\\\n- **Laparoscopy**: Direct visualization; gold standard for endometriosis, adhesions\\\\n  - Diagnostic: Confirms endometriosis, tubal patency, adhesions\\\\n  - Therapeutic: Lysis of adhesions, ablation of endometriosis\\\\n  - Indicated: Failed HSG, suspected endometriosis, repeated IVF failure\\\\n\\\\n**Step 4: Uterine Assessment**\\\\n- **Transvaginal Ultrasound**: Assess cavity (fibroids, polyps, septate uterus), endometrial thickness\\\\n- **Hysteroscopy**: Direct visualization if abnormality on ultrasound\\\\n- **MRI**: For complex uterine anomalies\\\\n\\\\n### Male Investigation\\\\n\\\\n**Semen Analysis** (WHO 2021 Criteria - ESSENTIAL)\\\\n- **Volume**: ≥1.4 mL (oligozoospermia if <1.4)\\\\n- **Count (Concentration)**: ≥16 million/mL (oligozoospermia if <16)\\\\n- **Motility**: ≥42% total motility, ≥30% progressive motility\\\\n- **Morphology**: ≥4% normal forms (strict criteria)\\\\n- **pH**: ≥7.2\\\\n- **Viscosity**: Normal or abnormal\\\\n\\\\n**Interpretation**\\\\n- **Normozoospermia**: All parameters normal\\\\n- **Oligozoospermia**: Count <16 million/mL\\\\n- **Asthenozoospermia**: Motility <42% total\\\\n- **Teratozoospermia**: <4% normal forms\\\\n- **Azoospermia**: No sperm present\\\\n- **Oligoasthenoteratozoospermia (OAT)**: Multiple defects\\\\n\\\\n**Hormonal Assessment** (if abnormal semen analysis)\\\\n- **Testosterone**: Low (<300 ng/dL) suggests hypogonadism\\\\n- **FSH**: Elevated (>12 mIU/mL) suggests primary testicular failure\\\\n- **LH**: Elevated with low testosterone = primary hypogonadism\\\\n- **Prolactin**: If low testosterone, rule out hyperprolactinemia\\\\n\\\\n## Clinical Presentations by Cause\\\\n\\\\n### PCOS-Related Infertility\\\\n- Amenorrhea/oligomenorrhea (irregular cycles)\\\\n- Hirsutism, acne (hyperandrogenism)\\\\n- Obesity (50% of PCOS)\\\\n- Polycystic ovaries on ultrasound (12+ follicles, increased stroma)\\\\n\\\\n### Endometriosis-Related Infertility\\\\n- Dysmenorrhea (secondary, progressive)\\\\n- Dyspareunia (deep penetration pain)\\\\n- Chronic pelvic pain\\\\n- History of diarrhea/constipation (bowel endometriosis)\\\\n- Adhesions and distorted tubal anatomy on laparoscopy\\\\n\\\\n### Tubal Disease\\\\n- History of STI (gonorrhea, chlamydia), TB, appendicitis\\\\n- Pelvic tenderness on examination\\\\n- Fixed uterus (adhesions)\\\\n- Hydrosalpinx, dilated tubes on imaging\\\\n\\\\n### Male Factor Presentations\\\\n- Small testicular volume (<15 mL)\\\\n- Absence of vas deferens (palpation)\\\\n- Retrograde ejaculation: Low ejaculate volume, sperm in post-void urine\\\\n- Varicocele: Bag of worms appearance, left side predominance,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"PCOS - PCOS triad: Oligomenorrhea, Hyperandrogenism, Polycystic ovaries\\\\\\\",\\\\n            explanation: \\\\\\\"Clinical diagnosis of PCOS requires 2/3 Rotterdam criteria\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"HSG - First-line tubal assessment (office procedure)\\\\\\\",\\\\n            explanation: \\\\\\\"Hysterosalpingography for tubal patency\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"LAPAROSCOPY - Gold standard for endometriosis + adhesions\\\\\\\",\\\\n            explanation: \\\\\\\"Direct visualization + therapeutic potential\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"SEMEN ANALYSIS WHO 2021 - Count >16M, Motility >42%, Morphology >4%\\\\\\\",\\\\n            explanation: \\\\\\\"Male factor evaluation with current criteria\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"PCOS: oligomenorrhea, hirsutism, polycystic ovaries\\\\\\\",\\\\n          \\\\\\\"HSG is first-line for tubal assessment\\\\\\\",\\\\n          \\\\\\\"Laparoscopy gold standard for endometriosis/adhesions\\\\\\\",\\\\n          \\\\\\\"Semen analysis: count >16M/mL, motility >42%, morphology >4%\\\\\\\",\\\\n          \\\\\\\"FSH/AMH assess ovarian reserve; elevated FSH/low AMH = DOR\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics & Gynaecology\\\\\\\", chapter: \\\\\\\"Ch 12: Infertility\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"WHO Semen Analysis Manual\\\\\\\", chapter: \\\\\\\"6th Edition\\\\\\\", edition: \\\\\\\"2021\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"infertility-exam\\\\\\\",\\\\n        title: \\\\\\\"Infertility - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"Examination focus: workup sequence, diagnosis (PCOS, male factor, tubal disease), treatment selection. Assisted Reproductive Technology (ART): IUI (first-line for male factor, PCOS after ovulation induction), IVF/ICSI (male factor, tubal disease), TESE (azoospermia). Treatment decisions based on age, duration, cause, patient factors.\\\\\\\",\\\\n        contentMd: ``# Infertility - Exam Preparation\\\\n\\\\n## Diagnostic Workup Sequence (Key Exam Focus)\\\\n\\\\n### Step 1: Establish Infertility (1 year of unprotected intercourse)\\\\n- Confirm regular coital frequency (2-3x/week)\\\\n- Assess duration of infertility\\\\n- Female age <35 years? Continue workup.\\\\n\\\\n### Step 2: Semen Analysis (Cost-effective, male factor first)\\\\n- WHO 2021 criteria\\\\n- If abnormal: 2 samples (6-8 weeks apart) for confirmation\\\\n- Normal: Proceed to female assessment\\\\n\\\\n### Step 3: Assess Ovulation\\\\n- Progesterone day 21 (>3 ng/mL confirms ovulation)\\\\n- AMH, FSH (ovarian reserve assessment)\\\\n- TSH, prolactin (rule out hormonal issues)\\\\n\\\\n### Step 4: Assess Tubal Patency & Uterine Cavity\\\\n- **HSG**: First-line, office procedure\\\\n- **Laparoscopy**: If HSG abnormal, suspected endometriosis, or multiple IVF failures\\\\n\\\\n### Step 5: Post-Coital Test (PCA)\\\\n- Controversial, limited utility in modern practice\\\\n- Not routinely recommended (ASRM guidelines)\\\\n\\\\n## Causes of Female Infertility Workup\\\\n\\\\n**Anovulation (30-40%)**\\\\n- Irregular cycles → Measure FSH, LH, prolactin, TSH, testosterone\\\\n- PCOS: Elevated LH/FSH ratio, hyperandrogenism, polycystic ovaries\\\\n- Management: Clomiphene citrate (CC) 50-100 mg ovulation induction\\\\n\\\\n**Tubal Factor (20-30%)**\\\\n- HSG shows occlusion or dilation (hydrosalpinx)\\\\n- Laparoscopy: Endometriosis, adhesions\\\\n- Management: IVF (bypass tubal pathology); consider adhesiolysis for milder disease\\\\n\\\\n**Uterine Factor (10-15%)**\\\\n- Asherman's syndrome: Hysteroscopic adhesiolysis\\\\n- Fibroids: Myomectomy if submucosal\\\\n- Uterine anomaly: Surgical correction if septate uterus\\\\n\\\\n**Diminished Ovarian Reserve (DOR)**\\\\n- FSH >10 mIU/mL, AMH <1 ng/mL (poor prognosis)\\\\n- Age >38 years\\\\n- Management: Poor response to stimulation; consider IVF with aggressive stimulation or donor eggs\\\\n\\\\n## Treatment Decision Algorithm\\\\n\\\\n### PCOS-Related Infertility\\\\n1. **Weight loss**: 5-10% improves ovulation in 50%\\\\n2. **Clomiphene Citrate (CC)**: First-line ovulation induction\\\\n   - Dose: 50-100 mg daily × 5 days (days 2-6 of cycle)\\\\n   - Response: Ovulation in 70-80% of PCOS patients\\\\n   - Side effects: Hot flashes, visual disturbances, OHSS\\\\n3. **Letrozole**: Alternative to CC (15 mg × 5 days)\\\\n4. **Metformin**: If insulin-resistant (improves ovulation in 30%)\\\\n5. **Gonadotropins**: If CC-resistant (FSH/hCG)\\\\n6. **IUI**: After ovulation induction if male factor present\\\\n7. **IVF**: After failure of ovulation induction + IUI × 6 cycles\\\\n\\\\n### Male Factor Infertility\\\\n**Mild-Moderate Male Factor** (10-20M count, 30-40% motility)\\\\n- IUI with ovulation induction (wife)\\\\n- Improves fertilization by selecting motile sperm\\\\n\\\\n**Severe Male Factor** (Count <10M, motility <30%)\\\\n- IVF with ICSI (Intracytoplasmic Sperm Injection)\\\\n- Inject single sperm into oocyte (fertilization 50-70%)\\\\n\\\\n**Azoospermia**\\\\n- Obstructive: TESE (Testicular Sperm Extraction) or PESA/MESA (Percutaneous/Microsurgical epididymal aspiration)\\\\n- Non-obstructive: TESE, TESA (Testicular Sperm Aspiration) for focal sperm production\\\\n- Success rates: 50-60% fertilization with ICSI\\\\n\\\\n### Tubal Disease\\\\n- **Mild (peritubal adhesions)**: Laparoscopic adhesiolysis, success 50%\\\\n- **Moderate (partial obstruction)**: IVF preferred\\\\n- **Severe (complete bilateral occlusion/hydrosalpinx)**: IVF; consider salpingectomy first (improves IVF success)\\\\n\\\\n## Assisted Reproductive Technology (ART)\\\\n\\\\n### Intrauterine Insemination (IUI)\\\\n- Indications: Male factor (mild-moderate), cervical factor, unexplained after ovulation induction, PCOS\\\\n- Procedure: Concentrate sperm, deposit in uterus post-ovulation\\\\n- Success rates: 10-20% per cycle (depends on age, sperm quality)\\\\n\\\\n### In Vitro Fertilization (IVF)\\\\n- Indications: Tubal disease, severe male factor (with ICSI), recurrent IUI failure, DOR\\\\n- Success rates: 30-40% live birth per cycle (age <35), declines with age\\\\n- Stimulation: GnRH agonist/antagonist + FSH (10-14 days)\\\\n- Egg retrieval: Ultrasound-guided transvaginal aspiration\\\\n\\\\n### Intracytoplasmic Sperm Injection (ICSI)\\\\n- Inject single sperm into oocyte\\\\n- Indications: Severe male factor, azoospermia (with TESE), previous fertilization failure\\\\n- Fertilization rates: 50-70%; pregnancy rates similar to IVF,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"WORKUP - Semen analysis → Ovulation → Tubal → Uterine (SOTU sequence)\\\\\\\",\\\\n            explanation: \\\\\\\"Systematic approach to infertility diagnosis\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"PCOS TREATMENT - Weight loss, CC, Letrozole, Metformin, IUI, IVF\\\\\\\",\\\\n            explanation: \\\\\\\"Stepwise management from lifestyle to assisted reproduction\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"MALE FACTOR - IUI mild-moderate, ICSI severe\\\\\\\",\\\\n            explanation: \\\\\\\"Treatment depends on sperm parameters\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"TUBAL DISEASE - Adhesiolysis mild, IVF severe\\\\\\\",\\\\n            explanation: \\\\\\\"Treatment based on severity of tubal damage\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Semen analysis is first test (cost-effective, identifies male factor)\\\\\\\",\\\\n          \\\\\\\"PCOS: Clomiphene citrate 50-100 mg first-line ovulation induction\\\\\\\",\\\\n          \\\\\\\"Tubal disease: Adhesiolysis for mild disease; IVF for severe\\\\\\\",\\\\n          \\\\\\\"Male factor: IUI for mild-moderate; ICSI for severe\\\\\\\",\\\\n          \\\\\\\"IVF: 30-40% live birth per cycle (age <35); declines with age\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics & Gynaecology\\\\\\\", chapter: \\\\\\\"Ch 12: Infertility\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"ASRM Clinical Practice Guidelines\\\\\\\", chapter: \\\\\\\"Female Infertility\\\\\\\", edition: \\\\\\\"2023\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"infertility-recall\\\\\\\",\\\\n        title: \\\\\\\"Infertility - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"Active recall questions on classification, diagnosis, treatment of female/male infertility, ART techniques, prognosis based on age and cause.\\\\\\\",\\\\n        contentMd: ``# Active Recall - Infertility\\\\n\\\\n**Q1:** A 28-year-old woman has primary infertility × 2 years. Menses every 35-45 days with hirsutism and acne. Pelvic ultrasound shows 20+ follicles with increased ovarian stroma bilaterally. What is the most likely diagnosis and first-line treatment?\\\\n> **Answer:** PCOS (Polycystic Ovary Syndrome). Clinical diagnosis: oligomenorrhea + hyperandrogenism + polycystic ovaries (Rotterdam criteria, 2/3). First-line treatment: (1) Weight loss 5-10% improves ovulation in 50%, (2) Clomiphene citrate 50-100 mg × 5 days (cycle days 2-6), (3) If CC-resistant, try letrozole 2.5 mg × 5 days or metformin 1000-2000 mg daily. Monitor ovulation with progesterone day 21 or follicular tracking with ultrasound.\\\\n\\\\n**Q2:** A 32-year-old man with infertility × 3 years has semen analysis: volume 1.5 mL, count 8 million/mL, motility 35%, morphology 3%. What is the diagnosis and recommended treatment?\\\\n> **Answer:** Severe oligoasthenoteratozoospermia (OAT). Count 8M (<16M), motility 35% (<42%), morphology 3% (<4%). First investigate cause: testicular ultrasound (varicocele?), hormonal assessment (testosterone, FSH, LH). Treatment: IVF with ICSI (inject single sperm into oocyte). Success rates 50-70% fertilization. If azoospermia (no sperm), consider TESE (testicular sperm extraction) with ICSI.\\\\n\\\\n**Q3:** A couple with primary infertility × 1.5 years: wife age 38, regular 28-day cycles, normal HSG; husband normal semen analysis. What is the next step?\\\\n> **Answer:** Unexplained infertility (1.5 years infertility, both partners normal investigations). At age 38, decreased ovarian reserve is concern; check FSH, AMH. If FSH normal and AMH >1 ng/mL, proceed with IUI × 3-6 cycles or IVF. If DOR (FSH >10, AMH <1), counsel on poor prognosis and recommend IVF with aggressive stimulation or donor eggs. Consider empiric IVF given age (38+) without prolonged IUI attempts.\\\\n\\\\n**Q4:** A 35-year-old woman with infertility × 2 years has HSG showing left tubal occlusion and right hydrosalpinx. No endometriosis on diagnostic laparoscopy. What is the recommended treatment?\\\\n> **Answer:** Bilateral tubal disease with hydrosalpinx requires IVF (cannot conceive naturally with occluded/dilated tubes). Consider salpingectomy or occlusion of right tube (hydrosalpinx) before IVF, as hydrosalpinx fluid reduces IVF success by 40-50%. Success rates with IVF: 30-40% live birth per cycle (depends on age, ovarian reserve). Adhesiolysis alone inadequate for complete tubal occlusion.\\\\n\\\\n**Q5:** A woman with PCOS ovulates on clomiphene citrate but has failed to conceive after 6 cycles of timed intercourse. What are the next treatment options?\\\\n> **Answer:** (1) IUI (first-line with continued CC ovulation induction). Improves fertilization by selecting motile sperm; success 10-20% per cycle. (2) If husband has mild male factor, IUI is particularly beneficial. (3) If IUI fails × 3-4 cycles, proceed to IVF. (4) Consider metformin addition if insulin-resistant (improves success). (5) Letrozole alternative to CC if concerned about side effects.\\\\n\\\\n**Q6:** A 26-year-old man presents with azoospermia (confirmed on 2 semen analyses). FSH 2 mIU/mL, testosterone 600 ng/dL (normal). Testicular ultrasound shows no masses. What is the likely diagnosis?\\\\n> **Answer:** Obstructive azoospermia (normal FSH, normal testosterone, normal testes). Likely post-vasectomy, congenital absence of vas deferens (CAVD), or ejaculatory duct obstruction. Diagnosis: Testicular ultrasound, MRI, transrectal ultrasound (TRUS). Treatment: TESE (testicular sperm extraction) + ICSI for IVF. Success rates 50-60%. Alternative: Surgical reconstruction if bilateral vas deferens patent post-TURS.\\\\n\\\\n**Q7:** Comparison: Woman age 25 vs. age 42 with similar primary infertility × 2 years. Both have normal investigations. What is the prognosis difference and management?\\\\n> **Answer:** Age 25: Excellent prognosis. Fertility declines <3% annually. Can attempt IUI × 6 cycles, then IVF. Live birth per IVF cycle ~45%. Age 42: Poor prognosis. Fertility ~50% of age 30 level. Oocyte aneuploidy risk 25-30%. Recommend IVF without prolonged IUI attempts. Live birth per cycle ~20-25%. Consider donor eggs if multiple IVF failures. Age is strongest prognostic factor in infertility.\\\\n\\\\n**Q8:** A woman undergoes IVF stimulation with GnRH agonist. On day 5, she develops severe abdominal pain, bloating, nausea. What is the likely complication?\\\\n> **Answer:** Ovarian Hyperstimulation Syndrome (OHSS). Mild: bloating, mild pain. Moderate/severe: abdominal pain, nausea/vomiting, weight gain >2 lb/day, ascites, oliguria. Cause: Excessive response to gonadotropins. Management: IVF cycle cancellation if severe (freeze embryos), supportive care (IV hydration, analgesia), paracentesis if critical OHSS. Risk factors: Young age, low BMI, high AMH, PCOS.\\\\n\\\\n**Q9:** A 30-year-old woman with secondary infertility × 2 years has painful menstruation (worsening) and deep dyspareunia. Laparoscopy confirms Stage III endometriosis with adhesions. What is the fertility treatment?\\\\n> **Answer:** IVF is recommended (success rates 30-40% per cycle in endometriosis). Surgical ablation/excision may improve fertility in mild-moderate endometriosis (especially if pain management needed), but not superior to IVF for severe disease. Medical management (GnRH agonists, progestin) improves pain but not fertility. Combined approach: laparoscopic excision (pain control) followed by IVF if no pregnancy within 6-12 months.\\\\n\\\\n**Q10:** ICSI vs. IVF: When is ICSI indicated vs. when is standard IVF recommended?\\\\n> **Answer:** **ICSI Indicated**: Severe male factor (count <10M, motility <30%, morphology <4%), azoospermia with TESE, previous IVF with low/no fertilization, antisperm antibodies. **Standard IVF**: Normal semen analysis, female-only factors (tubal, ovulatory, unexplained), DOR, previous poor fertilization without male factor. ICSI does NOT improve pregnancy rates in normal semen analysis (potential harm with extra sperm manipulation). Fertilization rates: IVF 50-70%, ICSI 50-70%; live birth rates similar.,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"PCOS FIRST-LINE - Weight loss, Clomiphene, then IUI, then IVF\\\\\\\",\\\\n            explanation: \\\\\\\"Stepwise management approach for PCOS infertility\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"MALE FACTOR - Azoospermia (FSH low = obstructive), TESE + ICSI\\\\\\\",\\\\n            explanation: \\\\\\\"Azoospermia management with assisted fertilization\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"AGE - Fertility declines sharply >35, poor at 42+\\\\\\\",\\\\n            explanation: \\\\\\\"Maternal age is strongest prognostic factor\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"TUBAL OCCLUSION - IVF bypass; hydrosalpinx → salpingectomy\\\\\\\",\\\\n            explanation: \\\\\\\"Surgical or assisted reproductive options for tubal disease\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"PCOS: clomiphene citrate first-line ovulation induction\\\\\\\",\\\\n          \\\\\\\"Male factor: IUI for mild-moderate; ICSI for severe azoospermia\\\\\\\",\\\\n          \\\\\\\"Tubal disease: IVF; salpingectomy if hydrosalpinx\\\\\\\",\\\\n          \\\\\\\"Age >35 worsens prognosis; age >42 warrants rapid IVF assessment\\\\\\\",\\\\n          \\\\\\\"IVF 30-40% success (age <35); ICSI for severe male factor/azoospermia\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics & Gynaecology\\\\\\\", chapter: \\\\\\\"Ch 12: Infertility\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"ASRM Clinical Practice Guidelines\\\\\\\", chapter: \\\\\\\"Female Infertility\\\\\\\", edition: \\\\\\\"2023\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  },\\\\n  {\\\\n    topicCode: \\\\\\\"OG-MOD-07-TOP-03\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"mtp-legal-aspects-foundation\\\\\\\",\\\\n        title: \\\\\\\"MTP & Legal Aspects - Foundation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Medical Termination of Pregnancy (MTP) is legal abortion in India under the Medical Termination of Pregnancy Act, 1972 (amended 2021). MTP Act 2021 extended access: gestational limit increased from 20 to 24 weeks for all women; up to 20 weeks without spousal consent; safe abortion methods include medical (mifepristone + misoprostol) and surgical (MVA/EVA). Legal safeguards protect women's reproductive autonomy.\\\\\\\",\\\\n        contentMd: ``# MTP & Legal Aspects - Foundation\\\\n\\\\n## MTP Act 1972 (Amended 2021)\\\\n\\\\n### Key Changes in MTP Amendment Act 2021\\\\n\\\\n**Expanded Gestational Limits**\\\\n- **General: Up to 20 weeks** of pregnancy (earlier: up to 12 weeks)\\\\n- **Special categories: Up to 24 weeks** (certain women)\\\\n\\\\n**Special Categories (Extended to 24 weeks)**\\\\n- Survivors of sexual assault (rape)\\\\n- Survivors of incest\\\\n- Unmarried women (previously had to be married)\\\\n- Women carrying fetus with severe abnormality\\\\n- Women with life-threatening complications\\\\n- Women <18 years old (with parental/guardian consent)\\\\n\\\\n**Provisions for Minors**\\\\n- Age <18: Requires consent of parent/guardian\\\\n- Can be given in person or by video-conferencing\\\\n- Court can authorize if guardians refuse consent\\\\n\\\\n### Informed Consent Requirements\\\\n- Written informed consent before procedure\\\\n- Information on procedure, risks, alternatives\\\\n- Counseling mandatory (medical provider or trained counselor)\\\\n- 48-hour waiting period between counseling and procedure (except medical emergency)\\\\n- No waiting period post-counseling if woman consents\\\\n\\\\n### Confidentiality & Non-Disclosure\\\\n- MTP provider cannot disclose information without woman's consent (except legal requirement)\\\\n- Woman's right to privacy protected\\\\n- Spousal consent NOT required (major change from 1972)\\\\n\\\\n## Definition of Abortion\\\\n\\\\n**Therapeutic Abortion** = Medical Termination of Pregnancy (legal, safe)\\\\n**Criminal Abortion** = Unsafe abortion (illegal, dangerous)\\\\n\\\\n### Gestational Age Definition\\\\n- **Weeks of pregnancy**: Calculated from last menstrual period (LMP) to present\\\\n- **First trimester**: 0-12 weeks\\\\n- **Second trimester**: 13-24 weeks\\\\n- **Third trimester**: >24 weeks (MTP not permissible except life-saving)\\\\n\\\\n## Safe Abortion Methods\\\\n\\\\n### Medical Abortion (Drug-Induced)\\\\n**Mifepristone + Misoprostol**\\\\n- Mifepristone 200 mg PO (first stage): Blocks progesterone, causes endometrial detachment\\\\n- Misoprostol 400 mcg buccal/sublingual 24-48 hours later (second stage): Induces uterine contractions\\\\n- Up to 20 weeks gestation (some providers use up to 24 weeks with extended protocols)\\\\n- Efficacy: 95-98% with mifepristone + misoprostol\\\\n- Advantages: Minimally invasive, no anesthesia needed, can be done outpatient\\\\n\\\\n### Surgical Abortion\\\\n**Manual Vacuum Aspiration (MVA)**\\\\n- Handheld syringe with suction; no electricity needed\\\\n- Can be done under local anesthesia\\\\n- Suitable for <12 weeks\\\\n- Efficacy: >99%\\\\n\\\\n**Electric Vacuum Aspiration (EVA)**\\\\n- Machine-powered suction\\\\n- Suitable for 8-15 weeks\\\\n- More efficient for larger gestations\\\\n- Efficacy: >99%\\\\n\\\\n**Dilation & Curettage (D&C)**\\\\n- Mechanical curettage of endometrium (less commonly used now)\\\\n- Higher morbidity than vacuum methods\\\\n- Suitable for <15 weeks\\\\n\\\\n## Legal Status Indicators\\\\n\\\\n**Unsafe Abortion Defined**\\\\n- Performed by untrained provider\\\\n- Performed in unhygienic conditions\\\\n- Performed without informed consent\\\\n- Use of harmful instruments/substances (e.g., salt water, caustics, herbal abortifacients)\\\\n\\\\n**Safe Abortion**\\\\n- Performed by trained medical professional\\\\n- In hygienic facility\\\\n- With informed consent\\\\n- Using evidence-based methods (medical or surgical)\\\\n\\\\n## Post-Abortion Care (PAC)\\\\n\\\\n**Immediate Post-Abortion**\\\\n- Monitor for hemorrhage, infection, perforation\\\\n- Rh-negative women: Anti-D prophylaxis\\\\n- Tetanus prophylaxis if indicated\\\\n\\\\n**Contraceptive Counseling**\\\\n- Spacing between pregnancies (minimum 18 months recommended)\\\\n- IUCD insertion: Can insert at time of MTP or after\\\\n- Sterilization: Can perform at time of MTP if counseled\\\\n\\\\n**Follow-up**\\\\n- 2-week post-MTP review\\\\n- Screen for incomplete abortion (retain products of conception)\\\\n- Assess for infection, hemorrhage, psychological distress,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"MTP ACT 2021 - 20 weeks (all), 24 weeks (rape/incest/minor/fetal anomaly)\\\\\\\",\\\\n            explanation: \\\\\\\"Extended gestational limits for safe abortion in India\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"NO SPOUSAL CONSENT - Major change from 1972 Act\\\\\\\",\\\\n            explanation: \\\\\\\"Woman's autonomy protected; husband/partner consent not required\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"MIFEPRISTONE + MISOPROSTOL - 95-98% efficacy (medical abortion)\\\\\\\",\\\\n            explanation: \\\\\\\"Safe drug combination for first/early second trimester\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"MVA/EVA - >99% efficacy (surgical abortion)\\\\\\\",\\\\n            explanation: \\\\\\\"Vacuum aspiration preferred over D&C (less morbidity)\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"MTP Act 2021: up to 20 weeks (all), 24 weeks (special categories)\\\\\\\",\\\\n          \\\\\\\"Special categories: rape, incest, unmarried, fetal anomaly, age <18\\\\\\\",\\\\n          \\\\\\\"No spousal consent required (India's recognition of reproductive autonomy)\\\\\\\",\\\\n          \\\\\\\"Medical abortion: mifepristone + misoprostol, 95-98% effective\\\\\\\",\\\\n          \\\\\\\"Surgical abortion: MVA/EVA, >99% effective, less morbidity than D&C\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics & Gynaecology\\\\\\\", chapter: \\\\\\\"Ch 11: MTP & Legal Aspects\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"MTP Act 2021\\\\\\\", chapter: \\\\\\\"The Medical Termination of Pregnancy Act, 2021\\\\\\\", edition: \\\\\\\"Current\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"mtp-legal-aspects-mechanism\\\\\\\",\\\\n        title: \\\\\\\"MTP & Legal Aspects - Mechanism\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Medical abortion mechanism: mifepristone (antiprogestin) blocks progesterone receptor, triggers endometrial decidualization loss and uterine contractions; misoprostol (prostaglandin E1 analog) amplifies contractions and cervical dilation. Surgical abortion: mechanical removal of products of conception via suction/curettage. Legal framework ensures safety, consent, and confidentiality.\\\\\\\",\\\\n        contentMd: ``# MTP & Legal Aspects - Mechanism\\\\n\\\\n## Pharmacology of Medical Abortion\\\\n\\\\n### Mifepristone (Antiprogesterone)\\\\n**Mechanism**\\\\n- Competitive antagonist at progesterone receptors\\\\n- Blocks progesterone action in endometrium\\\\n- Causes endometrial necrosis and decidual separation\\\\n- Reduces placental adherence\\\\n\\\\n**Pharmacokinetics**\\\\n- Dose: 200 mg (India standard; some regions 600 mg)\\\\n- Peak plasma: 1-2 hours\\\\n- Half-life: 25-30 hours\\\\n- Metabolism: Hepatic (CYP3A4)\\\\n\\\\n**Effects on Pregnancy**\\\\n- Softens cervix by progesterone antagonism\\\\n- Increases myometrial contractions (PGE2 sensitization)\\\\n- Causes incomplete abortion (only detaches products; expulsion requires additional stimulus)\\\\n- Efficacy alone: 60-80% complete abortion (if given <63 days)\\\\n\\\\n### Misoprostol (Prostaglandin Analog)\\\\n**Mechanism**\\\\n- Synthetic PGE1 analog (acts on EP1/EP3 receptors)\\\\n- Increases myometrial contractions (frequency + intensity)\\\\n- Causes cervical softening and dilation\\\\n- Accelerates uterine evacuation\\\\n\\\\n**Pharmacokinetics**\\\\n- Dose: 400-800 mcg buccal/sublingual (India: 400-600 mcg)\\\\n- Onset: 30 minutes\\\\n- Peak: 90 minutes\\\\n- Duration: 3-6 hours\\\\n\\\\n**Effects on Pregnancy**\\\\n- Synergistic with mifepristone for complete abortion\\\\n- Combined regimen: 95-98% efficacy\\\\n- Misoprostol alone (without mifepristone): 70-80% efficacy\\\\n\\\\n### Combined Medical Abortion Protocol\\\\n1. **Day 0**: Mifepristone 200 mg PO (counseled, informed consent)\\\\n2. **Day 1-2**: Misoprostol 400-600 mcg (buccal/sublingual at home or facility)\\\\n3. **Day 7-14**: Follow-up assessment for complete abortion\\\\n   - Lack of symptoms (bleeding, cramping)\\\\n   - Negative hCG or declining hCG\\\\n   - Ultrasound: Empty uterus\\\\n4. **If incomplete abortion**: Surgical evacuation (MVA/EVA)\\\\n\\\\n## Surgical Abortion - Vacuum Aspiration\\\\n\\\\n### Manual Vacuum Aspiration (MVA)\\\\n**Mechanism**\\\\n- Handheld syringe (60 mL capacity) creates negative pressure\\\\n- Suction: 0.8 bar (600 mmHg)\\\\n- Curette: Gently removes endometrial tissue\\\\n\\\\n**Procedure**\\\\n1. Cervical preparation: Misoprostol or mifepristone 6-24 hours before (optional)\\\\n2. Anesthesia: Local (paracervical block) or general\\\\n3. Dilation: Graduated dilators (Hegar)\\\\n4. Aspiration: Gentle sweeping motions, products collection\\\\n5. Inspection: Visual assessment for completeness\\\\n\\\\n**Advantages**\\\\n- Minimal anesthesia (local), outpatient\\\\n- Less tissue trauma than sharp curettage\\\\n- Lower perforation risk\\\\n- Quick recovery\\\\n\\\\n### Electric Vacuum Aspiration (EVA)\\\\n**Mechanism**\\\\n- Machine-powered vacuum (stronger suction possible)\\\\n- Vacuum: 0.8 bar or higher (up to 1.0 bar)\\\\n- More efficient for larger gestations/more products\\\\n\\\\n**Procedure** (similar to MVA)\\\\n- Suitable for 8-20 weeks (can handle larger volumes)\\\\n- Faster evacuation than MVA\\\\n- Requires electricity/equipment\\\\n\\\\n### Dilation & Curettage (D&C) - Less Used Now\\\\n**Mechanism**\\\\n- Mechanical removal by sharp curette\\\\n- More forceful tissue removal\\\\n- Higher risk of perforation, asherman's syndrome\\\\n\\\\n## Legal Framework & Safeguards\\\\n\\\\n### Informed Consent Process\\\\n**Components**\\\\n1. Explanation of procedure: Risks, benefits, alternatives\\\\n2. Discussion of gestational age, abortion methods available\\\\n3. Explanation of post-abortion care, contraception options\\\\n4. Counseling by trained provider (medical or non-medical)\\\\n5. Woman's voluntary agreement (no coercion)\\\\n\\\\n**Documentation**\\\\n- Counseling record with date, content, counselor name\\\\n- Signed informed consent form\\\\n- Woman's indication for MTP\\\\n- Method chosen and reason\\\\n\\\\n### Confidentiality Protection\\\\n**Legal Requirements**\\\\n- MTP provider cannot disclose information without explicit consent\\\\n- Exceptions: Court order, threat to woman's life\\\\n- Woman's right to privacy extends to procedure, reasons, outcome\\\\n\\\\n**Implementation**\\\\n- Separate counseling space (private)\\\\n- Medical records secured\\\\n- No notification to partner/family without consent\\\\n- Special protection for minors (parental consent required, but confidentiality maintained)\\\\n\\\\n### Waiting Period Rationale\\\\n**48-Hour Waiting Period** (before procedure, after counseling)\\\\n- Allows time for decision-making\\\\n- Reduces impulsive decisions\\\\n- Exception: Medical emergency (imminent threat to life)\\\\n- Woman can waive if re-counseled and consents\\\\n\\\\n### Special Legal Protections\\\\n\\\\n**For Survivors of Sexual Violence**\\\\n- Consent of sexual partner NOT required\\\\n- Access to fast-track counseling\\\\n- Police report NOT required for MTP\\\\n- Extended gestational limit (up to 24 weeks)\\\\n\\\\n**For Minors**\\\\n- Parental/guardian consent required\\\\n- But can petition court if guardians refuse\\\\n- Court assesses \\\\\\\"best interest\\\\\\\" of minor\\\\n- Maintains confidentiality\\\\n\\\\n**For Women with Fetal Abnormality**\\\\n- Medical opinion on severe fetal abnormality (two doctors for >20 weeks)\\\\n- Extended access (up to 24 weeks)\\\\n- Counseling on nature/severity of anomaly,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"MIFEPRISTONE - Antiprogestin, blocks progesterone, 60-80% alone\\\\\\\",\\\\n            explanation: \\\\\\\"Causes endometrial separation but incomplete abortion\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"MISOPROSTOL - PGE1, uterine contractions, 70-80% alone, 95-98% with mifepristone\\\\\\\",\\\\n            explanation: \\\\\\\"Synergistic effect when combined with mifepristone\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"MVA/EVA - >99% efficacy, vacuum aspiration, outpatient safe\\\\\\\",\\\\n            explanation: \\\\\\\"Surgical abortion with minimal morbidity\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"48-HOUR WAIT - Time for decision-making, exception for emergency\\\\\\\",\\\\n            explanation: \\\\\\\"Waiting period protects autonomy but allows expedited care if needed\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Mifepristone (antiprogestin) causes endometrial detachment (60-80% alone)\\\\\\\",\\\\n          \\\\\\\"Misoprostol (PGE analog) causes myometrial contractions\\\\\\\",\\\\n          \\\\\\\"Combined regimen: 95-98% efficacy for medical abortion\\\\\\\",\\\\n          \\\\\\\"Surgical abortion: MVA/EVA >99% efficacy, lower morbidity than D&C\\\\\\\",\\\\n          \\\\\\\"Informed consent, confidentiality, waiting period protect woman's autonomy\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics & Gynaecology\\\\\\\", chapter: \\\\\\\"Ch 11: MTP\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"WHO Abortion Care Guidelines\\\\\\\", chapter: \\\\\\\"Medical & Surgical Abortion\\\\\\\", edition: \\\\\\\"2023\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"mtp-legal-aspects-clinical\\\\\\\",\\\\n        title: \\\\\\\"MTP & Legal Aspects - Clinical\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Clinical presentation for MTP: unintended pregnancy with patient request (reasons: economic hardship, lack of contraception, rape/incest, health concerns, fetal abnormality). Assessment: gestational age (ultrasound), hemoglobin (risk of hemorrhage), Rh status (need anti-D). Complications: hemorrhage, incomplete abortion, infection, cervical trauma, uterine perforation (rare with proper technique).\\\\\\\",\\\\n        contentMd: ``# MTP & Legal Aspects - Clinical\\\\n\\\\n## Patient Presentation\\\\n\\\\n### Reasons for Seeking MTP\\\\n**Socioeconomic Factors** (50-60%)\\\\n- Inability to afford another child\\\\n- Lack of adequate housing/resources\\\\n- Competing child care demands\\\\n- Educational/career concerns\\\\n\\\\n**Relationship Issues** (20-30%)\\\\n- Unintended pregnancy\\\\n- Lack of partner support\\\\n- Domestic violence\\\\n- Unmarried status (stigma)\\\\n\\\\n**Sexual Violence** (5-10%)\\\\n- Rape\\\\n- Incest\\\\n- Non-consensual intercourse\\\\n\\\\n**Medical/Fetal Factors** (5-10%)\\\\n- Maternal health threats (cardiac disease, renal failure, cancer)\\\\n- Severe fetal abnormalities (anencephaly, severe IUGR, congenital heart disease)\\\\n- Medication teratogenicity\\\\n- Maternal infection (Zika, COVID-19)\\\\n\\\\n**Contraceptive Failure** (10-15%)\\\\n- Condom rupture\\\\n- OCP missed doses\\\\n- IUCD displacement\\\\n\\\\n## Pre-MTP Clinical Assessment\\\\n\\\\n### Gestational Age Determination\\\\n- **LMP**: First day of last menstrual period\\\\n- **Ultrasound**: Most accurate (transvaginal <12 weeks)\\\\n- **Clinical examination**: Less accurate but useful if ultrasound unavailable\\\\n- **Importance**: Gestational age determines method (medical vs. surgical), side effect profile\\\\n\\\\n### Hemoglobin/Hematocrit Assessment\\\\n- **Baseline**: To assess preoperative risk\\\\n- **Target**: Hb >7 g/dL (acceptable for MTP; transfusion if <7)\\\\n- **Severely anemic**: Iron supplementation post-procedure\\\\n\\\\n### Rh Typing\\\\n- **Rh-negative women**: Require anti-D prophylaxis (250 IU/kg or standard 500 IU dose up to 12 weeks)\\\\n- **Rh-positive women**: No anti-D needed\\\\n\\\\n### Contraindications to Medical Abortion\\\\n- **Absolute**: Ectopic pregnancy (mifepristone ineffective), adrenal insufficiency (rare), corticosteroid use for Cushing's\\\\n- **Relative**: Hemodynamic instability, uncontrolled bleeding disorder, inability to follow-up\\\\n\\\\n### Screening for Infection\\\\n- HIV, syphilis, hepatitis B/C status (counseling + testing)\\\\n- Chlamydia/gonorrhea (if symptomatic, screen and treat before abortion)\\\\n- Tuberculosis history (if suspected, screen; can proceed with MTP)\\\\n\\\\n## Clinical Management by Gestational Age\\\\n\\\\n### Medical Abortion (up to 20 weeks, special cases up to 24)\\\\n**First Trimester (<12 weeks)**\\\\n- Mifepristone 200 mg PO (day 0)\\\\n- Misoprostol 400 mcg sublingual/buccal (day 1-2)\\\\n- Complete abortion in 2-4 days\\\\n- Efficacy: 95-98%\\\\n- Bleeding: 7-14 days (normal)\\\\n\\\\n**Second Trimester (13-20 weeks)**\\\\n- Mifepristone 200 mg PO (day 0)\\\\n- Misoprostol 400-600 mcg (higher doses, more frequent dosing)\\\\n- Multiple doses misoprostol (every 3-6 hours) until abortion\\\\n- Efficacy: 95-98% (may be lower at later gestations)\\\\n- Hospitalization may be needed for pain management\\\\n\\\\n### Surgical Abortion\\\\n**First Trimester (<12 weeks)**\\\\n- MVA or EVA under local anesthesia\\\\n- Efficacy: >99%\\\\n- Outpatient procedure\\\\n- Recovery: Same day discharge\\\\n\\\\n**Second Trimester (13-20 weeks)**\\\\n- EVA under general anesthesia (preferred, less pain)\\\\n- Cervical preparation: Misoprostol 400-600 mcg 6-24 hours before\\\\n- Efficacy: >99%\\\\n- Hospitalization: May require overnight stay\\\\n- Recovery: Longer than first-trimester procedure\\\\n\\\\n## Complications of MTP\\\\n\\\\n### Early/Immediate Complications\\\\n\\\\n**Hemorrhage**\\\\n- Mild: Expected (500-1000 mL normal)\\\\n- Moderate: 1000-2000 mL (manage with ergot/oxytocin, IV fluids)\\\\n- Severe: >2000 mL or hemodynamic instability (transfusion, ICU monitoring)\\\\n- Incidence: 1-2% requiring intervention\\\\n\\\\n**Incomplete Abortion**\\\\n- Retained products of conception\\\\n- Symptoms: Persistent bleeding, cramping, elevated hCG\\\\n- Management: Surgical evacuation (MVA/EVA), repeat vacuum, antibiotics\\\\n- Incidence: 5-10% with medical abortion\\\\n\\\\n**Uterine Perforation**\\\\n- Rare: 1-2 per 1000 surgical procedures\\\\n- Symptoms: Acute pain, peritoneal signs\\\\n- Management: Hospitalization, laparoscopy/laparotomy, repair\\\\n- Risk higher with D&C vs. vacuum aspiration\\\\n\\\\n**Infection/Sepsis**\\\\n- Pre-existing (STI): Screen and treat\\\\n- Post-procedure: 1-3% risk\\\\n- Symptoms: Fever, lower abdominal pain, purulent discharge\\\\n- Management: Antibiotics (broad-spectrum initially), evacuation of products\\\\n\\\\n### Late Complications\\\\n\\\\n**Asherman's Syndrome**\\\\n- Intrauterine adhesions (from aggressive curettage)\\\\n- Symptoms: Amenorrhea, reduced menstrual flow\\\\n- Management: Hysteroscopic adhesiolysis\\\\n- Prevention: Gentle technique, vacuum over sharp curette\\\\n\\\\n**Rh Sensitization**\\\\n- If Rh-negative woman not given anti-D\\\\n- Symptoms: None immediately; risk in future pregnancies (hemolytic disease)\\\\n- Prevention: Anti-D 500 IU (<12 weeks) or 1500 IU (>12 weeks)\\\\n\\\\n**Emotional Distress/PTSD**\\\\n- Guilt, regret (lower in planned abortion)\\\\n- Depression, anxiety (temporary, usually resolves)\\\\n- Counseling and follow-up support recommended\\\\n\\\\n## Post-MTP Management\\\\n\\\\n### Immediate Post-Procedure\\\\n- Monitor for hemorrhage, infection\\\\n- Pain management (paracetamol, ibuprofen)\\\\n- Rh-negative: Administer anti-D\\\\n\\\\n### Follow-up (2 weeks)\\\\n- Review for incomplete abortion (hCG, ultrasound if bleeding)\\\\n- Screen for infection (fever, discharge)\\\\n- Assess for perforation (abdominal pain, peritoneal signs)\\\\n\\\\n### Contraceptive Counseling\\\\n- IUCD: Can insert at time of MTP or within 48 hours\\\\n- Oral contraception: Can start immediately\\\\n- Spacing: Minimum 6 months between pregnancies (optimal 18-24 months)\\\\n- Sterilization: Can perform at time of MTP if counseled\\\\n\\\\n### Psychological Support\\\\n- Normalize emotions (wide range normal)\\\\n- Link to support groups if desired\\\\n- Ensure non-judgmental care,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"PRE-MTP - Age, Hb, Rh, Infection screening, Contraindications\\\\\\\",\\\\n            explanation: \\\\\\\"Key assessments before medical/surgical abortion\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"HEMORRHAGE 1-2%, INCOMPLETE 5-10%, PERFORATION 1-2 per 1000\\\\\\\",\\\\n            explanation: \\\\\\\"Complication incidence rates for MTP\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"RH-NEGATIVE → Anti-D 500 IU (<12w) or 1500 IU (>12w)\\\\\\\",\\\\n            explanation: \\\\\\\"Prevent Rh sensitization in future pregnancies\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"POST-MTP CONTRACEPTION - IUCD immediate, OCP immediate, spacing 6+ months\\\\\\\",\\\\n            explanation: \\\\\\\"Options for family planning after MTP\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Gestational age determined by LMP + ultrasound\\\\\\\",\\\\n          \\\\\\\"Hemoglobin, Rh status, infection screening essential\\\\\\\",\\\\n          \\\\\\\"Medical abortion: 95-98% efficacy; surgical: >99%\\\\\\\",\\\\n          \\\\\\\"Hemorrhage 1-2%, incomplete 5-10%, perforation rare\\\\\\\",\\\\n          \\\\\\\"Anti-D for Rh-negative women; IUCD/OCP can start immediately\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics & Gynaecology\\\\\\\", chapter: \\\\\\\"Ch 11: MTP\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"WHO Abortion Care Guidelines\\\\\\\", chapter: \\\\\\\"Complications & Management\\\\\\\", edition: \\\\\\\"2023\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"mtp-legal-aspects-exam\\\\\\\",\\\\n        title: \\\\\\\"MTP & Legal Aspects - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"Examination focus: MTP Act 2021 changes (gestational limits, consent, spousal autonomy), methods (medical vs. surgical, efficacy, choice), complications (hemorrhage, incomplete, infection), post-abortion care (contraception, spacing). Case scenarios: rape, fetal anomaly, unmarried woman, minor. Legal documentation and counseling requirements.\\\\\\\",\\\\n        contentMd: ``# MTP & Legal Aspects - Exam Preparation\\\\n\\\\n## Key Legislation Changes (MTP Act 2021 vs. 1972)\\\\n\\\\n### Gestational Limit Changes\\\\n**1972 Act**: 12 weeks\\\\n**2021 Act**:\\\\n- 20 weeks (all women)\\\\n- 24 weeks (special categories)\\\\n\\\\n### Spousal Consent Requirement\\\\n**1972 Act**: Consent of husband required (if married)\\\\n**2021 Act**: Spousal consent NOT required (woman's autonomy prioritized)\\\\n\\\\n### Expansion of Special Categories\\\\n**2021 Additions**:\\\\n- Unmarried women (previously excluded)\\\\n- Survivors of sexual assault/incest\\\\n- Women <18 years\\\\n- Women with severe fetal abnormalities\\\\n- Women with life-threatening complications\\\\n\\\\n### Waiting Period\\\\n**Standard**: 48 hours between counseling and procedure\\\\n**Exception**: Medical emergency (waived)\\\\n\\\\n## Methods Comparison (Exam Key)\\\\n\\\\n### Medical vs. Surgical Abortion\\\\n\\\\n| Factor | Medical | Surgical |\\\\n|--------|---------|----------|\\\\n| Efficacy | 95-98% | >99% |\\\\n| Gestational Age | <20w (special 24w) | <20w |\\\\n| Anesthesia | None (local analgesic) | Local or general |\\\\n| Setting | Outpatient/home | Outpatient/hospital |\\\\n| Recovery | 2-7 days | Same day |\\\\n| Complication Rate | Low | Low |\\\\n| Hemorrhage | Expected (500-1000 mL) | 1-2% requiring intervention |\\\\n| Tissue Inspection | Not possible | Possible |\\\\n\\\\n### Method Selection Factors\\\\n- **Patient preference**: Empowered choice\\\\n- **Gestational age**: <12w either; 13-20w either (EVA preferred)\\\\n- **Access**: Rural areas may favor medical (less infrastructure)\\\\n- **Reliability**: Surgical slightly higher efficacy\\\\n- **Time**: Medical slower (2-4 days); surgical immediate\\\\n\\\\n## Complications & Management\\\\n\\\\n### Hemorrhage Management\\\\n- **Mild**: Expected, reassure\\\\n- **Moderate (1-2L)**: IV fluids, oxytocin, ergotamine, catheterization\\\\n- **Severe (>2L)**: Blood transfusion, ICU, emergency hysterectomy (rare)\\\\n\\\\n### Incomplete Abortion\\\\n- **Diagnosis**: Persistent bleeding, hCG not declining, ultrasound products\\\\n- **Management**: Evacuation (MVA/EVA), antibiotics if infected\\\\n- **Prevention**: Good technique, follow-up ultrasound at 2 weeks\\\\n\\\\n### Infection\\\\n- **Prevention**: Prophylactic antibiotics debated (may not be needed for routine)\\\\n- **Management**: Broad-spectrum antibiotics, evacuation if products retained\\\\n\\\\n### Perforation\\\\n- **Diagnosis**: Acute severe pain, peritoneal signs, free gas on imaging\\\\n- **Management**: Hospitalization, laparoscopy/laparotomy, repair, antibiotics\\\\n\\\\n## Post-Abortion Care (Spacing & Contraception)\\\\n\\\\n### Spacing Interval\\\\n**Minimum**: 6 months between pregnancies\\\\n**Optimal**: 18-24 months (reduces maternal/perinatal mortality)\\\\n**Explanation**: Allows time for nutritional repletion, uterine involution, psychosocial recovery\\\\n\\\\n### Contraceptive Options Post-MTP\\\\n- **IUCD**: Can insert immediately (at time of procedure or within 48 hours)\\\\n- **OCP**: Can start immediately\\\\n- **Barrier methods**: Acceptable\\\\n- **Sterilization**: Can perform at time of MTP (with counseling)\\\\n- **DMPA/Implant**: Can start immediately\\\\n\\\\n### Breastfeeding Impact\\\\n- Medical abortion: No impact on lactation\\\\n- If breastfeeding: OCP/progestin-only acceptable\\\\n\\\\n## Legal Documentation Requirements\\\\n\\\\n### Mandatory Records\\\\n1. **Counseling form**: Date, content, counselor name, woman's signature\\\\n2. **Informed consent**: Dated, signed, witnessed\\\\n3. **Indication for MTP**: Documented in medical record\\\\n4. **Method chosen**: Documented with rationale\\\\n5. **Complication assessment**: Follow-up documentation\\\\n\\\\n### Confidentiality Records\\\\n- Secure storage (locked file/encrypted)\\\\n- No disclosure without consent (except court order)\\\\n- Woman's right to access her records\\\\n\\\\n### Special Documentation for Minors\\\\n- Parental/guardian consent form\\\\n- Minor's assent (if possible)\\\\n- Best interest assessment (if guardians refuse)\\\\n\\\\n## Case-Based Exam Scenarios\\\\n\\\\n### Scenario 1: Rape Survivor (Age 25)\\\\n**Presentation**: 6-week pregnant from sexual assault\\\\n**Gestational limit**: 24 weeks available (extended access for rape survivor)\\\\n**Consent**: Woman's consent only (spousal consent not required)\\\\n**Waiting period**: Can waive for trauma survivor (compassionate grounds)\\\\n**Police report**: NOT required for MTP\\\\n\\\\n### Scenario 2: Severe Fetal Anomaly (Age 32, 22 weeks)\\\\n**Presentation**: Anencephaly diagnosed on screening ultrasound\\\\n**Gestational limit**: Can access up to 24 weeks (fetal anomaly is special category)\\\\n**Medical opinion**: 2 doctors' certification of severe fetal abnormality\\\\n**Counseling**: Sensitive discussion of anomaly implications\\\\n**Method**: Surgical (EVA) preferred at 22 weeks (safer than medical at late gestation)\\\\n\\\\n### Scenario 3: Unmarried Woman (Age 28, 15 weeks)\\\\n**Presentation**: Unintended pregnancy, no partner support\\\\n**Legal status before 2021**: Would need false marital claim\\\\n**Legal status 2021 onwards**: Eligible for MTP (unmarried status no longer bar)\\\\n**Gestational limit**: Up to 20 weeks available\\\\n**Consent**: Woman's consent only\\\\n\\\\n### Scenario 4: Minor (Age 16, 14 weeks)\\\\n**Presentation**: Pregnant, wants MTP, parents refuse\\\\n**Gestational limit**: Up to 24 weeks (minor is special category)\\\\n**Consent**: Requires parental/guardian consent normally\\\\n**If parents refuse**: Can petition court (High Court/District Court)\\\\n**Court assessment**: Judges \\\\\\\"best interest\\\\\\\" of minor; usually permits if minor desires\\\\n**Timing**: Court process may take weeks; expedite if medically urgent\\\\n\\\\n### Scenario 5: Medical Emergency (Age 38, 18 weeks, cardiac disease)\\\\n**Presentation**: Pregnancy threatening cardiac stability (peripartum cardiomyopathy risk)\\\\n**Gestational limit**: Up to 20 weeks (general access)\\\\n**Waiting period**: WAIVED (medical emergency)\\\\n**Consent**: Expedited counseling, immediate procedure\\\\n**Method**: Surgical (faster, safer in cardiac disease),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"MTP ACT 2021 - 20w ALL, 24w SPECIAL (rape, incest, minor, fetal anomaly)\\\\\\\",\\\\n            explanation: \\\\\\\"Extended gestational limits and categories\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"NO SPOUSAL CONSENT - Key change from 1972\\\\\\\",\\\\n            explanation: \\\\\\\"Woman's reproductive autonomy protected\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"METHODS - Medical 95-98%, Surgical >99%\\\\\\\",\\\\n            explanation: \\\\\\\"Efficacy comparison for exam\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"POST-MTP SPACING - 6 months minimum, 18-24 months optimal\\\\\\\",\\\\n            explanation: \\\\\\\"Interval for next pregnancy after abortion\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"MTP Act 2021: 20 weeks all women; 24 weeks special categories\\\\\\\",\\\\n          \\\\\\\"Spousal consent NOT required (woman's autonomy protected)\\\\\\\",\\\\n          \\\\\\\"Medical abortion: 95-98% efficacy, misoprostol + mifepristone\\\\\\\",\\\\n          \\\\\\\"Surgical abortion: >99% efficacy, MVA/EVA preferred over D&C\\\\\\\",\\\\n          \\\\\\\"Post-abortion spacing: 6 months minimum; IUCD/OCP immediate\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics & Gynaecology\\\\\\\", chapter: \\\\\\\"Ch 11: MTP\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"MTP Act 2021\\\\\\\", chapter: \\\\\\\"Legal Text\\\\\\\", edition: \\\\\\\"Current\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"mtp-legal-aspects-recall\\\\\\\",\\\\n        title: \\\\\\\"MTP & Legal Aspects - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 10,\\\\n        summary: \\\\\\\"Active recall questions on MTP Act 2021 changes, methods/efficacy, complications, legal requirements, special categories, post-abortion care.\\\\\\\",\\\\n        contentMd: ``# Active Recall - MTP & Legal Aspects\\\\n\\\\n**Q1:** A 22-year-old unmarried woman (8 weeks gestation) seeks MTP. Under the MTP Act 2021, what is her legal eligibility, and does she require spousal/parental consent?\\\\n> **Answer:** Fully eligible. Under MTP Act 2021, unmarried women can access MTP (previously, only married women were eligible under 1972 Act). Gestational limit: 20 weeks. Spousal consent NOT required (major change from 1972). Parental consent required only if woman <18 years. For this 22-year-old: self-consent sufficient. Counseling mandatory (48-hour wait unless emergency).\\\\n\\\\n**Q2:** A 16-year-old girl (12 weeks pregnant) wants MTP. Her parents refuse consent. What is the legal pathway?\\\\n> **Answer:** Minor is special category under MTP Act 2021 (access up to 24 weeks). Parental/guardian consent normally required, BUT if guardians refuse, girl can petition District/High Court. Court assesses \\\\\\\"best interest\\\\\\\" of minor. Courts generally permit MTP if minor desires (recognizing autonomy). Expedite petition if medically urgent. MTP provider can facilitate court petition process. Timeline: legal proceeding may take weeks; medical emergency waives waiting period.\\\\n\\\\n**Q3:** A woman (22 weeks pregnant) with anencephalic fetus seeks termination. Under MTP Act 2021, is she eligible for MTP?\\\\n> **Answer:** Yes, eligible up to 24 weeks (fetal abnormality is special category). Requires certification by TWO doctors that severe fetal abnormality is present. Anencephaly is universally lethal (meets \\\\\\\"severe abnormality\\\\\\\" criterion). Counseling on nature/severity of anomaly essential. Surgical abortion (EVA) preferred at 22 weeks (safer than medical). Consent process same as other women.\\\\n\\\\n**Q4:** A 28-year-old Rh-negative woman (14 weeks) undergoes MTP by medical abortion (mifepristone + misoprostol). What is the critical post-procedure intervention?\\\\n> **Answer:** Anti-D immunoglobulin prophylaxis 500 IU (<12 weeks) or 1500 IU (>12 weeks). This woman at 14 weeks receives 1500 IU (standard dose). Prevents Rh sensitization for future pregnancies. Without anti-D, risk of hemolytic disease in next pregnancy (Rh-positive baby) from maternal anti-D antibodies. Administer IM within 72 hours post-procedure (can extend to 10 days if missed).\\\\n\\\\n**Q5:** Medical abortion with mifepristone 200 mg + misoprostol has 95-98% efficacy. What explains the 2-5% failure rate, and what is management for incomplete abortion?\\\\n> **Answer:** Incomplete abortion (retained products of conception) is main cause of 2-5% failure. Causes: inadequate uterine contractions, thick endometrium, technical factors. Management: (1) Confirm diagnosis (persistent bleeding, hCG plateau/rise, ultrasound products), (2) Surgical evacuation (MVA/EVA), (3) Antibiotics if signs of infection. Prevention: good follow-up at 2 weeks, ultrasound confirmation of empty uterus.\\\\n\\\\n**Q6:** A 26-year-old seeks MTP at 16 weeks for social reasons. Compare medical vs. surgical abortion at this gestational age.\\\\n> **Answer:** **Medical abortion**: Mifepristone + misoprostol (multiple doses over several days), hospitalization likely for pain management, 95-98% efficacy, products not inspected. **Surgical abortion (EVA)**: General anesthesia, 1-day procedure, >99% efficacy, tissue can be inspected, faster. At 16 weeks, **surgical (EVA) preferred** over medical because: faster, less pain/hospitalization, slightly higher efficacy. Cervical preparation (misoprostol) may be used before EVA. Medical abortion suitable if patient preference + no contraindications.\\\\n\\\\n**Q7:** A woman presents 3 days post-surgical abortion (MVA) with fever (38.5°C), vaginal discharge, and lower abdominal pain. What is suspected complication, and what is management?\\\\n> **Answer:** Post-abortion infection (retained products of conception + infection). Diagnosis: fever, vaginal discharge, tenderness, elevated WBC. Management: (1) Blood cultures, (2) Broad-spectrum antibiotics (ceftriaxone + metronidazole initially), (3) Ultrasound to confirm retained products, (4) Surgical evacuation (repeat MVA/EVA) to remove infected tissue, (5) Monitor for sepsis (ICU if needed). Prevention: Use prophylactic antibiotics (doxycycline) post-procedure (controversial but many centers use).\\\\n\\\\n**Q8:** Post-abortion counseling for contraception: a woman who just underwent MTP at 14 weeks. When can she start various contraceptive methods?\\\\n> **Answer:** (1) **IUCD**: Insert immediately (at time of procedure) or within 48 hours. Effective within 5 minutes. (2) **OCP**: Start immediately (day of procedure or next day). (3) **Progestin-only pill**: Start immediately. (4) **DMPA injection**: Can give immediately. (5) **Condoms**: Use from immediately. (6) **Sterilization**: Can perform at time of MTP (with counseling). **Spacing interval**: Minimum 6 months before next pregnancy; optimal 18-24 months. Counsel on contraceptive choice per her preferences and needs.\\\\n\\\\n**Q9:** Documentation requirements for legal MTP: What records must be maintained for an MTP performed under MTP Act 2021?\\\\n> **Answer:** (1) **Counseling form**: Date, content (procedure, risks, alternatives), counselor name, woman's signature. (2) **Informed consent**: Dated, signed, witnessed, indicating woman's understanding + voluntary agreement. (3) **Medical record**: Indication for MTP, gestational age, method chosen, complications, follow-up. (4) **Special documentation**: For minors (parental consent/court order), fetal anomaly (2 doctors' certification for >20w), rape survivor (no police report needed). (5) **Confidentiality**: Secure storage, no disclosure without consent. Record retention: Standard medical records (5-7 years India).\\\\n\\\\n**Q10:** MTP Act 2021 waiting period: What is the rationale, when does it apply, and what are exceptions?\\\\n> **Answer:** **Rationale**: 48-hour waiting period between counseling and procedure allows time for woman's considered decision-making, reduces impulsive decisions, respects autonomy. **Application**: Standard for all women seeking MTP. **Woman can waive**: If re-counseled and consents (no mandatory wait if waiver obtained). **Exceptions/Expedited**: Medical emergency (imminent threat to life/health), rape survivor (compassionate grounds), other urgent circumstances. **Counseling timing**: Separate from procedure; can be done earlier (no mandated timing before 48h window starts). Designed to protect woman's interests while respecting urgent medical/trauma needs.,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"MTP ACT 2021 - Unmarried eligible, 20w all, 24w special, NO spousal consent\\\\\\\",\\\\n            explanation: \\\\\\\"Major changes from 1972 act\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"FETAL ANOMALY 24w - Requires 2 doctors' certification of severe abnormality\\\\\\\",\\\\n            explanation: \\\\\\\"Special category with extended access\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"MEDICAL ABORTION 95-98%, SURGICAL >99%\\\\\\\",\\\\n            explanation: \\\\\\\"Efficacy rates for exam\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"RH-NEGATIVE → Anti-D 500IU (<12w) or 1500IU (>12w) within 72h\\\\\\\",\\\\n            explanation: \\\\\\\"Critical intervention to prevent sensitization\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"MTP Act 2021: 20 weeks all; 24 weeks for rape, incest, minor, fetal anomaly\\\\\\\",\\\\n          \\\\\\\"Spousal consent NOT required; woman's autonomy prioritized\\\\\\\",\\\\n          \\\\\\\"Medical abortion: 95-98% efficacy (mifepristone + misoprostol)\\\\\\\",\\\\n          \\\\\\\"Surgical abortion: >99% efficacy (EVA preferred over D&C)\\\\\\\",\\\\n          \\\\\\\"Post-MTP: Anti-D for Rh-negative; IUCD/OCP immediate; spacing 6 months minimum\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics & Gynaecology\\\\\\\", chapter: \\\\\\\"Ch 11: MTP & Legal\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"MTP Act 2021\\\\\\\", chapter: \\\\\\\"The Medical Termination of Pregnancy Act, 2021\\\\\\\", edition: \\\\\\\"Current\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\"\""
-}
-}
+        contentMd: `# Infertility - Foundation
+
+## Definitions
+**Primary Infertility**: Never conceived
+**Secondary Infertility**: Conceived previously but unable to conceive again
+**Subfertility**: Difficulty conceiving but not absolute infertility
+
+## Epidemiology
+- Affects 10-15% of couples globally
+- India: 15-20% prevalence (higher in certain regions)
+- Female age-related decline: Sharp drop after 35 years
+- Causes: 40% female, 40% male, 20% unexplained (both partners have issue in 10%)
+
+## Classification of Female Infertility
+
+### Ovulatory Factors (30-40%)
+- **PCOS** (Polycystic Ovary Syndrome): Most common
+- **Hypothyroidism/Hyperprolactinemia**: Suppress GnRH
+- **Hypogonadotropic hypogonadism**: Low FSH/LH (weight loss, stress, exercise)
+- **Ovarian failure**: Premature ovarian insufficiency (POI), menopause
+- **Luteal phase defect**: Inadequate progesterone
+
+### Tubal/Peritoneal Factors (20-30%)
+- **Tubal obstruction**: STI (gonorrhea, chlamydia), TB, endometriosis
+- **Tubal dysfunction**: Impaired motility from scarring
+- **Adhesions**: Post-abortion, post-surgery, endometriosis
+- **Peritoneal factors**: Endometriosis, inflammation
+
+### Uterine/Cervical Factors (10-20%)
+- **Uterine anomalies**: Septate/bicornuate uterus, hypoplasia
+- **Fibroids (leiomyoma)**: If submucosal or distorting cavity
+- **Asherman's syndrome**: Intrauterine adhesions (post-D&C, post-abortion)
+- **Cervical factors**: Cervical stenosis, poor cervical mucus, antisperm antibodies
+
+### Male Factors (40%)
+- **Oligozoospermia**: Low sperm count (<15 million/mL)
+- **Asthenozoospermia**: Poor sperm motility
+- **Teratozoospermia**: Abnormal sperm morphology
+- **Azoospermia**: Absence of sperm (obstructive or non-obstructive)
+
+### Unexplained Infertility (20%)
+- Normal female ovulation, tubal patency, uterine morphology
+- Normal male semen analysis
+- Cause unknown (may involve gamete dysfunction, fertilization defects, implantation issues)
+
+## Female Age and Fertility
+
+### Age-Related Decline
+- **Age 20-30**: Peak fertility (20% per cycle)
+- **Age 30-35**: Slight decline begins
+- **Age 35-40**: Significant decline (15% per cycle)
+- **Age 40-45**: Sharp decline (5-10% per cycle)
+- **Age 45+**: Severely reduced (<5% per cycle)
+
+### Mechanism of Age-Related Decline
+- **Oocyte quality**: Accumulation of chromosomal abnormalities
+- **Meiotic spindle defects**: Increases with age
+- **Mitochondrial dysfunction**: Reduced ATP production
+- **Aneuploidy**: Increases with maternal age (especially trisomy 21)
+
+## Risk Factors for Infertility
+
+### Female
+- **Age >35 years**
+- **PCOS**
+- **Endometriosis**
+- **STI history** (PID, tubal damage)
+- **Smoking**
+- **Extreme BMI** (obesity or underweight)
+- **Uterine/tubal pathology**
+- **Anovulation** (irregular cycles)
+
+### Male
+- **Age >40 years**
+- **Smoking**
+- **Alcohol abuse**
+- **Drug use**
+- **Occupational exposure** (heat, chemicals)
+- **Gonadal injury/surgery**
+- **Sexually transmitted infections**
+- **Testicular atrophy**
+- **Varicocele**
+
+## Initial Assessment
+
+### History
+- **Duration of infertility**: Primary vs secondary
+- **Menstrual history**: Cycle regularity, dysmenorrhea, menorrhagia
+- **Pelvic pain**: Endometriosis risk
+- **STI history**: Tubal damage risk
+- **Obstetric history**: Prior pregnancies, miscarriages
+- **Medical history**: Thyroid disease, PCOS, diabetes
+- **Medication history**: Antipsychotics (hyperprolactinemia), anticonvulsants
+- **Sexual history**: Frequency of intercourse, erectile dysfunction, ejaculatory dysfunction
+- **Male partner**: Symptoms of male factor infertility
+
+### Physical Examination
+- **Female**: BMI, hirsutism/virilization (PCOS), pelvic mass, cervical/uterine pathology
+- **Male**: Testicular size, consistency, varicocele, epididymal thickening
+
+## Initial Investigations
+
+### Ovulation Assessment
+- **Basal Body Temperature (BBT)**: Rise >0.3°C post-ovulation (confirms ovulation)
+- **Serum Progesterone (Day 21)**: >5 ng/mL suggests ovulation
+- **Urinary LH**: Home kits detect LH surge (predicts ovulation)
+
+### Tubal Patency
+- **Hysterosalpingography (HSG)**: X-ray with dye, assesses tube patency and uterine morphology
+- **Sensitivity**: 50-60%
+- **Specificity**: 90%+
+
+### Semen Analysis
+- **Volume**: 1.4-1.7 mL (normal)
+- **Count**: >15 million/mL (normal)
+- **Motility**: >40% total motility, >32% progressive motility (normal)
+- **Morphology**: >4% normal forms (WHO 2010)
+
+### Hormonal Investigations
+- **TSH**: Screen for thyroid disease
+- **Prolactin**: Screen for hyperprolactinemia
+- **FSH (Day 3)**: Assess ovarian reserve (normal <10 IU/L)
+- **LH**: Assess pituitary function
+- **Testosterone**: Screen for androgen excess (PCOS)
+- **17-OH Progesterone**: Screen for late-onset adrenal hyperplasia
+
+### Imaging
+- **Pelvic Ultrasound**: Assess uterine morphology, ovarian cysts (PCOS), tubal masses
+- **Hysteroscopy**: Visualize uterine cavity (fibroids, polyps, adhesions, septum)
+
+## Diagnostic Criteria
+
+### Tubal Factor
+- Abnormal HSG (blockage, spillage absent)
+- History of PID, tubal surgery, ectopic pregnancy
+- Physical exam findings (tenderness, mass)
+
+### Ovulatory Factor
+- Irregular menses, anovulation on BBT/LH kits
+- Elevated androgen levels (PCOS)
+- Low FSH, high LH (PCOS)
+
+### Male Factor
+- Abnormal semen analysis (oligozoospermia, asthenozoospermia, teratozoospermia)
+- Azoospermia (obstructive vs non-obstructive)
+
+### Uterine Factor
+- HSG findings (cavity distortion)
+- Hysteroscopy findings (fibroids, polyps, adhesions, septum)
+- MRI findings (adenomyosis, myomas)`,
+        mnemonics: [
+          {
+            text: "Causes of Infertility: OTU + M",
+            explanation: "Ovulatory (30-40%), Tubal (20-30%), Uterine (10-20%), Male (40%), Unexplained (20%)"
+          },
+          {
+            text: "Age Decline: 20-30 Peak, 35-40 Significant, 45+ Severe",
+            explanation: "Female fertility: 20% at age 25, drops to 5-10% at 40, <5% at 45+"
+          },
+          {
+            text: "Initial Assessment: HOT-FISH",
+            explanation: "History, Ovulation assessment, Tubal patency, Semen analysis, HSG, Imaging, Serology"
+          }
+        ],
+        keyPoints: [
+          "Infertility: 40% female, 40% male, 20% unexplained causes",
+          "Female age most critical factor: Fertility drops significantly after 35 years",
+          "PCOS most common cause of anovulatory infertility",
+          "Tubal factor from STI (PID) in 20-30% of cases",
+          "Initial investigations: Ovulation assessment, semen analysis, HSG, hormones"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 24", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 34", edition: "17th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "infertility-layer-2-mechanism",
+        title: "Infertility - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pathophysiology of infertility involves ovulatory dysfunction (PCOS insulin resistance), tubal damage (inflammation, fibrosis), endometrial receptivity impairment, sperm dysfunction, and gamete transport abnormalities.",
+        contentMd: `# Infertility - Mechanism
+
+## Ovulatory Dysfunction
+
+### PCOS Pathophysiology
+**Insulin Resistance** (50-70% of PCOS):
+- **Mechanism**: Impaired insulin receptor signaling (intrinsic defect)
+- **Result**: Hyperinsulinemia (elevated fasting insulin >10 mIU/L)
+- **Effect on ovaries**: Stimulates theca cells → Excess androgen production
+
+**Androgen Excess**:
+- **Theca cell stimulation**: High insulin stimulates CYP17A1 enzyme
+- **Result**: Increased testosterone, androstenedione
+- **Effect on follicle**: Premature atresia (excess androgens toxic to granulosa cells)
+- **Ovulatory result**: Arrested follicle development → Anovulation
+
+**LH/FSH Dysregulation**:
+- **Abnormal GnRH pulsatility**: Increased frequency, amplitude
+- **Result**: **High LH**, normal/low FSH (LH:FSH ratio >2-3:1, normal 1:1)
+- **Effect**: Abnormal follicle selection, premature luteinization
+
+**Ovarian Morphology**:
+- **Polycystic ovaries**: Multiple small follicles (2-9 mm), thickened stroma
+- **Increased follicle number**: Defective atresia
+- **Granulosa cell dysfunction**: Impaired aromatase (reduced estrogen), abnormal steroid metabolism
+
+### Other Causes of Anovulation
+
+**Hypogonadotropic Hypogonadism**:
+- **Low GnRH**: From weight loss, stress, exercise, prolactinemia
+- **Result**: Low FSH/LH → No follicle development → Anovulation
+- **Reversible**: If underlying cause corrected
+
+**Hyperprolactinemia**:
+- **Mechanism**: Prolactin inhibits GnRH → Low FSH/LH
+- **Causes**: Pituitary adenoma, dopamine antagonists, hypothyroidism
+- **Result**: Anovulation, galactorrhea
+
+**Premature Ovarian Insufficiency (POI)**:
+- **Definition**: Follicle-stimulating hormone (FSH) >40 IU/L, estradiol <20 pg/mL, amenorrhea <40 years
+- **Mechanism**: Accelerated follicle atresia, follicle exhaustion
+- **Causes**: Autoimmune, genetic (FMR1 premutation), iatrogenic (chemotherapy, radiation)
+- **Result**: Irreversible infertility (except oocyte donation)
+
+## Tubal/Peritoneal Factor
+
+### Tubal Damage from PID
+**Acute Inflammation**:
+- **Salpingitis**: Epithelial destruction, ciliary loss
+- **Fibroblast activation**: Collagen deposition begins
+
+**Chronic Changes**:
+- **Ciliary loss**: Permanent (ciliated epithelium replaced with non-ciliated)
+- **Stricture formation**: Fibrosis narrows tubal lumen
+- **Adhesions**: Distortion, kinking of tubes
+- **Pyosalpinx**: Pus-filled tube, complete obstruction
+
+**Consequences**:
+- **Ovum transport impairment**: Loss of ciliary action, strictures block passage
+- **Ectopic pregnancy risk**: Partial obstruction allows sperm but blocks embryo
+- **Infertility**: 40% after first PID, 80% after third
+
+### Endometriosis and Infertility
+
+**Mechanical Factors**:
+- **Adhesions**: Distort tubes, reduce ovary-tube apposition
+- **Tubal dysfunction**: Impaired motility from endometrial invasion
+
+**Inflammatory Factors**:
+- **Prostaglandin excess**: PGE2, PGF2α increase (impair ovum/sperm transport)
+- **Cytokine elevation**: TNF-α, IL-6, IL-8 (toxic to gametes, embryos)
+- **Peritoneal fluid toxicity**: From inflammatory mediators
+
+**Ovulatory Factors**:
+- **Reduced follicle growth**: From inflammation
+- **Abnormal endometrial receptivity**: Impaired adhesion molecules
+- **Corpus luteum insufficiency**: Inadequate progesterone production
+
+## Implantation Defects
+
+### Uterine Factors
+**Asherman's Syndrome**:
+- **Intrauterine adhesions**: Fibrous bands bridging endometrial cavity
+- **Causes**: Post-D&C (most common), post-abortion, post-myomectomy
+- **Consequence**: Reduced endometrial surface for implantation
+
+**Submucosal Fibroids**:
+- **Mechanical distortion**: Alters endometrial architecture
+- **Angiogenesis impairment**: Reduced blood flow to implantation site
+- **Prostaglandin production**: Alterations favor uterine contractions (embryo expulsion)
+
+**Adenomyosis**:
+- **Impaired endometrial receptivity**: Abnormal adhesion molecules (integrins)
+- **Chronic inflammation**: TNF-α, IL-6 elevated
+- **Abnormal endometrial-myometrial interface**: Junctional zone dysfunction
+- **Result**: Reduced implantation success, increased miscarriage
+
+**Septate Uterus**:
+- **Reduced endometrial surface**: Septum (non-vascular) reduces implantation area
+- **Poor vascularization**: Septum poorly supplied with blood vessels
+- **Result**: Implantation failure, miscarriage
+
+### Endometrial Receptivity
+**Molecular Markers**:
+- **Integrin αvβ3**: Adhesion molecule, normally increased mid-luteal phase
+- **Osteopontin (OPN)**: Cell-cell adhesion, normally increased
+- **Leukemia Inhibitory Factor (LIF)**: Promotes embryo implantation, normally increased
+
+**Impaired Receptivity in Infertility**:
+- **Absent integrin**: Reduces embryo adhesion
+- **Low LIF**: Reduces signaling for implantation
+- **Altered prostaglandins**: Prostaglandins normally promote implantation; dysregulation impairs it
+- **Result**: Reduced implantation rates
+
+## Gamete Dysfunction
+
+### Oocyte Dysfunction
+**Meiotic Spindle Defects**:
+- **Age-related**: Defective spindle checkpoint
+- **Result**: Premature/delayed anaphase, chromosome missegregation
+- **Consequence**: Aneuploidy (trisomy, monosomy)
+
+**Mitochondrial Dysfunction**:
+- **Reduced ATP**: Oocytes have abundant mitochondria (energy demand)
+- **Age-related**: Mitochondrial dysfunction increases with age
+- **Result**: Reduced metabolic capacity, impaired development
+
+**Zona Pellucida Hardening**:
+- **Age-related**: Increased cross-linking in zona
+- **Result**: Reduced sperm penetration, impaired blastocyst expansion/hatching
+
+### Sperm Dysfunction
+**Oligozoospermia**:
+- **Low count**: <15 million/mL (fertility threshold ~5 million)
+- **Mechanisms**: Reduced spermatogenesis (testosterone deficiency, testicular heat, genetic)
+- **Result**: Fewer sperm reaching oocyte
+
+**Asthenozoospermia**:
+- **Poor motility**: Impaired flagellar movement
+- **Mechanisms**: Mitochondrial dysfunction, sperm DNA fragmentation
+- **Result**: Reduced sperm transport through female tract
+
+**Teratozoospermia**:
+- **Abnormal morphology**: Malformed head, midpiece, tail
+- **Result**: Impaired fertilization, reduced implantation (DNA fragmented sperm)
+
+**Sperm DNA Fragmentation**:
+- **Oxidative stress**: Reactive oxygen species (ROS) damage sperm DNA
+- **Causes**: Smoking, heat, infection, varicocele
+- **Result**: Impaired fertilization, increased miscarriage, developmental abnormalities
+
+## Fertilization Defects
+
+**Gamete Transport**:
+- **Impaired sperm transport**: Cervical mucus hostility (antisperm antibodies), tubal dysfunction
+- **Impaired ovum transport**: Tubal dysfunction (ciliary loss, strictures, adhesions)
+
+**Gamete Fusion**:
+- **Zona pellucida defects**: Abnormal glycoproteins, abnormal thickness (age-related)
+- **Sperm receptor dysfunction**: Impaired zona pellucida binding
+
+**Pronuclear Formation**:
+- **Fertilization failure**: Male pronucleus fails to form (sperm nuclear decondensation defect)
+- **Polyspermy**: Multiple sperm penetrate oocyte (zona defect)`,
+        mnemonics: [
+          {
+            text: "PCOS Mechanism: IAT",
+            explanation: "Insulin Resistance → Androgen excess → Theca stimulation (anovulation)"
+          },
+          {
+            text: "Tubal Damage: CLSP",
+            explanation: "Ciliary loss, strictures, adhesions, pyosalpinx (impair ovum transport)"
+          },
+          {
+            text: "Implantation Defects: AAA",
+            explanation: "Adhesion molecules (integrins), Adhesions (Asherman's), Adenomyosis"
+          }
+        ],
+        keyPoints: [
+          "PCOS: Insulin resistance → Androgen excess → Anovulation (high LH, low FSH)",
+          "Tubal damage: Ciliary loss + strictures + adhesions from PID/endometriosis",
+          "Adenomyosis: Impaired endometrial receptivity + myometrial dysfunction + inflammation",
+          "Oocyte age: Meiotic spindle defects, mitochondrial dysfunction, zona hardening",
+          "Sperm dysfunction: Oligozoospermia, asthenozoospermia, teratozoospermia, DNA fragmentation"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 24", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 34", edition: "17th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "infertility-layer-3-clinical",
+        title: "Infertility - Clinical",
+        estimatedMinutes: 20,
+        summary: "Management of infertility with focus on ovulation induction, assisted reproduction (IUI, IVF), surgical treatment, and male factor management. Treatment selection based on cause, age, and duration.",
+        contentMd: `# Infertility - Clinical
+
+## Management Strategy
+
+### Step 1: Confirmation of Diagnosis
+- **Duration**: Infertility ≥1 year (≥6 months if age >35 years)
+- **Baseline investigations**: Ovulation assessment (BBT, Day 21 progesterone, LH kits), semen analysis, HSG
+- **Hormonal investigations**: TSH, prolactin, FSH, testosterone
+
+### Step 2: Treat Identifiable Causes
+- **Hypothyroidism**: Levothyroxine replacement
+- **Hyperprolactinemia**: Dopamine agonist (cabergoline)
+- **PCOS**: Lifestyle modification (weight loss, exercise), metformin
+
+### Step 3: Ovulation Induction (if anovulation present)
+
+**First-line: Clomiphene Citrate**
+- **Mechanism**: Selective estrogen receptor modulator (SERM), blocks negative feedback
+- **Dosage**: 50-150 mg daily × 5 days (Day 3-7 of cycle)
+- **Efficacy**: 70% ovulation rate, 30-40% pregnancy rate (per cycle)
+- **Cost**: Inexpensive
+- **Side effects**: Hot flushes, mood changes, visual disturbances (rare)
+- **Monitoring**: Ultrasound to confirm ovulation, endometrial thickness
+
+**Second-line: Letrozole (Aromatase Inhibitor)**
+- **Mechanism**: Blocks aromatase, reduces estrogen → Increases FSH (less negative feedback than clomiphene)
+- **Dosage**: 2.5-5 mg daily × 5 days
+- **Advantages**: Better for PCOS (lower testosterone), better endometrial response than clomiphene
+- **Efficacy**: Similar to clomiphene (30-40% pregnancy rate)
+- **Off-label use** in many countries
+
+**FSH (Follicle-Stimulating Hormone)**
+- **Mechanism**: Exogenous FSH stimulates follicle development
+- **Indications**: Hypogonadotropic hypogonadism, failed clomiphene/letrozole
+- **Cost**: Expensive
+- **Monitoring**: Multiple ultrasounds (expensive, time-consuming)
+- **Risk**: Ovarian hyperstimulation syndrome (OHSS)
+
+**Metformin**
+- **Indication**: PCOS with insulin resistance
+- **Dosage**: 1.5-2.5 g daily (in divided doses)
+- **Efficacy**: Improves ovulation in 30% of PCOS patients
+- **Can combine**: With clomiphene for additive effect
+- **Side effects**: GI upset (nausea, diarrhea)
+
+### Step 4: Intrauterine Insemination (IUI)
+
+**Indications**:
+- Mild male factor infertility
+- Ovulation factor (after ovulation induction)
+- Unexplained infertility
+- Cervical factor infertility
+- Sexual dysfunction (erectile dysfunction, low libido)
+
+**Procedure**:
+- Ovulation induction with clomiphene/letrozole/FSH
+- Timed IUI (24-36 hours after LH surge or hCG trigger)
+- Washed sperm placed in uterine cavity
+
+**Success Rates**:
+- Per cycle: 10-20%
+- Cumulative (6 cycles): 40-50%
+- Better outcomes: Age <35, normal tubal patency, adequate sperm count
+
+### Step 5: In Vitro Fertilization (IVF)
+
+**Indications**:
+- **Tubal factor**: Blocked tubes (resistant to HSG/surgery)
+- **Moderate-severe male factor**: Despite IUI failure
+- **Endometriosis**: Moderate-severe
+- **Unexplained infertility**: Failed 6 cycles of IUI
+- **Age >40 years**: Consider earlier (lower success rates)
+- **BRCA mutations**: Consider preimplantation genetic testing (PGT)
+
+**IVF Process**:
+1. **Ovarian stimulation**: FSH ± GnRH agonist/antagonist × 8-14 days
+2. **Egg retrieval**: Ultrasound-guided aspiration (36 hours after hCG)
+3. **Fertilization**: In vitro (conventional IVF) or ICSI (intracytoplasmic sperm injection for male factor)
+4. **Embryo culture**: 3-5 days
+5. **Embryo transfer**: Day 3 (cleavage) or Day 5 (blastocyst)
+6. **Luteal support**: Progesterone supplementation × 10-12 days
+
+**Success Rates** (per embryo transfer):
+- **Age <35**: 40-50%
+- **Age 35-39**: 30-40%
+- **Age 40-42**: 15-25%
+- **Age >43**: <10%
+
+**Complications**:
+- **Ovarian hyperstimulation syndrome (OHSS)**: Mild (10%), moderate (3%), severe (<1%)
+- **Infection, bleeding**: Rare (<1%)
+- **Multiple pregnancy**: 20-30% (twins or more)
+
+## Male Factor Management
+
+**Mild Oligozoospermia/Asthenozoospermia**:
+- IUI with ovulation induction
+- Lifestyle modification: Avoid heat, smoking, stress
+- Antioxidants: Vitamin E, Vitamin C, Coenzyme Q10
+
+**Moderate-Severe Oligozoospermia (count <5 million/mL)**:
+- **IVF with ICSI** (intracytoplasmic sperm injection)
+- Single sperm injected into oocyte
+- Overcomes fertilization failure
+
+**Azoospermia**:
+- **Obstructive**: Vasectomy reversal, surgical sperm retrieval (PESA, TESE), then ICSI
+- **Non-obstructive**: Sperm retrieval (TESE) if residual spermatogenesis, then ICSI
+- **Complete failure**: Donor sperm (IUI or IVF with donor)
+
+## Surgical Management
+
+**Tubal Surgery**:
+- **Tubal ligation reversal**: Microsurgery, success rates 50-80% depending on location
+- **Selective salpingography**: Inject contrast selectively into blocked tubes
+- **Tubal cannulation**: For proximal blockages (50% success)
+- **Salpingoplasty**: Reconstruct tubal lumen
+- **Success rates**: 30-50% depending on damage extent
+
+**Uterine Surgery**:
+- **Hysteroscopic myomectomy**: Remove submucosal fibroids
+- **Hysteroscopic polypectomy**: Remove polyps
+- **Adhesiolysis**: Separate intrauterine adhesions (Asherman's)
+- **Septal resection**: Divide uterine septum (metroplasty)
+- **Success rates**: 50-80% depending on pathology
+
+**Endometriosis Surgery**:
+- **Laparoscopic excision**: Remove endometrial lesions, adhesiolysis
+- **Improve fertility**: 30-50% pregnancy rate if combined with ART
+- For **mild-moderate** disease with pain: Surgery reasonable
+- For **advanced disease**: Often proceed directly to IVF
+
+## Special Situations
+
+**Advanced Maternal Age (>40 years)**:
+- Limited ovarian reserve (↓ egg quantity and quality)
+- Consider IVF earlier (higher success rates)
+- **PGT-A** (preimplantation genetic testing for aneuploidy) to select euploid embryos
+- Success rates: 15-25% per cycle
+
+**PCOS**:
+- **Lifestyle first**: Weight loss (5-10%), exercise
+- **Clomiphene/letrozole**: First-line ovulation induction
+- **Caution with FSH**: Higher OHSS risk (start low dose)
+- **IVF if indicated**: Higher OHSS risk, monitor carefully
+
+**Adenomyosis**:
+- **Limited surgical options**: No definitive surgery (hysterectomy ends fertility)
+- **GnRH agonist pretreatment**: 3 months before IVF improves outcomes
+- **IVF + PGT**: Considers embryo quality given adenomyosis-related poor outcomes
+- **Prognosis**: Poorer outcomes than endometriosis
+
+**Recurrent Pregnancy Loss (RPL)**:
+- **Evaluation**: Karyotype, antiphospholipid antibodies, thyroid function
+- **Management**: Depends on cause (chromosomal, immunological, anatomical, thrombophilia)
+- **Aspirin/heparin**: For antiphospholipid syndrome
+- **Progesterone**: Controversial; may benefit some patients`,
+        mnemonics: [
+          {
+            text: "Ovulation Induction: CLE",
+            explanation: "Clomiphene (first-line), Letrozole (better for PCOS), Exogenous FSH (expensive)"
+          },
+          {
+            text: "IVF Indications: STEM",
+            explanation: "Severe tubal disease, Tubal factor, Endometriosis (severe), Male factor (severe)"
+          },
+          {
+            text: "Success Rates: Age Dependent",
+            explanation: "<35: 40-50%, 35-39: 30-40%, 40-42: 15-25%, >43: <10%"
+          }
+        ],
+        keyPoints: [
+          "Clomiphene first-line ovulation induction (70% ovulation rate, 30-40% pregnancy)",
+          "IUI for mild male factor, unexplained, or after ovulation induction (10-20% success)",
+          "IVF for tubal factor, severe male factor, or failed IUI (age-dependent success: 40-50% <35, <10% >43)",
+          "GnRH agonist pretreatment improves adenomyosis/IVF outcomes",
+          "PGT-A useful for advanced age or recurrent pregnancy loss (chromosomal selection)"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 24", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 34", edition: "17th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "infertility-layer-4-exam",
+        title: "Infertility - Exam Prep",
+        estimatedMinutes: 15,
+        summary: "High-yield exam concepts: Causes of infertility, initial investigations, treatment algorithms, success rates, and complications of assisted reproduction.",
+        contentMd: `# Infertility - Exam Prep
+
+## High-Yield Facts
+
+### 1. Causes of Infertility
+- **Female (40%)**: Ovulatory (30-40%), tubal (20-30%), uterine (10-20%), endometrial receptivity
+- **Male (40%)**: Oligozoospermia, asthenozoospermia, teratozoospermia, azoospermia
+- **Unexplained (20%)**
+
+### 2. Female Age and Fertility
+| Age | Fertility | Success IVF |
+|-----|-----------|------------|
+| **<35** | 20% per cycle | 40-50% |
+| **35-39** | 12-15% | 30-40% |
+| **40-42** | 5-10% | 15-25% |
+| **>43** | <5% | <10% |
+
+**Key**: Oocyte quality (aneuploidy) worsens with age
+
+### 3. Diagnosis of Infertility
+- **Ovulation**: BBT rise, Day 21 progesterone >5 ng/mL, positive LH kits
+- **Tubal**: Normal HSG (spillage present)
+- **Male**: Semen analysis (count >15M/mL, motility >40%, morphology >4%)
+- **Uterine**: Normal ultrasound, hysteroscopy
+
+### 4. Ovulation Induction Regimens
+**Clomiphene Citrate**:
+- Dose: 50-150 mg × 5 days (Day 3-7)
+- Ovulation rate: 70%
+- Pregnancy rate: 30-40% per cycle
+- Cost: Inexpensive
+- Mechanism: SERM (selective estrogen receptor modulator)
+
+**Letrozole**:
+- Dose: 2.5-5 mg × 5 days
+- Better for PCOS (lower testosterone, better endometrial response)
+- Pregnancy rate: 30-40% per cycle
+- Cost: Inexpensive to moderate
+
+**FSH**:
+- Mechanism: Exogenous gonadotropin
+- Cost: Expensive
+- Risk: OHSS
+
+### 5. IUI (Intrauterine Insemination)
+**Indications**:
+- Mild male factor
+- Ovulatory factor (after OI)
+- Unexplained infertility
+- Cervical factor
+- Sexual dysfunction
+
+**Success Rates**:
+- Per cycle: 10-20%
+- Cumulative (6 cycles): 40-50%
+
+### 6. IVF Success Rates (Per Embryo Transfer)
+- **<35 years**: 40-50%
+- **35-39 years**: 30-40%
+- **40-42 years**: 15-25%
+- **>43 years**: <10%
+
+**Cumulative Success** (6 cycles): 50-70%
+
+### 7. IVF Indications
+- **Tubal factor**: Blocked tubes
+- **Male factor**: Severe oligozoospermia, ICSI needed
+- **Endometriosis**: Moderate-severe
+- **Unexplained**: Failed 6 cycles IUI
+- **Age >40**: Consider earlier
+
+### 8. Complications of IVF
+
+**Ovarian Hyperstimulation Syndrome (OHSS)**:
+- **Mild**: 10% (abdominal bloating, mild pain)
+- **Moderate**: 3% (pain, nausea, vomiting)
+- **Severe**: <1% (ascites, renal dysfunction, pulmonary emboli) - life-threatening
+- **Prevention**: Low-dose gonadotropin, coasting, freeze all embryos
+
+**Multiple Pregnancy**: 20-30% (increased miscarriage, prematurity)
+**Bleeding/Infection**: <1%
+**Ovarian torsion**: Rare
+
+### 9. Male Factor Management
+**Mild (count 5-15M/mL)**:
+- IUI with ovulation induction
+- Lifestyle: Avoid heat, smoking
+- Antioxidants: Vitamin E, Q10
+
+**Moderate-Severe (count <5M/mL)**:
+- **IVF with ICSI** (intracytoplasmic sperm injection)
+
+**Azoospermia**:
+- **Obstructive**: Vasectomy reversal, PESA/TESE + ICSI
+- **Non-obstructive**: TESE (testicular sperm extraction) + ICSI
+- **Complete failure**: Donor sperm
+
+### 10. PCOS Management
+1. **Lifestyle**: Weight loss (5-10%), exercise
+2. **Metformin**: 1.5-2.5 g daily
+3. **Clomiphene/letrozole**: Ovulation induction
+4. **FSH**: If clomiphene-resistant (higher OHSS risk)
+5. **IVF**: If indicated (monitor carefully for OHSS)
+
+### 11. Adenomyosis and Infertility
+- **Impaired receptivity**: Abnormal integrins, LIF, prostaglandins
+- **Management**: GnRH agonist pretreatment × 3 months before IVF improves outcomes
+- **Surgery**: No definitive option (hysterectomy ends fertility)
+- **Prognosis**: Poorer than endometriosis-related infertility
+
+### 12. Exam Scenarios
+
+**Scenario 1**: 30-year-old with irregular cycles, clinical PCOS, infertility 2 years. Management?
+- **Answer**: Metformin 1.5-2.5 g daily + lifestyle (weight loss, exercise) + clomiphene 50-150 mg × 5 days for ovulation induction. Monitor with ultrasound.
+
+**Scenario 2**: 28-year-old, normal ovulation, normal HSG, abnormal semen (count 3M/mL). Management?
+- **Answer**: Severe male factor (oligozoospermia). IVF with ICSI (intracytoplasmic sperm injection) recommended.
+
+**Scenario 3**: 42-year-old, infertility 3 years, normal investigations, multiple IUI failures. Management?
+- **Answer**: Advanced age + unexplained infertility + failed IUI. Recommend IVF (better success for age). Consider PGT-A for chromosome selection.`,
+        mnemonics: [
+          {
+            text: "Ovulation Induction: CLE",
+            explanation: "Clomiphene (70% ovulation), Letrozole (better PCOS), Exogenous FSH (expensive, OHSS risk)"
+          },
+          {
+            text: "IUI Success: 10-20% per Cycle, 40-50% Cumulative",
+            explanation: "Best for mild male, ovulatory, unexplained factors"
+          },
+          {
+            text: "IVF Age Rule: 40-50% <35, 30-40% 35-39, 15-25% 40-42, <10% >43",
+            explanation: "Age determines success rate; oocyte aneuploidy increases with age"
+          }
+        ],
+        keyPoints: [
+          "Infertility causes: 40% female, 40% male, 20% unexplained (often combined)",
+          "Female age critical: Fertility 20% at 25, drops to 5% at 40, <5% at 45",
+          "PCOS: Metformin + lifestyle + clomiphene first-line",
+          "IUI: 10-20% per cycle (best for mild male, ovulatory, unexplained)",
+          "IVF: 40-50% <35, <10% >43 (age-dependent success); ICSI for male factor"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 24", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 34", edition: "17th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "infertility-layer-5-active-recall",
+        title: "Infertility - Active Recall",
+        estimatedMinutes: 10,
+        contentMd: `# Active Recall - Infertility
+
+**Q1**: Explain the pathophysiology of PCOS-related infertility. How does insulin resistance lead to anovulation?
+> **A**: **PCOS pathophysiology**: **Insulin resistance** (intrinsic defect) → **Hyperinsulinemia** → **Theca cell stimulation** → **Androgen excess** (testosterone, androstenedione) → **Premature follicle atresia** (excess androgens toxic to granulosa cells) → **Anovulation**. **Additional**: Abnormal **LH/FSH ratio** (high LH, low FSH) → Abnormal follicle development. **Result**: Polycystic ovaries, elevated LH, high testosterone. **Management**: Insulin sensitizer (metformin) + ovulation induction (clomiphene/letrozole) ± lifestyle.
+
+**Q2**: A 32-year-old with regular cycles, normal HSG, abnormal semen analysis (count 5M/mL, motility 30%). After 1 year of trying, management?
+> **A**: **Diagnosis**: **Moderate male factor infertility** (low count and motility). **Assessment**: Normal female factors (regular cycles, normal HSG). **Management**: (1) **First**: Lifestyle modification (avoid heat, smoking), antioxidants (vitamin E, Q10), (2) **IUI**: 2-3 cycles if willing (success 10-20% per cycle in male factor), (3) **Proceed to IVF with ICSI**: Intracytoplasmic sperm injection (single sperm into oocyte) bypasses fertilization defect. **Success**: IVF with ICSI 40-50% at age 32.
+
+**Q3**: Compare the mechanisms of infertility in adenomyosis vs endometriosis.
+> **A**: **Endometriosis**: (1) **Mechanical**: Adhesions distort tubes, reduce ovary-tube apposition, (2) **Inflammatory**: Prostaglandins excess (impair transport), TNF-α (toxic to gametes), (3) **Ovulatory**: Follicle growth impaired, (4) **Endometrial receptivity**: Abnormal adhesion molecules. **Adenomyosis**: (1) **Impaired endometrial receptivity**: Abnormal integrins, LIF, prostaglandins, (2) **Myometrial dysfunction**: Abnormal contractions from junctional zone pathology, (3) **Chronic inflammation**: Similar cytokines (TNF-α, IL-6), (4) **No mechanical obstruction** (adenomyosis is intrauterine). **Key difference**: Endometriosis has mechanical + inflammatory; adenomyosis primarily receptivity/myometrial dysfunction. **Management**: Adenomyosis: GnRH agonist pretreatment before IVF improves outcomes.
+
+**Q4**: A 38-year-old has been trying to conceive for 3 years. FSH = 12 IU/L (Day 3). What does this indicate?
+> **A**: **FSH = 12 IU/L on Day 3**: Elevated (normal <10 IU/L) → **Poor ovarian reserve** (diminished egg quantity and quality). **Implications**: (1) Age + elevated FSH → Reduced fertility potential, (2) **Higher aneuploidy rate** (eggs more likely chromosomally abnormal), (3) **Reduced success with ovulation induction** (fewer eggs respond to hormones), (4) **Better to proceed to IVF** (can do genetic testing with PGT-A to select euploid embryos). **Management**: (1) Counsel about prognosis (lower success rates), (2) Recommend IVF (not IUI or ovulation induction alone), (3) Consider PGT-A (preimplantation genetic testing for aneuploidy) to improve outcomes.
+
+**Q5**: Explain why tubal damage from PID leads to ectopic pregnancy risk despite infertility.
+> **A**: **Tubal damage mechanisms**: PID causes **ciliary loss** + **strictures** + **adhesions** from inflammation/scarring. **Partial tubal obstruction**: Stricture/scar allows **sperm passage** (small, motile) but **blocks embryo/ovum passage** (larger, less motile). **Result**: (1) **Ovum cannot reach uterus** (blocked by stricture) BUT **(2) Sperm can reach ovum** in distal tube → Fertilization occurs IN TUBE → Ectopic pregnancy. **Mechanisms of infertility**: Complete obstruction blocks sperm passage; partial obstruction allows ectopic but reduces normal fertility. **Risk**: 6-10 fold increased after PID.
+
+**Q6**: A 35-year-old underwent 3 cycles of clomiphene (ovulation confirmed each cycle) but did not conceive. Next step?
+> **A**: **Failed ovulation induction**: Ovulates but no pregnancy despite adequate ovulation. **Possible diagnoses**: (1) **Unexplained infertility** (normal ovulation, normal HSG, normal semen), (2) **Endometrial receptivity impairment** (adenomyosis, endometrial polyp, adhesions), (3) **Subtle male factor** (normal semen but subfertile sperm). **Next step**: (1) **Repeat HSG** (ensure tubal patency), (2) **Repeat semen analysis**, (3) **Consider hysteroscopy** (identify polyps, adhesions, septum), (4) **Proceed to IUI** (3-6 cycles to improve success), (5) **If IUI fails** → **IVF** (better fertilization, development, implantation assessment).
+
+**Q7**: What is ovarian hyperstimulation syndrome (OHSS) and how is it managed?
+> **A**: **OHSS**: Exaggerated response to ovarian stimulation, **self-limited but can be severe**. **Pathophysiology**: High estrogen + hCG (from pregnancy) → Increased vascular permeability, VEGF production → Ascites, pleural effusion. **Severity**: (1) **Mild (10%)**: Abdominal bloating, mild pain (manage outpatient), (2) **Moderate (3%)**: Pain, nausea, vomiting (hospitalize, monitor), (3) **Severe (<1%)**: Ascites, oliguria, thrombosis (ICU). **Prevention**: (1) Low-dose gonadotropins, (2) GnRH antagonist (avoids hCG surge), (3) Coasting (halt FSH when estrogen excessive), (4) Freeze all embryos (avoid hCG from pregnancy). **Management**: Rest, fluid intake (IV fluids if severe), analgesics, restrict exercise. **Prognosis**: Resolves spontaneously if not pregnant; prolonged if pregnant (hCG continues).
+
+**Q8**: A 40-year-old with infertility 2 years, normal cycles, normal HSG, normal semen. IUI twice failed. Management?
+> **A**: **Unexplained infertility at age 40**: Advanced age = **reduced oocyte quality** (higher aneuploidy). **Failed IUI**: Indicates need for higher-level intervention. **Management**: (1) **IVF** (not more IUI, which has low success at this age), (2) **Consider PGT-A** (preimplantation genetic testing for aneuploidy) to select chromosomally normal embryos (improves success in advanced age), (3) Counsel realistic expectations: 15-25% success per cycle at age 40. **Success factors**: Multiple cycles (cumulative success higher), good embryo quality, euploid embryos.
+
+**Q9**: Explain the role of metformin in PCOS and infertility.
+> **A**: **Metformin mechanism**: Insulin sensitizer (improves insulin receptor signaling) → **Reduces hyperinsulinemia** → **Decreases androgen production** from theca cells. **Fertility effects**: (1) **Restores ovulation** in 30% of PCOS anovulatory women, (2) **Improves ovulation induction response** when combined with clomiphene, (3) **Reduces miscarriage** (hyperinsulinemia associated with increased miscarriage). **Dosing**: 1.5-2.5 g daily (in divided doses) to minimize GI side effects. **Timeline**: 3-6 months for full effect. **Additional benefits**: Weight loss support, improved metabolic parameters. **Limitation**: Does not treat all PCOS; 70% require additional ovulation induction (clomiphene/letrozole).
+
+**Q10**: Compare IUI vs IVF outcomes and when each is indicated.
+> **A**: **IUI Success**: Per cycle 10-20%, cumulative (6 cycles) 40-50%. **Indications**: Mild male factor, ovulatory factor, unexplained, cervical factor, sexual dysfunction. **IVF Success**: Per cycle 40-50% at age <35, 30-40% at 35-39, 15-25% at 40-42, <10% at >43. **Indications**: Tubal factor, severe male factor, endometriosis (moderate-severe), unexplained (failed IUI), advanced age. **Choice algorithm**: (1) Normal male, normal tube → IUI first, (2) Age >38, multiple IUI failures → IVF, (3) Tubal disease → IVF, (4) Severe male factor → IVF + ICSI. **Outcome**: IVF higher success but more expensive, invasive, complications (OHSS). **Cost-effectiveness**: At age <35, may do 3 IUI cycles before IVF; at age >40, consider IVF earlier (higher success).`,
+        mnemonics: [],
+        keyPoints: [
+          "PCOS: Insulin resistance → Androgen excess → Anovulation (treat metformin + clomiphene)",
+          "Male factor: Oligozoospermia <5M/mL → IVF with ICSI (overcomes fertilization defect)",
+          "IUI success: 10-20% per cycle (best for mild male, ovulatory, unexplained)",
+          "IVF success: Age-dependent (40-50% <35, <10% >43); use PGT-A in advanced age",
+          "Adenomyosis: GnRH agonist pretreatment before IVF improves outcomes"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Gynaecology", chapter: "Ch 24", edition: "8th" },
+          { book: "Shaw's Textbook of Gynaecology", chapter: "Ch 34", edition: "17th" }
+        ]
+      }
+    ]
+  }
 ];
-];
+`,

@@ -1,17 +1,554 @@
-export const obgPart2Lessons = [
+import type { TopicLessons } from "./content-loader";
+
+export const obgPart2Lessons: TopicLessons[] = [
   {
     topicCode: "OG-MOD-03-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "normal-labor-mechanism-foundation",
+        slug: "normal-labor-layer-1-foundation",
         title: "Normal Labor & Mechanism - Foundation",
         estimatedMinutes: 25,
         summary: "Overview of labor physiology, stages of labor, and mechanism of normal vaginal delivery in vertex presentation.",
-        contentMd: "# Normal Labor & Mechanism - Foundation\n\n## Definition and Onset of Labor\n**Labor**: Rhythmic uterine contractions of sufficient intensity to efface and dilate the cervix leading to expulsion of fetus and placenta\n\n**Braxton Hicks vs True Labor**:\n- False labor: Irregular, painless, variable intervals, no cervical change\n- True labor: Regular (every 2-3 minutes), painful, progressive cervical dilation\n\n**Onset factors**:\n- Fetal maturity signals (cortisol surge)\n- Placental aging\n- Prostaglandin increase\n- Oxytocin sensitivity of myometrium\n\n## Three Stages of Labor\n\n### Stage 1: Latent → Active → Transition\n**Latent phase** (0-3 cm dilation):\n- Duration: 8-12 hours (primigravida)\n- Cervical effacement 50%\n- Mild contractions every 5-10 minutes\n\n**Active phase** (3-7 cm):\n- Duration: 3-6 hours\n- Faster cervical dilation (1 cm/hour)\n- Contractions every 2-3 minutes, moderate intensity\n- Vaginal show increases\n\n**Transition phase** (7-10 cm):\n- Duration: 30 minutes - 2 hours\n- Intense contractions every 1-2 minutes\n- Nausea, irritability, fetal descent accelerates\n\n### Stage 2: Expulsive (Full Dilation to Birth)\n- Duration: 30 minutes - 2 hours (primigravida up to 3 hours)\n- Mother feels urge to push\n- Perineal stretching and distension\n- Crowning occurs\n\n### Stage 3: Expulsion of Placenta\n- Duration: 5-30 minutes\n- Placental separation signs: gush of blood, cord lengthening\n- Placenta delivered by maternal effort or controlled cord traction\n\n### Stage 4: Recovery (First 1-2 hours)\n- Uterine contraction and hemostasis\n- Maternal stabilization\n- Infant adaptation\n\n## Cervical Changes in Labor\n- **Effacement**: Cervical thinning (100% = paper-thin)\n- **Dilation**: Cervical opening measured 0-10 cm\n- **Anterior cervix**: Moves forward, thins first\n- **Assessment**: Vaginal examination every 1-2 hours in active labor\n\n## Descent and Position\n**Fetal station**:\n- -5 to 0: Above pelvic inlet (unengaged)\n- 0: At pelvic inlet (engaged)\n- +1 to +5: Below pelvic outlet\n- +5: Crowning\n\n**Position**: Relationship of fetal occiput to maternal pelvis\n- Right/Left: Side\n- Anterior/Posterior: Front/back\n- Common: LOA (Left Occiput Anterior) - most favorable,\n        mnemonics: [\n          {\n            text: \"STAGES OF LABOR = 1 (Dilation), 2 (Descent), 3 (Delivery of placenta), 4 (Recovery)\",\n            explanation: \"Four distinct stages defining labor progression\"\n          },\n          {\n            text: \"LATENT→ACTIVE→TRANSITION = 0-3cm → 3-7cm → 7-10cm\",\n            explanation: \"Three phases of stage 1 with progressive dilation\"\n          },\n          {\n            text: \"STATION = -5 to +5, zero at pelvic inlet\",\n            explanation: \"Measurement of fetal descent through pelvis\"\n          }\n        ],\n        keyPoints: [\n          \"Labor defined by painful contractions causing cervical change\",\n          \"Stage 1 longest; stage 2 most active pushing required\",\n          \"Average labor: primigravida 12-14 hours, multipara 6-8 hours\",\n          \"Regular assessment of dilation, effacement, descent ensures progress\",\n          \"Position LOA/LOP/ROA/ROP represent 90% of normal presentations\"\n        ],\n        textbookRefs: [\n          { book: \"DC Dutta's Textbook of Obstetrics\", chapter: \"Stages of Labor\", edition: \"9th\" },\n          { book: \"Williams Obstetrics\", chapter: \"Labor and Delivery\", edition: \"26th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"normal-labor-mechanism-physiology\",\n        title: \"Normal Labor & Mechanism - Physiology\",\n        estimatedMinutes: 30,\n        summary: \"Physiological mechanisms of uterine contractions, cervical dilation, and fetal descent during labor.\",\n        contentMd: "# Normal Labor & Mechanism - Physiology\\n\\n## Uterine Contraction Physiology\\n\\n### Myometrial Structure\\n- Three muscle layers: outer (longitudinal), middle (circular), inner (longitudinal)\\n- Smooth muscle bundles connected by intercalated discs\\n- Actin-myosin sliding generates contractions\\n\\n### Contraction Mechanism\\n**Initiation**:\\n- Oxytocin binding to myometrial receptors increases intracellular Ca2+\\n- Calcium binds calmodulin\\n- Calmodulin-Ca2+ activates MLCK (myosin light chain kinase)\\n- MLCK phosphorylates myosin light chains\\n- Phosphorylated myosin interacts with actin filaments\\n\\n**Propagation**:\\n- Pacemaker sites in fundus (Pacemaker theory)\\n- Contractions propagate downward across myometrium\\n- Coordinated contractions (Braxton Hicks) become synchronized\\n\\n**Coordination in labor**:\\n- Gap junction development increases (connexin-43)\\n- Electrical coupling between muscle cells\\n- Synchronized, effective downward propagation\\n\\n### Contraction Pattern in Labor\\n- **Frequency**: 2-3 minutes apart (every 120-180 seconds)\\n- **Duration**: 40-60 seconds\\n- **Intensity**: 40-60 mmHg (measured by intrauterine pressure catheter)\\n- **Amplitude**: Increment/decrement/baseline pattern\\n\\n## Cervical Dilation Mechanism\\n\\n### Cervical Composition\\n- Rich in collagen (60-80%), elastin, proteoglycans\\n- Anterior vaginal portio and posterior cervix\\n- Cervical plug throughout pregnancy (mucus + IgA)\\n\\n### Dilation Process\\n1. **Softening (ripening)**: Collagen cross-linking breaks down\\n   - Matrix metalloproteinases (MMPs) increase\\n   - Prostaglandin F2α and E2 promote enzymatic breakdown\\n   - Cervix becomes softer, more distensible\\n\\n2. **Effacement**: Upper cervix shortens and pulls upward\\n   - Muscular portion thins (takes up shortening)\\n   - Lower cervix thins last\\n   - Anterior lip typically effaces before posterior\\n\\n3. **Dilation**: Progressive opening from 1 cm to 10 cm\\n   - Uterine contractions apply pressure\\n   - Cervix yields to pressure\\n   - Cervical fibers stretch circumferentially\\n\\n### Cervical Assessment\\n- **Bishop score**: Assesses cervical favorability for labor\\n  - Dilation, effacement, consistency, position, station\\n  - Score >8: Favorable cervix (high vaginal delivery success)\\n  - Score <6: Unfavorable (may require induction support)\\n\\n## Fetal Descent Mechanisms\\n\\n### Engagement\\n- Biparietal diameter (BPD) passes through pelvic inlet\\n- Usually occurs 2 weeks before labor in primigravida\\n- During labor in multipara\\n\\n### Descent Phases\\n**Initial descent**: Gradual through latent/early active phase\\n\\n**Acceleration phase**: Progressive faster descent in active labor\\n\\n**Deceleration phase**: Descent may slow at pelvic floor\\n- Fetal head arrested against pelvic floor muscles\\n- Pressure stimulates Ferguson's reflex (urge to push)\\n\\n### Cardinal Movements of Labor (Mechanism of Labor)\\n1. **Engagement**: Fetal head enters pelvic inlet\\n2. **Descent**: Progressive downward movement through pelvis\\n3. **Flexion**: Fetal chin touches chest (smallest diameter LOA)\\n4. **Internal rotation**: Head rotates from transverse to occiput anterior (90° rotation)\\n5. **Extension**: Head extends as it crowns under pubic symphysis\\n6. **External rotation (restitution)**: Head externally rotates 45° after birth\\n7. **Expulsion**: Body delivered after shoulders rotate\\n\\n### Normal Pelvis and Descent\\n- Pelvic inlet: Transverse diameter widest\\n- Pelvic mid-pelvis: Anterior-posterior diameter widest\\n- Pelvic outlet: Transverse diameter widest\\n- Head adapts shape as it navigates each pelvic level,\\n        mnemonics: [\\n          {\\n            text: \\\"CARDINAL MOVEMENTS = Engagement, Descent, Flexion, Internal rotation, Extension, External rotation, Expulsion\\\",\\n            explanation: \\\"Seven movements of fetal head through pelvis in labor\\\"\\n          },\\n          {\\n            text: \\\"CERVICAL RIPENING = Softening via MMPs, Effacement, then Dilation\\\",\\n            explanation: \\\"Three-step cervical change process\\\"\\n          },\\n          {\\n            text: \\\"UTERINE CONTRACTION = Ca2+→Calmodulin→MLCK→Myosin→Actin sliding\\\",\\n            explanation: \\\"Molecular cascade for muscle contraction\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Oxytocin and prostaglandins coordinate uterine muscle contraction\\\",\\n          \\\"Gap junctions increase in labor allowing synchronized contractions\\\",\\n          \\\"MMPs and prostaglandins degrade cervical collagen enabling dilation\\\",\\n          \\\"Cardinal movements ensure fetal head navigates pelvis efficiently\\\",\\n          \\\"Internal rotation most critical cardinal movement (LOA → OA)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"DC Dutta's Textbook of Obstetrics\\\", chapter: \\\"Mechanism of Labor\\\", edition: \\\"9th\\\" },\\n          { book: \\\"Williams Obstetrics\\\", chapter: \\\"Operative Vaginal Delivery\\\", edition: \\\"26th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"normal-labor-clinical-management\\\",\\n        title: \\\"Normal Labor & Mechanism - Clinical Management\\\",\\n        estimatedMinutes: 25,\\n        summary: \\\"Clinical assessment, partograph use, and management principles during normal labor.\\\",\\n        contentMd: "# Normal Labor & Mechanism - Clinical Management\\\\n\\\\n## Admission Assessment in Labor\\\\n\\\\n### History Taking\\\\n- Last menstrual period (confirm dating)\\\\n- Contractions: Frequency, duration, intensity\\\\n- Vaginal bleeding/leaking (assess PROM, abruption)\\\\n- Maternal medical/obstetric history\\\\n- Allergies and medications\\\\n\\\\n### Clinical Examination\\\\n- Vital signs: BP, pulse, temperature, respiratory rate\\\\n- General examination: Pallor, icterus, edema\\\\n- Obstetric examination:\\\\n  - Abdominal: Tenderness, scars, size\\\\n  - Pelvic: Vulva, vagina, cervix status\\\\n  - Per-vaginal: Cervical dilation, effacement, station, position, membranes\\\\n\\\\n### Fetal Assessment on Admission\\\\n- Fetal heart rate (Doppler or cardiotocography)\\\\n- Baseline rate: 120-160 bpm\\\\n- Variability and accelerations\\\\n- Assess for tachycardia/bradycardia/decelerations\\\\n\\\\n## Partograph in Labor (WHO Standard)\\\\n\\\\n### Components\\\\n**Recording during labor**:\\\\n- Time on x-axis\\\\n- Cervical dilation (0-10 cm) on y-axis\\\\n- Uterine contractions (frequency, duration, intensity)\\\\n- Fetal descent (station)\\\\n- Vital signs, urine output, vaginal loss\\\\n- Maternal condition, fetal heart rate\\\\n\\\\n### Alert and Action Lines\\\\n- **Alert line**: Expected cervical dilation with normal progress\\\\n- **Action line**: 4 hours to right of alert line\\\\n- If cervical dilation crosses action line → referral for intervention\\\\n\\\\n### Progress Assessment Using Partograph\\\\n- Expected dilation: 1 cm/hour (active phase)\\\\n- If dilation <0.5 cm/hour → abnormal progress\\\\n- Primigravida: Stage 2 should not exceed 2 hours\\\\n- Multipara: Stage 2 should not exceed 1 hour\\\\n\\\\n## Management During Labor\\\\n\\\\n### Stage 1 Management\\\\n**Latent phase**:\\\\n- Reassurance and support\\\\n- Ambulation encouraged\\\\n- Oral fluids and light diet (if no complications)\\\\n- Analgesia: Paracetamol, pethidine, or epidural (institutional availability)\\\\n\\\\n**Active phase**:\\\\n- Continuous cardiotocography if available (or intermittent)\\\\n- Vaginal examination every 2 hours to assess progress\\\\n- Partograph charting\\\\n- I.V. access and fluids (as per protocol)\\\\n- Bladder care: Catheterization if not passed urine in 2-3 hours\\\\n\\\\n**Transition phase**:\\\\n- Support from labor attendant\\\\n- Prepare for second stage\\\\n- Assess readiness for pushing\\\\n\\\\n### Stage 2 Management\\\\n- Position: Squatting, semi-recumbent, lateral\\\\n- Pushing: Directed pushing vs spontaneous\\\\n- Perineal stretching: Warm compresses, perineal massage reduce tear risk\\\\n- Preparation for delivery: Sterile field, delivery packs\\\\n\\\\n### Stage 3 Management\\\\n- Prophylactic oxytocin (IM or IV): 10 IU oxytocin\\\\n- Controlled cord traction (after signs of placental separation)\\\\n- Fundal massage after placenta delivery\\\\n- Inspection of placenta and membranes\\\\n- Uterine examination if trauma suspected\\\\n\\\\n### Stage 4 Care\\\\n- Uterine monitoring: Fundal tone, descent\\\\n- Vaginal examination if heavy bleeding\\\\n- Vital signs every 15-30 minutes\\\\n- Early mobilization\\\\n- Infant care: Vitamin K, eye prophylaxis\\\\n- Breastfeeding initiation within 30 minutes\\\\n\\\\n## Partograph Advantages (Per WHO)\\\\n- Visual trend of labor progress\\\\n- Early identification of prolonged labor\\\\n- Reduces unnecessary intervention\\\\n- Reduces maternal and fetal complications\\\\n- Low-cost, applicable in all settings,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"ADMISSION ASSESSMENT = H (History), E (Exam), A (Assessment)\\\\\\\",\\\\n            explanation: \\\\\\\"Three components of labor admission evaluation\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"PARTOGRAPH LINES = Alert (expected), Action (4 hours right of alert)\\\\\\\",\\\\n            explanation: \\\\\\\"Two key lines indicating need for intervention\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"NORMAL DILATION RATE = 1 cm/hour in active phase\\\\\\\",\\\\n            explanation: \\\\\\\"Benchmark for assessing labor progress\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Partograph prevents prolonged labor and unnecessary intervention\\\\\\\",\\\\n          \\\\\\\"Continuous support and mobility improve labor outcomes\\\\\\\",\\\\n          \\\\\\\"Prophylactic oxytocin in stage 3 reduces PPH risk by 40%\\\\\\\",\\\\n          \\\\\\\"Controlled cord traction after placental signs prevents maternal trauma\\\\\\\",\\\\n          \\\\\\\"Early skin-to-skin contact and breastfeeding improve neonatal adaptation\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Management of Normal Labor\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"WHO Partograph Guidelines\\\\\\\", chapter: \\\\\\\"Preventing Prolonged Labor\\\\\\\", edition: \\\\\\\"2015\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"normal-labor-exam-preparation\\\\\\\",\\\\n        title: \\\\\\\"Normal Labor & Mechanism - Exam Preparation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Key examination points and important comparisons for normal labor assessment.\\\\\\\",\\\\n        contentMd: ``# Normal Labor & Mechanism - Exam Preparation\\\\n\\\\n## Cervical Examination Findings\\\\n- **Nulliparous cervix**: Firm, pointed, closed\\\\n- **Multiparous cervix**: Soft, patulous, may be 1 cm open\\\\n- **Cervical edema**: Indicates prolonged labor against closed cervix\\\\n- **Caput succedaneum**: Swelling of fetal scalp (normal in labor)\\\\n\\\\n## Station Interpretation\\\\n- **-5 station**: Head at pelvic inlet (not engaged)\\\\n- **0 station**: Biparietal diameter at pelvic inlet (engaged)\\\\n- **+3 station**: Head at pelvic floor, crowning near\\\\n- **+5 station**: Crowning present\\\\n\\\\n## Partograph Interpretation\\\\n- Dilation **below alert line**: Normal progress\\\\n- Dilation **between alert and action line**: Close monitoring\\\\n- Dilation **crossing action line**: Intervention required (augmentation or delivery)\\\\n\\\\n## Common Examination Questions\\\\n**Q: What is the most important cardinal movement?**\\\\nA: Internal rotation (transverse to OA) - enables fetal head to navigate pelvic inlet to outlet\\\\n\\\\n**Q: How long can second stage last?**\\\\nA: Primigravida up to 2 hours, multipara up to 1 hour with epidural\\\\n\\\\n**Q: When is fetal assessment done in labor?**\\\\nA: Admission (baseline), every 30 minutes in active labor, continuous if abnormality detected\\\\n\\\\n**Q: Signs of placental separation?**\\\\nA: Gush of blood, cord lengthens, uterus becomes globular and rises\\\\n\\\\n## Clinical Scenarios\\\\n**Scenario 1**: Primigravida, 8 hours in labor, cervix 4 cm dilated, contractions 3/10min\\\\n- Assessment: Latent phase, normal progress\\\\n- Management: Continue expectant management, support, analgesia\\\\n\\\\n**Scenario 2**: Primigravida, 16 hours in labor, cervix 5 cm, weak contractions\\\\n- Assessment: Prolonged latent phase or slow active phase\\\\n- Management: Assess pelvic adequacy, consider augmentation with oxytocin\\\\n\\\\n**Scenario 3**: G2P1, at term, contractions 2-3 min, cervix 8 cm, fetal heart 150 bpm\\\\n- Assessment: Active labor, normal FHR, near second stage\\\\n- Management: Continue progress, prepare for second stage pushing\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"normal-labor-review-questions\\\\\\\",\\\\n        title: \\\\\\\"Normal Labor & Mechanism - Active Recall Questions\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Review questions on labor physiology, stages, cardinal movements, and clinical management.\\\\\\\",\\\\n        contentMd: ``# Normal Labor & Mechanism - Active Recall\\\\n\\\\n## Questions on Labor Physiology\\\\n\\\\n**Q1: What is the molecular mechanism by which oxytocin causes uterine contractions?**\\\\nA: Oxytocin binds myometrial receptors → ↑ intracellular Ca2+ → Calmodulin-Ca2+ → MLCK activation → Myosin phosphorylation → Actin-myosin interaction → Muscle contraction\\\\n\\\\n**Q2: How do gap junctions contribute to labor progress?**\\\\nA: Gap junctions (connexin-43) increase in number during labor → electrical coupling between myometrial cells → coordinated, synchronized contractions propagating from fundus downward\\\\n\\\\n**Q3: What is the role of prostaglandins in labor onset?**\\\\nA: Prostaglandins (PGE2, PGF2α) promote cervical ripening by increasing MMPs and collagen breakdown; they also sensitize myometrium to oxytocin\\\\n\\\\n**Q4: What percentage of collagen must be degraded for cervical effacement?**\\\\nA: Approximately 30-40% collagen cross-link breakdown occurs during cervical ripening\\\\n\\\\n## Questions on Stages and Mechanisms\\\\n\\\\n**Q5: What are the three phases of stage 1 and their cervical dilation ranges?**\\\\nA: Latent (0-3 cm), Active (3-7 cm), Transition (7-10 cm)\\\\n\\\\n**Q6: List the seven cardinal movements of labor in order.**\\\\nA: Engagement → Descent → Flexion → Internal rotation → Extension → External rotation → Expulsion\\\\n\\\\n**Q7: Why is internal rotation of the fetal head important?**\\\\nA: Internal rotation orients the head from transverse (widest at pelvic inlet) to occiput anterior (smallest diameter) allowing passage through pelvic outlet\\\\n\\\\n**Q8: What is the average duration of labor in a primigravida vs multipara?**\\\\nA: Primigravida: 12-14 hours total; Multipara: 6-8 hours total\\\\n\\\\n## Questions on Clinical Assessment\\\\n\\\\n**Q9: What findings on cervical examination indicate cervical ripeness (favorable cervix)?**\\\\nA: Soft consistency, 50% effaced, 2-3 cm dilated, anterior position, -1 station (Bishop score >8)\\\\n\\\\n**Q10: How frequently should cervical examinations be performed during active labor?**\\\\nA: Every 1-2 hours in active labor to assess progress; abnormal progress may warrant more frequent assessment\\\\n\\\\n**Q11: What is an acceptable rate of cervical dilation in active labor?**\\\\nA: ≥1 cm/hour; <0.5 cm/hour suggests abnormal labor progress\\\\n\\\\n**Q12: Name the alert line and action line in a partograph and their significance.**\\\\nA: Alert line = expected cervical dilation with normal progress; Action line = 4 hours to right of alert line. Crossing action line indicates abnormal progress requiring intervention\\\\n\\\\n## Questions on Fetal Assessment\\\\n\\\\n**Q13: What is the normal fetal heart rate range during labor?**\\\\nA: 120-160 bpm; baseline variability 5-25 bpm\\\\n\\\\n**Q14: What maternal position during second stage may optimize fetal descent?**\\\\nA: Upright positions (squatting, semi-recumbent) favor descent; lying supine may slow descent\\\\n\\\\n**Q15: How does caput succedaneum differ from molding?**\\\\nA: Caput = edema of scalp (resolves in 24-48 hours); Molding = compression of skull bones (resolves in 3-5 days)\\\\n\\\\n## Questions on Management\\\\n\\\\n**Q16: What is the purpose of prophylactic oxytocin in the third stage?**\\\\nA: Contracts uterus after placental delivery → compresses bleeding vessels → reduces PPH risk by 40%; reduces blood loss from 800 mL to 300-400 mL\\\\n\\\\n**Q17: What are the cardinal signs of placental separation?**\\\\nA: Gush of blood, cord lengthening (2-3 cm), uterus becomes globular and rises, slight maternal bleeding\\\\n\\\\n**Q18: What is the maximum time limit for expulsion of placenta?**\\\\nA: 30 minutes; beyond 30 minutes = retained placenta (risk of hemorrhage, infection)\\\\n\\\\n**Q19: Why is controlled cord traction safer than uncontrolled?**\\\\nA: Prevents uterine inversion, avoids partial placental separation, reduces risk of retained placenta\\\\n\\\\n**Q20: What analgesia options are available for labor in resource-limited settings?**\\\\nA: Reassurance/support, ambulation, warm compress on abdomen, pethidine IM, paracetamol, entonox (if available); epidural in equipped facilities\\\\n      }\\\\n    ]\\\\n  },\\\\n  {\\\\n    topicCode: \\\\\\\"OG-MOD-04-TOP-02\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"postpartum-hemorrhage-foundation\\\\\\\",\\\\n        title: \\\\\\\"Postpartum Hemorrhage - Foundation\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Definition, classification, and clinical presentation of postpartum hemorrhage and its impact on maternal mortality.\\\\\\\",\\\\n        contentMd: ``# Postpartum Hemorrhage - Foundation\\\\n\\\\n## Definition\\\\n**Postpartum hemorrhage (PPH)**: Abnormal uterine bleeding during third stage of labor or within 24 hours after delivery\\\\n- **Primary/Early PPH**: Within 24 hours of delivery\\\\n- **Secondary/Late PPH**: 24 hours to 12 weeks postpartum\\\\n\\\\n**Quantification**:\\\\n- **Minor PPH**: 500-1000 mL\\\\n- **Major PPH**: >1000 mL\\\\n- **Massive PPH**: >2500 mL\\\\n\\\\n## Global Significance\\\\n- Leading cause of maternal mortality in developing countries\\\\n- Accounts for 25-30% of maternal deaths in India (MMHS data)\\\\n- Partially preventable: Prophylactic oxytocin reduces risk by 40%\\\\n- Most deaths occur within first 24-48 hours\\\\n\\\\n## Risk Factors for PPH\\\\n\\\\n### Uterine Factors\\\\n- Multiple pregnancy (overdistended uterus)\\\\n- Polyhydramnios\\\\n- Placental abruption\\\\n- Placenta previa\\\\n- Retained placenta\\\\n- Uterine rupture\\\\n\\\\n### Maternal Factors\\\\n- Grand multiparity (5+ previous deliveries)\\\\n- Maternal age >35 years\\\\n- Anemia at delivery (Hb <8 g/dL)\\\\n- Coagulopathy/bleeding disorder\\\\n- Antepartum hemorrhage\\\\n\\\\n### Labor Factors\\\\n- Precipitate labor\\\\n- Prolonged labor (>18 hours)\\\\n- Operative delivery (forceps, vacuum, LSCS)\\\\n- General anesthesia\\\\n\\\\n## Causes of PPH (4 Ts)\\\\n\\\\n### 1. TONE (Most Common - 60-80%)\\\\n- Uterine atony (loss of myometrial contractility)\\\\n- Risk factors: Overdistension, exhaustion, infection\\\\n- Presents with: Boggy uterus, vaginal bleeding\\\\n\\\\n### 2. TISSUE (Retained Placenta/POC - 10-15%)\\\\n- Retained placental fragments\\\\n- Placental invasion disorders (accreta)\\\\n- Presents with: Tissue at OS, bloody discharge\\\\n\\\\n### 3. THROMBIN (Coagulopathy - 5-10%)\\\\n- DIC (disseminated intravascular coagulation)\\\\n- Pre-existing bleeding disorder\\\\n- Transfusion reactions\\\\n- Presents with: Oozing from all sites, petechiae\\\\n\\\\n### 4. TRAUMA (Genital Tract Injury - 10-15%)\\\\n- Cervical lacerations\\\\n- Vaginal lacerations\\\\n- Perineal tears (3rd/4th degree)\\\\n- Uterine rupture\\\\n- Presents with: Visible bleeding from laceration site\\\\n\\\\n## Clinical Presentation\\\\n\\\\n### Early Signs of Hemorrhage\\\\n- **Bleeding**: Continuous vaginal bleeding\\\\n- **Uterine consistency**: Soft, boggy uterus\\\\n- **Vital signs**: Tachycardia, tachypnea (may appear normal initially)\\\\n- **Maternal appearance**: Pallor, anxiety\\\\n- **Lochia**: Excessive clots\\\\n\\\\n### Signs of Shock\\\\n- Severe tachycardia (>120 bpm)\\\\n- Hypotension (<90/60 mmHg)\\\\n- Decreased urine output (<30 mL/hour)\\\\n- Altered mental status, confusion\\\\n- Rapid progression in hemorrhagic shock\\\\n\\\\n## Classification of Hemorrhagic Shock\\\\n- **Class I**: <15% blood loss, minimal signs\\\\n- **Class II**: 15-30% loss, tachycardia, mild hypotension\\\\n- **Class III**: 30-40% loss, severe tachycardia, clear hypotension, altered mental status\\\\n- **Class IV**: >40% loss, shock state, organ failure imminent,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"4 Ts of PPH = TONE (atony), TISSUE (retained), THROMBIN (coagulopathy), TRAUMA (lacerations)\\\\\\\",\\\\n            explanation: \\\\\\\"Four main causes of postpartum hemorrhage\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"PPH DEFINITION = >500 mL in first 24 hours (>1000 mL = major)\\\\\\\",\\\\n            explanation: \\\\\\\"Quantitative definition of postpartum bleeding\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"HEMORRHAGIC SHOCK = Tachycardia, Hypotension, Altered mental status, Oliguria\\\\\\\",\\\\n            explanation: \\\\\\\"Signs of severe blood loss requiring intervention\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Atony accounts for 60-80% of PPH cases\\\\\\\",\\\\n          \\\\\\\"Prophylactic oxytocin in stage 3 reduces PPH by 40%\\\\\\\",\\\\n          \\\\\\\"Blood loss may be underestimated by 30-50% clinically\\\\\\\",\\\\n          \\\\\\\"Early recognition and prompt treatment reduce mortality\\\\\\\",\\\\n          \\\\\\\"Risk assessment at delivery enables targeted prevention\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Postpartum Hemorrhage\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Williams Obstetrics\\\\\\\", chapter: \\\\\\\"Obstetrical Hemorrhage\\\\\\\", edition: \\\\\\\"26th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"postpartum-hemorrhage-pathophysiology\\\\\\\",\\\\n        title: \\\\\\\"Postpartum Hemorrhage - Pathophysiology\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Mechanisms of hemorrhage in uterine atony, retained placenta, and coagulopathy with physiological responses.\\\\\\\",\\\\n        contentMd: ``# Postpartum Hemorrhage - Pathophysiology\\\\n\\\\n## Uterine Atony Mechanism\\\\n\\\\n### Normal Hemostasis in Uterus\\\\n1. **Myometrial contraction**: Spiral arteries compressed after placental separation\\\\n2. **Platelet plug formation**: Platelets aggregate at bleeding site\\\\n3. **Thrombus formation**: Coagulation cascade produces fibrin clot\\\\n4. **Placental site involution**: Uterine vessels thrombose and remodel\\\\n\\\\n### Atony Development\\\\n**Loss of myometrial contractility**:\\\\n- Relaxation of muscle fibers → spiral arteries open\\\\n- Continuous bleeding from placental bed (bare area ~600 cm2)\\\\n- Bleeding volume can exceed 500 mL in minutes\\\\n\\\\n**Causes of atony**:\\\\n- **Uterine overdistension**: Multiple pregnancy, polyhydramnios → muscle fiber stretch → reduced contractility\\\\n- **Prolonged/augmented labor**: Myometrial exhaustion from prolonged contractions\\\\n- **Rapid labor**: Insufficient time for myometrial fatigue (paradoxical)\\\\n- **Placental abruption**: Uterine irritation and depletion of myometrial contractile proteins\\\\n- **Intrauterine infection/chorioamnionitis**: Inflammatory mediators impair contractility\\\\n- **Medications**: General anesthesia, magnesium, nifedipine (tocolytics)\\\\n\\\\n### Physiological Response to Atony\\\\n- Tachycardia: Sympathetic stimulation\\\\n- Peripheral vasoconstriction: Maintains central perfusion\\\\n- Increased cardiac output\\\\n- Decreased urine output: Decreased renal perfusion\\\\n\\\\n## Retained Placenta Mechanisms\\\\n\\\\n### Placental Invasion Disorders\\\\n**Normal placentation**:\\\\n- Trophoblast invasion limited to decidua basalis\\\\n- Placenta separates cleanly at interface\\\\n\\\\n**Abnormal invasion**:\\\\n- **Placenta accreta**: Trophoblast invades myometrium (85% of cases)\\\\n- **Increta**: Trophoblast invades deep into myometrium (10%)\\\\n- **Percreta**: Trophoblast reaches serosa/beyond (5%)\\\\n\\\\n**Risk factors for accreta**:\\\\n- Placenta previa (especially with prior cesarean)\\\\n- Prior uterine curettage\\\\n- Prior cesarean section\\\\n- Maternal age >35\\\\n- Multiparity\\\\n\\\\n### Mechanical Failure of Separation\\\\n- **Cordial insertion**: Placenta remains attached despite uterine contraction\\\\n- **Adherent placenta**: Abnormal decidualization or invasion\\\\n- **Membranes retained**: Incomplete placental expulsion\\\\n\\\\n### Bleeding Mechanism\\\\n- Placental bed not compressed by contracting uterus\\\\n- Spiral arteries continue to bleed\\\\n- Loss can be 400-800 mL\\\\n\\\\n## Coagulopathy in PPH\\\\n\\\\n### Trigger Factors\\\\n1. **Amniotic fluid embolism**: Amniotic fluid enters circulation\\\\n2. **Placental abruption**: Tissue factor enters maternal circulation\\\\n3. **Sepsis**: Endotoxins activate coagulation\\\\n4. **HELLP syndrome**: Hemolysis, liver dysfunction\\\\n\\\\n### DIC (Disseminated Intravascular Coagulation) Cascade\\\\n1. **Trigger**: Tissue factor/amniotic fluid activates Factor VII\\\\n2. **Thrombin burst**: Massive thrombin generation\\\\n3. **Platelet consumption**: Thrombocytopenia develops\\\\n4. **Fibrinogen consumption**: ↓ Fibrinogen → severe bleeding\\\\n5. **Fibrinolysis activation**: Enhanced breakdown of clots\\\\n6. **Microvascular thrombosis**: Organ ischemia\\\\n7. **Hemorrhage + Thrombosis**: Paradoxical state\\\\n\\\\n### Laboratory Findings in DIC-related PPH\\\\n- ↓ Platelets (<50,000)\\\\n- ↓ Fibrinogen (<100 mg/dL)\\\\n- ↑ PT/INR (>1.5)\\\\n- ↑ aPTT (>1.5 × control)\\\\n- ↑ D-dimer and FDP (fibrin degradation products)\\\\n\\\\n## Genital Tract Trauma Bleeding\\\\n\\\\n### Cervical Lacerations\\\\n- Occur during labor/delivery\\\\n- Vessels exposed → continuous oozing\\\\n- Blood loss usually <200 mL\\\\n- Risk: Infection, stricture formation\\\\n\\\\n### Vaginal/Perineal Tears\\\\n**3rd degree tear**: Extends into anal sphincter\\\\n**4th degree tear**: Extends into rectal mucosa\\\\n- Associated vessels bleed\\\\n- Risk: Long-term fecal incontinence\\\\n\\\\n### Uterine Rupture\\\\n- Myometrial vessels exposed\\\\n- Massive hemorrhage (>2000 mL)\\\\n- Often associated with shock\\\\n- Risk: Hysterectomy, maternal death\\\\n\\\\n## Physiological Compensation and Decompensation\\\\n\\\\n### Compensatory Phase\\\\n- Tachycardia: Increased cardiac output\\\\n- Vasoconstriction: Maintains BP and cerebral/coronary perfusion\\\\n- Tachypnea: Increased O2 delivery\\\\n- Anxiety, restlessness: Catecholamine release\\\\n\\\\n### Decompensatory Phase (After 30% loss)\\\\n- Sympathetic compensation fails\\\\n- BP drops suddenly\\\\n- Altered mental status, confusion\\\\n- Anuria (renal failure)\\\\n- ARDS, DIC, multi-organ failure,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"ATONY = Overdistension, Exhaustion, Anesthesia, Abruption, Infection\\\\\\\",\\\\n            explanation: \\\\\\\"Five causes of uterine atony\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"DIC CASCADE = Trigger → Thrombin → Platelet/Fibrin consumption → Bleeding\\\\\\\",\\\\n            explanation: \\\\\\\"Pathological coagulation sequence\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"PLACENTAL INVASION = Accreta (85%), Increta (10%), Percreta (5%)\\\\\\\",\\\\n            explanation: \\\\\\\"Types and frequency of abnormal placentation\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Placental bed covers 600 cm2; uterine contraction is critical for hemostasis\\\\\\\",\\\\n          \\\\\\\"Amniotic fluid embolism and placental abruption trigger DIC rapidly\\\\\\\",\\\\n          \\\\\\\"Atony bleeding increases exponentially without intervention (500 → 1000 → 2000 mL)\\\\\\\",\\\\n          \\\\\\\"Prior cesarean increases accreta risk progressively with repeat procedures\\\\\\\",\\\\n          \\\\\\\"Coagulopathy in PPH creates paradox of bleeding + thrombosis simultaneously\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Mechanism of Hemostasis\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Obstetric Hemorrhage: Strategy for Prevention and Management\\\\\\\", chapter: \\\\\\\"Pathophysiology\\\\\\\", edition: \\\\\\\"2017\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"postpartum-hemorrhage-management\\\\\\\",\\\\n        title: \\\\\\\"Postpartum Hemorrhage - Management\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Evidence-based management protocols for early detection, initial resuscitation, and specific interventions for PPH.\\\\\\\",\\\\n        contentMd: ``# Postpartum Hemorrhage - Management\\\\n\\\\n## Prevention (Most Effective Strategy)\\\\n\\\\n### Active Management of 3rd Stage\\\\n- **Prophylactic oxytocin**: 10 IU IM or 5 IU IV within 1 minute of birth (reduces PPH by 40%)\\\\n- **Controlled cord traction**: After signs of placental separation (reduces retained placenta)\\\\n- **Uterine massage**: After placenta delivery (stimulates contraction)\\\\n\\\\n### Risk Stratification\\\\n- **Low risk**: Routine prophylactic oxytocin\\\\n- **High risk**: Ergot alkaloids or misoprostol if oxytocin unavailable\\\\n\\\\n## Early Recognition\\\\n\\\\n### Immediate Assessment\\\\n- Visual inspection of vaginal blood loss\\\\n- Palpate uterine fundus: Firm (contracted) vs boggy (atonic)\\\\n- Count number of pads soaked\\\\n- Estimate ongoing loss\\\\n- Measure vital signs every 5-10 minutes\\\\n\\\\n### \\\\\\\"PEARL\\\\\\\" Assessment (Puerperium)\\\\n- **Palpate**: Fundus firm/boggy?\\\\n- **Empty**: Bladder full? (↓ uterine contraction)\\\\n- **Arteries**: Check for bleeding source (tear/laceration)\\\\n- **Review**: Placenta complete? POC retained?\\\\n- **Lab**: Type and crossmatch, CBC, coagulation profile\\\\n\\\\n## Management Algorithm\\\\n\\\\n### Step 1: Initial Response (First 5 minutes)\\\\n1. **Call for help**: Obstetric, anesthesia, nursing teams\\\\n2. **IV access**: 2 large-bore cannulae; send blood for group/cross-match, CBC, PT/INR, fibrinogen\\\\n3. **Position**: Left lateral (improve placental perfusion)\\\\n4. **Catheterize bladder**: Measure urine output (goal >30 mL/hour)\\\\n5. **Assess**: Identify cause (TONE/TISSUE/THROMBIN/TRAUMA)\\\\n\\\\n### Step 2: Uterine Atony Management\\\\n1. **Uterine massage**: Bimanual massage (internal + external) for 30 seconds\\\\n2. **Oxytocin**:\\\\n   - IV bolus: 5-10 IU over 1-2 minutes (can repeat)\\\\n   - IV infusion: 10-20 IU in 500 mL saline (titrate to contract)\\\\n   - IM: 10 IU (effective if IV access delayed)\\\\n3. **Ergot alkaloids** (if oxytocin fails):\\\\n   - Ergotamine IM: 0.2 mg (contraindicated if hypertensive/preeclampsia)\\\\n4. **Misoprostol**: 800 mcg PR (if above unavailable; slower action)\\\\n\\\\n### Step 3: Fluid/Blood Resuscitation\\\\n- **Target**: Maintain systolic BP >90 mmHg, Hb >7 g/dL\\\\n- **IV fluids**: Crystalloid 2-3 L bolus rapid infusion\\\\n- **Blood products**:\\\\n  - RBC: If Hb <7 g/dL or ongoing bleeding with symptoms\\\\n  - FFP: If coagulopathy evident (PT/INR >1.5)\\\\n  - Platelets: If <50,000 AND ongoing bleeding\\\\n  - Cryoprecipitate: If fibrinogen <100 mg/dL\\\\n\\\\n### Step 4: Identification and Treatment of Underlying Cause\\\\n\\\\n**If ATONY persists despite oxytocin**:\\\\n- Consider uterine compression (aortic compression, B-Lynch suture)\\\\n- Anesthesia review for laparotomy if needed\\\\n\\\\n**If TISSUE (retained)**:\\\\n- Manual removal of placental fragments under GA\\\\n- Exploration of uterine cavity\\\\n- D&C if indicated\\\\n\\\\n**If THROMBIN (coagulopathy)**:\\\\n- Replace clotting factors per lab values\\\\n- Consider DIC protocol\\\\n- Avoid over-transfusion (increases DIC)\\\\n\\\\n**If TRAUMA**:\\\\n- Inspect cervix under direct visualization (adequate light, retraction)\\\\n- Repair cervical/vaginal lacerations with absorbable sutures\\\\n- Higher degree tears require layer-wise repair\\\\n\\\\n## Non-Surgical Interventions\\\\n\\\\n### Uterine Tamponade (if medical therapy fails)\\\\n- **Bakri balloon**: Inflated with 300-500 mL saline in uterine cavity\\\\n- **Gauze packing**: 4-inch gauze soaked in epinephrine 1:10,000 (rarely used)\\\\n- **Foley catheter balloon**: Emergency temporary tamponade\\\\n\\\\n### Aortic Compression\\\\n- **Bimanual compression**: Internal hand compresses lower uterine segment against sacrum\\\\n- **Temporary measure**: Maintain perfusion while arranging definitive care\\\\n\\\\n## Surgical Interventions\\\\n- **B-Lynch suture**: Compresses uterus (success 80-100%)\\\\n- **Hysterectomy**: Last resort (1-2% of severe PPH)\\\\n\\\\n## Monitoring During Management\\\\n- Vital signs every 15 minutes\\\\n- Urine output hourly (goal >30 mL/hour)\\\\n- Repeat labs (CBC, coagulation) every 2-4 hours\\\\n- Fundal height and consistency\\\\n- Lochia volume and character\\\\n\\\\n## Transfer Protocol\\\\n- Contact higher center early if <2000 mL loss with ongoing bleeding/poor response\\\\n- Contact before 2000 mL if risk factors present\\\\n- Mobilize transport with blood products,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"PPH RESPONSE = Call, IV access, Identify cause (TONE/TISSUE/THROMBIN/TRAUMA), Intervene\\\\\\\",\\\\n            explanation: \\\\\\\"Four-step management approach\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"ATONY MANAGEMENT = Massage, Oxytocin, Ergot, Misoprostol\\\\\\\",\\\\n            explanation: \\\\\\\"Pharmacological agents in order of preference\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"PEARL = Palpate, Empty bladder, Arteries (check bleeding), Review placenta, Lab\\\\\\\",\\\\n            explanation: \\\\\\\"Systematic assessment of postpartum woman\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Active management of 3rd stage prevents majority of PPH\\\\\\\",\\\\n          \\\\\\\"Oxytocin is first-line; ergot if oxytocin fails or contraindicated\\\\\\\",\\\\n          \\\\\\\"Bimanual uterine massage often effective within minutes\\\\\\\",\\\\n          \\\\\\\"Early transfusion of RBCs at Hb <7 improves outcomes\\\\\\\",\\\\n          \\\\\\\"Massive transfusion protocol (1:1:1 RBC:FFP:platelets) for hemorrhagic shock\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Management of PPH\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Confidential Enquiry into Maternal Deaths (CEMD) India\\\\\\\", chapter: \\\\\\\"Obstetrical Hemorrhage\\\\\\\", edition: \\\\\\\"2019\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"postpartum-hemorrhage-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Postpartum Hemorrhage - Exam Preparation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Clinical scenarios and key examination points for PPH assessment and decision-making.\\\\\\\",\\\\n        contentMd: ``# Postpartum Hemorrhage - Exam Preparation\\\\n\\\\n## Clinical Scenarios\\\\n\\\\n**Scenario 1**: Woman 30 minutes after vaginal delivery, bleeding 400 mL, uterus boggy, BP 110/70, HR 88\\\\n- Cause: Uterine atony\\\\n- Management: Uterine massage + oxytocin infusion\\\\n- Prognosis: Likely to respond\\\\n\\\\n**Scenario 2**: Woman 2 hours after delivery, bleeding 200 mL, uterus firm, bleeding from cervix, BP 105/65, HR 95\\\\n- Cause: Cervical laceration\\\\n- Management: Inspect cervix under light + repair laceration\\\\n- Prognosis: Resolve with suturing\\\\n\\\\n**Scenario 3**: Woman 1 hour post-delivery, bleeding 2000 mL, boggy uterus, BP 85/50, HR 130, altered mental status\\\\n- Cause: Uterine atony with hemorrhagic shock\\\\n- Management: Emergent intervention - uterine compression, massive transfusion, consider B-Lynch suture\\\\n- Prognosis: High risk; requires ICU-level care\\\\n\\\\n**Scenario 4**: Woman 3 hours post-delivery, continuous oozing from multiple sites, platelets 50,000, fibrinogen 80, PT >2\\\\n- Cause: DIC (likely from placental abruption)\\\\n- Management: FFP, cryoprecipitate, RBC transfusion; treat underlying cause\\\\n- Prognosis: Moderate-high mortality if not treated promptly\\\\n\\\\n## Classification by Cause and Management\\\\n| Cause | Incidence | Early Sign | Management |\\\\n|-------|-----------|-----------|------------|\\\\n| Atony | 60-80% | Boggy uterus | Massage + oxytocin |\\\\n| Retained | 10-15% | Tissue at OS | Manual removal/D&C |\\\\n| Trauma | 10-15% | Visible laceration | Repair/suturing |\\\\n| Coagulopathy | 5-10% | Oozing from all sites | Blood products + FFP |\\\\n\\\\n## Key Comparisons\\\\n\\\\n**Ergot vs Misoprostol**:\\\\n- Ergot: Rapid onset, contraindicated in HTN\\\\n- Misoprostol: Slower, can use in any setting\\\\n\\\\n**Placental Accreta vs Retained Placenta**:\\\\n- Accreta: Abnormal invasion, requires hysterectomy consideration\\\\n- Retained: Incomplete separation, manual removal successful\\\\n\\\\n**Early vs Late PPH**:\\\\n- Early: Within 24 hours (usually atony/trauma)\\\\n- Late: After 24 hours (usually infection/retained tissue)\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"postpartum-hemorrhage-active-recall\\\\\\\",\\\\n        title: \\\\\\\"Postpartum Hemorrhage - Active Recall Questions\\\\\\\",\\\\n        estimatedMinutes: 35,\\\\n        summary: \\\\\\\"Review questions on PPH definition, causes, pathophysiology, and evidence-based management.\\\\\\\",\\\\n        contentMd: ``# Postpartum Hemorrhage - Active Recall Questions\\\\n\\\\n## Definition and Classification\\\\n\\\\n**Q1: Define primary postpartum hemorrhage.**\\\\nA: Abnormal uterine bleeding during third stage of labor or within 24 hours of delivery; >500 mL is minor, >1000 mL is major\\\\n\\\\n**Q2: What is the leading preventable cause of maternal death in developing countries?**\\\\nA: Postpartum hemorrhage (accounts for 25-30% of maternal deaths)\\\\n\\\\n**Q3: At what point in the third stage is prophylactic oxytocin administered?**\\\\nA: Within 1 minute of fetal delivery (before placental expulsion)\\\\n\\\\n## Causes (4 Ts)\\\\n\\\\n**Q4: List the four main causes of PPH (4 Ts).**\\\\nA: Tone (atony - 60-80%), Tissue (retained - 10-15%), Thrombin (coagulopathy - 5-10%), Trauma (lacerations - 10-15%)\\\\n\\\\n**Q5: What is placental accreta and why is it increasing?**\\\\nA: Abnormal trophoblastic invasion of myometrium; increasing due to rising cesarean section rates\\\\n\\\\n**Q6: What are the risk factors for placental accreta?**\\\\nA: Placenta previa (especially with prior CS), prior D&C, prior CS, advanced maternal age, multiparity\\\\n\\\\n**Q7: What causes DIC-related PPH?**\\\\nA: Amniotic fluid embolism, placental abruption, severe sepsis/endotoxemia, HELLP syndrome\\\\n\\\\n## Pathophysiology\\\\n\\\\n**Q8: Explain why uterine atony leads to hemorrhage.**\\\\nA: Loss of myometrial contractility → spiral arteries remain open/patent → continuous bleeding from bare placental bed (600 cm2 surface area)\\\\n\\\\n**Q9: What is the mechanism of oxytocin in controlling atony?**\\\\nA: Oxytocin binds myometrial receptors → ↑ intracellular Ca2+ → Calmodulin-Ca2+ activates MLCK → Myosin phosphorylation → Actin-myosin interaction → Uterine contraction → Compression of spiral arteries\\\\n\\\\n**Q10: How do gap junctions contribute to effective uterine contraction?**\\\\nA: Gap junctions increase myometrial electrical coupling → coordinated contraction propagating from fundus downward → effective compression of placental bed\\\\n\\\\n**Q11: What is the paradox in DIC-related hemorrhage?**\\\\nA: Both excessive bleeding AND thrombosis occur simultaneously - consumption of clotting factors causes bleeding while microvascular thrombosis causes organ ischemia\\\\n\\\\n**Q12: Why does retained placenta cause bleeding?**\\\\nA: Placental bed not compressed by contracting uterus → spiral arteries continue to bleed from exposed vessels\\\\n\\\\n## Clinical Assessment\\\\n\\\\n**Q13: What are the early signs of postpartum hemorrhage?**\\\\nA: Boggy/soft uterus, continuous vaginal bleeding, tachycardia (may be absent initially), vital signs may appear normal, lochia with excessive clots\\\\n\\\\n**Q14: Describe the signs of hemorrhagic shock.**\\\\nA: Class III-IV: Severe tachycardia (>120), hypotension (<90/60), altered mental status, anuria, pale/clammy skin, rapid capillary refill\\\\n\\\\n**Q15: How should blood loss be assessed in PPH?**\\\\nA: Visual estimate + pad count + weighing pads (1 mL = 1 g); blood loss typically underestimated by 30-50% clinically\\\\n\\\\n## Management\\\\n\\\\n**Q16: What is active management of the third stage?**\\\\nA: Prophylactic oxytocin (10 IU IM) within 1 minute of birth + controlled cord traction + uterine massage after placental delivery\\\\n\\\\n**Q17: How much does prophylactic oxytocin reduce PPH risk?**\\\\nA: By approximately 40% (from ~15% to ~10% incidence)\\\\n\\\\n**Q18: Sequence the pharmacological agents for uterine atony if oxytocin alone fails.**\\\\nA: Oxytocin (IV/IM) → Ergot alkaloid (IM 0.2 mg) → Misoprostol (800 mcg PR)\\\\n\\\\n**Q19: What is the contraindication to ergot alkaloids?**\\\\nA: Hypertension/preeclampsia/eclampsia (cause severe vasospasm and hypertensive crisis)\\\\n\\\\n**Q20: Describe bimanual uterine compression technique.**\\\\nA: One hand placed in vagina against lower uterine segment; external hand compresses uterus against sacrum from above; maintain compression while arranging definitive care\\\\n\\\\n**Q21: What blood products are indicated in PPH-related DIC?**\\\\nA: RBCs (if Hb <7), FFP (if PT/INR >1.5), cryoprecipitate (if fibrinogen <100), platelets (if <50,000 and bleeding)\\\\n\\\\n**Q22: When is hysterectomy indicated in PPH?**\\\\nA: Last resort (1-2% of cases) - after failure of oxytocin, ergot, misoprostol, uterine compression, B-Lynch suture; massive uncontrolled hemorrhage; uterine rupture\\\\n\\\\n**Q23: What is the B-Lynch suture and success rate?**\\\\nA: Compression suture that compresses uterine fundus; success rate 80-100% in controlling atony-related PPH\\\\n\\\\n**Q24: What is the target blood pressure and urine output during PPH resuscitation?**\\\\nA: SBP >90 mmHg, urine output >30 mL/hour\\\\n\\\\n**Q25: Describe the protocol for massive transfusion in hemorrhagic shock.**\\\\nA: 1:1:1 ratio of RBCs:FFP:platelets; avoid over-transfusion (increases DIC); repeat labs every 2-4 hours to guide therapy\\\\n      }\\\\n    ]\\\\n  },\\\\n  {\\\\n    topicCode: \\\\\\\"OG-MOD-02-TOP-02\\\\\\\",\\\\n    layers: [\\\\n      {\\\\n        layer: 1,\\\\n        slug: \\\\\\\"antepartum-hemorrhage-foundation\\\\\\\",\\\\n        title: \\\\\\\"Antepartum Hemorrhage - Foundation\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Overview of causes, classification, and clinical presentation of bleeding in pregnancy before labor onset.\\\\\\\",\\\\n        contentMd: ``# Antepartum Hemorrhage - Foundation\\\\n\\\\n## Definition and Significance\\\\n**Antepartum hemorrhage (APH)**: Vaginal bleeding after 20 weeks gestation and before onset of labor\\\\n- Affects 3-5% of pregnancies\\\\n- Major cause of maternal and fetal morbidity/mortality\\\\n- Accounts for 10-15% of maternal deaths\\\\n\\\\n## Classification by Gestational Age\\\\n\\\\n### Early Pregnancy Bleeding (before 20 weeks)\\\\n- Miscarriage (threatened, incomplete, complete)\\\\n- Ectopic pregnancy\\\\n- Molar pregnancy\\\\n- Cervical pathology\\\\n- Subchorionic hemorrhage\\\\n\\\\n### Late Pregnancy Bleeding (≥20 weeks) - APH\\\\n- Placenta previa\\\\n- Placental abruption (most urgent)\\\\n- Cervical causes (polyps, cervicitis, cervical cancer)\\\\n- Subchorionic hemorrhage\\\\n- Threatened preterm labor\\\\n- Unclassified (10-20% of cases)\\\\n\\\\n## Two Major Causes (85-90% of APH)\\\\n\\\\n### 1. PLACENTA PREVIA (30-35%)\\\\n**Definition**: Placenta partially or completely covers internal cervical os\\\\n**Incidence**: 0.5-1% of pregnancies\\\\n**Characteristics**:\\\\n- Painless bleeding\\\\n- Starts in 2nd trimester (may continue until delivery)\\\\n- Recurrent episodes\\\\n- Increases with parity and advanced age\\\\n- More common with prior CS, D&C\\\\n\\\\n**Types**:\\\\n- Complete: Entirely covers os\\\\n- Partial: Partially covers os\\\\n- Marginal: Placental edge at os\\\\n- Low-lying: Within 2 cm of os\\\\n\\\\n### 2. PLACENTAL ABRUPTION (35-40%)\\\\n**Definition**: Premature separation of normally implanted placenta\\\\n**Incidence**: 0.5-1% of pregnancies\\\\n**Characteristics**:\\\\n- Painful bleeding (classic presentation)\\\\n- Couvelaire uterus: Dark, boggy appearance\\\\n- Risk of DIC, PPH, fetal death\\\\n- Hypertension, trauma major risk factors\\\\n- Can occur with concealed hemorrhage\\\\n\\\\n## Clinical Presentation\\\\n\\\\n### Placenta Previa\\\\n- **Bleeding**: Bright red, intermittent, painless\\\\n- **Timing**: Often after coitus, vaginal exam, or spontaneously\\\\n- **Vital signs**: Usually stable (unless massive bleed)\\\\n- **Abdomen**: Soft, non-tender\\\\n- **Fetal status**: Usually reassuring (not distressed)\\\\n- **Episode severity**: Variable; may increase closer to term\\\\n\\\\n### Placental Abruption\\\\n- **Bleeding**: Dark red, continuous or intermittent\\\\n- **Pain**: Severe abdominal/back pain\\\\n- **Vital signs**: May show tachycardia, hypotension if severe\\\\n- **Abdomen**: Tender, rigid, board-like (irritated peritoneum)\\\\n- **Fetal status**: Often abnormal (bradycardia, late decelerations)\\\\n- **Uterine tone**: Increased (hypertonic), tetanic contractions possible\\\\n- **Shock**: Can develop rapidly with concealed hemorrhage\\\\n\\\\n## Risk Assessment\\\\n\\\\n### Risk Factors for Placenta Previa\\\\n- Advanced maternal age (>35)\\\\n- Multiparity\\\\n- Prior placenta previa\\\\n- Prior cesarean section (2-3% if one prior)\\\\n- Smoking, cocaine use\\\\n- Asian/Hispanic ethnicity\\\\n\\\\n### Risk Factors for Abruption\\\\n- Hypertension/preeclampsia (50% of cases)\\\\n- Maternal trauma (MVA, fall, domestic violence)\\\\n- Smoking and cocaine/methamphetamine use\\\\n- Polyhydramnios\\\\n- Multiple pregnancy\\\\n- Thrombophilia\\\\n- Prior abruption (recurrence 25%)\\\\n- Sudden decompression (polyhydramnios drainage),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"APH CAUSES = Placenta Previa (painless) vs Abruption (painful)\\\\\\\",\\\\n            explanation: \\\\\\\"Distinguish two main causes by pain presence\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"PLACENTA PREVIA = Complete (entire), Partial (some), Marginal (edge), Low-lying (2cm)\\\\\\\",\\\\n            explanation: \\\\\\\"Four types based on placental location\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"ABRUPTION SIGNS = Pain, Dark blood, Couvelaire uterus, Fetal distress\\\\\\\",\\\\n            explanation: \\\\\\\"Classic presentation of placental abruption\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Placenta previa painless; abruption painful\\\\\\\",\\\\n          \\\\\\\"Abruption more dangerous (higher fetal mortality 5-10%)\\\\\\\",\\\\n          \\\\\\\"Placenta previa may resolve as uterus grows (migration) in 2nd trimester\\\\\\\",\\\\n          \\\\\\\"TVS (transvaginal ultrasound) mandatory for previa diagnosis\\\\\\\",\\\\n          \\\\\\\"Expectant management possible for stable previa if facility available\\\\\\\",\\\\n          \\\\\\\"Abruption may be concealed (blood retained behind placenta)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Antepartum Hemorrhage\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"Williams Obstetrics\\\\\\\", chapter: \\\\\\\"Obstetrical Hemorrhage\\\\\\\", edition: \\\\\\\"26th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 2,\\\\n        slug: \\\\\\\"antepartum-hemorrhage-pathophysiology\\\\\\\",\\\\n        title: \\\\\\\"Antepartum Hemorrhage - Pathophysiology\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Mechanisms of placental implantation abnormalities and placental separation in APH.\\\\\\\",\\\\n        contentMd: ``# Antepartum Hemorrhage - Pathophysiology\\\\n\\\\n## Placenta Previa Development\\\\n\\\\n### Normal Placental Implantation\\\\n- Blastocyst enters uterus at corpus level\\\\n- Trophoblast invades decidua in area of best vascularization\\\\n- Placenta develops fundal or anterior wall location\\\\n- Lower segment placentation rare (only 0.5% of pregnancies)\\\\n\\\\n### Mechanisms of Lower Segment Placentation\\\\n\\\\n**1. Delayed Blastocyst Implantation**\\\\n- Delayed blastocyst entry into uterus (day 8-9 → 10-12)\\\\n- Reduced endometrial receptivity in lower segment\\\\n- Implantation occurs in lower segment by default\\\\n- Associated with: Uterine abnormalities, intrauterine synechiae (after D&C)\\\\n\\\\n**2. Defective Decidualization**\\\\n- Lower segment has less well-developed decidua basalis\\\\n- Defective spiral artery remodeling in lower segment\\\\n- Results in: Abnormal placentation at lower site\\\\n\\\\n**3. Increased Vascularity in Lower Segment**\\\\n- If placenta implants low, abundant vascularization not needed\\\\n- Placenta persists in lower location\\\\n- May result from: Prior instrumentation, scarring, fibrosis\\\\n\\\\n### Placental Migration Phenomenon\\\\n- **\\\\\\\"Placental migration\\\\\\\"**: Apparent upward movement on serial ultrasound\\\\n- **True mechanism**: Progressive development of lower segment away from os\\\\n- **Frequency**: 95% of low placentas in 2nd trimester move away from os by term\\\\n- **Mechanism**: Asymmetrical growth of lower segment; placenta becomes relatively higher\\\\n\\\\n### Why Bleeding Occurs in Previa\\\\n- Placental villi cover cervical os\\\\n- Maternal spiral arteries in area become uteroplacental vessels\\\\n- Minimal intervening decidua between placental surface and cervical opening\\\\n- Any cervical dilation → exposed vessels bleed\\\\n- Bleeding continues with cervical manipulation\\\\n\\\\n## Placental Abruption Pathophysiology\\\\n\\\\n### Mechanisms of Placental Separation\\\\n\\\\n**1. Traumatic Abruption**\\\\n- **Mechanism**: Blunt abdominal trauma → placenta compressed against uterine wall\\\\n- **Result**: Shear forces separate placenta from decidua\\\\n- **Rate of bleed**: Rapid (can exceed 500 mL/minute)\\\\n- **Example**: Motor vehicle accident, domestic violence\\\\n\\\\n**2. Hypertensive Abruption**\\\\n- **Mechanism**: Hypertension → atherosclerotic changes in spiral arteries\\\\n- **Result**: Vessel rupture or weakening → bleeding into decidua basalis\\\\n- **Rate of bleed**: Variable, often more gradual initially\\\\n- **Associated**: Preeclampsia, chronic hypertension\\\\n\\\\n**3. Placental Bed Pathology**\\\\n- **Defective placentation**: Inadequate trophoblastic invasion\\\\n- **Result**: Poor placental anchoring → prone to separation\\\\n- **Associated**: IUGR, thrombophilia\\\\n\\\\n**4. Smoking/Substance Abuse**\\\\n- **Mechanism**: Nicotine causes placental vasoconstriction and placental infarction\\\\n- **Cocaine**: Causes uterine contractions and hypertension\\\\n- **Result**: Hemorrhage into decidua basalis\\\\n\\\\n### Couvelaire Uterus\\\\n\\\\n**Definition**: Extravasation of blood into myometrium and peritoneal surface\\\\n**Mechanism**:\\\\n1. Hemorrhage in decidua basalis\\\\n2. Blood dissects upward between placenta and myometrium\\\\n3. Blood penetrates through myometrium\\\\n4. Blood reaches visceral peritoneum (dark purple/bluish appearance)\\\\n\\\\n**Consequences**:\\\\n- Severe uterine irritability (tetanic contractions)\\\\n- Uterine dysfunction (poor contractility after delivery)\\\\n- Increased risk of PPH\\\\n- May resemble peritonitis\\\\n\\\\n### Concealed vs Revealed Hemorrhage\\\\n\\\\n**Revealed** (80% of cases):\\\\n- Placenta separates at margin\\\\n- Blood escapes through vagina\\\\n- External bleeding apparent\\\\n- Blood loss underestimated less likely\\\\n\\\\n**Concealed** (20% of cases):\\\\n- Placenta separates centrally\\\\n- Blood trapped between placenta and uterus\\\\n- No external bleeding visible\\\\n- Woman appears well despite significant blood loss\\\\n- Shock develops suddenly when Couvelaire ruptures\\\\n- Maternal mortality highest in this group\\\\n\\\\n### Fetal Compromise in Abruption\\\\n\\\\n**Mechanisms**:\\\\n1. **Placental insufficiency**: Loss of functional placental tissue (>30% separation)\\\\n2. **Hypoxemia**: Decreased oxygen-carrying capacity from anemia\\\\n3. **Cord compression**: Uterine contractions compress umbilical cord\\\\n4. **Fetal anemia**: Fetal blood loss if membranes rupture (rare)\\\\n\\\\n**Fetal monitoring findings**:\\\\n- Tachycardia (initial)\\\\n- Variable decelerations (contractions)\\\\n- Late decelerations (hypoxia)\\\\n- Bradycardia (severe hypoxia)\\\\n- Reduced variability,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"PLACENTAL MIGRATION = Asymmetrical growth of lower segment pushes placenta away from os\\\\\\\",\\\\n            explanation: \\\\\\\"Why low placentas in 2nd trimester often move away by 3rd\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"ABRUPTION BLOOD PATH = Decidua → Myometrium → Visceral peritoneum = Couvelaire\\\\\\\",\\\\n            explanation: \\\\\\\"Anatomical pathway of blood extravasation\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"CONCEALED ABRUPTION = 20% of cases, most dangerous, sudden shock\\\\\\\",\\\\n            explanation: \\\\\\\"Most lethal form - blood retained internally\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Placental migration occurs in 95% of low placentas by term\\\\\\\",\\\\n          \\\\\\\"TVS at 20 weeks + repeat at 32 weeks identifies true previa\\\\\\\",\\\\n          \\\\\\\"Abruption can occur with concealed hemorrhage (blood trapped internally)\\\\\\\",\\\\n          \\\\\\\"Hypertension causes 50% of abruptions via vessel rupture\\\\\\\",\\\\n          \\\\\\\"Trauma abruption has highest immediate bleeding rate\\\\\\\",\\\\n          \\\\\\\"Couvelaire uterus predisposes to PPH (uterine dysfunction)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Williams Obstetrics\\\\\\\", chapter: \\\\\\\"Antepartum Hemorrhage\\\\\\\", edition: \\\\\\\"26th\\\\\\\" },\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Abnormality of Placentation\\\\\\\", edition: \\\\\\\"9th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 3,\\\\n        slug: \\\\\\\"antepartum-hemorrhage-management\\\\\\\",\\\\n        title: \\\\\\\"Antepartum Hemorrhage - Management\\\\\\\",\\\\n        estimatedMinutes: 25,\\\\n        summary: \\\\\\\"Evidence-based diagnosis and management strategies for placenta previa and abruption.\\\\\\\",\\\\n        contentMd: ``# Antepartum Hemorrhage - Management\\\\n\\\\n## Initial Assessment and Stabilization\\\\n\\\\n### First Steps (All APH)\\\\n1. **Position**: Left lateral recumbent\\\\n2. **Vital signs**: BP, HR, RR, temperature\\\\n3. **IV access**: Two large-bore cannulae\\\\n4. **Blood tests**: Type & cross-match, CBC, coagulation profile, Kleihauer-Betke (if Rh-negative)\\\\n5. **Fetal assessment**: FHR with Doppler/CTG\\\\n6. **Speculum exam**: Look for cervical/vaginal source (avoid digital cervical exam if previa)\\\\n\\\\n### NOT DO First\\\\n- **Avoid digital cervical examination** if suspected previa (can precipitate hemorrhage)\\\\n- **Use only sterile speculum exam** until previa ruled out\\\\n- **Avoid aggressive uterine manipulation**\\\\n\\\\n## Management by Diagnosis\\\\n\\\\n### PLACENTA PREVIA\\\\n\\\\n**Confirmation**:\\\\n- **TVS** (transvaginal ultrasound): Gold standard, measure distance from placental edge to os\\\\n- **TAS** (transabdominal): Less accurate but acceptable\\\\n- **Definition**: <2 cm from os or covering os\\\\n\\\\n**Expectant Management** (if stable, >24 weeks):\\\\n1. **Admit to hospital**: For initial observation and monitoring\\\\n2. **Strict bed rest**: Reduce activity to minimize bleeding trigger\\\\n3. **Pelvic rest**: No intercourse, tampons, douching\\\\n4. **Fetal surveillance**: Daily CTG (NST) after 34 weeks\\\\n5. **Serial ultrasound**: Every 2-4 weeks to assess placental location\\\\n6. **Corticosteroids**: If 24-34 weeks (betamethasone 12 mg IM × 2 doses) to promote fetal lung maturity\\\\n\\\\n**Indications for Delivery**:\\\\n- **Planned cesarean**: At 36-37 weeks for complete/partial previa (reduce risk of emergency delivery in labor)\\\\n- **Earlier delivery**: If recurrent heavy bleeding (>300 mL per episode) or maternal anemia (Hb <7)\\\\n- **Emergent delivery**: If uncontrollable hemorrhage or signs of fetal distress\\\\n\\\\n**Delivery Route**:\\\\n- **Cesarean section**: Indicated for complete/partial previa (vaginal delivery risks hemorrhage)\\\\n- **Vaginal delivery**: Possible for marginal previa in selected cases (deliver at hospital with OR ready)\\\\n\\\\n### PLACENTAL ABRUPTION\\\\n\\\\n**Diagnosis**:\\\\n- **Clinical presentation**: Painful vaginal bleeding + abdominal pain + uterine tenderness\\\\n- **Ultrasound**: May not be sensitive (normal US doesn't exclude abruption); diagnosis often clinical\\\\n- **CTG findings**: Variable/late decelerations, tachycardia, reduced variability\\\\n\\\\n**Management Protocol**:\\\\n\\\\n**Step 1: Assess Severity**\\\\n- **Mild** (<10% separation): Stable vitals, no fetal distress\\\\n- **Moderate** (10-30% separation): Mild tachycardia, possible fetal distress\\\\n- **Severe** (>30% separation): Shock, fetal death common\\\\n\\\\n**Step 2: Immediate Actions**\\\\n1. Type & cross-match, CBC, PT/INR, fibrinogen\\\\n2. Check Kleihauer-Betke if Rh-negative (need RhoGAM)\\\\n3. CTG monitoring\\\\n4. Position: Left lateral\\\\n5. IV fluids: Rapid crystalloid infusion\\\\n\\\\n**Step 3: Decisions Based on Gestational Age and Fetal Status**\\\\n\\\\n**Preterm (<34 weeks), stable mother, reassuring FHR**:\\\\n- **Expectant management**: Admit, bed rest, steroids (betamethasone)\\\\n- **Monitor**: CTG twice daily, repeat labs daily\\\\n- **Deliver at first sign**: Bleeding recurrence, fetal distress, maternal compromise\\\\n\\\\n**Preterm (<34 weeks), fetal distress or severe maternal symptoms**:\\\\n- **Emergent delivery**: Cesarean section preferred if vaginal delivery not imminent\\\\n- **Consider neonatal intensive care availability**\\\\n\\\\n**Term (≥34 weeks)**:\\\\n- **Vaginal delivery**: If no contraindications, stable, can progress to delivery quickly\\\\n- **Cesarean**: If vaginal delivery not likely within 4 hours or any sign of maternal/fetal distress\\\\n\\\\n**Massive abruption with fetal death**:\\\\n- **Vaginal delivery**: Preferred if maternal condition stable (reduces surgical risks)\\\\n- **Cesarean**: Only if maternal hemorrhage uncontrolled or vaginal delivery not safe\\\\n\\\\n**Step 4: Management of Complications**\\\\n\\\\n**DIC** (common with severe abruption):\\\\n- FFP, cryoprecipitate for clotting factors\\\\n- RBC transfusion for Hb <7\\\\n- Platelet transfusion if <50,000 and bleeding\\\\n- Avoid over-transfusion (worsens DIC)\\\\n\\\\n**PPH** (Couvelaire uterus predisposes):\\\\n- Prophylactic oxytocin\\\\n- Active 3rd stage management\\\\n- Have blood readily available\\\\n- Consider ICU admission post-delivery\\\\n\\\\n## Special Considerations\\\\n\\\\n### Rh-Negative Women\\\\n- **RhoGAM dose**: 50 mcg IV per mL of fetal RBC (or 100 mcg IV as prophylactic dose)\\\\n- Calculate fetal RBC volume by Kleihauer-Betke\\\\n- Give within 72 hours of hemorrhage\\\\n\\\\n### Follow-up After APH\\\\n- **Hematinics**: Iron + folic acid supplementation\\\\n- **Repeat ultrasound**: At delivery planning\\\\n- **Counseling**: Risk of recurrence, future pregnancy complications\\\\n- **Previous abruption**: 25% recurrence risk in next pregnancy,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"PREVIA MANAGEMENT = TVS diagnosis, Bed rest, Steroids (if preterm), Planned CS at 36-37 weeks\\\\\\\",\\\\n            explanation: \\\\\\\"Key elements of placenta previa management\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"ABRUPTION EMERGENCY = Severe → Deliver immediately, Mild/stable → Expectant + monitoring\\\\\\\",\\\\n            explanation: \\\\\\\"Severity guides management approach\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"CONCEALED ABRUPTION = Couvelaire uterus → Prepare for PPH, DIC, ICU care\\\\\\\",\\\\n            explanation: \\\\\\\"Serious complications requiring aggressive management\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"TVS is diagnostic gold standard for previa; avoid digital exam\\\\\\\",\\\\n          \\\\\\\"Placental migration occurs in 95%; repeat scan at 32 weeks\\\\\\\",\\\\n          \\\\\\\"Expectant management possible for previa if >24 weeks and stable\\\\\\\",\\\\n          \\\\\\\"Abruption diagnosis often clinical; ultrasound can be normal\\\\\\\",\\\\n          \\\\\\\"Severe abruption requires emergent delivery regardless of GA\\\\\\\",\\\\n          \\\\\\\"DIC screening and correction essential for severe abruption\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta's Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Placenta Previa and Abruption\\\\\\\", edition: \\\\\\\"9th\\\\\\\" },\\\\n          { book: \\\\\\\"ACOG Guidelines\\\\\\\", chapter: \\\\\\\"Antepartum Hemorrhage\\\\\\\", edition: \\\\\\\"2021\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"antepartum-hemorrhage-exam-prep\\\\\\\",\\\\n        title: \\\\\\\"Antepartum Hemorrhage - Exam Preparation\\\\\\\",\\\\n        estimatedMinutes: 20,\\\\n        summary: \\\\\\\"Clinical decision-making and key examination points for APH differentiation.\\\\\\\",\\\\n        contentMd: ``# Antepartum Hemorrhage - Exam Preparation\\\\n\\\\n## Differential Diagnosis Quick Reference\\\\n| Feature | Placenta Previa | Abruption |\\\\n|---------|-----------------|-----------|\\\\n| Bleeding | Painless | Painful |\\\\n| Blood color | Bright red | Dark red |\\\\n| Vital signs | Normal | Tachycardia/hypotension |\\\\n| Abdomen | Soft | Tender/rigid |\\\\n| Fetal distress | Rare | Common (>50%) |\\\\n| Ultrasound | Diagnostic | Often normal |\\\\n| Risk recurrence | Low (5%) | High (25%) |\\\\n\\\\n## Management Comparison\\\\n| Scenario | Previa | Abruption |\\\\n|----------|--------|-----------|\\\\n| Mild, preterm | Expectant at home | Inpatient monitoring |\\\\n| Severe, preterm | Admit for observation | Emergent delivery |\\\\n| Term | Planned CS 36-37w | Expedite vaginal/CS |\\\\n\\\\n## Clinical Scenarios\\\\n\\\\n**Case 1**: 28 weeks, painless bright red bleeding, stable vitals\\\\n- Diagnosis: Suspect placenta previa\\\\n- First step: TVS, speculum exam (no digital exam)\\\\n- Management: If previa confirmed - expectant, steroids, bed rest\\\\n\\\\n**Case 2**: 32 weeks, sudden severe abdominal pain, dark red bleeding, tachycardia\\\\n- Diagnosis: Suspected abruption\\\\n- First step: CTG, labs (CBC, PT/INR, fibrinogen), IV access\\\\n- Management: Monitor closely; deliver if fetal distress or uncontrolled bleeding\\\\n\\\\n**Case 3**: 35 weeks, painless bleeding, 300 mL per episode, has had 3 episodes\\\\n- Diagnosis: Placenta previa with recurrent bleeding\\\\n- Management: Admit, plan cesarean at 36-37 weeks or earlier if bleeding uncontrolled\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"antepartum-hemorrhage-active-recall\\\\\\\",\\\\n        title: \\\\\\\"Antepartum Hemorrhage - Active Recall Questions\\\\\\\",\\\\n        estimatedMinutes: 35,\\\\n        summary: \\\\\\\"Review questions on APH classification, diagnosis, pathophysiology, and management.\\\\\\\",\\\\n        contentMd: ``# Antepartum Hemorrhage - Active Recall Questions\\\\n\\\\n## Definition and Classification\\\\n\\\\n**Q1: Define antepartum hemorrhage.**\\\\nA: Vaginal bleeding after 20 weeks gestation and before onset of labor; affects 3-5% of pregnancies\\\\n\\\\n**Q2: What percentage of APH is caused by placenta previa vs abruption?**\\\\nA: Placenta previa 30-35%, abruption 35-40%; other causes 20-30%\\\\n\\\\n**Q3: When does placental migration typically occur?**\\\\nA: 95% of low placentas in 2nd trimester move away from os by term; migration due to asymmetrical lower segment growth\\\\n\\\\n## Placenta Previa\\\\n\\\\n**Q4: What are the four types of placenta previa?**\\\\nA: Complete (covers entire os), Partial (partially covers os), Marginal (edge at os), Low-lying (within 2 cm of os)\\\\n\\\\n**Q5: What is the diagnostic gold standard for placenta previa?**\\\\nA: Transvaginal ultrasound (TVS); measure distance from placental edge to internal cervical os\\\\n\\\\n**Q6: Why is digital cervical examination contraindicated in placenta previa?**\\\\nA: Placental villi are exposed over cervical os; digital examination can disturb placental tissue and precipitate severe hemorrhage\\\\n\\\\n**Q7: What are the major risk factors for placenta previa?**\\\\nA: Advanced maternal age >35, multiparity, prior CS (2-3% with one prior), prior D&C, smoking, Asian/Hispanic ethnicity\\\\n\\\\n**Q8: What is the mechanism of painless bleeding in previa?**\\\\nA: Minimal decidua between placental surface and cervical opening; any cervical dilation or manipulation exposes uteroplacental vessels → bleeding\\\\n\\\\n**Q9: What maternal position should be advised for APH?**\\\\nA: Left lateral recumbent (improves uteroplacental perfusion)\\\\n\\\\n**Q10: When is planned cesarean section performed for placenta previa?**\\\\nA: At 36-37 weeks (reduces risk of emergency delivery in labor); earlier if recurrent heavy bleeding\\\\n\\\\n## Placental Abruption\\\\n\\\\n**Q11: Define placental abruption.**\\\\nA: Premature separation of normally implanted placenta before fetal delivery; occurs in 0.5-1% of pregnancies\\\\n\\\\n**Q12: What is the classic presentation of abruption vs previa?**\\\\nA: Abruption: Painful dark red bleeding + severe abdominal pain; Previa: Painless bright red bleeding\\\\n\\\\n**Q13: What is Couvelaire uterus?**\\\\nA: Extravasation of blood into myometrium and visceral peritoneum following placental abruption; appears dark purple/blue; increases PPH risk\\\\n\\\\n**Q14: What causes Couvelaire uterus to occur?**\\\\nA: Blood dissects upward between placenta and myometrium → penetrates through myometrium → reaches visceral peritoneum\\\\n\\\\n**Q15: What is concealed hemorrhage and why is it dangerous?**\\\\nA: Blood is retained behind placenta (not externally visible); accounts for 20% of cases; most lethal because shock develops suddenly when bleeding barrier ruptures\\\\n\\\\n**Q16: What are the major risk factors for abruption?**\\\\nA: Hypertension/preeclampsia (50%), maternal trauma (MVA, domestic violence), smoking, cocaine use, polyhydramnios, thrombophilia, prior abruption (25% recurrence)\\\\n\\\\n**Q17: What percentage of abruption is associated with fetal death?**\\\\nA: 5-10% overall; higher in severe abruption (>30% separation) and with concealed hemorrhage\\\\n\\\\n## Pathophysiology\\\\n\\\\n**Q18: Why does hypertension increase abruption risk?**\\\\nA: Hypertension causes atherosclerotic changes in spiral arteries → vessel rupture/weakening → hemorrhage into decidua basalis\\\\n\\\\n**Q19: How does trauma cause placental abruption?**\\\\nA: Blunt abdominal trauma causes placenta to be compressed against uterine wall → shear forces → placental separation from decidua\\\\n\\\\n**Q20: What is the mechanism of fetal compromise in abruption?**\\\\nA: Placental insufficiency from loss of functional tissue (>30% separation) + hypoxemia from maternal anemia + cord compression from contractions\\\\n\\\\n## Clinical Assessment\\\\n\\\\n**Q21: What findings on cardiotocography suggest abruption?**\\\\nA: Variable decelerations (from contractions), late decelerations (hypoxia), tachycardia initially then bradycardia in severe cases\\\\n\\\\n**Q22: Why is ultrasound less sensitive for abruption diagnosis?**\\\\nA: Abruption can be occult/concealed; placental hematoma may not be visible; diagnosis often clinical based on symptoms\\\\n\\\\n**Q23: How should fetal status be assessed in APH?**\\\\nA: Admission CTG baseline, then continuous monitoring or at least twice daily CTG; earlier monitoring if any indication of distress\\\\n\\\\n## Management\\\\n\\\\n**Q24: What is the management approach for mild abruption at 30 weeks with reassuring FHR?**\\\\nA: Expectant management - admit, bed rest, daily CTG, repeat labs, corticosteroids for fetal lung maturity; deliver if bleeding recurs or FHR becomes abnormal\\\\n\\\\n**Q25: What should be done for severe abruption at 28 weeks?**\\\\nA: Emergent delivery (preferably CS), prepare for DIC management, massive transfusion protocol, neonatal intensive care standby\\\\n\\\\n**Q26: What is the Kleihauer-Betke test and when is it used?**\\\\nA: Estimates fetal RBC volume in maternal circulation; used in Rh-negative women after APH to calculate RhoGAM dose needed\\\\n\\\\n**Q27: How much RhoGAM is given to an Rh-negative woman with APH?**\\\\nA: 50 mcg IV per mL of fetal RBC identified on Kleihauer-Betke, or standard 100 mcg IV prophylactic dose\\\\n\\\\n**Q28: What are the complications of placental abruption?**\\\\nA: PPH (from Couvelaire uterus and uterine dysfunction), DIC, acute kidney injury, maternal death (0.1-0.5%), fetal death (5-10%)\\\\n\\\\n**Q29: What is the recurrence risk of abruption in subsequent pregnancy?**\\\\nA: 25% (significantly higher than previa which is <5%)\\\\n\\\\n**Q30: Why is expectant management preferred for previa but not abruption?**\\\\nA: Previa causes painless bleeding with stable hemodynamics; abruption has active pathology (vessel rupture, DIC activation) making conservative approach riskier\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\"\""
-}
-}
-}
-];
-];
+        contentMd: `# Normal Labor & Mechanism - Foundation
+
+## Definition and Onset of Labor
+
+**Labor**: Rhythmic uterine contractions leading to progressive cervical dilation and effacement, culminating in expulsion of fetus, placenta, and membranes.
+
+**Braxton Hicks vs True Labor**:
+- False labor: Irregular, painless, variable intervals, no cervical change
+- True labor: Regular (every 2-3 minutes), painful, progressive cervical dilation
+
+**Onset factors**:
+- Fetal maturity signals (cortisol surge)
+- Placental aging
+- Prostaglandin increase
+- Oxytocin sensitivity of myometrium
+
+## Three Stages of Labor
+
+### Stage 1: Latent → Active → Transition
+**Latent phase** (0-3 cm dilation):
+- Duration: 8-12 hours (primigravida)
+- Cervical effacement 50%
+- Mild contractions every 5-10 minutes
+
+**Active phase** (3-7 cm):
+- Duration: 3-6 hours
+- Dilation rate: 1 cm/hour (primiparous)
+- Contractions every 2-3 minutes
+
+**Transition phase** (7-10 cm):
+- Duration: 30 minutes - 2 hours
+- Intense contractions every 1-2 minutes
+
+### Stage 2: Expulsive (Full Dilation to Birth)
+- Duration: 30 minutes - 2 hours (primigravida up to 3 hours)
+- Mother feels urge to push
+- Perineal stretching and distension
+- Crowning occurs
+
+### Stage 3: Expulsion of Placenta
+- Duration: 5-30 minutes
+- Placental separation signs: gush of blood, cord lengthening
+- Placenta delivered by maternal effort or controlled cord traction
+
+### Stage 4: Recovery (First 1-2 hours post-delivery)
+- Uterine contraction and hemostasis
+- Maternal vital sign stabilization
+- Monitoring for complications
+
+## Powers of Labor (Uterine Contractions)
+
+**Normal contraction parameters**:
+- Frequency: 3-5 per 10 minutes (active phase)
+- Duration: 30-60 seconds
+- Intensity: 40-60 mmHg
+- Polarity: Fundal dominance, downward propagation
+- Effectiveness: Cervical dilation at expected rate
+
+## Mechanism of Normal Vaginal Delivery
+
+**Cardinal movements of labor** (vertex presentation):
+1. **Engagement**: Head enters pelvic inlet
+2. **Flexion**: Chin flexes onto chest (reduces presenting diameter)
+3. **Descent**: Progressive lowering through pelvis
+4. **Internal rotation**: Occiput rotates anteriorly (90° rotation from transverse)
+5. **Extension**: Head extends as it emerges under symphysis pubis
+6. **External rotation**: Shoulders rotate to align with pelvis
+7. **Expulsion**: Anterior shoulder over symphysis, posterior shoulder over perineum
+
+## Normal Progress in Labor
+
+**Expected rates** (active phase):
+- Primigravida: 1 cm dilation/hour
+- Multipara: 1.5-2 cm dilation/hour
+- Descent: 1 cm/hour in active phase
+
+**Cervical assessment**:
+- Dilation (0-10 cm)
+- Effacement (0-100%)
+- Consistency (firm, medium, soft)
+- Position (posterior, mid, anterior)
+- Station (-5 to +5)`,
+        mnemonics: [
+          {
+            text: "THREE STAGES = Stage 1 (0-10cm dilation), Stage 2 (full dilation to delivery), Stage 3 (placental delivery), Stage 4 (1-2 hrs recovery)",
+            explanation: "Divisions of labor"
+          },
+          {
+            text: "CARDINAL MOVEMENTS = Engagement, Flexion, Descent, Internal Rotation, Extension, External Rotation, Expulsion",
+            explanation: "Seven movements of fetal head through pelvis"
+          },
+          {
+            text: "NORMAL CONTRACTIONS = 3-5 per 10 min, 40-60 mmHg, 30-60 sec duration",
+            explanation: "Uterine contraction parameters in active labor"
+          },
+          {
+            text: "DILATION RATES = Primigravida 1 cm/hr, Multipara 1.5-2 cm/hr (active phase)",
+            explanation: "Expected cervical dilation progression"
+          }
+        ],
+        keyPoints: [
+          "Labor defined by regular contractions causing cervical dilation and descent",
+          "Stage 1 longest (latent to transition); Stage 2 is expulsive; Stage 3 is placental",
+          "Cardinal movements ensure fetal head navigates pelvic architecture optimally",
+          "Internal rotation from transverse to anterior crucial for vaginal delivery success",
+          "Flexion of fetal head reduces presenting diameter, facilitating descent",
+          "Station notation: -5 (at inlet) to 0 (at level of ischial spines) to +5 (at introitus)"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Normal Labor", edition: "9th" },
+          { book: "Williams Obstetrics", chapter: "Normal Labor and Delivery", edition: "25th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "normal-labor-layer-2-mechanism",
+        title: "Normal Labor & Mechanism - Mechanism",
+        estimatedMinutes: 25,
+        summary: "Physiological mechanisms of uterine contractions, cervical changes, and biomechanics of fetal descent.",
+        contentMd: `# Normal Labor & Mechanism - Mechanism
+
+## Uterine Contraction Physiology
+
+**Myometrial contraction mechanism**:
+- Oxytocin binds receptors on myometrial cells
+- Calcium influx via gap junctions → Actin-myosin interaction
+- Coordinated waves from fundus downward (polarity and conductivity)
+- Triple descending gradient: frequency, intensity, duration decrease toward lower segment
+
+**Gap junction development**: Increases dramatically at term (allows cell-to-cell communication)
+
+**Prostaglandins' role**:
+- PGE2 and PGF2α increase myometrial contractility
+- Stimulate oxytocin receptor synthesis
+- Enhance gap junction formation
+
+## Cervical Dilation and Effacement
+
+**Cervical changes**:
+- **Softening**: Collagen breakdown, increased water content
+- **Effacement**: Thinning from 2-3 cm to paper-thin
+- **Dilation**: Opening from 0 to 10 cm
+- **Retraction**: Upper segment shortens, lower segment elongates
+
+**Mechanism of dilation**:
+- Pressure from descending presenting part
+- Oxytocin-induced contractions
+- Cervical muscle relaxation (progesterone withdrawal, prostaglandins)
+
+## Cardinal Movements Biomechanics
+
+**Flexion**: 
+- Fetal head naturally assumes flexed position (reduces diameter from 13.5 cm to 9.5 cm)
+- Descending head applies pressure to upper cervix → Automatic flexion
+
+**Internal rotation**:
+- Head enters inlet in transverse position (narrowest diameter of inlet)
+- Ischial spines push anterior → Head rotates 90° to occiput anterior
+- Ensures largest diameter of head aligns with largest diameter of pelvis
+
+**Extension**:
+- Head extends under symphysis pubis (brow becomes visible, forehead appears)
+- Facilitates passage through birth canal
+
+**External rotation**:
+- After delivery of head, shoulders still transverse
+- Head rotates externally with shoulders (passive, mechanically driven)
+
+## Descent Mechanics
+
+**Engagement**: Head enters pelvic inlet (0 station = ischial spines level)
+
+**Mechanisms of descent**:
+1. Direct pressure from uterine contractions
+2. Maternal pushing (especially second stage)
+3. Abdominal muscle contractions (Valsalva)
+4. Gravity (upright position aids descent)
+
+**Station progression**: From -5 (inlet) → 0 (mid-pelvis) → +5 (introitus)
+
+## Normal Pelvic Anatomy
+
+**Pelvic inlet**: Widest in transverse diameter (13 cm)
+**Pelvic mid-cavity**: Widest in anteroposterior diameter
+**Pelvic outlet**: Widest in anteroposterior diameter
+
+**Pelvic shapes** (Caldwell-Moloy):
+- Gynecoid (female, 50%): Suitable for vaginal delivery
+- Android (male, 20%): Narrow transverse, may cause CPD
+- Platypelloid (flat, 10%): Narrow inlet
+- Anthropoid (ape-like, 20%): Long, narrow
+
+## Placental Separation Mechanisms
+
+**Signs of placental separation**:
+- Gush of blood from vagina
+- Lengthening of umbilical cord
+- Fundus rises and becomes firm
+- Change from transverse to vertical lie
+
+**Separation mechanism**:
+- Uterine contractions cause myometrial shortening
+- Placental site compresses, tears maternal vessels
+- Placenta separates as myometrium retracts`,
+        mnemonics: [
+          {
+            text: "CARDINAL MOVEMENTS MNEMONIC = E-F-D-I-R-E-E (Engagement-Flexion-Descent-Internal rotation-Rotation-Extension-Expulsion)",
+            explanation: "Seven cardinal movements in order"
+          },
+          {
+            text: "FLEXION BENEFIT = Reduces presenting diameter from 13.5cm (brow) to 9.5cm (vertex)",
+            explanation: "How flexion aids descent"
+          },
+          {
+            text: "INTERNAL ROTATION = Transverse → Occiput anterior (90° rotation) at ischial spines level",
+            explanation: "Direction and extent of rotation"
+          },
+          {
+            text: "PLACENTAL SEPARATION SIGNS = Gush of blood + Cord lengthening + Fundus firm and rises",
+            explanation: "Clinical indicators of placental detachment"
+          }
+        ],
+        keyPoints: [
+          "Coordinated uterine contractions with triple descending gradient enable labor progression",
+          "Oxytocin and prostaglandins work synergistically to increase myometrial contractility",
+          "Flexion reduces presenting diameter, critically aiding descent through pelvis",
+          "Internal rotation aligns largest head diameter with largest pelvic diameters",
+          "Extension over symphysis pubis allows head to deliver under pubic arch",
+          "Cervical dilation and effacement driven by contraction pressure and biochemical changes"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Mechanism of Labor", edition: "9th" },
+          { book: "Robbins & Kumar Pathologic Basis of Disease", chapter: "Female Genital Tract", edition: "10th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "normal-labor-layer-3-clinical",
+        title: "Normal Labor & Mechanism - Clinical Management",
+        estimatedMinutes: 30,
+        summary: "Assessment and management of normal labor, monitoring maternal and fetal well-being, and delivery conduct.",
+        contentMd: `# Normal Labor & Mechanism - Clinical Management
+
+## Admission Assessment
+
+**Confirm labor**:
+- Regular contractions every 2-3 minutes
+- Progressive cervical dilation and effacement
+- Fetal descent
+
+**Baseline investigations**:
+- Blood group, Rh, hemoglobin
+- Serology (HIV, VDRL, HBsAg per NACO)
+- Urine routine
+
+**Obstetric assessment**:
+- Confirm gestational age, presentation, fetal viability
+- Assess pelvis (clinical pelvimetry)
+- Check for complications (bleeding, rupture of membranes)
+
+## Partograph in Labor Management
+
+**Components**:
+- Cervical dilation plotted against time
+- Uterine contraction frequency recorded
+- Alert line: If crossed → Increase monitoring
+- Action line: 4 hours right of alert; if crossed → Refer/intervention
+
+**Benefits**: Identifies prolonged labor early, prevents obstructed labor
+
+## Maternal Monitoring in Labor
+
+**Vital signs**: Every 2-4 hours (temperature especially)
+**Urine output**: Monitor (catheterize if retention suspected)
+**Abdominal examination**: Tenderness, contraction pattern
+**Vaginal examination**: Every 2-4 hours (assess dilation, effacement, descent, rotation)
+
+## Fetal Well-being Assessment
+
+**Fetal heart rate monitoring**:
+- Intermittent auscultation: Every 15 minutes (low-risk)
+- Continuous CTG: If complications detected
+- Normal rate: 110-160 bpm
+- Assess: Baseline rate, variability, accelerations, decelerations
+
+**Meconium staining**:
+- Green/brown amniotic fluid
+- May indicate fetal distress (not always)
+- Increases aspiration risk
+
+## Management of Second Stage
+
+**Initial phase** (from full dilation, before bearing down urge):
+- Allow time for descent
+- Position changes: Upright, lateral
+- Maternal rest if no urge to push
+
+**Active phase** (with urge to push):
+- Encourage pushing with contractions
+- Closed glottis pushing (Valsalva) more effective
+- Monitor progress: Perineal bulging, visible scalp
+- Prepare for delivery
+
+**Delivery conduct**:
+- Warm environment, Vitamin K for baby
+- Controlled delivery of head
+- Check for cord around neck
+- Wipe face and create airway
+- Deliver shoulders (anterior first)
+- Clamp and cut umbilical cord
+- Initiate skin-to-skin contact
+- Deliver placenta (controlled cord traction or natural)
+
+## Anesthesia/Analgesia Options
+
+**Non-pharmacologic**: Position changes, ambulation, hot water, continuous support
+
+**Pharmacologic**:
+- Intramuscular: Pethidine 75-100 mg (common in India)
+- Inhalational: Nitrous oxide
+- Regional: Epidural (most effective but requires expertise)
+
+## Partograph Use
+
+**Plotting**:
+- Cervical dilation: Plot every vaginal exam
+- Contractions: Record frequency/intensity
+- Descent: Note estimated station
+
+**Interpretation**:
+- Between alert and action lines: Continue labor with close monitoring
+- Crosses action line: Refer for LSCS
+
+## Third Stage Management
+
+**Active management** (reduces hemorrhage risk):
+- Oxytocin 10 units IM immediately after shoulder delivery
+- Controlled cord traction after placental separation
+- Fundal massage to expel clots
+- Clamp and cut cord
+
+**Spontaneous management**:
+- Await natural placental separation
+- Deliver placenta by maternal effort
+- Higher PPH risk but less intervention`,
+        mnemonics: [
+          {
+            text: "PARTOGRAPH LINES = Alert line (increase monitoring) then Action line (4 hours right, refer/LSCS if crossed)",
+            explanation: "When to escalate care on partograph"
+          },
+          {
+            text: "FETAL HR NORMAL = 110-160 bpm; assess baseline rate, variability, accelerations, decelerations",
+            explanation: "CTG interpretation basics"
+          },
+          {
+            text: "SECOND STAGE DESCENT = Wait for urge to push, encourage with contractions, monitor perineal bulging",
+            explanation: "Management of expulsive phase"
+          },
+          {
+            text: "ACTIVE 3RD STAGE = Oxytocin + Controlled cord traction + Fundal massage = Lower PPH risk",
+            explanation: "Components of active third stage management"
+          }
+        ],
+        keyPoints: [
+          "Partograph is essential tool for identifying prolonged labor in resource-limited settings",
+          "Regular maternal and fetal assessment throughout labor ensures early detection of complications",
+          "CTG monitoring useful for high-risk cases; low-risk pregnancies can use intermittent auscultation",
+          "Position changes and ambulation in first stage aid descent and comfort",
+          "Active management of third stage reduces postpartum hemorrhage risk significantly",
+          "Immediate newborn care (warmth, Vitamin K, cord clamping) crucial after delivery"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Management of Normal Labor", edition: "9th" },
+          { book: "NRHM Guidelines", chapter: "Partograph & Labor Management", edition: "2015" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "normal-labor-layer-4-exam",
+        title: "Normal Labor & Mechanism - Exam Preparation",
+        estimatedMinutes: 25,
+        summary: "Board-level topics on normal labor physiology and management with clinical scenarios.",
+        contentMd: `# Normal Labor & Mechanism - Exam Preparation
+
+## High-Yield Facts
+
+### Stages of Labor Duration
+| Stage | Phase | Duration (Primigravida) |
+|-------|-------|----------------------|
+| 1 | Latent (0-3 cm) | 8-12 hours |
+| 1 | Active (3-7 cm) | 3-6 hours |
+| 1 | Transition (7-10 cm) | 0.5-2 hours |
+| 2 | Full dilation to delivery | 0.5-2 hours |
+| 3 | Placental delivery | 5-30 minutes |
+| 4 | Recovery | 1-2 hours |
+
+### Cardinal Movements (Vertex, Occiput Anterior)
+1. Engagement (head at inlet)
+2. Flexion (chin to chest; diameter 9.5 cm)
+3. Descent (progressive descent through pelvis)
+4. Internal rotation (transverse → occiput anterior, 90° rotation)
+5. Extension (head extends under symphysis pubis)
+6. External rotation (shoulders rotate to align)
+7. Expulsion (delivery of body)
+
+### Normal Labor Rates
+- **Dilation**: Primigravida 1 cm/hr; Multipara 1.5-2 cm/hr (active phase)
+- **Descent**: 1 cm/hr in active phase
+- **Contractions**: 3-5 per 10 minutes, 40-60 mmHg, 30-60 seconds
+
+## Exam-Style Scenarios
+
+### Scenario 1: Prolonged Latent Phase Recognition
+**Case**: Primigravida in labor for 14 hours. Contractions 2-3 per 10 minutes, mild. Cervical dilation 2 cm, 50% effaced. No rupture of membranes. Fetal heart rate normal.
+
+**Question**: Management?
+
+**Answer**: Prolonged latent phase (>12 hours in primigravida). Not abnormal; expected variation. Management: (1) Analgesia (pethidine 75-100 mg IM or epidural); (2) IV hydration if dehydrated; (3) Rest/sleep if possible; (4) Reassure patient (normal variant); (5) Ambulation if tolerated; (6) Review in 2-4 hours; (7) If progresses appropriately → Continue labor; if no progress → May need augmentation or consider false labor. Prognosis: Usually transitions to active phase with rest and analgesia.
+
+### Scenario 2: Internal Rotation Assessment
+**Case**: Primigravida, 8 hours labor, fully dilated, station +1. Fetal head palpable as anterior fontanelle (OA position). Contractions strong, 4 per 10 minutes.
+
+**Question**: Is rotation progressing normally?
+
+**Answer**: Yes. At full dilation with station +1, occiput anterior position indicates normal internal rotation has occurred (from usual transverse entry to anterior position). This is optimal for vaginal delivery. Anterior fontanelle palpable confirms proper flexion and OA position. Management: (1) Encourage pushing with contractions; (2) Monitor for perineal bulging; (3) Prepare for delivery; (4) Expect crowning soon. Prognosis: Excellent for vaginal delivery.
+
+### Scenario 3: Arrest of Dilation
+**Case**: Multipara, 6 hours in active labor, dilation reached 6 cm then arrested (same for 2 hours). Contractions 3-4 per 10 minutes, moderate intensity. Clinical pelvimetry appears adequate. No signs of infection.
+
+**Question**: Diagnosis and management?
+
+**Answer**: Secondary arrest of dilation (reached 6 cm, then no progress ×2 hours). Differential: (1) Inadequate contractions (assess by internal monitor or external palpation); (2) Cephalopelvic disproportion (CPD) - unlikely if clinical pelvimetry adequate; (3) Malposition (fetal head in OP or transverse). Management: (1) Assess contraction adequacy (if weak, augment with oxytocin); (2) Vaginal exam to check position (if OP, may require rotation); (3) Allow time for descent if contractions adequate; (4) Pelvic reassessment; (5) If no progress after augmentation/observation → LSCS for presumed CPD. Partograph helpful: If approaching/crossing action line → Urgency for intervention increases.
+
+## Common Exam Questions
+
+1. **What is internal rotation and why is it important?** Occiput rotates from transverse to anterior position at level of ischial spines, aligning largest head diameter with largest pelvic diameter; enables vaginal delivery.
+
+2. **Why does flexion of fetal head aid labor progress?** Reduces presenting diameter from brow (13.5 cm) to vertex (9.5 cm), facilitating descent.
+
+3. **What are the cardinal movements of labor in order?** Engagement, Flexion, Descent, Internal Rotation, Extension, External Rotation, Expulsion.
+
+4. **What is the normal dilation rate in active labor?** Primigravida 1 cm/hour; Multipara 1.5-2 cm/hour.
+
+5. **What is active management of third stage?** Oxytocin + Controlled cord traction + Fundal massage; reduces postpartum hemorrhage.`,
+        mnemonics: [
+          {
+            text: "CARDINAL MOVEMENTS MNEMONIC = EF-DIREE (Engagement-Flexion / Descent-Internal rotation-Rotation-Extension-Expulsion)",
+            explanation: "7 movements in order"
+          },
+          {
+            text: "NORMAL DILATION = 1st trim: 1 cm/hr (P), 2 cm/hr (M); assess with partograph",
+            explanation: "Expected dilation rates by parity"
+          },
+          {
+            text: "INTERNAL ROTATION = 90° turn from transverse → Occiput anterior at ischial spines",
+            explanation: "Critical movement for delivery"
+          },
+          {
+            text: "FLEXION BENEFIT = Reduces diameter 13.5cm → 9.5cm (brow to vertex)",
+            explanation: "Why flexion is mechanically crucial"
+          }
+        ],
+        keyPoints: [
+          "Cardinal movements follow predictable sequence; deviations suggest malpresentation or obstruction",
+          "Internal rotation crucial; failure suggests malposition or pelvic abnormality",
+          "Partograph identifies prolonged labor early, enabling timely intervention",
+          "Dilation rates vary by parity; multipara labor faster than primigravida",
+          "Active management of third stage reduces postpartum hemorrhage risk by 60%",
+          "Flexion reduces presenting diameter; essential for vaginal delivery success"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Normal Labor", edition: "9th" },
+          { book: "NEET-PG Previous Years", chapter: "Labor & Delivery", edition: "2023" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "normal-labor-layer-5-active-recall",
+        title: "Normal Labor & Mechanism - Active Recall",
+        estimatedMinutes: 20,
+        summary: "Q&A on labor physiology, cardinal movements, and normal progress.",
+        contentMd: `# Normal Labor & Mechanism - Active Recall
+
+## Q&A for Self-Assessment
+
+**Q1: Explain the seven cardinal movements of labor and their sequence.**
+
+A: (1) Engagement: Widest transverse diameter of head (biparietal) enters pelvic inlet; head descends to 0 station (ischial spines level). (2) Flexion: Descending head applies pressure to upper cervix automatically; head assumes flexed position (chin on chest) reducing presenting diameter from brow (13.5 cm) to vertex (9.5 cm). (3) Descent: Head progressively descends from inlet (-5 station) through mid-pelvis (0 station) to outlet (+5 station). (4) Internal rotation: At 0 station (ischial spines), head encounters ischial spines bilaterally pushing occiput anterior; rotates 90° from initial transverse position to occiput anterior position. (5) Extension: Head extends under symphysis pubis; brow appears first, then forehead, and finally vertex emerges. (6) External rotation: After head delivery, shoulders still transverse; head rotates externally passively as shoulders rotate to align with pelvis. (7) Expulsion: Anterior shoulder delivered over symphysis pubis, posterior shoulder over perineum; body follows.
+
+**Q2: Why is internal rotation considered the most important cardinal movement?**
+
+A: Internal rotation is critical because: (1) Ensures optimal alignment of fetal head diameter with pelvic diameter at each level - transverse diameter of head aligns with transverse diameter of inlet; anteroposterior diameter aligns with anteroposterior diameter of outlet; (2) If rotation fails (head remains transverse or posterior) → Larger presenting diameter → Mechanical obstruction → Labor arrest, increased fetal/maternal trauma, increased cesarean delivery risk; (3) Rotation mechanically driven by pelvic anatomy - inevitable if pelvis adequate and head properly flexed; (4) Malposition (failure to rotate) suggests either inadequate contractions, cephalopelvic disproportion, or fetal abnormality.
+
+**Q3: Explain the relationship between flexion and reducing presenting diameter. Why is this mechanically important?**
+
+A: Flexion reduces presenting diameter because: When head is fully extended, presenting part is brow (largest diameter = 13.5 cm). When head flexes (chin approaches chest), presenting part shifts to vertex (9.5 cm), smallest diameter. Mechanical importance: Pelvis must accommodate fetal head - if head extended → 13.5 cm diameter presented → May not fit through pelvic inlet or mid-pelvis → Mechanical obstruction results. But when flexed → 9.5 cm → Fits more easily. Flexion is automatic (descending head applies pressure to upper cervix triggering flexion). If flexion fails → Head remains brow or military position (intermediate diameters, harder to deliver) → Increased obstruction risk, prolonged labor, fetal/maternal trauma. Clinically, assessment of flexion on vaginal exam (anterior vs. posterior fontanelle location) indicates whether fetus is optimally positioned for delivery.
+
+**Q4: What is the significance of the partograph alert and action lines in labor management?**
+
+A: Alert line: First line on partograph indicating slower than expected cervical dilation progress. If dilation curve crosses alert line → Woman at risk for prolonged labor; indicates need for: closer monitoring, assessment of contraction adequacy, reassessment of pelvic adequacy, consideration of augmentation if inadequate contractions. Action line: Placed 4 hours to right of alert line. If cervical dilation crosses action line → Indicates 4+ hours of suboptimal labor progress already → High risk for obstructed labor and maternal/fetal complications (infection, hemorrhage, fetal hypoxia, uterine rupture). Significance: (1) Identifies abnormal labor early; (2) Allows time between alert and action lines for assessment and intervention; (3) Action line crossing is threshold for LSCS recommendation - at this point, risk of obstructed labor complications HIGH, further waiting increases morbidity; (4) Simple visual tool usable at all healthcare levels (ASHA to hospital); (5) Reduces unnecessary cesarean sections (many women between alert and action lines deliver vaginally) while catching true obstructed labor before severe sequelae.
+
+**Q5: Describe the complete process of placental separation and delivery in third stage.**
+
+A: Placental separation mechanism: After delivery of fetus, placental site rapidly shrinks due to uterine contraction → Myometrial fibers retract → Placenta is passive structure anchored to myometrium only by chorionic villi → As myometrium contracts and retracts, placental anchoring points are compressed and torn → Maternal blood vessels are compressed by contracting myometrium → Hemostasis occurs. Signs of separation: (1) Sudden gush of blood from vagina (from placental site); (2) Umbilical cord lengthens (placenta descends); (3) Uterus becomes firm and rises higher (less distended as placenta detaches); (4) Usually occurs within 5-10 minutes of fetal delivery. Delivery of placenta: (1) Actively managed (recommended): Give oxytocin 10 units IM immediately post-fetal delivery; then after separation signs → Controlled cord traction (gentle, continuous traction on cord while supporting uterus) → Placenta delivered within 5-10 minutes; (2) Spontaneously managed: Allow placenta to deliver by maternal effort (pushing) and gravity; takes longer (10-30 minutes); higher PPH risk. Post-delivery: (1) Fundal massage to expel remaining clots and maintain contraction; (2) Inspect placenta and membranes (ensure complete delivery, no retained fragments); (3) Active surveillance for PPH (heavy bleeding, soft uterus) in fourth stage.
+
+**Q6: How would you distinguish between prolonged latent phase and false labor?**
+
+A: False labor (Braxton Hicks): Irregular contractions (variable intervals, often 10-20 minutes apart), painless or mildly uncomfortable (felt in abdomen, not radiating), no cervical changes on exam (dilation does NOT progress), contractions cease spontaneously, no other signs of labor (no descent, no bloody show progression). Prolonged latent phase (true labor, slow): Regular contractions (consistently spaced, e.g., every 5-10 minutes), painful or uncomfortable (felt across abdomen and back), cervical changes present but slow (progressive dilation <3 cm, 50% effaced), contractions persist and intensify over hours, descent may progress gradually. Management: (1) False labor: Reassurance; send home if other features benign (normal vital signs, normal CTG, no complications); (2) Prolonged latent: Admit; provide analgesia and rest; hydration; reassure (normal variant); review in hours; if progresses appropriately → continue labor; if no progress after rest → may consider false labor diagnosis retrospectively. Distinction: The KEY is cervical dilation progression - if cervix truly dilating progressively → True labor (even if slow); if cervix unchanged → False labor.`,
+        mnemonics: [
+          {
+            text: "CARDINAL MOVEMENTS = E-F-D-I-R-E-E (Engagement-Flexion-Descent-Internal rotation-Rotation-Extension-Expulsion)",
+            explanation: "Seven movements in anatomical sequence"
+          },
+          {
+            text: "FLEXION DIAMETER = Brow 13.5cm → Vertex 9.5cm (reduces by 4cm)",
+            explanation: "How much flexion reduces presenting diameter"
+          },
+          {
+            text: "INTERNAL ROTATION = 90° transverse → Occiput anterior at ischial spines",
+            explanation: "Direction and timing of rotation"
+          },
+          {
+            text: "PARTOGRAPH ACTION LINE = 4 hours right of alert; crossing = LSCS recommended",
+            explanation: "When to intervene on partograph"
+          }
+        ],
+        keyPoints: [
+          "Seven cardinal movements ensure fetal head navigates pelvis optimally",
+          "Internal rotation is critical; failure indicates malposition or obstruction",
+          "Flexion reduces presenting diameter by 4 cm; mechanically essential for descent",
+          "Partograph identifies prolonged labor; action line crossing indicates high obstructed labor risk",
+          "Active management of third stage reduces PPH by 60% compared to expectant",
+          "Prolonged latent phase is normal variant; managed with rest and analgesia; true labor confirmed by cervical dilation"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Normal Labor", edition: "9th" },
+          { book: "Williams Obstetrics", chapter: "Labor and Delivery", edition: "25th" }
+        ]
+      }
+    ]
+  }
 ];

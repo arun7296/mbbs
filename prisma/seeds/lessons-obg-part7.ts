@@ -1,19 +1,563 @@
-export const obgPart7Lessons = [
+import type { TopicLessons } from "./content-loader";
+
+export const obgPart7Lessons: TopicLessons[] = [
   {
     topicCode: "OG-MOD-02-TOP-04",
     layers: [
       {
         layer: 1,
-        slug: "ectopic-abortion-foundation",
+        slug: "ectopic-abortion-layer-1-foundation",
         title: "Ectopic Pregnancy & Abortion - Foundation",
         estimatedMinutes: 25,
         summary: "Overview of ectopic pregnancy and abortion types, epidemiology, and early recognition.",
-        contentMd: "# Ectopic Pregnancy & Abortion - Foundation\n\n## Ectopic Pregnancy Definition\n- **Implantation of gestational sac** outside the uterine cavity\n- **Incidence**: 1-2% of pregnancies globally; higher in India (2-3% in some centers)\n- **Risk of maternal mortality**: 4-10 times higher than intrauterine pregnancy\n\n## Sites of Ectopic Pregnancy\n**Tubal** (95-98%):\n- Ampullary (70%): Ampulla of fallopian tube, most common site\n- Isthmic (12%): Narrower segment, ruptures earlier\n- Fimbrial (11%): Distal end, may spontaneously abort into pelvis\n- Interstitial (rare but dangerous): Within myometrium, ruptures later\n\n**Extratubal** (2-5%):\n- Cervical: Rare, catastrophic hemorrhage if ruptured\n- Ovarian: Rare, ruptures early\n- Abdominal: Secondary implantation after tubal rupture\n- Heterotopic: Both intrauterine and ectopic (rare, 1:30,000)\n\n## Risk Factors for Ectopic Pregnancy\n**Tubal factors**:\n- Previous salpingitis/PID (10-30x increased risk)\n- Pelvic TB (very high risk in India)\n- Intrauterine device use (5x if pregnancy occurs with IUCD in situ)\n- Post-tubal ligation/previous tubal surgery\n- Endometriosis with tubal involvement\n- Congenital tubal anomalies\n\n**Systemic factors**:\n- Advanced maternal age (>35 years)\n- Smoking (affects tubal motility)\n- Assisted reproductive techniques (higher relative risk)\n- Ectopic pregnancy history (25% recurrence risk)\n\n**Hormonal factors**:\n- Progesterone resistance (altered endometrial receptivity)\n\n## Clinical Presentation of Ectopic Pregnancy\n\n### Early Features (6-8 weeks)\n- **Amenorrhea**: May be irregular/light bleeding misinterpreted as menses\n- **Positive pregnancy test**: hCG positive but suboptimal rise\n- **Pelvic pain**: Usually unilateral, colicky initially\n- **Vaginal bleeding**: Light, typically less heavy than spontaneous abortion\n- **Abdominal tenderness**: Often lateral (site of implantation)\n\n### Advanced Ectopic (8-12 weeks) - Rupture Features\n- **Acute abdominal pain**: Severe, sudden onset\n- **Hemorrhagic shock**: Tachycardia, hypotension, pallor\n- **Vaginal bleeding**: Brisk (may be minimal if bleeding intra-abdominal)\n- **Hemoglobin drop**: Reflects hemoperitoneum magnitude\n- **Syncope/collapse**: Indicates severe hemorrhage\n\n## Abortion (Miscarriage) Types\n\n### Terminology in India (DC Dutta)\n- **Threatened abortion**: Vaginal bleeding in first 20 weeks with closed cervix, viable pregnancy\n- **Inevitable abortion**: Vaginal bleeding with open cervical os, pregnancy loss will occur\n- **Incomplete abortion**: Partial expulsion of products of conception, open os\n- **Complete abortion**: Expulsion of all products of conception, closed os, minimal bleeding\n- **Missed abortion**: Death of pregnancy retained in uterus, no symptoms\n- **Habitual abortion**: Three or more consecutive pregnancy losses\n\n### Recurrent Pregnancy Loss (RPL)\n- **Definition**: ≥3 consecutive pregnancy losses before 20 weeks\n- **Incidence**: 1-3% of couples\n- **Etiology**: Chromosomal (50%), immune (25%), thrombophilia (15%), unexplained (10%)\n\n## Epidemiology of Early Pregnancy Loss\n\n### Rates by Cause\n- **Spontaneous abortion rate**: 10-20% of all pregnancies\n- **Threatened abortion**: 25% progress to complete abortion\n- **Recurrent miscarriage**: 1-3% of couples\n- **Chromosomal abnormalities**: 50% of first trimester losses\n\n### Common Causes\n**Chromosomal**:\n- Trisomy, monosomy X, triploidy most common\n\n**Maternal factors**:\n- Infection (toxoplasma, rubella, CMV, others)\n- Maternal disease (diabetes, hypertension, antiphospholipid syndrome)\n- Uterine abnormalities (septate uterus, fibroids)\n- Immunological (antiphospholipid antibodies, other)\n\n**Paternal factors**:\n- Advanced paternal age associated with increased risk\n- Smoking affects sperm quality\n\n**Environmental**:\n- Alcohol, smoking, drug use\n- Radiation, chemical exposure\n\n## Diagnosis of Ectopic Pregnancy\n\n### Clinical Suspicion\n- Amenorrhea + pelvic pain + vaginal bleeding (classic triad)\n- Positive pregnancy test\n- Absence of intrauterine gestational sac on ultrasound (gold standard finding)\n\n### Transvaginal Ultrasound Findings\n- **Intrauterine**: Gestational sac usually visible at 5 weeks gestation\n- **Ectopic signs**: Free fluid (hemoperitoneum), adnexal mass, no IUP\n- **Positive predictive value**: >98% for diagnosis\n\n### hCG Patterns\n- **Normal early pregnancy**: hCG doubles every 48-72 hours (β-hCG doubles 1.5-2x every 2 days)\n- **Suboptimal rise**: Suggests ectopic or failing pregnancy\n- **Plateau/decline**: Suggests ectopic or miscarriage\n\n## Management of Abortion\n\n### Threatened Abortion\n- **Expectant management**: 50% progress to complete abortion naturally\n- **Medical management**: Misoprostol (in resource-limited settings)\n- **Surgical management**: Evacuation of retained products if heavy bleeding\n\n### Complete Abortion\n- Usually no intervention needed if hemodynamically stable\n- Ensure complete evacuation (ultrasound confirmation)\n\n### Incomplete/Missed Abortion\n- **Medical**: Misoprostol or mifepristone ± misoprostol\n- **Surgical**: Suction evacuation or curettage under anesthesia\n- **Expectant**: May wait 2-4 weeks for spontaneous expulsion,\n        mnemonics: [\n          {\n            text: \"ECTOPIC SITES = Ampullary 70%, Isthmic 12%, Fimbrial 11%, Others 7%\",\n            explanation: \"Distribution of ectopic pregnancy locations\"\n          },\n          {\n            text: \"ABORTION TYPES = Threatened (closed os, viable), Inevitable (open os), Incomplete (partial expulsion), Complete (all expelled), Missed (retained)\",\n            explanation: \"Classification of early pregnancy loss\"\n          },\n          {\n            text: \"ECTOPIC CLASSIC TRIAD = Amenorrhea + pelvic pain + vaginal bleeding\",\n            explanation: \"Suggestive presentation\"\n          }\n        ],\n        keyPoints: [\n          \"Ectopic pregnancy risk higher in India due to TB and PID prevalence\",\n          \"Ectopic mortality 4-10x higher than intrauterine pregnancy\",\n          \"hCG suboptimal rise highly suggestive of ectopic\",\n          \"Tubal ectopic ruptures typically 8-12 weeks gestation\",\n          \"Transvaginal ultrasound absence of IUP confirms ectopic diagnosis\"\n        ],\n        textbookRefs: [\n          { book: \"DC Dutta, Textbook of Obstetrics\", chapter: \"Ectopic Pregnancy and Abortion\", edition: \"8th\" },\n          { book: \"FIGO Guidelines\", chapter: \"Management of Ectopic Pregnancy\", edition: \"2021\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"ectopic-abortion-mechanism\",\n        title: \"Ectopic Pregnancy & Abortion - Mechanisms\",\n        estimatedMinutes: 30,\n        summary: \"Pathophysiology of ectopic implantation and mechanisms of pregnancy loss.\",\n        contentMd: "# Ectopic Pregnancy & Abortion - Mechanisms\\n\\n## Pathophysiology of Ectopic Pregnancy\\n\\n### Tubal Dysfunction\\n**Mechanisms of abnormal embryo transport**:\\n- Impaired ciliary function (smoking, infection-induced ciliary dysfunction)\\n- Decreased smooth muscle peristalsis (hormonal factors)\\n- Tubal strictures/stenosis (post-inflammatory, post-surgical)\\n- Anatomical abnormalities (diverticula, hypoplasia)\\n- Increased tubal contractility (retrograde transport)\\n\\n### TB-Related Ectopic (Specific to India)\\n- **Mechanism**: Tubal stenosis from caseating granulomas\\n- **Pattern**: Often bilateral involvement\\n- **Histology**: Acid-fast bacilli in tubal tissue\\n- **Risk**: Very high recurrence if bilateral involvement\\n- **Management**: Medical antituberculous therapy may help, but surgery often needed\\n\\n### Hormonal Factors\\n- **Progesterone receptor dysfunction**: Altered endometrial-embryo synchrony\\n- **Estrogen/progesterone imbalance**: Affects tubal secretions and contractility\\n- **hCG signaling abnormalities**: May allow ectopic implantation despite extrauterine location\\n\\n### Embryonic Factors\\n- **Abnormal embryogenesis**: Defective signals preventing descent into uterus\\n- **Trophoblastic invasion patterns**: May occur more readily in tubal mucosa\\n\\n## Implantation in Ectopic Site\\n\\n### Tubal Implantation Consequences\\n- **Ampullary implantation**: Large lumen → can accommodate growth until rupture (8-12 weeks)\\n- **Isthmic implantation**: Narrow lumen → limited expansion → rupture earlier (6-8 weeks)\\n- **Trophoblastic invasion**: Invades tubal muscularis/serosa (not reinforced like uterus)\\n- **Placental development**: Anomalous; villi directly contact maternal blood (hemorrhage risk)\\n\\n### Bleeding Mechanism in Rupture\\n- **Placental separation**: Trophoblastic erosion into blood vessels\\n- **Myometrial invasion absent**: No compression mechanism to control bleeding\\n- **Hemorrhage rate**: Rapid (can lose 1-2 liters quickly)\\n- **Shock risk**: High if rupture unrecognized\\n\\n## Pathophysiology of Pregnancy Loss\\n\\n### First Trimester Loss Mechanisms\\n\\n**Chromosomal abnormalities** (50%):\\n- **Mechanism**: Meiotic errors → aneuploidy (trisomy 16, 21, 22 most common)\\n- **Effect**: Abnormal placental development → inadequate nutrition\\n- **Timing**: Usually 8-13 weeks (when organogenesis critical)\\n- **Prognosis**: 50% of conceptions with abnormalities are lost\\n\\n**Immunological factors**:\\n- **Antiphospholipid syndrome**: Thrombosis in placental vessels → infarction\\n- **Alloimmunization**: Maternal antibodies against fetal/paternal antigens\\n- **Th1 predominance**: Increases inflammatory cytokines (TNF-alpha, IFN-gamma)\\n\\n**Thrombophilia**:\\n- **Inherited** (Factor V Leiden, MTHFR): Placental thrombosis\\n- **Acquired** (antiphospholipid antibodies): Thrombosis, infarction\\n\\n**Anatomical defects**:\\n- **Septate uterus**: Poor endometrial blood supply to septum\\n- **Intrauterine adhesions**: Prevents normal placentation\\n- **Myomas**: Distort cavity, impair implantation\\n\\n### Progesterone Insufficiency Theory\\n- **Corpus luteum insufficiency**: Inadequate progesterone in early weeks\\n- **Luteal phase defect**: Shortened second phase\\n- **Controversy**: Many studies refute progesterone insufficiency as primary cause\\n- **Clinical practice**: Empirical progesterone supplementation common despite unclear efficacy\\n\\n### Maternal Infection Mechanisms\\n**Ascending infection**:\\n- **Pathogen**: Chlamydia, gonorrhea, Ureaplasma\\n- **Effect**: Endometritis, fetal infection\\n- **Timing**: Miscarriage risk increases with infection severity\\n\\n**Transplacental infection**:\\n- **Viruses**: Rubella, CMV, parvovirus, Zika\\n- **Mechanism**: Fetal infection → organ damage → demise\\n- **Timing**: Variable depending on virus and gestational age\\n\\n## Immunological Mechanisms of RPL\\n\\n### Antiphospholipid Syndrome\\n- **Antibodies**: Against β2-glycoprotein-1, prothrombin, annexin V\\n- **Mechanism**: Placental thrombosis, complement activation, inflammation\\n- **Manifestation**: Recurrent miscarriages, often second trimester (after adequate placental development)\\n\\n### NK Cell Dysfunction\\n- **CD56+ cells**: Increased percentage/activation in RPL\\n- **Effect**: Increased inflammatory cytokine production\\n- **Proposed mechanism**: Enhanced rejection of pregnancy\\n\\n### Other Immune Factors\\n- **TH2 shift reduction**: Loss of normal immune tolerance\\n- **Regulatory T cells**: Insufficient suppression of inflammatory response\\n\\n## Second Trimester Loss Mechanisms\\n\\n**Anatomical causes** (more common):\\n- Cervical incompetence (painless dilation, loss occurs 16-24 weeks)\\n- Uterine septum (poor blood supply to septum)\\n- Severe infection/chorioamnionitis\\n\\n**Placental insufficiency**:\\n- Abruption, infarction\\n- Inadequate development\\n\\n**Fetal factors**:\\n- Major congenital anomalies incompatible with life\\n- Severe growth restriction,\\n        mnemonics: [\\n          {\\n            text: \\\"ECTOPIC RUPTURE RISK = Ampullary (late 8-12 weeks), Isthmic (early 6-8 weeks) due to size differences\\\",\\n            explanation: \\\"Timing varies with location\\\"\\n          },\\n          {\\n            text: \\\"RPL CAUSES = Chromosomal 50%, Immune 25%, Thrombophilia 15%, Unexplained 10%\\\",\\n            explanation: \\\"Etiology distribution in recurrent miscarriage\\\"\\n          },\\n          {\\n            text: \\\"ECTOPIC BLEEDING MECHANISM = No myometrial compression + trophoblastic invasion + placental location = massive hemorrhage risk\\\",\\n            explanation: \\\"Pathophysiology of dangerous bleeding\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Tubal dysfunction from infection/inflammation primary mechanism of ectopic\\\",\\n          \\\"TB-related ectopic higher risk in India; bilateral involvement common\\\",\\n          \\\"Chromosomal abnormalities account for 50% of first trimester losses\\\",\\n          \\\"Antiphospholipid syndrome pathophysiology involves placental thrombosis\\\",\\n          \\\"NK cell dysfunction and immune imbalance contribute to RPL\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"DC Dutta, Textbook of Obstetrics\\\", chapter: \\\"Pathophysiology of Pregnancy Loss\\\", edition: \\\"8th\\\" },\\n          { book: \\\"American College of Obstetricians and Gynecologists\\\", chapter: \\\"Recurrent Pregnancy Loss\\\", edition: \\\"2021\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"ectopic-abortion-clinical\\\",\\n        title: \\\"Ectopic Pregnancy & Abortion - Clinical Management\\\",\\n        estimatedMinutes: 35,\\n        summary: \\\"Clinical diagnosis, management options, and counseling for ectopic pregnancy and abortion.\\\",\\n        contentMd: "# Ectopic Pregnancy & Abortion - Clinical Management\\\\n\\\\n## Diagnosis of Ectopic Pregnancy\\\\n\\\\n### Clinical History and Examination\\\\n**History**:\\\\n- Amenorrhea (may be short if high hCG starts bleeding early)\\\\n- Lower abdominal pain (often unilateral)\\\\n- Vaginal bleeding (usually less than menses)\\\\n- Risk factors (PID, TB history, IUCD use, previous ectopic)\\\\n\\\\n**Examination**:\\\\n- **Abdominal**: Tenderness, rebound if rupture\\\\n- **Speculum**: Minimal to moderate vaginal bleeding\\\\n- **Bimanual**: Adnexal mass (50-80% palpable), cervical motion tenderness, unilateral tenderness\\\\n\\\\n### Diagnostic Investigation\\\\n\\\\n**Transvaginal ultrasound** (gold standard):\\\\n- **IUP not visualized** at expected hCG level (gestational sac usually visible at hCG >1000-2000 mIU/mL)\\\\n- **Adnexal findings**: Mass, fluid, gestational sac outside uterus\\\\n- **Free fluid in pelvis**: Suggests rupture/hemorrhage\\\\n- **Sensitivity/specificity**: >95%\\\\n\\\\n**hCG quantitation**:\\\\n- **Initial level**: Baseline for comparison\\\\n- **Repeat 48 hours**: Normal increases 1.5-2x (doubles is slower in first trimester)\\\\n- **Suboptimal rise**: <53% increase in 48 hours highly suggestive of ectopic\\\\n- **Serial monitoring**: Helps distinguish ectopic from failing intrauterine pregnancy\\\\n\\\\n**hCG discriminatory zone**:\\\\n- **Definition**: hCG level above which IUP should be visible\\\\n- **Varies with ultrasound quality**: 1500-2500 mIU/mL (vaginal ultrasound)\\\\n- **Clinical use**: If hCG above discriminatory zone but no IUP = ectopic\\\\n\\\\n## Management of Ectopic Pregnancy\\\\n\\\\n### Expectant Management\\\\n- **Criteria**: Hemodynamically stable, hCG <1500, no rupture signs, willing to accept risk\\\\n- **Monitoring**: Serial hCG every 2-3 days until negative (regression needed)\\\\n- **Advantages**: Avoids intervention, preserves tubal integrity\\\\n- **Disadvantages**: Risk of rupture during monitoring period, longer to resolution\\\\n- **Success rate**: 60-85% if appropriate selection\\\\n\\\\n### Medical Management (Methotrexate)\\\\n- **Mechanism**: Inhibits dihydrofolate reductase, arrests cell division\\\\n- **Single-dose regimen**: 50 mg/m² IM (most common in India)\\\\n- **Two-dose regimen**: 1 mg/kg alternating with folinic acid, better for high hCG\\\\n- **Multi-dose regimen**: Day 1-5 with folinic acid rescue (highest success, most toxic)\\\\n\\\\n**Criteria for medical management**:\\\\n- Hemodynamically stable\\\\n- hCG <5000 (preferably <2000) for single-dose\\\\n- No contraindications (renal/liver disease)\\\\n- Tubal mass <4 cm\\\\n- No rupture\\\\n- Reliable follow-up\\\\n\\\\n**Adverse effects**: Stomatitis, bone marrow suppression, hepatotoxicity, renal dysfunction\\\\n\\\\n**Monitoring**:\\\\n- hCG at day 7 (expect >15% decline)\\\\n- If plateau/rise at day 7 → consider additional dose or surgery\\\\n- Serial monitoring until hCG <5 mIU/mL\\\\n\\\\n**Success rate**: 80-95% if appropriately selected\\\\n\\\\n### Surgical Management\\\\n\\\\n**Indications**:\\\\n- **Emergency**: Rupture, hemodynamic instability, signs of hemorrhagic shock\\\\n- **Elective**: Failed medical management, hCG very high, large mass, patient unreliable\\\\n\\\\n**Operative procedures**:\\\\n- **Salpingostomy**: Incision in tube, evacuation of products, suturing (preserves tube)\\\\n- **Salpingectomy**: Removal of tube (preferred if other tube normal, recurrent ectopic, rupture)\\\\n- **Cornuotomy**: For interstitial ectopic\\\\n\\\\n**Laparoscopic vs Open**: Laparoscopic preferred if stable and expertise available; open if unstable/rupture\\\\n\\\\n## Management of Abortion\\\\n\\\\n### Threatened Abortion\\\\n\\\\n**Assessment**:\\\\n- Ultrasound: Confirm IUP, assess fetal viability (heart beat >20 weeks), measure CRL\\\\n- hCG: Baseline for comparison if needed\\\\n- Karyotype: Consider if RPL (if facility available)\\\\n\\\\n**Management options**:\\\\n\\\\n**Expectant**:\\\\n- Reassurance and supportive care\\\\n- Avoid sexual intercourse, strenuous activity\\\\n- Review in 1-2 weeks with repeat ultrasound\\\\n- 50% may progress to complete abortion despite viable appearance\\\\n- 50% may continue to term\\\\n\\\\n**Medical** (if heavy bleeding):\\\\n- Misoprostol 800 mcg sublingual once, then monitor\\\\n- Reduces need for surgical evacuation\\\\n- India: Often avoided in early weeks\\\\n\\\\n**Surgical** (if ongoing heavy bleeding):\\\\n- Vacuum aspiration or curettage under anesthesia\\\\n- Rapid definitive management\\\\n- Risk of uterine perforation, infection\\\\n\\\\n### Incomplete/Missed Abortion\\\\n\\\\n**Incomplete**:\\\\n- Products partially expelled, open cervical os\\\\n- Heavy bleeding common\\\\n- Requires evacuation (medical or surgical)\\\\n\\\\n**Missed**:\\\\n- Fetal demise, no symptoms initially\\\\n- Discovered on routine ultrasound\\\\n- Psychological impact significant\\\\n- Management options: Expectant (weeks), medical (misoprostol), surgical (evacuation)\\\\n\\\\n## Counseling Regarding Recurrent Pregnancy Loss\\\\n\\\\n**After 2 miscarriages**:\\\\n- Risk stratification: Age, previous obstetric history, miscarriage characteristics\\\\n- Recommend investigation if: RPL pattern established, advanced maternal age, ectopic history\\\\n\\\\n**Investigations for RPL**:\\\\n1. Anatomical: Hysterosalpingography or hysteroscopy\\\\n2. Immunological: Antiphospholipid panel if features (RPL + thrombosis + other criteria)\\\\n3. Genetic: Karyotype of parents (if recurrent, especially chromosomal causes)\\\\n4. Thrombophilia: Factor V Leiden, prothrombin G20210A (selective)\\\\n5. Infection: Torch titers (controversial utility)\\\\n\\\\n**Risk factors for recurrence**:\\\\n- Maternal age >35 years: 40% miscarriage risk\\\\n- Three prior losses: 60% risk in next pregnancy\\\\n- Antiphospholipid antibodies: 50-70% without treatment\\\\n- Chromosomal abnormality in one parent: 20-40%\\\\n\\\\n**Reassurance factors**:\\\\n- Most RPL couples achieve successful pregnancy (60-70%)\\\\n- Chromosomal abnormalities decrease with improved gamete selection\\\\n- Many RPL cases unexplained (no specific pathology) yet have good prognosis\\\\n\\\\n## Prevention of Recurrence\\\\n\\\\n**General measures**:\\\\n- Optimize BMI (obesity increases loss risk)\\\\n- Smoking cessation (smoking increases loss risk)\\\\n- Alcohol avoidance\\\\n- Folic acid supplementation (4-5 mg daily, higher dose)\\\\n\\\\n**Condition-specific**:\\\\n- **Antiphospholipid syndrome**: Aspirin + LMWH throughout pregnancy\\\\n- **Thyroid disorder**: Levothyroxine optimization (TSH <2.5)\\\\n- **Anatomical defect**: Septum resection (if identified)\\\\n- **Cervical incompetence**: Cervical cerclage at 12-14 weeks\\\\n\\\\n**Progesterone supplementation**:\\\\n- Controversial but often prescribed: Vaginal progesterone 200 mg daily\\\\n- Evidence stronger for threatened abortion (25% reduction in loss)\\\\n- Evidence weaker for asymptomatic RPL,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"ECTOPIC DIAGNOSIS = No IUP on ultrasound ABOVE discriminatory zone (hCG 1500-2500) + suboptimal hCG rise\\\\\\\",\\\\n            explanation: \\\\\\\"Key diagnostic findings\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"MTX SUCCESS = hCG <5000, single-dose effective, monitor hCG day 7 (expect >15% drop)\\\\\\\",\\\\n            explanation: \\\\\\\"Medical management criteria and monitoring\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"RPL INVESTIGATION = Anatomy + Immunity (APS) + Genetics (karyotype) + Thrombophilia (selective)\\\\\\\",\\\\n            explanation: \\\\\\\"Systematic workup approach\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Transvaginal ultrasound absence of IUP above discriminatory zone confirms ectopic\\\\\\\",\\\\n          \\\\\\\"Medical management (MTX) successful 80-95% if properly selected\\\\\\\",\\\\n          \\\\\\\"Expectant management lower intervention but higher rupture risk\\\\\\\",\\\\n          \\\\\\\"50% of threatened abortions progress to complete despite appearing viable\\\\\\\",\\\\n          \\\\\\\"Aspirin + LMWH first-line for APS-related RPL\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta, Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Ectopic Pregnancy and Abortion Management\\\\\\\", edition: \\\\\\\"8th\\\\\\\" },\\\\n          { book: \\\\\\\"Royal College of Obstetricians and Gynaecologists\\\\\\\", chapter: \\\\\\\"Ectopic Pregnancy and Miscarriage\\\\\\\", edition: \\\\\\\"2016\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"ectopic-abortion-exam\\\\\\\",\\\\n        title: \\\\\\\"Ectopic Pregnancy & Abortion - Exam Preparation\\\\\\\",\\\\n        estimatedMinutes: 35,\\\\n        summary: \\\\\\\"Board examination topics on ectopic pregnancy, abortion, and recurrent miscarriage.\\\\\\\",\\\\n        contentMd: ``# Ectopic Pregnancy & Abortion - Exam Preparation\\\\n\\\\n## High-Yield Examination Topics\\\\n\\\\n### Ectopic Pregnancy Diagnosis\\\\n**Classic presentation**: Amenorrhea + pelvic pain + vaginal bleeding\\\\n**Key diagnostic findings**:\\\\n- No IUP on TVS above hCG discriminatory zone\\\\n- hCG suboptimal rise (<53% in 48 hours)\\\\n- Adnexal mass or free fluid on ultrasound\\\\n\\\\n### Risk Factors Specific to India\\\\n**TB-related ectopic**:\\\\n- Tubal stenosis from granulomas\\\\n- Often bilateral\\\\n- Higher recurrence risk\\\\n- Very important in Indian exam context\\\\n\\\\n**IUCD use**:\\\\n- 5x increased relative risk if pregnancy occurs with IUCD in situ\\\\n- May present differently (hCG may be lower)\\\\n\\\\n### Management Comparison Table\\\\n\\\\n| Presentation | Management Option | Success Rate | Key Monitoring |\\\\n|---|---|---|---|\\\\n| Hemodynamic + hCG <2000 | Expectant | 60-85% | Serial hCG every 2-3 days |\\\\n| Hemodynamic + hCG <5000 | MTX single-dose | 80-95% | hCG day 7 expect >15% drop |\\\\n| Hemodynamic + hCG >5000 | MTX multi-dose or surgery | Variable | hCG weekly |\\\\n| Rupture/unstable | Emergency surgery | 100% | Resuscitation needed |\\\\n| Interstitial/cervical | Surgery (high risk) | Variable | Need specialist input |\\\\n\\\\n### Abortion Classification and Management\\\\n\\\\n**Threatened vs Inevitable vs Incomplete**:\\\\n- Threatened: Closed os, viable IUP on ultrasound → Expectant or bed rest\\\\n- Inevitable: Open os, nonviable IUP → Evacuation (medical or surgical)\\\\n- Incomplete: Partial expulsion, open os, heavy bleeding → Evacuation needed\\\\n- Complete: All products expelled, closed os → No intervention if hemodynamic\\\\n- Missed: Retained nonviable, asymptomatic → Expectant vs medical vs surgical\\\\n\\\\n### RPL Workup High-Yield Facts\\\\n**Three consecutive losses threshold** for investigation\\\\n\\\\n**Likely findings distribution**:\\\\n- Chromosomal abnormality: 50%\\\\n- Immune (APS, NK cell, other): 25%\\\\n- Thrombophilia: 15%\\\\n- Unexplained: 10%\\\\n\\\\n**First-line investigations**:\\\\n- Karyotype of parents\\\\n- Antiphospholipid antibody panel\\\\n- Pelvic ultrasound (anatomical assessment)\\\\n\\\\n**Selective investigations**:\\\\n- Hysteroscopy/HSG if anatomical suspicion\\\\n- Thrombophilia screening (controversial, selective)\\\\n\\\\n## Exam-Style Scenarios\\\\n\\\\n### Scenario 1: Ectopic Diagnosis Dilemma\\\\n**Case**: 6-week pregnant woman, mild abdominal pain, minimal vaginal bleeding. hCG 2500. TVS shows no IUP. Adnexa normal.\\\\n\\\\n**Question**: What is the most likely diagnosis and next step?\\\\n\\\\n**Answer**: Likely ectopic pregnancy (hCG above discriminatory zone, no IUP visualized). Differential: Extremely early IUP (not yet visualized). Next step: (1) Repeat hCG in 48 hours—if <53% rise confirms ectopic; (2) Repeat TVS in 48 hours to exclude very early IUP (rescan for developing gestational sac); (3) If hCG rises appropriately and IUP becomes visible = normal intrauterine pregnancy; if no IUP and suboptimal rise = ectopic.\\\\n\\\\n### Scenario 2: TB-Related Ectopic\\\\n**Case**: 28-year-old woman with history of TB (treated 5 years ago) with amenorrhea 8 weeks, severe pelvic pain, hCG 8000. TVS shows no IUP, bilateral tubal thickening, small adnexal mass on left.\\\\n\\\\n**Question**: What is your diagnosis and management?\\\\n\\\\n**Answer**: Ectopic pregnancy likely in setting of post-TB tubal damage. Bilateral tubal changes suggest previous TB sequelae. Diagnosis: Left tubal ectopic. Management: Emergency surgery (salpingectomy on left preferred given bilateral involvement and future fertility concerns). Rationale: hCG high (8000), bilateral damage suggests poor prognosis for either tube, history of TB increases recurrence risk. Medical management higher failure rate. Surgical intervention safer. Counseling: Explain reduced fertility, possible need for ART if right tube also severely damaged.\\\\n\\\\n### Scenario 3: Abortion Management Choice\\\\n**Case**: Woman 9 weeks pregnant, presents with moderate vaginal bleeding. Exam: Open cervical os, products visible. Ultrasound: No cardiac activity, incomplete products.\\\\n\\\\n**Question**: What is the diagnosis and appropriate management?\\\\n\\\\n**Answer**: Incomplete abortion (partial expulsion of products, open os). Management options: (1) Expectant (wait for spontaneous completion)—low success at 9 weeks, high rebleeding risk; (2) Medical—misoprostol to complete expulsion, works well, avoids anesthesia; (3) Surgical—vacuum aspiration under anesthesia, rapid, complete. Best approach in India: Medical management first-line if ongoing but controlled bleeding; surgical if heavy bleeding or failed medical. Advantages medical: Avoids anesthesia risks, preserves uterus, cost-effective. Advantages surgical: Rapid, definitive, allows visualization/confirmation.\\\\n\\\\n### Scenario 4: RPL Counseling\\\\n**Case**: 38-year-old woman with three consecutive miscarriages (8, 10, 7 weeks). One child 5 years prior (normal). Currently 6 weeks pregnant with spotting.\\\\n\\\\n**Question**: What investigations are indicated and what is prognosis?\\\\n\\\\n**Answer**: Investigations: (1) Karyotype of both parents (some centers standard); (2) Antiphospholipid antibody panel—especially important given maternal age and RPL; (3) Pelvic ultrasound (anatomical); (4) Consider: CBC (anemia), thyroid function. Prognosis: 60-70% chance of successful pregnancy with next conception despite RPL history. Age 38 increases risk (chromosomal trisomies increase). Miscarriage rate approximately 40% at age 38. Management this pregnancy: (1) If APS found—aspirin + LMWH; (2) Progesterone supplementation—vaginal 200 mg daily (controversial but often recommended); (3) Frequent follow-up ultrasounds (reassurance, early detection of problems); (4) Emotional support.\\\\n\\\\n### Scenario 5: Ectopic with Confusing hCG\\\\n**Case**: hCG 4000 on day 0, hCG 5800 on day 2 (45% rise). TVS shows no IUP, small adnexal mass.\\\\n\\\\n**Question**: Is this ectopic or early intrauterine pregnancy?\\\\n\\\\n**Answer**: The 45% rise is SUBOPTIMAL (less than expected 53-100% doubling). This is highly suggestive of ectopic or failing pregnancy. Combined with adnexal mass and absent IUP = ectopic pregnancy. The rise of 45% in 2 days is too slow for normal early pregnancy. Management: Treat as ectopic. Options: Expectant (monitor hCG for regression), medical (MTX), or surgical (given slightly elevated hCG, medical would be reasonable). Key point: hCG rise is the KEY diagnostic feature—not the absolute level.\\\\n\\\\n## High-Yield Mnemonics for Exams\\\\n\\\\n**Ectopic diagnosis**: No IUP above discriminatory zone (hCG 1500-2500)\\\\n\\\\n**hCG interpretation**:\\\\n- Normal: Doubles every 48-72 hours (1.5-2x increase)\\\\n- Suboptimal: <53% rise in 48 hours = ectopic or failing pregnancy\\\\n- Abnormal: Plateau or decline = ectopic or miscarriage\\\\n\\\\n**IUCD-related ectopic**: 5x increased relative risk if pregnancy occurs with IUCD in situ\\\\n\\\\n**TB tubal damage**: Bilateral stenosis common, high recurrence risk\\\\n\\\\n**Abortion classification**: Threatened (closed os, viable), Inevitable (open os), Incomplete (partial), Complete (all expelled), Missed (retained)\\\\n\\\\n**RPL workup**: PAST CATH = Parental karyotype, Anatomical (HSG), Serology (APS), Thrombophilia, Chromosomal (fetal), Antiphospholipid, Thyroid, Hemorrhagic/Hematologic\\\\n\\\\n**APS management in pregnancy**: Low-dose aspirin + LMWH throughout pregnancy (unlike non-pregnant management which is anticoagulation alone),\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"hCG PATTERN = Normal rise 53-100% in 48 hrs, Suboptimal <53% = ectopic/failing, Decline = miscarriage\\\\\\\",\\\\n            explanation: \\\\\\\"Diagnostic interpretation of hCG trends\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"ECTOPIC DISCRIMINATORY ZONE = hCG 1500-2500 (vaginal ultrasound), if above and no IUP = ectopic\\\\\\\",\\\\n            explanation: \\\\\\\"Key diagnostic threshold\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"TB ECTOPIC INDIA = Bilateral tubal damage, high recurrence, favors salpingectomy over salpingostomy\\\\\\\",\\\\n            explanation: \\\\\\\"India-specific management considerations\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Absence of IUP above discriminatory zone hCG is ectopic until proven otherwise\\\\\\\",\\\\n          \\\\\\\"hCG rise rate more important than absolute level in early pregnancy assessment\\\\\\\",\\\\n          \\\\\\\"Medical management (MTX) successful if selected carefully (hCG <5000)\\\\\\\",\\\\n          \\\\\\\"TB-related ectopic higher recurrence; may need bilateral assessment\\\\\\\",\\\\n          \\\\\\\"Antiphospholipid syndrome requires aspirin + LMWH in pregnancy\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta\\\\\\\", chapter: \\\\\\\"Ectopic Pregnancy and Abortion\\\\\\\", edition: \\\\\\\"8th\\\\\\\" },\\\\n          { book: \\\\\\\"NEET-PG Previous Years\\\\\\\", chapter: \\\\\\\"Ectopic Pregnancy & Miscarriage\\\\\\\", edition: \\\\\\\"2023\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 5,\\\\n        slug: \\\\\\\"ectopic-abortion-recall\\\\\\\",\\\\n        title: \\\\\\\"Ectopic Pregnancy & Abortion - Active Recall\\\\\\\",\\\\n        estimatedMinutes: 30,\\\\n        summary: \\\\\\\"Q&A covering diagnosis, management decisions, and counseling for ectopic pregnancy and miscarriage.\\\\\\\",\\\\n        contentMd: ``# Ectopic Pregnancy & Abortion - Active Recall Questions\\\\n\\\\n## Q&A Section\\\\n\\\\n**Q1: A 7-week pregnant woman presents with right lower abdominal pain and minimal vaginal bleeding. hCG 3500. TVS shows no IUP, right adnexal mass 2.5 cm, free fluid in cul-de-sac. Explain your diagnosis and management options.**\\\\n\\\\nA: Diagnosis: Right tubal ectopic pregnancy. Diagnostic findings: (1) hCG 3500 (above discriminatory zone 1500-2500) but no IUP visualized = ectopic; (2) Right adnexal mass = gestational sac; (3) Free fluid = hemoperitoneum (small amount). Management options: (1) EXPECTANT—if hemodynamically stable, willing to accept rupture risk, reliable follow-up. Monitor hCG every 2-3 days until negative (weeks of monitoring). Success 60-85% if <1500 and tube small; less likely with hCG 3500. (2) MEDICAL (MTX)—hCG 3500 is acceptable (can use single-dose if <5000 or multi-dose if >5000). Inject methotrexate 50 mg/m² IM, monitor hCG day 7 (expect >15% drop). Success 85-95%. Advantages: Preserves tube, no anesthesia. Disadvantages: Longer resolution, rupture risk during monitoring. (3) SURGICAL—Laparoscopic salpingostomy (evacuate products, preserve tube) or salpingectomy (remove tube). Immediate resolution. Consider if: Patient unreliable, hemodynamically unstable approaching rupture, recurrent ectopic (might choose salpingectomy). My recommendation: Medical management reasonable given hemodynamic stability and hCG <5000.\\\\n\\\\n**Q2: Describe TB-related ectopic pregnancy in India. How does it differ from non-TB ectopic? What management would you recommend?**\\\\n\\\\nA: TB-related ectopic epidemiology: TB salpingitis causes tubal stenosis from caseating granulomas; India has high TB prevalence; approximately 5-10% of ectopic pregnancies in India are TB-related (higher in endemic areas). Pathophysiology differences: (1) Bilateral tubal involvement common (60-70% cases); (2) Multiple stenotic areas rather than single blockage; (3) Recurrence risk much higher (40-50% vs 10-25% non-TB); (4) Tube severely damaged with poor prognosis for future fertility. Diagnosis: History of TB (treated or untreated); may have symptoms of recurrent pelvic infection; bilateral tubal thickening on ultrasound. Management differences from non-TB: (1) Expectant/medical management less favorable given bilateral damage; (2) Surgical salpingectomy preferred (removes damaged tube, accepts infertility from bilateral disease rather than risking recurrence); (3) Antituberculous therapy: If TB active or suspected, treat tuberculosis; if previously treated and quiescent, surgery primarily indicated. (4) Counseling: Explain very limited fertility prognosis; discuss ART/surrogacy if desire children. Special consideration: Endometrial TB rare but possible; hysteroscopy may be indicated to assess if planning future pregnancy despite bilateral damage.\\\\n\\\\n**Q3: A woman has hCG 1200 on day 0, hCG 1500 on day 2 (25% rise). TVS shows no IUP. What is your interpretation and next step?**\\\\n\\\\nA: Interpretation: SEVERELY suboptimal hCG rise. Normal early pregnancy: 53-100% increase (doubling) in 48 hours. This patient's 25% rise is concerning for either ectopic pregnancy OR failing intrauterine pregnancy. Differential diagnosis: (1) Ectopic pregnancy—most likely given hCG not above discriminatory zone yet but rise is already suboptimal; (2) Failing intrauterine pregnancy—possible but if no IUP visible at hCG 1200, less likely to be viable IUP. Next steps: (1) Repeat hCG at 48 hours again (day 4 from initial): If continues to rise slowly/plateau = ectopic or failing; if starts to decline = miscarriage; (2) Repeat TVS at day 4 to look for IUP development (if truly early, gestational sac may not be visible yet at hCG 1200); (3) Consider urine hCG daily to assess trajectory. Clinical judgment: If repeat hCG shows continued suboptimal rise and still no IUP = treat as ectopic (expectant vs medical management). If IUP becomes visible with appropriate growth = normal pregnancy (possibly with lower initial hCG than expected).\\\\n\\\\n**Q4: Compare the clinical course and outcomes of threatened abortion that progresses to incomplete vs complete abortion.**\\\\n\\\\nA: Threatened abortion: Vaginal bleeding before 20 weeks with closed cervical os, viable IUP on ultrasound. Approximately 50% will progress to complete/incomplete abortion; 50% will continue as normal pregnancy. Incomplete abortion course: (1) Initial phase—bleeding increases as cervix begins to dilate, products partially expelled; (2) Presentation—heavier bleeding than threatened, open cervical os, products visible or protruding; (3) Risks—ongoing hemorrhage (may lose 500+ mL), uterine perforation if curettage performed, infection/endometritis; (4) Management options—expectant (let expulsion complete naturally, takes hours-days), medical (misoprostol speeds expulsion), surgical (vacuum aspiration under anesthesia). Complete abortion course: (1) All products expelled within hours to days; (2) Cervical os initially open, then closes; (3) Bleeding gradually decreases; (4) Minimal ongoing risks unless infected; (5) Management—mainly supportive care, confirm complete expulsion on ultrasound (no retained products), monitor hemoglobin. Key difference: Incomplete requires definitive intervention (medical or surgical); complete usually resolves with supportive care. Outcome: Complete abortion has lower morbidity if uncomplicated; incomplete higher morbidity due to hemorrhage/infection risk.\\\\n\\\\n**Q5: A 40-year-old woman has had two consecutive miscarriages (12 weeks and 10 weeks). She is now 8 weeks in third pregnancy. What investigations are indicated and what is your management plan?**\\\\n\\\\nA: Two miscarriages in fourth decade—concerning for age-related chromosomal issues but also warrants investigation for treatable causes. Investigations (before this third pregnancy, but can still be done): (1) Karyotype of both parents—identify chromosomal balanced translocations (5-15% of RPL couples); (2) Antiphospholipid antibody panel—anticardiolipin, anti-β2GP1, lupus anticoagulant. Particularly important at age 40 (increased thrombotic risk); (3) Pelvic ultrasound—assess for uterine septum, fibroids, adhesions; (4) Thyroid function—TSH, free T4 (hypothyroidism increases loss risk); (5) Selective: Thrombophilia screening (Factor V Leiden, prothrombin G20210A) controversial but reasonable if family history of thrombosis. Management this pregnancy (8 weeks): (1) High-frequency ultrasound monitoring—weekly initially to reassure, early detection of problems; (2) Progesterone supplementation—Start immediately; vaginal 200 mg daily through 12 weeks minimum. Rationale: Controversial but reduces loss risk 25-30%, inexpensive, safe; (3) Aspirin—If APS panel positive: Low-dose aspirin 75-100 mg daily throughout pregnancy; (4) If thrombophilia identified: LMWH may be added; (5) Folic acid—High-dose 4-5 mg daily (standard 400 mcg insufficient). Prognosis: Age 40 carries 40% miscarriage risk base rate; with investigation/treatment, may reduce to 25-30%. 60-70% ultimate success rate reported in RPL cohorts despite prior losses.\\\\n\\\\n**Q6: Explain the mechanism of dangerous hemorrhage in ectopic pregnancy and why it occurs more rapidly than other causes of uterine bleeding.**\\\\n\\\\nA: Mechanism of ectopic hemorrhage: (1) Location of implantation—tubal tissue has thin muscular wall (not reinforced like myometrium); placental villi invade through muscularis directly into blood vessels; (2) Abnormal vasculature—placental vessels in ectopic location are abnormally developed, lack adequate smooth muscle, more fragile; (3) No compression mechanism—in uterine pregnancy, myometrial contractions compress bleeding vessels; in tubal ectopic, tube cannot contract effectively to control bleeding; (4) Separation mechanics—as trophoblast invades and pregnancy grows, placental separation leads to direct vessel hemorrhage without muscle compression; (5) Timeline—rupture usually occurs 8-12 weeks (ampullary) or 6-8 weeks (isthmic) depending on tubal location. Hemorrhage rate rapid because: (1) Large vessels eroded (tubal branches of ovarian/uterine arteries); (2) No physiological hemostasis mechanism active (no myometrial contraction); (3) Blood flows freely into peritoneal cavity (intra-abdominal bleeding hidden—patient may appear stable externally but in shock internally); (4) Shock develops rapidly as blood volume loss >500 mL occurs within minutes. Clinical consequence: Ectopic rupture is obstetric emergency; mortality 5-10% if unrecognized, <1% if recognized and treated surgically. Contrast with threatened abortion: Uterine bleeding is controlled by myometrial contraction and endometrial vessels; shock develops slowly (hours to days) allowing time for transport to hospital.\\\\n\\\\n**Q7: A patient with recurrent miscarriage is found to have antiphospholipid syndrome (positive anticardiolipin IgG). Explain the pathophysiology and appropriate treatment in pregnancy.**\\\\n\\\\nA: Antiphospholipid syndrome (APS) pathophysiology in pregnancy: (1) Antibodies—anticardiolipin, anti-β2 glycoprotein-1, lupus anticoagulant bind to phospholipid-protein complexes; (2) Mechanism of miscarriage—thrombosis in placental vessels (particularly decidual vessels) → placental infarction → fetal demise; additionally, complement activation (C3a, C5a) → inflammation and trophoblastic dysfunction; (3) Placental effects—impaired vascular development, inadequate trophoblastic invasion, accelerated aging of placenta; (4) Fetal consequences—repeated loss (50-70% untreated), intrauterine growth restriction, preterm delivery, fetal demise. Treatment in APS pregnancy: (1) Anticoagulation strategy—low-dose aspirin (75-100 mg daily) starting before conception (improves live birth rates 50-75% depending on study); PLUS low-molecular-weight heparin (LMWH) throughout pregnancy (enoxaparin 40-80 mg daily or equivalent). Mechanism of heparin benefit: Anti-inflammatory (complement inhibition), anti-thrombotic (activates protein S/C), improves trophoblastic function. (2) Monitoring—Baseline heparin level (anti-Xa 0.5-1.2 mIU/mL), adjust dose accordingly. (3) Duration—Aspirin alone not sufficient (success <25%); aspirin + heparin success 60-80% for live birth. (4) Postpartum—Heparin continues 6-8 weeks postpartum (VTE risk highest); aspirin may continue. Clinical note: In non-pregnant APS (thrombotic events), anticoagulation with warfarin/DOACs appropriate; in pregnancy, heparin required (warfarin teratogenic).\\\\n\\\\n**Q8: A 9-week ectopic pregnancy is being managed medically with methotrexate. hCG on day 0 = 3000, day 7 = 2500 (17% drop). Should you give additional MTX dose? Explain your reasoning.**\\\\n\\\\nA: hCG trend analysis: Initial hCG 3000, decline to 2500 (17% drop over 7 days). Interpretation: 17% decline meets minimum threshold for continuing expectation of success (>15% decline expected by day 7). Decision: Do NOT give additional MTX dose yet. Reasoning: (1) Single-dose MTX considered successful if >15% drop in hCG by day 7; this patient meets criteria (17% drop); (2) Continuing single-dose monitoring is appropriate strategy; (3) Additional dose would increase toxicity risk without clear benefit if trajectory appropriate. Monitoring plan: (1) Repeat hCG every 3-4 days until <5 mIU/mL (complete regression); (2) If hCG plateaus (no further drop) or rises → then consider additional MTX or surgical intervention; (3) If continues declining (even slowly) → continue monitoring. Expected trajectory: After appropriate single-dose MTX, hCG should decline exponentially; slow decline acceptable as long as continuing. Time to resolution: Usually 3-4 weeks if hCG moderate (3000-5000). Clinical note: This patient is on successful path; changing management prematurely risks unnecessary toxicity and additional intervention.\\\\n\\\\n**Q9: Explain why threatened abortion at 8 weeks with ultrasound appearance of viable IUP (good growth, fetal heart beat present) still carries 25-30% risk of progressing to miscarriage.**\\\\n\\\\nA: Despite ultrasound appearance of viability, threatened abortion has high progression risk because: (1) Chromosomal abnormalities—50% of miscarriages due to trisomy/aneuploidy; many abnormal embryos have normal ultrasound appearance early (fetal heart may beat despite lethal abnormality; becomes apparent later in pregnancy as growth slows or cardiac activity ceases); (2) Placental insufficiency—abnormal placentation may develop despite initially appropriate gestational sac growth; becomes evident in next 1-2 weeks; (3) Hidden fetal anomalies—major congenital anomalies may not be apparent at 8 weeks; incompatible anomalies result in subsequent fetal demise. (4) Progesterone insufficiency—despite normal hCG, may have inadequate corpus luteum function or declining progesterone; bleeding indicates placental separation beginning; (5) Subclinical infection—low-level infection may not cause symptoms but damages pregnancy; (6) Immune rejection—antiphospholipid antibodies or other immune factors may impair pregnancy despite initial development. Clinical significance: Presence of fetal heart beat at 8 weeks reassuring (20-25% loss risk) but NOT protective against later loss. This is why follow-up ultrasound at 12-14 weeks important to confirm continued viability. Counseling: \\\\\\\"Good signs now, but miscarriage risk still 25-30% because some chromosomal problems and other issues not evident on early ultrasound.\\\\\\\"\\\\n\\\\n**Q10: A woman plans pregnancy after ectopic. What counseling regarding recurrence risk and preventive measures would you offer?**\\\\n\\\\nA: Recurrence risk counseling: (1) Baseline recurrence—without identifiable cause, approximately 10-25% will have recurrent ectopic (much higher than first ectopic risk); (2) Risk increases with—bilateral tubal damage, history of TB, previous ectopic in same tube (high), endometriosis; (3) Risk lower if—ectopic was fimbrial (often spontaneously resolves), single tube affected, no predisposing factors identified. Preventive measures: (1) Hysterosalpingography or laparoscopy—assess tubal patency/damage in contralateral tube; if severely damaged, may counseled regarding ART; (2) Early ultrasound in next pregnancy—Confirm intrauterine location (transvaginal ultrasound at 5-6 weeks); (3) hCG monitoring—If any doubt about location, serial hCG to ensure appropriate rise; (4) Infection prevention—Treat any genital tract infections aggressively; test for and treat chlamydia, gonorrhea; (5) Consider hysteroscopy—If endometrial TB suspected, diagnostic evaluation. Surgical considerations: (1) If previous ectopic treated with salpingostomy—explain recurrence risk remains substantial (25-30%); salpingectomy might have been alternative; future fertility depends on remaining tube; (2) If salpingectomy performed—contralateral tube must be patent; if also damaged, counsel regarding ART/surrogacy. Prognosis: 60-70% will achieve intrauterine pregnancy in subsequent attempt (despite ectopic history). Most important: Early ultrasound confirmation of intrauterine location in next pregnancy.,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"MTX SUCCESS CRITERIA DAY 7 = hCG drop >15%, if <15% = consider additional dose or surgery\\\\\\\",\\\\n            explanation: \\\\\\\"Monitoring medical management response\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"ECTOPIC RECURRENCE = 10-25% after ectopic (much higher than first pregnancy risk); TB highest risk, fimbrial lowest\\\\\\\",\\\\n            explanation: \\\\\\\"Counseling after ectopic\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"APS PREGNANCY TREATMENT = Aspirin ALONE insufficient; must add LMWH (unlike non-pregnant APS which uses warfarin)\\\\\\\",\\\\n            explanation: \\\\\\\"Management difference pregnancy-specific\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"hCG trend more important than absolute level in ectopic diagnosis\\\\\\\",\\\\n          \\\\\\\"Medical management (MTX) successful 80-95% if appropriately selected\\\\\\\",\\\\n          \\\\\\\"TB-related ectopic very common in India; bilateral involvement frequent\\\\\\\",\\\\n          \\\\\\\"Threatened abortion with viable appearance still 25-30% miscarriage risk\\\\\\\",\\\\n          \\\\\\\"APS requires aspirin + LMWH throughout pregnancy for success\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"DC Dutta\\\\\\\", chapter: \\\\\\\"Ectopic Pregnancy and Abortion\\\\\\\", edition: \\\\\\\"8th\\\\\\\" },\\\\n          { book: \\\\\\\"Nelson Textbook of Obstetrics\\\\\\\", chapter: \\\\\\\"Early Pregnancy Complications\\\\\\\", edition: \\\\\\\"2020\\\\\\\" }\\\\n        ]\\\\n      }\\\\n    ]\\\\n  }\\\\n];\\\\n\\\"\""
-}
-}
-}
-}
-];
-];
-];
+        contentMd: `# Ectopic Pregnancy & Abortion - Foundation
+
+## Ectopic Pregnancy Definition
+- **Implantation of gestational sac** outside the uterine cavity
+- **Incidence**: 1-2% of pregnancies globally; higher in India (2-3% in some centers)
+- **Risk of maternal mortality**: 4-10 times higher than intrauterine pregnancy
+
+## Sites of Ectopic Pregnancy
+**Tubal** (95-98%):
+- Ampullary (70%): Ampulla of fallopian tube, most common site
+- Isthmic (12%): Narrower segment, ruptures earlier
+- Fimbrial (11%): Distal end, may spontaneously abort into pelvis
+- Interstitial (rare but dangerous): Within myometrium, ruptures later
+
+**Extratubal** (2-5%):
+- Cervical: Rare, catastrophic hemorrhage if ruptured
+- Ovarian: Rare, ruptures early
+- Abdominal: Secondary implantation after tubal rupture
+- Heterotopic: Both intrauterine and ectopic (rare, 1:30,000)
+
+## Risk Factors for Ectopic Pregnancy
+**Tubal factors**:
+- Previous salpingitis/PID (10-30x increased risk)
+- Pelvic TB (very high risk in India)
+- Intrauterine device use (5x if pregnancy occurs with IUCD in situ)
+- Post-tubal ligation/previous tubal surgery
+- Endometriosis with tubal involvement
+- Congenital tubal anomalies
+
+**Systemic factors**:
+- Advanced maternal age (>35 years)
+- Smoking (affects tubal motility)
+- Assisted reproductive techniques (higher relative risk)
+- Ectopic pregnancy history (25% recurrence risk)
+
+**Hormonal factors**:
+- Progesterone resistance (altered endometrial receptivity)
+
+## Abortion Definition & Classification
+**Abortion** = Termination of pregnancy before viability (before 20 weeks or <500g fetal weight)
+- **Spontaneous abortion** (miscarriage): Unintended loss
+- **Induced abortion** (termination): Intentional loss
+- **Threatened abortion**: Bleeding <20 weeks, cervix closed, viable pregnancy
+- **Inevitable abortion**: Bleeding <20 weeks, dilated cervix, may have POC in canal
+- **Incomplete abortion**: Partial expulsion of POC
+- **Complete abortion**: Complete expulsion of POC, closed cervix
+- **Missed abortion**: Fetal death <20 weeks without expulsion
+- **Septic abortion**: Abortion with infection (fever, foul-smelling discharge)
+
+## Incidence of Abortion
+- **Clinical miscarriage**: 15-20% of clinically recognized pregnancies
+- **Biochemical loss**: Additional 10-15% (hCG rise but no ultrasound pregnancy)
+- **First trimester loss**: 50% of all pregnancies (including pre-implantation)
+- **Recurrent miscarriage**: Loss of 3+ consecutive pregnancies (affects 1-2% of couples)
+
+## Causes of Spontaneous Abortion
+**First Trimester** (most common):
+- Chromosomal abnormalities: 50-60% (trisomies, monosomy X)
+- Maternal age >35: Exponential increase in chromosomal risk
+- Uterine anomalies: Septate uterus (most common), unicornuate uterus
+- Immunological: Antiphospholipid syndrome, autoimmune thyroiditis
+- Infections: CMV, toxoplasma, listeria, rubella (rare in India with vaccination)
+- Endocrine: Thyroid disease, PCOS, uncontrolled diabetes
+
+**Second Trimester**:
+- Cerclage incompetence
+- Uterine anomalies
+- Infections: Listeria, toxoplasma
+- Placental abnormalities`,
+        mnemonics: [
+          { text: "Ectopic sites: COAT (Cornual, Ovarian, Abdominal, Tubal)", explanation: "Less common, tubal is most common" },
+          { text: "Ectopic risk: Previous PID, TB (high in India), Post-tubal surgery, IUCD, Age >35", explanation: "Major risk factors" },
+          { text: "Abortion classification: TIEMC", explanation: "Threatened, Inevitable, Incomplete, missed, Complete" },
+          { text: "Chromosomal abnormality in 50-60% first trimester losses", explanation: "Main cause of early miscarriage" }
+        ],
+        keyPoints: [
+          "Ectopic pregnancy incidence 1-2% (higher in India 2-3%)",
+          "Tubal pregnancy accounts for 95-98% of ectopic pregnancies",
+          "PID and pelvic TB highest risk factors for ectopic in India",
+          "Clinical miscarriage occurs in 15-20% of recognized pregnancies",
+          "Chromosomal abnormalities cause 50-60% of first trimester losses",
+          "Missed abortion is asymptomatic fetal death (<20 weeks) without expulsion"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Ectopic Pregnancy and Abortion", edition: "9th" },
+          { book: "Sheila Balakrishnan", chapter: "Abnormalities of Early Pregnancy", edition: "3rd" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "ectopic-abortion-layer-2-mechanism",
+        title: "Ectopic Pregnancy & Abortion - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pathophysiology of ectopic implantation, tubal rupture, abortion mechanisms, and recurrent miscarriage causes.",
+        contentMd: `# Ectopic Pregnancy & Abortion - Mechanism
+
+## Ectopic Pregnancy Pathophysiology
+**Tubal environment abnormalities**:
+- **Altered tubal motility**: Reduced ciliary action (from PID scarring, smoking)
+- **Tubal strictures**: From infection (TB, gonorrhea), endometriosis, surgery
+- **Diverticula**: Blind pouches in tube where embryo lodges
+- **Impaired peristalsis**: Due to scarring or muscular dysfunction
+
+**Altered implantation site**:
+- Compromised tubal endometrium (inadequate for decidualization)
+- Reduced blood supply at implantation site
+- Abnormal placentation occurs (trophoblast invades tubal wall deeper than normal)
+
+**Embryonic factors**:
+- Genetic/chromosomal abnormalities (50-60% have abnormal karyotype)
+- Impaired growth → Pregnancy non-viable but continues to grow in tube
+
+## Tubal Rupture Mechanism
+**Progressive growth**:
+- Trophoblast invades tubal muscularis
+- Placental tissue erodes tubal wall blood vessels
+- Progressive hemorrhage weakens wall
+- Rupture occurs when pressure exceeds wall tensile strength
+
+**Timing of rupture**:
+- Ampullary: Rupture at 12-16 weeks (more compliant tissue)
+- Isthmic: Rupture at 6-8 weeks (less compliant, narrower)
+- Interstitial: Rupture at 16+ weeks (thick muscular wall supports longer)
+
+**Hemorrhage**:
+- Rapid bleeding from tubal vessels (can lose 1-2L rapidly)
+- Peritoneal irritation → severe pain
+- Shock from hypovolemia (cardiac output drops, BP falls)
+
+## Abortion Mechanisms
+
+**Threatened Abortion**:
+- Subchorionic hemorrhage (bleeding between chorion and decidua)
+- Placental abruption (partial separation)
+- Cervical irritability/bleeding (may be incidental)
+- 50% progress to complete loss; 50% continue viable pregnancy
+
+**Inevitable Abortion**:
+- Placental separation ≥25% surface
+- Cervical dilation signals inevitable loss
+- Fetal death likely if not already present
+- Intrauterine infection risk increases over time
+
+**Incomplete Abortion**:
+- Partial expulsion of products (POC)
+- Retained tissue in uterus → continued bleeding
+- Uterine atony from inadequate contraction
+- Infection risk if tissue retained >24 hours
+
+**Missed Abortion**:
+- Embryonic death but no uterine contractions/bleeding
+- Retained POC triggers maternal anticoagulation (DIC risk if retained >4 weeks)
+- Risk of infection increases with retention time
+- Progesterone withdrawal triggers eventual uterine response
+
+**Septic Abortion**:
+- Bacterial invasion of retained POC (anaerobes, gram-negatives)
+- Endometritis → Myometritis → Septicemia (in severe cases)
+- Toxin release → Shock, DIC, multi-organ failure
+- Can rapidly deteriorate (gram-negative septic shock)
+
+## Chromosomal Abnormalities in Abortion
+**Common aneuploidies**:
+- **Trisomy 16**: Most common aneuploid finding (100% lethal, early loss 15%)
+- **Trisomy 21, 18, 13**: Second trimester losses
+- **Monosomy X (45,X)**: Second most common (15-20% of chromosomal losses)
+- **Triploidy (69,XXX)**: Polyploidy, usually loses by 20 weeks
+- **Balanced translocations**: 1-2% of recurrent miscarriage couples
+
+**Maternal age effect**:
+- Age 20: 1% chromosomal risk
+- Age 35: 5-10% chromosomal risk
+- Age 40: 20-30% chromosomal risk
+- Age 45: 50% chromosomal risk
+
+## Immunological Causes of Recurrent Miscarriage
+
+**Antiphospholipid Syndrome** (APS):
+- Antiphospholipid antibodies → Placental thrombosis/infarction
+- Mechanism: Antibodies against phospholipid-binding proteins
+- Recurrent loss even with normal karyotype
+- Pregnancy-associated thrombosis common
+
+**Autoimmune**:
+- Anti-thyroid antibodies (TPO, thyroglobulin)
+- Elevated NK cells in endometrium
+- TNF-α overproduction`,
+        mnemonics: [
+          { text: "Ectopic rupture timing: AIM (Ampullary at 12-16 weeks, Isthmic at 6-8, Interstitial >16)", explanation: "Based on tubal compliance" },
+          { text: "Abortion types by tissue expulsion: TIIMS", explanation: "Threatened (intact), Inevitable (opening), Incomplete (partial), Missed (none), Septic (infected)" },
+          { text: "Trisomy 16 most common aneuploid abortion (100% lethal)", explanation: "Most frequent chromosomal finding" },
+          { text: "APS mechanism: Antiphospholipid abs → Placental thrombosis → Miscarriage", explanation: "Immunologic cause" }
+        ],
+        keyPoints: [
+          "Tubal implantation results from tubal dysfunction (reduced motility, strictures, diverticula)",
+          "Trophoblast invades tubal muscularis deeper than normal → Progressive rupture risk",
+          "Ampullary tubes rupture later (12-16 weeks) than isthmic (6-8 weeks)",
+          "50% threatened abortions continue as viable pregnancies; 50% abort",
+          "Chromosomal abnormalities present in 50-60% of first trimester losses",
+          "Maternal age exponentially increases chromosomal risk after age 35",
+          "Antiphospholipid syndrome causes recurrent loss via placental thrombosis/infarction"
+        ],
+        textbookRefs: [
+          { book: "Williams Obstetrics", chapter: "Abnormalities of Early Pregnancy", edition: "26th" },
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Pathophysiology of Ectopic and Abortion", edition: "9th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "ectopic-abortion-layer-3-clinical",
+        title: "Ectopic Pregnancy & Abortion - Clinical",
+        estimatedMinutes: 35,
+        summary: "Clinical diagnosis, imaging, management of ectopic pregnancy, and management of different abortion types.",
+        contentMd: `# Ectopic Pregnancy & Abortion - Clinical
+
+## Clinical Presentation of Ectopic Pregnancy
+
+**Classic Triad**:
+- Amenorrhea (2-8 weeks)
+- Vaginal bleeding (watery, dark, continuous)
+- Pelvic pain (unilateral, colicky initially)
+
+**Atypical presentation** (50% of cases):
+- No amenorrhea if irregular cycles
+- Gastrointestinal symptoms (GI bleed with abdominal pain)
+- No pelvic pain if rupture occurs suddenly
+
+**Signs of rupture**:
+- Acute severe pain (worse with movement, Valsalva)
+- Peritoneal signs (guarding, rebound tenderness)
+- Shoulder tip pain (from subdiaphragmatic blood irritating phrenic nerve)
+- Tachycardia, hypotension (shock from hemorrhage)
+- Pallor, cold extremities
+
+## Diagnosis of Ectopic Pregnancy
+
+**Serum beta-hCG**:
+- Positive (>5 mIU/mL confirms pregnancy)
+- Slower rise than intrauterine (doubles every 72+ hours vs 48-72 hours)
+- Plateaus earlier (4,000-6,000 mIU/mL vs continues rising to 100,000+)
+- Low hCG may rupture ectopic before suspected
+
+**Ultrasound findings**:
+- **No intrauterine pregnancy** despite positive hCG (key finding)
+- Transvaginal most sensitive for early detection
+- Empty gestational sac in uterus, but hCG positive → Ectopic likely
+- Direct visualization of ectopic sac (tubal rings, doppler flow)
+- Free fluid in pouch of Douglas (suggests rupture/hemorrhage)
+
+**Serial hCG**:
+- Abnormal rise (not doubling, slower rise)
+- Plateau or decline (suggests degenerating pregnancy)
+- Values >6,000 without intrauterine pregnancy → Ectopic very likely
+
+## Management of Ectopic Pregnancy
+
+**Medical Management** (Methotrexate):
+- **Indication**: Hemodynamically stable, unruptured, hCG <5,000, patient compliant
+- **Regimen**: Methotrexate 50 mg/m² IM single dose
+- **Mechanism**: Inhibits dihydrofolate reductase → Blocks DNA synthesis → Trophoblast death
+- **Success rate**: 80-90% if hCG <5,000; falls with higher hCG
+- **Monitoring**: hCG on days 4 and 7 (should decline 15%); repeat MTX if not declined
+- **Follow-up**: Serial hCG weekly until <5 mIU/mL
+- **Contraindications**: Rupture, hemodynamic instability, abnormal liver/renal function
+
+**Surgical Management**:
+- **Emergency LSCS/Laparotomy**: Rupture with shock (blood loss >1L)
+- **Laparoscopic salpingostomy**: Unruptured ectopic, tube preservation desired
+  - Linear incision over ectopic, suction out trophoblast
+  - Success rate: 70-80%
+  - Complications: Incomplete removal (needs monitoring)
+
+- **Laparoscopic salpingectomy**: Rupture, recurrent ectopic same tube, tube severely damaged
+  - Removes entire tube
+  - 20-25% ectopic risk in remaining tube (already compromised from PID/TB)
+
+## Clinical Management of Abortion
+
+**Threatened Abortion**:
+- Pelvic ultrasound: Confirm intrauterine pregnancy, measure CRL, assess for fetal cardiac activity
+- Hematocrit: Assess blood loss
+- RhD status: Rh-negative women need anti-D prophylaxis 500 IU/mL if <12 weeks (standard dose)
+- Expectant management: Bleeding often stops; 50% continue as viable pregnancy
+- Activity: Bed rest not proven beneficial in trials, but often recommended
+
+**Inevitable Abortion**:
+- Expectations: Complete expulsion likely but may take days
+- Uterine contractions will increase as cervix dilates
+- Monitor for hemorrhage, signs of shock
+- Analgesics for pain management
+- Prepare for D&C if incomplete expulsion after 24 hours
+
+**Incomplete Abortion**:
+- Confirmed by ultrasound (retained POC <15mm usually normal)
+- Option 1: Expectant management (50% expel remaining tissue spontaneously over 1-2 weeks)
+- Option 2: Medical management: Misoprostol 600 mcg sublingual (PGE1 analog, causes contractions)
+  - Success rate: 80% within 24 hours
+  - Cost-effective, accessible
+  - Contraindication: Suspected rupture
+- Option 3: Surgical D&C (if heavy bleeding, hemodynamic instability, patient preference)
+  - Suction evacuation under anesthesia
+  - Most complete removal
+  - Risk: Uterine perforation (rare, 0.1%)
+
+**Missed Abortion**:
+- Ultrasound confirms: No fetal cardiac activity, CRL <20 mm, no growth on serial scan
+- Expectant management: 20-50% expel spontaneously within 2 weeks
+- Medical management: Misoprostol 600 mcg (takes longer than incomplete, 3-7 days typical)
+- Surgical D&C: If no expulsion after 2 weeks (risk of DIC increases with retention)
+
+**Septic Abortion**:
+- **Emergency management required**:
+  - IV antibiotics immediately (broad-spectrum: ceftriaxone + metronidazole + gentamicin or similar)
+  - Fluid resuscitation (may be in septic shock)
+  - Blood cultures before antibiotics
+  - Correct coagulopathy (may have DIC)
+- Emergency uterine evacuation (D&C or LSCS if ruptured)
+- ICU monitoring if septic shock
+
+## Recurrent Miscarriage Workup & Management
+
+**Workup** (after 2-3 losses):
+- Karyotype: Both partners (balanced translocation in 3-5%)
+- Uterine imaging: Transvaginal ultrasound or hysteroscopy (polyps, fibroids, septum)
+- Thrombophilia screen: Activated protein C resistance, Factor V Leiden, antithrombin, protein C/S
+- Antiphospholipid antibodies: Lupus anticoagulant, anticardiolipin, anti-β2-glycoprotein
+- Thyroid function: TSH, anti-TPO antibodies
+- Glucose tolerance: Rule out diabetes
+
+**Management based on cause**:
+- Cervical incompetence: Cervical cerclage at 12-14 weeks
+- APS: Aspirin + LMWH throughout pregnancy
+- Thyroid disease: Levothyroxine if hypothyroid; levothyroxine if TPO positive (even if normal TSH)
+- Balanced translocation: Genetic counseling; PGD if considering IVF
+- Unexplained recurrent loss: Empiric hCG support (progesterone) though evidence mixed`,
+        mnemonics: [
+          { text: "Ectopic pain+pelvic mass+positive hCG but no IUP = ECTOPIC", explanation: "Classic diagnosis" },
+          { text: "Ectopic hCG rise slower, plateaus lower than IUP", explanation: "Key lab finding" },
+          { text: "MTX success >80% if hCG <5,000, unruptured, stable", explanation: "Medical management criteria" },
+          { text: "Incomplete abortion: Options EMS (Expectant, Medical-misoprostol, Surgical-D&C)", explanation: "Management choices" }
+        ],
+        keyPoints: [
+          "Ectopic classic triad: amenorrhea, bleeding, pelvic pain (but 50% atypical presentation)",
+          "No intrauterine pregnancy on ultrasound despite positive hCG is key diagnostic finding",
+          "hCG rise slower in ectopic (>72 hours doubling) vs intrauterine (48-72 hours)",
+          "Methotrexate successful 80-90% if hCG <5,000 and unruptured",
+          "50% threatened abortions continue as viable pregnancies; expectant management safe",
+          "Septic abortion is obstetric emergency requiring immediate antibiotics and evacuation",
+          "Recurrent miscarriage workup includes karyotype, thrombophilia, APS screening, thyroid"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Management of Ectopic and Abortion", edition: "9th" },
+          { book: "FOGSI Clinical Guidelines", chapter: "Ectopic Pregnancy and Early Pregnancy Loss", edition: "2024" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "ectopic-abortion-layer-4-exam",
+        title: "Ectopic Pregnancy & Abortion - Exam Prep",
+        estimatedMinutes: 25,
+        summary: "Exam-focus: Diagnostic criteria, management algorithms, complications, and India-specific considerations.",
+        contentMd: `# Ectopic Pregnancy & Abortion - Exam Prep
+
+## Ectopic Pregnancy Diagnosis Criteria
+
+**Classic Triad** (but only present in 50%):
+- Amenorrhea
+- Abnormal vaginal bleeding (watery, dark, continuous)
+- Pelvic pain
+
+**Diagnostic findings**:
+- Positive pregnancy test (hCG >5 mIU/mL)
+- No intrauterine gestational sac on ultrasound (key finding)
+- Direct visualization of ectopic pregnancy on imaging
+- Abnormal hCG rise (doubling time >72 hours)
+
+**Discriminatory hCG zone**:
+- hCG >6,500 mIU/mL without visible intrauterine pregnancy → Ectopic likely
+- Below this, may have very early intrauterine pregnancy
+
+## Ectopic Sites & Risk of Rupture
+
+| Site | Frequency | Time to Rupture |
+|------|-----------|-----------------|
+| **Ampullary** | 70% | 12-16 weeks |
+| **Isthmic** | 12% | 6-8 weeks |
+| **Fimbrial** | 11% | 4-6 weeks |
+| **Interstitial** | 2% (dangerous) | 16+ weeks |
+| **Cervical** | Rare | Can rupture suddenly |
+
+## Management Algorithm
+
+**Unruptured, Stable, hCG <5,000**:
+1. Methotrexate 50 mg/m² IM
+2. Monitor hCG day 4, 7 (should decline 15%)
+3. Repeat MTX if hCG not declining
+4. Serial hCG until undetectable
+5. Success rate: 80-90%
+
+**Unruptured, Stable, hCG 5,000-10,000**:
+1. Laparoscopic salpingostomy (tube-sparing)
+2. Success rate: 70-80%
+3. Monitor for incomplete removal (hCG may not disappear)
+
+**Ruptured or Unstable**:
+1. Emergency surgical intervention
+2. Laparotomy (exploratory, not laparoscopic)
+3. Salpingectomy (tube removal, due to massive bleeding)
+4. Blood transfusion likely needed
+
+## Abortion Classification & Management
+
+| Type | Definition | Management |
+|------|-----------|-----------|
+| **Threatened** | Bleeding <20wks, closed cervix, viable | Expectant; 50% continue |
+| **Inevitable** | Bleeding <20wks, dilated cervix | Expectant or D&C |
+| **Incomplete** | Partial POC expulsion | Expectant, Medical (Misoprostol), or D&C |
+| **Complete** | Complete POC expulsion | Confirm with ultrasound; no further intervention |
+| **Missed** | Fetal death, no expulsion | Expectant, Medical, or D&C |
+| **Septic** | Abortion with infection | Emergency antibiotics + evacuation |
+
+## Medical Management of Early Pregnancy Loss
+
+**Misoprostol**:
+- **Dose**: 600 mcg sublingual (or 800 mcg vaginally)
+- **Timing**: Can repeat in 24 hours if no response
+- **Efficacy**: 80% successful expulsion within 24-48 hours
+- **Advantage**: Non-invasive, cost-effective, accessible
+- **Failure**: 15-20% require D&C for complete expulsion
+- **Contraindication**: Ectopic (uterine contractions worsen bleeding)
+
+**Methotrexate** (for ectopic):
+- **Mechanism**: Blocks dihydrofolate reductase
+- **Regimen**: 50 mg/m² IM single dose (or escalating if failed)
+- **Success**: 80-90% if hCG <5,000
+- **Monitoring**: Serial hCG q3-4 days until <5 mIU/mL
+- **Avoid pregnancy** 3 months after MTX (teratogenic)
+
+## Rh Prophylaxis in Early Pregnancy Loss
+
+**Rh-negative women** (Rh D-negative):
+- Threatened abortion <12 weeks: 100-120 IU/kg (usually 500 IU)
+- Threatened abortion ≥12 weeks: 100-120 IU/kg (usually 1,000-1,500 IU)
+- After D&C: Standard dose (500 IU) if <12 weeks
+- Within 72 hours of event for best efficacy
+
+## Complications of Abortion
+
+**Hemorrhage**:
+- Incomplete abortion: Retained POC prevents adequate uterine contraction
+- Uterine atony: Inadequate myometrial contractions
+- Management: D&C, uterotonics (oxytocin), blood transfusion if needed
+
+**Infection/Septic Abortion**:
+- Retained POC becomes infected (anaerobes, gram-negatives)
+- Presents with fever, foul-smelling discharge, lower abdominal pain
+- Emergency evacuation + broad-spectrum antibiotics
+- Risk of septic shock, DIC
+
+**Coagulopathy** (from Missed Abortion):
+- Retained POC >4 weeks triggers disseminated intravascular coagulation
+- Platelet consumption, fibrinogen depletion
+- Bleeding risk during eventual evacuation
+- Check CBC, coagulation panel before D&C
+
+**Asherman Syndrome** (Intrauterine Adhesions):
+- Aggressive D&C causes endometrial damage/scarring
+- Amenorrhea, reduced fertility
+- Prevention: Gentle suction evacuation, avoid curettage
+- Treatment: Hysteroscopic lysis of adhesions
+
+## India-Specific Points
+
+- **PID/TB**: Higher prevalence increases ectopic risk (2-3% vs 1-2% globally)
+- **Methotrexate availability**: Check local availability; surgical management alternative
+- **Rh prophylaxis**: Ensure anti-D available; educate Rh-negative women
+- **Recurrent loss**: Thyroid autoimmunity common in India; check anti-TPO
+- **Cost**: Expectant management cheaper than surgical (relevant in resource settings)`,
+        mnemonics: [
+          { text: "Ectopic diagnosis: No IUP + Positive hCG + Risk factors = ECTOPIC", explanation: "Key diagnostic combination" },
+          { text: "MTX success: <5,000 hCG, Unruptured, Stable = 80-90% success", explanation: "Medical management criteria" },
+          { text: "Rh prophylaxis in abortion: 500 IU <12 wks, 1,500 IU >12 wks", explanation: "Dosing by gestation" },
+          { text: "Abortion management: EMS (Expectant, Medical-misoprostol, Surgical-D&C)", explanation: "Three main options" }
+        ],
+        keyPoints: [
+          "Ectopic incidence 1-2% globally; 2-3% in India (higher PID/TB risk)",
+          "No intrauterine pregnancy on ultrasound despite positive hCG is diagnostic key",
+          "Slow hCG rise (doubling >72 hours) suggests ectopic",
+          "Methotrexate 80-90% successful if hCG <5,000 and unruptured",
+          "50% threatened abortions continue as viable pregnancies",
+          "Incomplete abortion: Misoprostol 80% effective, cheaper than D&C",
+          "Septic abortion is obstetric emergency (antibiotics + evacuation)",
+          "Rh-negative prophylaxis within 72 hours prevents sensitization"
+        ],
+        textbookRefs: [
+          { book: "NMC Standard Textbook", chapter: "Ectopic & Early Pregnancy Loss", edition: "2024" },
+          { book: "FOGSI Clinical Guidelines", chapter: "Management of Ectopic Pregnancy", edition: "2024" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "ectopic-abortion-layer-5-active-recall",
+        title: "Ectopic Pregnancy & Abortion - Active Recall",
+        estimatedMinutes: 15,
+        summary: "8 key Q&A covering ectopic diagnosis, management, abortion types, and complications.",
+        contentMd: `# Ectopic Pregnancy & Abortion - Active Recall
+
+## Questions & Answers
+
+**Q1: A 28-year-old presents with 8 weeks amenorrhea, mild vaginal bleeding, and left-sided pelvic pain. Urine pregnancy test positive. Transvaginal ultrasound shows no intrauterine gestational sac. What is the diagnosis and next step?**
+A: **Diagnosis**: Ectopic pregnancy (presumptive). No intrauterine pregnancy on ultrasound despite positive hCG is key diagnostic finding. **Next step**: (1) Serum beta-hCG quantification, (2) If hCG <6,500 → May be very early intrauterine pregnancy; repeat ultrasound in 1 week, (3) If hCG >6,500 → Ectopic very likely; proceed to management, (4) Assess hemodynamic stability, (5) Rh status (prophylaxis if negative), (6) Management based on hCG level and stability.
+
+**Q2: hCG is 3,500 mIU/mL. Ultrasound suspicious for left tubal pregnancy, patient hemodynamically stable. Appropriate management?**
+A: **Medical management with methotrexate**. Indications met: (1) hCG <5,000, (2) Unruptured ectopic, (3) Hemodynamically stable. **Regimen**: Methotrexate 50 mg/m² IM single dose. **Monitoring**: Repeat hCG on day 4 and day 7 (should decline ≥15%); if decline inadequate, repeat MTX. **Follow-up**: Serial hCG weekly until <5 mIU/mL. **Success rate**: 80-90% with these criteria. **Avoid pregnancy** for 3 months (teratogenic).
+
+**Q3: Six hours after methotrexate injection, patient develops severe acute left-sided pelvic pain, shoulder-tip pain, and becomes hypotensive (BP 90/60). What has happened and what is management?**
+A: **Diagnosis**: Tubal rupture with hemorrhage (despite MTX injection, pregnancy was probably ruptured or close to rupture). Shoulder-tip pain from subdiaphragmatic blood irritating phrenic nerve. **Management**: (1) **Emergency surgical intervention**, (2) Start large-bore IV access, two lines if possible, (3) Call OR, crossmatch blood (likely needs transfusion), (4) Exploratory laparotomy (not laparoscopy due to shock), (5) Salpingectomy (tube removal due to massive bleeding), (6) Fluid/blood resuscitation, (7) Post-op ICU if severe hemorrhage.
+
+**Q4: A 26-year-old at 10 weeks presents with vaginal bleeding and pelvic pain. Ultrasound shows intrauterine gestational sac, but cervix is 2 cm dilated. hCG 85,000 mIU/mL. Fetal cardiac activity present. Diagnosis and counseling?**
+A: **Diagnosis**: **Inevitable abortion** (cervical dilation suggests inevitable loss, though cardiac activity present suggests viable pregnancy at moment). **Counseling**: "Your cervix is opening, which suggests the pregnancy is likely to be lost. Even though there is a heartbeat now, the risk of continuing is very high (~95% will abort). We can: (1) Wait for natural expulsion (expectant), (2) Use medication to help with expulsion, or (3) Have a surgical procedure (D&C). If you want to try to continue, high risk of infection if cervix stays open." **Management**: Most inevitably abort within 48 hours; prepare for D&C if needed.
+
+**Q5: A 32-year-old with threatened abortion (6 weeks, light vaginal bleeding, closed cervix, viable pregnancy on ultrasound) asks if activity restrictions help. What is the evidence?**
+A: **Evidence**: Bed rest/activity restriction NOT proven beneficial in randomized trials. Threat of miscarriage primarily determined by embryonic viability (usually chromosomal issues), not by maternal activity. **Counseling**: "There is no scientific evidence that bed rest prevents miscarriage. You can continue normal activities. However, some women choose bed rest for psychological reassurance. About 50% of threatened abortions continue as viable pregnancies. We'll repeat ultrasound in 1-2 weeks to confirm viability." **Practical**: Some recommend avoiding heavy lifting, strenuous exercise out of abundance of caution.
+
+**Q6: A woman with incomplete abortion (partially expelled POC confirmed on ultrasound) declines surgery. She is hemodynamically stable, minimal bleeding. Options?**
+A: **Option 1: Expectant management** (observation): 50% expel remaining tissue spontaneously over 1-2 weeks; 50% need intervention. Monitor for infection, excessive bleeding. **Option 2: Medical management (Misoprostol)**: 600 mcg sublingual or 800 mcg vaginally. Success rate 80% within 24-48 hours. Cheaper than surgery, non-invasive, can be done as outpatient. Can repeat in 24 hours if no response. **Option 3: Surgical D&C**: Most certain, fastest, complete removal in single procedure. Risk of uterine perforation minimal (0.1%). **Recommendation**: Medical management reasonable if patient agrees to monitoring and follow-up ultrasound.
+
+**Q7: A 25-year-old Rh-negative woman at 10 weeks has complete abortion (confirmed complete expulsion on ultrasound, closed cervix, minimal POC). What about anti-D prophylaxis?**
+A: **Yes, Rh prophylaxis indicated**. **Rationale**: Risk of fetal-maternal hemorrhage (FMH) even in early pregnancy. Sensitization risk ~5% without prophylaxis. **Dose**: At ≥12 weeks, use standard dose (1,000-1,500 IU or 100-120 IU/kg). At <12 weeks (this case), use reduced dose (500 IU or 50-100 IU/kg). **Timing**: Within 72 hours of event (ideally within 24 hours for best efficacy). **Direct antiglobulin test**: Not needed routinely in first trimester. **Future pregnancies**: Ensure Rh-negative women with partner Rh-positive known for potential sensitization risk.
+
+**Q8: After 3 consecutive pregnancy losses (8 weeks, 10 weeks, 9 weeks), couple seeks recurrent miscarriage evaluation. Outline the workup.**
+A: **Workup** (after 2-3 losses recommended): (1) **Karyotype both partners**: Rule out balanced translocation (3-5% of recurrent loss). (2) **Uterine anatomy**: Transvaginal ultrasound or hysteroscopy (septate uterus, polyps, fibroids, cervical insufficiency). (3) **Thrombophilia screening**: Activated protein C resistance, Factor V Leiden, antithrombin, protein C/S (if recurrent losses or prior thrombosis). (4) **Antiphospholipid antibodies**: Lupus anticoagulant, anticardiolipin IgG/IgM, anti-β2-glycoprotein (if 2+ losses). (5) **Thyroid**: TSH, anti-TPO (even if TSH normal, anti-TPO positive associated with loss). (6) **Glucose tolerance**: Screen for uncontrolled diabetes. (7) **Hormones**: Progesterone if luteal phase defect suspected (though evidence mixed). **Findings guide management**: Cerclage if cervical incompetence, APS → Aspirin + LMWH, Thyroid disease → Levothyroxine, Balanced translocation → Genetic counseling.`,
+        mnemonics: [],
+        keyPoints: [
+          "Ectopic diagnosis: No IUP on ultrasound + positive hCG + risk factors",
+          "Slow hCG rise (>72 hour doubling time) suggests ectopic",
+          "Methotrexate 80-90% successful if hCG <5,000 and unruptured",
+          "Tubal rupture presents with acute pain, shock, shoulder-tip pain",
+          "50% threatened abortions continue as viable pregnancies",
+          "Incomplete abortion: Misoprostol 80% effective, alternatives to surgery",
+          "Recurrent loss workup includes karyotype, thrombophilia, APS, thyroid",
+          "Rh prophylaxis within 72 hours for all Rh-negative women with loss"
+        ],
+        textbookRefs: [
+          { book: "DC Dutta's Textbook of Obstetrics", chapter: "Ectopic & Abortion Management", edition: "9th" },
+          { book: "FOGSI Clinical Guidelines", chapter: "Early Pregnancy Loss", edition: "2024" }
+        ]
+      }
+    ]
+  }
 ];
