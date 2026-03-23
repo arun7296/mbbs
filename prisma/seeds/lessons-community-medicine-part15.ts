@@ -466,15 +466,1561 @@ export const cmLessonsPart15: TopicLessons[] = [
       },
     ],
   },
-];
-        contentMd: "# Housing & Ventilation Standards\n\n## Definition of Adequate Housing\n- Provides protection from weather and environmental hazards\n- Has adequate space without overcrowding\n- Ensures good sanitation and hygiene\n- Maintains proper ventilation and natural light\n- Is affordable and accessible\n\n## Overcrowding Index (Floor Space Index)\n- Measures density of population in a dwelling\n- Normal standard: 40 sq feet per person (India standard)\n- **Overcrowded housing**: < 40 sq feet per person\n- Effects of overcrowding: ↑ spread of communicable diseases, poor hygiene, mental stress\n\n## Ventilation Requirements\n\n### Natural Ventilation\n- Windows on at least 2 opposite walls for cross-ventilation\n- Window area = 1/10th of floor area\n- Height of ceiling ≥ 10 feet (residential), ≥ 12-14 feet (institutional)\n\n### Air Changes Required\n| Space Type | Recommended Air Changes/Hour |\n|------------|-----|\n| Living room | 3-4 |\n| Bedroom | 2-3 |\n| Kitchen | 6-8 |\n| Bathroom | 8-10 |\n| Hospital ward | 6-12 |\n\n## Natural Lighting Standards\n- Window area = 1/10th to 1/6th of floor area\n- At least one window facing outside\n- Skylights in addition to windows\n\n## Components of Housing Standards (India)\n1. **Water supply**: Piped water, safe drinking water source\n2. **Sanitation**: Indoor or nearby toilets with proper drainage\n3. **Ventilation**: Adequate windows and air movement\n4. **Structure**: Safe building materials, structural stability\n5. **Safety**: Proper stairs, handrails, fire safety measures\n6. **Overcrowding**: ≥ 40 sq feet per person,\n        mnemonics: [\n          { text: \"40 Sq Feet for Freedom\", explanation: \"Normal housing standard in India: minimum 40 square feet per person to avoid overcrowding.\" },\n          { text: \"Window 1/10th, Ventilation 3-4 per Hour\", explanation: \"Window area = 1/10th of floor area; Living room requires 3-4 air changes per hour for good ventilation.\" }\n        ],\n        keyPoints: [\n          \"Overcrowding index (floor space index): 40 sq feet per person is the minimum standard in India\",\n          \"Adequate housing requires water supply, sanitation, ventilation, structure, and safety\",\n          \"Window area should be 1/10th to 1/6th of floor area for natural light\",\n          \"Cross-ventilation achieved by windows on at least 2 opposite walls\",\n          \"Air changes required vary by room: living room 3-4, bathroom 8-10, kitchen 6-8 per hour\",\n          \"Ceiling height ≥ 10 feet residential, ≥ 12-14 feet institutional spaces\"\n        ],\n        textbookRefs: [{ book: \"Park's Textbook of Preventive & Social Medicine\", chapter: \"Housing & Health\", edition: \"26th\" }] },\n\n      { layer: 2, slug: \"housing-ventilation-mechanism\", title: \"Housing & Ventilation - Mechanism\", estimatedMinutes: 30,\n        summary: \"Mechanisms by which poor housing and inadequate ventilation contribute to disease transmission, respiratory issues, and poor health outcomes. Impact of environmental factors on disease burden.\",\n        contentMd: "# How Housing & Ventilation Affect Health\\n\\n## Disease Transmission in Overcrowded Housing\\n- **Airborne diseases** (TB, measles, influenza): Inadequate ventilation → ↑ pathogen concentration\\n- **Fomite transmission**: Poor sanitation + overcrowding → ↑ contact spread\\n- **Vector-borne**: Poor structure → mosquito/bug entry; stagnant water in poorly drained houses\\n\\n## Respiratory Impact\\n- Poor ventilation → ↑ CO₂, ↓ O₂\\n- Indoor air pollutants from cooking fires, biomass fuel\\n- Moisture and mold growth in damp houses → asthma, allergies\\n- Increased respiratory symptoms, COPD risk\\n\\n## Humidity & Thermal Comfort\\n- Excessive humidity (> 60%) → mold, dust mites\\n- Poor thermal regulation → heat stress in summer, cold injuries in winter\\n- Effects: Respiratory infections, heat exhaustion, exacerbation of chronic diseases\\n\\n## Social & Mental Health Impact\\n- Overcrowding → reduced privacy, increased family stress\\n- Poor living conditions → depression, anxiety, behavioral issues\\n- Child development affected by inadequate play space\\n\\n## Pathways: Housing Quality → Disease → Disability\\n1. Inadequate ventilation → respiratory pathogen exposure → TB, ALRI\\n2. Poor sanitation + overcrowding → diarrheal disease → malnutrition in children\\n3. Damp housing → asthma exacerbation\\n4. Poor structure → injury risk (falls, burns),\\n        mnemonics: [\\n          { text: \\\"Poor Housing = Poor Health (P²)\\\", explanation: \\\"Overcrowding and inadequate ventilation increase disease transmission, respiratory issues, and stress-related health problems.\\\" }\\n        ],\\n        keyPoints: [\\n          \\\"Airborne diseases spread more rapidly in poorly ventilated spaces due to ↑ pathogen concentration\\\",\\n          \\\"Overcrowding increases contact transmission of communicable diseases\\\",\\n          \\\"Poor ventilation leads to ↑ indoor CO₂, mold growth, and respiratory symptoms\\\",\\n          \\\"Humidity > 60% promotes mold and dust mite proliferation\\\",\\n          \\\"Inadequate housing contributes to malnutrition, respiratory infections, and injuries\\\",\\n          \\\"Mental health effects include depression and behavioral issues in crowded conditions\\\"\\n        ],\\n        textbookRefs: [{ book: \\\"Park's Textbook of Preventive & Social Medicine\\\", chapter: \\\"Housing & Health\\\", edition: \\\"26th\\\" }] },\\n\\n      { layer: 3, slug: \\\"housing-ventilation-clinical\\\", title: \\\"Housing & Ventilation - Clinical\\\", estimatedMinutes: 20,\\n        summary: \\\"Clinical implications of poor housing: increased TB in slums, asthma exacerbation, vector-borne disease clusters. Assessment tools for housing quality and interventions in Indian context.\\\",\\n        contentMd: "# Clinical & Public Health Implications\\\\n\\\\n## Housing Quality Assessment\\\\n- **Linseed Index**: Crude measure of housing quality based on materials\\\\n- **Housing density index**: Population per room\\\\n- **Physical inspection**: Walls, roof, floor, doors, windows, water source, sanitation\\\\n\\\\n## Slum Housing & TB Transmission\\\\n- Slums in India: High overcrowding, poor ventilation\\\\n- **Cluster transmission of TB**: Higher secondary attack rate in slum settings\\\\n- **Delayed diagnosis**: Delayed-care seeking + poor access → advanced TB at presentation\\\\n- **Epidemiological field investigation**: Identify contacts in household, workplace for prophylaxis\\\\n\\\\n## Asthma in Poorly Ventilated Homes\\\\n- **Triggers in poor housing**: Dust, mold, damp conditions\\\\n- **Clinical pattern**: Symptoms worse in winter or during monsoon\\\\n- **Management**: Improve ventilation, reduce dust exposure, optimize medication\\\\n\\\\n## Vector-Borne Diseases\\\\n- **Dengue/Chikungunya**: Poor drainage creates breeding sites; poor screening\\\\n- **Malaria in tribal areas**: Traditional houses with gaps in walls/roof\\\\n- **Intervention**: Screen repair programs, water container management\\\\n\\\\n## Interventions in Indian Settings\\\\n\\\\n### Individual/Household\\\\n- Home environment assessment and counseling\\\\n- Improve ventilation and natural light\\\\n- Water storage and sanitation improvements\\\\n- Smoke management (cooking stove improvement)\\\\n\\\\n### Community\\\\n- Slum upgradation programs\\\\n- Providing construction materials subsidies\\\\n- Regulatory enforcement of building codes in urban areas\\\\n- Disaster-resistant housing in vulnerable areas\\\\n\\\\n### Policy Level (India)\\\\n- **PMAY-G (Pradhan Mantri Awas Yojana - Gramin)**: Housing for rural poor\\\\n- **PMAY-U**: Urban housing scheme\\\\n- **Building codes**: National Building Code standards\\\\n\\\\n## Medicolegal Aspects\\\\n- Unfitness of house for habitation (poor ventilation, sanitation)\\\\n- Work-related housing standards (worker colonies, hospitals)\\\\n- Compensatory liability in injury cases related to poor housing,\\\\n        mnemonics: [\\\\n          { text: \\\\\\\"VENTS: Ventilation, Elimination of overcrowding, Natural light, Temperature control, Sanitation\\\\\\\", explanation: \\\\\\\"Five key components of adequate housing quality assessment and improvement.\\\\\\\" }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"TB transmission clusters common in overcrowded slums with poor ventilation\\\\\\\",\\\\n          \\\\\\\"Asthma symptoms often worse in poorly ventilated homes, especially during monsoon\\\\\\\",\\\\n          \\\\\\\"Vector-borne disease clusters linked to poor drainage and lack of window screening\\\\\\\",\\\\n          \\\\\\\"Housing assessment includes density index, physical inspection of structure, and sanitation survey\\\\\\\",\\\\n          \\\\\\\"PMAY-G and PMAY-U are major government schemes for housing improvement in India\\\\\\\",\\\\n          \\\\\\\"Interventions require multi-level approach: household, community, and policy levels\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [{ book: \\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\", chapter: \\\\\\\"Housing & Health\\\\\\\", edition: \\\\\\\"26th\\\\\\\" }] },\\\\n\\\\n      { layer: 4, slug: \\\\\\\"housing-ventilation-exam\\\\\\\", title: \\\\\\\"Housing & Ventilation - Exam Prep\\\\\\\", estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield facts on housing standards, overcrowding index, ventilation requirements, and common questions on public health interventions.\\\\\\\",\\\\n        contentMd: "# Exam High Yield\\\\\\\\n\\\\\\\\n## One-Liners\\\\\\\\n- Minimum floor space per person: **40 sq feet** (India standard)\\\\\\\\n- Overcrowding index < 40 sq feet: **Overcrowded housing**\\\\\\\\n- Window area for natural light: **1/10th to 1/6th of floor area**\\\\\\\\n- Air changes per hour (living room): **3-4 per hour**\\\\\\\\n- Air changes per hour (bathroom): **8-10 per hour**\\\\\\\\n- Ceiling height (residential): **≥ 10 feet**\\\\\\\\n- Ceiling height (institutional): **≥ 12-14 feet**\\\\\\\\n- Cross-ventilation requires windows: **On at least 2 opposite walls**\\\\\\\\n- Critical humidity level for mold growth: **> 60%**\\\\\\\\n- Healthiest housing model: **Light, airy, good sanitation**\\\\\\\\n\\\\\\\\n## Comparison Table: Housing Standards (India vs International)\\\\\\\\n\\\\\\\\n| Parameter | India Standard | WHO Standard |\\\\\\\\n|-----------|---|---|\\\\\\\\n| Floor space per person | 40 sq ft | 50-60 sq ft |\\\\\\\\n| Window area (% of floor) | 10% | 15-20% |\\\\\\\\n| Ceiling height | 10 ft (residential) | 10-12 ft |\\\\\\\\n| Air changes/hour | 3-4 (living) | 4-6 |\\\\\\\\n| Sanitation | Nearby/indoor toilet | Indoor toilet |\\\\\\\\n\\\\\\\\n## NEXT Themes\\\\\\\\n- Overcrowding and disease transmission\\\\\\\\n- Housing quality and TB control\\\\\\\\n- Vector control through housing improvement\\\\\\\\n- Government programs (PMAY-G, PMAY-U)\\\\\\\\n- Slum health and intervention strategies,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"40-10-3: Housing Foundation\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"40 sq feet per person, 1/10th window area, 3-4 air changes per hour for living rooms.\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Floor space index 40 sq feet per person is the standard in India\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Window area 1/10th-1/6th of floor area with cross-ventilation for optimal natural light\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Humidity > 60% promotes mold and respiratory issues\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Air changes required vary: living 3-4, kitchen 6-8, bathroom 8-10 per hour\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"TB and asthma exacerbation linked to poor ventilation in homes\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PMAY programs major intervention for housing improvement in India\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Housing & Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 5, slug: \\\\\\\\\\\\\\\"housing-ventilation-recall\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Housing & Ventilation - Active Recall\\\\\\\\\\\\\\\", estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Flashcard-style questions for self-testing on housing standards and ventilation requirements.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Active Recall\\\\\\\\n\\\\\\\\n**Q1:** What is the minimum floor space per person to avoid overcrowding in Indian housing standards?\\\\\\\\n> 40 square feet per person\\\\\\\\n\\\\\\\\n**Q2:** What should be the window area in relation to floor area for adequate natural light?\\\\\\\\n> 1/10th to 1/6th of floor area\\\\\\\\n\\\\\\\\n**Q3:** On how many opposite walls should windows be placed for cross-ventilation?\\\\\\\\n> At least 2 opposite walls\\\\\\\\n\\\\\\\\n**Q4:** How many air changes per hour are needed in a living room?\\\\\\\\n> 3-4 air changes per hour\\\\\\\\n\\\\\\\\n**Q5:** What is the recommended air change rate for a bathroom?\\\\\\\\n> 8-10 air changes per hour\\\\\\\\n\\\\\\\\n**Q6:** What ceiling height is recommended for residential buildings?\\\\\\\\n> ≥ 10 feet\\\\\\\\n\\\\\\\\n**Q7:** At what humidity level does mold growth become a concern?\\\\\\\\n> > 60% humidity\\\\\\\\n\\\\\\\\n**Q8:** Name the main government housing scheme for rural areas in India.\\\\\\\\n> PMAY-G (Pradhan Mantri Awas Yojana - Gramin)\\\\\\\\n\\\\\\\\n**Q9:** How does overcrowding increase TB transmission?\\\\\\\\n> Increases pathogen concentration in air due to inadequate ventilation; increases density of contact between infected and susceptible individuals\\\\\\\\n\\\\\\\\n**Q10:** What window area is needed for adequate ventilation?\\\\\\\\n> 1/10th of floor area (minimum for ventilation),\\\\\\\\n        mnemonics: [],\\\\\\\\n        keyPoints: [\\\\\\\\\\\\\\\"10 key questions on housing standards, ventilation, overcrowding, and government schemes\\\\\\\\\\\\\\\"],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Housing & Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n    ],\\\\\\\\n  },\\\\\\\\n\\\\\\\\n  // ─── CM-MOD-06-TOP-04: Occupational Health & Hazards ──────────\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"CM-MOD-06-TOP-04\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      { layer: 1, slug: \\\\\\\\\\\\\\\"occupational-health-hazards-foundation\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Occupational Health & Hazards - Foundation\\\\\\\\\\\\\\\", estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Occupational health deals with physical, chemical, biological, ergonomic, and psychosocial hazards in the workplace. Common occupational diseases in India include silicosis, asbestosis, COPD from textile dust, hearing loss, and dermatitis. Prevention through hazard control and worker education is essential.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Occupational Health & Hazards\\\\\\\\n\\\\\\\\n## Definition & Scope\\\\\\\\n- **Occupational health**: Promotion and maintenance of worker health, safety, and productivity\\\\\\\\n- Covers physical, chemical, biological, ergonomic, and psychosocial hazards\\\\\\\\n- Focus on prevention through engineering and administrative controls\\\\\\\\n\\\\\\\\n## Types of Occupational Hazards\\\\\\\\n\\\\\\\\n### Physical Hazards\\\\\\\\n- Noise (hearing loss, hypertension)\\\\\\\\n- Temperature extremes (heat stress, cold injuries)\\\\\\\\n- Radiation (ionizing and non-ionizing)\\\\\\\\n- Vibration (vibration white finger, HAVS)\\\\\\\\n- Pressure changes (decompression sickness in divers)\\\\\\\\n\\\\\\\\n### Chemical Hazards\\\\\\\\n- Metals: Lead, mercury, arsenic, chromium\\\\\\\\n- Dusts: Silica (silicosis), asbestos, cotton dust\\\\\\\\n- Gases: Carbon monoxide, chlorine, ammonia\\\\\\\\n- Solvents: Benzene, toluene, trichloroethylene\\\\\\\\n\\\\\\\\n### Biological Hazards\\\\\\\\n- Healthcare workers: Bloodborne pathogens (HIV, HBV, HCV)\\\\\\\\n- Agriculture: Leptospirosis, brucellosis\\\\\\\\n- Construction/mining: Fungal infections (histoplasmosis, coccidioidomycosis)\\\\\\\\n\\\\\\\\n### Ergonomic Hazards\\\\\\\\n- Poor posture: Back pain, carpal tunnel syndrome\\\\\\\\n- Repetitive strain: Tennis elbow, trigger finger\\\\\\\\n- Heavy lifting, pushing, pulling\\\\\\\\n\\\\\\\\n### Psychosocial Hazards\\\\\\\\n- Stress, burnout (healthcare workers, police)\\\\\\\\n- Workplace violence\\\\\\\\n- Long working hours\\\\\\\\n\\\\\\\\n## Common Occupational Diseases in India\\\\\\\\n\\\\\\\\n| Disease | Occupation | Exposure | Clinical Features |\\\\\\\\n|---------|-----------|----------|------------------|\\\\\\\\n| **Silicosis** | Quarrying, foundries, sandblasters | Silica dust (SiO₂) | Pneumoconiosis, increased TB risk, progressive dyspnea |\\\\\\\\n| **Asbestosis** | Shipbreaking, construction, textiles | Asbestos fibers | Restrictive lung disease, pleural plaques, mesothelioma risk |\\\\\\\\n| **Byssinosis** | Cotton mill workers | Cotton dust, endotoxin | \\\\\\\\\\\\\\\"Monday fever\\\\\\\\\\\\\\\" - chest tightness worse on first day back |\\\\\\\\n| **COPD** | Textile workers | Occupational dust exposure | Chronic airflow obstruction |\\\\\\\\n| **NIHL** | Construction, textile, mining | Noise > 85 dB | Hearing loss, noise-induced tinnitus |\\\\\\\\n| **Lead poisoning** | Smelting, battery making, welding | Lead dust/fumes | Anemia, peripheral neuropathy, renal toxicity |\\\\\\\\n| **Occupational dermatitis** | Construction, agriculture, chemicals | Irritant/allergen contact | Contact dermatitis, eczema |,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"CBEPP: Chemical, Biological, Ergonomic, Physical, Psychosocial hazards\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Five categories of occupational hazards to systematically assess workplace safety.\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"SILICA = S(ilica), I(rritant), L(ung), I(nflammation), C(hronic), A(dvance to TB)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Silicosis progression: silica inhalation → lung inflammation → chronic progressive disease → increased TB risk.\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Five types of occupational hazards: Physical (noise, temperature, radiation), Chemical (metals, dusts, gases), Biological, Ergonomic, Psychosocial\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Silicosis: pneumoconiosis from crystalline silica dust; increases TB risk; irreversible\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Asbestosis: restrictive lung disease; risk of mesothelioma and lung cancer\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Byssinosis: cotton mill worker disease with 'Monday fever' from endotoxin exposure\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Occupational NIHL: >85 dB causes hearing loss; preventable with ear protection\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Lead poisoning affects blood, nervous system, and kidneys; preventable through engineering controls\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Occupational Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 2, slug: \\\\\\\\\\\\\\\"occupational-health-hazards-mechanism\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Occupational Health & Hazards - Mechanism\\\\\\\\\\\\\\\", estimatedMinutes: 30,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Pathophysiological mechanisms of occupational disease development. How hazards cause tissue damage, chronic inflammation, and systemic effects. Dose-response relationship and latency periods.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Mechanisms of Occupational Disease\\\\\\\\n\\\\\\\\n## Pneumoconiosis Pathophysiology\\\\\\\\n\\\\\\\\n### Silicosis\\\\\\\\n1. **Inhalation**: Crystalline SiO₂ particles (< 5 µm) deposited in alveoli\\\\\\\\n2. **Macrophage engulfment**: Alveolar macrophages attempt to phagocytose particles\\\\\\\\n3. **Lysosomal damage**: Sharp silica crystals rupture macrophage lysosomes → pyroptosis\\\\\\\\n4. **Inflammatory cascade**: Released cytokines (TNF-α, IL-6) → fibroblast activation\\\\\\\\n5. **Fibrosis**: Progressive collagen deposition → restrictive lung disease\\\\\\\\n6. **TB predisposition**: Macrophage dysfunction → ↓ immunity to M. tuberculosis\\\\\\\\n\\\\\\\\n### Asbestos-Related Disease\\\\\\\\n- **Asbestos-coated fibers** taken up by macrophages\\\\\\\\n- Similar inflammatory cascade as silicosis\\\\\\\\n- Risk of **pleural plaques** (scarring)\\\\\\\\n- **Mesothelioma**: Fiber fragments → DNA damage → malignant transformation\\\\\\\\n- **Latency**: 20-50 years between exposure and disease manifestation\\\\\\\\n\\\\\\\\n## Noise-Induced Hearing Loss (NIHL)\\\\\\\\n\\\\\\\\n### Mechanism\\\\\\\\n1. **Mechanical damage**: Sound waves → cochlear basilar membrane vibration\\\\\\\\n2. **Hair cell shearing**: Outer hair cells damaged at high frequencies first\\\\\\\\n3. **Oxidative stress**: ↑ Free radicals → mitochondrial dysfunction in hair cells\\\\\\\\n4. **Hair cell death**: Permanent loss of inner hair cells\\\\\\\\n5. **Neural degeneration**: ↑ Noise → cochlear inflammation → auditory nerve damage\\\\\\\\n\\\\\\\\n### Dose-Response\\\\\\\\n- **85 dB**: 8-hour exposure limit (OSHA)\\\\\\\\n- **90 dB**: Doubles risk every 5 dB increase\\\\\\\\n- **Typical pattern**: High-frequency loss (3-6 kHz range) first, then expands\\\\\\\\n\\\\\\\\n## Lead Toxicity\\\\\\\\n\\\\\\\\n### Absorption & Distribution\\\\\\\\n- **Inhalation** (most occupational exposure): Respiratory absorption ~50%\\\\\\\\n- **Ingestion**: Gastrointestinal absorption ~5-15%\\\\\\\\n- **Distribution**: Replaces calcium in bone → 70% sequestered in bone\\\\\\\\n- **Excretion**: Very slow (half-life 30 years in bone)\\\\\\\\n\\\\\\\\n### Mechanism of Toxicity\\\\\\\\n- **Heme synthesis**: Inhibits δ-aminolevulinic acid dehydratase (ALAD) → anemia\\\\\\\\n- **Nervous system**: Disrupts neurotransmitter synthesis → neuropathy\\\\\\\\n- **Kidneys**: Direct tubular toxicity → proteinuria, chronic kidney disease\\\\\\\\n- **Reproductive**: Affects sperm production, teratogenic\\\\\\\\n\\\\\\\\n## Dose-Response & Latency\\\\\\\\n\\\\\\\\n| Disease | Latency | Dose Effect |\\\\\\\\n|---------|---------|------------|\\\\\\\\n| Silicosis | 5-20 years | Progressive with cumulative exposure (smoking accelerates) |\\\\\\\\n| Asbestosis | 20-50 years | Cumulative dose; no safe threshold |\\\\\\\\n| NIHL | Acute to chronic | Cumulative; no recovery (irreversible) |\\\\\\\\n| Lead toxicity | Acute or chronic | No threshold effect; even low levels harmful to children |\\\\\\\\n| Byssinosis | Weeks to months | Endotoxin dose; reversible early, fixed later |,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"SHARP Silica Damages Macrophages\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Silica crystals are sharp → rupture macrophage lysosomes → cytokine release → fibrosis and TB risk.\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Lead = Lifetime in Bone\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Lead has very long half-life (30 years) in bone; replaces calcium; causes anemia, neuropathy, kidney damage.\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Silica inhalation → macrophage lysosomal rupture → inflammatory cascade → pulmonary fibrosis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Asbestos has 20-50 year latency; risk of mesothelioma increases with cumulative exposure\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"NIHL from mechanical damage and oxidative stress to cochlear hair cells; irreversible damage\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Lead replaces calcium in bone; inhibits heme synthesis → anemia; damages nervous and renal systems\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Dose-response relationships critical: 85 dB as exposure limit; lead has no safe threshold\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Latency periods vary: silicosis 5-20 years, asbestosis 20-50 years, NIHL can be acute\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Occupational Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 3, slug: \\\\\\\\\\\\\\\"occupational-health-hazards-clinical\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Occupational Health & Hazards - Clinical\\\\\\\\\\\\\\\", estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Clinical presentation of occupational diseases. Diagnosis, investigations, management, and preventive strategies. Workers' compensation and rehabilitation in Indian context.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Clinical Management & Prevention\\\\\\\\n\\\\\\\\n## Diagnosis of Occupational Diseases\\\\\\\\n\\\\\\\\n### Key History Elements\\\\\\\\n1. **Detailed occupational history**: Current and past jobs, duration of exposure\\\\\\\\n2. **Latency calculation**: Time between exposure onset and symptom development\\\\\\\\n3. **Temporal relationship**: Symptoms correlate with workplace exposure\\\\\\\\n4. **Co-worker involvement**: Others with similar symptoms?\\\\\\\\n\\\\\\\\n### Investigations\\\\\\\\n\\\\\\\\n**Silicosis/Asbestosis**\\\\\\\\n- **CXR**: Small opacities (q and p shadows), progressive pattern\\\\\\\\n- **PFTs**: Restrictive pattern (↓ FVC, FEV₁/FVC normal)\\\\\\\\n- **HRCT**: Ground-glass opacities, pleural plaques (asbestos)\\\\\\\\n- **Smoking**: Accelerates progression\\\\\\\\n\\\\\\\\n**NIHL**\\\\\\\\n- **Audiometry**: High-frequency sensorineural hearing loss (dip at 3-6 kHz)\\\\\\\\n- **No current test for early damage**: Prevention is critical\\\\\\\\n\\\\\\\\n**Lead Poisoning**\\\\\\\\n- **Peripheral blood smear**: Basophilic stippling (lead lines)\\\\\\\\n- **Blood lead levels**: > 10 µg/dL concerning (CDC); India threshold 5 µg/dL for children\\\\\\\\n- **FBC**: Anemia, microcytic hypochromic\\\\\\\\n- **Lead-binding proteins**: Zinc protoporphyrin levels\\\\\\\\n\\\\\\\\n## Management Strategies\\\\\\\\n\\\\\\\\n### Primary Prevention (Elimination of Hazard)\\\\\\\\n- Engineering controls: Closed systems, local exhaust ventilation, isolation\\\\\\\\n- Substitution: Replace hazardous substances\\\\\\\\n- Work organization: Rotation to reduce exposure duration\\\\\\\\n\\\\\\\\n### Secondary Prevention (Hazard Reduction)\\\\\\\\n- PPE: Respirators, ear plugs, gloves, safety glasses\\\\\\\\n- Worker training and compliance\\\\\\\\n- Respiratory protection programs\\\\\\\\n- Regular health monitoring\\\\\\\\n\\\\\\\\n### Tertiary Prevention (Disease Management)\\\\\\\\n- **Silicosis/Asbestosis**: Supportive care; monitor for TB; assess for lung cancer\\\\\\\\n- **Lead poisoning**: Chelation therapy if symptomatic; remove from exposure; monitor levels\\\\\\\\n- **NIHL**: Hearing aids; communication support; prevent further damage\\\\\\\\n- **Occupational dermatitis**: Skin care, irritant avoidance, topical treatments\\\\\\\\n\\\\\\\\n## Rehabilitation & Worker Rights (India)\\\\\\\\n\\\\\\\\n### Legal Framework\\\\\\\\n- **Workmen's Compensation Act, 1923**: Provides benefits for occupational diseases\\\\\\\\n- **Factories Act, 1948**: Workplace safety standards\\\\\\\\n- **Building and Other Construction Workers Act, 1996**: Specific for construction workers\\\\\\\\n\\\\\\\\n### Scheduled Occupational Diseases (India)\\\\\\\\n- Listed diseases automatically presumed occupational if exposed\\\\\\\\n- Includes: Silicosis, asbestosis, NIHL, lead poisoning, occupational dermatitis\\\\\\\\n\\\\\\\\n### Benefits Available\\\\\\\\n- Medical care during incapacity\\\\\\\\n- Compensation based on permanent disability\\\\\\\\n- Rehabilitation and vocational retraining\\\\\\\\n- Employer liability in negligence cases\\\\\\\\n\\\\\\\\n## Prevention in Indian Settings\\\\\\\\n\\\\\\\\n### Quarrying & Mining Industries\\\\\\\\n- Dust suppression: Water spray systems\\\\\\\\n- Respiratory protection: Use of respiratory masks\\\\\\\\n- Health surveillance: Regular CXRs, PFTs\\\\\\\\n- Worker awareness programs\\\\\\\\n\\\\\\\\n### Textile Industry\\\\\\\\n- Textile dust control: Ventilation, enclosure of processes\\\\\\\\n- Byssinosis prevention: Endotoxin reduction, job rotation\\\\\\\\n- Hearing protection for workers in noisy mills\\\\\\\\n\\\\\\\\n### Construction Sector\\\\\\\\n- PPE provision and compliance\\\\\\\\n- Training on hazard recognition\\\\\\\\n- Regular medical examinations\\\\\\\\n- Scaffold safety, fall protection,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"OPT: Occupational history, PFTs, Timeline of symptoms\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Key elements for diagnosing occupational disease: detailed occupational exposure history, pulmonary function tests, and temporal relationship between exposure and symptoms.\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Diagnosis requires detailed occupational history, calculation of latency, and temporal relationship with exposure\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"CXR shows small opacities in pneumoconiosis; PFTs show restrictive pattern\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"NIHL diagnosed by audiometry showing high-frequency sensorineural hearing loss\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Lead toxicity: blood lead levels > 10 µg/dL (CDC), basophilic stippling on blood smear\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Prevention: engineering controls (primary) > administrative (secondary) > PPE (tertiary)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Workers' Compensation Act, 1923 provides benefits for occupational diseases in India; scheduled diseases presumed occupational\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Occupational Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 4, slug: \\\\\\\\\\\\\\\"occupational-health-hazards-exam\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Occupational Health & Hazards - Exam Prep\\\\\\\\\\\\\\\", estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"High-yield facts on common occupational diseases, thresholds, diagnostic patterns, and preventive strategies for NEXT examination.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Exam High Yield\\\\\\\\n\\\\\\\\n## One-Liners\\\\\\\\n- Noise-induced hearing loss threshold: **≥ 85 dB for 8 hours**\\\\\\\\n- Asbestosis latency: **20-50 years**\\\\\\\\n- Silicosis latency: **5-20 years**\\\\\\\\n- Byssinosis mechanism: **Endotoxin from cotton dust**\\\\\\\\n- Lead blood level concern (CDC): **> 10 µg/dL**\\\\\\\\n- Silicosis increases TB risk: **Yes, macrophage dysfunction**\\\\\\\\n- NIHL hearing loss pattern: **High-frequency (3-6 kHz dip) first**\\\\\\\\n- Asbestosis cancer risk: **Mesothelioma, lung cancer**\\\\\\\\n- Lead's longest reservoir: **Bone (70% sequestered)**\\\\\\\\n- Occupational disease presumed work-related (India): **Yes, for scheduled diseases**\\\\\\\\n\\\\\\\\n## Occupational Diseases: Quick Reference\\\\\\\\n\\\\\\\\n| Disease | Occupation | Exposure | Key Finding | Latency |\\\\\\\\n|---------|-----------|----------|------------|---------|\\\\\\\\n| Silicosis | Quarrying, foundry | Silica dust | Pneumoconiosis + TB risk | 5-20 yr |\\\\\\\\n| Asbestosis | Shipbreaking, construction | Asbestos fibers | Pleural plaques, mesothelioma | 20-50 yr |\\\\\\\\n| Byssinosis | Cotton mill | Cotton dust endotoxin | Monday fever | Wk-mo |\\\\\\\\n| NIHL | Construction, textile | Noise > 85 dB | 3-6 kHz dip | Acute-chronic |\\\\\\\\n| Lead poisoning | Smelting, battery making | Lead dust/fumes | Microcytic anemia, neuropathy | Acute-chronic |\\\\\\\\n\\\\\\\\n## Comparison: Silicosis vs Asbestosis\\\\\\\\n\\\\\\\\n| Feature | Silicosis | Asbestosis |\\\\\\\\n|---------|-----------|-----------|\\\\\\\\n| Fibrosis pattern | Predominantly upper lobe | Bilateral lower lobe |\\\\\\\\n| TB risk | Significantly increased | Not significantly increased |\\\\\\\\n| Cancer risk | Lung cancer only | Mesothelioma + lung cancer |\\\\\\\\n| PFTs | Restrictive | Restrictive |\\\\\\\\n| Recovery | No | No |\\\\\\\\n\\\\\\\\n## NEXT Themes\\\\\\\\n- Latency periods and diagnosis timing\\\\\\\\n- Prevention hierarchy (engineering > admin > PPE)\\\\\\\\n- Workers' compensation and legal framework\\\\\\\\n- Dust-related pneumoconiosis\\\\\\\\n- Hearing loss in occupational settings,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"85 dB = 8-Hour limit\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"OSHA standard for noise exposure: 85 dB for 8 hours maximum; higher levels have shorter safe exposure times.\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"SilicosIS = Increases TB Susceptibility\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Silica → silicosis → macrophage dysfunction → TB risk increases; remember the 'S' connection.\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"85 dB is OSHA's occupational noise limit for 8-hour daily exposure\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Silicosis latency 5-20 years; asbestosis latency 20-50 years\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Silicosis increases TB risk through macrophage dysfunction\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Asbestos exposure carries mesothelioma risk with very long latency\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"NIHL shows characteristic high-frequency loss (3-6 kHz) with audiometry\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Lead toxicity: inhibits ALAD → anemia; no safe threshold in children\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Occupational Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 5, slug: \\\\\\\\\\\\\\\"occupational-health-hazards-recall\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Occupational Health & Hazards - Active Recall\\\\\\\\\\\\\\\", estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Flashcard-style questions for self-testing on occupational hazards and diseases.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Active Recall\\\\\\\\n\\\\\\\\n**Q1:** What are the five categories of occupational hazards?\\\\\\\\n> Physical (noise, temperature, radiation), Chemical (metals, dusts, gases), Biological, Ergonomic, Psychosocial\\\\\\\\n\\\\\\\\n**Q2:** What is the OSHA noise exposure limit for 8 hours per day?\\\\\\\\n> ≥ 85 dB\\\\\\\\n\\\\\\\\n**Q3:** What is byssinosis and which industry is it associated with?\\\\\\\\n> \\\\\\\\\\\\\\\"Monday fever\\\\\\\\\\\\\\\" - tightness in chest worse on return to work after weekend; cotton mill workers exposed to cotton dust endotoxin\\\\\\\\n\\\\\\\\n**Q4:** What is the latency period for silicosis?\\\\\\\\n> 5-20 years\\\\\\\\n\\\\\\\\n**Q5:** What is the latency period for asbestosis?\\\\\\\\n> 20-50 years\\\\\\\\n\\\\\\\\n**Q6:** How does silicosis increase TB risk?\\\\\\\\n> Silica → macrophage lysosomal rupture → impaired immunity to Mycobacterium tuberculosis\\\\\\\\n\\\\\\\\n**Q7:** What is the critical blood lead level of concern according to CDC?\\\\\\\\n> > 10 µg/dL\\\\\\\\n\\\\\\\\n**Q8:** What type of hearing loss occurs in noise-induced hearing loss?\\\\\\\\n> High-frequency sensorineural hearing loss with characteristic dip at 3-6 kHz\\\\\\\\n\\\\\\\\n**Q9:** What are the three prevention strategies for occupational hazards in order of preference?\\\\\\\\n> Engineering controls, Administrative controls, PPE (personal protective equipment)\\\\\\\\n\\\\\\\\n**Q10:** What law in India provides compensation for occupational diseases?\\\\\\\\n> Workmen's Compensation Act, 1923,\\\\\\\\n        mnemonics: [],\\\\\\\\n        keyPoints: [\\\\\\\\\\\\\\\"10 key questions on occupational hazards, latency periods, prevention, and Indian legal framework\\\\\\\\\\\\\\\"],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Occupational Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n    ],\\\\\\\\n  },\\\\\\\\n\\\\\\\\n  // ─── CM-MOD-07-TOP-01: Healthcare Delivery System in India ──────────\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"CM-MOD-07-TOP-01\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      { layer: 1, slug: \\\\\\\\\\\\\\\"healthcare-delivery-india-foundation\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Healthcare Delivery System in India - Foundation\\\\\\\\\\\\\\\", estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"India's healthcare system is three-tiered: primary (PHCs, Sub-centers), secondary (Community Health Centers), and tertiary (Medical colleges, tertiary centers). Public system caters to ~75% population; private sector provides care to remaining ~25%. Integration and equity remain challenges.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Healthcare Delivery System in India\\\\\\\\n\\\\\\\\n## Three-Tier Structure\\\\\\\\n\\\\\\\\n### Primary Health Care (PHC)\\\\\\\\n- **Sub-center**: Basic unit; serves population of ~3,000-5,000\\\\\\\\n  - 1 Male ANM + 1 Female ANM\\\\\\\\n  - Basic immunization, maternal child health, contraception\\\\\\\\n  - First point of contact for common illnesses\\\\\\\\n\\\\\\\\n- **Primary Health Center (PHC)**: Serves population of ~10,000-30,000\\\\\\\\n  - 1 Auxiliary Nurse Midwife (ANM) + 1 Health Worker\\\\\\\\n  - Basic diagnostic facilities (microscopy, basic lab tests)\\\\\\\\n  - Maternal and child health services\\\\\\\\n  - Communicable disease surveillance\\\\\\\\n\\\\\\\\n### Secondary Health Care (Secondary Health Center - SHC/CHC)\\\\\\\\n- **Community Health Center (CHC)**: Serves population of ~100,000-120,000\\\\\\\\n  - 4-6 beds minimum\\\\\\\\n  - Basic surgical and obstetric facilities\\\\\\\\n  - 24-hour emergency services\\\\\\\\n  - Referral facility for PHCs\\\\\\\\n  - Specialists: Surgeon, Obstetrician, Internist, Anesthetist\\\\\\\\n\\\\\\\\n### Tertiary Health Care\\\\\\\\n- **Medical Colleges & Teaching Hospitals**: Serve population of ~1 million+\\\\\\\\n  - Advanced diagnostic facilities (imaging, specialized labs)\\\\\\\\n  - Complex surgical and medical procedures\\\\\\\\n  - Teaching and research\\\\\\\\n  - Postgraduate training\\\\\\\\n\\\\\\\\n## Population-Facility Ratios (IPHS Standards)\\\\\\\\n\\\\\\\\n| Facility | Serves | Beds | Staff |\\\\\\\\n|----------|--------|------|-------|\\\\\\\\n| Sub-center | 3,000-5,000 | Nil | 2 ANMs |\\\\\\\\n| PHC | 10,000-30,000 | 4-6 | 1 ANM + Health Worker |\\\\\\\\n| CHC | 100,000-120,000 | 30+ | Doctors + Specialists |\\\\\\\\n| Medical College | 1,000,000+ | 500+ | Faculty + Residents |\\\\\\\\n\\\\\\\\n## Public vs Private Healthcare in India\\\\\\\\n\\\\\\\\n| Aspect | Public | Private |\\\\\\\\n|--------|--------|---------|\\\\\\\\n| Coverage | ~75% population | ~25% population |\\\\\\\\n| Cost | Subsidized/Free | High |\\\\\\\\n| Accessibility | Rural reach better | Urban concentrated |\\\\\\\\n| Quality variation | High | Usually higher |\\\\\\\\n| Regulation | Government oversight | Varying regulation |\\\\\\\\n\\\\\\\\n## Rural-Urban Disparities\\\\\\\\n- **Rural areas**: Limited access to secondary/tertiary care\\\\\\\\n- **Urban slums**: Informal settlements with minimal infrastructure\\\\\\\\n- **Tribal areas**: Geographic remoteness, cultural barriers\\\\\\\\n- **Strategies**: Mobile health clinics, telemedicine, incentive programs,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"3-10-100-1000: Population Served\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Sub-center serves ~3,000-5,000; PHC ~10,000; CHC ~100,000; Medical college ~1 million population\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"3 Tiers: Primary (PHC), Secondary (CHC), Tertiary (Medical college)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Three levels of healthcare organized by complexity and referral pattern\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Sub-center: basic unit with 2 ANMs; serves 3,000-5,000 population\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PHC: serves 10,000-30,000 population; first referral unit for sub-centers\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"CHC: serves 100,000-120,000 population; provides basic surgical and obstetric facilities\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Medical colleges provide tertiary care and training; serve 1 million+ population\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Public healthcare reaches ~75% population; private sector ~25%\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Rural-urban disparities remain significant; geographic access challenges in tribal areas\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Healthcare Delivery System\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 2, slug: \\\\\\\\\\\\\\\"healthcare-delivery-india-mechanism\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Healthcare Delivery System in India - Mechanism\\\\\\\\\\\\\\\", estimatedMinutes: 30,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"How India's healthcare system functions through referral pathways, coordination between tiers, skill mix at each level, and information systems. Integration of maternal, child, and communicable disease programs within the structure.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# System Functioning & Integration\\\\\\\\n\\\\\\\\n## Referral Pathways\\\\\\\\n\\\\\\\\n### Upward Referral (From PHC to CHC to Medical College)\\\\\\\\n- PHC identifies complicated cases requiring specialist input\\\\\\\\n- CHC provides stabilization and may refer complex cases to medical college\\\\\\\\n- Clear communication and documentation essential\\\\\\\\n\\\\\\\\n### Backward Referral (Post-management Follow-up)\\\\\\\\n- Medical college or CHC refers stable patients to PHC for ongoing care\\\\\\\\n- Reduces burden on higher facilities; utilizes PHC capacity\\\\\\\\n\\\\\\\\n### Network Model\\\\\\\\n```\\\\\\\\nSub-center → PHC → CHC → Medical College\\\\\\\\n    ↑         ↑       ↑         ↑\\\\\\\\n  Feedback, Supplies, Supervision, Support\\\\\\\\n```\\\\\\\\n\\\\\\\\n## Integration of Programs\\\\\\\\n\\\\\\\\n### Reproductive & Child Health (RCH)\\\\\\\\n- Antenatal care at sub-center and PHC\\\\\\\\n- Institutional deliveries encouraged\\\\\\\\n- Postnatal and newborn care\\\\\\\\n- Immunization programs\\\\\\\\n- Family planning services\\\\\\\\n\\\\\\\\n### Communicable Disease Control\\\\\\\\n- AISH (Acute Illness Surveillance and Health) at sub-centers\\\\\\\\n- IDSP (Integrated Disease Surveillance Programme) reporting\\\\\\\\n- Contact tracing and prophylaxis at PHC level\\\\\\\\n- Central coordination for outbreak response\\\\\\\\n\\\\\\\\n### Non-Communicable Disease Management\\\\\\\\n- Screening at PHC level\\\\\\\\n- Chronic disease registries\\\\\\\\n- Medications availability at PHC\\\\\\\\n- Specialist referral for complications\\\\\\\\n\\\\\\\\n## Information Systems\\\\\\\\n- **HMIS** (Health Management Information System): Monthly data collection\\\\\\\\n- **RCH Dashboard**: Real-time tracking of maternal/child health indicators\\\\\\\\n- **IDSP**: Communicable disease surveillance\\\\\\\\n- Challenges: Data quality, timeliness, privacy concerns\\\\\\\\n\\\\\\\\n## Public Health Functions at Each Level\\\\\\\\n\\\\\\\\n| Level | Main Functions |\\\\\\\\n|-------|---|\\\\\\\\n| **Sub-center** | Community mobilization, basic health education, contraception counseling, ANC, immunization, disease surveillance |\\\\\\\\n| **PHC** | Supervision of sub-centers, primary treatment, referral, program implementation, data collection |\\\\\\\\n| **CHC** | Specialist care, complicated case management, training of PHC staff, quality assurance |\\\\\\\\n| **Medical College** | Advanced care, training, research, policy formulation, outbreak investigation |,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"RCH-IDSP-HMIS Integration\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Major programs integrated into healthcare system: Reproductive-Child Health, Integrated Disease Surveillance Programme, Health Management Information System\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Upward referral: PHC identifies complicated cases; CHC stabilizes and may refer to medical college\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Backward referral: reduces burden on higher facilities; PHC continues management\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"RCH, communicable disease programs, and NCD management integrated at all levels\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"HMIS collects monthly routine data; IDSP monitors disease surveillance; RCH dashboard tracks maternal-child health\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Public health functions distributed: sub-center (community), PHC (primary care), CHC (secondary), Medical college (tertiary + training)\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Healthcare Delivery System\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 3, slug: \\\\\\\\\\\\\\\"healthcare-delivery-india-clinical\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Healthcare Delivery System in India - Clinical\\\\\\\\\\\\\\\", estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Role of clinicians at different tiers, evidence-based protocols, quality assurance mechanisms, and challenges in implementation. How to access and utilize each level effectively for patient benefit.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Clinical Practice Within Healthcare System\\\\\\\\n\\\\\\\\n## Role of Healthcare Providers\\\\\\\\n\\\\\\\\n### ASHA (Accredited Social Health Activist)\\\\\\\\n- Community volunteer; links between community and healthcare system\\\\\\\\n- ANC mobilization, immunization promotion, IMNCI implementation\\\\\\\\n- Reporting of pregnancy, deaths, disease surveillance\\\\\\\\n\\\\\\\\n### ANM (Auxiliary Nurse Midwife)\\\\\\\\n- Primary healthcare provider at sub-center\\\\\\\\n- Antenatal care, institutional delivery support, immunization\\\\\\\\n- Management of minor illnesses, first aid\\\\\\\\n\\\\\\\\n### Sub-center to PHC Referral\\\\\\\\n- ANM identifies pregnancy complications → refers to PHC/CHC\\\\\\\\n- Severe malaria, suspected TB → PHC/CHC for confirmation\\\\\\\\n- Neonatal complications → PHC/CHC\\\\\\\\n\\\\\\\\n### PHC Physician\\\\\\\\n- First doctor in public system; handles most primary conditions\\\\\\\\n- Laboratory diagnosis capacity\\\\\\\\n- Referral for conditions beyond capability\\\\\\\\n- Supervision of ANMs and disease surveillance\\\\\\\\n\\\\\\\\n### CHC Specialist\\\\\\\\n- Obstetrics, Surgery, Medicine, Pediatrics\\\\\\\\n- Complex case management\\\\\\\\n- Capacity building and supervision of PHC\\\\\\\\n\\\\\\\\n## Evidence-Based Protocols\\\\\\\\n- **IMNCI** (Integrated Management of Neonatal and Childhood Illness): Simplified protocol for PHC-level management\\\\\\\\n- **PMTCT** (Prevention of Mother-to-Child Transmission): HIV care integration\\\\\\\\n- **RNTCP** (Revised National TB Control Programme): Standardized TB management\\\\\\\\n- **NRHM guidelines**: Maternal mortality reduction protocols\\\\\\\\n\\\\\\\\n## Quality Assurance\\\\\\\\n\\\\\\\\n### External Supervision\\\\\\\\n- CHC provides periodic supervision of PHC\\\\\\\\n- State/District program officers review implementation\\\\\\\\n- Sentinel surveillance for disease outbreaks\\\\\\\\n\\\\\\\\n### Internal Monitoring\\\\\\\\n- Self-assessment at each facility\\\\\\\\n- Checklist-based audits\\\\\\\\n- Complaint redressal mechanisms\\\\\\\\n\\\\\\\\n## Challenges in Indian Healthcare System\\\\\\\\n\\\\\\\\n### Access\\\\\\\\n- Geographic remoteness (tribal, hilly areas)\\\\\\\\n- Poor road infrastructure\\\\\\\\n- Intermittent power supply in rural facilities\\\\\\\\n\\\\\\\\n### Quality\\\\\\\\n- Inadequate training and supervision\\\\\\\\n- High staff turnover\\\\\\\\n- Infrastructure gaps (missing diagnostic equipment)\\\\\\\\n\\\\\\\\n### Equity\\\\\\\\n- Higher disease burden in marginalized communities\\\\\\\\n- Affordability of care\\\\\\\\n- Gender-based health disparities\\\\\\\\n\\\\\\\\n### Solutions\\\\\\\\n- Mobile health clinics and telemedicine\\\\\\\\n- Community health volunteer programs\\\\\\\\n- Targeted schemes for vulnerable populations,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"ASHA-ANM-PHC Pathway\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Community engagement (ASHA) → Basic care (ANM) → Primary healthcare (PHC) → Specialist referral\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"ANM is primary healthcare provider at sub-center; ASHA bridges community and healthcare system\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PHC physician has laboratory facilities and handles most primary conditions; refers complex cases\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"IMNCI, PMTCT, RNTCP are evidence-based protocols implemented across tiers\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Quality assurance through external supervision (CHC of PHC) and internal monitoring\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Key challenges: geographic access, infrastructure gaps, staff shortages, quality variation\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Telemedicine and mobile clinics emerging strategies for remote area access\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Healthcare Delivery System\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 4, slug: \\\\\\\\\\\\\\\"healthcare-delivery-india-exam\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Healthcare Delivery System in India - Exam Prep\\\\\\\\\\\\\\\", estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"High-yield facts on Indian healthcare structure, population ratios, workforce composition, and key health programs.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Exam High Yield\\\\\\\\n\\\\\\\\n## One-Liners\\\\\\\\n- Sub-center population: **3,000-5,000**\\\\\\\\n- PHC population: **10,000-30,000**\\\\\\\\n- CHC population: **100,000-120,000**\\\\\\\\n- Medical college population: **1,000,000+**\\\\\\\\n- ASHA role: **Community mobilization and linkage**\\\\\\\\n- ANM: **Basic healthcare provider at sub-center**\\\\\\\\n- Public healthcare coverage: **~75% of population**\\\\\\\\n- Private healthcare coverage: **~25% of population**\\\\\\\\n- IMNCI: **Integrated Management of Neonatal and Childhood Illness**\\\\\\\\n- RNTCP: **Revised National TB Control Programme**\\\\\\\\n\\\\\\\\n## Three-Tier System Quick Reference\\\\\\\\n\\\\\\\\n| Tier | Facility | Serves | Key Feature |\\\\\\\\n|------|----------|--------|------------|\\\\\\\\n| Primary | Sub-center | 3,000-5,000 | ANMs, community base |\\\\\\\\n| Primary | PHC | 10,000-30,000 | First doctor, basic lab |\\\\\\\\n| Secondary | CHC | 100,000-120,000 | Specialists, surgery, OB |\\\\\\\\n| Tertiary | Medical College | 1,000,000+ | Advanced care, teaching |\\\\\\\\n\\\\\\\\n## Key Programs Integrated\\\\\\\\n- RCH (Reproductive & Child Health)\\\\\\\\n- RNTCP (TB control)\\\\\\\\n- NPCB (Vision care)\\\\\\\\n- IDSP (Disease surveillance)\\\\\\\\n- NRHM/NHM (National Health Mission)\\\\\\\\n\\\\\\\\n## NEXT Themes\\\\\\\\n- Population coverage ratios\\\\\\\\n- Referral pathways and integration\\\\\\\\n- Role of different healthcare workers\\\\\\\\n- Public vs private sector coverage\\\\\\\\n- Rural-urban disparities,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"3-10-100: Population Served (in thousands)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Sub-center ~3K, PHC ~10K, CHC ~100K population\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Sub-center serves 3,000-5,000; PHC 10,000-30,000; CHC 100,000-120,000 population\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"ANM is first healthcare worker at sub-center level\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PHC is first doctor in public system; has laboratory facilities\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"CHC provides secondary care with specialist support\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Public system covers ~75% population; private ~25%\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"ASHA, ANM, PHC physician form backbone of rural primary care\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Healthcare Delivery System\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 5, slug: \\\\\\\\\\\\\\\"healthcare-delivery-india-recall\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Healthcare Delivery System in India - Active Recall\\\\\\\\\\\\\\\", estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Flashcard-style questions on Indian healthcare structure, tiers, and key programs.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Active Recall\\\\\\\\n\\\\\\\\n**Q1:** What population is served by a sub-center?\\\\\\\\n> 3,000-5,000 population\\\\\\\\n\\\\\\\\n**Q2:** What is the staff composition of a sub-center?\\\\\\\\n> 1 Male ANM + 1 Female ANM\\\\\\\\n\\\\\\\\n**Q3:** What population does a PHC serve?\\\\\\\\n> 10,000-30,000 population\\\\\\\\n\\\\\\\\n**Q4:** Name the key difference between PHC and sub-center in terms of human resources.\\\\\\\\n> PHC has a physician (doctor), while sub-center has only ANMs\\\\\\\\n\\\\\\\\n**Q5:** What is the population coverage of a CHC?\\\\\\\\n> 100,000-120,000 population\\\\\\\\n\\\\\\\\n**Q6:** What are the minimum number of beds at a CHC?\\\\\\\\n> 30+ beds\\\\\\\\n\\\\\\\\n**Q7:** Who is an ASHA and what is their main role?\\\\\\\\n> Accredited Social Health Activist; community volunteer who mobilizes and links community with healthcare system\\\\\\\\n\\\\\\\\n**Q8:** What does IMNCI stand for?\\\\\\\\n> Integrated Management of Neonatal and Childhood Illness\\\\\\\\n\\\\\\\\n**Q9:** What is the referral pathway from sub-center?\\\\\\\\n> Sub-center → PHC → CHC → Medical College (upward referral for complex cases)\\\\\\\\n\\\\\\\\n**Q10:** What percentage of India's population is covered by public healthcare?\\\\\\\\n> Approximately 75%,\\\\\\\\n        mnemonics: [],\\\\\\\\n        keyPoints: [\\\\\\\\\\\\\\\"10 key questions on healthcare system structure, staff, and coverage\\\\\\\\\\\\\\\"],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Healthcare Delivery System\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n    ],\\\\\\\\n  },\\\\\\\\n\\\\\\\\n  // ─── CM-MOD-07-TOP-02: National Health Mission & Ayushman Bharat ──────────\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"CM-MOD-07-TOP-02\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      { layer: 1, slug: \\\\\\\\\\\\\\\"nhm-ayushman-bharat-foundation\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"National Health Mission & Ayushman Bharat - Foundation\\\\\\\\\\\\\\\", estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"National Health Mission (NHM) launched in 2013, subsuming NRHM and NRHM(Urban). Focus: Health system strengthening in high-burden states, universal health coverage. Ayushman Bharat (2018) includes PMJAY (health insurance) and Health and Wellness Centers. India aims UHC by 2030.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# National Health Mission & Ayushman Bharat\\\\\\\\n\\\\\\\\n## National Health Mission (NHM)\\\\\\\\n\\\\\\\\n### Overview\\\\\\\\n- Launched: **2013** (unified NRHM and NRHM-Urban)\\\\\\\\n- Objective: Health system strengthening, Universal Health Coverage\\\\\\\\n- Focus: High burden states (19 high-focus states, 9 low-focus states)\\\\\\\\n- Current: National Health Mission (2017-2025)\\\\\\\\n\\\\\\\\n### High-Focus States\\\\\\\\n- Uttar Pradesh, Bihar, Uttarakhand, Jammu & Kashmir, Assam, Rajasthan, Odisha, Chhattisgarh, Jharkhand, Madhya Pradesh, etc.\\\\\\\\n- These states receive additional resource allocation and technical support\\\\\\\\n\\\\\\\\n### Components of NHM\\\\\\\\n\\\\\\\\n1. **Reproductive & Child Health (RCH)**\\\\\\\\n   - Maternal Mortality Ratio (MMR) reduction\\\\\\\\n   - Safe motherhood programs\\\\\\\\n   - Immunization programs\\\\\\\\n   - Child health services\\\\\\\\n\\\\\\\\n2. **Communicable Disease Control**\\\\\\\\n   - TB, Malaria, Dengue, Kala-azar, Leprosy programs\\\\\\\\n   - Integrated Disease Surveillance Programme (IDSP)\\\\\\\\n\\\\\\\\n3. **Non-Communicable Disease Management**\\\\\\\\n   - Cancer, CVD, diabetes screening\\\\\\\\n   - NPCDCS (National Programme for Prevention and Control of Cancer, Diabetes, CVD, and Stroke)\\\\\\\\n\\\\\\\\n4. **Health System Strengthening**\\\\\\\\n   - Facility upgradation\\\\\\\\n   - Human resource development\\\\\\\\n   - Information systems\\\\\\\\n\\\\\\\\n## Ayushman Bharat (2018)\\\\\\\\n\\\\\\\\n### Vision\\\\\\\\n- Shift from curative to preventive healthcare\\\\\\\\n- Bridge gap between secondary and primary care\\\\\\\\n- Comprehensive coverage of health\\\\\\\\n\\\\\\\\n### Two Pillars\\\\\\\\n\\\\\\\\n**1. Pradhan Mantri Jan Arogya Yojana (PMJAY)**\\\\\\\\n- World's largest health insurance scheme\\\\\\\\n- Coverage: 50 crore (500 million) families (~10.74 crore = 107 million persons)\\\\\\\\n- Free hospitalization up to **Rs 5 lakh per family per year**\\\\\\\\n- About 50 million families below poverty line + middle-income groups\\\\\\\\n- 29,000+ empaneled hospitals (public and private)\\\\\\\\n- **Cashless treatment** at empaneled facilities\\\\\\\\n\\\\\\\\n**2. Health and Wellness Centers (HWCs)**\\\\\\\\n- Convert sub-centers into comprehensive primary care centers\\\\\\\\n- Services: Prevention, promotion, diagnostics, treatment, palliation\\\\\\\\n- Planned: 150,000 HWCs across India (by 2022)\\\\\\\\n- Functions integrated with existing RCH, IDSP programs\\\\\\\\n- Added: Non-communicable disease screening (BP, glucose, BMI),\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"NHM = New Health Model\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"National Health Mission: 2013 onwards; focused on high-burden states and health system strengthening\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"AB = 2 Pillars: PMJAY + HWC\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Ayushman Bharat has two pillars: Pradhan Mantri Jan Arogya Yojana (health insurance) and Health and Wellness Centers (preventive care)\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"NHM launched 2013; focuses on health system strengthening and UHC in high-burden states\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"High-focus states (19) receive additional resources and technical support\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"NHM covers RCH, communicable and non-communicable disease programs\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PMJAY provides health insurance covering Rs 5 lakh/family/year; 50 crore beneficiaries\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"HWCs transform sub-centers into comprehensive primary care with prevention + treatment focus\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Ayushman Bharat emphasizes shift from curative to preventive healthcare\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"National Health Mission & Schemes\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 2, slug: \\\\\\\\\\\\\\\"nhm-ayushman-bharat-mechanism\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"National Health Mission & Ayushman Bharat - Mechanism\\\\\\\\\\\\\\\", estimatedMinutes: 30,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"How NHM and Ayushman Bharat function operationally. PMJAY enrollment and claims process. HWCs service delivery model. Integration with existing healthcare infrastructure and programs.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Operational Mechanisms\\\\\\\\n\\\\\\\\n## NHM Implementation Structure\\\\\\\\n\\\\\\\\n### Governance\\\\\\\\n- **Central**: Ministry of Health & Family Welfare provides policy, financing\\\\\\\\n- **State Level**: SHSB (State Health Society Board) oversees implementation\\\\\\\\n- **District Level**: DHSB (District Health Society Board) coordinates programs\\\\\\\\n- **Facility Level**: Committees ensure community participation and oversight\\\\\\\\n\\\\\\\\n### Resource Allocation\\\\\\\\n- **High-focus states**: Higher per capita allocation\\\\\\\\n- **HMIS data**: Drives performance-based incentives\\\\\\\\n- **Centrally Sponsored Scheme**: Government of India shares 90-100% cost\\\\\\\\n\\\\\\\\n## PMJAY Operational Details\\\\\\\\n\\\\\\\\n### Eligibility\\\\\\\\n- Automatic coverage: Households below official poverty line (BPL)\\\\\\\\n- State can extend to middle-income groups\\\\\\\\n- Occupational categories: Auto-drivers, weavers, construction workers, etc.\\\\\\\\n\\\\\\\\n### Hospital Empanelment\\\\\\\\n- Hospitals (public and private) can get empaneled\\\\\\\\n- Quality standards and oversight required\\\\\\\\n- **e-Arogya** portal: Real-time claim processing\\\\\\\\n\\\\\\\\n### Beneficiary Process\\\\\\\\n1. **Identification**: SECC (Socio-Economic Caste Census) data used for BPL identification\\\\\\\\n2. **Card generation**: Yellow colored PMJAY card issued\\\\\\\\n3. **Hospital visit**: Present card at empaneled hospital\\\\\\\\n4. **Treatment**: Cashless treatment; hospital claims from insurance pool\\\\\\\\n5. **Discharge**: No out-of-pocket payment for covered services\\\\\\\\n\\\\\\\\n### Package-Based Payment\\\\\\\\n- **Fixed packages**: Defined cost for common procedures (cataract surgery, hysterectomy, etc.)\\\\\\\\n- **Incentives**: Promotes efficiency and quality\\\\\\\\n- **Cost control**: Prevents unnecessary investigations\\\\\\\\n\\\\\\\\n## Health and Wellness Centers (HWCs)\\\\\\\\n\\\\\\\\n### Transition from Sub-centers\\\\\\\\n- Sub-centers get additional staff and equipment\\\\\\\\n- Expanded scope: Prevention + primary treatment\\\\\\\\n- **ASHA and ANM** roles redefined for health promotion\\\\\\\\n\\\\\\\\n### Services at HWCs\\\\\\\\n1. **Prevention & Health Promotion**\\\\\\\\n   - Counseling on nutrition, hygiene, maternal health\\\\\\\\n   - NCD risk assessment (hypertension, diabetes screening)\\\\\\\\n\\\\\\\\n2. **Diagnostics**\\\\\\\\n   - Blood glucose testing\\\\\\\\n   - Blood pressure monitoring\\\\\\\\n   - Pregnancy testing, hemoglobin estimation\\\\\\\\n\\\\\\\\n3. **Treatment & Management**\\\\\\\\n   - Common acute illnesses\\\\\\\\n   - Maternal and child health services\\\\\\\\n   - Contraception and family planning\\\\\\\\n   - Management of simple NCD cases\\\\\\\\n\\\\\\\\n4. **Referral & Follow-up**\\\\\\\\n   - Identified hypertension, diabetes cases → referred to PHC\\\\\\\\n   - Telemedicine consultation with PHC\\\\\\\\n\\\\\\\\n### Integration Points\\\\\\\\n- Data flows into HMIS and IDSP\\\\\\\\n- Links with RNTCP, NCP programs\\\\\\\\n- Connect with PMJAY empaneled hospitals for cashless treatment\\\\\\\\n\\\\\\\\n## Community Participation\\\\\\\\n- **VHSNCs** (Village Health and Sanitation Committees): Village-level committees\\\\\\\\n- **NRHM convergence**: Coordination with nutrition, WASH programs\\\\\\\\n- **Women SHGs**: Income generation through health promotion activities,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"PMJAY: Parivar, Maharaj, Arogya, Yojana\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Family health insurance scheme with Rs 5 lakh coverage per family per year at empaneled hospitals\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"NHM governance: Central (policy) → State (implementation) → District (coordination) → Facility (delivery)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PMJAY covers Rs 5 lakh/family/year cashless; 50 crore beneficiaries; 29,000+ empaneled hospitals\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PMJAY package-based payment: fixed cost for procedures; promotes efficiency\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"HWCs provide preventive care (screening), diagnostics, and primary treatment\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"HWCs integrate NCD risk assessment (BP, glucose, BMI) with RCH and communicable disease programs\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"VHSNC and community SHGs enhance community engagement and local ownership\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"National Health Mission & Schemes\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 3, slug: \\\\\\\\\\\\\\\"nhm-ayushman-bharat-clinical\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"National Health Mission & Ayushman Bharat - Clinical\\\\\\\\\\\\\\\", estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Clinician role in NHM implementation. Benefits for patients and healthcare providers. Challenges in implementation: exclusions in PMJAY, equity concerns, quality monitoring. Success stories and areas for improvement.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Clinical Implementation & Impact\\\\\\\\n\\\\\\\\n## For Patients & Communities\\\\\\\\n\\\\\\\\n### PMJAY Benefits\\\\\\\\n- **Financial protection**: Prevents catastrophic health expenditure\\\\\\\\n- **Access to private sector**: 50% empaneled hospitals are private\\\\\\\\n- **Preventive care**: HWCs screening reduces disease burden\\\\\\\\n- **Reduced health inequity**: Covers marginalized populations\\\\\\\\n\\\\\\\\n### HWC Benefits\\\\\\\\n- Accessible primary care at village level\\\\\\\\n- Screening identifies risk early (NCD screening, pregnancy complications)\\\\\\\\n- Reduces unnecessary referrals to CHC/hospital\\\\\\\\n- Cost-effective primary care\\\\\\\\n\\\\\\\\n## For Healthcare Providers\\\\\\\\n\\\\\\\\n### PMJAY Hospital Benefits\\\\\\\\n- Assured patient volume from 50 crore covered population\\\\\\\\n- Performance-based incentives from package-based payment\\\\\\\\n- Supports hospital operations and infrastructure\\\\\\\\n\\\\\\\\n### Challenges in Implementation\\\\\\\\n\\\\\\\\n**PMJAY Exclusions**\\\\\\\\n- Certain procedures not covered (cosmetic surgery, fertility treatment)\\\\\\\\n- Pre-existing chronic conditions: 30-day waiting period in some states\\\\\\\\n- OPD services: Not covered (limits preventive care)\\\\\\\\n\\\\\\\\n**Quality Issues**\\\\\\\\n- Monitoring quality at empaneled hospitals variable\\\\\\\\n- Inadequate grievance redressal mechanisms\\\\\\\\n- **Fraud concerns**: Overutilization of packages\\\\\\\\n\\\\\\\\n**HWC Implementation Gaps**\\\\\\\\n- Staff shortages and high turnover\\\\\\\\n- Inadequate equipment and supplies\\\\\\\\n- Low awareness among beneficiaries\\\\\\\\n- Referral coordination with PHC not always smooth\\\\\\\\n\\\\\\\\n## Equity & Access Issues\\\\\\\\n\\\\\\\\n### Exclusions in PMJAY\\\\\\\\n- Many vulnerable groups not covered: unorganized sector workers not in predefined categories\\\\\\\\n- OPD-only diseases (like asthma, hypertension management) not fully covered\\\\\\\\n- Health inequity persists despite universal coverage aim\\\\\\\\n\\\\\\\\n### Rural vs Urban\\\\\\\\n- HWCs more developed in rural areas\\\\\\\\n- Urban slums: Limited HWC penetration\\\\\\\\n- Tiered network less established in urban settings\\\\\\\\n\\\\\\\\n## Success Indicators & Outcomes\\\\\\\\n\\\\\\\\n### National-Level Impact\\\\\\\\n- Reduced catastrophic health expenditure in poor households\\\\\\\\n- Increased hospital utilization in low-income groups\\\\\\\\n- Better maternal health outcomes in high-burden states (declining MMR)\\\\\\\\n\\\\\\\\n### Data-Driven Improvements\\\\\\\\n- HMIS data guides resource allocation\\\\\\\\n- IDSP tracks disease trends, enables outbreak response\\\\\\\\n- PMJAY claims data identifies treatment patterns\\\\\\\\n\\\\\\\\n## Future Roadmap\\\\\\\\n- Expand OPD coverage (Ayushman Bharat 2.0 discussions)\\\\\\\\n- Strengthen HWC-PHC-CHC coordination\\\\\\\\n- Increase private sector engagement\\\\\\\\n- Enhance telemedicine integration\\\\\\\\n- Achieve true UHC with equitable quality care,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"PMJAY Exclusions: C-TOP (Cosmetic, Treatment of infertility, Out-of-pocket for OPD, Pre-existing wait period)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Key services not covered or have limitations under PMJAY\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"PMJAY covers Rs 5 lakh/family/year for hospitalization; OPD not covered\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Pre-existing conditions have 30-day waiting period in some states\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"HWCs provide accessible preventive care and screening at village level\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Quality monitoring at empaneled hospitals variable; fraud concerns exist\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Equity challenges: many vulnerable groups still excluded from PMJAY; OPD-only diseases not covered\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Success metrics: reduced catastrophic expenditure, increased hospital utilization, declining MMR in high-burden states\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"National Health Mission & Schemes\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 4, slug: \\\\\\\\\\\\\\\"nhm-ayushman-bharat-exam\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"National Health Mission & Ayushman Bharat - Exam Prep\\\\\\\\\\\\\\\", estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"High-yield facts on NHM objectives, PMJAY coverage, HWC services, and key statistics.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Exam High Yield\\\\\\\\n\\\\\\\\n## One-Liners\\\\\\\\n- NHM launched: **2013**\\\\\\\\n- PMJAY launched: **2018** (as part of Ayushman Bharat)\\\\\\\\n- PMJAY coverage: **Rs 5 lakh per family per year**\\\\\\\\n- PMJAY beneficiaries: **50 crore (500 million) families**\\\\\\\\n- PMJAY empaneled hospitals: **29,000+**\\\\\\\\n- HWC planned coverage: **150,000 centers across India**\\\\\\\\n- NHM focus states: **19 high-focus + 9 low-focus states**\\\\\\\\n- PMJAY card color: **Yellow**\\\\\\\\n- HWC transitions: **Sub-centers converted to comprehensive primary care**\\\\\\\\n- Ayushman Bharat vision: **Shift from curative to preventive healthcare**\\\\\\\\n\\\\\\\\n## Ayushman Bharat Quick Reference\\\\\\\\n\\\\\\\\n| Aspect | PMJAY | HWC |\\\\\\\\n|--------|-------|-----|\\\\\\\\n| Type | Health insurance | Preventive care center |\\\\\\\\n| Location | Empaneled hospitals | Villages |\\\\\\\\n| Coverage | Rs 5 lakh/family/year | Free screening, diagnosis, treatment |\\\\\\\\n| Services | Hospitalization | Prevention, diagnosis, primary treatment |\\\\\\\\n| Beneficiaries | 50 crore families | Universal |\\\\\\\\n| Goal | Financial protection | Early detection, prevention |\\\\\\\\n\\\\\\\\n## NHM Components\\\\\\\\n1. Reproductive & Child Health\\\\\\\\n2. Communicable Disease Control (RNTCP, NMCP, dengue)\\\\\\\\n3. Non-Communicable Disease Management (NPCDCS)\\\\\\\\n4. Health System Strengthening\\\\\\\\n\\\\\\\\n## NEXT Themes\\\\\\\\n- PMJAY coverage and exclusions\\\\\\\\n- HWC services and integration\\\\\\\\n- NHM components and high-focus states\\\\\\\\n- UHC goals and progress\\\\\\\\n- Equity issues in health insurance,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"5 Lakh for PMJAY\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Pradhan Mantri Jan Arogya Yojana covers Rs 5 lakh per family per year for hospitalization\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"2013 NHM, 2018 PMJAY+HWC\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"NHM launched 2013; Ayushman Bharat (PMJAY + HWC) launched 2018\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"PMJAY covers Rs 5 lakh/family/year for hospitalization at 29,000+ empaneled hospitals\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"NHM covers RCH, communicable diseases, NCD programs, and health system strengthening\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"19 high-focus states receive additional NHM resources and technical support\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"HWCs provide prevention, screening, primary treatment, and referral services\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PMJAY exclusions: cosmetic surgery, fertility treatment, OPD services, pre-existing conditions\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Ayushman Bharat vision: preventive healthcare + financial protection for UHC\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"National Health Mission & Schemes\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 5, slug: \\\\\\\\\\\\\\\"nhm-ayushman-bharat-recall\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"National Health Mission & Ayushman Bharat - Active Recall\\\\\\\\\\\\\\\", estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Flashcard-style questions on NHM and Ayushman Bharat programs.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Active Recall\\\\\\\\n\\\\\\\\n**Q1:** When was the National Health Mission launched?\\\\\\\\n> 2013\\\\\\\\n\\\\\\\\n**Q2:** What are the two main components of Ayushman Bharat?\\\\\\\\n> 1. PMJAY (health insurance), 2. Health and Wellness Centers (preventive care)\\\\\\\\n\\\\\\\\n**Q3:** What is the health insurance coverage amount under PMJAY?\\\\\\\\n> Rs 5 lakh per family per year for hospitalization\\\\\\\\n\\\\\\\\n**Q4:** How many families are covered under PMJAY?\\\\\\\\n> 50 crore (500 million) families (~107 million individuals)\\\\\\\\n\\\\\\\\n**Q5:** What is the color of the PMJAY card?\\\\\\\\n> Yellow\\\\\\\\n\\\\\\\\n**Q6:** How many hospitals are empaneled under PMJAY?\\\\\\\\n> 29,000+ hospitals (public and private)\\\\\\\\n\\\\\\\\n**Q7:** What is the planned number of Health and Wellness Centers across India?\\\\\\\\n> 150,000 centers (by 2022)\\\\\\\\n\\\\\\\\n**Q8:** Which type of facility is converted into Health and Wellness Centers?\\\\\\\\n> Sub-centers\\\\\\\\n\\\\\\\\n**Q9:** What services are provided at Health and Wellness Centers?\\\\\\\\n> Prevention and health promotion, diagnostics (BP, glucose), treatment of common acute illnesses, maternal and child health services, referral\\\\\\\\n\\\\\\\\n**Q10:** Name three components of the National Health Mission.\\\\\\\\n> Reproductive & Child Health, Communicable Disease Control, Non-Communicable Disease Management, Health System Strengthening,\\\\\\\\n        mnemonics: [],\\\\\\\\n        keyPoints: [\\\\\\\\\\\\\\\"10 key questions on NHM and Ayushman Bharat programs, coverage, and services\\\\\\\\\\\\\\\"],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"National Health Mission & Schemes\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n    ],\\\\\\\\n  },\\\\\\\\n\\\\\\\\n  // ─── CM-MOD-07-TOP-03: Health Education & Behavior Change ──────────\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"CM-MOD-07-TOP-03\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      { layer: 1, slug: \\\\\\\\\\\\\\\"health-education-behavior-change-foundation\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Health Education & Behavior Change - Foundation\\\\\\\\\\\\\\\", estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Health education aims to increase awareness and promote healthy behaviors. Behavior change is gradual and requires understanding psychological, social, and structural factors. IEC (Information, Education, Communication) and BCC (Behavior Change Communication) are core public health tools in India's national programs.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Health Education & Behavior Change\\\\\\\\n\\\\\\\\n## Definition & Concepts\\\\\\\\n\\\\\\\\n**Health Education**: Process of providing information to enable informed health decisions and promote healthy behaviors\\\\\\\\n\\\\\\\\n**Behavior Change**: Adoption of new health practices through sustained modification of attitudes and actions\\\\\\\\n\\\\\\\\n**IEC (Information, Education, Communication)**: Strategies to disseminate health information and enable informed decisions\\\\\\\\n\\\\\\\\n**BCC (Behavior Change Communication)**: Targeted communication to facilitate behavior adoption\\\\\\\\n\\\\\\\\n## Health Belief Model (HBM)\\\\\\\\n\\\\\\\\nPredicts health behavior based on:\\\\\\\\n- **Perceived susceptibility**: \\\\\\\\\\\\\\\"Am I at risk?\\\\\\\\\\\\\\\" (e.g., Risk of TB)\\\\\\\\n- **Perceived severity**: \\\\\\\\\\\\\\\"How serious is this disease?\\\\\\\\\\\\\\\" (e.g., TB complications)\\\\\\\\n- **Perceived benefits**: \\\\\\\\\\\\\\\"Will the action help?\\\\\\\\\\\\\\\" (e.g., DOTS cures TB)\\\\\\\\n- **Perceived barriers**: \\\\\\\\\\\\\\\"What obstacles exist?\\\\\\\\\\\\\\\" (e.g., Side effects of TB drugs)\\\\\\\\n- **Cues to action**: Reminders or triggers (e.g., Symptoms, health worker counseling)\\\\\\\\n- **Self-efficacy**: \\\\\\\\\\\\\\\"Can I do this?\\\\\\\\\\\\\\\" (e.g., Ability to complete treatment)\\\\\\\\n\\\\\\\\n## PRECEDE-PROCEED Model\\\\\\\\n\\\\\\\\nPlanning health education interventions:\\\\\\\\n1. **Predisposing factors**: Knowledge, attitudes, beliefs (what makes people ready?)\\\\\\\\n2. **Reinforcing factors**: Support from family, community, providers (what reinforces behavior?)\\\\\\\\n3. **Enabling factors**: Skills, resources, services (what enables behavior?)\\\\\\\\n4. **Implementation** of intervention\\\\\\\\n5. **Evaluation** of outcomes\\\\\\\\n\\\\\\\\n## Transtheoretical Model (Stages of Change)\\\\\\\\n\\\\\\\\n| Stage | Characteristics | Strategy |\\\\\\\\n|-------|---|---|\\\\\\\\n| **Precontemplation** | No intention to change | Increase awareness, provide information |\\\\\\\\n| **Contemplation** | Thinking about change | Discuss benefits and barriers |\\\\\\\\n| **Preparation** | Ready to change | Provide practical skills and resources |\\\\\\\\n| **Action** | Actively changing behavior | Support and reinforcement |\\\\\\\\n| **Maintenance** | Sustaining changed behavior | Prevent relapse; continue support |\\\\\\\\n\\\\\\\\n## IEC/BCC Channels in India\\\\\\\\n\\\\\\\\n- **Community meetings**: Village health committees, ASHA mobilization\\\\\\\\n- **Print media**: Posters, pamphlets (high reach in low literacy)\\\\\\\\n- **Electronic media**: Radio, TV, mobile messaging\\\\\\\\n- **Community health workers**: ASHA, ANM, PHC staff\\\\\\\\n- **Schools**: Curriculum integration, peer educators\\\\\\\\n- **Healthcare facilities**: Waiting room counseling, discharge counseling,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"PSBC: Perceived (Susceptibility, Severity), Perceived (Benefits, Barriers), Cues, Self-efficacy\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Health Belief Model components predicting health behavior adoption\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"PRECEDE-PROCEED: P-R-E (Plan) → P-R-E (Proceed/Evaluate)\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Framework for planning and evaluating health education interventions\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Health Belief Model: 6 components predict behavior - perceived susceptibility, severity, benefits, barriers, cues, self-efficacy\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PRECEDE-PROCEED: predisposing factors (knowledge/beliefs) → reinforcing factors (support) → enabling factors (skills/resources)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Transtheoretical Model: 5 stages of change - Precontemplation → Contemplation → Preparation → Action → Maintenance\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"IEC/BCC channels: community meetings, media, health workers, schools, healthcare facilities\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Behavior change is gradual; requires addressing knowledge, attitudes, beliefs, and structural barriers\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Self-efficacy critical: people must believe they can adopt and maintain the behavior\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Health Education & Behavior Change\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 2, slug: \\\\\\\\\\\\\\\"health-education-behavior-change-mechanism\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Health Education & Behavior Change - Mechanism\\\\\\\\\\\\\\\", estimatedMinutes: 30,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"How behavior change occurs at individual, community, and population levels. Social and environmental factors influencing health behavior. Implementation of IEC/BCC interventions in Indian national programs (RCH, TB, malaria, NCD).\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Mechanisms of Behavior Change\\\\\\\\n\\\\\\\\n## Individual Level Behavior Change\\\\\\\\n\\\\\\\\n### Psychological Mechanisms\\\\\\\\n- **Cognitive dissonance**: Discomfort from conflicting beliefs → motivation to change\\\\\\\\n- **Habit formation**: Repeated behavior → automatic response (takes ~66 days for habit)\\\\\\\\n- **Reward/reinforcement**: Positive outcomes strengthen behavior\\\\\\\\n- **Social learning**: Observing others' behavior and outcomes\\\\\\\\n\\\\\\\\n### Barriers to Individual Change\\\\\\\\n- **Habit inertia**: Existing behaviors deeply rooted\\\\\\\\n- **Knowledge-behavior gap**: Understanding doesn't automatically → behavior change (e.g., smoking knowledge but continued smoking)\\\\\\\\n- **Environmental constraints**: Unavailability of resources\\\\\\\\n- **Cultural beliefs**: Conflicting with recommended behaviors\\\\\\\\n- **Cost barriers**: Economic inability to afford healthier options\\\\\\\\n\\\\\\\\n## Community Level Behavior Change\\\\\\\\n\\\\\\\\n### Social Factors\\\\\\\\n- **Social norms**: What community members perceive as normal (often more influential than facts)\\\\\\\\n- **Social networks**: Influence spreads through friends and family\\\\\\\\n- **Community leaders**: ASHA, ANM, village elders influential in endorsing changes\\\\\\\\n\\\\\\\\n### Mechanisms\\\\\\\\n1. **Community mobilization**: Organize village meetings, discuss issues\\\\\\\\n2. **Community consensus**: Build agreement on benefits of behavior\\\\\\\\n3. **Peer influence**: Community members advocate for each other\\\\\\\\n4. **Collective efficacy**: \\\\\\\\\\\\\\\"If we work together, we can achieve this\\\\\\\\\\\\\\\"\\\\\\\\n\\\\\\\\n## Population-Level Behavior Change\\\\\\\\n\\\\\\\\n### Environmental Modifications\\\\\\\\n- **Enabling policies**: Government programs (PMJAY making healthcare accessible)\\\\\\\\n- **Infrastructure changes**: Water supply, toilet construction enabling sanitation\\\\\\\\n- **Healthcare availability**: Establishing HWCs, PHCs increases service utilization\\\\\\\\n- **Pricing mechanisms**: Taxation on harmful goods (tobacco), subsidies on healthy foods\\\\\\\\n\\\\\\\\n### Examples in India\\\\\\\\n- **Immunization**: Linked incentives (ASHA incentives) → maternal participation → child coverage\\\\\\\\n- **Sanitation**: PMAY-WASH + awareness = toilet construction and usage\\\\\\\\n- **TB**: DOTS program (DOT provider incentives) + awareness = adherence\\\\\\\\n\\\\\\\\n## Implementation of IEC/BCC Programs\\\\\\\\n\\\\\\\\n### Reproductive & Child Health\\\\\\\\n- **Target**: Maternal, newborn, child health behaviors\\\\\\\\n- **Messages**: ANC attendance, institutional delivery, early breastfeeding, immunization\\\\\\\\n- **Channels**: ASHA counseling, wait room counseling, TV campaigns\\\\\\\\n- **Impact**: Increase MMR, IMR reduction\\\\\\\\n\\\\\\\\n### Communicable Diseases (TB, Malaria)\\\\\\\\n- **TB**: \\\\\\\\\\\\\\\"TB can be cured\\\\\\\\\\\\\\\" messaging → reduces stigma → increases case detection and treatment adherence\\\\\\\\n- **Malaria**: Bed net usage, housing improvement messaging → reduces transmission\\\\\\\\n- **Challenges**: Superstitions (\\\\\\\\\\\\\\\"TB inheritance\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"Malaria from sorcery\\\\\\\\\\\\\\\")\\\\\\\\n\\\\\\\\n### Non-Communicable Disease Prevention\\\\\\\\n- **CVD/Diabetes**: Awareness on risk factors (salt intake, physical activity, BMI)\\\\\\\\n- **Tobacco/Alcohol**: Campaigns on harmful effects\\\\\\\\n- **Mental Health**: Stigma reduction campaigns → increased help-seeking\\\\\\\\n\\\\\\\\n## Evaluation of Behavior Change\\\\\\\\n\\\\\\\\n### Outcome Measures\\\\\\\\n- **Knowledge**: Awareness increase (assessed via surveys)\\\\\\\\n- **Attitude**: Perception change (attitude scores)\\\\\\\\n- **Practice**: Actual behavior adoption (coverage surveys)\\\\\\\\n\\\\\\\\n### Coverage Indicators\\\\\\\\n- **RCH**: Institutional delivery rate, exclusive breastfeeding rate, immunization coverage\\\\\\\\n- **TB**: Treatment adherence rate, treatment completion rate\\\\\\\\n- **Sanitation**: Open defecation-free villages, latrine coverage,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"HAB: Habit (takes 66 days), Attitude, Behavior adoption\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Mechanism of behavior change: habit formation, attitude shift, then sustained behavior\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Social before Solo\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Social/community factors (norms, networks, leaders) more influential than individual factors in behavior adoption\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Individual behavior change hindered by habit inertia and knowledge-behavior gap\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Social norms influence more than factual information; peer and community leader endorsement critical\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Community mobilization builds consensus and collective efficacy for behavior change\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Environmental modifications (infrastructure, policies) enable and sustain behavior change\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Incentive programs (ASHA incentives, DOT provider incentives) link behavior change to rewards\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Evaluation requires measuring knowledge, attitudes, and actual practice change\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Health Education & Behavior Change\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 3, slug: \\\\\\\\\\\\\\\"health-education-behavior-change-clinical\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Health Education & Behavior Change - Clinical\\\\\\\\\\\\\\\", estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Clinician role in health education and behavior change counseling. Patient communication strategies, shared decision-making, motivational interviewing. Health literacy and its impact on outcomes. Addressing misconceptions in Indian healthcare context.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Clinical Implementation\\\\\\\\n\\\\\\\\n## Patient-Centered Communication\\\\\\\\n\\\\\\\\n### Counseling Skills\\\\\\\\n- **Empathy and respect**: Validate patient concerns without judgment\\\\\\\\n- **Active listening**: Understand patient's beliefs, barriers, motivations\\\\\\\\n- **Open-ended questions**: \\\\\\\\\\\\\\\"What concerns do you have about treatment?\\\\\\\\\\\\\\\"\\\\\\\\n- **Avoid jargon**: Use simple language, explain medical terms\\\\\\\\n- **Check understanding**: \\\\\\\\\\\\\\\"Can you explain back to me what you understood?\\\\\\\\\\\\\\\"\\\\\\\\n\\\\\\\\n### Motivational Interviewing\\\\\\\\n- **Explore ambivalence**: \\\\\\\\\\\\\\\"You want to lose weight but enjoy sweets - tell me more\\\\\\\\\\\\\\\"\\\\\\\\n- **Support self-efficacy**: \\\\\\\\\\\\\\\"You've successfully quit smoking before, so you can do this\\\\\\\\\\\\\\\"\\\\\\\\n- **Develop discrepancy**: \\\\\\\\\\\\\\\"You value health but smoking harms your lungs\\\\\\\\\\\\\\\"\\\\\\\\n- **Roll with resistance**: Don't argue; acknowledge barriers and problem-solve together\\\\\\\\n\\\\\\\\n## Shared Decision-Making\\\\\\\\n- Present options with pros and cons\\\\\\\\n- Elicit patient preferences and values\\\\\\\\n- Support patient autonomy in choice\\\\\\\\n- Increases adherence and satisfaction\\\\\\\\n\\\\\\\\n## Addressing Misconceptions in Indian Context\\\\\\\\n\\\\\\\\n### Common Beliefs & Counter-messaging\\\\\\\\n\\\\\\\\n| Belief | Clinical Implication | Counter-messaging |\\\\\\\\n|--------|---|---|\\\\\\\\n| TB is inherited / caused by curse | Stigma, delayed treatment | TB is bacterial infection, transmitted by cough droplets, curable |\\\\\\\\n| Hypertension is normal with age | Non-compliance with treatment | Early control prevents stroke, cardiac disease |\\\\\\\\n| Diabetes curable by traditional medicine | Delayed diagnosis, complications | Need ongoing treatment; traditional medicine complements not replaces |\\\\\\\\n| Vaccines cause autism | Low immunization coverage | No link; vaccines prevent serious diseases |\\\\\\\\n| Contraception reduces fertility | Low contraceptive usage | Hormonal contraception reversible; doesn't affect future fertility |\\\\\\\\n\\\\\\\\n## Health Literacy Impact\\\\\\\\n- Low health literacy → poor medication adherence, treatment non-compliance\\\\\\\\n- **Simple language**, written materials, visual aids improve outcomes\\\\\\\\n- Teach-back method: Ask patient to demonstrate understanding\\\\\\\\n\\\\\\\\n## Role of Health Worker in Counseling\\\\\\\\n\\\\\\\\n### ASHA/ANM\\\\\\\\n- Household counseling on maternal health, immunization\\\\\\\\n- Weight monitoring, nutritional advice\\\\\\\\n- Community mobilization through group sessions\\\\\\\\n\\\\\\\\n### PHC Physician\\\\\\\\n- OPD counseling on chronic disease management\\\\\\\\n- Treatment adherence for TB, hypertension, diabetes\\\\\\\\n- Prevention counseling (smoking, alcohol, diet)\\\\\\\\n\\\\\\\\n### Specialized Counseling\\\\\\\\n- **HIV/AIDS**: Disclosure support, partner notification\\\\\\\\n- **Mental health**: Depression screening, psychological support, referral\\\\\\\\n- **Cancer**: Stigma reduction, treatment options discussion\\\\\\\\n\\\\\\\\n## Success Factors in Indian Behavior Change Programs\\\\\\\\n\\\\\\\\n1. **Community endorsement**: Village leaders, ASHA support essential\\\\\\\\n2. **Cultural alignment**: Messages match local context and values\\\\\\\\n3. **Tangible benefits**: Free PMJAY, ASHA incentives → material motivation\\\\\\\\n4. **Regular reinforcement**: Repeated messages through multiple channels\\\\\\\\n5. **Feedback and monitoring**: Coverage tracking motivates workers and communities,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"ECAR: Empathy, Check understanding, Ask (open-ended), Respect autonomy\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Core counseling skills for effective patient communication\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Empathy and active listening foundation of patient counseling; validate concerns without judgment\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Motivational interviewing explores ambivalence and supports self-efficacy\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Shared decision-making increases adherence and patient satisfaction\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Address misconceptions actively: TB not inherited, vaccines safe, hypertension preventable\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Health literacy affects adherence; use simple language, teach-back, visual aids\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Community endorsement and cultural alignment critical for behavior change success in India\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Health Education & Behavior Change\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 4, slug: \\\\\\\\\\\\\\\"health-education-behavior-change-exam\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Health Education & Behavior Change - Exam Prep\\\\\\\\\\\\\\\", estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"High-yield facts on behavior change models, IEC/BCC strategies, and health literacy concepts.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Exam High Yield\\\\\\\\n\\\\\\\\n## One-Liners\\\\\\\\n- Health Belief Model: **6 factors** (perceived susceptibility, severity, benefits, barriers, cues, self-efficacy)\\\\\\\\n- PRECEDE-PROCEED: **P(redisposing), R(einforcing), E(nabling), Evaluation**\\\\\\\\n- Transtheoretical Model: **5 stages** (Precontemplation, Contemplation, Preparation, Action, Maintenance)\\\\\\\\n- Habit formation time: **~66 days of repetition**\\\\\\\\n- Most influential behavior change factor: **Social norms and peer influence**\\\\\\\\n- IEC: **Information, Education, Communication**\\\\\\\\n- BCC: **Behavior Change Communication**\\\\\\\\n- Motivational interviewing technique: **Explore ambivalence and self-efficacy**\\\\\\\\n- Knowledge-behavior gap: **Understanding ≠ Automatic behavior change**\\\\\\\\n- Health literacy: **Ability to understand health information and make decisions**\\\\\\\\n\\\\\\\\n## Behavior Change Models Comparison\\\\\\\\n\\\\\\\\n| Model | Focus | Application |\\\\\\\\n|-------|-------|---|\\\\\\\\n| **HBM** | Individual perception of risk/benefits | Screening programs, treatment initiation |\\\\\\\\n| **PRECEDE-PROCEED** | Planning & evaluation framework | Program development and assessment |\\\\\\\\n| **Transtheoretical** | Stages of change process | Smoking cessation, exercise adoption |\\\\\\\\n\\\\\\\\n## IEC/BCC Strategies\\\\\\\\n- Community meetings (high-impact, low-cost)\\\\\\\\n- ASHA house-to-house counseling (trusted source)\\\\\\\\n- Mass media (posters, radio, TV)\\\\\\\\n- Classroom education (school-based)\\\\\\\\n- Healthcare facility waiting room counseling\\\\\\\\n\\\\\\\\n## NEXT Themes\\\\\\\\n- Behavior change models and their application\\\\\\\\n- Counseling skills and patient communication\\\\\\\\n- Addressing health misconceptions\\\\\\\\n- Role of social factors in behavior change\\\\\\\\n- Evaluation of behavior change programs,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"PSB-CSE: HBM Model\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Perceived Susceptibility, Severity, Benefits, barriers, Cues, Self-Efficacy\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Pre-Con-Con-Pro: Stages of Change\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Precontemplation, Contemplation, Preparation, Action, Maintenance (doesn't start with M but remember 'Pro' for action phase)\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Health Belief Model: 6 factors predict health behavior; self-efficacy critical\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"PRECEDE-PROCEED: comprehensive framework from planning to evaluation\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Transtheoretical: 5 stages; people enter at different stages requiring tailored approaches\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Social norms more influential than factual information; peer influence powerful\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Counseling: empathy, active listening, open-ended questions, check understanding\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Knowledge alone insufficient; requires attitude change and enabling factors\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Health Education & Behavior Change\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 5, slug: \\\\\\\\\\\\\\\"health-education-behavior-change-recall\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Health Education & Behavior Change - Active Recall\\\\\\\\\\\\\\\", estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Flashcard-style questions on behavior change models and health education strategies.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Active Recall\\\\\\\\n\\\\\\\\n**Q1:** Name the 6 components of the Health Belief Model.\\\\\\\\n> Perceived susceptibility, perceived severity, perceived benefits, perceived barriers, cues to action, self-efficacy\\\\\\\\n\\\\\\\\n**Q2:** What does PRECEDE-PROCEED stand for?\\\\\\\\n> Predisposing factors, Reinforcing factors, Enabling factors → Program implementation → Evaluation\\\\\\\\n\\\\\\\\n**Q3:** What are the 5 stages of the Transtheoretical Model?\\\\\\\\n> Precontemplation, Contemplation, Preparation, Action, Maintenance\\\\\\\\n\\\\\\\\n**Q4:** What is the knowledge-behavior gap?\\\\\\\\n> The phenomenon where people have correct knowledge but don't necessarily adopt the recommended behavior\\\\\\\\n\\\\\\\\n**Q5:** How long does it take for a new behavior to become a habit?\\\\\\\\n> Approximately 66 days of consistent repetition\\\\\\\\n\\\\\\\\n**Q6:** What is more influential in behavior change: individual knowledge or social norms?\\\\\\\\n> Social norms and peer influence are typically more influential than individual factual knowledge\\\\\\\\n\\\\\\\\n**Q7:** What is the difference between IEC and BCC?\\\\\\\\n> IEC (Information, Education, Communication) is about providing information; BCC (Behavior Change Communication) is specifically targeted at facilitating behavior adoption\\\\\\\\n\\\\\\\\n**Q8:** Name three channels for IEC/BCC in India.\\\\\\\\n> Community meetings, ASHA counseling, mass media (radio/TV), posters, school education, healthcare facility counseling\\\\\\\\n\\\\\\\\n**Q9:** What is motivational interviewing?\\\\\\\\n> Counseling technique exploring ambivalence, supporting self-efficacy, and helping patient develop internal motivation for change\\\\\\\\n\\\\\\\\n**Q10:** What is health literacy?\\\\\\\\n> Ability to obtain, process, and understand health information to make informed health decisions,\\\\\\\\n        mnemonics: [],\\\\\\\\n        keyPoints: [\\\\\\\\\\\\\\\"10 key questions on behavior change models, counseling techniques, and health education strategies\\\\\\\\\\\\\\\"],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Health Education & Behavior Change\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n    ],\\\\\\\\n  },\\\\\\\\n\\\\\\\\n  // ─── CM-MOD-07-TOP-04: Disaster Management & International Health ──────────\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"CM-MOD-07-TOP-04\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      { layer: 1, slug: \\\\\\\\\\\\\\\"disaster-management-international-health-foundation\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Disaster Management & International Health - Foundation\\\\\\\\\\\\\\\", estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Disaster management involves preparedness, response, and recovery from natural (earthquakes, floods, tsunamis) or man-made disasters. International health addresses global health challenges, SDGs, and collaboration through WHO. Disaster health includes mass casualties, disease surveillance, and community resilience.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Disaster Management & International Health\\\\\\\\n\\\\\\\\n## Disaster Definition & Classification\\\\\\\\n\\\\\\\\n**Disaster**: Sudden event causing widespread damage, loss of life, injuries, and disruption of services\\\\\\\\n\\\\\\\\n### Natural Disasters in India\\\\\\\\n- **Earthquakes**: North, Northeast, Himalayas most vulnerable\\\\\\\\n- **Floods**: Monsoon flooding, riverine floods (North India, Northeast)\\\\\\\\n- **Cyclones**: Coastal areas (Bay of Bengal, Arabian Sea)\\\\\\\\n- **Droughts**: Semi-arid regions (Rajasthan, parts of Maharashtra)\\\\\\\\n- **Landslides**: Hilly regions, heavy rainfall areas\\\\\\\\n\\\\\\\\n### Man-Made Disasters\\\\\\\\n- Industrial accidents (Bhopal Gas Tragedy, 1984)\\\\\\\\n- Building collapse, transportation accidents\\\\\\\\n- Armed conflict, civil unrest\\\\\\\\n\\\\\\\\n## Disaster Management Cycle\\\\\\\\n\\\\\\\\n### 1. Mitigation & Prevention\\\\\\\\n- Reduce risk of disaster impact\\\\\\\\n- Building codes, earthquake-resistant structures\\\\\\\\n- Flood management, drainage systems\\\\\\\\n- Early warning systems\\\\\\\\n\\\\\\\\n### 2. Preparedness\\\\\\\\n- Planning for disaster response\\\\\\\\n- Training disaster management teams\\\\\\\\n- Stockpiling medical supplies, medicines, food\\\\\\\\n- Community awareness, mock drills\\\\\\\\n\\\\\\\\n### 3. Response (Immediate - First 72 Hours)\\\\\\\\n- Emergency medical services\\\\\\\\n- Mass casualty management (triage, first aid)\\\\\\\\n- Search and rescue\\\\\\\\n- Disease surveillance and sanitation\\\\\\\\n- Establishing relief camps\\\\\\\\n\\\\\\\\n### 4. Recovery & Rehabilitation\\\\\\\\n- Restoration of services and livelihoods\\\\\\\\n- Reconstruction of infrastructure\\\\\\\\n- Psychological support (trauma counseling)\\\\\\\\n- Prevention of disease epidemics\\\\\\\\n- Long-term development\\\\\\\\n\\\\\\\\n## Disaster Health System in India\\\\\\\\n\\\\\\\\n### National Disaster Management Act (2005)\\\\\\\\n- Establishes institutional framework\\\\\\\\n- National Disaster Management Authority (NDMA) at center\\\\\\\\n- State and District level authorities coordinate\\\\\\\\n\\\\\\\\n### Disaster Health Response\\\\\\\\n- **Incident Command System** for coordinated response\\\\\\\\n- **Mass casualty management**: Triage, treatment prioritization\\\\\\\\n- **Disease surveillance**: Early detection of epidemics in post-disaster period\\\\\\\\n- **Health worker safety**: PPE, training, mental health support\\\\\\\\n\\\\\\\\n## International Health & Global Health Concepts\\\\\\\\n\\\\\\\\n**International Health**: Official government-to-government health diplomacy and international health law\\\\\\\\n\\\\\\\\n**Global Health**: Transnational health issues and collaborative solutions (includes NGOs, academia)\\\\\\\\n\\\\\\\\n### Major Global Health Challenges\\\\\\\\n- Communicable diseases: HIV/AIDS, TB, Malaria, COVID-19\\\\\\\\n- Non-communicable diseases: CVD, diabetes, cancer\\\\\\\\n- Maternal and child mortality\\\\\\\\n- Antimicrobial resistance\\\\\\\\n- Health system strengthening\\\\\\\\n\\\\\\\\n### Sustainable Development Goals (SDGs) - 2030 Agenda\\\\\\\\n- **Goal 3**: Ensure healthy lives and promote well-being\\\\\\\\n  - Targets: Reduce maternal mortality, end TB/HIV, reduce NCDs\\\\\\\\n- **Goal 6**: Clean water and sanitation\\\\\\\\n- **Goal 13**: Climate action\\\\\\\\n- Related to health: Poverty (Goal 1), Food security (Goal 2), Education (Goal 4)\\\\\\\\n\\\\\\\\n### Key International Organizations\\\\\\\\n- **WHO** (World Health Organization): Directs global health; disease surveillance (IHR)\\\\\\\\n- **UNICEF**: Maternal and child health, immunization\\\\\\\\n- **GAVI**: Vaccination programs\\\\\\\\n- **Global Fund**: HIV, TB, malaria funding\\\\\\\\n- **Gavi Alliance**: Vaccine accessibility,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"MIRR: Mitigation, (preparedness), Response, Recovery\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Four phases of disaster management cycle\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"NDM-NDMA: National Disaster Management Act with Authority\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"2005 act establishes NDMA for coordinated disaster management in India\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Disaster management: 4 phases - Mitigation, Preparedness, Response (72-hour critical), Recovery\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Natural disasters common in India: earthquakes, floods, cyclones, droughts affecting specific regions\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Response phase critical: triage, mass casualty management, disease surveillance, sanitation\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"NDMA coordinates disaster response; Incident Command System ensures coordination\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Global health challenges: communicable diseases, NCDs, maternal-child health, antimicrobial resistance\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"SDG 3 targets: reduce maternal mortality, end TB/HIV, prevent NCDs; related goals address poverty, nutrition, education\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Disaster Management & International Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 2, slug: \\\\\\\\\\\\\\\"disaster-management-international-health-mechanism\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Disaster Management & International Health - Mechanism\\\\\\\\\\\\\\\", estimatedMinutes: 30,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Mechanisms of disaster impact on health systems. Disease transmission in post-disaster settings. Vulnerability and resilience factors. International disease surveillance and response coordination through WHO IHR.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Mechanisms & Systems\\\\\\\\n\\\\\\\\n## Health Impact of Disasters\\\\\\\\n\\\\\\\\n### Immediate Impact (First 72 hours)\\\\\\\\n- **Traumatic injuries**: Crush injuries, lacerations, fractures\\\\\\\\n- **Disease outbreak risk**: Contaminated water, poor sanitation, overcrowding\\\\\\\\n- **Disruption of services**: Damaged health facilities, unavailable medications\\\\\\\\n- **Psychological trauma**: Acute stress reactions, grief, anxiety\\\\\\\\n\\\\\\\\n### Secondary Impact (Post-disaster period)\\\\\\\\n- **Epidemics**: Waterborne (cholera, typhoid), vector-borne (malaria in flood areas)\\\\\\\\n- **Mental health**: PTSD, depression, substance abuse\\\\\\\\n- **Chronic disease management**: Loss of diabetes/hypertension medications\\\\\\\\n- **Malnutrition**: Disrupted food supply chain\\\\\\\\n\\\\\\\\n## Vulnerability & Resilience\\\\\\\\n\\\\\\\\n### Vulnerable Groups\\\\\\\\n- **Elderly**: Reduced mobility, chronic diseases\\\\\\\\n- **Children**: Malnutrition, vaccine-preventable disease risk\\\\\\\\n- **Disabled**: Limited access to relief and rehabilitation\\\\\\\\n- **Low-income populations**: Less financial capacity to recover\\\\\\\\n- **Women**: Gender-based violence increases post-disaster\\\\\\\\n\\\\\\\\n### Building Resilience\\\\\\\\n- Community-based disaster management training\\\\\\\\n- Local resource availability and strengthening\\\\\\\\n- Integration of disaster management with health system planning\\\\\\\\n- Community participation in preparedness\\\\\\\\n\\\\\\\\n## Communicable Disease Outbreak After Disasters\\\\\\\\n\\\\\\\\n### Waterborne Diseases (Flood Scenario)\\\\\\\\n- **Cholera**: Fecal-oral route; rapid spread in camps\\\\\\\\n- **Typhoid**: Contaminated water supply\\\\\\\\n- **Hepatitis A, E**: Fecal contamination\\\\\\\\n- **Prevention**: Water disinfection, oral rehydration, vaccination\\\\\\\\n\\\\\\\\n### Vector-Borne Diseases\\\\\\\\n- **Malaria**: Stagnant water breeding sites post-flood\\\\\\\\n- **Dengue/Chikungunya**: Mosquito breeding in discarded containers\\\\\\\\n- **Prevention**: Vector control, bed nets, insecticide spraying\\\\\\\\n\\\\\\\\n### Respiratory Infections\\\\\\\\n- **Crowded relief camps**: Tuberculosis, influenza transmission\\\\\\\\n- **Dust exposure**: Respiratory symptoms in earthquake aftermath\\\\\\\\n- **Prevention**: Respiratory hygiene, separation of symptomatic patients\\\\\\\\n\\\\\\\\n## International Disease Surveillance & Response\\\\\\\\n\\\\\\\\n### IHR (International Health Regulations)\\\\\\\\n- Binding legal framework (WHO, 2005)\\\\\\\\n- Obligates countries to report disease outbreaks of international concern\\\\\\\\n- Coordinates global response to health emergencies\\\\\\\\n- **PHEIC**: Public Health Emergency of International Concern (declared by WHO)\\\\\\\\n\\\\\\\\n### Disease Surveillance at WHO Level\\\\\\\\n- **AFRO, SEARO (South-East Asia)**: Regional surveillance networks\\\\\\\\n- Real-time data sharing on outbreaks\\\\\\\\n- Rapid assessment missions (WHO experts to outbreak countries)\\\\\\\\n- Coordination of international support and resources\\\\\\\\n\\\\\\\\n### Example: COVID-19 Response\\\\\\\\n- IHR activated; PHEIC declared January 30, 2020\\\\\\\\n- Global coordination on testing, PPE distribution, vaccine rollout\\\\\\\\n- Highlighted gaps in surveillance systems and supply chains\\\\\\\\n\\\\\\\\n## India's Disaster Health System\\\\\\\\n\\\\\\\\n### National Level\\\\\\\\n- NDMA: Policy formulation\\\\\\\\n- Health ministry coordinates medical response\\\\\\\\n\\\\\\\\n### State Level\\\\\\\\n- SDMA (State Disaster Management Authority)\\\\\\\\n- Pre-positioned medicines, supplies\\\\\\\\n- Training of rapid response teams\\\\\\\\n\\\\\\\\n### District Level\\\\\\\\n- DDMA (District Disaster Management Authority)\\\\\\\\n- First responders: Police, Fire, Health services\\\\\\\\n- Community health workers mobilized for outreach,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"IHR = International Health Regulations\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Binding framework requiring countries to report disease outbreaks of international concern to WHO\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Disaster Diseases: Diarrhea, Dengue, Dust\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Common post-disaster diseases: diarrheal (waterborne), dengue (vector-borne), dust (respiratory)\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Immediate disaster impact: injuries, disease risk, service disruption, psychological trauma\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Secondary impact: epidemic outbreaks (waterborne, vector-borne), mental health issues, chronic disease management gaps\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Vulnerable groups: elderly, children, disabled, low-income, women - require targeted support\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Waterborne diseases (cholera, typhoid) common in flood disasters; vector-borne (malaria, dengue) post-flood stagnant water\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"IHR framework obligates countries to report outbreaks; WHO coordinates global response\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"India's NDMA-SDMA-DDMA coordinate disaster response; health sector key responder\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Disaster Management & International Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 3, slug: \\\\\\\\\\\\\\\"disaster-management-international-health-clinical\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Disaster Management & International Health - Clinical\\\\\\\\\\\\\\\", estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Clinician role in disaster response. Triage systems (START, SALT), mass casualty management, psychological first aid. Post-disaster health assessment and program development. WHO collaboration and global health partnerships.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Clinical Response & Global Collaboration\\\\\\\\n\\\\\\\\n## Triage in Mass Casualty Events\\\\\\\\n\\\\\\\\n### START Triage (Simple Triage and Rapid Treatment)\\\\\\\\n1. **Immediate (Red tag)**: Life-threatening, salvageable\\\\\\\\n   - Airway/breathing compromised\\\\\\\\n   - Severe hemorrhage\\\\\\\\n   - Altered mental status\\\\\\\\n\\\\\\\\n2. **Delayed (Yellow tag)**: Serious but stable\\\\\\\\n   - Moderate injuries\\\\\\\\n   - Moderate hemorrhage controlled\\\\\\\\n   - Alert and oriented\\\\\\\\n\\\\\\\\n3. **Minor (Green tag)**: Walking wounded\\\\\\\\n   - Minor injuries\\\\\\\\n   - No immediate threat\\\\\\\\n\\\\\\\\n4. **Expectant (Black tag)**: Unsurvivable injuries\\\\\\\\n   - Massive head injuries\\\\\\\\n   - Severe crush injuries with prolonged extrication\\\\\\\\n   - Severe burns > 90%\\\\\\\\n\\\\\\\\n### SALT Triage (Sort, Assess, Lifesaving interventions, Treatment)\\\\\\\\n- Modified version considering resource constraints\\\\\\\\n- Emphasizes lifesaving interventions early (airway, hemorrhage control)\\\\\\\\n\\\\\\\\n## Disaster Medical Response Phases\\\\\\\\n\\\\\\\\n### Rescue Phase (0-72 hours)\\\\\\\\n- Field triage and emergency first aid\\\\\\\\n- Transport to nearest healthcare facility\\\\\\\\n- Focus: Life-threatening injuries\\\\\\\\n\\\\\\\\n### Acute Phase (Days 3-2 weeks)\\\\\\\\n- Hospital-based treatment of serious injuries\\\\\\\\n- Disease surveillance, outbreak response\\\\\\\\n- Psychological support begins\\\\\\\\n\\\\\\\\n### Recovery Phase (Weeks-Months)\\\\\\\\n- Rehabilitation of survivors\\\\\\\\n- Reconstruction of health services\\\\\\\\n- Mental health and psychosocial support (MHPSS)\\\\\\\\n- Disease prevention programs\\\\\\\\n\\\\\\\\n## Psychological First Aid (PFA)\\\\\\\\n- **FIRST approach**:\\\\\\\\n  - **F**ace-to-face: Provide immediate presence and support\\\\\\\\n  - **I**nformation: Simple, clear information on disaster and services\\\\\\\\n  - **R**efer: Connect to family/social support\\\\\\\\n  - **S**tabilize: Grounding techniques, immediate needs met\\\\\\\\n  - **T**rust: Build therapeutic alliance\\\\\\\\n\\\\\\\\n### Post-Disaster Mental Health Issues\\\\\\\\n- **Acute Stress Disorder**: Symptoms within first month\\\\\\\\n- **PTSD**: Long-term (months-years)\\\\\\\\n- **Depression**: Related to loss and displacement\\\\\\\\n- **Substance abuse**: Coping mechanism\\\\\\\\n\\\\\\\\n## Global Health Partnerships & India\\\\\\\\n\\\\\\\\n### India's Role in Global Health\\\\\\\\n- **SAARC cooperation**: Regional health emergencies (earthquake response Nepal 2015)\\\\\\\\n- **BIMSTEC**: Disease surveillance cooperation\\\\\\\\n- **AIIMS abroad**: Medical diplomacy, capacity building\\\\\\\\n- **Telemedicine**: Remote consultation in disaster zones\\\\\\\\n\\\\\\\\n### WHO Collaborating Centers\\\\\\\\n- India hosts multiple WHO collaborating centers for:\\\\\\\\n  - TB control\\\\\\\\n  - Vaccine safety\\\\\\\\n  - Mental health\\\\\\\\n  - Traditional medicine\\\\\\\\n\\\\\\\\n### Bilateral Health Agreements\\\\\\\\n- India-Bangladesh: TB and malaria control\\\\\\\\n- India-Myanmar: Health system strengthening\\\\\\\\n- India-Nepal: Earthquake disaster management\\\\\\\\n\\\\\\\\n## Health Needs Assessment (HNA) Post-Disaster\\\\\\\\n\\\\\\\\n### Rapid Assessment (0-3 days)\\\\\\\\n- Deaths, injuries, missing persons\\\\\\\\n- Damaged health facilities, supplies\\\\\\\\n- Population displacement, shelter adequacy\\\\\\\\n\\\\\\\\n### Detailed Assessment (Days 1-2 weeks)\\\\\\\\n- Disease surveillance data\\\\\\\\n- Nutritional status of children\\\\\\\\n- Water, sanitation, food security\\\\\\\\n- Mental health needs\\\\\\\\n- Restoration of essential services\\\\\\\\n\\\\\\\\n### Program Planning\\\\\\\\n- Gap prioritization based on assessment\\\\\\\\n- Resource mobilization (local, national, international)\\\\\\\\n- Integration with existing health programs\\\\\\\\n- Monitoring and evaluation framework,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"START: Simple Triage and Rapid Treatment\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Red (immediate/life-threatening), Yellow (delayed/serious), Green (minor), Black (expectant/unsurvivable)\\\\\\\\\\\\\\\" },\\\\\\\\n          { text: \\\\\\\\\\\\\\\"FIRST PFA: Face, Information, Refer, Stabilize, Trust\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Components of psychological first aid for disaster survivors\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Triage: Red (immediate), Yellow (delayed), Green (minor), Black (expectant) - resource allocation priority\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"START triage uses vital signs and mental status to categorize; SALT emphasizes lifesaving interventions\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Disaster phases: Rescue (0-72h), Acute (3-14 days), Recovery (weeks-months)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Psychological First Aid: presence, information, referral, stabilization, trust-building\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Post-disaster mental health: PTSD, depression, substance abuse - long-term support needed\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"HNA guides recovery planning: rapid assessment (deaths/facilities) → detailed assessment (health needs) → program planning\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Disaster Management & International Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 4, slug: \\\\\\\\\\\\\\\"disaster-management-international-health-exam\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Disaster Management & International Health - Exam Prep\\\\\\\\\\\\\\\", estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"High-yield facts on disaster phases, triage systems, vulnerable populations, and international health frameworks.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Exam High Yield\\\\\\\\n\\\\\\\\n## One-Liners\\\\\\\\n- Disaster management phases: **Mitigation, Preparedness, Response, Recovery**\\\\\\\\n- START triage colors: **Red (immediate), Yellow (delayed), Green (minor), Black (expectant)**\\\\\\\\n- Critical response window: **First 72 hours**\\\\\\\\n- Common post-flood diseases: **Cholera, typhoid, malaria**\\\\\\\\n- WHO international legal framework: **International Health Regulations (IHR)**\\\\\\\\n- PHEIC declared by: **World Health Organization (WHO)**\\\\\\\\n- India's disaster coordination body: **National Disaster Management Authority (NDMA)**\\\\\\\\n- SDG 3 targets: **Reduce maternal mortality, end TB/HIV, prevent NCDs**\\\\\\\\n- Psychological First Aid approach: **FIRST (Face, Information, Refer, Stabilize, Trust)**\\\\\\\\n- Vulnerable disaster groups: **Elderly, children, disabled, low-income, women**\\\\\\\\n\\\\\\\\n## Triage Decision Tree\\\\\\\\n\\\\\\\\n| Vital Signs | Respiratory Status | Level |\\\\\\\\n|---|---|---|\\\\\\\\n| Alert, BP normal, RR < 30 | Normal | Green |\\\\\\\\n| Alert/confused, BP normal, RR 30-40 | Slight difficulty | Yellow |\\\\\\\\n| Unconscious, no palpable pulse, apneic | Severe distress | Red or Black |\\\\\\\\n\\\\\\\\n## Disaster Diseases by Type\\\\\\\\n\\\\\\\\n| Disaster Type | Common Diseases |\\\\\\\\n|---|---|\\\\\\\\n| Floods | Cholera, typhoid, malaria, dengue |\\\\\\\\n| Earthquakes | Crush injuries, respiratory infections (dust) |\\\\\\\\n| Cyclones | Vector-borne (dengue, malaria), respiratory |\\\\\\\\n| Droughts | Malnutrition, diarrheal diseases |\\\\\\\\n\\\\\\\\n## NEXT Themes\\\\\\\\n- Triage system and prioritization\\\\\\\\n- Post-disaster disease outbreaks\\\\\\\\n- Vulnerable populations in disasters\\\\\\\\n- International health regulations and WHO role\\\\\\\\n- Disaster management cycle and phases,\\\\\\\\n        mnemonics: [\\\\\\\\n          { text: \\\\\\\\\\\\\\\"Red-Yellow-Green-Black for Triage\\\\\\\\\\\\\\\", explanation: \\\\\\\\\\\\\\\"Red = immediate (life-threatening), Yellow = delayed (serious), Green = minor (walking), Black = expectant (unsurvivable)\\\\\\\\\\\\\\\" }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"4 phases of disaster management: Mitigation (reduce risk), Preparedness (plan), Response (immediate), Recovery (restore)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"First 72 hours critical for rescue and emergency response; triage determines treatment priority\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Common post-disaster outbreaks: waterborne (cholera, typhoid) in floods; vector-borne (malaria, dengue) in wet areas\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Vulnerable groups need targeted support: elderly (chronic disease), children (malnutrition), women (safety)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"IHR framework binds countries to report disease outbreaks; WHO declares PHEIC and coordinates response\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"India's NDMA ensures preparedness and coordinated response; SDMA/DDMA operationalize at state/district\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Disaster Management & International Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n\\\\\\\\n      { layer: 5, slug: \\\\\\\\\\\\\\\"disaster-management-international-health-recall\\\\\\\\\\\\\\\", title: \\\\\\\\\\\\\\\"Disaster Management & International Health - Active Recall\\\\\\\\\\\\\\\", estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Flashcard-style questions on disaster management and international health.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Active Recall\\\\\\\\n\\\\\\\\n**Q1:** What are the four phases of the disaster management cycle?\\\\\\\\n> Mitigation (reduce risk), Preparedness (plan and train), Response (immediate action), Recovery (restore and rehabilitate)\\\\\\\\n\\\\\\\\n**Q2:** What does START triage stand for?\\\\\\\\n> Simple Triage and Rapid Treatment\\\\\\\\n\\\\\\\\n**Q3:** What do the four triage colors represent?\\\\\\\\n> Red = Immediate (life-threatening), Yellow = Delayed (serious but stable), Green = Minor (walking wounded), Black = Expectant (unsurvivable)\\\\\\\\n\\\\\\\\n**Q4:** What is the critical time window in the response phase?\\\\\\\\n> First 72 hours (immediate rescue and emergency care)\\\\\\\\n\\\\\\\\n**Q5:** Name three common diseases that occur after flooding.\\\\\\\\n> Cholera, typhoid, malaria, dengue\\\\\\\\n\\\\\\\\n**Q6:** What is IHR?\\\\\\\\n> International Health Regulations - binding legal framework established by WHO in 2005 requiring countries to report outbreaks of international concern\\\\\\\\n\\\\\\\\n**Q7:** What does PHEIC mean?\\\\\\\\n> Public Health Emergency of International Concern (declared by WHO for urgent global health threats)\\\\\\\\n\\\\\\\\n**Q8:** Name the India disaster management authority at national level.\\\\\\\\n> National Disaster Management Authority (NDMA)\\\\\\\\n\\\\\\\\n**Q9:** What is the FIRST approach in Psychological First Aid?\\\\\\\\n> Face-to-face support, Information provision, Refer to resources, Stabilize immediately, Trust-building\\\\\\\\n\\\\\\\\n**Q10:** Name three vulnerable populations in disasters.\\\\\\\\n> Elderly, children, disabled persons, low-income populations, women,\\\\\\\\n        mnemonics: [],\\\\\\\\n        keyPoints: [\\\\\\\\\\\\\\\"10 key questions on disaster phases, triage, disease outbreaks, and international health frameworks\\\\\\\\\\\\\\\"],\\\\\\\\n        textbookRefs: [{ book: \\\\\\\\\\\\\\\"Park's Textbook of Preventive & Social Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Disaster Management & International Health\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"26th\\\\\\\\\\\\\\\" }] },\\\\\\\\n    ],\\\\\\\\n  },\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-}
-}
-}
-];
-];
-];
-];
+
+  // ═══════════════════════════════════════════════════════════════
+  // CM-MOD-06-TOP-04: Occupational Health & Hazards
+  // ═══════════════════════════════════════════════════════════════
+  {
+    topicCode: "CM-MOD-06-TOP-04",
+    layers: [
+      {
+        layer: 1,
+        slug: "occupational-health-layer-1-foundation",
+        title: "Occupational Health & Hazards - Foundation",
+        estimatedMinutes: 20,
+        summary: "Occupational health focuses on preventing work-related diseases and injuries. Hazards are classified as physical, chemical, biological, mechanical, and psychosocial.",
+        contentMd: `# Occupational Health & Hazards - Foundation
+
+## Definition
+- **Occupational health**: Promotion and maintenance of highest degree of physical, mental, and social well-being of workers in all occupations (ILO/WHO)
+- **Occupational disease**: Disease arising out of or in the course of employment
+
+## Classification of Occupational Hazards
+| Type | Examples |
+|------|---------|
+| **Physical** | Noise, heat, radiation, vibration, pressure |
+| **Chemical** | Dusts, fumes, gases, solvents, pesticides |
+| **Biological** | Infections, allergens (farmers, healthcare workers) |
+| **Mechanical** | Accidents, injuries, ergonomic hazards |
+| **Psychosocial** | Stress, burnout, harassment, shift work |
+
+## Common Occupational Diseases in India
+| Disease | Occupation | Agent |
+|---------|-----------|-------|
+| Silicosis | Mining, stone cutting | Silica dust |
+| Asbestosis | Construction, shipbreaking | Asbestos fibers |
+| Byssinosis | Cotton textile mills | Cotton dust |
+| Lead poisoning | Battery, paint industry | Lead |
+| Noise-induced hearing loss | Factory workers, mining | Noise >85 dB |
+| Pesticide poisoning | Agriculture | Organophosphates |
+
+## Pneumoconioses (Dust Diseases)
+| Disease | Dust | X-ray Pattern |
+|---------|------|--------------|
+| Silicosis | Free silica (SiO2) | Eggshell calcification of hilar nodes |
+| Asbestosis | Asbestos | Lower zone fibrosis, pleural plaques |
+| Coal workers' | Coal dust | Upper zone nodules |
+| Byssinosis | Cotton/flax/hemp | Monday fever (chest tightness) |
+
+> **Clinical Pearl**: Silicosis is the most common occupational lung disease in India, prevalent among stone crushers, mine workers, and construction workers.`,
+        mnemonics: [
+          { text: "PCBMP for hazard types: Physical, Chemical, Biological, Mechanical, Psychosocial", explanation: "Five categories of occupational hazards" },
+          { text: "Silicosis = Eggshell calcification on X-ray", explanation: "Pathognomonic finding: calcified hilar lymph nodes with eggshell pattern" }
+        ],
+        keyPoints: [
+          "Five hazard types: physical, chemical, biological, mechanical, psychosocial",
+          "Silicosis: most common pneumoconiosis in India (mining, stone cutting)",
+          "Asbestosis: lower zone fibrosis + pleural plaques + mesothelioma risk",
+          "Byssinosis: cotton textile workers, Monday fever",
+          "Noise-induced hearing loss: >85 dB threshold",
+          "Lead poisoning: battery and paint industry"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 18: Occupational Health", edition: "26th" },
+          { book: "Textbook of Preventive Medicine (Mahajan)", chapter: "Occupational Health", edition: "5th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "occupational-health-layer-2-mechanism",
+        title: "Occupational Health & Hazards - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pathogenesis of pneumoconioses, lead and mercury poisoning mechanisms, noise-induced hearing loss, and occupational cancer pathways.",
+        contentMd: `# Occupational Hazards - Mechanism
+
+## Silicosis Pathogenesis
+1. Inhalation of free crystalline silica (quartz) particles <5 microns
+2. Particles reach alveoli -> engulfed by macrophages
+3. Silica is toxic to macrophages (lysosomal damage)
+4. Macrophage death releases silica + inflammatory mediators
+5. Fibroblast activation -> collagen deposition -> fibrotic nodules
+6. Progressive massive fibrosis in advanced disease
+- **Increased TB risk**: Silica impairs macrophage killing of M. tuberculosis (silicotuberculosis)
+
+## Lead Poisoning Mechanism
+- **Absorption**: GI tract (ingestion) or lungs (inhalation of fumes)
+- **Blood**: Binds to RBC (>90% in blood bound to RBCs)
+- **Enzyme inhibition**: ALA dehydratase and ferrochelatase
+  - ALA dehydratase block -> ALA accumulates in urine
+  - Ferrochelatase block -> zinc protoporphyrin accumulates
+- **Effects**: Microcytic anemia (basophilic stippling), neuropathy, nephropathy
+- **Children**: More vulnerable (lead encephalopathy, IQ reduction)
+
+## Mercury Poisoning
+- **Organic (methylmercury)**: Bioaccumulation in fish; crosses BBB
+  - Minamata disease: neurological damage (ataxia, sensory loss)
+- **Inorganic**: Hat industry, thermometer manufacturing
+  - Mad hatter disease: erethism (irritability, tremor, gingivitis)
+
+## Noise-Induced Hearing Loss
+- Continuous exposure >85 dB -> cochlear hair cell damage
+- Outer hair cells of organ of Corti damaged first
+- **4000 Hz dip**: Earliest audiometric finding (acoustic notch)
+- Progressive: 4000 Hz -> 2000 Hz -> 1000 Hz -> speech frequencies
+- Irreversible once hair cells are lost
+
+## Occupational Cancer
+| Cancer | Agent | Occupation |
+|--------|-------|-----------|
+| Mesothelioma | Asbestos | Construction, shipbreaking |
+| Bladder cancer | Beta-naphthylamine | Dye/rubber industry |
+| Scrotal cancer | Soot | Chimney sweeps (historical) |
+| Lung cancer | Asbestos, chromium, nickel | Mining, welding |
+| Leukemia | Benzene | Petrochemical, paint |
+| Liver angiosarcoma | Vinyl chloride | Plastics industry |`,
+        mnemonics: [
+          { text: "Silica kills Macrophages -> releases Fibrotic mediators", explanation: "Silica is directly toxic to macrophages; their death drives fibrosis" },
+          { text: "Lead blocks ALA dehydratase + Ferrochelatase", explanation: "Two enzyme blocks in heme synthesis pathway causing anemia" },
+          { text: "4000 Hz dip = earliest noise hearing loss", explanation: "Acoustic notch at 4 kHz is the earliest audiometric sign" }
+        ],
+        keyPoints: [
+          "Silicosis: silica toxic to macrophages -> fibrotic nodules; increases TB risk",
+          "Lead: blocks ALA dehydratase and ferrochelatase -> microcytic anemia with basophilic stippling",
+          "Mercury: organic (Minamata, neuro) vs inorganic (Mad hatter, erethism)",
+          "Noise: 4000 Hz dip earliest; outer hair cells damaged first; irreversible",
+          "Asbestos: mesothelioma + lung cancer + lower zone fibrosis",
+          "Benzene: leukemia; vinyl chloride: liver angiosarcoma"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 18: Mechanisms", edition: "26th" },
+          { book: "Robbins Pathologic Basis of Disease", chapter: "Environmental Disease", edition: "10th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "occupational-health-layer-3-clinical",
+        title: "Occupational Health & Hazards - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Diagnosis and management of occupational diseases, industrial hygiene measures, PPE, Factories Act 1948, and ESI scheme in India.",
+        contentMd: `# Occupational Health - Clinical Application
+
+## Diagnosis of Occupational Disease
+1. **Occupational history**: Detailed work exposure history (ESSENTIAL)
+2. **Clinical examination**: Disease-specific signs
+3. **Investigations**: Chest X-ray (pneumoconiosis), blood lead level, audiometry
+4. **Biological monitoring**: Blood/urine levels of toxicants
+5. **Environmental monitoring**: Workplace exposure measurement (TLV)
+
+## Prevention Hierarchy (Most to Least Effective)
+1. **Elimination**: Remove hazard entirely
+2. **Substitution**: Replace with safer alternative
+3. **Engineering controls**: Ventilation, enclosure, isolation
+4. **Administrative controls**: Job rotation, reduced exposure time, training
+5. **PPE**: Last resort (masks, gloves, earplugs, goggles)
+
+## Threshold Limit Values (TLV)
+- **TLV-TWA**: Time-weighted average for 8-hour day, 40-hour week
+- **TLV-STEL**: Short-term exposure limit (15 min maximum)
+- **TLV-C**: Ceiling (must never be exceeded)
+- Noise: 85 dB TLV-TWA; hearing protection mandatory above this
+
+## Indian Legislation
+### Factories Act 1948
+- Applies to premises with 10+ workers (with power) or 20+ (without)
+- Provisions: Working hours (48/week), overtime, leave, health, safety
+- Health: cleanliness, ventilation, lighting, drinking water, latrines
+- Safety: fencing of machinery, fire safety, first aid
+
+### ESI (Employees' State Insurance) Act 1948
+- Social security for workers earning <21,000/month
+- Benefits: medical, sickness, maternity, disability, funeral
+
+### Workmen's Compensation Act 1923
+- Compensation for injury/disease arising out of employment
+- Employer liable for occupational disease in scheduled employment
+
+## India-Specific Occupational Health Issues
+- **Informal sector**: 93% of Indian workforce; no social security
+- **Child labor**: Banned in hazardous industries (Child Labor Act 1986)
+- **Migrant workers**: High occupational risk, poor access to healthcare
+- **Agriculture**: Pesticide poisoning, musculoskeletal disorders
+
+> **Clinical Pearl**: Always take a detailed occupational history. The question "What work do you do?" can unlock the diagnosis of many unexplained chronic diseases.`,
+        mnemonics: [
+          { text: "ESAPE for prevention hierarchy", explanation: "Elimination, Substitution, Administrative, PPE, Engineering (in order of effectiveness)" },
+          { text: "TLV-TWA = 8-hour average; TLV-C = ceiling (never exceed)", explanation: "Two most important TLV concepts" }
+        ],
+        keyPoints: [
+          "Occupational history is ESSENTIAL for diagnosis",
+          "Prevention hierarchy: elimination > substitution > engineering > admin > PPE",
+          "Factories Act 1948: applies to 10+ workers with power",
+          "ESI: social security for workers <21,000/month",
+          "93% of Indian workforce is informal sector with no social security",
+          "Noise TLV-TWA: 85 dB; hearing protection mandatory above this"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 18: Legislation", edition: "26th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "occupational-health-layer-4-exam-prep",
+        title: "Occupational Health & Hazards - Exam Preparation",
+        estimatedMinutes: 15,
+        summary: "High-yield disease-agent-occupation associations, legislation, and prevention measures for NEXT/NEET PG.",
+        contentMd: `# Occupational Health - Exam High Yield
+
+## Disease-Agent-Occupation Table
+| Disease | Agent | Occupation | Key Finding |
+|---------|-------|-----------|-------------|
+| Silicosis | Silica | Mining, stone cutting | Eggshell calcification |
+| Asbestosis | Asbestos | Construction | Pleural plaques, mesothelioma |
+| Byssinosis | Cotton dust | Textile mills | Monday fever |
+| Lead poisoning | Lead | Battery, paint | Basophilic stippling, wrist drop |
+| NIHL | Noise >85dB | Factories | 4000 Hz dip |
+| Mesothelioma | Asbestos | Shipbreaking | Only asbestos (pathognomonic) |
+| Bladder Ca | Beta-naphthylamine | Dye industry | Aniline dye workers |
+| Angiosarcoma | Vinyl chloride | Plastics | Liver |
+| Leukemia | Benzene | Petroleum | AML |
+
+## Lead Poisoning Summary
+- **Blood**: Basophilic stippling of RBCs, microcytic anemia
+- **Urine**: Raised ALA and coproporphyrin
+- **Burton line**: Blue line on gums (lead sulfide)
+- **Wrist/foot drop**: Motor neuropathy
+- **Children**: Encephalopathy, IQ reduction
+- **Treatment**: Chelation (EDTA, DMSA, D-penicillamine)
+
+## One-Liners
+- Mesothelioma is ONLY caused by asbestos (pathognomonic)
+- Silicosis increases TB risk (silicotuberculosis)
+- Monday fever = byssinosis (improves during week, worsens Monday)
+- Most dangerous dust: asbestos (carcinogenic + fibrotic)
+- Scrotal cancer: first occupational cancer described (chimney sweeps, Pott 1775)
+- Factories Act: 10+ workers with power; 48 hrs/week max`,
+        mnemonics: [
+          { text: "Burton's Blue line on gums = Lead", explanation: "Lead sulfide deposits on gingival margin" },
+          { text: "Mesothelioma = Asbestos ONLY", explanation: "Only known cause of mesothelioma; pathognomonic association" }
+        ],
+        keyPoints: [
+          "Silicosis: eggshell calcification, increased TB risk",
+          "Asbestos: pleural plaques + mesothelioma (pathognomonic)",
+          "Lead: basophilic stippling, Burton line, wrist drop, raised urinary ALA",
+          "Noise: 4000 Hz dip earliest; irreversible",
+          "Byssinosis: Monday fever in cotton workers",
+          "Factories Act 1948: 10+ workers with power"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 18", edition: "26th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "occupational-health-layer-5-active-recall",
+        title: "Occupational Health & Hazards - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard Q&A for occupational diseases, hazard classification, legislation, and prevention.",
+        contentMd: `# Occupational Health - Active Recall
+
+**Q1:** Name the 5 types of occupational hazards.
+> Physical, Chemical, Biological, Mechanical, Psychosocial
+
+**Q2:** What is the pathognomonic X-ray finding in silicosis?
+> Eggshell calcification of hilar lymph nodes
+
+**Q3:** Why does silicosis increase TB risk?
+> Silica impairs macrophage killing of M. tuberculosis (silicotuberculosis)
+
+**Q4:** What is Burton line? What does it indicate?
+> Blue-black line on gingival margin due to lead sulfide deposits. Indicates chronic lead poisoning
+
+**Q5:** What is the earliest audiometric finding in noise-induced hearing loss?
+> 4000 Hz dip (acoustic notch). Outer hair cells damaged first
+
+**Q6:** What is Monday fever? Which disease?
+> Chest tightness and breathlessness on returning to work Monday after weekend off. Byssinosis (cotton dust exposure)
+
+**Q7:** Which cancer is pathognomonic for asbestos exposure?
+> Mesothelioma (pleural or peritoneal). Only known cause is asbestos
+
+**Q8:** What is the prevention hierarchy?
+> Elimination > Substitution > Engineering controls > Administrative controls > PPE (most to least effective)
+
+**Q9:** What is TLV-TWA for noise?
+> 85 dB for 8-hour workday. Hearing protection mandatory above this
+
+**Q10:** What does the Factories Act 1948 cover?
+> Premises with 10+ workers (with power) or 20+ (without). Covers working hours (48/week), health, safety, welfare
+
+**Q11:** What percentage of Indian workforce is in informal sector?
+> 93%. Most have no occupational health coverage or social security
+
+**Q12:** Name the chelating agents for lead poisoning.
+> EDTA (calcium disodium), DMSA (succimer), D-penicillamine. DMSA preferred for children`,
+        mnemonics: [],
+        keyPoints: [
+          "12 flashcards covering occupational hazards, diseases, and legislation",
+          "Tests disease-agent associations and pathognomonic findings",
+          "Includes prevention hierarchy and Indian legislation",
+          "Reinforces India-specific occupational health issues"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 18", edition: "26th" }
+        ]
+      }
+    ]
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // CM-MOD-07-TOP-01: Healthcare Delivery System in India
+  // ═══════════════════════════════════════════════════════════════
+  {
+    topicCode: "CM-MOD-07-TOP-01",
+    layers: [
+      {
+        layer: 1,
+        slug: "healthcare-delivery-layer-1-foundation",
+        title: "Healthcare Delivery System in India - Foundation",
+        estimatedMinutes: 20,
+        summary: "India's healthcare is delivered through a three-tier system: primary (SC, PHC), secondary (CHC, district hospital), and tertiary (medical colleges, specialty hospitals).",
+        contentMd: `# Healthcare Delivery System in India - Foundation
+
+## Three-Tier Structure
+
+### Primary Level
+| Facility | Population | Staff |
+|----------|-----------|-------|
+| Sub-Centre (SC) | 5000 (plains), 3000 (hilly) | 1 HW(F) + 1 HW(M) |
+| Primary Health Centre (PHC) | 30,000 (plains), 20,000 (hilly) | 1 Medical Officer + 14 paramedical |
+
+### Secondary Level
+| Facility | Population | Beds |
+|----------|-----------|------|
+| Community Health Centre (CHC) | 1,20,000 (plains), 80,000 (hilly) | 30 beds |
+| Sub-District Hospital | 5-10 lakh | 30-100 beds |
+| District Hospital | 10-20 lakh | 100-500 beds |
+
+### Tertiary Level
+- Medical college hospitals
+- Super-specialty hospitals
+- Regional/national institutes (AIIMS, PGI, JIPMER)
+
+## Key Health Infrastructure Numbers
+- Sub-centres: ~160,000
+- PHCs: ~30,000
+- CHCs: ~6,000
+- District hospitals: ~800
+
+## Health Manpower
+- Doctor-population ratio: ~1:1000 (WHO recommends 1:1000)
+- Nurse-population ratio: ~1.7:1000 (WHO recommends 3:1000)
+- India has ~70% of doctors in urban areas serving 30% population
+
+> **Clinical Pearl**: The 30,000 PHC to 1,20,000 CHC population norms are frequently tested. Remember: SC(5K) -> PHC(30K) -> CHC(1.2L) -> District Hospital.`,
+        mnemonics: [
+          { text: "5-30-120 for facility populations (thousands)", explanation: "SC: 5000, PHC: 30000, CHC: 120000 (plains)" },
+          { text: "3-20-80 for hilly areas", explanation: "SC: 3000, PHC: 20000, CHC: 80000 (hilly/tribal)" }
+        ],
+        keyPoints: [
+          "Three-tier: primary (SC, PHC), secondary (CHC, district), tertiary (medical colleges)",
+          "SC: 5000 population; PHC: 30000; CHC: 120000 (plains)",
+          "Hilly/tribal: SC 3000, PHC 20000, CHC 80000",
+          "CHC has 30 beds and 4 specialists (surgeon, physician, OBG, pediatrician)",
+          "70% of doctors serve 30% urban population (maldistribution)",
+          "India needs more nurses (1.7 vs WHO-recommended 3 per 1000)"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 23: Health Care", edition: "26th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "healthcare-delivery-layer-2-mechanism",
+        title: "Healthcare Delivery System - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Functions of each tier, referral system, IPHS standards, role of ASHA/ANM/AWW, and integration of AYUSH with the public health system.",
+        contentMd: `# Healthcare Delivery - Mechanism
+
+## Functions by Level
+
+### Sub-Centre
+- Maternal and child health services
+- Family planning services
+- Immunization
+- Treatment of minor ailments
+- Health education
+- Referral to PHC
+
+### PHC (First Referral Unit for Rural)
+- 6 beds (inpatient)
+- OPD, emergency care
+- National health program implementation
+- Reproductive and child health
+- Laboratory services
+- 24/7 service (ideally)
+
+### CHC (First Referral Unit - Surgical)
+- 30 beds
+- 4 specialists: Surgeon, Physician, OBG, Pediatrician
+- X-ray, laboratory, OT
+- Emergency obstetric care (EmOC)
+- Blood storage/bank
+
+### District Hospital
+- Specialist and super-specialist services
+- Teaching and training
+- Administrative hub for district health programs
+
+## Key Health Workers
+| Worker | Level | Key Functions |
+|--------|-------|--------------|
+| ASHA | Village | Health promotion, referral, DOTS provider |
+| ANM (HW-F) | Sub-centre | MCH, immunization, family planning |
+| MPW (HW-M) | Sub-centre | Malaria, sanitation, health education |
+| AWW (Anganwadi) | ICDS centre | Nutrition, preschool education |
+
+## ASHA (Accredited Social Health Activist)
+- One per 1000 population (rural)
+- Selected from the village itself
+- Trained for 23 days (induction) + periodic refresher
+- Incentive-based (not salaried)
+- Link between community and health system
+- Key roles: promote institutional delivery, DOTS, immunization counseling
+
+## IPHS (Indian Public Health Standards)
+- Minimum standards for healthcare facilities
+- Set by MoHFW (Ministry of Health and Family Welfare)
+- Cover infrastructure, manpower, equipment, drugs
+- Regularly revised
+
+## Referral System
+SC -> PHC -> CHC -> District Hospital -> Medical College -> Super-specialty`,
+        mnemonics: [
+          { text: "ASHA = 1000 population, village-based, incentive-based", explanation: "Key facts about ASHA workers" },
+          { text: "CHC has 4 specialists: SPOP (Surgeon, Physician, OBG, Pediatrician)", explanation: "Four mandatory specialists at Community Health Centre" }
+        ],
+        keyPoints: [
+          "PHC: 6 beds, 1 MO, national program implementation, 24/7",
+          "CHC: 30 beds, 4 specialists (SPOP), blood bank, OT",
+          "ASHA: 1 per 1000, village-based, incentive (not salaried)",
+          "ANM at sub-centre: MCH, immunization, family planning",
+          "AWW (Anganwadi Worker): nutrition + preschool under ICDS",
+          "Referral: SC -> PHC -> CHC -> District -> Medical College"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 23", edition: "26th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "healthcare-delivery-layer-3-clinical",
+        title: "Healthcare Delivery System - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Challenges in Indian healthcare delivery, urban health services, private sector role, Health and Wellness Centres under Ayushman Bharat, and quality improvement.",
+        contentMd: `# Healthcare Delivery - Clinical Application
+
+## Challenges in Indian Healthcare
+- **Rural-urban disparity**: 70% doctors in urban; 70% population rural
+- **Infrastructure gaps**: Many SC/PHCs lack minimum standards
+- **Human resource shortage**: Specialists vacant at CHCs
+- **Out-of-pocket expenditure**: 62% of health spending (catastrophic for poor)
+- **Quality**: Variable standards across public and private sectors
+
+## Health and Wellness Centres (HWCs)
+- Under Ayushman Bharat (2018): transform 1.5 lakh SC/PHCs into HWCs
+- **Comprehensive Primary Health Care (CPHC)** package:
+  - 12 services including NCD screening, mental health, oral health
+  - Wellness activities: yoga, counseling
+  - Telemedicine integration
+- Staffed by Community Health Officer (BSc Community Health graduate)
+
+## Urban Health Services
+- Urban PHC: 50,000-1,00,000 population
+- Urban CHC
+- Mahila Arogya Samiti (MAS): women's health groups in urban slums
+- National Urban Health Mission (NUHM): targets urban poor
+
+## Private Sector in India
+- 74% of outpatient care from private sector
+- Unregulated in many areas
+- Clinical Establishments Act (2010): registration and standards
+- Public-private partnerships (PPP): increasing role
+
+## Quality Improvement
+- **NQAS (National Quality Assurance Standards)**: for public facilities
+- **NABH (National Accreditation Board for Hospitals)**: voluntary accreditation
+- **LaQshya**: quality improvement in labor rooms and OTs
+
+> **Clinical Pearl**: India's out-of-pocket health expenditure (62%) is among the highest globally, pushing 50 million people into poverty annually.`,
+        mnemonics: [
+          { text: "HWC = 12 services + telemedicine + wellness", explanation: "Health and Wellness Centres deliver 12 CPHC packages" },
+          { text: "OOP 62%: India's out-of-pocket health spending", explanation: "62% of health expenditure is out-of-pocket" }
+        ],
+        keyPoints: [
+          "Rural-urban disparity: 70% doctors urban, 70% population rural",
+          "HWCs under Ayushman Bharat: 12 CPHC services at SC/PHC level",
+          "74% of outpatient care from private sector",
+          "62% out-of-pocket expenditure (among highest globally)",
+          "NQAS for public quality; NABH for accreditation",
+          "Community Health Officer staffs HWCs"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 23-24", edition: "26th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "healthcare-delivery-layer-4-exam-prep",
+        title: "Healthcare Delivery System - Exam Preparation",
+        estimatedMinutes: 15,
+        summary: "High-yield population norms, facility standards, health worker roles, and recent policy changes.",
+        contentMd: `# Healthcare Delivery - Exam High Yield
+
+## Population Norms (Plains / Hilly)
+| Facility | Plains | Hilly/Tribal |
+|----------|--------|-------------|
+| Sub-Centre | 5,000 | 3,000 |
+| PHC | 30,000 | 20,000 |
+| CHC | 1,20,000 | 80,000 |
+
+## Facility Standards
+| Facility | Beds | Key Staff |
+|----------|------|-----------|
+| SC | None | 1 ANM + 1 MPW |
+| PHC | 6 | 1 MO + 14 paramedical |
+| CHC | 30 | 4 specialists (SPOP) |
+
+## Health Worker One-Liners
+- ASHA: 1 per 1000 (rural), incentive-based, village resident
+- ANM: Posted at SC, key MCH worker
+- AWW: ICDS, nutrition + preschool
+- CHO: BSc Community Health, posted at HWC
+
+## Recent Policies
+- Ayushman Bharat (2018): HWCs + PMJAY
+- PMJAY: Rs 5 lakh/family/year for hospitalization
+- NHM (2013): Merged NRHM + NUHM
+- National Health Policy 2017: Health expenditure 2.5% of GDP target
+
+## Previous Year Themes
+- Population norms for SC, PHC, CHC
+- Functions of CHC vs PHC
+- ASHA: selection, training, functions
+- HWC: services offered
+- Out-of-pocket expenditure percentage`,
+        mnemonics: [
+          { text: "5-30-120 (plains); 3-20-80 (hilly)", explanation: "Population norms in thousands for SC-PHC-CHC" },
+          { text: "SPOP at CHC: Surgeon, Physician, OBG, Pediatrician", explanation: "Four mandatory specialists" }
+        ],
+        keyPoints: [
+          "SC: 5000/3000; PHC: 30000/20000; CHC: 120000/80000",
+          "PHC: 6 beds, 1 MO; CHC: 30 beds, 4 specialists",
+          "ASHA: village-based, incentive, 1 per 1000",
+          "Ayushman Bharat: HWCs + PMJAY (5 lakh coverage)",
+          "NHP 2017 target: 2.5% of GDP on health",
+          "Out-of-pocket: 62% in India"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 23", edition: "26th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "healthcare-delivery-layer-5-active-recall",
+        title: "Healthcare Delivery System - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Q&A for healthcare tiers, population norms, health workers, and health policy.",
+        contentMd: `# Healthcare Delivery - Active Recall
+
+**Q1:** Population norms for SC, PHC, CHC (plains)?
+> SC: 5000, PHC: 30000, CHC: 120000
+
+**Q2:** How many beds at PHC and CHC?
+> PHC: 6 beds; CHC: 30 beds
+
+**Q3:** Four specialists at CHC?
+> Surgeon, Physician, Obstetrician-Gynecologist, Pediatrician
+
+**Q4:** Who is ASHA? Key features?
+> Accredited Social Health Activist. 1 per 1000 rural population. Village resident. Incentive-based (not salaried). Link between community and health system
+
+**Q5:** What is the role of ANM?
+> Auxiliary Nurse Midwife at sub-centre. MCH, immunization, family planning, health education
+
+**Q6:** What are Health and Wellness Centres?
+> Sub-centres/PHCs upgraded to deliver 12 CPHC services under Ayushman Bharat. Include NCD screening, mental health, oral health, telemedicine
+
+**Q7:** What is India's out-of-pocket health expenditure?
+> 62% (one of highest globally). Pushes 50 million into poverty annually
+
+**Q8:** What is PMJAY?
+> Pradhan Mantri Jan Arogya Yojana. Health insurance Rs 5 lakh/family/year for hospitalization. Targets bottom 40% of population
+
+**Q9:** What percentage of doctors are in urban areas?
+> ~70% of doctors serve ~30% urban population (maldistribution)
+
+**Q10:** What is the NHP 2017 health expenditure target?
+> 2.5% of GDP on health (current ~1.3%)
+
+**Q11:** What is the referral chain in rural India?
+> Sub-Centre -> PHC -> CHC -> District Hospital -> Medical College -> Super-specialty
+
+**Q12:** What is NQAS?
+> National Quality Assurance Standards. Framework for quality assessment of public health facilities`,
+        mnemonics: [],
+        keyPoints: [
+          "12 flashcards covering healthcare delivery structure and policy",
+          "Tests population norms, health worker roles, and facility standards",
+          "Includes recent policies (Ayushman Bharat, PMJAY, HWC)",
+          "Reinforces India-specific healthcare challenges"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 23-24", edition: "26th" }
+        ]
+      }
+    ]
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // CM-MOD-07-TOP-02: National Health Mission & Ayushman Bharat
+  // ═══════════════════════════════════════════════════════════════
+  {
+    topicCode: "CM-MOD-07-TOP-02",
+    layers: [
+      {
+        layer: 1,
+        slug: "nhm-ayushman-layer-1-foundation",
+        title: "NHM & Ayushman Bharat - Foundation",
+        estimatedMinutes: 20,
+        summary: "NHM (2013) combines NRHM and NUHM for universal healthcare. Ayushman Bharat (2018) has two components: Health and Wellness Centres and PMJAY insurance scheme.",
+        contentMd: `# National Health Mission & Ayushman Bharat
+
+## National Health Mission (NHM) - 2013
+- Merges NRHM (2005) and NUHM (2013)
+- Goal: Universal access to equitable, affordable, quality healthcare
+- Centrally sponsored scheme (60:40 Centre:State funding)
+
+### NRHM Components
+- Strengthening rural health infrastructure
+- ASHA program (community health workers)
+- Janani Suraksha Yojana (JSY): conditional cash transfer for institutional delivery
+- Rogi Kalyan Samiti: hospital management committees
+- Mobile Medical Units for remote areas
+- IPHS implementation
+
+### NUHM Focus
+- Urban poor and slum health
+- Urban PHCs and Urban CHCs
+- Mahila Arogya Samiti
+
+## Ayushman Bharat (2018)
+### Component 1: Health and Wellness Centres (HWCs)
+- 1.5 lakh SC/PHCs converted to HWCs
+- 12 CPHC services including NCD screening, mental health, oral health
+- Staffed by Community Health Officer
+- Wellness promotion: yoga, health education
+
+### Component 2: PMJAY (Pradhan Mantri Jan Arogya Yojana)
+- Health insurance Rs 5 lakh per family per year
+- Cashless hospitalization at empaneled hospitals
+- Targets bottom 40% (10.74 crore families)
+- Based on SECC (Socio-Economic Caste Census) 2011 data
+- Portable across India (any empaneled hospital)
+
+> **Clinical Pearl**: JSY has significantly increased institutional deliveries from 40% to over 80% in many states since its implementation.`,
+        mnemonics: [
+          { text: "NHM = NRHM + NUHM (2013)", explanation: "National Health Mission combines rural and urban health missions" },
+          { text: "PMJAY = 5 lakh + 10.74 crore families + cashless", explanation: "Key numbers for Ayushman Bharat insurance component" }
+        ],
+        keyPoints: [
+          "NHM (2013): merges NRHM + NUHM for universal healthcare",
+          "ASHA program and JSY are key NRHM interventions",
+          "Ayushman Bharat: HWCs (primary) + PMJAY (insurance)",
+          "PMJAY: Rs 5 lakh/family/year, bottom 40%, cashless, portable",
+          "HWCs: 12 CPHC services at upgraded SC/PHC level",
+          "JSY: conditional cash for institutional delivery"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 24: National Programs", edition: "26th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "nhm-ayushman-layer-2-mechanism",
+        title: "NHM & Ayushman Bharat - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Implementation framework, funding mechanisms, PMJAY enrollment and claim process, JSY eligibility, and key health scheme components.",
+        contentMd: `# NHM & Ayushman Bharat - Implementation
+
+## NHM Implementation Framework
+- **Central level**: MoHFW provides policy, funding, technical support
+- **State level**: State Health Mission adapts to local needs
+- **District level**: District Health Mission implements programs
+- **Block/facility level**: Service delivery
+
+## Key NHM Sub-schemes
+| Scheme | Purpose | Beneficiary |
+|--------|---------|-------------|
+| JSY | Cash for institutional delivery | BPL pregnant women |
+| JSSK | Free delivery + transport + drugs | All pregnant women + sick neonates |
+| RBSK | Child health screening (0-18yr) | School children |
+| Rashtriya Bal Swasthya Karyakram | 4D screening (defects, diseases, deficiencies, delays) | 0-18 years |
+| RKSK | Adolescent health | 10-19 years |
+
+## JSY Details
+- **High-performing states** (KE, TN, AP, etc.): Rs 700 (rural), Rs 600 (urban)
+- **Low-performing states** (UP, Bihar, MP, etc.): Rs 1400 (rural), Rs 1000 (urban)
+- BPL, SC/ST eligible
+- Mother receives cash after institutional delivery
+
+## PMJAY Implementation
+1. **Identification**: SECC 2011 database (deprivation criteria)
+2. **Enrollment**: Free, no premium for beneficiary
+3. **E-card**: Ayushman card for identification
+4. **Treatment**: Cashless at any empaneled hospital (public or private)
+5. **Claim**: Hospital submits to NHA (National Health Authority)
+6. **Packages**: 1,393 treatment packages defined
+
+## PMJAY Coverage
+- Secondary and tertiary hospitalization
+- Pre-existing conditions covered from day 1
+- 3-day pre-hospitalization + 15-day post-hospitalization
+- No cap on family size
+- Portable: can use anywhere in India
+
+## Health Insurance Landscape in India
+| Scheme | Coverage | Population |
+|--------|---------|-----------|
+| PMJAY | Rs 5 lakh hospitalization | Bottom 40% |
+| ESIC | Comprehensive | Formal sector <21K/month |
+| CGHS | Comprehensive | Central govt employees |
+| State schemes | Variable | State-specific |`,
+        mnemonics: [
+          { text: "JSSK = Janani Shishu Suraksha Karyakram (free delivery)", explanation: "Free delivery, C-section, drugs, diagnostics, diet, transport for ALL pregnant women" },
+          { text: "RBSK = 4D: Defects, Diseases, Deficiencies, Delays", explanation: "School health screening program components" }
+        ],
+        keyPoints: [
+          "JSY: cash incentive, BPL women, higher amount in low-performing states",
+          "JSSK: free delivery + transport + drugs for ALL pregnant women",
+          "RBSK: 4D screening for children 0-18 years",
+          "PMJAY: no premium, SECC-based, 1393 treatment packages",
+          "PMJAY covers pre-existing conditions from day 1",
+          "Portable across India at any empaneled hospital"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 24", edition: "26th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "nhm-ayushman-layer-3-clinical",
+        title: "NHM & Ayushman Bharat - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Impact assessment of NHM programs, challenges in implementation, role of health professionals, and comparison with other countries' universal health coverage models.",
+        contentMd: `# NHM & Ayushman Bharat - Impact and Challenges
+
+## NHM Impact
+- Institutional deliveries increased from 40% (2005) to >85% (2020)
+- IMR declined from 58 (2005) to 28 (2020)
+- MMR declined from 254 to 97 per 100,000 live births
+- Full immunization coverage improved from 44% to 76%
+- 10+ lakh ASHA workers deployed
+
+## PMJAY Impact (Since 2018)
+- 30+ crore Ayushman cards issued
+- 5+ crore hospital admissions authorized
+- Rs 50,000+ crore claims processed
+- 28,000+ empaneled hospitals
+
+## Challenges
+- **JSY**: Cash incentive alone does not ensure quality care
+- **ASHA**: Low incentives, irregular payment, heavy workload
+- **PMJAY**: Limited to hospitalization (no OPD coverage), fraud risk
+- **Infrastructure**: Many facilities below IPHS standards
+- **Human resources**: Specialist vacancies at CHCs (>50% in some states)
+- **Private sector regulation**: Overcharging, unnecessary procedures
+
+## Role of Medical Professionals
+- Implement national health programs at facility level
+- Provide quality care per protocols
+- Data reporting for HMIS (Health Management Information System)
+- Community engagement and health education
+- Ethical practice: avoid unnecessary interventions
+
+## Universal Health Coverage (UHC) Progress
+- India committed to UHC by SDG target (2030)
+- Current coverage: ~55% of essential health services
+- Major gaps: financial protection, service coverage, quality
+- NHP 2017: increase health spending to 2.5% GDP
+
+> **Clinical Pearl**: Despite impressive PMJAY enrollment numbers, actual utilization remains low in many states due to awareness gaps, limited hospital empanelment in rural areas, and portability challenges.`,
+        mnemonics: [
+          { text: "NHM success: IMR 58->28, MMR 254->97", explanation: "Key impact indicators of National Health Mission" },
+          { text: "UHC = Universal Health Coverage by 2030 (SDG)", explanation: "India's commitment under Sustainable Development Goals" }
+        ],
+        keyPoints: [
+          "NHM: institutional deliveries 40%->85%, IMR 58->28, MMR 254->97",
+          "PMJAY: 30+ crore cards, 5+ crore admissions since 2018",
+          "ASHA challenges: low pay, irregular payment, heavy workload",
+          "PMJAY gaps: no OPD coverage, fraud risk, low rural utilization",
+          "UHC by 2030 (SDG); current essential service coverage ~55%",
+          "NHP 2017: target 2.5% GDP on health (current ~1.3%)"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 24", edition: "26th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "nhm-ayushman-layer-4-exam-prep",
+        title: "NHM & Ayushman Bharat - Exam Preparation",
+        estimatedMinutes: 15,
+        summary: "High-yield scheme details, amounts, eligibility, and impact statistics for NEXT/NEET PG.",
+        contentMd: `# NHM & Ayushman Bharat - Exam High Yield
+
+## Quick Reference
+| Scheme | Year | Key Feature |
+|--------|------|-------------|
+| NRHM | 2005 | Rural health infrastructure + ASHA |
+| NHM | 2013 | NRHM + NUHM merged |
+| Ayushman Bharat | 2018 | HWC + PMJAY |
+| JSY | 2005 | Cash for institutional delivery |
+| JSSK | 2011 | Free delivery for ALL |
+| RBSK | 2013 | 4D child health screening |
+
+## PMJAY Key Numbers
+- Rs 5 lakh per family per year
+- 10.74 crore families (50 crore beneficiaries)
+- 1,393 treatment packages
+- No premium for beneficiary
+- Based on SECC 2011
+
+## One-Liners
+- ASHA: 1 per 1000, village, incentive-based
+- JSY cash: Rs 1400 (rural LPS), Rs 700 (rural HPS)
+- JSSK: zero out-of-pocket for delivery
+- RBSK: 4D (Defects, Diseases, Deficiencies, Developmental delays)
+- HWC: 12 CPHC services at SC/PHC level
+- PMJAY: cashless, portable, pre-existing covered
+- NHP 2017: 2.5% GDP target for health
+
+## Previous Year Themes
+- PMJAY coverage amount and eligibility
+- JSY cash amounts by state category
+- ASHA role and selection criteria
+- NHM components
+- HWC services`,
+        mnemonics: [
+          { text: "5-10-1393: Rs 5 lakh, 10.74 crore families, 1393 packages", explanation: "Three key PMJAY numbers" },
+          { text: "JSY: 1400 LPS rural, 700 HPS rural", explanation: "Cash incentive amounts by state performance category" }
+        ],
+        keyPoints: [
+          "PMJAY: 5 lakh, 10.74 crore families, 1393 packages, no premium",
+          "JSY: Rs 1400 (LPS rural), Rs 700 (HPS rural)",
+          "JSSK: zero cost delivery for all pregnant women",
+          "RBSK: 4D screening for children",
+          "HWC: 12 CPHC services",
+          "NHP 2017: 2.5% GDP target"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 24", edition: "26th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "nhm-ayushman-layer-5-active-recall",
+        title: "NHM & Ayushman Bharat - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Q&A for NHM programs, Ayushman Bharat components, and scheme details.",
+        contentMd: `# NHM & Ayushman Bharat - Active Recall
+
+**Q1:** What is NHM? When was it launched?
+> National Health Mission (2013). Merges NRHM (2005) + NUHM for universal healthcare access
+
+**Q2:** Two components of Ayushman Bharat?
+> Health and Wellness Centres (HWCs) at primary level, PMJAY (insurance) for secondary/tertiary
+
+**Q3:** PMJAY coverage amount?
+> Rs 5 lakh per family per year for hospitalization. Cashless. No premium. Portable
+
+**Q4:** Who is eligible for PMJAY?
+> Bottom 40% population identified through SECC 2011 data (10.74 crore families)
+
+**Q5:** What is JSY? Cash amounts?
+> Janani Suraksha Yojana: cash for institutional delivery. Rs 1400 (rural LPS), Rs 700 (rural HPS)
+
+**Q6:** What is JSSK?
+> Janani Shishu Suraksha Karyakram: free delivery, C-section, drugs, diagnostics, diet, transport for ALL pregnant women and sick neonates (zero out-of-pocket)
+
+**Q7:** What is RBSK?
+> Rashtriya Bal Swasthya Karyakram: 4D screening (Defects, Diseases, Deficiencies, Developmental delays) for children 0-18 years
+
+**Q8:** How many services at Health and Wellness Centres?
+> 12 CPHC services including NCD screening, mental health, oral health, elderly care, palliative care
+
+**Q9:** Key NHM impact indicators?
+> IMR 58->28, MMR 254->97, institutional delivery 40%->85%, immunization 44%->76%
+
+**Q10:** What is NHP 2017 health expenditure target?
+> 2.5% of GDP (current ~1.3%). Also targets reducing OOP to 25%
+
+**Q11:** What are PMJAY treatment packages?
+> 1,393 defined packages for secondary and tertiary procedures. Pre-existing conditions covered from day 1
+
+**Q12:** Main PMJAY challenge?
+> Low utilization due to awareness gaps, limited rural hospital empanelment, and no OPD coverage`,
+        mnemonics: [],
+        keyPoints: [
+          "12 flashcards covering NHM, Ayushman Bharat, JSY, JSSK, RBSK, PMJAY",
+          "Tests scheme details, amounts, and eligibility criteria",
+          "Includes impact statistics",
+          "Reinforces current health policy knowledge"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 24", edition: "26th" }
+        ]
+      }
+    ]
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // CM-MOD-07-TOP-03: Health Education & Behavior Change
+  // ═══════════════════════════════════════════════════════════════
+  {
+    topicCode: "CM-MOD-07-TOP-03",
+    layers: [
+      {
+        layer: 1,
+        slug: "health-education-layer-1-foundation",
+        title: "Health Education & Behavior Change - Foundation",
+        estimatedMinutes: 20,
+        summary: "Health education aims to change health behavior through IEC and BCC strategies. Models include Health Belief Model, Transtheoretical Model, and Social Cognitive Theory.",
+        contentMd: `# Health Education & Behavior Change
+
+## Definition
+- **Health education**: Process of enabling people to increase control over and improve their health
+- **IEC**: Information, Education, Communication
+- **BCC**: Behavior Change Communication (more interactive, community-focused)
+
+## Approaches to Health Education
+| Approach | Description | Example |
+|----------|-----------|---------|
+| Didactic | One-way information transfer | Lectures, pamphlets |
+| Socratic | Two-way discussion | Group discussions, counseling |
+| Persuasive | Motivation to change | Mass media campaigns |
+| Participatory | Community involvement | Peer education, role play |
+
+## Methods of Health Education
+### Individual Methods
+- Personal counseling, one-on-one education
+- Most effective for behavior change (personalized)
+
+### Group Methods
+- Group discussions, role play, demonstrations
+- Peer education programs
+- Self-help groups
+
+### Mass Methods
+- TV, radio, newspapers, social media
+- Posters, pamphlets, billboards
+- Street plays (nukkad natak), folk media
+
+## Behavior Change Models
+### Health Belief Model (Rosenstock)
+- **Perceived susceptibility**: "Am I at risk?"
+- **Perceived severity**: "How serious is this?"
+- **Perceived benefits**: "Will this action help?"
+- **Perceived barriers**: "What prevents me?"
+- **Cue to action**: Trigger for behavior change
+- **Self-efficacy**: "Can I do it?"
+
+### Transtheoretical Model (Prochaska)
+1. **Precontemplation**: Not thinking about change
+2. **Contemplation**: Thinking about change (within 6 months)
+3. **Preparation**: Planning to change (within 1 month)
+4. **Action**: Making the change
+5. **Maintenance**: Sustaining change (>6 months)
+6. **Relapse**: Returning to old behavior
+
+> **Clinical Pearl**: In India, folk media (nukkad natak, puppetry) remains one of the most effective health education tools in rural areas where literacy is low.`,
+        mnemonics: [
+          { text: "Health Belief Model: SSBBC (Susceptibility, Severity, Benefits, Barriers, Cue)", explanation: "Five components of the Health Belief Model" },
+          { text: "Stages of Change: PC-CPAM (Precontemplation, Contemplation, Preparation, Action, Maintenance)", explanation: "Five stages of Transtheoretical Model" }
+        ],
+        keyPoints: [
+          "IEC = Information, Education, Communication; BCC = Behavior Change Communication",
+          "Health Belief Model: susceptibility, severity, benefits, barriers, cue to action, self-efficacy",
+          "Transtheoretical: precontemplation -> contemplation -> preparation -> action -> maintenance",
+          "Individual counseling is most effective for behavior change",
+          "Mass media reaches largest audience but less effective for behavior change",
+          "Folk media effective in rural India (nukkad natak, puppetry)"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 22: Health Education", edition: "26th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "health-education-layer-2-mechanism",
+        title: "Health Education & Behavior Change - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Communication theories, social marketing, PRECEDE-PROCEED model, and evaluation of health education programs.",
+        contentMd: `# Health Education - Mechanism
+
+## Communication Process
+- **Source**: Credible, trustworthy communicator
+- **Message**: Clear, culturally appropriate, actionable
+- **Channel**: Appropriate medium (interpersonal, mass media, digital)
+- **Receiver**: Target audience (literacy, culture, beliefs)
+- **Feedback**: Two-way communication essential
+
+## Social Cognitive Theory (Bandura)
+- **Reciprocal determinism**: Behavior, personal factors, environment interact
+- **Observational learning**: Learning from role models
+- **Self-efficacy**: Confidence in ability to perform behavior
+- **Reinforcement**: Positive/negative consequences
+
+## PRECEDE-PROCEED Model (Green)
+### PRECEDE (Planning Phase)
+- **P**redisposing factors: Knowledge, attitudes, beliefs
+- **R**einforcing factors: Rewards, feedback, social support
+- **E**nabling factors: Resources, skills, accessibility
+
+### PROCEED (Implementation + Evaluation)
+- Process evaluation: Was program implemented as planned?
+- Impact evaluation: Did knowledge/behavior change?
+- Outcome evaluation: Did health status improve?
+
+## Social Marketing
+- Applying commercial marketing principles to health
+- **4 Ps**: Product (behavior), Price (cost of change), Place (accessibility), Promotion (communication)
+- Example: Pulse Polio campaign, condom social marketing
+
+## Health Literacy
+- Ability to obtain, understand, and use health information
+- Low health literacy associated with poor health outcomes
+- India: varies greatly by region, gender, education level
+
+## Evaluation of Health Education
+| Level | Measure | Example |
+|-------|---------|---------|
+| Input | Resources used | Budget, staff, materials |
+| Process | Activities done | Sessions conducted, attendance |
+| Output | Immediate results | Knowledge gained (pre/post test) |
+| Outcome | Behavior change | Handwashing practice |
+| Impact | Health status | Diarrhea incidence reduction |`,
+        mnemonics: [
+          { text: "PRECEDE = Predisposing + Reinforcing + Enabling factors", explanation: "Three factor categories in the planning phase of PRECEDE-PROCEED" },
+          { text: "4 Ps of Social Marketing: Product, Price, Place, Promotion", explanation: "Marketing principles applied to health behavior change" }
+        ],
+        keyPoints: [
+          "Communication needs credible source, clear message, appropriate channel",
+          "Bandura: self-efficacy is key predictor of behavior change",
+          "PRECEDE-PROCEED: predisposing + reinforcing + enabling factors",
+          "Social marketing: 4 Ps (Product, Price, Place, Promotion)",
+          "Evaluation levels: input -> process -> output -> outcome -> impact",
+          "Low health literacy associated with poor outcomes"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 22", edition: "26th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "health-education-layer-3-clinical",
+        title: "Health Education & Behavior Change - Clinical",
+        estimatedMinutes: 20,
+        summary: "Practical health education in clinical settings, patient counseling techniques, community-based programs in India, and digital health education.",
+        contentMd: `# Health Education - Clinical Application
+
+## Clinical Health Education (5As Framework)
+1. **Ask**: Assess patient's health behavior and readiness to change
+2. **Advise**: Clear personalized advice to change
+3. **Assess**: Evaluate willingness to change (stage of change)
+4. **Assist**: Provide tools and support for behavior change
+5. **Arrange**: Follow-up plan
+
+## Motivational Interviewing
+- Patient-centered counseling technique
+- Express empathy, develop discrepancy, roll with resistance, support self-efficacy
+- Effective for addiction, chronic disease management, lifestyle modification
+
+## Community Health Education Programs (India)
+- **Pulse Polio**: Mass media + community mobilization -> polio eradication
+- **Swachh Bharat Mission**: Sanitation behavior change
+- **National Tobacco Control Programme**: IEC against tobacco use
+- **Adolescent-Friendly Health Clinics**: RKSK program
+- **Village Health Sanitation Nutrition Day (VHSND)**: Monthly health education at AWC
+
+## Digital Health Education
+- mHealth: SMS reminders for medication adherence, ANC visits
+- Telemedicine counseling at HWCs
+- Social media campaigns (COVID-19 awareness)
+- AI chatbots for health information
+- Aarogya Setu app during pandemic
+
+## Challenges in India
+- Diverse languages and cultures
+- Low literacy in rural areas
+- Myths and misconceptions about health
+- Gender barriers to health information access
+- Digital divide (rural vs urban access)
+
+> **Clinical Pearl**: The 5As framework is the most practical tool for clinical health education. Every patient encounter is an opportunity for brief health advice.`,
+        mnemonics: [
+          { text: "5As: Ask, Advise, Assess, Assist, Arrange", explanation: "Clinical framework for health education at every patient encounter" },
+          { text: "MI = Express empathy + Develop discrepancy + Roll with resistance + Support self-efficacy", explanation: "Four principles of Motivational Interviewing" }
+        ],
+        keyPoints: [
+          "5As framework for clinical health education at every patient visit",
+          "Motivational interviewing: empathy, discrepancy, resistance, self-efficacy",
+          "Pulse Polio: most successful mass health education campaign in India",
+          "VHSND: monthly health education at village level",
+          "mHealth and telemedicine expanding health education reach",
+          "Challenges: literacy, language diversity, myths, gender barriers"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 22", edition: "26th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "health-education-layer-4-exam-prep",
+        title: "Health Education & Behavior Change - Exam Preparation",
+        estimatedMinutes: 15,
+        summary: "High-yield behavior change models, health education methods, evaluation frameworks for NEXT/NEET PG.",
+        contentMd: `# Health Education - Exam High Yield
+
+## Model Comparison
+| Model | Key Concept | Application |
+|-------|-----------|-------------|
+| Health Belief | Perceived threat + benefits | Vaccination uptake |
+| Transtheoretical | Stages of change | Smoking cessation |
+| Social Cognitive | Self-efficacy + modeling | Diet/exercise programs |
+| PRECEDE-PROCEED | Planning + evaluation framework | Program design |
+
+## Methods Effectiveness Ranking
+1. Individual counseling (most effective for behavior change)
+2. Group methods (peer education, demonstrations)
+3. Mass media (widest reach, least effective per individual)
+
+## One-Liners
+- Most effective method: Individual counseling
+- Widest reach: Mass media (TV, radio)
+- IEC = one-way; BCC = two-way interactive
+- Health Belief Model by Rosenstock (1966)
+- Transtheoretical by Prochaska & DiClemente
+- 5As: Ask, Advise, Assess, Assist, Arrange
+- Nukkad natak: most effective rural folk media
+
+## Previous Year Themes
+- Health Belief Model components
+- Transtheoretical stages of change
+- IEC vs BCC difference
+- Methods of health education
+- PRECEDE-PROCEED model
+- Social marketing 4 Ps`,
+        mnemonics: [
+          { text: "Rosenstock = Belief; Prochaska = Stages; Bandura = Self-efficacy", explanation: "Three theorists and their key contributions" },
+          { text: "Individual > Group > Mass (effectiveness ranking)", explanation: "Individual methods most effective but least reach; mass least effective but widest reach" }
+        ],
+        keyPoints: [
+          "Health Belief Model: susceptibility, severity, benefits, barriers, cue, self-efficacy",
+          "Transtheoretical: 5 stages from precontemplation to maintenance",
+          "PRECEDE-PROCEED: predisposing + reinforcing + enabling -> evaluation",
+          "Individual counseling most effective; mass media widest reach",
+          "5As for clinical health education",
+          "Social marketing: 4 Ps applied to health"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 22", edition: "26th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "health-education-layer-5-active-recall",
+        title: "Health Education & Behavior Change - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Q&A for health education models, methods, and application.",
+        contentMd: `# Health Education - Active Recall
+
+**Q1:** Name the components of the Health Belief Model.
+> Perceived susceptibility, perceived severity, perceived benefits, perceived barriers, cue to action, self-efficacy
+
+**Q2:** List the stages of the Transtheoretical Model.
+> Precontemplation, Contemplation, Preparation, Action, Maintenance (+ Relapse)
+
+**Q3:** What is the difference between IEC and BCC?
+> IEC is one-way information transfer. BCC is two-way interactive communication aimed at behavior change
+
+**Q4:** What is the most effective health education method?
+> Individual counseling (personalized, interactive). But narrowest reach
+
+**Q5:** What are the 5As of clinical health education?
+> Ask, Advise, Assess, Assist, Arrange
+
+**Q6:** What is the PRECEDE-PROCEED model?
+> Planning framework: PRECEDE identifies predisposing, reinforcing, enabling factors. PROCEED implements and evaluates (process, impact, outcome)
+
+**Q7:** What are the 4 Ps of social marketing?
+> Product (behavior to adopt), Price (cost of change), Place (accessibility), Promotion (communication strategy)
+
+**Q8:** What is motivational interviewing?
+> Patient-centered counseling technique using empathy, developing discrepancy, rolling with resistance, and supporting self-efficacy
+
+**Q9:** Most effective health education tool in rural India?
+> Folk media (nukkad natak, puppetry) combined with interpersonal communication by ASHAs/ANMs
+
+**Q10:** What is Bandura's key contribution to health education?
+> Social Cognitive Theory: self-efficacy (confidence in ability to change) is the strongest predictor of behavior change
+
+**Q11:** What evaluation level measures actual health status change?
+> Impact evaluation (e.g., reduction in disease incidence). Outcome measures behavior change
+
+**Q12:** Name a successful mass health education campaign in India.
+> Pulse Polio campaign: combination of mass media, community mobilization, and house-to-house visits led to polio eradication in 2014`,
+        mnemonics: [],
+        keyPoints: [
+          "12 flashcards on health education models, methods, and campaigns",
+          "Tests Health Belief Model, Transtheoretical, and PRECEDE-PROCEED",
+          "Includes clinical application (5As, motivational interviewing)",
+          "Covers India-specific programs and challenges"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 22", edition: "26th" }
+        ]
+      }
+    ]
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // CM-MOD-07-TOP-04: Disaster Management & International Health
+  // ═══════════════════════════════════════════════════════════════
+  {
+    topicCode: "CM-MOD-07-TOP-04",
+    layers: [
+      {
+        layer: 1,
+        slug: "disaster-intl-health-layer-1-foundation",
+        title: "Disaster Management & International Health - Foundation",
+        estimatedMinutes: 20,
+        summary: "Disaster management involves preparedness, mitigation, response, and recovery. International health is coordinated by WHO and guided by SDGs and IHR regulations.",
+        contentMd: `# Disaster Management & International Health
+
+## Disaster Management
+
+### Definition
+- **Disaster**: Serious disruption of society causing widespread human, material, or environmental losses exceeding community's ability to cope
+- **Hazard**: Potential threat
+- **Vulnerability**: Susceptibility to damage
+- **Risk**: Hazard x Vulnerability
+
+### Types of Disasters
+| Natural | Man-made |
+|---------|---------|
+| Earthquake | Industrial accidents |
+| Flood | Chemical spills |
+| Cyclone | Nuclear disasters |
+| Tsunami | War/conflict |
+| Drought | Terrorism |
+| Epidemic/Pandemic | Transport accidents |
+
+### Disaster Management Cycle
+1. **Mitigation**: Reduce risk (building codes, land use planning)
+2. **Preparedness**: Planning and training (drills, stockpiling)
+3. **Response**: Immediate relief (rescue, medical care, shelter)
+4. **Recovery**: Rehabilitation and reconstruction
+
+## International Health Organizations
+
+### WHO (World Health Organization)
+- Established: 1948, Headquarters: Geneva
+- Governing body: World Health Assembly (WHA)
+- Functions: Disease surveillance, technical guidance, health standards
+- Major programs: EPI, DOTS, IHR
+
+### Other Key Organizations
+| Organization | Focus |
+|-------------|-------|
+| UNICEF | Children's health and nutrition |
+| UNFPA | Reproductive health |
+| World Bank | Health financing |
+| GAVI | Vaccine access |
+| Global Fund | HIV, TB, Malaria |
+
+## Sustainable Development Goals (SDGs) - 2015-2030
+- **SDG 3**: Good Health and Well-being
+- Targets: reduce MMR <70, NMR <12, end epidemics (AIDS, TB, malaria)
+- 17 SDGs total, adopted by UN in 2015
+
+## International Health Regulations (IHR) 2005
+- Legally binding for 196 countries
+- Requires reporting of Public Health Emergency of International Concern (PHEIC)
+- Core capacities: surveillance, laboratory, response, risk communication
+
+> **Clinical Pearl**: India is highly vulnerable to floods, cyclones, and earthquakes. The National Disaster Management Authority (NDMA) coordinates disaster response at national level.`,
+        mnemonics: [
+          { text: "MPRR: Mitigation, Preparedness, Response, Recovery", explanation: "Four phases of disaster management cycle" },
+          { text: "WHO 1948 Geneva; UNICEF = children; UNFPA = reproductive", explanation: "Key international health organizations and their focus" }
+        ],
+        keyPoints: [
+          "Disaster management cycle: mitigation -> preparedness -> response -> recovery",
+          "Risk = Hazard x Vulnerability",
+          "WHO: 1948, Geneva, WHA, disease surveillance and standards",
+          "SDG 3: Good Health, targets MMR <70, NMR <12, end epidemics by 2030",
+          "IHR 2005: mandatory PHEIC reporting by all member states",
+          "NDMA coordinates disaster response in India"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 25: Disaster Management + Ch 26: International Health", edition: "26th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "disaster-intl-health-layer-2-mechanism",
+        title: "Disaster Management & International Health - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Triage systems, mass casualty management, epidemic investigation steps, IHR notification process, and WHO disease eradication programs.",
+        contentMd: `# Disaster & International Health - Mechanism
+
+## Triage in Mass Casualties (START System)
+| Color | Priority | Condition | Action |
+|-------|---------|-----------|--------|
+| Red | Immediate (P1) | Life-threatening, salvageable | Treat first |
+| Yellow | Delayed (P2) | Serious but can wait | Treat second |
+| Green | Minor (P3) | Walking wounded | Treat last |
+| Black | Expectant/Dead | Non-salvageable | Comfort care only |
+
+## Mass Casualty Incident (MCI) Management
+1. **Scene safety**: Ensure rescuer safety first
+2. **Triage**: START system, prioritize resources
+3. **Treatment**: Field stabilization, first aid
+4. **Transport**: Nearest appropriate facility
+5. **Tracking**: Patient documentation
+
+## Epidemic Investigation Steps (7 Steps)
+1. Confirm the epidemic (observed vs expected cases)
+2. Verify the diagnosis (clinical and laboratory)
+3. Define the case (person, place, time)
+4. Count cases and determine population at risk
+5. Descriptive epidemiology (epidemic curve, spot map)
+6. Develop and test hypotheses (analytical study)
+7. Implement control measures and evaluate
+
+## IHR 2005 Notification
+- **PHEIC**: Public Health Emergency of International Concern
+- Countries must notify WHO within 24 hours of qualifying event
+- Decision instrument: Unusual/unexpected + serious public health impact + international spread risk
+- Recent PHEICs: COVID-19, Mpox, Ebola, Zika, Polio
+
+## WHO Disease Eradication Programs
+| Disease | Strategy | Status |
+|---------|---------|--------|
+| Smallpox | Vaccination + ring vaccination | Eradicated (1980) |
+| Polio | OPV + surveillance | Near eradication |
+| Guinea worm | Water filtration + health education | Near eradication |
+| Measles | Vaccination | Elimination target |
+
+## Millennium Development Goals (MDGs) to SDGs
+- MDGs (2000-2015): 8 goals, health-focused (4, 5, 6)
+- SDGs (2015-2030): 17 goals, broader scope, SDG 3 = health`,
+        mnemonics: [
+          { text: "Triage: Red Yellow Green Black (RYGB)", explanation: "Priority order: immediate, delayed, minor, expectant" },
+          { text: "7 steps of epidemic investigation: Confirm, Verify, Define, Count, Describe, Hypothesize, Control", explanation: "Sequential steps for investigating an outbreak" }
+        ],
+        keyPoints: [
+          "START triage: Red (immediate), Yellow (delayed), Green (minor), Black (dead)",
+          "Epidemic investigation: 7 steps from confirmation to control",
+          "PHEIC notification to WHO within 24 hours",
+          "Smallpox: only disease eradicated (1980)",
+          "MDGs (2000-2015) replaced by SDGs (2015-2030)",
+          "IHR 2005: core capacities for surveillance and response"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 25-26", edition: "26th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "disaster-intl-health-layer-3-clinical",
+        title: "Disaster Management & International Health - Clinical",
+        estimatedMinutes: 20,
+        summary: "India's disaster vulnerability, NDMA structure, clinical roles in disasters, global health challenges, and India's contributions to international health.",
+        contentMd: `# Disaster & International Health - Clinical
+
+## India's Disaster Vulnerability
+- 58.6% landmass prone to earthquakes (zones III-V)
+- 12% area prone to floods
+- 8% area prone to cyclones (eastern and western coasts)
+- Recent: COVID-19, Kerala floods (2018), Uttarakhand floods (2013), Indian Ocean tsunami (2004)
+
+## NDMA (National Disaster Management Authority)
+- Chaired by Prime Minister
+- State level: SDMA (chaired by Chief Minister)
+- District level: DDMA (chaired by District Collector)
+- National Disaster Response Force (NDRF): specialized response teams
+
+## Clinical Roles in Disasters
+- **Immediate**: Triage, trauma care, emergency surgery
+- **Short-term**: Disease surveillance (diarrhea, respiratory), clean water provision
+- **Medium-term**: Mental health support (PTSD), rehabilitation
+- **Long-term**: Public health infrastructure rebuilding
+
+## Post-Disaster Disease Risks
+| Risk | Example |
+|------|---------|
+| Waterborne | Cholera, typhoid, hepatitis A |
+| Vector-borne | Malaria, dengue (stagnant water) |
+| Overcrowding | Measles, respiratory infections |
+| Wound infections | Tetanus, gas gangrene |
+| Mental health | PTSD, depression, anxiety |
+
+## Global Health Challenges
+- Climate change and health (heat waves, vector spread)
+- Antimicrobial resistance (AMR)
+- Emerging infections (Nipah, COVID, Mpox)
+- Health inequity between and within countries
+- Universal Health Coverage progress
+
+## India's International Health Contributions
+- Largest vaccine producer (Serum Institute, Bharat Biotech)
+- WHO-SEARO headquarters in New Delhi
+- Technical assistance to developing countries
+- Generic medicines supplier globally
+
+> **Clinical Pearl**: After floods, the priority is safe drinking water and sanitation to prevent waterborne disease outbreaks. Cholera and hepatitis A are the biggest risks.`,
+        mnemonics: [
+          { text: "NDMA = PM chairs; SDMA = CM; DDMA = Collector", explanation: "Three levels of disaster management authority" },
+          { text: "Post-disaster: Water > Shelter > Surveillance > Mental health", explanation: "Priority order for post-disaster health response" }
+        ],
+        keyPoints: [
+          "India: 58.6% earthquake-prone, 12% flood-prone",
+          "NDMA chaired by PM; NDRF for response operations",
+          "Post-disaster priorities: safe water, sanitation, disease surveillance",
+          "Waterborne diseases are primary post-flood risk",
+          "Global challenges: climate change, AMR, emerging infections",
+          "India is world's largest vaccine producer"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 25-26", edition: "26th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "disaster-intl-health-layer-4-exam-prep",
+        title: "Disaster Management & International Health - Exam Preparation",
+        estimatedMinutes: 15,
+        summary: "High-yield facts on triage, disaster cycle, WHO structure, SDGs, IHR, and disease eradication for NEXT/NEET PG.",
+        contentMd: `# Disaster & International Health - Exam High Yield
+
+## Triage Colors
+| Color | Priority | Action |
+|-------|---------|--------|
+| Red | P1 Immediate | Airway/hemorrhage control first |
+| Yellow | P2 Delayed | Can wait hours |
+| Green | P3 Minor | Walking wounded |
+| Black | Dead/expectant | Comfort care |
+
+## Key Organizations
+| Organization | HQ | Head | Focus |
+|-------------|-----|------|-------|
+| WHO | Geneva | Director-General | Global health |
+| UNICEF | New York | Executive Director | Children |
+| UNFPA | New York | Executive Director | Reproductive health |
+| World Bank | Washington DC | President | Health financing |
+
+## SDG 3 Targets (Health)
+- MMR <70/100,000 live births
+- Under-5 mortality <25/1000
+- NMR <12/1000
+- End epidemics: AIDS, TB, malaria, NTDs
+- UHC for all
+
+## One-Liners
+- Only eradicated disease: Smallpox (1980, WHO certification)
+- PHEIC: notifiable to WHO within 24 hours
+- IHR 2005: legally binding for 196 countries
+- NDMA chair: Prime Minister
+- Risk = Hazard x Vulnerability
+- START triage: walking wounded = green
+
+## Previous Year Themes
+- Triage color coding
+- Disaster management cycle phases
+- WHO functions and headquarters
+- SDG 3 targets
+- Smallpox eradication year
+- PHEIC notification requirements`,
+        mnemonics: [
+          { text: "1980 = Smallpox gone; 2014 = India polio-free", explanation: "Two key eradication/elimination milestones" },
+          { text: "SDG 3 = MMR 70, NMR 12, U5MR 25", explanation: "Three SDG 3 mortality targets" }
+        ],
+        keyPoints: [
+          "Triage: RYGB (Red, Yellow, Green, Black)",
+          "Disaster cycle: mitigation -> preparedness -> response -> recovery",
+          "WHO: Geneva, 1948, WHA governing body",
+          "SDG 3: MMR <70, NMR <12, U5MR <25",
+          "Smallpox: only eradicated disease (1980)",
+          "PHEIC: notify WHO within 24 hours"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 25-26", edition: "26th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "disaster-intl-health-layer-5-active-recall",
+        title: "Disaster Management & International Health - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Q&A for disaster management phases, triage, WHO, SDGs, and IHR.",
+        contentMd: `# Disaster & International Health - Active Recall
+
+**Q1:** What are the 4 phases of disaster management?
+> Mitigation (reduce risk), Preparedness (plan/train), Response (immediate relief), Recovery (rehabilitation)
+
+**Q2:** What is START triage? Name the 4 colors.
+> Simple Triage and Rapid Treatment. Red (immediate), Yellow (delayed), Green (minor/walking wounded), Black (dead/expectant)
+
+**Q3:** What is PHEIC?
+> Public Health Emergency of International Concern. Must be notified to WHO within 24 hours under IHR 2005
+
+**Q4:** Which is the only disease eradicated globally?
+> Smallpox (eradicated 1980, WHO certified). Achieved through vaccination and ring vaccination
+
+**Q5:** Who chairs NDMA, SDMA, and DDMA?
+> NDMA: Prime Minister. SDMA: Chief Minister. DDMA: District Collector
+
+**Q6:** What are the 7 steps of epidemic investigation?
+> Confirm epidemic, Verify diagnosis, Define case, Count cases, Descriptive epi, Hypothesize, Implement control
+
+**Q7:** What are the SDG 3 mortality targets?
+> MMR <70/100000, Under-5 mortality <25/1000, NMR <12/1000
+
+**Q8:** Where is WHO headquartered? When established?
+> Geneva, Switzerland. Established 1948. Governing body: World Health Assembly
+
+**Q9:** What diseases are post-flood risks?
+> Waterborne (cholera, typhoid, hepatitis A), vector-borne (malaria, dengue from stagnant water), wound infections (tetanus)
+
+**Q10:** What is IHR 2005?
+> International Health Regulations: legally binding for 196 countries. Requires PHEIC notification and core surveillance/response capacities
+
+**Q11:** What is the formula for disaster risk?
+> Risk = Hazard x Vulnerability. Reduce either to reduce risk
+
+**Q12:** Name 3 recent PHEICs declared by WHO.
+> COVID-19 (2020), Mpox (2022), Ebola (2014, 2019), Zika (2016), Polio (ongoing)`,
+        mnemonics: [],
+        keyPoints: [
+          "12 flashcards covering disaster management and international health",
+          "Tests triage, disaster cycle, epidemic investigation, and WHO/SDGs",
+          "Includes India-specific disaster vulnerability",
+          "Reinforces IHR notification requirements"
+        ],
+        textbookRefs: [
+          { book: "Park's Textbook of Preventive & Social Medicine", chapter: "Ch 25-26", edition: "26th" }
+        ]
+      }
+    ]
+  }
 ];

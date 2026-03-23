@@ -1,17 +1,689 @@
-export const finalBatch3Lessons = [
+import type { TopicLessons } from "./content-loader";
+
+/**
+ * 5-layer lessons for final batch 3.
+ * Covers: Somatoform & Dissociative Disorders (PS-MOD-03-TOP-03),
+ * Opioid & Other Substance Use (PS-MOD-04-TOP-02).
+ */
+export const finalBatch3Lessons: TopicLessons[] = [
+  // ═══════════════════════════════════════════════════════════════
+  // PS-MOD-03-TOP-03: Somatoform & Dissociative Disorders
+  // ═══════════════════════════════════════════════════════════════
   {
     topicCode: "PS-MOD-03-TOP-03",
     layers: [
       {
         layer: 1,
-        slug: "somatoform-dissociative-foundation",
+        slug: "somatoform-dissociative-layer-1-foundation",
         title: "Somatoform & Dissociative Disorders - Foundation",
         estimatedMinutes: 20,
-        summary: "Somatoform and dissociative disorders involve psychological symptoms manifesting as somatic complaints or memory/identity disruption. Somatic Symptom Disorder (SSD) involves excessive health anxiety; Conversion Disorder features neurologic deficits without medical cause; Hypochondriasis focuses on disease conviction. Dissociative disorders include amnesia, fugue, and identity disturbance. Indian context: high prevalence of medically unexplained symptoms in primary care.",
-        contentMd: "# Somatoform & Dissociative Disorders - Foundation\n\n## Somatic Symptom Disorder (SSD)\n\n### Diagnostic Criteria (DSM-5)\n- **Predominant symptom**: One or more somatic symptoms causing distress/disruption\n- **Cognitive criteria**: Excessive health anxiety (one or more):\n  - Excessive time/energy on health concerns\n  - High health anxiety\n  - Excessive medical care-seeking OR avoidance\n- **Duration**: ≥6 months\n- **Not attributable**: To another medical condition (though medical illness may coexist)\n\n### Prevalence\n- **Incidence**: 5-7% in primary care, up to 20% in neurology clinics\n- **Gender**: More common in women (2:1 female:male)\n- **Age**: Often begins in adolescence/early adulthood\n- **Indian context**: 20-30% of primary care visits involve medically unexplained symptoms\n\n### Common Presentations\n- **Pain**: Musculoskeletal, neuropathic, chronic\n- **GI**: Nausea, dyspepsia, diarrhea (without organic cause)\n- **Neurologic**: Weakness, paresthesias, dizziness\n- **Fatigue**: Severe, disproportionate to activity\n\n## Conversion Disorder (Functional Neurologic Symptom Disorder)\n\n### Diagnostic Criteria (DSM-5)\n- **Neurologic symptom**: Weakness, tremor, anesthesia, blindness, paralysis\n- **Absence of evidence**: Symptom not explained by neurologic disease\n- **Incompatibility**: Symptom distribution doesn't match neuroanatomy\n- **Evidence of stressor**: Psychological stressor preceding symptom\n- **Duration**: ≥2 weeks (acute episode criterion)\n\n### Pathognomonic Signs (Suggest Conversion)\n- **La belle indifférence**: Patient surprisingly unconcerned about severity\n- **Stocking-glove anesthesia**: Sensory loss in non-dermatomal distribution\n- **Hoover's sign**: Weakness of hip extension, but preserved hip flexion against resistance\n- **Pronator drift with maintained grip**: Selective motor weakness in non-neurologic distribution\n- **Astasia-abasia**: Inability to stand or walk despite normal strength in bed\n\n### Common Presentations\n- **Motor**: Paralysis, tremor, gait disturbance\n- **Sensory**: Anesthesia, paresthesia\n- **Vision**: Blindness, tunnel vision, diplopia\n- **Speech**: Mutism, aphonia (voice loss)\n- **Mixed**: Combinations (paralysis + sensory loss)\n\n## Illness Anxiety Disorder (Hypochondriasis)\n\n### Diagnostic Criteria (DSM-5)\n- **Minimal symptoms** OR no symptoms\n- **Preoccupation with illness**: Fear of having or acquiring serious disease\n- **High health anxiety**: Excessive health-related behaviors or avoidance\n- **Duration**: ≥6 months\n- **Distinction from SSD**: Few or no somatic symptoms; focus is on illness fear\n\n### Clinical Features\n- **Disease conviction**: Misinterprets normal sensations (heartbeat, GI sounds) as pathology\n- **Doctor shopping**: Seeks multiple medical opinions; dissatisfied with reassurance\n- **Over-investigation**: Requests excessive testing; relief temporary (if any)\n- **Avoidance**: Evades situations triggering health anxiety (hospitals, medical news)\n\n## Dissociative Amnesia\n\n### Diagnostic Criteria (DSM-5)\n- **Impaired recall**: Cannot remember important autobiographic information (not due to normal forgetting)\n- **Psychogenic origin**: Beyond what neurologic disease would explain\n- **With fugue**: Unplanned travel with identity confusion (subtype)\n- **Stressor-related**: Usually follows psychological trauma or stress\n\n### Types\n- **Localized**: Cannot remember events during circumscribed time period\n- **Selective**: Cannot remember some events during period (e.g., recalls before/after trauma, not during)\n- **Generalized**: Cannot remember entire life history\n- **Continuous**: Ongoing inability to recall new events (rare)\n\n## Dissociative Identity Disorder (DID)\n\n### Diagnostic Criteria (DSM-5)\n- **Multiple distinct personalities**: Two or more identities (alters) with different names/demographics/characteristics\n- **Recurrent control loss**: Periods unable to recall personal information consistent with alter activity\n- **Symptoms cause distress**: Disruption in functioning, relationships, occupation\n- **Not attributable**: To substance use or medical condition\n\n### Historical Context\n- **Formerly known as**: Multiple Personality Disorder (MPD)\n- **Prevalence**: 1-3% in clinical populations; more common in history of severe trauma\n- **Gender**: More common in women\n\n## Other Dissociative Disorders\n\n### Depersonalization/Derealization Disorder\n- **Depersonalization**: Feeling detached from body/self (observing from outside)\n- **Derealization**: World appears dreamlike, unreal, or distant\n- **Intact reality testing**: Person knows experiences are not real\n- **Stressor-related**: Often trauma or extreme stress\n\n### Dissociative Disorder Not Otherwise Specified (DDNOS)\n- **Mild DID features**: But don't meet full criteria\n- **Acute stress disorder**: Dissociation in response to acute trauma,\n        mnemonics: [\n          {\n            text: \"SSD = Somatic symptom + Excessive health anxiety + 6 months\",\n            explanation: \"Distinguishes from medical illness; anxiety focus\"\n          },\n          {\n            text: \"Conversion = Neurologic symptom + No medical explanation + La belle indifférence\",\n            explanation: \"Psychological symptom manifests neurologically\"\n          },\n          {\n            text: \"Hoover's sign = Hip extension weak but hip flexion strong = Conversion\",\n            explanation: \"Inconsistency suggests non-neurologic origin\"\n          },\n          {\n            text: \"Dissociative amnesia = Autobiographic memory loss + Trauma + NOT neurologic\",\n            explanation: \"Psychogenic, not organic brain disease\"\n          }\n        ],\n        keyPoints: [\n          \"SSD: somatic symptoms + excessive health anxiety, 6+ months, not medical illness\",\n          \"Conversion: neurologic symptom without medical explanation; la belle indifférence; Hoover's sign\",\n          \"Hypochondriasis (IAD): minimal/no somatic symptoms but extreme disease fear\",\n          \"Dissociative amnesia: memory loss following trauma; localized, selective, generalized, continuous subtypes\",\n          \"DID: 2+ distinct personalities with amnesia for alter activities; severe trauma history common\"\n        ],\n        textbookRefs: [\n          { book: \"DSM-5 Diagnostic and Statistical Manual\", chapter: \"F45/F48\", edition: \"5th\" },\n          { book: \"Kaplan & Sadock's Synopsis of Psychiatry\", chapter: \"Ch 6-7\", edition: \"11th\" },\n          { book: \"Ghai Pediatric Nursing\", chapter: \"Psychological Disorders\", edition: \"Indian\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"somatoform-dissociative-mechanism\",\n        title: \"Somatoform & Dissociative Disorders - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Somatoform disorders involve neurobiology of interoception (awareness of body signals), heightened amygdala reactivity, and anterior insula dysfunction. Conversion involves right-hemisphere dominance for emotional-somatic processing. Dissociation involves disrupted default mode network and insula-amygdala connectivity, triggered by trauma. Shared mechanism: psychological stress channeled into somatic/dissociative symptoms via unconscious processes.\",\n        contentMd: "# Somatoform & Dissociative Disorders - Mechanism\\n\\n## Neurobiology of Somatic Symptom Disorder\\n\\n### Interoception (Body Awareness)\\n- **Definition**: Conscious awareness of internal body signals (heartbeat, breathing, GI sensations)\\n- **Normal**: Integrated into background awareness; minimal attention\\n- **SSD pathology**: Hyperawareness of normal bodily sensations; misinterpreted as pathology\\n- **Brain regions**: Insular cortex (primary), anterior cingulate cortex (ACC), thalamus\\n\\n### Brain Imaging Findings in SSD\\n- **Anterior insula hyperactivity**: Enhanced attention to body signals\\n- **Amygdala hyperreactivity**: Emotional response to body sensations amplified\\n- **Prefrontal cortex hypoactivity**: Reduced top-down regulation of anxiety\\n- **Reduced gray matter**: Dorsolateral prefrontal cortex, anterior insula\\n- **Functional connectivity**: Disrupted insula-amygdala connection\\n\\n### Attentional Bias\\n- **Selective attention**: Preferentially focuses on threatening somatic cues\\n- **Health-related schema**: Information processing biased toward illness\\n- **Confirmatory bias**: Interprets ambiguous sensations as illness\\n- **Threat overestimation**: Small ache becomes \\\"major disease\\\"\\n\\n## Pathophysiology of Conversion Disorder\\n\\n### Neuroanatomical Model (Functional Imaging)\\n- **Right hemisphere dominance**: Emotional processing and somatic representation\\n- **Anterior insula**: Heightened activation during symptom provocation\\n- **Prefrontal-limbic disconnection**: Reduced top-down regulation of emotional symptoms\\n- **Motor cortex**: Reduced activation during weak limb (vs. actual stroke)\\n- **Abnormal connectivity**: Dorsolateral prefrontal cortex-amygdala reduced\\n\\n### Salience Network Dysfunction\\n- **Amygdala hyperreactivity**: Interprets emotional stress as physical threat\\n- **Anterior insula hyperactivity**: Magnifies somatic symptoms\\n- **Dorsal ACC hyperactivity**: Processes conflict between psychological stress and motor output\\n- **Result**: Psychological conflict emerges as neurologic symptom\\n\\n### Psychodynamic Mechanism\\n- **Primary gain**: Conversion of psychological conflict into somatic symptom\\n- **Secondary gain**: Symptom provides social benefits (attention, avoiding responsibility)\\n- **Dissociation**: Symptom occurs outside conscious awareness (not intentional)\\n- **Distinction from factitious**: Conversion is unconscious; factitious is deliberate\\n\\n### Why Neurologically Implausible?\\n- **Hoover's sign**: Effortless hip flexion during \\\"weak\\\" extension shows motor intact\\n- **Stocking-glove anesthesia**: Non-dermatomal pattern indicates functional, not organic\\n- **Inconsistency**: Paralysis disappears under anesthesia or in sleep\\n- **Functional imaging**: Motor cortex not recruited during symptom expression\\n\\n## Neurobiology of Dissociation\\n\\n### Default Mode Network (DMN) Dysfunction\\n- **DMN**: Medial prefrontal cortex, posterior cingulate, angular gyrus, temporal lobe\\n- **Normal function**: Self-referential thinking, autobiographic memory integration\\n- **Dissociative pathology**: Disrupted DMN connectivity → fragmented self-representation\\n- **Result**: Depersonalization (altered self-awareness), dissociative amnesia (memory fragmentation)\\n\\n### Insula-Amygdala Dysfunction\\n- **Normal**: Anterior insula receives emotion signals from amygdala\\n- **Dissociation**: Reduced connectivity → emotional signals not integrated into conscious awareness\\n- **Result**: Emotional numbing, detachment from experience despite trauma\\n\\n### Anterior Cingulate Cortex (ACC) Abnormalities\\n- **Normal**: Detects conflict, alerts attention to important stimuli\\n- **Dissociative pathology**: Reduced ACC activity during trauma recall\\n- **Result**: Failure to integrate traumatic memory into autobiographic narrative\\n\\n### Trauma-Related Changes\\n- **PTSD vs. Dissociation**: Both involve amygdala hyperreactivity, but different integration patterns\\n- **PTSD**: Hyperactive amygdala + preserved DMN = intrusive memories\\n- **Dissociation**: Hyperactive amygdala + disrupted DMN = fragmented, inaccessible memories\\n- **Polyvagal theory**: Vagal shutdown in response to inescapable threat → dissociation\\n\\n## Memory Mechanisms in Dissociative Amnesia\\n\\n### Encoding vs. Retrieval\\n- **Normal amnesia**: Problems with encoding (learning) or consolidation\\n- **Dissociative amnesia**: Intact encoding; retrieval blocked by psychological processes\\n- **Evidence**: Information often recoverable under hypnosis or guided imagery\\n\\n### Implicit vs. Explicit Memory\\n- **Explicit (declarative)**: Consciously recalled facts/events → blocked in dissociative amnesia\\n- **Implicit (procedural)**: Skills, habits, conditioned responses → usually preserved\\n- **Result**: Person may not remember trauma (explicit) but shows fear response (implicit)\\n\\n### Motivated Forgetting\\n- **Repression**: Unconscious pushing away of traumatic memory\\n- **Suppression**: Conscious decision not to think about trauma\\n- **Neural basis**: Reduced prefrontal-hippocampal connectivity during suppression\\n- **Result**: Psychogenic amnesia without neurologic damage\\n\\n## Dissociative Identity Disorder Etiology\\n\\n### Chronic Trauma Theory\\n- **Childhood trauma**: Severe, repeated, usually from caregiver\\n- **Developmental disruption**: Normal integration of identity fails\\n- **Compartmentalization**: Alters develop to contain traumatic memories\\n- **Functional advantage**: Allows daily functioning despite stored trauma\\n\\n### Identity Fragmentation\\n- **Normal development**: Experiences integrated into coherent self\\n- **Extreme trauma**: Identity fragments into separate self-states (alters)\\n- **Specialization**: Each alter may handle specific emotional states (anger, fear, joy)\\n- **Amnesia**: Switching between alters; incomplete awareness of other identities\\n\\n### Neurobiology of Switching\\n- **Brain imaging**: Different neural activation patterns during alternate identity expression\\n- **Discordant activity**: Motor cortex, sensory cortex show discordant activation\\n- **Inconsistent patterns**: Not consistent with single neurologic disease\\n- **Functional MRI**: Different alters show different patterns of connectivity,\\n        mnemonics: [\\n          {\\n            text: \\\"SSD = Anterior insula + Amygdala hyperactivity + Prefrontal hypoactivity\\\",\\n            explanation: \\\"Hyperawareness of body signals amplified by emotion\\\"\\n          },\\n          {\\n            text: \\\"Conversion = Right hemisphere emotional-somatic processing disruption\\\",\\n            explanation: \\\"Psychological stress manifests as neurologic symptom\\\"\\n          },\\n          {\\n            text: \\\"Dissociation = DMN disrupted + Insula-amygdala disconnected\\\",\\n            explanation: \\\"Fragmented self-representation, emotional disconnection\\\"\\n          },\\n          {\\n            text: \\\"Dissociative amnesia = Encoding intact, retrieval blocked (not neurologic)\\\",\\n            explanation: \\\"Motivated forgetting; implicit memory often preserved\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"SSD: anterior insula hyperactivity + amygdala reactivity + reduced prefrontal regulation\\\",\\n          \\\"Conversion: right-hemisphere emotional processing, motor cortex not recruited, psychodynamic conflict\\\",\\n          \\\"Dissociation: DMN disrupted, insula-amygdala disconnected, fragmented self-representation\\\",\\n          \\\"Dissociative amnesia: retrieval-based (not encoding); often recoverable; motivated forgetting\\\",\\n          \\\"DID: childhood trauma → identity fragmentation; each alter has separate consciousness\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kandel & Schwartz's Principles of Neuroscience\\\", chapter: \\\"Ch 53-54\\\", edition: \\\"6th\\\" },\\n          { book: \\\"Kaplan & Sadock's Synopsis of Psychiatry\\\", chapter: \\\"Ch 6-7\\\", edition: \\\"11th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"somatoform-dissociative-clinical\\\",\\n        title: \\\"Somatoform & Dissociative Disorders - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Clinical approach requires distinguishing from organic disease via focused history/exam, neuropsychological testing, and brain imaging when needed. Treatment includes psychotherapy (CBT, trauma-focused), patient education, avoiding unnecessary investigations. Conversion often shows dramatic recovery with reassurance ± psychotherapy. Dissociative disorders require trauma-informed care, stabilization before processing memories.\\\",\\n        contentMd: "# Somatoform & Dissociative Disorders - Clinical\\\\n\\\\n## Diagnostic Approach to Somatoform Disorders\\\\n\\\\n### History & Physical Examination\\\\n- **Psychosocial stressors**: Life events, relationship problems, work stress preceding symptoms\\\\n- **Medical history**: Pattern of investigations (often extensive), doctor shopping\\\\n- **Symptom timeline**: Acute onset common; may relate to identifiable stressor\\\\n- **Associated psychiatric**: Anxiety, depression, personality traits (perfectionism, people-pleasing)\\\\n- **Impact on functioning**: Work absence, relationship strain, social withdrawal\\\\n\\\\n### Investigations (Limited, Targeted)\\\\n- **Resist excessive testing**: Each investigation feeds health anxiety\\\\n- **Selective testing**: Only if clinically indicated; avoid \\\\\\\"reassurance rounds\\\\\\\"\\\\n- **Findings**: Usually negative (reinforces diagnosis of functional disorder)\\\\n- **Neuroimaging**: MRI brain only if focal neurologic signs suggest organic cause\\\\n\\\\n### Diagnostic Criteria Application\\\\n- **SSD diagnosis**: Requires evidence of excessive health anxiety (not just symptoms)\\\\n- **Conversion diagnosis**: Requires neurologically implausible symptom + identified stressor\\\\n- **Hypochondriasis**: Preoccupation with disease despite absent symptoms\\\\n\\\\n## Diagnostic Approach to Conversion Disorder\\\\n\\\\n### Clinical Features Supporting Diagnosis\\\\n- **Sudden onset**: Often after clear psychosocial stressor\\\\n- **Neurologic implausibility**: Sensory loss non-dermatomal, paralysis inconsistent\\\\n- **La belle indifférence**: Surprising lack of concern (though not required for diagnosis)\\\\n- **Inconsistency between examination findings**: Can walk despite \\\\\\\"paraplegia\\\\\\\" in sleep\\\\n- **Complete recovery possible**: Good prognosis if early intervention\\\\n\\\\n### Examination Maneuvers\\\\n- **Hoover's sign**: Patient supine, ask to lift weak leg against resistance; hip extensor weak but hip flexor strong\\\\n- **Pronator drift**: Ask to extend arms with palms up; affected arm pronates (suggests conversion)\\\\n- **Astasia-abasia**: Cannot stand/walk but has normal strength in bed; ataxia doesn't match neuroanatomy\\\\n- **Nonorganic sensory loss**: Stocking-glove distribution; splitting at midline; change between visits\\\\n\\\\n### Neuroimaging\\\\n- **MRI brain**: Normal in true conversion (rules out organic lesion)\\\\n- **fMRI (functional)**: Shows reduced motor cortex activation during weak limb movement (research tool)\\\\n- **PET scan**: Can show hypometabolism in affected regions (rarely needed clinically)\\\\n\\\\n## Management of Somatoform Disorders\\\\n\\\\n### Patient Education & Validation\\\\n- **Acknowledge distress**: Symptoms are real, not \\\\\\\"all in your head\\\\\\\"\\\\n- **Explain mechanism**: Discuss brain-body connection, stress physiology\\\\n- **Normalize**: Many people experience physical effects of stress\\\\n- **Avoid medical jargon**: \\\\\\\"Functional disorder\\\\\\\" preferred over \\\\\\\"psychosomatic\\\\\\\"\\\\n\\\\n### Psychotherapy\\\\n- **Cognitive-behavioral therapy (CBT)**: Challenge catastrophic thoughts, reduce health anxiety\\\\n  - Identify thought patterns: \\\\\\\"Pain = serious disease\\\\\\\"\\\\n  - Behavioral activation: Gradual return to activities despite symptoms\\\\n  - Exposure: Gradually increase health-related anxiety tolerance\\\\n\\\\n- **Mindfulness-based approaches**: Accept symptoms without struggle\\\\n- **Interpersonal therapy**: Address relationship problems driving symptoms\\\\n- **Motivational interviewing**: Resolve ambivalence about change\\\\n\\\\n### Medication (Adjunctive)\\\\n- **SSRIs**: For comorbid anxiety/depression (escitalopram, sertraline 50-200 mg daily)\\\\n- **Avoid**: Benzodiazepines (reinforce illness beliefs), multiple analgesics (dependency risk)\\\\n- **Not first-line**: Medication alone rarely effective without psychotherapy\\\\n\\\\n### Primary Care Coordination\\\\n- **Regular scheduled visits**: Reduce doctor-shopping; provide containment\\\\n- **Avoid unnecessary investigations**: Establish boundaries on testing\\\\n- **Treatment consistency**: All providers reinforce same message\\\\n- **Reassurance paradox**: Repeated reassurance often worsens (reduces anxiety temporarily, then increases)\\\\n\\\\n## Management of Conversion Disorder\\\\n\\\\n### Acute Phase\\\\n- **Rapid reassurance**: Explain neurologic exam findings rule out serious disease\\\\n- **Remove focus**: Avoid extensive investigation (reinforces conversion)\\\\n- **Suggestion & expectancy**: \\\\\\\"This usually resolves quickly with rest and activity\\\\\\\"\\\\n- **Physical therapy**: Early mobilization, graded activity restoration\\\\n\\\\n### Psychotherapy (Evidence-Based)\\\\n- **Trauma-focused therapy**: If precipitant is trauma\\\\n- **Psychodynamic therapy**: Explore unconscious conflicts driving symptom\\\\n- **Motivational therapy**: Enhance motivation for recovery\\\\n- **Exposure therapy**: Systematic desensitization to stressor\\\\n\\\\n### Prognosis\\\\n- **Good prognostic factors**: Acute onset, identified stressor, first episode, younger age, high education\\\\n- **Recovery rate**: 50-80% recover (many without formal treatment)\\\\n- **Rapid resolution common**: Days to weeks if early intervention\\\\n- **Recurrence**: 20-30% may have further episodes if stressors continue\\\\n\\\\n## Management of Dissociative Disorders\\\\n\\\\n### Assessment Phase\\\\n- **Trauma history**: Essential; establish severity, type, timing\\\\n- **Dissociative symptoms**: Depersonalization, derealization, amnesia, identity confusion\\\\n- **Comorbidities**: PTSD, anxiety, depression, personality disorders\\\\n- **Safety assessment**: Suicidality, self-harm (common in DID)\\\\n\\\\n### Stabilization Phase (First-Line)\\\\n- **Safety focus**: Reduce self-harm, establish predictability\\\\n- **Grounding techniques**: 5 senses technique, breathing, physical anchoring\\\\n- **Routine establishment**: Predictable sleep, meals, activity schedule\\\\n- **Psychoeducation**: Explain dissociation as trauma adaptation\\\\n- **Avoid trauma processing**: NOT ready to recall trauma details yet\\\\n\\\\n### Trauma Processing Phase (After Stabilization)\\\\n- **Timing**: Usually 6-12 months of stabilization first\\\\n- **Trauma-focused CBT**: Gradual exposure to trauma memories\\\\n- **EMDR (Eye Movement Desensitization & Reprocessing)**: Bilateral stimulation while recalling trauma\\\\n- **Internal resource building**: Strengthen coping before processing\\\\n\\\\n### DID-Specific Management\\\\n- **Cooperative communication**: Help alters communicate with each other\\\\n- **Identify precipitants**: What triggers switching; recognize early warning signs\\\\n- **Integration goal**: Ultimately merge alters (though some prefer functional cooperation)\\\\n- **Treatment duration**: Often 5-10+ years (chronic condition)\\\\n\\\\n### Medication\\\\n- **No specific medication**: No drug \\\\\\\"cures\\\\\\\" dissociation\\\\n- **Symptom management**:\\\\n  - **Anxiety**: SSRIs (sertraline 50-200 mg)\\\\n  - **Nightmares/sleep**: Prazosin 1-5 mg bedtime (blocks noradrenergic activity)\\\\n  - **Agitation**: Low-dose antipsychotics only if necessary (haloperidol 0.5-2 mg)\\\\n- **Avoid**: Benzodiazepines (addiction risk, especially in trauma survivors)\\\\n\\\\n## Treatment Outcomes\\\\n\\\\n### Somatoform Disorders\\\\n- **Response to intervention**: 30-50% show significant improvement with CBT\\\\n- **Timeline**: 3-6 months of regular therapy\\\\n- **Maintenance**: Ongoing management prevents relapse\\\\n\\\\n### Conversion Disorder\\\\n- **Best prognosis**: 50-80% recover fully, often quickly\\\\n- **Worst prognosis**: Longer duration, multiple episodes, secondary gain strong\\\\n\\\\n### Dissociative Disorders\\\\n- **DID timeline**: Years to decades for full treatment\\\\n- **Goals**: Stability, safety, functional improvement (not always complete integration)\\\\n- **Ongoing**: Lifelong management of symptoms,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"SSD diagnosis = Somatic symptom + Excessive health anxiety (not just symptoms)\\\\\\\",\\\\n            explanation: \\\\\\\"Key is the anxiety/preoccupation, not symptom count\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Conversion = Hoover's sign (hip ext weak, flex strong) + Neurologically implausible\\\\\\\",\\\\n            explanation: \\\\\\\"Examination inconsistencies suggest functional origin\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Conversion management = Reassurance + Psychotherapy + Early activity (NOT prolonged testing)\\\\\\\",\\\\n            explanation: \\\\\\\"Prognosis excellent with early intervention\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"DID treatment = Stabilize first (months), THEN trauma processing\\\\\\\",\\\\n            explanation: \\\\\\\"Safety and coping skills before trauma recall\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"SSD/Conversion diagnosis: psychosocial stressor, medical history pattern, neurologically implausible (conversion)\\\\\\\",\\\\n          \\\\\\\"Manage with CBT (challenge catastrophic thoughts), psychoeducation, scheduled visits, minimal investigations\\\\\\\",\\\\n          \\\\\\\"Conversion has excellent prognosis (50-80% recovery); rapid reassurance + early activity optimal\\\\\\\",\\\\n          \\\\\\\"Dissociative amnesia: retrievable memories; psychotherapy core treatment\\\\\\\",\\\\n          \\\\\\\"DID: stabilization phase critical (6-12 months safety), then trauma processing; long-term management (years)\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Kaplan & Sadock's Synopsis of Psychiatry\\\\\\\", chapter: \\\\\\\"Ch 6-7\\\\\\\", edition: \\\\\\\"11th\\\\\\\" },\\\\n          { book: \\\\\\\"American Psychiatric Association Treatment Guidelines\\\\\\\", chapter: \\\\\\\"Somatic & Dissociative\\\\\\\", edition: \\\\\\\"2023\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"somatoform-dissociative-exam\\\\\\\",\\\\n        title: \\\\\\\"Somatoform & Dissociative Disorders - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield exam topics: SSD diagnostic criteria (somatic symptom + excessive health anxiety 6+ months), conversion (neurologic symptom + no medical explanation + la belle indifférence), Hoover's sign, dissociative amnesia (autobiographic memory loss), and DID (2+ personalities + amnesia). Treatment: CBT, psychotherapy, avoid unnecessary investigations.\\\\\\\",\\\\n        contentMd: "# Somatoform & Dissociative Disorders - Exam Prep\\\\\\\\n\\\\\\\\n## High-Yield Facts for Exams\\\\\\\\n\\\\\\\\n### Diagnostic Criteria Quick Reference\\\\\\\\n| Disorder | Key Diagnostic Feature |\\\\\\\\n|----------|----------------------|\\\\\\\\n| **SSD** | Somatic symptom + Excessive health anxiety x 6 months |\\\\\\\\n| **Conversion** | Neurologic symptom + No medical explanation + Stressor |\\\\\\\\n| **IAD** | Preoccupation with disease + Minimal/no somatic symptoms x 6 months |\\\\\\\\n| **Dissociative amnesia** | Autobiographic memory loss + Trauma/stress + NOT neurologic |\\\\\\\\n| **DID** | 2+ distinct personalities + Amnesia between alters |\\\\\\\\n\\\\\\\\n### Conversion Disorder Red Flags\\\\\\\\n| Finding | Suggests Conversion | Why |\\\\\\\\n|---------|---|---|\\\\\\\\n| **Hoover's sign** | Hip extension weak, flexion strong | Inconsistent with neurologic disease |\\\\\\\\n| **Stocking-glove anesthesia** | Non-dermatomal sensory loss | Functional, not anatomic |\\\\\\\\n| **Astasia-abasia** | Cannot stand/walk but normal in bed | Inconsistent with true paralysis |\\\\\\\\n| **La belle indifférence** | Unconcerned despite severe symptom | Suggests psychological origin |\\\\\\\\n| **Sudden onset after stressor** | Conversion likely | Temporal relationship |\\\\\\\\n\\\\\\\\n### Management Approaches by Disorder\\\\\\\\n\\\\\\\\n**SSD**:\\\\\\\\n- CBT (challenge catastrophic thoughts, behavioral activation)\\\\\\\\n- SSRIs for comorbid anxiety/depression\\\\\\\\n- Scheduled regular visits (avoid doctor shopping)\\\\\\\\n- Minimize investigations\\\\\\\\n\\\\\\\\n**Conversion**:\\\\\\\\n- Reassurance (symptoms will resolve)\\\\\\\\n- Early physical activity/rehabilitation\\\\\\\\n- Psychotherapy (identify stressor, trauma-focused if needed)\\\\\\\\n- Good prognosis (50-80% recovery)\\\\\\\\n\\\\\\\\n**Dissociative Amnesia**:\\\\\\\\n- Psychotherapy (trauma-focused CBT, possibly hypnosis)\\\\\\\\n- Safety assessment\\\\\\\\n- Gradual memory retrieval (don't force)\\\\\\\\n\\\\\\\\n**DID**:\\\\\\\\n- Stabilization phase (6-12 months): safety, grounding, routine\\\\\\\\n- Trauma processing phase: CBT, EMDR (after stabilization)\\\\\\\\n- Long-term management (years-decades)\\\\\\\\n- Internal communication (help alters work together)\\\\\\\\n\\\\\\\\n## Common Exam Scenarios\\\\\\\\n\\\\\\\\n**Scenario 1: Woman with abdominal pain, multiple prior normal investigations, very anxious about cancer. Diagnosis?**\\\\\\\\nA) SSD (correct: somatic symptom + excessive health anxiety + 6 months implied)\\\\\\\\nB) Conversion (wrong: no neurologic symptom)\\\\\\\\nC) Factitious (wrong: not deliberately producing symptoms)\\\\\\\\n\\\\\\\\n**Scenario 2: Man presents with paralysis of leg after traumatic accident. Exam shows Hoover's sign positive. Diagnosis?**\\\\\\\\nA) Spinal cord injury (wrong: Hoover's sign inconsistent)\\\\\\\\nB) Conversion disorder (correct: neurologically implausible + stressor)\\\\\\\\nC) Hysterical paralysis (outdated term; use conversion disorder)\\\\\\\\n\\\\\\\\n**Scenario 3: 45-year-old cannot remember events during 5-year abusive relationship, but remembers before/after. Diagnosis?**\\\\\\\\nA) Dissociative amnesia (correct: selective amnesia for trauma period)\\\\\\\\nB) Generalized amnesia (wrong: not entire life history)\\\\\\\\nC) Dementia (wrong: otherwise cognitively normal)\\\\\\\\n\\\\\\\\n## Common Exam Mistakes\\\\\\\\n1. **SSD = just somatic symptoms** (WRONG: requires excessive health anxiety)\\\\\\\\n2. **La belle indifférence required for conversion** (WRONG: helpful but not required)\\\\\\\\n3. **Conversion always has good prognosis** (PARTIALLY: 50-80% good, but 20-30% may recur)\\\\\\\\n4. **Dissociative amnesia = neurologic amnesia** (WRONG: psychogenic, not organic)\\\\\\\\n5. **DID = schizophrenia** (WRONG: schizophrenia has hallucinations, thought disorder; DID has amnesia, trauma)\\\\\\\\n6. **Treat SSD with benzodiazepines** (WRONG: SSRIs + CBT; benzos reinforce illness beliefs),\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"SSD = Somatic + Excessive health anxiety x 6 mo (NOT just somatic symptoms)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Anxiety/preoccupation is key feature\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Conversion = Hoover's sign (inconsistency) + Neurologic implausibility + Stressor\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Inconsistent exam findings suggest functional origin\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Dissociative amnesia = Autobiographic memory + Trauma + Psychogenic (not neurologic)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Psychological mechanism; often recoverable\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"DID = 2+ personalities + Amnesia between alters + Childhood trauma history\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Severe dissociation with fragmented identity\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"SSD: somatic symptom + excessive health anxiety; diagnosis requires both\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Conversion: neurologic symptom without medical explanation; Hoover's sign suggests functional\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"La belle indifférence: suggestive of conversion but not required for diagnosis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Dissociative amnesia: selective/generalized memory loss for autobiographic info following trauma\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"DID: 2+ distinct personalities; amnesia between switching; treatment: stabilization then trauma processing\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"NEXT Medical Exam Question Bank\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Psychiatry & Behavioral Medicine\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2026\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"DSM-5 Diagnostic and Statistical Manual\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"F45/F48\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Kaplan & Sadock's Synopsis of Psychiatry\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 6-7\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"11th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"somatoform-dissociative-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Somatoform & Dissociative Disorders - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Active recall tests rapid disorder differentiation, diagnostic criterion application, and management selection. Practice scenarios include SSD vs. medical illness, conversion vs. organic neurologic disease, and dissociative disorders presentation.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Somatoform & Dissociative Disorders - Active Recall\\\\\\\\n\\\\\\\\n## Quick Q&A Review\\\\\\\\n\\\\\\\\n**Q1: Define Somatic Symptom Disorder (SSD). What distinguishes it from having a medical illness?**\\\\\\\\n> SSD: one or more somatic symptoms causing distress + excessive health anxiety (excessive time/energy on health, excessive medical care-seeking OR avoidance) for ≥6 months. Distinction: SSD can coexist with medical illness; key is the EXCESSIVE ANXIETY response disproportionate to medical findings.\\\\\\\\n\\\\\\\\n**Q2: What is Conversion Disorder and what are the pathognomonic signs?**\\\\\\\\n> Conversion: neurologic symptom (weakness, blindness, seizure-like) without medical explanation, following identified stressor. Pathognomonic signs: Hoover's sign (hip extension weak but flexion strong), stocking-glove anesthesia, la belle indifférence (unconcerned about severity), symptoms appearing/disappearing inconsistently.\\\\\\\\n\\\\\\\\n**Q3: Explain Hoover's sign. Why does it suggest Conversion Disorder?**\\\\\\\\n> Hoover's sign: Patient supine with weak leg; ask to lift against resistance; hip extensor weak but hip flexor strong. Suggests conversion because true neurologic disease would affect all muscles in motor pathway; inconsistency indicates functional (non-neurologic) origin.\\\\\\\\n\\\\\\\\n**Q4: A 35-year-old woman comes to clinic with years of pain complaints, multiple normal investigations, and very high anxiety about cancer despite reassurance. She insists on more testing. Diagnosis and management?**\\\\\\\\n> Likely Somatic Symptom Disorder. Management: 1) Validate distress. 2) Avoid excessive investigation (feeds anxiety). 3) Schedule regular visits (prevents doctor-shopping). 4) CBT (challenge catastrophic thoughts). 5) SSRIs if anxiety/depression comorbid. 6) Psychotherapy to address underlying stressors.\\\\\\\\n\\\\\\\\n**Q5: What is the difference between Dissociative Amnesia and amnesia from a medical condition like dementia?**\\\\\\\\n> Dissociative amnesia: autobiographic memory loss (often selective for trauma period) following psychological stress; no structural brain damage; memory often recoverable. Dementia: gradual memory loss (encoding problem), progressive, associated with cognitive decline, structural brain changes on imaging.\\\\\\\\n\\\\\\\\n**Q6: A trauma survivor has 3-hour time gap unable to remember, but remembers hour before and after. What type of dissociative amnesia?**\\\\\\\\n> Selective amnesia: cannot remember SOME events during time period but recalls before/after. (Localized = cannot remember entire time period; Generalized = cannot remember entire life history; Continuous = ongoing amnesia for new events).\\\\\\\\n\\\\\\\\n**Q7: Define Dissociative Identity Disorder (DID). What is the relationship to childhood trauma?**\\\\\\\\n> DID: 2+ distinct personalities with different names, characteristics, behaviors; recurrent control loss and amnesia for alternate identity activities. Childhood trauma history nearly universal (usually severe, repeated, from caregiver). Theory: identity fragments as adaptation to compartmentalize trauma; each alter handles different emotional states/memories.\\\\\\\\n\\\\\\\\n**Q8: Compare DID with Schizophrenia. How are they different?**\\\\\\\\n> DID: Multiple personalities/identities, amnesia for alter activities, trauma history, NOT hallucinations/thought disorder. Schizophrenia: auditory hallucinations, thought disorder (loose associations), delusions, NOT multiple distinct personalities. DID = fragmented identity; Schizophrenia = psychosis.\\\\\\\\n\\\\\\\\n**Q9: A 40-year-old with DID presents to treatment. In what order should phases of treatment proceed?**\\\\\\\\n> Phase 1 (Stabilization, 6-12 months): Establish safety, grounding techniques, predictable routine, psychoeducation. Phase 2 (Trauma Processing): Trauma-focused CBT, EMDR, gradual exposure to memories. Phase 3 (Integration/Reintegration): Merge or cooperatively work alters. Stabilization MUST come first (avoid trauma processing before stability).\\\\\\\\n\\\\\\\\n**Q10: A woman with Conversion Disorder (paralysis of arm following car accident) is seen in clinic. What is the prognosis and what factors predict good vs. poor outcome?**\\\\\\\\n> Overall prognosis: 50-80% recover fully (often rapidly with early intervention). Good prognostic factors: acute onset, clear stressor identified, first episode, younger age, higher education. Poor factors: chronic course, multiple prior episodes, strong secondary gain, lack of motivation for recovery. Early reassurance + physical therapy = best outcome.,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"SSD = Somatic + Excessive anxiety (both required); can coexist with medical illness\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Distinguishes from purely medical disorder\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Conversion = Hoover's sign + Stocking-glove anesthesia + La belle indifférence\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Neurologically implausible findings suggest functional origin\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Dissociative amnesia = Autobiographic memory loss + Trauma + Recoverable\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Psychological mechanism; often treatable\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"DID = 2+ personalities + Amnesia + Childhood trauma = Stabilize then process trauma\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Severe dissociation with identity fragmentation\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"SSD: somatic symptom + excessive health anxiety; can coexist with medical illness\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Conversion: neurologic symptom without medical explanation; Hoover's sign classic; good prognosis with early treatment\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Dissociative amnesia: autobiographic memory loss following trauma; types include localized, selective, generalized\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"DID: 2+ distinct personalities; almost universal childhood trauma history; long-term treatment needed\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Treatment: SSD/conversion CBT + psychotherapy; dissociative amnesia psychotherapy + safety; DID stabilization before trauma processing\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"DSM-5 Diagnostic and Statistical Manual\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"F45/F48\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Kaplan & Sadock's Synopsis of Psychiatry\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 6-7\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"11th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  },\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"PS-MOD-04-TOP-02\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      {\\\\\\\\n        layer: 1,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"opioid-substance-use-foundation\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Opioid & Other Substance Use - Foundation\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Opioid use disorder affects millions globally; India has 2.1 million opioid users. Physical dependence develops within 1-2 weeks of regular use. Withdrawal (non-fatal but severe) presents with rhinorrhea, lacrimation, diarrhea, sweating, muscle aches. Overdose (potentially fatal) presents with respiratory depression, miosis (pinpoint pupils), coma. Cannabis use disorder involves amotivational syndrome. Naloxone reverses opioids; buprenorphine maintenance is evidence-based treatment.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Opioid & Other Substance Use - Foundation\\\\\\\\n\\\\\\\\n## Opioid Use Disorder\\\\\\\\n\\\\\\\\n### Epidemiology\\\\\\\\n- **Incidence globally**: 26-36 million opioid users worldwide\\\\\\\\n- **India**: 2.1 million opioid users (heroin #1 drug of abuse after alcohol)\\\\\\\\n- **Mortality**: Opioid overdose death rates rising (50,000+ annually in USA)\\\\\\\\n- **Incidence**: Higher in males, starting age 20-30 years in India\\\\\\\\n\\\\\\\\n### Opioids: Classification\\\\\\\\n- **Natural**: Morphine, codeine (from opium poppy)\\\\\\\\n- **Semi-synthetic**: Heroin, oxycodone, hydrocodone\\\\\\\\n- **Fully synthetic**: Fentanyl, tramadol, methadone, buprenorphine\\\\\\\\n- **Schedule**: Heroin (Schedule I), morphine (Schedule II), codeine (Schedule III) in India\\\\\\\\n\\\\\\\\n### Mechanism of Action\\\\\\\\n- **μ-opioid receptor agonism**: Primarily at μ1, μ2, μ3 receptors\\\\\\\\n- **Effects**:\\\\\\\\n  - **Analgesia**: Descending pain inhibition in spinal cord\\\\\\\\n  - **Euphoria**: Mesolimbic dopamine release (reinforcement)\\\\\\\\n  - **Respiratory depression**: Medullary chemoreceptor suppression\\\\\\\\n  - **GI**: Increased smooth muscle tone → constipation\\\\\\\\n  - **Pupil**: Miosis (pinpoint pupils) via oculomotor nucleus\\\\\\\\n\\\\\\\\n### Physical Dependence Development\\\\\\\\n- **Timeline**: 1-2 weeks of regular use (heroin) to 1-2 months (methadone)\\\\\\\\n- **Definition**: Adaptive changes requiring continued use to prevent withdrawal\\\\\\\\n- **NOT same as addiction**: Dependence is physical; addiction is behavioral (loss of control)\\\\\\\\n- **Tolerance**: Decreasing effect with repeated doses; contributes to overdose risk\\\\\\\\n\\\\\\\\n## Opioid Withdrawal Syndrome\\\\\\\\n\\\\\\\\n### Presentation Timeline\\\\\\\\n- **Onset**: 6-12 hours (short-acting heroin) to 24-48 hours (methadone)\\\\\\\\n- **Peak**: 24-72 hours (heroin withdrawal), up to 1-2 weeks (methadone)\\\\\\\\n- **Duration**: 5-10 days (heroin) to weeks (methadone)\\\\\\\\n\\\\\\\\n### Withdrawal Symptoms\\\\\\\\n- **Early (first 6-8 hours)**: Anxiety, irritability, craving, insomnia\\\\\\\\n- **Autonomic (6-48 hours)**:\\\\\\\\n  - **Rhinorrhea** (runny nose): Pathognomonic\\\\\\\\n  - **Lacrimation** (tearing): Pathognomonic\\\\\\\\n  - **Dilated pupils** (mydriasis): Opposite of intoxication\\\\\\\\n  - **Piloerection** (\\\\\\\\\\\\\\\"goose bumps\\\\\\\\\\\\\\\"): Hair standing on end\\\\\\\\n  - **Diaphoresis** (sweating): Profuse\\\\\\\\n  - **Tachycardia**: Usually 100-120 bpm\\\\\\\\n  - **Hypertension**: Often elevated\\\\\\\\n  - **Hypothermia or hyperthermia**: Temperature dysregulation\\\\\\\\n\\\\\\\\n- **GI**: Nausea, vomiting, diarrhea, abdominal cramping\\\\\\\\n- **Musculoskeletal**: Myalgias (muscle aches), arthralgias (joint pain)\\\\\\\\n- **CNS**: Anhedonia (inability to feel pleasure), insomnia, anxiety, irritability\\\\\\\\n- **Craving**: Intense desire for opioid\\\\\\\\n\\\\\\\\n### Severity & Mortality\\\\\\\\n- **Medical complications**: RARE; withdrawal not usually life-threatening (vs. alcohol withdrawal)\\\\\\\\n- **Psychological**: Intense discomfort drives relapse\\\\\\\\n- **Dehydration**: From diarrhea/sweating; correctable with fluids\\\\\\\\n\\\\\\\\n## Opioid Overdose Syndrome\\\\\\\\n\\\\\\\\n### Presentation (\\\\\\\\\\\\\\\"Opioid Triad\\\\\\\\\\\\\\\")\\\\\\\\n1. **Pinpoint pupils** (miosis): Pathognomonic; <2mm diameter\\\\\\\\n2. **Respiratory depression**: RR <8-10; most dangerous feature\\\\\\\\n3. **Coma/altered mental status**: CNS depression\\\\\\\\n\\\\\\\\n### Associated Features\\\\\\\\n- **Bradycardia**: Usually <60 bpm\\\\\\\\n- **Hypothermia**: Low core temperature\\\\\\\\n- **Pulmonary edema**: Non-cardiogenic; fluid in alveoli (pink frothy sputum)\\\\\\\\n- **Seizures**: Possible (especially with meperidine)\\\\\\\\n- **Muscle rigidity**: May occur (fentanyl), resembles conversion disorder\\\\\\\\n\\\\\\\\n### Timing of Overdose\\\\\\\\n- **Immediate** (minutes): Heroin (IV), fentanyl patches\\\\\\\\n- **Early** (1-2 hours): Oral oxycodone, hydrocodone\\\\\\\\n- **Late** (3-24 hours): Methadone (very long-acting; sustained release pills)\\\\\\\\n\\\\\\\\n### Mortality Rate\\\\\\\\n- **Without treatment**: >90% of severe respiratory depression fatal\\\\\\\\n- **With naloxone**: <1% mortality if treated rapidly\\\\\\\\n- **Risk factors**: Co-ingestion (alcohol, benzodiazepines), tolerance loss (relapse after abstinence)\\\\\\\\n\\\\\\\\n## Cannabis Use Disorder\\\\\\\\n\\\\\\\\n### Epidemiology\\\\\\\\n- **Prevalence**: 3-5% globally; 0.5-2% in India (hashish, marijuana, \\\\\\\\\\\\\\\"ganja\\\\\\\\\\\\\\\")\\\\\\\\n- **Age of onset**: Typically adolescence (15-25 years)\\\\\\\\n- **Male:Female**: 3:1 (males more likely)\\\\\\\\n- **DSM-5 criteria**: ≥2 symptoms impacting function (out of 11 possible)\\\\\\\\n\\\\\\\\n### Active Ingredient\\\\\\\\n- **Δ9-tetrahydrocannabinol (THC)**: Binds CB1 receptors in brain\\\\\\\\n- **Cannabidiol (CBD)**: Non-intoxicating; potential therapeutic properties\\\\\\\\n- **Ratio**: High THC:CBD (modern cannabis) = greater addiction risk\\\\\\\\n\\\\\\\\n### Withdrawal Syndrome\\\\\\\\n- **Onset**: 24-48 hours after last use\\\\\\\\n- **Duration**: 1-2 weeks\\\\\\\\n- **Symptoms**: Irritability, anxiety, sleep disturbance, decreased appetite, anhedonia\\\\\\\\n- **NOT medically dangerous**: No respiratory/cardiovascular risk (unlike opioid withdrawal)\\\\\\\\n\\\\\\\\n### Amotivational Syndrome (Key Feature)\\\\\\\\n- **Definition**: Loss of motivation, apathy, impaired goal-directed behavior\\\\\\\\n- **Timing**: Develops with chronic use; reverses with abstinence\\\\\\\\n- **Mechanism**: CB1 agonism reduces dopamine in reward pathways\\\\\\\\n- **Impact**: School/work failure, social withdrawal, depression\\\\\\\\n- **Affected populations**: Adolescents/young adults (developing brains most vulnerable)\\\\\\\\n\\\\\\\\n### Cannabis-Induced Psychiatric Symptoms\\\\\\\\n- **Psychosis**: THC-induced in vulnerable individuals (especially high-potency strains)\\\\\\\\n- **Panic disorder**: Acute anxiety with THC use\\\\\\\\n- **Depressive disorder**: Chronic use associated with depression\\\\\\\\n- **Impaired cognition**: Memory, attention, processing speed affected,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Opioid withdrawal = Rhinorrhea, Lacrimation, Mydriasis, NOT life-threatening but severe\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Pathognomonic signs: runny nose, tearing, dilated pupils\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Opioid overdose = Pinpoint pupils + Respiratory depression + Coma = Naloxone\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Triad of signs; emergency reversal with antagonist\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Buprenorphine = Partial μ-agonist (safer than methadone, maintenance treatment)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Preferred opioid substitution; lower overdose risk\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Cannabis amotivational = Loss of drive, apathy, anhedonia with chronic use\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Reversible with abstinence; developmental impact in adolescents\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Opioid dependence develops in 1-2 weeks; withdrawal non-fatal but severe (rhinorrhea, lacrimation, mydriasis)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Opioid overdose: pinpoint pupils + respiratory depression + coma; naloxone reverses; respiratory support critical\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Buprenorphine: partial μ-agonist; maintenance therapy for opioid use disorder; safer than methadone\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Cannabis withdrawal: irritability, anxiety, sleep disturbance; no medical danger but anhedonia severe\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Cannabis amotivational syndrome: apathy, anhedonia, impaired cognition; adolescents most vulnerable\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Kaplan & Sadock's Synopsis of Psychiatry\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 10-11\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"11th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"DSM-5 Diagnostic and Statistical Manual\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Substance Use Disorders\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"5th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"NIDA Drug Facts\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Opioids, Cannabis\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"Latest\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 2,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"opioid-substance-use-mechanism\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Opioid & Other Substance Use - Mechanism\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 30,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Opioids act on μ-opioid receptors in brainstem, spinal cord, and mesolimbic system. Acute tolerance develops rapidly; chronic use causes downregulation of receptors and reduced endogenous opioid synthesis. Withdrawal involves hyperactivity of locus coeruleus (noradrenergic system) and dysregulation of dopamine reward. Buprenorphine: partial μ-agonist with ceiling effect (safer overdose profile). Cannabis: CB1 receptor agonism affects motivation, cognition, emotion regulation.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Opioid & Other Substance Use - Mechanism\\\\\\\\n\\\\\\\\n## Mu-Opioid Receptor Physiology\\\\\\\\n\\\\\\\\n### Receptor Subtypes & Location\\\\\\\\n- **μ1-receptors**: Supraspinal analgesia, euphoria; forebrain locations\\\\\\\\n- **μ2-receptors**: Spinal analgesia, respiratory depression, GI; brainstem, spinal cord\\\\\\\\n- **μ3-receptors**: Vascular tone, immune modulation\\\\\\\\n- **G-protein coupled**: Inhibit adenylyl cyclase → reduced cAMP → cellular hyperpolarization\\\\\\\\n\\\\\\\\n### Normal Endogenous Opioid System\\\\\\\\n- **Endogenous ligands**: Endorphins, enkephalins, dynorphins\\\\\\\\n- **Function**: Pain modulation, stress response, reward, mood regulation\\\\\\\\n- **Tonic activity**: Baseline levels maintain homeostasis\\\\\\\\n- **Phasic activity**: Increased with pain, stress, reward (food, sex)\\\\\\\\n\\\\\\\\n## Acute Opioid Intoxication\\\\\\\\n\\\\\\\\n### Receptor Activation Effects\\\\\\\\n1. **Analgesia** (μ1 + μ2):\\\\\\\\n   - Spinal cord: Presynaptic inhibition of pain neurotransmitters\\\\\\\\n   - Brainstem: Descending pain inhibitory pathways\\\\\\\\n   - Supraspinal: Emotional response to pain\\\\\\\\n\\\\\\\\n2. **Respiratory depression** (μ2 primary):\\\\\\\\n   - Medullary chemoreceptor suppression: Reduced CO2 responsiveness\\\\\\\\n   - Pontine respiratory group inhibition: Reduced automatic breathing\\\\\\\\n   - Mechanism: μ2 agonism → hyperpolarization of neurons\\\\\\\\n   - Most dangerous effect: Can progress to apnea\\\\\\\\n\\\\\\\\n3. **Euphoria** (μ1 in mesolimbic):\\\\\\\\n   - Ventral tegmental area (VTA): Dopamine neuron activation\\\\\\\\n   - Nucleus accumbens: Reward circuit reinforcement\\\\\\\\n   - Magnitude: Heroin produces intense euphoria (50x alcohol reward)\\\\\\\\n\\\\\\\\n4. **Miosis**:\\\\\\\\n   - Oculomotor nucleus: Direct μ-agonism\\\\\\\\n   - Mydriasis only if severe anoxia (hypercapnia)\\\\\\\\n\\\\\\\\n5. **GI effects**:\\\\\\\\n   - Increased muscle tone in ileum, colon\\\\\\\\n   - Decreased propulsion → constipation (chronic problem)\\\\\\\\n   - Nausea: Chemoreceptor trigger zone stimulation\\\\\\\\n\\\\\\\\n## Acute Tolerance & Desensitization\\\\\\\\n\\\\\\\\n### Rapid Development\\\\\\\\n- **Timeline**: Begins within hours of first dose\\\\\\\\n- **Mechanism**: Receptor desensitization (uncoupling from G-proteins)\\\\\\\\n- **G-protein uncoupling**: μ-receptor still binds agonist but downstream signaling reduced\\\\\\\\n- **β-arrestin recruitment**: Prevents further signaling (alternative pathway)\\\\\\\\n- **Consequence**: Same dose produces less effect → escalating use\\\\\\\\n\\\\\\\\n### Differential Tolerance\\\\\\\\n- **Analgesia**: Tolerance develops rapidly (within days)\\\\\\\\n- **Respiratory depression**: Tolerance develops slowly (weeks-months)\\\\\\\\n- **Miosis**: Virtually no tolerance (pupils always small with use)\\\\\\\\n- **Constipation**: No tolerance (becomes chronic problem)\\\\\\\\n\\\\\\\\n### Clinical Implication\\\\\\\\n- **Addiction risk**: Escalating doses to maintain euphoria\\\\\\\\n- **Overdose risk**: Analgesic tolerance creates false sense of safety; respiratory depression still present at high doses\\\\\\\\n\\\\\\\\n## Physical Dependence Mechanisms\\\\\\\\n\\\\\\\\n### Chronic Receptor Changes\\\\\\\\n1. **μ-receptor downregulation**: Reduced number of receptors (internalization, degradation)\\\\\\\\n2. **Reduced G-protein coupling**: Fewer functional receptor-G-protein complexes\\\\\\\\n3. **Increased adenylyl cyclase**: Compensatory upregulation\\\\\\\\n4. **Increased phosphodiesterase**: Increased cAMP degradation\\\\\\\\n5. **Result**: Higher baseline cellular activity; requires opioid to maintain homeostasis\\\\\\\\n\\\\\\\\n### Locus Coeruleus Hyperactivity\\\\\\\\n- **LC anatomy**: Noradrenergic nucleus in pons; projects to cortex, amygdala, hippocampus\\\\\\\\n- **Normal opioid effect**: μ-agonism inhibits LC neurons (reduces noradrenaline)\\\\\\\\n- **Chronic use**: LC adapts via upregulation of cAMP pathways\\\\\\\\n- **Upon withdrawal**: LC neurons hyperfire; excessive noradrenaline → withdrawal symptoms\\\\\\\\n\\\\\\\\n## Withdrawal Mechanisms\\\\\\\\n\\\\\\\\n### Locus Coeruleus Dysregulation\\\\\\\\n- **Hyperactivity**: Unopposed without opioid agonism\\\\\\\\n- **Noradrenaline excess**: Anxiety, agitation, insomnia, tachycardia, hypertension\\\\\\\\n- **CRF (corticotropin-releasing factor)**: Co-released, amplifies stress response\\\\\\\\n- **Timeline**: Peak at 24-72 hours as LC adaptations reach peak\\\\\\\\n\\\\\\\\n### Dynorphin System Dysregulation\\\\\\\\n- **Upregulation**: Chronic opioid use increases dynorphin (endogenous opioid)\\\\\\\\n- **Withdrawal**: Dynorphin continues elevated; binds κ-opioid receptors\\\\\\\\n- **κ-effects**: Dysphoria, anxiety, anhedonia (opposite of μ-euphoria)\\\\\\\\n- **Contributes to**: Psychological discomfort of withdrawal\\\\\\\\n\\\\\\\\n### Dopamine System Changes\\\\\\\\n- **Chronic use**: Downregulation of dopamine receptors in reward pathway\\\\\\\\n- **Withdrawal**: Dopamine levels low relative to reduced receptors\\\\\\\\n- **Result**: Anhedonia (inability to feel pleasure from natural rewards)\\\\\\\\n- **Timeline**: Can persist weeks-months\\\\\\\\n\\\\\\\\n## Naloxone & Buprenorphine Pharmacology\\\\\\\\n\\\\\\\\n### Naloxone (Competitive Antagonist)\\\\\\\\n- **Mechanism**: High-affinity competitive antagonist at μ-receptor\\\\\\\\n- **Kd**: 0.1-1 nM (higher affinity than heroin/morphine)\\\\\\\\n- **Binding**: Displaces opioid from receptor rapidly\\\\\\\\n- **Duration**: t½ 30-45 min (shorter than most opioids)\\\\\\\\n- **Effect**: Immediate reversal of opioid effects; precipitated withdrawal if opioid-dependent\\\\\\\\n\\\\\\\\n### Buprenorphine (Partial Agonist)\\\\\\\\n- **Mechanism**: Partial agonist at μ-receptor (~25% intrinsic activity)\\\\\\\\n- **Advantages**:\\\\\\\\n  - **Ceiling effect**: Respiratory depression plateaus (safer in overdose)\\\\\\\\n  - **High affinity**: Displaces other opioids; blocking effect\\\\\\\\n  - **Longer duration**: t½ 24-60 hours (once or twice daily dosing)\\\\\\\\n  - **Addiction potential**: Lower than full agonists due to partial effect\\\\\\\\n- **Maintenance dosing**: 8-32 mg daily (typical 16 mg)\\\\\\\\n- **Comparison to methadone**: Equal efficacy, safer, less regulation\\\\\\\\n\\\\\\\\n## Cannabis & CB1 Receptor Mechanisms\\\\\\\\n\\\\\\\\n### CB1 Receptor Distribution\\\\\\\\n- **Brain locations**: Hippocampus (memory), amygdala (emotion), striatum (motivation/habit)\\\\\\\\n- **Presynaptic terminals**: Modulates neurotransmitter release (glutamate, GABA, dopamine)\\\\\\\\n- **G-protein coupled**: Inhibits adenylyl cyclase; hyperpolarizes neurons\\\\\\\\n\\\\\\\\n### Acute THC Effects\\\\\\\\n1. **Cannabinoid high**:\\\\\\\\n   - Dopamine release (ventral striatum): Reward\\\\\\\\n   - Hippocampal effects: Altered memory formation\\\\\\\\n   - Amygdala: Anxiolytic or (paradoxically) anxiogenic in high doses\\\\\\\\n\\\\\\\\n2. **Motivation suppression**:\\\\\\\\n   - Dorsolateral prefrontal cortex: Reduced goal-directed activity\\\\\\\\n   - Ventral striatum: Reduced response to non-drug rewards\\\\\\\\n   - Mechanism: CB1 agonism reduces dopamine to natural reward stimuli\\\\\\\\n\\\\\\\\n3. **Memory/Cognition**:\\\\\\\\n   - Hippocampus: Impaired encoding, working memory\\\\\\\\n   - Prefrontal cortex: Reduced executive function\\\\\\\\n   - Reversible acutely; some persistence with chronic use\\\\\\\\n\\\\\\\\n### Chronic THC & Brain Changes\\\\\\\\n- **CB1 downregulation**: Reduced receptor density in prefrontal cortex, striatum\\\\\\\\n- **Dopamine receptor changes**: Reduced D2 receptors (altered motivation)\\\\\\\\n- **White matter changes**: Altered myelination in prefrontal-limbic circuits\\\\\\\\n- **Amygdala hyperactivity**: Enhanced fear/emotional reactivity\\\\\\\\n- **Result**: Amotivational syndrome (apathy), impaired decision-making, depression\\\\\\\\n\\\\\\\\n### Adolescent Vulnerability\\\\\\\\n- **Prefrontal development**: Ongoing until mid-20s; vulnerable to THC\\\\\\\\n- **Long-term effects**: Earlier use = greater cognitive impairment in adulthood\\\\\\\\n- **Neuroplasticity**: THC disrupts synaptic pruning, myelination\\\\\\\\n- **Permanent effects**: Some cognitive deficits may not fully reverse,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"μ1 = Analgesia + Euphoria; μ2 = Respiratory depression + Spinal analgesia\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Receptor subtype functions; differential tolerance important\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Tolerance rapid (analgesia) but respiratory depression slow → overdose risk\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Dangerous discordance between analgesic and respiratory tolerance\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Locus coeruleus hyperactivity in withdrawal = Noradrenaline excess = Anxiety, tachycardia, insomnia\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Mechanism of withdrawal symptoms (sympathetic overdrive)\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Buprenorphine = Partial μ-agonist + Ceiling effect + Longer t½ = Safer than methadone\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Maintenance treatment advantages\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"μ-agonism: analgesia (μ1+μ2), euphoria (μ1, mesolimbic), respiratory depression (μ2, slow tolerance)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Acute tolerance develops hours; desensitization and G-protein uncoupling mechanisms\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Withdrawal: locus coeruleus hyperactivity (noradrenaline excess), dynorphin dysregulation, dopamine depletion\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Buprenorphine: partial agonist with ceiling effect (safer respiratory profile) than methadone (full agonist)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Cannabis CB1 agonism: acute dopamine release + chronic downregulation + prefrontal dysfunction → amotivation\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Kandel & Schwartz's Principles of Neuroscience\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 51-52\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"6th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Kaplan & Sadock's Synopsis of Psychiatry\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 10-11\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"11th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 3,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"opioid-substance-use-clinical\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Opioid & Other Substance Use - Clinical\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Management of opioid use disorder includes detoxification (symptom management), medication-assisted treatment (MAT; buprenorphine preferred), and psychosocial support. Overdose managed with naloxone + respiratory support. Withdrawal treated with α2-agonists (clonidine), antiemetics, antidiarrheals. Cannabis use disorder: behavioral therapy, motivational interviewing. Indian context: limited MAT availability, high stigma, criminalization barriers.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Opioid & Other Substance Use - Clinical\\\\\\\\n\\\\\\\\n## Management of Opioid Withdrawal\\\\\\\\n\\\\\\\\n### Pharmacologic Management\\\\\\\\n\\\\\\\\n**Symptom-Targeted Approach**:\\\\\\\\n- **Anxiety/Craving**:\\\\\\\\n  - Benzodiazepines: Diazepam 5-10 mg BD-TDS (short-term, taper over 1-2 weeks)\\\\\\\\n  - BUT: Addiction risk; use cautiously\\\\\\\\n  - Buspirone: 15-30 mg daily (non-addictive alternative)\\\\\\\\n\\\\\\\\n- **Autonomic hyperactivity**:\\\\\\\\n  - **Clonidine** (α2-agonist): 0.1-0.3 mg BD (reduces noradrenaline)\\\\\\\\n  - Reduces: Sweating, tachycardia, hypertension\\\\\\\\n  - Caution: Can cause hypotension; check BP\\\\\\\\n  - Lofexidine: Alternative α2-agonist (fewer CV side effects)\\\\\\\\n\\\\\\\\n- **Nausea/Vomiting**:\\\\\\\\n  - Ondansetron: 4-8 mg TD\\\\\\\\n  - Metoclopramide: 10 mg TD\\\\\\\\n  - Avoid antihistamines (sedation)\\\\\\\\n\\\\\\\\n- **Diarrhea**:\\\\\\\\n  - Loperamide: 2-4 mg TID-QID (as needed)\\\\\\\\n  - Avoid abuse; CNS-inactive at therapeutic doses\\\\\\\\n\\\\\\\\n- **Insomnia**:\\\\\\\\n  - Avoid benzodiazepines (addiction risk)\\\\\\\\n  - Melatonin: 3-10 mg bedtime\\\\\\\\n  - Trazodone: 50-100 mg bedtime\\\\\\\\n  - Sleep hygiene optimization\\\\\\\\n\\\\\\\\n### Medication-Assisted Treatment (MAT)\\\\\\\\n\\\\\\\\n**Buprenorphine** (Preferred in many settings):\\\\\\\\n- **Dosing**: 8-32 mg daily, typically 16 mg (can give 1x or 2x daily)\\\\\\\\n- **Induction**:\\\\\\\\n  - Start 2-4 mg (after mild withdrawal to avoid precipitation)\\\\\\\\n  - Increase daily by 2-8 mg until stable (usually 48-72 hours)\\\\\\\\n- **Advantages**:\\\\\\\\n  - Partial agonist = lower overdose risk\\\\\\\\n  - Ceiling effect = respiratory depression plateaus\\\\\\\\n  - Longer t½ = once daily dosing possible\\\\\\\\n  - Better retention than methadone in some populations\\\\\\\\n  - Can prescribe in office-based settings\\\\\\\\n- **Combination product**: Buprenorphine/naloxone (prevents intravenous diversion)\\\\\\\\n\\\\\\\\n**Methadone** (Alternative, requires specialty clinic):\\\\\\\\n- **Dosing**: 20-100 mg daily (higher than buprenorphine)\\\\\\\\n- **Induction**: 20-30 mg day 1, titrate slowly (QT prolongation risk)\\\\\\\\n- **Advantages**: Very low cost, strong retention\\\\\\\\n- **Disadvantages**: Full agonist (overdose risk), requires daily clinic visit, long t½ = slow adjustment\\\\\\\\n- **Setting**: Only in licensed methadone clinics in most countries\\\\\\\\n\\\\\\\\n### Psychosocial Support\\\\\\\\n- **Cognitive-behavioral therapy**: Identify triggers, coping strategies\\\\\\\\n- **Peer support**: NA (Narcotics Anonymous), SMART Recovery\\\\\\\\n- **Motivational interviewing**: Ambivalence resolution\\\\\\\\n- **Family therapy**: If family willing/available\\\\\\\\n\\\\\\\\n## Management of Opioid Overdose\\\\\\\\n\\\\\\\\n### Emergency Response (Naloxone Administration)\\\\\\\\n\\\\\\\\n**Immediate Actions**:\\\\\\\\n1. **Naloxone dosing**: 0.4-2 mg IV/IM (typical 2 mg)\\\\\\\\n   - Onset: 1-2 min IV; 2-3 min IM\\\\\\\\n   - Duration: 30-45 min (shorter than most opioids)\\\\\\\\n2. **Repeat dosing**: q3-5 min if no response (may need 2-3 doses)\\\\\\\\n3. **Respiratory support**: Bag-mask ventilation if available\\\\\\\\n4. **Intubation**: If respiratory failure unresponsive to naloxone\\\\\\\\n5. **Call emergency**: 108 (India) for transport to hospital\\\\\\\\n\\\\\\\\n### Post-Naloxone Management\\\\\\\\n- **Monitor for re-sedation**: Opioid effects return as naloxone wears off\\\\\\\\n- **Continuous observation**: At least 3-4 hours (some opioids like methadone need longer)\\\\\\\\n- **Consider naloxone infusion**: 0.5 mg/hour if initial response inadequate\\\\\\\\n- **Supportive care**: Oxygen, fluids, cardiac monitoring\\\\\\\\n- **Aspiration precautions**: If altered mental status\\\\\\\\n\\\\\\\\n### Pulmonary Edema Management\\\\\\\\n- **Mechanism**: Non-cardiogenic; likely due to massive sympathomimetic surge post-reversal\\\\\\\\n- **Management**:\\\\\\\\n  - **CPAP/BiPAP**: First-line respiratory support\\\\\\\\n  - **Intubation**: If severe or unresponsive to CPAP\\\\\\\\n  - **Diuretics**: Furosemide 40-80 mg IV (caution: may worsen)\\\\\\\\n  - **Oxygen**: Target SpO2 >94%\\\\\\\\n\\\\\\\\n### Long-Term Prevention\\\\\\\\n- **Naloxone distribution**: Provide naloxone kit to all patients with opioid use disorder\\\\\\\\n- **Education**: Train on overdose recognition, naloxone use, recovery position\\\\\\\\n- **Relapse prevention**: Ensure rapid re-entry to MAT post-overdose\\\\\\\\n- **Tolerance loss awareness**: Relapse after abstinence (even days) = overdose risk\\\\\\\\n\\\\\\\\n## Management of Cannabis Use Disorder\\\\\\\\n\\\\\\\\n### Behavioral Interventions (First-Line)\\\\\\\\n\\\\\\\\n**Cognitive-Behavioral Therapy**:\\\\\\\\n- Identify cravings triggers; develop coping strategies\\\\\\\\n- Challenge maladaptive thoughts (e.g., \\\\\\\\\\\\\\\"I can't function without cannabis\\\\\\\\\\\\\\\")\\\\\\\\n- Behavioral activation: Increase non-cannabis activities\\\\\\\\n- Duration: 12-16 weeks typical\\\\\\\\n\\\\\\\\n**Motivational Interviewing**:\\\\\\\\n- Explore ambivalence about change\\\\\\\\n- Develop discrepancy between current use and life goals\\\\\\\\n- Enhance self-efficacy for change\\\\\\\\n- Non-confrontational approach\\\\\\\\n\\\\\\\\n**Contingency Management**:\\\\\\\\n- Reward abstinence (vouchers, privileges)\\\\\\\\n- Urine screening for accountability\\\\\\\\n- Effective for improving compliance\\\\\\\\n\\\\\\\\n### Pharmacotherapy (Limited Evidence)\\\\\\\\n\\\\\\\\n**No FDA-approved medications** for cannabis use disorder, but used off-label:\\\\\\\\n- **Bupropion**: Reduces craving/depression (150-300 mg daily)\\\\\\\\n- **Buspirone**: Reduces anxiety (15-30 mg daily)\\\\\\\\n- **N-acetylcysteine**: Reduces craving (1200 mg TID; limited evidence)\\\\\\\\n- **Tiagabine**: GABA enhancer (limited evidence)\\\\\\\\n\\\\\\\\n**Avoid benzodiazepines**: Addiction risk, though withdrawal not medically dangerous\\\\\\\\n\\\\\\\\n### Managing Withdrawal Symptoms\\\\\\\\n- **Irritability/anxiety**: Buspiron, CBT\\\\\\\\n- **Insomnia**: Sleep hygiene, melatonin, trazodone (avoid benzos)\\\\\\\\n- **Anhedonia**: Exercise, social connection, behavioral activation\\\\\\\\n- **Timeline**: Symptoms peak 1-2 weeks; resolve within 3-4 weeks\\\\\\\\n\\\\\\\\n### Special Populations\\\\\\\\n\\\\\\\\n**Adolescents**:\\\\\\\\n- Higher addiction risk (CNS still developing)\\\\\\\\n- Family-based interventions important\\\\\\\\n- School-based prevention programs\\\\\\\\n- Emphasize cognitive impact; reversibility with abstinence\\\\\\\\n\\\\\\\\n**Co-occurring Psychosis**:\\\\\\\\n- Antipsychotic if THC-induced psychosis persists >48 hours off cannabis\\\\\\\\n- Aripiprazole (avoid weight gain agents if possible)\\\\\\\\n- Cannabis contraindicated in schizophrenia/bipolar\\\\\\\\n- Motivate abstinence strongly\\\\\\\\n\\\\\\\\n## Outcomes & Prognosis\\\\\\\\n\\\\\\\\n### Opioid Use Disorder\\\\\\\\n- **MAT retention**: 70-80% at 1 year on buprenorphine\\\\\\\\n- **Relapse rate**: 30-50% relapse during treatment (continuous cycles normal)\\\\\\\\n- **Mortality**: Dramatically reduced on MAT (80-90% reduction)\\\\\\\\n- **Recovery**: Many achieve stable remission with long-term MAT\\\\\\\\n\\\\\\\\n### Cannabis Use Disorder\\\\\\\\n- **Spontaneous remission**: 30-50% with brief intervention\\\\\\\\n- **CBT efficacy**: 40-50% achieve abstinence/reduced use\\\\\\\\n- **Timeline**: Recovery takes months-years\\\\\\\\n- **Outcomes**: Better with family support, vocational engagement,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Opioid withdrawal = Clonidine + Buprenorphine + Psychotherapy\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Symptomatic management + MAT + behavioral support\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Naloxone = 0.4-2 mg IV q3-5 min; watch re-sedation (t½ short)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Overdose reversal; repeat dosing often needed\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Buprenorphine > Methadone (safer, office-based, ceiling effect)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Preferred first-line MAT in many settings\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Cannabis disorder = CBT + Motivational interviewing (no approved meds)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Behavioral approach primary; limited pharmacotherapy\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Opioid withdrawal: clonidine for autonomic, benzodiazepines short-term, buprenorphine maintenance\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Naloxone 0.4-2 mg IV for overdose; repeat q3-5 min; watch re-sedation and pulmonary edema\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Buprenorphine preferred MAT: partial agonist, ceiling effect, once daily, office-based\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Cannabis use disorder: CBT, motivational interviewing, behavioral activation; no FDA-approved meds\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"MAT retention 70-80%; mortality reduced 80-90% on treatment; long-term maintenance often needed\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Kaplan & Sadock's Synopsis of Psychiatry\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 10-11\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"11th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"ASAM Opioid Addiction Treatment Guidelines\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"MAT, Withdrawal, Overdose\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2020\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 4,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"opioid-substance-use-exam\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Opioid & Other Substance Use - Exam Prep\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"High-yield topics: opioid withdrawal (rhinorrhea, lacrimation, mydriasis, locus coeruleus hyperactivity), opioid overdose (pinpoint pupils, respiratory depression, naloxone), buprenorphine (partial agonist, ceiling effect, maintenance), cannabis amotivational syndrome. NEXT-pattern questions test management prioritization and pharmacology.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Opioid & Other Substance Use - Exam Prep\\\\\\\\n\\\\\\\\n## High-Yield Facts for Exams\\\\\\\\n\\\\\\\\n### Opioid Withdrawal Features\\\\\\\\n| Feature | Timeline | Mechanism |\\\\\\\\n|---------|----------|-----------|\\\\\\\\n| **Onset** | 6-12h (heroin) / 24-48h (methadone) | Half-life dependent |\\\\\\\\n| **Peak** | 24-72h (heroin) / 1-2 weeks (methadone) | Locus coeruleus adaptation |\\\\\\\\n| **Pathognomonic signs** | Rhinorrhea, Lacrimation, Mydriasis | Sympathomimetic excess |\\\\\\\\n| **Other features** | Sweating, piloerection, diarrhea, myalgias | Autonomic hyperactivity |\\\\\\\\n| **Mortality** | RARE (non-life-threatening) | Unlike alcohol withdrawal |\\\\\\\\n| **Duration** | 5-10d (heroin) / weeks (methadone) | Time-dependent |\\\\\\\\n\\\\\\\\n### Opioid Overdose Management\\\\\\\\n| Step | Action | Details |\\\\\\\\n|------|--------|---------|\\\\\\\\n| **Call 108** | Emergency response | Immediately |\\\\\\\\n| **Naloxone 0.4-2 mg** | IV/IM initial dose | Can give IM if no IV access |\\\\\\\\n| **Repeat q3-5 min** | If no response to first dose | May need 2-3 doses total |\\\\\\\\n| **Respiratory support** | Bag-mask/intubation | If naloxone insufficient |\\\\\\\\n| **Monitor 3-4 hours** | Watch for re-sedation | Naloxone t½ short (30-45 min) |\\\\\\\\n\\\\\\\\n### Medication-Assisted Treatment (MAT) Comparison\\\\\\\\n| Feature | Buprenorphine | Methadone |\\\\\\\\n|---------|---------------|-----------|\\\\\\\\n| **Agonist type** | Partial (safer) | Full (higher risk) |\\\\\\\\n| **Ceiling effect** | YES (respiratory) | NO |\\\\\\\\n| **t½** | 24-60 hours | 15-60 hours |\\\\\\\\n| **Dosing** | Once-twice daily | Daily (sometimes BD) |\\\\\\\\n| **Setting** | Office-based | Licensed clinic |\\\\\\\\n| **Overdose risk** | Lower | Higher |\\\\\\\\n| **Cost** | Moderate | Very low |\\\\\\\\n| **Preferred** | First-line USA | Alternative |\\\\\\\\n\\\\\\\\n### Cannabis Use Disorder Features\\\\\\\\n| Feature | Details |\\\\\\\\n|---------|---------|\\\\\\\\n| **Withdrawal symptoms** | Irritability, anxiety, insomnia, anhedonia |\\\\\\\\n| **Timeline** | Peak 1-2 weeks; resolve 3-4 weeks |\\\\\\\\n| **Medical danger** | NONE (unlike opioid withdrawal) |\\\\\\\\n| **Amotivational syndrome** | Loss of motivation, apathy, impaired cognition |\\\\\\\\n| **Adolescent effect** | Developmentally vulnerable; long-term cognitive impact |\\\\\\\\n| **Pharmacotherapy** | NO FDA-approved meds; off-label (bupropion, buspirone) |\\\\\\\\n| **First-line treatment** | CBT, motivational interviewing, behavioral activation |\\\\\\\\n\\\\\\\\n## Common Exam Scenarios\\\\\\\\n\\\\\\\\n**Scenario 1: Patient with dilated pupils, runny nose, tearing, sweating. Diagnosis?**\\\\\\\\nA) Opioid withdrawal (correct: pathognomonic signs)\\\\\\\\nB) Opioid intoxication (wrong: would have miosis, not mydriasis)\\\\\\\\nC) Anxiety disorder (wrong; no medical cause for autonomic signs)\\\\\\\\n\\\\\\\\n**Scenario 2: Overdosed patient with pinpoint pupils, RR 6, SpO2 70%. Next step?**\\\\\\\\nA) Narcan 0.4 mg IV + ventilation (correct)\\\\\\\\nB) Flumazenil (wrong: for benzodiazepines, not opioids)\\\\\\\\nC) Chest compression (wrong; no cardiac emergency per se)\\\\\\\\n\\\\\\\\n**Scenario 3: Opioid-dependent patient on stabilization. Best maintenance therapy?**\\\\\\\\nA) Naltrexone (wrong: antagonist, not maintenance)\\\\\\\\nB) Buprenorphine 16 mg daily (correct: partial agonist, office-based)\\\\\\\\nC) Morphine IR (wrong: will reinforce use, not treatment)\\\\\\\\n\\\\\\\\n## Common Exam Mistakes\\\\\\\\n1. **Withdrawal = life-threatening** (WRONG; non-fatal but severe; unlike alcohol)\\\\\\\\n2. **Miosis in withdrawal** (WRONG; mydriasis occurs; miosis in intoxication)\\\\\\\\n3. **Methadone preferred over buprenorphine** (WRONG; buprenorphine safer, office-based)\\\\\\\\n4. **Naloxone lasts 4-6 hours** (WRONG; only 30-45 min; must repeat or infuse)\\\\\\\\n5. **Cannabis withdrawal serious** (WRONG; non-life-threatening; uncomfortable but not dangerous)\\\\\\\\n6. **Benzodiazepines OK for cannabis** (WRONG; addiction risk; avoid)\\\\\\\\n7. **Amotivational syndrome permanent** (WRONG; reverses with abstinence),\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Withdrawal = Rhinorrhea + Lacrimation + Mydriasis (RLM) + Locus coeruleus hyperactivity\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Pathognomonic signs; sympathomimetic excess\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Overdose = Pinpoint pupils + RR <10 + Coma = Naloxone 0.4-2 mg IV q3-5 min\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Triad of signs; emergency reversal\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Buprenorphine = Partial agonist + Ceiling effect + Safer than methadone\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Preferred MAT in many settings\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Cannabis withdrawal = Irritable, insomnia, anhedonia (NOT life-threatening) = CBT/motivational interview\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Unpleasant but medically safe\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Opioid withdrawal: rhinorrhea, lacrimation, mydriasis, locus coeruleus hyperactivity, NOT life-threatening\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Opioid overdose: pinpoint pupils, respiratory depression; naloxone 0.4-2 mg IV, repeat q3-5 min\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Buprenorphine preferred maintenance: partial agonist, ceiling effect, office-based, once-daily\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Cannabis withdrawal: irritability, insomnia, anhedonia; no medical danger; lasts 3-4 weeks\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Cannabis amotivational syndrome: apathy, anhedonia, cognitive impairment; reversible with abstinence\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"NEXT Medical Exam Question Bank\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Substance Use Disorders\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2026\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"ASAM Opioid Addiction Treatment Guidelines\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"MAT, Withdrawal\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2020\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"opioid-substance-use-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Opioid & Other Substance Use - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Active recall tests withdrawal vs. overdose differentiation, management prioritization, and medication selection. Practice scenarios include acute presentations and chronic management decisions.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Opioid & Other Substance Use - Active Recall\\\\\\\\n\\\\\\\\n## Quick Q&A Review\\\\\\\\n\\\\\\\\n**Q1: Describe opioid withdrawal. Why is it non-life-threatening but still a major problem?**\\\\\\\\n> Opioid withdrawal: locus coeruleus hyperactivity causing rhinorrhea, lacrimation, mydriasis, sweating, piloerection, tachycardia, diarrhea, myalgias. Non-life-threatening (no respiratory/CV collapse like alcohol); BUT intense psychological discomfort and anhedonia drive relapse. Severe enough that users seek more opioids to stop it.\\\\\\\\n\\\\\\\\n**Q2: What is the mechanism of locus coeruleus hyperactivity in opioid withdrawal?**\\\\\\\\n> Normal opioids suppress locus coeruleus (LC) firing via μ-agonism. Chronic use causes LC adaptation (upregulation of cAMP cascades). Upon withdrawal, LC neurons hyperfire without opioid inhibition. Excessive noradrenaline released → withdrawal symptoms. CRF co-released amplifies stress response. Peak at 24-72h as adaptations peak.\\\\\\\\n\\\\\\\\n**Q3: A patient presents with pinpoint pupils, RR 6, SpO2 78%, unresponsive. Diagnosis and immediate management?**\\\\\\\\n> Opioid overdose. Management: (1) Call 108 immediately. (2) Naloxone 2 mg IV right now. (3) Bag-mask ventilation if available. (4) If no response in 2-3 min, repeat naloxone. (5) Prepare for intubation. (6) Continuous observation (naloxone t½ short; re-sedation possible).\\\\\\\\n\\\\\\\\n**Q4: Why is naloxone duration shorter than most opioids? What is the clinical consequence?**\\\\\\\\n> Naloxone t½ = 30-45 min; heroin = 4-6 hours, methadone = 15-60 hours. Clinical consequence: opioid effects return as naloxone wears off → re-sedation, respiratory depression. Requires repeated dosing q3-5 min OR continuous naloxone infusion (0.5 mg/hour).\\\\\\\\n\\\\\\\\n**Q5: What is buprenorphine and why is it preferred over methadone for maintenance?**\\\\\\\\n> Buprenorphine: partial μ-agonist (25% intrinsic activity). Advantages: (1) Ceiling effect = respiratory depression plateaus at high doses (safer overdose). (2) Long t½ = once daily dosing. (3) High affinity = blocks full opioid agonists. (4) Office-based prescribing (not restricted to clinics). (5) Lower abuse potential than methadone.\\\\\\\\n\\\\\\\\n**Q6: A patient starts buprenorphine. When can induction begin and how is it titrated?**\\\\\\\\n> Induction after mild withdrawal (usually 6-12h after last use) to avoid precipitation of acute withdrawal. Start 2-4 mg (low dose; buprenorphine has high affinity, will displace other opioids). Increase daily by 2-8 mg until stable (usually achieves steady-state 8-16 mg by day 2-3). Typical maintenance: 8-32 mg daily, usually 16 mg.\\\\\\\\n\\\\\\\\n**Q7: Differentiate opioid withdrawal from opioid overdose. Compare presentation and management.**\\\\\\\\n> Withdrawal: mydriasis (dilated), rhinorrhea, tachycardia, hyperalert; locus coeruleus hyperactivity. Management: clonidine, benzodiazepines, buprenorphine. Overdose: miosis (pinpoint), respiratory depression, coma, locus coeruleus quiet. Management: naloxone, respiratory support. Opposite presentations; different mechanisms.\\\\\\\\n\\\\\\\\n**Q8: What is cannabis amotivational syndrome? Is it reversible?**\\\\\\\\n> Amotivational syndrome: apathy, anhedonia, loss of drive, impaired goal-directed behavior, reduced motivation for school/work. Mechanism: CB1 downregulation in prefrontal cortex and striatum; reduced dopamine response to non-drug rewards. Reversibility: YES, with abstinence (weeks-months for reversal). Adolescents most vulnerable (developing brain).\\\\\\\\n\\\\\\\\n**Q9: Compare opioid and cannabis withdrawal. Why is management different?**\\\\\\\\n> Opioid: rhinorrhea, lacrimation, mydriasis, locus coeruleus hyperactivity; medically non-threatening but severe symptoms; treated with medications + MAT. Cannabis: irritability, insomnia, anhedonia; medically non-threatening, less intense; treated with behavioral therapy (CBT, motivational interview). Opioid withdrawal often requires pharmacotherapy; cannabis withdrawal mostly behavioral.\\\\\\\\n\\\\\\\\n**Q10: A 18-year-old has developed cannabis use disorder with amotivational symptoms, poor school performance. Concerning feature for long-term outcomes?**\\\\\\\\n> Adolescent use during critical brain development period. Concerns: (1) Prefrontal cortex still developing (until mid-20s). (2) Earlier THC exposure = greater long-term cognitive impairment. (3) Reduced dopamine receptor development. (4) Myelin disruption. (5) Some cognitive deficits may not fully reverse. Early intervention critical; emphasize developmental window. Family-based interventions recommended.,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Withdrawal = Rhinorrhea + Lacrimation + Mydriasis = Non-fatal but severe\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Locus coeruleus hyperactivity; drives relapse\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Overdose = Pinpoint + RR <10 + Naloxone 0.4-2 mg IV q3-5 min\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Emergency reversal; short naloxone duration\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Buprenorphine = Partial agonist + Ceiling effect + Safer, office-based\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Preferred MAT over methadone in many settings\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Cannabis amotivational = Apathy + Anhedonia + Reversible with abstinence\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"CB1 downregulation; developmental impact in adolescents\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Opioid withdrawal: rhinorrhea, lacrimation, mydriasis, locus coeruleus hyperactivity, medically non-threatening\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Naloxone 0.4-2 mg IV q3-5 min for overdose; short duration (30-45 min) = re-sedation risk\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Buprenorphine maintenance: partial agonist with ceiling effect, once daily, office-based, preferred over methadone\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Cannabis withdrawal: irritability, insomnia, anhedonia; medically safe; behavioral intervention primary\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Cannabis amotivational: reversible with abstinence; adolescent brain vulnerability; early intervention critical\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"ASAM Opioid Addiction Treatment Guidelines\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"MAT, Withdrawal, Overdose\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2020\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Kaplan & Sadock's Synopsis of Psychiatry\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 10-11\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"11th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-}
-];
-];
+        summary: "Somatic symptom disorders present with physical symptoms not fully explained by medical conditions. Dissociative disorders involve disruption of consciousness, identity, or motor function.",
+        contentMd: `# Somatoform & Dissociative Disorders - Foundation
+
+## Somatic Symptom and Related Disorders (DSM-5)
+
+### Somatic Symptom Disorder (SSD)
+- Physical symptoms causing distress with excessive health anxiety
+- Duration: >6 months
+- Not malingering or factitious (patient genuinely suffers)
+- Common in primary care (5-7%); up to 20-30% in India
+
+### Conversion Disorder (Functional Neurologic Symptom Disorder)
+- Neurologic symptoms (paralysis, blindness, tremor) incompatible with known neurologic disease
+- Often preceded by psychological stressor
+- **La belle indifference**: Patient unconcerned about severity
+- **Hoover sign**: Involuntary hip extension when testing opposite leg
+
+### Illness Anxiety Disorder (Hypochondriasis)
+- Preoccupation with having serious disease despite minimal/no symptoms
+- Excessive health-related behaviors (checking, reassurance-seeking)
+- Duration: >6 months
+
+### Factitious Disorder (Munchausen Syndrome)
+- Intentional production of symptoms for sick role
+- No external incentive (vs malingering)
+- **Munchausen by proxy**: Caregiver produces illness in another (usually child)
+
+### Malingering (NOT a psychiatric disorder)
+- Intentional symptom production for external gain (compensation, avoiding duty)
+- Not a mental illness; medicolegal issue
+
+## Dissociative Disorders
+
+### Dissociative Amnesia
+- Inability to recall important personal information (usually traumatic)
+- Too extensive to be normal forgetting
+- **Dissociative fugue**: Sudden travel away from home with amnesia for identity
+
+### Dissociative Identity Disorder (Multiple Personality)
+- Two or more distinct personality states
+- Gaps in recall of events, personal information
+- Most controversial diagnosis; rare
+
+### Depersonalization/Derealization Disorder
+- Feeling detached from self (depersonalization) or surroundings (derealization)
+- Reality testing intact (patient knows it is abnormal)
+
+> **Clinical Pearl**: In India, conversion disorder and dissociative disorders are very common presentations, especially in young women, and are often mistaken for neurological disease.`,
+        mnemonics: [
+          { text: "SSD = Suffering is real; Factitious = Faking for role; Malingering = Money/gain", explanation: "Three conditions with physical symptoms but different motivations" },
+          { text: "La belle indifference = beautiful indifference to symptoms", explanation: "Classic feature of conversion disorder" }
+        ],
+        keyPoints: [
+          "Somatic symptom disorder: genuine distress, excessive health anxiety, >6 months",
+          "Conversion: neurologic symptoms incompatible with disease, often post-stress",
+          "Factitious: intentional symptoms for sick role (no external gain)",
+          "Malingering: intentional symptoms for external gain (not psychiatric disorder)",
+          "Dissociative amnesia: cannot recall traumatic personal information",
+          "La belle indifference and Hoover sign help identify conversion"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Somatoform Disorders", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Chapter 13: Somatic Symptom Disorders", edition: "12th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "somatoform-dissociative-layer-2-mechanism",
+        title: "Somatoform & Dissociative Disorders - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Psychodynamic mechanisms (primary/secondary gain), neurobiological basis of conversion, somatization theories, and dissociation as defense mechanism.",
+        contentMd: `# Somatoform & Dissociative Disorders - Mechanism
+
+## Psychodynamic Theories
+
+### Conversion Disorder Mechanism (Freud)
+- **Primary gain**: Unconscious conflict converted to physical symptom (reduces anxiety)
+- **Secondary gain**: External benefits from being ill (attention, avoiding responsibility)
+- **Symbolism**: Symptom may symbolize the conflict (e.g., hand paralysis after desire to strike)
+
+### Somatization Mechanism
+- Alexithymia: difficulty identifying and expressing emotions
+- Psychological distress expressed through bodily symptoms
+- Cultural factors: somatic expression of distress common in Indian culture
+
+## Neurobiological Basis
+
+### Conversion Disorder Neuroimaging
+- Decreased activity in motor cortex during paralysis (fMRI)
+- Increased activity in emotion-processing areas (amygdala, anterior cingulate)
+- Disrupted connectivity between intention and execution areas
+- NOT voluntary suppression (different from malingering)
+
+### Dissociation Neurobiological Model
+- Disruption of normal integrative functions of consciousness
+- Prefrontal cortex hypoactivation (reduced executive control)
+- Amygdala hyperactivation (threat processing)
+- Default mode network dysregulation
+
+## Diagnostic Approach
+
+### Clinical Signs for Conversion
+| Sign | Test | Interpretation |
+|------|------|---------------|
+| Hoover sign | Test hip extension while flexing opposite hip | Involuntary extension = conversion |
+| Tremor entrainment | Ask patient to tap rhythm with unaffected hand | Conversion tremor entrains to rhythm |
+| Drift without pronation | Arm drift test | Organic: pronator drift; conversion: drift without pronation |
+| Stocking-glove sensory | Sensory testing | Non-dermatomal distribution |
+
+### Differentiating from Malingering
+| Feature | Conversion | Malingering |
+|---------|-----------|-------------|
+| Awareness | Unconscious | Conscious |
+| Motivation | Primary gain | External gain |
+| Consistency | May be inconsistent | Often inconsistent |
+| La belle indifference | Present | Absent (dramatic) |
+| Response to suggestion | Improves | May not |
+| Legal/financial context | Absent | Present |
+
+## ICD-11 Classification
+- **Bodily distress disorder**: Replaces multiple somatoform categories
+- **Dissociative neurological symptom disorder**: Replaces conversion disorder
+- Emphasizes positive diagnostic criteria over exclusion`,
+        mnemonics: [
+          { text: "Primary gain = internal (anxiety reduction); Secondary gain = external (attention)", explanation: "Two types of psychological benefit from symptoms" },
+          { text: "Hoover = Hip extension test for conversion", explanation: "Positive Hoover sign: involuntary hip extension when flexing opposite leg" }
+        ],
+        keyPoints: [
+          "Primary gain: unconscious anxiety reduction; secondary gain: external benefits",
+          "Conversion neuroimaging: decreased motor cortex, increased emotional areas",
+          "Hoover sign, tremor entrainment, drift without pronation help diagnose conversion",
+          "Malingering is conscious and motivated by external gain",
+          "Dissociation: disruption of integrative functions of consciousness",
+          "ICD-11: bodily distress disorder replaces somatoform"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Somatoform Mechanisms", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Chapter 13", edition: "12th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "somatoform-dissociative-layer-3-clinical",
+        title: "Somatoform & Dissociative Disorders - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Clinical management: biopsychosocial approach, CBT, pharmacotherapy, managing the doctor-patient relationship, and India-specific cultural considerations.",
+        contentMd: `# Somatoform & Dissociative Disorders - Clinical
+
+## Management Principles
+
+### Somatic Symptom Disorder
+1. **Validate symptoms**: Accept the patient's suffering as real
+2. **Single physician**: Designate one doctor to reduce doctor-shopping
+3. **Regular appointments**: Scheduled visits, not symptom-driven
+4. **Gradual activity increase**: Physical rehabilitation
+5. **CBT**: Cognitive behavioral therapy (most effective)
+6. **SSRIs**: If comorbid depression/anxiety (fluoxetine, sertraline)
+7. **Avoid unnecessary investigations**: Reduces reinforcement
+
+### Conversion Disorder
+1. **Positive diagnosis**: Explain that tests show the nervous system is intact
+2. **Physiotherapy**: Gradual functional rehabilitation
+3. **Suggestion and reassurance**: Often effective acutely
+4. **Address psychological stressor**: Identify and process trigger
+5. **Abreaction**: Amytal interview in resistant cases (rarely used now)
+6. **CBT**: Long-term prevention of recurrence
+
+### Factitious Disorder
+- Non-confrontational approach
+- Engage psychiatric team early
+- Address underlying emotional needs
+- Munchausen by proxy: mandatory child protection referral
+
+### Dissociative Disorders
+- Safety and stabilization first
+- Trauma-focused psychotherapy
+- EMDR (Eye Movement Desensitization and Reprocessing)
+- Hypnotherapy for dissociative amnesia (controversial)
+- Benzodiazepines for acute dissociative episodes
+
+## India-Specific Considerations
+- **Possession trance**: Common presentation; may be dissociative
+- **Mass hysteria**: Conversion symptoms in groups (schools, factories)
+- **Somatization of distress**: Physical symptoms for emotional suffering is culturally normative
+- **Stigma**: Mental health stigma leads to preference for medical explanation
+- **Traditional healers**: Many patients first consult traditional healers
+
+## Doctor-Patient Communication
+- Avoid saying "it's all in your head"
+- Explain mind-body connection using culturally appropriate language
+- Use stress-diathesis model to explain vulnerability
+- Emphasize that treatment is effective
+
+> **Clinical Pearl**: In India, mass hysteria outbreaks in schools often present with conversion symptoms (fainting, tremors). Management involves separating affected individuals and providing calm reassurance rather than extensive medical workup.`,
+        mnemonics: [
+          { text: "SVRCCA for SSD management", explanation: "Single doctor, Validate, Regular visits, CBT, Curtail investigations, Activity increase" },
+          { text: "Never say 'it is in your head' to somatizing patients", explanation: "Validation and mind-body explanation work better than dismissal" }
+        ],
+        keyPoints: [
+          "Validate symptoms, designate single physician, scheduled regular visits",
+          "CBT is most effective therapy for somatic symptom disorders",
+          "SSRIs for comorbid depression/anxiety",
+          "Conversion: positive diagnosis + physiotherapy + address stressor",
+          "India: possession trance and mass hysteria are common presentations",
+          "Munchausen by proxy: mandatory child protection referral"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Treatment", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Chapter 13", edition: "12th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "somatoform-dissociative-layer-4-exam-prep",
+        title: "Somatoform & Dissociative Disorders - Exam Preparation",
+        estimatedMinutes: 15,
+        summary: "High-yield comparison tables, diagnostic criteria, clinical signs, and classification changes for NEXT/NEET PG.",
+        contentMd: `# Somatoform & Dissociative - Exam High Yield
+
+## Key Differentiators
+| Condition | Symptom Origin | Motivation | Awareness |
+|-----------|---------------|------------|-----------|
+| SSD | Genuine distress | None (suffering) | Unaware |
+| Conversion | Unconscious | Primary gain | Unaware |
+| Factitious | Intentional | Sick role | Aware |
+| Malingering | Intentional | External gain | Aware |
+
+## Conversion Disorder Signs
+| Sign | Finding |
+|------|---------|
+| La belle indifference | Unconcerned about severe symptom |
+| Hoover sign | Involuntary hip extension |
+| Stocking-glove | Non-dermatomal sensory loss |
+| Tremor entrainment | Tremor frequency matches tapping |
+| Astasia-abasia | Cannot stand/walk but normal in bed |
+
+## Dissociative Disorders Comparison
+| Type | Core Feature |
+|------|-------------|
+| Dissociative amnesia | Cannot recall traumatic information |
+| Dissociative fugue | Sudden travel + identity amnesia |
+| DID | Multiple personality states |
+| Depersonalization | Detachment from self/surroundings |
+
+## One-Liners
+- SSD replaces somatization disorder in DSM-5
+- ICD-11: bodily distress disorder replaces somatoform
+- Conversion = functional neurologic symptom disorder (DSM-5)
+- CBT is first-line therapy for all somatic symptom disorders
+- Amytal interview: for abreaction in conversion (rarely used)
+- Munchausen by proxy = factitious disorder imposed on another
+- Mass hysteria = epidemic conversion disorder
+
+## Previous Year Themes
+- La belle indifference definition
+- Difference between factitious and malingering
+- Hoover sign interpretation
+- ICD-10 vs DSM-5 terminology
+- Treatment approach to somatization`,
+        mnemonics: [
+          { text: "Factitious = Feigned for Fun (sick role); Malingering = Money", explanation: "Quick differentiator for exam questions" },
+          { text: "CBT = Best Treatment for somatoform", explanation: "Cognitive behavioral therapy is most evidence-based" }
+        ],
+        keyPoints: [
+          "SSD: genuine distress, unaware; Factitious: intentional, sick role; Malingering: intentional, external gain",
+          "La belle indifference and Hoover sign are classic conversion features",
+          "CBT is first-line for all somatic symptom disorders",
+          "ICD-11: bodily distress disorder; DSM-5: somatic symptom disorder",
+          "Dissociative fugue = sudden travel + identity amnesia",
+          "Munchausen by proxy = factitious imposed on another"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Review", edition: "3rd" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "somatoform-dissociative-layer-5-active-recall",
+        title: "Somatoform & Dissociative Disorders - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard Q&A for somatoform classification, conversion signs, dissociative disorders, and management principles.",
+        contentMd: `# Somatoform & Dissociative - Active Recall
+
+**Q1:** What is somatic symptom disorder?
+> Physical symptoms causing distress with excessive health anxiety for >6 months. Not explained by medical condition alone. Patient genuinely suffers
+
+**Q2:** Difference between conversion, factitious, and malingering?
+> Conversion: unconscious, primary gain. Factitious: conscious, sick role. Malingering: conscious, external gain (not a psychiatric diagnosis)
+
+**Q3:** What is la belle indifference?
+> Patient with conversion disorder shows surprising unconcern about severe neurologic symptoms
+
+**Q4:** What is Hoover sign?
+> Test for conversion: involuntary hip extension when testing opposite leg flexion. Positive = conversion (true weakness shows no involuntary extension)
+
+**Q5:** What is dissociative fugue?
+> Sudden unexpected travel away from home with inability to recall identity. Subtype of dissociative amnesia
+
+**Q6:** First-line therapy for somatic symptom disorders?
+> CBT (Cognitive Behavioral Therapy). Also: single physician, regular visits, validate symptoms
+
+**Q7:** What drug class for comorbid depression in SSD?
+> SSRIs (fluoxetine, sertraline)
+
+**Q8:** What is Munchausen by proxy?
+> Factitious disorder imposed on another - caregiver intentionally causes illness in child. Mandatory child protection referral
+
+**Q9:** What replaces somatoform in ICD-11?
+> Bodily distress disorder (ICD-11). Somatic symptom disorder (DSM-5)
+
+**Q10:** What is mass hysteria?
+> Epidemic conversion disorder: conversion symptoms spreading in a group (common in schools in India). Manage with separation and reassurance
+
+**Q11:** What is primary gain vs secondary gain?
+> Primary: unconscious anxiety reduction from symptom. Secondary: external benefits (attention, avoiding work)
+
+**Q12:** What is abreaction/amytal interview?
+> IV amobarbital to facilitate recall of repressed material in conversion/dissociative disorder. Rarely used now; replaced by CBT`,
+        mnemonics: [],
+        keyPoints: [
+          "12 flashcards covering somatoform and dissociative disorders",
+          "Tests classification, diagnostic signs, and management",
+          "Includes India-specific presentations (mass hysteria, possession trance)",
+          "Reinforces differential diagnosis between conversion, factitious, malingering"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Somatoform", edition: "3rd" }
+        ]
+      }
+    ]
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // PS-MOD-04-TOP-02: Opioid & Other Substance Use
+  // ═══════════════════════════════════════════════════════════════
+  {
+    topicCode: "PS-MOD-04-TOP-02",
+    layers: [
+      {
+        layer: 1,
+        slug: "opioid-substance-use-layer-1-foundation",
+        title: "Opioid & Other Substance Use - Foundation",
+        estimatedMinutes: 20,
+        summary: "Substance use disorders involve compulsive use despite harm. Opioids (heroin, morphine) are the most common injecting drug, while cannabis and tobacco are most prevalent overall in India.",
+        contentMd: `# Opioid & Other Substance Use - Foundation
+
+## Key Definitions
+- **Substance use disorder**: Maladaptive pattern of use leading to impairment/distress
+- **Dependence**: Tolerance + withdrawal + compulsive use
+- **Tolerance**: Need for increasing dose for same effect
+- **Withdrawal**: Physical/psychological symptoms on cessation
+- **Intoxication**: Reversible substance-specific syndrome
+
+## Classification of Substances
+| Category | Examples |
+|----------|---------|
+| Opioids | Heroin, morphine, codeine, fentanyl, tramadol |
+| Sedatives | Benzodiazepines, barbiturates, alcohol |
+| Stimulants | Cocaine, amphetamine, methamphetamine |
+| Cannabis | Marijuana, hashish, bhang |
+| Hallucinogens | LSD, psilocybin, PCP |
+| Inhalants | Glue, paint thinner, nitrous oxide |
+| Tobacco/Nicotine | Cigarettes, bidi, gutka, paan masala |
+
+## Opioid Use Disorder
+
+### Pharmacology
+- Act on mu (analgesia, euphoria, respiratory depression), kappa, delta receptors
+- Heroin (diacetylmorphine): most commonly abused injecting opioid
+- Routes: IV injection (mainlining), smoking (chasing the dragon), snorting
+
+### Epidemiology (India)
+- Estimated 2.8 million opioid users in India
+- Punjab, northeast India: highest prevalence
+- IV drug use: major HIV/Hepatitis C transmission route
+- Tramadol abuse: emerging problem
+
+### Clinical Features of Opioid Intoxication
+- Euphoria, drowsiness, slurred speech
+- **Miosis** (pinpoint pupils) - pathognomonic
+- Respiratory depression (most dangerous)
+- Hypotension, bradycardia
+- Constipation, urinary retention
+
+### Opioid Withdrawal
+- Onset: 8-12 hours after last dose (heroin)
+- Peak: 48-72 hours
+- Duration: 5-7 days (acute)
+- **Features**: Lacrimation, rhinorrhea, yawning, piloerection (gooseflesh), mydriasis, diarrhea, muscle cramps, insomnia, anxiety
+
+> **Clinical Pearl**: Opioid overdose causes the classic triad: miosis, respiratory depression, and coma. Naloxone is the lifesaving antidote.`,
+        mnemonics: [
+          { text: "Opioid triad: Miosis + Respiratory depression + Coma", explanation: "Three cardinal features of opioid overdose" },
+          { text: "Withdrawal = opposite of intoxication: mydriasis, diarrhea, lacrimation", explanation: "Withdrawal features are sympathetic overactivity (opposite of opioid effects)" }
+        ],
+        keyPoints: [
+          "Substance dependence = tolerance + withdrawal + compulsive use",
+          "Opioids act on mu receptors (analgesia, euphoria, respiratory depression)",
+          "Miosis (pinpoint pupils) is pathognomonic for opioid intoxication",
+          "Respiratory depression is the lethal effect of opioid overdose",
+          "Withdrawal: lacrimation, rhinorrhea, piloerection, mydriasis, diarrhea",
+          "India: Punjab and NE India have highest opioid use"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Substance Use Disorders", edition: "3rd" },
+          { book: "Kaplan & Sadock's Synopsis of Psychiatry", chapter: "Chapter 20: Substance Use", edition: "12th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "opioid-substance-use-layer-2-mechanism",
+        title: "Opioid & Other Substance Use - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Neurobiological basis of addiction (reward pathway), opioid receptor pharmacology, mechanisms of tolerance and withdrawal, and other substance mechanisms.",
+        contentMd: `# Opioid & Substance Use - Mechanism
+
+## Reward Pathway (Mesolimbic Dopamine System)
+- **Ventral Tegmental Area (VTA)** -> Nucleus Accumbens -> Prefrontal Cortex
+- All drugs of abuse increase dopamine in nucleus accumbens
+- Natural rewards (food, sex) also use this pathway but less intensely
+- Chronic use: downregulation of D2 receptors -> anhedonia -> continued use
+
+## Opioid Receptor Pharmacology
+| Receptor | Effects | Agonists |
+|----------|---------|----------|
+| Mu (MOR) | Analgesia, euphoria, resp depression, miosis, constipation | Morphine, heroin, fentanyl |
+| Kappa (KOR) | Analgesia, dysphoria, sedation | Pentazocine, butorphanol |
+| Delta (DOR) | Analgesia, mood modulation | Enkephalins |
+
+## Tolerance Mechanism
+- Receptor desensitization (phosphorylation, internalization)
+- Upregulation of cAMP pathway (compensatory)
+- Cross-tolerance between opioids (basis for substitution therapy)
+
+## Withdrawal Mechanism
+- Abrupt removal of opioid -> unopposed compensatory mechanisms
+- cAMP surge -> noradrenergic hyperactivity (locus coeruleus)
+- Result: sympathetic overactivity (tachycardia, hypertension, sweating, diarrhea)
+- Opposite of intoxication effects
+
+## Other Substance Mechanisms
+| Substance | Primary Mechanism | Key Effect |
+|-----------|------------------|------------|
+| Cannabis | CB1/CB2 agonist | Euphoria, appetite, impaired memory |
+| Cocaine | Dopamine reuptake inhibitor | Euphoria, sympathetic activation |
+| Amphetamine | Dopamine/NE release + reuptake block | Stimulation, anorexia |
+| Benzodiazepines | GABA-A potentiation | Anxiolysis, sedation |
+| Alcohol | GABA enhancement + NMDA inhibition | Sedation, disinhibition |
+| Nicotine | Nicotinic ACh receptor agonist | Alertness, dependence |
+| LSD | 5-HT2A agonist | Hallucinations, synesthesia |
+
+## Cannabis Pharmacology
+- THC (delta-9-tetrahydrocannabinol): psychoactive component
+- CBD (cannabidiol): non-psychoactive, potential therapeutic
+- CB1 receptors: brain (euphoria, memory impairment)
+- CB2 receptors: immune system
+- India: cannabis commonly used as bhang during festivals`,
+        mnemonics: [
+          { text: "VTA -> NAc -> PFC: Reward pathway for all addictions", explanation: "Ventral Tegmental Area to Nucleus Accumbens to Prefrontal Cortex" },
+          { text: "Mu = Morphine = Most important opioid receptor", explanation: "Mu receptor mediates analgesia, euphoria, and respiratory depression" }
+        ],
+        keyPoints: [
+          "All drugs of abuse increase dopamine in nucleus accumbens",
+          "Mu receptor: analgesia, euphoria, respiratory depression, miosis",
+          "Tolerance: receptor desensitization + compensatory cAMP upregulation",
+          "Withdrawal: cAMP surge -> noradrenergic hyperactivity -> sympathetic storm",
+          "Cocaine blocks dopamine reuptake; amphetamine releases dopamine",
+          "Cannabis: THC acts on CB1 (brain) and CB2 (immune)"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Neurobiology of Addiction", edition: "3rd" },
+          { book: "KD Tripathi Essentials of Pharmacology", chapter: "Chapter 35: Opioids", edition: "8th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "opioid-substance-use-layer-3-clinical",
+        title: "Opioid & Other Substance Use - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Management of opioid overdose (naloxone), withdrawal treatment (buprenorphine, methadone), opioid substitution therapy, and harm reduction strategies in India.",
+        contentMd: `# Opioid & Substance Use - Clinical Management
+
+## Opioid Overdose Emergency
+1. **ABC**: Secure airway, assist ventilation
+2. **Naloxone** (opioid antagonist): 0.4-2 mg IV/IM/IN, repeat every 2-3 min
+3. **Monitor**: Respiratory rate, SpO2, consciousness
+4. **Observe**: At least 2 hours (short-acting naloxone may wear off before opioid)
+5. **Supportive**: IV fluids, warming
+
+## Opioid Withdrawal Management
+| Drug | Mechanism | Use |
+|------|-----------|-----|
+| Buprenorphine | Partial mu agonist | Withdrawal + maintenance |
+| Methadone | Full mu agonist | Withdrawal + maintenance |
+| Clonidine | Alpha-2 agonist | Symptomatic relief (autonomic) |
+| Loperamide | Peripheral mu agonist | Diarrhea |
+| NSAIDs | Anti-inflammatory | Body aches |
+| Benzodiazepines | GABA-A | Insomnia, anxiety |
+
+## Opioid Substitution Therapy (OST)
+- **Methadone**: Long-acting, once-daily dosing. Supervised dispensing
+- **Buprenorphine/naloxone (Suboxone)**: Safer (ceiling on respiratory depression)
+- **India**: NACO-supported OST centers in major cities
+- Duration: Long-term (minimum 1-2 years, often indefinite)
+- **Benefits**: Reduces IV drug use, reduces HIV/HCV transmission, improves social function
+
+## Harm Reduction (India)
+- Needle and syringe exchange programs (NSP)
+- Opioid substitution therapy (OST)
+- Condom distribution
+- HIV/HCV testing and counseling
+- NACO (National AIDS Control Organization) support
+
+## Cannabis Use Disorder
+- No specific pharmacotherapy with strong evidence
+- CBT and motivational interviewing
+- Address comorbid mental health conditions
+- India: legal for bhang in many states; illegal for ganja
+
+## Tobacco Cessation
+- **Nicotine replacement** (patch, gum, lozenge)
+- **Bupropion**: Dopamine/NE reuptake inhibitor
+- **Varenicline**: Partial nicotinic agonist (most effective)
+- Counseling (5As: Ask, Advise, Assess, Assist, Arrange)
+
+## Benzodiazepine Dependence
+- Gradual taper over weeks to months (NEVER abrupt cessation)
+- Switch to long-acting (diazepam) for taper
+- Abrupt withdrawal risk: seizures, delirium (can be fatal)
+
+> **Clinical Pearl**: In India, injection drug use is a major driver of HIV and Hepatitis C in northeastern states and Punjab. Harm reduction programs are critical public health interventions.`,
+        mnemonics: [
+          { text: "Naloxone = Narcotic (opioid) antagonist for overdose", explanation: "Reverses respiratory depression; short-acting so monitor for re-sedation" },
+          { text: "Buprenorphine = Partial agonist (safer ceiling)", explanation: "Partial mu agonist has ceiling effect on respiratory depression" }
+        ],
+        keyPoints: [
+          "Naloxone: opioid antagonist for overdose (0.4-2mg IV, repeat q2-3min)",
+          "Buprenorphine (partial agonist) and methadone (full agonist) for OST",
+          "Harm reduction: needle exchange + OST + HIV testing",
+          "BZD withdrawal: gradual taper (abrupt cessation can cause fatal seizures)",
+          "Varenicline: most effective for tobacco cessation",
+          "India: NACO supports OST centers for injection drug users"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Substance Use Treatment", edition: "3rd" },
+          { book: "KD Tripathi Essentials of Pharmacology", chapter: "Chapter 35", edition: "8th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "opioid-substance-use-layer-4-exam-prep",
+        title: "Opioid & Other Substance Use - Exam Preparation",
+        estimatedMinutes: 15,
+        summary: "High-yield intoxication/withdrawal comparison, antidotes, substitution therapies, and substance-specific features for NEXT/NEET PG.",
+        contentMd: `# Opioid & Substance Use - Exam High Yield
+
+## Intoxication vs Withdrawal Comparison
+| Substance | Intoxication | Withdrawal |
+|-----------|-------------|-----------|
+| Opioid | Miosis, resp depression, euphoria | Mydriasis, lacrimation, diarrhea |
+| Alcohol | Disinhibition, ataxia, nystagmus | Tremors, seizures, DT |
+| BZD | Sedation, ataxia, amnesia | Seizures, anxiety, insomnia |
+| Cannabis | Red eyes, appetite, impaired memory | Irritability, insomnia |
+| Cocaine | Mydriasis, euphoria, tachycardia | Depression, fatigue, craving |
+
+## Antidotes
+| Substance | Antidote |
+|-----------|---------|
+| Opioid | Naloxone |
+| Benzodiazepine | Flumazenil |
+| Organophosphate | Atropine + pralidoxime |
+| Alcohol (methanol) | Ethanol or fomepizole |
+| Paracetamol | N-acetylcysteine |
+
+## Substitution Therapies
+| Substance | Substitute |
+|-----------|-----------|
+| Opioid | Methadone, buprenorphine |
+| Nicotine | NRT, varenicline, bupropion |
+| Alcohol | Disulfiram, naltrexone, acamprosate |
+
+## One-Liners
+- Miosis = opioid; Mydriasis = cocaine/amphetamine
+- Opioid withdrawal is NOT life-threatening (unlike alcohol/BZD)
+- Alcohol and BZD withdrawal CAN be fatal (seizures, DT)
+- Wernicke encephalopathy: confusion + ataxia + ophthalmoplegia (thiamine deficiency)
+- Delirium tremens: 48-72h after alcohol cessation
+- Disulfiram: aldehyde dehydrogenase inhibitor (aversion therapy)
+- Naltrexone: opioid antagonist for relapse prevention (alcohol and opioid)
+
+## Previous Year Themes
+- Opioid overdose triad
+- Naloxone mechanism and dosing
+- Methadone vs buprenorphine
+- Alcohol withdrawal timeline
+- Delirium tremens management
+- Cannabis intoxication features`,
+        mnemonics: [
+          { text: "Miosis = Opioid; Mydriasis = Stimulant", explanation: "Pupil size differentiates opioid from stimulant intoxication" },
+          { text: "Alcohol and BZD withdrawal = can KILL; Opioid withdrawal = miserable but safe", explanation: "Key safety distinction between withdrawal syndromes" }
+        ],
+        keyPoints: [
+          "Opioid intoxication: miosis + respiratory depression + coma",
+          "Opioid withdrawal: NOT fatal; alcohol/BZD withdrawal CAN be fatal",
+          "Naloxone for opioid overdose; flumazenil for BZD",
+          "Methadone and buprenorphine for opioid substitution",
+          "Varenicline most effective for tobacco; disulfiram for alcohol aversion",
+          "Wernicke = confusion + ataxia + ophthalmoplegia (treat with thiamine)"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Review", edition: "3rd" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "opioid-substance-use-layer-5-active-recall",
+        title: "Opioid & Other Substance Use - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard Q&A for opioid pharmacology, overdose management, withdrawal, substitution therapy, and other substance use disorders.",
+        contentMd: `# Opioid & Substance Use - Active Recall
+
+**Q1:** Classic triad of opioid overdose?
+> Miosis (pinpoint pupils) + Respiratory depression + Coma/sedation
+
+**Q2:** Antidote for opioid overdose? Dose?
+> Naloxone 0.4-2 mg IV/IM/IN. Repeat every 2-3 minutes. Short-acting: monitor for re-sedation
+
+**Q3:** Features of opioid withdrawal?
+> Lacrimation, rhinorrhea, yawning, piloerection, mydriasis, diarrhea, muscle cramps, insomnia
+
+**Q4:** Is opioid withdrawal life-threatening?
+> No. Very distressing but NOT fatal (unlike alcohol and benzodiazepine withdrawal)
+
+**Q5:** Name two drugs for opioid substitution therapy.
+> Methadone (full mu agonist, once-daily) and Buprenorphine (partial mu agonist, safer ceiling)
+
+**Q6:** What is the reward pathway for addiction?
+> VTA -> Nucleus Accumbens -> Prefrontal Cortex (mesolimbic dopamine system)
+
+**Q7:** Mechanism of cocaine intoxication?
+> Blocks dopamine reuptake -> increased synaptic dopamine -> euphoria, tachycardia, mydriasis
+
+**Q8:** Which withdrawal syndromes can be fatal?
+> Alcohol and benzodiazepine withdrawal (seizures, delirium tremens)
+
+**Q9:** What is Wernicke encephalopathy?
+> Confusion + ataxia + ophthalmoplegia. Due to thiamine (B1) deficiency in alcoholism. Emergency: IV thiamine
+
+**Q10:** Most effective drug for tobacco cessation?
+> Varenicline (partial nicotinic receptor agonist)
+
+**Q11:** What are the components of harm reduction?
+> Needle/syringe exchange, OST (methadone/buprenorphine), condom distribution, HIV/HCV testing
+
+**Q12:** What is disulfiram? Mechanism?
+> Aversion therapy for alcohol. Inhibits aldehyde dehydrogenase -> acetaldehyde accumulation -> nausea/flushing if alcohol consumed`,
+        mnemonics: [],
+        keyPoints: [
+          "12 flashcards covering opioid, alcohol, BZD, cannabis, and tobacco",
+          "Tests overdose management, withdrawal features, and substitution therapy",
+          "Includes harm reduction and India-specific drug use patterns",
+          "Reinforces safety distinction: opioid withdrawal vs alcohol/BZD withdrawal"
+        ],
+        textbookRefs: [
+          { book: "Ahuja's Textbook of Postgraduate Psychiatry", chapter: "Substance Use", edition: "3rd" }
+        ]
+      }
+    ]
+  }
 ];

@@ -1,17 +1,721 @@
-export const finalBatch2Lessons = [
+import type { TopicLessons } from "./content-loader";
+
+/**
+ * 5-layer lessons for final batch 2.
+ * Covers: Organic & Plant Poisons (FM-MOD-06-TOP-03), Febrile Seizures & Epilepsy (PE-MOD-07-TOP-01).
+ */
+export const finalBatch2Lessons: TopicLessons[] = [
+  // ═══════════════════════════════════════════════════════════════
+  // FM-MOD-06-TOP-03: Organic & Plant Poisons
+  // ═══════════════════════════════════════════════════════════════
+  {
+    topicCode: "FM-MOD-06-TOP-03",
+    layers: [
+      {
+        layer: 1,
+        slug: "organic-plant-poisons-layer-1-foundation",
+        title: "Organic & Plant Poisons - Foundation",
+        estimatedMinutes: 20,
+        summary: "Organic poisons include organophosphorus compounds, carbamates, organochlorines, and plant-based poisons. Organophosphorus poisoning is the most common poisoning in India causing significant mortality.",
+        contentMd: `# Organic & Plant Poisons - Foundation
+
+## Classification
+| Category | Examples |
+|----------|---------|
+| Organophosphorus (OP) | Malathion, parathion, chlorpyrifos, diazinon |
+| Carbamates | Carbaryl, propoxur, aldicarb |
+| Organochlorines | DDT, BHC (lindane), endosulfan |
+| Pyrethroids | Allethrin, cypermethrin |
+| Plant poisons | Aconite, oleander, abrus, datura, castor |
+
+## Organophosphorus Poisoning (Most Important)
+
+### Mechanism
+- Irreversible inhibition of acetylcholinesterase (AChE)
+- Accumulation of acetylcholine at all cholinergic synapses
+- Affects: muscarinic, nicotinic, and CNS receptors
+
+### Routes of Exposure
+- **Ingestion**: Most common in suicidal attempts (India)
+- **Dermal absorption**: Occupational exposure (farmers)
+- **Inhalation**: Spray exposure
+
+### Garlicky Odor
+- Characteristic smell of OP compounds
+- Important forensic clue
+
+## Carbamate Poisoning
+- **Mechanism**: Reversible inhibition of AChE
+- Shorter duration than OP (hours vs days)
+- Atropine effective; pralidoxime less useful (spontaneous reactivation)
+
+## Organochlorine Poisoning
+- **Mechanism**: CNS stimulation via GABA inhibition
+- Banned in India but still encountered (endosulfan)
+- Stored in body fat (lipophilic) -> chronic toxicity
+- **Treatment**: Supportive; diazepam for seizures
+
+## Common Plant Poisons in India
+| Plant | Toxic Part | Active Principle | Effect |
+|-------|-----------|-----------------|--------|
+| Oleander (kaner) | All parts | Cardiac glycosides (oleandrin) | Cardiac arrhythmias |
+| Aconite (mitha zahar) | Root | Aconitine | Cardiac arrhythmias, paresthesias |
+| Abrus precatorius (rati) | Seeds | Abrin (toxalbumin) | GI hemorrhage, multi-organ failure |
+| Datura (dhatura) | Seeds, leaves | Atropine, scopolamine | Anticholinergic syndrome |
+| Castor (arandi) | Seeds | Ricin | GI hemorrhage, multi-organ failure |
+
+> **Clinical Pearl**: OP poisoning is the leading cause of poisoning deaths in rural India, primarily through suicidal ingestion of agricultural pesticides.`,
+        mnemonics: [
+          { text: "DUMBELS for muscarinic effects of OP", explanation: "Diarrhea, Urination, Miosis, Bronchospasm/Bradycardia, Emesis, Lacrimation, Salivation" },
+          { text: "OP = irreversible; Carbamate = reversible AChE inhibition", explanation: "Key difference in mechanism and duration of toxicity" }
+        ],
+        keyPoints: [
+          "OP compounds irreversibly inhibit acetylcholinesterase",
+          "Characteristic garlicky odor in OP poisoning",
+          "Carbamates cause reversible AChE inhibition (shorter duration)",
+          "Organochlorines: CNS stimulation via GABA inhibition, stored in fat",
+          "Oleander cardiac glycosides cause fatal arrhythmias",
+          "OP poisoning is leading cause of poisoning deaths in rural India"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine", chapter: "Chapter 21: Organic Poisons", edition: "34th" },
+          { book: "KD Tripathi Essentials of Pharmacology", chapter: "Chapter 7: Cholinergic", edition: "8th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "organic-plant-poisons-layer-2-mechanism",
+        title: "Organic & Plant Poisons - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Detailed pathophysiology of organophosphorus toxicity including cholinergic crisis, intermediate syndrome, OPIDN, and aging phenomenon. Plant poison mechanisms.",
+        contentMd: `# Organic & Plant Poisons - Mechanism
+
+## OP Poisoning: Cholinergic Crisis
+
+### Muscarinic Effects (DUMBELS)
+- **D**iarrhea, **U**rination, **M**iosis, **B**ronchospasm/Bradycardia
+- **E**mesis, **L**acrimation, **S**alivation
+- Due to ACh excess at parasympathetic effector organs
+
+### Nicotinic Effects
+- Muscle fasciculations, weakness, paralysis
+- Tachycardia (sympathetic ganglia stimulation)
+- Hypertension (adrenal medulla catecholamine release)
+
+### CNS Effects
+- Anxiety, confusion, seizures, coma
+- Respiratory depression (central)
+
+### Three Phases of OP Poisoning
+1. **Acute cholinergic crisis** (hours): DUMBELS + nicotinic effects
+2. **Intermediate syndrome** (24-96h): Proximal muscle weakness, respiratory failure
+3. **OPIDN** (2-4 weeks): Distal sensorimotor neuropathy (organophosphate-induced delayed neuropathy)
+
+### Aging Phenomenon
+- OP-AChE bond becomes permanent over time (aging)
+- Once aged, pralidoxime cannot reactivate the enzyme
+- **Aging time varies**: Soman (2 min), Sarin (5h), Parathion (24-48h)
+- Must give pralidoxime BEFORE aging occurs
+
+## Treatment Mechanism
+
+### Atropine
+- Competitive muscarinic antagonist
+- Blocks ACh at muscarinic receptors
+- Does NOT affect nicotinic receptors
+- Endpoint: drying of secretions (not pupil size)
+
+### Pralidoxime (2-PAM)
+- Reactivates AChE by cleaving OP-enzyme bond
+- Must give BEFORE aging occurs
+- Effective at nicotinic junctions (atropine is not)
+- Give within 24-48 hours of exposure
+
+## Oleander Poisoning Mechanism
+- Cardiac glycosides (oleandrin) inhibit Na+/K+ ATPase
+- Similar to digoxin toxicity
+- Results: hyperkalemia, bradycardia, heart block, VT/VF
+- Treatment: atropine for bradycardia, anti-digoxin Fab fragments
+
+## Datura Poisoning
+- Tropane alkaloids (atropine, scopolamine, hyoscyamine)
+- Anticholinergic toxidrome: "Hot as a hare, Dry as a bone, Red as a beet, Blind as a bat, Mad as a hatter"
+- Mydriasis, tachycardia, dry skin, urinary retention, delirium
+
+## Abrus/Ricin Mechanism
+- Toxalbumins: inhibit protein synthesis (ribosome inactivation)
+- Cause hemorrhagic gastroenteritis -> multi-organ failure
+- No specific antidote; supportive care only`,
+        mnemonics: [
+          { text: "DUMBELS: Diarrhea, Urination, Miosis, Bronchospasm, Emesis, Lacrimation, Salivation", explanation: "Muscarinic effects of cholinergic excess in OP poisoning" },
+          { text: "Hot Dry Red Blind Mad for anticholinergic (Datura)", explanation: "Hot as hare, Dry as bone, Red as beet, Blind as bat, Mad as hatter" },
+          { text: "Aging = permanent bond; Pralidoxime before aging", explanation: "Once OP-AChE ages, oximes cannot reactivate enzyme" }
+        ],
+        keyPoints: [
+          "OP crisis: muscarinic (DUMBELS) + nicotinic (fasciculations) + CNS (seizures)",
+          "Intermediate syndrome: proximal weakness at 24-96h, respiratory failure",
+          "OPIDN: delayed neuropathy at 2-4 weeks",
+          "Aging: OP-AChE bond becomes permanent; pralidoxime must be given before aging",
+          "Oleander: cardiac glycoside toxicity similar to digoxin",
+          "Datura: anticholinergic toxidrome"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine", chapter: "Chapter 21: OP Mechanism", edition: "34th" },
+          { book: "KD Tripathi Essentials of Pharmacology", chapter: "Chapter 7: Cholinergic Poisoning", edition: "8th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "organic-plant-poisons-layer-3-clinical",
+        title: "Organic & Plant Poisons - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Emergency management of OP poisoning (decontamination, atropinization, pralidoxime), oleander and datura poisoning management, and medicolegal aspects.",
+        contentMd: `# Organic & Plant Poisons - Clinical Management
+
+## OP Poisoning: Emergency Management
+
+### Step 1: Decontamination
+- Remove clothes, wash skin with soap and water
+- Gastric lavage if <2 hours (protected airway)
+- Activated charcoal if <1 hour
+- Healthcare workers: wear gloves (dermal absorption risk)
+
+### Step 2: Atropinization
+- **Loading**: Atropine 2-5 mg IV bolus, double every 5 min until secretions dry
+- **Endpoint**: Drying of bronchial secretions (NOT pupil size)
+- **Maintenance**: Continuous infusion; may need large doses (100+ mg/day)
+- **NOT tachycardia**: Tachycardia alone is NOT a reason to stop atropine
+
+### Step 3: Pralidoxime (2-PAM)
+- **Dose**: 1-2 g IV over 15-30 min, repeat every 6-8 hours
+- **Timing**: Most effective within 24-48 hours (before aging)
+- **Duration**: Continue for 24-48h or until clinical improvement
+- **Contraindicated in**: Carbamate poisoning (controversial; some sources say not needed)
+
+### Step 4: Supportive Care
+- Secure airway (intubation if needed)
+- Diazepam for seizures
+- Monitor for intermediate syndrome (respiratory failure at 24-96h)
+- ICU monitoring for at least 72 hours
+
+## Oleander Poisoning Management
+- Gastric lavage + activated charcoal
+- Atropine for symptomatic bradycardia
+- Anti-digoxin Fab fragments (Digibind) if available
+- Temporary pacemaker for complete heart block
+- Correct hyperkalemia (insulin-dextrose, calcium gluconate)
+
+## Datura Poisoning Management
+- Physostigmine (anticholinesterase) - specific antidote
+- Dose: 0.5-2 mg IV slowly (may cause seizures if rapid)
+- Supportive: cooling measures, benzodiazepines for agitation
+
+## Medicolegal Aspects
+- **OP poisoning**: Most common suicidal poison in India (agricultural workers)
+- **Mandatory reporting**: All poisoning cases must be reported to police
+- **Autopsy findings**: Garlicky odor in stomach contents, congested organs, pulmonary edema
+- **Chemical analysis**: Send stomach contents, blood, urine for toxicology
+- **Oleander**: Sections 302, 304A IPC if homicidal
+- **Section 309 IPC**: Attempt to commit suicide (decriminalized in 2018 Mental Healthcare Act)
+
+> **Clinical Pearl**: In OP poisoning, never use morphine (respiratory depression), aminophylline (cardiac arrhythmia), or succinylcholine (prolonged apnea due to AChE inhibition).`,
+        mnemonics: [
+          { text: "Atropine endpoint: DRY secretions (not pupils)", explanation: "Titrate atropine to drying of bronchial secretions; tachycardia/mydriasis are not endpoints" },
+          { text: "No MAS in OP: No Morphine, Aminophylline, Succinylcholine", explanation: "Three drugs contraindicated in OP poisoning" }
+        ],
+        keyPoints: [
+          "Decontaminate first: remove clothes, wash skin, gastric lavage",
+          "Atropine endpoint: drying of secretions, NOT pupil size or heart rate",
+          "Pralidoxime within 24-48h before aging occurs",
+          "Monitor for intermediate syndrome (respiratory failure at 24-96h)",
+          "Oleander: anti-digoxin Fab, atropine, pacemaker for heart block",
+          "Contraindicated in OP: morphine, aminophylline, succinylcholine"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine", chapter: "Chapter 21: Treatment", edition: "34th" },
+          { book: "KD Tripathi Essentials of Pharmacology", chapter: "Chapter 7", edition: "8th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "organic-plant-poisons-layer-4-exam-prep",
+        title: "Organic & Plant Poisons - Exam Preparation",
+        estimatedMinutes: 15,
+        summary: "High-yield facts on OP poisoning phases, drug contraindications, plant poison features, and medicolegal aspects for forensic medicine exams.",
+        contentMd: `# Organic & Plant Poisons - Exam High Yield
+
+## OP Poisoning Summary
+| Phase | Timing | Features |
+|-------|--------|----------|
+| Cholinergic crisis | Hours | DUMBELS + fasciculations + seizures |
+| Intermediate syndrome | 24-96h | Proximal weakness, respiratory failure |
+| OPIDN | 2-4 weeks | Distal neuropathy |
+
+## Treatment Quick Reference
+| Drug | Action | Endpoint |
+|------|--------|---------|
+| Atropine | Muscarinic antagonist | Dry secretions |
+| Pralidoxime | AChE reactivator | Before aging |
+| Diazepam | Anticonvulsant | Seizure control |
+
+## Plant Poison One-Liners
+| Plant | Toxic Principle | Fatal Effect |
+|-------|----------------|-------------|
+| Oleander | Oleandrin (glycoside) | Cardiac arrest |
+| Aconite | Aconitine | VT/VF |
+| Abrus | Abrin (toxalbumin) | Multi-organ failure |
+| Datura | Atropine/scopolamine | Anticholinergic |
+| Castor | Ricin | Multi-organ failure |
+| Croton tiglium | Croton oil | Severe GI hemorrhage |
+| Calotropis (madar) | Calotropin | Cardiac toxicity |
+
+## Contraindicated Drugs in OP
+- Morphine (respiratory depression)
+- Aminophylline (cardiac arrhythmia)
+- Succinylcholine (prolonged apnea - needs AChE for metabolism)
+
+## Medicolegal Points
+- Most common suicidal poison in India: OP compounds
+- Garlicky odor: OP poisoning (autopsy finding)
+- All poisoning cases: mandatory police reporting
+- Section 309 IPC: suicide attempt (decriminalized 2018)
+
+## Previous Year Themes
+- DUMBELS mnemonic and its meaning
+- Atropine vs pralidoxime mechanism
+- Intermediate syndrome timing
+- Aging phenomenon
+- Oleander = cardiac glycoside
+- Datura = anticholinergic toxidrome`,
+        mnemonics: [
+          { text: "SPACE = 3 phases: S=cholinergic crisis, P=intermediate, A=OPIDN", explanation: "Actually: cholinergic (hours), intermediate (24-96h), OPIDN (2-4 weeks)" },
+          { text: "No MAS: Morphine, Aminophylline, Succinylcholine", explanation: "Three contraindicated drugs in OP poisoning" }
+        ],
+        keyPoints: [
+          "Three phases: cholinergic crisis, intermediate syndrome, OPIDN",
+          "Atropine endpoint = dry secretions; pralidoxime before aging",
+          "Intermediate syndrome: respiratory failure at 24-96h",
+          "Oleander = cardiac glycoside; datura = anticholinergic",
+          "Most common suicidal poison in India: OP",
+          "Contraindicated: morphine, aminophylline, succinylcholine"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine", chapter: "Chapter 21", edition: "34th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "organic-plant-poisons-layer-5-active-recall",
+        title: "Organic & Plant Poisons - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard Q&A covering OP poisoning mechanisms, management, plant poisons, and medicolegal aspects.",
+        contentMd: `# Organic & Plant Poisons - Active Recall
+
+**Q1:** Mechanism of OP poisoning?
+> Irreversible inhibition of acetylcholinesterase causing ACh accumulation at muscarinic, nicotinic, and CNS receptors
+
+**Q2:** What are the muscarinic effects (DUMBELS)?
+> Diarrhea, Urination, Miosis, Bronchospasm/Bradycardia, Emesis, Lacrimation, Salivation
+
+**Q3:** What is intermediate syndrome?
+> Proximal muscle weakness and respiratory failure occurring 24-96 hours after OP exposure, after initial cholinergic crisis resolves
+
+**Q4:** What is the aging phenomenon?
+> OP-AChE bond becomes permanent over time. Once aged, pralidoxime cannot reactivate the enzyme
+
+**Q5:** Endpoint of atropine therapy in OP poisoning?
+> Drying of bronchial secretions (NOT pupil size or heart rate)
+
+**Q6:** When should pralidoxime be given?
+> Within 24-48 hours of exposure, before aging of OP-AChE complex occurs
+
+**Q7:** Name 3 drugs contraindicated in OP poisoning.
+> Morphine (respiratory depression), Aminophylline (arrhythmia), Succinylcholine (prolonged apnea)
+
+**Q8:** What is the toxic principle of oleander?
+> Oleandrin (cardiac glycoside similar to digoxin). Causes fatal cardiac arrhythmias
+
+**Q9:** What is datura poisoning toxidrome?
+> Anticholinergic: "Hot as hare, Dry as bone, Red as beet, Blind as bat, Mad as hatter." Antidote: physostigmine
+
+**Q10:** Most common suicidal poison in India?
+> Organophosphorus compounds (agricultural pesticides in rural areas)
+
+**Q11:** What is OPIDN?
+> Organophosphate-Induced Delayed Neuropathy. Distal sensorimotor neuropathy at 2-4 weeks post-exposure
+
+**Q12:** How does carbamate differ from OP poisoning?
+> Carbamate causes reversible AChE inhibition (shorter duration). Atropine works; pralidoxime usually not needed`,
+        mnemonics: [],
+        keyPoints: [
+          "12 flashcards covering OP, carbamate, organochlorine, and plant poisons",
+          "Tests mechanism, clinical phases, and management",
+          "Includes medicolegal aspects relevant to forensic medicine",
+          "Reinforces India-specific poisoning epidemiology"
+        ],
+        textbookRefs: [
+          { book: "Reddy's Essentials of Forensic Medicine", chapter: "Chapter 21", edition: "34th" }
+        ]
+      }
+    ]
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // PE-MOD-07-TOP-01: Febrile Seizures & Epilepsy
+  // ═══════════════════════════════════════════════════════════════
   {
     topicCode: "PE-MOD-07-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "febrile-seizures-epilepsy-foundation",
+        slug: "febrile-seizures-epilepsy-layer-1-foundation",
         title: "Febrile Seizures & Epilepsy - Foundation",
         estimatedMinutes: 20,
-        summary: "Febrile seizures are convulsions occurring during fever (38.5°C+) in children aged 6 months to 5 years, affecting 2-5% of children. Simple febrile seizures (<15 min, generalized, single episode) have excellent prognosis with minimal risk of recurrence. Complex febrile seizures (>15 min, focal, multiple) carry higher epilepsy risk. Epilepsy is defined as a predisposition to recurrent seizures; diagnosis requires one unprovoked seizure + high recurrence risk or two unprovoked seizures.",
-        contentMd: "# Febrile Seizures & Epilepsy - Foundation\n\n## Febrile Seizures Definition & Classification\n\n### Definition\n- **Temperature**: ≥38.5°C (38°C core temperature)\n- **Age**: 6 months to 5 years old\n- **Incidence**: 2-5% of children in India (higher incidence in Asian populations)\n- **Trigger**: Acute febrile illness, typically viral (otitis media, gastroenteritis, URI)\n- **Risk factors**: Family history (15-20%), male >female, developmental delay\n\n### Simple Febrile Seizures (80-90% of cases)\n- **Duration**: <15 minutes (typically 5-10 seconds to 2 minutes)\n- **Type**: Generalized, usually tonic-clonic\n- **Frequency**: Single episode during febrile illness\n- **Onset**: After fever established\n- **Postictal**: Brief (seconds to minutes)\n- **Prognosis**: Excellent; 30% recurrence rate, <1% develop epilepsy\n\n### Complex Febrile Seizures (10-20% of cases)\n- **Duration**: ≥15 minutes (status febrile convulsivus if >30 min)\n- **Type**: May be focal/partial onset\n- **Frequency**: Multiple episodes during single febrile illness or recurrent febrile illnesses\n- **Onset**: Within hours of fever; may precede temperature peak\n- **Characteristics**: Focal features, incomplete recovery, clustering\n- **Prognosis**: Higher recurrence (40-50%), 3-10% develop epilepsy\n\n## Pathophysiology of Febrile Seizures\n\n### Seizure Mechanisms\n- **Temperature effect**: Fever lowers seizure threshold; rapid temperature rise more likely than absolute height\n- **Immature CNS**: Developing GABAergic inhibitory system less effective in young children\n- **Genetic predisposition**: Family history suggests genetic lowering of seizure threshold\n- **Viral triggers**: Certain viruses (HHV-6, rotavirus) directly lower threshold; not just fever effect\n\n### Inflammatory Cascade\n- **Cytokine release**: IL-1β, IL-6, TNF-α increase intracranial pressure\n- **Neuronal excitability**: Reduced GABA inhibition, increased glutamate excitotoxicity\n- **Brain edema**: Transient cerebral edema contributes to seizure susceptibility\n\n## Epilepsy Definition & Classification\n\n### ILAE Definition (2014)\nEpilepsy is a brain disorder characterized by predisposition to recurrent seizures and the neurobiological, cognitive, and social consequences of this condition.\n\n**Diagnostic Criteria** (Any ONE):\n1. Two or more unprovoked (or reflex) seizures >24 hours apart\n2. One unprovoked seizure + high risk of recurrence (EEG/imaging abnormality predicting >60% recurrence within 10 years)\n3. Diagnosis of specific epilepsy syndrome\n\n### Types of Seizures (Ictal Onset)\n- **Generalized-onset**: Bilateral hemispheric involvement (tonic-clonic, absence, myoclonic, tonic, atonic)\n- **Focal-onset**: Unilateral hemisphere origin (with awareness, impaired awareness, evolving to bilateral)\n- **Unknown onset**: Cannot determine if generalized or focal\n\n### Common Epilepsy Syndromes in Children\n- **Absence epilepsy** (childhood): EEG \"spike-and-wave\"; typically 6-12 years old\n- **Generalized tonic-clonic** (GTCS): Most common; 50% of all seizures\n- **Focal motor epilepsy**: Rolandic spike on EEG\n- **Myoclonic-astatic epilepsy**: Progressive; poor prognosis\n- **Juvenile myoclonic epilepsy** (JME): 10-20 years old; lifetime treatment needed\n\n## Initial Assessment of Suspected Seizure\n\n### History Key Points\n- **Prodromal symptoms**: Aura, warning sensations\n- **Ictal features**: Loss of consciousness, posture, movements (tonic/clonic/twitching), incontinence, tongue bite\n- **Postictal state**: Duration of confusion, sleep, neurologic deficits\n- **Context**: Fever, trauma, toxin exposure, medications\n- **Duration**: From patient/witness account (often overestimated by 5-10x)\n- **Frequency**: First episode? Recurrent? Clustering?\n\n### Clinical Examination\n- **Vital signs**: Temperature, BP, HR (exclude shock, severe dehydration)\n- **Fundoscopy**: Exclude papilledema (increased ICP)\n- **Neurology**: Focal deficits, meningeal signs, developmental assessment\n- **General exam**: Skin lesions (neurofibromatosis), dysmorphic features,\n        mnemonics: [\n          {\n            text: \"Febrile: 6mo-5yr + Fever (≥38.5°C) + Seizure = Excellent prognosis if simple\",\n            explanation: \"Age and temperature range define febrile seizures\"\n          },\n          {\n            text: \"Simple seizure: <15 min, generalized, single = 30% recurrence, <1% epilepsy\",\n            explanation: \"Short-lived, generalized seizures have best outcome\"\n          },\n          {\n            text: \"Complex seizure: ≥15 min OR focal OR multiple = 40-50% recurrence, 3-10% epilepsy\",\n            explanation: \"Longer duration or focal features carry higher epilepsy risk\"\n          },\n          {\n            text: \"Epilepsy = 2+ unprovoked seizures >24h apart (or 1 + high risk)\",\n            explanation: \"ILAE definition emphasizes recurrence predisposition\"\n          }\n        ],\n        keyPoints: [\n          \"Febrile seizures: 2-5% incidence; simple (80-90%) has excellent prognosis; complex (10-20%) has higher epilepsy risk\",\n          \"Simple febrile seizure: <15 min, generalized, single episode; 30% recurrence, <1% develop epilepsy\",\n          \"Complex febrile seizure: ≥15 min, focal, or multiple episodes; 40-50% recurrence, 3-10% epilepsy risk\",\n          \"Epilepsy definition: predisposition to recurrent seizures; diagnosed with 2+ unprovoked seizures or 1 + high risk\",\n          \"Initial seizure assessment: history (aura, ictal features, postictal state), vital signs, neurologic exam, temperature\"\n        ],\n        textbookRefs: [\n          { book: \"Nelson Textbook of Pediatrics\", chapter: \"Ch 615-617\", edition: \"21st\" },\n          { book: \"Ghai Pediatric Nursing\", chapter: \"Neurologic Disorders\", edition: \"Indian, 10th\" },\n          { book: \"ILAE Seizure & Epilepsy Classification\", chapter: \"2017 Update\", edition: \"Latest\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"febrile-seizures-epilepsy-mechanism\",\n        title: \"Febrile Seizures & Epilepsy - Mechanism\",\n        estimatedMinutes: 30,\n        summary: \"Febrile seizure threshold lowers with rapid temperature rise, viral triggers, and immature GABA inhibition. Epileptogenesis involves repeated seizures causing neuronal death and sprouting (kindling), hippocampal sclerosis, and cortical reorganization. Antiepileptic drugs (AEDs) enhance GABA inhibition or reduce glutamate excitation. Status epilepticus causes cerebral metabolic stress, hypoxemia, and permanent neuronal damage if not rapidly controlled.\",\n        contentMd: "# Febrile Seizures & Epilepsy - Mechanism\\n\\n## Febrile Seizure Pathophysiology\\n\\n### Temperature Threshold Theory\\n- **Fever rate matters most**: Rapid rise to 39°C more likely to seize than gradual rise to 40°C\\n- **Individual threshold**: Each child has genetically determined temperature threshold (often 38-39°C)\\n- **Immature thermoregulation**: Children <5 years have poor temperature control\\n- **Hypothalamic sensitivity**: Fever-induced cytokine release (IL-1β) lowers seizure threshold\\n\\n### Neurochemical Changes During Fever\\n- **GABA inhibition reduced**: Fewer GABA receptors and lower GABA synthesis in immature brain\\n- **Glutamate excitotoxicity increased**: More NMDA/AMPA receptor activity\\n- **Ion channel dysfunction**: Altered K+ and Ca2+ handling in developing neurons\\n- **Genetic susceptibility genes**: FEB1 (on chromosome 8q) associated with increased seizure risk\\n\\n### Viral Triggers (HHV-6, Rotavirus)\\n- **Direct CNS invasion**: Viruses cross blood-brain barrier\\n- **Neuroinflammation**: Activated microglial cells release pro-inflammatory cytokines\\n- **Transient network hyperexcitability**: Cytokine-mediated GABA reduction\\n- **Resolution**: Seizure threshold normalizes when fever resolves and viral load decreases\\n\\n### Why Simple Seizures Have Excellent Prognosis\\n- **No neuronal damage**: Short seizure duration (<15 min) causes no permanent neuronal injury\\n- **Rapid fever resolution**: Treated fever/infection → seizure threshold normalizes\\n- **Developing plasticity**: Young brain recovers quickly from single insults\\n- **No kindling effect**: Single seizure doesn't predispose to future unprovoked seizures\\n\\n## Epilepsy Mechanisms & Epileptogenesis\\n\\n### Kindling Hypothesis (Repeated Seizures → Chronic Epilepsy)\\n1. **Initial seizure**: Excitatory stimulus triggers focal seizure\\n2. **Subthreshold stimulation**: Repeated subthreshold stimuli don't cause seizure initially\\n3. **Progressive lowering**: With each repetition, threshold lowers (\\\"kindling\\\")\\n4. **Chronic epilepsy**: After critical repetitions, spontaneous seizures begin\\n\\n### Structural Changes in Chronic Epilepsy\\n\\n**Hippocampal Sclerosis** (Most common in temporal lobe epilepsy):\\n- **Neuronal loss**: Pyramidal neurons in CA1, CA3, hilus die\\n- **Gliosis**: Astrocytes proliferate, replacing dead neurons\\n- **Mossy fiber sprouting**: Granule cell axons sprout abnormally, creating recurrent excitatory loops\\n- **Result**: Network hyperexcitability, spontaneous seizures\\n\\n**Cortical Dysplasia** (Developmental abnormality):\\n- **Abnormal neuronal migration**: Neurons fail to reach proper cortical layers\\n- **Disorganized connectivity**: Aberrant excitatory/inhibitory circuits\\n- **Seizure focus**: Dysplastic cortex highly epileptogenic\\n- **Resistance to drugs**: Often drug-resistant, requires surgery\\n\\n**Secondary Epileptogenesis**:\\n- **Traumatic brain injury**: Post-traumatic seizures develop months/years later\\n- **Stroke**: Post-stroke seizures more common with large cortical infarcts\\n- **Infection**: Meningitis/encephalitis sequelae → chronic epilepsy\\n\\n### GABA & Glutamate Dysregulation\\n\\n**GABA (Inhibitory) Dysfunction**:\\n- **Reduced GABA synthesis**: Lower glutamic acid decarboxylase (GAD) in epilepsy\\n- **Fewer GABA receptors**: Downregulation of GABA-A receptors on neurons\\n- **Impaired chloride handling**: Dysfunctional K+/Cl- cotransporter (KCC2) in developing brain\\n- **Result**: Inadequate inhibition of excitatory signals\\n\\n**Glutamate (Excitatory) Excess**:\\n- **Elevated extracellular glutamate**: Reduced reuptake or excessive release\\n- **NMDA receptor overactivation**: Calcium influx → neuronal toxicity\\n- **Excitotoxicity**: Excess calcium triggers apoptotic cascades\\n- **Result**: Excessive neuronal firing, seizures\\n\\n## Antiepileptic Drug Mechanisms\\n\\n### GABA-Enhancing Drugs\\n**Phenobarbitone (Phenobarbital)**:\\n- **Mechanism**: Prolongs GABA-A receptor open time (increases chloride influx)\\n- **Also**: Reduces sodium channel activity\\n- **Use**: Broad-spectrum; effective for generalized and focal seizures\\n- **Disadvantage**: Sedation, behavioral changes, bone metabolism effects\\n\\n**Diazepam (Benzodiazepine)**:\\n- **Mechanism**: Increases GABA-A receptor frequency of opening\\n- **Use**: Acute seizure termination (status epilepticus, febrile seizures)\\n- **Dosage**: 0.1-0.3 mg/kg IV (rapid onset in minutes)\\n- **Limitation**: Tolerance develops; not for chronic use\\n\\n**Valproate/Valproic Acid**:\\n- **Mechanisms**: GABA enhancement + sodium channel blockade + calcium channel effects\\n- **Use**: Broad-spectrum; myoclonic, absence, generalized seizures\\n- **Dosage**: 15-30 mg/kg/day divided doses\\n- **Advantage**: Effective across seizure types\\n- **Disadvantage**: Teratogenicity (NTD, cardiac, urogenital malformations), hepatotoxicity, pancreatitis\\n\\n### Sodium Channel Blockers\\n**Phenytoin (Diphenylhydantoin)**:\\n- **Mechanism**: Blocks voltage-dependent sodium channels → reduces sustained repetitive firing\\n- **Use**: Generalized tonic-clonic, focal seizures\\n- **Dosage**: 5 mg/kg/day loading, 3-7 mg/kg/day maintenance\\n- **Limitation**: Gingival hyperplasia, coarse facies, hirsutism, osteomalacia\\n\\n**Levetiracetam**:\\n- **Mechanism**: Binds synaptic vesicle protein 2A (SV2A) → may enhance inhibition\\n- **Use**: Broad-spectrum; myoclonic, absence, partial seizures\\n- **Advantage**: No drug interactions, minimal metabolism\\n- **Disadvantage**: Behavioral side effects (irritability) in some children\\n\\n**Carbamazepine**:\\n- **Mechanism**: Sodium/calcium channel blockade\\n- **Use**: Focal seizures, generalized tonic-clonic; NOT absence (may worsen)\\n- **Caution**: SIADH, hyponatremia risk\\n\\n### Other Mechanisms\\n**Ethosuximide** (Absence epilepsy):\\n- **Mechanism**: T-type calcium channel blocker\\n- **Use**: Absence seizures specifically (very effective)\\n\\n**Lamotrigine**:\\n- **Mechanism**: Sodium channel blockade + glutamate reduction\\n- **Use**: Broad-spectrum; especially myoclonic, absence\\n\\n## Status Epilepticus Pathophysiology\\n\\n### Definition\\n- **Continuous seizures**: ≥5 minutes of uninterrupted seizure activity\\n- **OR**: ≥2 seizures without full recovery between them\\n- **Mortality**: 10-30% if untreated\\n\\n### Metabolic Consequences\\n1. **First 30 minutes**: Seizure activity increases metabolic demand 2-5 fold\\n   - Increased O2 consumption, glucose consumption, CO2 production\\n   - Brain compensates initially via increased cerebral blood flow\\n\\n2. **After 30 minutes** (Failure of cerebral autoregulation):\\n   - **Cerebral edema**: Ischemic from inadequate perfusion\\n   - **Hypoxemia**: Respiratory depression → hypoventilation\\n   - **Hypoglycemia**: Glucose depletion from sustained seizure activity\\n   - **Acidosis**: Lactic acidosis from anaerobic metabolism\\n   - **Hyperthermia**: Uncontrolled seizure activity generates heat\\n\\n3. **Neuronal Death**:\\n   - **Calcium overload**: NMDA receptor activation → uncontrolled Ca2+ influx\\n   - **Apoptosis**: Programmed cell death cascade triggered\\n   - **Necrosis**: Severe hypoxia/acidosis causes acute cell death\\n   - **Permanent damage**: Status >1 hour causes irreversible neuronal loss\\n\\n### Long-Term Consequences of Status\\n- **Epileptogenesis**: Repeated status episodes lower future seizure threshold\\n- **Cognitive decline**: Memory deficits, learning difficulties\\n- **SUDEP risk**: Sudden unexpected nocturnal death in epilepsy increases with poorly controlled seizures,\\n        mnemonics: [\\n          {\\n            text: \\\"Febrile seizure = Rapid temp rise (not absolute height) + Immature GABA inhibition\\\",\\n            explanation: \\\"Rate of temperature rise matters more than absolute temperature\\\"\\n          },\\n          {\\n            text: \\\"Kindling = Repeated seizures → Lower threshold → Chronic epilepsy\\\",\\n            explanation: \\\"Mechanism of epileptogenesis from recurrent seizures\\\"\\n          },\\n          {\\n            text: \\\"Hippocampal sclerosis = Neuronal loss + Mossy fiber sprouting = TLE\\\",\\n            explanation: \\\"Structural basis of temporal lobe epilepsy\\\"\\n          },\\n          {\\n            text: \\\"Valproate = GABA + Na channel + Broad-spectrum (but teratogenic)\\\",\\n            explanation: \\\"Multi-mechanism drug effective but risky in pregnancy\\\"\\n          },\\n          {\\n            text: \\\"Status epilepticus >30 min = Brain ischemia + Edema + Permanent damage\\\",\\n            explanation: \\\"Urgent intervention critical to prevent neuronal death\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Febrile seizure: rapid temperature rise lowers threshold; immature GABA inhibition; viral triggers\\\",\\n          \\\"Kindling hypothesis: repeated seizures progressively lower seizure threshold → chronic epilepsy\\\",\\n          \\\"Hippocampal sclerosis: neuronal loss + mossy fiber sprouting creates recurrent excitatory loops\\\",\\n          \\\"Valproate: enhances GABA, blocks sodium channels, effective broad-spectrum but teratogenic\\\",\\n          \\\"Levetiracetam: binds SV2A, minimal drug interactions, no metabolism, broad-spectrum use\\\",\\n          \\\"Status epilepticus >30 min: cerebral autoregulation fails, brain ischemia, edema, neuronal death\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Kandel & Schwartz's Principles of Neuroscience\\\", chapter: \\\"Ch 25\\\", edition: \\\"6th\\\" },\\n          { book: \\\"Nelson Textbook of Pediatrics\\\", chapter: \\\"Ch 615-617\\\", edition: \\\"21st\\\" },\\n          { book: \\\"ILAE Commission on Classification\\\", chapter: \\\"Seizure & Epilepsy Classification\\\", edition: \\\"2017\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"febrile-seizures-epilepsy-clinical\\\",\\n        title: \\\"Febrile Seizures & Epilepsy - Clinical\\\",\\n        estimatedMinutes: 20,\\n        summary: \\\"Management of febrile seizures focuses on seizure control (diazepam rectally) and fever management; prophylaxis NOT recommended for simple seizures. Complex seizures may warrant short-term prophylaxis. Epilepsy management includes EEG confirmation, neuroimaging (MRI), AED selection based on seizure type, and lifestyle counseling. Antiepileptic drugs (valproate, levetiracetam) are chosen based on efficacy, side effects, and patient factors.\\\",\\n        contentMd: "# Febrile Seizures & Epilepsy - Clinical\\\\n\\\\n## Management of Febrile Seizures\\\\n\\\\n### Acute Seizure Management (First 5-10 minutes)\\\\n1. **Safety**: Protect from injury, place on side, loosen tight clothing\\\\n2. **Seizure termination**:\\\\n   - **Diazepam 0.3 mg/kg rectally** (most effective, rapid onset)\\\\n   - OR lorazepam 0.1 mg/kg IV if IV access available\\\\n   - OR midazolam 0.2 mg/kg IM/nasal\\\\n3. **Oxygen**: Apply oxygen if available (SpO2 <94%)\\\\n4. **Temperature control**: Tepid sponging, acetaminophen 15 mg/kg (does NOT prevent recurrence)\\\\n5. **Call for help**: Alert caregiver, arrange transport if needed\\\\n\\\\n### Diagnostic Workup\\\\n- **Clinical diagnosis**: Based on fever + seizure characteristics\\\\n- **EEG**: NOT routinely needed; indicated only if atypical features (focal onset, prolonged postictal)\\\\n- **Neuroimaging (Brain CT/MRI)**:\\\\n  - Simple febrile seizure: NOT indicated\\\\n  - Complex features: Consider if focal onset, prolonged postictal, or atypical findings\\\\n- **Lumbar puncture**: Only if meningitis suspected (meningeal signs, altered mental status)\\\\n- **Lab tests**: Not routinely needed; only if clinical concern (metabolic disorder, infection)\\\\n\\\\n### Parental Counseling & Home Safety\\\\n- **Recurrence risk**: 30-40% for simple febrile seizure; repeat does NOT mean epilepsy\\\\n- **Fever management**: Acetaminophen or ibuprofen for fever/comfort (but won't prevent seizure)\\\\n- **First-aid**: Teach parents diazepam rectal administration (if high recurrence risk)\\\\n- **When to call doctor**:\\\\n  - Seizure duration >15 minutes\\\\n  - Multiple seizures in single fever\\\\n  - Focal seizure features\\\\n  - New seizure after age 6 years\\\\n  - Lethargy/altered mental status\\\\n\\\\n### Prophylaxis (Generally NOT Recommended)\\\\n**Simple Febrile Seizures**:\\\\n- **No prophylaxis**: Natural history excellent; seizure prophylaxis (diazepam, phenobarbital) not indicated\\\\n- **Intermittent use**: Diazepam 0.3-0.5 mg/kg rectally at fever onset in very high-risk cases (rare)\\\\n\\\\n**Complex Febrile Seizures**:\\\\n- **Consider prophylaxis** if:\\\\n  - 3+ recurrent complex febrile seizures\\\\n  - Underlying developmental disorder\\\\n  - Strong family history of epilepsy\\\\n- **Options**:\\\\n  - **Phenobarbital**: 3-4 mg/kg/day (effective but behavioral side effects)\\\\n  - **Diazepam**: 0.3-0.5 mg/kg rectally at fever onset (intermittent)\\\\n  - **Valproate**: 15-30 mg/kg/day (contraindicated in metabolic disorders)\\\\n\\\\n**Continuous prophylaxis discontinuation**: After 12 months if no recurrence, or after age 4-5 years (approaching seizure-free period naturally)\\\\n\\\\n## Management of Epilepsy\\\\n\\\\n### Diagnostic Approach\\\\n\\\\n**EEG (Electroencephalography)**:\\\\n- **Indication**: Confirm diagnosis after 2+ seizures or 1 + high risk\\\\n- **Interictal EEG**: 40-50% normal even with epilepsy; not required for diagnosis\\\\n- **Ictal EEG**: Gold standard but rarely captured\\\\n- **Findings**: Spike-and-wave (absence), focal spikes (focal epilepsy), slow waves (encephalopathy)\\\\n\\\\n**Neuroimaging (MRI)**:\\\\n- **Indication**: Focal seizures, developmental delay, abnormal neurology\\\\n- **NOT needed**: Generalized absence epilepsy with normal exam\\\\n- **Findings**: Hippocampal sclerosis (TLE), cortical dysplasia, tumor, vascular malformation\\\\n\\\\n**Metabolic Workup** (if developmental delay or family history):\\\\n- **Serum: Glucose, calcium, magnesium, liver function, ammonia**\\\\n- **Urine: Organic acids (metabolic disorders)**\\\\n- **Genetic testing**: If syndromic features or refractory seizures\\\\n\\\\n### Antiepileptic Drug Selection\\\\n\\\\n**First-Line Agents by Seizure Type**:\\\\n\\\\n| Seizure Type | First-Line | Second-Line |\\\\n|---|---|---|\\\\n| **Generalized tonic-clonic** | Valproate, Levetiracetam | Lamotrigine, Carbamazepine |\\\\n| **Absence** | Ethosuximide | Valproate, Lamotrigine |\\\\n| **Myoclonic** | Valproate | Levetiracetam, Lamotrigine |\\\\n| **Focal (partial)** | Carbamazepine, Levetiracetam | Oxcarbazepine, Valproate |\\\\n| **Atonic/Tonic** | Valproate | Lamotrigine, Levetiracetam |\\\\n\\\\n**Dosing Examples** (Typical maintenance):\\\\n- **Valproate**: 15-30 mg/kg/day divided BD-TDS (monitor levels 50-100 μg/mL)\\\\n- **Levetiracetam**: 10-20 mg/kg/day divided BD\\\\n- **Ethosuximide**: 10-20 mg/kg/day divided BD\\\\n- **Lamotrigine**: 2-5 mg/kg/day (titrate slowly due to rash risk)\\\\n- **Carbamazepine**: 10-20 mg/kg/day divided BD-TDS\\\\n\\\\n**Monotherapy vs. Polytherapy**:\\\\n- **Goal**: Start monotherapy first (70% seizure control)\\\\n- **If failure**: Add second agent; can be additive or synergistic\\\\n- **Polypharmacy**: Increases side effects without proportional benefit in many cases\\\\n\\\\n### Drug Monitoring & Toxicity\\\\n\\\\n**Valproate Monitoring**:\\\\n- **Baseline**: LFT, coagulation studies, carnitine level\\\\n- **Monitoring**: LFT + PT/INR at 3 months, then 6-12 monthly\\\\n- **Toxicity**: Hepatotoxicity (1/500 children <2 yr), pancreatitis, encephalopathy\\\\n- **Pregnancy**: X-category; 10-20% NTD risk; absolutely contraindicated in women of childbearing age\\\\n\\\\n**Levetiracetam Monitoring**:\\\\n- **Behavioral effects**: Mood changes, irritability in 10-15% (usually resolve)\\\\n- **No drug interactions**: Allows easier addition/removal of other drugs\\\\n- **No blood monitoring needed**: Unlike valproate/phenytoin\\\\n\\\\n**Carbamazepine Monitoring**:\\\\n- **SIADH risk**: Monitor sodium (especially first weeks)\\\\n- **Drug interactions**: Induces own metabolism + induces oral contraceptives, other drugs\\\\n- **Hypersensitivity**: Rash (benign) or Stevens-Johnson syndrome (rare)\\\\n\\\\n### Management of Refractory Epilepsy (Drug-Resistant)\\\\n- **Definition**: Failure of 2+ appropriately dosed, tolerated AED trials\\\\n- **Incidence**: 20-30% of epilepsy patients\\\\n- **Options**:\\\\n  - **Polypharmacy**: Add 3rd or 4th agent (diminishing returns)\\\\n  - **Surgical intervention**: Temporal lobe resection (if focal, identified on imaging), corpus callosotomy\\\\n  - **Vagal nerve stimulation**: Device implantation; 30-40% achieve >50% seizure reduction\\\\n  - **Ketogenic diet**: Effective in myoclonic-astatic epilepsy; difficult to maintain\\\\n\\\\n### Lifestyle & Counseling\\\\n\\\\n**Activity Restrictions**:\\\\n- **Swimming**: Only with supervision; risk of drowning during seizure\\\\n- **Heights**: Avoid climbing, construction work\\\\n- **Driving**: In India, restrictions vary by state; generally prohibited if recent seizure (6-12 months seizure-free)\\\\n\\\\n**School & Social**:\\\\n- **Education plan**: Coordinate with school; teacher awareness of seizure management\\\\n- **Bullying/stigma**: Psychological support, peer education\\\\n- **Medication compliance**: Crucial; drug interruption → breakthrough seizures\\\\n\\\\n**Pregnancy**:\\\\n- **Contraception**: Many AED reduce oral contraceptive efficacy (carbamazepine inducer)\\\\n- **Pre-conception counseling**: Risk of seizure recurrence vs. teratogenicity\\\\n- **AED choice**: Levetiracetam safest; avoid valproate,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"Febrile seizure = Diazepam 0.3 mg/kg rectally (acute) + NO prophylaxis for simple\\\\\\\",\\\\n            explanation: \\\\\\\"Acute management and no preventive drug for simple febrile seizures\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Absence seizures = Ethosuximide first-line (NOT carbamazepine, which worsens)\\\\\\\",\\\\n            explanation: \\\\\\\"Calcium channel blockade specific for absence\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Valproate = Teratogenic; contraindicated in women of childbearing age\\\\\\\",\\\\n            explanation: \\\\\\\"10-20% NTD risk; absolute contraindication if pregnancy possible\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Refractory epilepsy = 2+ failed AED trials; consider surgery/VNS/ketogenic diet\\\\\\\",\\\\n            explanation: \\\\\\\"20-30% patients drug-resistant; non-drug options available\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Febrile seizure acute management: diazepam 0.3 mg/kg rectally; NO prophylaxis for simple febrile seizures\\\\\\\",\\\\n          \\\\\\\"EEG confirms diagnosis; neuroimaging for focal features, developmental delay, or abnormal exam\\\\\\\",\\\\n          \\\\\\\"AED selection by seizure type: valproate/levetiracetam for generalized; ethosuximide for absence; carbamazepine for focal\\\\\\\",\\\\n          \\\\\\\"Valproate: effective broad-spectrum but teratogenic; requires baseline/regular LFT, coagulation monitoring\\\\\\\",\\\\n          \\\\\\\"Levetiracetam: minimal drug interactions, no monitoring required, well-tolerated alternative\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Nelson Textbook of Pediatrics\\\\\\\", chapter: \\\\\\\"Ch 615-617\\\\\\\", edition: \\\\\\\"21st\\\\\\\" },\\\\n          { book: \\\\\\\"Ghai Pediatric Nursing\\\\\\\", chapter: \\\\\\\"Neurologic Disorders\\\\\\\", edition: \\\\\\\"Indian, 10th\\\\\\\" },\\\\n          { book: \\\\\\\"ILAE Commission on Antiepileptic Drugs\\\\\\\", chapter: \\\\\\\"Drug Selection Guidelines\\\\\\\", edition: \\\\\\\"2018\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"febrile-seizures-epilepsy-exam\\\\\\\",\\\\n        title: \\\\\\\"Febrile Seizures & Epilepsy - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield exam topics: febrile seizure age range (6 mo-5 yr), simple vs. complex features, prophylaxis NOT recommended, seizure classification (generalized vs. focal), AED mechanisms, and drug selection by seizure type. NEXT-pattern questions test diagnostic criteria, management decisions, and drug toxicity.\\\\\\\",\\\\n        contentMd: "# Febrile Seizures & Epilepsy - Exam Prep\\\\\\\\n\\\\\\\\n## High-Yield Facts for Exams\\\\\\\\n\\\\\\\\n### Febrile Seizures Classification\\\\\\\\n| Aspect | Simple | Complex |\\\\\\\\n|--------|--------|---------|\\\\\\\\n| **Frequency in FS** | 80-90% | 10-20% |\\\\\\\\n| **Duration** | <15 min | ≥15 min |\\\\\\\\n| **Type** | Generalized | May be focal |\\\\\\\\n| **Count** | Single per fever | Multiple/clustering |\\\\\\\\n| **Recurrence** | 30% | 40-50% |\\\\\\\\n| **Epilepsy risk** | <1% | 3-10% |\\\\\\\\n| **Prophylaxis** | NOT recommended | Consider if recurrent |\\\\\\\\n| **Prognosis** | Excellent | Guarded |\\\\\\\\n\\\\\\\\n### Febrile Seizure Facts\\\\\\\\n- **Age**: 6 months to 5 years (rare before 6 mo or after 5 yr)\\\\\\\\n- **Temperature**: ≥38.5°C (fever must be present)\\\\\\\\n- **Incidence**: 2-5% of children in India\\\\\\\\n- **Incidence higher**: Asian populations, family history, male >female\\\\\\\\n- **Rapid temp rise > absolute temp**: 39°C rising quickly more likely than 40°C gradual\\\\\\\\n- **Acetaminophen**: For comfort, NOT seizure prevention\\\\\\\\n- **Diagnosis**: Clinical; no mandatory EEG or brain imaging for simple features\\\\\\\\n\\\\\\\\n### Epilepsy Diagnostic Criteria (ILAE)\\\\\\\\n**Diagnosis requires ANY ONE**:\\\\\\\\n1. Two or more unprovoked seizures >24 hours apart\\\\\\\\n2. One unprovoked seizure + High risk recurrence (EEG/MRI abnormality predicting >60% 10-yr recurrence)\\\\\\\\n3. Diagnosis of specific epilepsy syndrome\\\\\\\\n\\\\\\\\n**Seizure Onset Classification**:\\\\\\\\n- **Generalized-onset**: Bilateral hemispheric; tonic-clonic, absence, myoclonic, tonic, atonic\\\\\\\\n- **Focal-onset**: One hemisphere; may have awareness impairment or evolve to bilateral\\\\\\\\n- **Unknown-onset**: Cannot determine\\\\\\\\n\\\\\\\\n### AED Selection by Seizure Type (High-Yield)\\\\\\\\n| Seizure Type | First-Line | Why | Second-Line |\\\\\\\\n|---|---|---|---|\\\\\\\\n| **Generalized tonic-clonic** | Valproate | Broad + effective | Levetiracetam |\\\\\\\\n| **Absence (childhood)** | Ethosuximide | Specific + best efficacy | Valproate |\\\\\\\\n| **Myoclonic** | Valproate | Broad spectrum | Levetiracetam |\\\\\\\\n| **Focal** | Carbamazepine | Effective for focal | Levetiracetam |\\\\\\\\n| **Atonic** | Valproate | Best efficacy | Lamotrigine |\\\\\\\\n| **Tonic** | Valproate | Broad spectrum | Lamotrigine |\\\\\\\\n\\\\\\\\n**WRONG answers for exam**:\\\\\\\\n- Carbamazepine for absence (worsens absence)\\\\\\\\n- Ethosuximide for generalized tonic-clonic (ineffective)\\\\\\\\n- Phenytoin for myoclonic seizures (ineffective)\\\\\\\\n\\\\\\\\n### AED Mechanisms & Key Points\\\\\\\\n| Drug | Mechanism | Use | Key Facts |\\\\\\\\n|---|---|---|---|\\\\\\\\n| **Valproate** | GABA↑ + Na channel | Broad spectrum | Teratogenic; monitor LFT |\\\\\\\\n| **Levetiracetam** | SV2A binding | Broad spectrum | No interactions; no monitoring |\\\\\\\\n| **Carbamazepine** | Na/Ca channel | Focal seizures | Inducer of OCP; hyponatremia risk |\\\\\\\\n| **Ethosuximide** | T-Ca channel | Absence only | Specific; excellent efficacy |\\\\\\\\n| **Lamotrigine** | Na channel | Broad spectrum | Titrate slowly; rash risk |\\\\\\\\n| **Phenytoin** | Na channel | GTCS, focal | Gingival hyperplasia, coarse facies |\\\\\\\\n\\\\\\\\n### Status Epilepticus\\\\\\\\n- **Definition**: ≥5 min continuous OR ≥2 seizures without full recovery\\\\\\\\n- **Mortality**: 10-30% untreated\\\\\\\\n- **Pathophysiology**: After 30 min, cerebral autoregulation fails → brain ischemia, edema, neuronal death\\\\\\\\n- **Urgent treatment**: Benzodiazepines (diazepam/lorazepam) → loading AED (phenytoin/levetiracetam)\\\\\\\\n- **Refractory SE**: Requires ICU, anesthesia (propofol/midazolam infusion)\\\\\\\\n\\\\\\\\n### Prophylaxis Rules\\\\\\\\n| Condition | Prophylaxis | Rationale |\\\\\\\\n|-----------|------------|-----------|\\\\\\\\n| **Simple febrile seizure** | NO | Excellent prognosis; <1% epilepsy risk |\\\\\\\\n| **Complex febrile seizure (1-2)** | Usually NO | 3-10% epilepsy; monitor |\\\\\\\\n| **Recurrent complex FS (3+)** | CONSIDER | Higher epilepsy risk; short-term OK |\\\\\\\\n| **After 1st unprovoked seizure** | CONSIDER | EEG/MRI if abnormal → prophylaxis |\\\\\\\\n| **After 2nd unprovoked seizure** | YES | Meets epilepsy criteria |\\\\\\\\n\\\\\\\\n### Common Exam Mistakes\\\\\\\\n1. **Age for febrile seizures**: Say <6 months (WRONG; starts at 6 months) or >5 years (WRONG; rare >5 yr)\\\\\\\\n2. **Prophylaxis recommendation**: Recommend phenobarbital for simple FS (WRONG; not indicated)\\\\\\\\n3. **AED choice**: Carbamazepine for absence (WRONG; worsens absence)\\\\\\\\n4. **Valproate monitoring**: Don't mention LFT/coagulation monitoring (WRONG; essential)\\\\\\\\n5. **EEG interpretation**: Say normal EEG rules out epilepsy (WRONG; 40-50% epilepsy have normal EEG)\\\\\\\\n6. **Acetaminophen utility**: Say acetaminophen prevents febrile seizures (WRONG; only for comfort),\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"FS: 6mo-5yr + Fever ≥38.5°C + Seizure = Simple if <15min, generalized, single\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Age and feature criteria for febrile seizure diagnosis\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Simple FS = <1% epilepsy risk + NO prophylaxis\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Excellent prognosis; avoid unnecessary drugs\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Complex FS = 3-10% epilepsy + Consider prophylaxis if recurrent\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Higher risk; prophylaxis justified if multiple episodes\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Ethosuximide = Absence ONLY (NOT generalized TC)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Specific for absence; wrong for other seizure types\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Valproate = Teratogenic (10-20% NTD) + Contraindicated in pregnancy\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Must avoid in women of childbearing potential\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Febrile seizure: age 6 mo-5 yr, fever ≥38.5°C; simple (<15 min, generalized) = excellent prognosis, <1% epilepsy\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Complex FS (≥15 min, focal, multiple) = 3-10% epilepsy risk; prophylaxis considered if recurrent\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Epilepsy diagnosis: 2+ unprovoked seizures >24h apart OR 1 + high recurrence risk (EEG/MRI abnormality)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"AED selection: valproate/levetiracetam generalized; ethosuximide absence only; carbamazepine focal\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Valproate: teratogenic (10-20% NTD); requires baseline/regular LFT + coagulation monitoring\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"NEXT Medical Exam Question Bank\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Pediatrics & Neurology\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2026\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Nelson Textbook of Pediatrics\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 615-617\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"21st\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"ILAE Commission on Antiepileptic Drugs\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Drug Selection Guidelines\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2018\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"febrile-seizures-epilepsy-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Febrile Seizures & Epilepsy - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Active recall tests rapid classification of febrile seizures, epilepsy diagnostic criteria, AED selection by seizure type, and drug toxicity monitoring. Practice scenarios differentiate simple from complex features and guide management decisions.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Febrile Seizures & Epilepsy - Active Recall\\\\\\\\n\\\\\\\\n## Quick Q&A Review\\\\\\\\n\\\\\\\\n**Q1: What defines a febrile seizure and what is the incidence in Indian children?**\\\\\\\\n> Febrile seizure: convulsion during fever (≥38.5°C core temp) in child aged 6 months to 5 years, triggered by acute febrile illness (usually viral). Incidence: 2-5% of Indian children; higher in Asian populations. Rapid temperature rise matters more than absolute temperature.\\\\\\\\n\\\\\\\\n**Q2: Distinguish simple from complex febrile seizures. What are the prognoses?**\\\\\\\\n> Simple FS (80-90%): <15 min, generalized, single episode per fever → 30% recurrence, <1% epilepsy. Complex FS (10-20%): ≥15 min duration OR focal features OR multiple episodes during fever → 40-50% recurrence, 3-10% epilepsy risk.\\\\\\\\n\\\\\\\\n**Q3: Should prophylaxis be given for a simple febrile seizure? Why or why not?**\\\\\\\\n> NO prophylaxis for simple FS. Rationale: excellent prognosis (<1% develop epilepsy), short seizure duration causes no brain damage, rapid fever resolution restores seizure threshold, and risk of drug side effects outweighs benefit. Counsel parents on first-aid (diazepam rectally if recurrence).\\\\\\\\n\\\\\\\\n**Q4: A 3-year-old with fever (39.5°C) has a 20-minute generalized tonic-clonic seizure with 10 minutes of postictal confusion. Management?**\\\\\\\\n> Complex febrile seizure (≥15 min). Acute: give diazepam 0.3 mg/kg rectally or lorazepam IV. Workup: EEG if atypical features; consider MRI if focal features or developmental delay. Prophylaxis: consider short-term phenobarbital or intermittent diazepam if recurrent complex episodes.\\\\\\\\n\\\\\\\\n**Q5: Define epilepsy and state the diagnostic criteria.**\\\\\\\\n> Epilepsy: brain disorder predisposing to recurrent seizures. Diagnosis requires ANY ONE: (1) ≥2 unprovoked seizures >24h apart, (2) 1 unprovoked seizure + high recurrence risk (EEG/MRI showing >60% 10-yr recurrence), or (3) specific epilepsy syndrome diagnosis.\\\\\\\\n\\\\\\\\n**Q6: A 6-year-old has two unprovoked generalized tonic-clonic seizures 2 days apart. How do you classify seizures and what seizure type?**\\\\\\\\n> Two unprovoked seizures >24h apart = meets epilepsy diagnostic criteria. Seizure type: generalized-onset tonic-clonic (bilateral hemispheric onset, both awareness lost, tonic phase → clonic phase). First-line AED: valproate 15-30 mg/kg/day or levetiracetam 10-20 mg/kg/day.\\\\\\\\n\\\\\\\\n**Q7: A child with absence seizures is started on carbamazepine. Why is this wrong? What should be used?**\\\\\\\\n> WRONG: Carbamazepine can worsen absence seizures (sodium channel blockade not helpful for absence). Correct: Ethosuximide is first-line (T-type calcium channel blocker, highly specific for absence). Mechanism: absence involves thalamocortical circuits that are suppressible by Ca2+ blockers but not by Na channel blockers.\\\\\\\\n\\\\\\\\n**Q8: What are the key monitoring requirements for valproate and why?**\\\\\\\\n> Baseline tests: LFT (AST/ALT), coagulation studies (PT/INR), carnitine level. Monitoring: LFT + coagulation at 3 months, then 6-12 monthly. Why: risk of hepatotoxicity (1/500 children <2 yr), pancreatitis, encephalopathy. Teratogenicity: 10-20% neural tube defect risk; absolutely contraindicated in women of childbearing age.\\\\\\\\n\\\\\\\\n**Q9: How does levetiracetam differ from valproate in terms of monitoring and side effects?**\\\\\\\\n> Levetiracetam: No blood level monitoring needed; minimal drug interactions (can easily add/remove other drugs); side effects behavioral (irritability 10-15%, usually resolve). Valproate: requires monitoring, induces drug metabolism, teratogenic. Levetiracetam increasingly preferred first-line for broad-spectrum seizure types.\\\\\\\\n\\\\\\\\n**Q10: A 5-year-old with refractory epilepsy (failed 2 AED trials) has 5+ seizures/month despite compliance. What are non-pharmacologic options?**\\\\\\\\n> Refractory epilepsy (20-30% patients): 1) Polypharmacy (add 3rd/4th agent, but diminishing returns). 2) Epilepsy surgery: temporal lobe resection if focal seizure focus identified on imaging. 3) Vagal nerve stimulation (VNS): device implantation, achieves >50% seizure reduction in 30-40%. 4) Ketogenic diet: effective especially for myoclonic-astatic epilepsy (strict maintenance required).,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Simple FS = <15 min, generalized, single = <1% epilepsy, NO prophylaxis\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Excellent prognosis; no drug prevention needed\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Complex FS = ≥15 min OR focal OR multiple = 3-10% epilepsy, consider prophylaxis\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Higher risk; drug prevention may be justified\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Epilepsy = 2+ unprovoked seizures >24h apart (OR 1 + high risk)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"ILAE diagnostic criteria: recurrence predisposition key feature\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Ethosuximide = Absence ONLY; Valproate = Broad-spectrum; Carbamazepine = Focal\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"AED selection by seizure type\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Valproate = Teratogenic + Monitor LFT/coagulation; Levetiracetam = Safe + No monitoring\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Drug choice considerations for side effects\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Simple febrile seizure: <15 min, generalized, single = <1% epilepsy, NO prophylaxis recommended\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Complex febrile seizure: ≥15 min OR focal OR multiple = 3-10% epilepsy, consider prophylaxis if recurrent\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Epilepsy diagnosis: 2+ unprovoked seizures >24h apart OR 1 + high recurrence risk\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"AED selection: ethosuximide for absence; valproate/levetiracetam for generalized; carbamazepine for focal\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Valproate monitoring: baseline + regular LFT/coagulation; contraindicated in pregnancy (10-20% NTD)\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Nelson Textbook of Pediatrics\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 615-617\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"21st\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"ILAE Commission on Antiepileptic Drugs\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Drug Selection Guidelines\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2018\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  },\\\\\\\\n  {\\\\\\\\n    topicCode: \\\\\\\\\\\\\\\"FM-MOD-06-TOP-03\\\\\\\\\\\\\\\",\\\\\\\\n    layers: [\\\\\\\\n      {\\\\\\\\n        layer: 1,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"organic-plant-poisons-foundation\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Organic & Plant Poisons - Foundation\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Organic and plant-based toxins cause significant morbidity in India. Organophosphate (OP) poisoning from pesticide exposure presents with cholinergic excess (SLUDGE syndrome: Salivation, Lacrimation, Urination, Defecation, Gastric pain, Emesis). Dhatura and other anticholinergic plants present with anticholinergic toxidrome. Alcohol and methanol cause metabolic acidosis and neurologic damage. Recognition and early antidote administration are life-saving.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Organic & Plant Poisons - Foundation\\\\\\\\n\\\\\\\\n## Organophosphate (OP) Poisoning\\\\\\\\n\\\\\\\\n### Mechanism of Toxicity\\\\\\\\n- **OP compounds**: Insecticides and pesticides (malathion, parathion, chlorpyrifos)\\\\\\\\n- **Mechanism**: Irreversibly inhibit acetylcholinesterase (AChE)\\\\\\\\n- **Result**: Accumulation of acetylcholine → cholinergic crisis\\\\\\\\n- **Incidence in India**: 100,000+ cases annually; high agricultural use\\\\\\\\n\\\\\\\\n### Clinical Presentation (Cholinergic Syndrome)\\\\\\\\n\\\\\\\\n**SLUDGE Syndrome** (Muscarinic effects):\\\\\\\\n- **Salivation**: Excessive drooling, bronchial secretions\\\\\\\\n- **Lacrimation**: Excessive tearing\\\\\\\\n- **Urination**: Loss of bladder control, incontinence\\\\\\\\n- **Defecation**: Diarrhea, fecal incontinence\\\\\\\\n- **Gastric symptoms**: Nausea, vomiting, abdominal pain\\\\\\\\n- **Emesis**: Vomiting\\\\\\\\n\\\\\\\\n**Nicotinic Effects** (skeletal muscle, sympathetic):\\\\\\\\n- **Muscle**: Fasciculations (visible twitching), paralysis\\\\\\\\n- **Heart**: Bradycardia or tachycardia\\\\\\\\n- **Blood pressure**: Variable (hypertension or hypotension)\\\\\\\\n\\\\\\\\n### Severity Grading\\\\\\\\n| Grade | Features | Mortality |\\\\\\\\n|-------|----------|-----------|\\\\\\\\n| **Mild** | SLUDGE only, normal vitals | <1% |\\\\\\\\n| **Moderate** | SLUDGE + respiratory difficulty, fasciculations | 5-10% |\\\\\\\\n| **Severe** | Respiratory failure, seizures, coma, paralysis | >50% |\\\\\\\\n\\\\\\\\n### Route of Exposure\\\\\\\\n- **Ingestion**: Intentional overdose (frequent in India), accidental\\\\\\\\n- **Inhalation**: Pesticide spray exposure (agricultural workers)\\\\\\\\n- **Dermal**: Contaminated skin (slow absorption but cumulative)\\\\\\\\n- **Transplacental**: Fetal exposure if maternal poisoning during pregnancy\\\\\\\\n\\\\\\\\n## Anticholinergic Plant Toxins (Dhatura, Belladonna, Atropine)\\\\\\\\n\\\\\\\\n### Plants Containing Anticholinergic Alkaloids\\\\\\\\n- **Dhatura** (Datura stramonium): Most common in India; seeds/flowers/leaves toxic\\\\\\\\n- **Belladonna**: Deadly nightshade; atropine and scopolamine\\\\\\\\n- **Henbane**: Hyoscine\\\\\\\\n- **Jimson weed**: North American equivalent of Dhatura\\\\\\\\n\\\\\\\\n### Mechanism\\\\\\\\n- **Anticholinergic agents**: Block muscarinic acetylcholine receptors\\\\\\\\n- **Result**: Loss of parasympathetic tone → sympathomimetic effects\\\\\\\\n- **Incidence**: Recreational use (euphoria), accidental ingestion, intentional poisoning\\\\\\\\n\\\\\\\\n### Clinical Presentation (Anticholinergic Toxidrome)\\\\\\\\n\\\\\\\\n**Central Effects**:\\\\\\\\n- **Confusion, hallucinations, delirium**: May be severe\\\\\\\\n- **\\\\\\\\\\\\\\\"Red as a beet, dry as a bone, hot as a hare, mad as a hatter\\\\\\\\\\\\\\\"**: Classic description\\\\\\\\n- **Agitation, violent behavior**: May require sedation\\\\\\\\n- **Seizures**: In severe cases\\\\\\\\n\\\\\\\\n**Peripheral Effects**:\\\\\\\\n- **Mydriasis** (dilated pupils): Pathognomonic; non-reactive to light\\\\\\\\n- **Dry mouth**: Severe xerostomia\\\\\\\\n- **Dry skin**: Anhidrosis (lack of sweating)\\\\\\\\n- **Tachycardia**: Usually >100 bpm\\\\\\\\n- **Hypertension**: Often present\\\\\\\\n- **Hyperthermia**: Lack of sweating → uncontrolled heat\\\\\\\\n- **Urinary retention**: Anticholinergic effect on bladder\\\\\\\\n\\\\\\\\n### Temperature Dysregulation\\\\\\\\n- **Mechanism**: Loss of sweating → inability to cool\\\\\\\\n- **Risk**: Heat stroke (>40°C core temp) → rhabdomyolysis, DIC, renal failure\\\\\\\\n- **Management**: Aggressive cooling (ice water, fans, cold IV saline)\\\\\\\\n\\\\\\\\n## Methanol & Ethanol Toxicity\\\\\\\\n\\\\\\\\n### Methanol Poisoning\\\\\\\\n- **Sources**: Contaminated alcoholic drinks, antifreeze, fuel\\\\\\\\n- **Lethal dose**: 30-40 mL in adults\\\\\\\\n- **Incidence**: Endemic in India; recurrent outbreaks from illicit liquor\\\\\\\\n\\\\\\\\n### Toxic Mechanism\\\\\\\\n1. **Metabolism**: Methanol → formaldehyde (via alcohol dehydrogenase)\\\\\\\\n2. **Further oxidation**: Formaldehyde → formic acid\\\\\\\\n3. **Formic acid toxicity**: Inhibits cytochrome c oxidase → cellular hypoxia\\\\\\\\n4. **Result**: Metabolic acidosis, optic nerve damage, CNS effects\\\\\\\\n\\\\\\\\n### Clinical Presentation\\\\\\\\n**Initial (First 12-24 hours)**:\\\\\\\\n- **GI symptoms**: Nausea, vomiting, abdominal pain\\\\\\\\n- **CNS**: Headache, dizziness, inebriation\\\\\\\\n- **Lactatemia**: Elevated lactate → metabolic acidosis\\\\\\\\n\\\\\\\\n**Late (24-72 hours)**:\\\\\\\\n- **Blindness**: Optic neuritis, permanent vision loss (pathognomonic)\\\\\\\\n- **Severe acidosis**: pH <7.2, anion gap metabolic acidosis\\\\\\\\n- **Seizures**: From cerebral edema\\\\\\\\n- **Coma**: Brainstem involvement\\\\\\\\n- **Death**: Cardiorespiratory collapse\\\\\\\\n\\\\\\\\n### Ethanol (Alcohol) Toxicity\\\\\\\\n- **Depressant**: CNS depression, respiratory depression\\\\\\\\n- **Hypoglycemia**: Impairs gluconeogenesis\\\\\\\\n- **Metabolic acidosis**: Lactate accumulation\\\\\\\\n- **Aspiration risk**: Loss of protective reflexes\\\\\\\\n- **Blood level**:\\\\\\\\n  - 50-100 mg/dL: Impaired judgment\\\\\\\\n  - 250-400 mg/dL: Severe intoxication, respiratory depression\\\\\\\\n  - >500 mg/dL: Coma, death\\\\\\\\n\\\\\\\\n## Opium & Opioid Poisoning\\\\\\\\n\\\\\\\\n### Common Sources\\\\\\\\n- **Medical**: Morphine, codeine, heroin (illicit)\\\\\\\\n- **Natural**: Opium poppy (Papaver somniferum)\\\\\\\\n- **Incidence**: Rising in India; 2.1 million users nationally\\\\\\\\n\\\\\\\\n### Opioid Toxidrome\\\\\\\\n- **Respiratory depression**: Most dangerous; hypoxemia, hypercapnia\\\\\\\\n- **Pinpoint pupils**: Pathognomonic (miosis); constricted <2mm\\\\\\\\n- **Sedation/coma**: CNS depression\\\\\\\\n- **Bradycardia**: Vagal tone increased\\\\\\\\n- **Hypothermia**: Central regulation impaired\\\\\\\\n- **Pulmonary edema**: Non-cardiogenic (fluid in alveoli)\\\\\\\\n\\\\\\\\n### Timing\\\\\\\\n- **Heroin**: Onset 5-30 min IV; 20-60 min IM; peak 30 min\\\\\\\\n- **Morphine**: Slower onset (30-60 min); longer duration\\\\\\\\n- **Codeine**: Longer acting (4-6 hours),\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"SLUDGE = Organophosphate poisoning (Salivation, Lacrimation, Urination, Defecation, Gastric, Emesis)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Cholinergic excess syndrome in OP poisoning\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Dhatura = 'Red, Dry, Hot, Mad' = Anticholinergic toxidrome\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Mnemonic for anticholinergic plant toxin signs\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Methanol = Blindness (optic neuritis), Metabolic acidosis, Death\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Key features of methanol toxicity\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Opioids = Pinpoint pupils + Respiratory depression + Coma\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Opioid toxidrome triad\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Organophosphate poisoning: cholinergic excess (SLUDGE), respiratory failure is main killer, AChE inhibition\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Dhatura/anticholinergic plants: mydriasis, dry skin, tachycardia, hyperthermia, delirium, urinary retention\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Methanol: blindness (optic neuritis), metabolic acidosis, formic acid toxicity, CNS damage\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Ethanol: CNS depression, hypoglycemia, aspiration risk, metabolic acidosis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Opioid poisoning: pinpoint pupils, respiratory depression, pulmonary edema, coma\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Parikh's Textbook of Medical Emergencies\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 20-25\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"4th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Kasper's Harrison's Principles of Internal Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 456-459\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"21st\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Gupta & Gupta Forensic Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Toxicology\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"4th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 2,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"organic-plant-poisons-mechanism\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Organic & Plant Poisons - Mechanism\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 30,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Organophosphates irreversibly phosphorylate AChE active site, preventing acetylcholine breakdown. Anticholinergic compounds competitively block muscarinic receptors. Methanol converts to formic acid via hepatic oxidation, inhibiting cytochrome oxidase. Naloxone competitively antagonizes opioid receptors at nanomolar concentrations. Understanding molecular mechanisms guides antidote selection and dosing.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Organic & Plant Poisons - Mechanism\\\\\\\\n\\\\\\\\n## Organophosphate Poisoning Molecular Basis\\\\\\\\n\\\\\\\\n### Acetylcholinesterase (AChE) Inhibition\\\\\\\\n\\\\\\\\n**Normal Cholinergic Neurotransmission**:\\\\\\\\n1. Acetylcholine (ACh) released from presynaptic neuron\\\\\\\\n2. ACh binds nicotinic/muscarinic receptors on postsynaptic cell\\\\\\\\n3. AChE enzyme hydrolyzes ACh in synaptic cleft (half-life 1 millisecond)\\\\\\\\n4. Receptors inactivate; neurotransmission ceases\\\\\\\\n\\\\\\\\n**OP Mechanism**:\\\\\\\\n1. OP compound binds AChE active site (serine residue)\\\\\\\\n2. Phosphorylation: OP covalently bonds to serine\\\\\\\\n3. AChE enzyme becomes inactive; \\\\\\\\\\\\\\\"aging\\\\\\\\\\\\\\\" process begins\\\\\\\\n4. ACh cannot be hydrolyzed → accumulates in synapse\\\\\\\\n5. Continuous receptor stimulation → cholinergic crisis\\\\\\\\n\\\\\\\\n### Aging Process (Critical Timing)\\\\\\\\n- **Early poisoning** (<12-24 hours): Phosphorylated bond intact; reversible with pralidoxime (PAM)\\\\\\\\n- **Aging** (varies by OP compound): Alkyl group cleaved from phosphorus; irreversible\\\\\\\\n- **After aging**: PAM ineffective; must rely on enzyme synthesis (24-48 hours)\\\\\\\\n- **Clinical importance**: Early PAM administration critical; delay reduces efficacy\\\\\\\\n\\\\\\\\n### Excess Acetylcholine Effects\\\\\\\\n\\\\\\\\n**At Muscarinic Receptors** (M1-M5):\\\\\\\\n- **Salivary glands**: Excess salivation\\\\\\\\n- **Lacrimal glands**: Lacrimation\\\\\\\\n- **GI tract**: Increased motility, secretion → diarrhea, vomiting\\\\\\\\n- **Bladder**: Loss of sphincter tone → incontinence\\\\\\\\n- **Lungs**: Bronchoconstriction, bronchospasm, fluid secretion → respiratory failure\\\\\\\\n- **Heart**: Bradycardia, AV block\\\\\\\\n\\\\\\\\n**At Nicotinic Receptors** (neuromuscular junction, autonomic ganglia):\\\\\\\\n- **Skeletal muscle**: Fasciculations (visible twitching due to uncoordinated contractions)\\\\\\\\n- **Muscle paralysis**: After fasciculations cease; muscles remain paralyzed despite ACh excess\\\\\\\\n- **Autonomic ganglia**: Tachycardia, hypertension (despite muscarinic bradycardia)\\\\\\\\n\\\\\\\\n### Organophosphate Compounds Severity\\\\\\\\n\\\\\\\\n| Compound | Lipophilicity | Aging Time | Severity |\\\\\\\\n|----------|---------------|-----------|----------|\\\\\\\\n| **Malathion** | Low | Long (days) | Mild-moderate |\\\\\\\\n| **Parathion** | High | Medium (hours) | Severe |\\\\\\\\n| **Chlorpyrifos** | Very high | Rapid (minutes) | Very severe |\\\\\\\\n| **Trichlorfon** | Medium | Medium | Moderate |\\\\\\\\n\\\\\\\\nHighly lipophilic compounds: rapid absorption, rapid CNS penetration, rapid aging = worse prognosis\\\\\\\\n\\\\\\\\n## Anticholinergic Mechanisms\\\\\\\\n\\\\\\\\n### Muscarinic Receptor Blockade\\\\\\\\n- **Receptor**: G-protein coupled receptors (M1-M5 subtypes)\\\\\\\\n- **Normal function**: ACh binding → IP3/DAG cascade → cellular response\\\\\\\\n- **Anticholinergic action**: Competitive antagonism; blocks ACh access to receptor\\\\\\\\n- **CNS effects**: M1 blockade → confusion, hallucinations (short half-life agents worse for CNS)\\\\\\\\n- **Peripheral effects**: M2-M4 blockade → mydriasis, tachycardia, hyperthermia\\\\\\\\n\\\\\\\\n### Dhatura Alkaloids Pharmacology\\\\\\\\n- **Atropine**: 0.3-1 mg IM/IV acts within 30 min; duration 4-6 hours\\\\\\\\n- **Scopolamine**: Hyoscine; more CNS penetration; longer duration; more hallucinations\\\\\\\\n- **Hyoscyamine**: Intermediate between atropine and scopolamine\\\\\\\\n- **Tropane alkaloid structure**: Bicyclic compound mimics ACh but blocks receptor\\\\\\\\n\\\\\\\\n### Temperature Dysregulation Mechanism\\\\\\\\n- **Normal thermoregulation**: Hypothalamic set-point; cooling via sweating (muscarinic M3 receptors on sweat glands)\\\\\\\\n- **Anticholinergic blockade**: Sweat gland M3 receptors blocked → no sweating\\\\\\\\n- **Result**: Heat cannot dissipate → temperature rises uncontrolled (hyperthermia to 40-41°C possible)\\\\\\\\n- **Danger**: Rhabdomyolysis, disseminated intravascular coagulation (DIC), death\\\\\\\\n\\\\\\\\n## Methanol Toxicity Mechanisms\\\\\\\\n\\\\\\\\n### Two-Hit Toxicity: Parent Drug + Metabolite\\\\\\\\n\\\\\\\\n**Step 1: Methanol (Relatively Non-toxic)**:\\\\\\\\n- Oral absorption: Rapid (30-60 min peak)\\\\\\\\n- Initial CNS depression: Similar to ethanol\\\\\\\\n- Blood level: Correlated with symptoms\\\\\\\\n\\\\\\\\n**Step 2: Formic Acid (Highly Toxic)**:\\\\\\\\n1. **Hepatic oxidation**:\\\\\\\\n   - Methanol → Formaldehyde (via alcohol dehydrogenase, ADH)\\\\\\\\n   - Formaldehyde → Formic acid (via aldehyde dehydrogenase)\\\\\\\\n\\\\\\\\n2. **Formic acid toxicity**:\\\\\\\\n   - Inhibits mitochondrial cytochrome c oxidase\\\\\\\\n   - Blocks electron transport chain → ATP production fails\\\\\\\\n   - Cells shift to anaerobic metabolism → lactate accumulation\\\\\\\\n   - Metabolic acidosis: pH <7.1 possible\\\\\\\\n\\\\\\\\n3. **Organ-specific damage**:\\\\\\\\n   - **Optic nerve**: Highly metabolic, oxidative-dependent; first to fail\\\\\\\\n   - **Basal ganglia**: Necrosis (puts lesion on MRI)\\\\\\\\n   - **Brainstem**: Edema, herniation risk\\\\\\\\n\\\\\\\\n### Alcohol Dehydrogenase (ADH) Inhibition Strategy\\\\\\\\n- **Ethanol competition**: Ethanol has higher affinity for ADH than methanol (Km: ethanol 1 mM vs. methanol 2 mM)\\\\\\\\n- **Result**: Ethanol preferentially metabolized; methanol slows to renal excretion\\\\\\\\n- **Effect**: Delays formic acid formation; time for removal (hemodialysis)\\\\\\\\n- **Dosing**: Ethanol 0.5-1 g/kg loading, then 100-150 mg/kg/hr to maintain serum level 100-150 mg/dL\\\\\\\\n\\\\\\\\n### Formate Removal Methods\\\\\\\\n- **Hemodialysis**: Removes methanol (MW 32) AND formic acid; clearance 170 mL/min\\\\\\\\n- **Folic acid + 5-formyl-tetrahydrofolate**: Aids formic acid oxidation to CO2 (doses: 50 mg IV q4h)\\\\\\\\n- **Timing**: Hemodialysis urgent if serum methanol >25 mg/dL OR formate >20 mg/dL OR severe acidosis\\\\\\\\n\\\\\\\\n## Naloxone Mechanism of Action\\\\\\\\n\\\\\\\\n### Opioid Receptor Pharmacology\\\\\\\\n- **Receptors**: μ (mu), δ (delta), κ (kappa) G-protein coupled\\\\\\\\n- **μ-receptor activation**: Responsible for analgesia, respiratory depression, euphoria\\\\\\\\n- **Binding affinity**: Naloxone Kd 0.1-1 nM (very high affinity; opioids Kd 1-100 nM)\\\\\\\\n\\\\\\\\n### Naloxone Competitive Antagonism\\\\\\\\n1. **Rapid equilibration**: High-affinity binding displaces opioids from receptors\\\\\\\\n2. **Receptor blockade**: No agonist activity; pure antagonist\\\\\\\\n3. **Effect**: Opioid effects reversed within 1-2 minutes IV\\\\\\\\n4. **Duration**: Naloxone t½ = 30-45 min; opioids longer-acting → re-sedation possible\\\\\\\\n\\\\\\\\n### Naloxone Dosing & Administration\\\\\\\\n| Route | Dose | Onset | Duration |\\\\\\\\n|-------|------|-------|----------|\\\\\\\\n| **IV** | 0.4-2 mg | 1-2 min | 30-45 min |\\\\\\\\n| **IM/SC** | 0.4-2 mg | 2-3 min | 30-45 min |\\\\\\\\n| **Intranasal** | 4 mg | 2-3 min | 30-45 min |\\\\\\\\n| **Endotracheal** | 2.5x IV dose diluted | 3-5 min | 30-45 min |\\\\\\\\n\\\\\\\\n**Re-dosing**: May need repeated doses (q3-5 min) if opioid very long-acting (methadone)\\\\\\\\n\\\\\\\\n### Withdrawal Risk\\\\\\\\n- **Onset**: Immediate (within minutes of naloxone)\\\\\\\\n- **Symptoms**: Agitation, sweating, tachycardia, hypertension, body aches\\\\\\\\n- **Management**: Reassure patient, supportive care; rarely life-threatening,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"OP aging = Early (<12-24h): PAM works; Late (>12-24h): PAM ineffective\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Timing critical for pralidoxime efficacy; early intervention crucial\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Atropine + PAM = OP poisoning (muscarinic + nicotinic)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Dual treatment: anticholinergic + AChE reactivator\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Methanol = ADH inhibition (ethanol blocks) + Formic acid (formate removal)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Two-pronged approach: prevent toxic metabolite formation + remove it\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Naloxone = High-affinity μ-receptor antagonist (Kd 0.1-1 nM)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Competitively displaces opioids; rapid reversal\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"OP poisoning: irreversible AChE phosphorylation; early aging limits PAM efficacy; cholinergic excess at all receptors\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Anticholinergic toxins: muscarinic blockade → mydriasis, dry skin, hyperthermia; no sweating = heat stroke risk\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Methanol: two-hit (parent + formic acid); formate inhibits cytochrome oxidase; optic nerve most vulnerable\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Naloxone: high-affinity μ-antagonist; reverses opioids in 1-2 min; short duration (30-45 min) = re-sedation risk\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Treatment timing critical: early PAM in OP, early dialysis in methanol, early naloxone in opioids\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Parikh's Textbook of Medical Emergencies\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 20-25\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"4th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Hartshorn's Nursing Care of the Critically Ill Adult\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Toxicologic Emergencies\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"6th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Gupta & Gupta Forensic Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Toxicology\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"4th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 3,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"organic-plant-poisons-clinical\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Organic & Plant Poisons - Clinical\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 20,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Clinical management requires rapid recognition of toxidrome, decontamination, and antidote administration. Organophosphate: atropine (muscarinic) + pralidoxime (AChE reactivation) within 12 hours + supportive care. Dhatura: benzodiazepines, supportive care, aggressive cooling. Methanol: ethanol infusion, folic acid, hemodialysis if severe. Opioids: naloxone. Indian context includes limited resources, high-dose OP/illicit alcohol, and transport delays.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Organic & Plant Poisons - Clinical\\\\\\\\n\\\\\\\\n## Organophosphate Poisoning Management\\\\\\\\n\\\\\\\\n### Immediate Management (First 5-10 Minutes)\\\\\\\\n\\\\\\\\n**Safety & Decontamination**:\\\\\\\\n1. **Remove from exposure**: Move away from spray/contaminated area\\\\\\\\n2. **Protective equipment**: Healthcare workers use gloves, gowns (secondary exposure risk)\\\\\\\\n3. **Decontamination**: Remove clothing, wash skin with water/soap (prevent absorption)\\\\\\\\n4. **Secretion management**: Suction bronchial secretions; avoid aspiration\\\\\\\\n\\\\\\\\n### Atropine Administration (Muscarinic Blocker)\\\\\\\\n\\\\\\\\n**Rationale**: Reverse muscarinic effects (SLUDGE, bronchospasm, bradycardia)\\\\\\\\n\\\\\\\\n**Dosing**:\\\\\\\\n- **Initial**: 0.5-1 mg IV/IM\\\\\\\\n- **Repeat**: Double dose every 5-10 min until signs of atropinization appear\\\\\\\\n- **Titrate to**: Dry secretions, normal respiratory rate, HR 80-100 bpm\\\\\\\\n- **Total initial**: May require 10-20 mg in severe poisoning\\\\\\\\n\\\\\\\\n**Signs of Adequate Atropinization**:\\\\\\\\n- Dry mouth/skin\\\\\\\\n- Increased heart rate\\\\\\\\n- Dilated pupils\\\\\\\\n- Disappearance of bronchospasm\\\\\\\\n\\\\\\\\n**Continuous infusion**:\\\\\\\\n- **After initial boluses**: 0.5-1 mg/hour IV infusion\\\\\\\\n- **Adjust**: Based on secretion control and heart rate\\\\\\\\n- **Duration**: Until atropine can be weaned (may be days)\\\\\\\\n\\\\\\\\n**Why HIGH doses needed**:\\\\\\\\n- OP compounds cross blood-brain barrier → central cholinergic excess\\\\\\\\n- Atropine dosing higher than typical (high CNS penetration needed)\\\\\\\\n- Conventional dosing (0.1-0.2 mg) inadequate\\\\\\\\n\\\\\\\\n### Pralidoxime (PAM) - AChE Reactivation\\\\\\\\n\\\\\\\\n**Mechanism**: Breaks phosphorus-serine bond on AChE; reactivates enzyme\\\\\\\\n\\\\\\\\n**Dosing**:\\\\\\\\n- **Initial**: 1-2 g IV bolus over 5-30 min\\\\\\\\n- **Repeat**: 0.5-1 g IV/IM every 4-8 hours\\\\\\\\n- **Oral**: 600 mg BD (if IV unavailable; slower absorption)\\\\\\\\n\\\\\\\\n**Critical Timing**:\\\\\\\\n- **<12-24 hours**: PAM effective; \\\\\\\\\\\\\\\"aging\\\\\\\\\\\\\\\" not yet complete\\\\\\\\n- **>24-48 hours**: PAM less effective (compound aging)\\\\\\\\n- **Extreme importance**: Early PAM (first 2-4 hours) maximizes benefit\\\\\\\\n- **In India**: Transport delays often result in delayed PAM administration\\\\\\\\n\\\\\\\\n**Why PAM alone is inadequate**:\\\\\\\\n- Doesn't cross blood-brain barrier well (muscarinic effects in brain persist)\\\\\\\\n- Must combine with atropine for full benefit\\\\\\\\n\\\\\\\\n### Supportive Care\\\\\\\\n\\\\\\\\n**Airway Management**:\\\\\\\\n- **Intubation**: Indicated for respiratory depression, bronchospasm, airway protection\\\\\\\\n- **Suctioning**: Aggressive secretion removal (can be profuse)\\\\\\\\n- **Mechanical ventilation**: If severe paralysis (nicotinic effects)\\\\\\\\n\\\\\\\\n**Benzodiazepines**:\\\\\\\\n- **For seizures**: Diazepam 5-10 mg IV q5-10 min or lorazepam 2-4 mg IV\\\\\\\\n- **Often needed**: Severe poisoning frequently causes seizures\\\\\\\\n\\\\\\\\n**Fluid management**:\\\\\\\\n- **IV access**: Two large-bore lines\\\\\\\\n- **Fluids**: Generous; prevents renal failure from myoglobinuria (rhabdomyolysis)\\\\\\\\n- **Glucose**: Monitor; hypoglycemia possible\\\\\\\\n\\\\\\\\n**Monitoring**:\\\\\\\\n- **ICU admission**: Essential for severe poisoning\\\\\\\\n- **Vital signs**: Continuous monitoring\\\\\\\\n- **Labs**: Pseudocholinesterase levels (marker of AChE activity), electrolytes, renal function\\\\\\\\n- **ECG**: Bradycardia, arrhythmias common\\\\\\\\n\\\\\\\\n## Dhatura/Anticholinergic Poisoning Management\\\\\\\\n\\\\\\\\n### Recognition of Anticholinergic Toxidrome\\\\\\\\n\\\\\\\\n**Classic Features** (\\\\\\\\\\\\\\\"Red, Dry, Hot, Mad\\\\\\\\\\\\\\\"):\\\\\\\\n- **Red**: Flushed skin, erythema (due to tachycardia, hyperthermia)\\\\\\\\n- **Dry**: Dry mouth, dry skin, anhidrosis (no sweating)\\\\\\\\n- **Hot**: Hyperthermia (uncontrolled heat) to 40-41°C or higher\\\\\\\\n- **Mad**: Delirium, hallucinations, violent behavior\\\\\\\\n\\\\\\\\n**Diagnostic Confirmation**: Mydriasis (dilated pupils, non-reactive to light) is pathognomonic\\\\\\\\n\\\\\\\\n### Management\\\\\\\\n\\\\\\\\n**Immediate Actions**:\\\\\\\\n1. **Benzodiazepines**: Diazepam 5-10 mg IV/IM or lorazepam 2-4 mg IV\\\\\\\\n   - Calms agitation, reduces seizure risk\\\\\\\\n   - First-line for CNS manifestations\\\\\\\\n\\\\\\\\n2. **Cooling measures** (Critical):\\\\\\\\n   - **Ice water immersion**: Most effective; cool to 38.5°C\\\\\\\\n   - **Fans + wet towels**: If ice unavailable\\\\\\\\n   - **IV cold saline**: Cooled Normal Saline\\\\\\\\n   - **Target**: Core temp <38°C to prevent rhabdomyolysis\\\\\\\\n\\\\\\\\n3. **Decontamination**:\\\\\\\\n   - **Activated charcoal**: 1 g/kg PO (if alert; suppress gag reflex)\\\\\\\\n   - **Gastric lavage**: If within 1-2 hours and altered mental status allows\\\\\\\\n   - **IV access**: Multiple lines for fluid management\\\\\\\\n\\\\\\\\n**Symptomatic Management**:\\\\\\\\n- **Urinary retention**: Catheterization if needed (anticholinergic bladder effects)\\\\\\\\n- **Muscle rigidity/dystonia**: Benzodiazepines\\\\\\\\n- **Seizures**: Diazepam 5-10 mg IV (lorazepam slower acting)\\\\\\\\n- **Hallucinations/violence**: Environmental control, chemical restraint (benzodiazepines, antipsychotics)\\\\\\\\n\\\\\\\\n**Antidote - Physostigmine** (Rarely used):\\\\\\\\n- **Mechanism**: Acetylcholinesterase inhibitor; increases ACh available to block anticholinergic\\\\\\\\n- **Indication**: Pure anticholinergic poisoning (NOT OP), severe toxicity\\\\\\\\n- **Dosing**: 1-2 mg IV/IM q30 min (risk of cholinergic crisis if overdosed)\\\\\\\\n- **Caution**: Avoid if cardiac arrhythmias present; can worsen\\\\\\\\n\\\\\\\\n**Monitoring**:\\\\\\\\n- **Temperature**: Core (esophageal or rectal) monitoring essential\\\\\\\\n- **Rhabdomyolysis**: Monitor CK, myoglobin, urine color (dark = myoglobinuria)\\\\\\\\n- **Renal function**: Creatinine, BUN; aggressive fluids to prevent acute tubular necrosis\\\\\\\\n- **Labs**: Electrolytes, glucose (hypoglycemia can occur)\\\\\\\\n\\\\\\\\n## Methanol Poisoning Management\\\\\\\\n\\\\\\\\n### Early Recognition (Critical for Outcome)\\\\\\\\n\\\\\\\\n**History Clues**:\\\\\\\\n- **Source**: Illicit alcohol, \\\\\\\\\\\\\\\"country liquor,\\\\\\\\\\\\\\\" antifreeze ingestion\\\\\\\\n- **Timing**: Symptoms often start 12-24 hours after ingestion (unlike ethanol)\\\\\\\\n- **Vision changes**: Blurred vision, dimming (pathognomonic for methanol)\\\\\\\\n\\\\\\\\n**Laboratory Confirmation**:\\\\\\\\n- **Serum methanol**: >10 mg/dL indicates poisoning; >25 mg/dL requires dialysis\\\\\\\\n- **Serum glucose**: Often normal\\\\\\\\n- **Metabolic acidosis**: Anion gap metabolic acidosis (AG = Na - Cl - HCO3)\\\\\\\\n- **Base deficit**: Negative; severe methanol has -10 to -30\\\\\\\\n\\\\\\\\n### Antidote Administration (Urgent)\\\\\\\\n\\\\\\\\n**Ethanol Infusion** (Blocks ADH):\\\\\\\\n- **Goal**: Maintain serum ethanol 100-150 mg/dL\\\\\\\\n- **Loading**: Ethanol 0.5-1 g/kg IV (10% solution in 5% dextrose)\\\\\\\\n- **Maintenance**: 100-150 mg/kg/hr IV infusion\\\\\\\\n- **Oral alternative**: 70-100 proof ethanol (if IV unavailable)\\\\\\\\n\\\\\\\\n**Folic Acid** (Aids formate oxidation):\\\\\\\\n- **Dosing**: 50 mg IV/IM every 4-6 hours\\\\\\\\n- **Mechanism**: Provides folate cofactor for formic acid → CO2 oxidation\\\\\\\\n- **May also use**: 5-methyltetrahydrofolate (more active form)\\\\\\\\n\\\\\\\\n### Hemodialysis (Definitive Treatment)\\\\\\\\n\\\\\\\\n**Indications**:\\\\\\\\n- Serum methanol >25 mg/dL\\\\\\\\n- Severe metabolic acidosis (pH <7.2)\\\\\\\\n- Altered mental status\\\\\\\\n- Visual symptoms\\\\\\\\n- Renal impairment (oliguria)\\\\\\\\n\\\\\\\\n**Why effective**:\\\\\\\\n- **Clearance**: Methanol MW 32 (easily removed); formic acid also removed\\\\\\\\n- **Efficiency**: Clears 170 mL/min (>5x renal clearance)\\\\\\\\n- **Duration**: Continue until serum methanol <10 mg/dL AND metabolic parameters normalize\\\\\\\\n\\\\\\\\n### Supportive Care\\\\\\\\n\\\\\\\\n**Acid-base management**:\\\\\\\\n- **Sodium bicarbonate**: 1-2 mEq/kg IV to raise pH (target pH >7.1)\\\\\\\\n- **Monitor**: Arterial blood gas; recheck after 30-60 min\\\\\\\\n\\\\\\\\n**Seizure management**:\\\\\\\\n- **Diazepam**: 5-10 mg IV q5-10 min for seizures\\\\\\\\n\\\\\\\\n**Airway/Ventilation**:\\\\\\\\n- **Intubation**: If comatose, aspiration risk, respiratory depression\\\\\\\\n- **Hyperventilation**: Helps combat acidosis\\\\\\\\n\\\\\\\\n**Outcomes**:\\\\\\\\n- **Early treatment** (ethanol + dialysis <12 hours): ~95% survival\\\\\\\\n- **Delayed treatment** (>24 hours): ~50% survival; vision loss common,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Organophosphate = Atropine + PAM (within 12-24h) + Supportive care\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Dual antidote approach: muscarinic blockade + AChE reactivation\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Dhatura = Benzos + Aggressive cooling (38-38.5°C target)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Manage CNS and temperature; hyperthermia is most dangerous\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Methanol = Ethanol + Folic acid + Hemodialysis (if severe)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Prevent toxic metabolite formation, aid excretion, remove toxin\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Naloxone dose = 0.4-2 mg IV (titrate to respiratory response)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"May need repeat dosing; shorter duration than opioids\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"OP poisoning: atropine to dryness + PAM <12-24h + mechanical ventilation if respiratory failure\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Dhatura/anticholinergic: benzodiazepines + aggressive cooling to prevent rhabdomyolysis and heat stroke\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Methanol: ethanol infusion (100-150 mg/dL) + folic acid + hemodialysis if severe acidosis or vision changes\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Ethanol acts as competitive substrate for ADH, delaying methanol conversion to toxic formic acid\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Opioid overdose: naloxone 0.4-2 mg IV with repeat dosing; monitor for re-sedation (naloxone t½ 30-45 min)\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Parikh's Textbook of Medical Emergencies\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 20-25\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"4th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Kasper's Harrison's Principles of Internal Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 456-459\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"21st\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Gupta & Gupta Forensic Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Toxicology\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"4th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 4,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"organic-plant-poisons-exam\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Organic & Plant Poisons - Exam Prep\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 15,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"High-yield exam topics: SLUDGE syndrome in OP poisoning, anticholinergic toxidrome (Red-Dry-Hot-Mad), methanol blindness and acidosis, naloxone reversal of opioids, and antidote selection (atropine + PAM, ethanol + folic acid, benzodiazepines + cooling). NEXT-pattern questions test toxidrome recognition and management priorities.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Organic & Plant Poisons - Exam Prep\\\\\\\\n\\\\\\\\n## High-Yield Facts for Exams\\\\\\\\n\\\\\\\\n### Organophosphate Poisoning Quick Facts\\\\\\\\n| Aspect | Key Point |\\\\\\\\n|--------|-----------|\\\\\\\\n| **SLUDGE** | Salivation, Lacrimation, Urination, Defecation, Gastric, Emesis |\\\\\\\\n| **Nicotinic** | Fasciculations → Paralysis; tachycardia/hypertension |\\\\\\\\n| **Main killer** | Respiratory failure (bronchospasm + paralysis) |\\\\\\\\n| **Diagnosis** | Clinical presentation + low pseudocholinesterase |\\\\\\\\n| **Atropine** | Muscarinic blocker; titrate to dryness (0.5-20+ mg IV) |\\\\\\\\n| **PAM** | Breaks phosphorus-AChE bond; effective <12-24 hours |\\\\\\\\n| **Timing** | Early PAM (within 2-4 hours) critical for benefit |\\\\\\\\n\\\\\\\\n### Anticholinergic Toxidrome (\\\\\\\\\\\\\\\"Red, Dry, Hot, Mad\\\\\\\\\\\\\\\")\\\\\\\\n| Finding | Mechanism | Clinical |\\\\\\\\n|---------|-----------|----------|\\\\\\\\n| **Red** | Tachycardia + hyperthermia | Flushed, erythema |\\\\\\\\n| **Dry** | M3 blockade on sweat glands | Anhidrosis, dry skin/mouth |\\\\\\\\n| **Hot** | No sweating → uncontrolled heat | Core temp 39-41°C; heat stroke risk |\\\\\\\\n| **Mad** | CNS M1 blockade | Delirium, hallucinations, seizures |\\\\\\\\n| **Mydriasis** | Ciliary M3 blockade | Dilated pupils, non-reactive (pathognomonic) |\\\\\\\\n| **Management** | Benzos + aggressive cooling | Cool to <38.5°C; prevent rhabdomyolysis |\\\\\\\\n\\\\\\\\n### Methanol Poisoning Key Features\\\\\\\\n| Feature | Finding | Significance |\\\\\\\\n|---------|---------|--------------|\\\\\\\\n| **Blindness** | Optic neuritis (pathognomonic) | Permanent vision loss if delayed treatment |\\\\\\\\n| **Timing** | Symptoms 12-24 hours after ingestion | Unlike ethanol (rapid onset) |\\\\\\\\n| **Acidosis** | Anion gap metabolic acidosis | Severe: pH <7.1, AG >20 |\\\\\\\\n| **Mechanism** | Methanol → Formaldehyde → Formic acid | Formate inhibits cytochrome oxidase |\\\\\\\\n| **Ethanol treatment** | Blocks ADH; slows methanol metabolism | Maintain serum ethanol 100-150 mg/dL |\\\\\\\\n| **Folic acid** | Aids formate oxidation | 50 mg IV q4-6h |\\\\\\\\n| **Dialysis** | Removes methanol + formic acid | Indicated if severe or vision changes |\\\\\\\\n\\\\\\\\n### Ethanol Blood Levels & Effects\\\\\\\\n| Level (mg/dL) | Effect |\\\\\\\\n|---|---|\\\\\\\\n| 50-100 | Impaired judgment, decreased inhibition |\\\\\\\\n| 150-250 | Marked incoordination, dysarthria |\\\\\\\\n| 250-400 | Severe intoxication, coma risk |\\\\\\\\n| 400-500 | Respiratory depression, coma |\\\\\\\\n| >500 | Death (respiratory arrest) |\\\\\\\\n\\\\\\\\n### Opioid Poisoning Toxidrome\\\\\\\\n| Finding | Mechanism | Management |\\\\\\\\n|---------|-----------|------------|\\\\\\\\n| **Pinpoint pupils** | μ-receptor agonism | Pathognomonic; reverses with naloxone |\\\\\\\\n| **Respiratory depression** | μ-agonism of medullary respiratory center | MOST DANGEROUS; intubate if needed |\\\\\\\\n| **Coma** | CNS depression | Often from co-ingestion (alcohol, benzos) |\\\\\\\\n| **Pulmonary edema** | Non-cardiogenic; mechanism unclear | Furosemide, CPAP/intubation |\\\\\\\\n| **Naloxone** | μ-receptor antagonist | 0.4-2 mg IV; repeat q3-5 min if needed |\\\\\\\\n\\\\\\\\n### Antidote Summary Table\\\\\\\\n| Poison | Antidote | Dose | Mechanism |\\\\\\\\n|--------|----------|------|-----------|\\\\\\\\n| **Organophosphate** | Atropine + PAM | Atropine 0.5-20+ mg; PAM 1-2 g | Block ACh + reactivate AChE |\\\\\\\\n| **Anticholinergic** | Benzodiazepines + cooling | Diazepam 5-10 mg; cool to <38°C | Seizure prevention + heat management |\\\\\\\\n| **Methanol** | Ethanol + folic acid + hemodialysis | Ethanol 100-150 mg/dL; folate 50 mg q4-6h | ADH competition + formate removal |\\\\\\\\n| **Opioid** | Naloxone | 0.4-2 mg IV; repeat q3-5 min | μ-antagonism |\\\\\\\\n\\\\\\\\n### Clinical Scenarios & Management\\\\\\\\n\\\\\\\\n**Scenario 1: Farmer with SLUDGE, respiratory distress**:\\\\\\\\n- Diagnosis: OP poisoning\\\\\\\\n- Management: Atropine 1 mg IV, repeat q5 min until dryness; PAM 1 g IV; intubate if needed\\\\\\\\n\\\\\\\\n**Scenario 2: Teenager with mydriasis, hyperthermia 40.5°C, delirium**:\\\\\\\\n- Diagnosis: Anticholinergic (likely Dhatura)\\\\\\\\n- Management: Diazepam 10 mg IV; aggressive cooling (ice water immersion)\\\\\\\\n\\\\\\\\n**Scenario 3: Patient with blindness, anion gap acidosis, pH 6.9**:\\\\\\\\n- Diagnosis: Methanol poisoning\\\\\\\\n- Management: Ethanol infusion + folic acid + urgent hemodialysis\\\\\\\\n\\\\\\\\n**Scenario 4: Comatose patient with pinpoint pupils, RR 8**:\\\\\\\\n- Diagnosis: Opioid overdose\\\\\\\\n- Management: Naloxone 2 mg IV; intubate if RR not improving\\\\\\\\n\\\\\\\\n## Common Exam Mistakes\\\\\\\\n1. **SLUDGE causes parasympathetic** (correct: cholinergic excess)\\\\\\\\n2. **Anticholinergic = dry secretions** (correct: yes, but hyperthermia is killer)\\\\\\\\n3. **Methanol treatment**: Forget hemodialysis (WRONG; essential if severe)\\\\\\\\n4. **Naloxone duration**: Say 4-6 hours (WRONG; t½ 30-45 min; opioids longer)\\\\\\\\n5. **PAM timing**: Ineffective after 48 hours (mostly correct; some benefit up to 24-36h if not aged)\\\\\\\\n6. **Atropine dose**: Give standard 0.1-0.2 mg (WRONG; OP requires much higher doses),\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"SLUDGE = Salivation, Lacrimation, Urination, Defecation, Gastric, Emesis (OP poisoning)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Cholinergic excess at muscarinic receptors\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Red-Dry-Hot-Mad = Anticholinergic toxidrome (Dhatura)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"M3 blockade on sweat glands causes dangerous hyperthermia\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Methanol = Blindness + Acidosis + Ethanol treatment + Dialysis\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Key features and management priorities\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Atropine + PAM (within 12-24h) = OP poisoning dual antidote\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Muscarinic blockade + AChE reactivation\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Naloxone = 0.4-2 mg IV; short duration (30-45 min); may need repeat dosing\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Opioid antagonist; shorter acting than most opioids\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"OP poisoning: SLUDGE + nicotinic effects; atropine (muscarinic blocker) + PAM (AChE reactivator)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Anticholinergic toxidrome: Red-Dry-Hot-Mad; mydriasis pathognomonic; benzodiazepines + aggressive cooling\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Methanol: blindness (optic neuritis), anion gap acidosis; ethanol infusion 100-150 mg/dL + hemodialysis if severe\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Ethanol blocks ADH, delaying methanol → formic acid conversion; folic acid aids formate oxidation\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Naloxone: 0.4-2 mg IV with repeat dosing; short duration (30-45 min) = re-sedation risk\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"NEXT Medical Exam Question Bank\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Medical Emergencies & Toxicology\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"2026\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Parikh's Textbook of Medical Emergencies\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 20-25\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"4th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Kasper's Harrison's Principles of Internal Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 456-459\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"21st\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"organic-plant-poisons-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Organic & Plant Poisons - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Active recall tests toxidrome recognition, antidote identification, and management prioritization. Practice scenarios include OP, anticholinergic, methanol, ethanol, and opioid poisonings with varying presentations and severity.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Organic & Plant Poisons - Active Recall\\\\\\\\n\\\\\\\\n## Quick Q&A Review\\\\\\\\n\\\\\\\\n**Q1: What is the SLUDGE syndrome and which poison causes it?**\\\\\\\\n> SLUDGE = Salivation, Lacrimation, Urination, Defecation, Gastric symptoms, Emesis. Caused by organophosphate poisoning (OP pesticides, insecticides) via cholinergic excess from acetylcholinesterase inhibition. Accumulation of acetylcholine at muscarinic receptors.\\\\\\\\n\\\\\\\\n**Q2: Describe the anticholinergic toxidrome. What plant poison classically causes this?**\\\\\\\\n> Anticholinergic toxidrome: \\\\\\\\\\\\\\\"Red, Dry, Hot, Mad\\\\\\\\\\\\\\\" = flushed skin, anhidrosis/dry skin/mouth, hyperthermia, delirium/hallucinations, plus mydriasis (dilated non-reactive pupils). Caused by Dhatura (datura stramonium) ingestion, which contains atropine/scopolamine/hyoscyamine alkaloids.\\\\\\\\n\\\\\\\\n**Q3: How does hyperthermia develop in anticholinergic poisoning and why is it dangerous?**\\\\\\\\n> Anticholinergic agents block M3 muscarinic receptors on sweat glands → no sweating. Cannot dissipate heat → uncontrolled temperature rise to 40-41°C. Danger: rhabdomyolysis (muscle breakdown), myoglobinuria, acute renal failure, DIC, death. Requires aggressive cooling.\\\\\\\\n\\\\\\\\n**Q4: A 35-year-old farmer presents with excessive salivation, muscle fasciculations, respiratory distress, and bradycardia. Management sequence?**\\\\\\\\n> OP poisoning. Management: 1) Remove from exposure, decontaminate. 2) Atropine 1 mg IV bolus, repeat q5 min until dryness achieved (may need 10-20+ mg total). 3) PAM 1-2 g IV within 12-24 hours. 4) Benzodiazepines if seizures. 5) Mechanical ventilation if respiratory failure.\\\\\\\\n\\\\\\\\n**Q5: What is the mechanism of methanol toxicity and what are the cardinal clinical features?**\\\\\\\\n> Methanol metabolized → formaldehyde → formic acid. Formic acid inhibits cytochrome c oxidase (electron transport) → cellular hypoxia → metabolic acidosis. Cardinal features: blindness (optic neuritis, permanent), anion gap metabolic acidosis, CNS symptoms (confusion, coma), hypothermia, death.\\\\\\\\n\\\\\\\\n**Q6: How does ethanol treatment help in methanol poisoning? What other antidotes are used?**\\\\\\\\n> Ethanol competes for alcohol dehydrogenase (ADH) with higher affinity than methanol → blocks methanol conversion to toxic formic acid. Other antidotes: folic acid (50 mg IV q4-6h) aids formate oxidation to CO2. Most importantly: hemodialysis removes methanol and formic acid (clearance 170 mL/min).\\\\\\\\n\\\\\\\\n**Q7: A 60-year-old presents with blindness, severe anion gap metabolic acidosis (pH 6.8), and altered mental status. Which poison and management?**\\\\\\\\n> Methanol poisoning. Management: 1) Ethanol infusion 100-150 mg/dL IV. 2) Folic acid 50 mg IV q4-6h. 3) Hemodialysis urgently (clearance of methanol and formic acid). 4) Sodium bicarbonate if pH <7.1. Early treatment critical for vision preservation.\\\\\\\\n\\\\\\\\n**Q8: Differentiate between pinpoint pupils and mydriasis. Which poisons cause each?**\\\\\\\\n> Pinpoint pupils (miosis): Opioid poisoning (μ-receptor agonism). Mydriasis (dilated pupils): Anticholinergic poisoning (Dhatura, atropine, cocaine). Pinpoint pupils are pathognomonic for opioids; reversed by naloxone.\\\\\\\\n\\\\\\\\n**Q9: An opioid-overdosed patient has pinpoint pupils, RR 6, and SpO2 80%. Management?**\\\\\\\\n> Naloxone 2 mg IV immediately. If RR improves to >12, naloxone worked. If not: intubate and provide mechanical ventilation. Monitor for re-sedation (naloxone t½ 30-45 min; most opioids longer-acting). May need repeated doses q3-5 min or continuous infusion.\\\\\\\\n\\\\\\\\n**Q10: Compare anticholinergic and organophosphate poisoning management. What is the key difference?**\\\\\\\\n> Anticholinergic: benzodiazepines (calm agitation/seizures) + aggressive cooling (prevent heat stroke). OP: atropine (muscarinic blocker) + PAM (AChE reactivation) + mechanical ventilation. Key difference: OP is cholinergic EXCESS (too much ACh) requiring anticholinergics + AChE reactivation; anticholinergic is cholinergic DEFICIENCY (blocked receptors) requiring cooling + supportive care.,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"SLUDGE = Organophosphate; treat with Atropine + PAM (within 12-24h)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Cholinergic excess from AChE inhibition\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Red-Dry-Hot-Mad = Dhatura/Anticholinergic; treat with Benzos + Cooling\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Muscarinic blockade causes dangerous hyperthermia\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Blindness + Acidosis = Methanol; treat with Ethanol + Folic acid + Dialysis\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Formic acid toxicity; early intervention critical\\\\\\\\\\\\\\\"\\\\\\\\n          },\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"Pinpoint pupils + RR depression = Opioid; treat with Naloxone 2 mg IV\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"μ-receptor agonism; competitive antagonist reversal\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"Organophosphate: SLUDGE + nicotinic; atropine (muscarinic) + PAM (AChE reactivator) within 12-24h\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Anticholinergic (Dhatura): Red-Dry-Hot-Mad; benzodiazepines + aggressive cooling to prevent heat stroke\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Methanol: blindness, anion gap acidosis; ethanol 100-150 mg/dL + folic acid + hemodialysis\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Opioids: pinpoint pupils, respiratory depression; naloxone 0.4-2 mg IV with repeat dosing (short t½)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Timing critical: early PAM (<12-24h) in OP, early hemodialysis in methanol, early naloxone in opioids\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Parikh's Textbook of Medical Emergencies\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 20-25\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"4th\\\\\\\\\\\\\\\" },\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Kasper's Harrison's Principles of Internal Medicine\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Ch 456-459\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"21st\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-}
-];
-];
+        summary: "Febrile seizures occur in children 6 months to 5 years during fever. Simple febrile seizures are benign with excellent prognosis. Epilepsy is defined as recurrent unprovoked seizures.",
+        contentMd: `# Febrile Seizures & Epilepsy - Foundation
+
+## Febrile Seizures
+
+### Definition
+- Seizures associated with fever (>38 degrees C) in children aged 6 months to 5 years
+- No evidence of CNS infection or other defined cause
+- Most common seizure disorder in children (2-5% prevalence)
+
+### Classification
+| Feature | Simple | Complex |
+|---------|--------|---------|
+| Duration | <15 min | >15 min |
+| Type | Generalized | Focal features |
+| Frequency | Single in 24h | Multiple in 24h |
+| Recovery | Rapid | Prolonged postictal |
+| Recurrence | 30% | 40-50% |
+| Epilepsy risk | <1% | 3-10% |
+
+### Risk Factors for Febrile Seizures
+- Family history (15-20%)
+- High fever (rapid rise more important than absolute temperature)
+- Age <18 months (higher risk)
+- Developmental delay
+- Certain viral infections (HHV-6, influenza)
+
+## Epilepsy
+
+### Definition
+- 2 or more unprovoked seizures >24 hours apart, OR
+- 1 seizure with high recurrence risk (>60%), OR
+- Diagnosis of an epilepsy syndrome
+
+### Classification (ILAE 2017)
+**By onset type:**
+- **Focal**: One hemisphere (simple/complex/secondary generalized)
+- **Generalized**: Both hemispheres (absence, tonic-clonic, myoclonic, atonic)
+- **Unknown onset**: Insufficient information
+
+### Common Pediatric Epilepsy Syndromes
+| Syndrome | Age | Seizure Type | Prognosis |
+|----------|-----|-------------|-----------|
+| Childhood absence | 4-8 yr | Absence (staring) | Good, resolves by puberty |
+| JME | 12-18 yr | Myoclonic + GTCS | Good but lifelong treatment |
+| West syndrome | 3-12 mo | Infantile spasms | Poor |
+| Lennox-Gastaut | 2-6 yr | Multiple types | Poor |
+| Benign rolandic | 3-13 yr | Focal motor (face) | Excellent, resolves |
+
+> **Clinical Pearl**: In India, 10 million people have epilepsy, making it a major neurological condition. Stigma remains a barrier to treatment.`,
+        mnemonics: [
+          { text: "Simple febrile: <15 min, generalized, single, rapid recovery", explanation: "Four features of simple febrile seizure" },
+          { text: "West = Worst prognosis; Benign rolandic = Best prognosis", explanation: "Two ends of pediatric epilepsy prognosis spectrum" }
+        ],
+        keyPoints: [
+          "Febrile seizures: 6 months to 5 years, fever >38C, no CNS infection",
+          "Simple vs complex: duration, type, frequency, epilepsy risk",
+          "Simple febrile: <1% epilepsy risk; complex: 3-10%",
+          "Epilepsy: 2+ unprovoked seizures >24h apart",
+          "ILAE 2017: focal, generalized, or unknown onset",
+          "West syndrome: infantile spasms, poor prognosis"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 20: Seizures", edition: "10th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 611: Seizures in Children", edition: "21st" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "febrile-seizures-epilepsy-layer-2-mechanism",
+        title: "Febrile Seizures & Epilepsy - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pathophysiology of febrile seizures (temperature-dependent threshold, immature GABA), epileptogenesis, seizure classification, and pharmacology of antiepileptic drugs.",
+        contentMd: `# Febrile Seizures & Epilepsy - Mechanism
+
+## Febrile Seizure Pathophysiology
+- Fever lowers seizure threshold (rapid rise > absolute temperature)
+- Immature brain: GABAergic inhibitory system underdeveloped in children <5yr
+- Genetic factors: mutations in SCN1A, GABRG2 sodium/GABA channel genes
+- Cytokine role: IL-1beta, TNF-alpha increase neuronal excitability
+- HHV-6 and rotavirus have direct neurotropic effects
+
+## Epileptogenesis
+1. **Initiating event**: Brain injury (trauma, infection, hypoxia)
+2. **Latent period**: Molecular/cellular changes (days to years)
+3. **Chronic epilepsy**: Recurrent spontaneous seizures
+
+### Molecular Mechanisms
+- Increased glutamate (excitatory) signaling
+- Decreased GABA (inhibitory) signaling
+- Ion channel dysfunction (Na+, Ca2+, K+)
+- Synaptic reorganization (mossy fiber sprouting in hippocampus)
+- Neuronal loss and gliosis
+
+## Antiepileptic Drug Mechanisms
+| Drug | Mechanism | Indication |
+|------|-----------|------------|
+| Sodium valproate | Na+ channel block + GABA increase | Generalized (1st line), absence |
+| Carbamazepine | Na+ channel block | Focal seizures (1st line) |
+| Phenytoin | Na+ channel block | Focal, GTCS, status epilepticus |
+| Ethosuximide | T-type Ca2+ channel block | Absence seizures (1st choice) |
+| Levetiracetam | SV2A protein modulation | Broad spectrum (focal + generalized) |
+| Phenobarbital | GABA-A receptor potentiation | Neonatal seizures |
+| Lamotrigine | Na+ channel block | Broad spectrum |
+| Topiramate | Na+ block + GABA increase | Broad spectrum |
+
+## Status Epilepticus
+- Seizure lasting >5 minutes or 2+ seizures without recovery
+- **Medical emergency**: Mortality 20% if untreated
+
+### Treatment Protocol (Indian Guidelines)
+1. **0-5 min**: Stabilize (ABC), IV access, check glucose
+2. **5-20 min**: Benzodiazepine (lorazepam 0.1 mg/kg IV or diazepam 0.3 mg/kg IV)
+3. **20-40 min**: Phenytoin 20 mg/kg IV (or fosphenytoin) or levetiracetam 20-40 mg/kg
+4. **40-60 min**: Repeat phenytoin or valproate 20-30 mg/kg IV
+5. **>60 min (refractory)**: Midazolam infusion or thiopental (ICU)
+
+## EEG Patterns
+| Syndrome | EEG Pattern |
+|----------|-------------|
+| Childhood absence | 3 Hz spike-and-wave |
+| West syndrome | Hypsarrhythmia |
+| JME | 4-6 Hz polyspike-and-wave |
+| Benign rolandic | Centrotemporal spikes |
+| Lennox-Gastaut | Slow spike-and-wave (<2.5 Hz) |`,
+        mnemonics: [
+          { text: "Ethosuximide for Absence (both start with vowels)", explanation: "Ethosuximide blocks T-type Ca2+ channels; first-choice for absence epilepsy" },
+          { text: "VPA = Very Powerful Antiepileptic (valproate works for most types)", explanation: "Sodium valproate has broadest spectrum among traditional AEDs" },
+          { text: "Status = Stabilize + Benzo + Phenytoin", explanation: "Three-step initial management of status epilepticus" }
+        ],
+        keyPoints: [
+          "Febrile seizure: immature GABA + rapid fever rise + genetic susceptibility",
+          "Epileptogenesis: excitation-inhibition imbalance (glutamate excess, GABA deficit)",
+          "Ethosuximide is first-choice for absence; valproate is broadest spectrum",
+          "Carbamazepine is first-line for focal; can worsen absence and myoclonic",
+          "Status epilepticus: benzo first, then phenytoin/levetiracetam",
+          "West syndrome EEG: hypsarrhythmia; absence: 3Hz spike-and-wave"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 20: Epilepsy", edition: "10th" },
+          { book: "KD Tripathi Essentials of Pharmacology", chapter: "Chapter 30: Antiepileptics", edition: "8th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "febrile-seizures-epilepsy-layer-3-clinical",
+        title: "Febrile Seizures & Epilepsy - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Management of febrile seizures (parental counseling, when to investigate), epilepsy workup, AED selection, and when to refer. Status epilepticus emergency management.",
+        contentMd: `# Febrile Seizures & Epilepsy - Clinical
+
+## Febrile Seizure Management
+
+### Simple Febrile Seizure
+- **Acute**: Usually self-limiting; place in recovery position
+- **Investigations**: None needed for typical first simple febrile seizure in >12 month child
+- **LP**: Consider if <12 months, incomplete immunization, or signs of meningitis
+- **EEG**: NOT routinely indicated (will be abnormally slow post-seizure; misleading)
+- **Imaging**: NOT needed for simple febrile seizures
+- **Prophylaxis**: NOT routinely recommended
+
+### Complex Febrile Seizure
+- **Investigations**: Blood glucose, electrolytes, CBC
+- **LP**: Lower threshold (especially <18 months)
+- **EEG**: Consider if recurrent complex seizures
+- **Imaging**: MRI brain if focal features
+- **Prophylaxis**: Consider intermittent diazepam during febrile illness
+
+### Parental Counseling (Most Important)
+- Febrile seizures are NOT epilepsy
+- Excellent prognosis (simple: <1% epilepsy risk)
+- Fever control does NOT prevent febrile seizures
+- First aid: recovery position, do not put anything in mouth
+- Recurrence rate: 30% (higher if <18 months, family history)
+
+## Epilepsy Workup
+1. **Detailed history**: Seizure description, semiology, frequency, triggers
+2. **EEG**: First-line investigation (interictal may be normal)
+3. **MRI brain**: Structural cause (tumor, malformation, mesial temporal sclerosis)
+4. **Blood tests**: Glucose, calcium, magnesium, renal/liver function
+5. **Genetic testing**: If epilepsy syndrome suspected
+
+## AED Selection by Seizure Type
+| Seizure Type | First Line | Alternative |
+|-------------|-----------|-------------|
+| Focal | Carbamazepine, oxcarbazepine | Levetiracetam, lamotrigine |
+| GTCS | Valproate | Levetiracetam, lamotrigine |
+| Absence | Ethosuximide, valproate | Lamotrigine |
+| Myoclonic | Valproate | Levetiracetam, clonazepam |
+| Infantile spasms | ACTH, vigabatrin | Prednisolone |
+
+## When to Stop AED
+- Seizure-free for 2 years (children) or 3-5 years (adults)
+- Normal EEG
+- Gradual taper over 3-6 months
+- Exception: JME (lifelong treatment)
+
+## Status Epilepticus: Emergency Protocol
+- ABC + IV access + glucose check
+- Lorazepam 0.1 mg/kg IV (or rectal diazepam 0.5 mg/kg if no IV)
+- If seizure continues: phenytoin 20 mg/kg IV over 20 min
+- If refractory: midazolam infusion or thiopental (ICU)
+
+> **Clinical Pearl**: Carbamazepine can worsen absence and myoclonic seizures. Never use carbamazepine in generalized epilepsy syndromes.`,
+        mnemonics: [
+          { text: "Simple febrile = Simple management (reassure parents)", explanation: "No EEG, no imaging, no prophylaxis needed for typical simple febrile seizure" },
+          { text: "CBZ worsens Absence/Myoclonic (CAM rule)", explanation: "Carbamazepine worsens absence and myoclonic seizures" }
+        ],
+        keyPoints: [
+          "Simple febrile seizure: no routine EEG, imaging, or prophylaxis",
+          "LP if <12 months, incomplete immunization, or meningitis signs",
+          "Parental counseling: febrile seizures are NOT epilepsy",
+          "Carbamazepine first-line for focal; valproate for generalized",
+          "Ethosuximide first-choice for absence seizures",
+          "Status epilepticus: lorazepam first, then phenytoin"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 20: Management", edition: "10th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 611", edition: "21st" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "febrile-seizures-epilepsy-layer-4-exam-prep",
+        title: "Febrile Seizures & Epilepsy - Exam Preparation",
+        estimatedMinutes: 15,
+        summary: "High-yield comparison tables for febrile seizure types, epilepsy syndromes, EEG patterns, AED selection, and status epilepticus protocol.",
+        contentMd: `# Febrile Seizures & Epilepsy - Exam High Yield
+
+## Simple vs Complex Febrile Seizure
+| Feature | Simple | Complex |
+|---------|--------|---------|
+| Duration | <15 min | >15 min |
+| Type | Generalized | Focal/lateralized |
+| Recurrence in 24h | No | Yes (multiple) |
+| Epilepsy risk | <1% | 3-10% |
+| EEG needed | No | Consider |
+| Prophylaxis | No | Consider |
+
+## Epilepsy Syndrome EEG Patterns
+| Syndrome | EEG | Age |
+|----------|-----|-----|
+| Childhood absence | 3 Hz spike-wave | 4-8 yr |
+| JME | 4-6 Hz polyspike-wave | 12-18 yr |
+| West | Hypsarrhythmia | 3-12 mo |
+| Lennox-Gastaut | Slow spike-wave (<2.5 Hz) | 2-6 yr |
+| Benign rolandic | Centrotemporal spikes | 3-13 yr |
+
+## AED Quick Reference
+| Drug | Mechanism | Best For | Avoid In |
+|------|-----------|----------|----------|
+| Valproate | Na block + GABA | Generalized | Pregnancy (teratogenic) |
+| Carbamazepine | Na block | Focal | Absence, myoclonic |
+| Ethosuximide | T-Ca block | Absence | Focal, GTCS |
+| Phenytoin | Na block | Status, focal | Absence |
+| Levetiracetam | SV2A | Broad spectrum | - |
+| Vigabatrin | GABA transaminase inhibitor | Infantile spasms (tuberous sclerosis) | Retinal toxicity |
+
+## Status Epilepticus Protocol
+| Time | Drug | Dose |
+|------|------|------|
+| 0-5 min | Lorazepam | 0.1 mg/kg IV |
+| 5-20 min | Diazepam (alt) | 0.3 mg/kg IV |
+| 20-40 min | Phenytoin | 20 mg/kg IV |
+| 40-60 min | Valproate or levetiracetam | 20-40 mg/kg |
+| >60 min | Midazolam infusion | ICU |
+
+## One-Liners
+- Febrile seizures: most common seizure disorder in children
+- EEG NOT needed for simple febrile seizure
+- Carbamazepine worsens absence and myoclonic
+- ACTH = first-line for infantile spasms (West syndrome)
+- JME: lifelong treatment (high relapse if AED stopped)
+- Valproate: teratogenic (avoid in women of childbearing age)`,
+        mnemonics: [
+          { text: "3 Hz = Absence; Hypsarrhythmia = West; Centrotemporal = Rolandic", explanation: "Three most commonly tested EEG patterns in pediatrics" },
+          { text: "West needs ACTH; Absence needs Ethosuximide; JME needs Valproate for life", explanation: "Three important treatment associations" }
+        ],
+        keyPoints: [
+          "Simple febrile: <15 min, generalized, single, <1% epilepsy risk",
+          "Absence EEG: 3 Hz spike-wave; West: hypsarrhythmia",
+          "Carbamazepine worsens absence/myoclonic (never use in generalized)",
+          "ACTH for infantile spasms; ethosuximide for absence",
+          "Status: lorazepam -> phenytoin -> midazolam infusion",
+          "Valproate teratogenic: avoid in pregnancy"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 20", edition: "10th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "febrile-seizures-epilepsy-layer-5-active-recall",
+        title: "Febrile Seizures & Epilepsy - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Flashcard Q&A for febrile seizures, epilepsy syndromes, EEG patterns, AED selection, and status epilepticus management.",
+        contentMd: `# Febrile Seizures & Epilepsy - Active Recall
+
+**Q1:** Define febrile seizure.
+> Seizure with fever (>38C) in child 6mo-5yr, no CNS infection, no defined cause
+
+**Q2:** Simple vs complex febrile seizure differences?
+> Simple: <15min, generalized, single in 24h, <1% epilepsy risk. Complex: >15min, focal, multiple, 3-10% epilepsy risk
+
+**Q3:** Is EEG needed after simple febrile seizure?
+> No. EEG is NOT routinely indicated (post-seizure slow waves are misleading)
+
+**Q4:** When is LP needed in febrile seizure?
+> Age <12 months, incomplete immunization, or clinical signs of meningitis
+
+**Q5:** First-line drug for absence epilepsy?
+> Ethosuximide (blocks T-type calcium channels)
+
+**Q6:** Which AED is broadest spectrum?
+> Sodium valproate (works for most generalized and focal seizures)
+
+**Q7:** Why avoid carbamazepine in absence epilepsy?
+> Carbamazepine worsens absence and myoclonic seizures
+
+**Q8:** EEG pattern in childhood absence epilepsy?
+> 3 Hz generalized spike-and-wave discharges
+
+**Q9:** EEG pattern in West syndrome?
+> Hypsarrhythmia (chaotic, high-amplitude, multifocal spikes)
+
+**Q10:** Treatment of infantile spasms (West syndrome)?
+> ACTH or vigabatrin (especially if tuberous sclerosis)
+
+**Q11:** First drug in status epilepticus?
+> Lorazepam 0.1 mg/kg IV (or diazepam 0.3 mg/kg IV if no lorazepam)
+
+**Q12:** When can AEDs be stopped in children?
+> After 2 years seizure-free with normal EEG. Taper over 3-6 months. Exception: JME needs lifelong treatment`,
+        mnemonics: [],
+        keyPoints: [
+          "12 flashcards covering febrile seizures, epilepsy syndromes, and treatment",
+          "Tests classification, EEG patterns, and AED selection",
+          "Includes status epilepticus protocol",
+          "Reinforces clinical decision-making for febrile seizure workup"
+        ],
+        textbookRefs: [
+          { book: "OP Ghai Essential Pediatrics", chapter: "Chapter 20", edition: "10th" },
+          { book: "Nelson Textbook of Pediatrics", chapter: "Chapter 611", edition: "21st" }
+        ]
+      }
+    ]
+  }
 ];

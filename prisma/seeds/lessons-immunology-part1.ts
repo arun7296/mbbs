@@ -1,22 +1,456 @@
-export const immunologyPart1Lessons = [
-  // MI-MOD-02-TOP-01: Innate Immunity
+import type { TopicLessons } from "./content-loader";
+
+/**
+ * 5-layer lessons for Immunology / Microbiology module.
+ * Covers Innate Immunity (MI-MOD-02-TOP-01).
+ * Primary ref: Ananthanarayan & Paniker 10th ed, Jawetz 28th ed.
+ */
+export const immunologyPart1Lessons: TopicLessons[] = [
+  // ─── Topic: Innate Immunity (MI-MOD-02-TOP-01) ─────────────────
   {
     topicCode: "MI-MOD-02-TOP-01",
     layers: [
       {
         layer: 1,
-        slug: "innate-immunity-foundation",
+        slug: "innate-immunity-layer-1-foundation",
         title: "Innate Immunity - Foundation",
-        estimatedMinutes: 25,
-        summary: "Components of innate immunity, physical/chemical barriers, cellular defenses, complement system, cytokines.",
-        contentMd: "# Innate Immunity - Foundation\n\n## Definition & Characteristics\n- **Innate Immunity**: First-line defense present at birth, non-specific, immediate response\n- **Key feature**: Recognition of pathogen-associated molecular patterns (PAMPs) via pattern recognition receptors (PRRs)\n- **Does not require**: Previous exposure, antibodies, T cells\n- **Duration**: Rapid response (hours to days)\n\n## Physical & Chemical Barriers\n\n### Skin\n- Mechanical barrier: Intact epidermis prevents pathogen entry\n- pH: Acidic environment (pH 4.5-5.5) inhibits bacteria\n- Fatty acids: Anti-inflammatory and antimicrobial\n- Normal flora: Colonization resistance\n- Sebum production: Antimicrobial lipids\n\n### Respiratory Tract\n- **Mucus**: Traps organisms, contains lysozyme (enzyme breaking down peptidoglycan)\n- **Ciliary escalator**: Epithelial cilia beat upward, removing trapped organisms\n- **Cough/sneeze**: Mechanical expulsion of pathogens\n- **IgA**: Present in respiratory secretions, opsonizes pathogens\n\n### Gastrointestinal Tract\n- **Gastric acid**: pH 1-3, kills most bacteria\n- **Bile**: Antimicrobial lipids, detergent action disrupts membranes\n- **Pancreatic enzymes**: Proteases digest bacterial proteins\n- **Intestinal peristalsis**: Mechanical removal\n- **Mucus**: Physical barrier with lysozyme, IgA\n\n### Genitourinary Tract\n- **Urine**: Low pH, flow washes organisms out, contains lysozyme\n- **Vaginal secretions**: Lactobacillus produces lactic acid (pH 3.5-4.5)\n\n## Cellular Components of Innate Immunity\n\n### Neutrophils (PMNs)\n- Most abundant WBC (40-75% of circulating WBC)\n- **Functions**: Phagocytosis, killing, antigen presentation\n- **Lifespan**: 5-7 days in circulation, hours in tissues\n- **Granules**: Primary (lysozyme, lactoferrin), secondary (gelatinase)\n- **NADPH oxidase**: Produces superoxide radical, respiratory burst\n\n### Macrophages\n- Derived from monocytes (tissue macrophages)\n- **Functions**: Phagocytosis, antigen presentation (MHC II), cytokine production\n- **Location**: Tissue-specific (Kupffer cells in liver, alveolar macrophages in lungs)\n- **Activation**: By IFN-gamma, TNF-alpha\n- **Toll-like receptors**: Pattern recognition, bacterial recognition\n\n### Dendritic Cells\n- **Function**: Antigen presentation bridge between innate and adaptive immunity\n- **Pattern recognition receptors**: Recognize bacterial antigens\n- **Migration**: To lymph nodes for T cell activation\n\n### Natural Killer Cells (NK)\n- **Function**: Kill virus-infected cells and some tumor cells\n- **Mechanism**: Recognize stress ligands on infected cells\n- **Perforin/granzyme**: Induce apoptosis\n\n## Complement System (Classical Cascade Overview)\n\n### Three Activation Pathways\n1. **Classical**: Antibody-dependent (C1q binds IgG/IgM + antigen)\n2. **Alternative**: Antibody-independent (directly activated by LPS)\n3. **Lectin**: MBL (mannose-binding lectin) recognition\n\n### Functions\n- **Opsonization**: C3b coats organism, enhances phagocytosis\n- **Chemotaxis**: C5a recruits neutrophils\n- **Lysis**: MAC (C5b-9) forms pores, kills organisms\n- **Inflammation**: C3a, C5a increase vascular permeability\n\n## Inflammatory Mediators & Cytokines\n\n### TNF-alpha (Tumor Necrosis Factor-alpha)\n- **Source**: Macrophages, neutrophils\n- **Effects**: Fever, vascular permeability, septic shock\n- **India context**: Key mediator in severe malaria, dengue\n\n### IL-1 (Interleukin-1)\n- **Source**: Macrophages, endothelial cells\n- **Effects**: Fever, leukocyte recruitment, vascular permeability\n\n### IL-6\n- **Source**: Macrophages, fibroblasts\n- **Effects**: Acute phase response, fever, B cell differentiation\n\n### Chemokines (IL-8, MCP-1)\n- **Function**: Recruitment of leukocytes to inflammation site\n\n### Type I Interferons (IFN-alpha, IFN-beta)\n- **Source**: Virus-infected cells\n- **Effects**: Antiviral state, MHC upregulation,\n        mnemonics: [\n          {\n            text: \"INNATE = Immediate, Non-specific, Always present (INA)\",\n            explanation: \"Three characteristics distinguishing innate from adaptive immunity.\"\n          },\n          {\n            text: \"Barriers: SKIN acids, LUNGS cilia, STOMACH acid, URINE flow\",\n            explanation: \"First-line defenses at body surfaces preventing pathogen entry.\"\n          }\n        ],\n        keyPoints: [\n          \"Innate immunity provides first-line defense within hours\",\n          \"Physical/chemical barriers prevent pathogen entry (most important)\",\n          \"Complement system provides rapid opsonization and lysis\",\n          \"Neutrophils are primary responders to bacterial infection\",\n          \"Macrophages bridge innate and adaptive immunity via antigen presentation\"\n        ],\n        textbookRefs: [\n          { book: \"Jawetz, Melnick & Adelberg\", chapter: \"Chapter 7: Innate Immunity\", edition: \"28th\" },\n          { book: \"Ananthanarayan & Paniker\", chapter: \"Chapter 5: Immunity\", edition: \"10th\" }\n        ]\n      },\n      {\n        layer: 2,\n        slug: \"innate-immunity-mechanism\",\n        title: \"Innate Immunity - Mechanism\",\n        estimatedMinutes: 25,\n        summary: \"Pattern recognition, complement cascade details, phagocytosis mechanism, respiratory burst, inflammatory cascade.\",\n        contentMd: "# Innate Immunity - Mechanism\\n\\n## Pattern Recognition Receptors (PRRs)\\n\\n### Toll-Like Receptors (TLRs)\\n- **TLR4**: LPS (gram-negative) recognition\\n- **TLR2**: Peptidoglycan (gram-positive), lipoteichoic acid\\n- **TLR5**: Flagellin (bacterial flagella)\\n- **TLR3, 7, 8, 9**: Viral nucleic acids\\n- **Signal transduction**: MyD88 → NF-κB pathway → cytokine production\\n\\n### Mannose Receptors\\n- Recognize pathogen carbohydrates with terminal mannose\\n- Found on macrophages, dendritic cells\\n- Example: Cryptococcus polysaccharide recognition\\n\\n### Scavenger Receptors\\n- Non-opsonic phagocytosis\\n- Recognize oxidized LDL, debris\\n\\n## Complement Cascade - Detailed Mechanism\\n\\n### Alternative Pathway (Initiated by LPS, Fungi)\\n1. **Activation**: Factor B binds C3b (spontaneous low-level hydrolysis or pathogen-binding)\\n2. **Formation**: C3 convertase (C3b + Bb) forms\\n3. **Amplification**: Creates more C3b → more convertase (cascade amplification)\\n4. **C5 convertase**: C3b + Bb + C3b = C5 convertase\\n5. **Terminal complex**: C5b + C6, C7, C8, C9 = MAC (membrane attack complex)\\n\\n### Classical Pathway (Antibody-Dependent)\\n- **C1q binding**: To IgG/IgM-antigen complexes (even single IgM)\\n- **C1s activation**: Cascade begins\\n- **Generates**: C3 convertase, C5 convertase (same as alternative)\\n\\n### Lectin Pathway\\n- **MBL**: Mannose-binding lectin recognizes pathogen carbohydrates\\n- **MASP**: MBL-associated serine protease activates C3, C4\\n- **Merges** with classical pathway at C3\\n\\n### Regulatory Proteins\\n- **C1 inhibitor**: Prevents classical pathway overactivation\\n- **Factor H**: Prevents alternative pathway overactivation\\n- **CD55 (DAF)**: Membrane-bound, prevents complement activation on host cells\\n\\n## Phagocytosis Mechanism (Four Steps)\\n\\n### 1. Chemotaxis\\n- Neutrophil migrates toward chemoattractant (C5a, IL-8)\\n- Integrin + selectin interactions with endothelium\\n- Movement along concentration gradient\\n\\n### 2. Attachment/Recognition\\n- **Opsonization**: C3b, IgG coating organisms\\n- **Receptors**: CR1 (C3b receptor), Fc receptors (IgG)\\n- Direct contact with organism surface\\n\\n### 3. Engulfment (Phagocytosis)\\n- Pseudopodia surround organism\\n- Membrane fusion around organism\\n- Phagosome formation (internalization)\\n\\n### 4. Killing/Degradation\\n- **pH reduction**: Phagosome acidification (H⁺ pumps)\\n- **Lysosome fusion**: Forming phagolysosome\\n- **Antimicrobial peptides**: Lactoferrin, lysozyme release\\n- **Respiratory burst**: NADPH oxidase generates superoxide (O₂⁻)\\n- **Peroxidase**: Myeloperoxidase + H₂O₂ → hypochlorous acid (HOCl)\\n\\n## Respiratory Burst (Oxidative Killing)\\n\\n### NADPH Oxidase Complex\\n- **Catalyzes**: NADPH + 2O₂ → NADP⁺ + O₂⁻ (superoxide)\\n- **Genetic defect**: Chronic granulomatous disease (CGD) - defective NADPH oxidase\\n- **Problem**: Cannot kill catalase-positive organisms (Staph, Pseudomonas, Aspergillus)\\n\\n### Superoxide Cascade\\n- O₂⁻ → H₂O₂ (via superoxide dismutase)\\n- H₂O₂ → HOCl (via myeloperoxidase)\\n- HOCl: Most potent antimicrobial molecule\\n- Also: Singlet oxygen, hydroxyl radical\\n\\n## Inflammatory Cascade\\n\\n### Step 1: Endothelial Activation\\n- TNF-alpha, IL-1 activate endothelial cells\\n- **Result**: Upregulation of selectins, integrins\\n\\n### Step 2: Margination & Rolling\\n- Neutrophils slow in venules (selectin binding)\\n- Rolling motion along endothelium\\n\\n### Step 3: Firm Adhesion\\n- Integrin (leukocyte) + ICAM (endothelial)\\n- Tight adhesion to endothelium\\n\\n### Step 4: Transmigration\\n- Neutrophils squeeze between endothelial cells\\n- **Chemotaxis** toward C5a, TNF-alpha gradient\\n- Localized to infection site\\n\\n## Coagulation-Inflammation Link\\n\\n### Tissue Factor (TF)\\n- Binds Factor VIIa → activates extrinsic pathway\\n- Macrophages produce TF in response to LPS/TNF\\n- Generates thrombin\\n\\n### Thrombin Effects\\n- Activates PAR-1 (protease-activated receptor)\\n- Increases vascular permeability\\n- Recruits leukocytes\\n- **Result**: Fibrin deposition (walling off infection),\\n        mnemonics: [\\n          {\\n            text: \\\"PAMP + PRR = Innate response (TLR4-LPS, TLR2-PG, TLR5-flagellin)\\\",\\n            explanation: \\\"Pattern recognition: specific receptors recognize specific pathogen molecules.\\\"\\n          },\\n          {\\n            text: \\\"Complement: ALT(ernative) or CLASS(ical) → Both make C3 convertase → MAC\\\",\\n            explanation: \\\"Three pathways converge at C3 convertase, all produce MAC.\\\"\\n          }\\n        ],\\n        keyPoints: [\\n          \\\"Toll-like receptors (TLRs) are main pattern recognition receptors\\\",\\n          \\\"C3b is central amplification point - generated by all three complement pathways\\\",\\n          \\\"MAC (C5b-9) forms pores in organism membrane - bactericidal\\\",\\n          \\\"Respiratory burst (superoxide → H₂O₂ → HOCl) is major killing mechanism\\\",\\n          \\\"Complement can be blocked by pathogens (e.g., Pseudomonas proteases degrade C5a)\\\"\\n        ],\\n        textbookRefs: [\\n          { book: \\\"Jawetz, Melnick & Adelberg\\\", chapter: \\\"Chapter 7: Complement and Phagocytosis\\\", edition: \\\"28th\\\" },\\n          { book: \\\"Ananthanarayan & Paniker\\\", chapter: \\\"Chapter 5: Mechanisms\\\", edition: \\\"10th\\\" }\\n        ]\\n      },\\n      {\\n        layer: 3,\\n        slug: \\\"innate-immunity-clinical\\\",\\n        title: \\\"Innate Immunity - Clinical Application\\\",\\n        estimatedMinutes: 30,\\n        summary: \\\"Complement deficiencies, phagocytic defects, clinical assessment, sepsis pathophysiology, India-specific infections.\\\",\\n        contentMd: "# Innate Immunity - Clinical Application\\\\n\\\\n## Complement Deficiencies\\\\n\\\\n### C3 Deficiency\\\\n- **Consequence**: Impaired opsonization and chemotaxis\\\\n- **Risk**: Recurrent infections (pyogenic bacteria, gram-negative)\\\\n- **Manifestation**: Meningitis, bacteremia, glomerulonephritis\\\\n\\\\n### C5-9 Deficiencies (Terminal Pathway)\\\\n- **Consequence**: Inability to form MAC\\\\n- **Risk**: Neisseria meningitidis, N. gonorrhoeae infections\\\\n- **Clinical feature**: Meningococcal meningitis in late adolescence/adulthood (unusual age)\\\\n- **Prevention**: Meningococcal vaccine mandatory\\\\n\\\\n### C1q Deficiency (Classical Pathway)\\\\n- **Consequence**: No classical complement activation (IgG-dependent immunity impaired)\\\\n- **Risk**: Recurrent infections, autoimmune disease (SLE-like)\\\\n\\\\n### Factor H Deficiency\\\\n- **Consequence**: Uncontrolled alternative pathway activation\\\\n- **Risk**: Hemolytic uremic syndrome (HUS)\\\\n- **Mechanism**: Complement-mediated endothelial damage\\\\n\\\\n## Phagocytic Defects\\\\n\\\\n### Chronic Granulomatous Disease (CGD)\\\\n- **Defect**: NADPH oxidase gene mutation (usually X-linked)\\\\n- **Consequence**: Cannot produce superoxide, cannot kill catalase-positive organisms\\\\n- **Risk organisms**: Staphylococcus, Pseudomonas, Aspergillus, Serratia, Burkholderia\\\\n- **Clinical**: Recurrent catalase-positive bacterial/fungal infections, granulomas\\\\n- **Diagnosis**: Nitroblue tetrazolium (NBT) test - fails to color (no superoxide production)\\\\n- **Treatment**: IFN-gamma (partially restores phagocytic killing), antibiotics (prophylaxis)\\\\n\\\\n### Myeloperoxidase Deficiency\\\\n- **Consequence**: Cannot convert H₂O₂ to HOCl\\\\n- **Risk**: Minimal (other systems compensate) - mostly asymptomatic\\\\n- **Organism risk**: Candida (normally controlled by MPO)\\\\n\\\\n### Leukocyte Adhesion Deficiency\\\\n- **Defect**: CD18 integrin gene mutation\\\\n- **Consequence**: Cannot adhere to endothelium or migrate\\\\n- **Clinical**: Severe recurrent infections despite high neutrophil count\\\\n- **Finding**: Marked leukocytosis without pus formation\\\\n\\\\n### Chediak-Higashi Syndrome\\\\n- **Defect**: Lysosomal trafficking gene mutation\\\\n- **Consequence**: Lysosome dysfunction, poor chemotaxis, impaired killing\\\\n- **Clinical**: Recurrent infections, oculocutaneous albinism, bleeding\\\\n- **Finding**: Giant lysosomes in neutrophils on blood smear\\\\n\\\\n## Sepsis Pathophysiology (TNF-alpha Excess)\\\\n\\\\n### Inflammatory Cascade Amplification\\\\n1. **Initial infection**: Bacterial LPS or toxins\\\\n2. **Macrophage activation**: TLR4 recognition → TNF-alpha, IL-1, IL-6 release\\\\n3. **Systemic inflammation**: Cytokine amplification loop\\\\n4. **Endothelial dysfunction**: Increased vascular permeability\\\\n5. **Coagulation activation**: Tissue factor → thrombin → DIC\\\\n6. **Multi-organ failure**: Shock, ARDS, organ dysfunction\\\\n\\\\n### Clinical Manifestations\\\\n- Fever (IL-1, TNF-alpha)\\\\n- Hypotension (vasodilation from TNF, IL-1)\\\\n- Tachycardia (compensatory)\\\\n- Respiratory distress (ARDS from endothelial leak)\\\\n- Disseminated intravascular coagulation (DIC)\\\\n- End-organ damage (kidneys, liver, brain)\\\\n\\\\n### Management Principles\\\\n- Early antibiotics (source control)\\\\n- Fluid resuscitation (septic shock)\\\\n- Vasopressors (norepinephrine for refractory hypotension)\\\\n- Activated protein C (in severe sepsis) - anticoagulant and anti-inflammatory\\\\n\\\\n## Clinical Assessment of Innate Immunity\\\\n\\\\n### History\\\\n- Recurrent infections (pyogenic bacteria, gram-negatives, fungi)\\\\n- Age of onset (neonatal in severe defects)\\\\n- Family history (genetic immunodeficiencies)\\\\n- Infection sites (meningitis suggests complement defect)\\\\n\\\\n### Physical Examination\\\\n- Lymph node size (usually normal in innate defects)\\\\n- Hepatosplenomegaly (granulomas, hepatitis)\\\\n- Skin findings (eczema in hyper-IgE syndrome)\\\\n\\\\n### Laboratory Tests\\\\n- **WBC count**: Leukopenia (severe defects), leukocytosis (infection/recruitment)\\\\n- **Differential**: Neutrophil predominance in acute infection\\\\n- **NBT test**: Screen for NADPH oxidase defects (CGD)\\\\n- **Complement levels**: CH50 total, C3, C4 levels\\\\n- **Complement function**: Alternative pathway (AP50), classical pathway (CP50)\\\\n\\\\n## India-Specific Innate Immunity Considerations\\\\n\\\\n### TB (Mycobacterium tuberculosis)\\\\n- **Innate recognition**: TLR2, TLR4 activation by mycobacterial antigens\\\\n- **Initial control**: Macrophages form granulomas (innate response)\\\\n- **Problem**: M. tuberculosis blocks phagolysosome fusion (evades killing)\\\\n- **India context**: TB burden high, innate immunity critical for initial control\\\\n\\\\n### Dengue\\\\n- **Innate response**: Type I interferons (IFN-alpha/beta) crucial\\\\n- **Secondary dengue**: Previous immune response (antibodies) can worsen disease via ADE\\\\n- **India**: Seasonal epidemics, 4 serotypes, dengue hemorrhagic fever (innate dysregulation)\\\\n\\\\n### Malaria (Plasmodium falciparum)\\\\n- **Severe malaria**: TNF-alpha and IL-6 levels correlate with severity\\\\n- **Cytokine storm**: Excessive innate inflammatory response\\\\n- **India endemic**: Malaria still kills, especially P. falciparum\\\\n\\\\n### Enteric Infections (Cholera, Typhoid)\\\\n- **Initial defense**: Gastric acid and bile (physical barriers)\\\\n- **If breach**: Intestinal macrophages and lymphoid tissue\\\\n- **India endemic**: Waterborne transmission, hygiene important,\\\\n        mnemonics: [\\\\n          {\\\\n            text: \\\\\\\"CGD = Can't Generate superoxide → Can't kill Catalase-positive = CGD\\\\\\\",\\\\n            explanation: \\\\\\\"Chronic granulomatous disease memory aid (redundant but memorable).\\\\\\\"\\\\n          },\\\\n          {\\\\n            text: \\\\\\\"Meningococcal Vaccine if C5-9 deficiency (terminal complement)\\\\\\\",\\\\n            explanation: \\\\\\\"Classic board question: late complement deficiency → Neisseria risk.\\\\\\\"\\\\n          }\\\\n        ],\\\\n        keyPoints: [\\\\n          \\\\\\\"Complement deficiency → recurrent Neisseria meningitidis (vaccine needed)\\\\\\\",\\\\n          \\\\\\\"CGD cannot kill Staph, Pseudo, Aspergillus (catalase-positive organisms)\\\\\\\",\\\\n          \\\\\\\"Sepsis = TNF-alpha/IL-1 excess → shock, DIC, multi-organ failure\\\\\\\",\\\\n          \\\\\\\"Leukocyte adhesion deficiency = high WBC count but severe infections (paradox)\\\\\\\",\\\\n          \\\\\\\"Nitroblue tetrazolium (NBT) test diagnoses NADPH oxidase defects\\\\\\\"\\\\n        ],\\\\n        textbookRefs: [\\\\n          { book: \\\\\\\"Jawetz, Melnick & Adelberg\\\\\\\", chapter: \\\\\\\"Chapter 7: Clinical Immunology\\\\\\\", edition: \\\\\\\"28th\\\\\\\" },\\\\n          { book: \\\\\\\"Ananthanarayan & Paniker\\\\\\\", chapter: \\\\\\\"Chapter 5: Immunodeficiency\\\\\\\", edition: \\\\\\\"10th\\\\\\\" }\\\\n        ]\\\\n      },\\\\n      {\\\\n        layer: 4,\\\\n        slug: \\\\\\\"innate-immunity-exam\\\\\\\",\\\\n        title: \\\\\\\"Innate Immunity - Exam Prep\\\\\\\",\\\\n        estimatedMinutes: 15,\\\\n        summary: \\\\\\\"High-yield complement deficiencies, phagocytic disorders, sepsis management, diagnostic tests.\\\\\\\",\\\\n        contentMd: "# Innate Immunity - High-Yield Facts\\\\\\\\n\\\\\\\\n## Complement Cascade Deficiency Patterns\\\\\\\\n| Deficiency | Result | Organism Risk | Clinical |\\\\\\\\n|-----------|--------|---------------|----------|\\\\\\\\n| C3 | No opsonization | Pyogenic, gram-negative | Recurrent infections |\\\\\\\\n| C5 | No chemotaxis, MAC | Neisseria | Meningitis (unusual age) |\\\\\\\\n| C1q | Classical pathway blocked | Pyogenic | SLE-like + infections |\\\\\\\\n| Factor H | Uncontrolled alt. path. | Complement-mediated | HUS |\\\\\\\\n| Decay accelerating factor | No C3/C5 regulation | - | PNH, HUS |\\\\\\\\n\\\\\\\\n## Phagocytic Defects Summary\\\\\\\\n| Disorder | Defect | Organism Risk | Diagnosis |\\\\\\\\n|----------|--------|---------------|-----------|\\\\\\\\n| CGD | NADPH oxidase | Catalase+ (Staph, Pseudo, Aspergillus) | NBT test negative |\\\\\\\\n| MPO deficiency | Myeloperoxidase | Candida | Asymptomatic usually |\\\\\\\\n| LAD | CD18 integrin | Bacteria | High WBC, no pus |\\\\\\\\n| Chediak-Higashi | Lysosomal trafficking | All | Giant lysosomes |\\\\\\\\n\\\\\\\\n## Sepsis Cascade\\\\\\\\n**Infection → TLR activation → TNF/IL-1/IL-6 ↑ → Vascular leak + Coagulation → DIC + Shock → Multi-organ failure**\\\\\\\\n\\\\\\\\n## Management: Early antibiotics, Fluids, Vasopressors, Source control\\\\\\\\n\\\\\\\\n## Innate Immunity Quick Tests\\\\\\\\n- **CH50 total complement**: Screens all three pathways\\\\\\\\n- **C3, C4 levels**: Individual complement proteins\\\\\\\\n- **AP50**: Alternative pathway function\\\\\\\\n- **CP50**: Classical pathway function\\\\\\\\n- **NBT test**: NADPH oxidase (CGD screening)\\\\\\\\n- **Flow cytometry**: CD18 (LAD diagnosis)\\\\\\\\n\\\\\\\\n## India-Specific High-Yield Points\\\\\\\\n- **Meningitis**: C5-9 deficiency → Meningococcal vaccine\\\\\\\\n- **TB**: Macrophage granulomas are innate response (then Th1/Th17 adaptive)\\\\\\\\n- **Dengue**: Cytokine storm in secondary infection (TNF, IL-6)\\\\\\\\n- **Malaria**: P. falciparum severe malaria (TNF elevation)\\\\\\\\n- **Cholera**: Gastric acid barrier critical (low gastric acid = high risk)\\\\\\\\n\\\\\\\\n## Common Exam Questions\\\\\\\\n- CGD diagnosis: NBT test (fails to change color)\\\\\\\\n- Complement deficiency organisms: Neisseria = C5-9 deficiency\\\\\\\\n- Phagocyte defect + high WBC: Leukocyte adhesion deficiency\\\\\\\\n- Sepsis management: Early antibiotics + fluid resuscitation\\\\\\\\n- Cascade start: TLR recognition of PAMP,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"NBT = NADPH oxidase (CGD) test\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"Nitroblue tetrazolium test detects superoxide production (normal = color change, CGD = no color).\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"C3 most important complement component (all pathways converge)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"C5-9 deficiency specifically increases Neisseria risk\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Catalase-positive organisms: Staph, Pseudo, Aspergillus (CGD risk)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Sepsis = dysregulated innate inflammation → cytokine storm\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"TLR4-LPS recognition initiates most pyogenic infections\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Jawetz, Melnick & Adelberg\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Chapter 7: Quick Reference\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"28th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      },\\\\\\\\n      {\\\\\\\\n        layer: 5,\\\\\\\\n        slug: \\\\\\\\\\\\\\\"innate-immunity-recall\\\\\\\\\\\\\\\",\\\\\\\\n        title: \\\\\\\\\\\\\\\"Innate Immunity - Active Recall\\\\\\\\\\\\\\\",\\\\\\\\n        estimatedMinutes: 10,\\\\\\\\n        summary: \\\\\\\\\\\\\\\"Q&A flashcard pairs for active recall and spaced repetition.\\\\\\\\\\\\\\\",\\\\\\\\n        contentMd: ``# Innate Immunity - Active Recall Flashcards\\\\\\\\n\\\\\\\\n## Q1: What Are the Three Complement Pathway Activation Routes?\\\\\\\\n**A**: 1) Classical (IgG/IgM-antigen complexes bind C1q), 2) Alternative (LPS directly activates C3), 3) Lectin (MBL recognizes mannose on pathogens). All converge at C3 convertase formation.\\\\\\\\n\\\\\\\\n## Q2: Why Is C3 the Most Important Complement Component?\\\\\\\\n**A**: All three pathways converge to generate C3b. C3b is the major opsonin (tags organisms for phagocytosis) and amplification point. C3 deficiency = inability to opsonize → recurrent infections.\\\\\\\\n\\\\\\\\n## Q3: Phagocytosis Four-Step Process?\\\\\\\\n**A**: 1) Chemotaxis (toward C5a/IL-8), 2) Attachment (opsonization by C3b/IgG), 3) Engulfment (pseudopodia surround), 4) Killing (respiratory burst, lysosomal fusion, antimicrobial peptides).\\\\\\\\n\\\\\\\\n## Q4: Respiratory Burst Mechanism in Neutrophil?\\\\\\\\n**A**: NADPH oxidase catalyzes: NADPH + O₂ → superoxide (O₂⁻). Superoxide → H₂O₂ (via SOD). H₂O₂ → HOCl (via myeloperoxidase). HOCl is most potent antimicrobial molecule. Defect in NADPH oxidase = CGD.\\\\\\\\n\\\\\\\\n## Q5: Chronic Granulomatous Disease - What Organisms at Risk?\\\\\\\\n**A**: Catalase-positive organisms: Staphylococcus aureus, Pseudomonas aeruginosa, Aspergillus, Serratia, Burkholderia. Cannot kill because cannot produce superoxide. Diagnosis: NBT test (fails to color = negative).\\\\\\\\n\\\\\\\\n## Q6: C5-9 Complement Deficiency - Which Pathogen at Highest Risk?\\\\\\\\n**A**: Neisseria meningitidis (meningococcus). Also N. gonorrhoeae. Late complement pathway essential for forming MAC (lysis). Unusual presentation: meningitis in adolescent/young adult. Management: Meningococcal vaccine + prophylaxis for contacts.\\\\\\\\n\\\\\\\\n## Q7: Sepsis Pathophysiology - How Does TNF-Alpha Cause Shock?\\\\\\\\n**A**: TNF-alpha causes: 1) Vasodilation (vascular smooth muscle relaxation), 2) Increased vascular permeability (endothelial leak), 3) Coagulation activation (tissue factor), 4) Myocardial depression. Results in hypotension, DIC, multi-organ failure.\\\\\\\\n\\\\\\\\n## Q8: Leukocyte Adhesion Deficiency - Why High WBC With Severe Infections?\\\\\\\\n**A**: Neutrophils cannot adhere to endothelium or migrate to infection sites (defective CD18 integrin). Result: High circulating neutrophils but cannot reach tissues to fight infection. Severe infections despite high WBC count (paradox).\\\\\\\\n\\\\\\\\n## Q9: Gastric Acid Barrier in Cholera Prevention?\\\\\\\\n**A**: Gastric acid (pH 1-3) kills most bacteria including Vibrio cholerae. Patients with low gastric acid (achlorhydria, PPI use, post-gastrectomy) at high risk for cholera. Inoculum size inversely correlates with gastric acid.\\\\\\\\n\\\\\\\\n## Q10: Innate Immunity Assessment - What Test Screens All Complement Pathways?\\\\\\\\n**A**: CH50 (total hemolytic complement) test. Uses sensitized RBCs and patient serum - normal CH50 indicates functional innate complement. Individual C3, C4 levels assess specific components. AP50 and CP50 distinguish alternative vs classical.,\\\\\\\\n        mnemonics: [\\\\\\\\n          {\\\\\\\\n            text: \\\\\\\\\\\\\\\"C3 = Central, Crucial, Convergence point (all paths meet at C3)\\\\\\\\\\\\\\\",\\\\\\\\n            explanation: \\\\\\\\\\\\\\\"C3 is amplification hub of complement system.\\\\\\\\\\\\\\\"\\\\\\\\n          }\\\\\\\\n        ],\\\\\\\\n        keyPoints: [\\\\\\\\n          \\\\\\\\\\\\\\\"All complement pathways generate C3b (opsonization and amplification)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"MAC (C5b-9) forms pores in bacterial membranes - bactericidal\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Respiratory burst produces superoxide → H₂O₂ → HOCl (antimicrobial cascade)\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"TLRs recognize specific PAMPs on pathogens\\\\\\\\\\\\\\\",\\\\\\\\n          \\\\\\\\\\\\\\\"Innate immunity provides first-line defense before adaptive immunity activates\\\\\\\\\\\\\\\"\\\\\\\\n        ],\\\\\\\\n        textbookRefs: [\\\\\\\\n          { book: \\\\\\\\\\\\\\\"Jawetz, Melnick & Adelberg\\\\\\\\\\\\\\\", chapter: \\\\\\\\\\\\\\\"Chapter 7: Complete Review\\\\\\\\\\\\\\\", edition: \\\\\\\\\\\\\\\"28th\\\\\\\\\\\\\\\" }\\\\\\\\n        ]\\\\\\\\n      }\\\\\\\\n    ]\\\\\\\\n  }\\\\\\\\n];\\\\\\\\n\\\\\\\"\\\"\""
-}
-}
-}
-}
-}
-];
-];
-];
-];
+        estimatedMinutes: 20,
+        summary: "Innate immunity is the first-line defense present from birth. It includes physical and chemical barriers, phagocytic cells (neutrophils, macrophages), NK cells, complement system, and inflammatory mediators.",
+        contentMd: `# Innate Immunity - Foundation
+
+## Definition and Characteristics
+- **Innate immunity**: Non-specific defense mechanisms present from birth
+- **Response time**: Immediate to hours (no prior sensitization needed)
+- **Memory**: No immunological memory (same response on re-exposure)
+- **Specificity**: Broad pattern recognition (PAMPs), not antigen-specific
+- **Components**: Physical barriers, cellular defenses, humoral factors
+
+## First Line of Defense: Physical and Chemical Barriers
+
+### Skin
+| Barrier | Mechanism |
+|---------|-----------|
+| Intact epidermis | Mechanical barrier with keratinized layer |
+| Acidic pH (4.5-5.5) | Inhibits bacterial colonization |
+| Sebaceous secretions | Fatty acids with antimicrobial properties |
+| Normal flora | Competitive exclusion of pathogens |
+| Desquamation | Shedding removes attached organisms |
+
+### Mucous Membranes
+| Site | Defense |
+|------|---------|
+| Respiratory | Mucociliary escalator, lysozyme, IgA, cough reflex |
+| GI tract | Gastric acid (pH 1-3), bile salts, peristalsis, Paneth cells |
+| Urogenital | Urinary flow, vaginal lactobacilli (pH 3.5-4.5) |
+| Conjunctiva | Tears with lysozyme, mechanical blinking |
+
+## Second Line of Defense: Cellular Components
+
+### Neutrophils (PMNs)
+- Most abundant circulating WBC (40-75%)
+- First cells recruited to infection site
+- Functions: phagocytosis, oxidative killing (respiratory burst)
+- Short-lived: 5-7 days in blood, hours in tissues
+- Form pus at infection sites
+
+### Macrophages
+- Derived from blood monocytes (tissue-resident forms)
+- Named by location: Kupffer cells (liver), alveolar macrophages (lung), microglia (brain)
+- Functions: phagocytosis, antigen presentation (MHC II), cytokine secretion
+- Bridge between innate and adaptive immunity
+
+### Natural Killer (NK) Cells
+- Large granular lymphocytes (CD16+, CD56+)
+- Kill virus-infected cells and tumor cells without prior sensitization
+- Mechanism: perforin-granzyme pathway induces apoptosis
+- Activated by IL-12, IFN-alpha/beta; inhibited by MHC class I on target cells
+
+### Dendritic Cells
+- Professional antigen-presenting cells
+- Capture antigens in tissues, migrate to lymph nodes
+- Present antigens to T cells via MHC II (link innate to adaptive immunity)
+
+## Humoral Components
+
+### Complement System
+- Over 30 plasma proteins activated in cascade
+- Three activation pathways: Classical, Alternative, Lectin
+- Functions: opsonization (C3b), chemotaxis (C5a), lysis (MAC C5b-9), inflammation (C3a, C5a)
+
+### Cytokines
+| Cytokine | Source | Key Functions |
+|----------|--------|--------------|
+| TNF-alpha | Macrophages | Fever, vascular permeability, septic shock |
+| IL-1 | Macrophages | Fever, acute phase response |
+| IL-6 | Macrophages, fibroblasts | Acute phase proteins (CRP), fever |
+| IL-8 | Macrophages | Neutrophil chemotaxis |
+| IFN-alpha/beta | Virus-infected cells | Antiviral state in neighboring cells |
+| IL-12 | Macrophages, DCs | NK cell activation, Th1 differentiation |
+
+> **Clinical Pearl**: Innate immunity handles most infections without activating adaptive immunity. Only when innate defenses are overwhelmed does adaptive immunity engage (takes 4-7 days).`,
+        mnemonics: [
+          { text: "INN for Innate: Immediate, Non-specific, No memory", explanation: "Three defining characteristics that distinguish innate from adaptive immunity" },
+          { text: "Skin SAND: Sebum, Acid pH, Normal flora, Desquamation", explanation: "Four defense mechanisms of skin barrier" },
+          { text: "NK cells = Natural Killers: kill without prior exposure", explanation: "NK cells do not need antigen presentation or MHC restriction to kill targets" }
+        ],
+        keyPoints: [
+          "Innate immunity is immediate, non-specific, and lacks memory",
+          "Physical barriers (skin, mucosa) are the most important first-line defense",
+          "Neutrophils are the first responders to acute bacterial infection",
+          "Macrophages bridge innate and adaptive immunity via antigen presentation",
+          "Complement system provides opsonization (C3b), chemotaxis (C5a), and lysis (MAC)"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker Textbook of Microbiology", chapter: "Chapter 5: Immunity", edition: "10th" },
+          { book: "Jawetz, Melnick & Adelberg Medical Microbiology", chapter: "Chapter 7: Innate Immunity", edition: "28th" }
+        ]
+      },
+      {
+        layer: 2,
+        slug: "innate-immunity-layer-2-mechanism",
+        title: "Innate Immunity - Mechanism",
+        estimatedMinutes: 30,
+        summary: "Pattern recognition receptors (TLRs), complement cascade pathways, phagocytosis steps, respiratory burst mechanism, and the inflammatory cascade with endothelial activation.",
+        contentMd: `# Innate Immunity - Mechanisms
+
+## Pattern Recognition Receptors (PRRs)
+
+### Toll-Like Receptors (TLRs)
+| TLR | Location | Ligand (PAMP) | Pathogen |
+|-----|----------|--------------|----------|
+| TLR-2 | Cell surface | Peptidoglycan, lipoteichoic acid | Gram-positive bacteria |
+| TLR-3 | Endosome | dsRNA | Viruses |
+| TLR-4 | Cell surface | LPS (endotoxin) | Gram-negative bacteria |
+| TLR-5 | Cell surface | Flagellin | Motile bacteria |
+| TLR-7/8 | Endosome | ssRNA | RNA viruses |
+| TLR-9 | Endosome | CpG DNA | Bacteria, DNA viruses |
+
+### TLR Signaling
+1. PAMP binds TLR on macrophage/DC surface
+2. MyD88 adaptor protein recruited
+3. NF-kB pathway activated
+4. Transcription of pro-inflammatory cytokines (TNF-alpha, IL-1, IL-6)
+
+### Other PRRs
+- **NOD-like receptors (NLRs)**: Intracellular; detect peptidoglycan fragments
+- **RIG-I/MDA5**: Cytoplasmic; detect viral RNA
+- **Mannose receptors**: Recognize terminal mannose on pathogens
+- **Scavenger receptors**: Bind modified lipoproteins, microbial surfaces
+
+## Complement Cascade - Three Pathways
+
+### Classical Pathway (Antibody-Dependent)
+1. C1q binds IgG or IgM-antigen complex
+2. C1r and C1s activated
+3. C4 cleaved -> C4b binds surface; C2 cleaved -> C2a
+4. **C3 convertase**: C4b2a
+5. C3 cleaved -> C3b (opsonin) + C3a (anaphylatoxin)
+6. **C5 convertase**: C4b2a3b
+7. C5b initiates MAC formation (C5b-C6-C7-C8-C9)
+
+### Alternative Pathway (Antibody-Independent)
+1. Spontaneous C3 hydrolysis (tick-over mechanism)
+2. Factor B binds C3b; Factor D cleaves Factor B -> Bb
+3. **C3 convertase**: C3bBb (stabilized by properdin)
+4. Amplification loop generates more C3b
+5. **C5 convertase**: C3bBbC3b
+
+### Lectin Pathway
+1. Mannose-binding lectin (MBL) binds mannose on pathogen surface
+2. MASP-1 and MASP-2 activated
+3. Cleaves C4 and C2 (same as classical pathway from this point)
+
+### Complement Regulation
+| Regulator | Function |
+|-----------|----------|
+| C1-INH (C1 inhibitor) | Inactivates C1r, C1s (deficiency -> hereditary angioedema) |
+| Factor H | Displaces Bb from C3bBb (alternative pathway regulator) |
+| DAF (CD55) | Accelerates decay of C3/C5 convertases on host cells |
+| CD59 (protectin) | Prevents MAC assembly on host cells |
+
+> Deficiency of DAF + CD59 -> Paroxysmal Nocturnal Hemoglobinuria (PNH)
+
+## Phagocytosis: Four Steps
+
+### 1. Chemotaxis
+- C5a, IL-8 (CXCL8), bacterial products attract neutrophils
+- Selectin-mediated rolling on endothelium -> integrin-mediated adhesion -> diapedesis
+
+### 2. Opsonization and Recognition
+- C3b and IgG coat the pathogen (opsonins)
+- Fc receptors and CR1 on phagocytes bind opsonized bacteria
+
+### 3. Engulfment
+- Pseudopodia extend around organism -> phagosome formation
+- Phagosome fuses with lysosome -> phagolysosome
+
+### 4. Killing (Intracellular)
+**Oxygen-dependent (Respiratory Burst)**:
+- NADPH oxidase: O2 -> superoxide (O2-)
+- Superoxide dismutase: O2- -> H2O2
+- Myeloperoxidase: H2O2 + Cl- -> HOCl (hypochlorous acid, most potent)
+
+**Oxygen-independent**:
+- Lysozyme (breaks peptidoglycan)
+- Lactoferrin (iron chelation)
+- Defensins (membrane disruption)
+- Acidic pH of phagolysosome
+
+## Inflammatory Response Steps
+1. **Tissue injury/infection**: damaged cells release DAMPs; bacteria release PAMPs
+2. **Vascular changes**: vasodilation (histamine, PGE2) -> redness, heat
+3. **Increased permeability**: plasma protein leakage -> edema (swelling)
+4. **Neutrophil recruitment**: margination -> rolling (selectins) -> adhesion (integrins/ICAM) -> transmigration
+5. **Phagocytosis and killing**: at infection site
+6. **Resolution or chronic inflammation**: depending on outcome`,
+        mnemonics: [
+          { text: "TLR4 = LPS = Gram-negative = Sepsis trigger", explanation: "TLR4 recognizes LPS from gram-negative bacteria; key initiator of sepsis cascade" },
+          { text: "C3b = opsonin, C5a = chemotaxis, C3a/C5a = anaphylatoxins, MAC = lysis", explanation: "Four major complement functions linked to specific components" },
+          { text: "CORE for phagocytosis: Chemotaxis, Opsonization, Recogntion/engulfment, Elimination", explanation: "Four-step phagocytosis process" }
+        ],
+        keyPoints: [
+          "TLR4 recognizes LPS (gram-negative); TLR2 recognizes peptidoglycan (gram-positive)",
+          "All three complement pathways converge at C3 convertase formation",
+          "C3b is the central opsonin; C5a is the strongest chemotactic factor",
+          "Respiratory burst: NADPH oxidase generates superoxide -> H2O2 -> HOCl",
+          "DAF and CD59 protect host cells from complement; deficiency causes PNH",
+          "C1-INH deficiency causes hereditary angioedema"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker Textbook of Microbiology", chapter: "Chapter 5: Complement System", edition: "10th" },
+          { book: "Jawetz, Melnick & Adelberg Medical Microbiology", chapter: "Chapter 7-8: Complement, Phagocytosis", edition: "28th" }
+        ]
+      },
+      {
+        layer: 3,
+        slug: "innate-immunity-layer-3-clinical",
+        title: "Innate Immunity - Clinical Application",
+        estimatedMinutes: 20,
+        summary: "Clinical conditions resulting from innate immunity defects: complement deficiencies, phagocytic disorders (CGD, LAD, Chediak-Higashi), sepsis pathophysiology, and India-specific infections.",
+        contentMd: `# Innate Immunity - Clinical Correlations
+
+## Complement Deficiencies
+| Deficiency | Clinical Consequence |
+|------------|---------------------|
+| C1, C2, C4 (classical) | SLE-like syndrome, recurrent pyogenic infections |
+| C3 | Severe recurrent infections (most critical deficiency) |
+| C5-C9 (terminal) | Recurrent Neisseria meningitidis/gonorrhoeae infections |
+| C1-INH | Hereditary angioedema (recurrent non-pitting edema) |
+| Factor H | Atypical hemolytic uremic syndrome (aHUS) |
+| DAF + CD59 | Paroxysmal nocturnal hemoglobinuria (PNH) |
+
+### Hereditary Angioedema (C1-INH Deficiency)
+- Autosomal dominant; C1-INH fails to regulate C1 and kallikrein
+- Recurrent episodes of non-pitting edema (face, larynx, bowel)
+- Life-threatening if laryngeal edema occurs
+- Treatment: C1-INH concentrate, icatibant (bradykinin antagonist)
+- Lab: low C4 (screening), low C1-INH level or function
+
+## Phagocytic Defects
+
+### Chronic Granulomatous Disease (CGD)
+- **Defect**: NADPH oxidase mutation (X-linked recessive most common)
+- **Cannot produce**: Superoxide -> no respiratory burst
+- **Susceptible to**: Catalase-positive organisms (SPACE: Staphylococcus, Pseudomonas, Aspergillus, Candida, E. coli/Serratia)
+- **Diagnosis**: Dihydrorhodamine (DHR) flow cytometry or nitroblue tetrazolium (NBT) test
+- **NBT test**: Normal neutrophils reduce NBT dye to blue; CGD neutrophils do NOT
+- **Treatment**: Prophylactic TMP-SMX + itraconazole; IFN-gamma; bone marrow transplant
+
+### Leukocyte Adhesion Deficiency (LAD)
+- **Defect**: CD18 integrin (LAD-I) or selectin ligand (LAD-II)
+- **Result**: Neutrophils cannot adhere to endothelium or migrate to tissues
+- **Paradox**: Very high WBC count but severe recurrent infections without pus
+- **Hallmark**: Delayed umbilical cord separation (>30 days)
+- **Diagnosis**: Flow cytometry showing absent CD18
+
+### Chediak-Higashi Syndrome
+- **Defect**: LYST gene mutation; abnormal lysosomal trafficking
+- **Features**: Recurrent pyogenic infections, oculocutaneous albinism, peripheral neuropathy
+- **Diagnosis**: Giant granules in neutrophils on peripheral smear
+- **Triad**: Infections + albinism + giant granules
+
+### Myeloperoxidase Deficiency
+- Most common inherited phagocyte defect
+- Usually asymptomatic; mild susceptibility to Candida
+- Diagnosis: absent MPO staining in neutrophils
+
+## Sepsis and SIRS
+
+### Pathophysiology
+1. Gram-negative sepsis: LPS binds TLR4 on macrophages
+2. Massive TNF-alpha, IL-1, IL-6 release (cytokine storm)
+3. Endothelial activation: vascular leak, vasodilation
+4. Coagulation cascade activated: tissue factor -> DIC
+5. Multi-organ dysfunction syndrome (MODS)
+
+### SIRS Criteria (2 or more)
+- Temperature >38C or <36C
+- Heart rate >90/min
+- Respiratory rate >20/min or PaCO2 <32 mmHg
+- WBC >12,000 or <4,000 or >10% bands
+
+### Sepsis = SIRS + confirmed/suspected infection
+### Septic shock = Sepsis + refractory hypotension despite fluid resuscitation
+
+## India-Relevant Clinical Correlations
+- **Tuberculosis**: Macrophage granulomas represent innate containment; M. tb blocks phagolysosome fusion
+- **Malaria**: TNF-alpha levels correlate with severity of P. falciparum malaria
+- **Dengue**: Secondary infection may trigger excessive complement activation and cytokine storm
+- **Kala-azar (visceral leishmaniasis)**: Leishmania survives inside macrophages by inhibiting phagolysosome formation
+
+> **Clinical Pearl**: The NBT test is being replaced by DHR flow cytometry for CGD diagnosis due to better sensitivity and ability to detect carrier status.`,
+        mnemonics: [
+          { text: "SPACE organisms in CGD", explanation: "Staphylococcus, Pseudomonas, Aspergillus, Candida (Serratia), E. coli - all catalase-positive" },
+          { text: "C5-C9 gone = Neisseria prone", explanation: "Terminal complement deficiency leads to recurrent Neisseria infections" },
+          { text: "LAD = Lots of cells, Absent at site, Delayed cord separation", explanation: "High WBC but no pus; delayed umbilical cord fall (>30 days)" }
+        ],
+        keyPoints: [
+          "CGD: NADPH oxidase defect, catalase-positive organisms (SPACE), NBT/DHR test",
+          "LAD: CD18 deficiency, high WBC with no pus, delayed cord separation",
+          "C5-C9 deficiency: recurrent Neisseria meningitidis - vaccinate",
+          "C1-INH deficiency: hereditary angioedema, low C4 screening",
+          "Sepsis = SIRS + infection; cytokine storm from TNF-alpha excess",
+          "Chediak-Higashi: giant granules + albinism + infections"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker Textbook of Microbiology", chapter: "Chapter 5: Immunodeficiency", edition: "10th" },
+          { book: "Robbins Pathologic Basis of Disease", chapter: "Chapter 6: Immune Deficiency", edition: "10th" }
+        ]
+      },
+      {
+        layer: 4,
+        slug: "innate-immunity-layer-4-exam-prep",
+        title: "Innate Immunity - Exam Preparation",
+        estimatedMinutes: 15,
+        summary: "High-yield comparison tables, one-liners, and previous year themes for complement deficiencies, phagocytic defects, and TLR functions.",
+        contentMd: `# Innate Immunity - Exam High Yield
+
+## Innate vs Adaptive Immunity
+| Feature | Innate | Adaptive |
+|---------|--------|----------|
+| Specificity | Non-specific (PAMPs) | Highly specific (antigens) |
+| Speed | Immediate (hours) | Delayed (days to weeks) |
+| Memory | No | Yes (faster on re-exposure) |
+| Receptors | TLRs, NLRs, mannose receptors | TCR, BCR (immunoglobulins) |
+| Cells | Neutrophils, macrophages, NK, DCs | T cells, B cells |
+| Humoral | Complement, cytokines | Antibodies |
+
+## TLR Quick Reference
+| TLR | Ligand | Clinical Significance |
+|-----|--------|----------------------|
+| TLR-2 | Gram(+) peptidoglycan | Staphylococcal infections |
+| TLR-4 | Gram(-) LPS | Sepsis, septic shock |
+| TLR-5 | Flagellin | Salmonella recognition |
+| TLR-9 | CpG DNA | Used in vaccine adjuvants |
+
+## Complement One-Liners
+- **C3**: Most abundant complement protein; central to all pathways
+- **C5a**: Strongest chemotactic factor for neutrophils
+- **C3b**: Major opsonin
+- **C3a, C5a**: Anaphylatoxins (mast cell degranulation, vascular leak)
+- **MAC (C5b-9)**: Pore formation -> osmotic lysis
+- **C1-INH deficiency**: Hereditary angioedema (screen with C4 levels)
+- **DAF/CD59 deficiency**: PNH (complement-mediated RBC lysis)
+
+## Phagocytic Defect Summary
+| Disorder | Defect | Organisms | Diagnosis | Key Feature |
+|----------|--------|-----------|-----------|-------------|
+| CGD | NADPH oxidase | SPACE (catalase+) | NBT/DHR test | Granuloma formation |
+| LAD-I | CD18 integrin | Bacteria | Flow cytometry | No pus, delayed cord |
+| Chediak-Higashi | LYST gene | Pyogenic | Giant granules | Albinism |
+| MPO deficiency | Myeloperoxidase | Candida | MPO stain | Usually asymptomatic |
+
+## High-Yield Previous Year Themes
+- NBT test: what it diagnoses and mechanism
+- Complement pathway that does NOT need antibodies (alternative)
+- Anaphylatoxins: C3a and C5a
+- Most common cause of hereditary angioedema
+- PNH: complement attack on own RBCs (absent DAF/CD59)
+- Sepsis pathophysiology: LPS -> TLR4 -> TNF-alpha -> shock
+- NK cell killing mechanism: perforin-granzyme
+
+## Common MCQ Traps
+- Classical pathway needs antibody (IgG or IgM); alternative does NOT
+- IgM is more efficient at activating classical pathway than IgG (single IgM vs multiple IgG)
+- C3 deficiency is the most severe complement deficiency (not C5-9)
+- NBT test: NORMAL neutrophils turn BLUE; CGD neutrophils stay COLORLESS
+- LAD has HIGH WBC count, NOT low (cells are in blood, not in tissues)`,
+        mnemonics: [
+          { text: "NBT = Normal Blue Transformation; CGD = Colorless, Granulomas Develop", explanation: "NBT test interpretation and CGD hallmark" },
+          { text: "Classical needs Class (antibody IgG/IgM); Alternative is Alone (no antibody)", explanation: "Key difference between complement pathways" },
+          { text: "PNH = Protection Not Here (no DAF, no CD59)", explanation: "PNH results from loss of GPI-anchored complement regulators on RBCs" }
+        ],
+        keyPoints: [
+          "C3 is the most abundant and most critical complement protein",
+          "Alternative pathway = antibody-independent complement activation",
+          "NBT: normal = blue, CGD = colorless (no superoxide produced)",
+          "LAD: high WBC but no pus formation (migration defect)",
+          "IgM activates classical pathway more efficiently than IgG",
+          "C4 level is the screening test for C1-INH deficiency"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker Textbook of Microbiology", chapter: "Chapter 5: Quick Review", edition: "10th" },
+          { book: "Jawetz, Melnick & Adelberg Medical Microbiology", chapter: "Chapter 7-8: Review", edition: "28th" }
+        ]
+      },
+      {
+        layer: 5,
+        slug: "innate-immunity-layer-5-active-recall",
+        title: "Innate Immunity - Active Recall",
+        estimatedMinutes: 10,
+        summary: "Self-test flashcard Q&A for rapid revision of innate immunity concepts, complement, phagocytosis, and clinical defects.",
+        contentMd: `# Innate Immunity - Active Recall
+
+**Q1:** What are the 3 defining features of innate immunity?
+> Immediate response, non-specific recognition, no immunological memory
+
+**Q2:** Name the 3 complement activation pathways and what triggers each.
+> Classical (IgG/IgM-antigen complexes), Alternative (LPS, spontaneous C3 hydrolysis), Lectin (MBL binding mannose on pathogens)
+
+**Q3:** What is the function of C3b?
+> C3b is the major opsonin - it coats pathogens and enhances phagocytosis by binding to CR1 on phagocytes
+
+**Q4:** What are the anaphylatoxins? What do they do?
+> C3a and C5a. They cause mast cell degranulation, histamine release, increased vascular permeability, and smooth muscle contraction
+
+**Q5:** What is MAC and what does it do?
+> Membrane Attack Complex (C5b-C6-C7-C8-C9). Forms pores in the target cell membrane causing osmotic lysis
+
+**Q6:** Name the 4 steps of phagocytosis.
+> Chemotaxis (toward C5a/IL-8), Opsonization/recognition (C3b/IgG coating), Engulfment (phagosome), Killing (respiratory burst in phagolysosome)
+
+**Q7:** What is the respiratory burst? What enzyme initiates it?
+> Oxygen-dependent killing mechanism. NADPH oxidase converts O2 to superoxide. Then SOD makes H2O2. MPO converts H2O2 + Cl- to HOCl (hypochlorous acid, most potent)
+
+**Q8:** What is CGD? How is it diagnosed?
+> Chronic Granulomatous Disease: NADPH oxidase deficiency (usually X-linked). Cannot kill catalase-positive organisms (SPACE). Diagnosed by NBT test (no color change) or DHR flow cytometry
+
+**Q9:** A child has recurrent infections with high WBC but no pus. What is the diagnosis?
+> Leukocyte Adhesion Deficiency (LAD) - CD18 integrin deficiency. Neutrophils cannot migrate to tissues despite being abundant in blood
+
+**Q10:** Which complement deficiency causes recurrent Neisseria meningitidis?
+> C5-C9 (terminal complement/MAC) deficiency. Cannot form MAC to lyse Neisseria. Management: meningococcal vaccination
+
+**Q11:** What causes hereditary angioedema? How do you screen?
+> C1-INH (C1 esterase inhibitor) deficiency. Screen with C4 levels (low C4). Episodes of non-pitting edema of face, larynx, bowel
+
+**Q12:** Which TLR recognizes gram-negative LPS? What is the signaling pathway?
+> TLR-4 recognizes LPS. Signals via MyD88 adaptor protein -> activates NF-kB -> pro-inflammatory cytokine transcription (TNF-alpha, IL-1, IL-6)`,
+        mnemonics: [
+          { text: "SPACE for CGD organisms", explanation: "Staphylococcus, Pseudomonas, Aspergillus, Candida/Serratia, E. coli" }
+        ],
+        keyPoints: [
+          "12 recall questions covering innate immunity foundations and clinical defects",
+          "Tests complement pathway knowledge, phagocytosis steps, and TLR functions",
+          "Covers CGD, LAD, Chediak-Higashi, and complement deficiency clinical features",
+          "Reinforces diagnostic tests: NBT, DHR, flow cytometry, C4 screening",
+          "Links mechanisms to clinical presentations"
+        ],
+        textbookRefs: [
+          { book: "Ananthanarayan & Paniker Textbook of Microbiology", chapter: "Chapter 5", edition: "10th" },
+          { book: "Jawetz, Melnick & Adelberg Medical Microbiology", chapter: "Chapter 7-8", edition: "28th" }
+        ]
+      }
+    ]
+  }
 ];
