@@ -5,18 +5,19 @@ export const medicineLessonsPart13: TopicLessons[] = [
     topicCode: "IM-MOD-08-TOP-01",
     layers: [
       {
-        layerNumber: 1,
-        layerName: "Foundation",
+        layer: 1,
+        title: "Rheumatoid Arthritis - Foundation",
         slug: "rheumatoid-arthritis-layer-1-foundation",
-        estimatedDurationMinutes: 20,
+        estimatedMinutes: 20,
+        summary: "Foundation concepts of Rheumatoid Arthritis including definitions, classification, epidemiology, and basic pathophysiology.",
         mnemonics: [
           {
             text: "JAMS",
-            expansion: "Joint (anatomy), Autoimmunity, Mechanics (synovium), Serology (RF, anti-CCP)"
+            explanation: "Joint (anatomy), Autoimmunity, Mechanics (synovium), Serology (RF, anti-CCP)"
           },
           {
             text: "RA SEROTYPES",
-            expansion: "seropositive (RF+, anti-CCP+) vs seronegative (RF-, anti-CCP-)"
+            explanation: "seropositive (RF+, anti-CCP+) vs seronegative (RF-, anti-CCP-)"
           }
         ],
         keyPoints: [
@@ -133,18 +134,19 @@ Early diagnosis and treatment with DMARDs has transformed RA outcomes. The conce
         ]
       },
       {
-        layerNumber: 2,
-        layerName: "Mechanism",
+        layer: 2,
+        title: "Rheumatoid Arthritis - Mechanism",
         slug: "rheumatoid-arthritis-layer-2-mechanism",
-        estimatedDurationMinutes: 30,
+        estimatedMinutes: 30,
+        summary: "Detailed mechanisms underlying Rheumatoid Arthritis including pathogenesis, molecular pathways, and progression.",
         mnemonics: [
           {
             text: "HLA-DR4 TRIAD",
-            expansion: "Citrullination, Tolerance breakdown, RANKL-mediated bone loss"
+            explanation: "Citrullination, Tolerance breakdown, RANKL-mediated bone loss"
           },
           {
             text: "TNF-IL CASCADE",
-            expansion: "TNF-alpha → IL-1 → IL-6 drives inflammatory amplification"
+            explanation: "TNF-alpha → IL-1 → IL-6 drives inflammatory amplification"
           }
         ],
         keyPoints: [
@@ -332,18 +334,19 @@ The profound efficacy of anti-TNF therapy validates TNF-alpha as the central dri
         ]
       },
       {
-        layerNumber: 3,
-        layerName: "Clinical",
+        layer: 3,
+        title: "Rheumatoid Arthritis - Clinical",
         slug: "rheumatoid-arthritis-layer-3-clinical",
-        estimatedDurationMinutes: 25,
+        estimatedMinutes: 25,
+        summary: "Clinical presentation, diagnosis, and management of Rheumatoid Arthritis with emphasis on Indian clinical practice.",
         mnemonics: [
           {
             text: "SWAN NECK BOUTONNIERE ULNAR",
-            expansion: "Classic RA hand deformities indicating advanced joint damage"
+            explanation: "Classic RA hand deformities indicating advanced joint damage"
           },
           {
             text: "ACR-EULAR 2010",
-            expansion: "Score 6 or more = definite RA diagnosis (joint involvement, serology, acute phase, duration)"
+            explanation: "Score 6 or more = definite RA diagnosis (joint involvement, serology, acute phase, duration)"
           }
         ],
         keyPoints: [
@@ -653,18 +656,19 @@ Target is remission or low disease activity; therapy escalated if target not ach
         ]
       },
       {
-        layerNumber: 4,
-        layerName: "Exam",
+        layer: 4,
+        title: "Rheumatoid Arthritis - Exam Prep",
         slug: "rheumatoid-arthritis-layer-4-exam",
-        estimatedDurationMinutes: 20,
+        estimatedMinutes: 20,
+        summary: "High-yield exam preparation for Rheumatoid Arthritis with NEXT-pattern MCQ practice.",
         mnemonics: [
           {
             text: "NEXT PATTERN: PROBLEM-SOLVING 60%",
-            expansion: "Clinical vignette with subtle presentation requiring diagnosis and management decision"
+            explanation: "Clinical vignette with subtle presentation requiring diagnosis and management decision"
           },
           {
             text: "RA DEFORMITIES: SBU",
-            expansion: "Swan neck, Boutonniere, Ulnar deviation - identify on clinical photo or description"
+            explanation: "Swan neck, Boutonniere, Ulnar deviation - identify on clinical photo or description"
           }
         ],
         keyPoints: [
@@ -858,18 +862,19 @@ The exam tests integrated clinical reasoning, not isolated facts.
         ]
       },
       {
-        layerNumber: 5,
-        layerName: "Active Recall",
+        layer: 5,
+        title: "Rheumatoid Arthritis - Active Recall",
         slug: "rheumatoid-arthritis-layer-5-active-recall",
-        estimatedDurationMinutes: 15,
+        estimatedMinutes: 15,
+        summary: "Active recall and spaced repetition exercises for Rheumatoid Arthritis.",
         mnemonics: [
           {
             text: "RA DEFINITION",
-            expansion: "Chronic symmetric polyarticular inflammatory arthritis with synovial hyperplasia and autoimmunity"
+            explanation: "Chronic symmetric polyarticular inflammatory arthritis with synovial hyperplasia and autoimmunity"
           },
           {
             text: "RA TRIAD",
-            expansion: "Anti-CCP positive, morning stiffness >1hr, symmetric small joint inflammation"
+            explanation: "Anti-CCP positive, morning stiffness >1hr, symmetric small joint inflammation"
           }
         ],
         keyPoints: [
