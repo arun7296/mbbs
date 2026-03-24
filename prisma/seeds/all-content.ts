@@ -110,6 +110,11 @@ import { medicineLessonsPart16 } from "./lessons-medicine-part16";
 import { medicineLessonsPart17 } from "./lessons-medicine-part17";
 import { medicineLessonsPart18 } from "./lessons-medicine-part18";
 import { medicineLessonsPart19 } from "./lessons-medicine-part19";
+import { medicineGapLessons } from "./lessons-medicine-gap";
+import { medicineGapLessonsPart2 } from "./lessons-medicine-gap-part2";
+import { medicineGapInfectiousLessons } from "./lessons-medicine-gap-infectious";
+import { medicineGapToxicologyLessons } from "./lessons-medicine-gap-toxicology";
+import { medicineGapCriticalLessons } from "./lessons-medicine-gap-critical";
 
 // Microbiology lessons
 import { microbiologyBacteriologyLessons } from "./lessons-microbiology-bacteriology";
@@ -456,6 +461,11 @@ export const allLessons: TopicLessons[] = [
   ...medicineLessonsPart17,
   ...medicineLessonsPart18,
   ...medicineLessonsPart19,
+  ...medicineGapLessons,
+  ...medicineGapLessonsPart2,
+  ...medicineGapInfectiousLessons,
+  ...medicineGapToxicologyLessons,
+  ...medicineGapCriticalLessons,
 
   // Microbiology
   ...microbiologyBacteriologyLessons,

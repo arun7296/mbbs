@@ -11,6 +11,8 @@ export const medicineModules = [
   { code: "IM-MOD-08", name: "Rheumatology", description: "RA, SLE, spondyloarthropathies, vasculitis", estimatedHours: 35, sortOrder: 8 },
   { code: "IM-MOD-09", name: "Infectious Diseases", description: "Tropical infections, fever approach, sepsis, HIV", estimatedHours: 55, sortOrder: 9 },
   { code: "IM-MOD-10", name: "Emergency Medicine", description: "Shock, poisoning, snake bite, CPR, critical care basics", estimatedHours: 45, sortOrder: 10 },
+  { code: "IM-MOD-11", name: "Poisoning & Toxicology", description: "Snake bite, pesticide poisoning, drug overdose, environmental toxins", estimatedHours: 40, sortOrder: 11 },
+  { code: "IM-MOD-12", name: "Critical Care & ICU Medicine", description: "Shock, ARDS, sepsis, coma, coagulopathy, mechanical ventilation", estimatedHours: 50, sortOrder: 12 },
 ];
 
 export const medicineTopics: Record<string, Array<{ code: string; name: string; sortOrder: number; competencyCode: string; competencyDesc: string }>> = {
@@ -48,6 +50,7 @@ export const medicineTopics: Record<string, Array<{ code: string; name: string; 
     { code: "IM-MOD-05-TOP-03", name: "Adrenal Disorders", sortOrder: 3, competencyCode: "IM5.3", competencyDesc: "Describe Cushing's, Addison's, and pheochromocytoma" },
     { code: "IM-MOD-05-TOP-04", name: "Pituitary Disorders", sortOrder: 4, competencyCode: "IM5.4", competencyDesc: "Describe acromegaly, hypopituitarism, and SIADH" },
     { code: "IM-MOD-05-TOP-05", name: "Metabolic Bone Disease", sortOrder: 5, competencyCode: "IM5.5", competencyDesc: "Describe osteoporosis, hyperparathyroidism, Paget's disease" },
+    { code: "IM-MOD-05-TOP-06", name: "Geriatric Medicine", sortOrder: 6, competencyCode: "IM5.6", competencyDesc: "Describe age-related physiological changes, falls, frailty, polypharmacy in elderly" },
   ],
   "IM-MOD-06": [
     { code: "IM-MOD-06-TOP-01", name: "Iron Deficiency & Megaloblastic Anemia", sortOrder: 1, competencyCode: "IM6.1", competencyDesc: "Describe approach to anemia and management" },
@@ -68,6 +71,9 @@ export const medicineTopics: Record<string, Array<{ code: string; name: string; 
     { code: "IM-MOD-08-TOP-02", name: "Systemic Lupus Erythematosus", sortOrder: 2, competencyCode: "IM8.2", competencyDesc: "Describe SLE: criteria, management, and complications" },
     { code: "IM-MOD-08-TOP-03", name: "Gout & Pseudogout", sortOrder: 3, competencyCode: "IM8.3", competencyDesc: "Describe gout pathogenesis and management" },
     { code: "IM-MOD-08-TOP-04", name: "Ankylosing Spondylitis", sortOrder: 4, competencyCode: "IM8.4", competencyDesc: "Describe spondyloarthropathies" },
+    { code: "IM-MOD-08-TOP-05", name: "SLE & Antiphospholipid Syndrome", sortOrder: 5, competencyCode: "IM8.5", competencyDesc: "Describe SLE manifestations and antiphospholipid syndrome complications" },
+    { code: "IM-MOD-08-TOP-06", name: "Vasculitis", sortOrder: 6, competencyCode: "IM8.6", competencyDesc: "Describe Takayasu, PAN, Wegener's, Behcet's disease" },
+    { code: "IM-MOD-08-TOP-07", name: "Scleroderma & Polymyositis", sortOrder: 7, competencyCode: "IM8.7", competencyDesc: "Describe systemic sclerosis and inflammatory myopathies" },
   ],
   "IM-MOD-09": [
     { code: "IM-MOD-09-TOP-01", name: "Malaria", sortOrder: 1, competencyCode: "IM9.1", competencyDesc: "Describe malaria: species, diagnosis, treatment, severe malaria" },
@@ -75,6 +81,11 @@ export const medicineTopics: Record<string, Array<{ code: string; name: string; 
     { code: "IM-MOD-09-TOP-03", name: "Typhoid & Enteric Fever", sortOrder: 3, competencyCode: "IM9.3", competencyDesc: "Describe typhoid fever diagnosis and management" },
     { code: "IM-MOD-09-TOP-04", name: "HIV/AIDS & Opportunistic Infections", sortOrder: 4, competencyCode: "IM9.4", competencyDesc: "Describe HIV staging, ART, and OI management" },
     { code: "IM-MOD-09-TOP-05", name: "Sepsis & SIRS", sortOrder: 5, competencyCode: "IM9.5", competencyDesc: "Describe sepsis bundle and management" },
+    { code: "IM-MOD-09-TOP-06", name: "Protozoal Infections", sortOrder: 6, competencyCode: "IM9.6", competencyDesc: "Describe malaria detail, leishmaniasis, amoebiasis" },
+    { code: "IM-MOD-09-TOP-07", name: "Helminthic Infections", sortOrder: 7, competencyCode: "IM9.7", competencyDesc: "Describe filariasis, hydatid disease, hookworm, ascaris" },
+    { code: "IM-MOD-09-TOP-08", name: "Fungal Infections", sortOrder: 8, competencyCode: "IM9.8", competencyDesc: "Describe mucormycosis, aspergillosis, candidiasis" },
+    { code: "IM-MOD-09-TOP-09", name: "Rickettsial & Spirochetal Infections", sortOrder: 9, competencyCode: "IM9.9", competencyDesc: "Describe spotted fever group, Q fever, borreliosis" },
+    { code: "IM-MOD-09-TOP-10", name: "Hospital Acquired Infections & Immunocompromised Host", sortOrder: 10, competencyCode: "IM9.10", competencyDesc: "Describe HAI prevention, immunocompromised patient management" },
   ],
   "IM-MOD-10": [
     { code: "IM-MOD-10-TOP-01", name: "Shock: Types & Management", sortOrder: 1, competencyCode: "IM10.1", competencyDesc: "Describe types of shock and initial resuscitation" },
@@ -82,5 +93,20 @@ export const medicineTopics: Record<string, Array<{ code: string; name: string; 
     { code: "IM-MOD-10-TOP-03", name: "Snake Bite & Envenomation", sortOrder: 3, competencyCode: "IM10.3", competencyDesc: "Describe snake bite management and ASV protocol" },
     { code: "IM-MOD-10-TOP-04", name: "CPR & Basic Life Support", sortOrder: 4, competencyCode: "IM10.4", competencyDesc: "Describe BLS and ACLS algorithms" },
     { code: "IM-MOD-10-TOP-05", name: "Electrolyte & Acid-Base Disorders", sortOrder: 5, competencyCode: "IM10.5", competencyDesc: "Describe hyponatremia, hyperkalemia, metabolic acidosis/alkalosis" },
+    { code: "IM-MOD-10-TOP-06", name: "Pain Management & Palliative Care", sortOrder: 6, competencyCode: "IM10.6", competencyDesc: "Describe pain assessment, analgesic ladder, end-of-life care" },
+  ],
+  "IM-MOD-11": [
+    { code: "IM-MOD-11-TOP-01", name: "General Approach to Poisoning", sortOrder: 1, competencyCode: "IM11.1", competencyDesc: "Describe initial assessment and management of toxidromes" },
+    { code: "IM-MOD-11-TOP-02", name: "Snake Bite & Envenomation (Detailed)", sortOrder: 2, competencyCode: "IM11.2", competencyDesc: "Describe snake bite pathophysiology, ASV protocol, complications" },
+    { code: "IM-MOD-11-TOP-03", name: "Organophosphorus & Pesticide Poisoning", sortOrder: 3, competencyCode: "IM11.3", competencyDesc: "Describe OP poisoning, cholinergic crisis, atropine, pralidoxime" },
+    { code: "IM-MOD-11-TOP-04", name: "Corrosive & Drug Poisoning", sortOrder: 4, competencyCode: "IM11.4", competencyDesc: "Describe acid/alkali ingestion, paracetamol, salicylate, iron poisoning" },
+    { code: "IM-MOD-11-TOP-05", name: "Scorpion Sting, Insect Bites & Environmental Toxins", sortOrder: 5, competencyCode: "IM11.5", competencyDesc: "Describe scorpion sting, wasp, bee bites, heavy metal poisoning" },
+  ],
+  "IM-MOD-12": [
+    { code: "IM-MOD-12-TOP-01", name: "Shock (Types, Pathophysiology, Management)", sortOrder: 1, competencyCode: "IM12.1", competencyDesc: "Describe shock pathophysiology, classification, and resuscitation" },
+    { code: "IM-MOD-12-TOP-02", name: "ARDS & Mechanical Ventilation", sortOrder: 2, competencyCode: "IM12.2", competencyDesc: "Describe ARDS pathophysiology, management, ventilation modes" },
+    { code: "IM-MOD-12-TOP-03", name: "Sepsis & Multiorgan Dysfunction", sortOrder: 3, competencyCode: "IM12.3", competencyDesc: "Describe sepsis bundle, SOFA scoring, organ support" },
+    { code: "IM-MOD-12-TOP-04", name: "Coma & Altered Consciousness", sortOrder: 4, competencyCode: "IM12.4", competencyDesc: "Describe Glasgow Coma Scale, diagnostic approach to coma" },
+    { code: "IM-MOD-12-TOP-05", name: "DIC & Coagulopathy in Critical Care", sortOrder: 5, competencyCode: "IM12.5", competencyDesc: "Describe DIC pathophysiology, management, transfusion strategy" },
   ],
 };
