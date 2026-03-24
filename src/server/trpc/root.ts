@@ -5,6 +5,7 @@ import { assessmentRouter } from "./routers/assessment.router";
 import { progressRouter } from "./routers/progress.router";
 import { clinicalRouter } from "./routers/clinical.router";
 import { studyPlanRouter } from "./routers/studyPlan.router";
+import { searchRouter } from "./routers/search.router";
 
 export const appRouter = router({
   curriculum: curriculumRouter,
@@ -13,6 +14,7 @@ export const appRouter = router({
   progress: progressRouter,
   clinical: clinicalRouter,
   studyPlan: studyPlanRouter,
+  search: searchRouter,
 });
 
 export type AppRouter = typeof appRouter;

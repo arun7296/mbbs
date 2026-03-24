@@ -2,15 +2,24 @@
 
 import { Search, Bell, User } from "lucide-react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export function Header() {
   const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim().length >= 2) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-gray-200 bg-white px-4 lg:px-6">
       {/* Search */}
       <div className="flex flex-1 items-center gap-4 pl-12 lg:pl-0">
-        <div className="relative max-w-md flex-1">
+        <form onSubmit={handleSearch} className="relative max-w-md flex-1">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
           <input
             type="text"
@@ -19,7 +28,7 @@ export function Header() {
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full rounded-lg border border-gray-200 bg-gray-50 py-2 pl-10 pr-4 text-sm focus:border-blue-300 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100"
           />
-        </div>
+        </form>
       </div>
 
       {/* Actions */}
