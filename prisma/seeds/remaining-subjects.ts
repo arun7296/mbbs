@@ -155,10 +155,12 @@ export const anesthesiologyTopics: Record<string, Array<{ code: string; name: st
     { code: "AS-MOD-04-TOP-01", name: "BLS & ACLS", sortOrder: 1, competencyCode: "AS4.1", competencyDesc: "Describe basic and advanced cardiac life support" },
     { code: "AS-MOD-04-TOP-02", name: "Mechanical Ventilation", sortOrder: 2, competencyCode: "AS4.2", competencyDesc: "Describe ventilator modes and settings" },
     { code: "AS-MOD-04-TOP-03", name: "ICU Management of Shock", sortOrder: 3, competencyCode: "AS4.3", competencyDesc: "Describe ICU management of various types of shock" },
+    { code: "AS-MOD-04-TOP-04", name: "Fluid & Electrolyte Management in ICU", sortOrder: 4, competencyCode: "AS4.4", competencyDesc: "Describe fluid therapy, electrolyte imbalances, and acid-base disorders in critical care" },
   ],
   "AS-MOD-05": [
     { code: "AS-MOD-05-TOP-01", name: "Acute Pain Management", sortOrder: 1, competencyCode: "AS5.1", competencyDesc: "Describe WHO analgesic ladder and acute pain protocols" },
     { code: "AS-MOD-05-TOP-02", name: "Chronic Pain & Palliative Care", sortOrder: 2, competencyCode: "AS5.2", competencyDesc: "Describe chronic pain management and palliative care" },
+    { code: "AS-MOD-05-TOP-03", name: "Anesthesia in Special Situations", sortOrder: 3, competencyCode: "AS5.3", competencyDesc: "Describe anesthesia in obstetrics, pediatrics, day care surgery, and emergency situations" },
   ],
 };
 
@@ -174,6 +176,8 @@ export const radiologyTopics: Record<string, Array<{ code: string; name: string;
     { code: "RD-MOD-01-TOP-01", name: "Imaging Modalities Overview", sortOrder: 1, competencyCode: "RD1.1", competencyDesc: "Describe X-ray, CT, MRI, USG, and nuclear medicine" },
     { code: "RD-MOD-01-TOP-02", name: "Radiation Physics & Protection", sortOrder: 2, competencyCode: "RD1.2", competencyDesc: "Describe radiation physics and protection measures" },
     { code: "RD-MOD-01-TOP-03", name: "Contrast Media", sortOrder: 3, competencyCode: "RD1.3", competencyDesc: "Describe contrast agents and their adverse reactions" },
+    { code: "RD-MOD-01-TOP-04", name: "Radiation Safety & AERB Guidelines", sortOrder: 4, competencyCode: "RD1.4", competencyDesc: "Describe radiation hazards, dose limits, AERB regulations, and protection for patients and healthcare workers" },
+    { code: "RD-MOD-01-TOP-05", name: "Nuclear Medicine & PET-CT", sortOrder: 5, competencyCode: "RD1.5", competencyDesc: "Describe radioisotopes, thyroid scans, bone scans, PET-CT principles and clinical applications" },
   ],
   "RD-MOD-02": [
     { code: "RD-MOD-02-TOP-01", name: "Chest X-ray Interpretation", sortOrder: 1, competencyCode: "RD2.1", competencyDesc: "Describe systematic approach to chest X-ray reading" },
@@ -189,5 +193,6 @@ export const radiologyTopics: Record<string, Array<{ code: string; name: string;
     { code: "RD-MOD-04-TOP-01", name: "Abdominal X-ray & USG", sortOrder: 1, competencyCode: "RD4.1", competencyDesc: "Describe plain abdomen X-ray and abdominal ultrasound" },
     { code: "RD-MOD-04-TOP-02", name: "CT Abdomen & Pelvis", sortOrder: 2, competencyCode: "RD4.2", competencyDesc: "Describe CT findings in common abdominal pathologies" },
     { code: "RD-MOD-04-TOP-03", name: "GU Imaging & IVP", sortOrder: 3, competencyCode: "RD4.3", competencyDesc: "Describe renal imaging: USG, IVP, CT KUB" },
+    { code: "RD-MOD-04-TOP-04", name: "Interventional Radiology", sortOrder: 4, competencyCode: "RD4.4", competencyDesc: "Describe image-guided interventions, biopsies, drainage procedures, and embolization" },
   ],
 };

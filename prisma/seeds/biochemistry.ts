@@ -66,5 +66,6 @@ export const biochemistryTopics: Record<string, Array<{ code: string; name: stri
     { code: "BI-MOD-07-TOP-03", name: "Vitamins: Water-Soluble & Fat-Soluble", sortOrder: 3, competencyCode: "BI8.3", competencyDesc: "Describe vitamins, their biochemical roles, and deficiency diseases" },
     { code: "BI-MOD-07-TOP-04", name: "Minerals & Trace Elements", sortOrder: 4, competencyCode: "BI8.4", competencyDesc: "Describe iron, calcium, zinc, and other mineral metabolism" },
     { code: "BI-MOD-07-TOP-05", name: "Inborn Errors of Metabolism", sortOrder: 5, competencyCode: "BI8.5", competencyDesc: "Describe common inborn errors and their biochemical basis" },
+    { code: "BI-MOD-07-TOP-06", name: "Molecular Biology & Genetic Engineering", sortOrder: 6, competencyCode: "BI7.6", competencyDesc: "Describe PCR, blotting techniques, gene therapy, recombinant DNA technology, and CRISPR" },
   ],
 };

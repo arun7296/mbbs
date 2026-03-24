@@ -65,5 +65,6 @@ export const microbiologyTopics: Record<string, Array<{ code: string; name: stri
     { code: "MI-MOD-07-TOP-01", name: "Hospital Infections & Bioterrorism", sortOrder: 1, competencyCode: "MI7.1", competencyDesc: "Describe healthcare-associated infections and biosafety" },
     { code: "MI-MOD-07-TOP-02", name: "Antimicrobial Resistance", sortOrder: 2, competencyCode: "MI7.2", competencyDesc: "Describe mechanisms of antimicrobial resistance: MRSA, ESBL, MDR-TB" },
     { code: "MI-MOD-07-TOP-03", name: "Diagnostic Microbiology", sortOrder: 3, competencyCode: "MI7.3", competencyDesc: "Describe specimen collection, culture, serology, and molecular methods" },
+    { code: "MI-MOD-07-TOP-04", name: "Hospital Infection Control & Biomedical Waste", sortOrder: 4, competencyCode: "MI7.4", competencyDesc: "Describe nosocomial infections, biomedical waste management, hand hygiene, and infection control policies" },
   ],
 };

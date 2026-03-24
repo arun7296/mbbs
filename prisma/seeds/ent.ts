@@ -38,5 +38,6 @@ export const entTopics: Record<string, Array<{ code: string; name: string; sortO
     { code: "EN-MOD-05-TOP-01", name: "Foreign Bodies in ENT", sortOrder: 1, competencyCode: "EN6.1", competencyDesc: "Describe management of foreign bodies in ear, nose, throat" },
     { code: "EN-MOD-05-TOP-02", name: "Tracheostomy", sortOrder: 2, competencyCode: "EN6.2", competencyDesc: "Describe indications and technique of tracheostomy" },
     { code: "EN-MOD-05-TOP-03", name: "Hearing Aids & Cochlear Implants", sortOrder: 3, competencyCode: "EN6.3", competencyDesc: "Describe rehabilitation of hearing loss" },
+    { code: "EN-MOD-05-TOP-04", name: "ENT Emergencies", sortOrder: 4, competencyCode: "EN5.4", competencyDesc: "Describe management of epistaxis, foreign body airway/ear/nose, Ludwig angina, peritonsillar abscess, and stridor" },
   ],
 };

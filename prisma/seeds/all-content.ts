@@ -28,6 +28,7 @@ import { anesthesiologyPart4Lessons } from "./lessons-anesthesiology-part4";
 import { anesthesiologyPart5Lessons } from "./lessons-anesthesiology-part5";
 import { anesthesiologyLessonsPart8 } from "./lessons-anesthesiology-part8";
 import { anesthesiologyLessonsPart9 } from "./lessons-anesthesiology-part9";
+import { anesthesiologyGapLessons } from "./lessons-anesthesiology-gap";
 
 // Batch lessons
 import { newBatch5Lessons2 } from "./lessons-batch5-cont";
@@ -72,6 +73,9 @@ import { dermatologyGapLessons } from "./lessons-dermatology-gap";
 import { entLessons } from "./lessons-ent";
 import { entPart2Lessons } from "./lessons-ent-part2";
 import { entPart3Lessons } from "./lessons-ent-part3";
+
+// Misc gap lessons (Microbiology, Biochemistry, ENT)
+import { miscGapLessons } from "./lessons-misc-gap";
 
 // Final batch lessons
 import { finalBatch1Lessons } from "./lessons-final-batch-1";
@@ -259,6 +263,7 @@ import { radiologyPart4Lessons } from "./lessons-radiology-part4";
 import { radiologyPart5Lessons } from "./lessons-radiology-part5";
 import { radiologyLessonsPart8 } from "./lessons-radiology-part8";
 import { radiologyLessonsPart9 } from "./lessons-radiology-part9";
+import { radiologyGapLessons } from "./lessons-radiology-gap";
 
 // Regen batch lessons
 import { regenBatch1Lessons } from "./lessons-regen-batch1";
@@ -393,6 +398,7 @@ export const allLessons: TopicLessons[] = [
   ...anesthesiologyPart5Lessons,
   ...anesthesiologyLessonsPart8,
   ...anesthesiologyLessonsPart9,
+  ...anesthesiologyGapLessons,
 
   // Batch lessons
   ...newBatch5Lessons2,
@@ -437,6 +443,9 @@ export const allLessons: TopicLessons[] = [
   ...entLessons,
   ...entPart2Lessons,
   ...entPart3Lessons,
+
+  // Misc gap lessons (Microbiology, Biochemistry, ENT)
+  ...miscGapLessons,
 
   // Final batch
   ...finalBatch1Lessons,
@@ -624,6 +633,7 @@ export const allLessons: TopicLessons[] = [
   ...radiologyPart5Lessons,
   ...radiologyLessonsPart8,
   ...radiologyLessonsPart9,
+  ...radiologyGapLessons,
 
   // Regen batch
   ...regenBatch1Lessons,
