@@ -13,6 +13,7 @@ export const dermatologyTopics: Record<string, Array<{ code: string; name: strin
     { code: "DR-MOD-01-TOP-01", name: "Skin Structure & Lesion Morphology", sortOrder: 1, competencyCode: "DR1.1", competencyDesc: "Describe skin structure and types of skin lesions" },
     { code: "DR-MOD-01-TOP-02", name: "Eczema & Contact Dermatitis", sortOrder: 2, competencyCode: "DR1.2", competencyDesc: "Describe eczema types and management" },
     { code: "DR-MOD-01-TOP-03", name: "Urticaria & Drug Reactions", sortOrder: 3, competencyCode: "DR1.3", competencyDesc: "Describe urticaria, angioedema, and cutaneous drug reactions" },
+    { code: "DR-MOD-01-TOP-04", name: "Dermatological Therapeutics", sortOrder: 4, competencyCode: "DR1.4", competencyDesc: "Describe topical and systemic dermatological treatments including steroids, retinoids, and phototherapy" },
   ],
   "DR-MOD-02": [
     { code: "DR-MOD-02-TOP-01", name: "Fungal Infections", sortOrder: 1, competencyCode: "DR2.1", competencyDesc: "Describe dermatophytosis, candidiasis, and pityriasis versicolor" },
@@ -24,6 +25,7 @@ export const dermatologyTopics: Record<string, Array<{ code: string; name: strin
     { code: "DR-MOD-03-TOP-02", name: "Lichen Planus & Pityriasis Rosea", sortOrder: 2, competencyCode: "DR3.2", competencyDesc: "Describe lichen planus and pityriasis rosea" },
     { code: "DR-MOD-03-TOP-03", name: "Pemphigus & Bullous Pemphigoid", sortOrder: 3, competencyCode: "DR3.3", competencyDesc: "Describe autoimmune blistering diseases" },
     { code: "DR-MOD-03-TOP-04", name: "SJS & TEN", sortOrder: 4, competencyCode: "DR3.4", competencyDesc: "Describe Stevens-Johnson syndrome and toxic epidermal necrolysis" },
+    { code: "DR-MOD-03-TOP-05", name: "Autoimmune Skin Diseases", sortOrder: 5, competencyCode: "DR3.5", competencyDesc: "Describe pemphigus, pemphigoid, dermatitis herpetiformis, and lupus skin manifestations" },
   ],
   "DR-MOD-04": [
     { code: "DR-MOD-04-TOP-01", name: "Leprosy", sortOrder: 1, competencyCode: "DR4.1", competencyDesc: "Describe leprosy: classification, reactions, MDT" },
@@ -33,6 +35,7 @@ export const dermatologyTopics: Record<string, Array<{ code: string; name: strin
   "DR-MOD-05": [
     { code: "DR-MOD-05-TOP-01", name: "Vitiligo & Pigmentary Disorders", sortOrder: 1, competencyCode: "DR5.1", competencyDesc: "Describe vitiligo, melasma, and albinism" },
     { code: "DR-MOD-05-TOP-02", name: "Skin Tumors & Melanoma", sortOrder: 2, competencyCode: "DR5.2", competencyDesc: "Describe skin cancers and premalignant conditions" },
+    { code: "DR-MOD-05-TOP-03", name: "Pigmentary Disorders", sortOrder: 3, competencyCode: "DR5.3", competencyDesc: "Describe vitiligo, melasma, albinism, and post-inflammatory pigmentary changes" },
   ],
 };
 
@@ -49,6 +52,7 @@ export const psychiatryTopics: Record<string, Array<{ code: string; name: string
     { code: "PS-MOD-01-TOP-01", name: "Psychiatric Assessment & MSE", sortOrder: 1, competencyCode: "PS1.1", competencyDesc: "Describe psychiatric history taking and mental status examination" },
     { code: "PS-MOD-01-TOP-02", name: "Classification of Mental Disorders", sortOrder: 2, competencyCode: "PS1.2", competencyDesc: "Describe ICD and DSM classification systems" },
     { code: "PS-MOD-01-TOP-03", name: "Psychopharmacology Basics", sortOrder: 3, competencyCode: "PS1.3", competencyDesc: "Describe psychotropic drug classes and side effects" },
+    { code: "PS-MOD-01-TOP-04", name: "Classification & Assessment in Psychiatry", sortOrder: 4, competencyCode: "PS1.4", competencyDesc: "Describe ICD-11/DSM-5 classification, psychiatric interview, MSE, and psychometric assessment" },
   ],
   "PS-MOD-02": [
     { code: "PS-MOD-02-TOP-01", name: "Schizophrenia", sortOrder: 1, competencyCode: "PS2.1", competencyDesc: "Describe schizophrenia: symptoms, subtypes, management" },
@@ -65,10 +69,12 @@ export const psychiatryTopics: Record<string, Array<{ code: string; name: string
     { code: "PS-MOD-04-TOP-01", name: "Alcohol Use Disorder", sortOrder: 1, competencyCode: "PS4.1", competencyDesc: "Describe alcohol dependence, withdrawal, and delirium tremens" },
     { code: "PS-MOD-04-TOP-02", name: "Opioid & Other Substance Use", sortOrder: 2, competencyCode: "PS4.2", competencyDesc: "Describe opioid, cannabis, and other substance use disorders" },
     { code: "PS-MOD-04-TOP-03", name: "Delirium & Dementia", sortOrder: 3, competencyCode: "PS4.3", competencyDesc: "Describe delirium, Alzheimer's, and other dementias" },
+    { code: "PS-MOD-04-TOP-04", name: "Child & Adolescent Psychiatry", sortOrder: 4, competencyCode: "PS4.4", competencyDesc: "Describe ADHD, autism, intellectual disability, conduct disorders, and adolescent mental health" },
   ],
   "PS-MOD-05": [
     { code: "PS-MOD-05-TOP-01", name: "Child Psychiatry: ADHD & Autism", sortOrder: 1, competencyCode: "PS5.1", competencyDesc: "Describe ADHD, autism spectrum, and intellectual disability" },
     { code: "PS-MOD-05-TOP-02", name: "Mental Healthcare Act & Forensic Psychiatry", sortOrder: 2, competencyCode: "PS5.2", competencyDesc: "Describe MHCA 2017 and forensic psychiatric issues" },
+    { code: "PS-MOD-05-TOP-03", name: "Forensic Psychiatry & Ethics", sortOrder: 3, competencyCode: "PS5.3", competencyDesc: "Describe Mental Healthcare Act 2017, fitness to stand trial, testamentary capacity, and psychiatric ethics" },
   ],
 };
 
@@ -86,6 +92,7 @@ export const orthopedicsTopics: Record<string, Array<{ code: string; name: strin
     { code: "OR-MOD-01-TOP-01", name: "Fracture Healing & Classification", sortOrder: 1, competencyCode: "OR1.1", competencyDesc: "Describe fracture types, healing stages, and complications" },
     { code: "OR-MOD-01-TOP-02", name: "Principles of Fracture Management", sortOrder: 2, competencyCode: "OR1.2", competencyDesc: "Describe reduction, immobilization, and rehabilitation" },
     { code: "OR-MOD-01-TOP-03", name: "Compartment Syndrome & Fat Embolism", sortOrder: 3, competencyCode: "OR1.3", competencyDesc: "Describe fracture complications and emergencies" },
+    { code: "OR-MOD-01-TOP-04", name: "Principles of Fracture Healing & Complications", sortOrder: 4, competencyCode: "OR1.4", competencyDesc: "Describe fracture healing stages, delayed union, non-union, malunion, compartment syndrome, and fat embolism" },
   ],
   "OR-MOD-02": [
     { code: "OR-MOD-02-TOP-01", name: "Clavicle & Shoulder Fractures", sortOrder: 1, competencyCode: "OR2.1", competencyDesc: "Describe clavicle fracture and shoulder dislocation" },
@@ -110,6 +117,7 @@ export const orthopedicsTopics: Record<string, Array<{ code: string; name: strin
     { code: "OR-MOD-05-TOP-02", name: "Rheumatoid Arthritis", sortOrder: 2, competencyCode: "OR5.2", competencyDesc: "Describe RA joint deformities and management" },
     { code: "OR-MOD-05-TOP-03", name: "Septic Arthritis", sortOrder: 3, competencyCode: "OR5.3", competencyDesc: "Describe septic arthritis diagnosis and management" },
     { code: "OR-MOD-05-TOP-04", name: "Hip Disorders & AVN", sortOrder: 4, competencyCode: "OR5.4", competencyDesc: "Describe Perthes disease, SCFE, and avascular necrosis" },
+    { code: "OR-MOD-05-TOP-05", name: "Sports Medicine & Rehabilitation", sortOrder: 5, competencyCode: "OR5.5", competencyDesc: "Describe common sports injuries, ligament injuries, meniscal tears, rehabilitation principles, and physiotherapy" },
   ],
   "OR-MOD-06": [
     { code: "OR-MOD-06-TOP-01", name: "Osteomyelitis", sortOrder: 1, competencyCode: "OR6.1", competencyDesc: "Describe acute and chronic osteomyelitis" },

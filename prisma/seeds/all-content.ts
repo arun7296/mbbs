@@ -66,6 +66,7 @@ import { dermatologyPart4Lessons } from "./lessons-dermatology-part4";
 import { dermatologyPart5Lessons } from "./lessons-dermatology-part5";
 import { dermatologyLessonsPartSix } from "./lessons-dermatology-part6";
 import { dermatologyLessonsPartSeven } from "./lessons-dermatology-part7";
+import { dermatologyGapLessons } from "./lessons-dermatology-gap";
 
 // ENT lessons
 import { entLessons } from "./lessons-ent";
@@ -190,6 +191,7 @@ import { orthopedicsLessonsPart10 } from "./lessons-orthopedics-part10";
 import { orthopedicsLessonsPart11 } from "./lessons-orthopedics-part11";
 import { orthopedicsLessonsPart12 } from "./lessons-orthopedics-part12";
 import { orthopedicsLessonsPart13 } from "./lessons-orthopedics-part13";
+import { orthopedicsGapLessons } from "./lessons-orthopedics-gap";
 
 // Pathology lessons
 import { pathologyPart1Lessons } from "./lessons-pathology-part1";
@@ -247,6 +249,7 @@ import { psychiatryPart5Lessons } from "./lessons-psychiatry-part5";
 import { psychiatryPart6Lessons } from "./lessons-psychiatry-part6";
 import { psychiatryLessonsPart7 } from "./lessons-psychiatry-part7";
 import { psychiatryLessonsPart8 } from "./lessons-psychiatry-part8";
+import { psychiatryGapLessons } from "./lessons-psychiatry-gap";
 
 // Radiology lessons
 import { radiologyLessons } from "./lessons-radiology";
@@ -428,6 +431,7 @@ export const allLessons: TopicLessons[] = [
   ...dermatologyPart5Lessons,
   ...dermatologyLessonsPartSix,
   ...dermatologyLessonsPartSeven,
+  ...dermatologyGapLessons,
 
   // ENT
   ...entLessons,
@@ -552,6 +556,7 @@ export const allLessons: TopicLessons[] = [
   ...orthopedicsLessonsPart11,
   ...orthopedicsLessonsPart12,
   ...orthopedicsLessonsPart13,
+  ...orthopedicsGapLessons,
 
   // Pathology
   ...pathologyPart1Lessons,
@@ -609,6 +614,7 @@ export const allLessons: TopicLessons[] = [
   ...psychiatryPart6Lessons,
   ...psychiatryLessonsPart7,
   ...psychiatryLessonsPart8,
+  ...psychiatryGapLessons,
 
   // Radiology
   ...radiologyLessons,
