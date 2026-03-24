@@ -1,4 +1,4 @@
-import { TopicLessons } from "./types";
+import type { TopicLessons } from "./content-loader";
 
 export const obgGapLessons: TopicLessons[] = [
   // ============================================================
@@ -41,9 +41,9 @@ Pregnancy increases caloric demands by ~300 kcal/day in the second and third tri
 
 ## Common Deficiencies in Indian Context
 Iron deficiency anemia affects >50% of pregnant women in India. Calcium deficiency is common due to low dairy intake in many communities. Vitamin B12 deficiency is prevalent among vegetarians.`,
-        mnemonics: ["IRON-FOLIC: I-Iron 35mg, R-Recommended periconceptionally, O-Open NTD prevention, N-NIPI program, F-Folic acid 500µg, O-Organogenesis critical, L-Low cost intervention, I-ICDS supplements, C-Calcium 1200mg"],
+        mnemonics: [{ text: "IRON-FOLIC: I-Iron 35mg, R-Recommended periconceptionally, O-Open NTD prevention, N-NIPI program, F-Folic acid 500µg, O-Organogenesis critical, L-Low cost intervention, I-ICDS supplements, C-Calcium 1200mg", explanation: "", tags: [] }],
         keyPoints: ["Extra 300 kcal/day in 2nd-3rd trimester", "Iron 35mg + Folic acid 500µg daily mandatory", "Calcium 1200mg prevents pre-eclampsia", "ICDS and NIPI are key government nutrition programs", ">50% Indian pregnant women have iron-deficiency anemia"],
-        textbookRefs: ["DC Dutta Obstetrics Ch 10", "Mudaliar & Menon Ch 9"],
+        textbookRefs: [{ book: "DC Dutta Obstetrics", chapter: "Ch 10", edition: "" }, { book: "Mudaliar & Menon", chapter: "Ch 9", edition: "" }],
       },
       {
         layer: 2,
@@ -93,9 +93,9 @@ Hepcidin is suppressed in pregnancy → increased intestinal iron absorption. De
 - Amino acids actively transported across placenta
 - Branched-chain amino acids preferentially used by fetus
 - Maternal hypoalbuminemia (dilutional) is physiological`,
-        mnemonics: ["Anabolic→Catabolic: First half STORES, second half DELIVERS (like a warehouse: stock then ship)"],
+        mnemonics: [{ text: "Anabolic→Catabolic: First half STORES, second half DELIVERS (like a warehouse: stock then ship)", explanation: "", tags: [] }],
         keyPoints: ["Total iron need in pregnancy: 1000mg", "Neural tube closes by day 28 — folate must be periconceptional", "Pregnancy has anabolic (1st half) then catabolic (2nd half) phases", "Insulin resistance in late pregnancy facilitates glucose transfer to fetus", "Calcium absorption doubles via PTH-rP and vitamin D"],
-        textbookRefs: ["DC Dutta Obstetrics Ch 4, 10", "Williams Obstetrics Ch 4"],
+        textbookRefs: [{ book: "DC Dutta Obstetrics", chapter: "Ch 4, 10", edition: "" }, { book: "Williams Obstetrics", chapter: "Ch 4", edition: "" }],
       },
       {
         layer: 3,
@@ -153,9 +153,9 @@ Hepcidin is suppressed in pregnancy → increased intestinal iron absorption. De
 | Normal (18.5–24.9) | 11.5–16 kg | 0.4 kg/week |
 | Overweight (25–29.9) | 7–11.5 kg | 0.3 kg/week |
 | Obese (≥30) | 5–9 kg | 0.2 kg/week |`,
-        mnemonics: ["IFA from 14 weeks: '14 = IFA starts' (both start with similar sounds)"],
+        mnemonics: [{ text: "IFA from 14 weeks: '14 = IFA starts' (both start with similar sounds)", explanation: "", tags: [] }],
         keyPoints: ["IFA: 100mg iron + 500µg folic acid from 14 weeks to 6 months postpartum", "Calcium 500mg BD from 14 weeks", "Severe anemia (<7 g/dL) needs IV iron sucrose or transfusion", "Give thiamine BEFORE glucose in hyperemesis", "Weight gain: 11.5-16 kg for normal BMI"],
-        textbookRefs: ["DC Dutta Obstetrics Ch 10, 19", "FOGSI Good Clinical Practice Guidelines"],
+        textbookRefs: [{ book: "DC Dutta Obstetrics", chapter: "Ch 10, 19", edition: "" }, { book: "FOGSI Good Clinical Practice Guidelines", chapter: "", edition: "" }],
       },
       {
         layer: 4,
@@ -192,9 +192,9 @@ Hepcidin is suppressed in pregnancy → increased intestinal iron absorption. De
 | Calcium | 1,200 mg/day |
 | Neural tube closure | Day 28 |
 | Total iron need | ~1,000 mg |`,
-        mnemonics: ["IRON dose ladder: IFA=100, Therapeutic=200, Severe=IV sucrose"],
+        mnemonics: [{ text: "IRON dose ladder: IFA=100, Therapeutic=200, Severe=IV sucrose", explanation: "", tags: [] }],
         keyPoints: ["Folic acid 5mg (not 500µg) if previous NTD baby", "Neural tube closes day 28", "IV iron sucrose replaced IM iron dextran", "Thiamine BEFORE glucose in hyperemesis", "Physiological anemia: Hb may be 10.5 due to hemodilution"],
-        textbookRefs: ["DC Dutta Obstetrics Ch 10, 19", "Mudaliar & Menon Ch 9"],
+        textbookRefs: [{ book: "DC Dutta Obstetrics", chapter: "Ch 10, 19", edition: "" }, { book: "Mudaliar & Menon", chapter: "Ch 9", edition: "" }],
       },
       {
         layer: 5,
@@ -239,9 +239,9 @@ A: 1,200 mg/day
 
 **Q: What is the mechanism of physiological anemia of pregnancy?**
 A: Plasma volume increases (50%) more than RBC mass increase (30%) → dilutional decrease in Hb`,
-        mnemonics: ["Day 28 = NTube; 14 weeks = IFA starts; 1000mg = total iron"],
+        mnemonics: [{ text: "Day 28 = NTube; 14 weeks = IFA starts; 1000mg = total iron", explanation: "", tags: [] }],
         keyPoints: ["IFA: 100+0.5 from 14 weeks to 6m PP", "5mg folic acid if previous NTD", "Day 28 neural tube closure", "IV iron sucrose for severe anemia", "Thiamine before glucose in hyperemesis"],
-        textbookRefs: ["DC Dutta Obstetrics Ch 10", "Mudaliar & Menon Ch 9"],
+        textbookRefs: [{ book: "DC Dutta Obstetrics", chapter: "Ch 10", edition: "" }, { book: "Mudaliar & Menon", chapter: "Ch 9", edition: "" }],
       },
     ],
   },
@@ -309,9 +309,9 @@ Step 4: If HR still <60 despite compressions
 - Severe jaundice (within 24 hours or deep yellow)
 - Temperature <35.5°C or >37.5°C
 - Umbilical redness/discharge`,
-        mnemonics: ["APGAR: Appearance, Pulse, Grimace, Activity, Respiration", "Resuscitation: Warm-Clear-Dry-Stimulate → PPV → Compressions → Epinephrine (WCDS-PCE)"],
+        mnemonics: [{ text: "APGAR: Appearance, Pulse, Grimace, Activity, Respiration", explanation: "", tags: [] }, { text: "Resuscitation: Warm-Clear-Dry-Stimulate → PPV → Compressions → Epinephrine (WCDS-PCE)", explanation: "", tags: [] }],
         keyPoints: ["Golden Minute: complete initial steps in 60 seconds", "APGAR scored at 1 and 5 minutes", "Delayed cord clamping (1-3 min) improves iron stores", "Chest compressions if HR <60 after PPV", "Compression:ventilation ratio = 3:1 in neonates"],
-        textbookRefs: ["DC Dutta Obstetrics Ch 33", "NNF Textbook of Neonatology"],
+        textbookRefs: [{ book: "DC Dutta Obstetrics", chapter: "Ch 33", edition: "" }, { book: "NNF Textbook of Neonatology", chapter: "", edition: "" }],
       },
       {
         layer: 2,
@@ -361,9 +361,9 @@ Neonatal cardiac arrest is almost always respiratory in origin (unlike adults wh
 - Brown fat thermogenesis (non-shivering) is the primary mechanism
 - Cold stress → increased oxygen consumption → worsens hypoxia
 - Temperature goal: 36.5–37.5°C (axillary)`,
-        mnemonics: ["Transition: Lungs open → PVR drops → LA>RA → FO closes → Ductus closes (think of dominoes falling)"],
+        mnemonics: [{ text: "Transition: Lungs open → PVR drops → LA>RA → FO closes → Ductus closes (think of dominoes falling)", explanation: "", tags: [] }],
         keyPoints: ["Cannot distinguish primary from secondary apnea clinically — always intervene", "Neonatal arrest is respiratory in origin — ventilation is priority", "3:1 ratio gives 90 compressions + 30 breaths per minute", "Cold stress increases O2 consumption and worsens hypoxia", "Ductus arteriosus closes due to increased PaO2"],
-        textbookRefs: ["DC Dutta Obstetrics Ch 33", "NNF Textbook Ch 8", "Nelson Pediatrics Ch 102"],
+        textbookRefs: [{ book: "DC Dutta Obstetrics", chapter: "Ch 33", edition: "" }, { book: "NNF Textbook", chapter: "Ch 8", edition: "" }, { book: "Nelson Pediatrics", chapter: "Ch 102", edition: "" }],
       },
       {
         layer: 3,
@@ -423,9 +423,9 @@ Every delivery room must have:
 - **NBSU (Newborn Stabilization Unit)**: CHC level, stabilize and refer
 - **HBNC (Home-Based Newborn Care)**: ASHAs visit newborns at home (days 1,3,7,14,21,28,42)
 - **Navjaat Shishu Suraksha Karyakram (NSSK)**: Training program for basic newborn care`,
-        mnemonics: ["MR SOPA for PPV troubleshooting: Mask, Reposition, Suction, Open, Pressure, Alternative airway"],
+        mnemonics: [{ text: "MR SOPA for PPV troubleshooting: Mask, Reposition, Suction, Open, Pressure, Alternative airway", explanation: "", tags: [] }],
         keyPoints: ["MR SOPA corrective steps for ineffective PPV", "Two-thumb technique on lower 1/3 sternum", "Epinephrine 0.01-0.03 mg/kg IV (1:10,000)", "NO routine tracheal suction in MSAF (NRP 2020)", "Therapeutic hypothermia within 6 hours for moderate-severe HIE"],
-        textbookRefs: ["DC Dutta Obstetrics Ch 33", "NNF Textbook Ch 8-9", "NSSK Guidelines"],
+        textbookRefs: [{ book: "DC Dutta Obstetrics", chapter: "Ch 33", edition: "" }, { book: "NNF Textbook", chapter: "Ch 8-9", edition: "" }, { book: "NSSK Guidelines", chapter: "", edition: "" }],
       },
       {
         layer: 4,
@@ -470,9 +470,9 @@ Every delivery room must have:
 | Epinephrine ET dose | 0.05–0.1 mg/kg |
 | Normal saline bolus | 10 mL/kg |
 | Hypothermia target | 33.5°C for 72 hours |`,
-        mnemonics: ["Room Air for Resuscitation Start: '21 for 2021 guidelines' (21% O2)"],
+        mnemonics: [{ text: "Room Air for Resuscitation Start: '21 for 2021 guidelines' (21% O2)", explanation: "", tags: [] }],
         keyPoints: ["Ventilation is THE most important step", "3:1 ratio ONLY for neonates", "Start with room air (21% O2) for term babies", "APGAR doesn't guide resuscitation", "No sodium bicarbonate in delivery room"],
-        textbookRefs: ["DC Dutta Obstetrics Ch 33", "NNF NRP Guidelines 2020"],
+        textbookRefs: [{ book: "DC Dutta Obstetrics", chapter: "Ch 33", edition: "" }, { book: "NNF NRP Guidelines 2020", chapter: "", edition: "" }],
       },
       {
         layer: 5,
@@ -511,9 +511,9 @@ A: Clamping the cord 1–3 minutes after birth; improves iron stores and reduces
 
 **Q: Name the Indian program for home-based newborn care.**
 A: HBNC (Home-Based Newborn Care) — ASHAs visit on days 1, 3, 7, 14, 21, 28, and 42.`,
-        mnemonics: ["HBNC visit days: 1-3-7-14-21-28-42 (increasing intervals)"],
+        mnemonics: [{ text: "HBNC visit days: 1-3-7-14-21-28-42 (increasing intervals)", explanation: "", tags: [] }],
         keyPoints: ["Golden Minute = 60 seconds for initial steps", "3:1 ratio, room air start", "MR SOPA for PPV troubleshooting", "No routine meconium suctioning", "HBNC by ASHA on days 1,3,7,14,21,28,42"],
-        textbookRefs: ["DC Dutta Obstetrics Ch 33", "NNF Textbook Ch 8"],
+        textbookRefs: [{ book: "DC Dutta Obstetrics", chapter: "Ch 33", edition: "" }, { book: "NNF Textbook", chapter: "Ch 8", edition: "" }],
       },
     ],
   },
@@ -585,9 +585,9 @@ Previously called "leukoplakia" — now classified by ISSVD:
 - Location: 5 and 7 o'clock position at vaginal introitus
 - Treatment: Marsupialization (preferred) or Word catheter; I&D for acute abscess
 - In women >40: biopsy to rule out Bartholin gland carcinoma`,
-        mnemonics: ["Lichen Sclerosus = 'Cigarette Paper Skin' with 4-5% cancer risk", "Bartholin cyst: 5 & 7 o'clock (like a watch face at the introitus)"],
+        mnemonics: [{ text: "Lichen Sclerosus = 'Cigarette Paper Skin' with 4-5% cancer risk", explanation: "", tags: [] }, { text: "Bartholin cyst: 5 & 7 o'clock (like a watch face at the introitus)", explanation: "", tags: [] }],
         keyPoints: ["Lichen sclerosus: most common vulvar dystrophy, 4-5% SCC risk", "Vulvar SCC: 90% of vulvar cancers, two pathways (HPV and non-HPV)", "Clear cell adenocarcinoma of vagina → DES exposure in utero", "Bartholin cyst treatment: marsupialization preferred", "dVIN has higher malignant potential than uVIN"],
-        textbookRefs: ["DC Dutta Gynecology Ch 26, 27", "Shaw's Textbook of Gynecology Ch 30"],
+        textbookRefs: [{ book: "DC Dutta Gynecology", chapter: "Ch 26, 27", edition: "" }, { book: "Shaw's Textbook of Gynecology", chapter: "Ch 30", edition: "" }],
       },
       {
         layer: 2,
@@ -632,9 +632,9 @@ Previously called "leukoplakia" — now classified by ISSVD:
 - Secondary infection (often polymicrobial: E. coli, anaerobes, rarely N. gonorrhoeae) → abscess
 - Recurrent cyst → marsupialization creates new drainage pathway
 - In older women: adenoid cystic carcinoma or SCC can arise from Bartholin gland`,
-        mnemonics: ["Two VIN pathways: uVIN = HPV/young/p16+; dVIN = LichenSclerosus/old/p53+/WORSE prognosis"],
+        mnemonics: [{ text: "Two VIN pathways: uVIN = HPV/young/p16+; dVIN = LichenSclerosus/old/p53+/WORSE prognosis", explanation: "", tags: [] }],
         keyPoints: ["Lichen sclerosus is autoimmune — T-cell mediated", "uVIN: HPV→E6/E7→p53/Rb loss, p16 positive", "dVIN: non-HPV, p53 mutation, p16 negative, higher malignant risk", "DES → vaginal adenosis → clear cell adenocarcinoma", "Bartholin abscess: polymicrobial (E. coli, anaerobes)"],
-        textbookRefs: ["DC Dutta Gynecology Ch 26, 27", "Robbins Pathology Ch 22"],
+        textbookRefs: [{ book: "DC Dutta Gynecology", chapter: "Ch 26, 27", edition: "" }, { book: "Robbins Pathology", chapter: "Ch 22", edition: "" }],
       },
       {
         layer: 3,
@@ -689,9 +689,9 @@ Previously called "leukoplakia" — now classified by ISSVD:
 - Late presentation of vulvar cancer common in rural India due to shame/taboo
 - Lichen sclerosus often misdiagnosed as fungal infection → treated with antifungals → delays diagnosis
 - DES-related clear cell carcinoma now extremely rare in India (DES discontinued)`,
-        mnemonics: ["Vulvar cancer: ≤1mm invasion = NO lymph node dissection needed (Stage IA)"],
+        mnemonics: [{ text: "Vulvar cancer: ≤1mm invasion = NO lymph node dissection needed (Stage IA)", explanation: "", tags: [] }],
         keyPoints: ["Any vulvar lesion >4 weeks → biopsy", "Clobetasol 0.05% is treatment of choice for lichen sclerosus", "Stage IA vulvar cancer: WLE only, no LN dissection", "Word catheter for Bartholin abscess (4-6 weeks)", "Upper 1/3 vaginal cancer treated like cervical cancer"],
-        textbookRefs: ["DC Dutta Gynecology Ch 26, 27", "Shaw's Textbook Ch 30", "FIGO Staging Guidelines"],
+        textbookRefs: [{ book: "DC Dutta Gynecology", chapter: "Ch 26, 27", edition: "" }, { book: "Shaw's Textbook", chapter: "Ch 30", edition: "" }, { book: "FIGO Staging Guidelines", chapter: "", edition: "" }],
       },
       {
         layer: 4,
@@ -728,9 +728,9 @@ Previously called "leukoplakia" — now classified by ISSVD:
 | p53 IHC | Wild-type | Mutant |
 | Malignant risk | <5% | >30% |
 | Histology | Basaloid/warty | Keratinizing |`,
-        mnemonics: ["VIN comparison: U=Usual=Young=HPV=p16+; D=Differentiated=Dystrophy=p53+=Dangerous"],
+        mnemonics: [{ text: "VIN comparison: U=Usual=Young=HPV=p16+; D=Differentiated=Dystrophy=p53+=Dangerous", explanation: "", tags: [] }],
         keyPoints: ["Vulvar SCC 90% of vulvar malignancies", "Vulvar melanoma is 2nd most common (not basal cell)", "Verrucous carcinoma: never radiate", "Vulvar Paget's: 10-20% have underlying adenocarcinoma", "Primary vaginal cancer = diagnosis of exclusion"],
-        textbookRefs: ["DC Dutta Gynecology Ch 26, 27", "Shaw's Textbook Ch 30"],
+        textbookRefs: [{ book: "DC Dutta Gynecology", chapter: "Ch 26, 27", edition: "" }, { book: "Shaw's Textbook", chapter: "Ch 30", edition: "" }],
       },
       {
         layer: 5,
@@ -772,9 +772,9 @@ A: Radiation causes anaplastic transformation (makes it more aggressive)
 
 **Q: What FIGO stage of vulvar cancer does NOT require lymph node dissection?**
 A: Stage IA (≤2 cm, ≤1 mm invasion)`,
-        mnemonics: ["Bartholin biopsy age: >40 ('Bartholin Biopsy at Forty')"],
+        mnemonics: [{ text: "Bartholin biopsy age: >40 ('Bartholin Biopsy at Forty')", explanation: "", tags: [] }],
         keyPoints: ["Lichen sclerosus: 4-5% SCC risk, treat with clobetasol", "SCC 90%, melanoma 2nd most common", "uVIN vs dVIN: HPV/p16 vs lichen/p53", "DES → clear cell adenocarcinoma", "Stage IA: no LN dissection needed"],
-        textbookRefs: ["DC Dutta Gynecology Ch 26, 27"],
+        textbookRefs: [{ book: "DC Dutta Gynecology", chapter: "Ch 26, 27", edition: "" }],
       },
     ],
   },
@@ -841,9 +841,9 @@ Permanent cessation of menstruation for ≥12 consecutive months.
 - **Psychological**: Mood changes, insomnia, anxiety
 - **Skeletal**: Osteoporosis (accelerated bone loss first 5–7 years)
 - **Cardiovascular**: Increased CVD risk (loss of estrogen's protective effect)`,
-        mnemonics: ["Puberty sequence: 'The Pubertal Girl Menstruates' = Thelarche, Pubarche, Growth spurt, Menarche", "Primary amenorrhea with breast: MITA = Müllerian agenesis, Imperforate hymen, Transverse septum, AIS"],
+        mnemonics: [{ text: "Puberty sequence: 'The Pubertal Girl Menstruates' = Thelarche, Pubarche, Growth spurt, Menarche", explanation: "", tags: [] }, { text: "Primary amenorrhea with breast: MITA = Müllerian agenesis, Imperforate hymen, Transverse septum, AIS", explanation: "", tags: [] }],
         keyPoints: ["Thelarche is first sign of puberty", "Precocious puberty: <8 years in girls", "Turner syndrome: most common cause of hypergonadotropic primary amenorrhea", "Menopause: 12 months amenorrhea, average 47 years in India", "Hot flushes are the most common menopausal symptom"],
-        textbookRefs: ["DC Dutta Gynecology Ch 5, 7, 8", "Shaw's Textbook Ch 6, 28"],
+        textbookRefs: [{ book: "DC Dutta Gynecology", chapter: "Ch 5, 7, 8", edition: "" }, { book: "Shaw's Textbook", chapter: "Ch 6, 28", edition: "" }],
       },
       {
         layer: 2,
@@ -897,9 +897,9 @@ Permanent cessation of menstruation for ≥12 consecutive months.
 - Rapid bone loss phase: 2–3% per year for first 5–7 years after menopause
 - Slow phase: 0.5–1% per year thereafter
 - Trabecular bone affected first (spine > hip)`,
-        mnemonics: ["Menopause hormones: 'FSH First to rise, Estrone dominant Estrogen' (F for First, E for Estrone)"],
+        mnemonics: [{ text: "Menopause hormones: 'FSH First to rise, Estrone dominant Estrogen' (F for First, E for Estrone)", explanation: "", tags: [] }],
         keyPoints: ["Kisspeptin activates GnRH pulse generator at puberty", "POI: FSH >40 on two occasions 4 weeks apart", "FSH is earliest marker of declining ovarian reserve", "Estrone (not estradiol) is dominant estrogen in menopause", "Rapid bone loss: 2-3% per year for first 5-7 years"],
-        textbookRefs: ["DC Dutta Gynecology Ch 5, 7, 8", "Speroff's Clinical Gynecologic Endocrinology Ch 14"],
+        textbookRefs: [{ book: "DC Dutta Gynecology", chapter: "Ch 5, 7, 8", edition: "" }, { book: "Speroff's Clinical Gynecologic Endocrinology", chapter: "Ch 14", edition: "" }],
       },
       {
         layer: 3,
@@ -973,9 +973,9 @@ Permanent cessation of menstruation for ≥12 consecutive months.
 - High prevalence of osteoporosis in Indian women due to low calcium intake, vitamin D deficiency
 - Cultural silence around menopause → underreporting of symptoms
 - Rashtriya Kishor Swasthya Karyakram (RKSK): National adolescent health program addressing puberty education`,
-        mnemonics: ["HRT rule: 'E alone for No uterus, EP together if uterus Present' (E=Estrogen, P=Progesterone)"],
+        mnemonics: [{ text: "HRT rule: 'E alone for No uterus, EP together if uterus Present' (E=Estrogen, P=Progesterone)", explanation: "", tags: [] }],
         keyPoints: ["GnRH stimulation test differentiates central from peripheral precocious puberty", "Imperforate hymen: cruciate incision (not simple puncture)", "HRT: combined E+P if uterus present; E alone if absent", "Transdermal HRT preferred with DVT risk factors", "DEXA T-score ≤-2.5 = osteoporosis"],
-        textbookRefs: ["DC Dutta Gynecology Ch 5, 7, 8", "Shaw's Textbook Ch 6, 28", "FOGSI Menopause Guidelines"],
+        textbookRefs: [{ book: "DC Dutta Gynecology", chapter: "Ch 5, 7, 8", edition: "" }, { book: "Shaw's Textbook", chapter: "Ch 6, 28", edition: "" }, { book: "FOGSI Menopause Guidelines", chapter: "", edition: "" }],
       },
       {
         layer: 4,
@@ -1013,9 +1013,9 @@ Permanent cessation of menstruation for ≥12 consecutive months.
 | Pubic hair | Present | Present | Absent/sparse |
 | FSH | High | Normal | High LH |
 | Gonads | Streak | Normal ovaries | Intra-abdominal testes |`,
-        mnemonics: ["MRKH vs AIS: 'MRKH has XX and hair; AIS has XY and no hair'"],
+        mnemonics: [{ text: "MRKH vs AIS: 'MRKH has XX and hair; AIS has XY and no hair'", explanation: "", tags: [] }],
         keyPoints: ["Thelarche = first sign of puberty", "Turner 45,XO: streak gonads, high FSH", "AIS 46,XY: breast+ but no pubic hair, no uterus", "Combined HRT increases breast cancer; E-alone does not", "Raloxifene helps bone but worsens hot flushes"],
-        textbookRefs: ["DC Dutta Gynecology Ch 5, 7, 8", "Shaw's Textbook Ch 6, 28"],
+        textbookRefs: [{ book: "DC Dutta Gynecology", chapter: "Ch 5, 7, 8", edition: "" }, { book: "Shaw's Textbook", chapter: "Ch 6, 28", edition: "" }],
       },
       {
         layer: 5,
@@ -1060,9 +1060,9 @@ A: Combined E+P increased breast cancer risk; estrogen-alone did NOT.
 
 **Q: What is the T-score cutoff for osteoporosis on DEXA?**
 A: ≤ -2.5`,
-        mnemonics: ["Turner-MRKH-AIS: 'TOMAto' — Turner=O(X), MRKH=XX+hair, AIS=XY-hair"],
+        mnemonics: [{ text: "Turner-MRKH-AIS: 'TOMAto' — Turner=O(X), MRKH=XX+hair, AIS=XY-hair", explanation: "", tags: [] }],
         keyPoints: ["Thelarche first, GnRH stim test differentiates", "Kallmann = anosmia + hypogonadotropic", "MRKH 46XX vs AIS 46XY (pubic hair present vs absent)", "FSH rises first in menopause", "WHI: combined HRT → breast cancer, E-alone → no increase"],
-        textbookRefs: ["DC Dutta Gynecology Ch 5, 7, 8"],
+        textbookRefs: [{ book: "DC Dutta Gynecology", chapter: "Ch 5, 7, 8", edition: "" }],
       },
     ],
   },

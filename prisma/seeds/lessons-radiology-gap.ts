@@ -290,9 +290,7 @@ Answer: Coil thrombosis mechanism: coil placement initiates blood contact → cl
         ]
       }
     ]
-  }
-];
-,
+  },
   {
     topicCode: "RD-MOD-01-TOP-04",
     layers: [

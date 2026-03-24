@@ -3,6 +3,7 @@ import { ChevronRight, BookOpen, Clock, CheckCircle2 } from "lucide-react";
 import { ProgressRing } from "@/components/shared/ProgressRing";
 import { getServerTrpc } from "@/lib/trpc/server";
 import { notFound } from "next/navigation";
+export const dynamic = "force-dynamic";
 
 export default async function SubjectPage({ params }: { params: Promise<{ subjectCode: string }> }) {
   const { subjectCode } = await params;

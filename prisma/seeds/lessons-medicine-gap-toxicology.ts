@@ -846,7 +846,7 @@ Plus: Muscle fasciculations, miosis (pinpoint pupils), bradycardia, bronchospasm
 - **Pralidoxime benefit**: Works BEFORE aging; reactivates AChE if given early
 
 ### Paracetamol (Acetaminophen) Metabolism
-```
+\`\`\`
 Paracetamol (acetaminophen)
 ↓
 Phase I: CYP2E1, CYP2D6 (10-15%) → NAPQI (toxic reactive intermediate)
@@ -854,13 +854,13 @@ Phase I: CYP2E1, CYP2D6 (10-15%) → NAPQI (toxic reactive intermediate)
 NAPQI + Glutathione (GSH) ← Phase II conjugation
 ↓
 Mercapturic acid (safe, excreted)
-```
+\`\`\`
 - **Overdose**: GSH depletion → unchecked NAPQI accumulation → hepatocellular necrosis
 - **NAC mechanism**: Replenishes GSH, scavenges NAPQI, induces sulfation pathway
 - **Timing**: NAC effective within 24 hours of ingestion; optimal <8-10 hours
 
 ### Methanol & Ethylene Glycol Metabolism
-```
+\`\`\`
 Methanol/Ethylene glycol
 ↓
 ADH enzyme (alcohol dehydrogenase)
@@ -869,7 +869,7 @@ Methanol → Formaldehyde → Formic acid (TOXIC)
 Ethylene glycol → Glycolaldehyde → Glycolic acid → Oxalic acid (TOXIC)
 ↓
 Toxicity: Metabolic acidosis, organ damage (CNS in methanol, kidneys in EG)
-```
+\`\`\`
 - **Fomepizole mechanism**: Competitively inhibits ADH → blocks conversion to toxic metabolites
 - **Alcohol**: Also inhibits ADH (lesser enzyme affinity); historical antidote before fomepizole
 - **Hemodialysis**: Removes parent compounds and toxic metabolites; used with fomepizole
@@ -1004,7 +1004,7 @@ Toxicity: Metabolic acidosis, organ damage (CNS in methanol, kidneys in EG)
 ### Step 4: Specific Antidote Administration
 
 **Organophosphate Poisoning Antidote Protocol**
-```
+\`\`\`
 Diagnosis: SLUDGE + muscle fasciculations + cholinergic crisis
 Immediate treatment:
 1. Atropine IV 0.5-1 mg bolus
@@ -1017,10 +1017,10 @@ Immediate treatment:
    - Follow with 500 mg-1 g IV infusion q4-6h
 3. Benzodiazepines (midazolam, lorazepam) for seizures
 4. Supportive: Oxygen, airway management, IV fluids
-```
+\`\`\`
 
 **Opioid Overdose Antidote Protocol**
-```
+\`\`\`
 Diagnosis: Respiratory depression + miosis + altered consciousness
 Naloxone IV 0.4-2 mg bolus
 - Works within 1-2 minutes
@@ -1029,10 +1029,10 @@ Naloxone IV 0.4-2 mg bolus
 - Monitor: Respiratory rate >12/min, SpO2 >94%
 - t1/2 short (30-80 min) → may need repeat dosing if long-acting opioid (methadone)
 - Caution: Precipitates withdrawal in opioid-dependent patients
-```
+\`\`\`
 
 **Paracetamol Overdose Antidote Protocol**
-```
+\`\`\`
 Diagnosis: Ingestion >7.5 g (adult); assess risk via Rumack-Matthew nomogram
 NAC (N-acetylcysteine) protocol:
 Loading dose: 150 mg/kg IV over 1 hour
@@ -1041,10 +1041,10 @@ Maintenance 2: 100 mg/kg IV over 16 hours
 - Effective within 24 hours; optimal <8-10 hours
 - Monitor: Liver enzymes, PT/INR, bilirubin
 - If PT normalized, stop NAC
-```
+\`\`\`
 
 **Methanol/Ethylene Glycol Poisoning Antidote**
-```
+\`\`\`
 Diagnosis: Osmolal gap >10, metabolic acidosis, altered consciousness
 Fomepizole (4-methylpyrazole) IV
 - Loading: 15 mg/kg IV over 30 minutes
@@ -1052,7 +1052,7 @@ Fomepizole (4-methylpyrazole) IV
 - Continue until methanol/EG level <20 mg/dL or osmolal gap normalized
 - Hemodialysis: Indicated if severe acidosis (pH <7.1), renal failure, level >25 mg/dL
 - Monitor: Serum levels (if available), osmolal gap, acid-base status
-```
+\`\`\`
 
 ### Step 5: Enhanced Elimination
 
@@ -1601,7 +1601,7 @@ These species cause 90% of snake envenomation deaths in India:
 ## Disseminated Intravascular Coagulation (DIC) in Snake Bite
 
 ### Cascade in Russell's Viper Envenomation
-```
+\`\`\`
 Venom serine proteases activate coagulation
 ↓
 Massive fibrin formation (microthrombi)
@@ -1617,7 +1617,7 @@ Blood becomes "incoagulable" (secondary fibrinolysis)
 Bleeding manifestations (gums, GU, GI)
 ↓
 End-organ damage: Acute stroke (thrombosis), MI, renal failure
-```
+\`\`\`
 
 ### Microthrombosis Complications
 - **Stroke**: Thrombosis in cerebral vessels → paralysis, death
@@ -2194,7 +2194,7 @@ D. NSAIDs for pain relief (contraindicated; bleeding risk)
 ## Acetylcholinesterase (AChE) Inhibition Mechanism
 
 ### Normal Acetylcholine Metabolism
-```
+\`\`\`
 Acetylcholine (ACh) released from presynaptic neuron
 ↓
 Binds to acetylcholine receptors (nicotinic, muscarinic)
@@ -2204,7 +2204,7 @@ Signal transmitted to postsynaptic cell
 AChE enzyme degrades acetylcholine
 ↓
 Synapse cleared; receptor available for next signal
-```
+\`\`\`
 
 ### Organophosphate Effect on AChE
 1. **Phosphorylation**: Organophosphate binds to serine residue in AChE active site
@@ -2308,23 +2308,23 @@ Synapse cleared; receptor available for next signal
 ## Acetylcholinesterase (AChE) Biochemistry
 
 ### AChE Catalytic Mechanism (Normal)
-```
+\`\`\`
 ACh + AChE ← Complex → Products + AChE
 (Rapid: milliseconds)
-```
+\`\`\`
 - AChE has serine (Ser 203) in active site
 - Acetylcholine binds → hydroxyl group of Ser attacks carbonyl carbon of acetyl group
 - Acyl-enzyme intermediate forms briefly
 - Hydrolysis releases acetate + regenerated AChE (within milliseconds)
 
 ### Organophosphate Phosphorylation (Abnormal)
-```
+\`\`\`
 Organophosphate + AChE → Phosphorylated AChE (stable, hours-days)
 ↓
 Time-dependent: Dealkylation (aging)
 ↓
 AGED complex (irreversible, weeks for turnover)
-```
+\`\`\`
 
 **Key difference**: Phosphorus forms much more stable bond than acetyl group; hydrolysis extremely slow to impossible
 
@@ -2503,7 +2503,7 @@ AGED complex (irreversible, weeks for turnover)
 - Does NOT fix enzyme; only symptom relief
 
 **Dosing Protocol**:
-```
+\`\`\`
 Initial: Atropine 0.5-1 mg IV bolus
 ↓
 Reassess in 5-10 minutes
@@ -2517,7 +2517,7 @@ Until: Secretions dry (salivation stopped), RR >12, HR normalized
 Then: Give large dose (same as final effective dose) IM/SC
 ↓
 Maintenance: Same dose q4-6 hours (or continuous infusion if severe)
-```
+\`\`\`
 
 **CRITICAL POINTS**:
 - **No upper limit**: Unlike usual atropine dosing, can give very large doses (grams total)
@@ -2538,7 +2538,7 @@ Maintenance: Same dose q4-6 hours (or continuous infusion if severe)
 - Also helps nicotinic symptoms (atropine doesn't)
 
 **Dosing Protocol**:
-```
+\`\`\`
 Loading: Pralidoxime 1-2 g IV over 5-10 minutes (slow infusion)
 ↓
 Wait 5-10 minutes; assess response
@@ -2548,7 +2548,7 @@ If inadequate improvement: Repeat loading dose
 Then: Maintenance 500 mg-1 g IV infusion q4-6 hours
 ↓
 Continue × 24-48 hours (until aging complete or toxicity improves)
-```
+\`\`\`
 
 **CRITICAL TIMING**:
 - <24 hours post-exposure: Highly effective (aging not yet complete)
@@ -2819,13 +2819,13 @@ D. Anaphylaxis to antidotes; switch to other agents (no signs of anaphylaxis)
 ### Q6: Acetylcholinesterase (AChE) Phosphorylation & Aging
 **Q**: Diagram the biochemical process of OP binding to AChE and explain why "aging" makes pralidoxime ineffective.
 **A**:
-```
+\`\`\`
 Normal: ACh → AChE (serine) → rapid hydrolysis → cleared
 OP poisoning: OP → AChE-phosphate complex (slow/no hydrolysis) → accumulates → acetylcholine accumulates
 Pralidoxime: Oxime attacks phosphate → removes it → AChE regenerated ✓ (if done early)
 Aging: AChE-phosphate → dealkylation → AChE-aged phosphate (very stable, irreversible)
 Pralidoxime post-aging: Cannot reactivate aged complex ✗ (irreversible)
-```
+\`\`\`
 Aging = dealkylation of side chain; locks phosphate into enzyme irreversibly.
 
 ### Q7: Intermediate Syndrome (IS) Recognition & Management
@@ -3032,7 +3032,7 @@ Aging = dealkylation of side chain; locks phosphate into enzyme irreversibly.
 ## Acid vs Alkali Tissue Damage Mechanisms
 
 ### Acid Injury (Coagulative Necrosis)
-```
+\`\`\`
 Strong acid (H+)
 ↓
 Denatures proteins → protein coagulum (eschar) forms
@@ -3042,14 +3042,14 @@ Eschar acts as barrier → limits further penetration
 Injury usually limited to contact surface
 ↓
 Less serious than alkali (exception: very concentrated acids)
-```
+\`\`\`
 
 **Chemical reaction**: Exothermic (heat-generating); additional injury from heat
 **Tissue: Most resistant structures** (muscle, bone)
 **Clinical**: Visible burn area, charring
 
 ### Alkali Injury (Liquefactive Necrosis)
-```
+\`\`\`
 Strong alkali (OH-)
 ↓
 Saponifies fats (dissolves lipids) + denatures proteins
@@ -3059,7 +3059,7 @@ No eschar barrier → continuous penetration deeper
 Damage extends into submucosa, muscle, beyond
 ↓
 Severe, extensive injury; perforation risk
-```
+\`\`\`
 
 **Chemical reaction**: Not exothermic; slower reaction allows deep penetration
 **Tissue: Penetrates deep** through all layers
@@ -3068,25 +3068,25 @@ Severe, extensive injury; perforation risk
 ## NAPQI Formation & Detoxification Pathways
 
 ### Paracetamol Metabolism Pathways
-```
+\`\`\`
 Paracetamol (acetaminophen)
 ↓ (Phase I: CYP2E1, CYP2D6)
 NAPQI (N-acetyl-p-benzoquinone imine)
 ↓
 Two possible fates:
-```
+\`\`\`
 
 **Path 1: NORMAL (Glutathione-dependent, saturable)**
-```
+\`\`\`
 NAPQI + Glutathione (GSH) ← [Glutathione S-transferase]
 ↓
 Paracetamol-glutathione conjugate (safe)
 ↓
 Excretion (urine)
-```
+\`\`\`
 
 **Path 2: SATURATION (In overdose)**
-```
+\`\`\`
 Glutathione depleted (exhausted by NAPQI conjugation)
 ↓
 Unchecked NAPQI accumulation
@@ -3096,7 +3096,7 @@ NAPQI binds hepatocyte proteins (mitochondrial, cytoplasmic)
 Oxidative stress, lipid peroxidation, mitochondrial dysfunction
 ↓
 Hepatocellular necrosis (centrilobular pattern)
-```
+\`\`\`
 
 ### NAC Mechanism (Three Actions)
 1. **Glutathione replenishment** (primary mechanism):
@@ -3122,7 +3122,7 @@ Hepatocellular necrosis (centrilobular pattern)
 ## Desferrioxamine (Iron Antidote) Mechanism
 
 ### Iron Toxicity Pathophysiology
-```
+\`\`\`
 Iron Fe2+ (ferrous)
 ↓
 Oxidation to Fe3+ (ferric)
@@ -3132,7 +3132,7 @@ Fenton reaction: Fe3+ + H2O2 → Fe2+ + OH• (hydroxyl radical)
 Hydroxyl radicals damage lipids, proteins, DNA
 ↓
 Oxidative stress → cell death, organ damage (GI, liver, heart)
-```
+\`\`\`
 
 ### Desferrioxamine Chelation
 - **Mechanism**: Hexadentate ligand (6 binding sites) binds Fe3+ → forms stable complex
@@ -3143,26 +3143,26 @@ Oxidative stress → cell death, organ damage (GI, liver, heart)
 ## Methanol & Ethylene Glycol Metabolism
 
 ### Normal ADH Metabolism
-```
+\`\`\`
 Ethanol
 ↓ [Alcohol dehydrogenase (ADH)]
 Acetaldehyde
 ↓ [Aldehyde dehydrogenase (ALDH)]
 Acetate (safe, metabolized to CO2)
-```
+\`\`\`
 
 ### Methanol Metabolism (Toxic)
-```
+\`\`\`
 Methanol
 ↓ [ADH]
 Formaldehyde (toxic to retina, CNS)
 ↓ [ALDH]
 Formic acid (VERY TOXIC—metabolic acidosis, CNS damage)
-```
+\`\`\`
 **Clinical consequence**: Blindness (formaldehyde toxicity to optic nerve), CNS damage
 
 ### Ethylene Glycol Metabolism (Toxic)
-```
+\`\`\`
 Ethylene glycol
 ↓ [ADH]
 Glycolaldehyde
@@ -3170,7 +3170,7 @@ Glycolaldehyde
 Glycolic acid
 ↓ [Multiple steps]
 Oxalic acid (deposits as calcium oxalate crystals in kidneys)
-```
+\`\`\`
 **Clinical consequence**: Acute renal failure (oxalic acid precipitation in tubules), seizures
 
 ### Fomepizole (4-Methylpyrazole) Mechanism
@@ -3182,7 +3182,7 @@ Oxalic acid (deposits as calcium oxalate crystals in kidneys)
 ## Cyanide Toxicology
 
 ### Cyanide Mechanism
-```
+\`\`\`
 Cyanide (CN-)
 ↓
 Binds cytochrome c oxidase (Complex IV of electron transport chain)
@@ -3192,7 +3192,7 @@ Blocks oxidative phosphorylation
 Mitochondrial ATP production ceases
 ↓
 Cellular hypoxia (tissues can't use oxygen despite normal pO2)
-```
+\`\`\`
 
 ### Hydroxocobalamin (Vitamin B12 analog) Mechanism
 - **Binding**: CN- + Hydroxocobalamin → Cyanocobalamin (vitamin B12)
@@ -3320,7 +3320,7 @@ Cellular hypoxia (tissues can't use oxygen despite normal pO2)
 - Late presentation (>4h) with ingestion history: Start NAC empirically pending level
 
 **Dosing**:
-```
+\`\`\`
 Loading: NAC 150 mg/kg IV over 1 hour (in 200 mL NS)
 ↓ (Infuse slowly to reduce anaphylaxis risk)
 Maintenance 1: NAC 50 mg/kg IV over 4 hours
@@ -3328,7 +3328,7 @@ Maintenance 1: NAC 50 mg/kg IV over 4 hours
 Maintenance 2: NAC 100 mg/kg IV over 16 hours
 ↓
 Total duration: 20-21 hours (can repeat if worsening liver function)
-```
+\`\`\`
 
 **Monitoring**:
 - Liver enzymes q24h (watch for rise)
@@ -3377,13 +3377,13 @@ Total duration: 20-21 hours (can repeat if worsening liver function)
 - Radiopaque pills visible on abdominal X-ray (if ingestion severe)
 
 **Dosing**:
-```
+\`\`\`
 Severe toxicity: DFX 15 mg/kg IV infusion
 ↓ (Not bolus; slow infusion over 4-6 hours)
 Titrate to clinical improvement
 ↓
 May repeat dosing if serum iron rising or clinical deterioration
-```
+\`\`\`
 
 **Clinical effect**: Urine becomes "vin rosé" colored (iron-DFX complex)
 
@@ -3415,7 +3415,7 @@ May repeat dosing if serum iron rising or clinical deterioration
 - Suspected methanol/EG poisoning
 
 **Dosing**:
-```
+\`\`\`
 Loading: Fomepizole 15 mg/kg IV over 30 minutes
 ↓
 Maintenance: 10 mg/kg IV q12h × 4 doses
@@ -3425,7 +3425,7 @@ Then: 15 mg/kg IV q12h
 Continue until: Methanol/EG level <20 mg/dL
 OR: Osmolal gap normalized
 OR: Metabolic acidosis resolved
-```
+\`\`\`
 
 **Advantage over ethanol**: More selective ADH inhibition; doesn't cause intoxication
 
@@ -3745,7 +3745,7 @@ D. Induce vomiting, then activated charcoal (contraindicated; paracetamol alread
 
 ### Mechanism of Autonomic Storm
 **Red scorpion venom** triggers massive sympathetic overstimulation:
-```
+\`\`\`
 Venom toxins → Na+/K+ channel dysfunction
 ↓
 Uncontrolled catecholamine release (NE, epinephrine)
@@ -3753,7 +3753,7 @@ Uncontrolled catecholamine release (NE, epinephrine)
 Massive sympathetic overactivity (despite autonomic balance disruption)
 ↓
 "Autonomic storm"
-```
+\`\`\`
 
 ### Clinical Manifestations
 
@@ -3920,7 +3920,7 @@ Massive sympathetic overactivity (despite autonomic balance disruption)
 ## Autonomic Storm Pathophysiology
 
 ### Central Mechanism: Venom-Induced Catecholamine Excess
-```
+\`\`\`
 Venom α-toxins → Na+ channel dysfunction
 ↓
 Sympathetic neuronal hyperactivity
@@ -3930,7 +3930,7 @@ Massive catecholamine release (NE, E from sympathetic terminals, adrenal medulla
 Overwhelming β1, β2, α1, α2 receptor stimulation
 ↓
 AUTONOMIC STORM
-```
+\`\`\`
 
 ### Organs Affected & Clinical Manifestations
 
@@ -3970,7 +3970,7 @@ AUTONOMIC STORM
 - Direct vascular permeability effects
 
 ### Anaphylaxis Mechanism (IgE-mediated)
-```
+\`\`\`
 Bee venom allergen (PLA2, others)
 ↓
 Cross-links IgE on mast cell surface
@@ -3982,7 +3982,7 @@ Release: Histamine, tryptase, chemokines, leukotrienes
 Urticaria, angioedema, bronchospasm, hypotension
 ↓
 Anaphylaxis
-```
+\`\`\`
 
 ## Plant Alkaloid Mechanisms
 
@@ -4551,4 +4551,3 @@ D. Oxygen and IV fluids first (supportive, but adrenaline is priority)
     ]
   },
 ];
-`

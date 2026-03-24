@@ -912,7 +912,7 @@ Females (kcal/day): 447.593 + (9.247 × weight kg) + (3.098 × height cm) - (4.3
 - **Evaporative cooling**: Requires energy (latent heat of vaporization)
 
 ## Hypothalamic Control Circuit
-```
+\`\`\`
 Temperature sensors (skin, spinal cord, core)
           ↓
 Anterior hypothalamus (integrator, set-point 37°C)
@@ -926,7 +926,7 @@ Hypothalamus      Hypothalamus
 Heat prod ↑       Heat loss ↑
 (shivering,       (sweating,
 vasoconstr)       vasodil)
-```
+\`\`\`
 
 ## Peripheral Thermoreceptors
 - **Cold receptors**: TRPM8, TRPA1 channels → respond to cooling

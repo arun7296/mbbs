@@ -696,7 +696,7 @@ For digoxin in a CYP3A4 poor metabolizer taking clarithromycin:
 
 ## Rational Prescribing Algorithm (Short Version)
 
-```
+\`\`\`
 1. Diagnosis (clinical features + investigations)
    ↓
 2. Check NLEM availability
@@ -710,7 +710,7 @@ For digoxin in a CYP3A4 poor metabolizer taking clarithromycin:
 6. Set stopping rule (when to stop therapy)
    ↓
 7. Monitor for ADRs and efficacy
-```
+\`\`\`
 
 ## Previous Year Exam Themes
 

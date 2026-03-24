@@ -8,7 +8,7 @@ export const physiologyReproductiveLessons: TopicLessons[] = [
     layers: [
       {
         layer: 1,
-        slug: "male-repro-foundation",
+        slug: "physio-male-repro-foundation",
         title: "Male Reproductive Physiology - Foundation",
         estimatedMinutes: 25,
         summary: "Male reproductive physiology involves spermatogenesis, testosterone secretion, and sexual function.",
@@ -63,7 +63,7 @@ export const physiologyReproductiveLessons: TopicLessons[] = [
       },
       {
         layer: 2,
-        slug: "male-repro-mechanism",
+        slug: "physio-male-repro-mechanism",
         title: "Male Reproductive Physiology - Mechanism",
         estimatedMinutes: 30,
         summary: "Detailed mechanisms of testosterone synthesis, spermatogenesis regulation, and sexual response.",
@@ -117,7 +117,7 @@ export const physiologyReproductiveLessons: TopicLessons[] = [
       },
       {
         layer: 3,
-        slug: "male-repro-clinical",
+        slug: "physio-male-repro-clinical",
         title: "Male Reproductive Physiology - Clinical",
         estimatedMinutes: 20,
         summary: "Clinical disorders: erectile dysfunction, infertility, hypogonadism.",
@@ -163,7 +163,7 @@ export const physiologyReproductiveLessons: TopicLessons[] = [
       },
       {
         layer: 4,
-        slug: "male-repro-exam",
+        slug: "physio-male-repro-exam",
         title: "Male Reproductive Physiology - Exam Prep",
         estimatedMinutes: 15,
         summary: "High-yield exam points on male reproductive physiology.",
@@ -201,7 +201,7 @@ export const physiologyReproductiveLessons: TopicLessons[] = [
       },
       {
         layer: 5,
-        slug: "male-repro-recall",
+        slug: "physio-male-repro-recall",
         title: "Male Reproductive Physiology - Active Recall",
         estimatedMinutes: 12,
         summary: "Flashcards on male reproductive physiology.",
@@ -246,7 +246,7 @@ export const physiologyReproductiveLessons: TopicLessons[] = [
     layers: [
       {
         layer: 1,
-        slug: "female-repro-foundation",
+        slug: "physio-female-repro-foundation",
         title: "Female Reproductive Physiology - Foundation",
         estimatedMinutes: 25,
         summary: "Female reproductive physiology includes the menstrual cycle, ovulation, and hormonal regulation.",
@@ -301,7 +301,7 @@ export const physiologyReproductiveLessons: TopicLessons[] = [
       },
       {
         layer: 2,
-        slug: "female-repro-mechanism",
+        slug: "physio-female-repro-mechanism",
         title: "Female Reproductive Physiology - Mechanism",
         estimatedMinutes: 30,
         summary: "Detailed mechanisms of ovulation, corpus luteum formation, and hormonal control.",
@@ -357,7 +357,7 @@ export const physiologyReproductiveLessons: TopicLessons[] = [
       },
       {
         layer: 3,
-        slug: "female-repro-clinical",
+        slug: "physio-female-repro-clinical",
         title: "Female Reproductive Physiology - Clinical",
         estimatedMinutes: 20,
         summary: "Clinical disorders: anovulation, amenorrhea, infertility, PCOS.",
@@ -418,7 +418,7 @@ export const physiologyReproductiveLessons: TopicLessons[] = [
       },
       {
         layer: 4,
-        slug: "female-repro-exam",
+        slug: "physio-female-repro-exam",
         title: "Female Reproductive Physiology - Exam Prep",
         estimatedMinutes: 15,
         summary: "High-yield exam points on female reproductive physiology.",
@@ -462,7 +462,7 @@ export const physiologyReproductiveLessons: TopicLessons[] = [
       },
       {
         layer: 5,
-        slug: "female-repro-recall",
+        slug: "physio-female-repro-recall",
         title: "Female Reproductive Physiology - Active Recall",
         estimatedMinutes: 12,
         summary: "Flashcards on female reproductive physiology.",

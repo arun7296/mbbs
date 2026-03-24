@@ -1,4 +1,4 @@
-import { TopicLessons } from "./types";
+import type { TopicLessons } from "./content-loader";
 
 export const ophthalmologyGapLessons: TopicLessons[] = [
   // ============================================================
@@ -73,9 +73,9 @@ Involuntary rhythmic oscillation of eyes.
 - **Jerk nystagmus**: Fast + slow phase; named by FAST phase direction
 - **Pendular nystagmus**: Equal speed in both directions (e.g., congenital, miners')
 - **Optokinetic nystagmus**: Normal physiological response (OKN drum)`,
-        mnemonics: ["Argyll Robertson = ARP (Accommodation Reflex Present, light reflex absent)", "CN III palsy: 'Down and Out with a Dilated pupil'", "Meyer's loop (Temporal) = Superior defect = 'PIE IN THE SKY'"],
+        mnemonics: [{ text: "Argyll Robertson = ARP (Accommodation Reflex Present, light reflex absent)", explanation: "", tags: [] }, { text: "CN III palsy: 'Down and Out with a Dilated pupil'", explanation: "", tags: [] }, { text: "Meyer's loop (Temporal) = Superior defect = 'PIE IN THE SKY'", explanation: "", tags: [] }],
         keyPoints: ["RAPD: optic nerve disease, detected by swinging flashlight test", "Argyll Robertson pupil: neurosyphilis, near reflex intact, light reflex absent", "CN III palsy: down & out, ptosis, dilated pupil if PComA aneurysm", "CN IV: longest course, trauma most common cause", "CN VI: most common CN palsy, false localizing sign in raised ICP"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 20", "Parsons' Diseases of the Eye Ch 21"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 20", edition: "" }, { book: "Parsons' Diseases of the Eye", chapter: "Ch 21", edition: "" }],
       },
       {
         layer: 2,
@@ -135,9 +135,9 @@ Hydroxyamphetamine test: Dilates in central/preganglionic, NOT in postganglionic
 | Pain | Headache, transient visual obscurations | Pain on eye movement | No pain |
 | Bilateral | Usually yes | Usually unilateral | Can be either |
 | Cause | Raised ICP | MS, infections | End-stage optic nerve damage |`,
-        mnemonics: ["Horner's: Miosis, Ptosis (partial), Anhidrosis = 'MPA' (My Pupil's Affected)", "INO: 'In New Orleans, MLF doesn't work' — failure of adduction"],
+        mnemonics: [{ text: "Horner's: Miosis, Ptosis (partial), Anhidrosis = 'MPA' (My Pupil's Affected)", explanation: "", tags: [] }, { text: "INO: 'In New Orleans, MLF doesn't work' — failure of adduction", explanation: "", tags: [] }],
         keyPoints: ["Diabetic CN III: pupil spared (ischemia affects core, not periphery)", "PComA aneurysm CN III: pupil involved (compression affects periphery first)", "Bilateral INO in young = MS; unilateral in elderly = stroke", "Horner's: miosis + partial ptosis + anhidrosis", "Cocaine test confirms Horner's; hydroxyamphetamine localizes it"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 20", "Parsons' Ch 21", "Snell's Neuroanatomy Ch 8"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 20", edition: "" }, { book: "Parsons'", chapter: "Ch 21", edition: "" }, { book: "Snell's Neuroanatomy", chapter: "Ch 8", edition: "" }],
       },
       {
         layer: 3,
@@ -199,9 +199,9 @@ Hydroxyamphetamine test: Dilates in central/preganglionic, NOT in postganglionic
 - Pancoast tumor causing Horner's: Consider in smokers (high tobacco use in India)
 - Trachoma-related corneal opacification and papillary conjunctivitis still prevalent in rural India — distinguish from papilledema
 - NPCB (National Programme for Control of Blindness) includes neuro-ophthalmology training`,
-        mnemonics: ["CN III pupil-involving = EMERGENCY angiogram; pupil-sparing = observe 3 months"],
+        mnemonics: [{ text: "CN III pupil-involving = EMERGENCY angiogram; pupil-sparing = observe 3 months", explanation: "", tags: [] }],
         keyPoints: ["Pupil-involving CN III = PComA aneurysm until proven otherwise", "ONTT: IV methylprednisolone speeds recovery; oral steroids alone increase recurrence", "IIH: obese young woman, treat with weight loss + acetazolamide", "Swinging flashlight test detects RAPD", "Horner's workup: CXR + CT/MRI neck + brain MRI"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 20", "Parsons' Ch 21"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 20", edition: "" }, { book: "Parsons'", chapter: "Ch 21", edition: "" }],
       },
       {
         layer: 4,
@@ -240,9 +240,9 @@ Hydroxyamphetamine test: Dilates in central/preganglionic, NOT in postganglionic
 | Foster Kennedy | Ipsilateral atrophy + contralateral papilledema |
 | Horner | Miosis + partial ptosis + anhidrosis |
 | Adie tonic pupil | Dilated pupil, sluggish/absent light reflex, sector palsy on slit lamp |`,
-        mnemonics: ["Foster Kennedy: 'Foster the FRONT lobe tumor' — ipsilateral atrophy, contralateral papilledema"],
+        mnemonics: [{ text: "Foster Kennedy: 'Foster the FRONT lobe tumor' — ipsilateral atrophy, contralateral papilledema", explanation: "", tags: [] }],
         keyPoints: ["RAPD not in cataract", "CN III: pupil involvement differentiates aneurysm from diabetes", "Oral steroids alone contraindicated in optic neuritis", "Foster Kennedy: olfactory groove meningioma", "Parinaud: dorsal midbrain lesion (pinealoma)"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 20", "Parsons' Ch 21"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 20", edition: "" }, { book: "Parsons'", chapter: "Ch 21", edition: "" }],
       },
       {
         layer: 5,
@@ -281,9 +281,9 @@ A: Ipsilateral optic atrophy + contralateral papilledema — caused by frontal l
 
 **Q: What nerve palsy is a false localizing sign in raised ICP?**
 A: CN VI (abducens) palsy.`,
-        mnemonics: ["PComA = Pupil-Concerning-aneurysm = pupil-involving CN III"],
+        mnemonics: [{ text: "PComA = Pupil-Concerning-aneurysm = pupil-involving CN III", explanation: "", tags: [] }],
         keyPoints: ["RAPD: swinging flashlight test", "Argyll Robertson: neurosyphilis", "Pupil-involving CN III = aneurysm", "Bilateral INO in young = MS", "ONTT: IV steroids, NOT oral alone"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 20"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 20", edition: "" }],
       },
     ],
   },
@@ -346,9 +346,9 @@ Protrusion of eyeball beyond orbital rim.
 - **Inferior rectus** most commonly affected (restriction → limitation of upgaze)
 - NOSPECS classification for grading severity
 - Treatment: Smoking cessation, lubricants, IV methylprednisolone, orbital decompression for severe cases`,
-        mnemonics: ["Episcleritis BLANCHES with phenylephrine; Scleritis does NOT ('Scleritis is STUBBORN')", "Graves' muscles: 'I'M SLow' = Inferior rectus > Medial > Superior > Lateral (order of involvement)"],
+        mnemonics: [{ text: "Episcleritis BLANCHES with phenylephrine; Scleritis does NOT ('Scleritis is STUBBORN')", explanation: "", tags: [] }, { text: "Graves' muscles: 'I'M SLow' = Inferior rectus > Medial > Superior > Lateral (order of involvement)", explanation: "", tags: [] }],
         keyPoints: ["Phenylephrine 2.5% test differentiates episcleritis (blanches) from scleritis (doesn't)", "Scleritis: deep boring pain, associated with RA", "Orbital cellulitis: ethmoid sinusitis most common source", "Graves': most common cause of proptosis in adults", "Inferior rectus most commonly affected in Graves'"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 7, 19", "Parsons' Ch 8, 22"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 7, 19", edition: "" }, { book: "Parsons'", chapter: "Ch 8, 22", edition: "" }],
       },
       {
         layer: 2,
@@ -389,9 +389,9 @@ Protrusion of eyeball beyond orbital rim.
 - Contains: CN III, IV, V1, V2, VI, internal carotid artery
 - Clinical: Bilateral proptosis, ophthalmoplegia, chemosis, decreased vision
 - Mortality without treatment: Very high`,
-        mnemonics: ["Chandler: 'Pre-Orbital-Sub-Orbital-Cavernous' (POSOC) — severity ladder from mild to lethal"],
+        mnemonics: [{ text: "Chandler: 'Pre-Orbital-Sub-Orbital-Cavernous' (POSOC) — severity ladder from mild to lethal", explanation: "", tags: [] }],
         keyPoints: ["Scleritis: type III hypersensitivity with immune complex deposition", "Lamina papyracea: paper-thin bone between ethmoid sinus and orbit", "Graves': TSH-R antibodies → orbital fibroblast activation → GAG deposition", "Cavernous sinus receives valveless ophthalmic veins", "Dysthyroid optic neuropathy: muscle enlargement compresses optic nerve at apex"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 7, 19", "Parsons' Ch 8, 22"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 7, 19", edition: "" }, { book: "Parsons'", chapter: "Ch 8, 22", edition: "" }],
       },
       {
         layer: 3,
@@ -451,9 +451,9 @@ Protrusion of eyeball beyond orbital rim.
 - Orbital cellulitis from sinusitis common in children — often presents late in rural areas
 - Mucormycosis-related orbital disease: Increased awareness post-COVID-19 (rhino-orbital-cerebral mucormycosis in diabetics)
 - Graves' disease: Common in Indian population; requires thyroid function monitoring`,
-        mnemonics: ["Graves' surgery order: 'DSL' = Decompression, Strabismus, Lid (always in this sequence)"],
+        mnemonics: [{ text: "Graves' surgery order: 'DSL' = Decompression, Strabismus, Lid (always in this sequence)", explanation: "", tags: [] }],
         keyPoints: ["CT orbit mandatory in orbital cellulitis — look for abscess", "Preseptal: no proptosis, full movements; postseptal: proptosis + restricted movements", "Graves' active: IV methylprednisolone pulse therapy", "DON = emergency → IV steroids → decompression if no response", "Rehabilitative surgery sequence: D-S-L"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 7, 19", "Parsons' Ch 8, 22"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 7, 19", edition: "" }, { book: "Parsons'", chapter: "Ch 8, 22", edition: "" }],
       },
       {
         layer: 4,
@@ -481,9 +481,9 @@ Protrusion of eyeball beyond orbital rim.
 - Graves' can occur in euthyroid state (euthyroid Graves' ophthalmopathy)
 - Mucormycosis: Black eschar on palate/turbinate in diabetic/immunocompromised — orbital involvement is sight AND life-threatening
 - Orbital pseudotumor (idiopathic orbital inflammation): Responds dramatically to steroids ("steroid-responsive proptosis")`,
-        mnemonics: ["Graves' muscle: belly enlarged, tendon spared (like a fat snake with a thin tail)"],
+        mnemonics: [{ text: "Graves' muscle: belly enlarged, tendon spared (like a fat snake with a thin tail)", explanation: "", tags: [] }],
         keyPoints: ["Phenylephrine differentiates: blanch = episcleritis", "RA → scleritis → scleromalacia perforans", "Graves': muscle belly enlarged, tendon spared", "Orbital pseudotumor: dramatic steroid response", "Mucormycosis: black eschar + diabetes = emergency"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 7, 19"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 7, 19", edition: "" }],
       },
       {
         layer: 5,
@@ -522,9 +522,9 @@ A: D-S-L: Decompression first, then Strabismus surgery, then Lid surgery.
 
 **Q: What is orbital pseudotumor and how does it respond to treatment?**
 A: Idiopathic orbital inflammation — responds dramatically to systemic corticosteroids.`,
-        mnemonics: ["'T' for Tenon's = T sign on B-scan = posterior scleritis"],
+        mnemonics: [{ text: "'T' for Tenon's = T sign on B-scan = posterior scleritis", explanation: "", tags: [] }],
         keyPoints: ["Phenylephrine test is key differentiator", "Graves': inferior rectus, muscle belly not tendon", "Lamina papyracea → infection route", "Cavernous sinus thrombosis is life-threatening", "Orbital pseudotumor = steroid-responsive"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 7, 19"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 7, 19", edition: "" }],
       },
     ],
   },
@@ -583,9 +583,9 @@ A: Idiopathic orbital inflammation — responds dramatically to systemic cortico
 - **Natamycin 5%**: First-line for fungal keratitis (most common ophthalmic antifungal)
 - **Acyclovir 3% ointment**: Herpes simplex keratitis
 - **Fortified antibiotics**: Cefazolin + tobramycin for severe bacterial ulcers`,
-        mnemonics: ["Mydriatics durations: 'A Hot Cup of Tea' = Atropine (longest, 14d) > Homatropine (3d) > Cyclopentolate (24h) > Tropicamide (shortest, 6h)", "POAG first-line: 'Prostaglandin = Primary' (Latanoprost)"],
+        mnemonics: [{ text: "Mydriatics durations: 'A Hot Cup of Tea' = Atropine (longest, 14d) > Homatropine (3d) > Cyclopentolate (24h) > Tropicamide (shortest, 6h)", explanation: "", tags: [] }, { text: "POAG first-line: 'Prostaglandin = Primary' (Latanoprost)", explanation: "", tags: [] }],
         keyPoints: ["Latanoprost: first-line POAG, once daily, increases uveoscleral outflow", "Timolol: contraindicated in asthma/bradycardia", "Atropine: longest-acting cycloplegic (7-14 days)", "Natamycin 5%: first-line fungal keratitis", "Pilocarpine: emergency use in acute angle closure glaucoma"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 24", "Parsons' Ch 25"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 24", edition: "" }, { book: "Parsons'", chapter: "Ch 25", edition: "" }],
       },
       {
         layer: 2,
@@ -633,9 +633,9 @@ A: Idiopathic orbital inflammation — responds dramatically to systemic cortico
 - Block VEGF → reduce neovascularization and vascular permeability
 - Used in: Wet ARMD, diabetic macular edema, CRVO macular edema, ROP
 - Risk: Endophthalmitis (0.02-0.05% per injection)`,
-        mnemonics: ["Aqueous outflow: 'Trabecular 90%, Uveoscleral 10%' = 9:1 ratio", "Timolol absorption prevention: 'Press and Count to 120' (punctal occlusion 2 min)"],
+        mnemonics: [{ text: "Aqueous outflow: 'Trabecular 90%, Uveoscleral 10%' = 9:1 ratio", explanation: "", tags: [] }, { text: "Timolol absorption prevention: 'Press and Count to 120' (punctal occlusion 2 min)", explanation: "", tags: [] }],
         keyPoints: ["Trabecular outflow: 90%, pressure-dependent; uveoscleral: 10%, pressure-independent", "Latanoprost increases uveoscleral outflow via matrix remodeling", "Timolol systemic absorption via nasolacrimal duct → punctal occlusion", "Brimonidine contraindicated in children <2 years (CNS depression)", "Anti-VEGF: ranibizumab, bevacizumab, aflibercept for wet ARMD"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 24, 9", "Parsons' Ch 25"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 24, 9", edition: "" }, { book: "Parsons'", chapter: "Ch 25", edition: "" }],
       },
       {
         layer: 3,
@@ -692,9 +692,9 @@ Sequence of drugs given:
 - Natamycin for fungal keratitis — India has high prevalence of fungal corneal ulcers (agricultural injuries)
 - Bevacizumab used widely off-label (much cheaper than ranibizumab in India)
 - Steroid misuse is rampant — over-the-counter steroid drops → steroid glaucoma is a significant problem`,
-        mnemonics: ["AACG drugs in order: 'PTAM' = Pilocarpine, Timolol, Acetazolamide, Mannitol"],
+        mnemonics: [{ text: "AACG drugs in order: 'PTAM' = Pilocarpine, Timolol, Acetazolamide, Mannitol", explanation: "", tags: [] }],
         keyPoints: ["Latanoprost at night (once daily) is POAG first-line", "AACG sequence: pilocarpine → timolol → acetazolamide → mannitol", "Steroid-induced glaucoma: 2-6 weeks onset, reversible", "Atropine contraindicated in narrow angles", "Bevacizumab: cheaper anti-VEGF widely used in India"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 24, 9", "Parsons' Ch 25, 11"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 24, 9", edition: "" }, { book: "Parsons'", chapter: "Ch 25, 11", edition: "" }],
       },
       {
         layer: 4,
@@ -735,9 +735,9 @@ Sequence of drugs given:
 | Moxifloxacin | Topical | Bacterial keratitis/conjunctivitis |
 | Prednisolone acetate 1% | Topical | Uveitis |
 | Atropine 1% | Topical | Cycloplegic refraction in children |`,
-        mnemonics: ["Latanoprost iris change: 'Late at night, iris gets dark' (dark iris color, given at night)"],
+        mnemonics: [{ text: "Latanoprost iris change: 'Late at night, iris gets dark' (dark iris color, given at night)", explanation: "", tags: [] }],
         keyPoints: ["Latanoprost: first-line POAG, iris color change", "Atropine: longest cycloplegic, contraindicated in narrow angles", "Timolol: punctal occlusion 2 min after instillation", "Natamycin for fungal keratitis", "Never steroids alone in herpes keratitis"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 24"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 24", edition: "" }],
       },
       {
         layer: 5,
@@ -779,9 +779,9 @@ A: Steroids suppress immunity → virus replicates unchecked → corneal melting
 
 **Q: Name 3 anti-VEGF agents used intravitreally.**
 A: Ranibizumab, bevacizumab (off-label), aflibercept.`,
-        mnemonics: ["POAG first-line = Latanoprost = 'L for Lasting pressure control'"],
+        mnemonics: [{ text: "POAG first-line = Latanoprost = 'L for Lasting pressure control'", explanation: "", tags: [] }],
         keyPoints: ["Latanoprost OD at night for POAG", "Tropicamide shortest, atropine longest cycloplegic", "Pilocarpine first in AACG", "Natamycin for fungal keratitis", "Steroids + herpes = disaster"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 24"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 24", edition: "" }],
       },
     ],
   },
@@ -846,9 +846,9 @@ A: Ranibizumab, bevacizumab (off-label), aflibercept.`,
 - **Wilson disease**: Kayser-Fleischer ring (copper deposition in Descemet's membrane)
 - **Marfan syndrome**: Superotemporal lens subluxation
 - **Homocystinuria**: Inferonasal lens subluxation`,
-        mnemonics: ["Lens subluxation: 'Marfan UP and OUT, Homocystinuria DOWN and IN'", "CMV retinitis: 'Pizza pie appearance at CD4 <50'", "KWB grading: 'Narrowing → Nipping → hemorrhages → papilledema' (1-2-3-4)"],
+        mnemonics: [{ text: "Lens subluxation: 'Marfan UP and OUT, Homocystinuria DOWN and IN'", explanation: "", tags: [] }, { text: "CMV retinitis: 'Pizza pie appearance at CD4 <50'", explanation: "", tags: [] }, { text: "KWB grading: 'Narrowing → Nipping → hemorrhages → papilledema' (1-2-3-4)", explanation: "", tags: [] }],
         keyPoints: ["Diabetic retinopathy: leading cause of blindness in working-age adults", "KWB Grade IV = papilledema = malignant hypertension", "Ankylosing spondylitis: acute anterior uveitis (HLA-B27)", "CMV retinitis at CD4 <50; most common HIV ocular OI", "Vitamin A deficiency → Bitot spots → keratomalacia"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 22", "Parsons' Ch 24"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 22", edition: "" }, { book: "Parsons'", chapter: "Ch 24", edition: "" }],
       },
       {
         layer: 2,
@@ -894,9 +894,9 @@ WHO Classification:
 - **XF**: Xerophthalmic fundus
 
 Treatment: Vitamin A supplementation (WHO schedule: 200,000 IU on day 0, day 1, day 14)`,
-        mnemonics: ["Diabetic retinopathy pathways: 'PAGH' = Polyol, AGE, PKC (Protein Kinase C), Hexosamine", "Xerophthalmia: 'Night → Dry → Spots → Ulcer → Melt' (progressive severity)"],
+        mnemonics: [{ text: "Diabetic retinopathy pathways: 'PAGH' = Polyol, AGE, PKC (Protein Kinase C), Hexosamine", explanation: "", tags: [] }, { text: "Xerophthalmia: 'Night → Dry → Spots → Ulcer → Melt' (progressive severity)", explanation: "", tags: [] }],
         keyPoints: ["Pericyte loss is earliest change in diabetic retinopathy", "VEGF release from ischemic retina drives neovascularization", "HLA-B27 associated with acute anterior uveitis", "Bitot spots: keratinized conjunctival epithelium in vitamin A deficiency", "Vitamin A: 200,000 IU on days 0, 1, and 14"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 13, 22", "Parsons' Ch 15, 24"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 13, 22", edition: "" }, { book: "Parsons'", chapter: "Ch 15, 24", edition: "" }],
       },
       {
         layer: 3,
@@ -946,9 +946,9 @@ Treatment: Vitamin A supplementation (WHO schedule: 200,000 IU on day 0, day 1, 
 - All HIV patients with CD4 <100: Routine dilated fundoscopy every 3 months
 - CMV retinitis: Sight-threatening — start IV ganciclovir or valganciclovir immediately + ART
 - ART initiation may cause immune recovery uveitis (IRU) — paradoxical worsening as immune system recovers`,
-        mnemonics: ["DM screening: 'Type 1 at 5 years, Type 2 at diagnosis' (T1D later because onset known)"],
+        mnemonics: [{ text: "DM screening: 'Type 1 at 5 years, Type 2 at diagnosis' (T1D later because onset known)", explanation: "", tags: [] }],
         keyPoints: ["Type 2 DM: screen at diagnosis (may already have retinopathy)", "KWB Grade III-IV: urgent referral", "HLA-B27 uveitis: cycloplegics + topical steroids", "Indian Vitamin A programme: 9 doses from 9 months to 5 years", "CMV retinitis: sight-threatening, start ganciclovir immediately"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 13, 22", "ICO Guidelines"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 13, 22", edition: "" }, { book: "ICO Guidelines", chapter: "", edition: "" }],
       },
       {
         layer: 4,
@@ -991,9 +991,9 @@ Treatment: Vitamin A supplementation (WHO schedule: 200,000 IU on day 0, day 1, 
 | Angioid streaks | Pseudoxanthoma elasticum, Paget's, sickle cell |
 | Lens subluxation (up) | Marfan syndrome |
 | Lens subluxation (down) | Homocystinuria |`,
-        mnemonics: ["Cherry Red Spot: 'Tay-Sachs Needs Gaucher's CRAO' (most common causes)", "Blue Sclera: 'OI makes Blue sclera' (Osteogenesis Imperfecta)"],
+        mnemonics: [{ text: "Cherry Red Spot: 'Tay-Sachs Needs Gaucher's CRAO' (most common causes)", explanation: "", tags: [] }, { text: "Blue Sclera: 'OI makes Blue sclera' (Osteogenesis Imperfecta)", explanation: "", tags: [] }],
         keyPoints: ["Pericyte loss = earliest diabetic retinopathy change", "CMV retinitis at CD4 <50", "Marfan up, homocystinuria down (lens subluxation)", "KF ring = Wilson's", "Roth spots = endocarditis/leukemia"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 22", "Parsons' Ch 24"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 22", edition: "" }, { book: "Parsons'", chapter: "Ch 24", edition: "" }],
       },
       {
         layer: 5,
@@ -1035,9 +1035,9 @@ A: At the time of diagnosis (retinopathy may already be present).
 
 **Q: What is immune recovery uveitis?**
 A: Paradoxical inflammatory reaction in the eye after ART initiation in HIV patients with prior CMV retinitis.`,
-        mnemonics: ["DM screening: 'Type 2 at Two (diagnosis = day 0), Type 1 at Five'"],
+        mnemonics: [{ text: "DM screening: 'Type 2 at Two (diagnosis = day 0), Type 1 at Five'", explanation: "", tags: [] }],
         keyPoints: ["Pericyte loss earliest in DR", "KWB IV = papilledema = malignant HTN", "CMV at CD4 <50", "Marfan up, homocystinuria down", "Type 2 DM: screen at diagnosis"],
-        textbookRefs: ["AK Khurana Ophthalmology Ch 22"],
+        textbookRefs: [{ book: "AK Khurana Ophthalmology", chapter: "Ch 22", edition: "" }],
       },
     ],
   },
