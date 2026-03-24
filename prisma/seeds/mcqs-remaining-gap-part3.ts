@@ -1,0 +1,257 @@
+import type { McqData, SubjectMcqs } from "./content-loader";
+
+export const remainingGapMcqs3: SubjectMcqs[] = [
+  {
+    subjectCode: "EN",
+    mcqs: [
+      // EN-MOD-01-TOP-02: Otitis Media: Acute & Chronic
+      {
+        id: "EN-MOD-01-TOP-02-MCQ-001",
+        topicCode: "EN-MOD-01-TOP-02",
+        question: "A 4-year-old child with acute otitis media (AOM) develops spontaneous perforation of the tympanic membrane with purulent discharge. How does perforation change the clinical course and management of AOM?",
+        options: {
+          a: "Perforation allows pus drainage, reducing middle ear pressure and pain (often symptomatically improves); broad-spectrum antibiotics remain necessary to eradicate infection",
+          b: "Perforation indicates treatment failure; aggressive IV antibiotics and myringoplasty are immediately required",
+          c: "Perforation is therapeutic and no further antibiotic treatment is necessary; healing occurs spontaneously",
+          d: "Perforation is contraindication for antibiotic therapy, requiring only topical ear drops",
+        },
+        correctOption: "a",
+        explanation: "Spontaneous perforation in AOM is relatively common in children and represents release of middle ear pressure: (1) Symptomatic improvement: severe ear pain decreases once pus drains, (2) Risk of infection spreading: otitis media may progress to mastoiditis if infection not treated. (3) Management: continue systemic antibiotics (amoxicillin + clavulanate is standard for AOM, adjusted if resistant organism), avoid ototoxic topical drops (aminoglycosides). (4) Healing: most perforations heal spontaneously within 2-6 weeks with antibiotic therapy. (5) Complications: if perforation doesn't heal or recurrent perforations occur, consider tympanostomy tubes (for recurrent AOM) or tympanoplasty (for chronic perforation). In India: AOM is common in children; spontaneous perforation is an expected complication, not treatment failure. References: Dhingra; Scott-Brown.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+      {
+        id: "EN-MOD-01-TOP-02-MCQ-002",
+        topicCode: "EN-MOD-01-TOP-02",
+        question: "Chronic otitis media (COM) with discharge lasting >3 months typically has which two pathophysiological consequences?",
+        options: {
+          a: "Chronic inflammation causes ossicular erosion and bone conduction hearing loss; if pars flaccida perforation, risk of cholesteatoma formation",
+          b: "Chronic pus in middle ear causes recurrent infections but does not affect ossicular integrity or hearing",
+          c: "COM causes progressive sensorineural hearing loss from cochlear involvement; ossicles remain intact",
+          d: "COM with discharge is benign condition not requiring active treatment",
+        },
+        correctOption: "a",
+        explanation: "Chronic otitis media (COM) involves prolonged middle ear infection/inflammation with tympanic membrane perforation lasting >3 months. Pathophysiology: (1) Chronic inflammation → osteitis of middle ear bones → ossicular erosion (especially malleus and incus), conductive hearing loss. (2) Ossicular erosion is visible on CT/imaging. (3) Two types: (a) COM tubotympanic (safe type)—central perforation, less risk of complication. (b) COM atticoantral (unsafe type)—marginal/attic perforation, risk of cholesteatoma formation (invasion of squamous epithelium into middle ear/mastoid). (4) Cholesteatoma is destructive: further ossicular erosion, facial nerve paralysis, labyrinthitis, intracranial extension (meningitis, brain abscess). Management: regular topical antibiotic+steroid drops (ciprofloxacin is ototoxic-safe), avoid water exposure, consider surgery (ossiculoplasty, canal wall-down mastoidectomy) if recurrent infection or cholesteatoma. References: Dhingra; Scott-Brown.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+      {
+        id: "EN-MOD-01-TOP-02-MCQ-003",
+        topicCode: "EN-MOD-01-TOP-02",
+        question: "Why is Streptococcus pneumoniae in acute otitis media INCREASINGLY becoming resistant to first-line antibiotics in India, and how does this affect management?",
+        options: {
+          a: "Selective pressure from overuse of beta-lactams has driven emergence of penicillin-non-susceptible S. pneumoniae; amoxicillin monotherapy may fail, requiring amoxicillin-clavulanate or fluoroquinolone backup",
+          b: "S. pneumoniae resistance is due to capsular mutation preventing antibiotic penetration; topical agents are more effective",
+          c: "Resistance is multifactorial (beta-lactamase production, altered penicillin-binding proteins); vaccination (PCV13) coverage reduces incidence",
+          d: "Both a and c are correct",
+        },
+        correctOption: "d",
+        explanation: "S. pneumoniae resistance mechanisms: (1) Beta-lactamase production (some strains break down penicillin/amoxicillin), (2) Altered penicillin-binding proteins (PBPs), making cell wall synthesis less susceptible to beta-lactams, (3) Selective pressure from antibiotic overuse drives resistant strain emergence. India: S. pneumoniae resistance is increasing (penicillin-susceptible strain decrease). Management strategies: (1) First-line: amoxicillin-clavulanate (covers beta-lactamase producers), or high-dose amoxicillin (achieves adequate middle ear levels). (2) Resistance suspected if: no improvement after 48-72 hours, severe infection. (3) Second-line: fluoroquinolones (levofloxacin), cephalosporins (cefixime). (4) Prevention: PCV13 vaccination coverage reduces invasive disease and carrier state. (5) Judicious antibiotic use reduces selection pressure. References: Dhingra; Indian ENT guidelines.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+
+      // EN-MOD-03-TOP-03: Laryngitis & Voice Disorders
+      {
+        id: "EN-MOD-03-TOP-03-MCQ-001",
+        topicCode: "EN-MOD-03-TOP-03",
+        question: "A professional singer develops hoarseness and mild dyspnea lasting 2 weeks, with indirect laryngoscopy showing bilateral vocal cord edema and erythema. What is the most likely diagnosis and pathophysiology?",
+        options: {
+          a: "Acute laryngitis from viral infection causing mucosal edema and inflammation of vocal cords; self-limited over 2-3 weeks with rest and supportive care",
+          b: "Vocal cord nodules from voice overuse causing benign proliferative lesions; require voice therapy and surgical excision if large",
+          c: "Laryngeal papillomatosis from HPV infection causing growth on vocal cords; requires laser ablation",
+          d: "Laryngospasm from allergy causing acute airway obstruction; requires antihistamines and epinephrine",
+        },
+        correctOption: "a",
+        explanation: "Acute laryngitis: (1) Usually viral (rhinovirus, parainfluenza, influenza, adenovirus) or secondary to pharyngitis/upper respiratory tract infection. (2) Pathophysiology: mucosal inflammation and edema of larynx, vocal folds, epiglottis. (3) Symptoms: hoarseness/dysphonia (worse in morning from overnight postnasal drip), throat pain, occasional mild dyspnea if edema significant. (4) Findings: bilateral vocal cord edema, erythema, loss of sharp vocal cord margins. (5) Management: voice rest, hydration, humidified air, avoid irritants (smoking, shouting), analgesics. (6) Prognosis: self-limited, 5-7 days for viral infection, up to 3 weeks if secondary to bacterial infection or from voice overuse. Antibiotics not indicated for viral laryngitis. In India: laryngitis is common during monsoon (humid) and winter (dry air) seasons. References: Dhingra; Scott-Brown.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+      {
+        id: "EN-MOD-03-TOP-03-MCQ-002",
+        topicCode: "EN-MOD-03-TOP-03",
+        question: "Vocal cord nodules ('singer's nodules') are benign lesions from voice overuse. Which physical feature distinguishes nodules from other vocal cord pathology?",
+        options: {
+          a: "Bilateral, symmetric, small nodules at junction of anterior 2/3 and posterior 1/3 of vocal cords; caused by repeated mechanical trauma from voice overuse",
+          b: "Unilateral large lesions with irregular surface; may degenerate into carcinoma if untreated",
+          c: "Diffuse vocal cord thickening with keratosis; associated with chronic smoking",
+          d: "Cystic lesions filled with fluid; require drainage for improvement",
+        },
+        correctOption: "a",
+        explanation: "Vocal cord nodules: (1) Benign proliferative lesions, (2) Typically bilateral and symmetric, located at junction of anterior 2/3 and posterior 1/3 of vocal cords (point of maximum vocal cord impact during phonation), (3) Small, firm, pale nodules. (4) Pathophysiology: repeated mechanical trauma from voice overuse (shouting, professional singers, vocal teachers) causes fluid accumulation and fibrosis. (5) Symptoms: progressive hoarseness, reduced vocal endurance, may have breathy voice quality. (6) Management: conservative—voice rest, voice therapy (modify phonation patterns, reduce shouting), hydration, humidification. (7) Surgery (microlaryngoscopic excision with cold steel instruments or laser) reserved for: large nodules, failed voice therapy, severely affecting professional voice. (8) Prognosis: excellent with voice rest; recurs if overuse resumes. Distinguish from vocal cord polyps (unilateral, sessile or pedunculated, usually single) and cysts (fluid-filled, may be periarticular or epithelial). References: Dhingra; Scott-Brown.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+      {
+        id: "EN-MOD-03-TOP-03-MCQ-003",
+        topicCode: "EN-MOD-03-TOP-03",
+        question: "A smoker with chronic laryngitis develops a solitary vocal cord lesion with irregular borders and leukoplakia. What is the most important next step in management?",
+        options: {
+          a: "Microlaryngoscopy with biopsy to rule out laryngeal malignancy; leukoplakia with smoking history is premalignant/malignant until proven otherwise",
+          b: "Course of broad-spectrum antibiotics and voice rest; leukoplakia usually resolves with infection control",
+          c: "Topical corticosteroid spray to reduce inflammation; if no improvement in 2 weeks, then consider biopsy",
+          d: "Voice therapy alone; surgical intervention indicated only if complete airway obstruction occurs",
+        },
+        correctOption: "a",
+        explanation: "Laryngeal leukoplakia (white patches on vocal cords) is a premalignant condition: (1) Definition: white patch that cannot be scraped off and cannot be characterized clinically or pathologically as any other disease. (2) Risk factors: smoking, alcohol, HPV infection, chronic irritation. (3) Malignant potential: 5-15% progress to carcinoma if untreated. (4) Diagnosis: clinical laryngoscopy followed by ESSENTIAL biopsy (tissue diagnosis required—cannot diagnose malignancy clinically). (5) Histology: grades range from hyperkeratosis (low grade dysplasia) to carcinoma in situ (high grade dysplasia) to invasive carcinoma. (6) Management depends on histology: mild dysplasia—smoking cessation, repeat laryngoscopy. High-grade dysplasia/carcinoma in situ—laser ablation or cordectomy. Invasive carcinoma—radiation or partial laryngectomy ± lymph node dissection. In India: laryngeal cancer is common (smoking, tobacco chewing); early detection improves outcome. References: Dhingra; Scott-Brown.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+    ],
+  },
+  {
+    subjectCode: "DR",
+    mcqs: [
+      // DR-MOD-01-TOP-01: Dermatology (General skin pathology, eczema, psoriasis)
+      {
+        id: "DR-MOD-01-TOP-01-MCQ-001",
+        topicCode: "DR-MOD-01-TOP-01",
+        question: "A patient with atopic dermatitis (eczema) shows severely itchy erythematous plaques with lichenification on the flexor surfaces. What is the pathophysiological basis for the chronicity and relapsing nature of atopic dermatitis?",
+        options: {
+          a: "Impaired epidermal barrier function from filaggrin mutations and lipid depletion; Th2 immune response drives chronic inflammation and itch amplification loop",
+          b: "Excessive sebum production blocking sweat glands causes retention dermatitis",
+          c: "Fungal superinfection from Malassezia species perpetuates disease",
+          d: "Genetic predisposition alone determines disease; environmental factors are minimal",
+        },
+        correctOption: "a",
+        explanation: "Atopic dermatitis pathophysiology: (1) Intrinsic defect: filaggrin gene mutations (FLG) impair epidermal barrier function—reduced stratum corneum lipids and moisture, increased transepidermal water loss (TEWL). (2) Extrinsic triggers: allergens, irritants penetrate compromised barrier, activating dendritic cells. (3) Immune response: Th2-mediated (IL-4, IL-5, IL-13) promotes IgE production and eosinophil infiltration. (4) Chronic inflammation: reduced antimicrobial peptides (lactoferrin) allow staph colonization—S. aureus superinfection worsens disease. (5) Itch-scratch cycle: pruritus triggers scratching → barrier disruption → further inflammation → worse itch. Management: (1) barrier restoration (emollients, ceramides), (2) trigger avoidance, (3) topical corticosteroids for acute flares, (4) calcineurin inhibitors (tacrolimus) for steroid-sparing effect, (5) biologics (dupilumab—IL-4 receptor antagonist) for moderate-severe disease. References: IADVL Textbook; Neena Khanna.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+      {
+        id: "DR-MOD-01-TOP-01-MCQ-002",
+        topicCode: "DR-MOD-01-TOP-01",
+        question: "Psoriasis differs from eczema in several key features. Which statement BEST distinguishes psoriasis from atopic dermatitis clinically?",
+        options: {
+          a: "Psoriasis: well-demarcated erythematous plaques with silvery micaceous scale; typical locations are extensor surfaces (elbows, knees); minimal pruritus in many cases",
+          b: "Psoriasis: diffuse poorly-defined erythema with lichenification; flexor surface predilection (inner elbows, behind knees); severe pruritus",
+          c: "Psoriasis: scaly plaques with honey-crusted appearance; associated with severe pruritus and history of allergies",
+          d: "Both conditions are clinically identical; distinction requires biopsy",
+        },
+        correctOption: "a",
+        explanation: "Key differences: Psoriasis: (1) Well-demarcated erythematous plaques with silvery-white micaceous scale (easily scraped off—Auspitz sign: bleeding if scale removed), (2) Classic locations: extensor surfaces (elbows, knees), sacral region, scalp, nails, (3) Pruritus variable (some patients have minimal itch, others moderate-severe), (4) Associated conditions: arthritis (psoriatic arthritis in 10-30%), nail dystrophy (pitting, onycholysis), (5) Pathophysiology: Th1/Th17 immune response, abnormal epidermal differentiation, hyperproliferation (28-day cycle vs. normal 45 days). Eczema: (1) Poorly-demarcated, diffuse erythema with lichenification, (2) Flexor surface predilection (cubital/popliteal fossae, neck, hands), (3) Severe pruritus (often worse at night), (4) Personal/family history of atopy. Biopsy: psoriasis shows regular acanthosis, parakeratosis, dilated capillaries; eczema shows spongiosis. References: IADVL Textbook; Neena Khanna.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+      {
+        id: "DR-MOD-01-TOP-01-MCQ-003",
+        topicCode: "DR-MOD-01-TOP-01",
+        question: "Phototherapy (UV light exposure) is effective for psoriasis but ineffective for atopic dermatitis. What is the mechanistic basis for this differential response?",
+        options: {
+          a: "UV light suppresses Th1/Th17 lymphocytes (psoriasis driver), while eczema is primarily Th2-driven—UV may exacerbate eczema by promoting IgE",
+          b: "UV light destroys epidermal barrier, worsening eczema but improving psoriasis by increasing scale shedding",
+          c: "Psoriasis plaques are more exposed to sunlight due to extensor surface location; eczema-affected areas are more protected",
+          d: "UV light induces vitamin D production, which is deficient in psoriasis but adequate in eczema",
+        },
+        correctOption: "a",
+        explanation: "Phototherapy mechanisms: (1) NB-UVB (narrow-band, 311 nm) is gold standard for moderate-severe psoriasis: suppresses Th1/Th17 cells (pro-inflammatory in psoriasis), induces regulatory T cells, reduces TNF-α and IL-23. (2) PUVA (psoralen + UVA) is older modality, also effective for psoriasis. (3) UVB/UVA effects on eczema: may actually worsen atopic dermatitis because UV can promote IgE switching to Th2 cells. (4) In eczema: topical therapy (corticosteroids, calcineurin inhibitors) is preferred over systemic or light-based therapy. (5) Vitamin D: both conditions may have low vitamin D; supplementation has variable benefit. UV exposure increases malignancy risk (melanoma, NMSC); psoriasis and eczema patients require careful monitoring if on prolonged phototherapy. References: IADVL Textbook; Neena Khanna.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+    ],
+  },
+  {
+    subjectCode: "PS",
+    mcqs: [
+      // PS-MOD-01-TOP-01: Psychiatric Examination & Diagnosis
+      {
+        id: "PS-MOD-01-TOP-01-MCQ-001",
+        topicCode: "PS-MOD-01-TOP-01",
+        question: "During psychiatric examination, the examiner observes that the patient exhibits 'loose associations'—rapid shift from topic to unrelated topic without clear logical connection. In which psychiatric condition is this finding MOST characteristic?",
+        options: {
+          a: "Schizophrenia (particularly disorganized subtype)—loose associations reflect formal thought disorder characteristic of psychotic illness",
+          b: "Bipolar disorder in manic phase—rapid flight of ideas with related topics remains connected; differs from loose associations",
+          c: "Major depressive disorder—poverty of thought and psychomotor retardation cause slowed speech, not loose associations",
+          d: "Generalized anxiety disorder—racing thoughts but topics remain connected by anxiety theme",
+        },
+        correctOption: "a",
+        explanation: "Formal thought disorder (FTD) in schizophrenia includes: (1) Loose associations—jump from topic to unrelated topic without logical connection. (2) Flight of ideas (not true FTD but seen in mania)—rapid topic changes but themes connected. (3) Tangentiality—answers questions but never returns to point. (4) Circumstantiality—excessive detail before reaching answer. (5) Word salad—incoherent speech with random words. (6) Neologisms—made-up words. (7) Blocking—sudden interruption of thought/speech mid-sentence. Loose associations and incoherence are characteristic of schizophrenia, particularly disorganized subtype. Distinguish from: (1) Pressure of speech (mania—fast but organized), (2) Poverty of speech (depression, schizophrenia negative symptoms—low output but organized). References: Ahuja; Niraj Ahuja; Kaplan & Sadock.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+      {
+        id: "PS-MOD-01-TOP-01-MCQ-002",
+        topicCode: "PS-MOD-01-TOP-01",
+        question: "A patient with depression reports 'I feel hopeless and think life is not worth living.' During assessment, the clinician inquires about specific plans for self-harm. What is the clinical importance of distinguishing between suicidal ideation and suicidal intent/plan?",
+        options: {
+          a: "Ideation (passive wish to die, no plan) indicates lower immediate suicide risk; intent/plan (specific method, location, timing) indicates HIGH immediate risk requiring hospitalization",
+          b: "Intent/plan is always lethal regardless of ideation severity; ideation without plan is benign",
+          c: "Ideation and intent/plan are equivalent in terms of risk; both require identical management",
+          d: "Plans without ideation are more dangerous than ideation with plans; clinician should focus on detecting hidden plans",
+        },
+        correctOption: "a",
+        explanation: "Suicide risk assessment components: (1) Ideation (passive wish to die, no plan)—lower acuity but warrants monitoring/supportive therapy. (2) Intent (definite statement of desire to die)—moderate risk. (3) Plan (specific method, location, timing, access to means)—HIGH RISK, requires immediate intervention (hospitalization, 1-to-1 observation, removal of lethal means, psychiatric medications, ECT if psychotic). (4) Previous attempts—strong risk factor. (5) Warning signs: giving away possessions, saying goodbye, researching methods. Assessment framework (SAD PERSONS): Age (55+ or <20), Depression, Previous attempts, Ethanol abuse, Rational thinking loss, Social support lack, Organized plan, No spouse, Sickness. In India: suicide rates have increased; strong cultural/religious factors influence disclosure. Clinicians must assess all patients with depression or self-harm for suicide risk. References: Ahuja; Kaplan & Sadock.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+      {
+        id: "PS-MOD-01-TOP-01-MCQ-003",
+        topicCode: "PS-MOD-01-TOP-01",
+        question: "A patient on antipsychotic medication develops acute onset of high fever (39.2°C), severe muscle rigidity, altered mental status, and markedly elevated CK (2500 IU/L). What is this syndrome, and what is the mechanism of the muscle pathology?",
+        options: {
+          a: "Neuroleptic malignant syndrome (NMS)—dopamine D2 blockade in hypothalamus disrupts thermoregulation; rigidity from dopamine blockade in substantia nigra and striatum causes unopposed muscle contraction and rhabdomyolysis",
+          b: "Malignant hyperthermia—genetic predisposition to uncontrolled muscle calcium release; independent of dopamine antagonism",
+          c: "Heat stroke from environmental exposure—requires cooling, not medication discontinuation",
+          d: "Serotonin syndrome from SSRI overdose—different mechanism, not antipsychotic-related",
+        },
+        correctOption: "a",
+        explanation: "Neuroleptic malignant syndrome (NMS): (1) Incidence: 0.02-0.3% with typical antipsychotics, rare with atypicals. (2) Timing: usually 24-72 hours after initiation or dose increase, but can occur anytime. (3) Pathophysiology: dopamine D2 antagonism in hypothalamus (thermoregulation), substantia nigra (motor control), limbic system (behavioral). Results in: (a) impaired heat dissipation, (b) unopposed muscle contraction → rigidity → rhabdomyolysis. (4) Classic tetrad: fever, rigidity, altered mental status, autonomic instability (tachycardia, labile BP). (5) Labs: elevated CK (from rhabdo), elevated WBC, abnormal LFTs. (6) Complications: acute kidney injury (from myoglobin precipitation), DIC, cardiac arrhythmias. (7) Management: IMMEDIATE antipsychotic discontinuation, supportive care (cooling, IV fluids, monitor urine output), dantrolene (calcium channel blocker to reduce muscle rigidity—controversial efficacy), lorazepam for agitation. (8) Mortality: 5-20% if untreated. Recovery: 7-10 days after antipsychotic discontinuation. References: Ahuja; Kaplan & Sadock.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+    ],
+  },
+  {
+    subjectCode: "PA",
+    mcqs: [
+      // PA-MOD-01-TOP-08: Neoplasia
+      {
+        id: "PA-MOD-01-TOP-08-MCQ-001",
+        topicCode: "PA-MOD-01-TOP-08",
+        question: "A tumor is classified as 'Grade II' on Bloom & Richardson grading system. What do the three components of this grading system assess?",
+        options: {
+          a: "Histological grade (tubule formation, nuclear pleomorphism, mitotic count) predict tumor behavior and prognosis independent of stage",
+          b: "Tumor size (T), lymph node involvement (N), and metastatic spread (M) according to TNM classification",
+          c: "Cell of origin (epithelial, connective tissue, endothelial) determining tumor classification as carcinoma vs. sarcoma",
+          d: "DNA ploidy (diploid vs. aneuploid) and chromosomal abnormalities predicting treatment response",
+        },
+        correctOption: "a",
+        explanation: "Bloom & Richardson grading system (primarily for breast carcinomas, applicable to other tumors): (1) Tubule formation (well-differentiated = low score), (2) Nuclear pleomorphism (uniform nuclei = low score), (3) Mitotic count (low mitotic rate = low score). Each scored 1-3; total 3-9: Grade I (3-5) = well-differentiated/low grade; Grade II (6-7) = moderately differentiated; Grade III (8-9) = poorly differentiated/high grade. Prognostic significance: Grade I has best prognosis (slow growth, low metastatic potential); Grade III has worst prognosis (rapid growth, high metastatic potential). Grade is prognostically independent of tumor stage (TNM) and is essential for treatment decisions (Grade III tumors often receive adjuvant chemotherapy). Distinguish from TNM staging: TNM describes anatomic extent; Grade describes histologic differentiation. Both are required for complete tumor assessment. References: Robbins; Harsh Mohan.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+      {
+        id: "PA-MOD-01-TOP-08-MCQ-002",
+        topicCode: "PA-MOD-01-TOP-08",
+        question: "What is the difference between dysplasia and carcinoma in situ (CIS), and why is this distinction clinically important?",
+        options: {
+          a: "Dysplasia: abnormal cells confined to epithelium but WITH capacity to invade; CIS: severe dysplasia without invasion capacity",
+          b: "Dysplasia: low-grade abnormality (can regress/persist/progress); CIS: high-grade with uniform appearance and arrest at basement membrane",
+          c: "Dysplasia: involves superficial epithelium only; CIS: involves full thickness of epithelium",
+          d: "Both A and C are correct",
+        },
+        correctOption: "b",
+        explanation: "Dysplasia: (1) Abnormal epithelial proliferation confined within epithelium (above basement membrane), (2) Graded as low-grade (mild) or high-grade (moderate-severe), (3) Key features: increased nuclear:cytoplasmic ratio, hyperchromatic nuclei, increased mitoses (including abnormal), disorganized architecture, (4) Behavior: mild dysplasia—can regress (if irritant removed), persist, or progress. High-grade dysplasia—often progresses to cancer if untreated, (5) Not yet malignant but is a precancerous lesion. Carcinoma in situ (CIS): (1) Highest grade of intraepithelial neoplasia—essentially cancer but confined within epithelium, lacks invasion, (2) Involves full thickness of epithelium with marked nuclear abnormality and disorganization, (3) Defined by ABSENCE of invasion through basement membrane, (4) Virtually certain to progress to invasive cancer if untreated. Clinical importance: (1) Dysplasia: management depends on grade—low-grade may be observed/treated conservatively; high-grade requires closer follow-up/possible excision. (2) CIS: requires definitive treatment (excision, laser, chemotherapy, depending on location) to prevent invasive cancer. References: Robbins; Harsh Mohan.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+      {
+        id: "PA-MOD-01-TOP-08-MCQ-003",
+        topicCode: "PA-MOD-01-TOP-08",
+        question: "A solid tumor shows angiogenesis (new blood vessel formation) and activation of molecular pathways promoting cell survival over apoptosis. Which principle of tumor biology explains why angiogenesis enables tumor progression?",
+        options: {
+          a: "Tumors beyond 1-2 mm require blood supply for nutrient/oxygen delivery and waste removal; angiogenesis overcomes diffusion limitations enabling exponential growth",
+          b: "Angiogenesis provides lymphatic drainage preventing tumor cell necrosis",
+          c: "New blood vessels allow immune cells to eliminate tumor, slowing growth",
+          d: "Angiogenesis has minimal effect on tumor growth; genetic mutations drive progression independent of blood supply",
+        },
+        correctOption: "a",
+        explanation: "Hallmarks of cancer (Hanahan & Weinberg): angiogenesis is essential for tumorigenesis. Mechanism: (1) Avascular tumors (0-1 mm) survive by diffusion—nutrients, oxygen reach all cells within ~100 micrometers. (2) Beyond 1-2 mm: diffusion-limited oxygen, nutrients accumulate waste—central necrosis develops. (3) Tumors cannot grow beyond 1-2 mm without new blood supply. (4) Angiogenesis: tumor cells produce VEGF, FGF, angiopoietin → recruit endothelial cells → form new capillaries. (5) Angiogenesis: (a) provides nutrients/oxygen for exponential growth, (b) allows waste removal, (c) provides access to blood for metastasis. (6) Anti-angiogenic therapy: bevacizumab (VEGF inhibitor), tyrosine kinase inhibitors block angiogenesis, reducing tumor growth. Note: new blood vessels in tumors are often abnormal (irregular, increased permeability, dilated)—different from normal vasculature. References: Robbins; Harsh Mohan.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+    ],
+  },
+];
+
+export const allMcqsRemainingGap3 = remainingGapMcqs3;

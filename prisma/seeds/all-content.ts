@@ -353,6 +353,17 @@ import { radiologyMcqs } from "./mcqs-radiology-full";
 import { surgeryFullMcqs } from "./mcqs-surgery-full";
 import { surgeryMcqs2 } from "./mcqs-surgery-full2";
 
+// Gap MCQ imports
+import { anatomyGapMcqs } from "./mcqs-anatomy-gap";
+import { medicineGapMcqs } from "./mcqs-medicine-gap";
+import { surgeryGapMcqs } from "./mcqs-surgery-gap";
+import { pediatricsGapMcqs } from "./mcqs-pediatrics-gap";
+import { remainingGapMcqs } from "./mcqs-remaining-gap";
+import { remainingGapMcqs2 } from "./mcqs-remaining-gap-part2";
+import { remainingGapMcqs3 } from "./mcqs-remaining-gap-part3";
+import { remainingGapMcqs4 } from "./mcqs-remaining-gap-part4";
+import { remainingGapMcqs5 } from "./mcqs-remaining-gap-part5";
+
 // ============================================================================
 // CLINICAL CASE IMPORTS - All clinical-case*.ts files
 // ============================================================================
@@ -723,6 +734,17 @@ export const allMcqs = [
   ...radiologyMcqs,
   ...surgeryFullMcqs,
   ...surgeryMcqs2,
+
+  // Gap MCQs (filling topics with zero questions)
+  anatomyGapMcqs,
+  medicineGapMcqs,
+  surgeryGapMcqs,
+  pediatricsGapMcqs,
+  ...remainingGapMcqs,
+  ...remainingGapMcqs2,
+  ...remainingGapMcqs3,
+  ...remainingGapMcqs4,
+  ...remainingGapMcqs5,
 ];
 
 export const allClinicalCases = [

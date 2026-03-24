@@ -1,0 +1,257 @@
+import type { McqData, SubjectMcqs } from "./content-loader";
+
+export const remainingGapMcqs4: SubjectMcqs[] = [
+  {
+    subjectCode: "MI",
+    mcqs: [
+      // MI-MOD-05-TOP-01: General Virology
+      {
+        id: "MI-MOD-05-TOP-01-MCQ-001",
+        topicCode: "MI-MOD-05-TOP-01",
+        question: "Enveloped viruses (e.g., influenza) are more sensitive to environmental inactivation than non-enveloped viruses (e.g., adenovirus). What structural feature explains this difference?",
+        options: {
+          a: "Viral envelope (derived from host cell membrane) containing lipids is disrupted by heat, desiccation, detergents; nucleocapsid of non-enveloped viruses is more resistant",
+          b: "Enveloped viruses have weaker capsids that break apart easily; non-enveloped viruses have reinforced capsids",
+          c: "Non-enveloped viruses have glycoproteins that protect nucleic acid; enveloped viruses lack this protection",
+          d: "Envelope presence reduces viral infectivity, making enveloped viruses inherently less stable",
+        },
+        correctOption: "a",
+        explanation: "Viral structure and stability: (1) Enveloped viruses: lipid bilayer (derived from host cell plasma membrane, ER, Golgi) surrounds capsid/nucleocapsid, with viral glycoproteins embedded. (2) Environmental sensitivity of envelope: lipid bilayer is disrupted by—heat (>56°C for 30 min inactivates influenza), desiccation (dry environment inactivates), detergents (soap, alcohol denature lipids), UV light, pH extremes. (3) Result: enveloped viruses are sensitive to environmental conditions, require close contact transmission (respiratory droplets), die quickly outside host. (4) Non-enveloped (naked) viruses: protein capsid directly surrounds nucleic acid, no lipid layer. Capsid is highly stable—resistant to heat (>60°C), desiccation, detergents, acid (can survive stomach pH). Result: resistant to environmental conditions, can survive on surfaces, fomites, gut transit. Clinical significance: enveloped viruses (influenza, measles, mumps, rubella) require respiratory/contact precautions; non-enveloped (polio, rotavirus) can persist in environment. References: Ananthanarayan & Paniker; Jawetz.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+      {
+        id: "MI-MOD-05-TOP-01-MCQ-002",
+        topicCode: "MI-MOD-05-TOP-01",
+        question: "During viral replication, retroviruses use reverse transcriptase to synthesize DNA from viral RNA. Why is reverse transcriptase activity of retroviruses a target for antiretroviral therapy?",
+        options: {
+          a: "Reverse transcriptase is unique to retroviruses and essential for integrating viral genome into host chromosome; inhibition prevents establishment of persistent infection",
+          b: "Reverse transcriptase introduces mutations causing viral genome instability and defective replication",
+          c: "Reverse transcriptase suppresses innate immune responses by degrading host mRNA",
+          d: "Reverse transcriptase is required for viral budding from infected cell",
+        },
+        correctOption: "a",
+        explanation: "Retroviral replication cycle: (1) Virus binds CD4/CCR5 (HIV-1) → membrane fusion → viral RNA + enzymes (reverse transcriptase, integrase, protease) enter cell. (2) Reverse transcriptase (RT) catalyzes: RNA-dependent DNA synthesis (ssRNA → ssDNA), then RNase H degrades RNA, then DNA-dependent DNA synthesis (ssDNA → dsDNA). (3) dsDNA is transported to nucleus and integrated into host chromosome by integrase. (4) Integrated DNA (provirus) persists indefinitely, transcribed with host genes, producing viral proteins → assembly → budding. RT inhibition: (1) RT inhibitor classes: nucleoside RT inhibitors (NRTIs: AZT, lamivudine—chain terminators), non-nucleoside RT inhibitors (NNRTIs: efavirenz, rilpivirine—allosteric inhibition). (2) Effect: block conversion of viral RNA to DNA, preventing integration, blocking persistent infection. (3) Rationale: unlike host cells, retroviruses absolutely require RT for replication; selective toxicity justifies its use as drug target. RT mutant selection (esp. with monotherapy) is major cause of resistance; combination antiretroviral therapy (cART) suppresses resistance. References: Ananthanarayan & Paniker; Jawetz.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+      {
+        id: "MI-MOD-05-TOP-01-MCQ-003",
+        topicCode: "MI-MOD-05-TOP-01",
+        question: "A patient with acute viral hepatitis has negative anti-HAV IgM, positive anti-HAV total antibodies, positive anti-HBs, positive anti-HBc total, and negative HBsAg. What is the serological interpretation?",
+        options: {
+          a: "Past HAV and HBV infection (immunity confirmed); not currently infected with either virus",
+          b: "Current acute HAV infection; past HBV infection with immunity",
+          c: "Chronic HBV infection with past HAV exposure",
+          d: "Serological profile is inconsistent; unable to determine infection status",
+        },
+        correctOption: "a",
+        explanation: "Hepatitis serology interpretation: HAV markers: (1) Anti-HAV IgM (acute/recent infection), (2) Anti-HAV total (past infection/immunity—persists lifelong). Patient has negative IgM, positive total → past HAV infection, immune. HBV markers: (1) HBsAg (current infection—acute or chronic), (2) Anti-HBs (immunity to HBV), (3) Anti-HBc total (past or current infection—appears early in acute HBV, persists). (4) Anti-HBc IgM (acute HBV infection). Patient has: negative HBsAg (no current infection), positive anti-HBs (immunity), positive anti-HBc total (past infection). Interpretation: Past HBV infection with recovery and immunity. Overall: Past HAV and HBV infections, both resolved, immune to both viruses. Clinical management: (1) No acute viral hepatitis. (2) Not at risk of reinfection (immune). (3) If HBsAg were positive, would indicate chronic HBV (need ALT, HBV DNA, genotyping for management). References: Ananthanarayan & Paniker; Jawetz.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+
+      // MI-MOD-07-TOP-02: Antimicrobial Resistance
+      {
+        id: "MI-MOD-07-TOP-02-MCQ-001",
+        topicCode: "MI-MOD-07-TOP-02",
+        question: "A gram-negative bacterium expresses genes for ESBL (extended-spectrum beta-lactamase) via a plasmid that encodes beta-lactamase. What is the mechanism of resistance, and why are ESBL producers considered 'resistant' to third-generation cephalosporins?",
+        options: {
+          a: "ESBL hydrolyzes beta-lactam ring of cephalosporins (oxyimino-cephalosporins, aztreonam), inactivating the antibiotic before it reaches penicillin-binding proteins",
+          b: "ESBL prevents cellular uptake of cephalosporins by altering outer membrane porins",
+          c: "ESBL inhibits ribosomal protein synthesis, preventing cephalosporin action",
+          d: "ESBL activates efflux pumps that remove cephalosporins from bacterial cell",
+        },
+        correctOption: "a",
+        explanation: "ESBL (extended-spectrum beta-lactamase): (1) Enzymatic mechanism: beta-lactamases cleave beta-lactam ring (amide bond), rendering drug inactive. (2) Original beta-lactamases (TEM-1, SHV-1) hydrolyzed penicillins and early cephalosporins (1st-2nd generation). (3) ESBLs are mutant beta-lactamases with expanded substrate specificity—hydrolyze oxyimino-cephalosporins (3rd generation: ceftriaxone, cefotaxime, ceftazidime) and aztreonam. (4) Prevalence: ESBL-producing E. coli and Klebsiella are major cause of multidrug resistance in India. (5) Genetics: ESBL genes on plasmids (transferable) → rapid spread, co-resistance to fluoroquinolones, aminoglycosides. (6) Management: (a) Carbapenems (imipenem, meropenem) are stable to ESBLs—still effective. (b) Beta-lactamase inhibitor combinations (amoxicillin-clavulanate, piperacillin-tazobactam) may work if inhibitor concentration high enough. (c) Fluoroquinolones second-line (despite co-resistance rates), or carbapenems first-line. (7) Prevention: infection control (hand hygiene, isolation), appropriate antibiotic stewardship (avoid unnecessary 3rd-gen cephalosporins). References: Jawetz; Ananthanarayan.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+      {
+        id: "MI-MOD-07-TOP-02-MCQ-002",
+        topicCode: "MI-MOD-07-TOP-02",
+        question: "Why are fluoroquinolones highly prone to resistance selection despite high bactericidal activity, and why is monotherapy with fluoroquinolones increasingly discouraged in India?",
+        options: {
+          a: "Single-step mutations in bacterial topoisomerase genes confer high-level resistance; rapid selection occurs with monotherapy allowing resistant strain emergence",
+          b: "Fluoroquinolones are synergistic with other agents; monotherapy loses synergy reducing efficacy",
+          c: "Fluoroquinolones have poor tissue penetration limiting concentration at infection site",
+          d: "Bacterial enzymes slowly degrade fluoroquinolones, selecting for degradative enzyme production",
+        },
+        correctOption: "a",
+        explanation: "Fluoroquinolone resistance mechanisms and epidemiology: (1) Target mutations: fluoroquinolones inhibit topoisomerase II and IV (gyrase in gram-negatives, topoisomerase IV in gram-positives). Single-step mutations in gyrA, gyrB (gyrase) or parC, parE (topoisomerase IV) confer high-level resistance (4-8 fold MIC increase). (2) Mutation rate: ~1 in 10^6-10^8 cells. (3) Monotherapy disadvantage: with monotherapy, resistant mutants present in inoculum (>10^8 CFU) can be selected. This is unique feature of fluoroquinolones compared to beta-lactams (which require multiple resistance mechanisms). (4) Resistance prevalence in India: fluoroquinolone resistance rising in E. coli (10-30%), Vibrio cholerae (in some regions >50%). (5) Clinical consequence: fluoroquinolone monotherapy increasingly fails for community-acquired infections. (6) Management: combination therapy (fluoroquinolone + beta-lactam, or cephalosporin + fluoroquinolone) is recommended when fluoroquinolones used. (7) Antibiotic stewardship: restrict fluoroquinolone use, reserve for complicated infections where tissue penetration critical. References: Jawetz; Indian antimicrobial resistance reports.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+      {
+        id: "MI-MOD-07-TOP-02-MCQ-003",
+        topicCode: "MI-MOD-07-TOP-02",
+        question: "A Mycobacterium tuberculosis isolate is resistant to rifampicin. What is the mechanism of rifampicin resistance, and why does rifampicin monotherapy select resistant mutants rapidly?",
+        options: {
+          a: "Rifampicin-binding protein mutations prevent drug binding to bacterial RNA polymerase; high mutation rate (~10^-8) and high bacterial load in TB cavities enable rapid selection",
+          b: "Rifampicin resistance is acquired only through horizontal gene transfer of resistant plasmids",
+          c: "Rifampicin has poor penetration into TB granulomas, leaving persistent bacilli untreated",
+          d: "Mycobacterial enzymes degrade rifampicin, and this degradative capacity is selected under rifampicin pressure",
+        },
+        correctOption: "a",
+        explanation: "Rifampicin resistance in TB: (1) Mechanism: rifampicin binds bacterial RNA polymerase β-subunit (rpoB gene encodes), inhibiting transcription. Mutations in rpoB (especially 81 bp 'rifampicin-resistance determining region') alter drug binding, conferring resistance. (2) Mutation rate: ~10^-8 per cell division (relatively high for TB). (3) Bacterial load in TB: cavitary disease contains ~10^8-10^9 organisms—sufficient for resistant mutants to be present. (4) Monotherapy problem: (a) Monotherapy applies selective pressure favoring rifampicin-resistant mutants. (b) Without other active drugs (isoniazid, ethambutol, pyrazinamide), resistant mutants replicate unopposed. (5) Standard TB therapy: four-drug regimen (RIPE: rifampicin, isoniazid, pyrazinamide, ethambutol) prevents resistance by requiring multiple independent mutations for survival (probability extremely low). (6) Multidrug-resistant TB (MDR-TB): defined as rifampicin + isoniazid resistance; requires longer, more toxic treatment. Extensively drug-resistant TB (XDR-TB): includes resistance to fluoroquinolones and injectable drugs. (7) Prevention: directly observed therapy (DOT), fixed-dose combinations ensure adherence. References: Jawetz; TB treatment guidelines.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+    ],
+  },
+  {
+    subjectCode: "CM",
+    mcqs: [
+      // CM-MOD-01-TOP-06: Demography & Population Dynamics
+      {
+        id: "CM-MOD-01-TOP-06-MCQ-001",
+        topicCode: "CM-MOD-01-TOP-06",
+        question: "India's demographic transition has progressed through stages: high birth rate/death rate → declining death rate → declining birth rate. What public health achievement has MOST significantly contributed to declining crude death rate (CDR)?",
+        options: {
+          a: "Reduction of infant and child mortality through immunization, improved nutrition, oral rehydration therapy, and treatment of communicable diseases",
+          b: "Increase in life expectancy from improved healthcare access for elderly population",
+          c: "Population control through family planning reducing absolute number of deaths",
+          d: "Economic development increasing availability of modern medical care",
+        },
+        correctOption: "a",
+        explanation: "Demographic transition stages: Stage 1 (pre-transition): high birth rate (40-50), high death rate (40-50), low population growth. Stage 2 (declining mortality): high birth rate, declining death rate (improvements in public health, nutrition, mortality reduction), rapid population growth. Stage 3 (declining fertility): declining birth rate, low death rate, slowing growth. Stage 4 (low growth): low birth rate, low death rate. India is in Stage 3, transitioning to Stage 4. CDR decline (from ~42 in 1950s to ~7 today): primarily driven by reduction in infant/child mortality (IMR dropped from ~150 to ~30). Contributing factors: (1) Immunization (EPI coverage increased), (2) Improved nutrition/food security, (3) Oral rehydration therapy reducing diarrheal deaths, (4) Antimicrobial therapy for infections, (5) Antenatal/neonatal care. Life expectancy increase is consequence of CDR/IMR decline, not primary cause. References: Park's Preventive Medicine; Mahajan & Gupta.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+      {
+        id: "CM-MOD-01-TOP-06-MCQ-002",
+        topicCode: "CM-MOD-01-TOP-06",
+        question: "Total Fertility Rate (TFR) in India has declined from 5.7 (1990) to ~2.0 (2023). What is the most important determinant of fertility decline in Indian demographics?",
+        options: {
+          a: "Female education and empowerment (higher female literacy associated with later marriage, lower fertility); access to family planning services",
+          b: "Government-mandated population control policies forcing fertility reduction",
+          c: "Increased prevalence of sexually transmitted infections reducing fecundity",
+          d: "Economic recession reducing family size preference",
+        },
+        correctOption: "a",
+        explanation: "Fertility decline determinants: TFR decline is strongly associated with: (1) Female education (each year of additional female education reduces TFR by ~0.2-0.3), (2) Female age at marriage (increased marriage age from 18→22 years extends reproductive period termination), (3) Female empowerment (employment participation, control over resources, reproductive autonomy), (4) Access to family planning services (contraceptive methods availability, counseling), (5) Child mortality reduction (fewer births needed if child survival high), (6) Urbanization (urban areas show lower TFR). Government-mandated population control (e.g., forced sterilization campaigns) is NOT recommended and violated human rights; voluntary family planning with education/access is effective. In India: states with higher female literacy (Kerala, Tamil Nadu) have lower TFR (~1.5-2.0) vs. states with lower literacy (Uttar Pradesh, Bihar) with higher TFR (~3-4). References: Park's Preventive Medicine; Mahajan & Gupta.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+      {
+        id: "CM-MOD-01-TOP-06-MCQ-003",
+        topicCode: "CM-MOD-01-TOP-06",
+        question: "Why is population momentum (continued growth despite falling fertility) a significant challenge for India, and what is the mechanism?",
+        options: {
+          a: "High proportion of reproductive-age population (young age structure) continues bearing children even if TFR falls; absolute number of births may increase despite lower TFR",
+          b: "Continued immigration from neighboring countries offsets fertility decline effects",
+          c: "Cultural resistance to family planning limits effectiveness of interventions",
+          d: "Declining death rate increases population growth despite lower birth rate",
+        },
+        correctOption: "a",
+        explanation: "Population momentum: (1) Definition: tendency of population to continue growing despite fertility decline due to age structure (high proportion of reproductive-age population). (2) Mechanism: India's population pyramids shows broad base (children <15 years, ~25% of population). Even if each woman bears only 2 children (replacement level, TFR=2.1), the large number of women in reproductive years generates many births. (3) Time lag: significant reduction in absolute population growth rate occurs 20-30 years after TFR reaches replacement level—demographic lag. (4) Demographic window/dividend: the period of declining fertility but still-growing working-age population (increased labor force, potential for economic growth if employment/education provided). (5) Challenges for India: continued population growth (~1.2%/year currently) despite TFR ~2.0, causing pressure on resources (water, food, education, healthcare), environmental impacts, need for infrastructure expansion. (6) Management: education of young women (currently reproductive), employment opportunities, access to family planning will eventually result in lower growth rates. References: Park's Preventive Medicine; Mahajan & Gupta.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+    ],
+  },
+  {
+    subjectCode: "AS",
+    mcqs: [
+      // AS-MOD-01-TOP-01: Stages of Anesthesia & Agents
+      {
+        id: "AS-MOD-01-TOP-01-MCQ-001",
+        topicCode: "AS-MOD-01-TOP-01",
+        question: "A patient under general anesthesia progresses through Guedel's stages. In Stage III (surgical anesthesia), what is the characteristic finding that helps the anesthesiologist maintain the appropriate plane for surgery?",
+        options: {
+          a: "Progressive loss of eyelash and corneal reflexes, fixed dilated pupils, loss of responsiveness; respiration changes from regular to irregular to apneic",
+          b: "Maintained corneal and eyelash reflexes, constricted pupils, regular respiration; still responsive to pain",
+          c: "Loss of corneal reflex but maintained eyelash reflex, pupils intermediate (5-6mm), regular respiration; unresponsive to pain",
+          d: "Dilated pupils, absent reflexes, severe respiratory depression requiring ventilatory support; excessive anesthesia risk",
+        },
+        correctOption: "c",
+        explanation: "Guedel's planes of anesthesia (for ether/volatile anesthetics): Stage I (analgesia): consciousness retained, analgesia present, regular respiration, pupils react normally. Stage II (delirium/excitement): loss of consciousness, increased reflex activity, irregular respiration, pupils dilate, protective airway reflexes diminished. Stage III (surgical anesthesia): four planes: (1) Plane 1: eyelash reflex disappears, eyelids closed, pupils constricting. (2) Plane 2: corneal reflex disappears, eyelash reflex present, pupils 5-6mm, regular respiration (OPTIMAL surgical plane). (3) Plane 3: pupils dilate to 7-8mm, respiration becomes irregular. (4) Plane 4: pupils fully dilated (8mm), intercostal paralysis, abdominal breathing only. Stage IV (medullary paralysis): Danger zone—respiratory center depression, apnea, circulatory collapse. Plane 2 is ideal for surgery (good muscle relaxation, stable cardiovascular status, regular respiration, reflexes controlled). Modern anesthesia uses IV agents (propofol, thiopental) + volatile agents + muscle relaxants—Guedel's stages less relevant but principle of inadequate vs. excessive anesthesia remains. References: Lee's Synopsis; Ajay Yadav.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+      {
+        id: "AS-MOD-01-TOP-01-MCQ-002",
+        topicCode: "AS-MOD-01-TOP-01",
+        question: "Propofol (IV anesthetic agent) induces anesthesia rapidly but carries risk of severe hypotension and apnea. What is the mechanism of propofol's hemodynamic side effects?",
+        options: {
+          a: "Propofol causes direct myocardial depression and peripheral vasodilation (GABA_A enhancement, sympathetic inhibition); hypotension risk highest with rapid IV bolus or in elderly/hypovolemic patients",
+          b: "Propofol causes direct sympathomimetic effect, paradoxically increasing heart rate and blood pressure",
+          c: "Propofol decreases plasma albumin, impairing drug binding and increasing free propofol concentration",
+          d: "Propofol activates baroreceptor reflex, causing reflex bradycardia and hypotension",
+        },
+        correctOption: "a",
+        explanation: "Propofol pharmacology: (1) GABA_A agonist, enhancing inhibitory neurotransmission in CNS. (2) Cardiovascular effects: (a) Direct myocardial depression (negative inotropy), (b) Peripheral vasodilation (reduced systemic vascular resistance), (c) Net effect: significant hypotension (~30-40% MAP decrease), especially with rapid IV administration. (3) Respiratory depression: propofol is potent respiratory depressant—apnea common, requiring positive pressure ventilation or airway management. (4) Risk factors for severe hypotension: elderly, hypovolemia, shock, sepsis (propofol should be avoided in hypotensive patients; requires reduced doses or alternative agents). (5) Management: slow IV infusion, adequate fluid resuscitation, reduced doses in high-risk patients, vasopressor support (ephedrine, phenylephrine) if needed. (6) Advantages: rapid onset (arm-to-brain circulation time ~40 seconds), rapid recovery (short context-sensitive half-time), suitable for induction + infusion for total IV anesthesia (TIVA). (7) Unique complication: propofol infusion syndrome (myocardial depression, rhabdomyolysis, metabolic acidosis) with prolonged high-dose infusions. References: Lee's Synopsis; Ajay Yadav.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+      {
+        id: "AS-MOD-01-TOP-01-MCQ-003",
+        topicCode: "AS-MOD-01-TOP-01",
+        question: "Nitrous oxide (N2O) is used as an adjunct anesthetic but has the potential complication of diffusion hypoxia during recovery. What is the mechanism of diffusion hypoxia, and how is it prevented?",
+        options: {
+          a: "N2O rapidly diffuses from blood into alveolar space during emergence, diluting alveolar O2 concentration; prevention: supplemental O2 during recovery phase",
+          b: "N2O combines with hemoglobin irreversibly, preventing oxygen transport; recovery requires transfusion",
+          c: "N2O causes airway obstruction via pharyngeal edema, creating hypoxemia during emergence",
+          d: "N2O depletes antioxidants, causing oxidative damage to airways and hypoxemia",
+        },
+        correctOption: "a",
+        explanation: "Diffusion hypoxia mechanism: (1) N2O is highly soluble and non-metabolized—rapidly diffuses out of blood into alveoli during emergence (recovery phase). (2) Effect: N2O flux out of blood into alveoli is high volume (1-5 L/min), diluting alveolar oxygen concentration, reducing alveolar PO2 and causing hypoxemia. (3) Time course: occurs within 5-10 minutes after N2O discontinuation if not managed. (4) Clinical significance: SpO2 drops 5-15% unless supplemental oxygen provided. (5) Prevention: administer 100% oxygen for 5 minutes at end of anesthesia ('denitrogenation' or 'washout phase'), continue oxygen during recovery period. (6) Modern anesthesia: N2O is increasingly avoided due to: diffusion hypoxia, vitamin B12 depletion (chronic exposure inactivates methionine synthase → neuropathy with long-term use), environmental pollution, limited analgesic advantage with modern analgesics. (7) Residual effects: N2O provides analgesia (50% N2O provides analgesia equivalent to low-dose morphine), but opioids now preferred. References: Lee's Synopsis; Ajay Yadav.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+    ],
+  },
+  {
+    subjectCode: "RD",
+    mcqs: [
+      // RD-MOD-01-TOP-02: Radiation Physics & Protection
+      {
+        id: "RD-MOD-01-TOP-02-MCQ-001",
+        topicCode: "RD-MOD-01-TOP-02",
+        question: "A radiologist explains to a patient that X-rays are ionizing radiation. What is the mechanism by which X-rays cause tissue damage, and why is the risk higher with repeated exposures?",
+        options: {
+          a: "X-ray photons dislodge electrons from atoms (ionization), creating free radicals; free radicals damage DNA/proteins; cumulative exposure increases mutation/cancer risk",
+          b: "X-rays directly break DNA double-strand bonds, immediately killing cells",
+          c: "X-rays heat tissue, causing thermal burns proportional to exposure",
+          d: "X-rays deplete cellular ATP, causing cell death through energy starvation",
+        },
+        correctOption: "a",
+        explanation: "Ionizing radiation mechanism of injury: (1) X-ray photons have energy >10 eV, sufficient to remove electrons from atoms → ionization. (2) Ionization creates free radicals (unpaired electrons) that are highly reactive. (3) Free radicals damage: (a) DNA (double-strand breaks, base modifications), (b) Proteins (cross-linking, denaturation), (c) Lipids (peroxidation). (4) DNA damage: (a) Direct hits—ionization of DNA bases, (b) Indirect (main effect, ~60-70%)—free radicals from radiolysis of water attack DNA. (5) Cell death: excessive DNA damage → apoptosis or mitotic death. (6) Mutagenesis: non-lethal DNA damage → mutations → cancer risk. (7) Dose-response: stochastic (probabilistic) effects—cancer/mutations increase with dose, no threshold. Deterministic effects (acute radiation syndrome)—threshold ~2-6 Gy. (8) Cumulative exposure: repeated small doses allow some DNA repair, but imperfect repair accumulates mutations. Risk increases with total lifetime radiation dose. References: Sutton; Dahnert.",
+        bloomLevel: "APPLICATION",
+        pattern: "PROBLEM_SOLVING",
+      },
+      {
+        id: "RD-MOD-01-TOP-02-MCQ-002",
+        topicCode: "RD-MOD-01-TOP-02",
+        question: "ALARA principle (As Low As Reasonably Achievable) is fundamental to radiation protection. What are the three main strategies to reduce occupational radiation exposure?",
+        options: {
+          a: "Time (minimize exposure duration), Distance (maximize distance from source), Shielding (use lead aprons/barriers); combination reduces dose by inverse square law and attenuation",
+          b: "Dose (limit maximum dose per exposure), Frequency (reduce number of exposures), Energy (use lower energy photons)",
+          c: "Education (inform workers of risks), Monitoring (measure dose), Restraint (voluntary dose limitation)",
+          d: "Both a and c contribute to ALARA implementation",
+        },
+        correctOption: "a",
+        explanation: "ALARA principle: (1) Time: exposure time reduced → dose reduced (linear relationship). Example: fluoroscopic procedure 5 min vs. 10 min reduces dose 50%. (2) Distance: dose ∝ 1/r^2 (inverse square law). Double distance → 75% dose reduction. Example: fluoroscopy at 1m from source safer than 0.5m. (3) Shielding: attenuating material (lead, concrete) absorbs/scatters radiation. Half-value layer (HVL)—thickness reducing intensity 50%. Lead aprons (~0.5-1mm) reduce scattered radiation by ~90%. Thyroid shield reduces thyroid dose significantly. (4) Occupational limits (India/AERB): 50 mSv/year cumulative limit for occupational workers. Implementation: (a) Standard fluoroscopy protocols minimizing procedure time, (b) Maximizing distance (pulsed fluoroscopy, c-arm positioning), (c) Lead protection (aprons, gloves, shields). (d) Monitoring: thermoluminescent dosimeters (TLDs) measure cumulative dose. References: Sutton; Novelline.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+      {
+        id: "RD-MOD-01-TOP-02-MCQ-003",
+        topicCode: "RD-MOD-01-TOP-02",
+        question: "A radiologist receives an annual occupational dose of 40 mSv (approaching AERB safety limit of 50 mSv). What is the estimated increased lifetime cancer risk from this exposure?",
+        options: {
+          a: "~0.1-0.2% increased lifetime cancer risk per year at 40 mSv/year; cumulative risk over career requires dose limitation to prevent unacceptable risk",
+          b: "No increased cancer risk below 50 mSv; threshold exists below which radiation is safe",
+          c: "Cancer risk increases exponentially; 40 mSv guarantees cancer development within 5-10 years",
+          d: "Cancer risk is negligible; background radiation exposure is higher and does not cause cancer",
+        },
+        correctOption: "a",
+        explanation: "Cancer risk from ionizing radiation: (1) Stochastic risk model: no safe threshold; risk increases linearly with dose (linear-no-threshold, LNT model). (2) Risk estimates: ~5-6% increased lifetime cancer risk per Sievert (1 Sv = 1000 mSv). At 40 mSv/year: risk ~0.2-0.24% per year. (3) Over 30-year career at 40 mSv/year: cumulative dose ~1200 mSv = 12 Sv → ~6% lifetime cancer risk (already significant). (4) Therefore: AERB limits (50 mSv/year, lower for public ~1 mSv/year) are set to maintain acceptable risk. Occupational workers accept small increase in risk for employment benefit. (5) Mitigation: doses <20 mSv/year have lower cumulative risk. (6) Dose monitoring: workers with consistently high doses should be counseled; job rotation or tasks with lower radiation exposure can reduce dose. (7) Background radiation: natural background ~2-3 mSv/year varies geographically; higher in high-altitude/granite areas, but is uncontrollable; occupational dose is controllable and should be minimized. References: Sutton; AERB guidelines.",
+        bloomLevel: "ANALYSIS",
+        pattern: "ANALYSIS",
+      },
+    ],
+  },
+];
+
+export const allMcqsRemainingGap4 = remainingGapMcqs4;
