@@ -89,6 +89,8 @@ export const anatomyTopics: Record<string, Array<{ code: string; name: string; s
     { code: "AN-MOD-08-TOP-02", name: "Joints: Classification & Movements", sortOrder: 2, competencyCode: "AN1.2", competencyDesc: "Describe types of joints and their movements" },
     { code: "AN-MOD-08-TOP-03", name: "Muscles: Types & Actions", sortOrder: 3, competencyCode: "AN1.3", competencyDesc: "Describe the types and actions of muscles" },
     { code: "AN-MOD-08-TOP-04", name: "Blood Vessels, Lymphatics & Nerves", sortOrder: 4, competencyCode: "AN1.4", competencyDesc: "Describe general features of blood vessels, lymphatics, and nerves" },
+    { code: "AN-MOD-08-TOP-05", name: "Connective Tissue & Cartilage", sortOrder: 5, competencyCode: "AN1.5", competencyDesc: "Describe types of connective tissue, cartilage, and their distribution" },
+    { code: "AN-MOD-08-TOP-06", name: "Skin & Integumentary System", sortOrder: 6, competencyCode: "AN1.6", competencyDesc: "Describe structure of skin, appendages, and wound healing" },
   ],
   "AN-MOD-09": [
     { code: "AN-MOD-09-TOP-01", name: "Epithelial Tissue", sortOrder: 1, competencyCode: "AN65.1", competencyDesc: "Classify and identify epithelial tissues" },
@@ -102,5 +104,6 @@ export const anatomyTopics: Record<string, Array<{ code: string; name: string; s
     { code: "AN-MOD-10-TOP-02", name: "Implantation & Placenta", sortOrder: 2, competencyCode: "AN74.1", competencyDesc: "Describe implantation and placental development" },
     { code: "AN-MOD-10-TOP-03", name: "Embryonic Period & Folding", sortOrder: 3, competencyCode: "AN75.1", competencyDesc: "Describe the embryonic period and body folding" },
     { code: "AN-MOD-10-TOP-04", name: "Developmental Anomalies", sortOrder: 4, competencyCode: "AN76.1", competencyDesc: "Describe common congenital anomalies and their embryological basis" },
+    { code: "AN-MOD-10-TOP-05", name: "Fetal Membranes & Twinning", sortOrder: 5, competencyCode: "AN77.1", competencyDesc: "Describe fetal membranes, amniotic fluid, umbilical cord, and twinning" },
   ],
 };

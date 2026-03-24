@@ -9,6 +9,7 @@ import type { TopicLessons } from "./content-loader";
 import { abdomenLessons } from "./lessons-anatomy-abdomen";
 import { embryologyLessons } from "./lessons-anatomy-embryology";
 import { generalAnatomyLessons } from "./lessons-anatomy-general";
+import { anatomyGapLessons } from "./lessons-anatomy-gap";
 import { headNeckLessons } from "./lessons-anatomy-head-neck";
 import { histologyLessons } from "./lessons-anatomy-histology";
 import { lowerLimbLessons } from "./lessons-anatomy-lower-limb";
@@ -196,6 +197,7 @@ import { pathologyPart2Lessons } from "./lessons-pathology-part2";
 import { pathologyPart3Lessons } from "./lessons-pathology-part3";
 import { pathologyPart4Lessons } from "./lessons-pathology-part4";
 import { pathologyPart5Lessons } from "./lessons-pathology-part5";
+import { pathologyGapLessons } from "./lessons-pathology-gap";
 
 // Pediatrics lessons
 import { pediatricsPart1Lessons } from "./lessons-pediatrics-part1";
@@ -224,6 +226,7 @@ import { pharmacologyPart1Lessons } from "./lessons-pharmacology-part1";
 import { pharmacologyPart2Lessons } from "./lessons-pharmacology-part2";
 import { pharmacologyPart3Lessons } from "./lessons-pharmacology-part3";
 import { pharmacologyPart4Lessons } from "./lessons-pharmacology-part4";
+import { pharmacologyGapLessons } from "./lessons-pharmacology-gap";
 
 // Physiology lessons
 import { physiologyLessons } from "./lessons-physiology";
@@ -368,6 +371,7 @@ export const allLessons: TopicLessons[] = [
   ...abdomenLessons,
   ...embryologyLessons,
   ...generalAnatomyLessons,
+  ...anatomyGapLessons,
   ...headNeckLessons,
   ...histologyLessons,
   ...lowerLimbLessons,
@@ -555,6 +559,7 @@ export const allLessons: TopicLessons[] = [
   ...pathologyPart3Lessons,
   ...pathologyPart4Lessons,
   ...pathologyPart5Lessons,
+  ...pathologyGapLessons,
 
   // Pediatrics
   ...pediatricsPart1Lessons,
@@ -583,6 +588,7 @@ export const allLessons: TopicLessons[] = [
   ...pharmacologyPart2Lessons,
   ...pharmacologyPart3Lessons,
   ...pharmacologyPart4Lessons,
+  ...pharmacologyGapLessons,
 
   // Physiology
   ...physiologyLessons,

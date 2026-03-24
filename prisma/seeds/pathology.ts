@@ -28,6 +28,7 @@ export const pathologyTopics: Record<string, Array<{ code: string; name: string;
     { code: "PA-MOD-01-TOP-05", name: "Repair, Healing & Fibrosis", sortOrder: 5, competencyCode: "PA4.1", competencyDesc: "Describe wound healing, factors affecting it, and fibrosis" },
     { code: "PA-MOD-01-TOP-06", name: "Hemodynamic Disorders", sortOrder: 6, competencyCode: "PA5.1", competencyDesc: "Describe edema, thrombosis, embolism, infarction, shock" },
     { code: "PA-MOD-01-TOP-07", name: "Amyloidosis & Calcification", sortOrder: 7, competencyCode: "PA6.1", competencyDesc: "Describe amyloidosis and pathological calcification" },
+    { code: "PA-MOD-01-TOP-08", name: "Neoplasia", sortOrder: 8, competencyCode: "PA7.1", competencyDesc: "Describe neoplasia: nomenclature, characteristics of benign and malignant tumors, carcinogenesis, tumor markers" },
   ],
   "PA-MOD-02": [
     { code: "PA-MOD-02-TOP-01", name: "Neoplasia: Nomenclature & Classification", sortOrder: 1, competencyCode: "PA7.1", competencyDesc: "Describe classification and nomenclature of neoplasms" },
@@ -42,6 +43,7 @@ export const pathologyTopics: Record<string, Array<{ code: string; name: string;
     { code: "PA-MOD-03-TOP-04", name: "Leukemias", sortOrder: 4, competencyCode: "PA14.1", competencyDesc: "Describe classification and features of leukemias" },
     { code: "PA-MOD-03-TOP-05", name: "Lymphomas & Myeloma", sortOrder: 5, competencyCode: "PA15.1", competencyDesc: "Describe Hodgkin and non-Hodgkin lymphomas, multiple myeloma" },
     { code: "PA-MOD-03-TOP-06", name: "Bleeding Disorders", sortOrder: 6, competencyCode: "PA16.1", competencyDesc: "Describe platelet disorders, coagulation disorders, DIC" },
+    { code: "PA-MOD-03-TOP-07", name: "Transfusion Medicine", sortOrder: 7, competencyCode: "PA17.1b", competencyDesc: "Describe blood groups, cross-matching, transfusion reactions, and blood component therapy" },
   ],
   "PA-MOD-04": [
     { code: "PA-MOD-04-TOP-01", name: "Ischemic Heart Disease", sortOrder: 1, competencyCode: "PA17.1", competencyDesc: "Describe pathogenesis of atherosclerosis and IHD" },
@@ -50,6 +52,7 @@ export const pathologyTopics: Record<string, Array<{ code: string; name: string;
     { code: "PA-MOD-04-TOP-04", name: "Obstructive Lung Diseases", sortOrder: 4, competencyCode: "PA20.1", competencyDesc: "Describe COPD, asthma, and bronchiectasis" },
     { code: "PA-MOD-04-TOP-05", name: "Pneumonias & TB", sortOrder: 5, competencyCode: "PA21.1", competencyDesc: "Describe pneumonia types and pulmonary tuberculosis" },
     { code: "PA-MOD-04-TOP-06", name: "Lung Tumors", sortOrder: 6, competencyCode: "PA22.1", competencyDesc: "Describe lung carcinoma and pleural diseases" },
+    { code: "PA-MOD-04-TOP-07", name: "Pleural & Mediastinal Diseases", sortOrder: 7, competencyCode: "PA23.1", competencyDesc: "Describe pleural effusion, pneumothorax, mesothelioma, and mediastinal tumors" },
   ],
   "PA-MOD-05": [
     { code: "PA-MOD-05-TOP-01", name: "Oral & Esophageal Pathology", sortOrder: 1, competencyCode: "PA23.1", competencyDesc: "Describe diseases of oral cavity and esophagus" },

@@ -26,6 +26,7 @@ export const pharmacologyTopics: Record<string, Array<{ code: string; name: stri
     { code: "PH-MOD-01-TOP-03", name: "Pharmacodynamics", sortOrder: 3, competencyCode: "PH1.3", competencyDesc: "Describe drug-receptor interactions and dose-response relationships" },
     { code: "PH-MOD-01-TOP-04", name: "Adverse Drug Reactions", sortOrder: 4, competencyCode: "PH1.4", competencyDesc: "Describe ADRs, drug interactions, and pharmacovigilance" },
     { code: "PH-MOD-01-TOP-05", name: "Drug Development & Regulations", sortOrder: 5, competencyCode: "PH1.5", competencyDesc: "Describe drug discovery, clinical trials, and essential drugs" },
+    { code: "PH-MOD-01-TOP-06", name: "Pharmacogenomics & Rational Prescribing", sortOrder: 6, competencyCode: "PH1.6", competencyDesc: "Describe pharmacogenomics, rational drug use, essential medicines, and P-drug concept" },
   ],
   "PH-MOD-02": [
     { code: "PH-MOD-02-TOP-01", name: "Cholinergic Drugs", sortOrder: 1, competencyCode: "PH2.1", competencyDesc: "Describe cholinergic agonists and anticholinesterases" },
@@ -75,5 +76,6 @@ export const pharmacologyTopics: Record<string, Array<{ code: string; name: stri
     { code: "PH-MOD-08-TOP-02", name: "Respiratory Pharmacology", sortOrder: 2, competencyCode: "PH8.2", competencyDesc: "Describe bronchodilators, antitussives, and drugs for asthma" },
     { code: "PH-MOD-08-TOP-03", name: "Anticancer Drugs", sortOrder: 3, competencyCode: "PH8.3", competencyDesc: "Describe alkylating agents, antimetabolites, and targeted therapy" },
     { code: "PH-MOD-08-TOP-04", name: "Drugs Acting on Uterus & Blood", sortOrder: 4, competencyCode: "PH8.4", competencyDesc: "Describe oxytocics, hematinics, and plasma expanders" },
+    { code: "PH-MOD-08-TOP-05", name: "Immunopharmacology & Biologics", sortOrder: 5, competencyCode: "PH8.5", competencyDesc: "Describe immunosuppressants, immunostimulants, monoclonal antibodies, and biologics" },
   ],
 };
