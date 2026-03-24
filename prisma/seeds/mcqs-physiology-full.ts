@@ -402,7 +402,7 @@ export const physiologyFullMcqs = [
       { id: "c", text: "Increased parasympathetic tone", isCorrect: false, explanation: "Not the primary mechanism" },
       { id: "d", text: "Decreased renal perfusion pressure", isCorrect: false, explanation: "This is a consequence, not mechanism" },
     ],
-    explanation: "In **chronic hypertension**, **myogenic autoregulation** (the ability to maintain constant organ perfusion across changing pressures) is **shifted to higher pressure levels**. The kidney becomes "hypertensive" and requires higher pressures to maintain filtration, perpetuating the hypertension.",
+    explanation: "In **chronic hypertension**, **myogenic autoregulation** (the ability to maintain constant organ perfusion across changing pressures) is **shifted to higher pressure levels**. The kidney becomes \"hypertensive\" and requires higher pressures to maintain filtration, perpetuating the hypertension.",
     difficulty: "HARD" as const,
     bloomsLevel: "Analysis",
     examTags: ["NEXT_STEP1", "NEET_PG"] as string[],

@@ -220,3 +220,7 @@ export async function loadCasesForSubject(
   console.log(`   🏥 ${data.subjectCode}: ${count} cases loaded`);
   return count;
 }
+
+// ─── Re-exports from all-content.ts ──────────────────────────
+
+export { allLessons, allMcqs, allClinicalCases } from "./all-content";

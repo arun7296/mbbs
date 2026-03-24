@@ -827,34 +827,34 @@ A: Syndrome of inappropriate ADH secretion; causes hyponatremia; manage with flu
 ### Rapid Decision Trees
 
 **Decision 1: When to defer LP**
-```
+
 Suspected meningitis → Papilledema/focal deficit/mass on imaging?
 YES → Do CT head first, then LP
 NO → LP immediately (don't delay with imaging)
-```
+
 
 **Decision 2: Antibiotic Coverage**
-```
+
 Meningitis suspected → Age <50, immunocompetent?
 YES → Ceftriaxone + Vancomycin
 NO → Add Ampicillin (for Listeria)
-```
+
 
 **Decision 3: CSF Interpretation**
-```
+
 CSF cells → PMN dominant?
 YES → Likely bacterial
 NO → Lymphocytes dominant → Viral vs TB vs fungal
      → Very low glucose (<20)? → TB/fungal likely
      → Normal glucose? → Viral meningitis likely
-```
+
 
 **Decision 4: Need for Acyclovir**
-```
+
 Meningitis or encephalitis suspected → Any encephalitis features (altered mental status, seizures, behavioral change)?
 YES → Give acyclovir empirically
 NO → Can defer acyclovir if pure meningitis (bacterial/viral)
-```
+
 
 ---
 
@@ -974,4 +974,3 @@ NO → Can defer acyclovir if pure meningitis (bacterial/viral)
 } as const;
 
 export default medicinePart11Lessons;
-`,

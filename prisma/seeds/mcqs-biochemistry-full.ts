@@ -298,7 +298,7 @@ export const biochemistryFullMcqs = [
       { id: "c", text: "Increased lactate production", isCorrect: false, explanation: "Lactate is not produced" },
       { id: "d", text: "Mitochondrial dysfunction", isCorrect: false, explanation: "Mitochondria are intact" },
     ],
-    explanation: "**McArdle disease** (glycogen phosphorylase deficiency) prevents **muscle glycogen breakdown**. During exercise, muscles cannot mobilize glycogen for glycolysis, causing **"second wind" phenomenon** (symptoms improve as blood glucose enters muscle), **myoglobinuria**, and **permanent muscle damage** with repeated episodes.",
+    explanation: "**McArdle disease** (glycogen phosphorylase deficiency) prevents **muscle glycogen breakdown**. During exercise, muscles cannot mobilize glycogen for glycolysis, causing **\"second wind\" phenomenon** (symptoms improve as blood glucose enters muscle), **myoglobinuria**, and **permanent muscle damage** with repeated episodes.",
     difficulty: "MEDIUM" as const,
     bloomsLevel: "ProblemSolving",
     examTags: ["NEXT_STEP1", "NEET_PG"] as string[],

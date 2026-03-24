@@ -579,7 +579,7 @@ export const orthopedicsPart7Lessons: TopicLessons[] = [
 ## Management Algorithms
 
 ### Distal Radius Fracture Algorithm
-```
+
 Distal Radius Fracture?
 ├─ NEUROVASCULAR ASSESSMENT (Critical!)
 │  ├─ Vascular compromise → URGENT REDUCTION
@@ -606,10 +606,10 @@ Distal Radius Fracture?
    ├─ 6 weeks: Assess callus, begin gentle mobilization
    ├─ 12 weeks: Assess union, return to activities
    └─ Final: Functional assessment (pronation-supination, ROM)
-```
+
 
 ### Scaphoid Fracture Algorithm
-```
+
 Scaphoid Fracture Suspected?
 ├─ IMAGING
 │  ├─ X-ray: PA, lateral, scaphoid view
@@ -631,7 +631,7 @@ Scaphoid Fracture Suspected?
    ├─ Nonunion risk → Consider ORIF (screw fixation)
    ├─ AVN present → May require scaphoidectomy if symptomatic
    └─ Athlete/non-compliant → Early ORIF for return to sport
-```
+
 
 ## Common Exam Questions & Answers
 

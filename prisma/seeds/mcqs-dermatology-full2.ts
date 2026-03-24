@@ -829,7 +829,7 @@ export const dermatologyMcqs2 = [
   },
   {
     type: "MCQ_SINGLE" as const,
-    stem: "A 28-year-old female presents with painful, violaceous papules on inner wrists and ankles. Oral mucosa shows white, lacy patterns. Biopsy shows "saw-tooth" appearance with liquefaction of basal layer. What is the pathophysiological mechanism?",
+    stem: "A 28-year-old female presents with painful, violaceous papules on inner wrists and ankles. Oral mucosa shows white, lacy patterns. Biopsy shows \"saw-tooth\" appearance with liquefaction of basal layer. What is the pathophysiological mechanism?",
     clinicalVignette:
       "A 28-year-old female with violaceous papules on flexural areas and white lacy pattern on buccal mucosa. Biopsy consistent with lichen planus.",
     options: [

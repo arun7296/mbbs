@@ -205,13 +205,13 @@ export const microbiologyVirologyLessons5: TopicLessons[] = [
 | **III** | High (multiple/head/neck) | Urgent HBIG + vaccine |
 
 ## PEP Regimen (Rabies)
-```
+
 Day 0: 2 doses (0.5 mL IM in 2 shoulders OR intradermal split-dose)
 Day 3: 1 dose (0.5 mL IM)
 Day 7: 1 dose (0.5 mL IM)
 Day 14: 1 dose (0.5 mL IM)
 Total: 4 doses × 0.5 mL = 2 mL
-```
+
 
 ## High-Yield Facts
 - **Dengue R0**: 1.5-2 (moderate)

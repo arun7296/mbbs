@@ -525,4 +525,3 @@ export const obgLessonsPart14: TopicLessons[] = [
     ]
   }
 ];
-`,

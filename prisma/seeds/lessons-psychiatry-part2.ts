@@ -239,7 +239,7 @@ export const psychiatryPart2Lessons: TopicLessons[] = [
 
 ## Diagnostic Algorithms by Symptom Presentation
 ### Depressed Mood Algorithm
-```
+
 Depressed mood or anhedonia ≥2 weeks
   ├─ + ≥3 additional depression symptoms → Assess for major depression
   │   ├─ Single episode (first time) = Major Depressive Disorder
@@ -249,10 +249,10 @@ Depressed mood or anhedonia ≥2 weeks
   ├─ + Manic/hypomanic episode = Bipolar Disorder
   ├─ + Trauma history + hyperarousal = PTSD or Trauma-related
   └─ + Anxiety symptoms = Depression with anxious distress
-```
+
 
 ### Psychosis Algorithm
-```
+
 Delusions, hallucinations, or disorganized speech
   ├─ + Depressed/manic mood for full psychotic episode → Mood disorder with psychosis
   │   ├─ Manic episode with psychosis = Bipolar I
@@ -264,7 +264,7 @@ Delusions, hallucinations, or disorganized speech
   ├─ + Prominent delusions, no other criteria = Delusional disorder
   ├─ + Substance intoxication/withdrawal = Substance-induced psychotic disorder
   └─ + Medical condition (infection, seizure) = Psychotic disorder due to medical condition
-```
+
 
 ## Common Diagnostic Dilemmas in India
 ### Distinguishing Depression from Medically Explained Somatic Symptoms
@@ -365,13 +365,13 @@ Delusions, hallucinations, or disorganized speech
 
 ## Multiaxial Coding Example
 **Case**: 45-year-old man with depression + hypertension + job loss + borderline personality traits
-```
+
 Axis I: Major Depressive Disorder, single episode, moderate (F32.1)
 Axis II: Borderline Personality Traits (not full disorder)
 Axis III: Hypertension (medically managed)
 Axis IV: Job loss, financial stress (moderate severity)
 Axis V: GAF = 45 (serious symptoms, significant functional impairment)
-```
+
 
 ## Common Exam Question Patterns
 - "Which is characterized by ≥2 manic episodes?" = Bipolar I or Bipolar II (specify hypomania)

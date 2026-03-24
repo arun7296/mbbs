@@ -564,4 +564,3 @@ Presence of endometrial glands and stroma invading the myometrium (typically >2.
     ]
   }
 ];
-`,

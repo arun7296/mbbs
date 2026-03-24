@@ -311,16 +311,16 @@ Where:
 - Depends on disease prevalence
 
 ### 2×2 Table Analysis
-```
-        Disease +    Disease -
-Test +  TP           FP
-Test -  FN           TN
 
-Sensitivity = TP / (TP + FN)
-Specificity = TN / (TN + FP)
-PPV = TP / (TP + FP)
-NPV = TN / (TN + FN)
-````,
+|          | Disease + | Disease - |
+|----------|-----------|-----------|
+| Test +   | TP        | FP        |
+| Test -   | FN        | TN        |
+
+- Sensitivity = TP / (TP + FN)
+- Specificity = TN / (TN + FP)
+- PPV = TP / (TP + FP)
+- NPV = TN / (TN + FN)`,
         mnemonics: [
           {
             text: "RISK MEASURES: RR (exposed/unexposed), OR (odds ratio), ARR (absolute reduction), NNT (1/ARR)",

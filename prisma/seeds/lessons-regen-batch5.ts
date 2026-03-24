@@ -423,7 +423,7 @@ export const regenBatch5Lessons = [
         ]
       }
     ]
-  }
+  },
   {
     topicCode: "DR-MOD-01-TOP-02",
     layers: [
@@ -575,7 +575,7 @@ export const regenBatch5Lessons = [
         ]
       }
     ]
-  }
+  },
   {
     topicCode: "DR-MOD-01-TOP-03",
     layers: [
@@ -738,7 +738,7 @@ export const regenBatch5Lessons = [
         ]
       }
     ]
-  }
+  },
   {
     topicCode: "DR-MOD-03-TOP-03",
     layers: [
@@ -902,7 +902,7 @@ export const regenBatch5Lessons = [
         ]
       }
     ]
-  }
+  },
   {
     topicCode: "DR-MOD-03-TOP-04",
     layers: [

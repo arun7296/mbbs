@@ -775,4 +775,3 @@ export const obgLessonsPart15: TopicLessons[] = [
     ]
   }
 ];
-`,

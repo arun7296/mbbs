@@ -539,7 +539,7 @@ export const obgLessonsPartTwelve: TopicLessons[] = [
 - **Clinical use**: p16/Ki-67 dual staining better than either alone
 
 ### 6. ASCUS Management Algorithm
-```
+
 ASCUS (Mild atypia)
     ↓
 Option 1: HPV reflex testing
@@ -549,7 +549,7 @@ Option 1: HPV reflex testing
 Option 2: Repeat cytology at 12 months
     ├─ Normal → Routine screening
     └─ Abnormal → Colposcopy
-```
+
 
 ### 7. Colposcopy Findings and Interpretation
 **Normal**: Pink epithelium, regular vascular pattern, negative for acetowhitening
@@ -665,4 +665,3 @@ Option 2: Repeat cytology at 12 months
     ]
   }
 ];
-`,

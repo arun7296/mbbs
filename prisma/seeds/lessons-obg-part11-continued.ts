@@ -610,7 +610,7 @@ Acute or chronic inflammation of upper reproductive tract (endometrium, fallopia
 - Sensitivity: 60-80%
 
 ### 10. Ascending Infection Pathway
-```
+
 Cervix (Cervicitis)
     ↓
 Endometrium (Endometritis)
@@ -620,7 +620,7 @@ Fallopian Tubes (Salpingitis)
 Ovaries (Oophoritis)
     ↓
 Peritoneum (Peritonitis) → Tubo-Ovarian Abscess
-```
+
 
 ### 11. Chandelier Sign
 - **Severe cervical motion tenderness** (patient wants to hit ceiling)
@@ -719,4 +719,3 @@ Peritoneum (Peritonitis) → Tubo-Ovarian Abscess
     ]
   }
 ];
-`,

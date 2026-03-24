@@ -1053,7 +1053,7 @@ export const medicinePart8Lessons: TopicLessons[] = [
 
 ### Tree 1: High PTH Differential
 
-```
+
 HIGH PTH
 |
 ├─ High calcium → PRIMARY HYPERPARATHYROIDISM (adenoma/hyperplasia)
@@ -1077,11 +1077,11 @@ HIGH PTH
 |
 └─ Normal calcium (early secondary HPT)
     └─ Assess vitamin D, phosphate, creatinine (see above pathways)
-```
+
 
 ### Tree 2: Low Calcium Differential
 
-```
+
 LOW CALCIUM
 |
 ├─ HIGH PTH (should suppress calcium)
@@ -1096,11 +1096,11 @@ LOW CALCIUM
     ├─ Post-thyroid/parathyroid surgery → HYPOPARATHYROIDISM
     ├─ Hypomagnesemia → PTH SUPPRESSION (magnesium required for PTH secretion)
     └─ Pseudohypoparathyroidism (resistance to PTH) → PTH elevated but PTH action impaired
-```
+
 
 ### Tree 3: Bone Pain + Low Bone Density Differential
 
-```
+
 BONE PAIN + LOW BMD
 |
 ├─ High PTH + Low 25-vitamin D + Very HIGH ALP → OSTEOMALACIA
@@ -1120,7 +1120,7 @@ BONE PAIN + LOW BMD
 |
 └─ Low PTH + Low calcium → HYPOPARATHYROIDISM
     └─ Post-surgical; genetic; or pseudohypoparathyroidism
-```
+
 
 ## High-Yield Clinical Scenarios
 

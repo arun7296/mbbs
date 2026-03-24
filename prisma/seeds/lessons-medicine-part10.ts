@@ -791,4 +791,3 @@ Typically 6 cycles, often followed by radiation to involved-field regions. Achie
 ];
 
 export default medicinePart10Lessons;
-`,
