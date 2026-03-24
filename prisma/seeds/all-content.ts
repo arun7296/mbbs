@@ -173,6 +173,7 @@ import { ophthalmologyPart6Lessons } from "./lessons-ophthalmology-part6";
 import { ophthalmologyPart7Lessons } from "./lessons-ophthalmology-part7";
 import { ophthalmologyPart8Lessons } from "./lessons-ophthalmology-part8";
 import { ophthalmologyPart9Lessons } from "./lessons-ophthalmology-part9";
+import { ophthalmologyGapLessons } from "./lessons-ophthalmology-gap";
 
 // Orthopedics lessons
 import { orthopedicsLessons } from "./lessons-orthopedics-part1";
@@ -531,6 +532,7 @@ export const allLessons: TopicLessons[] = [
   ...ophthalmologyPart7Lessons,
   ...ophthalmologyPart8Lessons,
   ...ophthalmologyPart9Lessons,
+  ...ophthalmologyGapLessons,
 
   // Orthopedics
   ...orthopedicsLessons,

@@ -20,6 +20,7 @@ export const ophthalmologyTopics: Record<string, Array<{ code: string; name: str
     { code: "OP-MOD-02-TOP-03", name: "Uveitis", sortOrder: 3, competencyCode: "OP2.3", competencyDesc: "Describe anterior and posterior uveitis" },
     { code: "OP-MOD-02-TOP-04", name: "Cataract", sortOrder: 4, competencyCode: "OP2.4", competencyDesc: "Describe types of cataract and surgical management" },
     { code: "OP-MOD-02-TOP-05", name: "Eyelid & Lacrimal Disorders", sortOrder: 5, competencyCode: "OP2.5", competencyDesc: "Describe ptosis, chalazion, stye, and lacrimal disorders" },
+    { code: "OP-MOD-02-TOP-06", name: "Scleral & Orbital Diseases", sortOrder: 6, competencyCode: "OP2.6", competencyDesc: "Describe scleritis, episcleritis, proptosis, and orbital cellulitis" },
   ],
   "OP-MOD-03": [
     { code: "OP-MOD-03-TOP-01", name: "Open Angle Glaucoma", sortOrder: 1, competencyCode: "OP3.1", competencyDesc: "Describe POAG: pathogenesis, diagnosis, management" },
@@ -31,10 +32,13 @@ export const ophthalmologyTopics: Record<string, Array<{ code: string; name: str
     { code: "OP-MOD-04-TOP-02", name: "Retinal Detachment & ARMD", sortOrder: 2, competencyCode: "OP4.2", competencyDesc: "Describe retinal detachment and age-related macular degeneration" },
     { code: "OP-MOD-04-TOP-03", name: "Optic Nerve Diseases", sortOrder: 3, competencyCode: "OP4.3", competencyDesc: "Describe papilledema, optic neuritis, and optic atrophy" },
     { code: "OP-MOD-04-TOP-04", name: "Squint & Amblyopia", sortOrder: 4, competencyCode: "OP4.4", competencyDesc: "Describe types of squint and amblyopia management" },
+    { code: "OP-MOD-04-TOP-05", name: "Neuro-Ophthalmology", sortOrder: 5, competencyCode: "OP4.5", competencyDesc: "Describe pupillary reflexes, visual fields, cranial nerve palsies, and nystagmus" },
   ],
   "OP-MOD-05": [
     { code: "OP-MOD-05-TOP-01", name: "Ocular Trauma", sortOrder: 1, competencyCode: "OP5.1", competencyDesc: "Describe management of ocular injuries and chemical burns" },
     { code: "OP-MOD-05-TOP-02", name: "Blindness & NPCB", sortOrder: 2, competencyCode: "OP5.2", competencyDesc: "Describe causes of blindness and National Program for Control of Blindness" },
     { code: "OP-MOD-05-TOP-03", name: "Ocular Tumors", sortOrder: 3, competencyCode: "OP5.3", competencyDesc: "Describe retinoblastoma and ocular surface tumors" },
+    { code: "OP-MOD-05-TOP-04", name: "Ocular Pharmacology & Therapeutics", sortOrder: 4, competencyCode: "OP5.4", competencyDesc: "Describe ophthalmic drug delivery, mydriatics, miotics, and anti-glaucoma drugs" },
+    { code: "OP-MOD-05-TOP-05", name: "Systemic Diseases & the Eye", sortOrder: 5, competencyCode: "OP5.5", competencyDesc: "Describe ocular manifestations of systemic diseases: hypertension, diabetes, autoimmune, HIV" },
   ],
 };
