@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { GraduationCap, MessageCircle, Heart, Scale } from "lucide-react";
+import { GraduationCap, MessageCircle, Heart, Scale, Shield, AlertTriangle } from "lucide-react";
 
 const aetcomModules = [
   { num: 1, title: "What does it mean to be a doctor?", phase: "Phase I", icon: Heart },
   { num: 2, title: "What does it mean to be a patient?", phase: "Phase I", icon: MessageCircle },
   { num: 3, title: "The doctor-patient relationship", phase: "Phase I", icon: Heart },
   { num: 4, title: "Informed consent and patient autonomy", phase: "Phase I", icon: Scale },
-  { num: 5, title: "Health care as a right", phase: "Phase I", icon: Scale },
-  { num: 6, title: "Medical errors and patient safety", phase: "Phase I", icon: GraduationCap },
+  { num: 5, title: "Health care as a right", phase: "Phase I", icon: Shield },
+  { num: 6, title: "Medical errors and patient safety", phase: "Phase I", icon: AlertTriangle },
 ];
 
 export default function AetcomPage() {
@@ -37,11 +37,7 @@ export default function AetcomPage() {
               <h3 className="font-medium text-gray-900">Module {m.num}: {m.title}</h3>
               <p className="text-xs text-gray-400">{m.phase}</p>
             </div>
-            {m.num === 1 ? (
-              <span className="rounded-lg bg-pink-100 px-3 py-1 text-xs font-medium text-pink-600">Start</span>
-            ) : (
-              <span className="rounded-lg bg-gray-100 px-3 py-1 text-xs text-gray-500">Coming Soon</span>
-            )}
+            <span className="rounded-lg bg-pink-100 px-3 py-1 text-xs font-medium text-pink-600">Start</span>
           </Link>
         ))}
       </div>

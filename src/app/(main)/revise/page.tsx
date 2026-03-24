@@ -1,73 +1,33 @@
-"use client";
+import Link from "next/link";
+import { RotateCcw, AlertTriangle, BookOpen } from "lucide-react";
+import { getServerTrpc } from "@/lib/trpc/server";
 
-import { useState } from "react";
-import { RotateCcw, AlertTriangle } from "lucide-react";
-import { FlashcardReview } from "@/components/revise/FlashcardReview";
-import { WeakAreaCard } from "@/components/revise/WeakAreaCard";
-import type { Grade } from "@/lib/utils/spaced-repetition";
-import { gradeToQuality } from "@/lib/utils/spaced-repetition";
+export default async function RevisePage() {
+  const trpc = await getServerTrpc();
+  const phaseGroups = await trpc.curriculum.getPhases();
+  const allSubjects = Object.values(phaseGroups).flat();
 
-interface RevisionItem {
-  topicId: string;
-  topicName: string;
-  subjectName: string;
-  subjectCode: string;
-  moduleName: string;
-  moduleCode: string;
-  topicCode: string;
-  masteryLevel: number;
-  question: string;
-  answer: string;
-}
+  // Get a sample of topics across subjects for the revision overview
+  const subjectSample = allSubjects.slice(0, 6);
+  const topicsBySubject = await Promise.all(
+    subjectSample.map(async (s) => {
+      const full = await trpc.curriculum.getSubject({ code: s.code });
+      const topics = full?.modules.flatMap((m) =>
+        m.topics.map((t) => ({
+          id: t.id,
+          name: t.name,
+          code: t.code,
+          moduleName: m.name,
+          moduleCode: m.code,
+          subjectName: s.name,
+          subjectCode: s.code,
+        }))
+      ) ?? [];
+      return { subject: s, topics };
+    })
+  );
 
-// Sample revision cards generated from lesson key points
-const sampleCards: RevisionItem[] = [
-  { topicId: "t1", topicName: "Brachial Plexus", subjectName: "Anatomy", subjectCode: "AN", moduleName: "Upper Limb", moduleCode: "AN-MOD-01", topicCode: "AN-MOD-01-TOP-05", masteryLevel: 0.4,
-    question: "What spinal nerve roots form the brachial plexus?", answer: "C5, C6, C7, C8, T1 (ventral rami)" },
-  { topicId: "t2", topicName: "Brachial Plexus", subjectName: "Anatomy", subjectCode: "AN", moduleName: "Upper Limb", moduleCode: "AN-MOD-01", topicCode: "AN-MOD-01-TOP-05", masteryLevel: 0.4,
-    question: "Name the 5 terminal branches of the brachial plexus.", answer: "Musculocutaneous, Axillary, Radial, Median, Ulnar (MARMU)" },
-  { topicId: "t3", topicName: "Brachial Plexus", subjectName: "Anatomy", subjectCode: "AN", moduleName: "Upper Limb", moduleCode: "AN-MOD-01", topicCode: "AN-MOD-01-TOP-05", masteryLevel: 0.4,
-    question: "What nerve injury causes wrist drop? Where is it damaged?", answer: "Radial nerve, at the spiral groove of the humerus (mid-shaft fracture)" },
-  { topicId: "t4", topicName: "Brachial Plexus", subjectName: "Anatomy", subjectCode: "AN", moduleName: "Upper Limb", moduleCode: "AN-MOD-01", topicCode: "AN-MOD-01-TOP-05", masteryLevel: 0.4,
-    question: "Describe the position in Erb's palsy and the roots involved.", answer: "Waiter's tip: arm medially rotated, forearm pronated. Upper trunk (C5, C6)." },
-  { topicId: "t5", topicName: "Brachial Plexus", subjectName: "Anatomy", subjectCode: "AN", moduleName: "Upper Limb", moduleCode: "AN-MOD-01", topicCode: "AN-MOD-01-TOP-05", masteryLevel: 0.4,
-    question: "What passes through the quadrangular space?", answer: "Axillary nerve + posterior circumflex humeral artery" },
-  { topicId: "t6", topicName: "Brachial Plexus", subjectName: "Anatomy", subjectCode: "AN", moduleName: "Upper Limb", moduleCode: "AN-MOD-01", topicCode: "AN-MOD-01-TOP-05", masteryLevel: 0.4,
-    question: "Which nerve has NO branches in the arm?", answer: "Median nerve — it only starts branching in the cubital fossa" },
-  { topicId: "t7", topicName: "Brachial Plexus", subjectName: "Anatomy", subjectCode: "AN", moduleName: "Upper Limb", moduleCode: "AN-MOD-01", topicCode: "AN-MOD-01-TOP-05", masteryLevel: 0.4,
-    question: "What is the ulnar paradox?", answer: "Higher ulnar nerve injury = LESS clawing (because FDP is also paralyzed)" },
-  { topicId: "t8", topicName: "Brachial Plexus", subjectName: "Anatomy", subjectCode: "AN", moduleName: "Upper Limb", moduleCode: "AN-MOD-01", topicCode: "AN-MOD-01-TOP-05", masteryLevel: 0.4,
-    question: "Which nerve injury causes winging of scapula?", answer: "Long thoracic nerve (C5, C6, C7) — supplies serratus anterior" },
-];
-
-export default function RevisePage() {
-  const [mode, setMode] = useState<"overview" | "review">("overview");
-  const [dueCount] = useState(sampleCards.length);
-  const [weeklyDue] = useState(12);
-
-  const handleGrade = (topicId: string, grade: Grade) => {
-    const quality = gradeToQuality(grade);
-    // In production: call progress.submitReview via tRPC
-    console.log(`Graded topic ${topicId}: ${grade} (quality: ${quality})`);
-  };
-
-  if (mode === "review") {
-    return (
-      <div className="mx-auto max-w-4xl px-4 py-6 lg:px-8">
-        <button
-          onClick={() => setMode("overview")}
-          className="mb-4 text-sm text-gray-500 hover:text-gray-700"
-        >
-          ← Back to overview
-        </button>
-        <FlashcardReview
-          cards={sampleCards}
-          onGrade={handleGrade}
-          onComplete={() => setMode("overview")}
-        />
-      </div>
-    );
-  }
+  const totalTopics = topicsBySubject.reduce((sum, s) => sum + s.topics.length, 0);
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-6 lg:px-8">
@@ -76,67 +36,79 @@ export default function RevisePage() {
         <p className="text-gray-500">Spaced repetition and weak area targeted review</p>
       </div>
 
-      {/* Spaced Repetition Queue */}
+      {/* Spaced Repetition Info */}
       <div className="mb-8 rounded-xl border border-orange-200 bg-orange-50 p-6">
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-3">
-            <RotateCcw className="h-6 w-6 text-orange-600" />
-            <h2 className="text-lg font-semibold text-orange-800">Spaced Repetition</h2>
-          </div>
-          {dueCount > 0 && (
-            <button
-              onClick={() => setMode("review")}
-              className="rounded-lg bg-orange-500 px-4 py-2 text-sm font-medium text-white hover:bg-orange-600"
-            >
-              Start Review ({dueCount} cards)
-            </button>
-          )}
+        <div className="flex items-center gap-3 mb-4">
+          <RotateCcw className="h-6 w-6 text-orange-600" />
+          <h2 className="text-lg font-semibold text-orange-800">Spaced Repetition</h2>
         </div>
         <p className="text-sm text-orange-700 mb-4">
-          Topics are scheduled for review at optimal intervals to maximize retention. Grade each card to update its schedule.
+          Topics are scheduled for review at optimal intervals using the SM-2 algorithm to maximize retention.
+          Sign in to track your review schedule and see personalized due cards.
         </p>
         <div className="grid grid-cols-3 gap-4 text-center">
           <div className="rounded-lg bg-white p-3">
-            <p className="text-2xl font-bold text-orange-600">{dueCount}</p>
-            <p className="text-xs text-gray-500">Due Today</p>
+            <p className="text-2xl font-bold text-orange-600">{allSubjects.length}</p>
+            <p className="text-xs text-gray-500">Subjects</p>
           </div>
           <div className="rounded-lg bg-white p-3">
-            <p className="text-2xl font-bold text-amber-600">{weeklyDue}</p>
-            <p className="text-xs text-gray-500">Due This Week</p>
+            <p className="text-2xl font-bold text-amber-600">{totalTopics}+</p>
+            <p className="text-xs text-gray-500">Topics Available</p>
           </div>
           <div className="rounded-lg bg-white p-3">
-            <p className="text-2xl font-bold text-gray-600">60</p>
-            <p className="text-xs text-gray-500">Total Topics</p>
+            <p className="text-2xl font-bold text-gray-600">5</p>
+            <p className="text-xs text-gray-500">Layers per Topic</p>
           </div>
         </div>
       </div>
 
-      {/* Weak Areas */}
+      {/* Browse Topics by Subject */}
       <div className="rounded-xl border border-gray-200 bg-white p-6">
         <div className="flex items-center gap-3 mb-4">
-          <AlertTriangle className="h-6 w-6 text-red-500" />
-          <h2 className="text-lg font-semibold text-gray-900">Weak Areas</h2>
+          <BookOpen className="h-6 w-6 text-blue-500" />
+          <h2 className="text-lg font-semibold text-gray-900">Browse Topics for Review</h2>
         </div>
         <p className="text-sm text-gray-500 mb-4">
-          Topics below 60% mastery, sorted by urgency. Review these first for maximum improvement.
+          Select any topic to start reviewing. Each topic has 5 learning layers from Foundation to Active Recall.
         </p>
-        <div className="space-y-3">
-          {sampleCards.slice(0, 4).map((card, i) => (
-            <WeakAreaCard
-              key={i}
-              topicName={card.topicName}
-              subjectName={card.subjectName}
-              moduleName={card.moduleName}
-              masteryLevel={card.masteryLevel}
-              weaknessScore={0.7 - i * 0.05}
-              daysSinceReview={3 + i * 2}
-              topicCode={card.topicCode}
-              subjectCode={card.subjectCode}
-              moduleCode={card.moduleCode}
-            />
+        <div className="space-y-6">
+          {topicsBySubject.map(({ subject, topics }) => (
+            <div key={subject.code}>
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-sm font-semibold text-gray-700">
+                  {subject.name} ({subject.code})
+                </h3>
+                <Link
+                  href={`/learn/${subject.code}`}
+                  className="text-xs text-blue-600 hover:text-blue-700"
+                >
+                  View all →
+                </Link>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {topics.slice(0, 8).map((t) => (
+                  <Link
+                    key={t.id}
+                    href={`/learn/${t.subjectCode}/${t.moduleCode}/${t.code}`}
+                    className="rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-600 hover:border-orange-300 hover:bg-orange-50 hover:text-orange-700"
+                  >
+                    {t.name}
+                  </Link>
+                ))}
+                {topics.length > 8 && (
+                  <span className="rounded-full border border-dashed border-gray-200 px-3 py-1 text-xs text-gray-400">
+                    +{topics.length - 8} more
+                  </span>
+                )}
+              </div>
+            </div>
           ))}
         </div>
       </div>
+
+      <p className="mt-4 text-center text-sm text-gray-400">
+        Sign in to enable personalized spaced repetition scheduling and weak area detection
+      </p>
     </div>
   );
 }

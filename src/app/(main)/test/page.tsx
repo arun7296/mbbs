@@ -1,37 +1,68 @@
 import Link from "next/link";
-import { Clock, FileText, Lock } from "lucide-react";
+import { Clock, FileText, Sparkles } from "lucide-react";
+import { getServerTrpc } from "@/lib/trpc/server";
 
-const mockExams = [
-  {
-    id: "weekly-1",
-    title: "Weekly Test - Anatomy (Upper Limb)",
-    questions: 30,
-    timeMin: 45,
-    subjects: ["Anatomy"],
-    available: true,
-    type: "weekly",
-  },
-  {
-    id: "monthly-1",
-    title: "Monthly Test - Phase I (All Subjects)",
-    questions: 100,
-    timeMin: 120,
-    subjects: ["Anatomy", "Physiology", "Biochemistry"],
-    available: false,
-    type: "monthly",
-  },
-  {
-    id: "next-mock-1",
-    title: "NEXT Step 1 Mock - Full Length",
-    questions: 200,
-    timeMin: 180,
-    subjects: ["All Subjects"],
-    available: false,
-    type: "full",
-  },
-];
+export default async function TestPage() {
+  const trpc = await getServerTrpc();
+  const phaseGroups = await trpc.curriculum.getPhases();
+  const allSubjects = Object.values(phaseGroups).flat();
 
-export default function TestPage() {
+  // Build mock exams dynamically from available subjects
+  const phase1Subjects = phaseGroups["PHASE_1"] ?? [];
+  const phase2Subjects = phaseGroups["PHASE_2"] ?? [];
+  const phase3Subjects = [
+    ...(phaseGroups["PHASE_3_PART1"] ?? []),
+    ...(phaseGroups["PHASE_3_PART2"] ?? []),
+  ];
+
+  const mockExams = [
+    {
+      id: "phase1-weekly",
+      title: "Phase I Weekly Test",
+      questions: 30,
+      timeMin: 45,
+      subjects: phase1Subjects.map((s) => s.name),
+      subjectIds: phase1Subjects.map((s) => s.id),
+      type: "weekly" as const,
+    },
+    {
+      id: "phase1-monthly",
+      title: "Phase I Monthly Test",
+      questions: 100,
+      timeMin: 120,
+      subjects: phase1Subjects.map((s) => s.name),
+      subjectIds: phase1Subjects.map((s) => s.id),
+      type: "monthly" as const,
+    },
+    {
+      id: "phase2-weekly",
+      title: "Phase II Weekly Test",
+      questions: 30,
+      timeMin: 45,
+      subjects: phase2Subjects.map((s) => s.name),
+      subjectIds: phase2Subjects.map((s) => s.id),
+      type: "weekly" as const,
+    },
+    {
+      id: "phase3-weekly",
+      title: "Phase III Weekly Test",
+      questions: 30,
+      timeMin: 45,
+      subjects: phase3Subjects.slice(0, 4).map((s) => s.name),
+      subjectIds: phase3Subjects.map((s) => s.id),
+      type: "weekly" as const,
+    },
+    {
+      id: "full-mock",
+      title: "NEXT Step 1 Full Mock",
+      questions: 200,
+      timeMin: 180,
+      subjects: ["All Subjects"],
+      subjectIds: allSubjects.map((s) => s.id),
+      type: "full" as const,
+    },
+  ];
+
   return (
     <div className="mx-auto max-w-4xl px-4 py-6 lg:px-8">
       <div className="mb-8">
@@ -58,20 +89,24 @@ export default function TestPage() {
         </div>
       </div>
 
-      {/* Mock Exams List */}
+      {/* Mock Exams */}
       <div className="space-y-4">
         {mockExams.map((exam) => (
           <div
             key={exam.id}
-            className={`rounded-xl border bg-white p-5 ${
-              exam.available ? "border-gray-200 hover:border-gray-300 hover:shadow-sm" : "border-gray-100 opacity-60"
-            }`}
+            className="rounded-xl border border-gray-200 bg-white p-5 hover:border-gray-300 hover:shadow-sm"
           >
             <div className="flex items-start justify-between">
               <div>
                 <div className="flex items-center gap-2">
                   <h3 className="font-semibold text-gray-900">{exam.title}</h3>
-                  {!exam.available && <Lock className="h-4 w-4 text-gray-400" />}
+                  <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${
+                    exam.type === "weekly" ? "bg-blue-100 text-blue-700" :
+                    exam.type === "monthly" ? "bg-orange-100 text-orange-700" :
+                    "bg-red-100 text-red-700"
+                  }`}>
+                    {exam.type === "weekly" ? "Weekly" : exam.type === "monthly" ? "Monthly" : "Full Mock"}
+                  </span>
                 </div>
                 <div className="mt-2 flex items-center gap-4 text-sm text-gray-500">
                   <span className="flex items-center gap-1">
@@ -81,25 +116,39 @@ export default function TestPage() {
                     <Clock className="h-4 w-4" /> {exam.timeMin} min
                   </span>
                 </div>
-                <div className="mt-2 flex gap-2">
-                  {exam.subjects.map((s) => (
+                <div className="mt-2 flex flex-wrap gap-1">
+                  {exam.subjects.slice(0, 5).map((s) => (
                     <span key={s} className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-600">{s}</span>
                   ))}
+                  {exam.subjects.length > 5 && (
+                    <span className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-500">
+                      +{exam.subjects.length - 5} more
+                    </span>
+                  )}
                 </div>
               </div>
-              {exam.available ? (
-                <Link
-                  href={`/test/mock/${exam.id}`}
-                  className="rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700"
-                >
-                  Start Exam
-                </Link>
-              ) : (
-                <span className="rounded-lg bg-gray-100 px-4 py-2 text-sm text-gray-400">Coming Soon</span>
-              )}
+              <Link
+                href={`/test/mock/${exam.id}?subjects=${exam.subjectIds.join(",")}&count=${exam.questions}&time=${exam.timeMin}`}
+                className="shrink-0 rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700"
+              >
+                Start Exam
+              </Link>
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Custom Test */}
+      <div className="mt-6 rounded-xl border border-dashed border-gray-300 p-6 text-center">
+        <Sparkles className="mx-auto h-8 w-8 text-gray-400" />
+        <p className="mt-2 text-sm font-medium text-gray-700">Want a custom test?</p>
+        <p className="text-xs text-gray-500 mb-3">Use Practice mode to pick specific subjects, topics, and question count</p>
+        <Link
+          href="/practice"
+          className="inline-block rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700"
+        >
+          Go to Practice
+        </Link>
       </div>
     </div>
   );

@@ -1,13 +1,28 @@
-"use client";
-
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { ArrowLeft, Trophy } from "lucide-react";
 import { ProgressRing } from "@/components/shared/ProgressRing";
 
-export default function MockExamReviewPage() {
-  const params = useParams();
-  void params;
+interface PageProps {
+  params: Promise<{ examId: string }>;
+  searchParams: Promise<{ score?: string; correct?: string; total?: string; questions?: string }>;
+}
+
+export default async function MockExamReviewPage({ params, searchParams }: PageProps) {
+  const { examId } = await params;
+  const sp = await searchParams;
+  const score = parseInt(sp.score || "0", 10);
+  const correct = parseInt(sp.correct || "0", 10);
+  const total = parseInt(sp.total || "0", 10);
+  const totalQuestions = parseInt(sp.questions || sp.total || "0", 10);
+  const incorrect = total - correct;
+
+  const examTitle = decodeURIComponent(examId)
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+
+  const ringColor = score >= 70 ? "#16a34a" : score >= 50 ? "#ea580c" : "#dc2626";
+  const performanceLabel =
+    score >= 90 ? "Outstanding!" : score >= 70 ? "Well Done!" : score >= 50 ? "Keep Working" : "Needs Improvement";
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 lg:px-8">
@@ -17,34 +32,45 @@ export default function MockExamReviewPage() {
 
       <div className="rounded-xl border border-gray-200 bg-white p-8 text-center">
         <Trophy className="mx-auto h-12 w-12 text-red-500" />
-        <h1 className="mt-4 text-2xl font-bold text-gray-900">Mock Exam Review</h1>
+        <h1 className="mt-4 text-2xl font-bold text-gray-900">{examTitle}</h1>
+        <p className="mt-1 text-sm text-gray-500">{performanceLabel}</p>
 
         <div className="mt-6 flex justify-center">
-          <ProgressRing progress={60} size={100} strokeWidth={6} color="#dc2626">
-            <span className="text-xl font-bold">60%</span>
+          <ProgressRing progress={score} size={120} strokeWidth={8} color={ringColor}>
+            <div className="text-center">
+              <span className="text-2xl font-bold text-gray-900">{score}%</span>
+              <p className="text-xs text-gray-500">Score</p>
+            </div>
           </ProgressRing>
         </div>
 
-        {/* Subject Breakdown */}
-        <div className="mt-8 rounded-lg bg-gray-50 p-4 text-left">
-          <h3 className="mb-3 text-sm font-semibold text-gray-700">Subject-wise Performance</h3>
-          <div className="space-y-2">
-            {[
-              { subject: "Anatomy", correct: 1, total: 1 },
-              { subject: "Cardiology", correct: 1, total: 1 },
-              { subject: "Endocrinology", correct: 1, total: 1 },
-              { subject: "Nephrology", correct: 0, total: 1 },
-              { subject: "Pharmacology", correct: 1, total: 1 },
-            ].map((s) => (
-              <div key={s.subject} className="flex items-center gap-3">
-                <span className="w-28 text-xs text-gray-600">{s.subject}</span>
-                <div className="flex-1 h-2 rounded-full bg-gray-200">
-                  <div className={`h-2 rounded-full ${s.correct === s.total ? "bg-green-500" : "bg-red-400"}`} style={{ width: `${(s.correct / s.total) * 100}%` }} />
-                </div>
-                <span className="text-xs text-gray-500">{s.correct}/{s.total}</span>
-              </div>
-            ))}
+        <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+          <div className="rounded-lg bg-green-50 p-3">
+            <p className="text-lg font-bold text-green-700">{correct}</p>
+            <p className="text-xs text-gray-500">Correct</p>
           </div>
+          <div className="rounded-lg bg-red-50 p-3">
+            <p className="text-lg font-bold text-red-700">{incorrect}</p>
+            <p className="text-xs text-gray-500">Incorrect</p>
+          </div>
+          <div className="rounded-lg bg-gray-50 p-3">
+            <p className="text-lg font-bold text-gray-700">{totalQuestions}</p>
+            <p className="text-xs text-gray-500">Total Questions</p>
+          </div>
+        </div>
+
+        {/* Tips */}
+        <div className="mt-6 rounded-lg bg-gray-50 p-4 text-left">
+          <h3 className="mb-2 text-sm font-semibold text-gray-700">Next Steps</h3>
+          {score >= 70 ? (
+            <p className="text-sm text-gray-600">
+              Strong performance! Try the full NEXT Step 1 mock exam or increase difficulty to continue improving.
+            </p>
+          ) : (
+            <p className="text-sm text-gray-600">
+              Focus on your weak subjects using the Revise section. Practice more MCQs in specific areas before attempting another mock.
+            </p>
+          )}
         </div>
 
         <div className="mt-6 flex justify-center gap-3">

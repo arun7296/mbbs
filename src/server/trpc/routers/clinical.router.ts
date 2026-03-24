@@ -8,11 +8,12 @@ export const clinicalRouter = router({
         caseType: z.string().optional(),
         difficulty: z.enum(["EASY", "MEDIUM", "HARD", "EXPERT"]).optional(),
         subjectId: z.string().optional(),
-        limit: z.number().min(1).max(50).default(20),
+        limit: z.number().min(1).max(200).default(100),
+        cursor: z.string().optional(),
       })
     )
     .query(async ({ ctx, input }) => {
-      return ctx.prisma.clinicalCase.findMany({
+      const items = await ctx.prisma.clinicalCase.findMany({
         where: {
           status: "PUBLISHED",
           ...(input.caseType && { caseType: input.caseType }),
@@ -20,8 +21,17 @@ export const clinicalRouter = router({
           ...(input.subjectId && { subjectIds: { has: input.subjectId } }),
         },
         orderBy: { createdAt: "desc" },
-        take: input.limit,
+        take: input.limit + 1,
+        ...(input.cursor && { cursor: { id: input.cursor }, skip: 1 }),
       });
+
+      let nextCursor: string | undefined;
+      if (items.length > input.limit) {
+        const nextItem = items.pop();
+        nextCursor = nextItem?.id;
+      }
+
+      return { items, nextCursor };
     }),
 
   getCase: publicProcedure

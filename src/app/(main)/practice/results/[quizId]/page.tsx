@@ -1,18 +1,25 @@
-"use client";
-
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { Trophy, ArrowLeft, RotateCcw } from "lucide-react";
 import { ProgressRing } from "@/components/shared/ProgressRing";
 
-export default function QuizResultsPage() {
-  const params = useParams();
-  const quizId = params.quizId as string;
-  // Will be used for tRPC fetch: assessment.getQuizResults({ quizId })
-  void quizId;
+interface PageProps {
+  params: Promise<{ quizId: string }>;
+  searchParams: Promise<{ score?: string; correct?: string; total?: string; answered?: string; questions?: string }>;
+}
 
-  // In production, fetch results via tRPC: assessment.getQuizResults({ quizId })
-  // For now, show a results template
+export default async function QuizResultsPage({ searchParams }: PageProps) {
+  const sp = await searchParams;
+  const score = parseInt(sp.score || "0", 10);
+  const correct = parseInt(sp.correct || "0", 10);
+  const total = parseInt(sp.total || "0", 10);
+  const totalQuestions = parseInt(sp.questions || sp.total || "0", 10);
+  const incorrect = total - correct;
+
+  // Determine performance color
+  const ringColor = score >= 70 ? "#16a34a" : score >= 50 ? "#ea580c" : "#dc2626";
+  const performanceLabel =
+    score >= 90 ? "Excellent!" : score >= 70 ? "Good Job!" : score >= 50 ? "Keep Practicing" : "Needs Improvement";
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 lg:px-8">
       <Link href="/practice" className="mb-6 flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
@@ -25,11 +32,12 @@ export default function QuizResultsPage() {
             <Trophy className="h-8 w-8 text-green-600" />
           </div>
           <h1 className="mt-4 text-2xl font-bold text-gray-900">Quiz Complete!</h1>
+          <p className="mt-1 text-sm text-gray-500">{performanceLabel}</p>
 
           <div className="mt-6">
-            <ProgressRing progress={70} size={120} strokeWidth={8} color="#16a34a">
+            <ProgressRing progress={score} size={120} strokeWidth={8} color={ringColor}>
               <div className="text-center">
-                <span className="text-2xl font-bold text-gray-900">70%</span>
+                <span className="text-2xl font-bold text-gray-900">{score}%</span>
                 <p className="text-xs text-gray-500">Score</p>
               </div>
             </ProgressRing>
@@ -37,37 +45,31 @@ export default function QuizResultsPage() {
 
           <div className="mt-6 grid grid-cols-3 gap-4 text-center">
             <div className="rounded-lg bg-green-50 p-3">
-              <p className="text-lg font-bold text-green-700">7</p>
+              <p className="text-lg font-bold text-green-700">{correct}</p>
               <p className="text-xs text-gray-500">Correct</p>
             </div>
             <div className="rounded-lg bg-red-50 p-3">
-              <p className="text-lg font-bold text-red-700">3</p>
+              <p className="text-lg font-bold text-red-700">{incorrect}</p>
               <p className="text-xs text-gray-500">Incorrect</p>
             </div>
             <div className="rounded-lg bg-gray-50 p-3">
-              <p className="text-lg font-bold text-gray-700">10</p>
+              <p className="text-lg font-bold text-gray-700">{totalQuestions}</p>
               <p className="text-xs text-gray-500">Total</p>
             </div>
           </div>
 
-          {/* Bloom's Distribution */}
-          <div className="mt-6 w-full rounded-lg bg-gray-50 p-4">
-            <h3 className="mb-3 text-sm font-semibold text-gray-700">Performance by Question Type</h3>
-            <div className="space-y-2">
-              {[
-                { label: "Problem Solving (60%)", correct: 4, total: 6, color: "bg-blue-500" },
-                { label: "Analysis (30%)", correct: 2, total: 3, color: "bg-indigo-500" },
-                { label: "Recall (10%)", correct: 1, total: 1, color: "bg-green-500" },
-              ].map((item) => (
-                <div key={item.label} className="flex items-center gap-3">
-                  <span className="w-40 text-xs text-gray-600">{item.label}</span>
-                  <div className="flex-1 h-2 rounded-full bg-gray-200">
-                    <div className={`h-2 rounded-full ${item.color}`} style={{ width: `${(item.correct / item.total) * 100}%` }} />
-                  </div>
-                  <span className="text-xs text-gray-500">{item.correct}/{item.total}</span>
-                </div>
-              ))}
-            </div>
+          {/* Tips based on performance */}
+          <div className="mt-6 w-full rounded-lg bg-gray-50 p-4 text-left">
+            <h3 className="mb-2 text-sm font-semibold text-gray-700">What&apos;s Next?</h3>
+            {score >= 70 ? (
+              <p className="text-sm text-gray-600">
+                Great performance! Try a harder difficulty level or explore new subjects to keep building your knowledge.
+              </p>
+            ) : (
+              <p className="text-sm text-gray-600">
+                Review the topics you struggled with using the Revise section. Focus on weak areas before attempting more questions.
+              </p>
+            )}
           </div>
         </div>
 

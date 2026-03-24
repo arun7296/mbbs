@@ -18,7 +18,8 @@ const typeColors: Record<string, string> = {
 
 export default async function ClinicalPage() {
   const trpc = await getServerTrpc();
-  const cases = await trpc.clinical.getCases({});
+  const result = await trpc.clinical.getCases({ limit: 200 });
+  const cases = result.items;
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-6 lg:px-8">
