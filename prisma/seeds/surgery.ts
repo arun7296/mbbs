@@ -17,6 +17,7 @@ export const surgeryTopics: Record<string, Array<{ code: string; name: string; s
     { code: "SU-MOD-01-TOP-02", name: "Fluid, Electrolyte & Nutrition", sortOrder: 2, competencyCode: "SU1.2", competencyDesc: "Describe perioperative fluid management and nutrition" },
     { code: "SU-MOD-01-TOP-03", name: "Preoperative & Postoperative Care", sortOrder: 3, competencyCode: "SU1.3", competencyDesc: "Describe pre/postoperative assessment and complications" },
     { code: "SU-MOD-01-TOP-04", name: "Blood Transfusion & Hemostasis", sortOrder: 4, competencyCode: "SU1.4", competencyDesc: "Describe blood transfusion and surgical hemostasis" },
+    { code: "SU-MOD-01-TOP-05", name: "Burns & Wound Management", sortOrder: 5, competencyCode: "SU1.5", competencyDesc: "Describe Wallace rule of 9s, Parkland formula, burn classification and management" },
   ],
   "SU-MOD-02": [
     { code: "SU-MOD-02-TOP-01", name: "ATLS & Primary Survey", sortOrder: 1, competencyCode: "SU2.1", competencyDesc: "Describe ATLS approach and primary survey" },
@@ -53,6 +54,8 @@ export const surgeryTopics: Record<string, Array<{ code: string; name: string; s
     { code: "SU-MOD-07-TOP-01", name: "Varicose Veins", sortOrder: 1, competencyCode: "SU7.1", competencyDesc: "Describe varicose veins: clinical features, tests, surgery" },
     { code: "SU-MOD-07-TOP-02", name: "DVT & Peripheral Arterial Disease", sortOrder: 2, competencyCode: "SU7.2", competencyDesc: "Describe DVT management and PAD classification" },
     { code: "SU-MOD-07-TOP-03", name: "Aneurysms", sortOrder: 3, competencyCode: "SU7.3", competencyDesc: "Describe aortic aneurysm types and repair" },
+    { code: "SU-MOD-07-TOP-04", name: "Arterial Diseases", sortOrder: 4, competencyCode: "SU7.4", competencyDesc: "Describe limb ischemia, aneurysms, Buerger's disease" },
+    { code: "SU-MOD-07-TOP-05", name: "Venous Diseases", sortOrder: 5, competencyCode: "SU7.5", competencyDesc: "Describe DVT, PE, varicose veins" },
   ],
   "SU-MOD-08": [
     { code: "SU-MOD-08-TOP-01", name: "Renal Calculi", sortOrder: 1, competencyCode: "SU8.1", competencyDesc: "Describe urolithiasis: types, investigation, management" },
@@ -64,6 +67,7 @@ export const surgeryTopics: Record<string, Array<{ code: string; name: string; s
     { code: "SU-MOD-09-TOP-01", name: "Ulcers & Sinuses", sortOrder: 1, competencyCode: "SU9.1", competencyDesc: "Describe classification of ulcers and sinuses" },
     { code: "SU-MOD-09-TOP-02", name: "Skin Cancers", sortOrder: 2, competencyCode: "SU9.2", competencyDesc: "Describe BCC, SCC, melanoma: features and management" },
     { code: "SU-MOD-09-TOP-03", name: "Surgical Oncology Principles", sortOrder: 3, competencyCode: "SU9.3", competencyDesc: "Describe principles of surgical oncology and staging" },
+    { code: "SU-MOD-09-TOP-04", name: "Skin Tumors", sortOrder: 4, competencyCode: "SU9.4", competencyDesc: "Describe BCC, SCC, melanoma surgical management" },
   ],
   "SU-MOD-10": [
     { code: "SU-MOD-10-TOP-01", name: "Congenital Anomalies", sortOrder: 1, competencyCode: "SU10.1", competencyDesc: "Describe TEF, diaphragmatic hernia, anorectal malformations" },

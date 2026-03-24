@@ -25,6 +25,9 @@ export const communityMedicineTopics: Record<string, Array<{ code: string; name:
     { code: "CM-MOD-01-TOP-03", name: "Measures of Disease Frequency", sortOrder: 3, competencyCode: "CM1.3", competencyDesc: "Calculate prevalence, incidence, rates, and ratios" },
     { code: "CM-MOD-01-TOP-04", name: "Biostatistics", sortOrder: 4, competencyCode: "CM1.4", competencyDesc: "Describe measures of central tendency, dispersion, and statistical tests" },
     { code: "CM-MOD-01-TOP-05", name: "Screening & Surveillance", sortOrder: 5, competencyCode: "CM1.5", competencyDesc: "Describe screening tests, sensitivity, specificity, surveillance" },
+    { code: "CM-MOD-01-TOP-06", name: "Demography & Population Dynamics", sortOrder: 6, competencyCode: "CM1.6", competencyDesc: "Describe census, demographic transition, population pyramid" },
+    { code: "CM-MOD-01-TOP-07", name: "Health Education & Communication", sortOrder: 7, competencyCode: "CM1.7", competencyDesc: "Describe IEC, BCC, and health promotion models" },
+    { code: "CM-MOD-01-TOP-08", name: "Behavioral Sciences & Health Psychology", sortOrder: 8, competencyCode: "CM1.8", competencyDesc: "Describe health belief model, compliance, and behavior change" },
   ],
   "CM-MOD-02": [
     { code: "CM-MOD-02-TOP-01", name: "Tuberculosis", sortOrder: 1, competencyCode: "CM2.1", competencyDesc: "Describe epidemiology, prevention, and RNTCP/NTEP for TB" },
@@ -46,6 +49,7 @@ export const communityMedicineTopics: Record<string, Array<{ code: string; name:
     { code: "CM-MOD-04-TOP-03", name: "Immunization", sortOrder: 3, competencyCode: "CM4.3", competencyDesc: "Describe national immunization schedule, UIP, cold chain" },
     { code: "CM-MOD-04-TOP-04", name: "Family Planning", sortOrder: 4, competencyCode: "CM4.4", competencyDesc: "Describe contraceptive methods and national family planning program" },
     { code: "CM-MOD-04-TOP-05", name: "Demography & Population", sortOrder: 5, competencyCode: "CM4.5", competencyDesc: "Describe demographic cycle, census, and population policy" },
+    { code: "CM-MOD-04-TOP-06", name: "Adolescent & School Health", sortOrder: 6, competencyCode: "CM4.6", competencyDesc: "Describe ARSH, school health programs" },
   ],
   "CM-MOD-05": [
     { code: "CM-MOD-05-TOP-01", name: "Nutrition Assessment & Requirements", sortOrder: 1, competencyCode: "CM5.1", competencyDesc: "Describe nutritional assessment and dietary requirements" },
@@ -64,5 +68,7 @@ export const communityMedicineTopics: Record<string, Array<{ code: string; name:
     { code: "CM-MOD-07-TOP-02", name: "National Health Mission & Ayushman Bharat", sortOrder: 2, competencyCode: "CM7.2", competencyDesc: "Describe NHM, PMJAY, and health insurance schemes" },
     { code: "CM-MOD-07-TOP-03", name: "Health Education & Behavior Change", sortOrder: 3, competencyCode: "CM7.3", competencyDesc: "Describe health education methods and IEC/BCC strategies" },
     { code: "CM-MOD-07-TOP-04", name: "Disaster Management & International Health", sortOrder: 4, competencyCode: "CM7.4", competencyDesc: "Describe disaster preparedness, WHO, and SDGs" },
+    { code: "CM-MOD-07-TOP-05", name: "Disaster Management", sortOrder: 5, competencyCode: "CM7.5", competencyDesc: "Describe types, phases, triage, mass casualty management" },
+    { code: "CM-MOD-07-TOP-06", name: "Geriatric & Palliative Care in Community", sortOrder: 6, competencyCode: "CM7.6", competencyDesc: "Describe community geriatric care and palliative care principles" },
   ],
 };

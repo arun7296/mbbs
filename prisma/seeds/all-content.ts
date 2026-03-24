@@ -55,6 +55,7 @@ import { communityMedicinePart4Lessons } from "./lessons-community-medicine-part
 import { communityMedicinePart5Lessons } from "./lessons-community-medicine-part5";
 import { communityMedicinePart8Lessons } from "./lessons-community-medicine-part8";
 import { communityMedicinePart9Lessons } from "./lessons-community-medicine-part9";
+import { communityMedicineGapLessons } from "./lessons-community-medicine-gap";
 
 // Dermatology lessons
 import { dermatologyLessons } from "./lessons-dermatology";
@@ -88,6 +89,7 @@ import { forensicMedicineLessonsPartXXI } from "./lessons-forensic-medicine-part
 import { forensicMedicineLessonsPartXXII } from "./lessons-forensic-medicine-part11";
 import { forensicMedicineLessonsPartXXIII } from "./lessons-forensic-medicine-part12-13";
 import { fmLessonsPart13 } from "./lessons-forensic-medicine-part13";
+import { forensicMedicineGapLessons } from "./lessons-forensic-medicine-gap";
 
 // Immunology lessons
 import { immunologyPart1Lessons } from "./lessons-immunology-part1";
@@ -284,6 +286,7 @@ import { surgeryPart10Lessons } from "./lessons-surgery-part10";
 import { surgeryPart11Lessons } from "./lessons-surgery-part11";
 import { surgeryLessonsPart14 } from "./lessons-surgery-part14";
 import { surgeryLessonsPartXXI } from "./lessons-surgery-part13";
+import { surgeryGapLessons } from "./lessons-surgery-gap";
 
 // Remaining lessons
 import { lessonsRemainingCondensed } from "./lessons-remaining-condensed";
@@ -409,6 +412,7 @@ export const allLessons: TopicLessons[] = [
   ...communityMedicinePart5Lessons,
   ...communityMedicinePart8Lessons,
   ...communityMedicinePart9Lessons,
+  ...communityMedicineGapLessons,
 
   // Dermatology
   ...dermatologyLessons,
@@ -442,6 +446,7 @@ export const allLessons: TopicLessons[] = [
   ...forensicMedicineLessonsPartXXII,
   ...forensicMedicineLessonsPartXXIII,
   ...fmLessonsPart13,
+  ...forensicMedicineGapLessons,
 
   // Immunology
   ...immunologyPart1Lessons,
@@ -638,6 +643,7 @@ export const allLessons: TopicLessons[] = [
   ...surgeryPart11Lessons,
   ...surgeryLessonsPart14,
   ...surgeryLessonsPartXXI,
+  ...surgeryGapLessons,
 
   // Remaining
   ...lessonsRemainingCondensed,

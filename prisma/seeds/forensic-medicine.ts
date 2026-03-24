@@ -23,6 +23,7 @@ export const forensicMedicineTopics: Record<string, Array<{ code: string; name: 
     { code: "FM-MOD-01-TOP-02", name: "Consent & Negligence", sortOrder: 2, competencyCode: "FM1.2", competencyDesc: "Describe informed consent, types, and medical negligence" },
     { code: "FM-MOD-01-TOP-03", name: "Medicolegal Reports & Courts", sortOrder: 3, competencyCode: "FM1.3", competencyDesc: "Describe medicolegal reports, dying declaration, courts" },
     { code: "FM-MOD-01-TOP-04", name: "IPC Sections Relevant to Medicine", sortOrder: 4, competencyCode: "FM1.4", competencyDesc: "Describe IPC sections 299-304, 309, 375, 376" },
+    { code: "FM-MOD-01-TOP-05", name: "Medical Ethics & Legislation", sortOrder: 5, competencyCode: "FM1.5", competencyDesc: "Describe MTP Act, PCPNDT, organ transplant, euthanasia, POCSO" },
   ],
   "FM-MOD-02": [
     { code: "FM-MOD-02-TOP-01", name: "Death & Postmortem Changes", sortOrder: 1, competencyCode: "FM2.1", competencyDesc: "Describe signs of death and postmortem changes" },
@@ -46,11 +47,14 @@ export const forensicMedicineTopics: Record<string, Array<{ code: string; name: 
     { code: "FM-MOD-05-TOP-01", name: "Identification of Living & Dead", sortOrder: 1, competencyCode: "FM5.1", competencyDesc: "Describe methods of personal identification" },
     { code: "FM-MOD-05-TOP-02", name: "Age Estimation", sortOrder: 2, competencyCode: "FM5.2", competencyDesc: "Describe age estimation from teeth, bones, and other features" },
     { code: "FM-MOD-05-TOP-03", name: "DNA Fingerprinting", sortOrder: 3, competencyCode: "FM5.3", competencyDesc: "Describe DNA profiling and its medicolegal applications" },
+    { code: "FM-MOD-05-TOP-04", name: "Forensic Psychiatry", sortOrder: 4, competencyCode: "FM5.4", competencyDesc: "Describe Mental Health Act, criminal responsibility, fitness to plead" },
+    { code: "FM-MOD-05-TOP-05", name: "Forensic Sciences", sortOrder: 5, competencyCode: "FM5.5", competencyDesc: "Describe DNA fingerprinting, ballistics, lie detection, narcoanalysis" },
   ],
   "FM-MOD-06": [
     { code: "FM-MOD-06-TOP-01", name: "General Toxicology", sortOrder: 1, competencyCode: "FM6.1", competencyDesc: "Describe general principles of poisoning and management" },
     { code: "FM-MOD-06-TOP-02", name: "Corrosive & Metallic Poisons", sortOrder: 2, competencyCode: "FM6.2", competencyDesc: "Describe acid, alkali, arsenic, lead, and mercury poisoning" },
     { code: "FM-MOD-06-TOP-03", name: "Organic & Plant Poisons", sortOrder: 3, competencyCode: "FM6.3", competencyDesc: "Describe organophosphorus, alcohol, opium, and plant poisons" },
     { code: "FM-MOD-06-TOP-04", name: "Snake Bite & Insect Stings", sortOrder: 4, competencyCode: "FM6.4", competencyDesc: "Describe snake venom types, management, and antisnake venom" },
+    { code: "FM-MOD-06-TOP-05", name: "Environmental & Industrial Toxicology", sortOrder: 5, competencyCode: "FM6.5", competencyDesc: "Describe pollution, food adulteration, occupational toxicology" },
   ],
 };
