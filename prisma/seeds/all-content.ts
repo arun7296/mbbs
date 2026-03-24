@@ -228,6 +228,8 @@ import { physiologyPart3Lessons } from "./lessons-physiology-part3";
 import { physiologyCvsPart1Lessons } from "./lessons-physiology-cvs-part1";
 import { physiologyCvsPart2Lessons } from "./lessons-physiology-cvs-part2";
 import { physiologyGeneralHematologyLessons } from "./lessons-physiology-general-hematology";
+import { physiologyGapLessons } from "./lessons-physiology-gap";
+import { physiologyReproductiveLessons } from "./lessons-physiology-reproductive";
 
 // Psychiatry lessons
 import { psychiatryLessons } from "./lessons-psychiatry";
@@ -580,6 +582,8 @@ export const allLessons: TopicLessons[] = [
   ...physiologyCvsPart1Lessons,
   ...physiologyCvsPart2Lessons,
   ...physiologyGeneralHematologyLessons,
+  ...physiologyGapLessons,
+  ...physiologyReproductiveLessons,
 
   // Psychiatry
   ...psychiatryLessons,

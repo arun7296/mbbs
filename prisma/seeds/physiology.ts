@@ -17,6 +17,8 @@ export const physiologyModules = [
   { code: "PY-MOD-06", name: "Gastrointestinal System", description: "GI motility, secretions, digestion, absorption, liver functions", estimatedHours: 55, sortOrder: 6 },
   { code: "PY-MOD-07", name: "Endocrine System", description: "Hypothalamus, pituitary, thyroid, adrenals, pancreas, reproductive hormones", estimatedHours: 65, sortOrder: 7 },
   { code: "PY-MOD-08", name: "Neurophysiology & Special Senses", description: "Nerve, muscle, synapse, sensory systems, vision, hearing, motor control", estimatedHours: 80, sortOrder: 8 },
+  { code: "PY-MOD-09", name: "Nutrition & Environmental Physiology", description: "BMR, calorimetry, vitamins, thermoregulation, altitude, exercise physiology", estimatedHours: 40, sortOrder: 9 },
+  { code: "PY-MOD-10", name: "Reproductive Physiology", description: "Male and female reproductive physiology, pregnancy, lactation, contraception", estimatedHours: 45, sortOrder: 10 },
 ];
 
 export const physiologyTopics: Record<string, Array<{ code: string; name: string; sortOrder: number; competencyCode: string; competencyDesc: string }>> = {
@@ -82,5 +84,21 @@ export const physiologyTopics: Record<string, Array<{ code: string; name: string
     { code: "PY-MOD-08-TOP-05", name: "Vision & Eye", sortOrder: 5, competencyCode: "PY8.5", competencyDesc: "Describe optics, visual pathways, and color vision" },
     { code: "PY-MOD-08-TOP-06", name: "Hearing & Vestibular System", sortOrder: 6, competencyCode: "PY8.6", competencyDesc: "Describe auditory mechanism, vestibular function, and balance" },
     { code: "PY-MOD-08-TOP-07", name: "Higher Functions & EEG", sortOrder: 7, competencyCode: "PY8.7", competencyDesc: "Describe learning, memory, sleep, EEG, and CSF" },
+  ],
+  "PY-MOD-09": [
+    { code: "PY-MOD-09-TOP-01", name: "Basal Metabolic Rate & Calorimetry", sortOrder: 1, competencyCode: "PY9.1", competencyDesc: "Describe BMR, factors affecting BMR, and calorimetry methods" },
+    { code: "PY-MOD-09-TOP-02", name: "Carbohydrates, Proteins & Fats in Nutrition", sortOrder: 2, competencyCode: "PY9.2", competencyDesc: "Describe macronutrient metabolism and dietary requirements" },
+    { code: "PY-MOD-09-TOP-03", name: "Vitamins, Minerals & Dietary Requirements", sortOrder: 3, competencyCode: "PY9.3", competencyDesc: "Describe RDA, vitamin functions, and mineral requirements" },
+    { code: "PY-MOD-09-TOP-04", name: "Thermoregulation & Temperature Regulation", sortOrder: 4, competencyCode: "PY9.4", competencyDesc: "Describe heat production, heat loss mechanisms, and fever" },
+    { code: "PY-MOD-09-TOP-05", name: "High Altitude & Deep Sea Physiology", sortOrder: 5, competencyCode: "PY9.5", competencyDesc: "Describe acclimatization, mountain sickness, and diving physiology" },
+    { code: "PY-MOD-09-TOP-06", name: "Exercise Physiology & Physical Fitness", sortOrder: 6, competencyCode: "PY9.6", competencyDesc: "Describe cardiovascular and respiratory responses to exercise" },
+  ],
+  "PY-MOD-10": [
+    { code: "PY-MOD-10-TOP-01", name: "Male Reproductive Physiology", sortOrder: 1, competencyCode: "PY10.1", competencyDesc: "Describe spermatogenesis, testosterone, and male reproductive functions" },
+    { code: "PY-MOD-10-TOP-02", name: "Female Reproductive Physiology", sortOrder: 2, competencyCode: "PY10.2", competencyDesc: "Describe menstrual cycle, ovulation, and hormonal regulation" },
+    { code: "PY-MOD-10-TOP-03", name: "Pregnancy & Parturition Physiology", sortOrder: 3, competencyCode: "PY10.3", competencyDesc: "Describe physiological changes in pregnancy and parturition" },
+    { code: "PY-MOD-10-TOP-04", name: "Lactation Physiology", sortOrder: 4, competencyCode: "PY10.4", competencyDesc: "Describe milk production, ejection reflex, and lactation hormones" },
+    { code: "PY-MOD-10-TOP-05", name: "Contraception Physiology", sortOrder: 5, competencyCode: "PY10.5", competencyDesc: "Describe physiological basis of hormonal and barrier contraception" },
+    { code: "PY-MOD-10-TOP-06", name: "Yoga & Meditation Physiology", sortOrder: 6, competencyCode: "PY10.6", competencyDesc: "Describe physiological effects of yoga, pranayama, and meditation" },
   ],
 };
