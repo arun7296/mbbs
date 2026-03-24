@@ -250,6 +250,7 @@ model Lesson {
   module    Module           @relation(fields: [moduleId], references: [id], onDelete: Cascade)
   revisions LessonRevision[]
   progress  UserProgress[]
+  videos    VideoResource[]
 
   @@unique([topicId, layer])
 }
@@ -264,6 +265,35 @@ model LessonRevision {
   createdAt  DateTime @default(now())
 
   lesson Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+}
+
+// ─── Video Resources ─────────────────────────────────────────────────
+
+model VideoResource {
+  id              String   @id @default(cuid())
+  lessonId        String
+  youtubeVideoId  String
+  youtubeUrl      String
+  title           String
+  channelName     String
+  channelUrl      String?
+  durationSeconds Int
+  description     String?
+  startTimestamp  Int?
+  endTimestamp    Int?
+  quality         String   @default("RECOMMENDED")
+  language        String   @default("en")
+  sortOrder       Int      @default(0)
+  thumbnailUrl    String?
+  viewCount       Int?
+  publishedAt     DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  lesson Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@index([lessonId])
+  @@unique([lessonId, youtubeVideoId])
 }
 
 // ─── Assessment ──────────────────────────────────────────────────────

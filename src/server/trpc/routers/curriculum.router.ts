@@ -58,12 +58,18 @@ export const curriculumRouter = router({
   getTopic: publicProcedure
     .input(z.object({ code: z.string() }))
     .query(async ({ ctx, input }) => {
-      return ctx.prisma.topic.findUnique({
+      return (ctx.prisma.topic as any).findUnique({
         where: { code: input.code },
         include: {
           module: { include: { subject: true } },
           competency: true,
-          lessons: { orderBy: { layer: "asc" }, where: { status: "PUBLISHED" } },
+          lessons: {
+            orderBy: { layer: "asc" },
+            where: { status: "PUBLISHED" },
+            include: {
+              videos: { orderBy: { sortOrder: "asc" } },
+            },
+          },
         },
       });
     }),

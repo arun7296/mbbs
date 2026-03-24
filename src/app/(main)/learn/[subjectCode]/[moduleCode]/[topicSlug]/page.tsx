@@ -23,13 +23,22 @@ export default async function TopicPage({
       layer: number; title: string; contentMd: string; summary: string | null;
       mnemonics: unknown; keyPoints: unknown; textbookRefs: unknown;
       estimatedMinutes: number; examTags: string[];
+      videos?: Array<{
+        youtubeVideoId: string; youtubeUrl: string; title: string;
+        channelName: string; channelUrl: string | null;
+        durationSeconds: number; description: string | null;
+        startTimestamp: number | null; quality: string;
+        thumbnailUrl: string | null; viewCount: number | null;
+        sortOrder: number;
+      }>;
     }>;
   };
 
   // Use lessons from the include, or fetch separately
   const lessons = topic.lessons ?? await trpc.content.getLessonsByTopic({ topicId: topic.id });
 
-  const lessonData = lessons.map((l) => ({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const lessonData = lessons.map((l: any) => ({
     layer: l.layer,
     title: l.title,
     contentMd: l.contentMd,
@@ -39,6 +48,20 @@ export default async function TopicPage({
     textbookRefs: (l.textbookRefs as Array<{ book: string; chapter: string; page?: string; edition?: string }>) ?? undefined,
     estimatedMinutes: l.estimatedMinutes,
     examTags: l.examTags as string[],
+    videos: l.videos?.map((v: any) => ({
+      youtubeVideoId: v.youtubeVideoId,
+      youtubeUrl: v.youtubeUrl,
+      title: v.title,
+      channelName: v.channelName,
+      channelUrl: v.channelUrl,
+      durationSeconds: v.durationSeconds,
+      description: v.description,
+      startTimestamp: v.startTimestamp,
+      quality: v.quality,
+      thumbnailUrl: v.thumbnailUrl,
+      viewCount: v.viewCount,
+      sortOrder: v.sortOrder,
+    })),
   }));
 
   const subjectName = topic.module?.subject?.name ?? "Subject";

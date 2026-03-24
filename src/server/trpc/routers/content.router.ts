@@ -5,7 +5,7 @@ export const contentRouter = router({
   getLesson: publicProcedure
     .input(z.object({ slug: z.string() }))
     .query(async ({ ctx, input }) => {
-      return ctx.prisma.lesson.findUnique({
+      return (ctx.prisma.lesson as any).findUnique({
         where: { slug: input.slug },
         include: {
           topic: {
@@ -14,6 +14,7 @@ export const contentRouter = router({
               competency: true,
             },
           },
+          videos: { orderBy: { sortOrder: "asc" } },
         },
       });
     }),
@@ -22,17 +23,20 @@ export const contentRouter = router({
     .input(
       z.object({
         topicId: z.string(),
-        layer: z.number().min(1).max(5).optional(),
+        layer: z.number().min(1).max(6).optional(),
       })
     )
     .query(async ({ ctx, input }) => {
-      return ctx.prisma.lesson.findMany({
+      return (ctx.prisma.lesson as any).findMany({
         where: {
           topicId: input.topicId,
           status: "PUBLISHED",
           ...(input.layer && { layer: input.layer }),
         },
         orderBy: { layer: "asc" },
+        include: {
+          videos: { orderBy: { sortOrder: "asc" } },
+        },
       });
     }),
 

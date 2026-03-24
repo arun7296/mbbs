@@ -7,6 +7,7 @@ import { MarkdownRenderer } from "@/components/shared/MarkdownRenderer";
 import { MnemonicCard } from "./MnemonicCard";
 import { KeyPointsList } from "./KeyPointsList";
 import { TextbookRefBadge } from "./TextbookRefBadge";
+import { VideoList, type VideoItem } from "@/components/video/VideoList";
 import { BookOpen, Clock, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface LessonData {
@@ -19,6 +20,7 @@ interface LessonData {
   textbookRefs?: Array<{ book: string; chapter: string; page?: string; edition?: string }>;
   estimatedMinutes: number;
   examTags?: string[];
+  videos?: VideoItem[];
 }
 
 interface LessonViewerProps {
@@ -33,12 +35,15 @@ const layerColors = [
   { bg: "bg-emerald-50", border: "border-emerald-300", text: "text-emerald-700", activeBg: "bg-emerald-600", activeText: "text-white" },
   { bg: "bg-amber-50", border: "border-amber-300", text: "text-amber-700", activeBg: "bg-amber-600", activeText: "text-white" },
   { bg: "bg-rose-50", border: "border-rose-300", text: "text-rose-700", activeBg: "bg-rose-600", activeText: "text-white" },
+  { bg: "bg-red-50", border: "border-red-300", text: "text-red-700", activeBg: "bg-red-600", activeText: "text-white" },
 ];
 
 export function LessonViewer({ topicName, lessons, competencyCode }: LessonViewerProps) {
   void topicName;
   const [activeLayer, setActiveLayer] = useState(1);
   const currentLesson = lessons.find((l) => l.layer === activeLayer);
+  const isVideoLayer = activeLayer === 6;
+  const maxLayer = Math.max(...lessons.map((l) => l.layer), 5);
 
   return (
     <div className="flex flex-col">
@@ -48,7 +53,7 @@ export function LessonViewer({ topicName, lessons, competencyCode }: LessonViewe
           {LEARNING_LAYERS.map((layer, i) => {
             const isActive = activeLayer === layer.id;
             const hasLesson = lessons.some((l) => l.layer === layer.id);
-            const colors = layerColors[i];
+            const colors = layerColors[i] || layerColors[layerColors.length - 1];
 
             return (
               <button
@@ -75,66 +80,73 @@ export function LessonViewer({ topicName, lessons, competencyCode }: LessonViewe
       {/* Lesson Content */}
       {currentLesson ? (
         <div className="mx-auto max-w-4xl px-4 py-6 lg:px-8">
-          {/* Lesson Header */}
-          <div className="mb-6">
-            <div className="mb-2 flex items-center gap-2">
-              <span className={cn(
-                "rounded-full px-2 py-0.5 text-xs font-medium",
-                layerColors[activeLayer - 1].bg,
-                layerColors[activeLayer - 1].text
-              )}>
-                Layer {activeLayer}: {LEARNING_LAYERS[activeLayer - 1].name}
-              </span>
-              <span className="flex items-center gap-1 text-xs text-gray-400">
-                <Clock className="h-3 w-3" /> {currentLesson.estimatedMinutes} min
-              </span>
-              {currentLesson.examTags?.map((tag) => (
-                <span key={tag} className="rounded bg-red-50 px-1.5 py-0.5 text-[10px] font-medium text-red-600">
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <h1 className="text-xl font-bold text-gray-900">{currentLesson.title}</h1>
-            {competencyCode && (
-              <p className="text-sm text-gray-400">NMC Competency: {competencyCode}</p>
-            )}
-          </div>
-
-          {/* Textbook References */}
-          {currentLesson.textbookRefs && currentLesson.textbookRefs.length > 0 && (
-            <div className="mb-6 flex flex-wrap gap-2">
-              {currentLesson.textbookRefs.map((ref, i) => (
-                <TextbookRefBadge key={i} {...ref} />
-              ))}
-            </div>
-          )}
-
-          {/* Summary */}
-          {currentLesson.summary && (
-            <div className="mb-6 rounded-lg border border-blue-100 bg-blue-50 p-4">
-              <h3 className="mb-1 text-sm font-semibold text-blue-800">Quick Summary</h3>
-              <p className="text-sm leading-relaxed text-blue-700">{currentLesson.summary}</p>
-            </div>
-          )}
-
-          {/* Main Content */}
-          <MarkdownRenderer content={currentLesson.contentMd} className="prose-medical" />
-
-          {/* Key Points */}
-          {currentLesson.keyPoints && currentLesson.keyPoints.length > 0 && (
-            <KeyPointsList points={currentLesson.keyPoints} />
-          )}
-
-          {/* Mnemonics */}
-          {currentLesson.mnemonics && currentLesson.mnemonics.length > 0 && (
-            <div className="mt-8">
-              <h3 className="mb-3 text-lg font-semibold text-gray-900">Mnemonics</h3>
-              <div className="space-y-3">
-                {currentLesson.mnemonics.map((m, i) => (
-                  <MnemonicCard key={i} text={m.text} explanation={m.explanation} />
-                ))}
+          {/* Video Layer — special rendering */}
+          {isVideoLayer && currentLesson.videos && currentLesson.videos.length > 0 ? (
+            <VideoList videos={currentLesson.videos} topicName={topicName} />
+          ) : (
+            <>
+              {/* Lesson Header */}
+              <div className="mb-6">
+                <div className="mb-2 flex items-center gap-2">
+                  <span className={cn(
+                    "rounded-full px-2 py-0.5 text-xs font-medium",
+                    (layerColors[activeLayer - 1] || layerColors[0]).bg,
+                    (layerColors[activeLayer - 1] || layerColors[0]).text
+                  )}>
+                    Layer {activeLayer}: {LEARNING_LAYERS.find(l => l.id === activeLayer)?.name || "Unknown"}
+                  </span>
+                  <span className="flex items-center gap-1 text-xs text-gray-400">
+                    <Clock className="h-3 w-3" /> {currentLesson.estimatedMinutes} min
+                  </span>
+                  {currentLesson.examTags?.map((tag) => (
+                    <span key={tag} className="rounded bg-red-50 px-1.5 py-0.5 text-[10px] font-medium text-red-600">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h1 className="text-xl font-bold text-gray-900">{currentLesson.title}</h1>
+                {competencyCode && (
+                  <p className="text-sm text-gray-400">NMC Competency: {competencyCode}</p>
+                )}
               </div>
-            </div>
+
+              {/* Textbook References */}
+              {currentLesson.textbookRefs && currentLesson.textbookRefs.length > 0 && (
+                <div className="mb-6 flex flex-wrap gap-2">
+                  {currentLesson.textbookRefs.map((ref, i) => (
+                    <TextbookRefBadge key={i} {...ref} />
+                  ))}
+                </div>
+              )}
+
+              {/* Summary */}
+              {currentLesson.summary && (
+                <div className="mb-6 rounded-lg border border-blue-100 bg-blue-50 p-4">
+                  <h3 className="mb-1 text-sm font-semibold text-blue-800">Quick Summary</h3>
+                  <p className="text-sm leading-relaxed text-blue-700">{currentLesson.summary}</p>
+                </div>
+              )}
+
+              {/* Main Content */}
+              <MarkdownRenderer content={currentLesson.contentMd} className="prose-medical" />
+
+              {/* Key Points */}
+              {currentLesson.keyPoints && currentLesson.keyPoints.length > 0 && (
+                <KeyPointsList points={currentLesson.keyPoints} />
+              )}
+
+              {/* Mnemonics */}
+              {currentLesson.mnemonics && currentLesson.mnemonics.length > 0 && (
+                <div className="mt-8">
+                  <h3 className="mb-3 text-lg font-semibold text-gray-900">Mnemonics</h3>
+                  <div className="space-y-3">
+                    {currentLesson.mnemonics.map((m, i) => (
+                      <MnemonicCard key={i} text={m.text} explanation={m.explanation} />
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
           )}
 
           {/* Navigation */}
@@ -150,8 +162,8 @@ export function LessonViewer({ topicName, lessons, competencyCode }: LessonViewe
               <CheckCircle2 className="h-4 w-4" /> Mark Complete
             </button>
             <button
-              onClick={() => setActiveLayer(Math.min(5, activeLayer + 1))}
-              disabled={activeLayer === 5}
+              onClick={() => setActiveLayer(Math.min(maxLayer, activeLayer + 1))}
+              disabled={activeLayer >= maxLayer}
               className="flex items-center gap-1 text-sm font-medium text-gray-500 hover:text-gray-700 disabled:opacity-40"
             >
               Next Layer <ChevronRight className="h-4 w-4" />
