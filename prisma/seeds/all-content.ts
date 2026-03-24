@@ -103,7 +103,6 @@ import { medicinePart7Lessons } from "./lessons-medicine-part7";
 import { medicinePart8Lessons } from "./lessons-medicine-part8";
 import { medicinePart10Lessons } from "./lessons-medicine-part10";
 import { medicinePart11Lessons } from "./lessons-medicine-part11";
-import { medicinePart1Lessons } from "./lessons-medicine-part1";
 import { medicineLessonsPart13 } from "./lessons-medicine-part13";
 import { medicineLessonsPart14 } from "./lessons-medicine-part14";
 import { medicineLessonsPart15 } from "./lessons-medicine-part15";
@@ -276,7 +275,6 @@ import { surgeryPart9Lessons } from "./lessons-surgery-part9";
 import { surgeryPart10Lessons } from "./lessons-surgery-part10";
 import { surgeryPart11Lessons } from "./lessons-surgery-part11";
 import { surgeryLessonsPart14 } from "./lessons-surgery-part14";
-import { surgeryPart1Lessons } from "./lessons-surgery-part1";
 import { surgeryLessonsPartXXI } from "./lessons-surgery-part13";
 
 // Remaining lessons
@@ -431,10 +429,10 @@ export const allLessons: TopicLessons[] = [
   ...forensicMedicinePart4Lessons,
   ...forensicMedicinePart7Lessons,
   ...forensicMedicinePart8Lessons,
-  ...fmLessonsPart13,
-  ...fmLessonsPart13,
-  ...fmLessonsPart13,
-  ...fmLessonsPart13,
+  ...forensicMedicineLessonsPartXX,
+  ...forensicMedicineLessonsPartXXI,
+  ...forensicMedicineLessonsPartXXII,
+  ...forensicMedicineLessonsPartXXIII,
   ...fmLessonsPart13,
 
   // Immunology

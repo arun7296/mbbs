@@ -114,11 +114,16 @@ async function seedAllLessons() {
         try {
           if (!l || !l.slug) continue;
 
-          const existing = await prisma.lesson.findUnique({
+          // Check both slug and topicId+layer uniqueness
+          const existingBySlug = await prisma.lesson.findUnique({
             where: { slug: l.slug },
           });
+          if (existingBySlug) continue;
 
-          if (existing) continue;
+          const existingByTopicLayer = await prisma.lesson.findFirst({
+            where: { topicId: topic.id, layer: l.layer || 1 },
+          });
+          if (existingByTopicLayer) continue;
 
           await prisma.lesson.create({
             data: {
@@ -201,9 +206,9 @@ async function seedAllMcqs() {
           clinicalVignette: (mcq as any).clinicalVignette || null,
           options: mcq.options || [],
           explanation: mcq.explanation || "",
-          difficulty: mcq.difficulty || "MEDIUM",
+          difficulty: (["EASY", "MEDIUM", "HARD", "EXPERT"].includes(mcq.difficulty) ? mcq.difficulty : (mcq.difficulty === "HIGH" ? "HARD" : "MEDIUM")) as any,
           bloomsLevel: mcq.bloomsLevel || "Recall",
-          examTags: (mcq.examTags || ["NEXT_STEP1"]) as unknown as string[],
+          examTags: ((mcq.examTags || ["NEXT_STEP1"]) as string[]).filter(t => ["NEXT_STEP1", "NEXT_STEP2", "NEET_PG", "UNIVERSITY"].includes(t)) as any,
           textbookRefs: mcq.textbookRefs || [],
           status: "PUBLISHED",
         },
@@ -237,12 +242,12 @@ async function seedAllClinicalCases() {
           title: c.title,
           presentingComplaint: c.presentingComplaint || "",
           caseType: c.caseType || "Ward",
-          difficulty: c.difficulty || "MEDIUM",
+          difficulty: (["EASY", "MEDIUM", "HARD", "EXPERT"].includes(c.difficulty) ? c.difficulty : (c.difficulty === "HIGH" ? "HARD" : "MEDIUM")) as any,
           estimatedMinutes: c.estimatedMinutes || 30,
           subjectIds: [],
           topicIds: [],
           competencyIds: [],
-          examTags: (c.examTags || ["NEXT_STEP1"]) as unknown as string[],
+          examTags: ((c.examTags || ["NEXT_STEP1"]) as string[]).filter(t => ["NEXT_STEP1", "NEXT_STEP2", "NEET_PG", "UNIVERSITY"].includes(t)) as any,
           patientProfile: c.patientProfile || {},
           status: "PUBLISHED",
         },
@@ -256,7 +261,7 @@ async function seedAllClinicalCases() {
           await prisma.caseStage.create({
             data: {
               caseId: cc.id,
-              stage: s.stage || "ASSESSMENT",
+              stage: (["HISTORY", "EXAMINATION", "INVESTIGATION", "DIAGNOSIS", "TREATMENT", "FOLLOWUP"].includes(s.stage) ? s.stage : "HISTORY") as any,
               stageOrder: s.stageOrder || 1,
               prompt: s.prompt,
               availableActions: s.availableActions || [],
