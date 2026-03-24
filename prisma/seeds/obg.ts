@@ -14,6 +14,7 @@ export const obgTopics: Record<string, Array<{ code: string; name: string; sortO
     { code: "OG-MOD-01-TOP-02", name: "Antenatal Care", sortOrder: 2, competencyCode: "OG1.2", competencyDesc: "Describe ANC schedule, examinations, and investigations" },
     { code: "OG-MOD-01-TOP-03", name: "Physiological Changes in Pregnancy", sortOrder: 3, competencyCode: "OG1.3", competencyDesc: "Describe physiological changes during pregnancy" },
     { code: "OG-MOD-01-TOP-04", name: "Fetal Growth & Assessment", sortOrder: 4, competencyCode: "OG1.4", competencyDesc: "Describe fetal growth, amniotic fluid, and fetal monitoring" },
+    { code: "OG-MOD-01-TOP-05", name: "Nutrition in Pregnancy", sortOrder: 5, competencyCode: "OG1.5", competencyDesc: "Describe nutritional requirements, supplementation, and dietary advice during pregnancy" },
   ],
   "OG-MOD-02": [
     { code: "OG-MOD-02-TOP-01", name: "Hypertensive Disorders of Pregnancy", sortOrder: 1, competencyCode: "OG2.1", competencyDesc: "Describe pre-eclampsia, eclampsia, and HELLP syndrome" },
@@ -32,6 +33,7 @@ export const obgTopics: Record<string, Array<{ code: string; name: string; sortO
     { code: "OG-MOD-04-TOP-01", name: "Normal Puerperium", sortOrder: 1, competencyCode: "OG4.1", competencyDesc: "Describe normal puerperium and puerperal complications" },
     { code: "OG-MOD-04-TOP-02", name: "Postpartum Hemorrhage", sortOrder: 2, competencyCode: "OG4.2", competencyDesc: "Describe causes and management of PPH" },
     { code: "OG-MOD-04-TOP-03", name: "Breastfeeding & Lactation", sortOrder: 3, competencyCode: "OG4.3", competencyDesc: "Describe physiology of lactation and breastfeeding support" },
+    { code: "OG-MOD-04-TOP-04", name: "Neonatal Resuscitation & Care", sortOrder: 4, competencyCode: "OG4.4", competencyDesc: "Describe neonatal resuscitation steps, essential newborn care, and danger signs" },
   ],
   "OG-MOD-05": [
     { code: "OG-MOD-05-TOP-01", name: "Menstrual Disorders", sortOrder: 1, competencyCode: "OG5.1", competencyDesc: "Describe AUB, amenorrhea, and dysmenorrhea" },
@@ -44,10 +46,12 @@ export const obgTopics: Record<string, Array<{ code: string; name: string; sortO
     { code: "OG-MOD-06-TOP-01", name: "Cervical Cancer & Screening", sortOrder: 1, competencyCode: "OG6.1", competencyDesc: "Describe cervical cancer: HPV, Pap smear, staging, treatment" },
     { code: "OG-MOD-06-TOP-02", name: "Ovarian Tumors", sortOrder: 2, competencyCode: "OG6.2", competencyDesc: "Describe ovarian tumors: classification and management" },
     { code: "OG-MOD-06-TOP-03", name: "Endometrial & Gestational Trophoblastic Disease", sortOrder: 3, competencyCode: "OG6.3", competencyDesc: "Describe endometrial cancer and molar pregnancy" },
+    { code: "OG-MOD-06-TOP-04", name: "Vulvar & Vaginal Pathology", sortOrder: 4, competencyCode: "OG6.4", competencyDesc: "Describe vulvar dystrophies, vulvar cancer, vaginal tumors, and premalignant conditions" },
   ],
   "OG-MOD-07": [
     { code: "OG-MOD-07-TOP-01", name: "Contraception", sortOrder: 1, competencyCode: "OG7.1", competencyDesc: "Describe contraceptive methods: barrier, hormonal, IUCD, sterilization" },
     { code: "OG-MOD-07-TOP-02", name: "Infertility", sortOrder: 2, competencyCode: "OG7.2", competencyDesc: "Describe infertility workup and ART" },
     { code: "OG-MOD-07-TOP-03", name: "MTP & Legal Aspects", sortOrder: 3, competencyCode: "OG7.3", competencyDesc: "Describe MTP Act and safe abortion practices" },
+    { code: "OG-MOD-07-TOP-04", name: "Adolescent Gynecology & Menopause", sortOrder: 4, competencyCode: "OG7.4", competencyDesc: "Describe puberty disorders, adolescent gynecology, menopause, and HRT" },
   ],
 };

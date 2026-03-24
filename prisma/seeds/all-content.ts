@@ -161,6 +161,7 @@ import { obgLessonsPartElevenContinued } from "./lessons-obg-part11-continued";
 import { obgLessonsPartTwelve } from "./lessons-obg-part12";
 import { obgLessonsPart14 } from "./lessons-obg-part14";
 import { obgLessonsPart15 } from "./lessons-obg-part15";
+import { obgGapLessons } from "./lessons-obg-gap";
 
 // Ophthalmology lessons
 import { ophthalmologyLessons } from "./lessons-ophthalmology";
@@ -518,6 +519,7 @@ export const allLessons: TopicLessons[] = [
   ...obgLessonsPartTwelve,
   ...obgLessonsPart14,
   ...obgLessonsPart15,
+  ...obgGapLessons,
 
   // Ophthalmology
   ...ophthalmologyLessons,
