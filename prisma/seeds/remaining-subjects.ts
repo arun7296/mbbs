@@ -14,6 +14,7 @@ export const dermatologyTopics: Record<string, Array<{ code: string; name: strin
     { code: "DR-MOD-01-TOP-02", name: "Eczema & Contact Dermatitis", sortOrder: 2, competencyCode: "DR1.2", competencyDesc: "Describe eczema types and management" },
     { code: "DR-MOD-01-TOP-03", name: "Urticaria & Drug Reactions", sortOrder: 3, competencyCode: "DR1.3", competencyDesc: "Describe urticaria, angioedema, and cutaneous drug reactions" },
     { code: "DR-MOD-01-TOP-04", name: "Dermatological Therapeutics", sortOrder: 4, competencyCode: "DR1.4", competencyDesc: "Describe topical and systemic dermatological treatments including steroids, retinoids, and phototherapy" },
+    { code: "DR-MOD-01-TOP-05", name: "Hair & Nail Disorders", sortOrder: 5, competencyCode: "DR8.1", competencyDesc: "Identify and manage common hair and nail disorders including alopecia, onychomycosis, and hirsutism" },
   ],
   "DR-MOD-02": [
     { code: "DR-MOD-02-TOP-01", name: "Fungal Infections", sortOrder: 1, competencyCode: "DR2.1", competencyDesc: "Describe dermatophytosis, candidiasis, and pityriasis versicolor" },
@@ -36,6 +37,7 @@ export const dermatologyTopics: Record<string, Array<{ code: string; name: strin
     { code: "DR-MOD-05-TOP-01", name: "Vitiligo & Pigmentary Disorders", sortOrder: 1, competencyCode: "DR5.1", competencyDesc: "Describe vitiligo, melasma, and albinism" },
     { code: "DR-MOD-05-TOP-02", name: "Skin Tumors & Melanoma", sortOrder: 2, competencyCode: "DR5.2", competencyDesc: "Describe skin cancers and premalignant conditions" },
     { code: "DR-MOD-05-TOP-03", name: "Pigmentary Disorders", sortOrder: 3, competencyCode: "DR5.3", competencyDesc: "Describe vitiligo, melasma, albinism, and post-inflammatory pigmentary changes" },
+    { code: "DR-MOD-05-TOP-04", name: "Skin Manifestations of Systemic Diseases", sortOrder: 4, competencyCode: "DR12.1", competencyDesc: "Identify cutaneous markers of internal disease including diabetes, thyroid, SLE, liver, and malignancy" },
   ],
 };
 

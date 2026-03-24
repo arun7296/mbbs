@@ -51,6 +51,8 @@ export const medicineTopics: Record<string, Array<{ code: string; name: string; 
     { code: "IM-MOD-05-TOP-04", name: "Pituitary Disorders", sortOrder: 4, competencyCode: "IM5.4", competencyDesc: "Describe acromegaly, hypopituitarism, and SIADH" },
     { code: "IM-MOD-05-TOP-05", name: "Metabolic Bone Disease", sortOrder: 5, competencyCode: "IM5.5", competencyDesc: "Describe osteoporosis, hyperparathyroidism, Paget's disease" },
     { code: "IM-MOD-05-TOP-06", name: "Geriatric Medicine", sortOrder: 6, competencyCode: "IM5.6", competencyDesc: "Describe age-related physiological changes, falls, frailty, polypharmacy in elderly" },
+    { code: "IM-MOD-05-TOP-07", name: "Clinical Genetics & Genetic Counseling", sortOrder: 7, competencyCode: "IM25.1", competencyDesc: "Describe genetic basis of disease, common genetic disorders, genetic counseling, and pharmacogenomics" },
+    { code: "IM-MOD-05-TOP-08", name: "Nutritional & Metabolic Disorders", sortOrder: 8, competencyCode: "IM24.1", competencyDesc: "Describe nutritional requirements, deficiency diseases, obesity, metabolic syndrome, and diet therapy" },
   ],
   "IM-MOD-06": [
     { code: "IM-MOD-06-TOP-01", name: "Iron Deficiency & Megaloblastic Anemia", sortOrder: 1, competencyCode: "IM6.1", competencyDesc: "Describe approach to anemia and management" },

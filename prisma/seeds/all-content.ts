@@ -307,6 +307,7 @@ import { lessonsRemainingCondensed } from "./lessons-remaining-condensed";
 // Missing content batches
 import { missingBatch1Lessons } from "./lessons-missing-batch1";
 import { missingBatch2Lessons } from "./lessons-missing-batch2";
+import { final4TopicLessons } from "./lessons-final-4-topics";
 
 // ============================================================================
 // MCQ IMPORTS - All mcqs-*.ts files
@@ -677,6 +678,9 @@ export const allLessons: TopicLessons[] = [
   // Missing content batches (filling gaps)
   ...missingBatch1Lessons,
   ...missingBatch2Lessons,
+
+  // Final 4 topics for 100% NMC CBME coverage
+  ...final4TopicLessons,
 ];
 
 export const allMcqs = [
