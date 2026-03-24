@@ -213,6 +213,7 @@ import { pediatricsLessonsPartEleven } from "./lessons-pediatrics-part11";
 import { pediatricsLessonsPartTwelve } from "./lessons-pediatrics-part12";
 import { pediatricsLessonsPartThirteen } from "./lessons-pediatrics-part13";
 import { pediatricsLessonsPartFourteen } from "./lessons-pediatrics-part14";
+import { pediatricsGapLessons } from "./lessons-pediatrics-gap";
 
 // Pharmacology lessons
 import { pharmacologyPart1Lessons } from "./lessons-pharmacology-part1";
@@ -564,6 +565,7 @@ export const allLessons: TopicLessons[] = [
   ...pediatricsLessonsPartTwelve,
   ...pediatricsLessonsPartThirteen,
   ...pediatricsLessonsPartFourteen,
+  ...pediatricsGapLessons,
 
   // Pharmacology
   ...pharmacologyPart1Lessons,

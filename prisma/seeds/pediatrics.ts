@@ -8,12 +8,14 @@ export const pediatricsModules = [
   { code: "PE-MOD-06", name: "Pediatric Hematology & Nephrology", description: "Childhood anemias, nephrotic syndrome, UTI", estimatedHours: 35, sortOrder: 6 },
   { code: "PE-MOD-07", name: "Pediatric Neurology & Genetics", description: "Febrile seizures, cerebral palsy, genetic disorders", estimatedHours: 30, sortOrder: 7 },
   { code: "PE-MOD-08", name: "Pediatric Emergencies", description: "Dehydration, status epilepticus, poisoning, child abuse", estimatedHours: 30, sortOrder: 8 },
+  { code: "PE-MOD-09", name: "Pediatric Subspecialties", description: "Pediatric endocrinology, rheumatology, oncology, adolescent health, social pediatrics", estimatedHours: 40, sortOrder: 9 },
 ];
 export const pediatricsTopics: Record<string, Array<{ code: string; name: string; sortOrder: number; competencyCode: string; competencyDesc: string }>> = {
   "PE-MOD-01": [
     { code: "PE-MOD-01-TOP-01", name: "Normal Growth & Growth Charts", sortOrder: 1, competencyCode: "PE1.1", competencyDesc: "Describe normal growth patterns and growth monitoring" },
     { code: "PE-MOD-01-TOP-02", name: "Developmental Milestones", sortOrder: 2, competencyCode: "PE1.2", competencyDesc: "Describe motor, language, social developmental milestones" },
     { code: "PE-MOD-01-TOP-03", name: "Short Stature & Failure to Thrive", sortOrder: 3, competencyCode: "PE1.3", competencyDesc: "Describe approach to short stature and FTT" },
+    { code: "PE-MOD-01-TOP-04", name: "Vital Statistics & Child Health Indicators", sortOrder: 4, competencyCode: "PE1.4", competencyDesc: "Describe IMR, NMR, U5MR, and SDGs related to child health" },
   ],
   "PE-MOD-02": [
     { code: "PE-MOD-02-TOP-01", name: "Neonatal Resuscitation", sortOrder: 1, competencyCode: "PE2.1", competencyDesc: "Describe neonatal resuscitation steps" },
@@ -27,6 +29,7 @@ export const pediatricsTopics: Record<string, Array<{ code: string; name: string
     { code: "PE-MOD-03-TOP-02", name: "Protein-Energy Malnutrition", sortOrder: 2, competencyCode: "PE3.2", competencyDesc: "Describe SAM and MAM management" },
     { code: "PE-MOD-03-TOP-03", name: "Vitamin Deficiencies", sortOrder: 3, competencyCode: "PE3.3", competencyDesc: "Describe vitamin A, D, and other deficiencies in children" },
     { code: "PE-MOD-03-TOP-04", name: "Immunization Schedule", sortOrder: 4, competencyCode: "PE3.4", competencyDesc: "Describe national immunization schedule and vaccines" },
+    { code: "PE-MOD-03-TOP-05", name: "Pediatric GI & Fluid Management", sortOrder: 5, competencyCode: "PE3.5", competencyDesc: "Describe ORS composition, celiac disease, and IBD in children" },
   ],
   "PE-MOD-04": [
     { code: "PE-MOD-04-TOP-01", name: "Childhood Exanthems", sortOrder: 1, competencyCode: "PE4.1", competencyDesc: "Describe measles, rubella, chicken pox, and other rashes" },
@@ -39,6 +42,7 @@ export const pediatricsTopics: Record<string, Array<{ code: string; name: string
     { code: "PE-MOD-05-TOP-01", name: "Congenital Heart Disease", sortOrder: 1, competencyCode: "PE5.1", competencyDesc: "Describe acyanotic and cyanotic CHD" },
     { code: "PE-MOD-05-TOP-02", name: "Rheumatic Fever in Children", sortOrder: 2, competencyCode: "PE5.2", competencyDesc: "Describe Jones criteria and RF prophylaxis" },
     { code: "PE-MOD-05-TOP-03", name: "Childhood Asthma & Croup", sortOrder: 3, competencyCode: "PE5.3", competencyDesc: "Describe childhood asthma and upper airway obstruction" },
+    { code: "PE-MOD-05-TOP-04", name: "Pediatric Dermatology", sortOrder: 4, competencyCode: "PE5.4", competencyDesc: "Describe common pediatric rashes, hemangiomas, and diaper dermatitis" },
   ],
   "PE-MOD-06": [
     { code: "PE-MOD-06-TOP-01", name: "Childhood Anemias", sortOrder: 1, competencyCode: "PE6.1", competencyDesc: "Describe iron deficiency and thalassemia in children" },
@@ -54,5 +58,13 @@ export const pediatricsTopics: Record<string, Array<{ code: string; name: string
     { code: "PE-MOD-08-TOP-01", name: "Dehydration & Fluid Therapy", sortOrder: 1, competencyCode: "PE8.1", competencyDesc: "Describe dehydration assessment and IV fluid therapy" },
     { code: "PE-MOD-08-TOP-02", name: "Status Epilepticus", sortOrder: 2, competencyCode: "PE8.2", competencyDesc: "Describe management of status epilepticus in children" },
     { code: "PE-MOD-08-TOP-03", name: "Poisoning in Children", sortOrder: 3, competencyCode: "PE8.3", competencyDesc: "Describe common childhood poisonings and management" },
+    { code: "PE-MOD-08-TOP-04", name: "Pediatric Surgical Emergencies", sortOrder: 4, competencyCode: "PE8.4", competencyDesc: "Describe intussusception, pyloric stenosis, and Hirschsprung disease" },
+  ],
+  "PE-MOD-09": [
+    { code: "PE-MOD-09-TOP-01", name: "Pediatric Endocrinology", sortOrder: 1, competencyCode: "PE9.1", competencyDesc: "Describe childhood diabetes, thyroid disorders, and growth disorders" },
+    { code: "PE-MOD-09-TOP-02", name: "Pediatric Rheumatology", sortOrder: 2, competencyCode: "PE9.2", competencyDesc: "Describe JIA, Kawasaki disease, and SLE in children" },
+    { code: "PE-MOD-09-TOP-03", name: "Pediatric Oncology", sortOrder: 3, competencyCode: "PE9.3", competencyDesc: "Describe Wilms tumor, neuroblastoma, retinoblastoma, and ALL" },
+    { code: "PE-MOD-09-TOP-04", name: "Adolescent Health", sortOrder: 4, competencyCode: "PE9.4", competencyDesc: "Describe puberty, mental health, substance abuse, and ARSH" },
+    { code: "PE-MOD-09-TOP-05", name: "Social Pediatrics", sortOrder: 5, competencyCode: "PE9.5", competencyDesc: "Describe child abuse, ICDS, RBSK, child labor, and POCSO Act" },
   ],
 };
