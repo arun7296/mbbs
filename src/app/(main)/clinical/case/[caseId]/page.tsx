@@ -98,9 +98,27 @@ export default function ClinicalCasePage() {
     <div className="mx-auto max-w-5xl px-4 py-6 lg:px-8">
       <CasePlayer
         caseData={caseData}
-        onComplete={(score, maxScore) => {
-          // In production, save attempt via tRPC
-          console.log(`Case complete: ${score}/${maxScore}`);
+        onComplete={async (score, maxScore) => {
+          try {
+            // Save attempt via tRPC
+            const startRes = await fetch(`/api/trpc/clinical.startCase`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ json: { caseId } }),
+            });
+            const startData = await startRes.json();
+            const attemptId = startData?.result?.data?.json?.attempt?.id;
+
+            if (attemptId) {
+              await fetch(`/api/trpc/clinical.completeCase`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ json: { attemptId } }),
+              });
+            }
+          } catch {
+            // Silently fail — the UI already shows the score
+          }
         }}
       />
     </div>
