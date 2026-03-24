@@ -7,8 +7,6 @@ import {
   Stethoscope,
   Flame,
   Target,
-  Clock,
-  TrendingUp,
   ArrowRight,
 } from "lucide-react";
 import { getServerTrpc } from "@/lib/trpc/server";
@@ -49,9 +47,29 @@ export default async function DashboardPage() {
     totalTopics += s._count.modules * 5;
   }
 
-  // Get MCQ count
-  const mcqs = await trpc.assessment.getQuestions({ limit: 1 });
+  // Get clinical case count
   const clinicalResult = await trpc.clinical.getCases({ limit: 1 });
+
+  // Get user progress stats (may fail if not authenticated)
+  let dashboardStats: {
+    totalSubjects: number;
+    totalTopics: number;
+    totalLessons: number;
+    subjectsStarted: number;
+    overallProgress: number;
+    topicsCompleted: number;
+    topicsInProgress: number;
+    totalStudyTimeMin: number;
+    streak: { currentStreak: number; longestStreak: number };
+    dueForReview: number;
+    recentQuizzes: Array<{ id: string; title: string; score: number | null; completedAt: Date | null; totalQs: number }>;
+    weakTopics: Array<{ id: string; name: string; module: { subject: { code: string } } }>;
+  } | null = null;
+  try {
+    dashboardStats = await trpc.progress.getDashboardStats();
+  } catch {
+    // Not authenticated or no progress yet
+  }
 
   const hour = new Date().getHours();
   const greeting = hour < 12 ? "Good Morning" : hour < 17 ? "Good Afternoon" : "Good Evening";
@@ -69,11 +87,23 @@ export default async function DashboardPage() {
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2 rounded-lg bg-orange-50 px-4 py-2">
             <Flame className="h-5 w-5 text-orange-500" />
-            <span className="text-sm text-orange-500">Start your streak!</span>
+            <span className="text-sm text-orange-500">
+              {dashboardStats && dashboardStats.streak.currentStreak > 0
+                ? `${dashboardStats.streak.currentStreak} day streak!`
+                : "Start your streak!"}
+            </span>
           </div>
+          {dashboardStats && dashboardStats.dueForReview > 0 && (
+            <Link href="/revise" className="flex items-center gap-2 rounded-lg bg-yellow-50 px-4 py-2">
+              <RotateCcw className="h-5 w-5 text-yellow-600" />
+              <span className="text-sm text-yellow-700">{dashboardStats.dueForReview} due for review</span>
+            </Link>
+          )}
           <div className="flex items-center gap-2 rounded-lg bg-blue-50 px-4 py-2">
             <Target className="h-5 w-5 text-blue-500" />
-            <span className="text-sm text-blue-600">6h study goal</span>
+            <span className="text-sm text-blue-600">
+              {dashboardStats ? `${dashboardStats.overallProgress}% complete` : "6h study goal"}
+            </span>
           </div>
         </div>
       </div>
@@ -153,11 +183,11 @@ export default async function DashboardPage() {
                 <p className="text-xs text-green-600">Topics</p>
               </div>
               <div className="rounded-lg bg-orange-50 p-3 text-center">
-                <p className="text-lg font-bold text-orange-700">1,016</p>
-                <p className="text-xs text-orange-600">MCQs</p>
+                <p className="text-lg font-bold text-orange-700">{dashboardStats?.totalLessons?.toLocaleString() ?? "3,300"}</p>
+                <p className="text-xs text-orange-600">Lessons</p>
               </div>
               <div className="rounded-lg bg-purple-50 p-3 text-center">
-                <p className="text-lg font-bold text-purple-700">110</p>
+                <p className="text-lg font-bold text-purple-700">{clinicalResult.items.length}+</p>
                 <p className="text-xs text-purple-600">Clinical Cases</p>
               </div>
             </div>
