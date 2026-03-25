@@ -28,7 +28,7 @@ import * as path from "path";
 const PROGRESS_FILE = "/tmp/visual-seed-progress.json";
 const WIKIMEDIA_RATE_LIMIT_MS = 2000; // 2 sec between requests
 const MAX_IMAGES_PER_TOPIC = 5;
-const MIN_IMAGES_PER_TOPIC = 2;
+const MIN_IMAGES_PER_TOPIC = 1;
 
 // ─── Topic → Diagram Component Mapping ──────────────────────────────
 
@@ -320,9 +320,20 @@ async function main() {
       // 2. Search Wikimedia for relevant images (unless --diagrams-only)
       if (!diagramsOnly && layer7Lesson && !dryRun) {
         const subjectTerms = SUBJECT_SEARCH_TERMS[subjectCode] || [];
-        const searchQuery = `${topicName} ${subjectTerms[0] || ""}`.trim();
 
-        const images = await searchWikimediaImages(searchQuery, MAX_IMAGES_PER_TOPIC);
+        // Try multiple search queries — broader to narrow
+        const queries = [
+          `${topicName} ${subjectTerms[0] || ""} anatomy diagram`.trim(),
+          `${topicName} medical illustration`,
+          `${topicName.split(/[&:,]/).map(s => s.trim())[0]} ${subjectTerms[0] || ""}`.trim(),
+        ];
+
+        let images: any[] = [];
+        for (const searchQuery of queries) {
+          images = await searchWikimediaImages(searchQuery, MAX_IMAGES_PER_TOPIC);
+          if (images.length >= MIN_IMAGES_PER_TOPIC) break;
+          await new Promise(resolve => setTimeout(resolve, 1000)); // small delay between retries
+        }
 
         if (images.length >= MIN_IMAGES_PER_TOPIC) {
           for (let i = 0; i < images.length; i++) {
