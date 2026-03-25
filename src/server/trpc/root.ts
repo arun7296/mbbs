@@ -7,6 +7,7 @@ import { clinicalRouter } from "./routers/clinical.router";
 import { studyPlanRouter } from "./routers/studyPlan.router";
 import { searchRouter } from "./routers/search.router";
 import { videoRouter } from "./routers/video.router";
+import { visualRouter } from "./routers/visual.router";
 
 export const appRouter = router({
   curriculum: curriculumRouter,
@@ -17,6 +18,7 @@ export const appRouter = router({
   studyPlan: studyPlanRouter,
   search: searchRouter,
   video: videoRouter,
+  visual: visualRouter,
 });
 
 export type AppRouter = typeof appRouter;

@@ -15,6 +15,7 @@ export const contentRouter = router({
             },
           },
           videos: { orderBy: { sortOrder: "asc" } },
+          visuals: { orderBy: { sortOrder: "asc" } },
         },
       });
     }),
@@ -23,7 +24,7 @@ export const contentRouter = router({
     .input(
       z.object({
         topicId: z.string(),
-        layer: z.number().min(1).max(6).optional(),
+        layer: z.number().min(1).max(7).optional(),
       })
     )
     .query(async ({ ctx, input }) => {
@@ -36,6 +37,7 @@ export const contentRouter = router({
         orderBy: { layer: "asc" },
         include: {
           videos: { orderBy: { sortOrder: "asc" } },
+          visuals: { orderBy: { sortOrder: "asc" } },
         },
       });
     }),

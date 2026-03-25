@@ -251,6 +251,7 @@ model Lesson {
   revisions LessonRevision[]
   progress  UserProgress[]
   videos    VideoResource[]
+  visuals   VisualResource[]
 
   @@unique([topicId, layer])
 }
@@ -294,6 +295,44 @@ model VideoResource {
 
   @@index([lessonId])
   @@unique([lessonId, youtubeVideoId])
+}
+
+// ─── Visual Resources ───────────────────────────────────────────────
+
+model VisualResource {
+  id            String   @id @default(cuid())
+  lessonId      String
+  type          String   // SVG_DIAGRAM | ANIMATED | IMAGE | FLOWCHART | COMPARISON_TABLE
+  title         String
+  description   String?
+
+  // For SVG/Animated: component name to render
+  componentName String?  // e.g., "CardiacCycleDiagram", "BrachialPlexusSVG"
+
+  // For external images
+  imageUrl      String?
+  imageAlt      String?
+  attribution   String?
+  license       String?  // PUBLIC_DOMAIN | CC_BY | CC_BY_SA | CC_BY_NC
+
+  // For all types
+  category      String   @default("ANATOMY")
+  tags          String[]
+  sortOrder     Int      @default(0)
+
+  // Inline SVG content (for simple diagrams stored directly)
+  svgContent    String?
+
+  // Annotation data (labels, hotspots on images)
+  annotations   Json?
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  lesson Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@index([lessonId])
+  @@index([category])
 }
 
 // ─── Assessment ──────────────────────────────────────────────────────

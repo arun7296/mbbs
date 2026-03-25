@@ -68,6 +68,7 @@ export const curriculumRouter = router({
             where: { status: "PUBLISHED" },
             include: {
               videos: { orderBy: { sortOrder: "asc" } },
+              visuals: { orderBy: { sortOrder: "asc" } },
             },
           },
         },

@@ -8,6 +8,7 @@ import { MnemonicCard } from "./MnemonicCard";
 import { KeyPointsList } from "./KeyPointsList";
 import { TextbookRefBadge } from "./TextbookRefBadge";
 import { VideoList, type VideoItem } from "@/components/video/VideoList";
+import { VisualTheoryLayer, type VisualItem } from "./visual-theory-layer";
 import { BookOpen, Clock, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface LessonData {
@@ -21,6 +22,7 @@ interface LessonData {
   estimatedMinutes: number;
   examTags?: string[];
   videos?: VideoItem[];
+  visuals?: VisualItem[];
 }
 
 interface LessonViewerProps {
@@ -36,6 +38,7 @@ const layerColors = [
   { bg: "bg-amber-50", border: "border-amber-300", text: "text-amber-700", activeBg: "bg-amber-600", activeText: "text-white" },
   { bg: "bg-rose-50", border: "border-rose-300", text: "text-rose-700", activeBg: "bg-rose-600", activeText: "text-white" },
   { bg: "bg-red-50", border: "border-red-300", text: "text-red-700", activeBg: "bg-red-600", activeText: "text-white" },
+  { bg: "bg-violet-50", border: "border-violet-300", text: "text-violet-700", activeBg: "bg-violet-600", activeText: "text-white" },
 ];
 
 export function LessonViewer({ topicName, lessons, competencyCode }: LessonViewerProps) {
@@ -43,6 +46,7 @@ export function LessonViewer({ topicName, lessons, competencyCode }: LessonViewe
   const [activeLayer, setActiveLayer] = useState(1);
   const currentLesson = lessons.find((l) => l.layer === activeLayer);
   const isVideoLayer = activeLayer === 6;
+  const isVisualLayer = activeLayer === 7;
   const maxLayer = Math.max(...lessons.map((l) => l.layer), 5);
 
   return (
@@ -80,8 +84,15 @@ export function LessonViewer({ topicName, lessons, competencyCode }: LessonViewe
       {/* Lesson Content */}
       {currentLesson ? (
         <div className="mx-auto max-w-4xl px-4 py-6 lg:px-8">
-          {/* Video Layer — special rendering */}
-          {isVideoLayer && currentLesson.videos && currentLesson.videos.length > 0 ? (
+          {/* Visual Theory Layer — special rendering */}
+          {isVisualLayer ? (
+            <VisualTheoryLayer
+              visuals={currentLesson.visuals || []}
+              topicName={topicName}
+              contentMd={currentLesson.contentMd}
+            />
+          ) : /* Video Layer — special rendering */
+          isVideoLayer && currentLesson.videos && currentLesson.videos.length > 0 ? (
             <VideoList videos={currentLesson.videos} topicName={topicName} />
           ) : (
             <>

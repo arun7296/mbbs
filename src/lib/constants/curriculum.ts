@@ -12,6 +12,7 @@ export const LEARNING_LAYERS = [
   { id: 4, name: "Exam Prep", color: "amber", duration: "15 min", description: "High-yield points, mnemonics" },
   { id: 5, name: "Active Recall", color: "rose", duration: "10 min", description: "Flashcards, self-test" },
   { id: 6, name: "Videos", color: "red", duration: "varies", description: "Curated YouTube lectures from trusted channels" },
+  { id: 7, name: "Visual Theory", color: "violet", duration: "varies", description: "Interactive diagrams, animations & medical illustrations" },
 ] as const;
 
 export const LEARNING_MODES = [

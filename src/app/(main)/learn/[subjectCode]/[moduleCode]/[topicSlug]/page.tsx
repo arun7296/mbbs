@@ -31,6 +31,14 @@ export default async function TopicPage({
         thumbnailUrl: string | null; viewCount: number | null;
         sortOrder: number;
       }>;
+      visuals?: Array<{
+        id: string; type: string; title: string; description: string | null;
+        componentName: string | null; imageUrl: string | null;
+        imageAlt: string | null; attribution: string | null;
+        license: string | null; svgContent: string | null;
+        annotations: any; category: string; tags: string[];
+        sortOrder: number;
+      }>;
     }>;
   };
 
@@ -60,6 +68,22 @@ export default async function TopicPage({
       quality: v.quality,
       thumbnailUrl: v.thumbnailUrl,
       viewCount: v.viewCount,
+      sortOrder: v.sortOrder,
+    })),
+    visuals: l.visuals?.map((v: any) => ({
+      id: v.id,
+      type: v.type,
+      title: v.title,
+      description: v.description,
+      componentName: v.componentName,
+      imageUrl: v.imageUrl,
+      imageAlt: v.imageAlt,
+      attribution: v.attribution,
+      license: v.license,
+      svgContent: v.svgContent,
+      annotations: v.annotations,
+      category: v.category,
+      tags: v.tags,
       sortOrder: v.sortOrder,
     })),
   }));
