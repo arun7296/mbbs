@@ -5,16 +5,23 @@
  * This script:
  * 1. Creates Layer 7 lessons for all topics
  * 2. Assigns pre-built diagram components to relevant topics
- * 3. Searches Wikimedia Commons for 3-5 relevant images per topic
- * 4. Creates VisualResource records
+ * 3. Seeds curated images from OpenStax, Servier, and Wikimedia Commons
+ * 4. Generates SVG concept maps as fallback for topics with no images
+ * 5. Ensures 100% coverage: every topic gets at least 1 visual
  *
  * Usage:
- *   npx tsx scripts/seed-visuals.ts                    # Full run
- *   npx tsx scripts/seed-visuals.ts --dry-run           # Preview only
- *   npx tsx scripts/seed-visuals.ts --subject AN        # Anatomy only
- *   npx tsx scripts/seed-visuals.ts --resume            # Resume from last checkpoint
- *   npx tsx scripts/seed-visuals.ts --diagrams-only     # Only seed diagram components (no Wikimedia)
- *   npx tsx scripts/seed-visuals.ts --batch-size 50     # Process 50 topics per batch
+ *   npx tsx scripts/seed-visuals.ts                           # Full run (all sources + fallback)
+ *   npx tsx scripts/seed-visuals.ts --dry-run                  # Preview only
+ *   npx tsx scripts/seed-visuals.ts --subject AN               # Anatomy only
+ *   npx tsx scripts/seed-visuals.ts --resume                   # Resume from last checkpoint
+ *   npx tsx scripts/seed-visuals.ts --diagrams-only            # Only seed diagram components
+ *   npx tsx scripts/seed-visuals.ts --images-only              # Only seed images (skip diagrams)
+ *   npx tsx scripts/seed-visuals.ts --images-only --source openstax  # Only OpenStax images
+ *   npx tsx scripts/seed-visuals.ts --images-only --source clinical  # Only clinical images
+ *   npx tsx scripts/seed-visuals.ts --images-only --source wikimedia # Only Wikimedia search
+ *   npx tsx scripts/seed-visuals.ts --images-only --source fallback  # Only SVG concept maps
+ *   npx tsx scripts/seed-visuals.ts --images-only --source all       # All sources in priority order
+ *   npx tsx scripts/seed-visuals.ts --batch-size 50            # Process 50 topics per batch
  */
 
 import { PrismaPg } from "@prisma/adapter-pg";
@@ -22,6 +29,13 @@ import { PrismaClient } from "../src/generated/prisma/client.js";
 import pg from "pg";
 import * as fs from "fs";
 import * as path from "path";
+
+// Import curated image maps
+import { openstaxImages } from "../prisma/seeds/visual-openstax-map.js";
+import { clinicalImages } from "../prisma/seeds/visual-clinical-map.js";
+
+// Import SVG generator for fallback
+import { generateConceptMapSVG, getDefaultKeyPoints } from "../src/lib/visuals/svg-generator.js";
 
 // ─── Configuration ──────────────────────────────────────────────────
 
@@ -183,20 +197,73 @@ function normalizeLicense(license: string): string | null {
   return null;
 }
 
+// ─── Helpers ─────────────────────────────────────────────────────────
+
+function categoryForSubject(code: string): string {
+  const map: Record<string, string> = {
+    AN: "ANATOMY", PY: "PHYSIOLOGY", BI: "BIOCHEMISTRY",
+    PA: "PATHOLOGY", PH: "PHARMACOLOGY", MI: "MICROBIOLOGY",
+    FO: "FORENSIC", CM: "COMMUNITY_MEDICINE",
+  };
+  return map[code] || "CLINICAL";
+}
+
+/** Seed a single image record, returns true if created */
+async function seedImage(
+  prisma: any,
+  lessonId: string,
+  img: { imageUrl: string; title: string; imageAlt?: string; attribution: string; license: string },
+  category: string,
+  tags: string[],
+  sortOrder: number,
+  topicName: string,
+): Promise<boolean> {
+  const existing = await prisma.visualResource.findFirst({
+    where: { lessonId, imageUrl: img.imageUrl },
+  });
+  if (existing) return false;
+  await prisma.visualResource.create({
+    data: {
+      lessonId,
+      type: "IMAGE",
+      title: img.title,
+      description: `Medical illustration related to ${topicName}`,
+      imageUrl: img.imageUrl,
+      imageAlt: img.imageAlt || "",
+      attribution: img.attribution,
+      license: img.license,
+      category,
+      tags,
+      sortOrder,
+    },
+  });
+  return true;
+}
+
+/** Count existing visuals for a lesson */
+async function countVisuals(prisma: any, lessonId: string): Promise<number> {
+  return prisma.visualResource.count({ where: { lessonId } });
+}
+
 // ─── Main ───────────────────────────────────────────────────────────
+
+type SourceType = "openstax" | "clinical" | "wikimedia" | "fallback" | "all";
 
 async function main() {
   const args = process.argv.slice(2);
   const dryRun = args.includes("--dry-run");
   const resume = args.includes("--resume");
   const diagramsOnly = args.includes("--diagrams-only");
+  const imagesOnly = args.includes("--images-only");
   const subjectFilter = args.includes("--subject") ? args[args.indexOf("--subject") + 1] : null;
-  const batchSize = args.includes("--batch-size") ? parseInt(args[args.indexOf("--batch-size") + 1]) : 100;
+  const batchSize = args.includes("--batch-size") ? parseInt(args[args.indexOf("--batch-size") + 1]) : 200;
+  const sourceArg = args.includes("--source") ? args[args.indexOf("--source") + 1] as SourceType : "all";
 
   console.log("=== Visual Content Seeder ===");
   console.log(`Mode: ${dryRun ? "DRY RUN" : "LIVE"}`);
   console.log(`Subject filter: ${subjectFilter || "ALL"}`);
-  console.log(`Diagrams only: ${diagramsOnly}`);
+  console.log(`Diagrams only: ${diagramsOnly} | Images only: ${imagesOnly}`);
+  console.log(`Source: ${sourceArg}`);
   console.log(`Batch size: ${batchSize}`);
   console.log();
 
@@ -221,12 +288,21 @@ async function main() {
     console.log(`Resuming from checkpoint: ${progress.completedTopics.length} topics already done`);
   }
 
+  // Stats for this run
+  let statsOpenstax = 0;
+  let statsClinical = 0;
+  let statsWikimedia = 0;
+  let statsFallback = 0;
+
   try {
-    // Fetch all topics
+    // Fetch all topics with Layer 7 lessons and their Layer 4 (for key points fallback)
     const topics = await prisma.topic.findMany({
       include: {
         module: { include: { subject: true } },
-        lessons: { where: { layer: 7 } },
+        lessons: {
+          where: { layer: { in: [4, 7] } },
+          orderBy: { layer: "asc" as const },
+        },
       },
       orderBy: [{ module: { subject: { sortOrder: "asc" } } }, { module: { sortOrder: "asc" } }, { sortOrder: "asc" }],
     });
@@ -257,48 +333,57 @@ async function main() {
 
       console.log(`[${processed}/${filteredTopics.length}] ${topic.code}: ${topicName} (${subjectCode})`);
 
-      // Check if Layer 7 lesson already exists
-      let layer7Lesson = (topic as any).lessons[0];
+      // ─── Ensure Layer 7 lesson exists ──────────────────────
+      let layer7Lesson = (topic as any).lessons.find((l: any) => l.layer === 7);
+      const layer4Lesson = (topic as any).lessons.find((l: any) => l.layer === 4);
 
       if (!layer7Lesson) {
         if (dryRun) {
           console.log(`  Would create Layer 7 lesson for: ${topicName}`);
-        } else {
-          layer7Lesson = await (prisma.lesson as any).create({
-            data: {
-              topicId: topic.id,
-              moduleId: topic.moduleId,
-              title: `Visual Theory: ${topicName}`,
-              slug: `${topic.code.toLowerCase()}-visual-theory`,
-              layer: 7,
-              contentMd: `# Visual Theory: ${topicName}\n\nExplore interactive diagrams, animations, and medical illustrations for this topic.`,
-              summary: `Visual learning resources for ${topicName}`,
-              estimatedMinutes: 15,
-              status: "PUBLISHED",
-              sortOrder: 7,
-            },
-          });
-          console.log(`  Created Layer 7 lesson: ${layer7Lesson.id}`);
+          // Track progress even for dry run
+          progress.completedTopics.push(topic.code);
+          progress.lastTopicCode = topic.code;
+          continue;
         }
-      } else {
-        console.log(`  Layer 7 lesson already exists: ${layer7Lesson.id}`);
+        layer7Lesson = await (prisma.lesson as any).create({
+          data: {
+            topicId: topic.id,
+            moduleId: topic.moduleId,
+            title: `Visual Theory: ${topicName}`,
+            slug: `${topic.code.toLowerCase()}-visual-theory`,
+            layer: 7,
+            contentMd: `# Visual Theory: ${topicName}\n\nExplore interactive diagrams, animations, and medical illustrations for this topic.`,
+            summary: `Visual learning resources for ${topicName}`,
+            estimatedMinutes: 15,
+            status: "PUBLISHED",
+            sortOrder: 7,
+          },
+        });
+        console.log(`  Created Layer 7 lesson: ${layer7Lesson.id}`);
       }
 
-      // 1. Seed diagram components if this topic has a mapping
-      const diagrams = TOPIC_DIAGRAM_MAP[topic.code];
-      if (diagrams) {
-        for (const diagram of diagrams) {
-          if (dryRun) {
-            console.log(`  Would add diagram: ${diagram.component} (${diagram.type})`);
-          } else if (layer7Lesson) {
-            // Check if already exists
+      if (dryRun) {
+        progress.completedTopics.push(topic.code);
+        progress.lastTopicCode = topic.code;
+        continue;
+      }
+
+      const lessonId = layer7Lesson.id;
+      const category = categoryForSubject(subjectCode);
+      const baseTags = [subjectCode.toLowerCase(), ...topicName.toLowerCase().split(" ").slice(0, 3)];
+
+      // ─── STEP 1: Seed diagram components (unless --images-only) ─────
+      if (!imagesOnly) {
+        const diagrams = TOPIC_DIAGRAM_MAP[topic.code];
+        if (diagrams) {
+          for (const diagram of diagrams) {
             const existing = await (prisma as any).visualResource.findFirst({
-              where: { lessonId: layer7Lesson.id, componentName: diagram.component },
+              where: { lessonId, componentName: diagram.component },
             });
             if (!existing) {
               await (prisma as any).visualResource.create({
                 data: {
-                  lessonId: layer7Lesson.id,
+                  lessonId,
                   type: diagram.type,
                   title: diagram.title,
                   description: diagram.description,
@@ -309,75 +394,135 @@ async function main() {
                 },
               });
               progress.totalDiagrams++;
-              console.log(`  Added diagram: ${diagram.component}`);
-            } else {
-              console.log(`  Diagram already exists: ${diagram.component}`);
+              console.log(`  + Diagram: ${diagram.component}`);
             }
           }
         }
       }
 
-      // 2. Search Wikimedia for relevant images (unless --diagrams-only)
-      if (!diagramsOnly && layer7Lesson && !dryRun) {
-        const subjectTerms = SUBJECT_SEARCH_TERMS[subjectCode] || [];
-
-        // Try multiple search queries — broader to narrow
-        const queries = [
-          `${topicName} ${subjectTerms[0] || ""} anatomy diagram`.trim(),
-          `${topicName} medical illustration`,
-          `${topicName.split(/[&:,]/).map(s => s.trim())[0]} ${subjectTerms[0] || ""}`.trim(),
-        ];
-
-        let images: any[] = [];
-        for (const searchQuery of queries) {
-          images = await searchWikimediaImages(searchQuery, MAX_IMAGES_PER_TOPIC);
-          if (images.length >= MIN_IMAGES_PER_TOPIC) break;
-          await new Promise(resolve => setTimeout(resolve, 1000)); // small delay between retries
+      if (diagramsOnly) {
+        progress.completedTopics.push(topic.code);
+        progress.lastTopicCode = topic.code;
+        progress.totalCreated++;
+        if (processed % 10 === 0) {
+          fs.writeFileSync(PROGRESS_FILE, JSON.stringify(progress, null, 2));
         }
+        continue;
+      }
 
-        if (images.length >= MIN_IMAGES_PER_TOPIC) {
+      // ─── STEP 2: Curated images — OpenStax (AN, PY, BI topics) ─────
+      if (sourceArg === "openstax" || sourceArg === "all") {
+        const openstaxEntry = (openstaxImages as Record<string, any[]>)[topic.code];
+        if (openstaxEntry && openstaxEntry.length > 0) {
+          let added = 0;
+          for (let i = 0; i < openstaxEntry.length; i++) {
+            const img = openstaxEntry[i];
+            const created = await seedImage(
+              prisma as any, lessonId, img, category, [...baseTags, "openstax"], 10 + i, topicName,
+            );
+            if (created) { added++; progress.totalImages++; statsOpenstax++; }
+          }
+          if (added > 0) console.log(`  + ${added} OpenStax images`);
+        }
+      }
+
+      // ─── STEP 3: Curated images — Clinical map (PA, PH, MI, etc.) ──
+      if (sourceArg === "clinical" || sourceArg === "all") {
+        const clinicalEntry = (clinicalImages as Record<string, any[]>)[topic.code];
+        if (clinicalEntry && clinicalEntry.length > 0) {
+          let added = 0;
+          for (let i = 0; i < clinicalEntry.length; i++) {
+            const img = clinicalEntry[i];
+            const created = await seedImage(
+              prisma as any, lessonId, img, category, [...baseTags, "clinical"], 50 + i, topicName,
+            );
+            if (created) { added++; progress.totalImages++; statsClinical++; }
+          }
+          if (added > 0) console.log(`  + ${added} clinical images`);
+        }
+      }
+
+      // ─── STEP 4: Wikimedia Commons search (for topics still lacking) ─
+      if (sourceArg === "wikimedia" || sourceArg === "all") {
+        const currentCount = await countVisuals(prisma as any, lessonId);
+        if (currentCount < MIN_IMAGES_PER_TOPIC) {
+          const subjectTerms = SUBJECT_SEARCH_TERMS[subjectCode] || [];
+          const queries = [
+            `${topicName} ${subjectTerms[0] || ""} diagram`.trim(),
+            `${topicName} medical illustration`,
+            `${topicName.split(/[&:,]/).map((s: string) => s.trim())[0]} ${subjectTerms[0] || ""}`.trim(),
+          ];
+
+          let images: any[] = [];
+          for (const q of queries) {
+            images = await searchWikimediaImages(q, MAX_IMAGES_PER_TOPIC);
+            if (images.length >= MIN_IMAGES_PER_TOPIC) break;
+            await new Promise(r => setTimeout(r, 800));
+          }
+
+          let added = 0;
           for (let i = 0; i < images.length; i++) {
-            const img = images[i];
-            // Check if this image URL already exists for this lesson
-            const existing = await (prisma as any).visualResource.findFirst({
-              where: { lessonId: layer7Lesson.id, imageUrl: img.imageUrl },
-            });
-            if (!existing) {
-              await (prisma as any).visualResource.create({
-                data: {
-                  lessonId: layer7Lesson.id,
-                  type: "IMAGE",
-                  title: img.title,
-                  description: `Medical illustration related to ${topicName}`,
-                  imageUrl: img.imageUrl,
-                  imageAlt: img.imageAlt,
-                  attribution: img.attribution,
-                  license: img.license,
-                  category: subjectCode === "AN" ? "ANATOMY" : subjectCode === "PY" ? "PHYSIOLOGY" : subjectCode === "BI" ? "BIOCHEMISTRY" : subjectCode === "PA" ? "PATHOLOGY" : subjectCode === "PH" ? "PHARMACOLOGY" : "CLINICAL",
-                  tags: [subjectCode.toLowerCase(), ...topicName.toLowerCase().split(" ").slice(0, 3)],
-                  sortOrder: 100 + i,
-                },
-              });
-              progress.totalImages++;
-            }
+            const created = await seedImage(
+              prisma as any, lessonId, images[i], category, [...baseTags, "wikimedia"], 100 + i, topicName,
+            );
+            if (created) { added++; progress.totalImages++; statsWikimedia++; }
           }
-          console.log(`  Added ${images.length} Wikimedia images`);
-        } else {
-          console.log(`  Only found ${images.length} images (min ${MIN_IMAGES_PER_TOPIC}) — skipping`);
-        }
+          if (added > 0) console.log(`  + ${added} Wikimedia images`);
 
-        // Rate limit
-        await new Promise(resolve => setTimeout(resolve, WIKIMEDIA_RATE_LIMIT_MS));
-      } else if (!diagramsOnly && dryRun) {
-        console.log(`  Would search Wikimedia for: "${topicName}"`);
+          // Rate limit Wikimedia requests
+          await new Promise(r => setTimeout(r, WIKIMEDIA_RATE_LIMIT_MS));
+        }
       }
 
-      // Update progress
+      // ─── STEP 5: SVG concept map fallback (ensure 100% coverage) ────
+      if (sourceArg === "fallback" || sourceArg === "all") {
+        const currentCount = await countVisuals(prisma as any, lessonId);
+        if (currentCount === 0) {
+          // Extract key points from Layer 4 (Exam Prep) or use defaults
+          let keyPoints: string[] = [];
+          if (layer4Lesson) {
+            const parsed = layer4Lesson.keyPoints;
+            if (Array.isArray(parsed) && parsed.length > 0) {
+              keyPoints = parsed.map((p: any) => String(p));
+            }
+          }
+          if (keyPoints.length === 0) {
+            keyPoints = getDefaultKeyPoints(topicName, subjectCode);
+          }
+
+          // Generate SVG concept map
+          const svgContent = generateConceptMapSVG(topicName, keyPoints, subjectCode);
+
+          const existing = await (prisma as any).visualResource.findFirst({
+            where: { lessonId, type: "SVG_DIAGRAM", componentName: null, svgContent: { not: null } },
+          });
+          if (!existing) {
+            await (prisma as any).visualResource.create({
+              data: {
+                lessonId,
+                type: "SVG_DIAGRAM",
+                title: `${topicName} — Concept Map`,
+                description: `Auto-generated concept map showing key topics and relationships for ${topicName}`,
+                svgContent,
+                category,
+                tags: [...baseTags, "concept_map", "generated"],
+                sortOrder: 200,
+                attribution: "Auto-generated concept map",
+                license: "PUBLIC_DOMAIN",
+              },
+            });
+            progress.totalImages++;
+            statsFallback++;
+            console.log(`  + SVG concept map (fallback)`);
+          }
+        }
+      }
+
+      // ─── Update progress ───────────────────────────────────
       progress.completedTopics.push(topic.code);
       progress.lastTopicCode = topic.code;
       progress.totalCreated++;
 
-      // Save progress every 10 topics
       if (processed % 10 === 0) {
         fs.writeFileSync(PROGRESS_FILE, JSON.stringify(progress, null, 2));
         console.log(`  [checkpoint saved: ${progress.completedTopics.length} topics]`);
@@ -387,14 +532,37 @@ async function main() {
     // Final save
     fs.writeFileSync(PROGRESS_FILE, JSON.stringify(progress, null, 2));
 
+    // ─── Summary ──────────────────────────────────────────────
     console.log("\n=== Summary ===");
     console.log(`Topics processed: ${batchCount}`);
     console.log(`Total completed: ${progress.completedTopics.length}`);
     console.log(`Diagrams created: ${progress.totalDiagrams}`);
     console.log(`Images created: ${progress.totalImages}`);
+    console.log(`  OpenStax:  ${statsOpenstax}`);
+    console.log(`  Clinical:  ${statsClinical}`);
+    console.log(`  Wikimedia: ${statsWikimedia}`);
+    console.log(`  SVG fallback: ${statsFallback}`);
     console.log(`Errors: ${progress.errors.length}`);
     if (progress.errors.length > 0) {
       console.log("Errors:", progress.errors.slice(-5));
+    }
+
+    // ─── Verify coverage ──────────────────────────────────────
+    if (!dryRun && sourceArg === "all") {
+      const emptyLessons = await (prisma as any).lesson.findMany({
+        where: {
+          layer: 7,
+          status: "PUBLISHED",
+          visuals: { none: {} },
+        },
+        select: { id: true, title: true },
+      });
+      if (emptyLessons.length > 0) {
+        console.log(`\n⚠ ${emptyLessons.length} Layer 7 lessons still have NO visuals!`);
+        emptyLessons.slice(0, 10).forEach((l: any) => console.log(`  - ${l.title}`));
+      } else {
+        console.log(`\n✓ 100% coverage: Every Layer 7 lesson has at least 1 visual!`);
+      }
     }
 
   } catch (err) {
