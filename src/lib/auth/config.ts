@@ -24,8 +24,8 @@ export const authOptions: NextAuthOptions = {
           where: { email: credentials.email },
         });
         if (!user || !user.passwordHash) return null;
-        // In production, use bcrypt.compare here
-        // For now, simple check
+        // Simple plaintext comparison for dev (use bcrypt.compare in production)
+        if (credentials.password !== user.passwordHash) return null;
         return { id: user.id, email: user.email, name: user.name };
       },
     }),
