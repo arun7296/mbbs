@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { router, publicProcedure } from "../trpc";
+import { router, publicProcedure, protectedProcedure } from "../trpc";
 
 export const visualRouter = router({
   getVisualsForLesson: publicProcedure
@@ -24,7 +24,7 @@ export const visualRouter = router({
       return lessons.flatMap((l: any) => l.visuals);
     }),
 
-  addVisual: publicProcedure
+  addVisual: protectedProcedure
     .input(
       z.object({
         lessonId: z.string(),
@@ -49,7 +49,7 @@ export const visualRouter = router({
       });
     }),
 
-  removeVisual: publicProcedure
+  removeVisual: protectedProcedure
     .input(z.object({ id: z.string() }))
     .mutation(async ({ ctx, input }) => {
       return (ctx.prisma as any).visualResource.delete({
@@ -57,7 +57,7 @@ export const visualRouter = router({
       });
     }),
 
-  updateVisual: publicProcedure
+  updateVisual: protectedProcedure
     .input(
       z.object({
         id: z.string(),
@@ -83,7 +83,7 @@ export const visualRouter = router({
       });
     }),
 
-  reorderVisuals: publicProcedure
+  reorderVisuals: protectedProcedure
     .input(
       z.object({
         lessonId: z.string(),
