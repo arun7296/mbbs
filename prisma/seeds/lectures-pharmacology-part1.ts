@@ -487,8 +487,6 @@ Post-marketing safety monitoring. Adverse events reported to regulatory agencies
 
 ---`,
   },
-];
-
   {
     topicCode: "PH-MOD-01-TOP-06",
     estimatedMinutes: 50,
@@ -703,7 +701,7 @@ Prevents muscarinic side effects. Glycopyrrolate 0.2-0.4 mg IV with neostigmine;
 
 ---`,
   },
-];
+
 
   {
     topicCode: "PH-MOD-02-TOP-02",
@@ -1451,7 +1449,7 @@ See separate chapter; less commonly used for HTN monotherapy (increased CVD risk
 
 ---`,
   },
-];
+
 
   {
     topicCode: "PH-MOD-03-TOP-02",

@@ -681,7 +681,7 @@ The triad constitutes the Ghon complex (seen in infants/young children with prog
 - [ ] Name 3 paraneoplastic syndromes
 `,
     estimatedMinutes: 65
-  }
+  },
   {
     topicCode: "PA-MOD-04-TOP-07",
     contentMd: `# Pleural & Mediastinal Diseases

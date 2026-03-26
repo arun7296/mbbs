@@ -516,7 +516,7 @@ Adrenal pathology: pheochromocytoma (catecholamine-secreting tumor causing sever
 
 *Based on BD Chaurasia's Human Anatomy (8th ed), Chapter 4 - Kidneys, Ureters, and Suprarenal Glands.*
 `
-  }
+  },
   {
     topicCode: "AN-MOD-05-TOP-01",
     estimatedMinutes: 12,
@@ -902,7 +902,7 @@ Chronic perineal pain (pudendal neuralgia) presents years after childbirth or af
 
 *Based on BD Chaurasia's Human Anatomy (8th ed), Chapter 5 - Perineum.*
 `
-  }
+  },
   {
     topicCode: "AN-MOD-06-TOP-01",
     estimatedMinutes: 11,

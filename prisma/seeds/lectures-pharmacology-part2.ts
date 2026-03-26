@@ -910,8 +910,6 @@ Fluoroquinolones (norfloxacin, ofloxacin, ciprofloxacin, levofloxacin, moxifloxa
 `,
     estimatedMinutes: 85,
   },
-];
-
   {
     topicCode: "PH-MOD-05-TOP-03",
     contentMd: `# Antitubercular Drugs
