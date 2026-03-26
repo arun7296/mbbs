@@ -109,43 +109,43 @@ interface VisualTheoryLayerProps {
 // ---------------------------------------------------------------------------
 const CALLOUT_STYLES: Record<
   string,
-  { bg: string; border: string; iconBg: string; label: string }
+  { bg: string; border: string; textColor: string; label: string }
 > = {
   "\u{1F393}": {
-    bg: "bg-blue-50 dark:bg-blue-950/30",
-    border: "border-l-blue-500",
-    iconBg: "bg-blue-100 dark:bg-blue-900/50",
-    label: "Professor\u2019s Note",
+    bg: "bg-blue-50 dark:bg-blue-950/40",
+    border: "border-l-[5px] border-l-blue-600 dark:border-l-blue-400",
+    textColor: "text-blue-900 dark:text-blue-100",
+    label: "PROFESSOR\u2019S NOTE",
   },
   "\u{1F4A1}": {
-    bg: "bg-amber-50 dark:bg-amber-950/30",
-    border: "border-l-amber-500",
-    iconBg: "bg-amber-100 dark:bg-amber-900/50",
-    label: "Memory Trick",
+    bg: "bg-amber-50 dark:bg-amber-950/40",
+    border: "border-l-[5px] border-l-amber-500 dark:border-l-amber-400",
+    textColor: "text-amber-900 dark:text-amber-100",
+    label: "MEMORY TRICK",
   },
   "\u26A1": {
-    bg: "bg-red-50 dark:bg-red-950/30",
-    border: "border-l-red-500",
-    iconBg: "bg-red-100 dark:bg-red-900/50",
-    label: "Exam Alert",
+    bg: "bg-red-50 dark:bg-red-950/40",
+    border: "border-l-[5px] border-l-red-600 dark:border-l-red-400",
+    textColor: "text-red-900 dark:text-red-100",
+    label: "EXAM ALERT",
   },
   "\u{1F914}": {
-    bg: "bg-purple-50 dark:bg-purple-950/30",
-    border: "border-l-purple-500",
-    iconBg: "bg-purple-100 dark:bg-purple-900/50",
-    label: "Think About It",
+    bg: "bg-purple-50 dark:bg-purple-950/40",
+    border: "border-l-[5px] border-l-purple-600 dark:border-l-purple-400",
+    textColor: "text-purple-900 dark:text-purple-100",
+    label: "THINK ABOUT IT",
   },
   "\u{1F3E5}": {
-    bg: "bg-emerald-50 dark:bg-emerald-950/30",
-    border: "border-l-emerald-500",
-    iconBg: "bg-emerald-100 dark:bg-emerald-900/50",
-    label: "Clinical Pearl",
+    bg: "bg-emerald-50 dark:bg-emerald-950/40",
+    border: "border-l-[5px] border-l-emerald-600 dark:border-l-emerald-400",
+    textColor: "text-emerald-900 dark:text-emerald-100",
+    label: "CLINICAL PEARL",
   },
   "\u{1F4CB}": {
-    bg: "bg-orange-50 dark:bg-orange-950/30",
-    border: "border-l-orange-500",
-    iconBg: "bg-orange-100 dark:bg-orange-900/50",
-    label: "Self-Test",
+    bg: "bg-orange-50 dark:bg-orange-950/40",
+    border: "border-l-[5px] border-l-orange-600 dark:border-l-orange-400",
+    textColor: "text-orange-900 dark:text-orange-100",
+    label: "SELF-TEST",
   },
 };
 
@@ -165,19 +165,19 @@ function simpleMarkdown(text: string): string {
   return text
     .replace(
       /\*\*(.+?)\*\*/g,
-      '<strong class="font-semibold text-gray-900 dark:text-gray-100">$1</strong>',
+      '<strong class="font-bold text-gray-950 dark:text-white">$1</strong>',
     )
-    .replace(/\*(.+?)\*/g, "<em>$1</em>")
+    .replace(/\*(.+?)\*/g, '<em class="text-gray-800 dark:text-gray-200">$1</em>')
     .replace(
       /`(.+?)`/g,
-      '<code class="rounded bg-gray-100 px-1 py-0.5 text-sm font-mono text-violet-700 dark:bg-gray-800 dark:text-violet-300">$1</code>',
+      '<code class="rounded bg-gray-100 px-1.5 py-0.5 text-sm font-mono text-violet-700 dark:bg-gray-800 dark:text-violet-300">$1</code>',
     )
     .replace(
       /\[(.+?)\]\((.+?)\)/g,
       '<a href="$2" class="text-blue-600 underline hover:text-blue-700 dark:text-blue-400" target="_blank" rel="noopener">$1</a>',
     )
-    .replace(/^- (.+)/gm, '<li class="ml-4 list-disc">$1</li>')
-    .replace(/^(\d+)\. (.+)/gm, '<li class="ml-4 list-decimal">$2</li>')
+    .replace(/^- (.+)/gm, '<li class="ml-6 list-disc text-gray-800 dark:text-gray-200 my-1.5 leading-relaxed">$1</li>')
+    .replace(/^(\d+)\. (.+)/gm, '<li class="ml-6 list-decimal text-gray-800 dark:text-gray-200 my-1.5 leading-relaxed">$2</li>')
     .replace(/\n/g, "<br />");
 }
 
@@ -227,7 +227,13 @@ function MarkdownWithCallouts({ content }: { content: string }) {
           key={`div-${idx}`}
           className="my-10 flex items-center justify-center gap-3"
         >
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent dark:via-gray-600" />
+          <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent dark:via-gray-600" />
+          <div className="flex gap-1.5">
+            <div className="h-1.5 w-1.5 rounded-full bg-violet-400 dark:bg-violet-500" />
+            <div className="h-1.5 w-1.5 rounded-full bg-blue-400 dark:bg-blue-500" />
+            <div className="h-1.5 w-1.5 rounded-full bg-violet-400 dark:bg-violet-500" />
+          </div>
+          <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent dark:via-gray-600" />
         </div>,
       );
       idx++;
@@ -268,20 +274,16 @@ function MarkdownWithCallouts({ content }: { content: string }) {
         elements.push(
           <div
             key={`callout-${idx}`}
-            className={`my-6 rounded-xl border-l-4 ${matched.border} ${matched.bg} p-4 shadow-sm`}
+            className={`my-6 rounded-xl ${matched.border} ${matched.bg} p-5 shadow-sm`}
           >
             <div className="mb-2 flex items-center gap-2">
-              <span
-                className={`flex h-7 w-7 items-center justify-center rounded-lg text-sm ${matched.iconBg}`}
-              >
-                {matchedEmoji}
-              </span>
-              <span className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+              <span className="text-lg">{matchedEmoji}</span>
+              <span className={`text-xs font-bold uppercase tracking-wider ${matched.textColor}`}>
                 {matched.label}
               </span>
             </div>
             <div
-              className="text-sm leading-relaxed text-gray-700 dark:text-gray-300"
+              className={`text-[15px] leading-relaxed ${matched.textColor}`}
               dangerouslySetInnerHTML={{
                 __html: simpleMarkdown(cleanText),
               }}
@@ -293,7 +295,7 @@ function MarkdownWithCallouts({ content }: { content: string }) {
         elements.push(
           <blockquote
             key={`bq-${idx}`}
-            className="my-4 border-l-4 border-gray-300 pl-4 italic text-gray-600 dark:border-gray-600 dark:text-gray-400"
+            className="my-4 border-l-4 border-gray-400 pl-4 italic text-gray-700 dark:border-gray-500 dark:text-gray-300"
             dangerouslySetInnerHTML={{
               __html: simpleMarkdown(rawText),
             }}
@@ -309,12 +311,12 @@ function MarkdownWithCallouts({ content }: { content: string }) {
       const level = line.match(/^#+/)?.[0].length || 1;
       const text = line.replace(/^#+\s*/, "");
       const sizeClasses: Record<number, string> = {
-        1: "text-2xl font-bold mt-8 mb-4 text-gray-900 dark:text-gray-100",
-        2: "text-xl font-bold mt-8 mb-3 text-gray-800 dark:text-gray-200",
-        3: "text-lg font-semibold mt-6 mb-2 text-gray-800 dark:text-gray-200",
-        4: "text-base font-semibold mt-5 mb-2 text-gray-700 dark:text-gray-300",
-        5: "text-sm font-semibold mt-4 mb-1 text-gray-700 dark:text-gray-300",
-        6: "text-sm font-medium mt-3 mb-1 text-gray-600 dark:text-gray-400",
+        1: "text-3xl font-bold mt-8 mb-6 text-gray-950 dark:text-white leading-tight",
+        2: "text-2xl font-bold mt-10 mb-4 text-gray-900 dark:text-gray-100",
+        3: "text-xl font-semibold mt-8 mb-3 text-gray-900 dark:text-gray-100",
+        4: "text-base font-semibold mt-6 mb-2 text-gray-800 dark:text-gray-200",
+        5: "text-sm font-semibold mt-5 mb-2 text-gray-800 dark:text-gray-200",
+        6: "text-sm font-medium mt-4 mb-1 text-gray-700 dark:text-gray-300",
       };
       const Tag = `h${Math.min(level, 6)}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
       elements.push(
@@ -349,7 +351,7 @@ function MarkdownWithCallouts({ content }: { content: string }) {
     elements.push(
       <p
         key={`p-${idx}`}
-        className="my-3 text-[15px] leading-relaxed text-gray-700 dark:text-gray-300"
+        className="my-4 text-[17px] leading-[1.8] text-gray-800 dark:text-gray-200"
         dangerouslySetInnerHTML={{
           __html: simpleMarkdown(paraLines.join("\n")),
         }}
@@ -813,11 +815,11 @@ export function VisualTheoryLayer({
           <BookOpen className="h-3.5 w-3.5" />
           Professor&apos;s Lecture
         </span>
-        <span className="text-xs text-gray-400 dark:text-gray-500">
+        <span className="text-xs text-gray-600 dark:text-gray-400">
           ~{readMinutes} min read
         </span>
         {visuals.length > 0 && (
-          <span className="text-xs text-gray-400 dark:text-gray-500">
+          <span className="text-xs text-gray-600 dark:text-gray-400">
             &middot; {visuals.length} visual
             {visuals.length !== 1 ? "s" : ""}
           </span>
