@@ -10,7 +10,11 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "seed:pg": "node --loader tsx/cjs prisma/run-seed.ts",
-    "seed:pg-mjs": "node prisma/run-seed.mjs"
+    "seed:pg-mjs": "node prisma/run-seed.mjs",
+    "db:migrate": "npx prisma migrate dev",
+    "db:migrate:deploy": "npx prisma migrate deploy",
+    "db:seed": "npx prisma db seed",
+    "db:studio": "npx prisma studio"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.1",
