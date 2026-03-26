@@ -14,7 +14,7 @@ import {
 // Lazy load diagram components by name — keeps initial bundle small
 // ---------------------------------------------------------------------------
 function getDiagramComponent(componentName: string): React.ComponentType | null {
-  const componentMap: Record<string, () => Promise<any>> = {
+  const componentMap: Record<string, () => Promise<{ default: React.ComponentType }>> = {
     // Anatomy
     "HeartChambersDiagram": () => import("@/components/diagrams/anatomy/heart-chambers").then(m => ({ default: m.HeartChambersDiagram })),
     "BrachialPlexusSVG": () => import("@/components/diagrams/anatomy/brachial-plexus").then(m => ({ default: m.BrachialPlexusSVG })),
@@ -89,7 +89,7 @@ export interface VisualItem {
   attribution: string | null;
   license: string | null;
   svgContent: string | null;
-  annotations: any;
+  annotations: unknown;
   category: string;
   tags: string[];
   sortOrder: number;
@@ -178,20 +178,153 @@ function simpleMarkdown(text: string): string {
     .replace(/\n/g, "<br />");
 }
 
+/**
+ * Find the best matching image from the visuals array for an
+ * {{IMAGE: description}} marker using keyword overlap.
+ */
+function findBestImage(
+  visuals: VisualItem[],
+  description: string,
+): VisualItem | null {
+  const imageVisuals = visuals.filter((v) => v.imageUrl);
+  if (imageVisuals.length === 0) return null;
+  const words = description
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((w) => w.length > 3);
+  let best: VisualItem | null = null;
+  let bestScore = 0;
+  for (const v of imageVisuals) {
+    const haystack = `${v.title || ""} ${v.description || ""} ${(v.tags || []).join(" ")}`.toLowerCase();
+    const score = words.filter((w) => haystack.includes(w)).length;
+    if (score > bestScore) {
+      bestScore = score;
+      best = v;
+    }
+  }
+  return best || imageVisuals[0] || null;
+}
 
 // ---------------------------------------------------------------------------
-// Sub-component: Markdown with styled callouts
+// Sub-component: Render a single inline diagram by component name
 // ---------------------------------------------------------------------------
-function MarkdownWithCallouts({ content }: { content: string }) {
+function InlineDiagram({ name }: { name: string }) {
+  const Component = getDiagramComponent(name);
+  if (!Component) {
+    return (
+      <div className="my-8 flex h-48 items-center justify-center rounded-xl border border-dashed border-gray-300 bg-gray-50 dark:border-gray-600 dark:bg-gray-800/50">
+        <div className="text-center">
+          <GitBranch className="mx-auto h-8 w-8 text-gray-400" />
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            Interactive diagram: <span className="font-mono">{name}</span>
+          </p>
+          <p className="text-xs text-gray-400 dark:text-gray-500">Component coming soon</p>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div className="my-8 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+      <div className="flex items-center gap-2 border-b border-gray-100 px-4 py-2.5 dark:border-gray-800">
+        <GitBranch className="h-4 w-4 text-violet-500" />
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          Interactive Diagram
+        </span>
+      </div>
+      <div className="p-4">
+        <Component />
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Sub-component: Render an inline image for {{IMAGE: desc}} marker
+// ---------------------------------------------------------------------------
+function InlineImage({
+  description,
+  visuals,
+}: {
+  description: string;
+  visuals: VisualItem[];
+}) {
+  const img = findBestImage(visuals, description);
+  if (!img?.imageUrl) return null;
+
+  return (
+    <figure className="my-8 overflow-hidden rounded-xl border border-gray-100 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800/50">
+      <div className="flex justify-center">
+        <img
+          src={img.imageUrl}
+          alt={img.imageAlt || img.title || description}
+          className="max-h-80 rounded-lg object-contain"
+          loading="lazy"
+        />
+      </div>
+      <figcaption className="mt-3 text-center text-sm font-medium text-gray-700 dark:text-gray-300">
+        {img.title || description}
+        {img.attribution && (
+          <span className="ml-1 text-xs italic text-gray-500 dark:text-gray-400">
+            {" \u2014 "}
+            {img.attribution}
+          </span>
+        )}
+        {img.license && (
+          <span className="ml-2 rounded bg-gray-200 px-1.5 py-0.5 text-[10px] font-medium text-gray-600 not-italic dark:bg-gray-700 dark:text-gray-300">
+            {LICENSE_LABELS[img.license] || img.license}
+          </span>
+        )}
+      </figcaption>
+    </figure>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Sub-component: Markdown with styled callouts, diagrams, and images
+// ---------------------------------------------------------------------------
+function MarkdownWithCallouts({
+  content,
+  visuals,
+  imageCounter,
+}: {
+  content: string;
+  visuals: VisualItem[];
+  imageCounter: { current: number };
+}) {
   const lines = content.split("\n");
   const elements: React.ReactElement[] = [];
   let idx = 0;
+  const imageVisuals = visuals.filter((v) => v.imageUrl);
 
   while (idx < lines.length) {
     const line = lines[idx];
 
-    // --- Section divider ---
-    if (line.trim() === "---") {
+    // --- {{DIAGRAM: ComponentName}} marker ---
+    const diagramMatch = line.trim().match(/^\{\{DIAGRAM:\s*(\w+)\s*\}\}$/);
+    if (diagramMatch) {
+      elements.push(
+        <InlineDiagram key={`diagram-${idx}`} name={diagramMatch[1]} />,
+      );
+      idx++;
+      continue;
+    }
+
+    // --- {{IMAGE: description}} marker ---
+    const imageMatch = line.trim().match(/^\{\{IMAGE:\s*([^}]+)\s*\}\}$/);
+    if (imageMatch) {
+      elements.push(
+        <InlineImage
+          key={`image-${idx}`}
+          description={imageMatch[1].trim()}
+          visuals={visuals}
+        />,
+      );
+      idx++;
+      continue;
+    }
+
+    // --- Section divider (standalone --- NOT inside a table) ---
+    if (/^\s*---\s*$/.test(line) && !line.includes("|")) {
       elements.push(
         <div
           key={`div-${idx}`}
@@ -206,6 +339,41 @@ function MarkdownWithCallouts({ content }: { content: string }) {
           <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent dark:via-gray-600" />
         </div>,
       );
+
+      // Auto-inject an image after each section divider if available
+      if (imageCounter.current < imageVisuals.length) {
+        const img = imageVisuals[imageCounter.current];
+        imageCounter.current++;
+        elements.push(
+          <figure
+            key={`autoimg-${idx}`}
+            className="my-8 overflow-hidden rounded-xl border border-gray-100 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800/50"
+          >
+            <div className="flex justify-center">
+              <img
+                src={img.imageUrl!}
+                alt={img.imageAlt || img.title}
+                className="max-h-80 rounded-lg object-contain"
+                loading="lazy"
+              />
+            </div>
+            <figcaption className="mt-3 text-center text-sm font-medium text-gray-700 dark:text-gray-300">
+              {img.title}
+            </figcaption>
+            {img.attribution && (
+              <p className="mt-1 text-center text-xs italic text-gray-500 dark:text-gray-400">
+                {img.attribution}
+                {img.license && (
+                  <span className="ml-2 rounded bg-gray-200 px-1.5 py-0.5 text-[10px] font-medium text-gray-600 not-italic dark:bg-gray-700 dark:text-gray-300">
+                    {LICENSE_LABELS[img.license] || img.license}
+                  </span>
+                )}
+              </p>
+            )}
+          </figure>,
+        );
+      }
+
       idx++;
       continue;
     }
@@ -236,7 +404,6 @@ function MarkdownWithCallouts({ content }: { content: string }) {
       }
 
       if (matched) {
-        // Remove the bold label like **Professor's Note:** from the visible text
         const cleanText = rawText
           .replace(matchedEmoji, "")
           .replace(/\*\*[^*]+\*\*:?\s*/, "")
@@ -261,7 +428,6 @@ function MarkdownWithCallouts({ content }: { content: string }) {
           </div>,
         );
       } else {
-        // Generic blockquote
         elements.push(
           <blockquote
             key={`bq-${idx}`}
@@ -306,14 +472,16 @@ function MarkdownWithCallouts({ content }: { content: string }) {
       continue;
     }
 
-    // --- Regular paragraph (collect consecutive lines) ---
+    // --- Regular paragraph (collect consecutive non-special lines) ---
     const paraLines = [line];
     while (
       idx + 1 < lines.length &&
       lines[idx + 1].trim() !== "" &&
       !lines[idx + 1].startsWith("#") &&
       !lines[idx + 1].startsWith(">") &&
-      lines[idx + 1].trim() !== "---"
+      !/^\s*---\s*$/.test(lines[idx + 1]) &&
+      !/^\{\{DIAGRAM:/.test(lines[idx + 1].trim()) &&
+      !/^\{\{IMAGE:/.test(lines[idx + 1].trim())
     ) {
       idx++;
       paraLines.push(lines[idx]);
@@ -333,7 +501,6 @@ function MarkdownWithCallouts({ content }: { content: string }) {
   return <>{elements}</>;
 }
 
-
 // ---------------------------------------------------------------------------
 // Sub-component: Image gallery (shown below lecture or as fallback)
 // ---------------------------------------------------------------------------
@@ -351,7 +518,6 @@ function ImageGallery({
   const diagramVisuals = visuals.filter(
     (v) => v.componentName && (v.type === "SVG_DIAGRAM" || v.type === "ANIMATED"),
   );
-  const [activeId, setActiveId] = useState<string | null>(null);
 
   if (imageVisuals.length === 0 && diagramVisuals.length === 0) return null;
 
@@ -681,17 +847,12 @@ export function VisualTheoryLayer({
     );
   }
 
-  // -----------------------------------------------------------------------
-  // Split lecture into sections by --- dividers, distribute images between them
-  // -----------------------------------------------------------------------
-  const sections = contentMd!.split(/\n---\n/);
-  const imageVisuals = visuals.filter((v) => v.imageUrl);
-  const diagramVisuals = visuals.filter(
-    (v) => v.componentName && (v.type === "SVG_DIAGRAM" || v.type === "ANIMATED"),
-  );
-
   const wordCount = contentMd!.split(/\s+/).length;
   const readMinutes = Math.max(1, Math.round(wordCount / 200));
+
+  // Track which images have been auto-injected so we can show remaining at bottom
+  const imageCounter = { current: 0 };
+  const imageVisuals = visuals.filter((v) => v.imageUrl);
 
   return (
     <div className="mx-auto max-w-3xl">
@@ -712,59 +873,28 @@ export function VisualTheoryLayer({
         )}
       </div>
 
-      {/* Render sections with images auto-injected between them */}
-      {sections.map((section, i) => {
-        const sectionContent = section.trim();
-        if (!sectionContent) return null;
-        const img = imageVisuals[i];
-        return (
-          <div key={`section-${i}`}>
-            <MarkdownWithCallouts content={sectionContent} />
+      {/* Render the full lecture with inline diagrams, images, and callouts */}
+      <MarkdownWithCallouts
+        content={contentMd!}
+        visuals={visuals}
+        imageCounter={imageCounter}
+      />
 
-            {/* Auto-inject an image after each section if available */}
-            {img && (
-              <figure className="my-8 overflow-hidden rounded-xl border border-gray-100 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800/50">
-                <div className="flex justify-center">
-                  <img
-                    src={img.imageUrl!}
-                    alt={img.imageAlt || img.title}
-                    className="max-h-80 rounded-lg object-contain"
-                    loading="lazy"
-                  />
-                </div>
-                <figcaption className="mt-3 text-center text-sm font-medium text-gray-700 dark:text-gray-300">
-                  {img.title}
-                </figcaption>
-                {img.attribution && (
-                  <p className="mt-1 text-center text-xs italic text-gray-500 dark:text-gray-400">
-                    {img.attribution}
-                    {img.license && (
-                      <span className="ml-2 rounded bg-gray-200 px-1.5 py-0.5 text-[10px] font-medium text-gray-600 not-italic dark:bg-gray-700 dark:text-gray-300">
-                        {LICENSE_LABELS[img.license] || img.license}
-                      </span>
-                    )}
-                  </p>
-                )}
-              </figure>
-            )}
-          </div>
-        );
-      })}
-
-      {/* Any remaining images not distributed across sections */}
-      {imageVisuals.length > sections.length && (
-        <div className="mt-12 border-t border-gray-200 pt-8 dark:border-gray-700">
-          <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
-            <ImageIcon className="h-5 w-5 text-violet-500" />
-            Additional Visual Resources
-          </h3>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {imageVisuals.slice(sections.length).map((v) => (
+      {/* Remaining images not shown inline — collapsible gallery */}
+      {imageCounter.current < imageVisuals.length && (
+        <details className="mt-16 border-t border-gray-200 pt-8 dark:border-gray-700">
+          <summary className="cursor-pointer text-sm font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+            <ImageIcon className="mr-2 inline h-4 w-4" />
+            View {imageVisuals.length - imageCounter.current} Additional Reference Image
+            {imageVisuals.length - imageCounter.current !== 1 ? "s" : ""}
+          </summary>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {imageVisuals.slice(imageCounter.current).map((v) => (
               <div
                 key={v.id}
-                className="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700"
+                className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
               >
-                <div className="h-48 overflow-hidden bg-gray-50 dark:bg-gray-800">
+                <div className="h-40 overflow-hidden bg-gray-50 dark:bg-gray-800">
                   <img
                     src={v.imageUrl!}
                     alt={v.imageAlt || v.title}
@@ -772,50 +902,15 @@ export function VisualTheoryLayer({
                     loading="lazy"
                   />
                 </div>
-                <div className="p-3">
-                  <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                <div className="p-2">
+                  <p className="line-clamp-1 text-xs font-medium text-gray-700 dark:text-gray-300">
                     {v.title}
                   </p>
-                  {v.attribution && (
-                    <p className="text-xs italic text-gray-500 dark:text-gray-400">
-                      {v.attribution}
-                    </p>
-                  )}
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      )}
-
-      {/* Interactive diagram components rendered at end as standalone blocks */}
-      {diagramVisuals.length > 0 && (
-        <div className="mt-12 border-t border-gray-200 pt-8 dark:border-gray-700">
-          <h3 className="mb-6 flex items-center gap-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
-            <GitBranch className="h-5 w-5 text-violet-500" />
-            Interactive Diagrams
-          </h3>
-          {diagramVisuals.map((v) => {
-            const Component = getDiagramComponent(v.componentName!);
-            if (!Component) return null;
-            return (
-              <div
-                key={v.id}
-                className="my-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900"
-              >
-                <div className="flex items-center gap-2 border-b border-gray-100 px-4 py-2.5 dark:border-gray-800">
-                  <GitBranch className="h-4 w-4 text-violet-500" />
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                    {v.title}
-                  </span>
-                </div>
-                <div className="p-4">
-                  <Component />
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        </details>
       )}
     </div>
   );
