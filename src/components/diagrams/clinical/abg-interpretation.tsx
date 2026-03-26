@@ -116,7 +116,8 @@ export const ABGAlgorithm: React.FC = () => {
   };
 
   // Node data has variant shapes depending on `type` — use Record for dynamic access
-  const currentNodeData = nodes[currentNode as keyof typeof nodes] as Record<string, unknown>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const currentNodeData: any = nodes[currentNode as keyof typeof nodes];
 
   return (
     <div className="w-full max-w-6xl bg-white p-6 rounded-lg border border-gray-200 shadow-lg">
