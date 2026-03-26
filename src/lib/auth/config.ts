@@ -4,6 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { prisma } from "@/lib/db/prisma";
 import type { Adapter } from "next-auth/adapters";
+import bcrypt from "bcryptjs";
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma) as Adapter,
@@ -24,8 +25,8 @@ export const authOptions: NextAuthOptions = {
           where: { email: credentials.email },
         });
         if (!user || !user.passwordHash) return null;
-        // Simple plaintext comparison for dev (use bcrypt.compare in production)
-        if (credentials.password !== user.passwordHash) return null;
+        const isValid = await bcrypt.compare(credentials.password, user.passwordHash);
+        if (!isValid) return null;
         return { id: user.id, email: user.email, name: user.name };
       },
     }),

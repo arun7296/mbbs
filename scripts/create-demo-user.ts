@@ -11,6 +11,7 @@
  */
 
 import "dotenv/config";
+import bcrypt from "bcryptjs";
 import { PrismaClient } from "../src/generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 
@@ -23,14 +24,17 @@ const prisma = new PrismaClient({ adapter });
 async function main() {
   console.log("👤 Creating demo users...\n");
 
+  const demoHash = await bcrypt.hash("demo1234", 12);
+  const adminHash = await bcrypt.hash("admin1234", 12);
+
   // Create demo student
   const demo = await prisma.user.upsert({
     where: { email: "demo@medlearn.in" },
-    update: { passwordHash: "demo1234", name: "Demo Student" },
+    update: { passwordHash: demoHash, name: "Demo Student" },
     create: {
       email: "demo@medlearn.in",
       name: "Demo Student",
-      passwordHash: "demo1234",
+      passwordHash: demoHash,
       currentPhase: "PHASE_1",
       dailyStudyHours: 6,
       targetExams: ["NEXT_STEP1", "NEET_PG"],
@@ -42,11 +46,11 @@ async function main() {
   // Create admin user
   const admin = await prisma.user.upsert({
     where: { email: "admin@medlearn.in" },
-    update: { passwordHash: "admin1234", name: "Admin" },
+    update: { passwordHash: adminHash, name: "Admin" },
     create: {
       email: "admin@medlearn.in",
       name: "Admin",
-      passwordHash: "admin1234",
+      passwordHash: adminHash,
       currentPhase: "PHASE_1",
       dailyStudyHours: 8,
       targetExams: ["NEXT_STEP1"],
