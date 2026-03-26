@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full font-sans">
+      <body className="min-h-full bg-white text-gray-900 font-sans">
         <TRPCProvider>{children}</TRPCProvider>
       </body>
     </html>
