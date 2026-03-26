@@ -1396,4 +1396,3 @@ Deep-sea diving is less common in India but relevant for navy/coast guard person
     estimatedMinutes: 1050
   }
 ];
-`,

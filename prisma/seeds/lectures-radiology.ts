@@ -1609,4 +1609,4 @@ Interventional radiology encompasses percutaneous, catheter-based, and image-gui
 **Estimated Reading Time**: 12 minutes`,
     estimatedMinutes: 12,
   },
-];`,
+];

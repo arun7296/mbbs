@@ -2865,7 +2865,4 @@ Excessive neuronal excitation or insufficient inhibition. Contributing factors:
   },
 ];
 
-export default pharmacologyLecturesPart1;`,
-`,
-`,
-`,
+export default pharmacologyLecturesPart1;

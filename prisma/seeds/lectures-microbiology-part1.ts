@@ -1281,4 +1281,3 @@ Vibrio cholerae causes epidemic cholera, a severe watery diarrhea affecting mill
     estimatedMinutes: 70,
   },
 ];
-`,
