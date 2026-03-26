@@ -115,8 +115,8 @@ export const ABGAlgorithm: React.FC = () => {
     },
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const currentNodeData = nodes[currentNode as keyof typeof nodes] as any;
+  // Node data has variant shapes depending on `type` — use Record for dynamic access
+  const currentNodeData = nodes[currentNode as keyof typeof nodes] as Record<string, unknown>;
 
   return (
     <div className="w-full max-w-6xl bg-white p-6 rounded-lg border border-gray-200 shadow-lg">
@@ -135,7 +135,7 @@ export const ABGAlgorithm: React.FC = () => {
               <p className="text-sm text-gray-700 italic mb-4">{currentNodeData.info}</p>
 
               <div className="space-y-2">
-                {currentNodeData.options.map((option: any) => (
+                {(currentNodeData.options as Array<{ text: string; next: string; value: string }>).map((option) => (
                   <button
                     key={option.next}
                     onClick={() => setCurrentNode(option.next)}
@@ -155,7 +155,7 @@ export const ABGAlgorithm: React.FC = () => {
             <p className="text-sm text-green-700 font-semibold mb-2">Result</p>
             <h3 className="text-2xl font-bold text-green-900 mb-4">{currentNodeData.title}</h3>
             <div className="space-y-3 mb-6">
-              {currentNodeData.values.map((value: any, idx: number) => (
+              {(currentNodeData.values as string[]).map((value, idx) => (
                 <div key={idx} className="p-2 bg-green-50 border border-green-300 rounded">
                   <p className="text-sm font-semibold text-gray-900">{value}</p>
                 </div>
@@ -190,7 +190,7 @@ export const ABGAlgorithm: React.FC = () => {
               <div className="mb-6">
                 <p className="text-sm font-semibold text-gray-900 mb-2">Common Causes:</p>
                 <ul className="space-y-1">
-                  {currentNodeData.causes.map((cause: any, idx: number) => (
+                  {(currentNodeData.causes as string[]).map((cause, idx) => (
                     <li key={idx} className="text-sm text-gray-700 flex gap-2">
                       <span className="text-red-600">•</span>
                       <span>{cause}</span>

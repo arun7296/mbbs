@@ -5,7 +5,7 @@ export const visualRouter = router({
   getVisualsForLesson: publicProcedure
     .input(z.object({ lessonId: z.string() }))
     .query(async ({ ctx, input }) => {
-      return (ctx.prisma as any).visualResource.findMany({
+      return ctx.prisma.visualResource.findMany({
         where: { lessonId: input.lessonId },
         orderBy: { sortOrder: "asc" },
       });
@@ -15,13 +15,13 @@ export const visualRouter = router({
     .input(z.object({ topicId: z.string() }))
     .query(async ({ ctx, input }) => {
       // Get all Layer 7 lessons for this topic, then their visuals
-      const lessons = await (ctx.prisma as any).lesson.findMany({
+      const lessons = await ctx.prisma.lesson.findMany({
         where: { topicId: input.topicId, layer: 7 },
         include: {
           visuals: { orderBy: { sortOrder: "asc" } },
         },
       });
-      return lessons.flatMap((l: any) => l.visuals);
+      return lessons.flatMap((l: { visuals: unknown[] }) => l.visuals);
     }),
 
   addVisual: protectedProcedure
@@ -44,7 +44,7 @@ export const visualRouter = router({
       })
     )
     .mutation(async ({ ctx, input }) => {
-      return (ctx.prisma as any).visualResource.create({
+      return ctx.prisma.visualResource.create({
         data: input,
       });
     }),
@@ -52,7 +52,7 @@ export const visualRouter = router({
   removeVisual: protectedProcedure
     .input(z.object({ id: z.string() }))
     .mutation(async ({ ctx, input }) => {
-      return (ctx.prisma as any).visualResource.delete({
+      return ctx.prisma.visualResource.delete({
         where: { id: input.id },
       });
     }),
@@ -77,7 +77,7 @@ export const visualRouter = router({
     )
     .mutation(async ({ ctx, input }) => {
       const { id, ...data } = input;
-      return (ctx.prisma as any).visualResource.update({
+      return ctx.prisma.visualResource.update({
         where: { id },
         data,
       });
@@ -92,7 +92,7 @@ export const visualRouter = router({
     )
     .mutation(async ({ ctx, input }) => {
       const updates = input.order.map((item) =>
-        (ctx.prisma as any).visualResource.update({
+        ctx.prisma.visualResource.update({
           where: { id: item.id },
           data: { sortOrder: item.sortOrder },
         })
@@ -101,12 +101,12 @@ export const visualRouter = router({
     }),
 
   getVisualStats: publicProcedure.query(async ({ ctx }) => {
-    const total = await (ctx.prisma as any).visualResource.count();
-    const byType = await (ctx.prisma as any).visualResource.groupBy({
+    const total = await ctx.prisma.visualResource.count();
+    const byType = await ctx.prisma.visualResource.groupBy({
       by: ["type"],
       _count: true,
     });
-    const byCategory = await (ctx.prisma as any).visualResource.groupBy({
+    const byCategory = await ctx.prisma.visualResource.groupBy({
       by: ["category"],
       _count: true,
     });

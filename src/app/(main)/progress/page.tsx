@@ -22,7 +22,7 @@ export default async function ProgressPage() {
       const full = await trpc.curriculum.getSubject({ code: s.code });
       const topicCount = full?.modules.reduce((sum, m) => sum + m.topics.length, 0) ?? 0;
       const lessonCount = full?.modules.reduce(
-        (sum, m) => sum + m.topics.reduce((ts, t) => ts + ((t as any).lessons?.length ?? 0), 0),
+        (sum, m) => sum + m.topics.reduce((ts, t) => ts + ((t as { lessons?: unknown[] }).lessons?.length ?? 0), 0),
         0
       ) ?? 0;
       return {

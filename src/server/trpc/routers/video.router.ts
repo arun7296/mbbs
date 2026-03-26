@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { z } from "zod";
 import { router, publicProcedure, protectedProcedure } from "../trpc";
 
@@ -9,7 +8,7 @@ export const videoRouter = router({
   getVideosForLesson: publicProcedure
     .input(z.object({ lessonId: z.string() }))
     .query(async ({ ctx, input }) => {
-      return (ctx.prisma as any).videoResource.findMany({
+      return ctx.prisma.videoResource.findMany({
         where: { lessonId: input.lessonId },
         orderBy: { sortOrder: "asc" },
       });
@@ -21,7 +20,7 @@ export const videoRouter = router({
   getVideosForTopic: publicProcedure
     .input(z.object({ topicId: z.string() }))
     .query(async ({ ctx, input }) => {
-      return (ctx.prisma as any).videoResource.findMany({
+      return ctx.prisma.videoResource.findMany({
         where: { lesson: { topicId: input.topicId } },
         orderBy: { sortOrder: "asc" },
         include: { lesson: { select: { layer: true, title: true } } },
@@ -49,7 +48,7 @@ export const videoRouter = router({
       if (!videoId) throw new Error("Invalid YouTube URL");
 
       // Check for duplicate
-      const existing = await (ctx.prisma as any).videoResource.findUnique({
+      const existing = await ctx.prisma.videoResource.findUnique({
         where: {
           lessonId_youtubeVideoId: {
             lessonId: input.lessonId,
@@ -60,13 +59,13 @@ export const videoRouter = router({
       if (existing) throw new Error("Video already added to this lesson");
 
       // Get max sort order
-      const maxSort = await (ctx.prisma as any).videoResource.findFirst({
+      const maxSort = await ctx.prisma.videoResource.findFirst({
         where: { lessonId: input.lessonId },
         orderBy: { sortOrder: "desc" },
         select: { sortOrder: true },
       });
 
-      return (ctx.prisma as any).videoResource.create({
+      return ctx.prisma.videoResource.create({
         data: {
           lessonId: input.lessonId,
           youtubeVideoId: videoId,
@@ -87,7 +86,7 @@ export const videoRouter = router({
   removeVideo: protectedProcedure
     .input(z.object({ videoId: z.string() }))
     .mutation(async ({ ctx, input }) => {
-      return (ctx.prisma as any).videoResource.delete({
+      return ctx.prisma.videoResource.delete({
         where: { id: input.videoId },
       });
     }),
@@ -104,7 +103,7 @@ export const videoRouter = router({
     )
     .mutation(async ({ ctx, input }) => {
       const updates = input.videoIds.map((id, idx) =>
-        (ctx.prisma as any).videoResource.update({
+        ctx.prisma.videoResource.update({
           where: { id },
           data: { sortOrder: idx },
         })
@@ -128,7 +127,7 @@ export const videoRouter = router({
     )
     .mutation(async ({ ctx, input }) => {
       const { videoId, ...data } = input;
-      return (ctx.prisma as any).videoResource.update({
+      return ctx.prisma.videoResource.update({
         where: { id: videoId },
         data,
       });
@@ -138,11 +137,11 @@ export const videoRouter = router({
    * Get video stats — how many topics have videos
    */
   getVideoStats: publicProcedure.query(async ({ ctx }) => {
-    const totalVideos = await (ctx.prisma as any).videoResource.count();
-    const lessonsWithVideos = await (ctx.prisma.lesson as any).count({
+    const totalVideos = await ctx.prisma.videoResource.count();
+    const lessonsWithVideos = await ctx.prisma.lesson.count({
       where: { layer: 6, videos: { some: {} } },
     });
-    const topicsWithVideos = await (ctx.prisma.topic as any).count({
+    const topicsWithVideos = await ctx.prisma.topic.count({
       where: { lessons: { some: { layer: 6, videos: { some: {} } } } },
     });
 

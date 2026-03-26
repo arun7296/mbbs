@@ -42,7 +42,7 @@ export default async function SubjectProgressPage({ params }: PageProps) {
 
   const totalTopics = subject.modules.reduce((sum, m) => sum + m.topics.length, 0);
   const totalLessons = subject.modules.reduce(
-    (sum, m) => sum + m.topics.reduce((ts, t) => ts + ((t as any).lessons?.length ?? 0), 0),
+    (sum, m) => sum + m.topics.reduce((ts, t) => ts + ((t as { lessons?: unknown[] }).lessons?.length ?? 0), 0),
     0
   );
 

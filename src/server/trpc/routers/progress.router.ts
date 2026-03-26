@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { router, protectedProcedure } from "../trpc";
+import { calculateSM2 } from "@/lib/utils/spaced-repetition";
 
 export const progressRouter = router({
   // ─── Mark a lesson as complete ─────────────────────────────────────
@@ -481,38 +482,24 @@ export const progressRouter = router({
 
       if (!existing) throw new Error("No progress record found for this topic");
 
-      const q = input.quality;
-      let { easeFactor, interval, repetitions } = existing;
-
-      if (q >= 3) {
-        if (repetitions === 0) interval = 1;
-        else if (repetitions === 1) interval = 6;
-        else interval = Math.round(interval * easeFactor);
-        repetitions++;
-      } else {
-        repetitions = 0;
-        interval = 1;
-      }
-
-      easeFactor = Math.max(
-        1.3,
-        easeFactor + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02))
-      );
-
-      const nextReviewAt = new Date();
-      nextReviewAt.setDate(nextReviewAt.getDate() + interval);
+      const sm2Result = calculateSM2(input.quality, {
+        easeFactor: existing.easeFactor,
+        interval: existing.interval,
+        repetitions: existing.repetitions,
+      });
 
       // Update mastery based on quality
+      const q = input.quality;
       const masteryDelta = q >= 4 ? 0.05 : q === 3 ? 0.02 : -0.1;
       const newMastery = Math.max(0, Math.min(1, existing.masteryLevel + masteryDelta));
 
       return ctx.prisma.userProgress.update({
         where: { id: existing.id },
         data: {
-          easeFactor,
-          interval,
-          repetitions,
-          nextReviewAt,
+          easeFactor: sm2Result.easeFactor,
+          interval: sm2Result.interval,
+          repetitions: sm2Result.repetitions,
+          nextReviewAt: sm2Result.nextReviewAt,
           masteryLevel: newMastery,
           lastAccessedAt: new Date(),
         },

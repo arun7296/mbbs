@@ -5,7 +5,7 @@ export const contentRouter = router({
   getLesson: publicProcedure
     .input(z.object({ slug: z.string() }))
     .query(async ({ ctx, input }) => {
-      return (ctx.prisma.lesson as any).findUnique({
+      return ctx.prisma.lesson.findUnique({
         where: { slug: input.slug },
         include: {
           topic: {
@@ -28,7 +28,7 @@ export const contentRouter = router({
       })
     )
     .query(async ({ ctx, input }) => {
-      return (ctx.prisma.lesson as any).findMany({
+      return ctx.prisma.lesson.findMany({
         where: {
           topicId: input.topicId,
           status: "PUBLISHED",

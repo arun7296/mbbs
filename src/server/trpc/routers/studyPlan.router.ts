@@ -1,4 +1,5 @@
 import { z } from "zod";
+import type { Prisma } from "@/generated/prisma/client";
 import { router, protectedProcedure } from "../trpc";
 
 export const studyPlanRouter = router({
@@ -184,8 +185,7 @@ export const studyPlanRouter = router({
 
       return ctx.prisma.studyPlanDay.update({
         where: { id: input.dayId },
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        data: { tasks: tasks as any, completedPct },
+        data: { tasks: tasks as unknown as Prisma.InputJsonValue, completedPct },
       });
     }),
 });

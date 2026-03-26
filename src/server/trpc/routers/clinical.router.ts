@@ -1,4 +1,5 @@
 import { z } from "zod";
+import type { Prisma } from "@/generated/prisma/client";
 import { router, publicProcedure, protectedProcedure } from "../trpc";
 
 export const clinicalRouter = router({
@@ -105,8 +106,7 @@ export const clinicalRouter = router({
 
       await ctx.prisma.caseAttempt.update({
         where: { id: input.attemptId },
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        data: { decisions: decisions as any },
+        data: { decisions: decisions as unknown as Prisma.InputJsonValue },
       });
 
       return {
