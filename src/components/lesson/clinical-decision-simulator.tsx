@@ -205,10 +205,17 @@ export function ClinicalDecisionSimulator({
   const [investigationResults, setInvestigationResults] = useState<Record<string, { id: string; name: string; result: string; isAbnormal: boolean; interpretation: string }>>({});
   const [differentials, setDifferentials] = useState<Array<{ diagnosis: string; confidence: string; reasoning: string }>>([]);
   const [finalDiagnosis, setFinalDiagnosis] = useState("");
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [diagnosisResult, setDiagnosisResult] = useState<any>(null);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [treatmentResult, setTreatmentResult] = useState<any>(null);
+  const [diagnosisResult, setDiagnosisResult] = useState<{
+    isCorrect: boolean; correctDiagnosis: string; diagnosticReasoning: string;
+    correctDifferentials: Array<{ diagnosis: string; likelihood: string; reasoning: string }>;
+    score: number; feedback: string[];
+  } | null>(null);
+  const [treatmentResult, setTreatmentResult] = useState<{
+    correctPlan: Record<string, unknown>;
+    redFlags: Array<{ flag: string; action: string; urgency: string }>;
+    keyLearningPoints: string[]; commonMistakes: string[];
+    score: number; feedback: string[]; disclaimer: string;
+  } | null>(null);
 
   const handleRestart = useCallback(() => {
     setCurrentStep("intro");
