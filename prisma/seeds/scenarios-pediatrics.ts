@@ -9,7 +9,7 @@ export const pediatricsScenarios = [
   {
     topicCode: "PE-MOD-02-TOP-01",
     scenario: {
-      patientAge: "Newborn, 5 minutes old",
+      patientAge: 0,
       patientSex: "Male",
       patientOccupation: null,
       patientLocation: "Government Medical College Hospital, Lucknow, UP",
@@ -173,7 +173,7 @@ export const pediatricsScenarios = [
   {
     topicCode: "PE-MOD-04-TOP-02",
     scenario: {
-      patientAge: "2 years (24 months)",
+      patientAge: 2,
       patientSex: "Female",
       patientOccupation: null,
       patientLocation: "Private clinic, Bangalore, Karnataka",
@@ -340,7 +340,7 @@ export const pediatricsScenarios = [
   {
     topicCode: "PE-MOD-05-TOP-01",
     scenario: {
-      patientAge: "1 year (12 months)",
+      patientAge: 1,
       patientSex: "Male",
       patientOccupation: null,
       patientLocation: "Rural village, Begusarai district, Bihar",

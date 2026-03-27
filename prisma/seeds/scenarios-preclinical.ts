@@ -357,7 +357,8 @@ export const communityMedicineScenarios = [
   {
     topicCode: "CM-MOD-01-TOP-01",
     scenario: {
-      patientIndex: "Male, 45 years old (primary case for 'patient' context)",
+      patientAge: 45,
+      patientSex: "Male",
       patientOccupation: "Farmer",
       patientLocation: "Banasthali village, West Bengal (population ~5000, rural area)",
       chiefComplaint: "Sudden onset severe diarrhea and vomiting for 8 hours; 8 other villagers with similar symptoms in past 24 hours",
