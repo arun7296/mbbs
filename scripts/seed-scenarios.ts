@@ -5,10 +5,16 @@
  *   npx tsx scripts/seed-scenarios.ts          # Seed all subjects
  *   npx tsx scripts/seed-scenarios.ts IM       # Seed only Internal Medicine
  */
+import "dotenv/config";
 import { PrismaClient } from "../src/generated/prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
 import { medicineScenarios } from "../prisma/seeds/scenarios-medicine";
 
-const prisma = new PrismaClient();
+const directUrl =
+  process.env.DIRECT_DATABASE_URL ||
+  "postgres://postgres:postgres@localhost:51214/template1?sslmode=disable";
+const adapter = new PrismaPg({ connectionString: directUrl });
+const prisma = new PrismaClient({ adapter });
 
 const SCENARIO_MAP: Record<string, typeof medicineScenarios> = {
   IM: medicineScenarios,
