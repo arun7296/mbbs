@@ -4,6 +4,7 @@ import { contentRouter } from "./routers/content.router";
 import { assessmentRouter } from "./routers/assessment.router";
 import { progressRouter } from "./routers/progress.router";
 import { clinicalRouter } from "./routers/clinical.router";
+import { clinicalDecisionRouter } from "./routers/clinical-decision.router";
 import { studyPlanRouter } from "./routers/studyPlan.router";
 import { searchRouter } from "./routers/search.router";
 import { videoRouter } from "./routers/video.router";
@@ -15,6 +16,7 @@ export const appRouter = router({
   assessment: assessmentRouter,
   progress: progressRouter,
   clinical: clinicalRouter,
+  clinicalDecision: clinicalDecisionRouter,
   studyPlan: studyPlanRouter,
   search: searchRouter,
   video: videoRouter,
