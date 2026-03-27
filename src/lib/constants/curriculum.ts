@@ -13,6 +13,7 @@ export const LEARNING_LAYERS = [
   { id: 5, name: "Active Recall", color: "rose", duration: "10 min", description: "Flashcards, self-test" },
   { id: 6, name: "Videos", color: "red", duration: "varies", description: "Curated YouTube lectures from trusted channels" },
   { id: 7, name: "Visual Theory", color: "violet", duration: "varies", description: "Interactive diagrams, animations & medical illustrations" },
+  { id: 8, name: "Clinical Sim", color: "indigo", duration: "15-30 min", description: "Clinical decision simulator — be the doctor" },
 ] as const;
 
 export const LEARNING_MODES = [
