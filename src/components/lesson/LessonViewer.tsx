@@ -9,7 +9,7 @@ import { KeyPointsList } from "./KeyPointsList";
 import { TextbookRefBadge } from "./TextbookRefBadge";
 import { VideoList, type VideoItem } from "@/components/video/VideoList";
 import { VisualTheoryLayer, type VisualItem } from "./visual-theory-layer";
-import { ClinicalDecisionSimulator } from "./clinical-decision-simulator";
+import { ClinicalSimWrapper } from "./clinical-sim-wrapper";
 import { BookOpen, Clock, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface LessonData {
@@ -110,7 +110,7 @@ export function LessonViewer({ topicName, lessons, competencyCode }: LessonViewe
         <div className="mx-auto max-w-4xl px-4 py-6 lg:px-8">
           {/* Clinical Sim Layer — special rendering */}
           {isClinicalSimLayer ? (
-            <ClinicalDecisionSimulator
+            <ClinicalSimWrapper
               scenario={currentLesson.clinicalScenario || null}
               topicName={topicName}
               subjectCode=""
