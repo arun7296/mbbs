@@ -39,6 +39,21 @@ export default async function TopicPage({
         annotations: any; category: string; tags: string[];
         sortOrder: number;
       }>;
+      scenarios?: Array<{
+        id: string; patientAge: number; patientSex: string;
+        patientOccupation: string | null; patientLocation: string | null;
+        chiefComplaint: string; historyOfPresent: string;
+        pastHistory: string | null; familyHistory: string | null;
+        socialHistory: string | null; drugHistory: string | null;
+        vitals: unknown; generalExam: string | null; systemicExam: unknown;
+        availableInvestigations: unknown; correctDiagnosis: string;
+        differentials: unknown; diagnosticReasoning: string;
+        managementPlan: unknown; redFlags: unknown; keyLearningPoints: unknown;
+        commonMistakes: unknown; relevantHistoryQs: unknown;
+        relevantExamIds: unknown; difficulty: string; estimatedMinutes: number;
+        subjectTags: string[]; examRelevance: string[];
+        nmcCompetencyCode: string | null; maxScore: number; passingScore: number;
+      }>;
     }>;
   };
 
@@ -85,6 +100,31 @@ export default async function TopicPage({
       tags: v.tags as string[],
       sortOrder: v.sortOrder as number,
     })),
+    clinicalScenario: (() => {
+      const scenarios = l.scenarios as Array<Record<string, unknown>> | undefined;
+      const s = scenarios?.[0];
+      if (!s) return undefined;
+      return {
+        id: s.id as string,
+        patientAge: s.patientAge as number,
+        patientSex: s.patientSex as string,
+        patientOccupation: s.patientOccupation as string | null,
+        patientLocation: s.patientLocation as string | null,
+        chiefComplaint: s.chiefComplaint as string,
+        historyOfPresent: s.historyOfPresent as string,
+        pastHistory: s.pastHistory as string | null,
+        familyHistory: s.familyHistory as string | null,
+        socialHistory: s.socialHistory as string | null,
+        drugHistory: s.drugHistory as string | null,
+        vitals: s.vitals,
+        generalExam: s.generalExam as string | null,
+        difficulty: s.difficulty as string,
+        estimatedMinutes: s.estimatedMinutes as number,
+        examRelevance: s.examRelevance as string[],
+        maxScore: s.maxScore as number,
+        disclaimer: "This is an educational simulation only. Not for real patient care.",
+      };
+    })(),
   }));
 
   const subjectName = topic.module?.subject?.name ?? "Subject";
