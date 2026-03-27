@@ -9,6 +9,20 @@ import "dotenv/config";
 import { PrismaClient } from "../src/generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { medicineScenarios } from "../prisma/seeds/scenarios-medicine";
+import { surgeryScenarios } from "../prisma/seeds/scenarios-surgery";
+import { obgScenarios } from "../prisma/seeds/scenarios-obg";
+import { pediatricsScenarios } from "../prisma/seeds/scenarios-pediatrics";
+import { orthopedicsScenarios } from "../prisma/seeds/scenarios-orthopedics";
+import { pathologyScenarios } from "../prisma/seeds/scenarios-pathology";
+import { anatomyScenarios } from "../prisma/seeds/scenarios-anatomy";
+import { pharmacologyScenarios } from "../prisma/seeds/scenarios-pharmacology";
+import { microbiologyScenarios } from "../prisma/seeds/scenarios-microbiology";
+import { physiologyScenarios } from "../prisma/seeds/scenarios-physiology";
+import { entScenarios } from "../prisma/seeds/scenarios-ent";
+import { ophthalmologyScenarios } from "../prisma/seeds/scenarios-ophthalmology";
+import { dermatologyScenarios } from "../prisma/seeds/scenarios-dermatology";
+import { biochemistryScenarios, forensicMedicineScenarios, communityMedicineScenarios } from "../prisma/seeds/scenarios-preclinical";
+import { psychiatryScenarios, anesthesiologyScenarios, radiologyScenarios } from "../prisma/seeds/scenarios-clinical-specialties";
 
 const directUrl =
   process.env.DIRECT_DATABASE_URL ||
@@ -18,11 +32,24 @@ const prisma = new PrismaClient({ adapter });
 
 const SCENARIO_MAP: Record<string, typeof medicineScenarios> = {
   IM: medicineScenarios,
-  // Add more subjects here as seed files are created:
-  // SU: surgeryScenarios,
-  // PE: pediatricsScenarios,
-  // OG: obgynScenarios,
-  // AN: anatomyScenarios,
+  SU: surgeryScenarios,
+  OG: obgScenarios,
+  PE: pediatricsScenarios,
+  OR: orthopedicsScenarios,
+  PA: pathologyScenarios,
+  AN: anatomyScenarios,
+  PH: pharmacologyScenarios,
+  MI: microbiologyScenarios,
+  PY: physiologyScenarios,
+  EN: entScenarios,
+  OP: ophthalmologyScenarios,
+  DR: dermatologyScenarios,
+  BI: biochemistryScenarios,
+  FM: forensicMedicineScenarios,
+  CM: communityMedicineScenarios,
+  PS: psychiatryScenarios,
+  AS: anesthesiologyScenarios,
+  RD: radiologyScenarios,
 };
 
 async function seedScenarios(subjectFilter?: string) {
