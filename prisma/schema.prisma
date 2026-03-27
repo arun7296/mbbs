@@ -90,15 +90,16 @@ model User {
   createdAt          DateTime  @default(now())
   updatedAt          DateTime  @updatedAt
 
-  college       College?        @relation(fields: [collegeId], references: [id])
-  progress      UserProgress[]
-  quizzes       Quiz[]
-  caseAttempts  CaseAttempt[]
-  studyPlans    StudyPlan[]
-  streak        UserStreak?
-  abilities     SubjectAbility[]
-  accounts      Account[]
-  sessions      Session[]
+  college            College?          @relation(fields: [collegeId], references: [id])
+  progress           UserProgress[]
+  quizzes            Quiz[]
+  caseAttempts       CaseAttempt[]
+  studyPlans         StudyPlan[]
+  streak             UserStreak?
+  abilities          SubjectAbility[]
+  accounts           Account[]
+  sessions           Session[]
+  clinicalAttempts   ClinicalAttempt[]
 }
 
 model College {
@@ -192,6 +193,7 @@ model Topic {
   lessons    Lesson[]
   questions  Question[]
   progress   UserProgress[]
+  scenarios  ClinicalScenario[] @relation("TopicScenarios")
 }
 
 model NmcCompetency {
@@ -252,6 +254,7 @@ model Lesson {
   progress  UserProgress[]
   videos    VideoResource[]
   visuals   VisualResource[]
+  scenarios ClinicalScenario[]
 
   @@unique([topicId, layer])
 }
@@ -554,4 +557,116 @@ model SubjectAbility {
   subject Subject @relation(fields: [subjectId], references: [id])
 
   @@unique([userId, subjectId])
+}
+
+// ─── Layer 8: Clinical Decision Simulator ────────────────────────────
+
+model ClinicalScenario {
+  id                String   @id @default(cuid())
+  topicId           String
+  topic             Topic    @relation("TopicScenarios", fields: [topicId], references: [id])
+  lessonId          String?
+  lesson            Lesson?  @relation(fields: [lessonId], references: [id])
+
+  // Patient profile
+  patientAge        Int
+  patientSex        String   // "Male" | "Female" | "Child"
+  patientOccupation String?
+  patientLocation   String?  // e.g. "Rural Bihar", "Urban Mumbai"
+
+  // Presentation
+  chiefComplaint    String
+  historyOfPresent  String   // Detailed HPI in markdown
+  pastHistory       String?
+  familyHistory     String?
+  socialHistory     String?
+  drugHistory       String?
+
+  // Vitals
+  vitals            Json     // { pulse, bp, temp, rr, spo2 }
+
+  // Examination findings (revealed step by step)
+  generalExam       String?
+  systemicExam      Json     // { cardiovascular, respiratory, abdominal, neurological }
+
+  // Investigations (ordered by student, results revealed)
+  availableInvestigations Json // [{ id, name, cost, turnaround, category, result, isAbnormal, interpretation }]
+
+  // Diagnosis
+  correctDiagnosis  String
+  differentials     Json     // [{ diagnosis, likelihood, reasoning }]
+  diagnosticReasoning String
+
+  // Management
+  managementPlan    Json     // Structured treatment plan
+
+  // Red flags
+  redFlags          Json     // [{ flag, action, urgency }]
+
+  // Learning points
+  keyLearningPoints String[]
+  commonMistakes    String[]
+
+  // Relevant history question IDs for scoring
+  relevantHistoryQs String[]
+  relevantExamIds   String[]
+
+  // Metadata
+  difficulty        String   @default("MODERATE")
+  estimatedMinutes  Int      @default(15)
+  subjectTags       String[]
+  examRelevance     String[]
+  nmcCompetencyCode String?
+
+  // Safety
+  disclaimer        String   @default("⚠️ EDUCATIONAL SIMULATION ONLY. Do NOT use for real patient care.")
+
+  // Scoring
+  maxScore          Int      @default(100)
+  passingScore      Int      @default(60)
+
+  // Relations
+  attempts          ClinicalAttempt[]
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([topicId])
+  @@index([difficulty])
+}
+
+model ClinicalAttempt {
+  id                  String   @id @default(cuid())
+  scenarioId          String
+  scenario            ClinicalScenario @relation(fields: [scenarioId], references: [id], onDelete: Cascade)
+  userId              String
+  user                User     @relation(fields: [userId], references: [id])
+
+  // Student's choices at each step
+  historyQuestions    Json     // Questions the student chose to ask
+  examinations        Json     // Examinations performed
+  investigationsOrdered Json   // Labs/imaging ordered
+  differentialsMade   Json     // Student's differential list
+  finalDiagnosis      String?
+  treatmentPlan       Json?
+
+  // Scoring breakdown
+  historyScore        Int      @default(0)
+  examScore           Int      @default(0)
+  investigationScore  Int      @default(0)
+  diagnosisScore      Int      @default(0)
+  treatmentScore      Int      @default(0)
+  totalScore          Int      @default(0)
+
+  // Feedback
+  feedback            Json?
+
+  // Timing
+  startedAt           DateTime @default(now())
+  completedAt         DateTime?
+  timeSpentSeconds    Int?
+
+  @@index([userId])
+  @@index([scenarioId])
+  @@unique([userId, scenarioId, startedAt])
 }
